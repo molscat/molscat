@@ -1,0 +1,22 @@
+      SUBROUTINE DSYFIL(UPLO, N, A, LDA)
+C  Copyright (C) 2018 J. M. Hutson & C. R. Le Sueur
+C  Distributed under the GNU General Public License, version 3
+C
+C  SUBROUTINE TO FILL IN THE SECOND TRIANGLE OF A SYMMETRIC MATRIX.
+C  IF UPLO='L', THE LOWER TRIANGLE IS FILLED IN
+C  IF UPLO='U', THE UPPER TRIANGLE IS FILLED IN
+C
+      IMPLICIT DOUBLE PRECISION (A-H,O-Z)
+      CHARACTER(1) UPLO
+      DIMENSION A(LDA,N)
+
+      IF (UPLO.EQ.'L') THEN
+        DO 10 J=1,N-1
+   10     CALL DCOPY(N-J,A(J,J+1),LDA,A(J+1,J),1)
+      ELSEIF (UPLO.EQ.'U') THEN
+        DO 20 J=1,N-1
+   20     CALL DCOPY(N-J,A(J+1,J),1,A(J,J+1),LDA)
+      ENDIF
+C
+      RETURN
+      END

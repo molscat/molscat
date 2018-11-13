@@ -1,0 +1,10 @@
+      SUBROUTINE GET102(MXLVL,NLEVEL,JLEVEL,ELEVEL)
+C  Copyright (C) 2018 J. M. Hutson & C. R. Le Sueur
+C  Distributed under the GNU General Public License, version 3
+      IMPLICIT DOUBLE PRECISION (A-H,O-Z)
+      DIMENSION JLEVEL(2,MXLVL),ELEVEL(MXLVL)
+
+      WRITE(6,699)
+  699 FORMAT(/' GET102.  DUMMY ROUTINE CALLED.  TERMINAL ERROR.')
+      STOP
+      END
