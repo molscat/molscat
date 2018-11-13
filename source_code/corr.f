@@ -1,0 +1,79 @@
+      SUBROUTINE CORR(EIGNOW, EIGOLD, HP, DRNOW, DRMID, XLARGE, CDIAG,
+     1                COFF, NCH)
+C  This subroutine is part of the MOLSCAT, BOUND and FIELD suite of programs
+C
+C  AUTHOR:  MILLARD ALEXANDER
+C  CURRENT REVISION DATE: 27-SEPT-87
+C
+C  SUBROUTINE TO DETERMINE APPROXIMATE VALUES FOR DIAGONAL AND
+C  OFF-DIAGONAL CORRECTION TERMS IN AIRY PROPAGATOR
+C  ALSO COPIES NEW EIGENVALUES FROM ARRAY EIGNOW INTO ARRAY EIGOLD
+C  ---------------------------------------------------------------------
+C  VARIABLES IN CALL LIST:
+C    EIGNOW:   ON ENTRY: VECTOR CONTAINING EIGENVALUES OF WAVEVECTOR
+C              MATRIX IN CURRENT INTERVAL
+C    EIGOLD:   ON ENTRY: VECTOR CONTAINING EIGENVALUES OF WAVEVECTOR
+C              MATRIX IN PREVIOUS INTERVAL
+C              ON RETURN: VECTOR CONTAINING EIGENVALUES OF WAVEVECTOR
+C              MATRIX IN CURRENT INTERVAL
+C    HP:       VECTOR CONTAINING DIAGONAL ELEMENTS OF DERIVATIVE OF
+C              TRANSFORMED HAMILTONIAN MATRIX IN CURRENT INTERVAL
+C              THIS IS THE SAME AS THE NEGATIVE OF THE DIAGONAL ELEMENT
+C              OF THE WN-TILDE-PRIME MATRIX
+C    DRNOW:    WIDTH OF CURRENT INTERVAL
+C    DRMID:    DISTANCE BETWEEN MID-POINT OF CURRENT INTERVAL AND
+C              MID-POINT OF PREVIOUS INTERVAL
+C    XLARGE:   LARGEST OFF-DIAGONAL ELEMENT IN TRANSFORMED WAVEVECTOR
+C              MATRIX IN CURRENT INTERVAL
+C    CDIAG:    ON RETURN:  CONTAINS ESTIMATE OF ERROR DUE TO NEGLECTED
+C              DIAGONAL ELEMENTS OF WN-TILDE-DOUBLE PRIME MATRIX
+C              SEE EQ.(29) OF M.H. ALEXANDER, "HYBRID QUANTUM SCATTERING
+C              ALGORITHMS"
+C    COFF:     ON RETURN:  CONTAINS ESTIMATE OF ERROR DUE TO NEGLECTED
+C              OFF-DIAGONAL ELEMENTS OF WN-TILDE-PRIME MATRIX
+C              SEE EQ.(26) OF M.H. ALEXANDER, "HYBRID QUANTUM SCATTERING
+C              ALGORITHMS"
+C    NCH:      NUMBER OF CHANNELS
+C  ---------------------------------------------------------------------
+      IMPLICIT DOUBLE PRECISION (A-H,O-Z)
+      INTEGER I, NCH
+C  ARRAYS, MUST BE DIMENSIONED AT LEAST NCH
+      DIMENSION EIGNOW(1), EIGOLD(1), HP(1)
+      FACTOR = 2.D0 / (DRMID**2)
+      CAY = 0.D0
+      CDIAG = 0.D0
+      DO 30  I = 1 , NCH
+C  ---------------------------------------------------------------------
+C  ESTIMATE SECOND DERIVATIVE OF WAVEVECTOR BY POWER SERIES EXPANSION
+C                                                        2   2    2
+C       W(R ) = W(R ) + (R  - R ) (DW/DR) + 0.5 (R  - R )  (D W/DR )
+C          2       1      2    1         R        2    1            R
+C                                         1                          1
+C  WHICH CAN BE REARRANGED [SINCE DRMID = R - R  AND HP = - (DW/DR)   ]
+C                                          1   2                   R
+C                                                                   1
+C  TO GIVE
+C         2    2                                                  2
+C       (D W/DR ) = - 2 [ W(R ) - W(R ) + DRMID * HP(R ) ] / DRMID
+C                R           1       2
+C                 1
+C  ---------------------------------------------------------------------
+        W2P =  - FACTOR * (EIGNOW(I) - EIGOLD(I) + DRMID * HP(I))
+        CDIAG = CDIAG + ABS(W2P)
+        CAY = CAY + SQRT(ABS(EIGNOW(I)))
+30    CONTINUE
+
+      CAY = CAY / DBLE(NCH)
+      CDIAG = CDIAG / DBLE(NCH)
+C  CAY NOW CONTAINS AVERAGE WAVEVECTOR MAGNITUDE
+C  CDIAG NOW CONTAINS AVERAGE MAGNITUDE OF THE SECOND DERIVATIVE OF THE
+C  WAVEVECTOR ARRAY
+C
+C  NOW CALCULATE ESTIMATE OF ERROR
+      CDIAG = (DRNOW**3) * CDIAG / 12.D0
+      COFF = CAY * XLARGE * (DRNOW**3) / 12.D0
+C  NOW COPY NEW EIGENVALUE ARRAY INTO EIGOLD
+      CALL DCOPY(NCH, EIGNOW, 1, EIGOLD, 1)
+
+      RETURN
+      END

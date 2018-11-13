@@ -1,0 +1,93 @@
+ &INPUT
+    LABEL  = 'p-H2 + o-H2: potential of Zarur and Rabitz; coefficients from VSTAR',
+    URED   = 1.0,
+    IPRINT = 3,    ISCRU  =      1,   ISIGPR =  1,
+    RMIN   = 0.43, RMAX   =     20.0, IRXSET =  1,
+    IPROPS = 6,    IPROPL =      1,   STEPS  = 10.0, RVFAC  = 1.3,
+    JTOTL  = 0,    JTOTU  = 999999,
+    NNRG   = 2,    ENERGY =   2016.4, 1613.1,
+    DTOL   = 0.1,  OTOL   =      0.01,
+    LASTIN = 0,
+ /
+
+ &BASIS
+    ITYPE  = 3,
+    BE     = 2*60.8,
+    NLEVEL = 3,   JLEVEL = 0,1,  0,3,  2,1,
+ /
+
+ &POTL
+    MXLAM  = 4,   NTERM  = 4*-1,
+                  LAMBDA = 0,0,0,  2,0,2,  0,2,2,  2,2,4,
+ /
+
+ &INPUT
+    LABEL  = 'p-H2 + o-H2: potential of Zarur and Rabitz supplied by VRTP',
+    URED   = 1.0,
+    IPRINT = 3,    ISCRU  =      1,   ISIGPR =  1,
+    RMIN   = 0.43, RMAX   =     20.0, IRXSET =  1,
+    IPROPS = 6,    IPROPL =      1,   STEPS  = 10.0, RVFAC  = 1.3,
+    JTOTL  = 0,    JTOTU  = 999999,
+    NNRG   = 2,    ENERGY =   2016.4, 1613.1,
+    DTOL   = 0.1,  OTOL   =      0.01,
+    LASTIN = 0,
+ /
+
+ &BASIS
+    ITYPE  = 3,
+    BE     = 2*60.8,
+    NLEVEL = 3,   JLEVEL = 0,1,  0,3,  2,1,
+ /
+
+ &POTL
+    MXLAM  = 4,      NTERM  = 4*-1,
+                     LAMBDA = 0,0,0,  2,0,2,  0,2,2,  2,2,4,
+    LVRTP  = .TRUE.,
+ /
+
+ &INPUT
+    LABEL  = 'p-H2 + o-H2: potential of Zarur and Rabitz; VSTAR; IADD = 20',
+    URED   = 1.0,
+    IPRINT = 3,    ISCRU  =      1,   ISIGPR =  1,
+    RMIN   = 0.43, RMAX   =     20.0, IRXSET =  1,
+    IPROPS = 6,    IPROPL =      1,   STEPS  = 10.0, RVFAC  = 1.3,
+    JTOTL  = 0,    JTOTU  = 999999,
+    NNRG   = 2,    ENERGY =   2016.4, 1613.1,
+    DTOL   = 0.1,  OTOL   =      0.01,
+    LASTIN = 0,
+ /
+
+ &BASIS
+    ITYPE  = 23,
+    BE     = 2*60.8,
+    NLEVEL = 3,   JLEVEL = 0,1,  0,3,  2,1,
+ /
+
+ &POTL
+    MXLAM  = 4,   NTERM  = 4*-1,
+                  LAMBDA = 0,0,0,  2,0,2,  0,2,2,  2,2,4,
+ /
+
+ &INPUT
+    LABEL  = 'p-H2 + o-H2: potential of Zarur and Rabitz; VRTP; IADD = 20',
+    URED   = 1.0,
+    IPRINT = 3,    ISCRU  =      1,   ISIGPR =  1,
+    RMIN   = 0.43, RMAX   =     20.0, IRXSET =  1,
+    IPROPS = 6,    IPROPL =      1,   STEPS  = 10.0, RVFAC  = 1.3,
+    JTOTL  = 0,    JTOTU  = 999999,
+    NNRG   = 2,    ENERGY =   2016.4, 1613.1,
+    DTOL   = 0.1,  OTOL   =      0.01,
+    LASTIN = 0,
+ /
+
+ &BASIS
+    ITYPE  = 23,
+    BE     = 2*60.8,
+    NLEVEL = 3,   JLEVEL = 0,1,  0,3,  2,1,
+ /
+
+ &POTL
+    MXLAM  = 4,      NTERM  = 4*-1,
+                     LAMBDA = 0,0,0,  2,0,2,  0,2,2,  2,2,4,
+    LVRTP  = .TRUE.,
+ /

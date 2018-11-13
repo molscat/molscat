@@ -1,0 +1,378 @@
+  ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
+ |                                                                            |
+ |                Non-reactive quantum scattering calculations                |
+ |                     on atomic and molecular collisions                     |
+ |                                                                            |
+ |              Copyright (C) 2018 J. M. Hutson & C. R. Le Sueur              |
+ |                                                                            |
+ |                               Version 2019.0 (beta)                        |
+ |                                                                            |
+ |                       Run on 12 Nov 2018   at 14:59:58                     |
+ |                                                                            |
+  ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
+
+
+  This program is free software: you can redistribute it and/or modify it under
+  the terms of the GNU General Public License, version 3, as published by
+  the Free Software Foundation.
+
+  Publications resulting from the use of this program should refer to
+  J. M. Hutson & C. R. Le Sueur, MOLSCAT computer code 2019.0 (beta)       
+  or to the published paper in Computer Physics Communications when available.
+
+
+  PHYSICAL CONSTANTS OBTAINED FROM NIST CODATA TABULATION OF 2014
+
+  MEMORY ALLOCATED TO MAIN WORKING ARRAY IS   1000000 (8-BYTE) WORDS (    7.63 MB)
+  2 INTEGERS CAN BE STORED IN EACH WORD.
+
+  PRINT LEVEL =  6     OTHER PRINT CONTROLS  ISIGPR = 0
+
+  RUN LABEL = Ar-HF v=0 on H6(4,3,2) potential: see JCP 96, 6752 (1992)                       
+
+  REDUCED MASS FOR INTERACTION =  13.331917000 ATOMIC MASS UNITS
+
+  ENERGY-INDEPENDENT MATRICES WILL BE SAVED TEMPORARILY ON UNIT 30
+
+  ======================================================================================================================
+
+  INTERACTION TYPE IS    LINEAR RIGID ROTOR  -  ATOM.  
+
+  TARGET ROTATIONAL LEVELS COMPUTED FROM JMIN =  0,  JMAX =  8,  AND JSTEP = 1
+
+  ENERGY LEVELS COMPUTED FROM B(E) =   20.559743
+
+  QUANTUM NUMBERS FOR INTERACTING PAIR:
+  EACH PAIR STATE IS LABELLED BY  1 QUANTUM LABEL 
+  EACH CHANNEL FUNCTION IS FORMED BY COMBINING A PAIR STATE WITH A VALUE OF L.
+  THE RESULTING BASIS SET IS ASYMPTOTICALLY DIAGONAL.
+
+  PAIR STATE     PAIR STATE QUANTUM NUMBERS    PAIR LEVEL     PAIR ENERGY (CM-1)
+                ---------        J ---------
+        1                        0                1             0.0000000
+        2                        1                2            41.1194860
+        3                        2                3           123.3584580
+        4                        3                4           246.7169160
+        5                        4                5           411.1948600
+        6                        5                6           616.7922900
+        7                        6                7           863.5092060
+        8                        7                8          1151.3456080
+        9                        8                9          1480.3014960
+
+  ======================================================================================================================
+  GENERAL-PURPOSE POTENL ROUTINE (MAY 18)
+
+  UNEXPANDED POTENTIAL IS OBTAINED FROM VRTP ROUTINE.
+
+  A SUITABLE VRTP ROUTINE MUST BE SUPPLIED.
+  INDUCTION AND DISPERSION PARAMETERS (ATOMIC UNITS):
+  RARE GAS POLARIZABILITY                11.096
+  DIATOM DIPOLE MOMENT                   0.7069  0.0244 -0.0031
+  DIATOM QUADRUPOLE MOMENT                1.734   0.093   0.001
+  ISOTROPIC C6 COEFFICIENT               34.310   0.820   0.000
+  DIATOM ISOTROPIC POLARIZABILITY         5.511   0.174   0.003
+  DIATOM POLARIZABILITY ANISOTROPY        1.309   0.254   0.004
+  DIATOM PARALLEL A TENSOR                4.563   0.698   0.010
+  DIATOM PERPENDICULAR A TENSOR           0.907   0.101   0.001
+  DIATOM BOND LENGTH                        0.932600 A
+  DIATOM CENTRE OF MASS SHIFT               0.000000 A
+  DISTANCE FROM X ATOM TO QUADRUPOLE ORIGIN 0.046980 A
+  USING   9-POINT QUADRATURE FOR THETA-1
+
+  ANGULAR DEPENDENCE OF POTENTIAL EXPANDED IN TERMS OF
+  LEGENDRE POLYNOMIALS, P(LAMBDA).
+
+  INTERACTION POTENTIAL FOR EXPANSION TERM NUMBER   1
+  WHICH HAS LAMBDA =   0
+
+
+  INTERACTION POTENTIAL FOR EXPANSION TERM NUMBER   2
+  WHICH HAS LAMBDA =   1
+
+
+  INTERACTION POTENTIAL FOR EXPANSION TERM NUMBER   3
+  WHICH HAS LAMBDA =   2
+
+
+  INTERACTION POTENTIAL FOR EXPANSION TERM NUMBER   4
+  WHICH HAS LAMBDA =   3
+
+
+  INTERACTION POTENTIAL FOR EXPANSION TERM NUMBER   5
+  WHICH HAS LAMBDA =   4
+
+
+  INTERACTION POTENTIAL FOR EXPANSION TERM NUMBER   6
+  WHICH HAS LAMBDA =   5
+
+
+  INTERACTION POTENTIAL FOR EXPANSION TERM NUMBER   7
+  WHICH HAS LAMBDA =   6
+
+
+  INTERACTION POTENTIAL FOR EXPANSION TERM NUMBER   8
+  WHICH HAS LAMBDA =   7
+
+
+  INTERACTION POTENTIAL FOR EXPANSION TERM NUMBER   9
+  WHICH HAS LAMBDA =   8
+
+
+  POTENL PROCESSING FINISHED.
+
+  UNITS FOR POTENTIAL ROUTINES:
+  POTENTIAL RETURNED IN UNITS OF EPSIL =       1.000000 CM-1
+  R                  IN UNITS OF RM    =       1.000000 ANGSTROMS
+
+  ALL LENGTHS ARE IN UNITS OF RM =  1.000000 ANGSTROM UNLESS OTHERWISE STATED
+
+  INTERACTION MATRIX USES   9 BLOCKS OF VL ARRAY FOR R-DEPENDENT TERMS IN POTENTIAL
+
+  ======================================================================================================================
+
+  PROPAGATION ALGORITHM FOR COUPLED EQUATIONS SPECIFIED BY IPROPS =  6
+
+  COUPLED EQUATIONS WILL BE PROPAGATED OUTWARDS IN 1 SEGMENT 
+  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+  SEGMENT 1 WILL BE PROPAGATED OUTWARDS
+
+  FROM RMIN   =      2.50  TO RMAX   =     15.00
+
+  COUPLED EQUATIONS SOLVED BY DIABATIC MODIFIED LOG DERIVATIVE METHOD OF MANOLOPOULOS
+
+  PROPAGATION STEP SIZE DETERMINED USING DR =  3.000E-02
+
+  LOG-DERIVATIVE MATRIX WILL BE INITIALISED IN THE LOCAL EIGENBASIS FOR RMIN IN THE OUTWARDS PROPAGATION PART
+  LOCALLY CLOSED CHANNELS WILL BE INITIALISED WITH A WKB BOUNDARY CONDITION
+  LOCALLY OPEN CHANNELS WILL BE INITIALISED WITH THE VALUE  1.0000000E+08
+  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+  ======================================================================================================================
+
+  INPUT ENERGY VALUES ASSUMED TO BE IN UNITS OF CM-1 BY DEFAULT.
+
+  CONTROL DATA FOR TOTAL ENERGIES.  CALCULATIONS WILL BE PERFORMED FOR  10 VALUES
+       ENERGY NO.   1 =   16.930000000     CM-1
+       ENERGY NO.   2 =   16.930100000     CM-1
+       ENERGY NO.   3 =   16.930200000     CM-1
+       ENERGY NO.   4 =   16.930300000     CM-1
+       ENERGY NO.   5 =   16.930400000     CM-1
+
+  RESONANCE SEARCH OPTION. ONLY FIRST 5 ENERGIES GIVEN. OTHERS WILL BE DETERMINED INTERACTIVELY.
+
+  ======================================================================================================================
+
+  TOTAL ANGULAR MOMENTUM JTOT =   1
+
+  EACH JTOT IS SPLIT INTO A MAXIMUM OF   2 DIFFERENT SYMMETRY BLOCKS
+
+  CALCULATION(S) WILL BE FOR SYMMETRY BLOCK   2
+
+  COMPUTED K-MATRICES WILL BE SAVED ON UNIT 10
+
+  EIGENPHASE SUMMARY WILL BE WRITTEN TO UNIT  4
+
+  STATE-TO-STATE INTEGRAL CROSS-SECTIONS WILL BE COMPUTED BUT NOT STORED ON DISK
+
+  ======================================================================================================================
+
+  INITIALIZATION DONE.  TIME WAS   0.00 CPU SECS.      1076 WORDS OF STORAGE USED.
+
+  ============================= Ar-HF v=0 on H6(4,3,2) potential: see JCP 96, 6752 (1992) ==============================
+
+  *******************************************  ANGULAR MOMENTUM JTOT  =   1  *******************************************
+
+  IBLOCK =   2
+
+  CHANNEL FUNCTION LIST:
+
+  EACH CHANNEL FUNCTION IS FORMED BY COMBINING A PAIR STATE WITH A VALUE OF L.
+
+  CHANNEL  PAIR STATE    PAIR STATE QUANTUM NUMBERS            L        PAIR LEVEL   PAIR ENERGY (CM-1)
+                         ---------      J   ---------
+        1           2                   1                      0             2        41.1194860
+        2           1                   0                      1             1         0.0000000
+        3           3                   2                      1             3       123.3584580
+        4           2                   1                      2             2        41.1194860
+        5           4                   3                      2             4       246.7169160
+        6           3                   2                      3             3       123.3584580
+        7           5                   4                      3             5       411.1948600
+        8           4                   3                      4             4       246.7169160
+        9           6                   5                      4             6       616.7922900
+       10           5                   4                      5             5       411.1948600
+       11           7                   6                      5             7       863.5092060
+       12           6                   5                      6             6       616.7922900
+       13           8                   7                      6             8      1151.3456080
+       14           7                   6                      7             7       863.5092060
+       15           9                   8                      7             9      1480.3014960
+       16           8                   7                      8             8      1151.3456080
+       17           9                   8                      9             9      1480.3014960
+
+  JTOT =    1   IBLOCK =   2   ENERGY(   1) =   16.930000000     CM-1
+
+  DWPROP. LOG DERIVATIVE MATRIX PROPAGATED FROM       2.5000  TO  15.000      IN    416  STEPS.
+
+  S-MATRIX EIGENPHASE SUM, EPSUM/PI = 10.24273
+
+  FOR JTOT =    1 IBLOCK =  2 ENERGY(  1) =  16.93000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  1.34E+00 &   0.00E+00
+
+  FINISHED JTOT =    1   IBLOCK =   2   ENERGY(   1) =  16.93000    
+
+  ----------------------------- Ar-HF v=0 on H6(4,3,2) potential: see JCP 96, 6752 (1992) ------------------------------
+
+  JTOT =    1   IBLOCK =   2   ENERGY(   2) =   16.930100000     CM-1
+
+  DWPROP. LOG DERIVATIVE MATRIX PROPAGATED FROM       2.5000  TO  15.000      IN    416  STEPS.
+
+  S-MATRIX EIGENPHASE SUM, EPSUM/PI = 10.24271
+
+  FOR JTOT =    1 IBLOCK =  2 ENERGY(  2) =  16.93010    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  1.34E+00 &   0.00E+00
+
+  FINISHED JTOT =    1   IBLOCK =   2   ENERGY(   2) =  16.93010    
+
+  ----------------------------- Ar-HF v=0 on H6(4,3,2) potential: see JCP 96, 6752 (1992) ------------------------------
+
+  JTOT =    1   IBLOCK =   2   ENERGY(   3) =   16.930200000     CM-1
+
+  DWPROP. LOG DERIVATIVE MATRIX PROPAGATED FROM       2.5000  TO  15.000      IN    416  STEPS.
+
+  S-MATRIX EIGENPHASE SUM, EPSUM/PI = 10.24270
+
+  FOR JTOT =    1 IBLOCK =  2 ENERGY(  3) =  16.93020    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  1.34E+00 &   0.00E+00
+
+  FINISHED JTOT =    1   IBLOCK =   2   ENERGY(   3) =  16.93020    
+
+  ----------------------------- Ar-HF v=0 on H6(4,3,2) potential: see JCP 96, 6752 (1992) ------------------------------
+
+  JTOT =    1   IBLOCK =   2   ENERGY(   4) =   16.930300000     CM-1
+
+  DWPROP. LOG DERIVATIVE MATRIX PROPAGATED FROM       2.5000  TO  15.000      IN    416  STEPS.
+
+  S-MATRIX EIGENPHASE SUM, EPSUM/PI = 10.24268
+
+  FOR JTOT =    1 IBLOCK =  2 ENERGY(  4) =  16.93030    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  1.34E+00 &   0.00E+00
+
+  FINISHED JTOT =    1   IBLOCK =   2   ENERGY(   4) =  16.93030    
+
+  ----------------------------- Ar-HF v=0 on H6(4,3,2) potential: see JCP 96, 6752 (1992) ------------------------------
+
+  JTOT =    1   IBLOCK =   2   ENERGY(   5) =   16.930400000     CM-1
+
+  DWPROP. LOG DERIVATIVE MATRIX PROPAGATED FROM       2.5000  TO  15.000      IN    416  STEPS.
+
+  S-MATRIX EIGENPHASE SUM, EPSUM/PI = 10.24267
+
+  FOR JTOT =    1 IBLOCK =  2 ENERGY(  5) =  16.93040    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  1.34E+00 &   0.00E+00
+
+  FINISHED JTOT =    1   IBLOCK =   2   ENERGY(   5) =  16.93040    
+
+  ESTIMATE PARAMETERS OF DISTANT RESONANCE USING 5 ENERGIES
+
+  ENERGY(1) =   16.930000000000     CM-1 EPSUM/PI = 10.242726726073771
+  ENERGY(2) =   16.930100000000     CM-1 EPSUM/PI = 10.242712555427827
+  ENERGY(3) =   16.930200000000     CM-1 EPSUM/PI = 10.242698395311200
+  ENERGY(4) =   16.930300000000     CM-1 EPSUM/PI = 10.242684245958081
+  ENERGY(5) =   16.930400000000     CM-1 EPSUM/PI = 10.242670107624269
+
+  ESTIMATED EIGENPHASE CURVATURES ARE   1.05293       1.07635       1.10193    
+
+  ESTIMATE RESONANCE ENERGY =   16.943400581809       WIDTH = 0.2481E-05 CM-1    
+
+  CONTROL DATA FOR TOTAL ENERGIES.  CALCULATIONS WILL BE PERFORMED FOR  10 VALUES
+       ENERGY NO.   6 =   16.942872559     CM-1
+       ENERGY NO.   7 =   16.943136570     CM-1
+       ENERGY NO.   8 =   16.943400582     CM-1
+       ENERGY NO.   9 =   16.943664593     CM-1
+       ENERGY NO.  10 =   16.943928605     CM-1
+
+  ----------------------------- Ar-HF v=0 on H6(4,3,2) potential: see JCP 96, 6752 (1992) ------------------------------
+
+  JTOT =    1   IBLOCK =   2   ENERGY(   6) =   16.942872559     CM-1
+
+  DWPROP. LOG DERIVATIVE MATRIX PROPAGATED FROM       2.5000  TO  15.000      IN    416  STEPS.
+
+  S-MATRIX EIGENPHASE SUM, EPSUM/PI = 10.24312
+
+  FOR JTOT =    1 IBLOCK =  2 ENERGY(  6) =  16.94287    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  1.35E+00 &   0.00E+00
+
+  FINISHED JTOT =    1   IBLOCK =   2   ENERGY(   6) =  16.94287    
+
+  ----------------------------- Ar-HF v=0 on H6(4,3,2) potential: see JCP 96, 6752 (1992) ------------------------------
+
+  JTOT =    1   IBLOCK =   2   ENERGY(   7) =   16.943136570     CM-1
+
+  DWPROP. LOG DERIVATIVE MATRIX PROPAGATED FROM       2.5000  TO  15.000      IN    416  STEPS.
+
+  S-MATRIX EIGENPHASE SUM, EPSUM/PI = 10.24566
+
+  FOR JTOT =    1 IBLOCK =  2 ENERGY(  7) =  16.94314    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  1.37E+00 &   0.00E+00
+
+  FINISHED JTOT =    1   IBLOCK =   2   ENERGY(   7) =  16.94314    
+
+  ----------------------------- Ar-HF v=0 on H6(4,3,2) potential: see JCP 96, 6752 (1992) ------------------------------
+
+  JTOT =    1   IBLOCK =   2   ENERGY(   8) =   16.943400582     CM-1
+
+  DWPROP. LOG DERIVATIVE MATRIX PROPAGATED FROM       2.5000  TO  15.000      IN    416  STEPS.
+
+  S-MATRIX EIGENPHASE SUM, EPSUM/PI = 10.17175
+
+  FOR JTOT =    1 IBLOCK =  2 ENERGY(  8) =  16.94340    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  7.43E-01 &   0.00E+00
+
+  FINISHED JTOT =    1   IBLOCK =   2   ENERGY(   8) =  16.94340    
+
+  ----------------------------- Ar-HF v=0 on H6(4,3,2) potential: see JCP 96, 6752 (1992) ------------------------------
+
+  JTOT =    1   IBLOCK =   2   ENERGY(   9) =   16.943664593     CM-1
+
+  DWPROP. LOG DERIVATIVE MATRIX PROPAGATED FROM       2.5000  TO  15.000      IN    416  STEPS.
+
+  S-MATRIX EIGENPHASE SUM, EPSUM/PI = 10.23625
+
+  FOR JTOT =    1 IBLOCK =  2 ENERGY(  9) =  16.94366    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  1.29E+00 &   0.00E+00
+
+  FINISHED JTOT =    1   IBLOCK =   2   ENERGY(   9) =  16.94366    
+
+  ----------------------------- Ar-HF v=0 on H6(4,3,2) potential: see JCP 96, 6752 (1992) ------------------------------
+
+  JTOT =    1   IBLOCK =   2   ENERGY(  10) =   16.943928605     CM-1
+
+  DWPROP. LOG DERIVATIVE MATRIX PROPAGATED FROM       2.5000  TO  15.000      IN    416  STEPS.
+
+  S-MATRIX EIGENPHASE SUM, EPSUM/PI = 10.23832
+
+  FOR JTOT =    1 IBLOCK =  2 ENERGY( 10) =  16.94393    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  1.30E+00 &   0.00E+00
+
+  FINISHED JTOT =    1   IBLOCK =   2   ENERGY(  10) =  16.94393    
+
+  ESTIMATE PARAMETERS OF DISTANT RESONANCE USING 5 ENERGIES
+
+  ENERGY(1) =   16.942872558537     CM-1 EPSUM/PI = 10.243124639351423
+  ENERGY(2) =   16.943136570173     CM-1 EPSUM/PI = 10.245657784629216
+  ENERGY(3) =   16.943400581809     CM-1 EPSUM/PI = 10.171753452046035
+  ENERGY(4) =   16.943664593445     CM-1 EPSUM/PI = 10.236249824836593
+  ENERGY(5) =   16.943928605082     CM-1 EPSUM/PI = 10.238318197065205
+
+  ESTIMATED EIGENPHASE CURVATURES ARE -0.109663E+07  0.198560E+07  -895640.    
+
+  *** NEXTE: EIGENPHASE CURVATURES AMBIGUOUS: EITHER ENERGIES SPAN RESONANCE OR PHASES AFFECTED BY NUMERICAL NOISE:
+             UNSAFE TO ESTIMATE RESONANCE ENERGY. DNRG INCREASED TO 0.26401E-02 CM-1    
+
+  ======================================================================================================================
+
+  SIGMA NOT PRINTED BECAUSE ISIGPR = 0
+
+
+  ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
+ |                                                                            |
+ |                Non-reactive quantum scattering calculations                |
+ |                     on atomic and molecular collisions                     |
+ |                                                                            |
+ |              Copyright (C) 2018 J. M. Hutson & C. R. Le Sueur              |
+ |                                                                            |
+ |                               Version 2019.0 (beta)                        |
+ |                                                                            |
+ |                    This run used       0.14 cpu secs and                   |
+ |               3525 of the allocated   1000000 words of storage             |
+ |                                                                            |
+  ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---

@@ -1,0 +1,2395 @@
+  ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
+ |                                                                            |
+ |                Non-reactive quantum scattering calculations                |
+ |                     on atomic and molecular collisions                     |
+ |                                                                            |
+ |              Copyright (C) 2018 J. M. Hutson & C. R. Le Sueur              |
+ |                                                                            |
+ |                               Version 2019.0 (beta)                        |
+ |                                                                            |
+ |                       Run on 12 Nov 2018   at 15:03:17                     |
+ |                                                                            |
+  ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
+
+
+  This program is free software: you can redistribute it and/or modify it under
+  the terms of the GNU General Public License, version 3, as published by
+  the Free Software Foundation.
+
+  Publications resulting from the use of this program should refer to
+  J. M. Hutson & C. R. Le Sueur, MOLSCAT computer code 2019.0 (beta)       
+  or to the published paper in Computer Physics Communications when available.
+
+
+  PHYSICAL CONSTANTS OBTAINED FROM NIST CODATA TABULATION OF 2014
+
+  MEMORY ALLOCATED TO MAIN WORKING ARRAY IS   1000000 (8-BYTE) WORDS (    7.63 MB)
+  2 INTEGERS CAN BE STORED IN EACH WORD.
+
+  PRINT LEVEL =  2     OTHER PRINT CONTROLS  ISIGPR = 0
+
+  RUN LABEL = 85Rb-85Rb elastic pole characterisation in aa channel                           
+
+  REDUCED MASS FOR INTERACTION =  42.455894869 ATOMIC MASS UNITS
+
+  ======================================================================================================================
+  ATOM - ATOM WITH NUC SP + MAG FL
+
+
+  ATOMS  WITH S = 1/2,  MU_S   =    2.002319 MU_B
+              I = 5/2,  MU_NUC =   -0.000294 MU_B
+         HYPERFINE SPLITTING =    3.035732, COUPLING CONST =    1.011911 GHZ
+
+  L UP TO    2
+  SPIN-SPIN TERM INCLUDED
+
+  INTERACTION TYPE IS  ATOM - ATOM WITH NUC SP + MAG FL
+
+  QUANTUM NUMBERS FOR INTERACTING PAIR:
+  THE BASIS FUNCTIONS ARE LABELLED BY A SET OF   4 PAIR STATE QUANTUM NUMBERS AND A VALUE OF L.
+  THE RESULTING BASIS SET IS ASYMPTOTICALLY NON-DIAGONAL.
+
+  THE SETS OF PAIR STATE QUANTUM NUMBERS ARE:
+
+      SET       ------ PAIR STATE QUANTUM NUMBERS ------
+                    2*MSA     2*MIA     2*MSB     2*MIB
+        1              -1        -5        -1        -5
+        2              -1        -3        -1        -5
+        3              -1        -3        -1        -3
+        4              -1        -1        -1        -5
+        5              -1        -1        -1        -3
+        6              -1        -1        -1        -1
+        7              -1         1        -1        -5
+        8              -1         1        -1        -3
+        9              -1         1        -1        -1
+       10              -1         1        -1         1
+       11              -1         3        -1        -5
+       12              -1         3        -1        -3
+       13              -1         3        -1        -1
+       14              -1         3        -1         1
+       15              -1         3        -1         3
+       16              -1         5        -1        -5
+       17              -1         5        -1        -3
+       18              -1         5        -1        -1
+       19              -1         5        -1         1
+       20              -1         5        -1         3
+       21              -1         5        -1         5
+       22               1        -5        -1        -5
+       23               1        -5        -1        -3
+       24               1        -5        -1        -1
+       25               1        -5        -1         1
+       26               1        -5        -1         3
+       27               1        -5        -1         5
+       28               1        -5         1        -5
+       29               1        -3        -1        -5
+       30               1        -3        -1        -3
+       31               1        -3        -1        -1
+       32               1        -3        -1         1
+       33               1        -3        -1         3
+       34               1        -3        -1         5
+       35               1        -3         1        -5
+       36               1        -3         1        -3
+       37               1        -1        -1        -5
+       38               1        -1        -1        -3
+       39               1        -1        -1        -1
+       40               1        -1        -1         1
+       41               1        -1        -1         3
+       42               1        -1        -1         5
+       43               1        -1         1        -5
+       44               1        -1         1        -3
+       45               1        -1         1        -1
+       46               1         1        -1        -5
+       47               1         1        -1        -3
+       48               1         1        -1        -1
+       49               1         1        -1         1
+       50               1         1        -1         3
+       51               1         1        -1         5
+       52               1         1         1        -5
+       53               1         1         1        -3
+       54               1         1         1        -1
+       55               1         1         1         1
+       56               1         3        -1        -5
+       57               1         3        -1        -3
+       58               1         3        -1        -1
+       59               1         3        -1         1
+       60               1         3        -1         3
+       61               1         3        -1         5
+       62               1         3         1        -5
+       63               1         3         1        -3
+       64               1         3         1        -1
+       65               1         3         1         1
+       66               1         3         1         3
+       67               1         5        -1        -5
+       68               1         5        -1        -3
+       69               1         5        -1        -1
+       70               1         5        -1         1
+       71               1         5        -1         3
+       72               1         5        -1         5
+       73               1         5         1        -5
+       74               1         5         1        -3
+       75               1         5         1        -1
+       76               1         5         1         1
+       77               1         5         1         3
+       78               1         5         1         5
+
+  ======================================================================================================================
+
+  THIS CALCULATION USES  1 EXTERNAL FIELD VARIABLE 
+
+  OFFSET BETWEEN EFV INDICES AND COUPLING MATRIX COEFFICIENT INDICES IS  1
+  GENERAL-PURPOSE POTENL ROUTINE (MAY 18)
+
+  *** POTENL. ITYPE =   9 CANNOT BE PROCESSED TO DETERMINE THE POTENTIAL EXPANSION LABELS
+
+  INTERACTION POTENTIAL FOR EXPANSION TERM NUMBER   1
+
+  JMH routine for Tiemann-style alkali dimer potentials
+  Rb2 potential from Strauss et al., PRA 82, 052514 (2010)               
+  For potential  1 at RLR =  11.00000000000    
+  gamma shifted from   5.317689000000    
+                  to   5.317691181176    
+  V =  -18.02577440996    
+  A(0)  shifted from  -3993.592873000     cm-1
+                  to  -3993.593189150     cm-1
+  For potential   1 at RSR =  3.126000000000     A
+  V =  -6.255737838933    cm-1, dV/dR =  -9257.490374248    cm-1/A and n =   4.533895000000    
+  B(SR) shifted from   1120053.610000     cm-1 A^n
+                  to   1120053.629089     cm-1 A^n
+  A(SR) shifted from  -6389.048800000     cm-1
+                  to  -6389.049099816     cm-1
+
+  INTERACTION POTENTIAL FOR EXPANSION TERM NUMBER   2
+
+  JMH routine for Tiemann-style alkali dimer potentials
+  Rb2 potential from Strauss et al., PRA 82, 052514 (2010)               
+  For potential  2 at RLR =  11.00000000000    
+  gamma shifted from   5.317691181176    
+                  to   5.317691181176    
+  V =  -17.12208948080    
+  A(0)  shifted from  -241.5033520000     cm-1
+                  to  -241.5036630329     cm-1
+  For potential   2 at RSR =  5.070000000000     A
+  V =  -10.77028535365    cm-1, dV/dR =  -543.9945779764    cm-1/A and n =   4.533895000000    
+  B(SR) shifted from   956231.6770000     cm-1 A^n
+                  to   956231.6938206     cm-1 A^n
+  A(SR) shifted from  -619.0885430000     cm-1
+                  to  -619.0888525768     cm-1
+
+  INTERACTION POTENTIAL FOR EXPANSION TERM NUMBER   3
+
+                -0.10023206E+01 * R ** -3
+                 0.91829168E+01 * EXP(   -0.7196 * R )
+
+  POTENL PROCESSING FINISHED.
+
+  UNITS FOR POTENTIAL ROUTINES:
+  POTENTIAL RETURNED IN UNITS OF EPSIL =       1.000000 CM-1
+  R                  IN UNITS OF RM    =       0.529177 ANGSTROMS
+
+  ALL LENGTHS ARE IN UNITS OF RM =  0.529177 ANGSTROM UNLESS OTHERWISE STATED
+
+  INTERACTION MATRIX USES   3 BLOCKS OF VL ARRAY FOR R-DEPENDENT TERMS IN POTENTIAL
+                            2                    FOR CONSTANT    TERMS IN POTENTIAL
+
+  IN TOTAL:  5 BLOCKS OF VL ARRAY ARE USED
+
+
+  ======================================================================================================================
+
+  PROPAGATION ALGORITHMS FOR COUPLED EQUATIONS SPECIFIED BY IPROPS =  6 AND IPROPL =  1
+
+  COUPLED EQUATIONS WILL BE PROPAGATED OUTWARDS IN 2 SEGMENTS
+  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+  SEGMENT 1 WILL BE PROPAGATED OUTWARDS
+
+  FROM RMIN   =      3.00  TO RMID   =     21.00
+
+  COUPLED EQUATIONS SOLVED BY DIABATIC MODIFIED LOG DERIVATIVE METHOD OF MANOLOPOULOS
+
+  PROPAGATION STEP SIZE DETERMINED USING DR =  2.000E-03
+
+  LOG-DERIVATIVE MATRIX WILL BE INITIALISED IN THE LOCAL EIGENBASIS FOR RMIN IN THE OUTWARDS PROPAGATION PART
+  LOCALLY CLOSED CHANNELS WILL BE INITIALISED WITH A WKB BOUNDARY CONDITION
+  LOCALLY OPEN CHANNELS WILL BE INITIALISED WITH THE VALUE  1.0000000E+08
+  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+  SEGMENT 2 WILL BE PROPAGATED OUTWARDS
+
+  FROM RMID   =     21.00  TO RMAX   =  15000.00
+
+  COUPLED EQUATIONS SOLVED BY VARIABLE STEP AIRY METHOD.
+  ALL PUBLICATIONS RESULTING FROM THE USE OF THIS PROPAGATOR SHOULD REFERENCE
+  M.H. ALEXANDER AND D.E. MANOLOPOULOS,  J CHEM PHYS 86, 2044 (1987).
+
+  INITIAL STEP SIZE TAKEN FROM DR       =  2.000E-03
+                             WITH TOLHI =  1.00E-07         POWRX = 6.0
+  TOLHI.LT.1  --  AIRY STEPS ADJUSTED TO MAINTAIN APPROX. ACCURACY VIA PERTURBATION THEORY AND POWRX.
+  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+  ======================================================================================================================
+
+  INPUT ENERGY VALUES CONVERTED FROM K
+  TO INTERNAL WORKING UNITS OF CM-1 DUE TO INTEGER INPUT =   2
+
+  INPUT ENERGY LIST IS
+                    6.950346E-10
+
+  CONTROL DATA FOR TOTAL ENERGIES.  CALCULATIONS WILL BE PERFORMED FOR   1 VALUE 
+       ENERGY NO.   1 =  6.95034570000E-10 CM-1 =  1.00000000000E-09 K       
+
+  ======================================================================================================================
+
+  PROGRAM WILL ATTEMPT TO CHARACTERISE RESONANCE IN SCATTERING LENGTH FOR CHANNEL   1 TO ACCURACY  1.00E-08 GAUSS
+  BETWEEN FLDMIN AND FLDMAX FOR MAGNETIC Z FIELD
+
+   USING ELASTIC RESONANCE FORMULA
+
+                  MAGNETIC Z FIELD (GAUSS )
+  FLDMIN:             171.4600000    
+  FLDMAX:             171.8600000    
+
+  ======================================================================================================================
+
+  TOTAL ANGULAR MOMENTUM JTOT =   8
+
+  EACH JTOT IS SPLIT INTO A MAXIMUM OF   2 DIFFERENT SYMMETRY BLOCKS
+
+  CALCULATION(S) WILL BE FOR SYMMETRY BLOCK   2
+
+  ======================================================================================================================
+
+  THESE ENERGY VALUES ARE RELATIVE TO THE REFERENCE ENERGY SPECIFIED BY MONOMER QUANTUM NUMBERS   4   4   4   4
+  THE REFERENCE ENERGY WILL BE CALCULATED FOR EVERY EFV SET
+
+  INITIALIZATION DONE.  TIME WAS   0.00 CPU SECS.       392 WORDS OF STORAGE USED.
+
+  =============================== 85Rb-85Rb elastic pole characterisation in aa channel ================================
+
+  *******************************************  ANGULAR MOMENTUM JTOT  =   8  *******************************************
+
+  IBLOCK =   2
+  IBLOCK =  2 SELECTS PARITY  1
+  MTOT =  8/2
+  BASIS SET GENERATED FOR TWO IDENTICAL BOSONS
+
+  JTOT =    8   IBLOCK =   2   ENERGY(   1) =  6.95034570000E-10 CM-1 =   1.00000000000E-09 K
+
+  EFV SET     1:  MAGNETIC Z FIELD =   171.4600000     GAUSS
+
+  ------------------------------- 85Rb-85Rb elastic pole characterisation in aa channel --------------------------------
+
+  JTOT =    8   IBLOCK =   2   ENERGY(   1) =  6.95034570000E-10 CM-1 =   1.00000000000E-09 K
+
+  EFV SET     2:  MAGNETIC Z FIELD =   171.8600000     GAUSS
+
+  ------------------------------- 85Rb-85Rb elastic pole characterisation in aa channel --------------------------------
+
+  JTOT =    8   IBLOCK =   2   ENERGY(   1) =  6.95034570000E-10 CM-1 =   1.00000000000E-09 K
+
+  EFV SET     3:  MAGNETIC Z FIELD =   171.6600000     GAUSS
+
+  ------------------------------- 85Rb-85Rb elastic pole characterisation in aa channel --------------------------------
+
+  JTOT =    8   IBLOCK =   2   ENERGY(   1) =  6.95034570000E-10 CM-1 =   1.00000000000E-09 K
+
+  EFV SET     4:  MAGNETIC Z FIELD =   171.5942056     GAUSS
+
+  ------------------------------- 85Rb-85Rb elastic pole characterisation in aa channel --------------------------------
+
+  JTOT =    8   IBLOCK =   2   ENERGY(   1) =  6.95034570000E-10 CM-1 =   1.00000000000E-09 K
+
+  EFV SET     5:  MAGNETIC Z FIELD =   171.5642802     GAUSS
+
+  ------------------------------- 85Rb-85Rb elastic pole characterisation in aa channel --------------------------------
+
+  JTOT =    8   IBLOCK =   2   ENERGY(   1) =  6.95034570000E-10 CM-1 =   1.00000000000E-09 K
+
+  EFV SET     6:  MAGNETIC Z FIELD =   171.5603348     GAUSS
+
+  ------------------------------- 85Rb-85Rb elastic pole characterisation in aa channel --------------------------------
+
+  JTOT =    8   IBLOCK =   2   ENERGY(   1) =  6.95034570000E-10 CM-1 =   1.00000000000E-09 K
+
+  EFV SET     7:  MAGNETIC Z FIELD =   171.5604789     GAUSS
+
+  ------------------------------- 85Rb-85Rb elastic pole characterisation in aa channel --------------------------------
+
+  JTOT =    8   IBLOCK =   2   ENERGY(   1) =  6.95034570000E-10 CM-1 =   1.00000000000E-09 K
+
+  EFV SET     8:  MAGNETIC Z FIELD =   171.5604823     GAUSS
+
+  ------------------------------- 85Rb-85Rb elastic pole characterisation in aa channel --------------------------------
+
+  JTOT =    8   IBLOCK =   2   ENERGY(   1) =  6.95034570000E-10 CM-1 =   1.00000000000E-09 K
+
+  EFV SET     9:  MAGNETIC Z FIELD =   171.5604429     GAUSS
+
+  ------------------------------- 85Rb-85Rb elastic pole characterisation in aa channel --------------------------------
+
+  JTOT =    8   IBLOCK =   2   ENERGY(   1) =  6.95034570000E-10 CM-1 =   1.00000000000E-09 K
+
+  EFV SET    10:  MAGNETIC Z FIELD =   171.5604787     GAUSS
+
+  CONVERGED ON RESONANCE AT MAGNETIC Z FIELD_RES =   171.560478736 GAUSS, WITH LAST STEP =  1.38630E-09 GAUSS
+
+  ======================================================================================================================
+
+
+  ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
+ |                                                                            |
+ |                Non-reactive quantum scattering calculations                |
+ |                     on atomic and molecular collisions                     |
+ |                                                                            |
+ |              Copyright (C) 2018 J. M. Hutson & C. R. Le Sueur              |
+ |                                                                            |
+ |                               Version 2019.0 (beta)                        |
+ |                                                                            |
+ |                    This run used      15.64 cpu secs and                   |
+ |               6817 of the allocated   1000000 words of storage             |
+ |                                                                            |
+  ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
+  ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
+ |                                                                            |
+ |                Non-reactive quantum scattering calculations                |
+ |                     on atomic and molecular collisions                     |
+ |                                                                            |
+ |              Copyright (C) 2018 J. M. Hutson & C. R. Le Sueur              |
+ |                                                                            |
+ |                               Version 2019.0 (beta)                        |
+ |                                                                            |
+ |                       Run on 12 Nov 2018   at 15:03:33                     |
+ |                                                                            |
+  ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
+
+
+  This program is free software: you can redistribute it and/or modify it under
+  the terms of the GNU General Public License, version 3, as published by
+  the Free Software Foundation.
+
+  Publications resulting from the use of this program should refer to
+  J. M. Hutson & C. R. Le Sueur, MOLSCAT computer code 2019.0 (beta)       
+  or to the published paper in Computer Physics Communications when available.
+
+
+  PHYSICAL CONSTANTS OBTAINED FROM NIST CODATA TABULATION OF 2014
+
+  MEMORY ALLOCATED TO MAIN WORKING ARRAY IS   1000000 (8-BYTE) WORDS (    7.63 MB)
+  2 INTEGERS CAN BE STORED IN EACH WORD.
+
+  PRINT LEVEL =  2     OTHER PRINT CONTROLS  ISIGPR = 0
+
+  RUN LABEL = 85Rb-85Rb weakly decayed resonance characterisation in ee channel               
+
+  REDUCED MASS FOR INTERACTION =  42.455894869 ATOMIC MASS UNITS
+
+  ======================================================================================================================
+  ATOM - ATOM WITH NUC SP + MAG FL
+
+
+  ATOMS  WITH S = 1/2,  MU_S   =    2.002319 MU_B
+              I = 5/2,  MU_NUC =   -0.000294 MU_B
+         HYPERFINE SPLITTING =    3.035732, COUPLING CONST =    1.011911 GHZ
+
+  L UP TO    2
+  SPIN-SPIN TERM INCLUDED
+
+  INTERACTION TYPE IS  ATOM - ATOM WITH NUC SP + MAG FL
+
+  QUANTUM NUMBERS FOR INTERACTING PAIR:
+  THE BASIS FUNCTIONS ARE LABELLED BY A SET OF   4 PAIR STATE QUANTUM NUMBERS AND A VALUE OF L.
+  THE RESULTING BASIS SET IS ASYMPTOTICALLY NON-DIAGONAL.
+
+  THE SETS OF PAIR STATE QUANTUM NUMBERS ARE:
+
+      SET       ------ PAIR STATE QUANTUM NUMBERS ------
+                    2*MSA     2*MIA     2*MSB     2*MIB
+        1              -1        -5        -1        -5
+        2              -1        -3        -1        -5
+        3              -1        -3        -1        -3
+        4              -1        -1        -1        -5
+        5              -1        -1        -1        -3
+        6              -1        -1        -1        -1
+        7              -1         1        -1        -5
+        8              -1         1        -1        -3
+        9              -1         1        -1        -1
+       10              -1         1        -1         1
+       11              -1         3        -1        -5
+       12              -1         3        -1        -3
+       13              -1         3        -1        -1
+       14              -1         3        -1         1
+       15              -1         3        -1         3
+       16              -1         5        -1        -5
+       17              -1         5        -1        -3
+       18              -1         5        -1        -1
+       19              -1         5        -1         1
+       20              -1         5        -1         3
+       21              -1         5        -1         5
+       22               1        -5        -1        -5
+       23               1        -5        -1        -3
+       24               1        -5        -1        -1
+       25               1        -5        -1         1
+       26               1        -5        -1         3
+       27               1        -5        -1         5
+       28               1        -5         1        -5
+       29               1        -3        -1        -5
+       30               1        -3        -1        -3
+       31               1        -3        -1        -1
+       32               1        -3        -1         1
+       33               1        -3        -1         3
+       34               1        -3        -1         5
+       35               1        -3         1        -5
+       36               1        -3         1        -3
+       37               1        -1        -1        -5
+       38               1        -1        -1        -3
+       39               1        -1        -1        -1
+       40               1        -1        -1         1
+       41               1        -1        -1         3
+       42               1        -1        -1         5
+       43               1        -1         1        -5
+       44               1        -1         1        -3
+       45               1        -1         1        -1
+       46               1         1        -1        -5
+       47               1         1        -1        -3
+       48               1         1        -1        -1
+       49               1         1        -1         1
+       50               1         1        -1         3
+       51               1         1        -1         5
+       52               1         1         1        -5
+       53               1         1         1        -3
+       54               1         1         1        -1
+       55               1         1         1         1
+       56               1         3        -1        -5
+       57               1         3        -1        -3
+       58               1         3        -1        -1
+       59               1         3        -1         1
+       60               1         3        -1         3
+       61               1         3        -1         5
+       62               1         3         1        -5
+       63               1         3         1        -3
+       64               1         3         1        -1
+       65               1         3         1         1
+       66               1         3         1         3
+       67               1         5        -1        -5
+       68               1         5        -1        -3
+       69               1         5        -1        -1
+       70               1         5        -1         1
+       71               1         5        -1         3
+       72               1         5        -1         5
+       73               1         5         1        -5
+       74               1         5         1        -3
+       75               1         5         1        -1
+       76               1         5         1         1
+       77               1         5         1         3
+       78               1         5         1         5
+
+  ======================================================================================================================
+
+  THIS CALCULATION USES  1 EXTERNAL FIELD VARIABLE 
+
+  OFFSET BETWEEN EFV INDICES AND COUPLING MATRIX COEFFICIENT INDICES IS  1
+  GENERAL-PURPOSE POTENL ROUTINE (MAY 18)
+
+  *** POTENL. ITYPE =   9 CANNOT BE PROCESSED TO DETERMINE THE POTENTIAL EXPANSION LABELS
+
+  INTERACTION POTENTIAL FOR EXPANSION TERM NUMBER   1
+
+  JMH routine for Tiemann-style alkali dimer potentials
+  Rb2 potential from Strauss et al., PRA 82, 052514 (2010)               
+  For potential  1 at RLR =  11.00000000000    
+  gamma shifted from   5.317691181176    
+                  to   5.317691181176    
+  V =  -18.02609056020    
+  A(0)  shifted from  -3993.593189150     cm-1
+                  to  -3993.593189150     cm-1
+  For potential   1 at RSR =  3.126000000000     A
+  V =  -6.255737838933    cm-1, dV/dR =  -9257.490374248    cm-1/A and n =   4.533895000000    
+  B(SR) shifted from   1120053.629089     cm-1 A^n
+                  to   1120053.629089     cm-1 A^n
+  A(SR) shifted from  -6389.049099816     cm-1
+                  to  -6389.049099816     cm-1
+
+  INTERACTION POTENTIAL FOR EXPANSION TERM NUMBER   2
+
+  JMH routine for Tiemann-style alkali dimer potentials
+  Rb2 potential from Strauss et al., PRA 82, 052514 (2010)               
+  For potential  2 at RLR =  11.00000000000    
+  gamma shifted from   5.317691181176    
+                  to   5.317691181176    
+  V =  -17.12240051365    
+  A(0)  shifted from  -241.5036630329     cm-1
+                  to  -241.5036630329     cm-1
+  For potential   2 at RSR =  5.070000000000     A
+  V =  -10.77028535365    cm-1, dV/dR =  -543.9945779764    cm-1/A and n =   4.533895000000    
+  B(SR) shifted from   956231.6938206     cm-1 A^n
+                  to   956231.6938206     cm-1 A^n
+  A(SR) shifted from  -619.0888525768     cm-1
+                  to  -619.0888525768     cm-1
+
+  INTERACTION POTENTIAL FOR EXPANSION TERM NUMBER   3
+
+                -0.10023206E+01 * R ** -3
+                 0.91829168E+01 * EXP(   -0.7196 * R )
+
+  POTENL PROCESSING FINISHED.
+
+  UNITS FOR POTENTIAL ROUTINES:
+  POTENTIAL RETURNED IN UNITS OF EPSIL =       1.000000 CM-1
+  R                  IN UNITS OF RM    =       0.529177 ANGSTROMS
+
+  ALL LENGTHS ARE IN UNITS OF RM =  0.529177 ANGSTROM UNLESS OTHERWISE STATED
+
+  INTERACTION MATRIX USES   3 BLOCKS OF VL ARRAY FOR R-DEPENDENT TERMS IN POTENTIAL
+                            2                    FOR CONSTANT    TERMS IN POTENTIAL
+
+  IN TOTAL:  5 BLOCKS OF VL ARRAY ARE USED
+
+
+  ======================================================================================================================
+
+  PROPAGATION ALGORITHMS FOR COUPLED EQUATIONS SPECIFIED BY IPROPS =  6 AND IPROPL =  1
+
+  COUPLED EQUATIONS WILL BE PROPAGATED OUTWARDS IN 2 SEGMENTS
+  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+  SEGMENT 1 WILL BE PROPAGATED OUTWARDS
+
+  FROM RMIN   =      3.00  TO RMID   =     21.00
+
+  COUPLED EQUATIONS SOLVED BY DIABATIC MODIFIED LOG DERIVATIVE METHOD OF MANOLOPOULOS
+
+  PROPAGATION STEP SIZE DETERMINED USING DR =  2.000E-03
+
+  LOG-DERIVATIVE MATRIX WILL BE INITIALISED IN THE LOCAL EIGENBASIS FOR RMIN IN THE OUTWARDS PROPAGATION PART
+  LOCALLY CLOSED CHANNELS WILL BE INITIALISED WITH A WKB BOUNDARY CONDITION
+  LOCALLY OPEN CHANNELS WILL BE INITIALISED WITH THE VALUE  1.0000000E+08
+  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+  SEGMENT 2 WILL BE PROPAGATED OUTWARDS
+
+  FROM RMID   =     21.00  TO RMAX   =  15000.00
+
+  COUPLED EQUATIONS SOLVED BY VARIABLE STEP AIRY METHOD.
+  ALL PUBLICATIONS RESULTING FROM THE USE OF THIS PROPAGATOR SHOULD REFERENCE
+  M.H. ALEXANDER AND D.E. MANOLOPOULOS,  J CHEM PHYS 86, 2044 (1987).
+
+  INITIAL STEP SIZE TAKEN FROM DR       =  2.000E-03
+                             WITH TOLHI =  1.00E-07         POWRX = 6.0
+  TOLHI.LT.1  --  AIRY STEPS ADJUSTED TO MAINTAIN APPROX. ACCURACY VIA PERTURBATION THEORY AND POWRX.
+  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+  ======================================================================================================================
+
+  INPUT ENERGY VALUES CONVERTED FROM K
+  TO INTERNAL WORKING UNITS OF CM-1 DUE TO INTEGER INPUT =   2
+
+  INPUT ENERGY LIST IS
+                    6.950346E-10
+
+  CONTROL DATA FOR TOTAL ENERGIES.  CALCULATIONS WILL BE PERFORMED FOR   1 VALUE 
+       ENERGY NO.   1 =  6.95034570000E-10 CM-1 =  1.00000000000E-09 K       
+
+  ======================================================================================================================
+
+  PROGRAM WILL ATTEMPT TO CHARACTERISE RESONANCE IN SCATTERING LENGTH FOR CHANNEL   4 TO ACCURACY  1.00E-08 GAUSS
+  BETWEEN FLDMIN AND FLDMAX FOR MAGNETIC Z FIELD
+
+  USING FORMULA INCORPORATING WEAK  BACKGROUND INELASTICITY.
+  TOLMIN = 0.1000 AND TOLMAX = 1.0000
+
+                  MAGNETIC Z FIELD (GAUSS )
+  FLDMIN:             214.9800000    
+  FLDMAX:             215.3800000    
+
+  ======================================================================================================================
+
+  TOTAL ANGULAR MOMENTUM JTOT =  -8
+
+  EACH JTOT IS SPLIT INTO A MAXIMUM OF   2 DIFFERENT SYMMETRY BLOCKS
+
+  CALCULATION(S) WILL BE FOR SYMMETRY BLOCK   2
+
+  ======================================================================================================================
+
+  THESE ENERGY VALUES ARE RELATIVE TO THE REFERENCE ENERGY SPECIFIED BY MONOMER QUANTUM NUMBERS   4  -4   4  -4
+  THE REFERENCE ENERGY WILL BE CALCULATED FOR EVERY EFV SET
+
+  INITIALIZATION DONE.  TIME WAS   0.00 CPU SECS.       392 WORDS OF STORAGE USED.
+
+  ========================= 85Rb-85Rb weakly decayed resonance characterisation in ee channel ==========================
+
+  *******************************************  ANGULAR MOMENTUM JTOT  =  -8  *******************************************
+
+  IBLOCK =   2
+  IBLOCK =  2 SELECTS PARITY  1
+  MTOT = -8/2
+  BASIS SET GENERATED FOR TWO IDENTICAL BOSONS
+
+  JTOT =   -8   IBLOCK =   2   ENERGY(   1) =  6.95034570000E-10 CM-1 =   1.00000000000E-09 K
+
+  EFV SET     1:  MAGNETIC Z FIELD =   214.9800000     GAUSS
+  ** ESTIMATED CORRECTIONS LARGER THAN 5*TOLAI IN AIRPRP
+   CHECK FOR DISCONTINUITIES OR UNPHYSICAL OSCILLATIONS IN YOUR POTENTIAL
+   STEP    RNOW       DRNOW      CDIAG       COFF
+   1244  1.2019E+03  3.9689E+01  1.8010E-07  3.7279E-06
+
+  ------------------------- 85Rb-85Rb weakly decayed resonance characterisation in ee channel --------------------------
+
+  JTOT =   -8   IBLOCK =   2   ENERGY(   1) =  6.95034570000E-10 CM-1 =   1.00000000000E-09 K
+
+  EFV SET     2:  MAGNETIC Z FIELD =   215.3800000     GAUSS
+  ** ESTIMATED CORRECTIONS LARGER THAN 5*TOLAI IN AIRPRP
+   CHECK FOR DISCONTINUITIES OR UNPHYSICAL OSCILLATIONS IN YOUR POTENTIAL
+   STEP    RNOW       DRNOW      CDIAG       COFF
+   1244  1.2005E+03  3.9631E+01  1.4325E-07  4.5323E-06
+
+  ------------------------- 85Rb-85Rb weakly decayed resonance characterisation in ee channel --------------------------
+
+  JTOT =   -8   IBLOCK =   2   ENERGY(   1) =  6.95034570000E-10 CM-1 =   1.00000000000E-09 K
+
+  EFV SET     3:  MAGNETIC Z FIELD =   215.1800000     GAUSS
+  ** ESTIMATED CORRECTIONS LARGER THAN 5*TOLAI IN AIRPRP
+   CHECK FOR DISCONTINUITIES OR UNPHYSICAL OSCILLATIONS IN YOUR POTENTIAL
+   STEP    RNOW       DRNOW      CDIAG       COFF
+   1244  1.2012E+03  3.9661E+01  1.6676E-07  4.2224E-06
+
+  ------------------------- 85Rb-85Rb weakly decayed resonance characterisation in ee channel --------------------------
+
+  JTOT =   -8   IBLOCK =   2   ENERGY(   1) =  6.95034570000E-10 CM-1 =   1.00000000000E-09 K
+
+  EFV SET     4:  MAGNETIC Z FIELD =   215.0876566     GAUSS
+  ** ESTIMATED CORRECTIONS LARGER THAN 5*TOLAI IN AIRPRP
+   CHECK FOR DISCONTINUITIES OR UNPHYSICAL OSCILLATIONS IN YOUR POTENTIAL
+   STEP    RNOW       DRNOW      CDIAG       COFF
+   1244  1.2017E+03  3.9682E+01  1.9134E-07  3.0234E-06
+
+  ------------------------- 85Rb-85Rb weakly decayed resonance characterisation in ee channel --------------------------
+
+  JTOT =   -8   IBLOCK =   2   ENERGY(   1) =  6.95034570000E-10 CM-1 =   1.00000000000E-09 K
+
+  EFV SET     5:  MAGNETIC Z FIELD =   215.0852756     GAUSS
+  ** ESTIMATED CORRECTIONS LARGER THAN 5*TOLAI IN AIRPRP
+   CHECK FOR DISCONTINUITIES OR UNPHYSICAL OSCILLATIONS IN YOUR POTENTIAL
+   STEP    RNOW       DRNOW      CDIAG       COFF
+   1244  1.2017E+03  3.9683E+01  1.9233E-07  2.9418E-06
+
+  ------------------------- 85Rb-85Rb weakly decayed resonance characterisation in ee channel --------------------------
+
+  JTOT =   -8   IBLOCK =   2   ENERGY(   1) =  6.95034570000E-10 CM-1 =   1.00000000000E-09 K
+
+  EFV SET     6:  MAGNETIC Z FIELD =   215.0769500     GAUSS
+  ** ESTIMATED CORRECTIONS LARGER THAN 5*TOLAI IN AIRPRP
+   CHECK FOR DISCONTINUITIES OR UNPHYSICAL OSCILLATIONS IN YOUR POTENTIAL
+   STEP    RNOW       DRNOW      CDIAG       COFF
+   1244  1.2018E+03  3.9685E+01  1.9444E-07  2.7509E-06
+
+  ------------------------- 85Rb-85Rb weakly decayed resonance characterisation in ee channel --------------------------
+
+  JTOT =   -8   IBLOCK =   2   ENERGY(   1) =  6.95034570000E-10 CM-1 =   1.00000000000E-09 K
+
+  EFV SET     7:  MAGNETIC Z FIELD =   215.0860869     GAUSS
+  ** ESTIMATED CORRECTIONS LARGER THAN 5*TOLAI IN AIRPRP
+   CHECK FOR DISCONTINUITIES OR UNPHYSICAL OSCILLATIONS IN YOUR POTENTIAL
+   STEP    RNOW       DRNOW      CDIAG       COFF
+   1244  1.2017E+03  3.9682E+01  1.9200E-07  2.9696E-06
+
+  ------------------------- 85Rb-85Rb weakly decayed resonance characterisation in ee channel --------------------------
+
+  JTOT =   -8   IBLOCK =   2   ENERGY(   1) =  6.95034570000E-10 CM-1 =   1.00000000000E-09 K
+
+  EFV SET     8:  MAGNETIC Z FIELD =   215.0852561     GAUSS
+  ** ESTIMATED CORRECTIONS LARGER THAN 5*TOLAI IN AIRPRP
+   CHECK FOR DISCONTINUITIES OR UNPHYSICAL OSCILLATIONS IN YOUR POTENTIAL
+   STEP    RNOW       DRNOW      CDIAG       COFF
+   1244  1.2017E+03  3.9683E+01  1.9234E-07  2.9411E-06
+
+  CONVERGED ON RESONANCE AT MAGNETIC Z FIELD_RES =   215.085256105 GAUSS, WITH LAST STEP = -1.09139E-09 GAUSS
+
+  ======================================================================================================================
+
+
+  ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
+ |                                                                            |
+ |                Non-reactive quantum scattering calculations                |
+ |                     on atomic and molecular collisions                     |
+ |                                                                            |
+ |              Copyright (C) 2018 J. M. Hutson & C. R. Le Sueur              |
+ |                                                                            |
+ |                               Version 2019.0 (beta)                        |
+ |                                                                            |
+ |                    This run used      13.00 cpu secs and                   |
+ |               6817 of the allocated   1000000 words of storage             |
+ |                                                                            |
+  ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
+  ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
+ |                                                                            |
+ |                Non-reactive quantum scattering calculations                |
+ |                     on atomic and molecular collisions                     |
+ |                                                                            |
+ |              Copyright (C) 2018 J. M. Hutson & C. R. Le Sueur              |
+ |                                                                            |
+ |                               Version 2019.0 (beta)                        |
+ |                                                                            |
+ |                       Run on 12 Nov 2018   at 15:03:46                     |
+ |                                                                            |
+  ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
+
+
+  This program is free software: you can redistribute it and/or modify it under
+  the terms of the GNU General Public License, version 3, as published by
+  the Free Software Foundation.
+
+  Publications resulting from the use of this program should refer to
+  J. M. Hutson & C. R. Le Sueur, MOLSCAT computer code 2019.0 (beta)       
+  or to the published paper in Computer Physics Communications when available.
+
+
+  PHYSICAL CONSTANTS OBTAINED FROM NIST CODATA TABULATION OF 2014
+
+  MEMORY ALLOCATED TO MAIN WORKING ARRAY IS   1000000 (8-BYTE) WORDS (    7.63 MB)
+  2 INTEGERS CAN BE STORED IN EACH WORD.
+
+  PRINT LEVEL =  2     OTHER PRINT CONTROLS  ISIGPR = 0
+
+  RUN LABEL = 85Rb-85Rb quite strongly decayed resonance in ee channel                        
+
+  REDUCED MASS FOR INTERACTION =  42.455894869 ATOMIC MASS UNITS
+
+  ======================================================================================================================
+  ATOM - ATOM WITH NUC SP + MAG FL
+
+
+  ATOMS  WITH S = 1/2,  MU_S   =    2.002319 MU_B
+              I = 5/2,  MU_NUC =   -0.000294 MU_B
+         HYPERFINE SPLITTING =    3.035732, COUPLING CONST =    1.011911 GHZ
+
+  L UP TO    2
+  SPIN-SPIN TERM INCLUDED
+
+  INTERACTION TYPE IS  ATOM - ATOM WITH NUC SP + MAG FL
+
+  QUANTUM NUMBERS FOR INTERACTING PAIR:
+  THE BASIS FUNCTIONS ARE LABELLED BY A SET OF   4 PAIR STATE QUANTUM NUMBERS AND A VALUE OF L.
+  THE RESULTING BASIS SET IS ASYMPTOTICALLY NON-DIAGONAL.
+
+  THE SETS OF PAIR STATE QUANTUM NUMBERS ARE:
+
+      SET       ------ PAIR STATE QUANTUM NUMBERS ------
+                    2*MSA     2*MIA     2*MSB     2*MIB
+        1              -1        -5        -1        -5
+        2              -1        -3        -1        -5
+        3              -1        -3        -1        -3
+        4              -1        -1        -1        -5
+        5              -1        -1        -1        -3
+        6              -1        -1        -1        -1
+        7              -1         1        -1        -5
+        8              -1         1        -1        -3
+        9              -1         1        -1        -1
+       10              -1         1        -1         1
+       11              -1         3        -1        -5
+       12              -1         3        -1        -3
+       13              -1         3        -1        -1
+       14              -1         3        -1         1
+       15              -1         3        -1         3
+       16              -1         5        -1        -5
+       17              -1         5        -1        -3
+       18              -1         5        -1        -1
+       19              -1         5        -1         1
+       20              -1         5        -1         3
+       21              -1         5        -1         5
+       22               1        -5        -1        -5
+       23               1        -5        -1        -3
+       24               1        -5        -1        -1
+       25               1        -5        -1         1
+       26               1        -5        -1         3
+       27               1        -5        -1         5
+       28               1        -5         1        -5
+       29               1        -3        -1        -5
+       30               1        -3        -1        -3
+       31               1        -3        -1        -1
+       32               1        -3        -1         1
+       33               1        -3        -1         3
+       34               1        -3        -1         5
+       35               1        -3         1        -5
+       36               1        -3         1        -3
+       37               1        -1        -1        -5
+       38               1        -1        -1        -3
+       39               1        -1        -1        -1
+       40               1        -1        -1         1
+       41               1        -1        -1         3
+       42               1        -1        -1         5
+       43               1        -1         1        -5
+       44               1        -1         1        -3
+       45               1        -1         1        -1
+       46               1         1        -1        -5
+       47               1         1        -1        -3
+       48               1         1        -1        -1
+       49               1         1        -1         1
+       50               1         1        -1         3
+       51               1         1        -1         5
+       52               1         1         1        -5
+       53               1         1         1        -3
+       54               1         1         1        -1
+       55               1         1         1         1
+       56               1         3        -1        -5
+       57               1         3        -1        -3
+       58               1         3        -1        -1
+       59               1         3        -1         1
+       60               1         3        -1         3
+       61               1         3        -1         5
+       62               1         3         1        -5
+       63               1         3         1        -3
+       64               1         3         1        -1
+       65               1         3         1         1
+       66               1         3         1         3
+       67               1         5        -1        -5
+       68               1         5        -1        -3
+       69               1         5        -1        -1
+       70               1         5        -1         1
+       71               1         5        -1         3
+       72               1         5        -1         5
+       73               1         5         1        -5
+       74               1         5         1        -3
+       75               1         5         1        -1
+       76               1         5         1         1
+       77               1         5         1         3
+       78               1         5         1         5
+
+  ======================================================================================================================
+
+  THIS CALCULATION USES  1 EXTERNAL FIELD VARIABLE 
+
+  OFFSET BETWEEN EFV INDICES AND COUPLING MATRIX COEFFICIENT INDICES IS  1
+  GENERAL-PURPOSE POTENL ROUTINE (MAY 18)
+
+  *** POTENL. ITYPE =   9 CANNOT BE PROCESSED TO DETERMINE THE POTENTIAL EXPANSION LABELS
+
+  INTERACTION POTENTIAL FOR EXPANSION TERM NUMBER   1
+
+  JMH routine for Tiemann-style alkali dimer potentials
+  Rb2 potential from Strauss et al., PRA 82, 052514 (2010)               
+  For potential  1 at RLR =  11.00000000000    
+  gamma shifted from   5.317691181176    
+                  to   5.317691181176    
+  V =  -18.02609056020    
+  A(0)  shifted from  -3993.593189150     cm-1
+                  to  -3993.593189150     cm-1
+  For potential   1 at RSR =  3.126000000000     A
+  V =  -6.255737838933    cm-1, dV/dR =  -9257.490374248    cm-1/A and n =   4.533895000000    
+  B(SR) shifted from   1120053.629089     cm-1 A^n
+                  to   1120053.629089     cm-1 A^n
+  A(SR) shifted from  -6389.049099816     cm-1
+                  to  -6389.049099816     cm-1
+
+  INTERACTION POTENTIAL FOR EXPANSION TERM NUMBER   2
+
+  JMH routine for Tiemann-style alkali dimer potentials
+  Rb2 potential from Strauss et al., PRA 82, 052514 (2010)               
+  For potential  2 at RLR =  11.00000000000    
+  gamma shifted from   5.317691181176    
+                  to   5.317691181176    
+  V =  -17.12240051365    
+  A(0)  shifted from  -241.5036630329     cm-1
+                  to  -241.5036630329     cm-1
+  For potential   2 at RSR =  5.070000000000     A
+  V =  -10.77028535365    cm-1, dV/dR =  -543.9945779764    cm-1/A and n =   4.533895000000    
+  B(SR) shifted from   956231.6938206     cm-1 A^n
+                  to   956231.6938206     cm-1 A^n
+  A(SR) shifted from  -619.0888525768     cm-1
+                  to  -619.0888525768     cm-1
+
+  INTERACTION POTENTIAL FOR EXPANSION TERM NUMBER   3
+
+                -0.10023206E+01 * R ** -3
+                 0.91829168E+01 * EXP(   -0.7196 * R )
+
+  POTENL PROCESSING FINISHED.
+
+  UNITS FOR POTENTIAL ROUTINES:
+  POTENTIAL RETURNED IN UNITS OF EPSIL =       1.000000 CM-1
+  R                  IN UNITS OF RM    =       0.529177 ANGSTROMS
+
+  ALL LENGTHS ARE IN UNITS OF RM =  0.529177 ANGSTROM UNLESS OTHERWISE STATED
+
+  INTERACTION MATRIX USES   3 BLOCKS OF VL ARRAY FOR R-DEPENDENT TERMS IN POTENTIAL
+                            2                    FOR CONSTANT    TERMS IN POTENTIAL
+
+  IN TOTAL:  5 BLOCKS OF VL ARRAY ARE USED
+
+
+  ======================================================================================================================
+
+  PROPAGATION ALGORITHMS FOR COUPLED EQUATIONS SPECIFIED BY IPROPS =  6 AND IPROPL =  1
+
+  COUPLED EQUATIONS WILL BE PROPAGATED OUTWARDS IN 2 SEGMENTS
+  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+  SEGMENT 1 WILL BE PROPAGATED OUTWARDS
+
+  FROM RMIN   =      3.00  TO RMID   =     21.00
+
+  COUPLED EQUATIONS SOLVED BY DIABATIC MODIFIED LOG DERIVATIVE METHOD OF MANOLOPOULOS
+
+  PROPAGATION STEP SIZE DETERMINED USING DR =  2.000E-03
+
+  LOG-DERIVATIVE MATRIX WILL BE INITIALISED IN THE LOCAL EIGENBASIS FOR RMIN IN THE OUTWARDS PROPAGATION PART
+  LOCALLY CLOSED CHANNELS WILL BE INITIALISED WITH A WKB BOUNDARY CONDITION
+  LOCALLY OPEN CHANNELS WILL BE INITIALISED WITH THE VALUE  1.0000000E+08
+  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+  SEGMENT 2 WILL BE PROPAGATED OUTWARDS
+
+  FROM RMID   =     21.00  TO RMAX   =  15000.00
+
+  COUPLED EQUATIONS SOLVED BY VARIABLE STEP AIRY METHOD.
+  ALL PUBLICATIONS RESULTING FROM THE USE OF THIS PROPAGATOR SHOULD REFERENCE
+  M.H. ALEXANDER AND D.E. MANOLOPOULOS,  J CHEM PHYS 86, 2044 (1987).
+
+  INITIAL STEP SIZE TAKEN FROM DR       =  2.000E-03
+                             WITH TOLHI =  1.00E-07         POWRX = 6.0
+  TOLHI.LT.1  --  AIRY STEPS ADJUSTED TO MAINTAIN APPROX. ACCURACY VIA PERTURBATION THEORY AND POWRX.
+  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+  ======================================================================================================================
+
+  INPUT ENERGY VALUES CONVERTED FROM K
+  TO INTERNAL WORKING UNITS OF CM-1 DUE TO INTEGER INPUT =   2
+
+  INPUT ENERGY LIST IS
+                    6.950346E-10
+
+  CONTROL DATA FOR TOTAL ENERGIES.  CALCULATIONS WILL BE PERFORMED FOR   1 VALUE 
+       ENERGY NO.   1 =  6.95034570000E-10 CM-1 =  1.00000000000E-09 K       
+
+  ======================================================================================================================
+
+  PROGRAM WILL ATTEMPT TO CHARACTERISE RESONANCE IN SCATTERING LENGTH FOR CHANNEL   4 TO ACCURACY  1.00E-08 GAUSS
+  BETWEEN FLDMIN AND FLDMAX FOR MAGNETIC Z FIELD
+
+  USING FORMULA INCORPORATING WEAK  BACKGROUND INELASTICITY.
+  TOLMIN = 0.1000 AND TOLMAX = 1.0000
+
+                  MAGNETIC Z FIELD (GAUSS )
+  FLDMIN:             603.8700000    
+  FLDMAX:             604.2700000    
+
+  ======================================================================================================================
+
+  TOTAL ANGULAR MOMENTUM JTOT =  -8
+
+  EACH JTOT IS SPLIT INTO A MAXIMUM OF   2 DIFFERENT SYMMETRY BLOCKS
+
+  CALCULATION(S) WILL BE FOR SYMMETRY BLOCK   2
+
+  ======================================================================================================================
+
+  THESE ENERGY VALUES ARE RELATIVE TO THE REFERENCE ENERGY SPECIFIED BY MONOMER QUANTUM NUMBERS   4  -4   4  -4
+  THE REFERENCE ENERGY WILL BE CALCULATED FOR EVERY EFV SET
+
+  INITIALIZATION DONE.  TIME WAS   0.00 CPU SECS.       392 WORDS OF STORAGE USED.
+
+  ============================== 85Rb-85Rb quite strongly decayed resonance in ee channel ==============================
+
+  *******************************************  ANGULAR MOMENTUM JTOT  =  -8  *******************************************
+
+  IBLOCK =   2
+  IBLOCK =  2 SELECTS PARITY  1
+  MTOT = -8/2
+  BASIS SET GENERATED FOR TWO IDENTICAL BOSONS
+
+  JTOT =   -8   IBLOCK =   2   ENERGY(   1) =  6.95034570000E-10 CM-1 =   1.00000000000E-09 K
+
+  EFV SET     1:  MAGNETIC Z FIELD =   603.8700000     GAUSS
+
+  ------------------------------ 85Rb-85Rb quite strongly decayed resonance in ee channel ------------------------------
+
+  JTOT =   -8   IBLOCK =   2   ENERGY(   1) =  6.95034570000E-10 CM-1 =   1.00000000000E-09 K
+
+  EFV SET     2:  MAGNETIC Z FIELD =   604.2700000     GAUSS
+
+  ------------------------------ 85Rb-85Rb quite strongly decayed resonance in ee channel ------------------------------
+
+  JTOT =   -8   IBLOCK =   2   ENERGY(   1) =  6.95034570000E-10 CM-1 =   1.00000000000E-09 K
+
+  EFV SET     3:  MAGNETIC Z FIELD =   604.0700000     GAUSS
+
+  ------------------------------ 85Rb-85Rb quite strongly decayed resonance in ee channel ------------------------------
+
+  JTOT =   -8   IBLOCK =   2   ENERGY(   1) =  6.95034570000E-10 CM-1 =   1.00000000000E-09 K
+
+  EFV SET     4:  MAGNETIC Z FIELD =   603.9874070     GAUSS
+
+  ------------------------------ 85Rb-85Rb quite strongly decayed resonance in ee channel ------------------------------
+
+  JTOT =   -8   IBLOCK =   2   ENERGY(   1) =  6.95034570000E-10 CM-1 =   1.00000000000E-09 K
+
+  EFV SET     5:  MAGNETIC Z FIELD =   603.9777072     GAUSS
+
+  ------------------------------ 85Rb-85Rb quite strongly decayed resonance in ee channel ------------------------------
+
+  JTOT =   -8   IBLOCK =   2   ENERGY(   1) =  6.95034570000E-10 CM-1 =   1.00000000000E-09 K
+
+  EFV SET     6:  MAGNETIC Z FIELD =   603.9773603     GAUSS
+
+  ------------------------------ 85Rb-85Rb quite strongly decayed resonance in ee channel ------------------------------
+
+  JTOT =   -8   IBLOCK =   2   ENERGY(   1) =  6.95034570000E-10 CM-1 =   1.00000000000E-09 K
+
+  EFV SET     7:  MAGNETIC Z FIELD =   603.9773334     GAUSS
+
+  ------------------------------ 85Rb-85Rb quite strongly decayed resonance in ee channel ------------------------------
+
+  JTOT =   -8   IBLOCK =   2   ENERGY(   1) =  6.95034570000E-10 CM-1 =   1.00000000000E-09 K
+
+  EFV SET     8:  MAGNETIC Z FIELD =   603.9773614     GAUSS
+
+  CONVERGED ON RESONANCE AT MAGNETIC Z FIELD_RES =   603.977361422 GAUSS, WITH LAST STEP =  1.79045E-09 GAUSS
+
+  ======================================================================================================================
+
+
+  ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
+ |                                                                            |
+ |                Non-reactive quantum scattering calculations                |
+ |                     on atomic and molecular collisions                     |
+ |                                                                            |
+ |              Copyright (C) 2018 J. M. Hutson & C. R. Le Sueur              |
+ |                                                                            |
+ |                               Version 2019.0 (beta)                        |
+ |                                                                            |
+ |                    This run used      12.90 cpu secs and                   |
+ |               6817 of the allocated   1000000 words of storage             |
+ |                                                                            |
+  ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
+  ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
+ |                                                                            |
+ |                Non-reactive quantum scattering calculations                |
+ |                     on atomic and molecular collisions                     |
+ |                                                                            |
+ |              Copyright (C) 2018 J. M. Hutson & C. R. Le Sueur              |
+ |                                                                            |
+ |                               Version 2019.0 (beta)                        |
+ |                                                                            |
+ |                       Run on 12 Nov 2018   at 15:03:59                     |
+ |                                                                            |
+  ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
+
+
+  This program is free software: you can redistribute it and/or modify it under
+  the terms of the GNU General Public License, version 3, as published by
+  the Free Software Foundation.
+
+  Publications resulting from the use of this program should refer to
+  J. M. Hutson & C. R. Le Sueur, MOLSCAT computer code 2019.0 (beta)       
+  or to the published paper in Computer Physics Communications when available.
+
+
+  PHYSICAL CONSTANTS OBTAINED FROM NIST CODATA TABULATION OF 2014
+
+  MEMORY ALLOCATED TO MAIN WORKING ARRAY IS   1000000 (8-BYTE) WORDS (    7.63 MB)
+  2 INTEGERS CAN BE STORED IN EACH WORD.
+
+  PRINT LEVEL =  2     OTHER PRINT CONTROLS  ISIGPR = 0
+
+  RUN LABEL = 85Rb-85Rb strongly decayed resonance characterisation in kk channel             
+
+  REDUCED MASS FOR INTERACTION =  42.455894869 ATOMIC MASS UNITS
+
+  ======================================================================================================================
+  ATOM - ATOM WITH NUC SP + MAG FL
+
+
+  ATOMS  WITH S = 1/2,  MU_S   =    2.002319 MU_B
+              I = 5/2,  MU_NUC =   -0.000294 MU_B
+         HYPERFINE SPLITTING =    3.035732, COUPLING CONST =    1.011911 GHZ
+
+  L UP TO    2
+  SPIN-SPIN TERM INCLUDED
+
+  INTERACTION TYPE IS  ATOM - ATOM WITH NUC SP + MAG FL
+
+  QUANTUM NUMBERS FOR INTERACTING PAIR:
+  THE BASIS FUNCTIONS ARE LABELLED BY A SET OF   4 PAIR STATE QUANTUM NUMBERS AND A VALUE OF L.
+  THE RESULTING BASIS SET IS ASYMPTOTICALLY NON-DIAGONAL.
+
+  THE SETS OF PAIR STATE QUANTUM NUMBERS ARE:
+
+      SET       ------ PAIR STATE QUANTUM NUMBERS ------
+                    2*MSA     2*MIA     2*MSB     2*MIB
+        1              -1        -5        -1        -5
+        2              -1        -3        -1        -5
+        3              -1        -3        -1        -3
+        4              -1        -1        -1        -5
+        5              -1        -1        -1        -3
+        6              -1        -1        -1        -1
+        7              -1         1        -1        -5
+        8              -1         1        -1        -3
+        9              -1         1        -1        -1
+       10              -1         1        -1         1
+       11              -1         3        -1        -5
+       12              -1         3        -1        -3
+       13              -1         3        -1        -1
+       14              -1         3        -1         1
+       15              -1         3        -1         3
+       16              -1         5        -1        -5
+       17              -1         5        -1        -3
+       18              -1         5        -1        -1
+       19              -1         5        -1         1
+       20              -1         5        -1         3
+       21              -1         5        -1         5
+       22               1        -5        -1        -5
+       23               1        -5        -1        -3
+       24               1        -5        -1        -1
+       25               1        -5        -1         1
+       26               1        -5        -1         3
+       27               1        -5        -1         5
+       28               1        -5         1        -5
+       29               1        -3        -1        -5
+       30               1        -3        -1        -3
+       31               1        -3        -1        -1
+       32               1        -3        -1         1
+       33               1        -3        -1         3
+       34               1        -3        -1         5
+       35               1        -3         1        -5
+       36               1        -3         1        -3
+       37               1        -1        -1        -5
+       38               1        -1        -1        -3
+       39               1        -1        -1        -1
+       40               1        -1        -1         1
+       41               1        -1        -1         3
+       42               1        -1        -1         5
+       43               1        -1         1        -5
+       44               1        -1         1        -3
+       45               1        -1         1        -1
+       46               1         1        -1        -5
+       47               1         1        -1        -3
+       48               1         1        -1        -1
+       49               1         1        -1         1
+       50               1         1        -1         3
+       51               1         1        -1         5
+       52               1         1         1        -5
+       53               1         1         1        -3
+       54               1         1         1        -1
+       55               1         1         1         1
+       56               1         3        -1        -5
+       57               1         3        -1        -3
+       58               1         3        -1        -1
+       59               1         3        -1         1
+       60               1         3        -1         3
+       61               1         3        -1         5
+       62               1         3         1        -5
+       63               1         3         1        -3
+       64               1         3         1        -1
+       65               1         3         1         1
+       66               1         3         1         3
+       67               1         5        -1        -5
+       68               1         5        -1        -3
+       69               1         5        -1        -1
+       70               1         5        -1         1
+       71               1         5        -1         3
+       72               1         5        -1         5
+       73               1         5         1        -5
+       74               1         5         1        -3
+       75               1         5         1        -1
+       76               1         5         1         1
+       77               1         5         1         3
+       78               1         5         1         5
+
+  ======================================================================================================================
+
+  THIS CALCULATION USES  1 EXTERNAL FIELD VARIABLE 
+
+  OFFSET BETWEEN EFV INDICES AND COUPLING MATRIX COEFFICIENT INDICES IS  1
+  GENERAL-PURPOSE POTENL ROUTINE (MAY 18)
+
+  *** POTENL. ITYPE =   9 CANNOT BE PROCESSED TO DETERMINE THE POTENTIAL EXPANSION LABELS
+
+  INTERACTION POTENTIAL FOR EXPANSION TERM NUMBER   1
+
+  JMH routine for Tiemann-style alkali dimer potentials
+  Rb2 potential from Strauss et al., PRA 82, 052514 (2010)               
+  For potential  1 at RLR =  11.00000000000    
+  gamma shifted from   5.317691181176    
+                  to   5.317691181176    
+  V =  -18.02609056020    
+  A(0)  shifted from  -3993.593189150     cm-1
+                  to  -3993.593189150     cm-1
+  For potential   1 at RSR =  3.126000000000     A
+  V =  -6.255737838933    cm-1, dV/dR =  -9257.490374248    cm-1/A and n =   4.533895000000    
+  B(SR) shifted from   1120053.629089     cm-1 A^n
+                  to   1120053.629089     cm-1 A^n
+  A(SR) shifted from  -6389.049099816     cm-1
+                  to  -6389.049099816     cm-1
+
+  INTERACTION POTENTIAL FOR EXPANSION TERM NUMBER   2
+
+  JMH routine for Tiemann-style alkali dimer potentials
+  Rb2 potential from Strauss et al., PRA 82, 052514 (2010)               
+  For potential  2 at RLR =  11.00000000000    
+  gamma shifted from   5.317691181176    
+                  to   5.317691181176    
+  V =  -17.12240051365    
+  A(0)  shifted from  -241.5036630329     cm-1
+                  to  -241.5036630329     cm-1
+  For potential   2 at RSR =  5.070000000000     A
+  V =  -10.77028535365    cm-1, dV/dR =  -543.9945779764    cm-1/A and n =   4.533895000000    
+  B(SR) shifted from   956231.6938206     cm-1 A^n
+                  to   956231.6938206     cm-1 A^n
+  A(SR) shifted from  -619.0888525768     cm-1
+                  to  -619.0888525768     cm-1
+
+  INTERACTION POTENTIAL FOR EXPANSION TERM NUMBER   3
+
+                -0.10023206E+01 * R ** -3
+                 0.91829168E+01 * EXP(   -0.7196 * R )
+
+  POTENL PROCESSING FINISHED.
+
+  UNITS FOR POTENTIAL ROUTINES:
+  POTENTIAL RETURNED IN UNITS OF EPSIL =       1.000000 CM-1
+  R                  IN UNITS OF RM    =       0.529177 ANGSTROMS
+
+  ALL LENGTHS ARE IN UNITS OF RM =  0.529177 ANGSTROM UNLESS OTHERWISE STATED
+
+  INTERACTION MATRIX USES   3 BLOCKS OF VL ARRAY FOR R-DEPENDENT TERMS IN POTENTIAL
+                            2                    FOR CONSTANT    TERMS IN POTENTIAL
+
+  IN TOTAL:  5 BLOCKS OF VL ARRAY ARE USED
+
+
+  ======================================================================================================================
+
+  PROPAGATION ALGORITHMS FOR COUPLED EQUATIONS SPECIFIED BY IPROPS =  6 AND IPROPL =  1
+
+  COUPLED EQUATIONS WILL BE PROPAGATED OUTWARDS IN 2 SEGMENTS
+  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+  SEGMENT 1 WILL BE PROPAGATED OUTWARDS
+
+  FROM RMIN   =      3.00  TO RMID   =     21.00
+
+  COUPLED EQUATIONS SOLVED BY DIABATIC MODIFIED LOG DERIVATIVE METHOD OF MANOLOPOULOS
+
+  PROPAGATION STEP SIZE DETERMINED USING DR =  2.000E-03
+
+  LOG-DERIVATIVE MATRIX WILL BE INITIALISED IN THE LOCAL EIGENBASIS FOR RMIN IN THE OUTWARDS PROPAGATION PART
+  LOCALLY CLOSED CHANNELS WILL BE INITIALISED WITH A WKB BOUNDARY CONDITION
+  LOCALLY OPEN CHANNELS WILL BE INITIALISED WITH THE VALUE  1.0000000E+08
+  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+  SEGMENT 2 WILL BE PROPAGATED OUTWARDS
+
+  FROM RMID   =     21.00  TO RMAX   =  15000.00
+
+  COUPLED EQUATIONS SOLVED BY VARIABLE STEP AIRY METHOD.
+  ALL PUBLICATIONS RESULTING FROM THE USE OF THIS PROPAGATOR SHOULD REFERENCE
+  M.H. ALEXANDER AND D.E. MANOLOPOULOS,  J CHEM PHYS 86, 2044 (1987).
+
+  INITIAL STEP SIZE TAKEN FROM DR       =  2.000E-03
+                             WITH TOLHI =  1.00E-07         POWRX = 6.0
+  TOLHI.LT.1  --  AIRY STEPS ADJUSTED TO MAINTAIN APPROX. ACCURACY VIA PERTURBATION THEORY AND POWRX.
+  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+  ======================================================================================================================
+
+  INPUT ENERGY VALUES CONVERTED FROM K
+  TO INTERNAL WORKING UNITS OF CM-1 DUE TO INTEGER INPUT =   2
+
+  INPUT ENERGY LIST IS
+                    6.950346E-10
+
+  CONTROL DATA FOR TOTAL ENERGIES.  CALCULATIONS WILL BE PERFORMED FOR   1 VALUE 
+       ENERGY NO.   1 =  6.95034570000E-10 CM-1 =  1.00000000000E-09 K       
+
+  ======================================================================================================================
+
+  PROGRAM WILL ATTEMPT TO CHARACTERISE RESONANCE IN SCATTERING LENGTH FOR CHANNEL  25 TO ACCURACY  1.00E-08 GAUSS
+  BETWEEN FLDMIN AND FLDMAX FOR MAGNETIC Z FIELD
+
+  USING FULL TREATMENT OF INELASTIC RESONANCE
+  TOLMIN = 0.1000 AND TOLMAX = 1.0000
+
+                  MAGNETIC Z FIELD (GAUSS )
+  FLDMIN:             171.7400000    
+  FLDMAX:             172.1400000    
+
+  ======================================================================================================================
+
+  TOTAL ANGULAR MOMENTUM JTOT =   8
+
+  EACH JTOT IS SPLIT INTO A MAXIMUM OF   2 DIFFERENT SYMMETRY BLOCKS
+
+  CALCULATION(S) WILL BE FOR SYMMETRY BLOCK   2
+
+  ======================================================================================================================
+
+  THESE ENERGY VALUES ARE RELATIVE TO THE REFERENCE ENERGY SPECIFIED BY MONOMER QUANTUM NUMBERS   6   4   6   4
+  THE REFERENCE ENERGY WILL BE CALCULATED FOR EVERY EFV SET
+
+  INITIALIZATION DONE.  TIME WAS   0.00 CPU SECS.       392 WORDS OF STORAGE USED.
+
+  ======================== 85Rb-85Rb strongly decayed resonance characterisation in kk channel =========================
+
+  *******************************************  ANGULAR MOMENTUM JTOT  =   8  *******************************************
+
+  IBLOCK =   2
+  IBLOCK =  2 SELECTS PARITY  1
+  MTOT =  8/2
+  BASIS SET GENERATED FOR TWO IDENTICAL BOSONS
+
+  JTOT =    8   IBLOCK =   2   ENERGY(   1) =  6.95034570000E-10 CM-1 =   1.00000000000E-09 K
+
+  EFV SET     1:  MAGNETIC Z FIELD =   171.7400000     GAUSS
+
+  ------------------------ 85Rb-85Rb strongly decayed resonance characterisation in kk channel -------------------------
+
+  JTOT =    8   IBLOCK =   2   ENERGY(   1) =  6.95034570000E-10 CM-1 =   1.00000000000E-09 K
+
+  EFV SET     2:  MAGNETIC Z FIELD =   172.1400000     GAUSS
+
+  ------------------------ 85Rb-85Rb strongly decayed resonance characterisation in kk channel -------------------------
+
+  JTOT =    8   IBLOCK =   2   ENERGY(   1) =  6.95034570000E-10 CM-1 =   1.00000000000E-09 K
+
+  EFV SET     3:  MAGNETIC Z FIELD =   171.9400000     GAUSS
+
+  ------------------------ 85Rb-85Rb strongly decayed resonance characterisation in kk channel -------------------------
+
+  JTOT =    8   IBLOCK =   2   ENERGY(   1) =  6.95034570000E-10 CM-1 =   1.00000000000E-09 K
+
+  EFV SET     4:  MAGNETIC Z FIELD =   171.9099545     GAUSS
+
+  ------------------------ 85Rb-85Rb strongly decayed resonance characterisation in kk channel -------------------------
+
+  JTOT =    8   IBLOCK =   2   ENERGY(   1) =  6.95034570000E-10 CM-1 =   1.00000000000E-09 K
+
+  EFV SET     5:  MAGNETIC Z FIELD =   171.8585853     GAUSS
+
+  ------------------------ 85Rb-85Rb strongly decayed resonance characterisation in kk channel -------------------------
+
+  JTOT =    8   IBLOCK =   2   ENERGY(   1) =  6.95034570000E-10 CM-1 =   1.00000000000E-09 K
+
+  EFV SET     6:  MAGNETIC Z FIELD =   171.8415754     GAUSS
+
+  ------------------------ 85Rb-85Rb strongly decayed resonance characterisation in kk channel -------------------------
+
+  JTOT =    8   IBLOCK =   2   ENERGY(   1) =  6.95034570000E-10 CM-1 =   1.00000000000E-09 K
+
+  EFV SET     7:  MAGNETIC Z FIELD =   171.8437917     GAUSS
+
+  ------------------------ 85Rb-85Rb strongly decayed resonance characterisation in kk channel -------------------------
+
+  JTOT =    8   IBLOCK =   2   ENERGY(   1) =  6.95034570000E-10 CM-1 =   1.00000000000E-09 K
+
+  EFV SET     8:  MAGNETIC Z FIELD =   171.8476720     GAUSS
+
+  ------------------------ 85Rb-85Rb strongly decayed resonance characterisation in kk channel -------------------------
+
+  JTOT =    8   IBLOCK =   2   ENERGY(   1) =  6.95034570000E-10 CM-1 =   1.00000000000E-09 K
+
+  EFV SET     9:  MAGNETIC Z FIELD =   171.8433567     GAUSS
+
+  ------------------------ 85Rb-85Rb strongly decayed resonance characterisation in kk channel -------------------------
+
+  JTOT =    8   IBLOCK =   2   ENERGY(   1) =  6.95034570000E-10 CM-1 =   1.00000000000E-09 K
+
+  EFV SET    10:  MAGNETIC Z FIELD =   171.8437491     GAUSS
+
+  CONVERGED ON RESONANCE AT MAGNETIC Z FIELD_RES =   171.843749046 GAUSS, WITH LAST STEP = -8.01788E-09 GAUSS
+
+  ======================================================================================================================
+
+
+  ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
+ |                                                                            |
+ |                Non-reactive quantum scattering calculations                |
+ |                     on atomic and molecular collisions                     |
+ |                                                                            |
+ |              Copyright (C) 2018 J. M. Hutson & C. R. Le Sueur              |
+ |                                                                            |
+ |                               Version 2019.0 (beta)                        |
+ |                                                                            |
+ |                    This run used      15.40 cpu secs and                   |
+ |               6817 of the allocated   1000000 words of storage             |
+ |                                                                            |
+  ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
+  ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
+ |                                                                            |
+ |                Non-reactive quantum scattering calculations                |
+ |                     on atomic and molecular collisions                     |
+ |                                                                            |
+ |              Copyright (C) 2018 J. M. Hutson & C. R. Le Sueur              |
+ |                                                                            |
+ |                               Version 2019.0 (beta)                        |
+ |                                                                            |
+ |                       Run on 12 Nov 2018   at 15:04:14                     |
+ |                                                                            |
+  ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
+
+
+  This program is free software: you can redistribute it and/or modify it under
+  the terms of the GNU General Public License, version 3, as published by
+  the Free Software Foundation.
+
+  Publications resulting from the use of this program should refer to
+  J. M. Hutson & C. R. Le Sueur, MOLSCAT computer code 2019.0 (beta)       
+  or to the published paper in Computer Physics Communications when available.
+
+
+  PHYSICAL CONSTANTS OBTAINED FROM NIST CODATA TABULATION OF 2014
+
+  MEMORY ALLOCATED TO MAIN WORKING ARRAY IS   1000000 (8-BYTE) WORDS (    7.63 MB)
+  2 INTEGERS CAN BE STORED IN EACH WORD.
+
+  PRINT LEVEL =  1     OTHER PRINT CONTROLS  ISIGPR = 0
+
+  RUN LABEL = 85Rb-85Rb effective range across resonances in aa channel                       
+
+  REDUCED MASS FOR INTERACTION =  42.455894869 ATOMIC MASS UNITS
+
+  ***** WARNING - NO SCRATCH FILE SPECIFIED BY ISCRU PARAMETER - FULL CALCULATION WILL BE DONE AT EACH ENERGY
+
+  ======================================================================================================================
+  ATOM - ATOM WITH NUC SP + MAG FL
+
+
+  ATOMS  WITH S = 1/2,  MU_S   =    2.002319 MU_B
+              I = 5/2,  MU_NUC =   -0.000294 MU_B
+         HYPERFINE SPLITTING =    3.035732, COUPLING CONST =    1.011911 GHZ
+
+  L UP TO    2
+  SPIN-SPIN TERM INCLUDED
+
+  INTERACTION TYPE IS  ATOM - ATOM WITH NUC SP + MAG FL
+
+  QUANTUM NUMBERS FOR INTERACTING PAIR:
+  THE BASIS FUNCTIONS ARE LABELLED BY A SET OF   4 PAIR STATE QUANTUM NUMBERS AND A VALUE OF L.
+  THE RESULTING BASIS SET IS ASYMPTOTICALLY NON-DIAGONAL.
+
+  THE SETS OF PAIR STATE QUANTUM NUMBERS ARE:
+
+      SET       ------ PAIR STATE QUANTUM NUMBERS ------
+                    2*MSA     2*MIA     2*MSB     2*MIB
+        1              -1        -5        -1        -5
+        2              -1        -3        -1        -5
+        3              -1        -3        -1        -3
+        4              -1        -1        -1        -5
+        5              -1        -1        -1        -3
+        6              -1        -1        -1        -1
+        7              -1         1        -1        -5
+        8              -1         1        -1        -3
+        9              -1         1        -1        -1
+       10              -1         1        -1         1
+       11              -1         3        -1        -5
+       12              -1         3        -1        -3
+       13              -1         3        -1        -1
+       14              -1         3        -1         1
+       15              -1         3        -1         3
+       16              -1         5        -1        -5
+       17              -1         5        -1        -3
+       18              -1         5        -1        -1
+       19              -1         5        -1         1
+       20              -1         5        -1         3
+       21              -1         5        -1         5
+       22               1        -5        -1        -5
+       23               1        -5        -1        -3
+       24               1        -5        -1        -1
+       25               1        -5        -1         1
+       26               1        -5        -1         3
+       27               1        -5        -1         5
+       28               1        -5         1        -5
+       29               1        -3        -1        -5
+       30               1        -3        -1        -3
+       31               1        -3        -1        -1
+       32               1        -3        -1         1
+       33               1        -3        -1         3
+       34               1        -3        -1         5
+       35               1        -3         1        -5
+       36               1        -3         1        -3
+       37               1        -1        -1        -5
+       38               1        -1        -1        -3
+       39               1        -1        -1        -1
+       40               1        -1        -1         1
+       41               1        -1        -1         3
+       42               1        -1        -1         5
+       43               1        -1         1        -5
+       44               1        -1         1        -3
+       45               1        -1         1        -1
+       46               1         1        -1        -5
+       47               1         1        -1        -3
+       48               1         1        -1        -1
+       49               1         1        -1         1
+       50               1         1        -1         3
+       51               1         1        -1         5
+       52               1         1         1        -5
+       53               1         1         1        -3
+       54               1         1         1        -1
+       55               1         1         1         1
+       56               1         3        -1        -5
+       57               1         3        -1        -3
+       58               1         3        -1        -1
+       59               1         3        -1         1
+       60               1         3        -1         3
+       61               1         3        -1         5
+       62               1         3         1        -5
+       63               1         3         1        -3
+       64               1         3         1        -1
+       65               1         3         1         1
+       66               1         3         1         3
+       67               1         5        -1        -5
+       68               1         5        -1        -3
+       69               1         5        -1        -1
+       70               1         5        -1         1
+       71               1         5        -1         3
+       72               1         5        -1         5
+       73               1         5         1        -5
+       74               1         5         1        -3
+       75               1         5         1        -1
+       76               1         5         1         1
+       77               1         5         1         3
+       78               1         5         1         5
+
+  ======================================================================================================================
+
+  THIS CALCULATION USES  1 EXTERNAL FIELD VARIABLE 
+
+  OFFSET BETWEEN EFV INDICES AND COUPLING MATRIX COEFFICIENT INDICES IS  1
+  GENERAL-PURPOSE POTENL ROUTINE (MAY 18)
+
+  *** POTENL. ITYPE =   9 CANNOT BE PROCESSED TO DETERMINE THE POTENTIAL EXPANSION LABELS
+
+  INTERACTION POTENTIAL FOR EXPANSION TERM NUMBER   1
+
+  JMH routine for Tiemann-style alkali dimer potentials
+  Rb2 potential from Strauss et al., PRA 82, 052514 (2010)               
+  For potential  1 at RLR =  11.00000000000    
+  gamma shifted from   5.317691181176    
+                  to   5.317691181176    
+  V =  -18.02609056020    
+  A(0)  shifted from  -3993.593189150     cm-1
+                  to  -3993.593189150     cm-1
+  For potential   1 at RSR =  3.126000000000     A
+  V =  -6.255737838933    cm-1, dV/dR =  -9257.490374248    cm-1/A and n =   4.533895000000    
+  B(SR) shifted from   1120053.629089     cm-1 A^n
+                  to   1120053.629089     cm-1 A^n
+  A(SR) shifted from  -6389.049099816     cm-1
+                  to  -6389.049099816     cm-1
+
+  INTERACTION POTENTIAL FOR EXPANSION TERM NUMBER   2
+
+  JMH routine for Tiemann-style alkali dimer potentials
+  Rb2 potential from Strauss et al., PRA 82, 052514 (2010)               
+  For potential  2 at RLR =  11.00000000000    
+  gamma shifted from   5.317691181176    
+                  to   5.317691181176    
+  V =  -17.12240051365    
+  A(0)  shifted from  -241.5036630329     cm-1
+                  to  -241.5036630329     cm-1
+  For potential   2 at RSR =  5.070000000000     A
+  V =  -10.77028535365    cm-1, dV/dR =  -543.9945779764    cm-1/A and n =   4.533895000000    
+  B(SR) shifted from   956231.6938206     cm-1 A^n
+                  to   956231.6938206     cm-1 A^n
+  A(SR) shifted from  -619.0888525768     cm-1
+                  to  -619.0888525768     cm-1
+
+  INTERACTION POTENTIAL FOR EXPANSION TERM NUMBER   3
+
+                -0.10023206E+01 * R ** -3
+                 0.91829168E+01 * EXP(   -0.7196 * R )
+
+  POTENL PROCESSING FINISHED.
+
+  UNITS FOR POTENTIAL ROUTINES:
+  POTENTIAL RETURNED IN UNITS OF EPSIL =       1.000000 CM-1
+  R                  IN UNITS OF RM    =       0.529177 ANGSTROMS
+
+  ALL LENGTHS ARE IN UNITS OF RM =  0.529177 ANGSTROM UNLESS OTHERWISE STATED
+
+  INTERACTION MATRIX USES   3 BLOCKS OF VL ARRAY FOR R-DEPENDENT TERMS IN POTENTIAL
+                            2                    FOR CONSTANT    TERMS IN POTENTIAL
+
+  IN TOTAL:  5 BLOCKS OF VL ARRAY ARE USED
+
+
+  ======================================================================================================================
+
+  PROPAGATION ALGORITHMS FOR COUPLED EQUATIONS SPECIFIED BY IPROPS =  6 AND IPROPL =  1
+
+  COUPLED EQUATIONS WILL BE PROPAGATED OUTWARDS IN 2 SEGMENTS
+  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+  SEGMENT 1 WILL BE PROPAGATED OUTWARDS
+
+  FROM RMIN   =      3.00  TO RMID   =     21.00
+
+  COUPLED EQUATIONS SOLVED BY DIABATIC MODIFIED LOG DERIVATIVE METHOD OF MANOLOPOULOS
+
+  PROPAGATION STEP SIZE DETERMINED USING DR =  2.000E-03
+
+  LOG-DERIVATIVE MATRIX WILL BE INITIALISED IN THE LOCAL EIGENBASIS FOR RMIN IN THE OUTWARDS PROPAGATION PART
+  LOCALLY CLOSED CHANNELS WILL BE INITIALISED WITH A WKB BOUNDARY CONDITION
+  LOCALLY OPEN CHANNELS WILL BE INITIALISED WITH THE VALUE  1.0000000E+08
+  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+  SEGMENT 2 WILL BE PROPAGATED OUTWARDS
+
+  FROM RMID   =     21.00  TO RMAX   =  15000.00
+
+  COUPLED EQUATIONS SOLVED BY VARIABLE STEP AIRY METHOD.
+  ALL PUBLICATIONS RESULTING FROM THE USE OF THIS PROPAGATOR SHOULD REFERENCE
+  M.H. ALEXANDER AND D.E. MANOLOPOULOS,  J CHEM PHYS 86, 2044 (1987).
+
+  INITIAL STEP SIZE TAKEN FROM DR       =  2.000E-03
+                             WITH TOLHI =  1.00E-07         POWRX = 6.0
+  TOLHI.LT.1  --  AIRY STEPS ADJUSTED TO MAINTAIN APPROX. ACCURACY VIA PERTURBATION THEORY AND POWRX.
+  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+  ======================================================================================================================
+
+  INPUT ENERGY VALUES CONVERTED FROM K
+  TO INTERNAL WORKING UNITS OF CM-1 DUE TO INTEGER INPUT =   2
+
+  INPUT ENERGY LIST IS
+                    6.950346E-08    1.390069E-07
+
+  CONTROL DATA FOR TOTAL ENERGIES.  CALCULATIONS WILL BE PERFORMED FOR   2 VALUES
+       ENERGY NO.   1 =  6.95034570000E-08 CM-1 =  1.00000000000E-07 K       
+       ENERGY NO.   2 =  1.39006914000E-07 CM-1 =  2.00000000000E-07 K       
+
+  ======================================================================================================================
+
+  CONTROL DATA FOR EXTERNAL FIELD VARIABLES.  CALCULATIONS WILL BE PERFORMED FOR 101 SETS
+
+                  MAGNETIC Z FIELD (GAUSS )
+  SET     1:          800.0000000    
+  SET     2:          801.0000000    
+  SET     3:          802.0000000    
+  SET     4:          803.0000000    
+  SET     5:          804.0000000    
+  SET     6:          805.0000000    
+  SET     7:          806.0000000    
+  SET     8:          807.0000000    
+  SET     9:          808.0000000    
+  SET    10:          809.0000000    
+  SET    11:          810.0000000    
+  SET    12:          811.0000000    
+  SET    13:          812.0000000    
+  SET    14:          813.0000000    
+  SET    15:          814.0000000    
+  SET    16:          815.0000000    
+  SET    17:          816.0000000    
+  SET    18:          817.0000000    
+  SET    19:          818.0000000    
+  SET    20:          819.0000000    
+  SET    21:          820.0000000    
+  SET    22:          821.0000000    
+  SET    23:          822.0000000    
+  SET    24:          823.0000000    
+  SET    25:          824.0000000    
+  SET    26:          825.0000000    
+  SET    27:          826.0000000    
+  SET    28:          827.0000000    
+  SET    29:          828.0000000    
+  SET    30:          829.0000000    
+  SET    31:          830.0000000    
+  SET    32:          831.0000000    
+  SET    33:          832.0000000    
+  SET    34:          833.0000000    
+  SET    35:          834.0000000    
+  SET    36:          835.0000000    
+  SET    37:          836.0000000    
+  SET    38:          837.0000000    
+  SET    39:          838.0000000    
+  SET    40:          839.0000000    
+  SET    41:          840.0000000    
+  SET    42:          841.0000000    
+  SET    43:          842.0000000    
+  SET    44:          843.0000000    
+  SET    45:          844.0000000    
+  SET    46:          845.0000000    
+  SET    47:          846.0000000    
+  SET    48:          847.0000000    
+  SET    49:          848.0000000    
+  SET    50:          849.0000000    
+  SET    51:          850.0000000    
+  SET    52:          851.0000000    
+  SET    53:          852.0000000    
+  SET    54:          853.0000000    
+  SET    55:          854.0000000    
+  SET    56:          855.0000000    
+  SET    57:          856.0000000    
+  SET    58:          857.0000000    
+  SET    59:          858.0000000    
+  SET    60:          859.0000000    
+  SET    61:          860.0000000    
+  SET    62:          861.0000000    
+  SET    63:          862.0000000    
+  SET    64:          863.0000000    
+  SET    65:          864.0000000    
+  SET    66:          865.0000000    
+  SET    67:          866.0000000    
+  SET    68:          867.0000000    
+  SET    69:          868.0000000    
+  SET    70:          869.0000000    
+  SET    71:          870.0000000    
+  SET    72:          871.0000000    
+  SET    73:          872.0000000    
+  SET    74:          873.0000000    
+  SET    75:          874.0000000    
+  SET    76:          875.0000000    
+  SET    77:          876.0000000    
+  SET    78:          877.0000000    
+  SET    79:          878.0000000    
+  SET    80:          879.0000000    
+  SET    81:          880.0000000    
+  SET    82:          881.0000000    
+  SET    83:          882.0000000    
+  SET    84:          883.0000000    
+  SET    85:          884.0000000    
+  SET    86:          885.0000000    
+  SET    87:          886.0000000    
+  SET    88:          887.0000000    
+  SET    89:          888.0000000    
+  SET    90:          889.0000000    
+  SET    91:          890.0000000    
+  SET    92:          891.0000000    
+  SET    93:          892.0000000    
+  SET    94:          893.0000000    
+  SET    95:          894.0000000    
+  SET    96:          895.0000000    
+  SET    97:          896.0000000    
+  SET    98:          897.0000000    
+  SET    99:          898.0000000    
+  SET   100:          899.0000000    
+  SET   101:          900.0000000    
+
+  ======================================================================================================================
+
+  TOTAL ANGULAR MOMENTUM JTOT =   8
+
+  EACH JTOT IS SPLIT INTO A MAXIMUM OF   2 DIFFERENT SYMMETRY BLOCKS
+
+  CALCULATION(S) WILL BE FOR SYMMETRY BLOCK   2
+
+  ======================================================================================================================
+
+  THESE ENERGY VALUES ARE RELATIVE TO THE REFERENCE ENERGY SPECIFIED BY MONOMER QUANTUM NUMBERS   4   4   4   4
+  THE REFERENCE ENERGY WILL BE CALCULATED FOR EVERY EFV SET
+
+  INITIALIZATION DONE.  TIME WAS   0.00 CPU SECS.       392 WORDS OF STORAGE USED.
+
+  ============================= 85Rb-85Rb effective range across resonances in aa channel ==============================
+  IBLOCK =  2 SELECTS PARITY  1
+  MTOT =  8/2
+  BASIS SET GENERATED FOR TWO IDENTICAL BOSONS
+
+  EFV SET     1:  MAGNETIC Z FIELD =   800.0000000     GAUSS
+
+  EFFECTIVE RANGE FOR CHANNEL   1:
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   338.85     BOHR WITH 1/A(K=0) =  -0.2548662271E-02 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   335.57     BOHR WITH   A(K=0) =   -392.3544451     BOHR
+
+  EFV SET     2:  MAGNETIC Z FIELD =   801.0000000     GAUSS
+
+  EFFECTIVE RANGE FOR CHANNEL   1:
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   338.92     BOHR WITH 1/A(K=0) =  -0.2550156720E-02 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   335.65     BOHR WITH   A(K=0) =   -392.1245226     BOHR
+
+  EFV SET     3:  MAGNETIC Z FIELD =   802.0000000     GAUSS
+
+  EFFECTIVE RANGE FOR CHANNEL   1:
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   338.99     BOHR WITH 1/A(K=0) =  -0.2551706024E-02 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   335.72     BOHR WITH   A(K=0) =   -391.8864451     BOHR
+
+  EFV SET     4:  MAGNETIC Z FIELD =   803.0000000     GAUSS
+
+  EFFECTIVE RANGE FOR CHANNEL   1:
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   339.07     BOHR WITH 1/A(K=0) =  -0.2553314004E-02 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   335.80     BOHR WITH   A(K=0) =   -391.6396564     BOHR
+
+  EFV SET     5:  MAGNETIC Z FIELD =   804.0000000     GAUSS
+
+  EFFECTIVE RANGE FOR CHANNEL   1:
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   339.16     BOHR WITH 1/A(K=0) =  -0.2554985656E-02 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   335.88     BOHR WITH   A(K=0) =   -391.3834248     BOHR
+
+  EFV SET     6:  MAGNETIC Z FIELD =   805.0000000     GAUSS
+
+  EFFECTIVE RANGE FOR CHANNEL   1:
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   339.24     BOHR WITH 1/A(K=0) =  -0.2556726335E-02 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   335.97     BOHR WITH   A(K=0) =   -391.1169689     BOHR
+
+  EFV SET     7:  MAGNETIC Z FIELD =   806.0000000     GAUSS
+
+  EFFECTIVE RANGE FOR CHANNEL   1:
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   339.33     BOHR WITH 1/A(K=0) =  -0.2558542531E-02 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   336.06     BOHR WITH   A(K=0) =   -390.8393396     BOHR
+
+  EFV SET     8:  MAGNETIC Z FIELD =   807.0000000     GAUSS
+
+  EFFECTIVE RANGE FOR CHANNEL   1:
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   339.42     BOHR WITH 1/A(K=0) =  -0.2560442823E-02 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   336.15     BOHR WITH   A(K=0) =   -390.5492767     BOHR
+
+  EFV SET     9:  MAGNETIC Z FIELD =   808.0000000     GAUSS
+
+  EFFECTIVE RANGE FOR CHANNEL   1:
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   339.52     BOHR WITH 1/A(K=0) =  -0.2562438834E-02 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   336.25     BOHR WITH   A(K=0) =   -390.2450665     BOHR
+
+  EFV SET    10:  MAGNETIC Z FIELD =   809.0000000     GAUSS
+
+  EFFECTIVE RANGE FOR CHANNEL   1:
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   339.62     BOHR WITH 1/A(K=0) =  -0.2564552290E-02 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   336.35     BOHR WITH   A(K=0) =   -389.9234729     BOHR
+
+  EFV SET    11:  MAGNETIC Z FIELD =   810.0000000     GAUSS
+
+  EFFECTIVE RANGE FOR CHANNEL   1:
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   339.72     BOHR WITH 1/A(K=0) =  -0.2566858405E-02 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   336.46     BOHR WITH   A(K=0) =   -389.5731676     BOHR
+
+  EFV SET    12:  MAGNETIC Z FIELD =   811.0000000     GAUSS
+
+  EFFECTIVE RANGE FOR CHANNEL   1:
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   336.26     BOHR WITH 1/A(K=0) =  -0.2564155671E-02 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   333.06     BOHR WITH   A(K=0) =   -389.9839423     BOHR
+
+  EFV SET    13:  MAGNETIC Z FIELD =   812.0000000     GAUSS
+
+  EFFECTIVE RANGE FOR CHANNEL   1:
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   339.93     BOHR WITH 1/A(K=0) =  -0.2571155285E-02 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   336.66     BOHR WITH   A(K=0) =   -388.9221354     BOHR
+
+  EFV SET    14:  MAGNETIC Z FIELD =   813.0000000     GAUSS
+
+  EFFECTIVE RANGE FOR CHANNEL   1:
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   340.07     BOHR WITH 1/A(K=0) =  -0.2573886516E-02 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   336.80     BOHR WITH   A(K=0) =   -388.5094487     BOHR
+
+  EFV SET    15:  MAGNETIC Z FIELD =   814.0000000     GAUSS
+
+  EFFECTIVE RANGE FOR CHANNEL   1:
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   340.20     BOHR WITH 1/A(K=0) =  -0.2576766325E-02 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   336.94     BOHR WITH   A(K=0) =   -388.0752598     BOHR
+
+  EFV SET    16:  MAGNETIC Z FIELD =   815.0000000     GAUSS
+
+  EFFECTIVE RANGE FOR CHANNEL   1:
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   340.35     BOHR WITH 1/A(K=0) =  -0.2579925408E-02 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   337.09     BOHR WITH   A(K=0) =   -387.6000796     BOHR
+
+  EFV SET    17:  MAGNETIC Z FIELD =   816.0000000     GAUSS
+
+  EFFECTIVE RANGE FOR CHANNEL   1:
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   340.51     BOHR WITH 1/A(K=0) =  -0.2583531880E-02 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   337.25     BOHR WITH   A(K=0) =   -387.0590254     BOHR
+
+  EFV SET    18:  MAGNETIC Z FIELD =   817.0000000     GAUSS
+
+  EFFECTIVE RANGE FOR CHANNEL   1:
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   340.70     BOHR WITH 1/A(K=0) =  -0.2587977007E-02 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   337.44     BOHR WITH   A(K=0) =   -386.3942289     BOHR
+
+  EFV SET    19:  MAGNETIC Z FIELD =   818.0000000     GAUSS
+
+  EFFECTIVE RANGE FOR CHANNEL   1:
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   340.90     BOHR WITH 1/A(K=0) =  -0.2594613573E-02 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   337.65     BOHR WITH   A(K=0) =   -385.4059312     BOHR
+
+  EFV SET    20:  MAGNETIC Z FIELD =   819.0000000     GAUSS
+
+  EFFECTIVE RANGE FOR CHANNEL   1:
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   340.60     BOHR WITH 1/A(K=0) =  -0.2614320567E-02 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   337.38     BOHR WITH   A(K=0) =   -382.5008361     BOHR
+
+  EFV SET    21:  MAGNETIC Z FIELD =   820.0000000     GAUSS
+
+  EFFECTIVE RANGE FOR CHANNEL   1:
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   336.84     BOHR WITH 1/A(K=0) =  -0.2558815106E-02 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   333.62     BOHR WITH   A(K=0) =   -390.7978266     BOHR
+
+  EFV SET    22:  MAGNETIC Z FIELD =   821.0000000     GAUSS
+
+  EFFECTIVE RANGE FOR CHANNEL   1:
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   340.39     BOHR WITH 1/A(K=0) =  -0.2585403234E-02 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   337.13     BOHR WITH   A(K=0) =   -386.7788836     BOHR
+
+  EFV SET    23:  MAGNETIC Z FIELD =   822.0000000     GAUSS
+
+  EFFECTIVE RANGE FOR CHANNEL   1:
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   340.93     BOHR WITH 1/A(K=0) =  -0.2593355929E-02 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   337.67     BOHR WITH   A(K=0) =   -385.5928244     BOHR
+
+  EFV SET    24:  MAGNETIC Z FIELD =   823.0000000     GAUSS
+
+  EFFECTIVE RANGE FOR CHANNEL   1:
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   341.25     BOHR WITH 1/A(K=0) =  -0.2599161406E-02 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   337.99     BOHR WITH   A(K=0) =   -384.7315862     BOHR
+
+  EFV SET    25:  MAGNETIC Z FIELD =   824.0000000     GAUSS
+
+  EFFECTIVE RANGE FOR CHANNEL   1:
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   341.52     BOHR WITH 1/A(K=0) =  -0.2604473968E-02 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   338.27     BOHR WITH   A(K=0) =   -383.9468365     BOHR
+
+  EFV SET    26:  MAGNETIC Z FIELD =   825.0000000     GAUSS
+
+  EFFECTIVE RANGE FOR CHANNEL   1:
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   341.78     BOHR WITH 1/A(K=0) =  -0.2609757068E-02 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   338.53     BOHR WITH   A(K=0) =   -383.1696077     BOHR
+
+  EFV SET    27:  MAGNETIC Z FIELD =   826.0000000     GAUSS
+
+  EFFECTIVE RANGE FOR CHANNEL   1:
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   342.05     BOHR WITH 1/A(K=0) =  -0.2615212430E-02 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   338.80     BOHR WITH   A(K=0) =   -382.3703320     BOHR
+
+  EFV SET    28:  MAGNETIC Z FIELD =   827.0000000     GAUSS
+
+  EFFECTIVE RANGE FOR CHANNEL   1:
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   342.33     BOHR WITH 1/A(K=0) =  -0.2620960684E-02 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   339.08     BOHR WITH   A(K=0) =   -381.5317441     BOHR
+
+  EFV SET    29:  MAGNETIC Z FIELD =   828.0000000     GAUSS
+
+  EFFECTIVE RANGE FOR CHANNEL   1:
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   342.62     BOHR WITH 1/A(K=0) =  -0.2627095013E-02 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   339.37     BOHR WITH   A(K=0) =   -380.6408812     BOHR
+
+  EFV SET    30:  MAGNETIC Z FIELD =   829.0000000     GAUSS
+
+  EFFECTIVE RANGE FOR CHANNEL   1:
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   342.94     BOHR WITH 1/A(K=0) =  -0.2633701347E-02 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   339.69     BOHR WITH   A(K=0) =   -379.6861120     BOHR
+
+  EFV SET    31:  MAGNETIC Z FIELD =   830.0000000     GAUSS
+
+  EFFECTIVE RANGE FOR CHANNEL   1:
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   343.28     BOHR WITH 1/A(K=0) =  -0.2640869411E-02 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   340.04     BOHR WITH   A(K=0) =   -378.6555629     BOHR
+
+  EFV SET    32:  MAGNETIC Z FIELD =   831.0000000     GAUSS
+
+  EFFECTIVE RANGE FOR CHANNEL   1:
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   343.65     BOHR WITH 1/A(K=0) =  -0.2648699300E-02 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   340.41     BOHR WITH   A(K=0) =   -377.5362377     BOHR
+
+  EFV SET    33:  MAGNETIC Z FIELD =   832.0000000     GAUSS
+
+  EFFECTIVE RANGE FOR CHANNEL   1:
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   344.06     BOHR WITH 1/A(K=0) =  -0.2657307604E-02 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   340.82     BOHR WITH   A(K=0) =   -376.3132462     BOHR
+
+  EFV SET    34:  MAGNETIC Z FIELD =   833.0000000     GAUSS
+
+  EFFECTIVE RANGE FOR CHANNEL   1:
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   344.51     BOHR WITH 1/A(K=0) =  -0.2666834017E-02 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   341.28     BOHR WITH   A(K=0) =   -374.9690209     BOHR
+
+  EFV SET    35:  MAGNETIC Z FIELD =   834.0000000     GAUSS
+
+  EFFECTIVE RANGE FOR CHANNEL   1:
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   345.01     BOHR WITH 1/A(K=0) =  -0.2677449527E-02 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   341.78     BOHR WITH   A(K=0) =   -373.4823867     BOHR
+
+  EFV SET    36:  MAGNETIC Z FIELD =   835.0000000     GAUSS
+
+  EFFECTIVE RANGE FOR CHANNEL   1:
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   345.57     BOHR WITH 1/A(K=0) =  -0.2689367313E-02 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   342.34     BOHR WITH   A(K=0) =   -371.8273609     BOHR
+
+  EFV SET    37:  MAGNETIC Z FIELD =   836.0000000     GAUSS
+
+  EFFECTIVE RANGE FOR CHANNEL   1:
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   346.20     BOHR WITH 1/A(K=0) =  -0.2702857124E-02 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   342.98     BOHR WITH   A(K=0) =   -369.9716370     BOHR
+
+  EFV SET    38:  MAGNETIC Z FIELD =   837.0000000     GAUSS
+
+  EFFECTIVE RANGE FOR CHANNEL   1:
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   346.92     BOHR WITH 1/A(K=0) =  -0.2718266964E-02 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   343.70     BOHR WITH   A(K=0) =   -367.8743214     BOHR
+
+  EFV SET    39:  MAGNETIC Z FIELD =   838.0000000     GAUSS
+
+  EFFECTIVE RANGE FOR CHANNEL   1:
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   347.74     BOHR WITH 1/A(K=0) =  -0.2736053851E-02 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   344.53     BOHR WITH   A(K=0) =   -365.4828555     BOHR
+
+  EFV SET    40:  MAGNETIC Z FIELD =   839.0000000     GAUSS
+
+  EFFECTIVE RANGE FOR CHANNEL   1:
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   348.70     BOHR WITH 1/A(K=0) =  -0.2756830868E-02 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   345.49     BOHR WITH   A(K=0) =   -362.7284392     BOHR
+
+  EFV SET    41:  MAGNETIC Z FIELD =   840.0000000     GAUSS
+
+  EFFECTIVE RANGE FOR CHANNEL   1:
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   349.82     BOHR WITH 1/A(K=0) =  -0.2781440437E-02 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   346.62     BOHR WITH   A(K=0) =   -359.5191752     BOHR
+
+  EFV SET    42:  MAGNETIC Z FIELD =   841.0000000     GAUSS
+
+  EFFECTIVE RANGE FOR CHANNEL   1:
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   351.16     BOHR WITH 1/A(K=0) =  -0.2811073030E-02 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   347.97     BOHR WITH   A(K=0) =   -355.7294362     BOHR
+
+  EFV SET    43:  MAGNETIC Z FIELD =   842.0000000     GAUSS
+
+  EFFECTIVE RANGE FOR CHANNEL   1:
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   352.79     BOHR WITH 1/A(K=0) =  -0.2847467827E-02 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   349.61     BOHR WITH   A(K=0) =   -351.1828007     BOHR
+
+  EFV SET    44:  MAGNETIC Z FIELD =   843.0000000     GAUSS
+
+  EFFECTIVE RANGE FOR CHANNEL   1:
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   354.81     BOHR WITH 1/A(K=0) =  -0.2893270536E-02 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   351.64     BOHR WITH   A(K=0) =   -345.6234330     BOHR
+
+  EFV SET    45:  MAGNETIC Z FIELD =   844.0000000     GAUSS
+
+  EFFECTIVE RANGE FOR CHANNEL   1:
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   357.38     BOHR WITH 1/A(K=0) =  -0.2952713061E-02 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   354.24     BOHR WITH   A(K=0) =   -338.6656731     BOHR
+
+  EFV SET    46:  MAGNETIC Z FIELD =   845.0000000     GAUSS
+
+  EFFECTIVE RANGE FOR CHANNEL   1:
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   360.78     BOHR WITH 1/A(K=0) =  -0.3033011720E-02 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   357.66     BOHR WITH   A(K=0) =   -329.6997314     BOHR
+
+  EFV SET    47:  MAGNETIC Z FIELD =   846.0000000     GAUSS
+
+  EFFECTIVE RANGE FOR CHANNEL   1:
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   365.46     BOHR WITH 1/A(K=0) =  -0.3147562250E-02 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   362.37     BOHR WITH   A(K=0) =   -317.7010849     BOHR
+
+  EFV SET    48:  MAGNETIC Z FIELD =   847.0000000     GAUSS
+
+  EFFECTIVE RANGE FOR CHANNEL   1:
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   372.30     BOHR WITH 1/A(K=0) =  -0.3324355344E-02 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   369.27     BOHR WITH   A(K=0) =   -300.8057057     BOHR
+
+  EFV SET    49:  MAGNETIC Z FIELD =   848.0000000     GAUSS
+
+  EFFECTIVE RANGE FOR CHANNEL   1:
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   383.15     BOHR WITH 1/A(K=0) =  -0.3633297170E-02 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   380.21     BOHR WITH   A(K=0) =   -275.2284484     BOHR
+
+  EFV SET    50:  MAGNETIC Z FIELD =   849.0000000     GAUSS
+
+  EFFECTIVE RANGE FOR CHANNEL   1:
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   402.04     BOHR WITH 1/A(K=0) =  -0.4311615905E-02 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   399.31     BOHR WITH   A(K=0) =   -231.9291995     BOHR
+
+  EFV SET    51:  MAGNETIC Z FIELD =   850.0000000     GAUSS
+
+  EFFECTIVE RANGE FOR CHANNEL   1:
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   410.09     BOHR WITH 1/A(K=0) =  -0.7010370542E-02 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   408.34     BOHR WITH   A(K=0) =   -142.6452283     BOHR
+
+  EFV SET    52:  MAGNETIC Z FIELD =   851.0000000     GAUSS
+
+  EFFECTIVE RANGE FOR CHANNEL   1:
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS  -749.16     BOHR WITH 1/A(K=0) =   0.6702980797E-02 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS  -743.07     BOHR WITH   A(K=0) =    149.1851381     BOHR
+
+  EFV SET    53:  MAGNETIC Z FIELD =   852.0000000     GAUSS
+
+  EFFECTIVE RANGE FOR CHANNEL   1:
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   185.22     BOHR WITH 1/A(K=0) =  -0.2237209132E-03 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   174.73     BOHR WITH   A(K=0) =   -4466.388040     BOHR
+
+  EFV SET    54:  MAGNETIC Z FIELD =   853.0000000     GAUSS
+
+  EFFECTIVE RANGE FOR CHANNEL   1:
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   259.62     BOHR WITH 1/A(K=0) =  -0.1202047419E-02 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   255.58     BOHR WITH   A(K=0) =   -831.8680459     BOHR
+
+  EFV SET    55:  MAGNETIC Z FIELD =   854.0000000     GAUSS
+
+  EFFECTIVE RANGE FOR CHANNEL   1:
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   285.37     BOHR WITH 1/A(K=0) =  -0.1592763553E-02 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   281.67     BOHR WITH   A(K=0) =   -627.8156831     BOHR
+
+  EFV SET    56:  MAGNETIC Z FIELD =   855.0000000     GAUSS
+
+  EFFECTIVE RANGE FOR CHANNEL   1:
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   298.30     BOHR WITH 1/A(K=0) =  -0.1803099159E-02 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   294.72     BOHR WITH   A(K=0) =   -554.5826536     BOHR
+
+  EFV SET    57:  MAGNETIC Z FIELD =   856.0000000     GAUSS
+
+  EFFECTIVE RANGE FOR CHANNEL   1:
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   306.05     BOHR WITH 1/A(K=0) =  -0.1934604087E-02 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   302.54     BOHR WITH   A(K=0) =   -516.8862655     BOHR
+
+  EFV SET    58:  MAGNETIC Z FIELD =   857.0000000     GAUSS
+
+  EFFECTIVE RANGE FOR CHANNEL   1:
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   311.20     BOHR WITH 1/A(K=0) =  -0.2024645985E-02 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   307.74     BOHR WITH   A(K=0) =   -493.8996456     BOHR
+
+  EFV SET    59:  MAGNETIC Z FIELD =   858.0000000     GAUSS
+
+  EFFECTIVE RANGE FOR CHANNEL   1:
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   314.88     BOHR WITH 1/A(K=0) =  -0.2090197723E-02 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   311.44     BOHR WITH   A(K=0) =   -478.4107380     BOHR
+
+  EFV SET    60:  MAGNETIC Z FIELD =   859.0000000     GAUSS
+
+  EFFECTIVE RANGE FOR CHANNEL   1:
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   317.64     BOHR WITH 1/A(K=0) =  -0.2140080632E-02 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   314.22     BOHR WITH   A(K=0) =   -467.2598805     BOHR
+
+  EFV SET    61:  MAGNETIC Z FIELD =   860.0000000     GAUSS
+
+  EFFECTIVE RANGE FOR CHANNEL   1:
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   319.79     BOHR WITH 1/A(K=0) =  -0.2179333938E-02 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   316.38     BOHR WITH   A(K=0) =   -458.8440499     BOHR
+
+  EFV SET    62:  MAGNETIC Z FIELD =   861.0000000     GAUSS
+
+  EFFECTIVE RANGE FOR CHANNEL   1:
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   321.50     BOHR WITH 1/A(K=0) =  -0.2211045135E-02 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   318.11     BOHR WITH   A(K=0) =   -452.2634355     BOHR
+
+  EFV SET    63:  MAGNETIC Z FIELD =   862.0000000     GAUSS
+
+  EFFECTIVE RANGE FOR CHANNEL   1:
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   322.91     BOHR WITH 1/A(K=0) =  -0.2237211807E-02 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   319.52     BOHR WITH   A(K=0) =   -446.9738778     BOHR
+
+  EFV SET    64:  MAGNETIC Z FIELD =   863.0000000     GAUSS
+
+  EFFECTIVE RANGE FOR CHANNEL   1:
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   324.08     BOHR WITH 1/A(K=0) =  -0.2259183282E-02 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   320.70     BOHR WITH   A(K=0) =   -442.6270085     BOHR
+
+  EFV SET    65:  MAGNETIC Z FIELD =   864.0000000     GAUSS
+
+  EFFECTIVE RANGE FOR CHANNEL   1:
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   325.07     BOHR WITH 1/A(K=0) =  -0.2277904005E-02 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   321.70     BOHR WITH   A(K=0) =   -438.9894337     BOHR
+
+  EFV SET    66:  MAGNETIC Z FIELD =   865.0000000     GAUSS
+
+  EFFECTIVE RANGE FOR CHANNEL   1:
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   325.92     BOHR WITH 1/A(K=0) =  -0.2294054876E-02 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   322.56     BOHR WITH   A(K=0) =   -435.8989026     BOHR
+
+  EFV SET    67:  MAGNETIC Z FIELD =   866.0000000     GAUSS
+
+  EFFECTIVE RANGE FOR CHANNEL   1:
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   326.66     BOHR WITH 1/A(K=0) =  -0.2308138909E-02 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   323.30     BOHR WITH   A(K=0) =   -433.2391704     BOHR
+
+  EFV SET    68:  MAGNETIC Z FIELD =   867.0000000     GAUSS
+
+  EFFECTIVE RANGE FOR CHANNEL   1:
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   327.31     BOHR WITH 1/A(K=0) =  -0.2320536209E-02 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   323.96     BOHR WITH   A(K=0) =   -430.9246894     BOHR
+
+  EFV SET    69:  MAGNETIC Z FIELD =   868.0000000     GAUSS
+
+  EFFECTIVE RANGE FOR CHANNEL   1:
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   327.88     BOHR WITH 1/A(K=0) =  -0.2331538959E-02 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   324.53     BOHR WITH   A(K=0) =   -428.8911756     BOHR
+
+  EFV SET    70:  MAGNETIC Z FIELD =   869.0000000     GAUSS
+
+  EFFECTIVE RANGE FOR CHANNEL   1:
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   328.39     BOHR WITH 1/A(K=0) =  -0.2341375496E-02 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   325.05     BOHR WITH   A(K=0) =   -427.0893800     BOHR
+
+  EFV SET    71:  MAGNETIC Z FIELD =   870.0000000     GAUSS
+
+  EFFECTIVE RANGE FOR CHANNEL   1:
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   328.85     BOHR WITH 1/A(K=0) =  -0.2350227231E-02 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   325.51     BOHR WITH   A(K=0) =   -425.4808666     BOHR
+
+  EFV SET    72:  MAGNETIC Z FIELD =   871.0000000     GAUSS
+
+  EFFECTIVE RANGE FOR CHANNEL   1:
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   329.27     BOHR WITH 1/A(K=0) =  -0.2358239560E-02 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   325.93     BOHR WITH   A(K=0) =   -424.0352995     BOHR
+
+  EFV SET    73:  MAGNETIC Z FIELD =   872.0000000     GAUSS
+
+  EFFECTIVE RANGE FOR CHANNEL   1:
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   329.64     BOHR WITH 1/A(K=0) =  -0.2365530802E-02 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   326.31     BOHR WITH   A(K=0) =   -422.7283394     BOHR
+
+  EFV SET    74:  MAGNETIC Z FIELD =   873.0000000     GAUSS
+
+  EFFECTIVE RANGE FOR CHANNEL   1:
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   329.99     BOHR WITH 1/A(K=0) =  -0.2372197935E-02 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   326.66     BOHR WITH   A(K=0) =   -421.5402830     BOHR
+
+  EFV SET    75:  MAGNETIC Z FIELD =   874.0000000     GAUSS
+
+  EFFECTIVE RANGE FOR CHANNEL   1:
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   330.30     BOHR WITH 1/A(K=0) =  -0.2378321602E-02 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   326.97     BOHR WITH   A(K=0) =   -420.4549386     BOHR
+
+  EFV SET    76:  MAGNETIC Z FIELD =   875.0000000     GAUSS
+
+  EFFECTIVE RANGE FOR CHANNEL   1:
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   330.59     BOHR WITH 1/A(K=0) =  -0.2383968871E-02 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   327.26     BOHR WITH   A(K=0) =   -419.4589718     BOHR
+
+  EFV SET    77:  MAGNETIC Z FIELD =   876.0000000     GAUSS
+
+  EFFECTIVE RANGE FOR CHANNEL   1:
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   330.86     BOHR WITH 1/A(K=0) =  -0.2389196358E-02 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   327.53     BOHR WITH   A(K=0) =   -418.5412348     BOHR
+
+  EFV SET    78:  MAGNETIC Z FIELD =   877.0000000     GAUSS
+
+  EFFECTIVE RANGE FOR CHANNEL   1:
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   331.11     BOHR WITH 1/A(K=0) =  -0.2394052118E-02 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   327.78     BOHR WITH   A(K=0) =   -417.6923486     BOHR
+
+  EFV SET    79:  MAGNETIC Z FIELD =   878.0000000     GAUSS
+
+  EFFECTIVE RANGE FOR CHANNEL   1:
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   331.34     BOHR WITH 1/A(K=0) =  -0.2398577221E-02 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   328.02     BOHR WITH   A(K=0) =   -416.9043620     BOHR
+
+  EFV SET    80:  MAGNETIC Z FIELD =   879.0000000     GAUSS
+
+  EFFECTIVE RANGE FOR CHANNEL   1:
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   331.56     BOHR WITH 1/A(K=0) =  -0.2402806710E-02 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   328.23     BOHR WITH   A(K=0) =   -416.1705358     BOHR
+
+  EFV SET    81:  MAGNETIC Z FIELD =   880.0000000     GAUSS
+
+  EFFECTIVE RANGE FOR CHANNEL   1:
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   331.76     BOHR WITH 1/A(K=0) =  -0.2406771067E-02 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   328.44     BOHR WITH   A(K=0) =   -415.4850522     BOHR
+
+  EFV SET    82:  MAGNETIC Z FIELD =   881.0000000     GAUSS
+
+  EFFECTIVE RANGE FOR CHANNEL   1:
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   331.95     BOHR WITH 1/A(K=0) =  -0.2410496754E-02 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   328.63     BOHR WITH   A(K=0) =   -414.8428927     BOHR
+
+  EFV SET    83:  MAGNETIC Z FIELD =   882.0000000     GAUSS
+
+  EFFECTIVE RANGE FOR CHANNEL   1:
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   332.13     BOHR WITH 1/A(K=0) =  -0.2414006820E-02 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   328.81     BOHR WITH   A(K=0) =   -414.2397112     BOHR
+
+  EFV SET    84:  MAGNETIC Z FIELD =   883.0000000     GAUSS
+
+  EFFECTIVE RANGE FOR CHANNEL   1:
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   332.30     BOHR WITH 1/A(K=0) =  -0.2417321329E-02 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   328.98     BOHR WITH   A(K=0) =   -413.6717425     BOHR
+
+  EFV SET    85:  MAGNETIC Z FIELD =   884.0000000     GAUSS
+
+  EFFECTIVE RANGE FOR CHANNEL   1:
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   332.46     BOHR WITH 1/A(K=0) =  -0.2420458108E-02 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   329.14     BOHR WITH   A(K=0) =   -413.1356620     BOHR
+
+  EFV SET    86:  MAGNETIC Z FIELD =   885.0000000     GAUSS
+
+  EFFECTIVE RANGE FOR CHANNEL   1:
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   332.61     BOHR WITH 1/A(K=0) =  -0.2423432983E-02 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   329.29     BOHR WITH   A(K=0) =   -412.6285334     BOHR
+
+  EFV SET    87:  MAGNETIC Z FIELD =   886.0000000     GAUSS
+
+  EFFECTIVE RANGE FOR CHANNEL   1:
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   332.75     BOHR WITH 1/A(K=0) =  -0.2426259789E-02 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   329.43     BOHR WITH   A(K=0) =   -412.1477983     BOHR
+
+  EFV SET    88:  MAGNETIC Z FIELD =   887.0000000     GAUSS
+
+  EFFECTIVE RANGE FOR CHANNEL   1:
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   332.88     BOHR WITH 1/A(K=0) =  -0.2428950917E-02 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   329.57     BOHR WITH   A(K=0) =   -411.6911767     BOHR
+
+  EFV SET    89:  MAGNETIC Z FIELD =   888.0000000     GAUSS
+
+  EFFECTIVE RANGE FOR CHANNEL   1:
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   333.01     BOHR WITH 1/A(K=0) =  -0.2431517454E-02 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   329.70     BOHR WITH   A(K=0) =   -411.2566370     BOHR
+
+  EFV SET    90:  MAGNETIC Z FIELD =   889.0000000     GAUSS
+
+  EFFECTIVE RANGE FOR CHANNEL   1:
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   333.14     BOHR WITH 1/A(K=0) =  -0.2433969311E-02 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   329.83     BOHR WITH   A(K=0) =   -410.8423695     BOHR
+
+  EFV SET    91:  MAGNETIC Z FIELD =   890.0000000     GAUSS
+
+  EFFECTIVE RANGE FOR CHANNEL   1:
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   333.26     BOHR WITH 1/A(K=0) =  -0.2436315534E-02 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   329.95     BOHR WITH   A(K=0) =   -410.4467307     BOHR
+
+  EFV SET    92:  MAGNETIC Z FIELD =   891.0000000     GAUSS
+
+  EFFECTIVE RANGE FOR CHANNEL   1:
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   333.37     BOHR WITH 1/A(K=0) =  -0.2438564062E-02 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   330.06     BOHR WITH   A(K=0) =   -410.0682806     BOHR
+
+  EFV SET    93:  MAGNETIC Z FIELD =   892.0000000     GAUSS
+
+  EFFECTIVE RANGE FOR CHANNEL   1:
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   333.48     BOHR WITH 1/A(K=0) =  -0.2440722199E-02 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   330.17     BOHR WITH   A(K=0) =   -409.7056997     BOHR
+
+  EFV SET    94:  MAGNETIC Z FIELD =   893.0000000     GAUSS
+
+  EFFECTIVE RANGE FOR CHANNEL   1:
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   333.58     BOHR WITH 1/A(K=0) =  -0.2442796489E-02 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   330.28     BOHR WITH   A(K=0) =   -409.3578096     BOHR
+
+  EFV SET    95:  MAGNETIC Z FIELD =   894.0000000     GAUSS
+
+  EFFECTIVE RANGE FOR CHANNEL   1:
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   333.69     BOHR WITH 1/A(K=0) =  -0.2444792907E-02 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   330.38     BOHR WITH   A(K=0) =   -409.0235372     BOHR
+
+  EFV SET    96:  MAGNETIC Z FIELD =   895.0000000     GAUSS
+
+  EFFECTIVE RANGE FOR CHANNEL   1:
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   333.78     BOHR WITH 1/A(K=0) =  -0.2446716993E-02 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   330.48     BOHR WITH   A(K=0) =   -408.7018922     BOHR
+
+  EFV SET    97:  MAGNETIC Z FIELD =   896.0000000     GAUSS
+
+  EFFECTIVE RANGE FOR CHANNEL   1:
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   333.88     BOHR WITH 1/A(K=0) =  -0.2448573620E-02 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   330.57     BOHR WITH   A(K=0) =   -408.3920032     BOHR
+
+  EFV SET    98:  MAGNETIC Z FIELD =   897.0000000     GAUSS
+
+  EFFECTIVE RANGE FOR CHANNEL   1:
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   333.97     BOHR WITH 1/A(K=0) =  -0.2450367381E-02 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   330.66     BOHR WITH   A(K=0) =   -408.0930532     BOHR
+
+  EFV SET    99:  MAGNETIC Z FIELD =   898.0000000     GAUSS
+
+  EFFECTIVE RANGE FOR CHANNEL   1:
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   334.05     BOHR WITH 1/A(K=0) =  -0.2452102508E-02 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   330.75     BOHR WITH   A(K=0) =   -407.8042913     BOHR
+
+  EFV SET   100:  MAGNETIC Z FIELD =   899.0000000     GAUSS
+
+  EFFECTIVE RANGE FOR CHANNEL   1:
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   334.14     BOHR WITH 1/A(K=0) =  -0.2453782730E-02 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   330.83     BOHR WITH   A(K=0) =   -407.5250561     BOHR
+
+  EFV SET   101:  MAGNETIC Z FIELD =   900.0000000     GAUSS
+
+  EFFECTIVE RANGE FOR CHANNEL   1:
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   334.22     BOHR WITH 1/A(K=0) =  -0.2455411545E-02 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   330.92     BOHR WITH   A(K=0) =   -407.2547288     BOHR
+
+
+  ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
+ |                                                                            |
+ |                Non-reactive quantum scattering calculations                |
+ |                     on atomic and molecular collisions                     |
+ |                                                                            |
+ |              Copyright (C) 2018 J. M. Hutson & C. R. Le Sueur              |
+ |                                                                            |
+ |                               Version 2019.0 (beta)                        |
+ |                                                                            |
+ |                    This run used     330.06 cpu secs and                   |
+ |               6817 of the allocated   1000000 words of storage             |
+ |                                                                            |
+  ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---

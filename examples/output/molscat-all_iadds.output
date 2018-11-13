@@ -1,0 +1,3966 @@
+  ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
+ |                                                                            |
+ |                Non-reactive quantum scattering calculations                |
+ |                     on atomic and molecular collisions                     |
+ |                                                                            |
+ |              Copyright (C) 2018 J. M. Hutson & C. R. Le Sueur              |
+ |                                                                            |
+ |                               Version 2019.0 (beta)                        |
+ |                                                                            |
+ |                       Run on 12 Nov 2018   at 14:59:58                     |
+ |                                                                            |
+  ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
+
+
+  This program is free software: you can redistribute it and/or modify it under
+  the terms of the GNU General Public License, version 3, as published by
+  the Free Software Foundation.
+
+  Publications resulting from the use of this program should refer to
+  J. M. Hutson & C. R. Le Sueur, MOLSCAT computer code 2019.0 (beta)       
+  or to the published paper in Computer Physics Communications when available.
+
+
+  PHYSICAL CONSTANTS OBTAINED FROM NIST CODATA TABULATION OF 2014
+
+  MEMORY ALLOCATED TO MAIN WORKING ARRAY IS   1000000 (8-BYTE) WORDS (    7.63 MB)
+  2 INTEGERS CAN BE STORED IN EACH WORD.
+
+  PRINT LEVEL =  3     OTHER PRINT CONTROLS  ISIGPR = 1
+
+  RUN LABEL = model system: ITYP=2; no decoupling (IADD=0)                                    
+
+  REDUCED MASS FOR INTERACTION =  20.000000000 ATOMIC MASS UNITS
+
+  ENERGY-INDEPENDENT MATRICES WILL BE SAVED TEMPORARILY ON UNIT  1
+
+  ======================================================================================================================
+
+  INTERACTION TYPE IS    DIATOMIC VIB-ROTOR  -  ATOM.  
+
+  TARGET ROTATIONAL LEVELS TAKEN FROM &BASIS (JLEVEL) INPUT.  NLEVEL =  6
+
+  ENERGY LEVELS COMPUTED FROM W(E) = 1200.0000,   B(E) =   30.0000
+         WITH ZERO ENERGY AT V=0, J=0
+
+  QUANTUM NUMBERS FOR INTERACTING PAIR:
+  EACH PAIR STATE IS LABELLED BY  2 QUANTUM LABELS
+  EACH CHANNEL FUNCTION IS FORMED BY COMBINING A PAIR STATE WITH A VALUE OF L.
+  THE RESULTING BASIS SET IS ASYMPTOTICALLY DIAGONAL.
+
+  PAIR STATE     PAIR STATE QUANTUM NUMBERS    PAIR LEVEL     PAIR ENERGY (CM-1)
+                ----        J         V ----
+        1                   0         0           1             0.0000000
+        2                   2         0           2           180.0000000
+        3                   4         0           3           600.0000000
+        4                   6         0           4          1260.0000000
+        5                   0         1           5          1200.0000000
+        6                   2         1           6          1380.0000000
+
+  ======================================================================================================================
+  GENERAL-PURPOSE POTENL ROUTINE (MAY 18)
+
+  ANGULAR DEPENDENCE OF POTENTIAL EXPANDED IN TERMS OF
+  LEGENDRE POLYNOMIALS, P(LAMBDA).
+  INTEGRATED OVER DIATOM VIBRATIONAL FUNCTIONS
+
+  INTERACTION POTENTIAL FOR EXPANSION TERM NUMBER   1
+  WHICH HAS LAMBDA =   0,  V =   0,  V-PRIME =   0
+
+                 0.10000000E+01 * R **-12
+                -0.20000000E+01 * R ** -6
+
+  INTERACTION POTENTIAL FOR EXPANSION TERM NUMBER   2
+  WHICH HAS LAMBDA =   2,  V =   0,  V-PRIME =   0
+
+                -0.20000000E+00 * R ** -6
+
+  INTERACTION POTENTIAL FOR EXPANSION TERM NUMBER   3
+  WHICH HAS LAMBDA =   0,  V =   1,  V-PRIME =   1
+
+                 0.11000000E+01 * R **-12
+                -0.22000000E+01 * R ** -6
+
+  INTERACTION POTENTIAL FOR EXPANSION TERM NUMBER   4
+  WHICH HAS LAMBDA =   2,  V =   1,  V-PRIME =   1
+
+                -0.40000000E+00 * R ** -6
+
+  INTERACTION POTENTIAL FOR EXPANSION TERM NUMBER   5
+  WHICH HAS LAMBDA =   0,  V =   1,  V-PRIME =   0
+
+                 0.10000000E+00 * R **-12
+
+  INTERACTION POTENTIAL FOR EXPANSION TERM NUMBER   6
+  WHICH HAS LAMBDA =   2,  V =   1,  V-PRIME =   0
+
+                 0.10000000E-01 * R **-12
+
+  POTENL PROCESSING FINISHED.
+
+  UNITS FOR POTENTIAL ROUTINES:
+  POTENTIAL RETURNED IN UNITS OF EPSIL =      50.000000 CM-1
+  R                  IN UNITS OF RM    =       3.500000 ANGSTROMS
+
+  ALL LENGTHS ARE IN UNITS OF RM =  3.500000 ANGSTROM UNLESS OTHERWISE STATED
+
+  IVCHK.  COMPLETED SUCCESSFULLY.
+  INTERACTION MATRIX USES   3 BLOCKS OF VL ARRAY FOR R-DEPENDENT TERMS IN POTENTIAL
+
+  ======================================================================================================================
+
+  PROPAGATION ALGORITHMS FOR COUPLED EQUATIONS SPECIFIED BY IPROPS =  6 AND IPROPL =  1
+
+  COUPLED EQUATIONS WILL BE PROPAGATED OUTWARDS IN 2 SEGMENTS
+  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+  SEGMENT 1 WILL BE PROPAGATED OUTWARDS
+
+  FROM RMIN CHOSEN USING IRMSET =   8  TO VALUE OF RMID CHOSEN USING RVFAC =    1.05
+
+  COUPLED EQUATIONS SOLVED BY DIABATIC MODIFIED LOG DERIVATIVE METHOD OF MANOLOPOULOS
+
+  PROPAGATION STEP SIZE DETERMINED USING STEPS =   5.00     (PER WAVELENGTH)
+
+  LOG-DERIVATIVE MATRIX WILL BE INITIALISED IN THE LOCAL EIGENBASIS FOR RMIN IN THE OUTWARDS PROPAGATION PART
+  LOCALLY CLOSED CHANNELS WILL BE INITIALISED WITH A WKB BOUNDARY CONDITION
+  LOCALLY OPEN CHANNELS WILL BE INITIALISED WITH THE VALUE  1.0000000E+08
+  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+  SEGMENT 2 WILL BE PROPAGATED OUTWARDS
+
+  FROM VALUE OF RMID CHOSEN USING RVFAC =    1.05  TO WHICHEVER IS LARGER OF
+  OUTERMOST CENTRIFUGAL TURNING POINT IN OPEN CHANNELS, AND RMAX, WHICH =     10.00
+
+  COUPLED EQUATIONS SOLVED BY VARIABLE STEP AIRY METHOD.
+  ALL PUBLICATIONS RESULTING FROM THE USE OF THIS PROPAGATOR SHOULD REFERENCE
+  M.H. ALEXANDER AND D.E. MANOLOPOULOS,  J CHEM PHYS 86, 2044 (1987).
+  STEP SIZE GROWS GEOMETRICALLY WITH INCREASING R, WITH RATIO TOLHI =  1.050000
+  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+  ======================================================================================================================
+
+  INPUT ENERGY VALUES ASSUMED TO BE IN UNITS OF CM-1 BY DEFAULT.
+
+  CONTROL DATA FOR TOTAL ENERGIES.  CALCULATIONS WILL BE PERFORMED FOR   2 VALUES
+       ENERGY NO.   1 =   1250.0000000     CM-1
+       ENERGY NO.   2 =   1000.0000000     CM-1
+
+  ======================================================================================================================
+
+  TOTAL ANGULAR MOMENTUM JTOT RUNS FROM  10  TO    40  IN STEPS OF  10
+
+  EACH JTOT IS SPLIT INTO A MAXIMUM OF   2 DIFFERENT SYMMETRY BLOCKS
+
+  STATE-TO-STATE INTEGRAL CROSS-SECTIONS WILL BE COMPUTED BUT NOT STORED ON DISK
+
+  ======================================================================================================================
+
+  INITIALIZATION DONE.  TIME WAS   0.00 CPU SECS.       171 WORDS OF STORAGE USED.
+
+  ==================================== model system: ITYP=2; no decoupling (IADD=0) ====================================
+
+  *******************************************  ANGULAR MOMENTUM JTOT  =  10  *******************************************
+
+  IBLOCK =   1
+
+  JTOT =   10   IBLOCK =   1   ENERGY(   1) =   1250.0000000     CM-1
+  INNER CLASSICAL TURNING POINT AT R =  0.7467
+  RADIAL PROPAGATION WILL START AT R =  0.6404
+
+  RMID =   0.7840 OBTAINED FROM RVFAC = 1.050
+
+  DWPROP. LOG DERIVATIVE MATRIX PROPAGATED FROM       0.6404  TO 0.78404      IN     28  STEPS.
+
+  AIRPRP. LOG DERIVATIVE MATRIX PROPAGATED FROM       0.7840  TO  10.000      IN     93  STEPS.
+
+  * * * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  10 AND IBLOCK =   1 * * * * * * * * *
+
+    F  I =      2              3
+    2       2.74020E-02    7.25267E-07
+    3       7.93049E-07    9.87479E-02
+
+  * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
+
+  ------------------------------------ model system: ITYP=2; no decoupling (IADD=0) ------------------------------------
+
+  JTOT =   10   IBLOCK =   1   ENERGY(   2) =   1000.0000000     CM-1
+
+  DWPROP. LOG DERIVATIVE MATRIX PROPAGATED FROM       0.6404  TO 0.78404      IN     28  STEPS.
+
+  AIRPRP. LOG DERIVATIVE MATRIX PROPAGATED FROM       0.7840  TO  10.000      IN     93  STEPS.
+
+  * * * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  10 AND IBLOCK =   1 * * * * * * * * *
+
+    F  I =      2              3
+    2       8.97085E-02    2.63090E-07
+    3       2.31006E-07    1.00278E-01
+
+  * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
+
+  ======================================================================================================================
+
+  IBLOCK =   2
+
+  JTOT =   10   IBLOCK =   2   ENERGY(   1) =   1250.0000000     CM-1
+  INNER CLASSICAL TURNING POINT AT R =  0.7391
+  RADIAL PROPAGATION WILL START AT R =  0.6366
+
+  RMID =   0.7761 OBTAINED FROM RVFAC = 1.050
+
+  DWPROP. LOG DERIVATIVE MATRIX PROPAGATED FROM       0.6366  TO 0.77606      IN     29  STEPS.
+
+  AIRPRP. LOG DERIVATIVE MATRIX PROPAGATED FROM       0.7761  TO  10.000      IN     94  STEPS.
+
+  * * * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  10 AND IBLOCK =   2 * * * * * * * * *
+
+    F  I =      1              2              3              5
+    1       1.73070E-01    3.79660E-04    5.25807E-09    5.55407E-10
+    2       1.62494E-03    7.56964E-02    1.16012E-06    2.74239E-11
+    3       2.46078E-08    1.26854E-06    6.97623E-02    9.98761E-12
+    5       2.22163E-11    2.56298E-13    8.53642E-14    3.22993E+00
+
+  * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
+
+  ------------------------------------ model system: ITYP=2; no decoupling (IADD=0) ------------------------------------
+
+  JTOT =   10   IBLOCK =   2   ENERGY(   2) =   1000.0000000     CM-1
+
+  DWPROP. LOG DERIVATIVE MATRIX PROPAGATED FROM       0.6366  TO 0.77606      IN     29  STEPS.
+
+  AIRPRP. LOG DERIVATIVE MATRIX PROPAGATED FROM       0.7761  TO  10.000      IN     94  STEPS.
+
+  * * * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  10 AND IBLOCK =   2 * * * * * * * * *
+
+    F  I =      1              2              3
+    1       1.86558E-01    3.33663E-04    1.14854E-09
+    2       1.36802E-03    3.80579E-02    3.54172E-07
+    3       4.13473E-09    3.10981E-07    1.77288E-01
+
+  * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
+
+  ======================================================================================================================
+
+  *******************************************  ANGULAR MOMENTUM JTOT  =  20  *******************************************
+
+  IBLOCK =   1
+
+  JTOT =   20   IBLOCK =   1   ENERGY(   1) =   1250.0000000     CM-1
+  INNER CLASSICAL TURNING POINT AT R =  0.7485
+  RADIAL PROPAGATION WILL START AT R =  0.6413
+
+  RMID =   0.7859 OBTAINED FROM RVFAC = 1.050
+
+  DWPROP. LOG DERIVATIVE MATRIX PROPAGATED FROM       0.6413  TO 0.78590      IN     28  STEPS.
+
+  AIRPRP. LOG DERIVATIVE MATRIX PROPAGATED FROM       0.7859  TO  10.000      IN     93  STEPS.
+
+  * * * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  20 AND IBLOCK =   1 * * * * * * * * *
+
+    F  I =      2              3
+    2       1.32421E-01    1.28645E-06
+    3       1.40667E-06    1.88248E-01
+
+  * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
+
+  ------------------------------------ model system: ITYP=2; no decoupling (IADD=0) ------------------------------------
+
+  JTOT =   20   IBLOCK =   1   ENERGY(   2) =   1000.0000000     CM-1
+
+  DWPROP. LOG DERIVATIVE MATRIX PROPAGATED FROM       0.6413  TO 0.78590      IN     28  STEPS.
+
+  AIRPRP. LOG DERIVATIVE MATRIX PROPAGATED FROM       0.7859  TO  10.000      IN     93  STEPS.
+
+  * * * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  20 AND IBLOCK =   1 * * * * * * * * *
+
+    F  I =      2              3
+    2       1.86741E-02    3.45208E-07
+    3       3.03110E-07    2.48251E-01
+
+  * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
+
+  ======================================================================================================================
+
+  IBLOCK =   2
+
+  JTOT =   20   IBLOCK =   2   ENERGY(   1) =   1250.0000000     CM-1
+  INNER CLASSICAL TURNING POINT AT R =  0.7407
+  RADIAL PROPAGATION WILL START AT R =  0.6374
+
+  RMID =   0.7777 OBTAINED FROM RVFAC = 1.050
+
+  DWPROP. LOG DERIVATIVE MATRIX PROPAGATED FROM       0.6374  TO 0.77774      IN     30  STEPS.
+
+  AIRPRP. LOG DERIVATIVE MATRIX PROPAGATED FROM       0.7777  TO  10.000      IN     95  STEPS.
+
+  * * * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  20 AND IBLOCK =   2 * * * * * * * * *
+
+    F  I =      1              2              3              5
+    1       1.62675E-04    7.08811E-04    9.12212E-09    1.54044E-09
+    2       3.03371E-03    6.44533E-02    1.98294E-06    6.19449E-11
+    3       4.26915E-08    2.16827E-06    1.67711E-01    7.24012E-12
+    5       6.16176E-11    5.78925E-13    6.18814E-14    7.49158E+00
+
+  * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
+
+  ------------------------------------ model system: ITYP=2; no decoupling (IADD=0) ------------------------------------
+
+  JTOT =   20   IBLOCK =   2   ENERGY(   2) =   1000.0000000     CM-1
+
+  DWPROP. LOG DERIVATIVE MATRIX PROPAGATED FROM       0.6374  TO 0.77774      IN     30  STEPS.
+
+  AIRPRP. LOG DERIVATIVE MATRIX PROPAGATED FROM       0.7777  TO  10.000      IN     95  STEPS.
+
+  * * * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  20 AND IBLOCK =   2 * * * * * * * * *
+
+    F  I =      1              2              3
+    1       5.92312E-03    6.22231E-04    1.70099E-09
+    2       2.55115E-03    2.56940E-01    5.85832E-07
+    3       6.12357E-09    5.14389E-07    3.39713E-01
+
+  * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
+
+  ======================================================================================================================
+
+  *******************************************  ANGULAR MOMENTUM JTOT  =  30  *******************************************
+
+  IBLOCK =   1
+
+  JTOT =   30   IBLOCK =   1   ENERGY(   1) =   1250.0000000     CM-1
+  INNER CLASSICAL TURNING POINT AT R =  0.7515
+  RADIAL PROPAGATION WILL START AT R =  0.6429
+
+  RMID =   0.7891 OBTAINED FROM RVFAC = 1.050
+
+  DWPROP. LOG DERIVATIVE MATRIX PROPAGATED FROM       0.6429  TO 0.78906      IN     29  STEPS.
+
+  AIRPRP. LOG DERIVATIVE MATRIX PROPAGATED FROM       0.7891  TO  10.000      IN     93  STEPS.
+
+  * * * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  30 AND IBLOCK =   1 * * * * * * * * *
+
+    F  I =      2              3
+    2       1.62655E-01    1.34003E-06
+    3       1.46527E-06    1.92782E-01
+
+  * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
+
+  ------------------------------------ model system: ITYP=2; no decoupling (IADD=0) ------------------------------------
+
+  JTOT =   30   IBLOCK =   1   ENERGY(   2) =   1000.0000000     CM-1
+
+  DWPROP. LOG DERIVATIVE MATRIX PROPAGATED FROM       0.6429  TO 0.78906      IN     29  STEPS.
+
+  AIRPRP. LOG DERIVATIVE MATRIX PROPAGATED FROM       0.7891  TO  10.000      IN     93  STEPS.
+
+  * * * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  30 AND IBLOCK =   1 * * * * * * * * *
+
+    F  I =      2              3
+    2       6.38662E-02    3.87446E-07
+    3       3.40196E-07    4.43630E-01
+
+  * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
+
+  ======================================================================================================================
+
+  IBLOCK =   2
+
+  JTOT =   30   IBLOCK =   2   ENERGY(   1) =   1250.0000000     CM-1
+  INNER CLASSICAL TURNING POINT AT R =  0.7434
+  RADIAL PROPAGATION WILL START AT R =  0.6389
+
+  RMID =   0.7806 OBTAINED FROM RVFAC = 1.050
+
+  DWPROP. LOG DERIVATIVE MATRIX PROPAGATED FROM       0.6389  TO 0.78057      IN     30  STEPS.
+
+  AIRPRP. LOG DERIVATIVE MATRIX PROPAGATED FROM       0.7806  TO  10.000      IN     95  STEPS.
+
+  * * * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  30 AND IBLOCK =   2 * * * * * * * * *
+
+    F  I =      1              2              3              5
+    1       5.49304E-02    9.87376E-04    1.03907E-08    3.00245E-08
+    2       4.22597E-03    1.42764E-01    2.39305E-06    2.88957E-10
+    3       4.86285E-08    2.61670E-06    3.45138E-01    1.31672E-12
+    5       1.20098E-09    2.70053E-12    1.12540E-14    2.25512E-01
+
+  * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
+
+  ------------------------------------ model system: ITYP=2; no decoupling (IADD=0) ------------------------------------
+
+  JTOT =   30   IBLOCK =   2   ENERGY(   2) =   1000.0000000     CM-1
+
+  DWPROP. LOG DERIVATIVE MATRIX PROPAGATED FROM       0.6389  TO 0.78057      IN     30  STEPS.
+
+  AIRPRP. LOG DERIVATIVE MATRIX PROPAGATED FROM       0.7806  TO  10.000      IN     95  STEPS.
+
+  * * * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  30 AND IBLOCK =   2 * * * * * * * * *
+
+    F  I =      1              2              3
+    1       2.44413E-02    8.38470E-04    1.75630E-09
+    2       3.43773E-03    2.93909E-01    6.23586E-07
+    3       6.32268E-09    5.47539E-07    3.81082E-01
+
+  * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
+
+  ======================================================================================================================
+
+  *******************************************  ANGULAR MOMENTUM JTOT  =  40  *******************************************
+
+  IBLOCK =   1
+
+  JTOT =   40   IBLOCK =   1   ENERGY(   1) =   1250.0000000     CM-1
+  INNER CLASSICAL TURNING POINT AT R =  0.7559
+  RADIAL PROPAGATION WILL START AT R =  0.6451
+
+  RMID =   0.7937 OBTAINED FROM RVFAC = 1.050
+
+  DWPROP. LOG DERIVATIVE MATRIX PROPAGATED FROM       0.6451  TO 0.79369      IN     29  STEPS.
+
+  AIRPRP. LOG DERIVATIVE MATRIX PROPAGATED FROM       0.7937  TO  10.000      IN     93  STEPS.
+
+  * * * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  40 AND IBLOCK =   1 * * * * * * * * *
+
+    F  I =      2              3
+    2       2.08959E-01    1.37979E-06
+    3       1.50874E-06    3.23848E-01
+
+  * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
+
+  ------------------------------------ model system: ITYP=2; no decoupling (IADD=0) ------------------------------------
+
+  JTOT =   40   IBLOCK =   1   ENERGY(   2) =   1000.0000000     CM-1
+
+  DWPROP. LOG DERIVATIVE MATRIX PROPAGATED FROM       0.6451  TO 0.79369      IN     29  STEPS.
+
+  AIRPRP. LOG DERIVATIVE MATRIX PROPAGATED FROM       0.7937  TO  10.000      IN     93  STEPS.
+
+  * * * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  40 AND IBLOCK =   1 * * * * * * * * *
+
+    F  I =      2              3
+    2       2.96463E-01    2.71866E-07
+    3       2.38712E-07    5.07678E-01
+
+  * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
+
+  ======================================================================================================================
+
+  IBLOCK =   2
+
+  JTOT =   40   IBLOCK =   2   ENERGY(   1) =   1250.0000000     CM-1
+  INNER CLASSICAL TURNING POINT AT R =  0.7473
+  RADIAL PROPAGATION WILL START AT R =  0.6409
+
+  RMID =   0.7847 OBTAINED FROM RVFAC = 1.050
+
+  DWPROP. LOG DERIVATIVE MATRIX PROPAGATED FROM       0.6409  TO 0.78470      IN     30  STEPS.
+
+  AIRPRP. LOG DERIVATIVE MATRIX PROPAGATED FROM       0.7847  TO  10.000      IN     94  STEPS.
+
+  * * * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  40 AND IBLOCK =   2 * * * * * * * * *
+
+    F  I =      1              2              3              5
+    1       1.16484E-01    1.18855E-03    8.55844E-09    3.38979E-09
+    2       5.08701E-03    2.43418E-01    2.11546E-06    6.38672E-11
+    3       4.00535E-08    2.31317E-06    3.56983E-01    1.16806E-15
+    5       1.35592E-10    5.96890E-13    9.98345E-18    1.62794E+01
+
+  * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
+
+  ------------------------------------ model system: ITYP=2; no decoupling (IADD=0) ------------------------------------
+
+  JTOT =   40   IBLOCK =   2   ENERGY(   2) =   1000.0000000     CM-1
+
+  DWPROP. LOG DERIVATIVE MATRIX PROPAGATED FROM       0.6409  TO 0.78470      IN     30  STEPS.
+
+  AIRPRP. LOG DERIVATIVE MATRIX PROPAGATED FROM       0.7847  TO  10.000      IN     94  STEPS.
+
+  * * * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  40 AND IBLOCK =   2 * * * * * * * * *
+
+    F  I =      1              2              3
+    1       5.69138E-01    9.65083E-04    1.45096E-09
+    2       3.95684E-03    3.36210E-01    5.29395E-07
+    3       5.22345E-09    4.64835E-07    6.80603E-01
+
+  * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
+
+  ======================================================================================================================
+
+  * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
+
+  ==================================== model system: ITYP=2; no decoupling (IADD=0) ====================================
+
+  LEVEL   4 WITH ENERGY   1260.000000000000 IS NEVER OPEN
+  LEVEL   6 WITH ENERGY   1380.000000000000 IS NEVER OPEN
+
+  STATE-TO-STATE INTEGRAL CROSS SECTIONS IN ANGSTROM**2 BETWEEN    4 LEVELS WITH THRESHOLD ENERGIES (IN CM-1):
+
+    1     0.000000000000
+    2   180.000000000000
+    3   600.000000000000
+    5  1200.000000000000
+
+  *** N.B. CROSS SECTIONS HAVE BEEN MULTIPLIED BY 10.0 TO ACCOUNT FOR JSTEP
+
+   ENERGY (CM-1)    JTOTL  JSTEP  JTOTU      F    I         SIG(F,I)
+   1250.000000         10     10     40      1    1          3.44647      
+   1250.000000         10     10     40      2    1         0.139716      
+   1250.000000         10     10     40      3    1         1.559813E-06  
+   1250.000000         10     10     40      5    1         1.420406E-08  
+
+   1250.000000         10     10     40      1    2         3.264401E-02  
+   1250.000000         10     10     40      2    2          10.5777      
+   1250.000000         10     10     40      3    2         1.354041E-04  
+   1250.000000         10     10     40      5    2         4.132646E-11  
+
+   1250.000000         10     10     40      1    3         3.332935E-07  
+   1250.000000         10     10     40      2    3         1.238311E-04  
+   1250.000000         10     10     40      3    3          17.4322      
+   1250.000000         10     10     40      5    3         1.585095E-12  
+
+   1250.000000         10     10     40      1    5         3.551016E-07  
+   1250.000000         10     10     40      2    5         4.421932E-09  
+   1250.000000         10     10     40      3    5         1.854562E-10  
+   1250.000000         10     10     40      5    5          272.264      
+
+  TOTAL INELASTIC INTEGRAL CROSS SECTIONS IN ANGSTROM**2 FROM LEVEL
+   1.39718E-01                                                 1
+   3.27794E-02                                                 2
+   1.24164E-04                                                 3
+   3.59709E-07                                                 5
+
+
+   ENERGY (CM-1)    JTOTL  JSTEP  JTOTU      F    I         SIG(F,I)
+   1000.000000         10     10     40      1    1          7.86061      
+   1000.000000         10     10     40      2    1         0.113137      
+   1000.000000         10     10     40      3    1         2.180444E-07  
+
+   1000.000000         10     10     40      1    2         2.759448E-02  
+   1000.000000         10     10     40      2    2          13.9383      
+   1000.000000         10     10     40      3    2         2.950767E-05  
+
+   1000.000000         10     10     40      1    3         6.056788E-08  
+   1000.000000         10     10     40      2    3         3.360596E-05  
+   1000.000000         10     10     40      3    3          28.7852      
+
+
+  TOTAL INELASTIC INTEGRAL CROSS SECTIONS IN ANGSTROM**2 FROM LEVEL
+   1.13138E-01                                                 1
+   2.76240E-02                                                 2
+   3.36665E-05                                                 3
+
+
+
+  ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
+ |                                                                            |
+ |                Non-reactive quantum scattering calculations                |
+ |                     on atomic and molecular collisions                     |
+ |                                                                            |
+ |              Copyright (C) 2018 J. M. Hutson & C. R. Le Sueur              |
+ |                                                                            |
+ |                               Version 2019.0 (beta)                        |
+ |                                                                            |
+ |                    This run used       0.21 cpu secs and                   |
+ |               3408 of the allocated   1000000 words of storage             |
+ |                                                                            |
+  ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
+  ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
+ |                                                                            |
+ |                Non-reactive quantum scattering calculations                |
+ |                     on atomic and molecular collisions                     |
+ |                                                                            |
+ |              Copyright (C) 2018 J. M. Hutson & C. R. Le Sueur              |
+ |                                                                            |
+ |                               Version 2019.0 (beta)                        |
+ |                                                                            |
+ |                       Run on 12 Nov 2018   at 14:59:58                     |
+ |                                                                            |
+  ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
+
+
+  This program is free software: you can redistribute it and/or modify it under
+  the terms of the GNU General Public License, version 3, as published by
+  the Free Software Foundation.
+
+  Publications resulting from the use of this program should refer to
+  J. M. Hutson & C. R. Le Sueur, MOLSCAT computer code 2019.0 (beta)       
+  or to the published paper in Computer Physics Communications when available.
+
+
+  PHYSICAL CONSTANTS OBTAINED FROM NIST CODATA TABULATION OF 2014
+
+  MEMORY ALLOCATED TO MAIN WORKING ARRAY IS   1000000 (8-BYTE) WORDS (    7.63 MB)
+  2 INTEGERS CAN BE STORED IN EACH WORD.
+
+  PRINT LEVEL =  3     OTHER PRINT CONTROLS  ISIGPR = 1
+
+  RUN LABEL = model system: ITYP=2; effective potential (IADD=10)                             
+
+  REDUCED MASS FOR INTERACTION =  20.000000000 ATOMIC MASS UNITS
+
+  ENERGY-INDEPENDENT MATRICES WILL BE SAVED TEMPORARILY ON UNIT  1
+
+  ======================================================================================================================
+
+  *EFFECTIVE POTENTIAL METHOD* WILL BE USED. SEE H. RABITZ,  J. CHEM. PHYS. 57, 1718 (1972).
+
+     ITYPE =  12
+
+  INTERACTION TYPE IS    DIATOMIC VIB-ROTOR  -  ATOM.  
+
+  TARGET ROTATIONAL LEVELS TAKEN FROM &BASIS (JLEVEL) INPUT.  NLEVEL =  6
+
+  ENERGY LEVELS COMPUTED FROM W(E) = 1200.0000,   B(E) =   30.0000
+         WITH ZERO ENERGY AT V=0, J=0
+
+  QUANTUM NUMBERS FOR INTERACTING PAIR:
+  EACH PAIR STATE IS LABELLED BY  2 QUANTUM LABELS
+  EACH CHANNEL FUNCTION IS FORMED BY COMBINING A PAIR STATE WITH A VALUE OF L.
+  THE RESULTING BASIS SET IS ASYMPTOTICALLY DIAGONAL.
+
+  PAIR STATE     PAIR STATE QUANTUM NUMBERS    PAIR LEVEL     PAIR ENERGY (CM-1)
+                ----        J         V ----
+        1                   0         0           1             0.0000000
+        2                   2         0           2           180.0000000
+        3                   4         0           3           600.0000000
+        4                   6         0           4          1260.0000000
+        5                   0         1           5          1200.0000000
+        6                   2         1           6          1380.0000000
+
+  ======================================================================================================================
+  GENERAL-PURPOSE POTENL ROUTINE (MAY 18)
+
+  ANGULAR DEPENDENCE OF POTENTIAL EXPANDED IN TERMS OF
+  LEGENDRE POLYNOMIALS, P(LAMBDA).
+  INTEGRATED OVER DIATOM VIBRATIONAL FUNCTIONS
+
+  INTERACTION POTENTIAL FOR EXPANSION TERM NUMBER   1
+  WHICH HAS LAMBDA =   0,  V =   0,  V-PRIME =   0
+
+                 0.10000000E+01 * R **-12
+                -0.20000000E+01 * R ** -6
+
+  INTERACTION POTENTIAL FOR EXPANSION TERM NUMBER   2
+  WHICH HAS LAMBDA =   2,  V =   0,  V-PRIME =   0
+
+                -0.20000000E+00 * R ** -6
+
+  INTERACTION POTENTIAL FOR EXPANSION TERM NUMBER   3
+  WHICH HAS LAMBDA =   0,  V =   1,  V-PRIME =   1
+
+                 0.11000000E+01 * R **-12
+                -0.22000000E+01 * R ** -6
+
+  INTERACTION POTENTIAL FOR EXPANSION TERM NUMBER   4
+  WHICH HAS LAMBDA =   2,  V =   1,  V-PRIME =   1
+
+                -0.40000000E+00 * R ** -6
+
+  INTERACTION POTENTIAL FOR EXPANSION TERM NUMBER   5
+  WHICH HAS LAMBDA =   0,  V =   1,  V-PRIME =   0
+
+                 0.10000000E+00 * R **-12
+
+  INTERACTION POTENTIAL FOR EXPANSION TERM NUMBER   6
+  WHICH HAS LAMBDA =   2,  V =   1,  V-PRIME =   0
+
+                 0.10000000E-01 * R **-12
+
+  POTENL PROCESSING FINISHED.
+
+  UNITS FOR POTENTIAL ROUTINES:
+  POTENTIAL RETURNED IN UNITS OF EPSIL =      50.000000 CM-1
+  R                  IN UNITS OF RM    =       3.500000 ANGSTROMS
+
+  ALL LENGTHS ARE IN UNITS OF RM =  3.500000 ANGSTROM UNLESS OTHERWISE STATED
+
+  IVCHK.  COMPLETED SUCCESSFULLY.
+  INTERACTION MATRIX USES   3 BLOCKS OF VL ARRAY FOR R-DEPENDENT TERMS IN POTENTIAL
+
+  ======================================================================================================================
+
+  PROPAGATION ALGORITHMS FOR COUPLED EQUATIONS SPECIFIED BY IPROPS =  6 AND IPROPL =  1
+
+  COUPLED EQUATIONS WILL BE PROPAGATED OUTWARDS IN 2 SEGMENTS
+  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+  SEGMENT 1 WILL BE PROPAGATED OUTWARDS
+
+  FROM RMIN CHOSEN USING IRMSET =   8  TO VALUE OF RMID CHOSEN USING RVFAC =    1.05
+
+  COUPLED EQUATIONS SOLVED BY DIABATIC MODIFIED LOG DERIVATIVE METHOD OF MANOLOPOULOS
+
+  PROPAGATION STEP SIZE DETERMINED USING STEPS =   5.00     (PER WAVELENGTH)
+
+  LOG-DERIVATIVE MATRIX WILL BE INITIALISED IN THE LOCAL EIGENBASIS FOR RMIN IN THE OUTWARDS PROPAGATION PART
+  LOCALLY CLOSED CHANNELS WILL BE INITIALISED WITH A WKB BOUNDARY CONDITION
+  LOCALLY OPEN CHANNELS WILL BE INITIALISED WITH THE VALUE  1.0000000E+08
+  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+  SEGMENT 2 WILL BE PROPAGATED OUTWARDS
+
+  FROM VALUE OF RMID CHOSEN USING RVFAC =    1.05  TO WHICHEVER IS LARGER OF
+  OUTERMOST CENTRIFUGAL TURNING POINT IN OPEN CHANNELS, AND RMAX, WHICH =     10.00
+
+  COUPLED EQUATIONS SOLVED BY VARIABLE STEP AIRY METHOD.
+  ALL PUBLICATIONS RESULTING FROM THE USE OF THIS PROPAGATOR SHOULD REFERENCE
+  M.H. ALEXANDER AND D.E. MANOLOPOULOS,  J CHEM PHYS 86, 2044 (1987).
+  STEP SIZE GROWS GEOMETRICALLY WITH INCREASING R, WITH RATIO TOLHI =  1.050000
+  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+  ======================================================================================================================
+
+  INPUT ENERGY VALUES ASSUMED TO BE IN UNITS OF CM-1 BY DEFAULT.
+
+  CONTROL DATA FOR TOTAL ENERGIES.  CALCULATIONS WILL BE PERFORMED FOR   2 VALUES
+       ENERGY NO.   1 =   1250.0000000     CM-1
+       ENERGY NO.   2 =   1000.0000000     CM-1
+
+  ======================================================================================================================
+
+  TOTAL ANGULAR MOMENTUM JTOT RUNS FROM  10  TO    40  IN STEPS OF  10
+
+  EACH JTOT IS SPLIT INTO A MAXIMUM OF   1 DIFFERENT SYMMETRY BLOCKS
+
+  STATE-TO-STATE INTEGRAL CROSS-SECTIONS WILL BE COMPUTED BUT NOT STORED ON DISK
+
+  ======================================================================================================================
+
+  INITIALIZATION DONE.  TIME WAS   0.00 CPU SECS.       171 WORDS OF STORAGE USED.
+
+  ================================ model system: ITYP=2; effective potential (IADD=10) =================================
+
+  *******************************************  ANGULAR MOMENTUM JTOT  =  10  *******************************************
+
+  IBLOCK =   1
+
+  JTOT =   10   IBLOCK =   1   ENERGY(   1) =   1250.0000000     CM-1
+  INNER CLASSICAL TURNING POINT AT R =  0.7392
+  RADIAL PROPAGATION WILL START AT R =  0.6368
+
+  RMID =   0.7762 OBTAINED FROM RVFAC = 1.050
+
+  DWPROP. LOG DERIVATIVE MATRIX PROPAGATED FROM       0.6368  TO 0.77621      IN     29  STEPS.
+
+  AIRPRP. LOG DERIVATIVE MATRIX PROPAGATED FROM       0.7762  TO  10.000      IN     94  STEPS.
+
+  * * * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  10 AND IBLOCK =   1 * * * * * * * * *
+
+    F  I =      1              2              3              5
+    1       1.76104E-01    2.28320E-04    1.94427E-09    2.21391E-10
+    2       9.77210E-04    1.64348E-01    1.54178E-06    1.08546E-11
+    3       9.09917E-09    1.68587E-06    1.40063E-01    5.61055E-12
+    5       8.85563E-12    1.01445E-13    4.79535E-14    3.36824E+00
+
+  * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
+
+  -------------------------------- model system: ITYP=2; effective potential (IADD=10) ---------------------------------
+
+  JTOT =   10   IBLOCK =   1   ENERGY(   2) =   1000.0000000     CM-1
+
+  DWPROP. LOG DERIVATIVE MATRIX PROPAGATED FROM       0.6368  TO 0.77621      IN     29  STEPS.
+
+  AIRPRP. LOG DERIVATIVE MATRIX PROPAGATED FROM       0.7762  TO  10.000      IN     94  STEPS.
+
+  * * * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  10 AND IBLOCK =   1 * * * * * * * * *
+
+    F  I =      1              2              3
+    1       1.91464E-01    1.90930E-04    4.44728E-10
+    2       7.82812E-04    1.85399E-02    4.91343E-07
+    3       1.60102E-09    4.31424E-07    4.05402E-01
+
+  * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
+
+  ======================================================================================================================
+
+  *******************************************  ANGULAR MOMENTUM JTOT  =  20  *******************************************
+
+  IBLOCK =   1
+
+  JTOT =   20   IBLOCK =   1   ENERGY(   1) =   1250.0000000     CM-1
+  INNER CLASSICAL TURNING POINT AT R =  0.7408
+  RADIAL PROPAGATION WILL START AT R =  0.6377
+
+  RMID =   0.7779 OBTAINED FROM RVFAC = 1.050
+
+  DWPROP. LOG DERIVATIVE MATRIX PROPAGATED FROM       0.6377  TO 0.77788      IN     30  STEPS.
+
+  AIRPRP. LOG DERIVATIVE MATRIX PROPAGATED FROM       0.7779  TO  10.000      IN     95  STEPS.
+
+  * * * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  20 AND IBLOCK =   1 * * * * * * * * *
+
+    F  I =      1              2              3              5
+    1       6.06489E-04    4.21955E-04    3.41660E-09    8.11404E-10
+    2       1.80597E-03    2.32132E-02    2.77547E-06    3.17671E-11
+    3       1.59897E-08    3.03486E-06    3.55689E-02    4.02677E-12
+    5       3.24562E-11    2.96889E-13    3.44168E-14    7.68385E+00
+
+  * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
+
+  -------------------------------- model system: ITYP=2; effective potential (IADD=10) ---------------------------------
+
+  JTOT =   20   IBLOCK =   1   ENERGY(   2) =   1000.0000000     CM-1
+
+  DWPROP. LOG DERIVATIVE MATRIX PROPAGATED FROM       0.6377  TO 0.77788      IN     30  STEPS.
+
+  AIRPRP. LOG DERIVATIVE MATRIX PROPAGATED FROM       0.7779  TO  10.000      IN     95  STEPS.
+
+  * * * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  20 AND IBLOCK =   1 * * * * * * * * *
+
+    F  I =      1              2              3
+    1       4.10882E-03    3.50526E-04    4.97330E-10
+    2       1.43716E-03    5.11881E-01    6.30327E-07
+    3       1.79039E-09    5.53458E-07    3.44506E-01
+
+  * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
+
+  ======================================================================================================================
+
+  *******************************************  ANGULAR MOMENTUM JTOT  =  30  *******************************************
+
+  IBLOCK =   1
+
+  JTOT =   30   IBLOCK =   1   ENERGY(   1) =   1250.0000000     CM-1
+  INNER CLASSICAL TURNING POINT AT R =  0.7435
+  RADIAL PROPAGATION WILL START AT R =  0.6391
+
+  RMID =   0.7807 OBTAINED FROM RVFAC = 1.050
+
+  DWPROP. LOG DERIVATIVE MATRIX PROPAGATED FROM       0.6391  TO 0.78072      IN     30  STEPS.
+
+  AIRPRP. LOG DERIVATIVE MATRIX PROPAGATED FROM       0.7807  TO  10.000      IN     95  STEPS.
+
+  * * * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  30 AND IBLOCK =   1 * * * * * * * * *
+
+    F  I =      1              2              3              5
+    1       4.89443E-02    5.76340E-04    3.29984E-09    3.08549E-08
+    2       2.46673E-03    9.52586E-02    3.04237E-06    1.83058E-10
+    3       1.54432E-08    3.32670E-06    8.49142E-02    7.23435E-13
+    5       1.23420E-09    1.71082E-12    6.18321E-15    3.35378E-01
+
+  * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
+
+  -------------------------------- model system: ITYP=2; effective potential (IADD=10) ---------------------------------
+
+  JTOT =   30   IBLOCK =   1   ENERGY(   2) =   1000.0000000     CM-1
+
+  DWPROP. LOG DERIVATIVE MATRIX PROPAGATED FROM       0.6391  TO 0.78072      IN     30  STEPS.
+
+  AIRPRP. LOG DERIVATIVE MATRIX PROPAGATED FROM       0.7807  TO  10.000      IN     95  STEPS.
+
+  * * * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  30 AND IBLOCK =   1 * * * * * * * * *
+
+    F  I =      1              2              3
+    1       2.00446E-02    4.58542E-04    6.26364E-10
+    2       1.88002E-03    6.86496E-01    8.44555E-07
+    3       2.25491E-09    7.41560E-07    1.36093E+00
+
+  * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
+
+  ======================================================================================================================
+
+  *******************************************  ANGULAR MOMENTUM JTOT  =  40  *******************************************
+
+  IBLOCK =   1
+
+  JTOT =   40   IBLOCK =   1   ENERGY(   1) =   1250.0000000     CM-1
+  INNER CLASSICAL TURNING POINT AT R =  0.7475
+  RADIAL PROPAGATION WILL START AT R =  0.6411
+
+  RMID =   0.7848 OBTAINED FROM RVFAC = 1.050
+
+  DWPROP. LOG DERIVATIVE MATRIX PROPAGATED FROM       0.6411  TO 0.78484      IN     30  STEPS.
+
+  AIRPRP. LOG DERIVATIVE MATRIX PROPAGATED FROM       0.7848  TO  10.000      IN     94  STEPS.
+
+  * * * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  40 AND IBLOCK =   1 * * * * * * * * *
+
+    F  I =      1              2              3              5
+    1       1.28597E-01    6.72153E-04    2.11218E-09    2.59041E-09
+    2       2.87682E-03    2.69706E-01    2.15336E-06    3.68961E-11
+    3       9.88502E-09    2.35460E-06    7.00613E-01    5.29111E-16
+    5       1.03616E-10    3.44823E-13    4.52232E-18    1.61381E+01
+
+  * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
+
+  -------------------------------- model system: ITYP=2; effective potential (IADD=10) ---------------------------------
+
+  JTOT =   40   IBLOCK =   1   ENERGY(   2) =   1000.0000000     CM-1
+
+  DWPROP. LOG DERIVATIVE MATRIX PROPAGATED FROM       0.6411  TO 0.78484      IN     30  STEPS.
+
+  AIRPRP. LOG DERIVATIVE MATRIX PROPAGATED FROM       0.7848  TO  10.000      IN     94  STEPS.
+
+  * * * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  40 AND IBLOCK =   1 * * * * * * * * *
+
+    F  I =      1              2              3
+    1       5.88058E-01    5.06710E-04    2.22867E-10
+    2       2.07751E-03    1.09380E-01    4.43752E-07
+    3       8.02321E-10    3.89636E-07    1.58367E+00
+
+  * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
+
+  ======================================================================================================================
+
+  * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
+
+  ================================ model system: ITYP=2; effective potential (IADD=10) =================================
+
+  LEVEL   4 WITH ENERGY   1260.000000000000 IS NEVER OPEN
+  LEVEL   6 WITH ENERGY   1380.000000000000 IS NEVER OPEN
+
+  STATE-TO-STATE INTEGRAL CROSS SECTIONS IN ANGSTROM**2 BETWEEN    4 LEVELS WITH THRESHOLD ENERGIES (IN CM-1):
+
+    1     0.000000000000
+    2   180.000000000000
+    3   600.000000000000
+    5  1200.000000000000
+
+  *** N.B. CROSS SECTIONS HAVE BEEN MULTIPLIED BY 10.0 TO ACCOUNT FOR JSTEP
+
+   ENERGY (CM-1)    JTOTL  JSTEP  JTOTU      F    I         SIG(F,I)
+   1250.000000         10     10     40      1    1          3.54252      
+   1250.000000         10     10     40      2    1         8.126726E-02  
+   1250.000000         10     10     40      3    1         5.041713E-07  
+   1250.000000         10     10     40      5    1         1.379123E-08  
+
+   1250.000000         10     10     40      1    2         1.898768E-02  
+   1250.000000         10     10     40      2    2          5.52526      
+   1250.000000         10     10     40      3    2         1.040203E-04  
+   1250.000000         10     10     40      5    2         2.453977E-11  
+
+   1250.000000         10     10     40      1    3         1.077289E-07  
+   1250.000000         10     10     40      2    3         9.512965E-05  
+   1250.000000         10     10     40      3    3          9.61159      
+   1250.000000         10     10     40      5    3         8.855801E-13  
+
+   1250.000000         10     10     40      1    5         3.447809E-07  
+   1250.000000         10     10     40      2    5         2.625755E-09  
+   1250.000000         10     10     40      3    5         1.036129E-10  
+   1250.000000         10     10     40      5    5          275.255      
+
+  TOTAL INELASTIC INTEGRAL CROSS SECTIONS IN ANGSTROM**2 FROM LEVEL
+   8.12678E-02                                                 1
+   1.90917E-02                                                 2
+   9.52374E-05                                                 3
+   3.47510E-07                                                 5
+
+
+   ENERGY (CM-1)    JTOTL  JSTEP  JTOTU      F    I         SIG(F,I)
+   1000.000000         10     10     40      1    1          8.03675      
+   1000.000000         10     10     40      2    1         6.177503E-02  
+   1000.000000         10     10     40      3    1         6.448642E-08  
+
+   1000.000000         10     10     40      1    2         1.506708E-02  
+   1000.000000         10     10     40      2    2          13.2630      
+   1000.000000         10     10     40      3    2         2.116077E-05  
+
+   1000.000000         10     10     40      1    3         1.791289E-08  
+   1000.000000         10     10     40      2    3         2.409977E-05  
+   1000.000000         10     10     40      3    3          36.9451      
+
+
+  TOTAL INELASTIC INTEGRAL CROSS SECTIONS IN ANGSTROM**2 FROM LEVEL
+   6.17751E-02                                                 1
+   1.50882E-02                                                 2
+   2.41177E-05                                                 3
+
+
+
+  ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
+ |                                                                            |
+ |                Non-reactive quantum scattering calculations                |
+ |                     on atomic and molecular collisions                     |
+ |                                                                            |
+ |              Copyright (C) 2018 J. M. Hutson & C. R. Le Sueur              |
+ |                                                                            |
+ |                               Version 2019.0 (beta)                        |
+ |                                                                            |
+ |                    This run used       0.01 cpu secs and                   |
+ |                542 of the allocated   1000000 words of storage             |
+ |                                                                            |
+  ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
+  ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
+ |                                                                            |
+ |                Non-reactive quantum scattering calculations                |
+ |                     on atomic and molecular collisions                     |
+ |                                                                            |
+ |              Copyright (C) 2018 J. M. Hutson & C. R. Le Sueur              |
+ |                                                                            |
+ |                               Version 2019.0 (beta)                        |
+ |                                                                            |
+ |                       Run on 12 Nov 2018   at 14:59:58                     |
+ |                                                                            |
+  ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
+
+
+  This program is free software: you can redistribute it and/or modify it under
+  the terms of the GNU General Public License, version 3, as published by
+  the Free Software Foundation.
+
+  Publications resulting from the use of this program should refer to
+  J. M. Hutson & C. R. Le Sueur, MOLSCAT computer code 2019.0 (beta)       
+  or to the published paper in Computer Physics Communications when available.
+
+
+  PHYSICAL CONSTANTS OBTAINED FROM NIST CODATA TABULATION OF 2014
+
+  MEMORY ALLOCATED TO MAIN WORKING ARRAY IS   1000000 (8-BYTE) WORDS (    7.63 MB)
+  2 INTEGERS CAN BE STORED IN EACH WORD.
+
+  PRINT LEVEL =  3     OTHER PRINT CONTROLS  ISIGPR = 1
+
+  RUN LABEL = model system: ITYP=2; coupled states (IADD=20)                                  
+
+  REDUCED MASS FOR INTERACTION =  20.000000000 ATOMIC MASS UNITS
+
+  ENERGY-INDEPENDENT MATRICES WILL BE SAVED TEMPORARILY ON UNIT  1
+
+  ======================================================================================================================
+
+  COUPLED STATES APPROXIMATION OF MCGUIRE AND KOURI (C.F.  J. CHEM. PHYS. 60, 2488 (1974))  WILL BE USED.
+
+           ITYPE = 22
+           L(I) = JTOT + ( 0) * (J(I)-2*M)
+
+  INTERACTION TYPE IS    DIATOMIC VIB-ROTOR  -  ATOM.  
+
+  TARGET ROTATIONAL LEVELS TAKEN FROM &BASIS (JLEVEL) INPUT.  NLEVEL =  6
+
+  ENERGY LEVELS COMPUTED FROM W(E) = 1200.0000,   B(E) =   30.0000
+         WITH ZERO ENERGY AT V=0, J=0
+
+  *** NOTE.  IN CS CALCULATION MINUS/PLUS M-VALUE ASSUMED TO BE IDENTICAL.
+  *** NOTE.  CS OR DLD APPROXIMATION SUBSPACE IS LIMITED BY JZCSMX =  2
+             CROSS SECTIONS BETWEEN HIGHER J INACCURATE.
+  *** NOTE.  NEGATIVE VALUE FOR PAIR LEVEL INDEX INDICATES THAT LEVEL
+             IS AFFECTED BY JZCSMX LIMITATION.
+  *** NOTE.  CROSS SECTIONS INCOMPLETE BECAUSE OF JZCSMX WILL BE MARKED NEGATIVE
+             AND PRINTED ONLY IF ISIGPR.GE.2
+
+  QUANTUM NUMBERS FOR INTERACTING PAIR:
+  EACH PAIR STATE IS LABELLED BY  2 QUANTUM LABELS
+  EACH CHANNEL FUNCTION IS FORMED BY COMBINING A PAIR STATE WITH A VALUE OF L.
+  THE RESULTING BASIS SET IS ASYMPTOTICALLY DIAGONAL.
+
+  PAIR STATE     PAIR STATE QUANTUM NUMBERS    PAIR LEVEL     PAIR ENERGY (CM-1)
+                ----        J         V ----
+        1                   0         0           1             0.0000000
+        2                   2         0           2           180.0000000
+        3                   4         0          -3           600.0000000
+        4                   6         0          -4          1260.0000000
+        5                   0         1           5          1200.0000000
+        6                   2         1           6          1380.0000000
+
+  ======================================================================================================================
+  GENERAL-PURPOSE POTENL ROUTINE (MAY 18)
+
+  ANGULAR DEPENDENCE OF POTENTIAL EXPANDED IN TERMS OF
+  LEGENDRE POLYNOMIALS, P(LAMBDA).
+  INTEGRATED OVER DIATOM VIBRATIONAL FUNCTIONS
+
+  INTERACTION POTENTIAL FOR EXPANSION TERM NUMBER   1
+  WHICH HAS LAMBDA =   0,  V =   0,  V-PRIME =   0
+
+                 0.10000000E+01 * R **-12
+                -0.20000000E+01 * R ** -6
+
+  INTERACTION POTENTIAL FOR EXPANSION TERM NUMBER   2
+  WHICH HAS LAMBDA =   2,  V =   0,  V-PRIME =   0
+
+                -0.20000000E+00 * R ** -6
+
+  INTERACTION POTENTIAL FOR EXPANSION TERM NUMBER   3
+  WHICH HAS LAMBDA =   0,  V =   1,  V-PRIME =   1
+
+                 0.11000000E+01 * R **-12
+                -0.22000000E+01 * R ** -6
+
+  INTERACTION POTENTIAL FOR EXPANSION TERM NUMBER   4
+  WHICH HAS LAMBDA =   2,  V =   1,  V-PRIME =   1
+
+                -0.40000000E+00 * R ** -6
+
+  INTERACTION POTENTIAL FOR EXPANSION TERM NUMBER   5
+  WHICH HAS LAMBDA =   0,  V =   1,  V-PRIME =   0
+
+                 0.10000000E+00 * R **-12
+
+  INTERACTION POTENTIAL FOR EXPANSION TERM NUMBER   6
+  WHICH HAS LAMBDA =   2,  V =   1,  V-PRIME =   0
+
+                 0.10000000E-01 * R **-12
+
+  POTENL PROCESSING FINISHED.
+
+  UNITS FOR POTENTIAL ROUTINES:
+  POTENTIAL RETURNED IN UNITS OF EPSIL =      50.000000 CM-1
+  R                  IN UNITS OF RM    =       3.500000 ANGSTROMS
+
+  ALL LENGTHS ARE IN UNITS OF RM =  3.500000 ANGSTROM UNLESS OTHERWISE STATED
+
+  IVCHK.  COMPLETED SUCCESSFULLY.
+  INTERACTION MATRIX USES   3 BLOCKS OF VL ARRAY FOR R-DEPENDENT TERMS IN POTENTIAL
+
+  ======================================================================================================================
+
+  PROPAGATION ALGORITHMS FOR COUPLED EQUATIONS SPECIFIED BY IPROPS =  6 AND IPROPL =  1
+
+  COUPLED EQUATIONS WILL BE PROPAGATED OUTWARDS IN 2 SEGMENTS
+  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+  SEGMENT 1 WILL BE PROPAGATED OUTWARDS
+
+  FROM RMIN CHOSEN USING IRMSET =   8  TO VALUE OF RMID CHOSEN USING RVFAC =    1.05
+
+  COUPLED EQUATIONS SOLVED BY DIABATIC MODIFIED LOG DERIVATIVE METHOD OF MANOLOPOULOS
+
+  PROPAGATION STEP SIZE DETERMINED USING STEPS =   5.00     (PER WAVELENGTH)
+
+  LOG-DERIVATIVE MATRIX WILL BE INITIALISED IN THE LOCAL EIGENBASIS FOR RMIN IN THE OUTWARDS PROPAGATION PART
+  LOCALLY CLOSED CHANNELS WILL BE INITIALISED WITH A WKB BOUNDARY CONDITION
+  LOCALLY OPEN CHANNELS WILL BE INITIALISED WITH THE VALUE  1.0000000E+08
+  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+  SEGMENT 2 WILL BE PROPAGATED OUTWARDS
+
+  FROM VALUE OF RMID CHOSEN USING RVFAC =    1.05  TO WHICHEVER IS LARGER OF
+  OUTERMOST CENTRIFUGAL TURNING POINT IN OPEN CHANNELS, AND RMAX, WHICH =     10.00
+
+  COUPLED EQUATIONS SOLVED BY VARIABLE STEP AIRY METHOD.
+  ALL PUBLICATIONS RESULTING FROM THE USE OF THIS PROPAGATOR SHOULD REFERENCE
+  M.H. ALEXANDER AND D.E. MANOLOPOULOS,  J CHEM PHYS 86, 2044 (1987).
+  STEP SIZE GROWS GEOMETRICALLY WITH INCREASING R, WITH RATIO TOLHI =  1.050000
+  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+  ======================================================================================================================
+
+  INPUT ENERGY VALUES ASSUMED TO BE IN UNITS OF CM-1 BY DEFAULT.
+
+  CONTROL DATA FOR TOTAL ENERGIES.  CALCULATIONS WILL BE PERFORMED FOR   2 VALUES
+       ENERGY NO.   1 =   1250.0000000     CM-1
+       ENERGY NO.   2 =   1000.0000000     CM-1
+
+  ======================================================================================================================
+
+  TOTAL ANGULAR MOMENTUM JTOT RUNS FROM  10  TO    40  IN STEPS OF  10
+
+  EACH JTOT IS SPLIT INTO A MAXIMUM OF   3 DIFFERENT SYMMETRY BLOCKS
+
+  STATE-TO-STATE INTEGRAL CROSS-SECTIONS WILL BE COMPUTED BUT NOT STORED ON DISK
+
+  ======================================================================================================================
+
+  INITIALIZATION DONE.  TIME WAS   0.00 CPU SECS.       171 WORDS OF STORAGE USED.
+
+  =================================== model system: ITYP=2; coupled states (IADD=20) ===================================
+
+  *******************************************  ANGULAR MOMENTUM JTOT  =  10  *******************************************
+
+  IBLOCK =   1
+
+  JTOT =   10   IBLOCK =   1   ENERGY(   1) =   1250.0000000     CM-1
+  INNER CLASSICAL TURNING POINT AT R =  0.7391
+  RADIAL PROPAGATION WILL START AT R =  0.6366
+
+  RMID =   0.7761 OBTAINED FROM RVFAC = 1.050
+
+  DWPROP. LOG DERIVATIVE MATRIX PROPAGATED FROM       0.6366  TO 0.77606      IN     29  STEPS.
+
+  AIRPRP. LOG DERIVATIVE MATRIX PROPAGATED FROM       0.7761  TO  10.000      IN     94  STEPS.
+
+  * * * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  10 AND IBLOCK =   1 * * * * * * * * *
+
+    F  I =      1              2              3              5
+    1       1.73034E-01    3.83483E-04    5.50099E-09    5.57290E-10
+    2       1.64131E-03    1.86577E-02    4.51778E-07    2.76479E-11
+    3       2.57447E-08    4.94000E-07    4.20611E-03    9.64841E-12
+    5       2.22916E-11    2.58391E-13    8.24650E-14    3.22932E+00
+
+  * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
+
+  ----------------------------------- model system: ITYP=2; coupled states (IADD=20) -----------------------------------
+
+  JTOT =   10   IBLOCK =   1   ENERGY(   2) =   1000.0000000     CM-1
+
+  DWPROP. LOG DERIVATIVE MATRIX PROPAGATED FROM       0.6366  TO 0.77606      IN     29  STEPS.
+
+  AIRPRP. LOG DERIVATIVE MATRIX PROPAGATED FROM       0.7761  TO  10.000      IN     94  STEPS.
+
+  * * * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  10 AND IBLOCK =   1 * * * * * * * * *
+
+    F  I =      1              2              3
+    1       1.86515E-01    3.37314E-04    1.18844E-09
+    2       1.38299E-03    1.87666E-02    1.29123E-07
+    3       4.27839E-09    1.13376E-07    2.22131E-02
+
+  * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
+
+  ======================================================================================================================
+
+  IBLOCK =   2
+
+  JTOT =   10   IBLOCK =   2   ENERGY(   1) =   1250.0000000     CM-1
+  INNER CLASSICAL TURNING POINT AT R =  0.7467
+  RADIAL PROPAGATION WILL START AT R =  0.6404
+
+  RMID =   0.7840 OBTAINED FROM RVFAC = 1.050
+
+  DWPROP. LOG DERIVATIVE MATRIX PROPAGATED FROM       0.6404  TO 0.78403      IN     28  STEPS.
+
+  AIRPRP. LOG DERIVATIVE MATRIX PROPAGATED FROM       0.7840  TO  10.000      IN     93  STEPS.
+
+  * * * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  10 AND IBLOCK =   2 * * * * * * * * *
+
+    F  I =      2              3
+    2       4.37775E-02    7.97962E-07
+    3       8.72538E-07    9.78448E-03
+
+  * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
+
+  ----------------------------------- model system: ITYP=2; coupled states (IADD=20) -----------------------------------
+
+  JTOT =   10   IBLOCK =   2   ENERGY(   2) =   1000.0000000     CM-1
+
+  DWPROP. LOG DERIVATIVE MATRIX PROPAGATED FROM       0.6404  TO 0.78403      IN     28  STEPS.
+
+  AIRPRP. LOG DERIVATIVE MATRIX PROPAGATED FROM       0.7840  TO  10.000      IN     93  STEPS.
+
+  * * * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  10 AND IBLOCK =   2 * * * * * * * * *
+
+    F  I =      2              3
+    2       3.04745E-02    3.05467E-07
+    3       2.68215E-07    4.79734E-02
+
+  * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
+
+  ======================================================================================================================
+
+  IBLOCK =   3
+
+  JTOT =   10   IBLOCK =   3   ENERGY(   1) =   1250.0000000     CM-1
+  INNER CLASSICAL TURNING POINT AT R =  0.7480
+  RADIAL PROPAGATION WILL START AT R =  0.6413
+
+  RMID =   0.7854 OBTAINED FROM RVFAC = 1.050
+
+  DWPROP. LOG DERIVATIVE MATRIX PROPAGATED FROM       0.6413  TO 0.78536      IN     28  STEPS.
+
+  AIRPRP. LOG DERIVATIVE MATRIX PROPAGATED FROM       0.7854  TO  10.000      IN     93  STEPS.
+
+  * * * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  10 AND IBLOCK =   3 * * * * * * * * *
+
+    F  I =      2              3
+    2       6.74085E-02    6.82095E-07
+    3       7.45843E-07    1.44078E-02
+
+  * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
+
+  ----------------------------------- model system: ITYP=2; coupled states (IADD=20) -----------------------------------
+
+  JTOT =   10   IBLOCK =   3   ENERGY(   2) =   1000.0000000     CM-1
+
+  DWPROP. LOG DERIVATIVE MATRIX PROPAGATED FROM       0.6413  TO 0.78536      IN     28  STEPS.
+
+  AIRPRP. LOG DERIVATIVE MATRIX PROPAGATED FROM       0.7854  TO  10.000      IN     93  STEPS.
+
+  * * * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  10 AND IBLOCK =   3 * * * * * * * * *
+
+    F  I =      2              3
+    2       6.25639E-03    2.73297E-07
+    3       2.39968E-07    5.89410E-02
+
+  * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
+
+  ======================================================================================================================
+
+  *******************************************  ANGULAR MOMENTUM JTOT  =  20  *******************************************
+
+  IBLOCK =   1
+
+  JTOT =   20   IBLOCK =   1   ENERGY(   1) =   1250.0000000     CM-1
+  INNER CLASSICAL TURNING POINT AT R =  0.7407
+  RADIAL PROPAGATION WILL START AT R =  0.6374
+
+  RMID =   0.7777 OBTAINED FROM RVFAC = 1.050
+
+  DWPROP. LOG DERIVATIVE MATRIX PROPAGATED FROM       0.6374  TO 0.77774      IN     30  STEPS.
+
+  AIRPRP. LOG DERIVATIVE MATRIX PROPAGATED FROM       0.7777  TO  10.000      IN     95  STEPS.
+
+  * * * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  20 AND IBLOCK =   1 * * * * * * * * *
+
+    F  I =      1              2              3              5
+    1       1.61376E-04    7.10770E-04    9.15060E-09    1.54201E-09
+    2       3.04209E-03    2.53779E-02    7.41973E-07    6.04925E-11
+    3       4.28248E-08    8.11317E-07    2.28406E-02    6.90640E-12
+    5       6.16803E-11    5.65350E-13    5.90291E-14    7.49101E+00
+
+  * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
+
+  ----------------------------------- model system: ITYP=2; coupled states (IADD=20) -----------------------------------
+
+  JTOT =   20   IBLOCK =   1   ENERGY(   2) =   1000.0000000     CM-1
+
+  DWPROP. LOG DERIVATIVE MATRIX PROPAGATED FROM       0.6374  TO 0.77774      IN     30  STEPS.
+
+  AIRPRP. LOG DERIVATIVE MATRIX PROPAGATED FROM       0.7777  TO  10.000      IN     95  STEPS.
+
+  * * * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  20 AND IBLOCK =   1 * * * * * * * * *
+
+    F  I =      1              2              3
+    1       5.93258E-03    6.23023E-04    1.53348E-09
+    2       2.55439E-03    1.00843E-01    2.04821E-07
+    3       5.52052E-09    1.79843E-07    5.61579E-03
+
+  * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
+
+  ======================================================================================================================
+
+  IBLOCK =   2
+
+  JTOT =   20   IBLOCK =   2   ENERGY(   1) =   1250.0000000     CM-1
+  INNER CLASSICAL TURNING POINT AT R =  0.7485
+  RADIAL PROPAGATION WILL START AT R =  0.6413
+
+  RMID =   0.7859 OBTAINED FROM RVFAC = 1.050
+
+  DWPROP. LOG DERIVATIVE MATRIX PROPAGATED FROM       0.6413  TO 0.78592      IN     28  STEPS.
+
+  AIRPRP. LOG DERIVATIVE MATRIX PROPAGATED FROM       0.7859  TO  10.000      IN     93  STEPS.
+
+  * * * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  20 AND IBLOCK =   2 * * * * * * * * *
+
+    F  I =      2              3
+    2       4.14537E-02    1.41330E-06
+    3       1.54538E-06    4.19309E-02
+
+  * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
+
+  ----------------------------------- model system: ITYP=2; coupled states (IADD=20) -----------------------------------
+
+  JTOT =   20   IBLOCK =   2   ENERGY(   2) =   1000.0000000     CM-1
+
+  DWPROP. LOG DERIVATIVE MATRIX PROPAGATED FROM       0.6413  TO 0.78592      IN     28  STEPS.
+
+  AIRPRP. LOG DERIVATIVE MATRIX PROPAGATED FROM       0.7859  TO  10.000      IN     93  STEPS.
+
+  * * * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  20 AND IBLOCK =   2 * * * * * * * * *
+
+    F  I =      2              3
+    2       2.08942E-01    3.63404E-07
+    3       3.19086E-07    1.44604E-02
+
+  * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
+
+  ======================================================================================================================
+
+  IBLOCK =   3
+
+  JTOT =   20   IBLOCK =   3   ENERGY(   1) =   1250.0000000     CM-1
+  INNER CLASSICAL TURNING POINT AT R =  0.7498
+  RADIAL PROPAGATION WILL START AT R =  0.6422
+
+  RMID =   0.7873 OBTAINED FROM RVFAC = 1.050
+
+  DWPROP. LOG DERIVATIVE MATRIX PROPAGATED FROM       0.6422  TO 0.78727      IN     28  STEPS.
+
+  AIRPRP. LOG DERIVATIVE MATRIX PROPAGATED FROM       0.7873  TO  10.000      IN     93  STEPS.
+
+  * * * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  20 AND IBLOCK =   3 * * * * * * * * *
+
+    F  I =      2              3
+    2       7.84299E-03    1.19665E-06
+    3       1.30848E-06    3.12659E-02
+
+  * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
+
+  ----------------------------------- model system: ITYP=2; coupled states (IADD=20) -----------------------------------
+
+  JTOT =   20   IBLOCK =   3   ENERGY(   2) =   1000.0000000     CM-1
+
+  DWPROP. LOG DERIVATIVE MATRIX PROPAGATED FROM       0.6422  TO 0.78727      IN     28  STEPS.
+
+  AIRPRP. LOG DERIVATIVE MATRIX PROPAGATED FROM       0.7873  TO  10.000      IN     93  STEPS.
+
+  * * * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  20 AND IBLOCK =   3 * * * * * * * * *
+
+    F  I =      2              3
+    2       2.03614E-01    3.46767E-07
+    3       3.04479E-07    2.64130E-02
+
+  * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
+
+  ======================================================================================================================
+
+  *******************************************  ANGULAR MOMENTUM JTOT  =  30  *******************************************
+
+  IBLOCK =   1
+
+  JTOT =   30   IBLOCK =   1   ENERGY(   1) =   1250.0000000     CM-1
+  INNER CLASSICAL TURNING POINT AT R =  0.7434
+  RADIAL PROPAGATION WILL START AT R =  0.6389
+
+  RMID =   0.7806 OBTAINED FROM RVFAC = 1.050
+
+  DWPROP. LOG DERIVATIVE MATRIX PROPAGATED FROM       0.6389  TO 0.78057      IN     30  STEPS.
+
+  AIRPRP. LOG DERIVATIVE MATRIX PROPAGATED FROM       0.7806  TO  10.000      IN     95  STEPS.
+
+  * * * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  30 AND IBLOCK =   1 * * * * * * * * *
+
+    F  I =      1              2              3              5
+    1       5.49656E-02    9.77807E-04    9.46407E-09    3.00352E-08
+    2       4.18501E-03    5.70927E-02    8.89597E-07    2.87159E-10
+    3       4.42919E-08    9.72736E-07    3.79565E-04    1.22732E-12
+    5       1.20141E-09    2.68373E-12    1.04899E-14    2.25418E-01
+
+  * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
+
+  ----------------------------------- model system: ITYP=2; coupled states (IADD=20) -----------------------------------
+
+  JTOT =   30   IBLOCK =   1   ENERGY(   2) =   1000.0000000     CM-1
+
+  DWPROP. LOG DERIVATIVE MATRIX PROPAGATED FROM       0.6389  TO 0.78057      IN     30  STEPS.
+
+  AIRPRP. LOG DERIVATIVE MATRIX PROPAGATED FROM       0.7806  TO  10.000      IN     95  STEPS.
+
+  * * * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  30 AND IBLOCK =   1 * * * * * * * * *
+
+    F  I =      1              2              3
+    1       2.44579E-02    8.24851E-04    1.65522E-09
+    2       3.38189E-03    1.55931E-01    2.00559E-07
+    3       5.95878E-09    1.76100E-07    1.79350E-01
+
+  * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
+
+  ======================================================================================================================
+
+  IBLOCK =   2
+
+  JTOT =   30   IBLOCK =   2   ENERGY(   1) =   1250.0000000     CM-1
+  INNER CLASSICAL TURNING POINT AT R =  0.7516
+  RADIAL PROPAGATION WILL START AT R =  0.6429
+
+  RMID =   0.7891 OBTAINED FROM RVFAC = 1.050
+
+  DWPROP. LOG DERIVATIVE MATRIX PROPAGATED FROM       0.6429  TO 0.78914      IN     29  STEPS.
+
+  AIRPRP. LOG DERIVATIVE MATRIX PROPAGATED FROM       0.7891  TO  10.000      IN     93  STEPS.
+
+  * * * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  30 AND IBLOCK =   2 * * * * * * * * *
+
+    F  I =      2              3
+    2       9.92317E-02    1.36374E-06
+    3       1.49119E-06    2.10065E-04
+
+  * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
+
+  ----------------------------------- model system: ITYP=2; coupled states (IADD=20) -----------------------------------
+
+  JTOT =   30   IBLOCK =   2   ENERGY(   2) =   1000.0000000     CM-1
+
+  DWPROP. LOG DERIVATIVE MATRIX PROPAGATED FROM       0.6429  TO 0.78914      IN     29  STEPS.
+
+  AIRPRP. LOG DERIVATIVE MATRIX PROPAGATED FROM       0.7891  TO  10.000      IN     93  STEPS.
+
+  * * * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  30 AND IBLOCK =   2 * * * * * * * * *
+
+    F  I =      2              3
+    2       3.13553E-01    3.92355E-07
+    3       3.44507E-07    3.57810E-01
+
+  * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
+
+  ======================================================================================================================
+
+  IBLOCK =   3
+
+  JTOT =   30   IBLOCK =   3   ENERGY(   1) =   1250.0000000     CM-1
+  INNER CLASSICAL TURNING POINT AT R =  0.7529
+  RADIAL PROPAGATION WILL START AT R =  0.6438
+
+  RMID =   0.7905 OBTAINED FROM RVFAC = 1.050
+
+  DWPROP. LOG DERIVATIVE MATRIX PROPAGATED FROM       0.6438  TO 0.79052      IN     29  STEPS.
+
+  AIRPRP. LOG DERIVATIVE MATRIX PROPAGATED FROM       0.7905  TO  10.000      IN     93  STEPS.
+
+  * * * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  30 AND IBLOCK =   3 * * * * * * * * *
+
+    F  I =      2              3
+    2       3.46812E-02    1.19469E-06
+    3       1.30634E-06    6.14010E-04
+
+  * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
+
+  ----------------------------------- model system: ITYP=2; coupled states (IADD=20) -----------------------------------
+
+  JTOT =   30   IBLOCK =   3   ENERGY(   2) =   1000.0000000     CM-1
+
+  DWPROP. LOG DERIVATIVE MATRIX PROPAGATED FROM       0.6438  TO 0.79052      IN     29  STEPS.
+
+  AIRPRP. LOG DERIVATIVE MATRIX PROPAGATED FROM       0.7905  TO  10.000      IN     93  STEPS.
+
+  * * * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  30 AND IBLOCK =   3 * * * * * * * * *
+
+    F  I =      2              3
+    2       2.70405E-01    3.65978E-07
+    3       3.21347E-07    3.51295E-01
+
+  * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
+
+  ======================================================================================================================
+
+  *******************************************  ANGULAR MOMENTUM JTOT  =  40  *******************************************
+
+  IBLOCK =   1
+
+  JTOT =   40   IBLOCK =   1   ENERGY(   1) =   1250.0000000     CM-1
+  INNER CLASSICAL TURNING POINT AT R =  0.7473
+  RADIAL PROPAGATION WILL START AT R =  0.6409
+
+  RMID =   0.7847 OBTAINED FROM RVFAC = 1.050
+
+  DWPROP. LOG DERIVATIVE MATRIX PROPAGATED FROM       0.6409  TO 0.78470      IN     30  STEPS.
+
+  AIRPRP. LOG DERIVATIVE MATRIX PROPAGATED FROM       0.7847  TO  10.000      IN     94  STEPS.
+
+  * * * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  40 AND IBLOCK =   1 * * * * * * * * *
+
+    F  I =      1              2              3              5
+    1       1.16510E-01    1.15406E-03    6.11570E-09    3.37961E-09
+    2       4.93937E-03    1.08131E-02    6.55300E-07    5.63662E-11
+    3       2.86215E-08    7.16543E-07    1.24465E-01    7.18554E-16
+    5       1.35184E-10    5.26787E-13    6.14149E-18    1.62794E+01
+
+  * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
+
+  ----------------------------------- model system: ITYP=2; coupled states (IADD=20) -----------------------------------
+
+  JTOT =   40   IBLOCK =   1   ENERGY(   2) =   1000.0000000     CM-1
+
+  DWPROP. LOG DERIVATIVE MATRIX PROPAGATED FROM       0.6409  TO 0.78470      IN     30  STEPS.
+
+  AIRPRP. LOG DERIVATIVE MATRIX PROPAGATED FROM       0.7847  TO  10.000      IN     94  STEPS.
+
+  * * * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  40 AND IBLOCK =   1 * * * * * * * * *
+
+    F  I =      1              2              3
+    1       5.69382E-01    9.23335E-04    8.84138E-10
+    2       3.78568E-03    2.91467E-04    1.78201E-07
+    3       3.18290E-09    1.56469E-07    2.32664E-01
+
+  * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
+
+  ======================================================================================================================
+
+  IBLOCK =   2
+
+  JTOT =   40   IBLOCK =   2   ENERGY(   1) =   1250.0000000     CM-1
+  INNER CLASSICAL TURNING POINT AT R =  0.7561
+  RADIAL PROPAGATION WILL START AT R =  0.6452
+
+  RMID =   0.7939 OBTAINED FROM RVFAC = 1.050
+
+  DWPROP. LOG DERIVATIVE MATRIX PROPAGATED FROM       0.6452  TO 0.79386      IN     29  STEPS.
+
+  AIRPRP. LOG DERIVATIVE MATRIX PROPAGATED FROM       0.7939  TO  10.000      IN     93  STEPS.
+
+  * * * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  40 AND IBLOCK =   2 * * * * * * * * *
+
+    F  I =      2              3
+    2       3.47623E-02    1.42852E-06
+    3       1.56202E-06    2.42944E-01
+
+  * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
+
+  ----------------------------------- model system: ITYP=2; coupled states (IADD=20) -----------------------------------
+
+  JTOT =   40   IBLOCK =   2   ENERGY(   2) =   1000.0000000     CM-1
+
+  DWPROP. LOG DERIVATIVE MATRIX PROPAGATED FROM       0.6452  TO 0.79386      IN     29  STEPS.
+
+  AIRPRP. LOG DERIVATIVE MATRIX PROPAGATED FROM       0.7939  TO  10.000      IN     93  STEPS.
+
+  * * * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  40 AND IBLOCK =   2 * * * * * * * * *
+
+    F  I =      2              3
+    2       6.58787E-04    2.42064E-07
+    3       2.12544E-07    4.60559E-01
+
+  * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
+
+  ======================================================================================================================
+
+  IBLOCK =   3
+
+  JTOT =   40   IBLOCK =   3   ENERGY(   1) =   1250.0000000     CM-1
+  INNER CLASSICAL TURNING POINT AT R =  0.7574
+  RADIAL PROPAGATION WILL START AT R =  0.6461
+
+  RMID =   0.7953 OBTAINED FROM RVFAC = 1.050
+
+  DWPROP. LOG DERIVATIVE MATRIX PROPAGATED FROM       0.6461  TO 0.79527      IN     29  STEPS.
+
+  AIRPRP. LOG DERIVATIVE MATRIX PROPAGATED FROM       0.7953  TO  10.000      IN     93  STEPS.
+
+  * * * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  40 AND IBLOCK =   3 * * * * * * * * *
+
+    F  I =      2              3
+    2       1.14720E-01    1.18083E-06
+    3       1.29119E-06    2.23189E-01
+
+  * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
+
+  ----------------------------------- model system: ITYP=2; coupled states (IADD=20) -----------------------------------
+
+  JTOT =   40   IBLOCK =   3   ENERGY(   2) =   1000.0000000     CM-1
+
+  DWPROP. LOG DERIVATIVE MATRIX PROPAGATED FROM       0.6461  TO 0.79527      IN     29  STEPS.
+
+  AIRPRP. LOG DERIVATIVE MATRIX PROPAGATED FROM       0.7953  TO  10.000      IN     93  STEPS.
+
+  * * * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  40 AND IBLOCK =   3 * * * * * * * * *
+
+    F  I =      2              3
+    2       4.99918E-02    2.06575E-07
+    3       1.81383E-07    4.41445E-01
+
+  * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
+
+  ======================================================================================================================
+
+  * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
+
+  =================================== model system: ITYP=2; coupled states (IADD=20) ===================================
+
+  LEVEL   4 WITH ENERGY   1260.000000000000 IS NEVER OPEN
+  LEVEL   6 WITH ENERGY   1380.000000000000 IS NEVER OPEN
+
+  STATE-TO-STATE INTEGRAL CROSS SECTIONS IN ANGSTROM**2 BETWEEN    4 LEVELS WITH THRESHOLD ENERGIES (IN CM-1):
+
+    1     0.000000000000
+    2   180.000000000000
+    3   600.000000000000
+    5  1200.000000000000
+
+  *** N.B. CROSS SECTIONS HAVE BEEN MULTIPLIED BY 10.0 TO ACCOUNT FOR JSTEP
+
+   ENERGY (CM-1)    JTOTL  JSTEP  JTOTU      F    I         SIG(F,I)
+   1250.000000         10     10     40      1    1          3.44670      
+   1250.000000         10     10     40      2    1         0.138078      
+   1250.000000         10     10     40      3    1         1.414828E-06  
+   1250.000000         10     10     40      5    1         1.420562E-08  
+
+   1250.000000         10     10     40      1    2         3.226119E-02  
+   1250.000000         10     10     40      2    2          5.55819      
+   1250.000000         10     10     40      3    2         1.311759E-04  
+   1250.000000         10     10     40      5    2         4.034260E-11  
+
+   1250.000000         10     10     40      1    3         3.023137E-07  
+   1250.000000         10     10     40      2    3         1.199643E-04  
+   1250.000000         10     10     40      5    3         1.519901E-12  
+
+   1250.000000         10     10     40      1    5         3.551406E-07  
+   1250.000000         10     10     40      2    5         4.316659E-09  
+   1250.000000         10     10     40      3    5         1.778285E-10  
+   1250.000000         10     10     40      5    5          272.251      
+
+  TOTAL INELASTIC INTEGRAL CROSS SECTIONS IN ANGSTROM**2 FROM LEVEL
+   1.38079E-01                                                 1
+   3.23924E-02                                                 2
+   1.20267E-04                                                 3
+   3.59635E-07                                                 5
+
+
+   ENERGY (CM-1)    JTOTL  JSTEP  JTOTU      F    I         SIG(F,I)
+   1000.000000         10     10     40      1    1          7.86288      
+   1000.000000         10     10     40      2    1         0.111049      
+   1000.000000         10     10     40      3    1         1.894059E-07  
+
+   1000.000000         10     10     40      1    2         2.708523E-02  
+   1000.000000         10     10     40      2    2          13.5973      
+   1000.000000         10     10     40      3    2         2.817317E-05  
+
+   1000.000000         10     10     40      1    3         5.261274E-08  
+   1000.000000         10     10     40      2    3         3.208611E-05  
+
+
+  TOTAL INELASTIC INTEGRAL CROSS SECTIONS IN ANGSTROM**2 FROM LEVEL
+   1.11050E-01                                                 1
+   2.71134E-02                                                 2
+   3.21387E-05                                                 3
+
+
+
+  ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
+ |                                                                            |
+ |                Non-reactive quantum scattering calculations                |
+ |                     on atomic and molecular collisions                     |
+ |                                                                            |
+ |              Copyright (C) 2018 J. M. Hutson & C. R. Le Sueur              |
+ |                                                                            |
+ |                               Version 2019.0 (beta)                        |
+ |                                                                            |
+ |                    This run used       0.03 cpu secs and                   |
+ |                731 of the allocated   1000000 words of storage             |
+ |                                                                            |
+  ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
+  ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
+ |                                                                            |
+ |                Non-reactive quantum scattering calculations                |
+ |                     on atomic and molecular collisions                     |
+ |                                                                            |
+ |              Copyright (C) 2018 J. M. Hutson & C. R. Le Sueur              |
+ |                                                                            |
+ |                               Version 2019.0 (beta)                        |
+ |                                                                            |
+ |                       Run on 12 Nov 2018   at 14:59:58                     |
+ |                                                                            |
+  ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
+
+
+  This program is free software: you can redistribute it and/or modify it under
+  the terms of the GNU General Public License, version 3, as published by
+  the Free Software Foundation.
+
+  Publications resulting from the use of this program should refer to
+  J. M. Hutson & C. R. Le Sueur, MOLSCAT computer code 2019.0 (beta)       
+  or to the published paper in Computer Physics Communications when available.
+
+
+  PHYSICAL CONSTANTS OBTAINED FROM NIST CODATA TABULATION OF 2014
+
+  MEMORY ALLOCATED TO MAIN WORKING ARRAY IS   1000000 (8-BYTE) WORDS (    7.63 MB)
+  2 INTEGERS CAN BE STORED IN EACH WORD.
+
+  PRINT LEVEL =  3     OTHER PRINT CONTROLS  ISIGPR = 1
+
+  RUN LABEL = model system: ITYP=2; helicity decoupling (IADD=20, IBOUND=1)                   
+
+  REDUCED MASS FOR INTERACTION =  20.000000000 ATOMIC MASS UNITS
+
+  ENERGY-INDEPENDENT MATRICES WILL BE SAVED TEMPORARILY ON UNIT  1
+
+  ======================================================================================================================
+
+  COUPLED STATES APPROXIMATION OF MCGUIRE AND KOURI (C.F.  J. CHEM. PHYS. 60, 2488 (1974))  WILL BE USED.
+
+           ITYPE = 22
+           L(I) = JTOT + ( 0) * (J(I)-2*M)
+
+  DIAGONAL CORIOLIS TERM INCLUDED IN CENTRIFUGAL POTENTIAL
+
+  INTERACTION TYPE IS    DIATOMIC VIB-ROTOR  -  ATOM.  
+
+  TARGET ROTATIONAL LEVELS TAKEN FROM &BASIS (JLEVEL) INPUT.  NLEVEL =  6
+
+  ENERGY LEVELS COMPUTED FROM W(E) = 1200.0000,   B(E) =   30.0000
+         WITH ZERO ENERGY AT V=0, J=0
+
+  *** NOTE.  IN CS CALCULATION MINUS/PLUS M-VALUE ASSUMED TO BE IDENTICAL.
+  *** NOTE.  CS OR DLD APPROXIMATION SUBSPACE IS LIMITED BY JZCSMX =  2
+             CROSS SECTIONS BETWEEN HIGHER J INACCURATE.
+  *** NOTE.  NEGATIVE VALUE FOR PAIR LEVEL INDEX INDICATES THAT LEVEL
+             IS AFFECTED BY JZCSMX LIMITATION.
+  *** NOTE.  CROSS SECTIONS INCOMPLETE BECAUSE OF JZCSMX WILL BE MARKED NEGATIVE
+             AND PRINTED ONLY IF ISIGPR.GE.2
+
+  QUANTUM NUMBERS FOR INTERACTING PAIR:
+  EACH PAIR STATE IS LABELLED BY  2 QUANTUM LABELS
+  EACH CHANNEL FUNCTION IS FORMED BY COMBINING A PAIR STATE WITH A VALUE OF L.
+  THE RESULTING BASIS SET IS ASYMPTOTICALLY DIAGONAL.
+
+  PAIR STATE     PAIR STATE QUANTUM NUMBERS    PAIR LEVEL     PAIR ENERGY (CM-1)
+                ----        J         V ----
+        1                   0         0           1             0.0000000
+        2                   2         0           2           180.0000000
+        3                   4         0          -3           600.0000000
+        4                   6         0          -4          1260.0000000
+        5                   0         1           5          1200.0000000
+        6                   2         1           6          1380.0000000
+
+  ======================================================================================================================
+  GENERAL-PURPOSE POTENL ROUTINE (MAY 18)
+
+  ANGULAR DEPENDENCE OF POTENTIAL EXPANDED IN TERMS OF
+  LEGENDRE POLYNOMIALS, P(LAMBDA).
+  INTEGRATED OVER DIATOM VIBRATIONAL FUNCTIONS
+
+  INTERACTION POTENTIAL FOR EXPANSION TERM NUMBER   1
+  WHICH HAS LAMBDA =   0,  V =   0,  V-PRIME =   0
+
+                 0.10000000E+01 * R **-12
+                -0.20000000E+01 * R ** -6
+
+  INTERACTION POTENTIAL FOR EXPANSION TERM NUMBER   2
+  WHICH HAS LAMBDA =   2,  V =   0,  V-PRIME =   0
+
+                -0.20000000E+00 * R ** -6
+
+  INTERACTION POTENTIAL FOR EXPANSION TERM NUMBER   3
+  WHICH HAS LAMBDA =   0,  V =   1,  V-PRIME =   1
+
+                 0.11000000E+01 * R **-12
+                -0.22000000E+01 * R ** -6
+
+  INTERACTION POTENTIAL FOR EXPANSION TERM NUMBER   4
+  WHICH HAS LAMBDA =   2,  V =   1,  V-PRIME =   1
+
+                -0.40000000E+00 * R ** -6
+
+  INTERACTION POTENTIAL FOR EXPANSION TERM NUMBER   5
+  WHICH HAS LAMBDA =   0,  V =   1,  V-PRIME =   0
+
+                 0.10000000E+00 * R **-12
+
+  INTERACTION POTENTIAL FOR EXPANSION TERM NUMBER   6
+  WHICH HAS LAMBDA =   2,  V =   1,  V-PRIME =   0
+
+                 0.10000000E-01 * R **-12
+
+  POTENL PROCESSING FINISHED.
+
+  UNITS FOR POTENTIAL ROUTINES:
+  POTENTIAL RETURNED IN UNITS OF EPSIL =      50.000000 CM-1
+  R                  IN UNITS OF RM    =       3.500000 ANGSTROMS
+
+  ALL LENGTHS ARE IN UNITS OF RM =  3.500000 ANGSTROM UNLESS OTHERWISE STATED
+
+  IVCHK.  COMPLETED SUCCESSFULLY.
+  INTERACTION MATRIX USES   3 BLOCKS OF VL ARRAY FOR R-DEPENDENT TERMS IN POTENTIAL
+
+  ======================================================================================================================
+
+  PROPAGATION ALGORITHMS FOR COUPLED EQUATIONS SPECIFIED BY IPROPS =  6 AND IPROPL =  1
+
+  COUPLED EQUATIONS WILL BE PROPAGATED OUTWARDS IN 2 SEGMENTS
+  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+  SEGMENT 1 WILL BE PROPAGATED OUTWARDS
+
+  FROM RMIN CHOSEN USING IRMSET =   8  TO VALUE OF RMID CHOSEN USING RVFAC =    1.05
+
+  COUPLED EQUATIONS SOLVED BY DIABATIC MODIFIED LOG DERIVATIVE METHOD OF MANOLOPOULOS
+
+  PROPAGATION STEP SIZE DETERMINED USING STEPS =   5.00     (PER WAVELENGTH)
+
+  LOG-DERIVATIVE MATRIX WILL BE INITIALISED IN THE LOCAL EIGENBASIS FOR RMIN IN THE OUTWARDS PROPAGATION PART
+  LOCALLY CLOSED CHANNELS WILL BE INITIALISED WITH A WKB BOUNDARY CONDITION
+  LOCALLY OPEN CHANNELS WILL BE INITIALISED WITH THE VALUE  1.0000000E+08
+  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+  SEGMENT 2 WILL BE PROPAGATED OUTWARDS
+
+  FROM VALUE OF RMID CHOSEN USING RVFAC =    1.05  TO WHICHEVER IS LARGER OF
+  OUTERMOST CENTRIFUGAL TURNING POINT IN OPEN CHANNELS, AND RMAX, WHICH =     10.00
+
+  COUPLED EQUATIONS SOLVED BY VARIABLE STEP AIRY METHOD.
+  ALL PUBLICATIONS RESULTING FROM THE USE OF THIS PROPAGATOR SHOULD REFERENCE
+  M.H. ALEXANDER AND D.E. MANOLOPOULOS,  J CHEM PHYS 86, 2044 (1987).
+  STEP SIZE GROWS GEOMETRICALLY WITH INCREASING R, WITH RATIO TOLHI =  1.050000
+  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+  ======================================================================================================================
+
+  INPUT ENERGY VALUES ASSUMED TO BE IN UNITS OF CM-1 BY DEFAULT.
+
+  CONTROL DATA FOR TOTAL ENERGIES.  CALCULATIONS WILL BE PERFORMED FOR   2 VALUES
+       ENERGY NO.   1 =   1250.0000000     CM-1
+       ENERGY NO.   2 =   1000.0000000     CM-1
+
+  ======================================================================================================================
+
+  TOTAL ANGULAR MOMENTUM JTOT RUNS FROM  10  TO    40  IN STEPS OF  10
+
+  EACH JTOT IS SPLIT INTO A MAXIMUM OF   3 DIFFERENT SYMMETRY BLOCKS
+
+  STATE-TO-STATE INTEGRAL CROSS-SECTIONS WILL BE COMPUTED BUT NOT STORED ON DISK
+
+  ======================================================================================================================
+
+  INITIALIZATION DONE.  TIME WAS   0.00 CPU SECS.       171 WORDS OF STORAGE USED.
+
+  =========================== model system: ITYP=2; helicity decoupling (IADD=20, IBOUND=1) ============================
+
+  *******************************************  ANGULAR MOMENTUM JTOT  =  10  *******************************************
+
+  IBLOCK =   1
+
+  JTOT =   10   IBLOCK =   1   ENERGY(   1) =   1250.0000000     CM-1
+  INNER CLASSICAL TURNING POINT AT R =  0.7391
+  RADIAL PROPAGATION WILL START AT R =  0.6366
+
+  RMID =   0.7761 OBTAINED FROM RVFAC = 1.050
+
+  DWPROP. LOG DERIVATIVE MATRIX PROPAGATED FROM       0.6366  TO 0.77606      IN     29  STEPS.
+
+  AIRPRP. LOG DERIVATIVE MATRIX PROPAGATED FROM       0.7761  TO  10.000      IN     94  STEPS.
+
+  * * * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  10 AND IBLOCK =   1 * * * * * * * * *
+
+    F  I =      1              2              3              5
+    1       1.73078E-01    3.78746E-04    5.15486E-09    5.55081E-10
+    2       1.62103E-03    4.39914E-03    4.28502E-07    2.70123E-11
+    3       2.41247E-08    4.68548E-07    2.52339E-02    9.94422E-12
+    5       2.22032E-11    2.52452E-13    8.49933E-14    3.23000E+00
+
+  * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
+
+  --------------------------- model system: ITYP=2; helicity decoupling (IADD=20, IBOUND=1) ----------------------------
+
+  JTOT =   10   IBLOCK =   1   ENERGY(   2) =   1000.0000000     CM-1
+
+  DWPROP. LOG DERIVATIVE MATRIX PROPAGATED FROM       0.6366  TO 0.77606      IN     29  STEPS.
+
+  AIRPRP. LOG DERIVATIVE MATRIX PROPAGATED FROM       0.7761  TO  10.000      IN     94  STEPS.
+
+  * * * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  10 AND IBLOCK =   1 * * * * * * * * *
+
+    F  I =      1              2              3
+    1       1.86568E-01    3.32530E-04    1.12086E-09
+    2       1.36337E-03    3.97323E-02    1.21976E-07
+    3       4.03510E-09    1.07101E-07    2.06363E-02
+
+  * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
+
+  ======================================================================================================================
+
+  IBLOCK =   2
+
+  JTOT =   10   IBLOCK =   2   ENERGY(   1) =   1250.0000000     CM-1
+  INNER CLASSICAL TURNING POINT AT R =  0.7467
+  RADIAL PROPAGATION WILL START AT R =  0.6404
+
+  RMID =   0.7841 OBTAINED FROM RVFAC = 1.050
+
+  DWPROP. LOG DERIVATIVE MATRIX PROPAGATED FROM       0.6404  TO 0.78405      IN     28  STEPS.
+
+  AIRPRP. LOG DERIVATIVE MATRIX PROPAGATED FROM       0.7841  TO  10.000      IN     93  STEPS.
+
+  * * * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  10 AND IBLOCK =   2 * * * * * * * * *
+
+    F  I =      2              3
+    2       2.18752E-02    7.64268E-07
+    3       8.35695E-07    3.91632E-02
+
+  * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
+
+  --------------------------- model system: ITYP=2; helicity decoupling (IADD=20, IBOUND=1) ----------------------------
+
+  JTOT =   10   IBLOCK =   2   ENERGY(   2) =   1000.0000000     CM-1
+
+  DWPROP. LOG DERIVATIVE MATRIX PROPAGATED FROM       0.6404  TO 0.78405      IN     28  STEPS.
+
+  AIRPRP. LOG DERIVATIVE MATRIX PROPAGATED FROM       0.7841  TO  10.000      IN     93  STEPS.
+
+  * * * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  10 AND IBLOCK =   2 * * * * * * * * *
+
+    F  I =      2              3
+    2       5.89940E-02    2.84759E-07
+    3       2.50033E-07    2.49251E-02
+
+  * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
+
+  ======================================================================================================================
+
+  IBLOCK =   3
+
+  JTOT =   10   IBLOCK =   3   ENERGY(   1) =   1250.0000000     CM-1
+  INNER CLASSICAL TURNING POINT AT R =  0.7480
+  RADIAL PROPAGATION WILL START AT R =  0.6413
+
+  RMID =   0.7854 OBTAINED FROM RVFAC = 1.050
+
+  DWPROP. LOG DERIVATIVE MATRIX PROPAGATED FROM       0.6413  TO 0.78535      IN     28  STEPS.
+
+  AIRPRP. LOG DERIVATIVE MATRIX PROPAGATED FROM       0.7854  TO  10.000      IN     93  STEPS.
+
+  * * * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  10 AND IBLOCK =   3 * * * * * * * * *
+
+    F  I =      2              3
+    2       7.53424E-02    6.55028E-07
+    3       7.16246E-07    8.38945E-03
+
+  * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
+
+  --------------------------- model system: ITYP=2; helicity decoupling (IADD=20, IBOUND=1) ----------------------------
+
+  JTOT =   10   IBLOCK =   3   ENERGY(   2) =   1000.0000000     CM-1
+
+  DWPROP. LOG DERIVATIVE MATRIX PROPAGATED FROM       0.6413  TO 0.78535      IN     28  STEPS.
+
+  AIRPRP. LOG DERIVATIVE MATRIX PROPAGATED FROM       0.7854  TO  10.000      IN     93  STEPS.
+
+  * * * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  10 AND IBLOCK =   3 * * * * * * * * *
+
+    F  I =      2              3
+    2       1.19522E-03    2.58537E-07
+    3       2.27008E-07    6.64680E-06
+
+  * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
+
+  ======================================================================================================================
+
+  *******************************************  ANGULAR MOMENTUM JTOT  =  20  *******************************************
+
+  IBLOCK =   1
+
+  JTOT =   20   IBLOCK =   1   ENERGY(   1) =   1250.0000000     CM-1
+  INNER CLASSICAL TURNING POINT AT R =  0.7407
+  RADIAL PROPAGATION WILL START AT R =  0.6374
+
+  RMID =   0.7777 OBTAINED FROM RVFAC = 1.050
+
+  DWPROP. LOG DERIVATIVE MATRIX PROPAGATED FROM       0.6374  TO 0.77774      IN     30  STEPS.
+
+  AIRPRP. LOG DERIVATIVE MATRIX PROPAGATED FROM       0.7777  TO  10.000      IN     95  STEPS.
+
+  * * * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  20 AND IBLOCK =   1 * * * * * * * * *
+
+    F  I =      1              2              3              5
+    1       1.62360E-04    7.01887E-04    8.65101E-09    1.53760E-09
+    2       3.00407E-03    4.05348E-02    7.10596E-07    5.96604E-11
+    3       4.04867E-08    7.77006E-07    6.45885E-02    7.11769E-12
+    5       6.15041E-11    5.57574E-13    6.08349E-14    7.49194E+00
+
+  * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
+
+  --------------------------- model system: ITYP=2; helicity decoupling (IADD=20, IBOUND=1) ----------------------------
+
+  JTOT =   20   IBLOCK =   1   ENERGY(   2) =   1000.0000000     CM-1
+
+  DWPROP. LOG DERIVATIVE MATRIX PROPAGATED FROM       0.6374  TO 0.77774      IN     30  STEPS.
+
+  AIRPRP. LOG DERIVATIVE MATRIX PROPAGATED FROM       0.7777  TO  10.000      IN     95  STEPS.
+
+  * * * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  20 AND IBLOCK =   1 * * * * * * * * *
+
+    F  I =      1              2              3
+    1       5.92091E-03    6.14012E-04    1.40409E-09
+    2       2.51745E-03    9.01034E-02    1.87792E-07
+    3       5.05472E-09    1.64890E-07    1.52750E-02
+
+  * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
+
+  ======================================================================================================================
+
+  IBLOCK =   2
+
+  JTOT =   20   IBLOCK =   2   ENERGY(   1) =   1250.0000000     CM-1
+  INNER CLASSICAL TURNING POINT AT R =  0.7485
+  RADIAL PROPAGATION WILL START AT R =  0.6413
+
+  RMID =   0.7859 OBTAINED FROM RVFAC = 1.050
+
+  DWPROP. LOG DERIVATIVE MATRIX PROPAGATED FROM       0.6413  TO 0.78595      IN     28  STEPS.
+
+  AIRPRP. LOG DERIVATIVE MATRIX PROPAGATED FROM       0.7859  TO  10.000      IN     93  STEPS.
+
+  * * * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  20 AND IBLOCK =   2 * * * * * * * * *
+
+    F  I =      2              3
+    2       6.09230E-02    1.35242E-06
+    3       1.47881E-06    1.19551E-01
+
+  * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
+
+  --------------------------- model system: ITYP=2; helicity decoupling (IADD=20, IBOUND=1) ----------------------------
+
+  JTOT =   20   IBLOCK =   2   ENERGY(   2) =   1000.0000000     CM-1
+
+  DWPROP. LOG DERIVATIVE MATRIX PROPAGATED FROM       0.6413  TO 0.78595      IN     28  STEPS.
+
+  AIRPRP. LOG DERIVATIVE MATRIX PROPAGATED FROM       0.7859  TO  10.000      IN     93  STEPS.
+
+  * * * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  20 AND IBLOCK =   2 * * * * * * * * *
+
+    F  I =      2              3
+    2       1.99471E-01    3.36409E-07
+    3       2.95384E-07    1.79942E-02
+
+  * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
+
+  ======================================================================================================================
+
+  IBLOCK =   3
+
+  JTOT =   20   IBLOCK =   3   ENERGY(   1) =   1250.0000000     CM-1
+  INNER CLASSICAL TURNING POINT AT R =  0.7498
+  RADIAL PROPAGATION WILL START AT R =  0.6422
+
+  RMID =   0.7873 OBTAINED FROM RVFAC = 1.050
+
+  DWPROP. LOG DERIVATIVE MATRIX PROPAGATED FROM       0.6422  TO 0.78726      IN     28  STEPS.
+
+  AIRPRP. LOG DERIVATIVE MATRIX PROPAGATED FROM       0.7873  TO  10.000      IN     93  STEPS.
+
+  * * * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  20 AND IBLOCK =   3 * * * * * * * * *
+
+    F  I =      2              3
+    2       3.94415E-03    1.14906E-06
+    3       1.25645E-06    8.33999E-02
+
+  * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
+
+  --------------------------- model system: ITYP=2; helicity decoupling (IADD=20, IBOUND=1) ----------------------------
+
+  JTOT =   20   IBLOCK =   3   ENERGY(   2) =   1000.0000000     CM-1
+
+  DWPROP. LOG DERIVATIVE MATRIX PROPAGATED FROM       0.6422  TO 0.78726      IN     28  STEPS.
+
+  AIRPRP. LOG DERIVATIVE MATRIX PROPAGATED FROM       0.7873  TO  10.000      IN     93  STEPS.
+
+  * * * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  20 AND IBLOCK =   3 * * * * * * * * *
+
+    F  I =      2              3
+    2       1.97620E-01    3.25716E-07
+    3       2.85994E-07    4.49260E-05
+
+  * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
+
+  ======================================================================================================================
+
+  *******************************************  ANGULAR MOMENTUM JTOT  =  30  *******************************************
+
+  IBLOCK =   1
+
+  JTOT =   30   IBLOCK =   1   ENERGY(   1) =   1250.0000000     CM-1
+  INNER CLASSICAL TURNING POINT AT R =  0.7434
+  RADIAL PROPAGATION WILL START AT R =  0.6389
+
+  RMID =   0.7806 OBTAINED FROM RVFAC = 1.050
+
+  DWPROP. LOG DERIVATIVE MATRIX PROPAGATED FROM       0.6389  TO 0.78057      IN     30  STEPS.
+
+  AIRPRP. LOG DERIVATIVE MATRIX PROPAGATED FROM       0.7806  TO  10.000      IN     95  STEPS.
+
+  * * * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  30 AND IBLOCK =   1 * * * * * * * * *
+
+    F  I =      1              2              3              5
+    1       5.49387E-02    9.65264E-04    8.85630E-09    3.00425E-08
+    2       4.13133E-03    7.11923E-02    8.44209E-07    2.84580E-10
+    3       4.14475E-08    9.23107E-07    1.88813E-02    1.26463E-12
+    5       1.20170E-09    2.65963E-12    1.08088E-14    2.25847E-01
+
+  * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
+
+  --------------------------- model system: ITYP=2; helicity decoupling (IADD=20, IBOUND=1) ----------------------------
+
+  JTOT =   30   IBLOCK =   1   ENERGY(   2) =   1000.0000000     CM-1
+
+  DWPROP. LOG DERIVATIVE MATRIX PROPAGATED FROM       0.6389  TO 0.78057      IN     30  STEPS.
+
+  AIRPRP. LOG DERIVATIVE MATRIX PROPAGATED FROM       0.7806  TO  10.000      IN     95  STEPS.
+
+  * * * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  30 AND IBLOCK =   1 * * * * * * * * *
+
+    F  I =      1              2              3
+    1       2.44315E-02    8.12494E-04    1.57828E-09
+    2       3.33123E-03    1.53757E-01    1.93533E-07
+    3       5.68181E-09    1.69932E-07    1.63059E-01
+
+  * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
+
+  ======================================================================================================================
+
+  IBLOCK =   2
+
+  JTOT =   30   IBLOCK =   2   ENERGY(   1) =   1250.0000000     CM-1
+  INNER CLASSICAL TURNING POINT AT R =  0.7516
+  RADIAL PROPAGATION WILL START AT R =  0.6429
+
+  RMID =   0.7892 OBTAINED FROM RVFAC = 1.050
+
+  DWPROP. LOG DERIVATIVE MATRIX PROPAGATED FROM       0.6429  TO 0.78917      IN     29  STEPS.
+
+  AIRPRP. LOG DERIVATIVE MATRIX PROPAGATED FROM       0.7892  TO  10.000      IN     93  STEPS.
+
+  * * * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  30 AND IBLOCK =   2 * * * * * * * * *
+
+    F  I =      2              3
+    2       1.18308E-01    1.30076E-06
+    3       1.42233E-06    2.76946E-02
+
+  * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
+
+  --------------------------- model system: ITYP=2; helicity decoupling (IADD=20, IBOUND=1) ----------------------------
+
+  JTOT =   30   IBLOCK =   2   ENERGY(   2) =   1000.0000000     CM-1
+
+  DWPROP. LOG DERIVATIVE MATRIX PROPAGATED FROM       0.6429  TO 0.78917      IN     29  STEPS.
+
+  AIRPRP. LOG DERIVATIVE MATRIX PROPAGATED FROM       0.7892  TO  10.000      IN     93  STEPS.
+
+  * * * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  30 AND IBLOCK =   2 * * * * * * * * *
+
+    F  I =      2              3
+    2       3.15167E-01    3.60667E-07
+    3       3.16683E-07    3.37981E-01
+
+  * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
+
+  ======================================================================================================================
+
+  IBLOCK =   3
+
+  JTOT =   30   IBLOCK =   3   ENERGY(   1) =   1250.0000000     CM-1
+  INNER CLASSICAL TURNING POINT AT R =  0.7529
+  RADIAL PROPAGATION WILL START AT R =  0.6438
+
+  RMID =   0.7905 OBTAINED FROM RVFAC = 1.050
+
+  DWPROP. LOG DERIVATIVE MATRIX PROPAGATED FROM       0.6438  TO 0.79051      IN     29  STEPS.
+
+  AIRPRP. LOG DERIVATIVE MATRIX PROPAGATED FROM       0.7905  TO  10.000      IN     93  STEPS.
+
+  * * * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  30 AND IBLOCK =   3 * * * * * * * * *
+
+    F  I =      2              3
+    2       2.82122E-02    1.14205E-06
+    3       1.24879E-06    6.21029E-03
+
+  * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
+
+  --------------------------- model system: ITYP=2; helicity decoupling (IADD=20, IBOUND=1) ----------------------------
+
+  JTOT =   30   IBLOCK =   3   ENERGY(   2) =   1000.0000000     CM-1
+
+  DWPROP. LOG DERIVATIVE MATRIX PROPAGATED FROM       0.6438  TO 0.79051      IN     29  STEPS.
+
+  AIRPRP. LOG DERIVATIVE MATRIX PROPAGATED FROM       0.7905  TO  10.000      IN     93  STEPS.
+
+  * * * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  30 AND IBLOCK =   3 * * * * * * * * *
+
+    F  I =      2              3
+    2       2.61623E-01    3.43116E-07
+    3       3.01272E-07    3.57893E-01
+
+  * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
+
+  ======================================================================================================================
+
+  *******************************************  ANGULAR MOMENTUM JTOT  =  40  *******************************************
+
+  IBLOCK =   1
+
+  JTOT =   40   IBLOCK =   1   ENERGY(   1) =   1250.0000000     CM-1
+  INNER CLASSICAL TURNING POINT AT R =  0.7473
+  RADIAL PROPAGATION WILL START AT R =  0.6409
+
+  RMID =   0.7847 OBTAINED FROM RVFAC = 1.050
+
+  DWPROP. LOG DERIVATIVE MATRIX PROPAGATED FROM       0.6409  TO 0.78470      IN     30  STEPS.
+
+  AIRPRP. LOG DERIVATIVE MATRIX PROPAGATED FROM       0.7847  TO  10.000      IN     94  STEPS.
+
+  * * * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  40 AND IBLOCK =   1 * * * * * * * * *
+
+    F  I =      1              2              3              5
+    1       1.16592E-01    1.13864E-03    5.67954E-09    3.37522E-09
+    2       4.87337E-03    5.27864E-03    6.12763E-07    5.59890E-11
+    3       2.65803E-08    6.70031E-07    1.42955E-01    7.98797E-16
+    5       1.35009E-10    5.23262E-13    6.82732E-18    1.62789E+01
+
+  * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
+
+  --------------------------- model system: ITYP=2; helicity decoupling (IADD=20, IBOUND=1) ----------------------------
+
+  JTOT =   40   IBLOCK =   1   ENERGY(   2) =   1000.0000000     CM-1
+
+  DWPROP. LOG DERIVATIVE MATRIX PROPAGATED FROM       0.6409  TO 0.78470      IN     30  STEPS.
+
+  AIRPRP. LOG DERIVATIVE MATRIX PROPAGATED FROM       0.7847  TO  10.000      IN     94  STEPS.
+
+  * * * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  40 AND IBLOCK =   1 * * * * * * * * *
+
+    F  I =      1              2              3
+    1       5.69556E-01    9.08935E-04    7.84453E-10
+    2       3.72663E-03    2.67851E-03    1.61331E-07
+    3       2.82403E-09    1.41657E-07    2.37739E-01
+
+  * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
+
+  ======================================================================================================================
+
+  IBLOCK =   2
+
+  JTOT =   40   IBLOCK =   2   ENERGY(   1) =   1250.0000000     CM-1
+  INNER CLASSICAL TURNING POINT AT R =  0.7561
+  RADIAL PROPAGATION WILL START AT R =  0.6452
+
+  RMID =   0.7939 OBTAINED FROM RVFAC = 1.050
+
+  DWPROP. LOG DERIVATIVE MATRIX PROPAGATED FROM       0.6452  TO 0.79388      IN     29  STEPS.
+
+  AIRPRP. LOG DERIVATIVE MATRIX PROPAGATED FROM       0.7939  TO  10.000      IN     93  STEPS.
+
+  * * * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  40 AND IBLOCK =   2 * * * * * * * * *
+
+    F  I =      2              3
+    2       2.47664E-02    1.36713E-06
+    3       1.49489E-06    2.80425E-01
+
+  * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
+
+  --------------------------- model system: ITYP=2; helicity decoupling (IADD=20, IBOUND=1) ----------------------------
+
+  JTOT =   40   IBLOCK =   2   ENERGY(   2) =   1000.0000000     CM-1
+
+  DWPROP. LOG DERIVATIVE MATRIX PROPAGATED FROM       0.6452  TO 0.79388      IN     29  STEPS.
+
+  AIRPRP. LOG DERIVATIVE MATRIX PROPAGATED FROM       0.7939  TO  10.000      IN     93  STEPS.
+
+  * * * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  40 AND IBLOCK =   2 * * * * * * * * *
+
+    F  I =      2              3
+    2       5.34540E-05    2.32714E-07
+    3       2.04335E-07    4.76637E-01
+
+  * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
+
+  ======================================================================================================================
+
+  IBLOCK =   3
+
+  JTOT =   40   IBLOCK =   3   ENERGY(   1) =   1250.0000000     CM-1
+  INNER CLASSICAL TURNING POINT AT R =  0.7574
+  RADIAL PROPAGATION WILL START AT R =  0.6461
+
+  RMID =   0.7953 OBTAINED FROM RVFAC = 1.050
+
+  DWPROP. LOG DERIVATIVE MATRIX PROPAGATED FROM       0.6461  TO 0.79526      IN     29  STEPS.
+
+  AIRPRP. LOG DERIVATIVE MATRIX PROPAGATED FROM       0.7953  TO  10.000      IN     93  STEPS.
+
+  * * * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  40 AND IBLOCK =   3 * * * * * * * * *
+
+    F  I =      2              3
+    2       1.23087E-01    1.13269E-06
+    3       1.23855E-06    2.55625E-01
+
+  * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
+
+  --------------------------- model system: ITYP=2; helicity decoupling (IADD=20, IBOUND=1) ----------------------------
+
+  JTOT =   40   IBLOCK =   3   ENERGY(   2) =   1000.0000000     CM-1
+
+  DWPROP. LOG DERIVATIVE MATRIX PROPAGATED FROM       0.6461  TO 0.79526      IN     29  STEPS.
+
+  AIRPRP. LOG DERIVATIVE MATRIX PROPAGATED FROM       0.7953  TO  10.000      IN     93  STEPS.
+
+  * * * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  40 AND IBLOCK =   3 * * * * * * * * *
+
+    F  I =      2              3
+    2       5.71342E-02    1.96885E-07
+    3       1.72874E-07    4.65639E-01
+
+  * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
+
+  ======================================================================================================================
+
+  * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
+
+  =========================== model system: ITYP=2; helicity decoupling (IADD=20, IBOUND=1) ============================
+
+  LEVEL   4 WITH ENERGY   1260.000000000000 IS NEVER OPEN
+  LEVEL   6 WITH ENERGY   1380.000000000000 IS NEVER OPEN
+
+  STATE-TO-STATE INTEGRAL CROSS SECTIONS IN ANGSTROM**2 BETWEEN    4 LEVELS WITH THRESHOLD ENERGIES (IN CM-1):
+
+    1     0.000000000000
+    2   180.000000000000
+    3   600.000000000000
+    5  1200.000000000000
+
+  *** N.B. CROSS SECTIONS HAVE BEEN MULTIPLIED BY 10.0 TO ACCOUNT FOR JSTEP
+
+   ENERGY (CM-1)    JTOTL  JSTEP  JTOTU      F    I         SIG(F,I)
+   1250.000000         10     10     40      1    1          3.44772      
+   1250.000000         10     10     40      2    1         0.136298      
+   1250.000000         10     10     40      3    1         1.326392E-06  
+   1250.000000         10     10     40      5    1         1.420415E-08  
+
+   1250.000000         10     10     40      1    2         3.184534E-02  
+   1250.000000         10     10     40      2    2          5.77862      
+   1250.000000         10     10     40      3    2         1.253046E-04  
+   1250.000000         10     10     40      5    2         3.992913E-11  
+
+   1250.000000         10     10     40      1    3         2.834171E-07  
+   1250.000000         10     10     40      2    3         1.145948E-04  
+   1250.000000         10     10     40      5    3         1.566439E-12  
+
+   1250.000000         10     10     40      1    5         3.551037E-07  
+   1250.000000         10     10     40      2    5         4.272417E-09  
+   1250.000000         10     10     40      3    5         1.832733E-10  
+   1250.000000         10     10     40      5    5          272.267      
+
+  TOTAL INELASTIC INTEGRAL CROSS SECTIONS IN ANGSTROM**2 FROM LEVEL
+   1.36299E-01                                                 1
+   3.19706E-02                                                 2
+   1.14878E-04                                                 3
+   3.59559E-07                                                 5
+
+
+   ENERGY (CM-1)    JTOTL  JSTEP  JTOTU      F    I         SIG(F,I)
+   1000.000000         10     10     40      1    1          7.86477      
+   1000.000000         10     10     40      2    1         0.109387      
+   1000.000000         10     10     40      3    1         1.759566E-07  
+
+   1000.000000         10     10     40      1    2         2.667971E-02  
+   1000.000000         10     10     40      2    2          13.7753      
+   1000.000000         10     10     40      3    2         2.637163E-05  
+
+   1000.000000         10     10     40      1    3         4.887684E-08  
+   1000.000000         10     10     40      2    3         3.003436E-05  
+
+
+  TOTAL INELASTIC INTEGRAL CROSS SECTIONS IN ANGSTROM**2 FROM LEVEL
+   1.09387E-01                                                 1
+   2.67061E-02                                                 2
+   3.00832E-05                                                 3
+
+
+
+  ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
+ |                                                                            |
+ |                Non-reactive quantum scattering calculations                |
+ |                     on atomic and molecular collisions                     |
+ |                                                                            |
+ |              Copyright (C) 2018 J. M. Hutson & C. R. Le Sueur              |
+ |                                                                            |
+ |                               Version 2019.0 (beta)                        |
+ |                                                                            |
+ |                    This run used       0.03 cpu secs and                   |
+ |                731 of the allocated   1000000 words of storage             |
+ |                                                                            |
+  ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
+  ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
+ |                                                                            |
+ |                Non-reactive quantum scattering calculations                |
+ |                     on atomic and molecular collisions                     |
+ |                                                                            |
+ |              Copyright (C) 2018 J. M. Hutson & C. R. Le Sueur              |
+ |                                                                            |
+ |                               Version 2019.0 (beta)                        |
+ |                                                                            |
+ |                       Run on 12 Nov 2018   at 14:59:58                     |
+ |                                                                            |
+  ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
+
+
+  This program is free software: you can redistribute it and/or modify it under
+  the terms of the GNU General Public License, version 3, as published by
+  the Free Software Foundation.
+
+  Publications resulting from the use of this program should refer to
+  J. M. Hutson & C. R. Le Sueur, MOLSCAT computer code 2019.0 (beta)       
+  or to the published paper in Computer Physics Communications when available.
+
+
+  PHYSICAL CONSTANTS OBTAINED FROM NIST CODATA TABULATION OF 2014
+
+  MEMORY ALLOCATED TO MAIN WORKING ARRAY IS   1000000 (8-BYTE) WORDS (    7.63 MB)
+  2 INTEGERS CAN BE STORED IN EACH WORD.
+
+  PRINT LEVEL =  3     OTHER PRINT CONTROLS  ISIGPR = 1
+
+  RUN LABEL = model system: ITYP=2; decoupled L-dominant (IADD=30)                            
+
+  REDUCED MASS FOR INTERACTION =  20.000000000 ATOMIC MASS UNITS
+
+  ENERGY-INDEPENDENT MATRICES WILL BE SAVED TEMPORARILY ON UNIT  1
+
+  ======================================================================================================================
+
+  DECOUPLED L-DOMINANT APPROX. OF DEPRISTO AND ALEXANDER WILL BE USED.
+
+  INTERACTION TYPE IS    DIATOMIC VIB-ROTOR  -  ATOM.  
+
+  TARGET ROTATIONAL LEVELS TAKEN FROM &BASIS (JLEVEL) INPUT.  NLEVEL =  6
+
+  ENERGY LEVELS COMPUTED FROM W(E) = 1200.0000,   B(E) =   30.0000
+         WITH ZERO ENERGY AT V=0, J=0
+  *** NOTE.  CS OR DLD APPROXIMATION SUBSPACE IS LIMITED BY JZCSMX =  2
+             CROSS SECTIONS BETWEEN HIGHER J INACCURATE.
+  *** NOTE.  NEGATIVE VALUE FOR PAIR LEVEL INDEX INDICATES THAT LEVEL
+             IS AFFECTED BY JZCSMX LIMITATION.
+  *** NOTE.  CROSS SECTIONS INCOMPLETE BECAUSE OF JZCSMX WILL BE MARKED NEGATIVE
+             AND PRINTED ONLY IF ISIGPR.GE.2
+
+  QUANTUM NUMBERS FOR INTERACTING PAIR:
+  EACH PAIR STATE IS LABELLED BY  2 QUANTUM LABELS
+  EACH CHANNEL FUNCTION IS FORMED BY COMBINING A PAIR STATE WITH A VALUE OF L.
+  THE RESULTING BASIS SET IS ASYMPTOTICALLY DIAGONAL.
+
+  PAIR STATE     PAIR STATE QUANTUM NUMBERS    PAIR LEVEL     PAIR ENERGY (CM-1)
+                ----        J         V ----
+        1                   0         0           1             0.0000000
+        2                   2         0           2           180.0000000
+        3                   4         0          -3           600.0000000
+        4                   6         0          -4          1260.0000000
+        5                   0         1           5          1200.0000000
+        6                   2         1           6          1380.0000000
+
+  ======================================================================================================================
+  GENERAL-PURPOSE POTENL ROUTINE (MAY 18)
+
+  ANGULAR DEPENDENCE OF POTENTIAL EXPANDED IN TERMS OF
+  LEGENDRE POLYNOMIALS, P(LAMBDA).
+  INTEGRATED OVER DIATOM VIBRATIONAL FUNCTIONS
+
+  INTERACTION POTENTIAL FOR EXPANSION TERM NUMBER   1
+  WHICH HAS LAMBDA =   0,  V =   0,  V-PRIME =   0
+
+                 0.10000000E+01 * R **-12
+                -0.20000000E+01 * R ** -6
+
+  INTERACTION POTENTIAL FOR EXPANSION TERM NUMBER   2
+  WHICH HAS LAMBDA =   2,  V =   0,  V-PRIME =   0
+
+                -0.20000000E+00 * R ** -6
+
+  INTERACTION POTENTIAL FOR EXPANSION TERM NUMBER   3
+  WHICH HAS LAMBDA =   0,  V =   1,  V-PRIME =   1
+
+                 0.11000000E+01 * R **-12
+                -0.22000000E+01 * R ** -6
+
+  INTERACTION POTENTIAL FOR EXPANSION TERM NUMBER   4
+  WHICH HAS LAMBDA =   2,  V =   1,  V-PRIME =   1
+
+                -0.40000000E+00 * R ** -6
+
+  INTERACTION POTENTIAL FOR EXPANSION TERM NUMBER   5
+  WHICH HAS LAMBDA =   0,  V =   1,  V-PRIME =   0
+
+                 0.10000000E+00 * R **-12
+
+  INTERACTION POTENTIAL FOR EXPANSION TERM NUMBER   6
+  WHICH HAS LAMBDA =   2,  V =   1,  V-PRIME =   0
+
+                 0.10000000E-01 * R **-12
+
+  POTENL PROCESSING FINISHED.
+
+  UNITS FOR POTENTIAL ROUTINES:
+  POTENTIAL RETURNED IN UNITS OF EPSIL =      50.000000 CM-1
+  R                  IN UNITS OF RM    =       3.500000 ANGSTROMS
+
+  ALL LENGTHS ARE IN UNITS OF RM =  3.500000 ANGSTROM UNLESS OTHERWISE STATED
+
+  IVCHK.  COMPLETED SUCCESSFULLY.
+  INTERACTION MATRIX USES   3 BLOCKS OF VL ARRAY FOR R-DEPENDENT TERMS IN POTENTIAL
+
+  ======================================================================================================================
+
+  PROPAGATION ALGORITHMS FOR COUPLED EQUATIONS SPECIFIED BY IPROPS =  6 AND IPROPL =  1
+
+  COUPLED EQUATIONS WILL BE PROPAGATED OUTWARDS IN 2 SEGMENTS
+  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+  SEGMENT 1 WILL BE PROPAGATED OUTWARDS
+
+  FROM RMIN CHOSEN USING IRMSET =   8  TO VALUE OF RMID CHOSEN USING RVFAC =    1.05
+
+  COUPLED EQUATIONS SOLVED BY DIABATIC MODIFIED LOG DERIVATIVE METHOD OF MANOLOPOULOS
+
+  PROPAGATION STEP SIZE DETERMINED USING STEPS =   5.00     (PER WAVELENGTH)
+
+  LOG-DERIVATIVE MATRIX WILL BE INITIALISED IN THE LOCAL EIGENBASIS FOR RMIN IN THE OUTWARDS PROPAGATION PART
+  LOCALLY CLOSED CHANNELS WILL BE INITIALISED WITH A WKB BOUNDARY CONDITION
+  LOCALLY OPEN CHANNELS WILL BE INITIALISED WITH THE VALUE  1.0000000E+08
+  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+  SEGMENT 2 WILL BE PROPAGATED OUTWARDS
+
+  FROM VALUE OF RMID CHOSEN USING RVFAC =    1.05  TO WHICHEVER IS LARGER OF
+  OUTERMOST CENTRIFUGAL TURNING POINT IN OPEN CHANNELS, AND RMAX, WHICH =     10.00
+
+  COUPLED EQUATIONS SOLVED BY VARIABLE STEP AIRY METHOD.
+  ALL PUBLICATIONS RESULTING FROM THE USE OF THIS PROPAGATOR SHOULD REFERENCE
+  M.H. ALEXANDER AND D.E. MANOLOPOULOS,  J CHEM PHYS 86, 2044 (1987).
+  STEP SIZE GROWS GEOMETRICALLY WITH INCREASING R, WITH RATIO TOLHI =  1.050000
+  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+  ======================================================================================================================
+
+  INPUT ENERGY VALUES ASSUMED TO BE IN UNITS OF CM-1 BY DEFAULT.
+
+  CONTROL DATA FOR TOTAL ENERGIES.  CALCULATIONS WILL BE PERFORMED FOR   2 VALUES
+       ENERGY NO.   1 =   1250.0000000     CM-1
+       ENERGY NO.   2 =   1000.0000000     CM-1
+
+  ======================================================================================================================
+
+  TOTAL ANGULAR MOMENTUM JTOT RUNS FROM  10  TO    40  IN STEPS OF  10
+
+  EACH JTOT IS SPLIT INTO A MAXIMUM OF   5 DIFFERENT SYMMETRY BLOCKS
+
+  STATE-TO-STATE INTEGRAL CROSS-SECTIONS WILL BE COMPUTED BUT NOT STORED ON DISK
+
+  ======================================================================================================================
+
+  INITIALIZATION DONE.  TIME WAS   0.00 CPU SECS.       171 WORDS OF STORAGE USED.
+
+  ================================ model system: ITYP=2; decoupled L-dominant (IADD=30) ================================
+
+  *******************************************  ANGULAR MOMENTUM JTOT  =  10  *******************************************
+
+  IBLOCK =   1
+
+  JTOT =   10   IBLOCK =   1   ENERGY(   1) =   1250.0000000     CM-1
+  INNER CLASSICAL TURNING POINT AT R =  0.7393
+  RADIAL PROPAGATION WILL START AT R =  0.6368
+
+  RMID =   0.7762 OBTAINED FROM RVFAC = 1.050
+
+  DWPROP. LOG DERIVATIVE MATRIX PROPAGATED FROM       0.6368  TO 0.77622      IN     29  STEPS.
+
+  AIRPRP. LOG DERIVATIVE MATRIX PROPAGATED FROM       0.7762  TO  10.000      IN     94  STEPS.
+
+  * * * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  10 AND IBLOCK =   1 * * * * * * * * *
+
+    F  I =      1              2              3              5
+    1       1.75958E-01    1.26236E-04    1.32411E-09    2.39612E-10
+    2       5.40288E-04    1.39860E-02    3.41749E-07    8.42901E-12
+    3       6.19686E-09    3.73689E-07    1.48460E-04    1.61426E-12
+    5       9.58448E-12    7.87758E-14    1.37971E-14    3.38450E+00
+
+  * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
+
+  -------------------------------- model system: ITYP=2; decoupled L-dominant (IADD=30) --------------------------------
+
+  JTOT =   10   IBLOCK =   1   ENERGY(   2) =   1000.0000000     CM-1
+
+  DWPROP. LOG DERIVATIVE MATRIX PROPAGATED FROM       0.6368  TO 0.77622      IN     29  STEPS.
+
+  AIRPRP. LOG DERIVATIVE MATRIX PROPAGATED FROM       0.7762  TO  10.000      IN     94  STEPS.
+
+  * * * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  10 AND IBLOCK =   1 * * * * * * * * *
+
+    F  I =      1              2              3
+    1       1.91597E-01    1.10631E-04    2.82895E-10
+    2       4.53589E-04    2.65132E-02    9.99316E-08
+    3       1.01842E-09    8.77449E-08    1.18382E-03
+
+  * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
+
+  ======================================================================================================================
+
+  IBLOCK =   2
+
+  JTOT =   10   IBLOCK =   2   ENERGY(   1) =   1250.0000000     CM-1
+  INNER CLASSICAL TURNING POINT AT R =  0.7473
+  RADIAL PROPAGATION WILL START AT R =  0.6409
+
+  RMID =   0.7847 OBTAINED FROM RVFAC = 1.050
+
+  DWPROP. LOG DERIVATIVE MATRIX PROPAGATED FROM       0.6409  TO 0.78469      IN     28  STEPS.
+
+  AIRPRP. LOG DERIVATIVE MATRIX PROPAGATED FROM       0.7847  TO  10.000      IN     93  STEPS.
+
+  * * * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  10 AND IBLOCK =   2 * * * * * * * * *
+
+    F  I =      2              3
+    2       1.70545E-02    1.37948E-07
+    3       1.50841E-07    3.70343E-02
+
+  * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
+
+  -------------------------------- model system: ITYP=2; decoupled L-dominant (IADD=30) --------------------------------
+
+  JTOT =   10   IBLOCK =   2   ENERGY(   2) =   1000.0000000     CM-1
+
+  DWPROP. LOG DERIVATIVE MATRIX PROPAGATED FROM       0.6409  TO 0.78469      IN     28  STEPS.
+
+  AIRPRP. LOG DERIVATIVE MATRIX PROPAGATED FROM       0.7847  TO  10.000      IN     93  STEPS.
+
+  * * * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  10 AND IBLOCK =   2 * * * * * * * * *
+
+    F  I =      2              3
+    2       4.15777E-02    5.53096E-08
+    3       4.85645E-08    5.26681E-02
+
+  * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
+
+  ======================================================================================================================
+
+  IBLOCK =   3
+
+  JTOT =   10   IBLOCK =   3   ENERGY(   1) =   1250.0000000     CM-1
+  INNER CLASSICAL TURNING POINT AT R =  0.7476
+  RADIAL PROPAGATION WILL START AT R =  0.6410
+
+  RMID =   0.7849 OBTAINED FROM RVFAC = 1.050
+
+  DWPROP. LOG DERIVATIVE MATRIX PROPAGATED FROM       0.6410  TO 0.78493      IN     28  STEPS.
+
+  AIRPRP. LOG DERIVATIVE MATRIX PROPAGATED FROM       0.7849  TO  10.000      IN     93  STEPS.
+
+  * * * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  10 AND IBLOCK =   3 * * * * * * * * *
+
+    F  I =      2              3
+    2       3.01586E-02    4.56597E-08
+    3       4.99270E-08    4.09947E-03
+
+  * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
+
+  -------------------------------- model system: ITYP=2; decoupled L-dominant (IADD=30) --------------------------------
+
+  JTOT =   10   IBLOCK =   3   ENERGY(   2) =   1000.0000000     CM-1
+
+  DWPROP. LOG DERIVATIVE MATRIX PROPAGATED FROM       0.6410  TO 0.78493      IN     28  STEPS.
+
+  AIRPRP. LOG DERIVATIVE MATRIX PROPAGATED FROM       0.7849  TO  10.000      IN     93  STEPS.
+
+  * * * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  10 AND IBLOCK =   3 * * * * * * * * *
+
+    F  I =      2              3
+    2       6.26695E-03    1.77387E-08
+    3       1.55754E-08    1.95108E-02
+
+  * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
+
+  ======================================================================================================================
+
+  IBLOCK =   4
+
+  JTOT =   10   IBLOCK =   4   ENERGY(   1) =   1250.0000000     CM-1
+  INNER CLASSICAL TURNING POINT AT R =  0.7474
+  RADIAL PROPAGATION WILL START AT R =  0.6409
+
+  RMID =   0.7848 OBTAINED FROM RVFAC = 1.050
+
+  DWPROP. LOG DERIVATIVE MATRIX PROPAGATED FROM       0.6409  TO 0.78477      IN     28  STEPS.
+
+  AIRPRP. LOG DERIVATIVE MATRIX PROPAGATED FROM       0.7848  TO  10.000      IN     93  STEPS.
+
+  * * * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  10 AND IBLOCK =   4 * * * * * * * * *
+
+    F  I =      2              3
+    2       9.32654E-03    1.05545E-08
+    3       1.15409E-08    2.99308E-02
+
+  * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
+
+  -------------------------------- model system: ITYP=2; decoupled L-dominant (IADD=30) --------------------------------
+
+  JTOT =   10   IBLOCK =   4   ENERGY(   2) =   1000.0000000     CM-1
+
+  DWPROP. LOG DERIVATIVE MATRIX PROPAGATED FROM       0.6409  TO 0.78477      IN     28  STEPS.
+
+  AIRPRP. LOG DERIVATIVE MATRIX PROPAGATED FROM       0.7848  TO  10.000      IN     93  STEPS.
+
+  * * * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  10 AND IBLOCK =   4 * * * * * * * * *
+
+    F  I =      2              3
+    2       5.02391E-02    3.90751E-09
+    3       3.43098E-09    3.17428E-02
+
+  * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
+
+  ======================================================================================================================
+
+  IBLOCK =   5
+
+  JTOT =   10   IBLOCK =   5   ENERGY(   1) =   1250.0000000     CM-1
+  INNER CLASSICAL TURNING POINT AT R =  0.7469
+  RADIAL PROPAGATION WILL START AT R =  0.6405
+
+  RMID =   0.7843 OBTAINED FROM RVFAC = 1.050
+
+  DWPROP. LOG DERIVATIVE MATRIX PROPAGATED FROM       0.6405  TO 0.78430      IN     28  STEPS.
+
+  AIRPRP. LOG DERIVATIVE MATRIX PROPAGATED FROM       0.7843  TO  10.000      IN     93  STEPS.
+
+  * * * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  10 AND IBLOCK =   5 * * * * * * * * *
+
+    F  I =      2              3
+    2       3.20712E-02    1.32251E-09
+    3       1.44610E-09    1.24578E-02
+
+  * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
+
+  -------------------------------- model system: ITYP=2; decoupled L-dominant (IADD=30) --------------------------------
+
+  JTOT =   10   IBLOCK =   5   ENERGY(   2) =   1000.0000000     CM-1
+
+  DWPROP. LOG DERIVATIVE MATRIX PROPAGATED FROM       0.6405  TO 0.78430      IN     28  STEPS.
+
+  AIRPRP. LOG DERIVATIVE MATRIX PROPAGATED FROM       0.7843  TO  10.000      IN     93  STEPS.
+
+  * * * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  10 AND IBLOCK =   5 * * * * * * * * *
+
+    F  I =      2              3
+    2       3.79792E-03    4.52848E-10
+    3       3.97623E-10    3.98682E-02
+
+  * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
+
+  ======================================================================================================================
+
+  *******************************************  ANGULAR MOMENTUM JTOT  =  20  *******************************************
+
+  IBLOCK =   1
+
+  JTOT =   20   IBLOCK =   1   ENERGY(   1) =   1250.0000000     CM-1
+  INNER CLASSICAL TURNING POINT AT R =  0.7408
+  RADIAL PROPAGATION WILL START AT R =  0.6376
+
+  RMID =   0.7779 OBTAINED FROM RVFAC = 1.050
+
+  DWPROP. LOG DERIVATIVE MATRIX PROPAGATED FROM       0.6376  TO 0.77789      IN     30  STEPS.
+
+  AIRPRP. LOG DERIVATIVE MATRIX PROPAGATED FROM       0.7779  TO  10.000      IN     95  STEPS.
+
+  * * * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  20 AND IBLOCK =   1 * * * * * * * * *
+
+    F  I =      1              2              3              5
+    1       6.46042E-04    2.71285E-04    3.12512E-09    8.88020E-10
+    2       1.16110E-03    5.42613E-02    6.83066E-07    2.18240E-11
+    3       1.46256E-08    7.46904E-07    7.42274E-02    1.15805E-12
+    5       3.55208E-11    2.03963E-13    9.89783E-15    7.69919E+00
+
+  * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
+
+  -------------------------------- model system: ITYP=2; decoupled L-dominant (IADD=30) --------------------------------
+
+  JTOT =   20   IBLOCK =   1   ENERGY(   2) =   1000.0000000     CM-1
+
+  DWPROP. LOG DERIVATIVE MATRIX PROPAGATED FROM       0.6376  TO 0.77789      IN     30  STEPS.
+
+  AIRPRP. LOG DERIVATIVE MATRIX PROPAGATED FROM       0.7779  TO  10.000      IN     95  STEPS.
+
+  * * * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  20 AND IBLOCK =   1 * * * * * * * * *
+
+    F  I =      1              2              3
+    1       4.01217E-03    2.40431E-04    6.64507E-10
+    2       9.85769E-04    7.14130E-02    2.46311E-07
+    3       2.39223E-09    2.16273E-07    8.64950E-02
+
+  * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
+
+  ======================================================================================================================
+
+  IBLOCK =   2
+
+  JTOT =   20   IBLOCK =   2   ENERGY(   1) =   1250.0000000     CM-1
+  INNER CLASSICAL TURNING POINT AT R =  0.7490
+  RADIAL PROPAGATION WILL START AT R =  0.6417
+
+  RMID =   0.7864 OBTAINED FROM RVFAC = 1.050
+
+  DWPROP. LOG DERIVATIVE MATRIX PROPAGATED FROM       0.6417  TO 0.78642      IN     28  STEPS.
+
+  AIRPRP. LOG DERIVATIVE MATRIX PROPAGATED FROM       0.7864  TO  10.000      IN     93  STEPS.
+
+  * * * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  20 AND IBLOCK =   2 * * * * * * * * *
+
+    F  I =      2              3
+    2       5.57318E-02    3.52546E-07
+    3       3.85494E-07    8.52069E-03
+
+  * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
+
+  -------------------------------- model system: ITYP=2; decoupled L-dominant (IADD=30) --------------------------------
+
+  JTOT =   20   IBLOCK =   2   ENERGY(   2) =   1000.0000000     CM-1
+
+  DWPROP. LOG DERIVATIVE MATRIX PROPAGATED FROM       0.6417  TO 0.78642      IN     28  STEPS.
+
+  AIRPRP. LOG DERIVATIVE MATRIX PROPAGATED FROM       0.7864  TO  10.000      IN     93  STEPS.
+
+  * * * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  20 AND IBLOCK =   2 * * * * * * * * *
+
+    F  I =      2              3
+    2       4.40694E-03    1.08697E-07
+    3       9.54409E-08    8.30360E-02
+
+  * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
+
+  ======================================================================================================================
+
+  IBLOCK =   3
+
+  JTOT =   20   IBLOCK =   3   ENERGY(   1) =   1250.0000000     CM-1
+  INNER CLASSICAL TURNING POINT AT R =  0.7494
+  RADIAL PROPAGATION WILL START AT R =  0.6420
+
+  RMID =   0.7868 OBTAINED FROM RVFAC = 1.050
+
+  DWPROP. LOG DERIVATIVE MATRIX PROPAGATED FROM       0.6420  TO 0.78685      IN     28  STEPS.
+
+  AIRPRP. LOG DERIVATIVE MATRIX PROPAGATED FROM       0.7868  TO  10.000      IN     93  STEPS.
+
+  * * * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  20 AND IBLOCK =   3 * * * * * * * * *
+
+    F  I =      2              3
+    2       8.08584E-03    1.28979E-07
+    3       1.41033E-07    4.55391E-02
+
+  * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
+
+  -------------------------------- model system: ITYP=2; decoupled L-dominant (IADD=30) --------------------------------
+
+  JTOT =   20   IBLOCK =   3   ENERGY(   2) =   1000.0000000     CM-1
+
+  DWPROP. LOG DERIVATIVE MATRIX PROPAGATED FROM       0.6420  TO 0.78685      IN     28  STEPS.
+
+  AIRPRP. LOG DERIVATIVE MATRIX PROPAGATED FROM       0.7868  TO  10.000      IN     93  STEPS.
+
+  * * * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  20 AND IBLOCK =   3 * * * * * * * * *
+
+    F  I =      2              3
+    2       1.04946E-01    3.72570E-08
+    3       3.27135E-08    4.92572E-03
+
+  * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
+
+  ======================================================================================================================
+
+  IBLOCK =   4
+
+  JTOT =   20   IBLOCK =   4   ENERGY(   1) =   1250.0000000     CM-1
+  INNER CLASSICAL TURNING POINT AT R =  0.7494
+  RADIAL PROPAGATION WILL START AT R =  0.6419
+
+  RMID =   0.7868 OBTAINED FROM RVFAC = 1.050
+
+  DWPROP. LOG DERIVATIVE MATRIX PROPAGATED FROM       0.6419  TO 0.78685      IN     28  STEPS.
+
+  AIRPRP. LOG DERIVATIVE MATRIX PROPAGATED FROM       0.7868  TO  10.000      IN     93  STEPS.
+
+  * * * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  20 AND IBLOCK =   4 * * * * * * * * *
+
+    F  I =      2              3
+    2       7.96522E-02    3.16094E-08
+    3       3.45635E-08    5.08212E-02
+
+  * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
+
+  -------------------------------- model system: ITYP=2; decoupled L-dominant (IADD=30) --------------------------------
+
+  JTOT =   20   IBLOCK =   4   ENERGY(   2) =   1000.0000000     CM-1
+
+  DWPROP. LOG DERIVATIVE MATRIX PROPAGATED FROM       0.6419  TO 0.78685      IN     28  STEPS.
+
+  AIRPRP. LOG DERIVATIVE MATRIX PROPAGATED FROM       0.7868  TO  10.000      IN     93  STEPS.
+
+  * * * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  20 AND IBLOCK =   4 * * * * * * * * *
+
+    F  I =      2              3
+    2       9.68733E-03    8.21563E-09
+    3       7.21373E-09    1.17403E-01
+
+  * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
+
+  ======================================================================================================================
+
+  IBLOCK =   5
+
+  JTOT =   20   IBLOCK =   5   ENERGY(   1) =   1250.0000000     CM-1
+  INNER CLASSICAL TURNING POINT AT R =  0.7490
+  RADIAL PROPAGATION WILL START AT R =  0.6416
+
+  RMID =   0.7865 OBTAINED FROM RVFAC = 1.050
+
+  DWPROP. LOG DERIVATIVE MATRIX PROPAGATED FROM       0.6416  TO 0.78647      IN     28  STEPS.
+
+  AIRPRP. LOG DERIVATIVE MATRIX PROPAGATED FROM       0.7865  TO  10.000      IN     93  STEPS.
+
+  * * * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  20 AND IBLOCK =   5 * * * * * * * * *
+
+    F  I =      2              3
+    2       7.05507E-05    4.01995E-09
+    3       4.39564E-09    6.86963E-03
+
+  * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
+
+  -------------------------------- model system: ITYP=2; decoupled L-dominant (IADD=30) --------------------------------
+
+  JTOT =   20   IBLOCK =   5   ENERGY(   2) =   1000.0000000     CM-1
+
+  DWPROP. LOG DERIVATIVE MATRIX PROPAGATED FROM       0.6416  TO 0.78647      IN     28  STEPS.
+
+  AIRPRP. LOG DERIVATIVE MATRIX PROPAGATED FROM       0.7865  TO  10.000      IN     93  STEPS.
+
+  * * * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  20 AND IBLOCK =   5 * * * * * * * * *
+
+    F  I =      2              3
+    2       8.65678E-02    8.89959E-10
+    3       7.81427E-10    2.94723E-02
+
+  * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
+
+  ======================================================================================================================
+
+  *******************************************  ANGULAR MOMENTUM JTOT  =  30  *******************************************
+
+  IBLOCK =   1
+
+  JTOT =   30   IBLOCK =   1   ENERGY(   1) =   1250.0000000     CM-1
+  INNER CLASSICAL TURNING POINT AT R =  0.7435
+  RADIAL PROPAGATION WILL START AT R =  0.6391
+
+  RMID =   0.7807 OBTAINED FROM RVFAC = 1.050
+
+  DWPROP. LOG DERIVATIVE MATRIX PROPAGATED FROM       0.6391  TO 0.78072      IN     30  STEPS.
+
+  AIRPRP. LOG DERIVATIVE MATRIX PROPAGATED FROM       0.7807  TO  10.000      IN     95  STEPS.
+
+  * * * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  30 AND IBLOCK =   1 * * * * * * * * *
+
+    F  I =      1              2              3              5
+    1       4.85929E-02    4.16102E-04    4.55901E-09    3.06869E-08
+    2       1.78092E-03    1.15036E-01    1.00560E-06    1.14221E-10
+    3       2.13362E-08    1.09959E-06    1.09903E-01    1.92187E-13
+    5       1.22748E-09    1.06749E-12    1.64263E-15    3.44236E-01
+
+  * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
+
+  -------------------------------- model system: ITYP=2; decoupled L-dominant (IADD=30) --------------------------------
+
+  JTOT =   30   IBLOCK =   1   ENERGY(   2) =   1000.0000000     CM-1
+
+  DWPROP. LOG DERIVATIVE MATRIX PROPAGATED FROM       0.6391  TO 0.78072      IN     30  STEPS.
+
+  AIRPRP. LOG DERIVATIVE MATRIX PROPAGATED FROM       0.7807  TO  10.000      IN     95  STEPS.
+
+  * * * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  30 AND IBLOCK =   1 * * * * * * * * *
+
+    F  I =      1              2              3
+    1       1.98879E-02    3.60632E-04    7.18636E-10
+    2       1.47859E-03    9.42837E-02    2.32056E-07
+    3       2.58709E-09    2.03756E-07    2.27855E-02
+
+  * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
+
+  ======================================================================================================================
+
+  IBLOCK =   2
+
+  JTOT =   30   IBLOCK =   2   ENERGY(   1) =   1250.0000000     CM-1
+  INNER CLASSICAL TURNING POINT AT R =  0.7519
+  RADIAL PROPAGATION WILL START AT R =  0.6432
+
+  RMID =   0.7895 OBTAINED FROM RVFAC = 1.050
+
+  DWPROP. LOG DERIVATIVE MATRIX PROPAGATED FROM       0.6432  TO 0.78950      IN     29  STEPS.
+
+  AIRPRP. LOG DERIVATIVE MATRIX PROPAGATED FROM       0.7895  TO  10.000      IN     93  STEPS.
+
+  * * * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  30 AND IBLOCK =   2 * * * * * * * * *
+
+    F  I =      2              3
+    2       4.86724E-02    4.33603E-07
+    3       4.74127E-07    1.88626E-02
+
+  * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
+
+  -------------------------------- model system: ITYP=2; decoupled L-dominant (IADD=30) --------------------------------
+
+  JTOT =   30   IBLOCK =   2   ENERGY(   2) =   1000.0000000     CM-1
+
+  DWPROP. LOG DERIVATIVE MATRIX PROPAGATED FROM       0.6432  TO 0.78950      IN     29  STEPS.
+
+  AIRPRP. LOG DERIVATIVE MATRIX PROPAGATED FROM       0.7895  TO  10.000      IN     93  STEPS.
+
+  * * * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  30 AND IBLOCK =   2 * * * * * * * * *
+
+    F  I =      2              3
+    2       3.70243E-03    1.58326E-07
+    3       1.39018E-07    1.70131E-01
+
+  * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
+
+  ======================================================================================================================
+
+  IBLOCK =   3
+
+  JTOT =   30   IBLOCK =   3   ENERGY(   1) =   1250.0000000     CM-1
+  INNER CLASSICAL TURNING POINT AT R =  0.7525
+  RADIAL PROPAGATION WILL START AT R =  0.6435
+
+  RMID =   0.7901 OBTAINED FROM RVFAC = 1.050
+
+  DWPROP. LOG DERIVATIVE MATRIX PROPAGATED FROM       0.6435  TO 0.79009      IN     29  STEPS.
+
+  AIRPRP. LOG DERIVATIVE MATRIX PROPAGATED FROM       0.7901  TO  10.000      IN     93  STEPS.
+
+  * * * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  30 AND IBLOCK =   3 * * * * * * * * *
+
+    F  I =      2              3
+    2       2.65089E-02    1.61586E-07
+    3       1.76688E-07    4.27500E-02
+
+  * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
+
+  -------------------------------- model system: ITYP=2; decoupled L-dominant (IADD=30) --------------------------------
+
+  JTOT =   30   IBLOCK =   3   ENERGY(   2) =   1000.0000000     CM-1
+
+  DWPROP. LOG DERIVATIVE MATRIX PROPAGATED FROM       0.6435  TO 0.79009      IN     29  STEPS.
+
+  AIRPRP. LOG DERIVATIVE MATRIX PROPAGATED FROM       0.7901  TO  10.000      IN     93  STEPS.
+
+  * * * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  30 AND IBLOCK =   3 * * * * * * * * *
+
+    F  I =      2              3
+    2       1.45162E-01    5.49185E-08
+    3       4.82211E-08    9.28690E-02
+
+  * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
+
+  ======================================================================================================================
+
+  IBLOCK =   4
+
+  JTOT =   30   IBLOCK =   4   ENERGY(   1) =   1250.0000000     CM-1
+  INNER CLASSICAL TURNING POINT AT R =  0.7526
+  RADIAL PROPAGATION WILL START AT R =  0.6436
+
+  RMID =   0.7902 OBTAINED FROM RVFAC = 1.050
+
+  DWPROP. LOG DERIVATIVE MATRIX PROPAGATED FROM       0.6436  TO 0.79024      IN     29  STEPS.
+
+  AIRPRP. LOG DERIVATIVE MATRIX PROPAGATED FROM       0.7902  TO  10.000      IN     93  STEPS.
+
+  * * * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  30 AND IBLOCK =   4 * * * * * * * * *
+
+    F  I =      2              3
+    2       1.16824E-01    3.94313E-08
+    3       4.31165E-08    1.05327E-01
+
+  * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
+
+  -------------------------------- model system: ITYP=2; decoupled L-dominant (IADD=30) --------------------------------
+
+  JTOT =   30   IBLOCK =   4   ENERGY(   2) =   1000.0000000     CM-1
+
+  DWPROP. LOG DERIVATIVE MATRIX PROPAGATED FROM       0.6436  TO 0.79024      IN     29  STEPS.
+
+  AIRPRP. LOG DERIVATIVE MATRIX PROPAGATED FROM       0.7902  TO  10.000      IN     93  STEPS.
+
+  * * * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  30 AND IBLOCK =   4 * * * * * * * * *
+
+    F  I =      2              3
+    2       5.50998E-02    1.21616E-08
+    3       1.06785E-08    8.00748E-03
+
+  * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
+
+  ======================================================================================================================
+
+  IBLOCK =   5
+
+  JTOT =   30   IBLOCK =   5   ENERGY(   1) =   1250.0000000     CM-1
+  INNER CLASSICAL TURNING POINT AT R =  0.7524
+  RADIAL PROPAGATION WILL START AT R =  0.6433
+
+  RMID =   0.7900 OBTAINED FROM RVFAC = 1.050
+
+  DWPROP. LOG DERIVATIVE MATRIX PROPAGATED FROM       0.6433  TO 0.78999      IN     29  STEPS.
+
+  AIRPRP. LOG DERIVATIVE MATRIX PROPAGATED FROM       0.7900  TO  10.000      IN     93  STEPS.
+
+  * * * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  30 AND IBLOCK =   5 * * * * * * * * *
+
+    F  I =      2              3
+    2       2.33736E-04    4.89301E-09
+    3       5.35030E-09    5.35750E-03
+
+  * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
+
+  -------------------------------- model system: ITYP=2; decoupled L-dominant (IADD=30) --------------------------------
+
+  JTOT =   30   IBLOCK =   5   ENERGY(   2) =   1000.0000000     CM-1
+
+  DWPROP. LOG DERIVATIVE MATRIX PROPAGATED FROM       0.6433  TO 0.78999      IN     29  STEPS.
+
+  AIRPRP. LOG DERIVATIVE MATRIX PROPAGATED FROM       0.7900  TO  10.000      IN     93  STEPS.
+
+  * * * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  30 AND IBLOCK =   5 * * * * * * * * *
+
+    F  I =      2              3
+    2       6.09271E-02    1.28553E-09
+    3       1.12876E-09    1.60804E-01
+
+  * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
+
+  ======================================================================================================================
+
+  *******************************************  ANGULAR MOMENTUM JTOT  =  40  *******************************************
+
+  IBLOCK =   1
+
+  JTOT =   40   IBLOCK =   1   ENERGY(   1) =   1250.0000000     CM-1
+  INNER CLASSICAL TURNING POINT AT R =  0.7475
+  RADIAL PROPAGATION WILL START AT R =  0.6411
+
+  RMID =   0.7848 OBTAINED FROM RVFAC = 1.050
+
+  DWPROP. LOG DERIVATIVE MATRIX PROPAGATED FROM       0.6411  TO 0.78484      IN     30  STEPS.
+
+  AIRPRP. LOG DERIVATIVE MATRIX PROPAGATED FROM       0.7848  TO  10.000      IN     94  STEPS.
+
+  * * * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  40 AND IBLOCK =   1 * * * * * * * * *
+
+    F  I =      1              2              3              5
+    1       1.28353E-01    5.45832E-04    4.54367E-09    2.75887E-09
+    2       2.33616E-03    4.77296E-02    1.07645E-06    2.51568E-11
+    3       2.12644E-08    1.17706E-06    6.98623E-03    4.58733E-17
+    5       1.10355E-10    2.35110E-13    3.92079E-19    1.61243E+01
+
+  * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
+
+  -------------------------------- model system: ITYP=2; decoupled L-dominant (IADD=30) --------------------------------
+
+  JTOT =   40   IBLOCK =   1   ENERGY(   2) =   1000.0000000     CM-1
+
+  DWPROP. LOG DERIVATIVE MATRIX PROPAGATED FROM       0.6411  TO 0.78484      IN     30  STEPS.
+
+  AIRPRP. LOG DERIVATIVE MATRIX PROPAGATED FROM       0.7848  TO  10.000      IN     94  STEPS.
+
+  * * * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  40 AND IBLOCK =   1 * * * * * * * * *
+
+    F  I =      1              2              3
+    1       5.86829E-01    4.56239E-04    8.59855E-10
+    2       1.87058E-03    1.45724E-01    3.01876E-07
+    3       3.09548E-09    2.65062E-07    1.70254E-01
+
+  * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
+
+  ======================================================================================================================
+
+  IBLOCK =   2
+
+  JTOT =   40   IBLOCK =   2   ENERGY(   1) =   1250.0000000     CM-1
+  INNER CLASSICAL TURNING POINT AT R =  0.7562
+  RADIAL PROPAGATION WILL START AT R =  0.6454
+
+  RMID =   0.7941 OBTAINED FROM RVFAC = 1.050
+
+  DWPROP. LOG DERIVATIVE MATRIX PROPAGATED FROM       0.6454  TO 0.79406      IN     29  STEPS.
+
+  AIRPRP. LOG DERIVATIVE MATRIX PROPAGATED FROM       0.7941  TO  10.000      IN     93  STEPS.
+
+  * * * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  40 AND IBLOCK =   2 * * * * * * * * *
+
+    F  I =      2              3
+    2       1.60267E-01    5.05767E-07
+    3       5.53035E-07    1.21779E-01
+
+  * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
+
+  -------------------------------- model system: ITYP=2; decoupled L-dominant (IADD=30) --------------------------------
+
+  JTOT =   40   IBLOCK =   2   ENERGY(   2) =   1000.0000000     CM-1
+
+  DWPROP. LOG DERIVATIVE MATRIX PROPAGATED FROM       0.6454  TO 0.79406      IN     29  STEPS.
+
+  AIRPRP. LOG DERIVATIVE MATRIX PROPAGATED FROM       0.7941  TO  10.000      IN     93  STEPS.
+
+  * * * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  40 AND IBLOCK =   2 * * * * * * * * *
+
+    F  I =      2              3
+    2       1.87851E-01    9.38280E-08
+    3       8.23856E-08    2.26555E-01
+
+  * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
+
+  ======================================================================================================================
+
+  IBLOCK =   3
+
+  JTOT =   40   IBLOCK =   3   ENERGY(   1) =   1250.0000000     CM-1
+  INNER CLASSICAL TURNING POINT AT R =  0.7570
+  RADIAL PROPAGATION WILL START AT R =  0.6458
+
+  RMID =   0.7948 OBTAINED FROM RVFAC = 1.050
+
+  DWPROP. LOG DERIVATIVE MATRIX PROPAGATED FROM       0.6458  TO 0.79482      IN     29  STEPS.
+
+  AIRPRP. LOG DERIVATIVE MATRIX PROPAGATED FROM       0.7948  TO  10.000      IN     93  STEPS.
+
+  * * * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  40 AND IBLOCK =   3 * * * * * * * * *
+
+    F  I =      2              3
+    2       4.27543E-02    1.92107E-07
+    3       2.10061E-07    1.10286E-01
+
+  * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
+
+  -------------------------------- model system: ITYP=2; decoupled L-dominant (IADD=30) --------------------------------
+
+  JTOT =   40   IBLOCK =   3   ENERGY(   2) =   1000.0000000     CM-1
+
+  DWPROP. LOG DERIVATIVE MATRIX PROPAGATED FROM       0.6458  TO 0.79482      IN     29  STEPS.
+
+  AIRPRP. LOG DERIVATIVE MATRIX PROPAGATED FROM       0.7948  TO  10.000      IN     93  STEPS.
+
+  * * * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  40 AND IBLOCK =   3 * * * * * * * * *
+
+    F  I =      2              3
+    2       1.29603E-02    3.43423E-08
+    3       3.01543E-08    6.31890E-02
+
+  * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
+
+  ======================================================================================================================
+
+  IBLOCK =   4
+
+  JTOT =   40   IBLOCK =   4   ENERGY(   1) =   1250.0000000     CM-1
+  INNER CLASSICAL TURNING POINT AT R =  0.7573
+  RADIAL PROPAGATION WILL START AT R =  0.6459
+
+  RMID =   0.7951 OBTAINED FROM RVFAC = 1.050
+
+  DWPROP. LOG DERIVATIVE MATRIX PROPAGATED FROM       0.6459  TO 0.79514      IN     29  STEPS.
+
+  AIRPRP. LOG DERIVATIVE MATRIX PROPAGATED FROM       0.7951  TO  10.000      IN     93  STEPS.
+
+  * * * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  40 AND IBLOCK =   4 * * * * * * * * *
+
+    F  I =      2              3
+    2       5.09926E-02    4.84462E-08
+    3       5.29738E-08    1.10481E-03
+
+  * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
+
+  -------------------------------- model system: ITYP=2; decoupled L-dominant (IADD=30) --------------------------------
+
+  JTOT =   40   IBLOCK =   4   ENERGY(   2) =   1000.0000000     CM-1
+
+  DWPROP. LOG DERIVATIVE MATRIX PROPAGATED FROM       0.6459  TO 0.79514      IN     29  STEPS.
+
+  AIRPRP. LOG DERIVATIVE MATRIX PROPAGATED FROM       0.7951  TO  10.000      IN     93  STEPS.
+
+  * * * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  40 AND IBLOCK =   4 * * * * * * * * *
+
+    F  I =      2              3
+    2       1.14380E-01    8.39621E-09
+    3       7.37228E-09    1.81816E-02
+
+  * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
+
+  ======================================================================================================================
+
+  IBLOCK =   5
+
+  JTOT =   40   IBLOCK =   5   ENERGY(   1) =   1250.0000000     CM-1
+  INNER CLASSICAL TURNING POINT AT R =  0.7572
+  RADIAL PROPAGATION WILL START AT R =  0.6458
+
+  RMID =   0.7950 OBTAINED FROM RVFAC = 1.050
+
+  DWPROP. LOG DERIVATIVE MATRIX PROPAGATED FROM       0.6458  TO 0.79503      IN     29  STEPS.
+
+  AIRPRP. LOG DERIVATIVE MATRIX PROPAGATED FROM       0.7950  TO  10.000      IN     93  STEPS.
+
+  * * * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  40 AND IBLOCK =   5 * * * * * * * * *
+
+    F  I =      2              3
+    2       1.50415E-01    6.28740E-09
+    3       6.87501E-09    8.85745E-02
+
+  * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
+
+  -------------------------------- model system: ITYP=2; decoupled L-dominant (IADD=30) --------------------------------
+
+  JTOT =   40   IBLOCK =   5   ENERGY(   2) =   1000.0000000     CM-1
+
+  DWPROP. LOG DERIVATIVE MATRIX PROPAGATED FROM       0.6458  TO 0.79503      IN     29  STEPS.
+
+  AIRPRP. LOG DERIVATIVE MATRIX PROPAGATED FROM       0.7950  TO  10.000      IN     93  STEPS.
+
+  * * * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  40 AND IBLOCK =   5 * * * * * * * * *
+
+    F  I =      2              3
+    2       1.73314E-01    1.10202E-09
+    3       9.67627E-10    1.91742E-01
+
+  * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
+
+  ======================================================================================================================
+
+  * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
+
+  ================================ model system: ITYP=2; decoupled L-dominant (IADD=30) ================================
+
+  LEVEL   4 WITH ENERGY   1260.000000000000 IS NEVER OPEN
+  LEVEL   6 WITH ENERGY   1380.000000000000 IS NEVER OPEN
+
+  STATE-TO-STATE INTEGRAL CROSS SECTIONS IN ANGSTROM**2 BETWEEN    4 LEVELS WITH THRESHOLD ENERGIES (IN CM-1):
+
+    1     0.000000000000
+    2   180.000000000000
+    3   600.000000000000
+    5  1200.000000000000
+
+  *** N.B. CROSS SECTIONS HAVE BEEN MULTIPLIED BY 10.0 TO ACCOUNT FOR JSTEP
+
+   ENERGY (CM-1)    JTOTL  JSTEP  JTOTU      F    I         SIG(F,I)
+   1250.000000         10     10     40      1    1          3.53550      
+   1250.000000         10     10     40      2    1         5.818470E-02  
+   1250.000000         10     10     40      3    1         6.342297E-07  
+   1250.000000         10     10     40      5    1         1.382936E-08  
+
+   1250.000000         10     10     40      1    2         1.359456E-02  
+   1250.000000         10     10     40      2    2          10.5983      
+   1250.000000         10     10     40      3    2         5.698704E-05  
+   1250.000000         10     10     40      5    2         1.585339E-11  
+
+   1250.000000         10     10     40      1    3         1.355192E-07  
+   1250.000000         10     10     40      2    3         5.211636E-05  
+   1250.000000         10     10     40      5    3         2.533792E-13  
+
+   1250.000000         10     10     40      1    5         3.457339E-07  
+   1250.000000         10     10     40      2    5         1.696313E-09  
+   1250.000000         10     10     40      3    5         2.964536E-11  
+   1250.000000         10     10     40      5    5          275.522      
+
+  TOTAL INELASTIC INTEGRAL CROSS SECTIONS IN ANGSTROM**2 FROM LEVEL
+   5.81853E-02                                                 1
+   1.36515E-02                                                 2
+   5.22519E-05                                                 3
+   3.47460E-07                                                 5
+
+
+   ENERGY (CM-1)    JTOTL  JSTEP  JTOTU      F    I         SIG(F,I)
+   1000.000000         10     10     40      1    1          8.02326      
+   1000.000000         10     10     40      2    1         4.788529E-02  
+   1000.000000         10     10     40      3    1         9.093217E-08  
+
+   1000.000000         10     10     40      1    2         1.167934E-02  
+   1000.000000         10     10     40      2    2          13.9882      
+   1000.000000         10     10     40      3    2         1.296880E-05  
+
+   1000.000000         10     10     40      1    3         2.525894E-08  
+   1000.000000         10     10     40      2    3         1.477003E-05  
+
+
+  TOTAL INELASTIC INTEGRAL CROSS SECTIONS IN ANGSTROM**2 FROM LEVEL
+   4.78854E-02                                                 1
+   1.16923E-02                                                 2
+   1.47953E-05                                                 3
+
+
+
+  ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
+ |                                                                            |
+ |                Non-reactive quantum scattering calculations                |
+ |                     on atomic and molecular collisions                     |
+ |                                                                            |
+ |              Copyright (C) 2018 J. M. Hutson & C. R. Le Sueur              |
+ |                                                                            |
+ |                               Version 2019.0 (beta)                        |
+ |                                                                            |
+ |                    This run used       0.05 cpu secs and                   |
+ |                542 of the allocated   1000000 words of storage             |
+ |                                                                            |
+  ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
+  ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
+ |                                                                            |
+ |                Non-reactive quantum scattering calculations                |
+ |                     on atomic and molecular collisions                     |
+ |                                                                            |
+ |              Copyright (C) 2018 J. M. Hutson & C. R. Le Sueur              |
+ |                                                                            |
+ |                               Version 2019.0 (beta)                        |
+ |                                                                            |
+ |                       Run on 12 Nov 2018   at 14:59:58                     |
+ |                                                                            |
+  ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
+
+
+  This program is free software: you can redistribute it and/or modify it under
+  the terms of the GNU General Public License, version 3, as published by
+  the Free Software Foundation.
+
+  Publications resulting from the use of this program should refer to
+  J. M. Hutson & C. R. Le Sueur, MOLSCAT computer code 2019.0 (beta)       
+  or to the published paper in Computer Physics Communications when available.
+
+
+  PHYSICAL CONSTANTS OBTAINED FROM NIST CODATA TABULATION OF 2014
+
+  MEMORY ALLOCATED TO MAIN WORKING ARRAY IS   1000000 (8-BYTE) WORDS (    7.63 MB)
+  2 INTEGERS CAN BE STORED IN EACH WORD.
+
+  PRINT LEVEL =  3     OTHER PRINT CONTROLS  ISIGPR = 1
+
+  RUN LABEL = model system: ITYP=2; Infinite order sudden approximation (IADD=100)            
+
+  REDUCED MASS FOR INTERACTION =  20.000000000 ATOMIC MASS UNITS
+
+  ENERGY-INDEPENDENT MATRICES WILL BE SAVED TEMPORARILY ON UNIT  1
+
+  ======================================================================================================================
+
+   *******************
+   ****** I O S ******
+   *******************
+
+  PROCESSED BY IOSBIN ROUTINE (FEB 94).
+
+  INPUT  ITYPE = 102
+
+  BASIS TAKEN FROM NLEVEL, JLEVEL INPUT.  NO. OF LEVELS (NLEVEL) =   6
+     0    0    2    0    4    0    6    0    0    1    2    1
+  IOSBIN (FEB 92).  LEVEL   2  V,J =   2   0  DUPLICATES AN EARLIER VIB LEVEL.
+                    VIBRATIONAL VALUE IGNORED, HIGHER J-VALUE KEPT.
+  IOSBIN (FEB 92).  LEVEL   2  V,J =   4   0  DUPLICATES AN EARLIER VIB LEVEL.
+                    VIBRATIONAL VALUE IGNORED, HIGHER J-VALUE KEPT.
+  IOSBIN (FEB 92).  LEVEL   2  V,J =   6   0  DUPLICATES AN EARLIER VIB LEVEL.
+                    VIBRATIONAL VALUE IGNORED, HIGHER J-VALUE KEPT.
+  IOSBIN (FEB 92).  LEVEL   3  V,J =   2   1  DUPLICATES AN EARLIER VIB LEVEL.
+                    VIBRATIONAL VALUE IGNORED, HIGHER J-VALUE KEPT.
+
+  IOSBIN (FEB 92).  NUMBER OF VIB. CHANNELS (NVC) =   2
+
+  TARGET ENERGY LEVELS (TAKING V = 0 AS ZERO ENERGY) COMPUTED FROM WE = 1200.0000
+  LEVEL   1   LEVV =   0  EV =      0.0000
+  LEVEL   2   LEVV =   1  EV =   1200.0000
+
+  ======================================================================================================================
+  GENERAL-PURPOSE POTENL ROUTINE (MAY 18)
+
+  ANGULAR DEPENDENCE OF POTENTIAL EXPANDED IN TERMS OF
+  LEGENDRE POLYNOMIALS, P(LAMBDA).
+  INTEGRATED OVER DIATOM VIBRATIONAL FUNCTIONS
+
+  INTERACTION POTENTIAL FOR EXPANSION TERM NUMBER   1
+  WHICH HAS LAMBDA =   0,  V =   0,  V-PRIME =   0
+
+                 0.10000000E+01 * R **-12
+                -0.20000000E+01 * R ** -6
+
+  INTERACTION POTENTIAL FOR EXPANSION TERM NUMBER   2
+  WHICH HAS LAMBDA =   2,  V =   0,  V-PRIME =   0
+
+                -0.20000000E+00 * R ** -6
+
+  INTERACTION POTENTIAL FOR EXPANSION TERM NUMBER   3
+  WHICH HAS LAMBDA =   0,  V =   1,  V-PRIME =   1
+
+                 0.11000000E+01 * R **-12
+                -0.22000000E+01 * R ** -6
+
+  INTERACTION POTENTIAL FOR EXPANSION TERM NUMBER   4
+  WHICH HAS LAMBDA =   2,  V =   1,  V-PRIME =   1
+
+                -0.40000000E+00 * R ** -6
+
+  INTERACTION POTENTIAL FOR EXPANSION TERM NUMBER   5
+  WHICH HAS LAMBDA =   0,  V =   1,  V-PRIME =   0
+
+                 0.10000000E+00 * R **-12
+
+  INTERACTION POTENTIAL FOR EXPANSION TERM NUMBER   6
+  WHICH HAS LAMBDA =   2,  V =   1,  V-PRIME =   0
+
+                 0.10000000E-01 * R **-12
+
+  POTENL PROCESSING FINISHED.
+
+  UNITS FOR POTENTIAL ROUTINES:
+  POTENTIAL RETURNED IN UNITS OF EPSIL =      50.000000 CM-1
+  R                  IN UNITS OF RM    =       3.500000 ANGSTROMS
+
+  ALL LENGTHS ARE IN UNITS OF RM =  3.500000 ANGSTROM UNLESS OTHERWISE STATED
+
+  IVCHK.  COMPLETED SUCCESSFULLY.
+  INTERACTION MATRIX USES   3 BLOCKS OF VL ARRAY FOR R-DEPENDENT TERMS IN POTENTIAL
+
+  ======================================================================================================================
+
+  PROPAGATION ALGORITHMS FOR COUPLED EQUATIONS SPECIFIED BY IPROPS =  6 AND IPROPL =  1
+
+  COUPLED EQUATIONS WILL BE PROPAGATED OUTWARDS IN 2 SEGMENTS
+  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+  SEGMENT 1 WILL BE PROPAGATED OUTWARDS
+
+  FROM RMIN CHOSEN USING IRMSET =   8  TO VALUE OF RMID CHOSEN USING RVFAC =    1.05
+
+  COUPLED EQUATIONS SOLVED BY DIABATIC MODIFIED LOG DERIVATIVE METHOD OF MANOLOPOULOS
+
+  PROPAGATION STEP SIZE DETERMINED USING STEPS =   5.00     (PER WAVELENGTH)
+
+  LOG-DERIVATIVE MATRIX WILL BE INITIALISED IN THE LOCAL EIGENBASIS FOR RMIN IN THE OUTWARDS PROPAGATION PART
+  LOCALLY CLOSED CHANNELS WILL BE INITIALISED WITH A WKB BOUNDARY CONDITION
+  LOCALLY OPEN CHANNELS WILL BE INITIALISED WITH THE VALUE  1.0000000E+08
+  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+  SEGMENT 2 WILL BE PROPAGATED OUTWARDS
+
+  FROM VALUE OF RMID CHOSEN USING RVFAC =    1.05  TO WHICHEVER IS LARGER OF
+  OUTERMOST CENTRIFUGAL TURNING POINT IN OPEN CHANNELS, AND RMAX, WHICH =     10.00
+
+  COUPLED EQUATIONS SOLVED BY VARIABLE STEP AIRY METHOD.
+  ALL PUBLICATIONS RESULTING FROM THE USE OF THIS PROPAGATOR SHOULD REFERENCE
+  M.H. ALEXANDER AND D.E. MANOLOPOULOS,  J CHEM PHYS 86, 2044 (1987).
+  STEP SIZE GROWS GEOMETRICALLY WITH INCREASING R, WITH RATIO TOLHI =  1.050000
+  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+  ======================================================================================================================
+
+  INPUT ENERGY VALUES ASSUMED TO BE IN UNITS OF CM-1 BY DEFAULT.
+
+  CONTROL DATA FOR TOTAL ENERGIES.  CALCULATIONS WILL BE PERFORMED FOR   2 VALUES
+       ENERGY NO.   1 =   1250.0000000     CM-1
+       ENERGY NO.   2 =   1000.0000000     CM-1
+
+  ======================================================================================================================
+
+  TOTAL ANGULAR MOMENTUM JTOT RUNS FROM  10  TO    40  IN STEPS OF  10
+
+  EACH JTOT IS SPLIT INTO A MAXIMUM OF   1 DIFFERENT SYMMETRY BLOCKS
+
+  IOSDRV ENTERED.  SET-UP FOR INFINITE ORDER SUDDEN CALCULATION.
+
+  * * * NOTE.
+  * * * NOTE.  USE WILL BE MADE OF FACT THAT POTENTIAL HAS ONLY EVEN LEGENDRE TERMS.
+
+  * * * NOTE.
+  NUMBER OF GAUSS POINTS FOR THETA (NGL) SET FROM &BASIS IOSNGP(1) =   8
+
+  * * * NOTE.
+  NUMBER OF GAUSS POINTS FOR THETA (NGL) SET FROM &BASIS IOSNGP(1) =   8
+
+  THETA INTEGRATION DONE BY   8-POINT GAUSSIAN QUADRATURE. POINTS/WEIGHTS ARE
+            0.019855  0.101229            0.101667  0.222381            0.237234  0.313707            0.408283  0.362684
+            0.591717  0.362684            0.762766  0.313707            0.898333  0.222381            0.980145  0.101229
+
+  * * * WARNING.
+  INPUT LMAX.LE.0 (DEFAULT), HIGHEST VALUE CONSISTENT WITH NUMBER OF QUADRATURE POINTS WILL BE USED.  LMAX =  16
+
+  STORAGE ALLOCATED FOR  NVC (NO. VIB. CHANNELS) =            2
+                         NGPT (NO. GAUSS PTS.) =              8
+                         LMAX (NO. LEGENDRE COEFFS.) =       16
+                         MXXXXL (NO. SYMMETRIES IN POTL) =    2
+                         NQL (NO. QLT) =                     16
+                         NIXQL (NO. INDICES IN IXQL) =        2
+                         NEXT LOCATION =                    536
+
+  TIME TO SET UP CALCULATION WAS    0.00   SECONDS.  EXIT IOSDRV
+
+========================================================================================================================
+ IOSCLC (MAY 92).  ENERGY(  1) =   1250.0000 CM-1.
+
+  ***** PARTIAL WAVE =   10    FOR ENERGY(  1) =    1250.0000    *****
+
+  ***** PARTIAL WAVE =   20    FOR ENERGY(  1) =    1250.0000    *****
+
+  ***** PARTIAL WAVE =   30    FOR ENERGY(  1) =    1250.0000    *****
+
+  ***** PARTIAL WAVE =   40    FOR ENERGY(  1) =    1250.0000    *****
+  ***** ***** ***** END OF CALCULATION FOR ENERGY =   1250.0000 CM-1 ***** ***** *****
+
+                      PARTIAL WAVES FROM   10 TO    40 (IN STEPS OF   10)
+
+  ***** ***** ***** TIME WAS     0.02  SEC.
+ 
+
+  ***** ***** STORAGE SO FAR USED       563  OF THE   1000000  AVAILABLE WORDS.
+
+  FOR ORIENTATION     1     SIG( 1, 1) =  5.7798E-01     SIG( 1, 2) =  9.3363E-10
+                            SIG( 2, 1) =  2.3341E-08     SIG( 2, 2) =  2.0471E+01
+
+  FOR ORIENTATION     2     SIG( 1, 1) =  5.6885E-01     SIG( 1, 2) =  9.3373E-10
+                            SIG( 2, 1) =  2.3343E-08     SIG( 2, 2) =  2.0772E+01
+
+  FOR ORIENTATION     3     SIG( 1, 1) =  5.2833E-01     SIG( 1, 2) =  9.4011E-10
+                            SIG( 2, 1) =  2.3503E-08     SIG( 2, 2) =  2.2003E+01
+
+  FOR ORIENTATION     4     SIG( 1, 1) =  4.4404E-01     SIG( 1, 2) =  1.0191E-09
+                            SIG( 2, 1) =  2.5477E-08     SIG( 2, 2) =  2.4332E+01
+
+  FOR ORIENTATION     5     SIG( 1, 1) =  3.5458E-01     SIG( 1, 2) =  1.4277E-09
+                            SIG( 2, 1) =  3.5692E-08     SIG( 2, 2) =  2.7647E+01
+
+  FOR ORIENTATION     6     SIG( 1, 1) =  3.4868E-01     SIG( 1, 2) =  2.4635E-09
+                            SIG( 2, 1) =  6.1588E-08     SIG( 2, 2) =  8.1235E+00
+
+  FOR ORIENTATION     7     SIG( 1, 1) =  4.5943E-01     SIG( 1, 2) =  2.0618E-09
+                            SIG( 2, 1) =  5.1544E-08     SIG( 2, 2) =  2.6575E+01
+
+  FOR ORIENTATION     8     SIG( 1, 1) =  5.9011E-01     SIG( 1, 2) =  1.6802E-09
+                            SIG( 2, 1) =  4.2004E-08     SIG( 2, 2) =  3.3750E+01
+
+  AVERAGE OVER ORIENTATIONS
+                            SIG( 1, 1) =  4.5584E-01     SIG( 1, 2) =  1.4429E-09
+                            SIG( 2, 1) =  3.6073E-08     SIG( 2, 2) =  2.2160E+01
+  STATE-TO-STATE CROSS SECTIONS (IN ANG**2) FOR KINETIC ENERGY =   1250.0000 CM-1.
+
+  PROCESSED BY IOSOUT (FEB 92).
+
+  CROSS SECTIONS (BUT NOT QL) MULTIPLIED BY JTSTEP = 10
+
+  NO. OF VIBRATIONAL LEVELS =   2.  LEVELS ARE
+          0         1
+
+  MAXIMUM J-VALUE REQUESTED IS   6
+
+   QLOLD(0)     1 TO  1 = -1.4408E-01    1 TO  2 =  3.9254E-10
+                2 TO  1 =  9.8135E-09    2 TO  2 = -9.3016E+00
+
+   Q(  0 )      1 TO  1 =  3.1176E-01    1 TO  2 =  3.9254E-10
+                2 TO  1 =  9.8135E-09    2 TO  2 =  1.2859E+01
+
+   Q(  1 )      1 TO  1 =  0.0000E+00    1 TO  2 =  0.0000E+00
+                2 TO  1 =  0.0000E+00    2 TO  2 =  0.0000E+00
+
+   Q(  2 )      1 TO  1 =  1.3328E-01    1 TO  2 =  3.8455E-10
+                2 TO  1 =  9.6138E-09    2 TO  2 =  1.9189E+00
+
+   Q(  3 )      1 TO  1 =  0.0000E+00    1 TO  2 =  0.0000E+00
+                2 TO  1 =  0.0000E+00    2 TO  2 =  0.0000E+00
+
+   Q(  4 )      1 TO  1 =  1.0451E-02    1 TO  2 =  2.2842E-10
+                2 TO  1 =  5.7106E-09    2 TO  2 =  2.7856E+00
+
+   Q(  5 )      1 TO  1 =  0.0000E+00    1 TO  2 =  0.0000E+00
+                2 TO  1 =  0.0000E+00    2 TO  2 =  0.0000E+00
+
+   Q(  6 )      1 TO  1 =  3.4238E-04    1 TO  2 =  1.8276E-10
+                2 TO  1 =  4.5689E-09    2 TO  2 =  2.3385E+00
+
+   Q(  7 )      1 TO  1 =  0.0000E+00    1 TO  2 =  0.0000E+00
+                2 TO  1 =  0.0000E+00    2 TO  2 =  0.0000E+00
+
+   Q(  8 )      1 TO  1 =  6.1566E-06    1 TO  2 =  1.2506E-10
+                2 TO  1 =  3.1266E-09    2 TO  2 =  1.0174E+00
+
+   Q(  9 )      1 TO  1 =  0.0000E+00    1 TO  2 =  0.0000E+00
+                2 TO  1 =  0.0000E+00    2 TO  2 =  0.0000E+00
+
+   Q( 10 )      1 TO  1 =  6.4328E-08    1 TO  2 =  1.1581E-10
+                2 TO  1 =  2.8952E-09    2 TO  2 =  1.0709E+00
+
+   Q( 11 )      1 TO  1 =  0.0000E+00    1 TO  2 =  0.0000E+00
+                2 TO  1 =  0.0000E+00    2 TO  2 =  0.0000E+00
+
+   Q( 12 )      1 TO  1 =  1.4860E-08    1 TO  2 =  5.2297E-12
+                2 TO  1 =  1.3074E-10    2 TO  2 =  3.9153E-02
+
+   Q( 13 )      1 TO  1 =  0.0000E+00    1 TO  2 =  0.0000E+00
+                2 TO  1 =  0.0000E+00    2 TO  2 =  0.0000E+00
+
+   Q( 14 )      1 TO  1 =  6.3067E-07    1 TO  2 =  1.2459E-10
+                2 TO  1 =  3.1148E-09    2 TO  2 =  9.8923E-01
+
+   Q( 15 )      1 TO  1 =  0.0000E+00    1 TO  2 =  0.0000E+00
+                2 TO  1 =  0.0000E+00    2 TO  2 =  0.0000E+00
+
+  ***** ***** ***** BELOW FOR VIB LEVEL  1 TO  1
+
+  FOR INITIAL LEVEL J =   0  NON-ZERO CROSS SECTIONS (ANG**2) TO FINAL LEVELS ARE
+      0  3.1176E+00       2  1.3328E+00       4  1.0451E-01       6  3.4238E-03 
+
+  FOR INITIAL LEVEL J =   1  NON-ZERO CROSS SECTIONS (ANG**2) TO FINAL LEVELS ARE
+      1  3.6507E+00       3  8.4612E-01       5  5.9641E-02 
+
+  FOR INITIAL LEVEL J =   2  NON-ZERO CROSS SECTIONS (ANG**2) TO FINAL LEVELS ARE
+      0  2.6656E-01       2  3.5283E+00       4  7.1366E-01       6  4.8396E-02 
+
+  FOR INITIAL LEVEL J =   3  NON-ZERO CROSS SECTIONS (ANG**2) TO FINAL LEVELS ARE
+      1  3.6262E-01       3  3.4928E+00       5  6.5826E-01 
+
+  FOR INITIAL LEVEL J =   4  NON-ZERO CROSS SECTIONS (ANG**2) TO FINAL LEVELS ARE
+      0  1.1612E-02       2  3.9648E-01       4  3.4812E+00       6  6.2745E-01 
+
+  FOR INITIAL LEVEL J =   5  NON-ZERO CROSS SECTIONS (ANG**2) TO FINAL LEVELS ARE
+      1  1.6266E-02       3  4.1889E-01       5  3.4759E+00 
+
+  FOR INITIAL LEVEL J =   6  NON-ZERO CROSS SECTIONS (ANG**2) TO FINAL LEVELS ARE
+      0  2.6337E-04       2  1.8614E-02       4  4.3439E-01       6  3.4729E+00 
+
+  ***** ***** ***** BELOW FOR VIB LEVEL  1 TO  2
+
+  FOR INITIAL LEVEL J =   0  NON-ZERO CROSS SECTIONS (ANG**2) TO FINAL LEVELS ARE
+      0  3.9254E-09       2  3.8455E-09       4  2.2842E-09       6  1.8276E-09 
+
+  FOR INITIAL LEVEL J =   1  NON-ZERO CROSS SECTIONS (ANG**2) TO FINAL LEVELS ARE
+      1  5.4636E-09       3  3.3225E-09       5  2.1125E-09 
+
+  FOR INITIAL LEVEL J =   2  NON-ZERO CROSS SECTIONS (ANG**2) TO FINAL LEVELS ARE
+      0  7.6910E-10       2  5.6768E-09       4  3.1461E-09       6  1.9155E-09 
+
+  FOR INITIAL LEVEL J =   3  NON-ZERO CROSS SECTIONS (ANG**2) TO FINAL LEVELS ARE
+      1  1.4239E-09       3  5.7922E-09       5  2.9782E-09 
+
+  FOR INITIAL LEVEL J =   4  NON-ZERO CROSS SECTIONS (ANG**2) TO FINAL LEVELS ARE
+      0  2.5380E-10       2  1.7478E-09       4  5.8016E-09       6  2.9114E-09 
+
+  FOR INITIAL LEVEL J =   5  NON-ZERO CROSS SECTIONS (ANG**2) TO FINAL LEVELS ARE
+      1  5.7614E-10       3  1.8952E-09       5  5.8378E-09 
+
+  FOR INITIAL LEVEL J =   6  NON-ZERO CROSS SECTIONS (ANG**2) TO FINAL LEVELS ARE
+      0  1.4058E-10       2  7.3671E-10       4  2.0156E-09       6  5.7017E-09 
+
+  ***** ***** ***** BELOW FOR VIB LEVEL  2 TO  1
+
+  FOR INITIAL LEVEL J =   0  NON-ZERO CROSS SECTIONS (ANG**2) TO FINAL LEVELS ARE
+      0  9.8135E-08       2  9.6138E-08       4  5.7106E-08       6  4.5689E-08 
+
+  FOR INITIAL LEVEL J =   1  NON-ZERO CROSS SECTIONS (ANG**2) TO FINAL LEVELS ARE
+      1  1.3659E-07       3  8.3063E-08       5  5.2813E-08 
+
+  FOR INITIAL LEVEL J =   2  NON-ZERO CROSS SECTIONS (ANG**2) TO FINAL LEVELS ARE
+      0  1.9228E-08       2  1.4192E-07       4  7.8653E-08       6  4.7886E-08 
+
+  FOR INITIAL LEVEL J =   3  NON-ZERO CROSS SECTIONS (ANG**2) TO FINAL LEVELS ARE
+      1  3.5598E-08       3  1.4481E-07       5  7.4454E-08 
+
+  FOR INITIAL LEVEL J =   4  NON-ZERO CROSS SECTIONS (ANG**2) TO FINAL LEVELS ARE
+      0  6.3451E-09       2  4.3696E-08       4  1.4504E-07       6  7.2786E-08 
+
+  FOR INITIAL LEVEL J =   5  NON-ZERO CROSS SECTIONS (ANG**2) TO FINAL LEVELS ARE
+      1  1.4403E-08       3  4.7380E-08       5  1.4595E-07 
+
+  FOR INITIAL LEVEL J =   6  NON-ZERO CROSS SECTIONS (ANG**2) TO FINAL LEVELS ARE
+      0  3.5146E-09       2  1.8418E-08       4  5.0390E-08       6  1.4254E-07 
+
+  ***** ***** ***** BELOW FOR VIB LEVEL  2 TO  2
+
+  FOR INITIAL LEVEL J =   0  NON-ZERO CROSS SECTIONS (ANG**2) TO FINAL LEVELS ARE
+      0  1.2859E+02       2  1.9189E+01       4  2.7856E+01       6  2.3385E+01 
+
+  FOR INITIAL LEVEL J =   1  NON-ZERO CROSS SECTIONS (ANG**2) TO FINAL LEVELS ARE
+      1  1.3626E+02       3  2.3894E+01       5  2.6269E+01 
+
+  FOR INITIAL LEVEL J =   2  NON-ZERO CROSS SECTIONS (ANG**2) TO FINAL LEVELS ARE
+      0  3.8379E+00       2  1.4203E+02       4  2.4463E+01       6  2.1966E+01 
+
+  FOR INITIAL LEVEL J =   3  NON-ZERO CROSS SECTIONS (ANG**2) TO FINAL LEVELS ARE
+      1  1.0240E+01       3  1.4422E+02       5  2.2036E+01 
+
+  FOR INITIAL LEVEL J =   4  NON-ZERO CROSS SECTIONS (ANG**2) TO FINAL LEVELS ARE
+      0  3.0952E+00       2  1.3591E+01       4  1.4340E+02       6  2.1616E+01 
+
+  FOR INITIAL LEVEL J =   5  NON-ZERO CROSS SECTIONS (ANG**2) TO FINAL LEVELS ARE
+      1  7.1643E+00       3  1.4023E+01       5  1.4373E+02 
+
+  FOR INITIAL LEVEL J =   6  NON-ZERO CROSS SECTIONS (ANG**2) TO FINAL LEVELS ARE
+      0  1.7989E+00       2  8.4485E+00       4  1.4965E+01       6  1.4243E+02 
+ IOSCLC (MAY 92).  ENERGY(  2) =   1000.0000 CM-1.
+
+  ***** PARTIAL WAVE =   10    FOR ENERGY(  2) =    1000.0000    *****
+
+  ***** PARTIAL WAVE =   20    FOR ENERGY(  2) =    1000.0000    *****
+
+  ***** PARTIAL WAVE =   30    FOR ENERGY(  2) =    1000.0000    *****
+
+  ***** PARTIAL WAVE =   40    FOR ENERGY(  2) =    1000.0000    *****
+  ***** ***** ***** END OF CALCULATION FOR ENERGY =   1000.0000 CM-1 ***** ***** *****
+
+                      PARTIAL WAVES FROM   10 TO    40 (IN STEPS OF   10)
+
+  ***** ***** ***** TIME WAS     0.01  SEC.
+ 
+
+  ***** ***** STORAGE SO FAR USED       563  OF THE   1000000  AVAILABLE WORDS.
+
+  FOR ORIENTATION     1     SIG( 1, 1) =  1.0909E+00     SIG( 1, 2) =  0.0000E+00
+                            SIG( 2, 1) =  0.0000E+00     SIG( 2, 2) =  0.0000E+00
+
+  FOR ORIENTATION     2     SIG( 1, 1) =  1.0819E+00     SIG( 1, 2) =  0.0000E+00
+                            SIG( 2, 1) =  0.0000E+00     SIG( 2, 2) =  0.0000E+00
+
+  FOR ORIENTATION     3     SIG( 1, 1) =  1.0407E+00     SIG( 1, 2) =  0.0000E+00
+                            SIG( 2, 1) =  0.0000E+00     SIG( 2, 2) =  0.0000E+00
+
+  FOR ORIENTATION     4     SIG( 1, 1) =  9.4389E-01     SIG( 1, 2) =  0.0000E+00
+                            SIG( 2, 1) =  0.0000E+00     SIG( 2, 2) =  0.0000E+00
+
+  FOR ORIENTATION     5     SIG( 1, 1) =  8.0190E-01     SIG( 1, 2) =  0.0000E+00
+                            SIG( 2, 1) =  0.0000E+00     SIG( 2, 2) =  0.0000E+00
+
+  FOR ORIENTATION     6     SIG( 1, 1) =  6.8508E-01     SIG( 1, 2) =  0.0000E+00
+                            SIG( 2, 1) =  0.0000E+00     SIG( 2, 2) =  0.0000E+00
+
+  FOR ORIENTATION     7     SIG( 1, 1) =  6.6374E-01     SIG( 1, 2) =  0.0000E+00
+                            SIG( 2, 1) =  0.0000E+00     SIG( 2, 2) =  0.0000E+00
+
+  FOR ORIENTATION     8     SIG( 1, 1) =  7.0560E-01     SIG( 1, 2) =  0.0000E+00
+                            SIG( 2, 1) =  0.0000E+00     SIG( 2, 2) =  0.0000E+00
+
+  AVERAGE OVER ORIENTATIONS
+                            SIG( 1, 1) =  8.7231E-01     SIG( 1, 2) =  0.0000E+00
+                            SIG( 2, 1) =  0.0000E+00     SIG( 2, 2) =  0.0000E+00
+  STATE-TO-STATE CROSS SECTIONS (IN ANG**2) FOR KINETIC ENERGY =   1000.0000 CM-1.
+
+  PROCESSED BY IOSOUT (FEB 92).
+
+  CROSS SECTIONS (BUT NOT QL) MULTIPLIED BY JTSTEP = 10
+
+  NO. OF VIBRATIONAL LEVELS =   2.  LEVELS ARE
+          0         1
+
+  MAXIMUM J-VALUE REQUESTED IS   6
+
+  IOSOUT (FEB 92).  ALL QL,QLOLD ZERO FOR SOME CHANNELS, PRESUMABLY CLOSED ENERGETICALLY.
+
+                    OUTPUT LIMITED TO NOUT =  1
+
+   QLOLD(0)     1 TO  1 = -1.8567E-01
+
+   Q(  0 )      1 TO  1 =  6.8665E-01
+
+   Q(  1 )      1 TO  1 =  0.0000E+00
+
+   Q(  2 )      1 TO  1 =  1.7122E-01
+
+   Q(  3 )      1 TO  1 =  0.0000E+00
+
+   Q(  4 )      1 TO  1 =  1.3965E-02
+
+   Q(  5 )      1 TO  1 =  0.0000E+00
+
+   Q(  6 )      1 TO  1 =  4.7524E-04
+
+   Q(  7 )      1 TO  1 =  0.0000E+00
+
+   Q(  8 )      1 TO  1 =  8.8862E-06
+
+   Q(  9 )      1 TO  1 =  0.0000E+00
+
+   Q( 10 )      1 TO  1 =  9.5224E-08
+
+   Q( 11 )      1 TO  1 =  0.0000E+00
+
+   Q( 12 )      1 TO  1 =  2.1661E-08
+
+   Q( 13 )      1 TO  1 =  0.0000E+00
+
+   Q( 14 )      1 TO  1 =  8.8580E-07
+
+   Q( 15 )      1 TO  1 =  0.0000E+00
+
+  ***** ***** ***** BELOW FOR VIB LEVEL  1 TO  1
+
+  FOR INITIAL LEVEL J =   0  NON-ZERO CROSS SECTIONS (ANG**2) TO FINAL LEVELS ARE
+      0  6.8665E+00       2  1.7122E+00       4  1.3965E-01       6  4.7524E-03 
+
+  FOR INITIAL LEVEL J =   1  NON-ZERO CROSS SECTIONS (ANG**2) TO FINAL LEVELS ARE
+      1  7.5513E+00       3  1.0894E+00       5  7.9775E-02 
+
+  FOR INITIAL LEVEL J =   2  NON-ZERO CROSS SECTIONS (ANG**2) TO FINAL LEVELS ARE
+      0  3.4243E-01       2  7.3956E+00       4  9.1831E-01       6  6.4715E-02 
+
+  FOR INITIAL LEVEL J =   3  NON-ZERO CROSS SECTIONS (ANG**2) TO FINAL LEVELS ARE
+      1  4.6687E-01       3  7.3495E+00       5  8.4688E-01 
+
+  FOR INITIAL LEVEL J =   4  NON-ZERO CROSS SECTIONS (ANG**2) TO FINAL LEVELS ARE
+      0  1.5516E-02       2  5.1017E-01       4  7.3345E+00       6  8.0719E-01 
+
+  FOR INITIAL LEVEL J =   5  NON-ZERO CROSS SECTIONS (ANG**2) TO FINAL LEVELS ARE
+      1  2.1757E-02       3  5.3893E-01       5  7.3276E+00 
+
+  FOR INITIAL LEVEL J =   6  NON-ZERO CROSS SECTIONS (ANG**2) TO FINAL LEVELS ARE
+      0  3.6557E-04       2  2.4890E-02       4  5.5883E-01       6  7.3238E+00 
+
+
+  ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
+ |                                                                            |
+ |                Non-reactive quantum scattering calculations                |
+ |                     on atomic and molecular collisions                     |
+ |                                                                            |
+ |              Copyright (C) 2018 J. M. Hutson & C. R. Le Sueur              |
+ |                                                                            |
+ |                               Version 2019.0 (beta)                        |
+ |                                                                            |
+ |                    This run used       0.03 cpu secs and                   |
+ |                563 of the allocated   1000000 words of storage             |
+ |                                                                            |
+  ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---

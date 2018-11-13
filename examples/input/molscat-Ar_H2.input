@@ -1,0 +1,34 @@
+&INPUT
+   LABEL  = 'Raman 0-2,2-4 cross sections for Ar-H2 (LeRoy-Carley BC3)',
+   URED   = 1.91886504,
+   IPRINT = 3,   ISIGPR =     1,   ISCRU  = 30,
+   RMIN   = 2.0, RMID   =     6.0, RMAX   = 14.0,  IRMSET = 7,
+   IPROPS = 6,   IPROPL =     1,   DR     =  0.02,
+   JTOTL  = 0,   JTOTU  = 99999,
+   NNRG   = 9,   ENERGY =    12.0, DNRG   =  0.5,
+   NLPRBR = 2,   LINE   =     1,2,1,2, 2,3,2,3,    IFEGEN = 1,
+ /
+
+ &BASIS
+   ITYPE  = 7,
+   NLEVEL = 3, JLEVEL = 0,0,   2,0,     4,0,
+               ELEVEL = 0.0, 354.40, 1168.88,
+ /
+
+ &POTL
+   IHET   =  0, NLEG   =  2, NSTR   = 1,
+   JMAXV0 =  4, JMAXV1 = -1,
+   NGP    = 10,
+ /
+11 1
+0 3.610D0 0 3.610D0   3.5727D0
+  50.87D0  3.5727D0  134500.D0
+   34.2D0   3.769D0  115800.D0
+  1.904D0  4.3575D0    3051.D0
+     0.D0      0.D0  -25270.D0
+   5.72D0   3.743D0   13500.D0
+   21.6D0  3.9487D0   29600.D0
+ 13.914D0  4.0267D0    5705.D0
+     0.D0      0.D0  -10395.D0
+
+

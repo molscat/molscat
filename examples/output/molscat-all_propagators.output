@@ -1,0 +1,3210 @@
+  ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
+ |                                                                            |
+ |                Non-reactive quantum scattering calculations                |
+ |                     on atomic and molecular collisions                     |
+ |                                                                            |
+ |              Copyright (C) 2018 J. M. Hutson & C. R. Le Sueur              |
+ |                                                                            |
+ |                               Version 2019.0 (beta)                        |
+ |                                                                            |
+ |                       Run on 12 Nov 2018   at 14:59:55                     |
+ |                                                                            |
+  ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
+
+
+  This program is free software: you can redistribute it and/or modify it under
+  the terms of the GNU General Public License, version 3, as published by
+  the Free Software Foundation.
+
+  Publications resulting from the use of this program should refer to
+  J. M. Hutson & C. R. Le Sueur, MOLSCAT computer code 2019.0 (beta)       
+  or to the published paper in Computer Physics Communications when available.
+
+
+  PHYSICAL CONSTANTS OBTAINED FROM NIST CODATA TABULATION OF 2014
+
+  MEMORY ALLOCATED TO MAIN WORKING ARRAY IS   1000000 (8-BYTE) WORDS (    7.63 MB)
+  2 INTEGERS CAN BE STORED IN EACH WORD.
+
+  PRINT LEVEL =  3     OTHER PRINT CONTROLS  ISIGPR = 1
+
+  RUN LABEL = model system: ITYPE=1; IPROPS=2                                                 
+
+  REDUCED MASS FOR INTERACTION =  20.000000000 ATOMIC MASS UNITS
+
+  ENERGY-INDEPENDENT MATRICES WILL BE SAVED TEMPORARILY ON UNIT  1
+
+  ======================================================================================================================
+
+  INTERACTION TYPE IS    LINEAR RIGID ROTOR  -  ATOM.  
+
+  TARGET ROTATIONAL LEVELS TAKEN FROM &BASIS (JLEVEL) INPUT.  NLEVEL =  4
+
+  ENERGY LEVELS COMPUTED FROM B(E) =   30.000000
+
+  QUANTUM NUMBERS FOR INTERACTING PAIR:
+  EACH PAIR STATE IS LABELLED BY  1 QUANTUM LABEL 
+  EACH CHANNEL FUNCTION IS FORMED BY COMBINING A PAIR STATE WITH A VALUE OF L.
+  THE RESULTING BASIS SET IS ASYMPTOTICALLY DIAGONAL.
+
+  PAIR STATE     PAIR STATE QUANTUM NUMBERS    PAIR LEVEL     PAIR ENERGY (CM-1)
+                ---------        J ---------
+        1                        0                1             0.0000000
+        2                        2                2           180.0000000
+        3                        4                3           600.0000000
+        4                        6                4          1260.0000000
+
+  ======================================================================================================================
+  GENERAL-PURPOSE POTENL ROUTINE (MAY 18)
+
+  ANGULAR DEPENDENCE OF POTENTIAL EXPANDED IN TERMS OF
+  LEGENDRE POLYNOMIALS, P(LAMBDA).
+
+  INTERACTION POTENTIAL FOR EXPANSION TERM NUMBER   1
+  WHICH HAS LAMBDA =   0
+
+                 0.10000000E+01 * R **-12
+                -0.20000000E+01 * R ** -6
+
+  INTERACTION POTENTIAL FOR EXPANSION TERM NUMBER   2
+  WHICH HAS LAMBDA =   2
+
+                -0.20000000E+00 * R ** -6
+
+  POTENL PROCESSING FINISHED.
+
+  UNITS FOR POTENTIAL ROUTINES:
+  POTENTIAL RETURNED IN UNITS OF EPSIL =      50.000000 CM-1
+  R                  IN UNITS OF RM    =       3.500000 ANGSTROMS
+
+  ALL LENGTHS ARE IN UNITS OF RM =  3.500000 ANGSTROM UNLESS OTHERWISE STATED
+
+  INTERACTION MATRIX USES   2 BLOCKS OF VL ARRAY FOR R-DEPENDENT TERMS IN POTENTIAL
+
+  ======================================================================================================================
+
+  PROPAGATION ALGORITHM FOR COUPLED EQUATIONS SPECIFIED BY IPROPS =  2
+
+  COUPLED EQUATIONS WILL BE PROPAGATED OUTWARDS IN 1 SEGMENT 
+  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+  SEGMENT 1 WILL BE PROPAGATED OUTWARDS
+
+  FROM RMIN CHOSEN USING IRMSET =   9  TO RMAX   =     20.00
+
+
+  COUPLED EQUATIONS SOLVED BY METHOD OF DEVOGELAERE.
+  PROPAGATION PARAMETERS ARE:    STEST  = 0.10E-03
+                                 STEPS  =     30.0  (PER WAVELENGTH)
+                                 STABIL =      5.0  (STEPS PER STABILIZATION)
+
+  LOG-DERIVATIVE MATRIX WILL BE INITIALISED IN THE LOCAL EIGENBASIS FOR RMIN IN THE OUTWARDS PROPAGATION PART
+  LOCALLY CLOSED CHANNELS WILL BE INITIALISED WITH A WKB BOUNDARY CONDITION
+  LOCALLY OPEN CHANNELS WILL BE INITIALISED WITH THE VALUE  1.0000000E+08
+  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+  ======================================================================================================================
+
+  INPUT ENERGY VALUES ASSUMED TO BE IN UNITS OF CM-1 BY DEFAULT.
+
+  CONTROL DATA FOR TOTAL ENERGIES.  CALCULATIONS WILL BE PERFORMED FOR   1 VALUE 
+       ENERGY NO.   1 =   1250.0000000     CM-1
+
+  ======================================================================================================================
+
+  TOTAL ANGULAR MOMENTUM JTOT =  10
+
+  EACH JTOT IS SPLIT INTO A MAXIMUM OF   2 DIFFERENT SYMMETRY BLOCKS
+
+  CALCULATION(S) WILL BE FOR SYMMETRY BLOCK   1
+
+  STATE-TO-STATE INTEGRAL CROSS-SECTIONS WILL BE COMPUTED BUT NOT STORED ON DISK
+
+  ======================================================================================================================
+
+  INITIALIZATION DONE.  TIME WAS   0.00 CPU SECS.        57 WORDS OF STORAGE USED.
+
+  ========================================== model system: ITYPE=1; IPROPS=2 ===========================================
+
+  *******************************************  ANGULAR MOMENTUM JTOT  =  10  *******************************************
+
+  IBLOCK =   1
+
+  JTOT =   10   IBLOCK =   1   ENERGY(   1) =   1250.0000000     CM-1
+  INNER CLASSICAL TURNING POINT AT R =  0.7477
+  RADIAL PROPAGATION WILL START AT R =  0.6352
+
+  * * * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  10 AND IBLOCK =   1 * * * * * * * * *
+
+    F  I =      2              3
+    2       2.09414E-02    1.05656E-06
+    3       1.15531E-06    9.87213E-02
+
+  * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
+
+  ======================================================================================================================
+
+  * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
+
+  ========================================== model system: ITYPE=1; IPROPS=2 ===========================================
+
+  LEVEL   4 WITH ENERGY   1260.000000000000 IS NEVER OPEN
+
+  STATE-TO-STATE INTEGRAL CROSS SECTIONS IN ANGSTROM**2 BETWEEN    3 LEVELS WITH THRESHOLD ENERGIES (IN CM-1):
+
+    1     0.000000000000
+    2   180.000000000000
+    3   600.000000000000
+
+   ENERGY (CM-1)    JTOTL  JSTEP  JTOTU      F    I         SIG(F,I)
+   1250.000000         10      1     10      2    2         2.094141E-02  
+   1250.000000         10      1     10      3    2         1.155309E-06  
+
+   1250.000000         10      1     10      2    3         1.056565E-06  
+   1250.000000         10      1     10      3    3         9.872134E-02  
+
+  TOTAL INELASTIC INTEGRAL CROSS SECTIONS IN ANGSTROM**2 FROM LEVEL
+   1.15531E-06                                                 2
+   1.05656E-06                                                 3
+
+
+
+  ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
+ |                                                                            |
+ |                Non-reactive quantum scattering calculations                |
+ |                     on atomic and molecular collisions                     |
+ |                                                                            |
+ |              Copyright (C) 2018 J. M. Hutson & C. R. Le Sueur              |
+ |                                                                            |
+ |                               Version 2019.0 (beta)                        |
+ |                                                                            |
+ |                    This run used       0.34 cpu secs and                   |
+ |               2475 of the allocated   1000000 words of storage             |
+ |                                                                            |
+  ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
+  ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
+ |                                                                            |
+ |                Non-reactive quantum scattering calculations                |
+ |                     on atomic and molecular collisions                     |
+ |                                                                            |
+ |              Copyright (C) 2018 J. M. Hutson & C. R. Le Sueur              |
+ |                                                                            |
+ |                               Version 2019.0 (beta)                        |
+ |                                                                            |
+ |                       Run on 12 Nov 2018   at 14:59:56                     |
+ |                                                                            |
+  ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
+
+
+  This program is free software: you can redistribute it and/or modify it under
+  the terms of the GNU General Public License, version 3, as published by
+  the Free Software Foundation.
+
+  Publications resulting from the use of this program should refer to
+  J. M. Hutson & C. R. Le Sueur, MOLSCAT computer code 2019.0 (beta)       
+  or to the published paper in Computer Physics Communications when available.
+
+
+  PHYSICAL CONSTANTS OBTAINED FROM NIST CODATA TABULATION OF 2014
+
+  MEMORY ALLOCATED TO MAIN WORKING ARRAY IS   1000000 (8-BYTE) WORDS (    7.63 MB)
+  2 INTEGERS CAN BE STORED IN EACH WORD.
+
+  PRINT LEVEL =  3     OTHER PRINT CONTROLS  ISIGPR = 1
+
+  RUN LABEL = model system: ITYPE=1; IPROPS=3                                                 
+
+  REDUCED MASS FOR INTERACTION =  20.000000000 ATOMIC MASS UNITS
+
+  ENERGY-INDEPENDENT MATRICES WILL BE SAVED TEMPORARILY ON UNIT  1
+
+  ======================================================================================================================
+
+  INTERACTION TYPE IS    LINEAR RIGID ROTOR  -  ATOM.  
+
+  TARGET ROTATIONAL LEVELS TAKEN FROM &BASIS (JLEVEL) INPUT.  NLEVEL =  4
+
+  ENERGY LEVELS COMPUTED FROM B(E) =   30.000000
+
+  QUANTUM NUMBERS FOR INTERACTING PAIR:
+  EACH PAIR STATE IS LABELLED BY  1 QUANTUM LABEL 
+  EACH CHANNEL FUNCTION IS FORMED BY COMBINING A PAIR STATE WITH A VALUE OF L.
+  THE RESULTING BASIS SET IS ASYMPTOTICALLY DIAGONAL.
+
+  PAIR STATE     PAIR STATE QUANTUM NUMBERS    PAIR LEVEL     PAIR ENERGY (CM-1)
+                ---------        J ---------
+        1                        0                1             0.0000000
+        2                        2                2           180.0000000
+        3                        4                3           600.0000000
+        4                        6                4          1260.0000000
+
+  ======================================================================================================================
+  GENERAL-PURPOSE POTENL ROUTINE (MAY 18)
+
+  ANGULAR DEPENDENCE OF POTENTIAL EXPANDED IN TERMS OF
+  LEGENDRE POLYNOMIALS, P(LAMBDA).
+
+  INTERACTION POTENTIAL FOR EXPANSION TERM NUMBER   1
+  WHICH HAS LAMBDA =   0
+
+                 0.10000000E+01 * R **-12
+                -0.20000000E+01 * R ** -6
+
+  INTERACTION POTENTIAL FOR EXPANSION TERM NUMBER   2
+  WHICH HAS LAMBDA =   2
+
+                -0.20000000E+00 * R ** -6
+
+  POTENL PROCESSING FINISHED.
+
+  UNITS FOR POTENTIAL ROUTINES:
+  POTENTIAL RETURNED IN UNITS OF EPSIL =      50.000000 CM-1
+  R                  IN UNITS OF RM    =       3.500000 ANGSTROMS
+
+  ALL LENGTHS ARE IN UNITS OF RM =  3.500000 ANGSTROM UNLESS OTHERWISE STATED
+
+  INTERACTION MATRIX USES   2 BLOCKS OF VL ARRAY FOR R-DEPENDENT TERMS IN POTENTIAL
+
+  ======================================================================================================================
+
+  PROPAGATION ALGORITHM FOR COUPLED EQUATIONS SPECIFIED BY IPROPS =  3
+
+  COUPLED EQUATIONS WILL BE PROPAGATED OUTWARDS IN 1 SEGMENT 
+  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+  SEGMENT 1 WILL BE PROPAGATED OUTWARDS
+
+  FROM RMIN CHOSEN USING IRMSET =   9  TO RMAX   =     20.00
+
+
+  COUPLED EQUATIONS SOLVED BY WALKER-LIGHT R-MATRIX PROPAGATOR ALGORITHM
+
+  PROPAGATION PARAMETERS ARE:    DR    =     0.020      VTOL   = 0.10E-05
+                                 RMID  =     1.00       MAXSTP =    10000
+                      AND DEEPLY CLOSED CHANNELS DROPPED IN LONG-RANGE REGION
+
+  LOG-DERIVATIVE MATRIX WILL BE INITIALISED IN THE LOCAL EIGENBASIS FOR RMIN IN THE OUTWARDS PROPAGATION PART
+  LOCALLY CLOSED CHANNELS WILL BE INITIALISED WITH A WKB BOUNDARY CONDITION
+  LOCALLY OPEN CHANNELS WILL BE INITIALISED WITH THE VALUE  1.0000000E+08
+  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+  ======================================================================================================================
+
+  INPUT ENERGY VALUES ASSUMED TO BE IN UNITS OF CM-1 BY DEFAULT.
+
+  CONTROL DATA FOR TOTAL ENERGIES.  CALCULATIONS WILL BE PERFORMED FOR   1 VALUE 
+       ENERGY NO.   1 =   1250.0000000     CM-1
+
+  ======================================================================================================================
+
+  TOTAL ANGULAR MOMENTUM JTOT =  10
+
+  EACH JTOT IS SPLIT INTO A MAXIMUM OF   2 DIFFERENT SYMMETRY BLOCKS
+
+  CALCULATION(S) WILL BE FOR SYMMETRY BLOCK   1
+
+  STATE-TO-STATE INTEGRAL CROSS-SECTIONS WILL BE COMPUTED BUT NOT STORED ON DISK
+
+  ======================================================================================================================
+
+  INITIALIZATION DONE.  TIME WAS   0.00 CPU SECS.        57 WORDS OF STORAGE USED.
+
+  ========================================== model system: ITYPE=1; IPROPS=3 ===========================================
+
+  *******************************************  ANGULAR MOMENTUM JTOT  =  10  *******************************************
+
+  IBLOCK =   1
+
+  JTOT =   10   IBLOCK =   1   ENERGY(   1) =   1250.0000000     CM-1
+  INNER CLASSICAL TURNING POINT AT R =  0.7477
+  RADIAL PROPAGATION WILL START AT R =  0.6352
+
+  * * * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  10 AND IBLOCK =   1 * * * * * * * * *
+
+    F  I =      2              3
+    2       2.09714E-02    1.05655E-06
+    3       1.15529E-06    9.87108E-02
+
+  * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
+
+  ======================================================================================================================
+
+  * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
+
+  ========================================== model system: ITYPE=1; IPROPS=3 ===========================================
+
+  LEVEL   4 WITH ENERGY   1260.000000000000 IS NEVER OPEN
+
+  STATE-TO-STATE INTEGRAL CROSS SECTIONS IN ANGSTROM**2 BETWEEN    3 LEVELS WITH THRESHOLD ENERGIES (IN CM-1):
+
+    1     0.000000000000
+    2   180.000000000000
+    3   600.000000000000
+
+   ENERGY (CM-1)    JTOTL  JSTEP  JTOTU      F    I         SIG(F,I)
+   1250.000000         10      1     10      2    2         2.097143E-02  
+   1250.000000         10      1     10      3    2         1.155294E-06  
+
+   1250.000000         10      1     10      2    3         1.056551E-06  
+   1250.000000         10      1     10      3    3         9.871085E-02  
+
+  TOTAL INELASTIC INTEGRAL CROSS SECTIONS IN ANGSTROM**2 FROM LEVEL
+   1.15529E-06                                                 2
+   1.05655E-06                                                 3
+
+
+
+  ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
+ |                                                                            |
+ |                Non-reactive quantum scattering calculations                |
+ |                     on atomic and molecular collisions                     |
+ |                                                                            |
+ |              Copyright (C) 2018 J. M. Hutson & C. R. Le Sueur              |
+ |                                                                            |
+ |                               Version 2019.0 (beta)                        |
+ |                                                                            |
+ |                    This run used       0.06 cpu secs and                   |
+ |               1119 of the allocated   1000000 words of storage             |
+ |                                                                            |
+  ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
+  ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
+ |                                                                            |
+ |                Non-reactive quantum scattering calculations                |
+ |                     on atomic and molecular collisions                     |
+ |                                                                            |
+ |              Copyright (C) 2018 J. M. Hutson & C. R. Le Sueur              |
+ |                                                                            |
+ |                               Version 2019.0 (beta)                        |
+ |                                                                            |
+ |                       Run on 12 Nov 2018   at 14:59:56                     |
+ |                                                                            |
+  ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
+
+
+  This program is free software: you can redistribute it and/or modify it under
+  the terms of the GNU General Public License, version 3, as published by
+  the Free Software Foundation.
+
+  Publications resulting from the use of this program should refer to
+  J. M. Hutson & C. R. Le Sueur, MOLSCAT computer code 2019.0 (beta)       
+  or to the published paper in Computer Physics Communications when available.
+
+
+  PHYSICAL CONSTANTS OBTAINED FROM NIST CODATA TABULATION OF 2014
+
+  MEMORY ALLOCATED TO MAIN WORKING ARRAY IS   1000000 (8-BYTE) WORDS (    7.63 MB)
+  2 INTEGERS CAN BE STORED IN EACH WORD.
+
+  PRINT LEVEL =  3     OTHER PRINT CONTROLS  ISIGPR = 1
+
+  RUN LABEL = model system: ITYPE=1; IPROPS=5                                                 
+
+  REDUCED MASS FOR INTERACTION =  20.000000000 ATOMIC MASS UNITS
+
+  ENERGY-INDEPENDENT MATRICES WILL BE SAVED TEMPORARILY ON UNIT  1
+
+  ======================================================================================================================
+
+  INTERACTION TYPE IS    LINEAR RIGID ROTOR  -  ATOM.  
+
+  TARGET ROTATIONAL LEVELS TAKEN FROM &BASIS (JLEVEL) INPUT.  NLEVEL =  4
+
+  ENERGY LEVELS COMPUTED FROM B(E) =   30.000000
+
+  QUANTUM NUMBERS FOR INTERACTING PAIR:
+  EACH PAIR STATE IS LABELLED BY  1 QUANTUM LABEL 
+  EACH CHANNEL FUNCTION IS FORMED BY COMBINING A PAIR STATE WITH A VALUE OF L.
+  THE RESULTING BASIS SET IS ASYMPTOTICALLY DIAGONAL.
+
+  PAIR STATE     PAIR STATE QUANTUM NUMBERS    PAIR LEVEL     PAIR ENERGY (CM-1)
+                ---------        J ---------
+        1                        0                1             0.0000000
+        2                        2                2           180.0000000
+        3                        4                3           600.0000000
+        4                        6                4          1260.0000000
+
+  ======================================================================================================================
+  GENERAL-PURPOSE POTENL ROUTINE (MAY 18)
+
+  ANGULAR DEPENDENCE OF POTENTIAL EXPANDED IN TERMS OF
+  LEGENDRE POLYNOMIALS, P(LAMBDA).
+
+  INTERACTION POTENTIAL FOR EXPANSION TERM NUMBER   1
+  WHICH HAS LAMBDA =   0
+
+                 0.10000000E+01 * R **-12
+                -0.20000000E+01 * R ** -6
+
+  INTERACTION POTENTIAL FOR EXPANSION TERM NUMBER   2
+  WHICH HAS LAMBDA =   2
+
+                -0.20000000E+00 * R ** -6
+
+  POTENL PROCESSING FINISHED.
+
+  UNITS FOR POTENTIAL ROUTINES:
+  POTENTIAL RETURNED IN UNITS OF EPSIL =      50.000000 CM-1
+  R                  IN UNITS OF RM    =       3.500000 ANGSTROMS
+
+  ALL LENGTHS ARE IN UNITS OF RM =  3.500000 ANGSTROM UNLESS OTHERWISE STATED
+
+  INTERACTION MATRIX USES   2 BLOCKS OF VL ARRAY FOR R-DEPENDENT TERMS IN POTENTIAL
+
+  ======================================================================================================================
+
+  PROPAGATION ALGORITHM FOR COUPLED EQUATIONS SPECIFIED BY IPROPS =  5
+
+  COUPLED EQUATIONS WILL BE PROPAGATED OUTWARDS IN 1 SEGMENT 
+  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+  SEGMENT 1 WILL BE PROPAGATED OUTWARDS
+
+  FROM RMIN CHOSEN USING IRMSET =   9  TO RMAX   =     20.00
+
+  COUPLED EQUATIONS SOLVED BY LOG DERIVATIVE METHOD OF JOHNSON
+
+  PROPAGATION STEP SIZE DETERMINED USING STEPS =   12.0     (PER WAVELENGTH)
+
+  LOG-DERIVATIVE MATRIX WILL BE INITIALISED IN THE LOCAL EIGENBASIS FOR RMIN IN THE OUTWARDS PROPAGATION PART
+  LOCALLY CLOSED CHANNELS WILL BE INITIALISED WITH A WKB BOUNDARY CONDITION
+  LOCALLY OPEN CHANNELS WILL BE INITIALISED WITH THE VALUE  1.0000000E+08
+  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+  ======================================================================================================================
+
+  INPUT ENERGY VALUES ASSUMED TO BE IN UNITS OF CM-1 BY DEFAULT.
+
+  CONTROL DATA FOR TOTAL ENERGIES.  CALCULATIONS WILL BE PERFORMED FOR   1 VALUE 
+       ENERGY NO.   1 =   1250.0000000     CM-1
+
+  ======================================================================================================================
+
+  TOTAL ANGULAR MOMENTUM JTOT =  10
+
+  EACH JTOT IS SPLIT INTO A MAXIMUM OF   2 DIFFERENT SYMMETRY BLOCKS
+
+  CALCULATION(S) WILL BE FOR SYMMETRY BLOCK   1
+
+  STATE-TO-STATE INTEGRAL CROSS-SECTIONS WILL BE COMPUTED BUT NOT STORED ON DISK
+
+  ======================================================================================================================
+
+  INITIALIZATION DONE.  TIME WAS   0.00 CPU SECS.        57 WORDS OF STORAGE USED.
+
+  ========================================== model system: ITYPE=1; IPROPS=5 ===========================================
+
+  *******************************************  ANGULAR MOMENTUM JTOT  =  10  *******************************************
+
+  IBLOCK =   1
+
+  JTOT =   10   IBLOCK =   1   ENERGY(   1) =   1250.0000000     CM-1
+  INNER CLASSICAL TURNING POINT AT R =  0.7477
+  RADIAL PROPAGATION WILL START AT R =  0.6352
+
+  LDPROP. LOG DERIVATIVE MATRIX PROPAGATED FROM       0.6352  TO  20.000      IN   9224  STEPS.
+
+  * * * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  10 AND IBLOCK =   1 * * * * * * * * *
+
+    F  I =      2              3
+    2       2.12611E-02    1.05658E-06
+    3       1.15533E-06    9.88751E-02
+
+  * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
+
+  ======================================================================================================================
+
+  * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
+
+  ========================================== model system: ITYPE=1; IPROPS=5 ===========================================
+
+  LEVEL   4 WITH ENERGY   1260.000000000000 IS NEVER OPEN
+
+  STATE-TO-STATE INTEGRAL CROSS SECTIONS IN ANGSTROM**2 BETWEEN    3 LEVELS WITH THRESHOLD ENERGIES (IN CM-1):
+
+    1     0.000000000000
+    2   180.000000000000
+    3   600.000000000000
+
+   ENERGY (CM-1)    JTOTL  JSTEP  JTOTU      F    I         SIG(F,I)
+   1250.000000         10      1     10      2    2         2.126111E-02  
+   1250.000000         10      1     10      3    2         1.155328E-06  
+
+   1250.000000         10      1     10      2    3         1.056582E-06  
+   1250.000000         10      1     10      3    3         9.887506E-02  
+
+  TOTAL INELASTIC INTEGRAL CROSS SECTIONS IN ANGSTROM**2 FROM LEVEL
+   1.15533E-06                                                 2
+   1.05658E-06                                                 3
+
+
+
+  ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
+ |                                                                            |
+ |                Non-reactive quantum scattering calculations                |
+ |                     on atomic and molecular collisions                     |
+ |                                                                            |
+ |              Copyright (C) 2018 J. M. Hutson & C. R. Le Sueur              |
+ |                                                                            |
+ |                               Version 2019.0 (beta)                        |
+ |                                                                            |
+ |                    This run used       0.20 cpu secs and                   |
+ |                783 of the allocated   1000000 words of storage             |
+ |                                                                            |
+  ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
+  ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
+ |                                                                            |
+ |                Non-reactive quantum scattering calculations                |
+ |                     on atomic and molecular collisions                     |
+ |                                                                            |
+ |              Copyright (C) 2018 J. M. Hutson & C. R. Le Sueur              |
+ |                                                                            |
+ |                               Version 2019.0 (beta)                        |
+ |                                                                            |
+ |                       Run on 12 Nov 2018   at 14:59:56                     |
+ |                                                                            |
+  ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
+
+
+  This program is free software: you can redistribute it and/or modify it under
+  the terms of the GNU General Public License, version 3, as published by
+  the Free Software Foundation.
+
+  Publications resulting from the use of this program should refer to
+  J. M. Hutson & C. R. Le Sueur, MOLSCAT computer code 2019.0 (beta)       
+  or to the published paper in Computer Physics Communications when available.
+
+
+  PHYSICAL CONSTANTS OBTAINED FROM NIST CODATA TABULATION OF 2014
+
+  MEMORY ALLOCATED TO MAIN WORKING ARRAY IS   1000000 (8-BYTE) WORDS (    7.63 MB)
+  2 INTEGERS CAN BE STORED IN EACH WORD.
+
+  PRINT LEVEL =  3     OTHER PRINT CONTROLS  ISIGPR = 1
+
+  RUN LABEL = model system: ITYPE=1; IPROPS=6                                                 
+
+  REDUCED MASS FOR INTERACTION =  20.000000000 ATOMIC MASS UNITS
+
+  ENERGY-INDEPENDENT MATRICES WILL BE SAVED TEMPORARILY ON UNIT  1
+
+  ======================================================================================================================
+
+  INTERACTION TYPE IS    LINEAR RIGID ROTOR  -  ATOM.  
+
+  TARGET ROTATIONAL LEVELS TAKEN FROM &BASIS (JLEVEL) INPUT.  NLEVEL =  4
+
+  ENERGY LEVELS COMPUTED FROM B(E) =   30.000000
+
+  QUANTUM NUMBERS FOR INTERACTING PAIR:
+  EACH PAIR STATE IS LABELLED BY  1 QUANTUM LABEL 
+  EACH CHANNEL FUNCTION IS FORMED BY COMBINING A PAIR STATE WITH A VALUE OF L.
+  THE RESULTING BASIS SET IS ASYMPTOTICALLY DIAGONAL.
+
+  PAIR STATE     PAIR STATE QUANTUM NUMBERS    PAIR LEVEL     PAIR ENERGY (CM-1)
+                ---------        J ---------
+        1                        0                1             0.0000000
+        2                        2                2           180.0000000
+        3                        4                3           600.0000000
+        4                        6                4          1260.0000000
+
+  ======================================================================================================================
+  GENERAL-PURPOSE POTENL ROUTINE (MAY 18)
+
+  ANGULAR DEPENDENCE OF POTENTIAL EXPANDED IN TERMS OF
+  LEGENDRE POLYNOMIALS, P(LAMBDA).
+
+  INTERACTION POTENTIAL FOR EXPANSION TERM NUMBER   1
+  WHICH HAS LAMBDA =   0
+
+                 0.10000000E+01 * R **-12
+                -0.20000000E+01 * R ** -6
+
+  INTERACTION POTENTIAL FOR EXPANSION TERM NUMBER   2
+  WHICH HAS LAMBDA =   2
+
+                -0.20000000E+00 * R ** -6
+
+  POTENL PROCESSING FINISHED.
+
+  UNITS FOR POTENTIAL ROUTINES:
+  POTENTIAL RETURNED IN UNITS OF EPSIL =      50.000000 CM-1
+  R                  IN UNITS OF RM    =       3.500000 ANGSTROMS
+
+  ALL LENGTHS ARE IN UNITS OF RM =  3.500000 ANGSTROM UNLESS OTHERWISE STATED
+
+  INTERACTION MATRIX USES   2 BLOCKS OF VL ARRAY FOR R-DEPENDENT TERMS IN POTENTIAL
+
+  ======================================================================================================================
+
+  PROPAGATION ALGORITHM FOR COUPLED EQUATIONS SPECIFIED BY IPROPS =  6
+
+  COUPLED EQUATIONS WILL BE PROPAGATED OUTWARDS IN 1 SEGMENT 
+  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+  SEGMENT 1 WILL BE PROPAGATED OUTWARDS
+
+  FROM RMIN CHOSEN USING IRMSET =   9  TO RMAX   =     20.00
+
+  COUPLED EQUATIONS SOLVED BY DIABATIC MODIFIED LOG DERIVATIVE METHOD OF MANOLOPOULOS
+
+  PROPAGATION STEP SIZE DETERMINED USING STEPS =   12.0     (PER WAVELENGTH)
+
+  LOG-DERIVATIVE MATRIX WILL BE INITIALISED IN THE LOCAL EIGENBASIS FOR RMIN IN THE OUTWARDS PROPAGATION PART
+  LOCALLY CLOSED CHANNELS WILL BE INITIALISED WITH A WKB BOUNDARY CONDITION
+  LOCALLY OPEN CHANNELS WILL BE INITIALISED WITH THE VALUE  1.0000000E+08
+  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+  ======================================================================================================================
+
+  INPUT ENERGY VALUES ASSUMED TO BE IN UNITS OF CM-1 BY DEFAULT.
+
+  CONTROL DATA FOR TOTAL ENERGIES.  CALCULATIONS WILL BE PERFORMED FOR   1 VALUE 
+       ENERGY NO.   1 =   1250.0000000     CM-1
+
+  ======================================================================================================================
+
+  TOTAL ANGULAR MOMENTUM JTOT =  10
+
+  EACH JTOT IS SPLIT INTO A MAXIMUM OF   2 DIFFERENT SYMMETRY BLOCKS
+
+  CALCULATION(S) WILL BE FOR SYMMETRY BLOCK   1
+
+  STATE-TO-STATE INTEGRAL CROSS-SECTIONS WILL BE COMPUTED BUT NOT STORED ON DISK
+
+  ======================================================================================================================
+
+  INITIALIZATION DONE.  TIME WAS   0.00 CPU SECS.        57 WORDS OF STORAGE USED.
+
+  ========================================== model system: ITYPE=1; IPROPS=6 ===========================================
+
+  *******************************************  ANGULAR MOMENTUM JTOT  =  10  *******************************************
+
+  IBLOCK =   1
+
+  JTOT =   10   IBLOCK =   1   ENERGY(   1) =   1250.0000000     CM-1
+  INNER CLASSICAL TURNING POINT AT R =  0.7477
+  RADIAL PROPAGATION WILL START AT R =  0.6352
+
+  DWPROP. LOG DERIVATIVE MATRIX PROPAGATED FROM       0.6352  TO  20.000      IN   9224  STEPS.
+
+  * * * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  10 AND IBLOCK =   1 * * * * * * * * *
+
+    F  I =      2              3
+    2       2.10011E-02    1.05657E-06
+    3       1.15531E-06    9.87502E-02
+
+  * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
+
+  ======================================================================================================================
+
+  * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
+
+  ========================================== model system: ITYPE=1; IPROPS=6 ===========================================
+
+  LEVEL   4 WITH ENERGY   1260.000000000000 IS NEVER OPEN
+
+  STATE-TO-STATE INTEGRAL CROSS SECTIONS IN ANGSTROM**2 BETWEEN    3 LEVELS WITH THRESHOLD ENERGIES (IN CM-1):
+
+    1     0.000000000000
+    2   180.000000000000
+    3   600.000000000000
+
+   ENERGY (CM-1)    JTOTL  JSTEP  JTOTU      F    I         SIG(F,I)
+   1250.000000         10      1     10      2    2         2.100107E-02  
+   1250.000000         10      1     10      3    2         1.155311E-06  
+
+   1250.000000         10      1     10      2    3         1.056567E-06  
+   1250.000000         10      1     10      3    3         9.875015E-02  
+
+  TOTAL INELASTIC INTEGRAL CROSS SECTIONS IN ANGSTROM**2 FROM LEVEL
+   1.15531E-06                                                 2
+   1.05657E-06                                                 3
+
+
+
+  ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
+ |                                                                            |
+ |                Non-reactive quantum scattering calculations                |
+ |                     on atomic and molecular collisions                     |
+ |                                                                            |
+ |              Copyright (C) 2018 J. M. Hutson & C. R. Le Sueur              |
+ |                                                                            |
+ |                               Version 2019.0 (beta)                        |
+ |                                                                            |
+ |                    This run used       0.18 cpu secs and                   |
+ |                783 of the allocated   1000000 words of storage             |
+ |                                                                            |
+  ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
+  ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
+ |                                                                            |
+ |                Non-reactive quantum scattering calculations                |
+ |                     on atomic and molecular collisions                     |
+ |                                                                            |
+ |              Copyright (C) 2018 J. M. Hutson & C. R. Le Sueur              |
+ |                                                                            |
+ |                               Version 2019.0 (beta)                        |
+ |                                                                            |
+ |                       Run on 12 Nov 2018   at 14:59:56                     |
+ |                                                                            |
+  ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
+
+
+  This program is free software: you can redistribute it and/or modify it under
+  the terms of the GNU General Public License, version 3, as published by
+  the Free Software Foundation.
+
+  Publications resulting from the use of this program should refer to
+  J. M. Hutson & C. R. Le Sueur, MOLSCAT computer code 2019.0 (beta)       
+  or to the published paper in Computer Physics Communications when available.
+
+
+  PHYSICAL CONSTANTS OBTAINED FROM NIST CODATA TABULATION OF 2014
+
+  MEMORY ALLOCATED TO MAIN WORKING ARRAY IS   1000000 (8-BYTE) WORDS (    7.63 MB)
+  2 INTEGERS CAN BE STORED IN EACH WORD.
+
+  PRINT LEVEL =  3     OTHER PRINT CONTROLS  ISIGPR = 1
+
+  RUN LABEL = model system: ITYPE=1; IPROPS=7                                                 
+
+  REDUCED MASS FOR INTERACTION =  20.000000000 ATOMIC MASS UNITS
+
+  ENERGY-INDEPENDENT MATRICES WILL BE SAVED TEMPORARILY ON UNIT  1
+
+  ======================================================================================================================
+
+  INTERACTION TYPE IS    LINEAR RIGID ROTOR  -  ATOM.  
+
+  TARGET ROTATIONAL LEVELS TAKEN FROM &BASIS (JLEVEL) INPUT.  NLEVEL =  4
+
+  ENERGY LEVELS COMPUTED FROM B(E) =   30.000000
+
+  QUANTUM NUMBERS FOR INTERACTING PAIR:
+  EACH PAIR STATE IS LABELLED BY  1 QUANTUM LABEL 
+  EACH CHANNEL FUNCTION IS FORMED BY COMBINING A PAIR STATE WITH A VALUE OF L.
+  THE RESULTING BASIS SET IS ASYMPTOTICALLY DIAGONAL.
+
+  PAIR STATE     PAIR STATE QUANTUM NUMBERS    PAIR LEVEL     PAIR ENERGY (CM-1)
+                ---------        J ---------
+        1                        0                1             0.0000000
+        2                        2                2           180.0000000
+        3                        4                3           600.0000000
+        4                        6                4          1260.0000000
+
+  ======================================================================================================================
+  GENERAL-PURPOSE POTENL ROUTINE (MAY 18)
+
+  ANGULAR DEPENDENCE OF POTENTIAL EXPANDED IN TERMS OF
+  LEGENDRE POLYNOMIALS, P(LAMBDA).
+
+  INTERACTION POTENTIAL FOR EXPANSION TERM NUMBER   1
+  WHICH HAS LAMBDA =   0
+
+                 0.10000000E+01 * R **-12
+                -0.20000000E+01 * R ** -6
+
+  INTERACTION POTENTIAL FOR EXPANSION TERM NUMBER   2
+  WHICH HAS LAMBDA =   2
+
+                -0.20000000E+00 * R ** -6
+
+  POTENL PROCESSING FINISHED.
+
+  UNITS FOR POTENTIAL ROUTINES:
+  POTENTIAL RETURNED IN UNITS OF EPSIL =      50.000000 CM-1
+  R                  IN UNITS OF RM    =       3.500000 ANGSTROMS
+
+  ALL LENGTHS ARE IN UNITS OF RM =  3.500000 ANGSTROM UNLESS OTHERWISE STATED
+
+  INTERACTION MATRIX USES   2 BLOCKS OF VL ARRAY FOR R-DEPENDENT TERMS IN POTENTIAL
+
+  ======================================================================================================================
+
+  PROPAGATION ALGORITHM FOR COUPLED EQUATIONS SPECIFIED BY IPROPS =  7
+
+  COUPLED EQUATIONS WILL BE PROPAGATED OUTWARDS IN 1 SEGMENT 
+  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+  SEGMENT 1 WILL BE PROPAGATED OUTWARDS
+
+  FROM RMIN CHOSEN USING IRMSET =   9  TO RMAX   =     20.00
+
+  COUPLED EQUATIONS SOLVED BY QUASIADIABATIC MODIFIED LOG DERIVATIVE METHOD OF MANOLOPOULOS
+
+  PROPAGATION STEP SIZE DETERMINED USING STEPS =   12.0     (PER WAVELENGTH)
+
+  LOG-DERIVATIVE MATRIX WILL BE INITIALISED IN THE LOCAL EIGENBASIS FOR RMIN IN THE OUTWARDS PROPAGATION PART
+  LOCALLY CLOSED CHANNELS WILL BE INITIALISED WITH A WKB BOUNDARY CONDITION
+  LOCALLY OPEN CHANNELS WILL BE INITIALISED WITH THE VALUE  1.0000000E+08
+  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+  ======================================================================================================================
+
+  INPUT ENERGY VALUES ASSUMED TO BE IN UNITS OF CM-1 BY DEFAULT.
+
+  CONTROL DATA FOR TOTAL ENERGIES.  CALCULATIONS WILL BE PERFORMED FOR   1 VALUE 
+       ENERGY NO.   1 =   1250.0000000     CM-1
+
+  ======================================================================================================================
+
+  TOTAL ANGULAR MOMENTUM JTOT =  10
+
+  EACH JTOT IS SPLIT INTO A MAXIMUM OF   2 DIFFERENT SYMMETRY BLOCKS
+
+  CALCULATION(S) WILL BE FOR SYMMETRY BLOCK   1
+
+  STATE-TO-STATE INTEGRAL CROSS-SECTIONS WILL BE COMPUTED BUT NOT STORED ON DISK
+
+  ======================================================================================================================
+
+  INITIALIZATION DONE.  TIME WAS   0.00 CPU SECS.        57 WORDS OF STORAGE USED.
+
+  ========================================== model system: ITYPE=1; IPROPS=7 ===========================================
+
+  *******************************************  ANGULAR MOMENTUM JTOT  =  10  *******************************************
+
+  IBLOCK =   1
+
+  JTOT =   10   IBLOCK =   1   ENERGY(   1) =   1250.0000000     CM-1
+  INNER CLASSICAL TURNING POINT AT R =  0.7477
+  RADIAL PROPAGATION WILL START AT R =  0.6352
+
+  QAPROP. LOG DERIVATIVE MATRIX PROPAGATED FROM       0.6352  TO  20.000      IN   9224  STEPS.
+
+  * * * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  10 AND IBLOCK =   1 * * * * * * * * *
+
+    F  I =      2              3
+    2       2.10011E-02    1.05656E-06
+    3       1.15531E-06    9.87502E-02
+
+  * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
+
+  ======================================================================================================================
+
+  * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
+
+  ========================================== model system: ITYPE=1; IPROPS=7 ===========================================
+
+  LEVEL   4 WITH ENERGY   1260.000000000000 IS NEVER OPEN
+
+  STATE-TO-STATE INTEGRAL CROSS SECTIONS IN ANGSTROM**2 BETWEEN    3 LEVELS WITH THRESHOLD ENERGIES (IN CM-1):
+
+    1     0.000000000000
+    2   180.000000000000
+    3   600.000000000000
+
+   ENERGY (CM-1)    JTOTL  JSTEP  JTOTU      F    I         SIG(F,I)
+   1250.000000         10      1     10      2    2         2.100107E-02  
+   1250.000000         10      1     10      3    2         1.155309E-06  
+
+   1250.000000         10      1     10      2    3         1.056565E-06  
+   1250.000000         10      1     10      3    3         9.875015E-02  
+
+  TOTAL INELASTIC INTEGRAL CROSS SECTIONS IN ANGSTROM**2 FROM LEVEL
+   1.15531E-06                                                 2
+   1.05656E-06                                                 3
+
+
+
+  ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
+ |                                                                            |
+ |                Non-reactive quantum scattering calculations                |
+ |                     on atomic and molecular collisions                     |
+ |                                                                            |
+ |              Copyright (C) 2018 J. M. Hutson & C. R. Le Sueur              |
+ |                                                                            |
+ |                               Version 2019.0 (beta)                        |
+ |                                                                            |
+ |                    This run used       0.36 cpu secs and                   |
+ |               1095 of the allocated   1000000 words of storage             |
+ |                                                                            |
+  ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
+  ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
+ |                                                                            |
+ |                Non-reactive quantum scattering calculations                |
+ |                     on atomic and molecular collisions                     |
+ |                                                                            |
+ |              Copyright (C) 2018 J. M. Hutson & C. R. Le Sueur              |
+ |                                                                            |
+ |                               Version 2019.0 (beta)                        |
+ |                                                                            |
+ |                       Run on 12 Nov 2018   at 14:59:57                     |
+ |                                                                            |
+  ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
+
+
+  This program is free software: you can redistribute it and/or modify it under
+  the terms of the GNU General Public License, version 3, as published by
+  the Free Software Foundation.
+
+  Publications resulting from the use of this program should refer to
+  J. M. Hutson & C. R. Le Sueur, MOLSCAT computer code 2019.0 (beta)       
+  or to the published paper in Computer Physics Communications when available.
+
+
+  PHYSICAL CONSTANTS OBTAINED FROM NIST CODATA TABULATION OF 2014
+
+  MEMORY ALLOCATED TO MAIN WORKING ARRAY IS   1000000 (8-BYTE) WORDS (    7.63 MB)
+  2 INTEGERS CAN BE STORED IN EACH WORD.
+
+  PRINT LEVEL =  3     OTHER PRINT CONTROLS  ISIGPR = 1
+
+  RUN LABEL = model system: ITYPE=1; IPROPS=9                                                 
+
+  REDUCED MASS FOR INTERACTION =  20.000000000 ATOMIC MASS UNITS
+
+  ENERGY-INDEPENDENT MATRICES WILL BE SAVED TEMPORARILY ON UNIT  1
+
+  ======================================================================================================================
+
+  INTERACTION TYPE IS    LINEAR RIGID ROTOR  -  ATOM.  
+
+  TARGET ROTATIONAL LEVELS TAKEN FROM &BASIS (JLEVEL) INPUT.  NLEVEL =  4
+
+  ENERGY LEVELS COMPUTED FROM B(E) =   30.000000
+
+  QUANTUM NUMBERS FOR INTERACTING PAIR:
+  EACH PAIR STATE IS LABELLED BY  1 QUANTUM LABEL 
+  EACH CHANNEL FUNCTION IS FORMED BY COMBINING A PAIR STATE WITH A VALUE OF L.
+  THE RESULTING BASIS SET IS ASYMPTOTICALLY DIAGONAL.
+
+  PAIR STATE     PAIR STATE QUANTUM NUMBERS    PAIR LEVEL     PAIR ENERGY (CM-1)
+                ---------        J ---------
+        1                        0                1             0.0000000
+        2                        2                2           180.0000000
+        3                        4                3           600.0000000
+        4                        6                4          1260.0000000
+
+  ======================================================================================================================
+  GENERAL-PURPOSE POTENL ROUTINE (MAY 18)
+
+  ANGULAR DEPENDENCE OF POTENTIAL EXPANDED IN TERMS OF
+  LEGENDRE POLYNOMIALS, P(LAMBDA).
+
+  INTERACTION POTENTIAL FOR EXPANSION TERM NUMBER   1
+  WHICH HAS LAMBDA =   0
+
+                 0.10000000E+01 * R **-12
+                -0.20000000E+01 * R ** -6
+
+  INTERACTION POTENTIAL FOR EXPANSION TERM NUMBER   2
+  WHICH HAS LAMBDA =   2
+
+                -0.20000000E+00 * R ** -6
+
+  POTENL PROCESSING FINISHED.
+
+  UNITS FOR POTENTIAL ROUTINES:
+  POTENTIAL RETURNED IN UNITS OF EPSIL =      50.000000 CM-1
+  R                  IN UNITS OF RM    =       3.500000 ANGSTROMS
+
+  ALL LENGTHS ARE IN UNITS OF RM =  3.500000 ANGSTROM UNLESS OTHERWISE STATED
+
+  INTERACTION MATRIX USES   2 BLOCKS OF VL ARRAY FOR R-DEPENDENT TERMS IN POTENTIAL
+
+  ======================================================================================================================
+
+  PROPAGATION ALGORITHM FOR COUPLED EQUATIONS SPECIFIED BY IPROPS =  9
+
+  COUPLED EQUATIONS WILL BE PROPAGATED OUTWARDS IN 1 SEGMENT 
+  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+  SEGMENT 1 WILL BE PROPAGATED OUTWARDS
+
+  FROM RMIN CHOSEN USING IRMSET =   9  TO RMAX   =     20.00
+
+  COUPLED EQUATIONS SOLVED BY SYMPLECTIC LOG-DERIVATIVE METHOD OF MANOLOPOULOS AND GRAY
+  USING THE SIX-STEP FIFTH-ORDER METHOD OF MCLACHLAN AND ATELA
+
+  PROPAGATION STEP SIZE DETERMINED USING STEPS =   12.0     (PER WAVELENGTH)
+
+  LOG-DERIVATIVE MATRIX WILL BE INITIALISED IN THE LOCAL EIGENBASIS FOR RMIN IN THE OUTWARDS PROPAGATION PART
+  LOCALLY CLOSED CHANNELS WILL BE INITIALISED WITH A WKB BOUNDARY CONDITION
+  LOCALLY OPEN CHANNELS WILL BE INITIALISED WITH THE VALUE  1.0000000E+08
+  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+  ======================================================================================================================
+
+  INPUT ENERGY VALUES ASSUMED TO BE IN UNITS OF CM-1 BY DEFAULT.
+
+  CONTROL DATA FOR TOTAL ENERGIES.  CALCULATIONS WILL BE PERFORMED FOR   1 VALUE 
+       ENERGY NO.   1 =   1250.0000000     CM-1
+
+  ======================================================================================================================
+
+  TOTAL ANGULAR MOMENTUM JTOT =  10
+
+  EACH JTOT IS SPLIT INTO A MAXIMUM OF   2 DIFFERENT SYMMETRY BLOCKS
+
+  CALCULATION(S) WILL BE FOR SYMMETRY BLOCK   1
+
+  STATE-TO-STATE INTEGRAL CROSS-SECTIONS WILL BE COMPUTED BUT NOT STORED ON DISK
+
+  ======================================================================================================================
+
+  INITIALIZATION DONE.  TIME WAS   0.00 CPU SECS.        57 WORDS OF STORAGE USED.
+
+  ========================================== model system: ITYPE=1; IPROPS=9 ===========================================
+
+  *******************************************  ANGULAR MOMENTUM JTOT  =  10  *******************************************
+
+  IBLOCK =   1
+
+  JTOT =   10   IBLOCK =   1   ENERGY(   1) =   1250.0000000     CM-1
+  INNER CLASSICAL TURNING POINT AT R =  0.7477
+  RADIAL PROPAGATION WILL START AT R =  0.6352
+
+  MGPROP. LOG DERIVATIVE MATRIX PROPAGATED FROM       0.6352  TO  20.000      IN   9224  STEPS.
+
+  * * * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  10 AND IBLOCK =   1 * * * * * * * * *
+
+    F  I =      2              3
+    2       2.10010E-02    1.05657E-06
+    3       1.15531E-06    9.87501E-02
+
+  * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
+
+  ======================================================================================================================
+
+  * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
+
+  ========================================== model system: ITYPE=1; IPROPS=9 ===========================================
+
+  LEVEL   4 WITH ENERGY   1260.000000000000 IS NEVER OPEN
+
+  STATE-TO-STATE INTEGRAL CROSS SECTIONS IN ANGSTROM**2 BETWEEN    3 LEVELS WITH THRESHOLD ENERGIES (IN CM-1):
+
+    1     0.000000000000
+    2   180.000000000000
+    3   600.000000000000
+
+   ENERGY (CM-1)    JTOTL  JSTEP  JTOTU      F    I         SIG(F,I)
+   1250.000000         10      1     10      2    2         2.100100E-02  
+   1250.000000         10      1     10      3    2         1.155311E-06  
+
+   1250.000000         10      1     10      2    3         1.056566E-06  
+   1250.000000         10      1     10      3    3         9.875011E-02  
+
+  TOTAL INELASTIC INTEGRAL CROSS SECTIONS IN ANGSTROM**2 FROM LEVEL
+   1.15531E-06                                                 2
+   1.05657E-06                                                 3
+
+
+
+  ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
+ |                                                                            |
+ |                Non-reactive quantum scattering calculations                |
+ |                     on atomic and molecular collisions                     |
+ |                                                                            |
+ |              Copyright (C) 2018 J. M. Hutson & C. R. Le Sueur              |
+ |                                                                            |
+ |                               Version 2019.0 (beta)                        |
+ |                                                                            |
+ |                    This run used       0.35 cpu secs and                   |
+ |                783 of the allocated   1000000 words of storage             |
+ |                                                                            |
+  ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
+  ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
+ |                                                                            |
+ |                Non-reactive quantum scattering calculations                |
+ |                     on atomic and molecular collisions                     |
+ |                                                                            |
+ |              Copyright (C) 2018 J. M. Hutson & C. R. Le Sueur              |
+ |                                                                            |
+ |                               Version 2019.0 (beta)                        |
+ |                                                                            |
+ |                       Run on 12 Nov 2018   at 14:59:57                     |
+ |                                                                            |
+  ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
+
+
+  This program is free software: you can redistribute it and/or modify it under
+  the terms of the GNU General Public License, version 3, as published by
+  the Free Software Foundation.
+
+  Publications resulting from the use of this program should refer to
+  J. M. Hutson & C. R. Le Sueur, MOLSCAT computer code 2019.0 (beta)       
+  or to the published paper in Computer Physics Communications when available.
+
+
+  PHYSICAL CONSTANTS OBTAINED FROM NIST CODATA TABULATION OF 2014
+
+  MEMORY ALLOCATED TO MAIN WORKING ARRAY IS   1000000 (8-BYTE) WORDS (    7.63 MB)
+  2 INTEGERS CAN BE STORED IN EACH WORD.
+
+  PRINT LEVEL =  3     OTHER PRINT CONTROLS  ISIGPR = 1
+
+  RUN LABEL = model system: ITYPE=1; IPROPS=5, IPROPL=1                                       
+
+  REDUCED MASS FOR INTERACTION =  20.000000000 ATOMIC MASS UNITS
+
+  ENERGY-INDEPENDENT MATRICES WILL BE SAVED TEMPORARILY ON UNIT  1
+
+  ======================================================================================================================
+
+  INTERACTION TYPE IS    LINEAR RIGID ROTOR  -  ATOM.  
+
+  TARGET ROTATIONAL LEVELS TAKEN FROM &BASIS (JLEVEL) INPUT.  NLEVEL =  4
+
+  ENERGY LEVELS COMPUTED FROM B(E) =   30.000000
+
+  QUANTUM NUMBERS FOR INTERACTING PAIR:
+  EACH PAIR STATE IS LABELLED BY  1 QUANTUM LABEL 
+  EACH CHANNEL FUNCTION IS FORMED BY COMBINING A PAIR STATE WITH A VALUE OF L.
+  THE RESULTING BASIS SET IS ASYMPTOTICALLY DIAGONAL.
+
+  PAIR STATE     PAIR STATE QUANTUM NUMBERS    PAIR LEVEL     PAIR ENERGY (CM-1)
+                ---------        J ---------
+        1                        0                1             0.0000000
+        2                        2                2           180.0000000
+        3                        4                3           600.0000000
+        4                        6                4          1260.0000000
+
+  ======================================================================================================================
+  GENERAL-PURPOSE POTENL ROUTINE (MAY 18)
+
+  ANGULAR DEPENDENCE OF POTENTIAL EXPANDED IN TERMS OF
+  LEGENDRE POLYNOMIALS, P(LAMBDA).
+
+  INTERACTION POTENTIAL FOR EXPANSION TERM NUMBER   1
+  WHICH HAS LAMBDA =   0
+
+                 0.10000000E+01 * R **-12
+                -0.20000000E+01 * R ** -6
+
+  INTERACTION POTENTIAL FOR EXPANSION TERM NUMBER   2
+  WHICH HAS LAMBDA =   2
+
+                -0.20000000E+00 * R ** -6
+
+  POTENL PROCESSING FINISHED.
+
+  UNITS FOR POTENTIAL ROUTINES:
+  POTENTIAL RETURNED IN UNITS OF EPSIL =      50.000000 CM-1
+  R                  IN UNITS OF RM    =       3.500000 ANGSTROMS
+
+  ALL LENGTHS ARE IN UNITS OF RM =  3.500000 ANGSTROM UNLESS OTHERWISE STATED
+
+  INTERACTION MATRIX USES   2 BLOCKS OF VL ARRAY FOR R-DEPENDENT TERMS IN POTENTIAL
+
+  ======================================================================================================================
+
+  PROPAGATION ALGORITHMS FOR COUPLED EQUATIONS SPECIFIED BY IPROPS =  5 AND IPROPL =  1
+
+  COUPLED EQUATIONS WILL BE PROPAGATED OUTWARDS IN 2 SEGMENTS
+  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+  SEGMENT 1 WILL BE PROPAGATED OUTWARDS
+
+  FROM RMIN CHOSEN USING IRMSET =   9  TO VALUE OF RMID CHOSEN USING RVFAC =    1.15
+
+  COUPLED EQUATIONS SOLVED BY LOG DERIVATIVE METHOD OF JOHNSON
+
+  PROPAGATION STEP SIZE DETERMINED USING STEPS =   12.0     (PER WAVELENGTH)
+
+  LOG-DERIVATIVE MATRIX WILL BE INITIALISED IN THE LOCAL EIGENBASIS FOR RMIN IN THE OUTWARDS PROPAGATION PART
+  LOCALLY CLOSED CHANNELS WILL BE INITIALISED WITH A WKB BOUNDARY CONDITION
+  LOCALLY OPEN CHANNELS WILL BE INITIALISED WITH THE VALUE  1.0000000E+08
+  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+  SEGMENT 2 WILL BE PROPAGATED OUTWARDS
+
+  FROM VALUE OF RMID CHOSEN USING RVFAC =    1.15  TO RMAX   =     20.00
+
+  COUPLED EQUATIONS SOLVED BY VARIABLE STEP AIRY METHOD.
+  ALL PUBLICATIONS RESULTING FROM THE USE OF THIS PROPAGATOR SHOULD REFERENCE
+  M.H. ALEXANDER AND D.E. MANOLOPOULOS,  J CHEM PHYS 86, 2044 (1987).
+
+  INITIAL STEP SIZE TAKEN FROM DR       =  2.000E-02
+                             WITH TOLHI =  1.00E-04         POWRX = 3.0
+  TOLHI.LT.1  --  AIRY STEPS ADJUSTED TO MAINTAIN APPROX. ACCURACY VIA PERTURBATION THEORY AND POWRX.
+  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+  ======================================================================================================================
+
+  INPUT ENERGY VALUES ASSUMED TO BE IN UNITS OF CM-1 BY DEFAULT.
+
+  CONTROL DATA FOR TOTAL ENERGIES.  CALCULATIONS WILL BE PERFORMED FOR   1 VALUE 
+       ENERGY NO.   1 =   1250.0000000     CM-1
+
+  ======================================================================================================================
+
+  TOTAL ANGULAR MOMENTUM JTOT =  10
+
+  EACH JTOT IS SPLIT INTO A MAXIMUM OF   2 DIFFERENT SYMMETRY BLOCKS
+
+  CALCULATION(S) WILL BE FOR SYMMETRY BLOCK   1
+
+  STATE-TO-STATE INTEGRAL CROSS-SECTIONS WILL BE COMPUTED BUT NOT STORED ON DISK
+
+  ======================================================================================================================
+
+  INITIALIZATION DONE.  TIME WAS   0.00 CPU SECS.        57 WORDS OF STORAGE USED.
+
+  ===================================== model system: ITYPE=1; IPROPS=5, IPROPL=1 ======================================
+
+  *******************************************  ANGULAR MOMENTUM JTOT  =  10  *******************************************
+
+  IBLOCK =   1
+
+  JTOT =   10   IBLOCK =   1   ENERGY(   1) =   1250.0000000     CM-1
+  INNER CLASSICAL TURNING POINT AT R =  0.7477
+  RADIAL PROPAGATION WILL START AT R =  0.6352
+
+  RMID =   0.8598 OBTAINED FROM RVFAC = 1.150
+
+  LDPROP. LOG DERIVATIVE MATRIX PROPAGATED FROM       0.6352  TO 0.85984      IN    107  STEPS.
+
+  AIRPRP. LOG DERIVATIVE MATRIX PROPAGATED FROM       0.8598  TO  20.000      IN    321  STEPS.
+
+  * * * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  10 AND IBLOCK =   1 * * * * * * * * *
+
+    F  I =      2              3
+    2       2.10018E-02    1.05825E-06
+    3       1.15715E-06    9.87502E-02
+
+  * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
+
+  ======================================================================================================================
+
+  * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
+
+  ===================================== model system: ITYPE=1; IPROPS=5, IPROPL=1 ======================================
+
+  LEVEL   4 WITH ENERGY   1260.000000000000 IS NEVER OPEN
+
+  STATE-TO-STATE INTEGRAL CROSS SECTIONS IN ANGSTROM**2 BETWEEN    3 LEVELS WITH THRESHOLD ENERGIES (IN CM-1):
+
+    1     0.000000000000
+    2   180.000000000000
+    3   600.000000000000
+
+   ENERGY (CM-1)    JTOTL  JSTEP  JTOTU      F    I         SIG(F,I)
+   1250.000000         10      1     10      2    2         2.100181E-02  
+   1250.000000         10      1     10      3    2         1.157149E-06  
+
+   1250.000000         10      1     10      2    3         1.058247E-06  
+   1250.000000         10      1     10      3    3         9.875018E-02  
+
+  TOTAL INELASTIC INTEGRAL CROSS SECTIONS IN ANGSTROM**2 FROM LEVEL
+   1.15715E-06                                                 2
+   1.05825E-06                                                 3
+
+
+
+  ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
+ |                                                                            |
+ |                Non-reactive quantum scattering calculations                |
+ |                     on atomic and molecular collisions                     |
+ |                                                                            |
+ |              Copyright (C) 2018 J. M. Hutson & C. R. Le Sueur              |
+ |                                                                            |
+ |                               Version 2019.0 (beta)                        |
+ |                                                                            |
+ |                    This run used       0.07 cpu secs and                   |
+ |               1107 of the allocated   1000000 words of storage             |
+ |                                                                            |
+  ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
+  ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
+ |                                                                            |
+ |                Non-reactive quantum scattering calculations                |
+ |                     on atomic and molecular collisions                     |
+ |                                                                            |
+ |              Copyright (C) 2018 J. M. Hutson & C. R. Le Sueur              |
+ |                                                                            |
+ |                               Version 2019.0 (beta)                        |
+ |                                                                            |
+ |                       Run on 12 Nov 2018   at 14:59:57                     |
+ |                                                                            |
+  ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
+
+
+  This program is free software: you can redistribute it and/or modify it under
+  the terms of the GNU General Public License, version 3, as published by
+  the Free Software Foundation.
+
+  Publications resulting from the use of this program should refer to
+  J. M. Hutson & C. R. Le Sueur, MOLSCAT computer code 2019.0 (beta)       
+  or to the published paper in Computer Physics Communications when available.
+
+
+  PHYSICAL CONSTANTS OBTAINED FROM NIST CODATA TABULATION OF 2014
+
+  MEMORY ALLOCATED TO MAIN WORKING ARRAY IS   1000000 (8-BYTE) WORDS (    7.63 MB)
+  2 INTEGERS CAN BE STORED IN EACH WORD.
+
+  PRINT LEVEL =  3     OTHER PRINT CONTROLS  ISIGPR = 1
+
+  RUN LABEL = model system: ITYPE=1; IPROPS=6, IPROPL=1                                       
+
+  REDUCED MASS FOR INTERACTION =  20.000000000 ATOMIC MASS UNITS
+
+  ENERGY-INDEPENDENT MATRICES WILL BE SAVED TEMPORARILY ON UNIT  1
+
+  ======================================================================================================================
+
+  INTERACTION TYPE IS    LINEAR RIGID ROTOR  -  ATOM.  
+
+  TARGET ROTATIONAL LEVELS TAKEN FROM &BASIS (JLEVEL) INPUT.  NLEVEL =  4
+
+  ENERGY LEVELS COMPUTED FROM B(E) =   30.000000
+
+  QUANTUM NUMBERS FOR INTERACTING PAIR:
+  EACH PAIR STATE IS LABELLED BY  1 QUANTUM LABEL 
+  EACH CHANNEL FUNCTION IS FORMED BY COMBINING A PAIR STATE WITH A VALUE OF L.
+  THE RESULTING BASIS SET IS ASYMPTOTICALLY DIAGONAL.
+
+  PAIR STATE     PAIR STATE QUANTUM NUMBERS    PAIR LEVEL     PAIR ENERGY (CM-1)
+                ---------        J ---------
+        1                        0                1             0.0000000
+        2                        2                2           180.0000000
+        3                        4                3           600.0000000
+        4                        6                4          1260.0000000
+
+  ======================================================================================================================
+  GENERAL-PURPOSE POTENL ROUTINE (MAY 18)
+
+  ANGULAR DEPENDENCE OF POTENTIAL EXPANDED IN TERMS OF
+  LEGENDRE POLYNOMIALS, P(LAMBDA).
+
+  INTERACTION POTENTIAL FOR EXPANSION TERM NUMBER   1
+  WHICH HAS LAMBDA =   0
+
+                 0.10000000E+01 * R **-12
+                -0.20000000E+01 * R ** -6
+
+  INTERACTION POTENTIAL FOR EXPANSION TERM NUMBER   2
+  WHICH HAS LAMBDA =   2
+
+                -0.20000000E+00 * R ** -6
+
+  POTENL PROCESSING FINISHED.
+
+  UNITS FOR POTENTIAL ROUTINES:
+  POTENTIAL RETURNED IN UNITS OF EPSIL =      50.000000 CM-1
+  R                  IN UNITS OF RM    =       3.500000 ANGSTROMS
+
+  ALL LENGTHS ARE IN UNITS OF RM =  3.500000 ANGSTROM UNLESS OTHERWISE STATED
+
+  INTERACTION MATRIX USES   2 BLOCKS OF VL ARRAY FOR R-DEPENDENT TERMS IN POTENTIAL
+
+  ======================================================================================================================
+
+  PROPAGATION ALGORITHMS FOR COUPLED EQUATIONS SPECIFIED BY IPROPS =  6 AND IPROPL =  1
+
+  COUPLED EQUATIONS WILL BE PROPAGATED OUTWARDS IN 2 SEGMENTS
+  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+  SEGMENT 1 WILL BE PROPAGATED OUTWARDS
+
+  FROM RMIN CHOSEN USING IRMSET =   9  TO VALUE OF RMID CHOSEN USING RVFAC =    1.15
+
+  COUPLED EQUATIONS SOLVED BY DIABATIC MODIFIED LOG DERIVATIVE METHOD OF MANOLOPOULOS
+
+  PROPAGATION STEP SIZE DETERMINED USING STEPS =   12.0     (PER WAVELENGTH)
+
+  LOG-DERIVATIVE MATRIX WILL BE INITIALISED IN THE LOCAL EIGENBASIS FOR RMIN IN THE OUTWARDS PROPAGATION PART
+  LOCALLY CLOSED CHANNELS WILL BE INITIALISED WITH A WKB BOUNDARY CONDITION
+  LOCALLY OPEN CHANNELS WILL BE INITIALISED WITH THE VALUE  1.0000000E+08
+  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+  SEGMENT 2 WILL BE PROPAGATED OUTWARDS
+
+  FROM VALUE OF RMID CHOSEN USING RVFAC =    1.15  TO RMAX   =     20.00
+
+  COUPLED EQUATIONS SOLVED BY VARIABLE STEP AIRY METHOD.
+  ALL PUBLICATIONS RESULTING FROM THE USE OF THIS PROPAGATOR SHOULD REFERENCE
+  M.H. ALEXANDER AND D.E. MANOLOPOULOS,  J CHEM PHYS 86, 2044 (1987).
+
+  INITIAL STEP SIZE TAKEN FROM DR       =  2.000E-02
+                             WITH TOLHI =  1.00E-04         POWRX = 3.0
+  TOLHI.LT.1  --  AIRY STEPS ADJUSTED TO MAINTAIN APPROX. ACCURACY VIA PERTURBATION THEORY AND POWRX.
+  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+  ======================================================================================================================
+
+  INPUT ENERGY VALUES ASSUMED TO BE IN UNITS OF CM-1 BY DEFAULT.
+
+  CONTROL DATA FOR TOTAL ENERGIES.  CALCULATIONS WILL BE PERFORMED FOR   1 VALUE 
+       ENERGY NO.   1 =   1250.0000000     CM-1
+
+  ======================================================================================================================
+
+  TOTAL ANGULAR MOMENTUM JTOT =  10
+
+  EACH JTOT IS SPLIT INTO A MAXIMUM OF   2 DIFFERENT SYMMETRY BLOCKS
+
+  CALCULATION(S) WILL BE FOR SYMMETRY BLOCK   1
+
+  STATE-TO-STATE INTEGRAL CROSS-SECTIONS WILL BE COMPUTED BUT NOT STORED ON DISK
+
+  ======================================================================================================================
+
+  INITIALIZATION DONE.  TIME WAS   0.00 CPU SECS.        57 WORDS OF STORAGE USED.
+
+  ===================================== model system: ITYPE=1; IPROPS=6, IPROPL=1 ======================================
+
+  *******************************************  ANGULAR MOMENTUM JTOT  =  10  *******************************************
+
+  IBLOCK =   1
+
+  JTOT =   10   IBLOCK =   1   ENERGY(   1) =   1250.0000000     CM-1
+  INNER CLASSICAL TURNING POINT AT R =  0.7477
+  RADIAL PROPAGATION WILL START AT R =  0.6352
+
+  RMID =   0.8598 OBTAINED FROM RVFAC = 1.150
+
+  DWPROP. LOG DERIVATIVE MATRIX PROPAGATED FROM       0.6352  TO 0.85984      IN    107  STEPS.
+
+  AIRPRP. LOG DERIVATIVE MATRIX PROPAGATED FROM       0.8598  TO  20.000      IN    321  STEPS.
+
+  * * * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  10 AND IBLOCK =   1 * * * * * * * * *
+
+    F  I =      2              3
+    2       2.10011E-02    1.05824E-06
+    3       1.15714E-06    9.87501E-02
+
+  * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
+
+  ======================================================================================================================
+
+  * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
+
+  ===================================== model system: ITYPE=1; IPROPS=6, IPROPL=1 ======================================
+
+  LEVEL   4 WITH ENERGY   1260.000000000000 IS NEVER OPEN
+
+  STATE-TO-STATE INTEGRAL CROSS SECTIONS IN ANGSTROM**2 BETWEEN    3 LEVELS WITH THRESHOLD ENERGIES (IN CM-1):
+
+    1     0.000000000000
+    2   180.000000000000
+    3   600.000000000000
+
+   ENERGY (CM-1)    JTOTL  JSTEP  JTOTU      F    I         SIG(F,I)
+   1250.000000         10      1     10      2    2         2.100107E-02  
+   1250.000000         10      1     10      3    2         1.157142E-06  
+
+   1250.000000         10      1     10      2    3         1.058241E-06  
+   1250.000000         10      1     10      3    3         9.875015E-02  
+
+  TOTAL INELASTIC INTEGRAL CROSS SECTIONS IN ANGSTROM**2 FROM LEVEL
+   1.15714E-06                                                 2
+   1.05824E-06                                                 3
+
+
+
+  ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
+ |                                                                            |
+ |                Non-reactive quantum scattering calculations                |
+ |                     on atomic and molecular collisions                     |
+ |                                                                            |
+ |              Copyright (C) 2018 J. M. Hutson & C. R. Le Sueur              |
+ |                                                                            |
+ |                               Version 2019.0 (beta)                        |
+ |                                                                            |
+ |                    This run used       0.03 cpu secs and                   |
+ |               1107 of the allocated   1000000 words of storage             |
+ |                                                                            |
+  ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
+  ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
+ |                                                                            |
+ |                Non-reactive quantum scattering calculations                |
+ |                     on atomic and molecular collisions                     |
+ |                                                                            |
+ |              Copyright (C) 2018 J. M. Hutson & C. R. Le Sueur              |
+ |                                                                            |
+ |                               Version 2019.0 (beta)                        |
+ |                                                                            |
+ |                       Run on 12 Nov 2018   at 14:59:57                     |
+ |                                                                            |
+  ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
+
+
+  This program is free software: you can redistribute it and/or modify it under
+  the terms of the GNU General Public License, version 3, as published by
+  the Free Software Foundation.
+
+  Publications resulting from the use of this program should refer to
+  J. M. Hutson & C. R. Le Sueur, MOLSCAT computer code 2019.0 (beta)       
+  or to the published paper in Computer Physics Communications when available.
+
+
+  PHYSICAL CONSTANTS OBTAINED FROM NIST CODATA TABULATION OF 2014
+
+  MEMORY ALLOCATED TO MAIN WORKING ARRAY IS   1000000 (8-BYTE) WORDS (    7.63 MB)
+  2 INTEGERS CAN BE STORED IN EACH WORD.
+
+  PRINT LEVEL =  3     OTHER PRINT CONTROLS  ISIGPR = 1
+
+  RUN LABEL = model system: ITYPE=1; IPROPS=7, IPROPL=1                                       
+
+  REDUCED MASS FOR INTERACTION =  20.000000000 ATOMIC MASS UNITS
+
+  ENERGY-INDEPENDENT MATRICES WILL BE SAVED TEMPORARILY ON UNIT  1
+
+  ======================================================================================================================
+
+  INTERACTION TYPE IS    LINEAR RIGID ROTOR  -  ATOM.  
+
+  TARGET ROTATIONAL LEVELS TAKEN FROM &BASIS (JLEVEL) INPUT.  NLEVEL =  4
+
+  ENERGY LEVELS COMPUTED FROM B(E) =   30.000000
+
+  QUANTUM NUMBERS FOR INTERACTING PAIR:
+  EACH PAIR STATE IS LABELLED BY  1 QUANTUM LABEL 
+  EACH CHANNEL FUNCTION IS FORMED BY COMBINING A PAIR STATE WITH A VALUE OF L.
+  THE RESULTING BASIS SET IS ASYMPTOTICALLY DIAGONAL.
+
+  PAIR STATE     PAIR STATE QUANTUM NUMBERS    PAIR LEVEL     PAIR ENERGY (CM-1)
+                ---------        J ---------
+        1                        0                1             0.0000000
+        2                        2                2           180.0000000
+        3                        4                3           600.0000000
+        4                        6                4          1260.0000000
+
+  ======================================================================================================================
+  GENERAL-PURPOSE POTENL ROUTINE (MAY 18)
+
+  ANGULAR DEPENDENCE OF POTENTIAL EXPANDED IN TERMS OF
+  LEGENDRE POLYNOMIALS, P(LAMBDA).
+
+  INTERACTION POTENTIAL FOR EXPANSION TERM NUMBER   1
+  WHICH HAS LAMBDA =   0
+
+                 0.10000000E+01 * R **-12
+                -0.20000000E+01 * R ** -6
+
+  INTERACTION POTENTIAL FOR EXPANSION TERM NUMBER   2
+  WHICH HAS LAMBDA =   2
+
+                -0.20000000E+00 * R ** -6
+
+  POTENL PROCESSING FINISHED.
+
+  UNITS FOR POTENTIAL ROUTINES:
+  POTENTIAL RETURNED IN UNITS OF EPSIL =      50.000000 CM-1
+  R                  IN UNITS OF RM    =       3.500000 ANGSTROMS
+
+  ALL LENGTHS ARE IN UNITS OF RM =  3.500000 ANGSTROM UNLESS OTHERWISE STATED
+
+  INTERACTION MATRIX USES   2 BLOCKS OF VL ARRAY FOR R-DEPENDENT TERMS IN POTENTIAL
+
+  ======================================================================================================================
+
+  PROPAGATION ALGORITHMS FOR COUPLED EQUATIONS SPECIFIED BY IPROPS =  7 AND IPROPL =  1
+
+  COUPLED EQUATIONS WILL BE PROPAGATED OUTWARDS IN 2 SEGMENTS
+  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+  SEGMENT 1 WILL BE PROPAGATED OUTWARDS
+
+  FROM RMIN CHOSEN USING IRMSET =   9  TO VALUE OF RMID CHOSEN USING RVFAC =    1.15
+
+  COUPLED EQUATIONS SOLVED BY QUASIADIABATIC MODIFIED LOG DERIVATIVE METHOD OF MANOLOPOULOS
+
+  PROPAGATION STEP SIZE DETERMINED USING STEPS =   12.0     (PER WAVELENGTH)
+
+  LOG-DERIVATIVE MATRIX WILL BE INITIALISED IN THE LOCAL EIGENBASIS FOR RMIN IN THE OUTWARDS PROPAGATION PART
+  LOCALLY CLOSED CHANNELS WILL BE INITIALISED WITH A WKB BOUNDARY CONDITION
+  LOCALLY OPEN CHANNELS WILL BE INITIALISED WITH THE VALUE  1.0000000E+08
+  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+  SEGMENT 2 WILL BE PROPAGATED OUTWARDS
+
+  FROM VALUE OF RMID CHOSEN USING RVFAC =    1.15  TO RMAX   =     20.00
+
+  COUPLED EQUATIONS SOLVED BY VARIABLE STEP AIRY METHOD.
+  ALL PUBLICATIONS RESULTING FROM THE USE OF THIS PROPAGATOR SHOULD REFERENCE
+  M.H. ALEXANDER AND D.E. MANOLOPOULOS,  J CHEM PHYS 86, 2044 (1987).
+
+  INITIAL STEP SIZE TAKEN FROM DR       =  2.000E-02
+                             WITH TOLHI =  1.00E-04         POWRX = 3.0
+  TOLHI.LT.1  --  AIRY STEPS ADJUSTED TO MAINTAIN APPROX. ACCURACY VIA PERTURBATION THEORY AND POWRX.
+  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+  ======================================================================================================================
+
+  INPUT ENERGY VALUES ASSUMED TO BE IN UNITS OF CM-1 BY DEFAULT.
+
+  CONTROL DATA FOR TOTAL ENERGIES.  CALCULATIONS WILL BE PERFORMED FOR   1 VALUE 
+       ENERGY NO.   1 =   1250.0000000     CM-1
+
+  ======================================================================================================================
+
+  TOTAL ANGULAR MOMENTUM JTOT =  10
+
+  EACH JTOT IS SPLIT INTO A MAXIMUM OF   2 DIFFERENT SYMMETRY BLOCKS
+
+  CALCULATION(S) WILL BE FOR SYMMETRY BLOCK   1
+
+  STATE-TO-STATE INTEGRAL CROSS-SECTIONS WILL BE COMPUTED BUT NOT STORED ON DISK
+
+  ======================================================================================================================
+
+  INITIALIZATION DONE.  TIME WAS   0.00 CPU SECS.        57 WORDS OF STORAGE USED.
+
+  ===================================== model system: ITYPE=1; IPROPS=7, IPROPL=1 ======================================
+
+  *******************************************  ANGULAR MOMENTUM JTOT  =  10  *******************************************
+
+  IBLOCK =   1
+
+  JTOT =   10   IBLOCK =   1   ENERGY(   1) =   1250.0000000     CM-1
+  INNER CLASSICAL TURNING POINT AT R =  0.7477
+  RADIAL PROPAGATION WILL START AT R =  0.6352
+
+  RMID =   0.8598 OBTAINED FROM RVFAC = 1.150
+
+  QAPROP. LOG DERIVATIVE MATRIX PROPAGATED FROM       0.6352  TO 0.85984      IN    107  STEPS.
+
+  AIRPRP. LOG DERIVATIVE MATRIX PROPAGATED FROM       0.8598  TO  20.000      IN    321  STEPS.
+
+  * * * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  10 AND IBLOCK =   1 * * * * * * * * *
+
+    F  I =      2              3
+    2       2.10011E-02    1.05823E-06
+    3       1.15713E-06    9.87501E-02
+
+  * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
+
+  ======================================================================================================================
+
+  * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
+
+  ===================================== model system: ITYPE=1; IPROPS=7, IPROPL=1 ======================================
+
+  LEVEL   4 WITH ENERGY   1260.000000000000 IS NEVER OPEN
+
+  STATE-TO-STATE INTEGRAL CROSS SECTIONS IN ANGSTROM**2 BETWEEN    3 LEVELS WITH THRESHOLD ENERGIES (IN CM-1):
+
+    1     0.000000000000
+    2   180.000000000000
+    3   600.000000000000
+
+   ENERGY (CM-1)    JTOTL  JSTEP  JTOTU      F    I         SIG(F,I)
+   1250.000000         10      1     10      2    2         2.100106E-02  
+   1250.000000         10      1     10      3    2         1.157130E-06  
+
+   1250.000000         10      1     10      2    3         1.058230E-06  
+   1250.000000         10      1     10      3    3         9.875015E-02  
+
+  TOTAL INELASTIC INTEGRAL CROSS SECTIONS IN ANGSTROM**2 FROM LEVEL
+   1.15713E-06                                                 2
+   1.05823E-06                                                 3
+
+
+
+  ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
+ |                                                                            |
+ |                Non-reactive quantum scattering calculations                |
+ |                     on atomic and molecular collisions                     |
+ |                                                                            |
+ |              Copyright (C) 2018 J. M. Hutson & C. R. Le Sueur              |
+ |                                                                            |
+ |                               Version 2019.0 (beta)                        |
+ |                                                                            |
+ |                    This run used       0.03 cpu secs and                   |
+ |               1107 of the allocated   1000000 words of storage             |
+ |                                                                            |
+  ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
+  ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
+ |                                                                            |
+ |                Non-reactive quantum scattering calculations                |
+ |                     on atomic and molecular collisions                     |
+ |                                                                            |
+ |              Copyright (C) 2018 J. M. Hutson & C. R. Le Sueur              |
+ |                                                                            |
+ |                               Version 2019.0 (beta)                        |
+ |                                                                            |
+ |                       Run on 12 Nov 2018   at 14:59:57                     |
+ |                                                                            |
+  ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
+
+
+  This program is free software: you can redistribute it and/or modify it under
+  the terms of the GNU General Public License, version 3, as published by
+  the Free Software Foundation.
+
+  Publications resulting from the use of this program should refer to
+  J. M. Hutson & C. R. Le Sueur, MOLSCAT computer code 2019.0 (beta)       
+  or to the published paper in Computer Physics Communications when available.
+
+
+  PHYSICAL CONSTANTS OBTAINED FROM NIST CODATA TABULATION OF 2014
+
+  MEMORY ALLOCATED TO MAIN WORKING ARRAY IS   1000000 (8-BYTE) WORDS (    7.63 MB)
+  2 INTEGERS CAN BE STORED IN EACH WORD.
+
+  PRINT LEVEL =  3     OTHER PRINT CONTROLS  ISIGPR = 1
+
+  RUN LABEL = model system: ITYPE=1; IPROPS=9, IPROPL=1                                       
+
+  REDUCED MASS FOR INTERACTION =  20.000000000 ATOMIC MASS UNITS
+
+  ENERGY-INDEPENDENT MATRICES WILL BE SAVED TEMPORARILY ON UNIT  1
+
+  ======================================================================================================================
+
+  INTERACTION TYPE IS    LINEAR RIGID ROTOR  -  ATOM.  
+
+  TARGET ROTATIONAL LEVELS TAKEN FROM &BASIS (JLEVEL) INPUT.  NLEVEL =  4
+
+  ENERGY LEVELS COMPUTED FROM B(E) =   30.000000
+
+  QUANTUM NUMBERS FOR INTERACTING PAIR:
+  EACH PAIR STATE IS LABELLED BY  1 QUANTUM LABEL 
+  EACH CHANNEL FUNCTION IS FORMED BY COMBINING A PAIR STATE WITH A VALUE OF L.
+  THE RESULTING BASIS SET IS ASYMPTOTICALLY DIAGONAL.
+
+  PAIR STATE     PAIR STATE QUANTUM NUMBERS    PAIR LEVEL     PAIR ENERGY (CM-1)
+                ---------        J ---------
+        1                        0                1             0.0000000
+        2                        2                2           180.0000000
+        3                        4                3           600.0000000
+        4                        6                4          1260.0000000
+
+  ======================================================================================================================
+  GENERAL-PURPOSE POTENL ROUTINE (MAY 18)
+
+  ANGULAR DEPENDENCE OF POTENTIAL EXPANDED IN TERMS OF
+  LEGENDRE POLYNOMIALS, P(LAMBDA).
+
+  INTERACTION POTENTIAL FOR EXPANSION TERM NUMBER   1
+  WHICH HAS LAMBDA =   0
+
+                 0.10000000E+01 * R **-12
+                -0.20000000E+01 * R ** -6
+
+  INTERACTION POTENTIAL FOR EXPANSION TERM NUMBER   2
+  WHICH HAS LAMBDA =   2
+
+                -0.20000000E+00 * R ** -6
+
+  POTENL PROCESSING FINISHED.
+
+  UNITS FOR POTENTIAL ROUTINES:
+  POTENTIAL RETURNED IN UNITS OF EPSIL =      50.000000 CM-1
+  R                  IN UNITS OF RM    =       3.500000 ANGSTROMS
+
+  ALL LENGTHS ARE IN UNITS OF RM =  3.500000 ANGSTROM UNLESS OTHERWISE STATED
+
+  INTERACTION MATRIX USES   2 BLOCKS OF VL ARRAY FOR R-DEPENDENT TERMS IN POTENTIAL
+
+  ======================================================================================================================
+
+  PROPAGATION ALGORITHMS FOR COUPLED EQUATIONS SPECIFIED BY IPROPS =  9 AND IPROPL =  1
+
+  COUPLED EQUATIONS WILL BE PROPAGATED OUTWARDS IN 2 SEGMENTS
+  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+  SEGMENT 1 WILL BE PROPAGATED OUTWARDS
+
+  FROM RMIN CHOSEN USING IRMSET =   9  TO VALUE OF RMID CHOSEN USING RVFAC =    1.15
+
+  COUPLED EQUATIONS SOLVED BY SYMPLECTIC LOG-DERIVATIVE METHOD OF MANOLOPOULOS AND GRAY
+  USING THE SIX-STEP FIFTH-ORDER METHOD OF MCLACHLAN AND ATELA
+
+  PROPAGATION STEP SIZE DETERMINED USING STEPS =   12.0     (PER WAVELENGTH)
+
+  LOG-DERIVATIVE MATRIX WILL BE INITIALISED IN THE LOCAL EIGENBASIS FOR RMIN IN THE OUTWARDS PROPAGATION PART
+  LOCALLY CLOSED CHANNELS WILL BE INITIALISED WITH A WKB BOUNDARY CONDITION
+  LOCALLY OPEN CHANNELS WILL BE INITIALISED WITH THE VALUE  1.0000000E+08
+  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+  SEGMENT 2 WILL BE PROPAGATED OUTWARDS
+
+  FROM VALUE OF RMID CHOSEN USING RVFAC =    1.15  TO RMAX   =     20.00
+
+  COUPLED EQUATIONS SOLVED BY VARIABLE STEP AIRY METHOD.
+  ALL PUBLICATIONS RESULTING FROM THE USE OF THIS PROPAGATOR SHOULD REFERENCE
+  M.H. ALEXANDER AND D.E. MANOLOPOULOS,  J CHEM PHYS 86, 2044 (1987).
+
+  INITIAL STEP SIZE TAKEN FROM DR       =  2.000E-02
+                             WITH TOLHI =  1.00E-04         POWRX = 3.0
+  TOLHI.LT.1  --  AIRY STEPS ADJUSTED TO MAINTAIN APPROX. ACCURACY VIA PERTURBATION THEORY AND POWRX.
+  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+  ======================================================================================================================
+
+  INPUT ENERGY VALUES ASSUMED TO BE IN UNITS OF CM-1 BY DEFAULT.
+
+  CONTROL DATA FOR TOTAL ENERGIES.  CALCULATIONS WILL BE PERFORMED FOR   1 VALUE 
+       ENERGY NO.   1 =   1250.0000000     CM-1
+
+  ======================================================================================================================
+
+  TOTAL ANGULAR MOMENTUM JTOT =  10
+
+  EACH JTOT IS SPLIT INTO A MAXIMUM OF   2 DIFFERENT SYMMETRY BLOCKS
+
+  CALCULATION(S) WILL BE FOR SYMMETRY BLOCK   1
+
+  STATE-TO-STATE INTEGRAL CROSS-SECTIONS WILL BE COMPUTED BUT NOT STORED ON DISK
+
+  ======================================================================================================================
+
+  INITIALIZATION DONE.  TIME WAS   0.00 CPU SECS.        57 WORDS OF STORAGE USED.
+
+  ===================================== model system: ITYPE=1; IPROPS=9, IPROPL=1 ======================================
+
+  *******************************************  ANGULAR MOMENTUM JTOT  =  10  *******************************************
+
+  IBLOCK =   1
+
+  JTOT =   10   IBLOCK =   1   ENERGY(   1) =   1250.0000000     CM-1
+  INNER CLASSICAL TURNING POINT AT R =  0.7477
+  RADIAL PROPAGATION WILL START AT R =  0.6352
+
+  RMID =   0.8598 OBTAINED FROM RVFAC = 1.150
+
+  MGPROP. LOG DERIVATIVE MATRIX PROPAGATED FROM       0.6352  TO 0.85984      IN    107  STEPS.
+
+  AIRPRP. LOG DERIVATIVE MATRIX PROPAGATED FROM       0.8598  TO  20.000      IN    321  STEPS.
+
+  * * * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  10 AND IBLOCK =   1 * * * * * * * * *
+
+    F  I =      2              3
+    2       2.10010E-02    1.05823E-06
+    3       1.15713E-06    9.87501E-02
+
+  * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
+
+  ======================================================================================================================
+
+  * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
+
+  ===================================== model system: ITYPE=1; IPROPS=9, IPROPL=1 ======================================
+
+  LEVEL   4 WITH ENERGY   1260.000000000000 IS NEVER OPEN
+
+  STATE-TO-STATE INTEGRAL CROSS SECTIONS IN ANGSTROM**2 BETWEEN    3 LEVELS WITH THRESHOLD ENERGIES (IN CM-1):
+
+    1     0.000000000000
+    2   180.000000000000
+    3   600.000000000000
+
+   ENERGY (CM-1)    JTOTL  JSTEP  JTOTU      F    I         SIG(F,I)
+   1250.000000         10      1     10      2    2         2.100102E-02  
+   1250.000000         10      1     10      3    2         1.157135E-06  
+
+   1250.000000         10      1     10      2    3         1.058234E-06  
+   1250.000000         10      1     10      3    3         9.875010E-02  
+
+  TOTAL INELASTIC INTEGRAL CROSS SECTIONS IN ANGSTROM**2 FROM LEVEL
+   1.15713E-06                                                 2
+   1.05823E-06                                                 3
+
+
+
+  ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
+ |                                                                            |
+ |                Non-reactive quantum scattering calculations                |
+ |                     on atomic and molecular collisions                     |
+ |                                                                            |
+ |              Copyright (C) 2018 J. M. Hutson & C. R. Le Sueur              |
+ |                                                                            |
+ |                               Version 2019.0 (beta)                        |
+ |                                                                            |
+ |                    This run used       0.03 cpu secs and                   |
+ |               1107 of the allocated   1000000 words of storage             |
+ |                                                                            |
+  ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
+  ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
+ |                                                                            |
+ |                Non-reactive quantum scattering calculations                |
+ |                     on atomic and molecular collisions                     |
+ |                                                                            |
+ |              Copyright (C) 2018 J. M. Hutson & C. R. Le Sueur              |
+ |                                                                            |
+ |                               Version 2019.0 (beta)                        |
+ |                                                                            |
+ |                       Run on 12 Nov 2018   at 14:59:57                     |
+ |                                                                            |
+  ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
+
+
+  This program is free software: you can redistribute it and/or modify it under
+  the terms of the GNU General Public License, version 3, as published by
+  the Free Software Foundation.
+
+  Publications resulting from the use of this program should refer to
+  J. M. Hutson & C. R. Le Sueur, MOLSCAT computer code 2019.0 (beta)       
+  or to the published paper in Computer Physics Communications when available.
+
+
+  PHYSICAL CONSTANTS OBTAINED FROM NIST CODATA TABULATION OF 2014
+
+  MEMORY ALLOCATED TO MAIN WORKING ARRAY IS   1000000 (8-BYTE) WORDS (    7.63 MB)
+  2 INTEGERS CAN BE STORED IN EACH WORD.
+
+  PRINT LEVEL =  3     OTHER PRINT CONTROLS  ISIGPR = 1
+
+  RUN LABEL = model system: ITYPE=1; IPROPS=5, IPROPL=14                                      
+
+  REDUCED MASS FOR INTERACTION =  20.000000000 ATOMIC MASS UNITS
+
+  ENERGY-INDEPENDENT MATRICES WILL BE SAVED TEMPORARILY ON UNIT  1
+
+  ======================================================================================================================
+
+  INTERACTION TYPE IS    LINEAR RIGID ROTOR  -  ATOM.  
+
+  TARGET ROTATIONAL LEVELS TAKEN FROM &BASIS (JLEVEL) INPUT.  NLEVEL =  4
+
+  ENERGY LEVELS COMPUTED FROM B(E) =   30.000000
+
+  QUANTUM NUMBERS FOR INTERACTING PAIR:
+  EACH PAIR STATE IS LABELLED BY  1 QUANTUM LABEL 
+  EACH CHANNEL FUNCTION IS FORMED BY COMBINING A PAIR STATE WITH A VALUE OF L.
+  THE RESULTING BASIS SET IS ASYMPTOTICALLY DIAGONAL.
+
+  PAIR STATE     PAIR STATE QUANTUM NUMBERS    PAIR LEVEL     PAIR ENERGY (CM-1)
+                ---------        J ---------
+        1                        0                1             0.0000000
+        2                        2                2           180.0000000
+        3                        4                3           600.0000000
+        4                        6                4          1260.0000000
+
+  ======================================================================================================================
+  GENERAL-PURPOSE POTENL ROUTINE (MAY 18)
+
+  ANGULAR DEPENDENCE OF POTENTIAL EXPANDED IN TERMS OF
+  LEGENDRE POLYNOMIALS, P(LAMBDA).
+
+  INTERACTION POTENTIAL FOR EXPANSION TERM NUMBER   1
+  WHICH HAS LAMBDA =   0
+
+                 0.10000000E+01 * R **-12
+                -0.20000000E+01 * R ** -6
+
+  INTERACTION POTENTIAL FOR EXPANSION TERM NUMBER   2
+  WHICH HAS LAMBDA =   2
+
+                -0.20000000E+00 * R ** -6
+
+  POTENL PROCESSING FINISHED.
+
+  UNITS FOR POTENTIAL ROUTINES:
+  POTENTIAL RETURNED IN UNITS OF EPSIL =      50.000000 CM-1
+  R                  IN UNITS OF RM    =       3.500000 ANGSTROMS
+
+  ALL LENGTHS ARE IN UNITS OF RM =  3.500000 ANGSTROM UNLESS OTHERWISE STATED
+
+  INTERACTION MATRIX USES   2 BLOCKS OF VL ARRAY FOR R-DEPENDENT TERMS IN POTENTIAL
+
+  ======================================================================================================================
+
+  PROPAGATION ALGORITHMS FOR COUPLED EQUATIONS SPECIFIED BY IPROPS =  5 AND IPROPL = 14
+
+  COUPLED EQUATIONS WILL BE PROPAGATED OUTWARDS IN 2 SEGMENTS
+  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+  SEGMENT 1 WILL BE PROPAGATED OUTWARDS
+
+  FROM RMIN CHOSEN USING IRMSET =   9  TO VALUE OF RMID CHOSEN USING RVFAC =    1.15
+
+  COUPLED EQUATIONS SOLVED BY LOG DERIVATIVE METHOD OF JOHNSON
+
+  PROPAGATION STEP SIZE DETERMINED USING STEPS =   12.0     (PER WAVELENGTH)
+
+  LOG-DERIVATIVE MATRIX WILL BE INITIALISED IN THE LOCAL EIGENBASIS FOR RMIN IN THE OUTWARDS PROPAGATION PART
+  LOCALLY CLOSED CHANNELS WILL BE INITIALISED WITH A WKB BOUNDARY CONDITION
+  LOCALLY OPEN CHANNELS WILL BE INITIALISED WITH THE VALUE  1.0000000E+08
+  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+  SEGMENT 2 WILL BE PROPAGATED OUTWARDS
+
+  FROM VALUE OF RMID CHOSEN USING RVFAC =    1.15  TO RMAX   =     20.00
+
+  COUPLED EQUATIONS SOLVED BY LOG DERIVATIVE METHOD OF JOHNSON
+
+  CHANGING TO VARIABLE INTERVAL / VARIABLE STEP METHOD AT LONG RANGE
+
+  PROPAGATION PARAMETERS ARE:    RVIVAS = 0.10E+31
+                                 RMAX   =    20.00        DRMAX  =     5.00
+                                                          ALPHA1 =     1.00
+                                 XSQMAX = 0.10E+05        ALPHA2 =     1.50
+                                 TOLHI  = 0.10E-03        IALPHA =        6
+                                 ISHIFT =        F        IV     =        T
+                                 IPERT  =        T        IVP    =        F
+                                 IALFP  =        F        IVPP   =        F
+                                 ISYM   =        T        NUMDER =        F
+
+  PROPAGATION STEP SIZE DETERMINED USING STEPS =   12.0     (PER WAVELENGTH)
+  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+  ======================================================================================================================
+
+  INPUT ENERGY VALUES ASSUMED TO BE IN UNITS OF CM-1 BY DEFAULT.
+
+  CONTROL DATA FOR TOTAL ENERGIES.  CALCULATIONS WILL BE PERFORMED FOR   1 VALUE 
+       ENERGY NO.   1 =   1250.0000000     CM-1
+
+  ======================================================================================================================
+
+  TOTAL ANGULAR MOMENTUM JTOT =  10
+
+  EACH JTOT IS SPLIT INTO A MAXIMUM OF   2 DIFFERENT SYMMETRY BLOCKS
+
+  CALCULATION(S) WILL BE FOR SYMMETRY BLOCK   1
+
+  STATE-TO-STATE INTEGRAL CROSS-SECTIONS WILL BE COMPUTED BUT NOT STORED ON DISK
+
+  ======================================================================================================================
+
+  INITIALIZATION DONE.  TIME WAS   0.00 CPU SECS.        57 WORDS OF STORAGE USED.
+
+  ===================================== model system: ITYPE=1; IPROPS=5, IPROPL=14 =====================================
+
+  *******************************************  ANGULAR MOMENTUM JTOT  =  10  *******************************************
+
+  IBLOCK =   1
+
+  JTOT =   10   IBLOCK =   1   ENERGY(   1) =   1250.0000000     CM-1
+  INNER CLASSICAL TURNING POINT AT R =  0.7477
+  RADIAL PROPAGATION WILL START AT R =  0.6352
+
+  RMID =   0.8598 OBTAINED FROM RVFAC = 1.150
+
+  LDPROP. LOG DERIVATIVE MATRIX PROPAGATED FROM       0.6352  TO 0.85984      IN    107  STEPS.
+
+  VIVAS.   R-MATRIX PROPAGATED FROM      0.8598  TO     20.0000  IN   450  STEPS.
+
+  * * * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  10 AND IBLOCK =   1 * * * * * * * * *
+
+    F  I =      2              3
+    2       2.11186E-02    1.02860E-06
+    3       1.12473E-06    9.90701E-02
+
+  * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
+
+  ======================================================================================================================
+
+  * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
+
+  ===================================== model system: ITYPE=1; IPROPS=5, IPROPL=14 =====================================
+
+  LEVEL   4 WITH ENERGY   1260.000000000000 IS NEVER OPEN
+
+  STATE-TO-STATE INTEGRAL CROSS SECTIONS IN ANGSTROM**2 BETWEEN    3 LEVELS WITH THRESHOLD ENERGIES (IN CM-1):
+
+    1     0.000000000000
+    2   180.000000000000
+    3   600.000000000000
+
+   ENERGY (CM-1)    JTOTL  JSTEP  JTOTU      F    I         SIG(F,I)
+   1250.000000         10      1     10      2    2         2.111857E-02  
+   1250.000000         10      1     10      3    2         1.124728E-06  
+
+   1250.000000         10      1     10      2    3         1.028597E-06  
+   1250.000000         10      1     10      3    3         9.907006E-02  
+
+  TOTAL INELASTIC INTEGRAL CROSS SECTIONS IN ANGSTROM**2 FROM LEVEL
+   1.12473E-06                                                 2
+   1.02860E-06                                                 3
+
+
+
+  ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
+ |                                                                            |
+ |                Non-reactive quantum scattering calculations                |
+ |                     on atomic and molecular collisions                     |
+ |                                                                            |
+ |              Copyright (C) 2018 J. M. Hutson & C. R. Le Sueur              |
+ |                                                                            |
+ |                               Version 2019.0 (beta)                        |
+ |                                                                            |
+ |                    This run used       0.02 cpu secs and                   |
+ |               2067 of the allocated   1000000 words of storage             |
+ |                                                                            |
+  ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
+  ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
+ |                                                                            |
+ |                Non-reactive quantum scattering calculations                |
+ |                     on atomic and molecular collisions                     |
+ |                                                                            |
+ |              Copyright (C) 2018 J. M. Hutson & C. R. Le Sueur              |
+ |                                                                            |
+ |                               Version 2019.0 (beta)                        |
+ |                                                                            |
+ |                       Run on 12 Nov 2018   at 14:59:58                     |
+ |                                                                            |
+  ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
+
+
+  This program is free software: you can redistribute it and/or modify it under
+  the terms of the GNU General Public License, version 3, as published by
+  the Free Software Foundation.
+
+  Publications resulting from the use of this program should refer to
+  J. M. Hutson & C. R. Le Sueur, MOLSCAT computer code 2019.0 (beta)       
+  or to the published paper in Computer Physics Communications when available.
+
+
+  PHYSICAL CONSTANTS OBTAINED FROM NIST CODATA TABULATION OF 2014
+
+  MEMORY ALLOCATED TO MAIN WORKING ARRAY IS   1000000 (8-BYTE) WORDS (    7.63 MB)
+  2 INTEGERS CAN BE STORED IN EACH WORD.
+
+  PRINT LEVEL =  3     OTHER PRINT CONTROLS  ISIGPR = 1
+
+  RUN LABEL = model system: ITYPE=1; IPROPS=6, IPROPL=14                                      
+
+  REDUCED MASS FOR INTERACTION =  20.000000000 ATOMIC MASS UNITS
+
+  ENERGY-INDEPENDENT MATRICES WILL BE SAVED TEMPORARILY ON UNIT  1
+
+  ======================================================================================================================
+
+  INTERACTION TYPE IS    LINEAR RIGID ROTOR  -  ATOM.  
+
+  TARGET ROTATIONAL LEVELS TAKEN FROM &BASIS (JLEVEL) INPUT.  NLEVEL =  4
+
+  ENERGY LEVELS COMPUTED FROM B(E) =   30.000000
+
+  QUANTUM NUMBERS FOR INTERACTING PAIR:
+  EACH PAIR STATE IS LABELLED BY  1 QUANTUM LABEL 
+  EACH CHANNEL FUNCTION IS FORMED BY COMBINING A PAIR STATE WITH A VALUE OF L.
+  THE RESULTING BASIS SET IS ASYMPTOTICALLY DIAGONAL.
+
+  PAIR STATE     PAIR STATE QUANTUM NUMBERS    PAIR LEVEL     PAIR ENERGY (CM-1)
+                ---------        J ---------
+        1                        0                1             0.0000000
+        2                        2                2           180.0000000
+        3                        4                3           600.0000000
+        4                        6                4          1260.0000000
+
+  ======================================================================================================================
+  GENERAL-PURPOSE POTENL ROUTINE (MAY 18)
+
+  ANGULAR DEPENDENCE OF POTENTIAL EXPANDED IN TERMS OF
+  LEGENDRE POLYNOMIALS, P(LAMBDA).
+
+  INTERACTION POTENTIAL FOR EXPANSION TERM NUMBER   1
+  WHICH HAS LAMBDA =   0
+
+                 0.10000000E+01 * R **-12
+                -0.20000000E+01 * R ** -6
+
+  INTERACTION POTENTIAL FOR EXPANSION TERM NUMBER   2
+  WHICH HAS LAMBDA =   2
+
+                -0.20000000E+00 * R ** -6
+
+  POTENL PROCESSING FINISHED.
+
+  UNITS FOR POTENTIAL ROUTINES:
+  POTENTIAL RETURNED IN UNITS OF EPSIL =      50.000000 CM-1
+  R                  IN UNITS OF RM    =       3.500000 ANGSTROMS
+
+  ALL LENGTHS ARE IN UNITS OF RM =  3.500000 ANGSTROM UNLESS OTHERWISE STATED
+
+  INTERACTION MATRIX USES   2 BLOCKS OF VL ARRAY FOR R-DEPENDENT TERMS IN POTENTIAL
+
+  ======================================================================================================================
+
+  PROPAGATION ALGORITHMS FOR COUPLED EQUATIONS SPECIFIED BY IPROPS =  6 AND IPROPL = 14
+
+  COUPLED EQUATIONS WILL BE PROPAGATED OUTWARDS IN 2 SEGMENTS
+  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+  SEGMENT 1 WILL BE PROPAGATED OUTWARDS
+
+  FROM RMIN CHOSEN USING IRMSET =   9  TO VALUE OF RMID CHOSEN USING RVFAC =    1.15
+
+  COUPLED EQUATIONS SOLVED BY DIABATIC MODIFIED LOG DERIVATIVE METHOD OF MANOLOPOULOS
+
+  PROPAGATION STEP SIZE DETERMINED USING STEPS =   12.0     (PER WAVELENGTH)
+
+  LOG-DERIVATIVE MATRIX WILL BE INITIALISED IN THE LOCAL EIGENBASIS FOR RMIN IN THE OUTWARDS PROPAGATION PART
+  LOCALLY CLOSED CHANNELS WILL BE INITIALISED WITH A WKB BOUNDARY CONDITION
+  LOCALLY OPEN CHANNELS WILL BE INITIALISED WITH THE VALUE  1.0000000E+08
+  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+  SEGMENT 2 WILL BE PROPAGATED OUTWARDS
+
+  FROM VALUE OF RMID CHOSEN USING RVFAC =    1.15  TO RMAX   =     20.00
+
+  COUPLED EQUATIONS SOLVED BY LOG DERIVATIVE METHOD OF JOHNSON
+
+  CHANGING TO VARIABLE INTERVAL / VARIABLE STEP METHOD AT LONG RANGE
+
+  PROPAGATION PARAMETERS ARE:    RVIVAS = 0.10E+31
+                                 RMAX   =    20.00        DRMAX  =     5.00
+                                                          ALPHA1 =     1.00
+                                 XSQMAX = 0.10E+05        ALPHA2 =     1.50
+                                 TOLHI  = 0.10E-03        IALPHA =        6
+                                 ISHIFT =        F        IV     =        T
+                                 IPERT  =        T        IVP    =        F
+                                 IALFP  =        F        IVPP   =        F
+                                 ISYM   =        T        NUMDER =        F
+
+  PROPAGATION STEP SIZE DETERMINED USING STEPS =   12.0     (PER WAVELENGTH)
+  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+  ======================================================================================================================
+
+  INPUT ENERGY VALUES ASSUMED TO BE IN UNITS OF CM-1 BY DEFAULT.
+
+  CONTROL DATA FOR TOTAL ENERGIES.  CALCULATIONS WILL BE PERFORMED FOR   1 VALUE 
+       ENERGY NO.   1 =   1250.0000000     CM-1
+
+  ======================================================================================================================
+
+  TOTAL ANGULAR MOMENTUM JTOT =  10
+
+  EACH JTOT IS SPLIT INTO A MAXIMUM OF   2 DIFFERENT SYMMETRY BLOCKS
+
+  CALCULATION(S) WILL BE FOR SYMMETRY BLOCK   1
+
+  STATE-TO-STATE INTEGRAL CROSS-SECTIONS WILL BE COMPUTED BUT NOT STORED ON DISK
+
+  ======================================================================================================================
+
+  INITIALIZATION DONE.  TIME WAS   0.00 CPU SECS.        57 WORDS OF STORAGE USED.
+
+  ===================================== model system: ITYPE=1; IPROPS=6, IPROPL=14 =====================================
+
+  *******************************************  ANGULAR MOMENTUM JTOT  =  10  *******************************************
+
+  IBLOCK =   1
+
+  JTOT =   10   IBLOCK =   1   ENERGY(   1) =   1250.0000000     CM-1
+  INNER CLASSICAL TURNING POINT AT R =  0.7477
+  RADIAL PROPAGATION WILL START AT R =  0.6352
+
+  RMID =   0.8598 OBTAINED FROM RVFAC = 1.150
+
+  DWPROP. LOG DERIVATIVE MATRIX PROPAGATED FROM       0.6352  TO 0.85984      IN    107  STEPS.
+
+  VIVAS.   R-MATRIX PROPAGATED FROM      0.8598  TO     20.0000  IN   450  STEPS.
+
+  * * * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  10 AND IBLOCK =   1 * * * * * * * * *
+
+    F  I =      2              3
+    2       2.11178E-02    1.02859E-06
+    3       1.12472E-06    9.90700E-02
+
+  * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
+
+  ======================================================================================================================
+
+  * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
+
+  ===================================== model system: ITYPE=1; IPROPS=6, IPROPL=14 =====================================
+
+  LEVEL   4 WITH ENERGY   1260.000000000000 IS NEVER OPEN
+
+  STATE-TO-STATE INTEGRAL CROSS SECTIONS IN ANGSTROM**2 BETWEEN    3 LEVELS WITH THRESHOLD ENERGIES (IN CM-1):
+
+    1     0.000000000000
+    2   180.000000000000
+    3   600.000000000000
+
+   ENERGY (CM-1)    JTOTL  JSTEP  JTOTU      F    I         SIG(F,I)
+   1250.000000         10      1     10      2    2         2.111783E-02  
+   1250.000000         10      1     10      3    2         1.124721E-06  
+
+   1250.000000         10      1     10      2    3         1.028591E-06  
+   1250.000000         10      1     10      3    3         9.907003E-02  
+
+  TOTAL INELASTIC INTEGRAL CROSS SECTIONS IN ANGSTROM**2 FROM LEVEL
+   1.12472E-06                                                 2
+   1.02859E-06                                                 3
+
+
+
+  ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
+ |                                                                            |
+ |                Non-reactive quantum scattering calculations                |
+ |                     on atomic and molecular collisions                     |
+ |                                                                            |
+ |              Copyright (C) 2018 J. M. Hutson & C. R. Le Sueur              |
+ |                                                                            |
+ |                               Version 2019.0 (beta)                        |
+ |                                                                            |
+ |                    This run used       0.02 cpu secs and                   |
+ |               2067 of the allocated   1000000 words of storage             |
+ |                                                                            |
+  ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
+  ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
+ |                                                                            |
+ |                Non-reactive quantum scattering calculations                |
+ |                     on atomic and molecular collisions                     |
+ |                                                                            |
+ |              Copyright (C) 2018 J. M. Hutson & C. R. Le Sueur              |
+ |                                                                            |
+ |                               Version 2019.0 (beta)                        |
+ |                                                                            |
+ |                       Run on 12 Nov 2018   at 14:59:58                     |
+ |                                                                            |
+  ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
+
+
+  This program is free software: you can redistribute it and/or modify it under
+  the terms of the GNU General Public License, version 3, as published by
+  the Free Software Foundation.
+
+  Publications resulting from the use of this program should refer to
+  J. M. Hutson & C. R. Le Sueur, MOLSCAT computer code 2019.0 (beta)       
+  or to the published paper in Computer Physics Communications when available.
+
+
+  PHYSICAL CONSTANTS OBTAINED FROM NIST CODATA TABULATION OF 2014
+
+  MEMORY ALLOCATED TO MAIN WORKING ARRAY IS   1000000 (8-BYTE) WORDS (    7.63 MB)
+  2 INTEGERS CAN BE STORED IN EACH WORD.
+
+  PRINT LEVEL =  3     OTHER PRINT CONTROLS  ISIGPR = 1
+
+  RUN LABEL = model system: ITYPE=1; IPROPS=7, IPROPL=14                                      
+
+  REDUCED MASS FOR INTERACTION =  20.000000000 ATOMIC MASS UNITS
+
+  ENERGY-INDEPENDENT MATRICES WILL BE SAVED TEMPORARILY ON UNIT  1
+
+  ======================================================================================================================
+
+  INTERACTION TYPE IS    LINEAR RIGID ROTOR  -  ATOM.  
+
+  TARGET ROTATIONAL LEVELS TAKEN FROM &BASIS (JLEVEL) INPUT.  NLEVEL =  4
+
+  ENERGY LEVELS COMPUTED FROM B(E) =   30.000000
+
+  QUANTUM NUMBERS FOR INTERACTING PAIR:
+  EACH PAIR STATE IS LABELLED BY  1 QUANTUM LABEL 
+  EACH CHANNEL FUNCTION IS FORMED BY COMBINING A PAIR STATE WITH A VALUE OF L.
+  THE RESULTING BASIS SET IS ASYMPTOTICALLY DIAGONAL.
+
+  PAIR STATE     PAIR STATE QUANTUM NUMBERS    PAIR LEVEL     PAIR ENERGY (CM-1)
+                ---------        J ---------
+        1                        0                1             0.0000000
+        2                        2                2           180.0000000
+        3                        4                3           600.0000000
+        4                        6                4          1260.0000000
+
+  ======================================================================================================================
+  GENERAL-PURPOSE POTENL ROUTINE (MAY 18)
+
+  ANGULAR DEPENDENCE OF POTENTIAL EXPANDED IN TERMS OF
+  LEGENDRE POLYNOMIALS, P(LAMBDA).
+
+  INTERACTION POTENTIAL FOR EXPANSION TERM NUMBER   1
+  WHICH HAS LAMBDA =   0
+
+                 0.10000000E+01 * R **-12
+                -0.20000000E+01 * R ** -6
+
+  INTERACTION POTENTIAL FOR EXPANSION TERM NUMBER   2
+  WHICH HAS LAMBDA =   2
+
+                -0.20000000E+00 * R ** -6
+
+  POTENL PROCESSING FINISHED.
+
+  UNITS FOR POTENTIAL ROUTINES:
+  POTENTIAL RETURNED IN UNITS OF EPSIL =      50.000000 CM-1
+  R                  IN UNITS OF RM    =       3.500000 ANGSTROMS
+
+  ALL LENGTHS ARE IN UNITS OF RM =  3.500000 ANGSTROM UNLESS OTHERWISE STATED
+
+  INTERACTION MATRIX USES   2 BLOCKS OF VL ARRAY FOR R-DEPENDENT TERMS IN POTENTIAL
+
+  ======================================================================================================================
+
+  PROPAGATION ALGORITHMS FOR COUPLED EQUATIONS SPECIFIED BY IPROPS =  7 AND IPROPL = 14
+
+  COUPLED EQUATIONS WILL BE PROPAGATED OUTWARDS IN 2 SEGMENTS
+  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+  SEGMENT 1 WILL BE PROPAGATED OUTWARDS
+
+  FROM RMIN CHOSEN USING IRMSET =   9  TO VALUE OF RMID CHOSEN USING RVFAC =    1.15
+
+  COUPLED EQUATIONS SOLVED BY QUASIADIABATIC MODIFIED LOG DERIVATIVE METHOD OF MANOLOPOULOS
+
+  PROPAGATION STEP SIZE DETERMINED USING STEPS =   12.0     (PER WAVELENGTH)
+
+  LOG-DERIVATIVE MATRIX WILL BE INITIALISED IN THE LOCAL EIGENBASIS FOR RMIN IN THE OUTWARDS PROPAGATION PART
+  LOCALLY CLOSED CHANNELS WILL BE INITIALISED WITH A WKB BOUNDARY CONDITION
+  LOCALLY OPEN CHANNELS WILL BE INITIALISED WITH THE VALUE  1.0000000E+08
+  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+  SEGMENT 2 WILL BE PROPAGATED OUTWARDS
+
+  FROM VALUE OF RMID CHOSEN USING RVFAC =    1.15  TO RMAX   =     20.00
+
+  COUPLED EQUATIONS SOLVED BY LOG DERIVATIVE METHOD OF JOHNSON
+
+  CHANGING TO VARIABLE INTERVAL / VARIABLE STEP METHOD AT LONG RANGE
+
+  PROPAGATION PARAMETERS ARE:    RVIVAS = 0.10E+31
+                                 RMAX   =    20.00        DRMAX  =     5.00
+                                                          ALPHA1 =     1.00
+                                 XSQMAX = 0.10E+05        ALPHA2 =     1.50
+                                 TOLHI  = 0.10E-03        IALPHA =        6
+                                 ISHIFT =        F        IV     =        T
+                                 IPERT  =        T        IVP    =        F
+                                 IALFP  =        F        IVPP   =        F
+                                 ISYM   =        T        NUMDER =        F
+
+  PROPAGATION STEP SIZE DETERMINED USING STEPS =   12.0     (PER WAVELENGTH)
+  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+  ======================================================================================================================
+
+  INPUT ENERGY VALUES ASSUMED TO BE IN UNITS OF CM-1 BY DEFAULT.
+
+  CONTROL DATA FOR TOTAL ENERGIES.  CALCULATIONS WILL BE PERFORMED FOR   1 VALUE 
+       ENERGY NO.   1 =   1250.0000000     CM-1
+
+  ======================================================================================================================
+
+  TOTAL ANGULAR MOMENTUM JTOT =  10
+
+  EACH JTOT IS SPLIT INTO A MAXIMUM OF   2 DIFFERENT SYMMETRY BLOCKS
+
+  CALCULATION(S) WILL BE FOR SYMMETRY BLOCK   1
+
+  STATE-TO-STATE INTEGRAL CROSS-SECTIONS WILL BE COMPUTED BUT NOT STORED ON DISK
+
+  ======================================================================================================================
+
+  INITIALIZATION DONE.  TIME WAS   0.00 CPU SECS.        57 WORDS OF STORAGE USED.
+
+  ===================================== model system: ITYPE=1; IPROPS=7, IPROPL=14 =====================================
+
+  *******************************************  ANGULAR MOMENTUM JTOT  =  10  *******************************************
+
+  IBLOCK =   1
+
+  JTOT =   10   IBLOCK =   1   ENERGY(   1) =   1250.0000000     CM-1
+  INNER CLASSICAL TURNING POINT AT R =  0.7477
+  RADIAL PROPAGATION WILL START AT R =  0.6352
+
+  RMID =   0.8598 OBTAINED FROM RVFAC = 1.150
+
+  QAPROP. LOG DERIVATIVE MATRIX PROPAGATED FROM       0.6352  TO 0.85984      IN    107  STEPS.
+
+  VIVAS.   R-MATRIX PROPAGATED FROM      0.8598  TO     20.0000  IN   450  STEPS.
+
+  * * * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  10 AND IBLOCK =   1 * * * * * * * * *
+
+    F  I =      2              3
+    2       2.11178E-02    1.02858E-06
+    3       1.12471E-06    9.90700E-02
+
+  * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
+
+  ======================================================================================================================
+
+  * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
+
+  ===================================== model system: ITYPE=1; IPROPS=7, IPROPL=14 =====================================
+
+  LEVEL   4 WITH ENERGY   1260.000000000000 IS NEVER OPEN
+
+  STATE-TO-STATE INTEGRAL CROSS SECTIONS IN ANGSTROM**2 BETWEEN    3 LEVELS WITH THRESHOLD ENERGIES (IN CM-1):
+
+    1     0.000000000000
+    2   180.000000000000
+    3   600.000000000000
+
+   ENERGY (CM-1)    JTOTL  JSTEP  JTOTU      F    I         SIG(F,I)
+   1250.000000         10      1     10      2    2         2.111783E-02  
+   1250.000000         10      1     10      3    2         1.124710E-06  
+
+   1250.000000         10      1     10      2    3         1.028581E-06  
+   1250.000000         10      1     10      3    3         9.907003E-02  
+
+  TOTAL INELASTIC INTEGRAL CROSS SECTIONS IN ANGSTROM**2 FROM LEVEL
+   1.12471E-06                                                 2
+   1.02858E-06                                                 3
+
+
+
+  ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
+ |                                                                            |
+ |                Non-reactive quantum scattering calculations                |
+ |                     on atomic and molecular collisions                     |
+ |                                                                            |
+ |              Copyright (C) 2018 J. M. Hutson & C. R. Le Sueur              |
+ |                                                                            |
+ |                               Version 2019.0 (beta)                        |
+ |                                                                            |
+ |                    This run used       0.03 cpu secs and                   |
+ |               2067 of the allocated   1000000 words of storage             |
+ |                                                                            |
+  ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
+  ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
+ |                                                                            |
+ |                Non-reactive quantum scattering calculations                |
+ |                     on atomic and molecular collisions                     |
+ |                                                                            |
+ |              Copyright (C) 2018 J. M. Hutson & C. R. Le Sueur              |
+ |                                                                            |
+ |                               Version 2019.0 (beta)                        |
+ |                                                                            |
+ |                       Run on 12 Nov 2018   at 14:59:58                     |
+ |                                                                            |
+  ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
+
+
+  This program is free software: you can redistribute it and/or modify it under
+  the terms of the GNU General Public License, version 3, as published by
+  the Free Software Foundation.
+
+  Publications resulting from the use of this program should refer to
+  J. M. Hutson & C. R. Le Sueur, MOLSCAT computer code 2019.0 (beta)       
+  or to the published paper in Computer Physics Communications when available.
+
+
+  PHYSICAL CONSTANTS OBTAINED FROM NIST CODATA TABULATION OF 2014
+
+  MEMORY ALLOCATED TO MAIN WORKING ARRAY IS   1000000 (8-BYTE) WORDS (    7.63 MB)
+  2 INTEGERS CAN BE STORED IN EACH WORD.
+
+  PRINT LEVEL =  3     OTHER PRINT CONTROLS  ISIGPR = 1
+
+  RUN LABEL = model system: ITYPE=1; IPROPS=9, IPROPL=14                                      
+
+  REDUCED MASS FOR INTERACTION =  20.000000000 ATOMIC MASS UNITS
+
+  ENERGY-INDEPENDENT MATRICES WILL BE SAVED TEMPORARILY ON UNIT  1
+
+  ======================================================================================================================
+
+  INTERACTION TYPE IS    LINEAR RIGID ROTOR  -  ATOM.  
+
+  TARGET ROTATIONAL LEVELS TAKEN FROM &BASIS (JLEVEL) INPUT.  NLEVEL =  4
+
+  ENERGY LEVELS COMPUTED FROM B(E) =   30.000000
+
+  QUANTUM NUMBERS FOR INTERACTING PAIR:
+  EACH PAIR STATE IS LABELLED BY  1 QUANTUM LABEL 
+  EACH CHANNEL FUNCTION IS FORMED BY COMBINING A PAIR STATE WITH A VALUE OF L.
+  THE RESULTING BASIS SET IS ASYMPTOTICALLY DIAGONAL.
+
+  PAIR STATE     PAIR STATE QUANTUM NUMBERS    PAIR LEVEL     PAIR ENERGY (CM-1)
+                ---------        J ---------
+        1                        0                1             0.0000000
+        2                        2                2           180.0000000
+        3                        4                3           600.0000000
+        4                        6                4          1260.0000000
+
+  ======================================================================================================================
+  GENERAL-PURPOSE POTENL ROUTINE (MAY 18)
+
+  ANGULAR DEPENDENCE OF POTENTIAL EXPANDED IN TERMS OF
+  LEGENDRE POLYNOMIALS, P(LAMBDA).
+
+  INTERACTION POTENTIAL FOR EXPANSION TERM NUMBER   1
+  WHICH HAS LAMBDA =   0
+
+                 0.10000000E+01 * R **-12
+                -0.20000000E+01 * R ** -6
+
+  INTERACTION POTENTIAL FOR EXPANSION TERM NUMBER   2
+  WHICH HAS LAMBDA =   2
+
+                -0.20000000E+00 * R ** -6
+
+  POTENL PROCESSING FINISHED.
+
+  UNITS FOR POTENTIAL ROUTINES:
+  POTENTIAL RETURNED IN UNITS OF EPSIL =      50.000000 CM-1
+  R                  IN UNITS OF RM    =       3.500000 ANGSTROMS
+
+  ALL LENGTHS ARE IN UNITS OF RM =  3.500000 ANGSTROM UNLESS OTHERWISE STATED
+
+  INTERACTION MATRIX USES   2 BLOCKS OF VL ARRAY FOR R-DEPENDENT TERMS IN POTENTIAL
+
+  ======================================================================================================================
+
+  PROPAGATION ALGORITHMS FOR COUPLED EQUATIONS SPECIFIED BY IPROPS =  9 AND IPROPL = 14
+
+  COUPLED EQUATIONS WILL BE PROPAGATED OUTWARDS IN 2 SEGMENTS
+  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+  SEGMENT 1 WILL BE PROPAGATED OUTWARDS
+
+  FROM RMIN CHOSEN USING IRMSET =   9  TO VALUE OF RMID CHOSEN USING RVFAC =    1.15
+
+  COUPLED EQUATIONS SOLVED BY SYMPLECTIC LOG-DERIVATIVE METHOD OF MANOLOPOULOS AND GRAY
+  USING THE SIX-STEP FIFTH-ORDER METHOD OF MCLACHLAN AND ATELA
+
+  PROPAGATION STEP SIZE DETERMINED USING STEPS =   12.0     (PER WAVELENGTH)
+
+  LOG-DERIVATIVE MATRIX WILL BE INITIALISED IN THE LOCAL EIGENBASIS FOR RMIN IN THE OUTWARDS PROPAGATION PART
+  LOCALLY CLOSED CHANNELS WILL BE INITIALISED WITH A WKB BOUNDARY CONDITION
+  LOCALLY OPEN CHANNELS WILL BE INITIALISED WITH THE VALUE  1.0000000E+08
+  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+  SEGMENT 2 WILL BE PROPAGATED OUTWARDS
+
+  FROM VALUE OF RMID CHOSEN USING RVFAC =    1.15  TO RMAX   =     20.00
+
+  COUPLED EQUATIONS SOLVED BY LOG DERIVATIVE METHOD OF JOHNSON
+
+  CHANGING TO VARIABLE INTERVAL / VARIABLE STEP METHOD AT LONG RANGE
+
+  PROPAGATION PARAMETERS ARE:    RVIVAS = 0.10E+31
+                                 RMAX   =    20.00        DRMAX  =     5.00
+                                                          ALPHA1 =     1.00
+                                 XSQMAX = 0.10E+05        ALPHA2 =     1.50
+                                 TOLHI  = 0.10E-03        IALPHA =        6
+                                 ISHIFT =        F        IV     =        T
+                                 IPERT  =        T        IVP    =        F
+                                 IALFP  =        F        IVPP   =        F
+                                 ISYM   =        T        NUMDER =        F
+
+  PROPAGATION STEP SIZE DETERMINED USING STEPS =   12.0     (PER WAVELENGTH)
+  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+  ======================================================================================================================
+
+  INPUT ENERGY VALUES ASSUMED TO BE IN UNITS OF CM-1 BY DEFAULT.
+
+  CONTROL DATA FOR TOTAL ENERGIES.  CALCULATIONS WILL BE PERFORMED FOR   1 VALUE 
+       ENERGY NO.   1 =   1250.0000000     CM-1
+
+  ======================================================================================================================
+
+  TOTAL ANGULAR MOMENTUM JTOT =  10
+
+  EACH JTOT IS SPLIT INTO A MAXIMUM OF   2 DIFFERENT SYMMETRY BLOCKS
+
+  CALCULATION(S) WILL BE FOR SYMMETRY BLOCK   1
+
+  STATE-TO-STATE INTEGRAL CROSS-SECTIONS WILL BE COMPUTED BUT NOT STORED ON DISK
+
+  ======================================================================================================================
+
+  INITIALIZATION DONE.  TIME WAS   0.00 CPU SECS.        57 WORDS OF STORAGE USED.
+
+  ===================================== model system: ITYPE=1; IPROPS=9, IPROPL=14 =====================================
+
+  *******************************************  ANGULAR MOMENTUM JTOT  =  10  *******************************************
+
+  IBLOCK =   1
+
+  JTOT =   10   IBLOCK =   1   ENERGY(   1) =   1250.0000000     CM-1
+  INNER CLASSICAL TURNING POINT AT R =  0.7477
+  RADIAL PROPAGATION WILL START AT R =  0.6352
+
+  RMID =   0.8598 OBTAINED FROM RVFAC = 1.150
+
+  MGPROP. LOG DERIVATIVE MATRIX PROPAGATED FROM       0.6352  TO 0.85984      IN    107  STEPS.
+
+  VIVAS.   R-MATRIX PROPAGATED FROM      0.8598  TO     20.0000  IN   450  STEPS.
+
+  * * * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  10 AND IBLOCK =   1 * * * * * * * * *
+
+    F  I =      2              3
+    2       2.11178E-02    1.02859E-06
+    3       1.12471E-06    9.90700E-02
+
+  * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
+
+  ======================================================================================================================
+
+  * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
+
+  ===================================== model system: ITYPE=1; IPROPS=9, IPROPL=14 =====================================
+
+  LEVEL   4 WITH ENERGY   1260.000000000000 IS NEVER OPEN
+
+  STATE-TO-STATE INTEGRAL CROSS SECTIONS IN ANGSTROM**2 BETWEEN    3 LEVELS WITH THRESHOLD ENERGIES (IN CM-1):
+
+    1     0.000000000000
+    2   180.000000000000
+    3   600.000000000000
+
+   ENERGY (CM-1)    JTOTL  JSTEP  JTOTU      F    I         SIG(F,I)
+   1250.000000         10      1     10      2    2         2.111779E-02  
+   1250.000000         10      1     10      3    2         1.124714E-06  
+
+   1250.000000         10      1     10      2    3         1.028585E-06  
+   1250.000000         10      1     10      3    3         9.906998E-02  
+
+  TOTAL INELASTIC INTEGRAL CROSS SECTIONS IN ANGSTROM**2 FROM LEVEL
+   1.12471E-06                                                 2
+   1.02859E-06                                                 3
+
+
+
+  ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
+ |                                                                            |
+ |                Non-reactive quantum scattering calculations                |
+ |                     on atomic and molecular collisions                     |
+ |                                                                            |
+ |              Copyright (C) 2018 J. M. Hutson & C. R. Le Sueur              |
+ |                                                                            |
+ |                               Version 2019.0 (beta)                        |
+ |                                                                            |
+ |                    This run used       0.03 cpu secs and                   |
+ |               2067 of the allocated   1000000 words of storage             |
+ |                                                                            |
+  ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
+  ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
+ |                                                                            |
+ |                Non-reactive quantum scattering calculations                |
+ |                     on atomic and molecular collisions                     |
+ |                                                                            |
+ |              Copyright (C) 2018 J. M. Hutson & C. R. Le Sueur              |
+ |                                                                            |
+ |                               Version 2019.0 (beta)                        |
+ |                                                                            |
+ |                       Run on 12 Nov 2018   at 14:59:58                     |
+ |                                                                            |
+  ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
+
+
+  This program is free software: you can redistribute it and/or modify it under
+  the terms of the GNU General Public License, version 3, as published by
+  the Free Software Foundation.
+
+  Publications resulting from the use of this program should refer to
+  J. M. Hutson & C. R. Le Sueur, MOLSCAT computer code 2019.0 (beta)       
+  or to the published paper in Computer Physics Communications when available.
+
+
+  PHYSICAL CONSTANTS OBTAINED FROM NIST CODATA TABULATION OF 2014
+
+  MEMORY ALLOCATED TO MAIN WORKING ARRAY IS   1000000 (8-BYTE) WORDS (    7.63 MB)
+  2 INTEGERS CAN BE STORED IN EACH WORD.
+
+  PRINT LEVEL =  3     OTHER PRINT CONTROLS  ISIGPR = 1
+
+  RUN LABEL = model system: ITYPE=1; IPROPS=-1 (using IOS approximation)                      
+
+  REDUCED MASS FOR INTERACTION =  20.000000000 ATOMIC MASS UNITS
+
+  ENERGY-INDEPENDENT MATRICES WILL BE SAVED TEMPORARILY ON UNIT  1
+
+  ======================================================================================================================
+
+   *******************
+   ****** I O S ******
+   *******************
+
+  PROCESSED BY IOSBIN ROUTINE (FEB 94).
+
+  INPUT  ITYPE = 101
+
+  BASIS TAKEN FROM NLEVEL, JLEVEL INPUT.  NO. OF LEVELS (NLEVEL) =   4
+     0    2    4    6
+
+  ======================================================================================================================
+  GENERAL-PURPOSE POTENL ROUTINE (MAY 18)
+
+  ANGULAR DEPENDENCE OF POTENTIAL EXPANDED IN TERMS OF
+  LEGENDRE POLYNOMIALS, P(LAMBDA).
+
+  INTERACTION POTENTIAL FOR EXPANSION TERM NUMBER   1
+  WHICH HAS LAMBDA =   0
+
+                 0.10000000E+01 * R **-12
+                -0.20000000E+01 * R ** -6
+
+  INTERACTION POTENTIAL FOR EXPANSION TERM NUMBER   2
+  WHICH HAS LAMBDA =   2
+
+                -0.20000000E+00 * R ** -6
+
+  POTENL PROCESSING FINISHED.
+
+  UNITS FOR POTENTIAL ROUTINES:
+  POTENTIAL RETURNED IN UNITS OF EPSIL =      50.000000 CM-1
+  R                  IN UNITS OF RM    =       3.500000 ANGSTROMS
+
+  ALL LENGTHS ARE IN UNITS OF RM =  3.500000 ANGSTROM UNLESS OTHERWISE STATED
+
+  INTERACTION MATRIX USES   2 BLOCKS OF VL ARRAY FOR R-DEPENDENT TERMS IN POTENTIAL
+
+  ======================================================================================================================
+
+  PROPAGATION ALGORITHM FOR COUPLED EQUATIONS SPECIFIED BY IPROPS = -1
+
+  COUPLED EQUATIONS WILL BE PROPAGATED OUTWARDS IN 1 SEGMENT 
+  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+  SEGMENT 1 WILL BE PROPAGATED OUTWARDS
+
+  FROM RMIN CHOSEN USING IRMSET =   9  TO RMAX   =     20.00
+
+
+  EQUATIONS SOLVED BY WKB APPROXIMATION WITH GAUSS-MEHLER INTEGRATION.  SEE R. T PACK, JCP 60, 633 (1974).
+
+  NOTE THAT THIS IS IMPLEMENTED ONLY FOR ONE CHANNEL CASES, E.G., IOS CALCULATIONS.
+
+  INTEGRATION PARAMETERS ARE:     STEST =    0.1000E-03
+                                   NGMP =    18 ( 1) 22
+
+  LOG-DERIVATIVE MATRIX WILL BE INITIALISED IN THE LOCAL EIGENBASIS FOR RMIN IN THE OUTWARDS PROPAGATION PART
+  LOCALLY CLOSED CHANNELS WILL BE INITIALISED WITH A WKB BOUNDARY CONDITION
+  LOCALLY OPEN CHANNELS WILL BE INITIALISED WITH THE VALUE  1.0000000E+08
+  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+  ======================================================================================================================
+
+  INPUT ENERGY VALUES ASSUMED TO BE IN UNITS OF CM-1 BY DEFAULT.
+
+  CONTROL DATA FOR TOTAL ENERGIES.  CALCULATIONS WILL BE PERFORMED FOR   1 VALUE 
+       ENERGY NO.   1 =   1250.0000000     CM-1
+
+  ======================================================================================================================
+
+  TOTAL ANGULAR MOMENTUM JTOT =  10
+
+  EACH JTOT IS SPLIT INTO A MAXIMUM OF   1 DIFFERENT SYMMETRY BLOCKS
+
+  CALCULATION(S) WILL BE FOR SYMMETRY BLOCK   1
+
+  IOSDRV ENTERED.  SET-UP FOR INFINITE ORDER SUDDEN CALCULATION.
+
+  * * * NOTE.
+  * * * NOTE.  USE WILL BE MADE OF FACT THAT POTENTIAL HAS ONLY EVEN LEGENDRE TERMS.
+
+  * * * NOTE.
+  NUMBER OF GAUSS POINTS FOR THETA (NGL) SET FROM &BASIS IOSNGP(1) =   8
+
+  * * * NOTE.
+  NUMBER OF GAUSS POINTS FOR THETA (NGL) SET FROM &BASIS IOSNGP(1) =   8
+
+  THETA INTEGRATION DONE BY   8-POINT GAUSSIAN QUADRATURE. POINTS/WEIGHTS ARE
+            0.019855  0.101229            0.101667  0.222381            0.237234  0.313707            0.408283  0.362684
+            0.591717  0.362684            0.762766  0.313707            0.898333  0.222381            0.980145  0.101229
+
+  LMAX TAKEN FROM &INPUT LMAX =   11
+
+  STORAGE ALLOCATED FOR  NVC (NO. VIB. CHANNELS) =            1
+                         NGPT (NO. GAUSS PTS.) =              8
+                         LMAX (NO. LEGENDRE COEFFS.) =       11
+                         MXXXXL (NO. SYMMETRIES IN POTL) =    2
+                         NQL (NO. QLT) =                     11
+                         NIXQL (NO. INDICES IN IXQL) =        2
+                         NEXT LOCATION =                    210
+
+  TIME TO SET UP CALCULATION WAS    0.00   SECONDS.  EXIT IOSDRV
+
+========================================================================================================================
+ IOSCLC (MAY 92).  ENERGY(  1) =   1250.0000 CM-1.
+
+  ***** PARTIAL WAVE =   10    FOR ENERGY(  1) =    1250.0000    *****
+  ***** ***** ***** END OF CALCULATION FOR ENERGY =   1250.0000 CM-1 ***** ***** *****
+
+                      PARTIAL WAVES FROM   10 TO    10 (IN STEPS OF    1)
+
+  ***** ***** ***** TIME WAS     0.00  SEC.
+ 
+
+  ***** ***** STORAGE SO FAR USED       214  OF THE   1000000  AVAILABLE WORDS.
+
+  FOR ORIENTATION     1     SIG( 1, 1) =  1.5347E-01
+
+  FOR ORIENTATION     2     SIG( 1, 1) =  1.5468E-01
+
+  FOR ORIENTATION     3     SIG( 1, 1) =  1.5992E-01
+
+  FOR ORIENTATION     4     SIG( 1, 1) =  1.7000E-01
+
+  FOR ORIENTATION     5     SIG( 1, 1) =  1.7780E-01
+
+  FOR ORIENTATION     6     SIG( 1, 1) =  1.7054E-01
+
+  FOR ORIENTATION     7     SIG( 1, 1) =  1.4658E-01
+
+  FOR ORIENTATION     8     SIG( 1, 1) =  1.2301E-01
+
+  AVERAGE OVER ORIENTATIONS
+                            SIG( 1, 1) =  1.6240E-01
+  STATE-TO-STATE CROSS SECTIONS (IN ANG**2) FOR KINETIC ENERGY =   1250.0000 CM-1.
+
+  PROCESSED BY IOSOUT (FEB 92).
+
+  NO. OF VIBRATIONAL LEVELS =   1.  LEVELS ARE
+          0
+
+  MAXIMUM J-VALUE REQUESTED IS   6
+
+   QLOLD(0)     1 TO  1 = -1.3784E-02
+
+   Q(  0 )      1 TO  1 =  1.4861E-01
+
+   Q(  1 )      1 TO  1 =  0.0000E+00
+
+   Q(  2 )      1 TO  1 =  1.2842E-02
+
+   Q(  3 )      1 TO  1 =  0.0000E+00
+
+   Q(  4 )      1 TO  1 =  9.1460E-04
+
+   Q(  5 )      1 TO  1 =  0.0000E+00
+
+   Q(  6 )      1 TO  1 =  2.7321E-05
+
+   Q(  7 )      1 TO  1 =  0.0000E+00
+
+   Q(  8 )      1 TO  1 =  4.4977E-07
+
+   Q(  9 )      1 TO  1 =  0.0000E+00
+
+   Q( 10 )      1 TO  1 =  4.3314E-09
+
+  ***** ***** ***** BELOW FOR VIB LEVEL  1 TO  1
+
+  FOR INITIAL LEVEL J =   0  NON-ZERO CROSS SECTIONS (ANG**2) TO FINAL LEVELS ARE
+      0  1.4861E-01       2  1.2842E-02       4  9.1460E-04       6  2.7321E-05 
+
+  FOR INITIAL LEVEL J =   1  NON-ZERO CROSS SECTIONS (ANG**2) TO FINAL LEVELS ARE
+      1  1.5375E-01       3  8.1116E-03       5  5.2072E-04 
+
+  FOR INITIAL LEVEL J =   2  NON-ZERO CROSS SECTIONS (ANG**2) TO FINAL LEVELS ARE
+      0  2.5684E-03       2  1.5254E-01       4  6.8506E-03       6  4.2283E-04 
+
+  FOR INITIAL LEVEL J =   3  NON-ZERO CROSS SECTIONS (ANG**2) TO FINAL LEVELS ARE
+      1  3.4764E-03       3  1.5221E-01       5  6.3212E-03 
+
+  FOR INITIAL LEVEL J =   4  NON-ZERO CROSS SECTIONS (ANG**2) TO FINAL LEVELS ARE
+      0  1.0162E-04       2  3.8059E-03       4  1.5210E-01       6  6.0261E-03 
+
+  FOR INITIAL LEVEL J =   5  NON-ZERO CROSS SECTIONS (ANG**2) TO FINAL LEVELS ARE
+      1  1.4201E-04       3  4.0226E-03       5  1.5205E-01 
+
+  FOR INITIAL LEVEL J =   6  NON-ZERO CROSS SECTIONS (ANG**2) TO FINAL LEVELS ARE
+      0  2.1016E-06       2  1.6263E-04       4  4.1719E-03       6  1.5202E-01*
+
+  ***** NOTE.  FOR CROSS SECTIONS MARKED WITH A STAR, SOME CONTRIBUTING Q(L) ARE NOT AVAILABLE.
+
+
+  ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
+ |                                                                            |
+ |                Non-reactive quantum scattering calculations                |
+ |                     on atomic and molecular collisions                     |
+ |                                                                            |
+ |              Copyright (C) 2018 J. M. Hutson & C. R. Le Sueur              |
+ |                                                                            |
+ |                               Version 2019.0 (beta)                        |
+ |                                                                            |
+ |                    This run used       0.00 cpu secs and                   |
+ |                214 of the allocated   1000000 words of storage             |
+ |                                                                            |
+  ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
+  ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
+ |                                                                            |
+ |                Non-reactive quantum scattering calculations                |
+ |                     on atomic and molecular collisions                     |
+ |                                                                            |
+ |              Copyright (C) 2018 J. M. Hutson & C. R. Le Sueur              |
+ |                                                                            |
+ |                               Version 2019.0 (beta)                        |
+ |                                                                            |
+ |                       Run on 12 Nov 2018   at 14:59:58                     |
+ |                                                                            |
+  ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
+
+
+  This program is free software: you can redistribute it and/or modify it under
+  the terms of the GNU General Public License, version 3, as published by
+  the Free Software Foundation.
+
+  Publications resulting from the use of this program should refer to
+  J. M. Hutson & C. R. Le Sueur, MOLSCAT computer code 2019.0 (beta)       
+  or to the published paper in Computer Physics Communications when available.
+
+
+  PHYSICAL CONSTANTS OBTAINED FROM NIST CODATA TABULATION OF 2014
+
+  MEMORY ALLOCATED TO MAIN WORKING ARRAY IS   1000000 (8-BYTE) WORDS (    7.63 MB)
+  2 INTEGERS CAN BE STORED IN EACH WORD.
+
+  PRINT LEVEL =  3     OTHER PRINT CONTROLS  ISIGPR = 1
+
+  RUN LABEL = model system: ITYPE=1; IPROPS=6 (using IOS approximation)                       
+
+  REDUCED MASS FOR INTERACTION =  20.000000000 ATOMIC MASS UNITS
+
+  ENERGY-INDEPENDENT MATRICES WILL BE SAVED TEMPORARILY ON UNIT  1
+
+  ======================================================================================================================
+
+   *******************
+   ****** I O S ******
+   *******************
+
+  PROCESSED BY IOSBIN ROUTINE (FEB 94).
+
+  INPUT  ITYPE = 101
+
+  BASIS TAKEN FROM NLEVEL, JLEVEL INPUT.  NO. OF LEVELS (NLEVEL) =   4
+     0    2    4    6
+
+  ======================================================================================================================
+  GENERAL-PURPOSE POTENL ROUTINE (MAY 18)
+
+  ANGULAR DEPENDENCE OF POTENTIAL EXPANDED IN TERMS OF
+  LEGENDRE POLYNOMIALS, P(LAMBDA).
+
+  INTERACTION POTENTIAL FOR EXPANSION TERM NUMBER   1
+  WHICH HAS LAMBDA =   0
+
+                 0.10000000E+01 * R **-12
+                -0.20000000E+01 * R ** -6
+
+  INTERACTION POTENTIAL FOR EXPANSION TERM NUMBER   2
+  WHICH HAS LAMBDA =   2
+
+                -0.20000000E+00 * R ** -6
+
+  POTENL PROCESSING FINISHED.
+
+  UNITS FOR POTENTIAL ROUTINES:
+  POTENTIAL RETURNED IN UNITS OF EPSIL =      50.000000 CM-1
+  R                  IN UNITS OF RM    =       3.500000 ANGSTROMS
+
+  ALL LENGTHS ARE IN UNITS OF RM =  3.500000 ANGSTROM UNLESS OTHERWISE STATED
+
+  INTERACTION MATRIX USES   2 BLOCKS OF VL ARRAY FOR R-DEPENDENT TERMS IN POTENTIAL
+
+  ======================================================================================================================
+
+  PROPAGATION ALGORITHM FOR COUPLED EQUATIONS SPECIFIED BY IPROPS =  6
+
+  COUPLED EQUATIONS WILL BE PROPAGATED OUTWARDS IN 1 SEGMENT 
+  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+  SEGMENT 1 WILL BE PROPAGATED OUTWARDS
+
+  FROM RMIN CHOSEN USING IRMSET =   9  TO RMAX   =     20.00
+
+  COUPLED EQUATIONS SOLVED BY DIABATIC MODIFIED LOG DERIVATIVE METHOD OF MANOLOPOULOS
+
+  PROPAGATION STEP SIZE DETERMINED USING STEPS =   12.0     (PER WAVELENGTH)
+
+  LOG-DERIVATIVE MATRIX WILL BE INITIALISED IN THE LOCAL EIGENBASIS FOR RMIN IN THE OUTWARDS PROPAGATION PART
+  LOCALLY CLOSED CHANNELS WILL BE INITIALISED WITH A WKB BOUNDARY CONDITION
+  LOCALLY OPEN CHANNELS WILL BE INITIALISED WITH THE VALUE  1.0000000E+08
+  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+  ======================================================================================================================
+
+  INPUT ENERGY VALUES ASSUMED TO BE IN UNITS OF CM-1 BY DEFAULT.
+
+  CONTROL DATA FOR TOTAL ENERGIES.  CALCULATIONS WILL BE PERFORMED FOR   1 VALUE 
+       ENERGY NO.   1 =   1250.0000000     CM-1
+
+  ======================================================================================================================
+
+  TOTAL ANGULAR MOMENTUM JTOT =  10
+
+  EACH JTOT IS SPLIT INTO A MAXIMUM OF   1 DIFFERENT SYMMETRY BLOCKS
+
+  CALCULATION(S) WILL BE FOR SYMMETRY BLOCK   1
+
+  IOSDRV ENTERED.  SET-UP FOR INFINITE ORDER SUDDEN CALCULATION.
+
+  * * * NOTE.
+  * * * NOTE.  USE WILL BE MADE OF FACT THAT POTENTIAL HAS ONLY EVEN LEGENDRE TERMS.
+
+  * * * NOTE.
+  NUMBER OF GAUSS POINTS FOR THETA (NGL) SET FROM &BASIS IOSNGP(1) =   8
+
+  * * * NOTE.
+  NUMBER OF GAUSS POINTS FOR THETA (NGL) SET FROM &BASIS IOSNGP(1) =   8
+
+  THETA INTEGRATION DONE BY   8-POINT GAUSSIAN QUADRATURE. POINTS/WEIGHTS ARE
+            0.019855  0.101229            0.101667  0.222381            0.237234  0.313707            0.408283  0.362684
+            0.591717  0.362684            0.762766  0.313707            0.898333  0.222381            0.980145  0.101229
+
+  LMAX TAKEN FROM &INPUT LMAX =   11
+
+  STORAGE ALLOCATED FOR  NVC (NO. VIB. CHANNELS) =            1
+                         NGPT (NO. GAUSS PTS.) =              8
+                         LMAX (NO. LEGENDRE COEFFS.) =       11
+                         MXXXXL (NO. SYMMETRIES IN POTL) =    2
+                         NQL (NO. QLT) =                     11
+                         NIXQL (NO. INDICES IN IXQL) =        2
+                         NEXT LOCATION =                    210
+
+  TIME TO SET UP CALCULATION WAS    0.00   SECONDS.  EXIT IOSDRV
+
+========================================================================================================================
+ IOSCLC (MAY 92).  ENERGY(  1) =   1250.0000 CM-1.
+
+  ***** PARTIAL WAVE =   10    FOR ENERGY(  1) =    1250.0000    *****
+  ***** ***** ***** END OF CALCULATION FOR ENERGY =   1250.0000 CM-1 ***** ***** *****
+
+                      PARTIAL WAVES FROM   10 TO    10 (IN STEPS OF    1)
+
+  ***** ***** ***** TIME WAS     0.02  SEC.
+ 
+
+  ***** ***** STORAGE SO FAR USED     50076  OF THE   1000000  AVAILABLE WORDS.
+
+  FOR ORIENTATION     1     SIG( 1, 1) =  1.5290E-01
+
+  FOR ORIENTATION     2     SIG( 1, 1) =  1.5412E-01
+
+  FOR ORIENTATION     3     SIG( 1, 1) =  1.5943E-01
+
+  FOR ORIENTATION     4     SIG( 1, 1) =  1.6966E-01
+
+  FOR ORIENTATION     5     SIG( 1, 1) =  1.7775E-01
+
+  FOR ORIENTATION     6     SIG( 1, 1) =  1.7086E-01
+
+  FOR ORIENTATION     7     SIG( 1, 1) =  1.4720E-01
+
+  FOR ORIENTATION     8     SIG( 1, 1) =  1.2376E-01
+
+  AVERAGE OVER ORIENTATIONS
+                            SIG( 1, 1) =  1.6231E-01
+  STATE-TO-STATE CROSS SECTIONS (IN ANG**2) FOR KINETIC ENERGY =   1250.0000 CM-1.
+
+  PROCESSED BY IOSOUT (FEB 92).
+
+  NO. OF VIBRATIONAL LEVELS =   1.  LEVELS ARE
+          0
+
+  MAXIMUM J-VALUE REQUESTED IS   6
+
+   QLOLD(0)     1 TO  1 = -1.3784E-02
+
+   Q(  0 )      1 TO  1 =  1.4853E-01
+
+   Q(  1 )      1 TO  1 =  0.0000E+00
+
+   Q(  2 )      1 TO  1 =  1.2842E-02
+
+   Q(  3 )      1 TO  1 =  0.0000E+00
+
+   Q(  4 )      1 TO  1 =  9.1463E-04
+
+   Q(  5 )      1 TO  1 =  0.0000E+00
+
+   Q(  6 )      1 TO  1 =  2.7322E-05
+
+   Q(  7 )      1 TO  1 =  0.0000E+00
+
+   Q(  8 )      1 TO  1 =  4.4981E-07
+
+   Q(  9 )      1 TO  1 =  0.0000E+00
+
+   Q( 10 )      1 TO  1 =  4.3316E-09
+
+  ***** ***** ***** BELOW FOR VIB LEVEL  1 TO  1
+
+  FOR INITIAL LEVEL J =   0  NON-ZERO CROSS SECTIONS (ANG**2) TO FINAL LEVELS ARE
+      0  1.4853E-01       2  1.2842E-02       4  9.1463E-04       6  2.7322E-05 
+
+  FOR INITIAL LEVEL J =   1  NON-ZERO CROSS SECTIONS (ANG**2) TO FINAL LEVELS ARE
+      1  1.5367E-01       3  8.1117E-03       5  5.2074E-04 
+
+  FOR INITIAL LEVEL J =   2  NON-ZERO CROSS SECTIONS (ANG**2) TO FINAL LEVELS ARE
+      0  2.5684E-03       2  1.5246E-01       4  6.8507E-03       6  4.2284E-04 
+
+  FOR INITIAL LEVEL J =   3  NON-ZERO CROSS SECTIONS (ANG**2) TO FINAL LEVELS ARE
+      1  3.4765E-03       3  1.5213E-01       5  6.3213E-03 
+
+  FOR INITIAL LEVEL J =   4  NON-ZERO CROSS SECTIONS (ANG**2) TO FINAL LEVELS ARE
+      0  1.0163E-04       2  3.8059E-03       4  1.5202E-01       6  6.0262E-03 
+
+  FOR INITIAL LEVEL J =   5  NON-ZERO CROSS SECTIONS (ANG**2) TO FINAL LEVELS ARE
+      1  1.4202E-04       3  4.0226E-03       5  1.5197E-01 
+
+  FOR INITIAL LEVEL J =   6  NON-ZERO CROSS SECTIONS (ANG**2) TO FINAL LEVELS ARE
+      0  2.1017E-06       2  1.6263E-04       4  4.1720E-03       6  1.5194E-01*
+
+  ***** NOTE.  FOR CROSS SECTIONS MARKED WITH A STAR, SOME CONTRIBUTING Q(L) ARE NOT AVAILABLE.
+
+
+  ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
+ |                                                                            |
+ |                Non-reactive quantum scattering calculations                |
+ |                     on atomic and molecular collisions                     |
+ |                                                                            |
+ |              Copyright (C) 2018 J. M. Hutson & C. R. Le Sueur              |
+ |                                                                            |
+ |                               Version 2019.0 (beta)                        |
+ |                                                                            |
+ |                    This run used       0.02 cpu secs and                   |
+ |              50076 of the allocated   1000000 words of storage             |
+ |                                                                            |
+  ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---

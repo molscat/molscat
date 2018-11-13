@@ -1,0 +1,93 @@
+      SUBROUTINE DASIZE(ILSU,MXREC)
+C  Copyright (C) 2018 J. M. Hutson & C. R. Le Sueur
+C  Distributed under the GNU General Public License, version 3
+      IMPLICIT DOUBLE PRECISION (A-H,O-Z)
+      SAVE MXUSED,IX,R,S
+      PARAMETER (NREC=50000)
+      DIMENSION IX(6,NREC)
+      DIMENSION IR2(2),IS2(2)
+      EQUIVALENCE (R,IR1,IR2(1)),(S,IS1,IS2(1))
+      COMMON /ASSVAR/ IDA
+C
+C  DYNAMIC STORAGE COMMON BLOCK ...
+C  NEEDED FOR NIPR; PREVIOUSLY PASSED IN COMMON /INTPAC/
+      COMMON /MEMORY/ MX,IXNEXT,NIPR,IDUMMY,X(1)
+C
+      DATA MAXREC/NREC/
+C
+      MXREC=MAXREC
+      ILSU=999
+      WRITE(6,601) MAXREC
+  601 FORMAT('  *** *** NUMBER OF SIMULATED RECORDS =',I7)
+      RETURN
+C
+      ENTRY DAOPEN
+      MXUSED=0
+      WRITE(6,600)
+  600 FORMAT(/'  *** *** IN-CORE DA SIMULATION ROUTINE HAS CONTROL.',
+     1       /'  *** *** DA FILE WILL NOT BE USED.')
+C
+      IF (NIPR.EQ.1 .OR. NIPR.EQ.2) GOTO 1000
+      WRITE(6,602) NIPR
+  602 FORMAT('  *** ERROR IN DASIZE/DAOPEN: NIPR =',I3,' INVALID')
+      STOP
+ 1000 RETURN
+C
+      ENTRY DARD1(I1,I2,I3,I4,I5,I6)
+      I1=IX(1,IDA)
+      I2=IX(2,IDA)
+      I3=IX(3,IDA)
+      I4=IX(4,IDA)
+      I5=IX(5,IDA)
+      I6=IX(6,IDA)
+      RETURN
+C
+      ENTRY DAWR1(I1,I2,I3,I4,I5,I6)
+      MXUSED=MAX(MXUSED,IDA)
+      IX(1,IDA)=I1
+      IX(2,IDA)=I2
+      IX(3,IDA)=I3
+      IX(4,IDA)=I4
+      IX(5,IDA)=I5
+      IX(6,IDA)=I6
+      RETURN
+C
+      ENTRY DARD2(I1,I2,X1,X2)
+      I1=IX(1,IDA)
+      I2=IX(2,IDA)
+      IF (NIPR.EQ.1) THEN
+        IR1=IX(3,IDA)
+        IS1=IX(4,IDA)
+      ELSE
+        IR2(1)=IX(3,IDA)
+        IR2(2)=IX(4,IDA)
+        IS2(1)=IX(5,IDA)
+        IS2(2)=IX(6,IDA)
+      ENDIF
+      X1=R
+      X2=S
+      RETURN
+C
+      ENTRY DAWR2(I1,I2,X1,X2)
+      MXUSED=MAX(MXUSED,IDA)
+      IX(1,IDA)=I1
+      IX(2,IDA)=I2
+      R=X1
+      S=X2
+      IF (NIPR.EQ.1) THEN
+        IX(3,IDA)=IR1
+        IX(4,IDA)=IS1
+      ELSE
+        IX(3,IDA)=IR2(1)
+        IX(4,IDA)=IR2(2)
+        IX(5,IDA)=IS2(1)
+        IX(6,IDA)=IS2(2)
+      ENDIF
+      RETURN
+C
+      ENTRY DACLOS
+      WRITE(6,610) MXUSED,MAXREC
+  610 FORMAT(/'  *** IN-CORE DA SIMULATOR USED',I10,' OF THE',I10,
+     1        ' ALLOCATED RECORDS')
+      RETURN
+      END

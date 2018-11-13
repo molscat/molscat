@@ -1,0 +1,21 @@
+ &INPUT
+    LABEL  = 'p-H2 + o-H2: potential of Zarur and Rabitz supplied by VRTP',
+    URED   =  1.00794,
+    IPRINT = 11,    ISIGPR =   1,
+    RMIN   =  0.43, RMID   =   2.0, RMAX   = 20.0,  IRXSET =  1,
+    IPROPS =  6,    IPROPL =   1,   STEPS  = 15.0,
+    JTOTL  =  6,    JTOTU  =   6,
+    NNRG   =  1,    ENERGY = 700.0,
+ /
+
+ &BASIS
+    ITYPE  = 3,
+    BE     = 2*59.067,
+    NLEVEL = 3,   JLEVEL = 0,1,  0,3,  2,1,
+ /
+
+ &POTL
+    MXLAM  = 4,      NTERM  = 4*-1,
+                     LAMBDA = 0,0,0,  2,0,2,  0,2,2,  2,2,4,
+    LVRTP  = .TRUE.,
+ /

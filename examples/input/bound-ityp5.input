@@ -1,0 +1,25 @@
+ &INPUT
+    LABEL  = 'NH3-He k=1 bound states on simple analytic potential',
+    URED   =   3.24,
+    IPRINT =   5,
+    RMIN   =   5.8, RMAX   =  20.0, RMATCH = 10.0,  IRMSET = 8,
+    IPROPS =   6,   IPROPL =   6,   DR     =  0.04,
+    JTOTL  =   1,   JTOTU  =   1,   IBFIX  =  0,
+    EMIN   = -20.0, EMAX   =  15.3,
+ /
+
+ &BASIS
+    ITYPE  = 5,
+    A      = 9.9441, B      = 9.9441, C      = 6.2294, ROTI(10) = 0.7934,
+    JMAX   = 4,      KMAX   = 6,      ISYM   = ,,1,1,
+ /
+
+ &POTL
+    RM     =  0.52917721067, EPSIL  = 1.0,
+    MXLAM  =  5,
+                 LAMBDA =  0,0,            1,0,    2,0,   3,0,    3,3,
+                 NTERM  =  2,              1,      1,     1,      1,
+                 NPOWER = -6,      0,      0,     -6,     0,      0,
+                 E      =         -2.4,   -2.4,          -2.4,   -2.4,
+                 A      = -1.2E7,  6.2E8, -5.4E7, 2.2E6,  3.6E7, 1.0E8,
+ /

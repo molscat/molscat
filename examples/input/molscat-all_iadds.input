@@ -1,0 +1,155 @@
+ &INPUT
+    LABEL  = 'model system: ITYP=2; no decoupling (IADD=0)',
+    URED   = 20.0,
+    IPRINT =  3,   ISIGPR =    1, ISCRU  =  1,
+    RMIN   =  0.5, IRMSET =    8, RMAX   = 10.0, IRXSET = 1,
+    IPROPS =  6,   IPROPL =    1, STEPS  =  5.0, RVFAC  = 1.05, TOLHI  = 1.05,
+    JTOTL  = 10,   JTOTU  =   40, JSTEP  = 10,
+    NNRG   =  2,   ENERGY = 1250.0, 1000.0,
+    LASTIN =  0,
+ /
+
+ &BASIS
+    ITYPE  = 2, BE     = 30.0,  WE = 1200.0,
+    NLEVEL = 6, JLEVEL =  0,0, 2,0, 4,0, 6,0, 0,1, 2,1,
+    JZCSMX = 2,
+ /
+
+ &POTL
+    MXLAM  =   6,
+    LAMBDA =   0,0,0,       2,0,0,   0,1,1,       2,1,1,   0,1,0,   2,1,0,
+    NTERM  =   2,           1,       2,           1,       1,       1,
+    NPOWER = -12,   -6,    -6,     -12,   -6,    -6,     -12,     -12,
+    A      =   1.0, -2.0,  -0.2,     1.1, -2.2,  -0.4,     0.1,     0.01,
+    RM     =   3.5,   EPSIL  = 50.0,
+ /
+
+ &INPUT
+    LABEL  = 'model system: ITYP=2; effective potential (IADD=10)',
+    URED   = 20.0,
+    IPRINT =  3,   ISIGPR =    1, ISCRU  =  1,
+    RMIN   =  0.5, IRMSET =    8, RMAX   = 10.0, IRXSET = 1,
+    IPROPS =  6,   IPROPL =    1, STEPS  =  5.0, RVFAC  = 1.05, TOLHI  = 1.05,
+    JTOTL  = 10,   JTOTU  =   40, JSTEP  = 10,
+    NNRG   =  2,   ENERGY = 1250.0, 1000.0,
+    LASTIN =  0,
+ /
+
+ &BASIS
+    ITYPE  = 12, BE     = 30.0,  WE = 1200.0,
+    NLEVEL = 6,  JLEVEL =  0,0, 2,0, 4,0, 6,0, 0,1, 2,1,
+    JZCSMX = 2,
+ /
+
+ &POTL
+    MXLAM  =   6,
+    LAMBDA =   0,0,0,       2,0,0,   0,1,1,       2,1,1,   0,1,0,   2,1,0,
+    NTERM  =   2,           1,       2,           1,       1,       1,
+    NPOWER = -12,  -6,     -6,     -12,   -6,    -6,     -12,     -12,
+    A      =   1.0, -2.0,  -0.2,     1.1, -2.2,  -0.4,     0.1,     0.01,
+    RM     =   3.5,   EPSIL  = 50.0,
+ /
+
+ &INPUT
+    LABEL  = 'model system: ITYP=2; coupled states (IADD=20)',
+    URED   = 20.0,
+    IPRINT =  3,   ISIGPR =    1, ISCRU  =  1,
+    RMIN   =  0.5, IRMSET =    8, RMAX   = 10.0, IRXSET = 1,
+    IPROPS =  6,   IPROPL =    1, STEPS  =  5.0, RVFAC  = 1.05, TOLHI  = 1.05,
+    JTOTL  = 10,   JTOTU  =   40, JSTEP  = 10,
+    NNRG   =  2,   ENERGY = 1250.0, 1000.0,
+    LASTIN =  0,
+ /
+
+ &BASIS
+    ITYPE  = 22, BE     = 30.0,  WE = 1200.0,
+    NLEVEL =  6, JLEVEL =  0,0, 2,0, 4,0, 6,0, 0,1, 2,1,
+    JZCSMX =  2,
+ /
+
+ &POTL
+    MXLAM  =   6,
+    LAMBDA =   0,0,0,       2,0,0,   0,1,1,       2,1,1,   0,1,0,   2,1,0,
+    NTERM  =   2,           1,       2,           1,       1,       1,
+    NPOWER = -12,  -6,     -6,     -12,   -6,    -6,     -12,     -12,
+    A      =   1.0, -2.0,  -0.2,     1.1, -2.2,  -0.4,     0.1,     0.01,
+    RM     =   3.5,   EPSIL  = 50.0,
+ /
+
+ &INPUT
+    LABEL  = 'model system: ITYP=2; helicity decoupling (IADD=20, IBOUND=1)',
+    URED   = 20.0,
+    IPRINT =  3,   ISIGPR =    1, ISCRU  =  1,
+    RMIN   =  0.5, IRMSET =    8, RMAX   = 10.0, IRXSET = 1,
+    IPROPS =  6,   IPROPL =    1, STEPS  =  5.0, RVFAC  = 1.05, TOLHI  = 1.05,
+    JTOTL  = 10,   JTOTU  =   40, JSTEP  = 10,
+    NNRG   =  2,   ENERGY = 1250.0, 1000.0,
+    LASTIN =  0,
+ /
+
+ &BASIS
+    ITYPE  = 22,  BE     = 30.0,  WE = 1200.0,
+    NLEVEL =  6,  JLEVEL =  0,0, 2,0, 4,0, 6,0, 0,1, 2,1,
+    JZCSMX =  2,  IBOUND =  1,
+ /
+
+ &POTL
+    MXLAM  =   6,
+    LAMBDA =   0,0,0,       2,0,0,   0,1,1,       2,1,1,   0,1,0,   2,1,0,
+    NTERM  =   2,           1,       2,           1,       1,       1,
+    NPOWER = -12,   -6,    -6,     -12,   -6,    -6,     -12,     -12,
+    A      =   1.0, -2.0,  -0.2,     1.1, -2.2,  -0.4,     0.1,     0.01,
+    RM     =   3.5,   EPSIL  = 50.0,
+ /
+
+ &INPUT
+    LABEL  = 'model system: ITYP=2; decoupled L-dominant (IADD=30)',
+    URED   = 20.0,
+    IPRINT =  3,   ISIGPR =    1, ISCRU  =  1,
+    RMIN   =  0.5, IRMSET =    8, RMAX   = 10.0, IRXSET = 1,
+    IPROPS =  6,   IPROPL =    1, STEPS  =  5.0, RVFAC  = 1.05, TOLHI  = 1.05,
+    JTOTL  = 10,   JTOTU  =   40, JSTEP  = 10,
+    NNRG   =  2,   ENERGY = 1250.0, 1000.0,
+    LASTIN =  0,
+ /
+
+ &BASIS
+    ITYPE  = 32,  BE     = 30.0,  WE = 1200.0,
+    NLEVEL =  6,  JLEVEL =  0,0, 2,0, 4,0, 6,0, 0,1, 2,1,
+    JZCSMX =  2,
+ /
+
+ &POTL
+    MXLAM  =   6,
+    LAMBDA =   0,0,0,       2,0,0,   0,1,1,       2,1,1,   0,1,0,   2,1,0,
+    NTERM  =   2,           1,       2,           1,       1,       1,
+    NPOWER = -12,   -6,    -6,     -12,   -6,    -6,     -12,     -12,
+    A      =   1.0, -2.0,  -0.2,     1.1, -2.2,  -0.4,     0.1,     0.01,
+    RM     =   3.5,   EPSIL  = 50.0,
+ /
+
+ &INPUT
+    LABEL = 'model system: ITYP=2; Infinite order sudden approximation (IADD=100)',
+    URED   = 20.0,
+    IPRINT =  3,   ISIGPR =    1, ISCRU  =  1,
+    RMIN   =  0.5, IRMSET =    8, RMAX   = 10.0, IRXSET = 1,
+    IPROPS =  6,   IPROPL =    1, STEPS  =  5.0, RVFAC  = 1.05, TOLHI  = 1.05,
+    JTOTL  = 10,   JTOTU  =   40, JSTEP  = 10,
+    NNRG   =  2,   ENERGY = 1250.0, 1000.0,
+    LASTIN =  1,
+ /
+
+ &BASIS
+    ITYPE  = 102,   BE     = 30.0,  WE = 1200.0,
+    NLEVEL =   6,   JLEVEL =  0,0, 2,0, 4,0, 6,0, 0,1, 2,1,
+    JZCSMX =   2,   IOSNGP =  8,
+ /
+
+ &POTL
+    MXLAM  =   6,
+    LAMBDA =   0,0,0,       2,0,0,   0,1,1,       2,1,1,   0,1,0,   2,1,0,
+    NTERM  =   2,           1,       2,           1,       1,       1,
+    NPOWER = -12,   -6,    -6,     -12,   -6,    -6,     -12,     -12,
+    A      =   1.0, -2.0,  -0.2,     1.1, -2.2,  -0.4,     0.1,     0.01,
+    RM     =   3.5,   EPSIL  = 50.0,
+ /

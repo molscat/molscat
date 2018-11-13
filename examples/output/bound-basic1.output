@@ -1,0 +1,154 @@
+  -- BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND --
+ |                                                                            |
+ |          Bound states of interacting pairs of atoms and molecules          |
+ |                                                                            |
+ |              Copyright (C) 2018 J. M. Hutson & C. R. Le Sueur              |
+ |                                                                            |
+ |                               Version 2019.0 (beta)                        |
+ |                                                                            |
+ |                       Run on 12 Nov 2018   at 14:59:24                     |
+ |                                                                            |
+  -- BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND --
+
+
+  This program is free software: you can redistribute it and/or modify it under
+  the terms of the GNU General Public License, version 3, as published by
+  the Free Software Foundation.
+
+  Publications resulting from the use of this program should refer to
+  J. M. Hutson & C. R. Le Sueur, BOUND computer code 2019.0 (beta)       
+  or to the published paper in Computer Physics Communications when available.
+
+
+  PHYSICAL CONSTANTS OBTAINED FROM NIST CODATA TABULATION OF 2014
+
+  MEMORY ALLOCATED TO MAIN WORKING ARRAY IS   1000000 (8-BYTE) WORDS (    7.63 MB)
+
+  PRINT LEVEL =  1
+
+  RUN LABEL = model system: ITYPE=1                                                           
+
+  REDUCED MASS FOR INTERACTION =  20.000000000 ATOMIC MASS UNITS
+
+  *** WARNING - NO SCRATCH FILE SPECIFIED BY ISCRU PARAMETER - FULL CALCULATION WILL BE DONE AT EACH ENERGY
+
+  ======================================================================================================================
+
+  INTERACTION TYPE IS    LINEAR RIGID ROTOR  -  ATOM.  
+
+  TARGET ROTATIONAL LEVELS TAKEN FROM &BASIS (JLEVEL) INPUT.  NLEVEL =  4
+
+  ENERGY LEVELS COMPUTED FROM B(E) =   30.000000
+
+  QUANTUM NUMBERS FOR INTERACTING PAIR:
+  EACH PAIR STATE IS LABELLED BY  1 QUANTUM LABEL 
+  EACH CHANNEL FUNCTION IS FORMED BY COMBINING A PAIR STATE WITH A VALUE OF L.
+  THE RESULTING BASIS SET IS ASYMPTOTICALLY DIAGONAL.
+
+  PAIR STATE     PAIR STATE QUANTUM NUMBERS    PAIR LEVEL     PAIR ENERGY (CM-1)
+                ---------        J ---------
+        1                        0                1             0.0000000
+        2                        2                2           180.0000000
+        3                        4                3           600.0000000
+        4                        6                4          1260.0000000
+
+  ======================================================================================================================
+  GENERAL-PURPOSE POTENL ROUTINE (MAY 18)
+
+  ANGULAR DEPENDENCE OF POTENTIAL EXPANDED IN TERMS OF
+  LEGENDRE POLYNOMIALS, P(LAMBDA).
+
+  INTERACTION POTENTIAL FOR EXPANSION TERM NUMBER   1
+  WHICH HAS LAMBDA =   0
+
+                 0.10000000E+01 * R **-12
+                -0.20000000E+01 * R ** -6
+
+  INTERACTION POTENTIAL FOR EXPANSION TERM NUMBER   2
+  WHICH HAS LAMBDA =   2
+
+                -0.20000000E+00 * R ** -6
+
+  POTENL PROCESSING FINISHED.
+
+  UNITS FOR POTENTIAL ROUTINES:
+  POTENTIAL RETURNED IN UNITS OF EPSIL =      50.000000 CM-1
+  R                  IN UNITS OF RM    =       3.500000 ANGSTROMS
+  INTERACTION MATRIX USES   2 BLOCKS OF VL ARRAY FOR R-DEPENDENT TERMS IN POTENTIAL
+
+  ======================================================================================================================
+
+  PROPAGATION ALGORITHMS FOR COUPLED EQUATIONS SPECIFIED BY IPROPS =  6 AND IPROPL =  6
+
+  COUPLED EQUATIONS WILL BE PROPAGATED TOWARDS RMATCH IN 2 SEGMENTS
+  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+  SEGMENT 1 WILL BE PROPAGATED OUTWARDS
+
+  FROM RMIN   =      0.50  TO RMATCH =      1.00
+
+  COUPLED EQUATIONS SOLVED BY DIABATIC MODIFIED LOG DERIVATIVE METHOD OF MANOLOPOULOS
+
+  PROPAGATION STEP SIZE DETERMINED USING DR =  1.000E-03
+
+  LOG-DERIVATIVE MATRIX WILL BE INITIALISED IN THE LOCAL EIGENBASIS FOR RMIN IN THE OUTWARDS PROPAGATION PART
+  LOCALLY CLOSED CHANNELS WILL BE INITIALISED WITH A WKB BOUNDARY CONDITION
+  LOCALLY OPEN CHANNELS WILL BE INITIALISED WITH THE VALUE  1.0000000E+08
+  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+  SEGMENT 2 WILL BE PROPAGATED  INWARDS
+
+  FROM RMAX   =     20.00  TO RMATCH =      1.00
+
+  COUPLED EQUATIONS SOLVED BY DIABATIC MODIFIED LOG DERIVATIVE METHOD OF MANOLOPOULOS
+
+  PROPAGATION STEP SIZE DETERMINED USING DR =  1.000E-03
+
+  LOG-DERIVATIVE MATRIX WILL BE INITIALISED IN THE LOCAL EIGENBASIS FOR RMAX IN THE INWARDS PROPAGATION PART
+  LOCALLY CLOSED CHANNELS WILL BE INITIALISED WITH A WKB BOUNDARY CONDITION
+  LOCALLY   OPEN CHANNELS WILL BE INITIALISED WITH THE VALUE  0.0000000E+00
+  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+  ======================================================================================================================
+
+  PROGRAM WILL ATTEMPT TO CONVERGE ON BOUND STATES AS A FUNCTION OF ENERGY
+
+  FOR EACH LEVEL, THE BISECTION METHOD WILL BE USED UNTIL THE VWDB METHOD OFFERS RELIABLE CONVERGENCE.
+
+  BOUND STATE POSITIONS WILL BE IDENTIFIED WITH AN ACCURACY OF  1.00000E-07 CM-1    
+
+  INPUT ENERGY VALUES ASSUMED TO BE IN UNITS OF CM-1 BY DEFAULT.
+
+  PROGRAM WILL SEEK EIGENVALUES WITH GENERALISED NODE COUNTS FROM    0 TO  99999
+  LYING IN ENERGY RANGE  -10.000     TO  -1.0000     CM-1    
+
+  INITIALIZATION DONE.  TIME WAS   0.00 CPU SECS.         9 WORDS OF STORAGE USED.
+
+  ======================================================================================================================
+
+  TOTAL ANGULAR MOMENTUM JTOT =   1
+
+  EACH JTOT IS SPLIT INTO A MAXIMUM OF   2 DIFFERENT SYMMETRY BLOCKS
+
+  CALCULATIONS WILL BE FOR SYMMETRY BLOCK   2  ONLY
+
+  =============================================== model system: ITYPE=1 ================================================
+
+  NODE COUNT =    3 AT MINIMUM ENERGY =  -10.00000000     CM-1  
+  NODE COUNT =    5 AT MAXIMUM ENERGY =  -1.000000000     CM-1  
+
+  CONVERGED ON NODE NUMBER     4 AT                               ENERGY =  -4.992074666     CM-1  
+
+  CONVERGED ON NODE NUMBER     5 AT                               ENERGY =  -1.413103889     CM-1  
+
+
+  -- BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND --
+ |                                                                            |
+ |          Bound states of interacting pairs of atoms and molecules          |
+ |                                                                            |
+ |              Copyright (C) 2018 J. M. Hutson & C. R. Le Sueur              |
+ |                                                                            |
+ |                               Version 2019.0 (beta)                        |
+ |                                                                            |
+ |                    This run used       2.86 cpu secs and                   |
+ |                305 of the allocated   1000000 words of storage             |
+ |                                                                            |
+  -- BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND --

@@ -1,0 +1,34 @@
+ &INPUT
+    LABEL  = 'ITYP = 9: Mg + NH in magnetic field; near-threshold states',
+    URED   =    9.232679959,
+    IPRINT =    5,
+    RMIN   =    2.3D0, RMATCH =   5.0D0, RMAX   = 50.0D0, IRMSET = 0,
+    IPROPS =    6,     IPROPL =   1,     DR     =  0.04,  TOLHI  = 1.D-4,
+    JTOTL  =   -1,     JTOTU  =  -1,     IBFIX  =  2,
+    EUNITS =    3,
+    EMIN   = -100.0,   EMAX   =  -0.01,
+    MONQN  =    0, 1, -1,
+    FLDMIN =  370.0,   FLDMAX = 385.0,   DFIELD = 5.0,
+ /
+
+ &BASIS
+    ITYPE  =  9,
+    ROTI   = 16.343D0, -0.055D0, 0.92D0, ! B, GAMMA, LAMBDA
+    JMIN   =  0, JMAX   = 2, JSTEP  = 1,
+ /
+
+ &BASIS9
+    IS     = 1,
+    LMAX   = 8,
+    IBSFLG = 2,
+ /
+
+ &POTL
+    MXLAM  = 7,
+    LAMBDA = 0, 1, 2, 3, 4, 5, 6,
+    NTERM  = 7*-1,
+ /
+
+ &POTL9
+    ITYPE  = 1,
+ /

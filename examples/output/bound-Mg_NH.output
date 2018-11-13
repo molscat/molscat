@@ -1,0 +1,464 @@
+  -- BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND --
+ |                                                                            |
+ |          Bound states of interacting pairs of atoms and molecules          |
+ |                                                                            |
+ |              Copyright (C) 2018 J. M. Hutson & C. R. Le Sueur              |
+ |                                                                            |
+ |                               Version 2019.0 (beta)                        |
+ |                                                                            |
+ |                       Run on 12 Nov 2018   at 15:10:51                     |
+ |                                                                            |
+  -- BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND --
+
+
+  This program is free software: you can redistribute it and/or modify it under
+  the terms of the GNU General Public License, version 3, as published by
+  the Free Software Foundation.
+
+  Publications resulting from the use of this program should refer to
+  J. M. Hutson & C. R. Le Sueur, BOUND computer code 2019.0 (beta)       
+  or to the published paper in Computer Physics Communications when available.
+
+
+  PHYSICAL CONSTANTS OBTAINED FROM NIST CODATA TABULATION OF 2014
+
+  MEMORY ALLOCATED TO MAIN WORKING ARRAY IS   1000000 (8-BYTE) WORDS (    7.63 MB)
+
+  PRINT LEVEL =  5
+
+  RUN LABEL = ITYP = 9: Mg + NH in magnetic field; near-threshold states                      
+
+  REDUCED MASS FOR INTERACTION =   9.232679959 ATOMIC MASS UNITS
+
+  *** WARNING - NO SCRATCH FILE SPECIFIED BY ISCRU PARAMETER - FULL CALCULATION WILL BE DONE AT EACH ENERGY
+
+  ======================================================================================================================
+
+  BASIS SETS USE DIATOM SPIN = 1
+                 NMAX =  2
+                 LMAX =  8
+
+  BASIS SET IS <COUPLED>, OFF-DIAGONAL TERMS INCLUDED
+
+  INTERACTION TYPE IS  ATOM + 3SIGMA IN MAGNETIC FIELD 
+
+  ENERGY LEVELS CALCULATED FROM:
+  Bv     =  16.34300
+  GAMMA  =  -0.05500
+  LAMBDA =   0.92000
+
+  QUANTUM NUMBERS FOR INTERACTING PAIR:
+  THE BASIS FUNCTIONS ARE LABELLED BY A SET OF   3 PAIR STATE QUANTUM NUMBERS AND A VALUE OF L.
+  THE RESULTING BASIS SET IS ASYMPTOTICALLY NON-DIAGONAL.
+
+  THE SETS OF PAIR STATE QUANTUM NUMBERS ARE:
+
+      SET       - PAIR STATE QUANTUM NUMBERS -
+                        N         J        MJ
+        1               0         1        -1
+        2               0         1         0
+        3               0         1         1
+        4               1         0         0
+        5               1         1        -1
+        6               1         1         0
+        7               1         1         1
+        8               1         2        -2
+        9               1         2        -1
+       10               1         2         0
+       11               1         2         1
+       12               1         2         2
+       13               2         1        -1
+       14               2         1         0
+       15               2         1         1
+       16               2         2        -2
+       17               2         2        -1
+       18               2         2         0
+       19               2         2         1
+       20               2         2         2
+       21               2         3        -3
+       22               2         3        -2
+       23               2         3        -1
+       24               2         3         0
+       25               2         3         1
+       26               2         3         2
+       27               2         3         3
+
+  ======================================================================================================================
+
+  THIS CALCULATION USES  1 EXTERNAL FIELD VARIABLE 
+
+  OFFSET BETWEEN EFV INDICES AND COUPLING MATRIX COEFFICIENT INDICES IS  3
+  GENERAL-PURPOSE POTENL ROUTINE (MAY 18)
+
+  *** POTENL. ITYPE =   9 CANNOT BE PROCESSED TO DETERMINE THE POTENTIAL EXPANSION LABELS
+
+  INTERACTION POTENTIAL FOR EXPANSION TERM NUMBER   1
+
+  NUMBER OF ANGLES:            9
+
+  INTERACTION POTENTIAL FOR EXPANSION TERM NUMBER   2
+
+
+  INTERACTION POTENTIAL FOR EXPANSION TERM NUMBER   3
+
+
+  INTERACTION POTENTIAL FOR EXPANSION TERM NUMBER   4
+
+
+  INTERACTION POTENTIAL FOR EXPANSION TERM NUMBER   5
+
+
+  INTERACTION POTENTIAL FOR EXPANSION TERM NUMBER   6
+
+
+  INTERACTION POTENTIAL FOR EXPANSION TERM NUMBER   7
+
+
+  POTENL PROCESSING FINISHED.
+
+  UNITS FOR POTENTIAL ROUTINES:
+  POTENTIAL RETURNED IN UNITS OF EPSIL =       1.000000 CM-1
+  R                  IN UNITS OF RM    =       1.000000 ANGSTROMS
+  INTERACTION MATRIX USES   7 BLOCKS OF VL ARRAY FOR R-DEPENDENT TERMS IN POTENTIAL
+                            4                    FOR CONSTANT    TERMS IN POTENTIAL
+
+  IN TOTAL: 11 BLOCKS OF VL ARRAY ARE USED
+
+
+  ======================================================================================================================
+
+  PROPAGATION ALGORITHMS FOR COUPLED EQUATIONS SPECIFIED BY IPROPS =  6 AND IPROPL =  1
+
+  COUPLED EQUATIONS WILL BE PROPAGATED TOWARDS RMATCH IN 2 SEGMENTS
+  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+  SEGMENT 1 WILL BE PROPAGATED OUTWARDS
+
+  FROM RMIN   =      2.30  TO RMATCH =      5.00
+
+  COUPLED EQUATIONS SOLVED BY DIABATIC MODIFIED LOG DERIVATIVE METHOD OF MANOLOPOULOS
+
+  PROPAGATION STEP SIZE DETERMINED USING DR =  4.000E-02
+
+  LOG-DERIVATIVE MATRIX WILL BE INITIALISED IN THE LOCAL EIGENBASIS FOR RMIN IN THE OUTWARDS PROPAGATION PART
+  LOCALLY CLOSED CHANNELS WILL BE INITIALISED WITH A WKB BOUNDARY CONDITION
+  LOCALLY OPEN CHANNELS WILL BE INITIALISED WITH THE VALUE  1.0000000E+08
+  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+  SEGMENT 2 WILL BE PROPAGATED  INWARDS
+
+  FROM RMAX   =     50.00  TO RMATCH =      5.00
+
+  COUPLED EQUATIONS SOLVED BY VARIABLE STEP AIRY METHOD.
+  ALL PUBLICATIONS RESULTING FROM THE USE OF THIS PROPAGATOR SHOULD REFERENCE
+  M.H. ALEXANDER AND D.E. MANOLOPOULOS,  J CHEM PHYS 86, 2044 (1987).
+
+  INITIAL STEP SIZE TAKEN FROM RMAX/400 =  0.125    
+                             WITH TOLHI =  1.00E-04         POWRX = 6.0
+  TOLHI.LT.1  --  AIRY STEPS ADJUSTED TO MAINTAIN APPROX. ACCURACY VIA PERTURBATION THEORY AND POWRX.
+
+  LOG-DERIVATIVE MATRIX WILL BE INITIALISED IN THE LOCAL EIGENBASIS FOR RMAX IN THE INWARDS PROPAGATION PART
+  LOCALLY CLOSED CHANNELS WILL BE INITIALISED WITH A WKB BOUNDARY CONDITION
+  LOCALLY   OPEN CHANNELS WILL BE INITIALISED WITH THE VALUE  0.0000000E+00
+  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+  ======================================================================================================================
+
+  PROGRAM WILL ATTEMPT TO CONVERGE ON BOUND STATES AS A FUNCTION OF ENERGY
+
+  FOR EACH LEVEL, THE BISECTION METHOD WILL BE USED UNTIL THE VWDB METHOD OFFERS RELIABLE CONVERGENCE.
+
+  BOUND STATE POSITIONS WILL BE IDENTIFIED WITH AN ACCURACY OF  1.00000E-07 MHZ     
+
+  CONTROL DATA FOR EXTERNAL FIELD VARIABLES.  CALCULATIONS WILL BE PERFORMED FOR   4 SETS
+
+                  MAGNETIC Z FIELD (GAUSS )
+  SET     1:          370.0000000    
+  SET     2:          375.0000000    
+  SET     3:          380.0000000    
+  SET     4:          385.0000000    
+
+  INPUT ENERGY VALUES CONVERTED FROM MHZ
+  TO INTERNAL WORKING UNITS OF CM-1 DUE TO INTEGER INPUT =   3
+
+  PROGRAM WILL SEEK EIGENVALUES WITH GENERALISED NODE COUNTS FROM    0 TO  99999
+  LYING IN ENERGY RANGE  -100.00     TO -1.00000E-02 MHZ     
+
+  THESE ENERGY VALUES ARE RELATIVE TO THE REFERENCE ENERGY SPECIFIED BY MONOMER QUANTUM NUMBERS   0   1  -1
+  THE REFERENCE ENERGY WILL BE CALCULATED FOR EVERY EFV SET
+
+  INITIALIZATION DONE.  TIME WAS   0.00 CPU SECS.       112 WORDS OF STORAGE USED.
+
+  ======================================================================================================================
+
+  TOTAL ANGULAR MOMENTUM JTOT =  -1
+
+  EACH JTOT IS SPLIT INTO A MAXIMUM OF   2 DIFFERENT SYMMETRY BLOCKS
+
+  CALCULATIONS WILL BE FOR SYMMETRY BLOCK   2  ONLY
+
+  ============================= ITYP = 9: Mg + NH in magnetic field; near-threshold states =============================
+
+  *******************************************  ANGULAR MOMENTUM JTOT  =  -1  *******************************************
+
+  BASIS SET FOR MTOT = -1, PARITY = (-1)**1
+  * * * NOTE.  FOR JTOT =  -1,  ALL COUPLING COEFFICIENTS ARE 0.0 FOR POTENTIAL SYMMETRY   6
+  * * * NOTE.  FOR JTOT =  -1,  ALL COUPLING COEFFICIENTS ARE 0.0 FOR POTENTIAL SYMMETRY   7
+
+  BASIS FUNCTION LIST:
+  BASIS FN        SET   - PAIR STATE QUANTUM NUMBERS -           L 
+                               N         J        MJ  
+        1           1          0         1        -1             1
+        2           1          0         1        -1             3
+        3           1          0         1        -1             5
+        4           1          0         1        -1             7
+        5           2          0         1         0             1
+        6           2          0         1         0             3
+        7           2          0         1         0             5
+        8           2          0         1         0             7
+        9           3          0         1         1             3
+       10           3          0         1         1             5
+       11           3          0         1         1             7
+       12           4          1         0         0             2
+       13           4          1         0         0             4
+       14           4          1         0         0             6
+       15           4          1         0         0             8
+       16           5          1         1        -1             0
+       17           5          1         1        -1             2
+       18           5          1         1        -1             4
+       19           5          1         1        -1             6
+       20           5          1         1        -1             8
+       21           6          1         1         0             2
+       22           6          1         1         0             4
+       23           6          1         1         0             6
+       24           6          1         1         0             8
+       25           7          1         1         1             2
+       26           7          1         1         1             4
+       27           7          1         1         1             6
+       28           7          1         1         1             8
+       29           8          1         2        -2             2
+       30           8          1         2        -2             4
+       31           8          1         2        -2             6
+       32           8          1         2        -2             8
+       33           9          1         2        -1             0
+       34           9          1         2        -1             2
+       35           9          1         2        -1             4
+       36           9          1         2        -1             6
+       37           9          1         2        -1             8
+       38          10          1         2         0             2
+       39          10          1         2         0             4
+       40          10          1         2         0             6
+       41          10          1         2         0             8
+       42          11          1         2         1             2
+       43          11          1         2         1             4
+       44          11          1         2         1             6
+       45          11          1         2         1             8
+       46          12          1         2         2             4
+       47          12          1         2         2             6
+       48          12          1         2         2             8
+       49          13          2         1        -1             1
+       50          13          2         1        -1             3
+       51          13          2         1        -1             5
+       52          13          2         1        -1             7
+       53          14          2         1         0             1
+       54          14          2         1         0             3
+       55          14          2         1         0             5
+       56          14          2         1         0             7
+       57          15          2         1         1             3
+       58          15          2         1         1             5
+       59          15          2         1         1             7
+       60          16          2         2        -2             1
+       61          16          2         2        -2             3
+       62          16          2         2        -2             5
+       63          16          2         2        -2             7
+       64          17          2         2        -1             1
+       65          17          2         2        -1             3
+       66          17          2         2        -1             5
+       67          17          2         2        -1             7
+       68          18          2         2         0             1
+       69          18          2         2         0             3
+       70          18          2         2         0             5
+       71          18          2         2         0             7
+       72          19          2         2         1             3
+       73          19          2         2         1             5
+       74          19          2         2         1             7
+       75          20          2         2         2             3
+       76          20          2         2         2             5
+       77          20          2         2         2             7
+       78          21          2         3        -3             3
+       79          21          2         3        -3             5
+       80          21          2         3        -3             7
+       81          22          2         3        -2             1
+       82          22          2         3        -2             3
+       83          22          2         3        -2             5
+       84          22          2         3        -2             7
+       85          23          2         3        -1             1
+       86          23          2         3        -1             3
+       87          23          2         3        -1             5
+       88          23          2         3        -1             7
+       89          24          2         3         0             1
+       90          24          2         3         0             3
+       91          24          2         3         0             5
+       92          24          2         3         0             7
+       93          25          2         3         1             3
+       94          25          2         3         1             5
+       95          25          2         3         1             7
+       96          26          2         3         2             3
+       97          26          2         3         2             5
+       98          26          2         3         2             7
+       99          27          2         3         3             5
+      100          27          2         3         3             7
+  = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = 
+
+  EFV SET     1:  MAGNETIC Z FIELD =   370.0000000     GAUSS
+
+  REFERENCE ENERGY EREF =  -1267.856199     MHZ = -4.2291130564E-02 CM-1
+
+  NODE COUNT =  169 AT MINIMUM ENERGY =  -100.0000000     MHZ   
+  NODE COUNT =  170 AT MAXIMUM ENERGY = -1.0000000000E-02 MHZ   
+
+  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+  SEARCHING FOR INODE =    1 CORRESPONDING TO NODE COUNT =  170
+
+  CONVERGED ON NODE NUMBER   170 AT                               ENERGY =  -42.83055562     MHZ   
+
+  SMALLEST EIGENVALUE IS NUMBER 28 = -0.12053E-10
+
+  WITH PRINCIPAL EIGENVECTOR COMPONENTS
+  CHAN     VEC    VEC**2   L   QUANTUM NUMBERS
+
+   3    0.4405    0.1940   5   0   1  -1   1
+   7   -0.3895    0.1517   5   0   1   0   2
+  10    0.1988    0.0395   5   0   1   1   3
+  13   -0.1077    0.0116   4   1   0   0   4
+  18    0.1223    0.0149   4   1   1  -1   5
+  19    0.2721    0.0740   6   1   1  -1   5
+  23   -0.2442    0.0596   6   1   1   0   6
+  26   -0.2572    0.0661   4   1   1   1   7
+  27    0.1267    0.0160   6   1   1   1   7
+  31   -0.1430    0.0204   6   1   2  -2   8
+  36    0.2801    0.0784   6   1   2  -1   9
+  40   -0.3487    0.1216   6   1   2   0  10
+  44    0.3011    0.0907   6   1   2   1  11
+  46   -0.0888    0.0079   4   1   2   2  12
+  47   -0.1706    0.0291   6   1   2   2  12
+  = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = 
+
+  EFV SET     2:  MAGNETIC Z FIELD =   375.0000000     GAUSS
+
+  REFERENCE ENERGY EREF =  -1281.867017     MHZ = -4.2758481155E-02 CM-1
+
+  NODE COUNT =  169 AT MINIMUM ENERGY =  -100.0000000     MHZ   
+  NODE COUNT =  170 AT MAXIMUM ENERGY = -1.0000000000E-02 MHZ   
+
+  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+  SEARCHING FOR INODE =    1 CORRESPONDING TO NODE COUNT =  170
+
+  CONVERGED ON NODE NUMBER   170 AT                               ENERGY =  -30.54023586     MHZ   
+
+  SMALLEST EIGENVALUE IS NUMBER 28 =  0.45481E-10
+
+  WITH PRINCIPAL EIGENVECTOR COMPONENTS
+  CHAN     VEC    VEC**2   L   QUANTUM NUMBERS
+
+   3    0.4417    0.1951   5   0   1  -1   1
+   7   -0.3874    0.1501   5   0   1   0   2
+  10    0.1957    0.0383   5   0   1   1   3
+  13   -0.1072    0.0115   4   1   0   0   4
+  18    0.1208    0.0146   4   1   1  -1   5
+  19    0.2768    0.0766   6   1   1  -1   5
+  23   -0.2465    0.0608   6   1   1   0   6
+  26   -0.2595    0.0673   4   1   1   1   7
+  27    0.1269    0.0161   6   1   1   1   7
+  31   -0.1419    0.0201   6   1   2  -2   8
+  36    0.2790    0.0779   6   1   2  -1   9
+  40   -0.3474    0.1207   6   1   2   0  10
+  44    0.2988    0.0893   6   1   2   1  11
+  46   -0.0909    0.0083   4   1   2   2  12
+  47   -0.1680    0.0282   6   1   2   2  12
+  = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = 
+
+  EFV SET     3:  MAGNETIC Z FIELD =   380.0000000     GAUSS
+
+  REFERENCE ENERGY EREF =  -1295.877835     MHZ = -4.3225831746E-02 CM-1
+
+  NODE COUNT =  169 AT MINIMUM ENERGY =  -100.0000000     MHZ   
+  NODE COUNT =  170 AT MAXIMUM ENERGY = -1.0000000000E-02 MHZ   
+
+  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+  SEARCHING FOR INODE =    1 CORRESPONDING TO NODE COUNT =  170
+
+  CONVERGED ON NODE NUMBER   170 AT                               ENERGY =  -18.14612502     MHZ   
+
+  SMALLEST EIGENVALUE IS NUMBER 28 = -0.35579E-10
+
+  WITH PRINCIPAL EIGENVECTOR COMPONENTS
+  CHAN     VEC    VEC**2   L   QUANTUM NUMBERS
+
+   3    0.4428    0.1961   5   0   1  -1   1
+   7   -0.3851    0.1483   5   0   1   0   2
+  10    0.1925    0.0371   5   0   1   1   3
+  13   -0.1068    0.0114   4   1   0   0   4
+  18    0.1194    0.0143   4   1   1  -1   5
+  19    0.2814    0.0792   6   1   1  -1   5
+  23   -0.2489    0.0619   6   1   1   0   6
+  26   -0.2619    0.0686   4   1   1   1   7
+  27    0.1271    0.0161   6   1   1   1   7
+  31   -0.1408    0.0198   6   1   2  -2   8
+  36    0.2779    0.0772   6   1   2  -1   9
+  40   -0.3460    0.1197   6   1   2   0  10
+  44    0.2964    0.0878   6   1   2   1  11
+  46   -0.0930    0.0086   4   1   2   2  12
+  47   -0.1654    0.0274   6   1   2   2  12
+  = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = 
+
+  EFV SET     4:  MAGNETIC Z FIELD =   385.0000000     GAUSS
+
+  REFERENCE ENERGY EREF =  -1309.888653     MHZ = -4.3693182338E-02 CM-1
+
+  NODE COUNT =  169 AT MINIMUM ENERGY =  -100.0000000     MHZ   
+  NODE COUNT =  170 AT MAXIMUM ENERGY = -1.0000000000E-02 MHZ   
+
+  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+  SEARCHING FOR INODE =    1 CORRESPONDING TO NODE COUNT =  170
+
+  CONVERGED ON NODE NUMBER   170 AT                               ENERGY =  -5.691226976     MHZ   
+
+  SMALLEST EIGENVALUE IS NUMBER 28 = -0.23232E-10
+
+  WITH PRINCIPAL EIGENVECTOR COMPONENTS
+  CHAN     VEC    VEC**2   L   QUANTUM NUMBERS
+
+   3    0.4439    0.1971   5   0   1  -1   1
+   7   -0.3828    0.1466   5   0   1   0   2
+  10    0.1893    0.0359   5   0   1   1   3
+  13   -0.1063    0.0113   4   1   0   0   4
+  18    0.1179    0.0139   4   1   1  -1   5
+  19    0.2861    0.0818   6   1   1  -1   5
+  23   -0.2512    0.0631   6   1   1   0   6
+  26   -0.2644    0.0699   4   1   1   1   7
+  27    0.1272    0.0162   6   1   1   1   7
+  31   -0.1396    0.0195   6   1   2  -2   8
+  36    0.2767    0.0766   6   1   2  -1   9
+  40   -0.3446    0.1187   6   1   2   0  10
+  44    0.2939    0.0864   6   1   2   1  11
+  46   -0.0952    0.0091   4   1   2   2  12
+  47   -0.1628    0.0265   6   1   2   2  12
+
+  ======================================================================================================================
+
+
+  -- BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND --
+ |                                                                            |
+ |          Bound states of interacting pairs of atoms and molecules          |
+ |                                                                            |
+ |              Copyright (C) 2018 J. M. Hutson & C. R. Le Sueur              |
+ |                                                                            |
+ |                               Version 2019.0 (beta)                        |
+ |                                                                            |
+ |                    This run used      27.92 cpu secs and                   |
+ |             206873 of the allocated   1000000 words of storage             |
+ |                                                                            |
+  -- BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND --

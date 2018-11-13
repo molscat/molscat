@@ -1,0 +1,557 @@
+  -- FIELD ------ FIELD ------ FIELD ------ FIELD ------ FIELD ------ FIELD --
+
+ |                                                                            |
+ |          Bound states of interacting pairs of atoms and molecules          |
+ |                      as a function of external field                       |
+ |                                                                            |
+ |              Copyright (C) 2018 J. M. Hutson & C. R. Le Sueur              |
+ |                                                                            |
+ |                               Version 2019.0 (beta)                        |
+ |                                                                            |
+ |                       Run on 12 Nov 2018   at 15:12:15                     |
+ |                                                                            |
+  -- FIELD ------ FIELD ------ FIELD ------ FIELD ------ FIELD ------ FIELD --
+
+
+
+  This program is free software: you can redistribute it and/or modify it under
+  the terms of the GNU General Public License, version 3, as published by
+  the Free Software Foundation.
+
+  Publications resulting from the use of this program should refer to
+  J. M. Hutson & C. R. Le Sueur, FIELD computer code 2019.0 (beta)       
+  or to the published paper in Computer Physics Communications when available.
+
+
+  PHYSICAL CONSTANTS OBTAINED FROM NIST CODATA TABULATION OF 2014
+
+  MEMORY ALLOCATED TO MAIN WORKING ARRAY IS   1000000 (8-BYTE) WORDS (    7.63 MB)
+
+  PRINT LEVEL =  5
+
+  RUN LABEL = 85Rb-85Rb: positions of bound states below aa threshold                         
+
+  REDUCED MASS FOR INTERACTION =  42.455894869 ATOMIC MASS UNITS
+
+  ======================================================================================================================
+  ATOM - ATOM WITH NUC SP + MAG FL
+
+
+  ATOMS  WITH S = 1/2,  MU_S   =    2.002319 MU_B
+              I = 5/2,  MU_NUC =   -0.000294 MU_B
+         HYPERFINE SPLITTING =    3.035732, COUPLING CONST =    1.011911 GHZ
+
+  L UP TO    2
+  SPIN-SPIN TERM INCLUDED
+
+  INTERACTION TYPE IS  ATOM - ATOM WITH NUC SP + MAG FL
+
+  QUANTUM NUMBERS FOR INTERACTING PAIR:
+  THE BASIS FUNCTIONS ARE LABELLED BY A SET OF   4 PAIR STATE QUANTUM NUMBERS AND A VALUE OF L.
+  THE RESULTING BASIS SET IS ASYMPTOTICALLY NON-DIAGONAL.
+
+  THE SETS OF PAIR STATE QUANTUM NUMBERS ARE:
+
+      SET       ------ PAIR STATE QUANTUM NUMBERS ------
+                    2*MSA     2*MIA     2*MSB     2*MIB
+        1              -1        -5        -1        -5
+        2              -1        -3        -1        -5
+        3              -1        -3        -1        -3
+        4              -1        -1        -1        -5
+        5              -1        -1        -1        -3
+        6              -1        -1        -1        -1
+        7              -1         1        -1        -5
+        8              -1         1        -1        -3
+        9              -1         1        -1        -1
+       10              -1         1        -1         1
+       11              -1         3        -1        -5
+       12              -1         3        -1        -3
+       13              -1         3        -1        -1
+       14              -1         3        -1         1
+       15              -1         3        -1         3
+       16              -1         5        -1        -5
+       17              -1         5        -1        -3
+       18              -1         5        -1        -1
+       19              -1         5        -1         1
+       20              -1         5        -1         3
+       21              -1         5        -1         5
+       22               1        -5        -1        -5
+       23               1        -5        -1        -3
+       24               1        -5        -1        -1
+       25               1        -5        -1         1
+       26               1        -5        -1         3
+       27               1        -5        -1         5
+       28               1        -5         1        -5
+       29               1        -3        -1        -5
+       30               1        -3        -1        -3
+       31               1        -3        -1        -1
+       32               1        -3        -1         1
+       33               1        -3        -1         3
+       34               1        -3        -1         5
+       35               1        -3         1        -5
+       36               1        -3         1        -3
+       37               1        -1        -1        -5
+       38               1        -1        -1        -3
+       39               1        -1        -1        -1
+       40               1        -1        -1         1
+       41               1        -1        -1         3
+       42               1        -1        -1         5
+       43               1        -1         1        -5
+       44               1        -1         1        -3
+       45               1        -1         1        -1
+       46               1         1        -1        -5
+       47               1         1        -1        -3
+       48               1         1        -1        -1
+       49               1         1        -1         1
+       50               1         1        -1         3
+       51               1         1        -1         5
+       52               1         1         1        -5
+       53               1         1         1        -3
+       54               1         1         1        -1
+       55               1         1         1         1
+       56               1         3        -1        -5
+       57               1         3        -1        -3
+       58               1         3        -1        -1
+       59               1         3        -1         1
+       60               1         3        -1         3
+       61               1         3        -1         5
+       62               1         3         1        -5
+       63               1         3         1        -3
+       64               1         3         1        -1
+       65               1         3         1         1
+       66               1         3         1         3
+       67               1         5        -1        -5
+       68               1         5        -1        -3
+       69               1         5        -1        -1
+       70               1         5        -1         1
+       71               1         5        -1         3
+       72               1         5        -1         5
+       73               1         5         1        -5
+       74               1         5         1        -3
+       75               1         5         1        -1
+       76               1         5         1         1
+       77               1         5         1         3
+       78               1         5         1         5
+
+  THIS CALCULATION USES  1 EXTERNAL FIELD VARIABLE 
+
+  OFFSET BETWEEN EFV INDICES AND COUPLING MATRIX COEFFICIENT INDICES IS  1
+
+  ======================================================================================================================
+  GENERAL-PURPOSE POTENL ROUTINE (MAY 18)
+
+  *** POTENL. ITYPE =   9 CANNOT BE PROCESSED TO DETERMINE THE POTENTIAL EXPANSION LABELS
+
+  INTERACTION POTENTIAL FOR EXPANSION TERM NUMBER   1
+
+  JMH routine for Tiemann-style alkali dimer potentials
+  Rb2 potential from Strauss et al., PRA 82, 052514 (2010)               
+  For potential  1 at RLR =  11.00000000000    
+  gamma shifted from   5.317689000000    
+                  to   5.317691181176    
+  V =  -18.02577440996    
+  A(0)  shifted from  -3993.592873000     cm-1
+                  to  -3993.593189150     cm-1
+  For potential   1 at RSR =  3.126000000000     A
+  V =  -6.255737838933    cm-1, dV/dR =  -9257.490374248    cm-1/A and n =   4.533895000000    
+  B(SR) shifted from   1120053.610000     cm-1 A^n
+                  to   1120053.629089     cm-1 A^n
+  A(SR) shifted from  -6389.048800000     cm-1
+                  to  -6389.049099816     cm-1
+
+  INTERACTION POTENTIAL FOR EXPANSION TERM NUMBER   2
+
+  JMH routine for Tiemann-style alkali dimer potentials
+  Rb2 potential from Strauss et al., PRA 82, 052514 (2010)               
+  For potential  2 at RLR =  11.00000000000    
+  gamma shifted from   5.317691181176    
+                  to   5.317691181176    
+  V =  -17.12208948080    
+  A(0)  shifted from  -241.5033520000     cm-1
+                  to  -241.5036630329     cm-1
+  For potential   2 at RSR =  5.070000000000     A
+  V =  -10.77028535365    cm-1, dV/dR =  -543.9945779764    cm-1/A and n =   4.533895000000    
+  B(SR) shifted from   956231.6770000     cm-1 A^n
+                  to   956231.6938206     cm-1 A^n
+  A(SR) shifted from  -619.0885430000     cm-1
+                  to  -619.0888525768     cm-1
+
+  INTERACTION POTENTIAL FOR EXPANSION TERM NUMBER   3
+
+                -0.10023206E+01 * R ** -3
+                 0.91829168E+01 * EXP(   -0.7196 * R )
+
+  POTENL PROCESSING FINISHED.
+
+  UNITS FOR POTENTIAL ROUTINES:
+  POTENTIAL RETURNED IN UNITS OF EPSIL =       1.000000 CM-1
+  R                  IN UNITS OF RM    =       0.529177 ANGSTROMS
+  INTERACTION MATRIX USES   3 BLOCKS OF VL ARRAY FOR R-DEPENDENT TERMS IN POTENTIAL
+                            2                    FOR CONSTANT    TERMS IN POTENTIAL
+
+  IN TOTAL:  5 BLOCKS OF VL ARRAY ARE USED
+
+
+  ======================================================================================================================
+
+  PROPAGATION ALGORITHMS FOR COUPLED EQUATIONS SPECIFIED BY IPROPS =  6 AND IPROPL =  1
+
+  COUPLED EQUATIONS WILL BE PROPAGATED TOWARDS RMATCH IN 2 SEGMENTS
+  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+  SEGMENT 1 WILL BE PROPAGATED OUTWARDS
+
+  FROM RMIN   =      3.00  TO RMATCH =     21.00
+
+  COUPLED EQUATIONS SOLVED BY DIABATIC MODIFIED LOG DERIVATIVE METHOD OF MANOLOPOULOS
+
+  PROPAGATION STEP SIZE DETERMINED USING DR =  2.000E-03
+
+  LOG-DERIVATIVE MATRIX WILL BE INITIALISED IN THE LOCAL EIGENBASIS FOR RMIN IN THE OUTWARDS PROPAGATION PART
+  LOCALLY CLOSED CHANNELS WILL BE INITIALISED WITH A WKB BOUNDARY CONDITION
+  LOCALLY OPEN CHANNELS WILL BE INITIALISED WITH THE VALUE  1.0000000E+08
+  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+  SEGMENT 2 WILL BE PROPAGATED  INWARDS
+
+  FROM RMAX   =  15000.00  TO RMATCH =     21.00
+
+  COUPLED EQUATIONS SOLVED BY VARIABLE STEP AIRY METHOD.
+  ALL PUBLICATIONS RESULTING FROM THE USE OF THIS PROPAGATOR SHOULD REFERENCE
+  M.H. ALEXANDER AND D.E. MANOLOPOULOS,  J CHEM PHYS 86, 2044 (1987).
+
+  INITIAL STEP SIZE TAKEN FROM RMAX/400 =   37.5    
+                             WITH TOLHI =  1.00E-07         POWRX = 6.0
+  TOLHI.LT.1  --  AIRY STEPS ADJUSTED TO MAINTAIN APPROX. ACCURACY VIA PERTURBATION THEORY AND POWRX.
+
+  LOG-DERIVATIVE MATRIX WILL BE INITIALISED IN THE LOCAL EIGENBASIS FOR RMAX IN THE INWARDS PROPAGATION PART
+  LOCALLY CLOSED CHANNELS WILL BE INITIALISED WITH A WKB BOUNDARY CONDITION
+  LOCALLY   OPEN CHANNELS WILL BE INITIALISED WITH THE VALUE  0.0000000E+00
+  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+  ======================================================================================================================
+
+  PROGRAM WILL ATTEMPT TO CONVERGE ON BOUND STATES AS A FUNCTION OF MAGNETIC Z FIELD
+
+  FOR EACH LEVEL, THE BISECTION METHOD WILL BE USED UNTIL THE VWDB METHOD OFFERS RELIABLE CONVERGENCE
+
+  PROGRAM WILL SEEK EIGENVALUES WITH GENERALISED NODE COUNTS FROM    0 TO  99999
+  LYING IN 
+
+                  MAGNETIC Z FIELD (GAUSS )
+  FLDMIN:             750.0000000    
+  FLDMAX:             850.0000000    
+
+  INPUT ENERGY VALUES CONVERTED FROM MHZ
+  TO INTERNAL WORKING UNITS OF CM-1 DUE TO INTEGER INPUT =   3
+  BOUND STATE POSITIONS WILL BE IDENTIFIED WITH AN ACCURACY OF  1.00000E-08 GAUSS 
+
+  PROGRAM WILL SEEK EIGENVALUES AT ENERGIES (IN MHZ)
+                   -0.225000E+03   -0.175000E+03   -0.125000E+03   -0.750000E+02   -0.250000E+02
+
+  THESE ENERGY VALUES ARE RELATIVE TO THE REFERENCE ENERGY SPECIFIED BY MONOMER QUANTUM NUMBERS   4   4   4   4
+  THE REFERENCE ENERGY WILL BE CALCULATED FOR EVERY EFV SET
+
+  FOR EACH LEVEL, THE BISECTION METHOD WILL BE USED UNTIL THE VWDB METHOD OFFERS RELIABLE CONVERGENCE.
+
+  INITIALIZATION DONE.  TIME WAS   0.00 CPU SECS.       392 WORDS OF STORAGE USED.
+
+  ======================================================================================================================
+
+  TOTAL ANGULAR MOMENTUM JTOT =   8
+
+  EACH JTOT IS SPLIT INTO A MAXIMUM OF   2 DIFFERENT SYMMETRY BLOCKS
+
+  CALCULATIONS WILL BE FOR SYMMETRY BLOCK   2  ONLY
+
+  ============================== 85Rb-85Rb: positions of bound states below aa threshold ===============================
+
+  *******************************************  ANGULAR MOMENTUM JTOT  =   8  *******************************************
+  IBLOCK =  2 SELECTS PARITY  1
+  MTOT =  8/2
+  BASIS SET GENERATED FOR TWO IDENTICAL BOSONS
+
+  BASIS FUNCTION LIST:
+  BASIS FN        SET   ------ PAIR STATE QUANTUM NUMBERS ------           L 
+                            2*MSA     2*MIA     2*MSB     2*MIB 
+        1          21         -1         5        -1         5             0
+        2          61          1         3        -1         5             0
+        3          66          1         3         1         3             0
+        4          71          1         5        -1         3             0
+        5          76          1         5         1         1             0
+        6          42          1        -1        -1         5             2
+        7          50          1         1        -1         3             2
+        8          51          1         1        -1         5             2
+        9          55          1         1         1         1             2
+       10          59          1         3        -1         1             2
+       11          60          1         3        -1         3             2
+       12          19         -1         5        -1         1             2
+       13          61          1         3        -1         5             2
+       14          64          1         3         1        -1             2
+       15          65          1         3         1         1             2
+       16          20         -1         5        -1         3             2
+       17          66          1         3         1         3             2
+       18          69          1         5        -1        -1             2
+       19          70          1         5        -1         1             2
+       20          15         -1         3        -1         3             2
+       21          71          1         5        -1         3             2
+       22          72          1         5        -1         5             2
+       23          74          1         5         1        -3             2
+       24          75          1         5         1        -1             2
+       25          21         -1         5        -1         5             2
+       26          76          1         5         1         1             2
+       27          77          1         5         1         3             2
+       28          78          1         5         1         5             2
+  = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = 
+
+  ENERGY SET     1: ENERGY =  -225.0000000     MHZ     
+
+  NODE COUNT = 1467 AT MINIMUM MAGNETIC Z FIELD =   750.0000000     GAUSS 
+  NODE COUNT = 1466 AT MAXIMUM MAGNETIC Z FIELD =   850.0000000     GAUSS 
+
+  NODE COUNT DECREASES BETWEEN FLDMIN AND FLDMAX
+  PROGRAM WILL ASSUME MONOTONIC BEHAVIOUR AND SEEK   1 NODE  IN THIS INTERVAL
+
+  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+  SEARCHING FOR INODE =    1 CORRESPONDING TO NODE COUNT = 1467
+
+  CONVERGED ON NODE NUMBER  1467 AT                     MAGNETIC Z FIELD =   774.7975187     GAUSS 
+
+  SMALLEST EIGENVALUE IS NUMBER  8 =  0.18315E-10
+
+  WITH PRINCIPAL EIGENVECTOR COMPONENTS
+  CHAN     VEC    VEC**2   L   QUANTUM NUMBERS
+
+   1    0.4977    0.2477   0  -1   5  -1   5   0
+   4    0.8036    0.6458   0   1   5  -1   3   0
+   5   -0.3091    0.0955   0   1   5   1   1   0
+  = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = 
+
+  ENERGY SET     2: ENERGY =  -175.0000000     MHZ     
+
+  NODE COUNT = 1469 AT MINIMUM MAGNETIC Z FIELD =   750.0000000     GAUSS 
+  NODE COUNT = 1467 AT MAXIMUM MAGNETIC Z FIELD =   850.0000000     GAUSS 
+
+  NODE COUNT DECREASES BETWEEN FLDMIN AND FLDMAX
+  PROGRAM WILL ASSUME MONOTONIC BEHAVIOUR AND SEEK   2 NODES IN THIS INTERVAL
+
+  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+  SEARCHING FOR INODE =    1 CORRESPONDING TO NODE COUNT = 1468
+
+  CONVERGED ON NODE NUMBER  1468 AT                     MAGNETIC Z FIELD =   787.3487285     GAUSS 
+
+  SMALLEST EIGENVALUE IS NUMBER  9 =  0.77538E-10
+
+  WITH PRINCIPAL EIGENVECTOR COMPONENTS
+  CHAN     VEC    VEC**2   L   QUANTUM NUMBERS
+
+   2    0.2410    0.0581   0   1   3  -1   5   0
+   4    0.9033    0.8159   0   1   5  -1   3   0
+   5   -0.3443    0.1185   0   1   5   1   1   0
+
+  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+  SEARCHING FOR INODE =    2 CORRESPONDING TO NODE COUNT = 1469
+
+  CONVERGED ON NODE NUMBER  1469 AT                     MAGNETIC Z FIELD =   753.1871768     GAUSS 
+
+  SMALLEST EIGENVALUE IS NUMBER  9 =  0.93920E-11
+
+  WITH PRINCIPAL EIGENVECTOR COMPONENTS
+  CHAN     VEC    VEC**2   L   QUANTUM NUMBERS
+
+  22   -0.9688    0.9386   2   1   5  -1   5   0
+  27    0.2477    0.0614   2   1   5   1   3   0
+  = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = 
+
+  ENERGY SET     3: ENERGY =  -125.0000000     MHZ     
+
+  NODE COUNT = 1471 AT MINIMUM MAGNETIC Z FIELD =   750.0000000     GAUSS 
+  NODE COUNT = 1468 AT MAXIMUM MAGNETIC Z FIELD =   850.0000000     GAUSS 
+
+  NODE COUNT DECREASES BETWEEN FLDMIN AND FLDMAX
+  PROGRAM WILL ASSUME MONOTONIC BEHAVIOUR AND SEEK   3 NODES IN THIS INTERVAL
+
+  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+  SEARCHING FOR INODE =    1 CORRESPONDING TO NODE COUNT = 1469
+
+  CONVERGED ON NODE NUMBER  1469 AT                     MAGNETIC Z FIELD =   805.7569285     GAUSS 
+
+  SMALLEST EIGENVALUE IS NUMBER 10 =  0.36835E-10
+
+  WITH PRINCIPAL EIGENVECTOR COMPONENTS
+  CHAN     VEC    VEC**2   L   QUANTUM NUMBERS
+
+   2   -0.2274    0.0517   0   1   3  -1   5   0
+   4   -0.9063    0.8214   0   1   5  -1   3   0
+   5    0.3420    0.1170   0   1   5   1   1   0
+
+  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+  SEARCHING FOR INODE =    2 CORRESPONDING TO NODE COUNT = 1470
+
+  CONVERGED ON NODE NUMBER  1470 AT                     MAGNETIC Z FIELD =   772.1831036     GAUSS 
+
+  SMALLEST EIGENVALUE IS NUMBER 10 =  0.27886E-11
+
+  WITH PRINCIPAL EIGENVECTOR COMPONENTS
+  CHAN     VEC    VEC**2   L   QUANTUM NUMBERS
+
+  22    0.9695    0.9399   2   1   5  -1   5   0
+  27   -0.2452    0.0601   2   1   5   1   3   0
+
+  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+  SEARCHING FOR INODE =    3 CORRESPONDING TO NODE COUNT = 1471
+
+  CONVERGED ON NODE NUMBER  1471 AT                     MAGNETIC Z FIELD =   764.0184567     GAUSS 
+
+  SMALLEST EIGENVALUE IS NUMBER 11 =  0.40276E-11
+
+  WITH PRINCIPAL EIGENVECTOR COMPONENTS
+  CHAN     VEC    VEC**2   L   QUANTUM NUMBERS
+
+  11   -0.9007    0.8112   2   1   3  -1   3   0
+  15    0.3543    0.1256   2   1   3   1   1   0
+  16   -0.2399    0.0576   2  -1   5  -1   3   0
+  = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = 
+
+  ENERGY SET     4: ENERGY =  -75.00000000     MHZ     
+
+  NODE COUNT = 1471 AT MINIMUM MAGNETIC Z FIELD =   750.0000000     GAUSS 
+  NODE COUNT = 1468 AT MAXIMUM MAGNETIC Z FIELD =   850.0000000     GAUSS 
+
+  NODE COUNT DECREASES BETWEEN FLDMIN AND FLDMAX
+  PROGRAM WILL ASSUME MONOTONIC BEHAVIOUR AND SEEK   3 NODES IN THIS INTERVAL
+
+  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+  SEARCHING FOR INODE =    1 CORRESPONDING TO NODE COUNT = 1469
+
+  CONVERGED ON NODE NUMBER  1469 AT                     MAGNETIC Z FIELD =   823.8673232     GAUSS 
+
+  SMALLEST EIGENVALUE IS NUMBER 10 =  0.61002E-10
+
+  WITH PRINCIPAL EIGENVECTOR COMPONENTS
+  CHAN     VEC    VEC**2   L   QUANTUM NUMBERS
+
+   2    0.2215    0.0491   0   1   3  -1   5   0
+   4    0.9080    0.8245   0   1   5  -1   3   0
+   5   -0.3393    0.1152   0   1   5   1   1   0
+
+  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+  SEARCHING FOR INODE =    2 CORRESPONDING TO NODE COUNT = 1470
+
+  CONVERGED ON NODE NUMBER  1470 AT                     MAGNETIC Z FIELD =   791.1539042     GAUSS 
+
+  SMALLEST EIGENVALUE IS NUMBER 10 = -0.15664E-10
+
+  WITH PRINCIPAL EIGENVECTOR COMPONENTS
+  CHAN     VEC    VEC**2   L   QUANTUM NUMBERS
+
+  22    0.9701    0.9411   2   1   5  -1   5   0
+  27   -0.2426    0.0589   2   1   5   1   3   0
+
+  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+  SEARCHING FOR INODE =    3 CORRESPONDING TO NODE COUNT = 1471
+
+  CONVERGED ON NODE NUMBER  1471 AT                     MAGNETIC Z FIELD =   782.8050521     GAUSS 
+
+  SMALLEST EIGENVALUE IS NUMBER 11 = -0.29253E-12
+
+  WITH PRINCIPAL EIGENVECTOR COMPONENTS
+  CHAN     VEC    VEC**2   L   QUANTUM NUMBERS
+
+  11   -0.9028    0.8150   2   1   3  -1   3   0
+  15    0.3505    0.1229   2   1   3   1   1   0
+  16   -0.2381    0.0567   2  -1   5  -1   3   0
+  = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = 
+
+  ENERGY SET     5: ENERGY =  -25.00000000     MHZ     
+
+  NODE COUNT = 1472 AT MINIMUM MAGNETIC Z FIELD =   750.0000000     GAUSS 
+  NODE COUNT = 1468 AT MAXIMUM MAGNETIC Z FIELD =   850.0000000     GAUSS 
+
+  NODE COUNT DECREASES BETWEEN FLDMIN AND FLDMAX
+  PROGRAM WILL ASSUME MONOTONIC BEHAVIOUR AND SEEK   4 NODES IN THIS INTERVAL
+
+  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+  SEARCHING FOR INODE =    1 CORRESPONDING TO NODE COUNT = 1469
+
+  CONVERGED ON NODE NUMBER  1469 AT                     MAGNETIC Z FIELD =   841.9413525     GAUSS 
+
+  SMALLEST EIGENVALUE IS NUMBER  9 = -0.95921E-10
+
+  WITH PRINCIPAL EIGENVECTOR COMPONENTS
+  CHAN     VEC    VEC**2   L   QUANTUM NUMBERS
+
+   2    0.2165    0.0469   0   1   3  -1   5   0
+   4    0.9094    0.8271   0   1   5  -1   3   0
+   5   -0.3366    0.1133   0   1   5   1   1   0
+
+  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+  SEARCHING FOR INODE =    2 CORRESPONDING TO NODE COUNT = 1470
+
+  CONVERGED ON NODE NUMBER  1470 AT                     MAGNETIC Z FIELD =   810.0994707     GAUSS 
+
+  SMALLEST EIGENVALUE IS NUMBER  9 =  0.53429E-11
+
+  WITH PRINCIPAL EIGENVECTOR COMPONENTS
+  CHAN     VEC    VEC**2   L   QUANTUM NUMBERS
+
+  22    0.9707    0.9423   2   1   5  -1   5   0
+  27   -0.2401    0.0577   2   1   5   1   3   0
+
+  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+  SEARCHING FOR INODE =    3 CORRESPONDING TO NODE COUNT = 1471
+
+  CONVERGED ON NODE NUMBER  1471 AT                     MAGNETIC Z FIELD =   801.5738204     GAUSS 
+
+  SMALLEST EIGENVALUE IS NUMBER 10 = -0.39942E-10
+
+  WITH PRINCIPAL EIGENVECTOR COMPONENTS
+  CHAN     VEC    VEC**2   L   QUANTUM NUMBERS
+
+  11    0.9047    0.8185   2   1   3  -1   3   0
+  15   -0.3468    0.1203   2   1   3   1   1   0
+  16    0.2366    0.0560   2  -1   5  -1   3   0
+
+  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+  SEARCHING FOR INODE =    4 CORRESPONDING TO NODE COUNT = 1472
+
+  CONVERGED ON NODE NUMBER  1472 AT                     MAGNETIC Z FIELD =   762.1331274     GAUSS 
+
+  SMALLEST EIGENVALUE IS NUMBER 10 =  0.11775E-10
+
+  WITH PRINCIPAL EIGENVECTOR COMPONENTS
+  CHAN     VEC    VEC**2   L   QUANTUM NUMBERS
+
+  13    0.2251    0.0507   2   1   3  -1   5   0
+  21    0.9025    0.8145   2   1   5  -1   3   0
+  26   -0.3490    0.1218   2   1   5   1   1   0
+
+  ======================================================================================================================
+
+
+  -- FIELD ------ FIELD ------ FIELD ------ FIELD ------ FIELD ------ FIELD --
+
+ |                                                                            |
+ |          Bound states of interacting pairs of atoms and molecules          |
+ |                      as a function of external field                       |
+ |                                                                            |
+ |              Copyright (C) 2018 J. M. Hutson & C. R. Le Sueur              |
+ |                                                                            |
+ |                               Version 2019.0 (beta)                        |
+ |                                                                            |
+ |                    This run used     123.97 cpu secs and                   |
+ |               7467 of the allocated   1000000 words of storage             |
+ |                                                                            |
+  -- FIELD ------ FIELD ------ FIELD ------ FIELD ------ FIELD ------ FIELD --
+

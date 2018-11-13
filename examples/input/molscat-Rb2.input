@@ -1,0 +1,182 @@
+ &INPUT
+    LABEL  =  '85Rb-85Rb elastic pole characterisation in aa channel',
+    URED   =  42.455894869D0,
+    IPRINT =   2,
+    RMIN   =   3.0D0,  RMID   =  21.0D0,  RMAX   = 15.0D3, IRMSET = 0,
+    IPROPS =   6,      IPROPL =   1,      DR     =  0.002, TOLHI  = 1.D-7, POWRX  = 6.0,
+    JTOTL  =   8,      JTOTU  =   8,      IBFIX  =  2,     JSTEP  = 2,
+    EUNITS =   2,      NNRG   =   1,      ENERGY =  1.D-9,
+                       DTOL   =   1.D-8,  MONQN  =  4, 4, 4, 4,
+    FLDMIN = 171.46D0, FLDMAX = 171.86D0,
+    ICHAN  =   1,
+    IFCONV =   1,
+    LASTIN =   0,
+ /
+
+ &BASIS
+    ITYPE  = 9,
+ /
+
+ &BASIS9
+    ISA    =  1,    !85-Rb
+    GSA    =  2.00231930,
+    INUCA  =  5,
+    HFSPLA = +3.035732440300,
+    GA     = -2.936400D-4,
+    INUCB  = -1,
+    LMAX   =  2,
+ /
+
+ &POTL
+    MXLAM  = 3,  LAMBDA =  1,  2,  3,
+                 NTERM  = -1, -1,  2,
+                 NPOWER =         -3,                 0,
+                E      =                            -0.7196D0,
+                A      =         -1.002320649155D0,  9.182916799D0,
+ /
+
+ &INPUT
+    LABEL  =  '85Rb-85Rb weakly decayed resonance characterisation in ee channel',
+    URED   =  42.455894869D0,
+    IPRINT =   2,
+    RMIN   =   3.0D0,  RMID   =  21.0D0,  RMAX   = 15.0D3, IRMSET = 0,
+    IPROPS =   6,      IPROPL =   1,      DR     =  0.002, TOLHI  = 1.D-7, POWRX  = 6.0,
+    JTOTL  =  -8,      JTOTU  =  -8,      IBFIX  =  2,     JSTEP  = 2,
+    EUNITS =   2,      NNRG   =   1,      ENERGY =  1.D-9,
+                       DTOL   =   1.D-8,  MONQN  =  4, -4, 4, -4,
+    FLDMIN = 214.98D0, FLDMAX = 215.38D0,
+    ICHAN  =   4,
+    IFCONV =   2,
+    LASTIN =   0,
+ /
+
+ &BASIS
+    ITYPE  = 9,
+ /
+
+ &BASIS9
+    ISA    =  1,    !85-Rb
+    GSA    =  2.00231930,
+    INUCA  =  5,
+    HFSPLA = +3.035732440300,
+    GA     = -2.936400D-4,
+    INUCB  = -1,
+    LMAX   =  2,
+ /
+
+ &POTL
+    MXLAM  = 3,  LAMBDA =  1,  2,  3,
+                 NTERM  = -1, -1,  2,
+                 NPOWER =         -3,                 0,
+                 E      =                            -0.7196D0,
+                 A      =         -1.002320649155D0,  9.182916799D0,
+ /
+
+ &INPUT
+    LABEL  =  '85Rb-85Rb quite strongly decayed resonance in ee channel',
+    URED   =  42.455894869D0,
+    IPRINT =   2,
+    RMIN   =   3.0D0,  RMID   =  21.0D0,  RMAX   = 15.0D3, IRMSET = 0,
+    IPROPS =   6,      IPROPL =   1,      DR     =  0.002, TOLHI  = 1.D-7, POWRX  = 6.0,
+    JTOTL  =  -8,      JTOTU  =  -8,      IBFIX  =  2,     JSTEP  = 2,
+    EUNITS =   2,      NNRG   =   1,      ENERGY =  1.D-9,
+                       DTOL   =   1.D-8,  MONQN  =  4, -4, 4, -4,
+    FLDMIN = 603.87D0, FLDMAX = 604.27D0,
+    ICHAN  =   4,
+    IFCONV =   2,
+    LASTIN =   0,
+ /
+
+ &BASIS
+    ITYPE  = 9,
+ /
+
+ &BASIS9
+    ISA    =  1,    !85-Rb
+    GSA    =  2.00231930,
+    INUCA  =  5,
+    HFSPLA = +3.035732440300,
+    GA     = -2.936400D-4,
+    INUCB  = -1,
+    LMAX   =  2,
+ /
+
+ &POTL
+    MXLAM  = 3,  LAMBDA =  1,  2,  3,
+                 NTERM  = -1, -1,  2,
+                 NPOWER =         -3,                 0,
+                 E      =                            -0.7196D0,
+                 A      =         -1.002320649155D0,  9.182916799D0,
+ /
+
+ &INPUT
+    LABEL  =  '85Rb-85Rb strongly decayed resonance characterisation in kk channel',
+    URED   =  42.455894869D0,
+    IPRINT =   2,
+    RMIN   =   3.0D0,  RMID   =  21.0D0,  RMAX   = 15.0D3, IRMSET = 0,
+    IPROPS =   6,      IPROPL =   1,      DR     =  0.002, TOLHI  = 1.D-7, POWRX  = 6.0,
+    JTOTL  =   8,      JTOTU  =   8,      IBFIX  =  2,     JSTEP  = 2,
+    EUNITS =   2,      NNRG   =   1,      ENERGY =  1.D-9,
+                       DTOL   =   1.D-8,  MONQN  =  6, 4, 6, 4,
+    FLDMIN = 171.74D0, FLDMAX = 172.14D0,
+    ICHAN  =  25,
+    IFCONV =   3,
+    LASTIN =   0,
+ /
+
+ &BASIS
+    ITYPE  = 9,
+ /
+
+ &BASIS9
+    ISA    =  1,    !85-Rb
+    GSA    =  2.00231930,
+    INUCA  =  5,
+    HFSPLA = +3.035732440300,
+    GA     = -2.936400D-4,
+    INUCB  = -1,
+    LMAX   =  2,
+ /
+
+ &POTL
+    MXLAM  = 3,  LAMBDA =  1,  2,  3,
+                 NTERM  = -1, -1,  2,
+                 NPOWER =         -3,                 0,
+                 E      =                            -0.7196D0,
+                 A      =         -1.002320649155D0,  9.182916799D0,
+ /
+
+ &INPUT
+    LABEL  =  '85Rb-85Rb effective range across resonances in aa channel',
+    URED   =  42.455894869D0,
+    IPRINT =   1,
+    RMIN   =   3.0D0,  RMID   =  21.0D0,  RMAX   = 15.0D3, IRMSET = 0,
+    IPROPS =   6,      IPROPL =   1,      DR     =  0.002, TOLHI  = 1.D-7, POWRX  = 6.0,
+    JTOTL  =   8,      JTOTU  =   8,      IBFIX  =  2,     JSTEP  = 2,
+    EUNITS =   2,      NNRG   =   2,      ENERGY =  1.D-7, 2.D-7,
+                       DTOL   =   1.D-8,  MONQN  =  4, 4, 4, 4,
+    FLDMIN = 800.00D0, FLDMAX = 900.00D0,
+    ICHAN  =   1,
+ /
+
+ &BASIS
+    ITYPE  = 9,
+ /
+
+ &BASIS9
+    ISA    =  1,    !85-Rb
+    GSA    =  2.00231930,
+    INUCA  =  5,
+    HFSPLA = +3.035732440300,
+    GA     = -2.936400D-4,
+    INUCB  = -1,
+    LMAX   =  2,
+ /
+
+ &POTL
+    MXLAM  = 3,  LAMBDA =  1,  2,  3,
+                 NTERM  = -1, -1,  2,
+                 NPOWER =         -3,                 0,
+                 E      =                            -0.7196D0,
+                 A      =         -1.002320649155D0,  9.182916799D0,
+ /

@@ -1,0 +1,37 @@
+ &INPUT
+    LABEL  = 'Ar-CO2 on split repulsion potential of JCP 105, 9130 (1996)',
+    URED   =   20.939751,
+    IPRINT =    5,   IBDSUM =    4,   ISCRU  = 30,
+    RMIN   =    2.4, RMATCH =    3.6, RMAX   =  6.0,   IRMSET = 0,
+    IPROPS =    5,   IPROPL =    5,   DR     =  0.03,
+    JTOTL  =    0,   JTOTU  =    0,   IBFIX  =  2,
+    EMIN   = -180.0, EMAX   = -130.0, DTOL   =  1.D-8,
+    NCONV  =    1,   ICON   =    1,   DRCON  =  0.3,
+ /
+
+ &BASIS
+    ITYPE  = 1,
+    ROTI   = 0.38714139,
+    JMIN   = 0, JMAX   = 26, JSTEP  = 2,
+ /
+
+ &POTL
+    LMAX   = 22,     IHOMO  = 2,
+    LVRTP  = .TRUE., NPT    = 5,
+ /
+
+ 1 4.6454 0.6288 1.
+ 5 5 7. 2.196
+   32.27581 2.03171
+    0.                0.
+   11.85757 1.79571
+    0.                0.
+   -9.41362 2.09529
+   32.36857 2.12256
+   -3.40252 1.87293
+   -1.68672 2.18922
+   -1.91165 1.96196
+    1.10092 1.98533
+ 101.    0.270
+ 1.5874  -1.    0.000000001
+ 29.21  999.

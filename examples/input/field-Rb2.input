@@ -1,0 +1,33 @@
+ &INPUT
+    LABEL  = '85Rb-85Rb: positions of bound states below aa threshold',
+    URED   =  42.455894869D0,
+    IBDSUM =   4,     IPRINT =   5,
+    RMIN   =   3.0D0, RMATCH =  21.0D0, RMAX   =   15.0D3, IRMSET =  0,
+    IPROPS =   6,     IPROPL =   1,     DR     =    0.002, TOLHI  =  1.0D-7,
+    JTOTL  =   8,     JTOTU  =   8,     JSTEP  =    2,     IBFIX  =  2,
+    EUNITS =   3,     NNRG   =   5,     ENERGY = -225.0,   DNRG   = 50.0,
+                      DTOL   =   1.D-8, MONQN  =  4, 4, 4, 4,
+    FLDMIN = 750.0,   FLDMAX = 850.0,
+ /
+
+ &BASIS
+    ITYPE  = 9,
+ /
+
+ &BASIS9
+    ISA    =  1,           ! data for 85-RB
+    GSA    =  2.00231930,
+    INUCA  =  5,
+    HFSPLA = +3.035732440300,
+    GA     = -2.936400D-4,
+    INUCB  = -1,
+    LMAX   =  2,
+ /
+
+ &POTL
+    MXLAM  =  3, LAMBDA =  1,  2,  3,
+                 NTERM  = -1, -1,  2,
+                 NPOWER =         -3,                 0,
+                 A      =         -1.002320649155D0,  9.182916799D0
+                 E      =                            -0.7196D0,
+ /

@@ -1,0 +1,37 @@
+ &INPUT
+    LABEL  = 'Ar-CO2 on single repulsion potential of JCP 105, 9130 (1996)',
+    URED   = 20.939751,
+    IPRINT =  1,   ISCRU  =  30,       IPHSUM =  4,
+    RMIN   =  2.4, RMID   =   5.0,     RMAX   = 12.0,  IRMSET = 7,
+    IPROPS =  6,   IPROPL =   1,       DR     =  0.02,
+    JTOTL  =  0,   JTOTU  =  -1,
+    NNRG   =  1,   ENERGY = 200.0,
+    NLPRBR =  1,   LINE   =   6,7,6,7, IFEGEN =  1,
+    DTOL   = 10.0, OTOL   =   1.D-4,
+ /
+
+ &BASIS
+    ITYPE  = 21,
+    ROTI   =  0.38714139,
+    JMIN   =  0, JMAX   = 38, JSTEP  = 2,
+ /
+
+ &POTL
+    LMAX   = 32,      IHOMO  =  2,
+    LVRTP  =  .TRUE., NPT    =  5,
+ /
+ 1 4.5100 0. 1.
+ 5 5 7. 2.196
+   32.27581 2.03171
+    0.                0.
+   11.85757 1.79571
+    0.                0.
+   -9.41362 2.09529
+   32.36857 2.12256
+   -3.40252 1.87293
+   -1.68672 2.18922
+   -1.91165 1.96196
+    1.10092 1.98533
+ 101.    0.270
+ 1.6608  -1.    0.000000001
+ 31.55  999.

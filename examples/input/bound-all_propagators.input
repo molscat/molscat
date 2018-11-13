@@ -1,0 +1,196 @@
+ &INPUT
+    LABEL  = 'model system: ITYPE=1; IPROPS=6, IPROPL=1 (RMID > RMATCH)',
+    URED   =  20.0,
+    IPRINT =   5,   IBDSUM = 106,
+    RMIN   =   0.5, RMID   =   2.0, RMATCH = 1.0,   RMAX   = 20.0,
+    IPROPS =   6,   IPROPL =   1,   DR     = 0.001,
+    JTOTL  =   0,   JTOTU  =   2,   IBFIX  = 2,
+    EMIN   = -10.0, EMAX   =  -1.0,
+    LASTIN =   0,
+ /
+ &BASIS
+    ITYPE  = 1,  BE     = 30.0,
+    NLEVEL = 4,  JLEVEL =  0, 2, 4, 6,
+ /
+ &POTL
+    MXLAM =   2, LAMBDA =   0,          2,
+                 NTERM  =   2,          1,
+                 NPOWER = -12,   -6,   -6,
+                 A      =   1.0, -2.0, -0.2,
+    RM    = 3.5, EPSIL  =  50.0,
+ /
+
+ &INPUT
+    LABEL  = 'model system: ITYPE=1; IPROPS=6, IPROPL=1 (RMID < RMATCH)',
+    URED   =  20.0,
+    IPRINT =   5,   IBDSUM = 116,
+    RMIN   =   0.5, RMID   =   1.0, RMATCH = 2.0,   RMAX   = 20.0,
+    IPROPS =   6,   IPROPL =   1,   DR     = 0.001,
+    JTOTL  =   0,   JTOTU  =   2,   IBFIX  = 2,
+    EMIN   = -10.0, EMAX   =  -1.0,
+    LASTIN =   0,
+ /
+ &BASIS
+    ITYPE  = 1,  BE     = 30.0,
+    NLEVEL = 4,  JLEVEL =  0, 2, 4, 6,
+ /
+ &POTL
+    MXLAM =   2, LAMBDA =   0,          2,
+                 NTERM  =   2,          1,
+                 NPOWER = -12,   -6,   -6,
+                 A      =   1.0, -2.0, -0.2,
+    RM    = 3.5, EPSIL  =  50.0,
+ /
+
+ &INPUT
+    LABEL  = 'model system: ITYPE=1; IPROPS=5, IPROPL=1',
+    URED   =  20.0,
+    IPRINT =   5,   IBDSUM = 105,
+    RMIN   =   0.5, RMATCH =   1.0, RMAX   = 20.0,
+    IPROPS =   5,   IPROPL =   1,   DR     =  0.001,
+    JTOTL  =   0,   JTOTU  =   2,   IBFIX  =  2,
+    EMIN   = -10.0, EMAX   =  -1.0,
+    LASTIN =   0,
+ /
+ &BASIS
+    ITYPE  = 1,  BE     = 30.0,
+    NLEVEL = 4,  JLEVEL =  0, 2, 4, 6,
+ /
+ &POTL
+    MXLAM =   2, LAMBDA =   0,          2,
+                 NTERM  =   2,          1,
+                 NPOWER = -12,   -6,   -6,
+                 A      =   1.0, -2.0, -0.2,
+    RM    = 3.5, EPSIL  =  50.0,
+ /
+
+ &INPUT
+    LABEL  = 'model system: ITYPE=1; IPROPS=7, IPROPL=1',
+    URED   =  20.0,
+    IPRINT =   5,   IBDSUM = 107,
+    RMIN   =   0.5, RMATCH =   1.0, RMAX   = 20.0,
+    IPROPS =   7,   IPROPL =   1,   DR     =  0.001,
+    JTOTL  =   0,   JTOTU  =   2,   IBFIX  =  2,
+    EMIN   = -10.0, EMAX   =  -1.0,
+    LASTIN =   0,
+ /
+ &BASIS
+    ITYPE  = 1,  BE     = 30.0,
+    NLEVEL = 4,  JLEVEL =  0, 2, 4, 6,
+ /
+ &POTL
+    MXLAM =   2, LAMBDA =   0,          2,
+                 NTERM  =   2,          1,
+                 NPOWER = -12,   -6,   -6,
+                 A      =   1.0, -2.0, -0.2,
+    RM    = 3.5, EPSIL  =  50.0,
+ /
+
+ &INPUT
+    LABEL  = 'model system: ITYPE=1; IPROPS=9, IPROPL=1',
+    URED   =  20.0,
+    IPRINT =   5,   IBDSUM = 109,
+    RMIN   =   0.5, RMATCH =   1.0, RMAX   = 20.0,
+    IPROPS =   9,   IMGSEL =   5,   IPROPL =  1,   DR     =  0.001,
+    JTOTL  =   0,   JTOTU  =   2,   IBFIX  =  2,
+    EMIN   = -10.0, EMAX   =  -1.0,
+    LASTIN =   0,
+ /
+ &BASIS
+    ITYPE  = 1,  BE     = 30.0,
+    NLEVEL = 4,  JLEVEL =  0, 2, 4, 6,
+ /
+ &POTL
+    MXLAM =   2, LAMBDA =   0,          2,
+                 NTERM  =   2,          1,
+                 NPOWER = -12,   -6,   -6,
+                 A      =   1.0, -2.0, -0.2,
+    RM    = 3.5, EPSIL  =  50.0,
+ /
+
+ &INPUT
+    LABEL  = 'model system: ITYPE=1; IPROPS=IPROPL=6',
+    URED   =  20.0,
+    IPRINT =   5,   IBDSUM = 606,
+    RMIN   =   0.5, RMATCH =   1.0, RMAX   = 20.0,
+    IPROPS =   6,   IPROPL =   6,   DR     =  0.001, DRLR   =  0.005,
+    JTOTL  =   0,   JTOTU  =   2,   IBFIX  =  2,
+    EMIN   = -10.0, EMAX   =  -1.0,
+    LASTIN =   0,
+ /
+ &BASIS
+    ITYPE  = 1,  BE     = 30.0,
+    NLEVEL = 4,  JLEVEL =  0, 2, 4, 6,
+ /
+ &POTL
+    MXLAM =   2, LAMBDA =   0,          2,
+                 NTERM  =   2,          1,
+                 NPOWER = -12,   -6,   -6,
+                 A      =   1.0, -2.0, -0.2,
+    RM    = 3.5, EPSIL  =  50.0,
+ /
+
+ &INPUT
+    LABEL  = 'model system: ITYPE=1; IPROPS=IPROPL=5',
+    URED   =  20.0,
+    IPRINT =   5,   IBDSUM = 505,
+    RMIN   =   0.5, RMATCH =   1.0, RMAX   = 20.0,
+    IPROPS =   5,   IPROPL =   5,   DR     =  0.001,
+    JTOTL  =   0,   JTOTU  =   2,   IBFIX  =  2,
+    EMIN   = -10.0, EMAX   =  -1.0,
+    LASTIN =   0,
+ /
+ &BASIS
+    ITYPE  = 1,  BE     = 30.0,
+    NLEVEL = 4,  JLEVEL =  0, 2, 4, 6,
+ /
+ &POTL
+    MXLAM =   2, LAMBDA =   0,          2,
+                 NTERM  =   2,          1,
+                 NPOWER = -12,   -6,   -6,
+                 A      =   1.0, -2.0, -0.2,
+    RM    = 3.5, EPSIL  =  50.0,
+ /
+
+ &INPUT
+    LABEL  = 'model system: ITYPE=1; IPROPS=IPROPL=7',
+    URED   =  20.0,
+    IPRINT =   5,   IBDSUM = 707,
+    RMIN   =   0.5, RMATCH =   1.0, RMAX   = 20.0,
+    IPROPS =   7,   IPROPL =   7,   DR     =  0.001,
+    JTOTL  =   0,   JTOTU  =   2,   IBFIX  =  2,
+    EMIN   = -10.0, EMAX   =  -1.0,
+    LASTIN =   0,
+ /
+ &BASIS
+    ITYPE  = 1,  BE     = 30.0,
+    NLEVEL = 4,  JLEVEL =  0, 2, 4, 6,
+ /
+ &POTL
+    MXLAM =   2, LAMBDA =   0,          2,
+                 NTERM  =   2,          1,
+                 NPOWER = -12,   -6,   -6,
+                 A      =   1.0, -2.0, -0.2,
+    RM    = 3.5, EPSIL  =  50.0,
+ /
+
+ &INPUT
+    LABEL  = 'model system: ITYPE=1; IPROPS=IPROPL=9',
+    URED   =  20.0,
+    IPRINT =   5,   IBDSUM = 909,
+    RMIN   =   0.5, RMATCH =   1.0, RMAX   = 20.0,
+    IPROPS =   9,   IPROPL =   9,   IMGSEL =  5,   DR     =  0.001,
+    JTOTL  =   0,   JTOTU  =   2,   IBFIX  =  2,
+    EMIN   = -10.0, EMAX   =  -1.0,
+ /
+ &BASIS
+    ITYPE  = 1,  BE     = 30.0,
+    NLEVEL = 4,  JLEVEL =  0, 2, 4, 6,
+ /
+ &POTL
+    MXLAM =   2, LAMBDA =   0,          2,
+                 NTERM  =   2,          1,
+                 NPOWER = -12,   -6,   -6,
+                 A      =   1.0, -2.0, -0.2,
+    RM    = 3.5, EPSIL  =  50.0,
+ /

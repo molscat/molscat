@@ -1,0 +1,27 @@
+ &INPUT
+    LABEL  = 'He-LiF potential of Wolken, JCP 58, 3047 (1973). Basis set 16',
+    URED   =  4.0026,
+    IPRINT = 11,
+    RMIN   = -2.0,    RMAX   =  6.0,
+    IPROPS =  6,      STEPS  = 10.0,
+    MXSIG  =  1,
+    JTOTU  =  0,
+    THETLW = 30.0,    THETST =  0.5,
+    PHILW  =  0.0,    PHIST  =  0.001, MXPHI  = 2,
+    EUNITS =  5,      NNRG   =  2,     ENERGY = 0.02, 0.022,
+ /
+
+ &BASIS
+    ITYPE  =   8,   J1MAX  =    3,   J2MAX  = 3,
+    EMAX   = 190.0, EMAXK  = 1000.0,
+    ROTI   =   2.84, 2.84,  90.0,
+ /
+
+ &POTL
+    MXLAM  = 2,   LAMBDA =  0,0,           1,0,
+                  NTERM  =  2,             1,
+                  NPOWER =  0,      0,     0,
+                  E      = -2.2,   -1.1,  -2.2,
+                  A      =  7.63, -15.26, -0.763,
+    RM     = 1.0, EPSIL  =  8.065544005,
+ /
