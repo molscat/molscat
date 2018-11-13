@@ -1,0 +1,124 @@
+      SUBROUTINE VSTAR(I,X,SUM)
+C  Copyright (C) 2018 J. M. Hutson & C. R. Le Sueur
+C  Distributed under the GNU General Public License, version 3
+      IMPLICIT DOUBLE PRECISION (A-H,O-Z)
+      SAVE
+C
+C  ROUTINE FOR THE MSV AND MSMSV POTENTIALS OF BUCK ET AL.,
+C  J. CHEM. PHYS. 74, 1707 (1981);
+C  CHEM. PHYS. LETT. 98, 199 (1983);
+C  CHEM. PHYS. 126, 1 (1988).
+C
+      DIMENSION LAM(4),ALPHAR(4),ALPHAA(4)
+      DATA LAM/0,3,4,4/
+C
+C  MORSE STATEMENT FUNCTION AND DERIVATIVE
+C
+      VMORSE(Z,BETA)=EXP(2.D0*BETA*(1.D0-Z))-2.D0*EXP(BETA*(1.D0-Z))
+      DMORSE(Z,BETA)=
+     1         2.D0*BETA*(EXP(BETA*(1.D0-Z))-EXP(2.D0*BETA*(1.D0-Z)))
+
+      IF (I.EQ.1) GOTO 1000
+      IF (I.EQ.2 .OR. I.EQ.3 .OR. I.EQ.4) GOTO 2000
+      WRITE(6,*) '***ERROR IN VSTAR: INVALID VALUE OF I'
+      STOP
+C
+ 1000 IF (X.LE.X1) THEN
+        SUM=VMORSE(X,BETA1)
+      ELSEIF (X.LT.X2) THEN
+        Y=X-X1
+        SUM=A0+Y*(A1+Y*(A2+Y*A3))
+      ELSEIF (X.LE.X3) THEN
+        SUM=VMORSE(X,BETA2)
+      ELSEIF (X.LT.X4) THEN
+        Y=X-X3
+        SUM=B0+Y*(B1+Y*(B2+Y*B3))
+      ELSE
+        Y=1.D0/(X*X)
+        SUM=-(C6+C8*Y)*Y**3
+      ENDIF
+      SUM=SUM*YCFAC
+      RETURN
+C
+ 2000 IF (LAM(I).EQ.0) THEN
+        IPOW=6
+      ELSEIF (LAM(I).EQ.3) THEN
+        IPOW=7
+      ELSEIF (LAM(I).EQ.4) THEN
+        IPOW=8
+      ELSEIF (LAM(I).EQ.6) THEN
+        IPOW=10
+      ENDIF
+      SUM=ALPHAR(I)*EXP(2.D0*BETA1*(1.D0-X))
+     1   -ALPHAA(I)*C6/X**IPOW
+      RETURN
+C======================================================================= VINIT
+      ENTRY VINIT(I,RM,EPSIL)
+C
+      IF (I.NE.1) GOTO 3000
+C
+      READ(5,*) EPSIL,RM
+      READ(5,*) BETA1,BETA2
+      READ(5,*) C6,C8
+      READ(5,*) X1,X2,X3,X4
+C
+      VL=VMORSE(X1,BETA1)
+      VLP=DMORSE(X1,BETA1)
+      VR=VMORSE(X2,BETA2)
+      VRP=DMORSE(X2,BETA2)
+      A0=VL
+      A1=VLP
+      Y=X2-X1
+      A2=3.D0*(VR-VL)/Y**2-(2.D0*VLP+VRP)/Y
+      A3=2.D0*(VL-VR)/Y**3+(VLP+VRP)/Y**2
+C
+      VL=VMORSE(X3,BETA2)
+      VLP=DMORSE(X3,BETA2)
+      Y=1.D0/(X4*X4)
+      VR=-(C6+C8*Y)*Y**3
+      VRP=(6.D0*C6+8.D0*C8*Y)*Y**3/X4
+      B0=VL
+      B1=VLP
+      Y=X4-X3
+      B2=3.D0*(VR-VL)/Y**2-(2.D0*VLP+VRP)/Y
+      B3=2.D0*(VL-VR)/Y**3+(VLP+VRP)/Y**2
+C
+      PI=ACOS(-1.D0)
+      YCFAC=SQRT(4.D0*PI)
+C
+      WRITE(6,*) ' WELL DEPTH =',EPSIL,' AT RM =',RM
+      IF (X1.GT.0.D0) THEN
+        WRITE(6,*) ' BETA =',BETA1
+        WRITE(6,*) ' SPLINE PARAMETERS: A = ',A0,A1,A2,A3
+      ENDIF
+      WRITE(6,*) ' BETA =',BETA2
+      WRITE(6,*) ' SPLINE PARAMETERS: B = ',B0,B1,B2,B3
+      WRITE(6,*) ' C6 =',C6,',  C8 =',C8
+C
+      RETURN
+C
+C  ALPHAS ARE AS DEFINED BY BUCK. THEY DO NOT NEED SCALING BY i
+C  SQRT(2*LAM+1/4PI), PROVIDED CFLAG WAS NOT SET TO 1, SO THAT
+C  MOLSCAT IS WORKING WITH YS NOT CS.
+C  NOTE THOUGH THAT V0 IS MULTIPLIED BY YCFAC=SQRT(4PI) BECAUSE
+C  BUCK AND SECREST DEFINE T0 AS 1, NOT Y00.
+C
+ 3000 READ(5,*) ALPHAR(I),ALPHAA(I)
+      WRITE(6,*) ' ALPHAR =',ALPHAR(I)
+      WRITE(6,*) ' ALPHAA =',ALPHAA(I)
+      WRITE(6,*) ' BETA =',BETA1
+      IF (I.EQ.3) THEN
+        ALPHAR(I)=ALPHAR(I)*SQRT(14.D0)
+        ALPHAA(I)=ALPHAA(I)*SQRT(14.D0)
+      ELSEIF (I.EQ.4) THEN
+        ALPHAR(I)=-ALPHAR(I)*SQRT(5.D0)
+        ALPHAA(I)=-ALPHAA(I)*SQRT(5.D0)
+      ENDIF
+      RETURN
+C
+      ENTRY VSTAR1(I,X,SUM)
+      ENTRY VSTAR2(I,X,SUM)
+      WRITE(6,*) ' VSTAR: DERIVATIVES NOT IMPLEMENTED'
+      STOP
+C
+      END

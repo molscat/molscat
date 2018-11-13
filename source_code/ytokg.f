@@ -1,0 +1,78 @@
+      SUBROUTINE YTOKG(NB,N,NOPEN,SJ,SJP,SN,SNP,Y,T,Q)
+C  Copyright (C) 2018 J. M. Hutson & C. R. Le Sueur
+C  Distributed under the GNU General Public License, version 3
+      IMPLICIT DOUBLE PRECISION (A-H,O-Z)
+C
+C  ROUTINE TO OBTAIN THE K MATRIX FROM THE LOG DERIVATIVE MATRIX
+C  ON ENTRY:  Y HOLDS THE LOG DERIVATIVE MATRIX
+C             SJ,SJP HOLD RICCATI-BESSEL FUNCTIONS AND DERIVATIVES
+C             SN,SNP HOLD MODIFIED SPHERICAL BESSEL FUNCTIONS
+C             NB HOLDS THE MAPPING FROM THRESHOLDS TO ENERGY ORDERED
+C             THRESHOLDS
+C  ON EXIT,   Q HOLDS THE K MATRIX
+C             T IS WORK SPACE
+C  SEE: B.R.JOHNSON, JOURNAL OF COMPUTATIONAL PHYSICS 13, 445 (1973)
+C
+      DIMENSION NB(N), SJ(N), SJP(N), SN(N), SNP(N),
+     1          Y(1), T(1), Q(1)
+C
+      CALL DSYFIL('U',N,Y,N)
+C
+C  GENERATE THE MATRIX IN SECOND SQUARE BRACKET OF EQN 18
+      IND = 0
+      DO 40 J = 1,NOPEN
+        NXJ = NB(J)
+        NXJJ = (NXJ - 1)*N
+      DO 40 I = 1,N
+        IND = IND + 1
+        INDY = NXJJ + NB(I)
+        T(IND) = Y(INDY)*SJ(NXJ)
+  40  CONTINUE
+C
+      IND = - N
+      DO 50 I = 1,NOPEN
+        IND = IND + N + 1
+        T(IND) = T(IND) - SJP(NB(I))
+  50  CONTINUE
+C
+C  GENERATE THE MATRIX IN FIRST SQUARE BRACKET OF EQN 18
+      IND = 0
+      DO 60 J = 1,N
+        NXJ = NB(J)
+        NXJJ = (NXJ - 1)*N
+      DO 60 I = 1,N
+        IND = IND + 1
+        INDY = NXJJ + NB(I)
+        Q(IND) = Y(INDY)*SN(NXJ)
+  60  CONTINUE
+C
+      IND = - N
+      DO 70 I = 1,N
+        IND = IND + N + 1
+        Q(IND) = Q(IND) - SNP(NB(I))
+  70  CONTINUE
+C
+C  COMPUTE SOLUTION TO EQN 18 AND PLACE IN T
+      CALL DGESV(N,NOPEN,Q,N,SJ,T,N,IER)
+      IF (IER.NE.0) GOTO 900
+C
+C  COPY SOLUTION INTO Q
+      IND = 0
+      DO 80 J = 1,NOPEN
+        INDA = (J - 1)*N
+      DO 80 I = 1,NOPEN
+        IND = IND + 1
+        INDA = INDA + 1
+        Q(IND) = T(INDA)
+  80  CONTINUE
+C
+C  Q NOW HOLDS THE K MATRIX.  FORCE SYMMETRY ON IT.
+C
+      CALL KSYM(Q, NOPEN)
+      RETURN
+C
+ 900  WRITE(6,901) IER
+ 901  FORMAT(/' ***** ERROR IN LINEAR EQUATION SOLVER IN YTOKG.',
+     1       '  IER =',I4,'.  RUN HALTED.')
+      STOP
+      END

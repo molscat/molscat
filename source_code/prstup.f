@@ -1,0 +1,409 @@
+      SUBROUTINE PRSTUP(IPROPS,IPROPL,RMIN,RMID,RMATCH,RMAX,
+     1                  DR,DRLR,DRAIRY,RNST,RNEND,DIR,RINIT,TOLHI)
+C  Copyright (C) 2018 J. M. Hutson & C. R. Le Sueur
+C  Distributed under the GNU General Public License, version 3
+      IMPLICIT NONE
+C  THIS SUBROUTINE SETS UP THE START AND END POINTS FOR EACH SEGMENT
+C
+C  WRITTEN BY CR Le Sueur SEPT-NOV 2016
+C
+C  AMENDED BY CR Le Sueur AUG-DEC 2018
+C
+      SAVE
+
+      INTEGER, INTENT(IN)::IPROPS,IPROPL
+      DOUBLE PRECISION, INTENT(IN)::RMIN,RMID,RMATCH,RMAX,DR,DRLR,
+     1                              DRAIRY,TOLHI
+      CHARACTER(6), INTENT(OUT)::RNST(NSEGS),RNEND(NSEGS)
+      CHARACTER(3), INTENT(OUT)::DIR(NSEGS)
+      CHARACTER(8), INTENT(OUT)::RINIT(2:3)
+
+      DOUBLE PRECISION, INTENT(IN) :: RTURN,RVFAC,RSTOP
+      DOUBLE PRECISION :: RMIDD
+      INTEGER, INTENT(IN) :: IPRINT
+      LOGICAL, INTENT(OUT) :: LSKIP
+
+      INTEGER MXSEG,IDIR,IFLG,NSEGS,NSTEPS
+      DOUBLE PRECISION RST,REND,DRPR,STEPS
+      PARAMETER (MXSEG=3)
+      COMMON /PRPDTA/ RST(MXSEG),REND(MXSEG),DRPR(MXSEG),
+     1                IDIR(MXSEG),IFLG(MXSEG),NSEGS,NSTEPS(MXSEG)
+
+      CHARACTER(1) CDRIVE
+      COMMON /CNTROL/ CDRIVE
+
+      INTEGER ISEG,SIFLG(MXSEG),SIDIR(MXSEG),SNSEGS,IMID,IMATCH,
+     1        NSTDUM,JSEG,IBACK
+      DOUBLE PRECISION SRST(MXSEG),SREND(MXSEG),SDRPR(MXSEG)
+      DOUBLE PRECISION RMTMP,DUMMY,GEOSTP,RENDAI,REXTRA
+
+      PARAMETER (REXTRA=1.D-5)
+
+C  SET THE NUMBER OF SEGMENTS IN THE PROPAGATION
+C  A) WHEN SHORT RANGE PROPAGATOR = LONG RANGE PROPAGATOR
+      IF (IPROPL.EQ.IPROPS) THEN
+C
+C  SET UP NUMBER OF SEGMENTS FOR MOLSCAT
+        IF (CDRIVE.EQ.'M') THEN
+          NSEGS=1
+          IF ((DRLR.NE.DR .AND. DRLR.NE.-1.D0) .AND. RMID.LT.RMAX) THEN
+            NSEGS=2
+          ENDIF
+C
+C  SET UP NUMBER OF SEGMENTS FOR BOUND/FIELD
+        ELSE
+          NSEGS=2
+        ENDIF
+C
+C  B) WHEN SHORT RANGE PROPAGATOR /= LONG RANGE PROPAGATOR
+      ELSE
+C
+C  SET UP NUMBER OF SEGMENTS FOR MOLSCAT
+        IF (CDRIVE.EQ.'M') THEN
+          NSEGS=2
+C
+C  SET UP NUMBER OF SEGMENTS FOR BOUND/FIELD
+        ELSE
+          IF (RMID.EQ.RMATCH) THEN
+            NSEGS=2
+          ELSE
+            NSEGS=3
+          ENDIF
+        ENDIF
+      ENDIF
+
+C  SET UP THE NAMES FOR START AND END POINTS, DIRECTIONS AND VALUES OF
+C  INTFLG
+      IFLG(1)=IPROPS
+      DRPR(1)=DR
+      RNST(1)='RMIN'
+      IDIR(1)=1
+      IF (NSEGS.EQ.1) THEN
+C
+C  MUST HAVE MORE THAN 1 SEGMENT FOR BOUND/FIELD
+        IF (CDRIVE.NE.'M') THEN
+          WRITE(6,*)'***** ERROR'
+          STOP
+        ENDIF
+        REND(1)=RMAX
+        RNEND(1)='RMAX'
+      ELSEIF (NSEGS.EQ.2) THEN
+        IFLG(2)=IPROPL
+C
+C  SET UP ENDPOINTS AND THEIR NAMES FOR MOLSCAT
+        IF (CDRIVE.EQ.'M') THEN
+          RNEND(1)='RMID'
+          RNST(2)='RMID'
+          RNEND(2)='RMAX'
+          IF (IPROPL.EQ.1 .OR. IPROPL.EQ.14) THEN
+            IF (DRAIRY.NE.-1.D0) THEN
+              DRPR(2)=DRAIRY
+              RINIT(2)='DRAIRY'
+            ELSEIF (DRLR.NE.-1.D0) THEN
+              DRPR(2)=DRLR
+              RINIT(2)='DRLR'
+            ELSE
+              DRPR(2)=-1.D0
+              RINIT(2)='DR'
+            ENDIF
+          ELSE
+            IF (DRLR.NE.-1.D0) THEN
+              DRPR(2)=DRLR
+            ELSE
+              DRPR(2)=DR
+            ENDIF
+          ENDIF
+          IDIR(2)=1
+C
+C  SET UP ENDPOINTS AND THEIR NAMES FOR BOUND/FIELD
+        ELSE
+          RNEND(1)='RMATCH'
+          RNEND(2)='RMAX'
+          RNST(2)='RMATCH'
+          IDIR(2)=-1
+          IF (IPROPL.EQ.1) THEN
+            IF (DRAIRY.NE.-1.D0) THEN
+              DRPR(2)=DRAIRY
+              RINIT(2)='DRAIRY'
+            ELSEIF (DRLR.NE.-1.D0) THEN
+              DRPR(2)=DRLR
+              RINIT(2)='DRLR'
+            ELSEIF (TOLHI.LT.1.D0) THEN
+              DRPR(2)=RMAX/400.D0
+              RINIT(2)='RMAX/400'
+            ELSE
+              DRPR(2)=DR
+              RINIT(2)='DR'
+            ENDIF
+          ELSE
+            IF (DRLR.EQ.-1.D0) THEN
+              DRPR(2)=DR
+            ELSE
+              DRPR(2)=DRLR
+            ENDIF
+          ENDIF
+        ENDIF
+C
+C  IF MORE THAN 2 SEGMENTS, CAN ONLY BE BOUND/FIELD
+      ELSEIF (NSEGS.EQ.3) THEN
+        IF (CDRIVE.EQ.'M') THEN
+          WRITE(6,*)'***** ERROR'
+          STOP
+        ENDIF
+C  SET UP ENDPOINTS AND THEIR NAMES
+C  TWO OPTIONS: A: RMATCH<RMID                  B: RMID<RMATCH
+C                 1: RMIN->RMATCH (SR) DR         1: RMIN->RMID (SR) DR
+C                 2: RMID<-RMAX   (LR) DRLR or    2: RMID->RMATCH (LR) DRLR or
+C                                      DRAIRY(/DR)                     DRAIRY
+C                 3: RMATCH<-RMID (SR) DR         3: RMATCH<-RMAX (LR) DRLR or
+C                                                                      DRAIRY
+        RNST(1)='RMIN'
+        RNST(2)='RMID'
+        RNST(3)='RMATCH'
+        IDIR(3)=-1
+        DIR(3)=' IN'
+        IFLG(2)=IPROPL
+        IF (RMID.GT.RMATCH) THEN ! OPTION A
+          RNEND(1)='RMATCH'      ! RMIN   -> RMATCH (SR, USE DR)
+          RNEND(2)='RMAX'        ! RMID   <- RMAX   (LR, USE DRLR OR DRAIRY
+                                 !                       OR DR)
+          RNEND(3)='RMID'        ! RMATCH <- RMID   (SR, USE DR)
+          IFLG(3)=IPROPS
+          IDIR(2)=-1
+          IF (IPROPL.EQ.1) THEN
+            IF (DRAIRY.NE.-1.D0) THEN
+              DRPR(2)=DRAIRY
+              RINIT(2)='DRAIRY'
+            ELSEIF (TOLHI.LT.1.D0) THEN
+              DRPR(2)=RMAX/400.D0
+              RINIT(2)='RMAX/400'
+            ELSEIF (DRLR.NE.-1.D0) THEN
+              DRPR(2)=DRLR
+              RINIT(2)='DRLR'
+            ELSE
+              DRPR(2)=DR
+              RINIT(2)='DR'
+            ENDIF
+            DRPR(3)=DR
+            RINIT(3)='DR'
+          ELSE
+            IF (DRLR.NE.-1.D0) THEN
+              DRPR(3)=DRLR
+            ELSE
+              DRPR(3)=DR
+            ENDIF
+          ENDIF
+        ELSE                     ! OPTION B
+          RNEND(1)='RMID'        ! RMIN   -> RMID   (SR, USE DR)
+          RNEND(2)='RMATCH'      ! RMID   -> RMATCH (LR, USE DRLR OR DRAIRY
+                                 !                       OR DR)
+          RNEND(3)='RMAX'        ! RMATCH <- RMAX   (LR, USE DRAIRY OR DRLR
+                                 !                       OR DR)
+          IFLG(3)=IPROPL
+          IDIR(2)=1
+          IF (IPROPL.EQ.1) THEN
+            IF (DRLR.NE.-1.D0) THEN
+              DRPR(2)=DRLR
+              RINIT(2)='DRLR'
+            ELSEIF (DRAIRY.NE.-1.D0) THEN
+              DRPR(2)=DRAIRY
+              RINIT(2)='DRAIRY'
+            ELSE
+              DRPR(2)=DR
+              RINIT(2)='DR'
+            ENDIF
+            IF (DRAIRY.NE.-1.D0) THEN
+              DRPR(3)=DRAIRY
+              RINIT(3)='DRAIRY'
+            ELSEIF (TOLHI.LT.1.D0) THEN
+              DRPR(3)=RMAX/400.D0
+              RINIT(3)='RMAX/400'
+            ELSE
+              DRPR(3)=DRPR(2)
+              RINIT(3)=RINIT(2)
+            ENDIF
+          ELSE
+            IF (DRLR.NE.-1.D0) THEN
+              DRPR(2)=DRLR
+            ELSE
+              DRPR(2)=DR
+            ENDIF
+            DRPR(3)=DRPR(2)
+          ENDIF
+        ENDIF
+      ENDIF
+
+C  USE THE NAMES TO FIND THE VALUES FOR THE END POINTS OF EACH
+C  PROPAGATION
+      IMID=0
+      IMATCH=0
+      DO ISEG=1,NSEGS
+        IF (RNST(ISEG).EQ.'RMIN') RST(ISEG)=RMIN
+        IF (RNST(ISEG).EQ.'RMID') RST(ISEG)=RMID
+        IF (RNST(ISEG).EQ.'RMATCH') RST(ISEG)=RMATCH
+        IF (RNST(ISEG).EQ.'RMAX') RST(ISEG)=RMAX
+        IF (RNEND(ISEG).EQ.'RMIN') REND(ISEG)=RMIN
+        IF (RNEND(ISEG).EQ.'RMID') THEN
+          REND(ISEG)=RMID
+          IMID=ISEG
+        ENDIF
+        IF (RNEND(ISEG).EQ.'RMATCH') THEN
+          IF (RMATCH.NE.-1.D0) THEN
+            REND(ISEG)=RMATCH
+          ELSEIF (RMIN.NE.0.D0) THEN
+            REND(ISEG)=SQRT(RMIN*RMAX)
+          ELSE
+            REND(ISEG)=RMAX/2.D0
+          ENDIF
+          IMATCH=ISEG
+        ENDIF
+        IF (RNEND(ISEG).EQ.'RMAX') REND(ISEG)=RMAX
+        IF (IDIR(ISEG).EQ.1) THEN
+          DIR(ISEG)='OUT'
+        ELSE
+          DIR(ISEG)=' IN'
+        ENDIF
+C  SET UP SAVED VALUES OF ALL VARIABLES, SO THAT THEY CAN BE RESET FOR
+C  EVERY CALL TO THE PROPAGATION
+        IF (IFLG(ISEG).EQ.1 .AND. TOLHI.GT.1.D0) THEN
+
+C  ONCE PARAMETERS FOR EARLIER PROPAGATION HAVE BEEN SET, CAN SET STEP SIZE
+C  FOR 2ND AIRY PROPAGATION IN THIS SPECIAL CASE.
+          IF (ISEG.EQ.3 .AND. IFLG(2).EQ.1 .AND. RINIT(3).EQ.RINIT(2))
+     1    THEN
+            NSTDUM=0
+            DUMMY=GEOSTP(RST(2),REND(2),DRPR(2),TOLHI,NSTDUM)
+            DRPR(3)=DRPR(2)*TOLHI**NSTDUM
+          ENDIF
+C  AND CAN CHANGE PERMANENT VALUES OF ENDPOINTS IF THEY HAVE NEEDED ADJUSTMENT
+C  IN THE CASE OF TOLHI>1
+          SRST(ISEG)=SREND(ISEG-1)
+          RENDAI=GEOSTP(SRST(ISEG),REND(ISEG),DRPR(ISEG),TOLHI,
+     1                   NSTDUM)
+          IF (REND(ISEG)-RENDAI.LE.REXTRA) SREND(ISEG)=RENDAI
+        ELSE
+          SRST(ISEG)=RST(ISEG)
+          SREND(ISEG)=REND(ISEG)
+        ENDIF
+        SIFLG(ISEG)=IFLG(ISEG)
+        SIDIR(ISEG)=IDIR(ISEG)
+        SDRPR(ISEG)=DRPR(ISEG)
+      ENDDO
+      SNSEGS=NSEGS
+      RETURN
+C============================================================== END OF PRSTUP
+      ENTRY PRCONT(RMIN,RTURN,RSTOP,RMATCH,RMAX,RVFAC,IPRINT)
+
+C  COPY THE SAVED VALUES BACK INTO THE COMMON BLOCK VARIABLES
+      DO ISEG=1,SNSEGS
+        RST(ISEG)=SRST(ISEG)
+        REND(ISEG)=SREND(ISEG)
+        IFLG(ISEG)=SIFLG(ISEG)
+        IDIR(ISEG)=SIDIR(ISEG)
+        DRPR(ISEG)=SDRPR(ISEG)
+      ENDDO
+      NSEGS=SNSEGS
+
+C  COPY THE (POSSIBLY) CHANGED VALUES OF RMIN AND RMAX INTO THE 
+C  RELEVANT PLACES
+      RST(1)=RMIN
+      REND(NSEGS)=RMAX
+      IF (RMATCH.EQ.-1.D0) THEN
+        IF (RST(1).NE.0.D0) THEN
+          REND(IMATCH)=SQRT(RMIN*RMAX)
+        ELSE
+          REND(IMATCH)=RMAX/2.D0
+        ENDIF
+        RST(IMATCH+1)=REND(IMATCH)
+      ENDIF
+
+C  (FOR MOLSCAT ONLY) COPY THE VALUE OF RMIDD INTO THE RELEVANT PLACE.
+C
+C  BUT IF RMIDD IS CALCULATED FROM RTURN, THEN FIRST CHECK WHETHER IT IS LESS
+C  THAN RMAX.  IF RMIDD>RMAX, RESET NUMBER OF SEGMENTS SO THAT PROPAGATION ENDS
+C  WITH SEGMENT TERMINATED BY RMIDD (AND SET END POINT TO BE RMAX).
+      IF (RVFAC.NE.0.D0) THEN
+        RMIDD=RVFAC*RTURN
+        IF (RMIDD.GT.MAX(RSTOP,RMAX)) THEN
+          WRITE(6,*) ' *** WARNING *** RMID OBTAINED FROM RVFAC IS'//
+     1               ' > RMAX'
+          WRITE(6,*) '                 RESETTING IT TO RMAX'
+          RMIDD=MAX(RSTOP,RMAX)
+          NSEGS=IMID
+        ELSE
+          IF (IPRINT.GE.3 .AND. RSTOP.GT.RMAX) WRITE(6,1799) RSTOP,RMAX
+ 1799     FORMAT('  RMID OBTAINED FROM RTURN EVEN THOUGH RSTOP.GT.RMAX',
+     1           2F8.2)
+          IF (IPRINT.GE.3) WRITE(6,1800) RMIDD,RVFAC
+ 1800     FORMAT(/'  RMID =',F9.4,' OBTAINED FROM RVFAC =',F6.3)
+          RST(IMID+1)=RMIDD
+        ENDIF
+        REND(IMID)=RMIDD
+      ENDIF
+
+      RETURN
+C=========================================================== END OF PRCONT
+      ENTRY PRCHCK(STEPS,LSKIP)
+        
+      DO ISEG=2,SNSEGS
+C  CHECK THAT RST VALUES INCREASE.  IF NOT, REMOVE SUPERFLUOUS
+C  PROPAGATIONS FROM THE BEGINNING
+        IF (RST(1).GT.RST(ISEG)) THEN
+          NSEGS=NSEGS-1
+        ENDIF
+      ENDDO
+
+C  IF RMIN > RMAX, NO PROPAGATION - SET LSKIP TO TRUE TO INDICATE THIS
+      IF (RST(1).GT.REND(SNSEGS)) NSEGS=0
+      LSKIP=(NSEGS.EQ.0)
+      IF (LSKIP) RETURN
+
+C  IF RMIN > RST FOR SOME NUMBER OF SEGMENTS, REMOVE THEM FROM THIS
+C  PROPAGATION
+      IBACK=SNSEGS-NSEGS
+      IF (IBACK.GT.0) THEN
+        DO ISEG=1,NSEGS
+          RST(ISEG)=MAX(RST(ISEG),RST(ISEG+IBACK))
+          REND(ISEG)=REND(ISEG+IBACK)
+          IF (ISEG.NE.1 .OR. DRPR(ISEG+IBACK).NE.-1.D0)
+     1      DRPR(ISEG)=DRPR(ISEG+IBACK)
+          IFLG(ISEG)=IFLG(ISEG+IBACK)
+          IDIR(ISEG)=IDIR(ISEG+IBACK)
+        ENDDO
+      ENDIF
+
+C  SET START POINT FOR EACH SEGMENT TO BE END POINT OF PREVIOUS
+      DO ISEG=1,NSEGS
+        IF (ISEG.NE.1) THEN
+          RST(ISEG)=REND(ISEG-1)
+        ENDIF
+
+C  CHECK THAT RST < REND FOR EACH SEGMENT
+        IF (RST(ISEG).GE.REND(ISEG)) THEN
+          WRITE(6,*) ' *** ERROR *** SEGMENT ',ISEG,
+     1               ' HAS START POINT >= END POINT'
+          STOP
+        ENDIF
+
+        IF (STEPS.GT.0.D0) CYCLE
+C  MAKE NSTEPS EQUAL TO THE NEAREST POSITIVE WHOLE NUMBER
+        IF (IFLG(ISEG).NE.1) THEN
+          NSTEPS(ISEG)=MAX(INT(ABS(REND(ISEG)-RST(ISEG))/DRPR(ISEG)),1)
+          DRPR(ISEG)=(REND(ISEG)-RST(ISEG))/DFLOAT(NSTEPS(ISEG))
+        ENDIF
+
+C  SET END POINT FOR EACH SEGMENT TO BE WHOLE NUMBER OF STEPS AWAY FROM
+C  START POINT
+        IF (IDIR(ISEG).EQ.1 .AND. IFLG(ISEG).NE.1) THEN
+          REND(ISEG)=RST(ISEG)+NSTEPS(ISEG)*DRPR(ISEG)
+        ELSEIF (IFLG(ISEG).EQ.1 .AND. IDIR(ISEG).EQ.-1) THEN
+          IF (DRAIRY.EQ.-1.D0) THEN
+            DRPR(ISEG)=REND(ISEG)/400.D0
+          ELSE
+            DRPR(ISEG)=DRAIRY
+          ENDIF
+        ENDIF
+      ENDDO
+
+      RETURN
+      END

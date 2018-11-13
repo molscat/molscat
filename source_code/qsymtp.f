@@ -1,0 +1,57 @@
+      FUNCTION QSYMTP(J1,K1,J1P,K1P,J2,J2P,LL,LLP,
+     1                JJ,JJP,JT,P1,Q1,P2,PP)
+C  Copyright (C) 2018 J. M. Hutson & C. R. Le Sueur
+C  Distributed under the GNU General Public License, version 3
+      IMPLICIT DOUBLE PRECISION (A-H,O-Z)
+      INTEGER P1,Q1,P2,PP
+C
+C  CALCULATES MATRIX ELEMENT FOR LINEAR ROTOR/ASYMMETRIC TOP
+C  USES SUBROUTINES -
+C       THRJ(J1,P1,J1P,K1,Q1,K1P)
+C       THREEJ(J2,P2,J2P) WHICH IS FOR M1=M2=M3=0
+C       SIXJ(LL,LLP,JJ,JJP,PP,JT)
+C         NOTE THAT ORDER OF ARGUMENTS IS (J1,J2,J5,J4,J3,J6)
+C       XNINEJ(JJP,JJ,PP,J1P,J1,P1,J2P,J2,P2)
+C
+      DATA PI /3.14159265358979289D0/
+C     STATEMENT FUNCTION DEFINITION . . .
+      Z(Y) = 2.D0 * Y + 1.D0
+C
+      IF (K1P-K1+Q1.NE.0) GOTO 9000
+
+      F=THREEJ(LL,LLP,PP)
+      IF (F.EQ.0.D0) GOTO 9000
+
+      XJ1 = J1
+      XJ1P = J1P
+      XK1 = -K1
+      XK1P = K1P
+      XQ1 = Q1
+      XP1 = P1
+      F = F * THRJ(XJ1,XP1,XJ1P,XK1,XQ1,XK1P)
+      F = F*THREEJ(J2,P2,J2P)
+      IF (F.EQ.0.D0) GOTO 9000
+
+      F = F * SIXJ(LL,LLP,JJ,JJP,PP,JT)
+      IF (F. EQ. 0.0D0) GOTO 9000
+
+      F = F*XNINEJ(JJP,JJ,PP,J1P,J1,P1,J2P,J2,P2)
+      IF (F.EQ.0.D0) GOTO 9000
+
+      XLLP = LLP
+      XLL = LL
+      XJ2 = J2
+      XJ2P = J2P
+      XJJ = JJ
+      XJJP = JJP
+      XPP = PP
+      XP2 = P2
+      PH = PARSGN(-J1P+J2P-PP+K1-JJ-JT)
+      F = F*PH*SQRT(Z(XLLP)*Z(XLL)*Z(XJ2)*Z(XJ2P)*Z(XJJ)*Z(XJJP)
+     1              *Z(XPP)*Z(XP2)*Z(XJ1)*Z(XJ1P))/4.0/PI
+      QSYMTP=F
+      RETURN
+
+ 9000 QSYMTP=0.D0
+      RETURN
+      END
