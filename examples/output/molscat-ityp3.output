@@ -7,7 +7,7 @@
  |                                                                            |
  |                               Version 2019.0 (beta)                        |
  |                                                                            |
- |                       Run on 12 Nov 2018   at 15:01:41                     |
+ |                       Run on 14 Nov 2018   at 09:41:35                     |
  |                                                                            |
   ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
 
@@ -3975,7 +3975,7 @@
  |                                                                            |
  |                               Version 2019.0 (beta)                        |
  |                                                                            |
- |                    This run used       2.12 cpu secs and                   |
+ |                    This run used       2.27 cpu secs and                   |
  |               1725 of the allocated   1000000 words of storage             |
  |                                                                            |
   ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
@@ -3988,7 +3988,7 @@
  |                                                                            |
  |                               Version 2019.0 (beta)                        |
  |                                                                            |
- |                       Run on 12 Nov 2018   at 15:01:43                     |
+ |                       Run on 14 Nov 2018   at 09:41:37                     |
  |                                                                            |
   ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
 
@@ -7958,7 +7958,7 @@
  |                                                                            |
  |                               Version 2019.0 (beta)                        |
  |                                                                            |
- |                    This run used       2.74 cpu secs and                   |
+ |                    This run used       2.72 cpu secs and                   |
  |               1773 of the allocated   1000000 words of storage             |
  |                                                                            |
   ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
@@ -7971,7 +7971,7 @@
  |                                                                            |
  |                               Version 2019.0 (beta)                        |
  |                                                                            |
- |                       Run on 12 Nov 2018   at 15:01:46                     |
+ |                       Run on 14 Nov 2018   at 09:41:40                     |
  |                                                                            |
   ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
 
@@ -15090,7 +15090,7 @@
  |                                                                            |
  |                               Version 2019.0 (beta)                        |
  |                                                                            |
- |                    This run used       0.57 cpu secs and                   |
+ |                    This run used       0.56 cpu secs and                   |
  |                504 of the allocated   1000000 words of storage             |
  |                                                                            |
   ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
@@ -15103,7 +15103,7 @@
  |                                                                            |
  |                               Version 2019.0 (beta)                        |
  |                                                                            |
- |                       Run on 12 Nov 2018   at 15:01:47                     |
+ |                       Run on 14 Nov 2018   at 09:41:40                     |
  |                                                                            |
   ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
 
@@ -22224,7 +22224,7 @@
  |                                                                            |
  |                               Version 2019.0 (beta)                        |
  |                                                                            |
- |                    This run used       1.90 cpu secs and                   |
+ |                    This run used       1.92 cpu secs and                   |
  |                552 of the allocated   1000000 words of storage             |
  |                                                                            |
   ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---

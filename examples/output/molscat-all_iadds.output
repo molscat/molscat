@@ -7,7 +7,7 @@
  |                                                                            |
  |                               Version 2019.0 (beta)                        |
  |                                                                            |
- |                       Run on 12 Nov 2018   at 14:59:58                     |
+ |                       Run on 14 Nov 2018   at 09:39:43                     |
  |                                                                            |
   ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
 
@@ -67,34 +67,34 @@
   INTERACTION POTENTIAL FOR EXPANSION TERM NUMBER   1
   WHICH HAS LAMBDA =   0,  V =   0,  V-PRIME =   0
 
-                 0.10000000E+01 * R **-12
-                -0.20000000E+01 * R ** -6
+                 1.00000000E+00 * R **-12
+                -2.00000000E+00 * R ** -6
 
   INTERACTION POTENTIAL FOR EXPANSION TERM NUMBER   2
   WHICH HAS LAMBDA =   2,  V =   0,  V-PRIME =   0
 
-                -0.20000000E+00 * R ** -6
+                -2.00000000E-01 * R ** -6
 
   INTERACTION POTENTIAL FOR EXPANSION TERM NUMBER   3
   WHICH HAS LAMBDA =   0,  V =   1,  V-PRIME =   1
 
-                 0.11000000E+01 * R **-12
-                -0.22000000E+01 * R ** -6
+                 1.10000000E+00 * R **-12
+                -2.20000000E+00 * R ** -6
 
   INTERACTION POTENTIAL FOR EXPANSION TERM NUMBER   4
   WHICH HAS LAMBDA =   2,  V =   1,  V-PRIME =   1
 
-                -0.40000000E+00 * R ** -6
+                -4.00000000E-01 * R ** -6
 
   INTERACTION POTENTIAL FOR EXPANSION TERM NUMBER   5
   WHICH HAS LAMBDA =   0,  V =   1,  V-PRIME =   0
 
-                 0.10000000E+00 * R **-12
+                 1.00000000E-01 * R **-12
 
   INTERACTION POTENTIAL FOR EXPANSION TERM NUMBER   6
   WHICH HAS LAMBDA =   2,  V =   1,  V-PRIME =   0
 
-                 0.10000000E-01 * R **-12
+                 1.00000000E-02 * R **-12
 
   POTENL PROCESSING FINISHED.
 
@@ -556,7 +556,7 @@
  |                                                                            |
  |                               Version 2019.0 (beta)                        |
  |                                                                            |
- |                    This run used       0.21 cpu secs and                   |
+ |                    This run used       0.20 cpu secs and                   |
  |               3408 of the allocated   1000000 words of storage             |
  |                                                                            |
   ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
@@ -569,7 +569,7 @@
  |                                                                            |
  |                               Version 2019.0 (beta)                        |
  |                                                                            |
- |                       Run on 12 Nov 2018   at 14:59:58                     |
+ |                       Run on 14 Nov 2018   at 09:39:43                     |
  |                                                                            |
   ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
 
@@ -633,34 +633,34 @@
   INTERACTION POTENTIAL FOR EXPANSION TERM NUMBER   1
   WHICH HAS LAMBDA =   0,  V =   0,  V-PRIME =   0
 
-                 0.10000000E+01 * R **-12
-                -0.20000000E+01 * R ** -6
+                 1.00000000E+00 * R **-12
+                -2.00000000E+00 * R ** -6
 
   INTERACTION POTENTIAL FOR EXPANSION TERM NUMBER   2
   WHICH HAS LAMBDA =   2,  V =   0,  V-PRIME =   0
 
-                -0.20000000E+00 * R ** -6
+                -2.00000000E-01 * R ** -6
 
   INTERACTION POTENTIAL FOR EXPANSION TERM NUMBER   3
   WHICH HAS LAMBDA =   0,  V =   1,  V-PRIME =   1
 
-                 0.11000000E+01 * R **-12
-                -0.22000000E+01 * R ** -6
+                 1.10000000E+00 * R **-12
+                -2.20000000E+00 * R ** -6
 
   INTERACTION POTENTIAL FOR EXPANSION TERM NUMBER   4
   WHICH HAS LAMBDA =   2,  V =   1,  V-PRIME =   1
 
-                -0.40000000E+00 * R ** -6
+                -4.00000000E-01 * R ** -6
 
   INTERACTION POTENTIAL FOR EXPANSION TERM NUMBER   5
   WHICH HAS LAMBDA =   0,  V =   1,  V-PRIME =   0
 
-                 0.10000000E+00 * R **-12
+                 1.00000000E-01 * R **-12
 
   INTERACTION POTENTIAL FOR EXPANSION TERM NUMBER   6
   WHICH HAS LAMBDA =   2,  V =   1,  V-PRIME =   0
 
-                 0.10000000E-01 * R **-12
+                 1.00000000E-02 * R **-12
 
   POTENL PROCESSING FINISHED.
 
@@ -983,7 +983,7 @@
  |                                                                            |
  |                               Version 2019.0 (beta)                        |
  |                                                                            |
- |                       Run on 12 Nov 2018   at 14:59:58                     |
+ |                       Run on 14 Nov 2018   at 09:39:43                     |
  |                                                                            |
   ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
 
@@ -1056,34 +1056,34 @@
   INTERACTION POTENTIAL FOR EXPANSION TERM NUMBER   1
   WHICH HAS LAMBDA =   0,  V =   0,  V-PRIME =   0
 
-                 0.10000000E+01 * R **-12
-                -0.20000000E+01 * R ** -6
+                 1.00000000E+00 * R **-12
+                -2.00000000E+00 * R ** -6
 
   INTERACTION POTENTIAL FOR EXPANSION TERM NUMBER   2
   WHICH HAS LAMBDA =   2,  V =   0,  V-PRIME =   0
 
-                -0.20000000E+00 * R ** -6
+                -2.00000000E-01 * R ** -6
 
   INTERACTION POTENTIAL FOR EXPANSION TERM NUMBER   3
   WHICH HAS LAMBDA =   0,  V =   1,  V-PRIME =   1
 
-                 0.11000000E+01 * R **-12
-                -0.22000000E+01 * R ** -6
+                 1.10000000E+00 * R **-12
+                -2.20000000E+00 * R ** -6
 
   INTERACTION POTENTIAL FOR EXPANSION TERM NUMBER   4
   WHICH HAS LAMBDA =   2,  V =   1,  V-PRIME =   1
 
-                -0.40000000E+00 * R ** -6
+                -4.00000000E-01 * R ** -6
 
   INTERACTION POTENTIAL FOR EXPANSION TERM NUMBER   5
   WHICH HAS LAMBDA =   0,  V =   1,  V-PRIME =   0
 
-                 0.10000000E+00 * R **-12
+                 1.00000000E-01 * R **-12
 
   INTERACTION POTENTIAL FOR EXPANSION TERM NUMBER   6
   WHICH HAS LAMBDA =   2,  V =   1,  V-PRIME =   0
 
-                 0.10000000E-01 * R **-12
+                 1.00000000E-02 * R **-12
 
   POTENL PROCESSING FINISHED.
 
@@ -1708,7 +1708,7 @@
  |                                                                            |
  |                               Version 2019.0 (beta)                        |
  |                                                                            |
- |                       Run on 12 Nov 2018   at 14:59:58                     |
+ |                       Run on 14 Nov 2018   at 09:39:43                     |
  |                                                                            |
   ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
 
@@ -1783,34 +1783,34 @@
   INTERACTION POTENTIAL FOR EXPANSION TERM NUMBER   1
   WHICH HAS LAMBDA =   0,  V =   0,  V-PRIME =   0
 
-                 0.10000000E+01 * R **-12
-                -0.20000000E+01 * R ** -6
+                 1.00000000E+00 * R **-12
+                -2.00000000E+00 * R ** -6
 
   INTERACTION POTENTIAL FOR EXPANSION TERM NUMBER   2
   WHICH HAS LAMBDA =   2,  V =   0,  V-PRIME =   0
 
-                -0.20000000E+00 * R ** -6
+                -2.00000000E-01 * R ** -6
 
   INTERACTION POTENTIAL FOR EXPANSION TERM NUMBER   3
   WHICH HAS LAMBDA =   0,  V =   1,  V-PRIME =   1
 
-                 0.11000000E+01 * R **-12
-                -0.22000000E+01 * R ** -6
+                 1.10000000E+00 * R **-12
+                -2.20000000E+00 * R ** -6
 
   INTERACTION POTENTIAL FOR EXPANSION TERM NUMBER   4
   WHICH HAS LAMBDA =   2,  V =   1,  V-PRIME =   1
 
-                -0.40000000E+00 * R ** -6
+                -4.00000000E-01 * R ** -6
 
   INTERACTION POTENTIAL FOR EXPANSION TERM NUMBER   5
   WHICH HAS LAMBDA =   0,  V =   1,  V-PRIME =   0
 
-                 0.10000000E+00 * R **-12
+                 1.00000000E-01 * R **-12
 
   INTERACTION POTENTIAL FOR EXPANSION TERM NUMBER   6
   WHICH HAS LAMBDA =   2,  V =   1,  V-PRIME =   0
 
-                 0.10000000E-01 * R **-12
+                 1.00000000E-02 * R **-12
 
   POTENL PROCESSING FINISHED.
 
@@ -2435,7 +2435,7 @@
  |                                                                            |
  |                               Version 2019.0 (beta)                        |
  |                                                                            |
- |                       Run on 12 Nov 2018   at 14:59:58                     |
+ |                       Run on 14 Nov 2018   at 09:39:43                     |
  |                                                                            |
   ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
 
@@ -2503,34 +2503,34 @@
   INTERACTION POTENTIAL FOR EXPANSION TERM NUMBER   1
   WHICH HAS LAMBDA =   0,  V =   0,  V-PRIME =   0
 
-                 0.10000000E+01 * R **-12
-                -0.20000000E+01 * R ** -6
+                 1.00000000E+00 * R **-12
+                -2.00000000E+00 * R ** -6
 
   INTERACTION POTENTIAL FOR EXPANSION TERM NUMBER   2
   WHICH HAS LAMBDA =   2,  V =   0,  V-PRIME =   0
 
-                -0.20000000E+00 * R ** -6
+                -2.00000000E-01 * R ** -6
 
   INTERACTION POTENTIAL FOR EXPANSION TERM NUMBER   3
   WHICH HAS LAMBDA =   0,  V =   1,  V-PRIME =   1
 
-                 0.11000000E+01 * R **-12
-                -0.22000000E+01 * R ** -6
+                 1.10000000E+00 * R **-12
+                -2.20000000E+00 * R ** -6
 
   INTERACTION POTENTIAL FOR EXPANSION TERM NUMBER   4
   WHICH HAS LAMBDA =   2,  V =   1,  V-PRIME =   1
 
-                -0.40000000E+00 * R ** -6
+                -4.00000000E-01 * R ** -6
 
   INTERACTION POTENTIAL FOR EXPANSION TERM NUMBER   5
   WHICH HAS LAMBDA =   0,  V =   1,  V-PRIME =   0
 
-                 0.10000000E+00 * R **-12
+                 1.00000000E-01 * R **-12
 
   INTERACTION POTENTIAL FOR EXPANSION TERM NUMBER   6
   WHICH HAS LAMBDA =   2,  V =   1,  V-PRIME =   0
 
-                 0.10000000E-01 * R **-12
+                 1.00000000E-02 * R **-12
 
   POTENL PROCESSING FINISHED.
 
@@ -3459,7 +3459,7 @@
  |                                                                            |
  |                               Version 2019.0 (beta)                        |
  |                                                                            |
- |                       Run on 12 Nov 2018   at 14:59:58                     |
+ |                       Run on 14 Nov 2018   at 09:39:43                     |
  |                                                                            |
   ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
 
@@ -3523,34 +3523,34 @@
   INTERACTION POTENTIAL FOR EXPANSION TERM NUMBER   1
   WHICH HAS LAMBDA =   0,  V =   0,  V-PRIME =   0
 
-                 0.10000000E+01 * R **-12
-                -0.20000000E+01 * R ** -6
+                 1.00000000E+00 * R **-12
+                -2.00000000E+00 * R ** -6
 
   INTERACTION POTENTIAL FOR EXPANSION TERM NUMBER   2
   WHICH HAS LAMBDA =   2,  V =   0,  V-PRIME =   0
 
-                -0.20000000E+00 * R ** -6
+                -2.00000000E-01 * R ** -6
 
   INTERACTION POTENTIAL FOR EXPANSION TERM NUMBER   3
   WHICH HAS LAMBDA =   0,  V =   1,  V-PRIME =   1
 
-                 0.11000000E+01 * R **-12
-                -0.22000000E+01 * R ** -6
+                 1.10000000E+00 * R **-12
+                -2.20000000E+00 * R ** -6
 
   INTERACTION POTENTIAL FOR EXPANSION TERM NUMBER   4
   WHICH HAS LAMBDA =   2,  V =   1,  V-PRIME =   1
 
-                -0.40000000E+00 * R ** -6
+                -4.00000000E-01 * R ** -6
 
   INTERACTION POTENTIAL FOR EXPANSION TERM NUMBER   5
   WHICH HAS LAMBDA =   0,  V =   1,  V-PRIME =   0
 
-                 0.10000000E+00 * R **-12
+                 1.00000000E-01 * R **-12
 
   INTERACTION POTENTIAL FOR EXPANSION TERM NUMBER   6
   WHICH HAS LAMBDA =   2,  V =   1,  V-PRIME =   0
 
-                 0.10000000E-01 * R **-12
+                 1.00000000E-02 * R **-12
 
   POTENL PROCESSING FINISHED.
 

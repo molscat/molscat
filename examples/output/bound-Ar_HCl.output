@@ -6,7 +6,7 @@
  |                                                                            |
  |                               Version 2019.0 (beta)                        |
  |                                                                            |
- |                       Run on 12 Nov 2018   at 15:10:46                     |
+ |                       Run on 14 Nov 2018   at 09:50:55                     |
  |                                                                            |
   -- BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND --
 
@@ -264,7 +264,7 @@
  |                                                                            |
  |                               Version 2019.0 (beta)                        |
  |                                                                            |
- |                    This run used       0.33 cpu secs and                   |
+ |                    This run used       0.39 cpu secs and                   |
  |               2208 of the allocated   1000000 words of storage             |
  |                                                                            |
   -- BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND --
@@ -276,7 +276,7 @@
  |                                                                            |
  |                               Version 2019.0 (beta)                        |
  |                                                                            |
- |                       Run on 12 Nov 2018   at 15:10:46                     |
+ |                       Run on 14 Nov 2018   at 09:50:56                     |
  |                                                                            |
   -- BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND --
 

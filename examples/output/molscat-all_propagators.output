@@ -7,7 +7,7 @@
  |                                                                            |
  |                               Version 2019.0 (beta)                        |
  |                                                                            |
- |                       Run on 12 Nov 2018   at 14:59:55                     |
+ |                       Run on 14 Nov 2018   at 09:39:41                     |
  |                                                                            |
   ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
 
@@ -63,13 +63,13 @@
   INTERACTION POTENTIAL FOR EXPANSION TERM NUMBER   1
   WHICH HAS LAMBDA =   0
 
-                 0.10000000E+01 * R **-12
-                -0.20000000E+01 * R ** -6
+                 1.00000000E+00 * R **-12
+                -2.00000000E+00 * R ** -6
 
   INTERACTION POTENTIAL FOR EXPANSION TERM NUMBER   2
   WHICH HAS LAMBDA =   2
 
-                -0.20000000E+00 * R ** -6
+                -2.00000000E-01 * R ** -6
 
   POTENL PROCESSING FINISHED.
 
@@ -190,7 +190,7 @@
  |                                                                            |
  |                               Version 2019.0 (beta)                        |
  |                                                                            |
- |                       Run on 12 Nov 2018   at 14:59:56                     |
+ |                       Run on 14 Nov 2018   at 09:39:41                     |
  |                                                                            |
   ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
 
@@ -246,13 +246,13 @@
   INTERACTION POTENTIAL FOR EXPANSION TERM NUMBER   1
   WHICH HAS LAMBDA =   0
 
-                 0.10000000E+01 * R **-12
-                -0.20000000E+01 * R ** -6
+                 1.00000000E+00 * R **-12
+                -2.00000000E+00 * R ** -6
 
   INTERACTION POTENTIAL FOR EXPANSION TERM NUMBER   2
   WHICH HAS LAMBDA =   2
 
-                -0.20000000E+00 * R ** -6
+                -2.00000000E-01 * R ** -6
 
   POTENL PROCESSING FINISHED.
 
@@ -361,7 +361,7 @@
  |                                                                            |
  |                               Version 2019.0 (beta)                        |
  |                                                                            |
- |                    This run used       0.06 cpu secs and                   |
+ |                    This run used       0.09 cpu secs and                   |
  |               1119 of the allocated   1000000 words of storage             |
  |                                                                            |
   ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
@@ -374,7 +374,7 @@
  |                                                                            |
  |                               Version 2019.0 (beta)                        |
  |                                                                            |
- |                       Run on 12 Nov 2018   at 14:59:56                     |
+ |                       Run on 14 Nov 2018   at 09:39:42                     |
  |                                                                            |
   ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
 
@@ -430,13 +430,13 @@
   INTERACTION POTENTIAL FOR EXPANSION TERM NUMBER   1
   WHICH HAS LAMBDA =   0
 
-                 0.10000000E+01 * R **-12
-                -0.20000000E+01 * R ** -6
+                 1.00000000E+00 * R **-12
+                -2.00000000E+00 * R ** -6
 
   INTERACTION POTENTIAL FOR EXPANSION TERM NUMBER   2
   WHICH HAS LAMBDA =   2
 
-                -0.20000000E+00 * R ** -6
+                -2.00000000E-01 * R ** -6
 
   POTENL PROCESSING FINISHED.
 
@@ -544,7 +544,7 @@
  |                                                                            |
  |                               Version 2019.0 (beta)                        |
  |                                                                            |
- |                    This run used       0.20 cpu secs and                   |
+ |                    This run used       0.21 cpu secs and                   |
  |                783 of the allocated   1000000 words of storage             |
  |                                                                            |
   ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
@@ -557,7 +557,7 @@
  |                                                                            |
  |                               Version 2019.0 (beta)                        |
  |                                                                            |
- |                       Run on 12 Nov 2018   at 14:59:56                     |
+ |                       Run on 14 Nov 2018   at 09:39:42                     |
  |                                                                            |
   ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
 
@@ -613,13 +613,13 @@
   INTERACTION POTENTIAL FOR EXPANSION TERM NUMBER   1
   WHICH HAS LAMBDA =   0
 
-                 0.10000000E+01 * R **-12
-                -0.20000000E+01 * R ** -6
+                 1.00000000E+00 * R **-12
+                -2.00000000E+00 * R ** -6
 
   INTERACTION POTENTIAL FOR EXPANSION TERM NUMBER   2
   WHICH HAS LAMBDA =   2
 
-                -0.20000000E+00 * R ** -6
+                -2.00000000E-01 * R ** -6
 
   POTENL PROCESSING FINISHED.
 
@@ -727,7 +727,7 @@
  |                                                                            |
  |                               Version 2019.0 (beta)                        |
  |                                                                            |
- |                    This run used       0.18 cpu secs and                   |
+ |                    This run used       0.22 cpu secs and                   |
  |                783 of the allocated   1000000 words of storage             |
  |                                                                            |
   ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
@@ -740,7 +740,7 @@
  |                                                                            |
  |                               Version 2019.0 (beta)                        |
  |                                                                            |
- |                       Run on 12 Nov 2018   at 14:59:56                     |
+ |                       Run on 14 Nov 2018   at 09:39:42                     |
  |                                                                            |
   ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
 
@@ -796,13 +796,13 @@
   INTERACTION POTENTIAL FOR EXPANSION TERM NUMBER   1
   WHICH HAS LAMBDA =   0
 
-                 0.10000000E+01 * R **-12
-                -0.20000000E+01 * R ** -6
+                 1.00000000E+00 * R **-12
+                -2.00000000E+00 * R ** -6
 
   INTERACTION POTENTIAL FOR EXPANSION TERM NUMBER   2
   WHICH HAS LAMBDA =   2
 
-                -0.20000000E+00 * R ** -6
+                -2.00000000E-01 * R ** -6
 
   POTENL PROCESSING FINISHED.
 
@@ -910,7 +910,7 @@
  |                                                                            |
  |                               Version 2019.0 (beta)                        |
  |                                                                            |
- |                    This run used       0.36 cpu secs and                   |
+ |                    This run used       0.40 cpu secs and                   |
  |               1095 of the allocated   1000000 words of storage             |
  |                                                                            |
   ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
@@ -923,7 +923,7 @@
  |                                                                            |
  |                               Version 2019.0 (beta)                        |
  |                                                                            |
- |                       Run on 12 Nov 2018   at 14:59:57                     |
+ |                       Run on 14 Nov 2018   at 09:39:42                     |
  |                                                                            |
   ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
 
@@ -979,13 +979,13 @@
   INTERACTION POTENTIAL FOR EXPANSION TERM NUMBER   1
   WHICH HAS LAMBDA =   0
 
-                 0.10000000E+01 * R **-12
-                -0.20000000E+01 * R ** -6
+                 1.00000000E+00 * R **-12
+                -2.00000000E+00 * R ** -6
 
   INTERACTION POTENTIAL FOR EXPANSION TERM NUMBER   2
   WHICH HAS LAMBDA =   2
 
-                -0.20000000E+00 * R ** -6
+                -2.00000000E-01 * R ** -6
 
   POTENL PROCESSING FINISHED.
 
@@ -1094,7 +1094,7 @@
  |                                                                            |
  |                               Version 2019.0 (beta)                        |
  |                                                                            |
- |                    This run used       0.35 cpu secs and                   |
+ |                    This run used       0.36 cpu secs and                   |
  |                783 of the allocated   1000000 words of storage             |
  |                                                                            |
   ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
@@ -1107,7 +1107,7 @@
  |                                                                            |
  |                               Version 2019.0 (beta)                        |
  |                                                                            |
- |                       Run on 12 Nov 2018   at 14:59:57                     |
+ |                       Run on 14 Nov 2018   at 09:39:43                     |
  |                                                                            |
   ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
 
@@ -1163,13 +1163,13 @@
   INTERACTION POTENTIAL FOR EXPANSION TERM NUMBER   1
   WHICH HAS LAMBDA =   0
 
-                 0.10000000E+01 * R **-12
-                -0.20000000E+01 * R ** -6
+                 1.00000000E+00 * R **-12
+                -2.00000000E+00 * R ** -6
 
   INTERACTION POTENTIAL FOR EXPANSION TERM NUMBER   2
   WHICH HAS LAMBDA =   2
 
-                -0.20000000E+00 * R ** -6
+                -2.00000000E-01 * R ** -6
 
   POTENL PROCESSING FINISHED.
 
@@ -1293,7 +1293,7 @@
  |                                                                            |
  |                               Version 2019.0 (beta)                        |
  |                                                                            |
- |                    This run used       0.07 cpu secs and                   |
+ |                    This run used       0.03 cpu secs and                   |
  |               1107 of the allocated   1000000 words of storage             |
  |                                                                            |
   ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
@@ -1306,7 +1306,7 @@
  |                                                                            |
  |                               Version 2019.0 (beta)                        |
  |                                                                            |
- |                       Run on 12 Nov 2018   at 14:59:57                     |
+ |                       Run on 14 Nov 2018   at 09:39:43                     |
  |                                                                            |
   ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
 
@@ -1362,13 +1362,13 @@
   INTERACTION POTENTIAL FOR EXPANSION TERM NUMBER   1
   WHICH HAS LAMBDA =   0
 
-                 0.10000000E+01 * R **-12
-                -0.20000000E+01 * R ** -6
+                 1.00000000E+00 * R **-12
+                -2.00000000E+00 * R ** -6
 
   INTERACTION POTENTIAL FOR EXPANSION TERM NUMBER   2
   WHICH HAS LAMBDA =   2
 
-                -0.20000000E+00 * R ** -6
+                -2.00000000E-01 * R ** -6
 
   POTENL PROCESSING FINISHED.
 
@@ -1492,7 +1492,7 @@
  |                                                                            |
  |                               Version 2019.0 (beta)                        |
  |                                                                            |
- |                    This run used       0.03 cpu secs and                   |
+ |                    This run used       0.02 cpu secs and                   |
  |               1107 of the allocated   1000000 words of storage             |
  |                                                                            |
   ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
@@ -1505,7 +1505,7 @@
  |                                                                            |
  |                               Version 2019.0 (beta)                        |
  |                                                                            |
- |                       Run on 12 Nov 2018   at 14:59:57                     |
+ |                       Run on 14 Nov 2018   at 09:39:43                     |
  |                                                                            |
   ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
 
@@ -1561,13 +1561,13 @@
   INTERACTION POTENTIAL FOR EXPANSION TERM NUMBER   1
   WHICH HAS LAMBDA =   0
 
-                 0.10000000E+01 * R **-12
-                -0.20000000E+01 * R ** -6
+                 1.00000000E+00 * R **-12
+                -2.00000000E+00 * R ** -6
 
   INTERACTION POTENTIAL FOR EXPANSION TERM NUMBER   2
   WHICH HAS LAMBDA =   2
 
-                -0.20000000E+00 * R ** -6
+                -2.00000000E-01 * R ** -6
 
   POTENL PROCESSING FINISHED.
 
@@ -1691,7 +1691,7 @@
  |                                                                            |
  |                               Version 2019.0 (beta)                        |
  |                                                                            |
- |                    This run used       0.03 cpu secs and                   |
+ |                    This run used       0.02 cpu secs and                   |
  |               1107 of the allocated   1000000 words of storage             |
  |                                                                            |
   ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
@@ -1704,7 +1704,7 @@
  |                                                                            |
  |                               Version 2019.0 (beta)                        |
  |                                                                            |
- |                       Run on 12 Nov 2018   at 14:59:57                     |
+ |                       Run on 14 Nov 2018   at 09:39:43                     |
  |                                                                            |
   ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
 
@@ -1760,13 +1760,13 @@
   INTERACTION POTENTIAL FOR EXPANSION TERM NUMBER   1
   WHICH HAS LAMBDA =   0
 
-                 0.10000000E+01 * R **-12
-                -0.20000000E+01 * R ** -6
+                 1.00000000E+00 * R **-12
+                -2.00000000E+00 * R ** -6
 
   INTERACTION POTENTIAL FOR EXPANSION TERM NUMBER   2
   WHICH HAS LAMBDA =   2
 
-                -0.20000000E+00 * R ** -6
+                -2.00000000E-01 * R ** -6
 
   POTENL PROCESSING FINISHED.
 
@@ -1891,7 +1891,7 @@
  |                                                                            |
  |                               Version 2019.0 (beta)                        |
  |                                                                            |
- |                    This run used       0.03 cpu secs and                   |
+ |                    This run used       0.02 cpu secs and                   |
  |               1107 of the allocated   1000000 words of storage             |
  |                                                                            |
   ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
@@ -1904,7 +1904,7 @@
  |                                                                            |
  |                               Version 2019.0 (beta)                        |
  |                                                                            |
- |                       Run on 12 Nov 2018   at 14:59:57                     |
+ |                       Run on 14 Nov 2018   at 09:39:43                     |
  |                                                                            |
   ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
 
@@ -1960,13 +1960,13 @@
   INTERACTION POTENTIAL FOR EXPANSION TERM NUMBER   1
   WHICH HAS LAMBDA =   0
 
-                 0.10000000E+01 * R **-12
-                -0.20000000E+01 * R ** -6
+                 1.00000000E+00 * R **-12
+                -2.00000000E+00 * R ** -6
 
   INTERACTION POTENTIAL FOR EXPANSION TERM NUMBER   2
   WHICH HAS LAMBDA =   2
 
-                -0.20000000E+00 * R ** -6
+                -2.00000000E-01 * R ** -6
 
   POTENL PROCESSING FINISHED.
 
@@ -2111,7 +2111,7 @@
  |                                                                            |
  |                               Version 2019.0 (beta)                        |
  |                                                                            |
- |                       Run on 12 Nov 2018   at 14:59:58                     |
+ |                       Run on 14 Nov 2018   at 09:39:43                     |
  |                                                                            |
   ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
 
@@ -2167,13 +2167,13 @@
   INTERACTION POTENTIAL FOR EXPANSION TERM NUMBER   1
   WHICH HAS LAMBDA =   0
 
-                 0.10000000E+01 * R **-12
-                -0.20000000E+01 * R ** -6
+                 1.00000000E+00 * R **-12
+                -2.00000000E+00 * R ** -6
 
   INTERACTION POTENTIAL FOR EXPANSION TERM NUMBER   2
   WHICH HAS LAMBDA =   2
 
-                -0.20000000E+00 * R ** -6
+                -2.00000000E-01 * R ** -6
 
   POTENL PROCESSING FINISHED.
 
@@ -2318,7 +2318,7 @@
  |                                                                            |
  |                               Version 2019.0 (beta)                        |
  |                                                                            |
- |                       Run on 12 Nov 2018   at 14:59:58                     |
+ |                       Run on 14 Nov 2018   at 09:39:43                     |
  |                                                                            |
   ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
 
@@ -2374,13 +2374,13 @@
   INTERACTION POTENTIAL FOR EXPANSION TERM NUMBER   1
   WHICH HAS LAMBDA =   0
 
-                 0.10000000E+01 * R **-12
-                -0.20000000E+01 * R ** -6
+                 1.00000000E+00 * R **-12
+                -2.00000000E+00 * R ** -6
 
   INTERACTION POTENTIAL FOR EXPANSION TERM NUMBER   2
   WHICH HAS LAMBDA =   2
 
-                -0.20000000E+00 * R ** -6
+                -2.00000000E-01 * R ** -6
 
   POTENL PROCESSING FINISHED.
 
@@ -2512,7 +2512,7 @@
  |                                                                            |
  |                               Version 2019.0 (beta)                        |
  |                                                                            |
- |                    This run used       0.03 cpu secs and                   |
+ |                    This run used       0.02 cpu secs and                   |
  |               2067 of the allocated   1000000 words of storage             |
  |                                                                            |
   ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
@@ -2525,7 +2525,7 @@
  |                                                                            |
  |                               Version 2019.0 (beta)                        |
  |                                                                            |
- |                       Run on 12 Nov 2018   at 14:59:58                     |
+ |                       Run on 14 Nov 2018   at 09:39:43                     |
  |                                                                            |
   ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
 
@@ -2581,13 +2581,13 @@
   INTERACTION POTENTIAL FOR EXPANSION TERM NUMBER   1
   WHICH HAS LAMBDA =   0
 
-                 0.10000000E+01 * R **-12
-                -0.20000000E+01 * R ** -6
+                 1.00000000E+00 * R **-12
+                -2.00000000E+00 * R ** -6
 
   INTERACTION POTENTIAL FOR EXPANSION TERM NUMBER   2
   WHICH HAS LAMBDA =   2
 
-                -0.20000000E+00 * R ** -6
+                -2.00000000E-01 * R ** -6
 
   POTENL PROCESSING FINISHED.
 
@@ -2720,7 +2720,7 @@
  |                                                                            |
  |                               Version 2019.0 (beta)                        |
  |                                                                            |
- |                    This run used       0.03 cpu secs and                   |
+ |                    This run used       0.02 cpu secs and                   |
  |               2067 of the allocated   1000000 words of storage             |
  |                                                                            |
   ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
@@ -2733,7 +2733,7 @@
  |                                                                            |
  |                               Version 2019.0 (beta)                        |
  |                                                                            |
- |                       Run on 12 Nov 2018   at 14:59:58                     |
+ |                       Run on 14 Nov 2018   at 09:39:43                     |
  |                                                                            |
   ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
 
@@ -2782,13 +2782,13 @@
   INTERACTION POTENTIAL FOR EXPANSION TERM NUMBER   1
   WHICH HAS LAMBDA =   0
 
-                 0.10000000E+01 * R **-12
-                -0.20000000E+01 * R ** -6
+                 1.00000000E+00 * R **-12
+                -2.00000000E+00 * R ** -6
 
   INTERACTION POTENTIAL FOR EXPANSION TERM NUMBER   2
   WHICH HAS LAMBDA =   2
 
-                -0.20000000E+00 * R ** -6
+                -2.00000000E-01 * R ** -6
 
   POTENL PROCESSING FINISHED.
 
@@ -2977,7 +2977,7 @@
  |                                                                            |
  |                               Version 2019.0 (beta)                        |
  |                                                                            |
- |                       Run on 12 Nov 2018   at 14:59:58                     |
+ |                       Run on 14 Nov 2018   at 09:39:43                     |
  |                                                                            |
   ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
 
@@ -3026,13 +3026,13 @@
   INTERACTION POTENTIAL FOR EXPANSION TERM NUMBER   1
   WHICH HAS LAMBDA =   0
 
-                 0.10000000E+01 * R **-12
-                -0.20000000E+01 * R ** -6
+                 1.00000000E+00 * R **-12
+                -2.00000000E+00 * R ** -6
 
   INTERACTION POTENTIAL FOR EXPANSION TERM NUMBER   2
   WHICH HAS LAMBDA =   2
 
-                -0.20000000E+00 * R ** -6
+                -2.00000000E-01 * R ** -6
 
   POTENL PROCESSING FINISHED.
 

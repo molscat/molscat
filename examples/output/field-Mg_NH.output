@@ -8,7 +8,7 @@
  |                                                                            |
  |                               Version 2019.0 (beta)                        |
  |                                                                            |
- |                       Run on 12 Nov 2018   at 15:11:19                     |
+ |                       Run on 14 Nov 2018   at 09:51:35                     |
  |                                                                            |
   -- FIELD ------ FIELD ------ FIELD ------ FIELD ------ FIELD ------ FIELD --
 
@@ -346,7 +346,7 @@
  |                                                                            |
  |                               Version 2019.0 (beta)                        |
  |                                                                            |
- |                    This run used      55.78 cpu secs and                   |
+ |                    This run used      59.28 cpu secs and                   |
  |             116873 of the allocated   1000000 words of storage             |
  |                                                                            |
   -- FIELD ------ FIELD ------ FIELD ------ FIELD ------ FIELD ------ FIELD --

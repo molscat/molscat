@@ -7,7 +7,7 @@
  |                                                                            |
  |                               Version 2019.0 (beta)                        |
  |                                                                            |
- |                       Run on 12 Nov 2018   at 15:03:17                     |
+ |                       Run on 14 Nov 2018   at 09:43:17                     |
  |                                                                            |
   ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
 
@@ -177,8 +177,8 @@
 
   INTERACTION POTENTIAL FOR EXPANSION TERM NUMBER   3
 
-                -0.10023206E+01 * R ** -3
-                 0.91829168E+01 * EXP(   -0.7196 * R )
+                -1.00232065E+00 * R ** -3
+                 9.18291680E+00 * EXP(   -0.7196 * R )
 
   POTENL PROCESSING FINISHED.
 
@@ -343,7 +343,7 @@
  |                                                                            |
  |                               Version 2019.0 (beta)                        |
  |                                                                            |
- |                    This run used      15.64 cpu secs and                   |
+ |                    This run used      16.73 cpu secs and                   |
  |               6817 of the allocated   1000000 words of storage             |
  |                                                                            |
   ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
@@ -356,7 +356,7 @@
  |                                                                            |
  |                               Version 2019.0 (beta)                        |
  |                                                                            |
- |                       Run on 12 Nov 2018   at 15:03:33                     |
+ |                       Run on 14 Nov 2018   at 09:43:33                     |
  |                                                                            |
   ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
 
@@ -526,8 +526,8 @@
 
   INTERACTION POTENTIAL FOR EXPANSION TERM NUMBER   3
 
-                -0.10023206E+01 * R ** -3
-                 0.91829168E+01 * EXP(   -0.7196 * R )
+                -1.00232065E+00 * R ** -3
+                 9.18291680E+00 * EXP(   -0.7196 * R )
 
   POTENL PROCESSING FINISHED.
 
@@ -713,7 +713,7 @@
  |                                                                            |
  |                               Version 2019.0 (beta)                        |
  |                                                                            |
- |                    This run used      13.00 cpu secs and                   |
+ |                    This run used      13.61 cpu secs and                   |
  |               6817 of the allocated   1000000 words of storage             |
  |                                                                            |
   ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
@@ -726,7 +726,7 @@
  |                                                                            |
  |                               Version 2019.0 (beta)                        |
  |                                                                            |
- |                       Run on 12 Nov 2018   at 15:03:46                     |
+ |                       Run on 14 Nov 2018   at 09:43:47                     |
  |                                                                            |
   ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
 
@@ -896,8 +896,8 @@
 
   INTERACTION POTENTIAL FOR EXPANSION TERM NUMBER   3
 
-                -0.10023206E+01 * R ** -3
-                 0.91829168E+01 * EXP(   -0.7196 * R )
+                -1.00232065E+00 * R ** -3
+                 9.18291680E+00 * EXP(   -0.7196 * R )
 
   POTENL PROCESSING FINISHED.
 
@@ -1051,7 +1051,7 @@
  |                                                                            |
  |                               Version 2019.0 (beta)                        |
  |                                                                            |
- |                    This run used      12.90 cpu secs and                   |
+ |                    This run used      13.32 cpu secs and                   |
  |               6817 of the allocated   1000000 words of storage             |
  |                                                                            |
   ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
@@ -1064,7 +1064,7 @@
  |                                                                            |
  |                               Version 2019.0 (beta)                        |
  |                                                                            |
- |                       Run on 12 Nov 2018   at 15:03:59                     |
+ |                       Run on 14 Nov 2018   at 09:44:00                     |
  |                                                                            |
   ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
 
@@ -1234,8 +1234,8 @@
 
   INTERACTION POTENTIAL FOR EXPANSION TERM NUMBER   3
 
-                -0.10023206E+01 * R ** -3
-                 0.91829168E+01 * EXP(   -0.7196 * R )
+                -1.00232065E+00 * R ** -3
+                 9.18291680E+00 * EXP(   -0.7196 * R )
 
   POTENL PROCESSING FINISHED.
 
@@ -1401,7 +1401,7 @@
  |                                                                            |
  |                               Version 2019.0 (beta)                        |
  |                                                                            |
- |                    This run used      15.40 cpu secs and                   |
+ |                    This run used      15.74 cpu secs and                   |
  |               6817 of the allocated   1000000 words of storage             |
  |                                                                            |
   ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
@@ -1414,7 +1414,7 @@
  |                                                                            |
  |                               Version 2019.0 (beta)                        |
  |                                                                            |
- |                       Run on 12 Nov 2018   at 15:04:14                     |
+ |                       Run on 14 Nov 2018   at 09:44:16                     |
  |                                                                            |
   ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
 
@@ -1586,8 +1586,8 @@
 
   INTERACTION POTENTIAL FOR EXPANSION TERM NUMBER   3
 
-                -0.10023206E+01 * R ** -3
-                 0.91829168E+01 * EXP(   -0.7196 * R )
+                -1.00232065E+00 * R ** -3
+                 9.18291680E+00 * EXP(   -0.7196 * R )
 
   POTENL PROCESSING FINISHED.
 
@@ -2389,7 +2389,7 @@
  |                                                                            |
  |                               Version 2019.0 (beta)                        |
  |                                                                            |
- |                    This run used     330.06 cpu secs and                   |
+ |                    This run used     338.31 cpu secs and                   |
  |               6817 of the allocated   1000000 words of storage             |
  |                                                                            |
   ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---

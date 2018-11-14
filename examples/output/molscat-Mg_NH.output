@@ -7,7 +7,7 @@
  |                                                                            |
  |                               Version 2019.0 (beta)                        |
  |                                                                            |
- |                       Run on 12 Nov 2018   at 15:02:59                     |
+ |                       Run on 14 Nov 2018   at 09:42:58                     |
  |                                                                            |
   ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
 
@@ -193,7 +193,7 @@
   THESE ENERGY VALUES ARE RELATIVE TO THE REFERENCE ENERGY SPECIFIED BY MONOMER QUANTUM NUMBERS   0   1   1
   THE REFERENCE ENERGY WILL BE CALCULATED FOR EVERY EFV SET
 
-  INITIALIZATION DONE.  TIME WAS   0.00 CPU SECS.       237 WORDS OF STORAGE USED.
+  INITIALIZATION DONE.  TIME WAS   0.01 CPU SECS.       237 WORDS OF STORAGE USED.
 
   ====================== ITYP = 9: Mg + NH in magnetic field; cross sections, non-diagonal H_intl ======================
 
@@ -3493,7 +3493,7 @@
  |                                                                            |
  |                               Version 2019.0 (beta)                        |
  |                                                                            |
- |                    This run used       8.87 cpu secs and                   |
+ |                    This run used      10.17 cpu secs and                   |
  |             124853 of the allocated   1000000 words of storage             |
  |                                                                            |
   ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
@@ -3506,7 +3506,7 @@
  |                                                                            |
  |                               Version 2019.0 (beta)                        |
  |                                                                            |
- |                       Run on 12 Nov 2018   at 15:03:08                     |
+ |                       Run on 14 Nov 2018   at 09:43:08                     |
  |                                                                            |
   ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
 
@@ -7635,7 +7635,7 @@
  |                                                                            |
  |                               Version 2019.0 (beta)                        |
  |                                                                            |
- |                    This run used       9.07 cpu secs and                   |
+ |                    This run used       8.67 cpu secs and                   |
  |             101413 of the allocated   1000000 words of storage             |
  |                                                                            |
   ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---

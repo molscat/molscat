@@ -6,7 +6,7 @@
  |                                                                            |
  |                               Version 2019.0 (beta)                        |
  |                                                                            |
- |                       Run on 12 Nov 2018   at 15:09:44                     |
+ |                       Run on 14 Nov 2018   at 09:49:55                     |
  |                                                                            |
   -- BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND --
 
@@ -61,13 +61,13 @@
   INTERACTION POTENTIAL FOR EXPANSION TERM NUMBER   1
   WHICH HAS LAMBDA =   0
 
-                 0.10000000E+01 * R **-12
-                -0.20000000E+01 * R ** -6
+                 1.00000000E+00 * R **-12
+                -2.00000000E+00 * R ** -6
 
   INTERACTION POTENTIAL FOR EXPANSION TERM NUMBER   2
   WHICH HAS LAMBDA =   2
 
-                -0.20000000E+00 * R ** -6
+                -2.00000000E-01 * R ** -6
 
   POTENL PROCESSING FINISHED.
 
@@ -302,7 +302,7 @@
  |                                                                            |
  |                               Version 2019.0 (beta)                        |
  |                                                                            |
- |                    This run used       1.05 cpu secs and                   |
+ |                    This run used       1.12 cpu secs and                   |
  |                841 of the allocated   1000000 words of storage             |
  |                                                                            |
   -- BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND --
@@ -314,7 +314,7 @@
  |                                                                            |
  |                               Version 2019.0 (beta)                        |
  |                                                                            |
- |                       Run on 12 Nov 2018   at 15:09:45                     |
+ |                       Run on 14 Nov 2018   at 09:49:56                     |
  |                                                                            |
   -- BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND --
 
@@ -369,13 +369,13 @@
   INTERACTION POTENTIAL FOR EXPANSION TERM NUMBER   1
   WHICH HAS LAMBDA =   0
 
-                 0.10000000E+01 * R **-12
-                -0.20000000E+01 * R ** -6
+                 1.00000000E+00 * R **-12
+                -2.00000000E+00 * R ** -6
 
   INTERACTION POTENTIAL FOR EXPANSION TERM NUMBER   2
   WHICH HAS LAMBDA =   2
 
-                -0.20000000E+00 * R ** -6
+                -2.00000000E-01 * R ** -6
 
   POTENL PROCESSING FINISHED.
 
@@ -609,7 +609,7 @@
  |                                                                            |
  |                               Version 2019.0 (beta)                        |
  |                                                                            |
- |                    This run used       0.52 cpu secs and                   |
+ |                    This run used       0.54 cpu secs and                   |
  |                841 of the allocated   1000000 words of storage             |
  |                                                                            |
   -- BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND --
@@ -621,7 +621,7 @@
  |                                                                            |
  |                               Version 2019.0 (beta)                        |
  |                                                                            |
- |                       Run on 12 Nov 2018   at 15:09:46                     |
+ |                       Run on 14 Nov 2018   at 09:49:56                     |
  |                                                                            |
   -- BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND --
 
@@ -676,13 +676,13 @@
   INTERACTION POTENTIAL FOR EXPANSION TERM NUMBER   1
   WHICH HAS LAMBDA =   0
 
-                 0.10000000E+01 * R **-12
-                -0.20000000E+01 * R ** -6
+                 1.00000000E+00 * R **-12
+                -2.00000000E+00 * R ** -6
 
   INTERACTION POTENTIAL FOR EXPANSION TERM NUMBER   2
   WHICH HAS LAMBDA =   2
 
-                -0.20000000E+00 * R ** -6
+                -2.00000000E-01 * R ** -6
 
   POTENL PROCESSING FINISHED.
 
@@ -909,7 +909,7 @@
  |                                                                            |
  |                               Version 2019.0 (beta)                        |
  |                                                                            |
- |                    This run used       0.68 cpu secs and                   |
+ |                    This run used       0.67 cpu secs and                   |
  |                841 of the allocated   1000000 words of storage             |
  |                                                                            |
   -- BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND --
@@ -921,7 +921,7 @@
  |                                                                            |
  |                               Version 2019.0 (beta)                        |
  |                                                                            |
- |                       Run on 12 Nov 2018   at 15:09:46                     |
+ |                       Run on 14 Nov 2018   at 09:49:57                     |
  |                                                                            |
   -- BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND --
 
@@ -976,13 +976,13 @@
   INTERACTION POTENTIAL FOR EXPANSION TERM NUMBER   1
   WHICH HAS LAMBDA =   0
 
-                 0.10000000E+01 * R **-12
-                -0.20000000E+01 * R ** -6
+                 1.00000000E+00 * R **-12
+                -2.00000000E+00 * R ** -6
 
   INTERACTION POTENTIAL FOR EXPANSION TERM NUMBER   2
   WHICH HAS LAMBDA =   2
 
-                -0.20000000E+00 * R ** -6
+                -2.00000000E-01 * R ** -6
 
   POTENL PROCESSING FINISHED.
 
@@ -1209,7 +1209,7 @@
  |                                                                            |
  |                               Version 2019.0 (beta)                        |
  |                                                                            |
- |                    This run used       1.37 cpu secs and                   |
+ |                    This run used       1.23 cpu secs and                   |
  |                841 of the allocated   1000000 words of storage             |
  |                                                                            |
   -- BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND --
@@ -1221,7 +1221,7 @@
  |                                                                            |
  |                               Version 2019.0 (beta)                        |
  |                                                                            |
- |                       Run on 12 Nov 2018   at 15:09:48                     |
+ |                       Run on 14 Nov 2018   at 09:49:58                     |
  |                                                                            |
   -- BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND --
 
@@ -1276,13 +1276,13 @@
   INTERACTION POTENTIAL FOR EXPANSION TERM NUMBER   1
   WHICH HAS LAMBDA =   0
 
-                 0.10000000E+01 * R **-12
-                -0.20000000E+01 * R ** -6
+                 1.00000000E+00 * R **-12
+                -2.00000000E+00 * R ** -6
 
   INTERACTION POTENTIAL FOR EXPANSION TERM NUMBER   2
   WHICH HAS LAMBDA =   2
 
-                -0.20000000E+00 * R ** -6
+                -2.00000000E-01 * R ** -6
 
   POTENL PROCESSING FINISHED.
 
@@ -1510,7 +1510,7 @@
  |                                                                            |
  |                               Version 2019.0 (beta)                        |
  |                                                                            |
- |                    This run used       1.15 cpu secs and                   |
+ |                    This run used       0.99 cpu secs and                   |
  |               1021 of the allocated   1000000 words of storage             |
  |                                                                            |
   -- BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND --
@@ -1522,7 +1522,7 @@
  |                                                                            |
  |                               Version 2019.0 (beta)                        |
  |                                                                            |
- |                       Run on 12 Nov 2018   at 15:09:49                     |
+ |                       Run on 14 Nov 2018   at 09:49:59                     |
  |                                                                            |
   -- BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND --
 
@@ -1577,13 +1577,13 @@
   INTERACTION POTENTIAL FOR EXPANSION TERM NUMBER   1
   WHICH HAS LAMBDA =   0
 
-                 0.10000000E+01 * R **-12
-                -0.20000000E+01 * R ** -6
+                 1.00000000E+00 * R **-12
+                -2.00000000E+00 * R ** -6
 
   INTERACTION POTENTIAL FOR EXPANSION TERM NUMBER   2
   WHICH HAS LAMBDA =   2
 
-                -0.20000000E+00 * R ** -6
+                -2.00000000E-01 * R ** -6
 
   POTENL PROCESSING FINISHED.
 
@@ -1806,7 +1806,7 @@
  |                                                                            |
  |                               Version 2019.0 (beta)                        |
  |                                                                            |
- |                    This run used       2.43 cpu secs and                   |
+ |                    This run used       2.04 cpu secs and                   |
  |                591 of the allocated   1000000 words of storage             |
  |                                                                            |
   -- BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND --
@@ -1818,7 +1818,7 @@
  |                                                                            |
  |                               Version 2019.0 (beta)                        |
  |                                                                            |
- |                       Run on 12 Nov 2018   at 15:09:51                     |
+ |                       Run on 14 Nov 2018   at 09:50:01                     |
  |                                                                            |
   -- BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND --
 
@@ -1873,13 +1873,13 @@
   INTERACTION POTENTIAL FOR EXPANSION TERM NUMBER   1
   WHICH HAS LAMBDA =   0
 
-                 0.10000000E+01 * R **-12
-                -0.20000000E+01 * R ** -6
+                 1.00000000E+00 * R **-12
+                -2.00000000E+00 * R ** -6
 
   INTERACTION POTENTIAL FOR EXPANSION TERM NUMBER   2
   WHICH HAS LAMBDA =   2
 
-                -0.20000000E+00 * R ** -6
+                -2.00000000E-01 * R ** -6
 
   POTENL PROCESSING FINISHED.
 
@@ -2102,7 +2102,7 @@
  |                                                                            |
  |                               Version 2019.0 (beta)                        |
  |                                                                            |
- |                    This run used       9.48 cpu secs and                   |
+ |                    This run used       8.97 cpu secs and                   |
  |                591 of the allocated   1000000 words of storage             |
  |                                                                            |
   -- BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND --
@@ -2114,7 +2114,7 @@
  |                                                                            |
  |                               Version 2019.0 (beta)                        |
  |                                                                            |
- |                       Run on 12 Nov 2018   at 15:10:01                     |
+ |                       Run on 14 Nov 2018   at 09:50:10                     |
  |                                                                            |
   -- BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND --
 
@@ -2169,13 +2169,13 @@
   INTERACTION POTENTIAL FOR EXPANSION TERM NUMBER   1
   WHICH HAS LAMBDA =   0
 
-                 0.10000000E+01 * R **-12
-                -0.20000000E+01 * R ** -6
+                 1.00000000E+00 * R **-12
+                -2.00000000E+00 * R ** -6
 
   INTERACTION POTENTIAL FOR EXPANSION TERM NUMBER   2
   WHICH HAS LAMBDA =   2
 
-                -0.20000000E+00 * R ** -6
+                -2.00000000E-01 * R ** -6
 
   POTENL PROCESSING FINISHED.
 
@@ -2398,7 +2398,7 @@
  |                                                                            |
  |                               Version 2019.0 (beta)                        |
  |                                                                            |
- |                    This run used      24.64 cpu secs and                   |
+ |                    This run used      24.69 cpu secs and                   |
  |                831 of the allocated   1000000 words of storage             |
  |                                                                            |
   -- BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND --
@@ -2410,7 +2410,7 @@
  |                                                                            |
  |                               Version 2019.0 (beta)                        |
  |                                                                            |
- |                       Run on 12 Nov 2018   at 15:10:26                     |
+ |                       Run on 14 Nov 2018   at 09:50:35                     |
  |                                                                            |
   -- BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND --
 
@@ -2465,13 +2465,13 @@
   INTERACTION POTENTIAL FOR EXPANSION TERM NUMBER   1
   WHICH HAS LAMBDA =   0
 
-                 0.10000000E+01 * R **-12
-                -0.20000000E+01 * R ** -6
+                 1.00000000E+00 * R **-12
+                -2.00000000E+00 * R ** -6
 
   INTERACTION POTENTIAL FOR EXPANSION TERM NUMBER   2
   WHICH HAS LAMBDA =   2
 
-                -0.20000000E+00 * R ** -6
+                -2.00000000E-01 * R ** -6
 
   POTENL PROCESSING FINISHED.
 
@@ -2696,7 +2696,7 @@
  |                                                                            |
  |                               Version 2019.0 (beta)                        |
  |                                                                            |
- |                    This run used      20.53 cpu secs and                   |
+ |                    This run used      20.18 cpu secs and                   |
  |                931 of the allocated   1000000 words of storage             |
  |                                                                            |
   -- BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND --

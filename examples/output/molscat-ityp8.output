@@ -7,7 +7,7 @@
  |                                                                            |
  |                               Version 2019.0 (beta)                        |
  |                                                                            |
- |                       Run on 12 Nov 2018   at 15:02:59                     |
+ |                       Run on 14 Nov 2018   at 09:42:58                     |
  |                                                                            |
   ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
 
@@ -92,13 +92,13 @@
   INTERACTION POTENTIAL FOR EXPANSION TERM NUMBER   1
   WHICH HAS G1 =   0,  G2 =   0
 
-                 0.76300000E+01 * EXP(   -2.2000 * R )
-                -0.15260000E+02 * EXP(   -1.1000 * R )
+                 7.63000000E+00 * EXP(   -2.2000 * R )
+                -1.52600000E+01 * EXP(   -1.1000 * R )
 
   INTERACTION POTENTIAL FOR EXPANSION TERM NUMBER   2
   WHICH HAS G1 =   1,  G2 =   0
 
-                -0.76300000E+00 * EXP(   -2.2000 * R )
+                -7.63000000E-01 * EXP(   -2.2000 * R )
 
   POTENL PROCESSING FINISHED.
 

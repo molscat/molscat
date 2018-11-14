@@ -6,7 +6,7 @@
  |                                                                            |
  |                               Version 2019.0 (beta)                        |
  |                                                                            |
- |                       Run on 12 Nov 2018   at 15:10:51                     |
+ |                       Run on 14 Nov 2018   at 09:51:05                     |
  |                                                                            |
   -- BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND --
 
@@ -185,7 +185,7 @@
   THESE ENERGY VALUES ARE RELATIVE TO THE REFERENCE ENERGY SPECIFIED BY MONOMER QUANTUM NUMBERS   0   1  -1
   THE REFERENCE ENERGY WILL BE CALCULATED FOR EVERY EFV SET
 
-  INITIALIZATION DONE.  TIME WAS   0.00 CPU SECS.       112 WORDS OF STORAGE USED.
+  INITIALIZATION DONE.  TIME WAS   0.01 CPU SECS.       112 WORDS OF STORAGE USED.
 
   ======================================================================================================================
 
@@ -458,7 +458,7 @@
  |                                                                            |
  |                               Version 2019.0 (beta)                        |
  |                                                                            |
- |                    This run used      27.92 cpu secs and                   |
+ |                    This run used      29.15 cpu secs and                   |
  |             206873 of the allocated   1000000 words of storage             |
  |                                                                            |
   -- BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND --
