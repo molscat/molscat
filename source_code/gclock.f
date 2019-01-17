@@ -22,7 +22,7 @@ C     CALL CLOCKS(ITIME)
 C     XTIME=-ITIME
 C     XTIME=XTIME*1.D-2
 
-c  code below calls the f90 (and onwards) intrinsic cpu_time
-      call cpu_time(xtime)
+C  CODE BELOW CALLS THE F90 (AND ONWARDS) INTRINSIC cpu_time
+      CALL cpu_time(XTIME)
       RETURN
       END

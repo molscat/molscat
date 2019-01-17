@@ -68,8 +68,9 @@ base9_suite.mod:        base9-skeleton.f     $(OBJDIR)/base9-skeleton.o
 # physical constants module =================================================
 #
 PHYS_CONST_DEPS = base9-1S_3Sigma_cpld.o base9-alk_alk.o \
-                  bd.driver.o eavg.o ecnv.o extpot-Rg_HX.o fld.driver.o \
-                  mol.driver.o pot_data_Tiemann-Rb2-2010.o surbas.o \
+                  bd.driver.o chckru.o eavg.o ecnv.o extpot-Rg_HX.o \
+                  fld.driver.o mol.driver.o pot_data_Tiemann-Rb2-2010.o \
+                  surbas.o
 
 (addprefix $(OBJDIR)/,$(PHYS_CONST_DEPS)): physical_constants.mod
 #
@@ -84,7 +85,7 @@ SIZES_DEPS =      angles_module.o bd.driver.o basis_module.o eavg.o \
 # angles module =============================================================
 #
 ANGLES_DEPS =     iosbin.o iosout.o potenl.o vrtp-He_H2O.o vrtp-Rg_HX-eta.o \
-                  vrtp-H2_H2.o \
+                  vrtp-H2_H2.o
 
 (addprefix $(OBJDIR)/,$(ANGLES_DEPS)): angles.mod
 #
@@ -93,17 +94,17 @@ ANGLES_DEPS =     iosbin.o iosout.o potenl.o vrtp-He_H2O.o vrtp-Rg_HX-eta.o \
 EFVS_DEPS =       base.o base9-1S_3Sigma_cpld.o base9-alk_alk.o \
                   bd.driver.o efv9-dummy.o fld.driver.o header.o ldrdwt.o \
                   locpol.o mol.driver.o output.o prnsum.o rdpch.o setefv.o \
-                  sread.o wvhead.o cheint.o \
+                  sread.o wvhead.o cheint.o
 
 (addprefix $(OBJDIR)/,$(EFVS_DEPS)): efvs.mod
 #
 # potential module ==========================================================
 #
 POTL_DEPS =       base.o base9-1S_3Sigma_cpld.o base9-alk_alk.o bd.driver.o \
-                  calca.o cheint.o cntrct.o dermat.o ev_ord.o fld.driver.o \
-                  getlev.o mol.driver.o odprop.o output.o potenl.o \
-                  restrt.o rmtprp.o scprop.o scwave.o setefv.o thresh.o \
-                  vlchk.o vstar-Tiemann.o wavmat.o wavvec.o ytrans.o \
+                  calca.o chckru.o cheint.o cntrct.o dermat.o ev_ord.o \
+                  fld.driver.o getlev.o mol.driver.o odprop.o output.o \
+                  potenl.o restrt.o rmprop.o scctrl.o scwave.o setefv.o \
+                  thresh.o vlchk.o vstar-Tiemann.o wavmat.o wavvec.o ytrans.o
 
 (addprefix $(OBJDIR)/,$(POTL_DEPS)): potential.mod
 #
@@ -128,8 +129,8 @@ LA_UTILS =  dgemul.o alloc-syminl.o dsyneg.o syminv.o
 # set up dependencies ======================================================
 #
 TRANS =     ytrans.o multop.o ev_ord.o chnsrt.o wvcalc.o
-LDPROPS =   ldprop.o dwprop.o mgprop.o qaprop.o trnsfm.o trnsp.o \
-            airprp.o potent.o corr.o maxmgv.o outmat.o spropn.o \
+LDPROPS =   ldprop.o mdprop.o mgprop.o maprop.o trnsfm.o trnsp.o \
+            aiprop.o potent.o corr.o maxmgv.o outmat.o spropn.o waveig.o \
             airymp.o scairy.o yinit.o dermat.o
 BASE =      mcgcpl.o cpl21.o cpl22.o cpl23.o cpl4.o qsymtp.o rsymtp.o cpl25.o \
             gsymtp.o set6.o ipasym.o esymtp.o fsymtp.o couple.o cpl3.o \
@@ -139,26 +140,26 @@ UTILITIES = dmsym.o dsyfil.o matprn.o chkstr.o
 LIBUTILS  =
 ANG_MOM =   j3j000.o j6j.o j9j.o threej.o sixj.o xninej.o parsgn.o thrj.o
 WMAT =      wavmat.o wavvec.o pertrb.o scapot-default.o
-ALLDRV =    base.o brent.o cheint.o ecnv.o ecnvx.o efprop.o findrm.o idpchk.o \
-            ifmsg.o progms.o prstup.o setefv.o stsrch.o thresh.o thrlst.o \
-            vlchk.o wvhead.o \
+ALLDRV =    base.o brent.o calck.o chckru.o cheint.o drcalc.o drset.o ecnv.o \
+            ecnvx.o efprop.o findrm.o idpchk.o progms.o propst.o setefv.o \
+            stsrch.o thresh.o thrlst.o vlchk.o wvhead.o \
             $(TRANS) $(LDPROPS) $(BASE) $(UTILITIES) $(LIBUTILS) $(ANG_MOM) $(WMAT)
 IOSBIN =    chck6i.o plm.o set6i.o get102.o gaussp.o gasleg.o zbes.o \
             yrr.o sig6.o iosclc.o iosout.o iospb.o isutp.o
 PRBR =      prbr.o dasize.o prbr3.o
 RESTRT =    sread.o epsum.o restrt.o
-PROPS =     dvprop.o stabil.o dvfree.o rsym.o rmtprp.o \
-            sgnchk.o colim.o stry.o shrink.o vivas.o \
+PROPS =     dvprop.o stabil.o rmprop.o \
+            sgnchk.o vvprop.o \
             pert1.o pert2.o delrd.o odprop.o wkb.o
-YTOS =      ytok.o rbes.o rbesjy.o rmsbf.o rbessk.o ytokg.o ksym.o ktos.o
+YTOS =      ytok.o rbesjy.o rbessk.o ytokg.o ksym.o ktos.o
 #
 # set up dependencies needed for each program ===============================
 #
-FLD = evmtch.o bdprop.o bd.iosbin.o prnsum.o $(ALLDRV)
+FLD = bdctrl.o bdpset.o bd.iosbin.o bd.prpini.o evmtch.o prnsum.o $(ALLDRV)
 BD =  cntrct.o $(FLD)
-MOL = eavg.o findrx.o header.o ldrdwt.o convrg.o nexte.o locpol.o \
-      output.o getlev.o calca.o rdpch.o scprop.o scwave.o psiasy.o \
-      iosbin.o iosdrv.o \
+MOL = calca.o convrg.o eavg.o findrx.o getlev.o header.o iosbin.o iosdrv.o \
+      ldrdwt.o locpol.o mol.prpini.o nexte.o output.o rdpch.o psiasy.o \
+      scctrl.o scpset.o scwave.o \
       $(ALLDRV) $(IOSBIN) $(PRBR) $(RESTRT) $(PROPS) $(YTOS)
 #
 # set up sets of dependencies needed for POTENL ============================
@@ -191,6 +192,8 @@ ALK2-BASE9   = base9-alk_alk.o \
                efv9-dummy.o degen9-nondegenerate.o
 MGNH-BASE9   = base9-1S_3Sigma_cpld.o \
                efv9-dummy.o degen9-nondegenerate.o potin9-example.o
+TETRAQUARK-BASE9   = base9-tetraquark-centrifugal.o \
+               efv9-dummy.o degen9-nondegenerate.o thrsh9-dummy.o
 # definitions for MOLSCAT post-processors
 #
 # set up 'normal' set of object files dependencies ==========================
@@ -210,6 +213,7 @@ PROGS =     molscat-basic \
             bound-Rg_HX   bound-Rb2      bound-Ar_CH4 \
             bound-H2_H2   bound-Rg_H2    bound-Mg_NH \
             bound-Rg_CO2 \
+            bound-tetraquark \
             field-basic \
             field-Mg_NH   field-Rb2
 ##############################################################################
@@ -282,6 +286,10 @@ $(EXECDIR)/bound-Rg_CO2      : $(addprefix $(OBJDIR)/,$(BASIC_BND) \
 $(EXECDIR)/bound-Mg_NH       : $(addprefix $(OBJDIR)/,$(BASIC_BND) \
                                                       $(MGNH-BASE9) \
                                                       $(MGNH-POTENL))
+	$(LINK.f) $^ $(LIBS) -o $@
+$(EXECDIR)/bound-tetraquark  : $(addprefix $(OBJDIR)/,$(BASIC_BND) \
+                                                      $(TETRAQUARK-BASE9) \
+                                                      $(BASIC-POTENL))
 	$(LINK.f) $^ $(LIBS) -o $@
 $(EXECDIR)/field-basic       : $(addprefix $(OBJDIR)/,$(BASIC_FLD) \
                                                       $(UNUSED-BASE9) \
