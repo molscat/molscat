@@ -811,8 +811,8 @@ C
 
               IF ((IFLD.EQ.2 .AND. .NOT.LFSCAN) .AND. IPRINT.GE.2)
      1          CALL PRMNMX(NODLO,NODHI,FLDMIN,FLDMAX,SVNAME,SVUNIT)
-              IF ((IFLD.GT.2 .OR. LFSCAN) .AND. IPRINT.GE.2)
-     1          CALL PRPROP(SVNAME,FLD,SVUNIT)
+c             IF ((IFLD.GT.2 .OR. LFSCAN) .AND. IPRINT.GE.2)
+c    1          CALL PRPROP(SVNAME,FLD,SVUNIT)
 C
               NCALC=NCALC+1
               NFOUND=0
