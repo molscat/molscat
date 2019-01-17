@@ -3,6 +3,7 @@
 C  Copyright (C) 2018 J. M. Hutson & C. R. Le Sueur
 C  Distributed under the GNU General Public License, version 3
       USE sizes, ONLY: MAXSCH
+      USE potential, ONLY: RUNAME
       USE efvs
 
 C  SUBROUTINE FOR CONVERGING ON RESONANCES USING SCATTERING LENGTHS.
@@ -81,9 +82,9 @@ C  SECOND POINT
         FLDNXT=(FIELDS(1)+FIELDS(2))/2.D0
         IF (IDECAY.EQ.1) THEN
           ABG=(SCLNRE(1)+SCLNRE(2))/2.D0
-          IF (IPRINT.GE.7) WRITE(6,101) ABG
+          IF (IPRINT.GE.7) WRITE(6,101) ABG,RUNAME
   101     FORMAT('  AVERAGE OF FIRST TWO SCATTERING LENGTHS GIVES FIRST'
-     1           ' APPROXIMATION OF A_BG = ',F12.5,' IN RM UNITS')
+     1           ' APPROXIMATION OF A_BG = ',F12.5,1X,A)
         ENDIF
       ENDIF
       IF (JFIELD.LE.2) RETURN
@@ -116,12 +117,12 @@ C  PURE ELASTIC OR WEAKLY DECAYED RESONANCE
           ENDDO
 
           IF (IPRINT.GE.7)
-     1      WRITE(6,102) ABG,(IFIELD(I),SCLNRE(IFIELD(I)),
-     2                                  SCLNIM(IFIELD(I)),
-     3                                  SCLENS(IFIELD(I)),I=1,3)
+     1      WRITE(6,102) RUNAME,ABG,(IFIELD(I),SCLNRE(IFIELD(I)),
+     2                                         SCLNIM(IFIELD(I)),
+     3                                         SCLENS(IFIELD(I)),I=1,3)
   102     FORMAT(/'  USING PREVIOUS VALUE OF A_BG = ',F12.7,' TO '
      1           'CALCULATE NEW "REGULARISED" SCATTERING LENGTHS'
-     2           ' (IN RM UNITS).',
+     2           ' (',A,').',
      3           1P,3(/'  A_',SS,I2.2,' = ',E12.5,1X,SP,E12.5,' i ',
      4                'GIVES A_REGULARISED = ',E12.5)/)
         ENDIF
@@ -131,10 +132,10 @@ C  PURE ELASTIC OR WEAKLY DECAYED RESONANCE
         IF (IPRINT.GE.4) WRITE(6,130) ADJUSTR(EFVNAM(ISVEFV)),
      1                             B0,TRIM(EFVUNT(ISVEFV)),
      2                          DELTA,TRIM(EFVUNT(ISVEFV)),
-     3                          ABG
+     3                          ABG,RUNAME
   130   FORMAT('  3-POINT POLE FORMULA ESTIMATES ',A,'_RES = ',F16.9,
      1         5X,A,/52X,'DELTA = ',1PG20.9,1X,A,/39X,
-     2         'A_BG (IN RM UNITS) = ',G20.9/)
+     2         'A_BG = ',G20.9,1X,A/)
 
       ELSEIF (IDECAY.EQ.2) THEN
 C  STRONGLY DECAYED RESONANCE
@@ -156,13 +157,14 @@ C  STRONGLY DECAYED RESONANCE
         IF (IPRINT.GE.4)
      1    WRITE(6,106) TRIM(EFVNAM(ISVEFV)),B0,
      2                 TRIM(EFVUNT(ISVEFV)),
-     3                 ALPHA_BG,-BETA_BG,ALPHA_RES,-BETA_RES,
-     4                 GAMMA_INEL,TRIM(EFVUNT(ISVEFV)),
-     5                 DELTA,TRIM(EFVUNT(ISVEFV))
+     3                 TRIM(RUNAME),ALPHA_BG,-BETA_BG,
+     4                 TRIM(RUNAME),ALPHA_RES,-BETA_RES,
+     5                 GAMMA_INEL,TRIM(EFVUNT(ISVEFV)),
+     6                 DELTA,TRIM(EFVUNT(ISVEFV))
   106     FORMAT(/'  PARAMETERS OBTAINED ARE:'/,
      1            '  ',A,'_RES = ',F16.9,5X,A/,
-     2         7X,'A_BG  (IN RM UNITS) = ',1P G20.9,' ',SP,G20.9,' i '/
-     3         7X,'A_RES (IN RM UNITS) = ',SS,G20.9,' ',SP,G20.9,' i '/,
+     2           7X,'A_BG  (IN ',A,') = ',1P G20.9,' ',SP,G20.9,' i '/
+     3           7X,'A_RES (IN ',A,') = ',SS,G20.9,' ',SP,G20.9,' i '/,
      4           16X,'GAMMA_INEL = ',SS,G20.9,X,A/,
      5           21X,'DELTA = -ALPHA_RES*GAMMA_INEL/2*ALPHA_BG'/
      6           27X,'= ',G20.9,X,A)

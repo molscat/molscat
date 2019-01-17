@@ -1,7 +1,7 @@
       SUBROUTINE LDPROP(N,MXLAM,NPOTL,
      1                  Z,U,VL,IV,EINT,CENT,P,DIAG,
-     2                  RBEGIN,REND,NSTEP,ERED,ESHIFT,RMLMDA,
-     3                  IREAD,IWRITE,ISCRU,NODES,IPRINT)
+     2                  RSTART,RSTOP,NSTEP,DR,NODES,
+     3                  ERED,RMLMDA,IPRINT)
 C  Copyright (C) 2018 J. M. Hutson & C. R. Le Sueur
 C  Distributed under the GNU General Public License, version 3
 C
@@ -13,18 +13,33 @@ C
 C  COMMENTS AND SOME F77 CONSTRUCTS ADDED BY J M HUTSON 2006
 C
       IMPLICIT DOUBLE PRECISION (A-H,O-Z)
+C
+C  COMMON BLOCK FOR CONTROL OF USE OF PROPAGATION SCRATCH FILE
       LOGICAL IREAD,IWRITE
+      COMMON /PRPSCR/ ESHIFT,ISCRU,IREAD,IWRITE
+
       DIMENSION U(N,N),Z(N,N),P(MXLAM),VL(2),IV(2),EINT(N),CENT(N),
      1          DIAG(N)
 
-      H = (REND-RBEGIN)/DBLE(2*NSTEP)
+      H=DR/2.D0
       D1 = H*H/3.D0
       D2 = 2.D0*D1
       D4 = -D1/16.D0
 C
-      R = RBEGIN
+      R = RSTART
       NODES=0
 C
+C  26-12-18 ADDED THIS CODE BECAUSE U NO LONGER PRESERVED BY YINIT
+      IF (IREAD) THEN
+        READ(ISCRU) U
+        DO 130 I=1,N
+  130     U(I,I)=U(I,I)-ESHIFT
+      ELSE
+        CALL WAVMAT(U,N,R,P,VL,IV,ERED,EINT,CENT,RMLMDA,DIAG,
+     1              MXLAM,NPOTL,IPRINT)
+        IF (IWRITE) WRITE(ISCRU) U
+      ENDIF
+
       DO 150 J = 1,N
         DO 140 I = J,N
   140     Z(I,J) = H*Z(I,J)+D1*U(I,J)
