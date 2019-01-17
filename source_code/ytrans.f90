@@ -26,6 +26,9 @@ USE potential
 !
 !  altered by CRLS 17-07-2018 to use new structure for extra operators
 !
+!  minor alteration by CRLS 14-01-2019 to always call wvcalc and hence
+!  return NOPEN and WVEC
+!
 !  This latest version has the capability to find degenerate sets of
 !  eigenvalues and then to form linear (orthonormal) combinations of
 !  them based on diagonalisation of futher operators (which may or may
@@ -81,11 +84,12 @@ data tol_L/1d-10/
 jprint=IPRINT
 if (LQUIET) jprint=0
 
-if (NCONST.eq.0 .and. NRSQ.eq.0 .and. NEXTRA.eq.0) return
-NEXTRA_local=NEXTRA
-if (cdrive.ne.'M') NEXTRA_local=0
+if (NCONST.eq.0 .and. NRSQ.eq.0 .and. NEXTRA.eq.0) then
+  return
+endif
 
-!need some code in here differentiating between bound/field and molscat use
+NEXTRA_local=NEXTRA
+if (cdrive.ne.'M') NEXTRA_local=0 ! can ignore extra operators for BOUND/FIELD
 
 n_ops=min(1,NCONST)+min(1,NRSQ)+NEXTRA_local
 allocate (mconst(n_ops))
@@ -300,7 +304,7 @@ do LL=Lmin,Lmax
 !   call MATPRN(6,Wsub,nn,nn,nn,1,Wsub,' EIGENVECTORS:',1)
 ! endif
 
-!  check for degeneracies: in progress CRLS
+!  check for degeneracies
   if (.not.nowarn) then
     allocate(eigmag(n_ops))
     do i_op=1,n_ops
@@ -350,18 +354,16 @@ do LL=Lmin,Lmax
   enddo
   deallocate (Wsub)
 
-! if (jprint.ge.15) &
-!   write(6,*) ' Index        Energy       Reduced Energy',&
-!              '       Channel No.'
 !  Set up EINT array (threshold energies) from eigenvalues
-  icol=0
-  do i=1,N
-    if (NRSQ.eq.0 .and. maskCorL(i).ne.LL) cycle
-    icol=icol+1
-    EINT(i)=eval(icol,1)
-!   if (jprint.ge.15) &
-!     write(6,'(I5,2E20.10,I10)') icol,eval(icol,1),EINT(i),i
-  enddo
+  if (NCONST.gt.0) then
+    icol=0
+    do i=1,N
+      if (NRSQ.eq.0 .and. maskCorL(i).ne.LL) cycle
+      icol=icol+1
+      EINT(i)=eval(icol,1)
+    enddo
+  endif
+
   deallocate(eval)
 enddo
 
@@ -370,7 +372,7 @@ deallocate(wks)
 !---------------------------------------------------------------
 !Print sorted by the energy
 
-if (jprint.ge.15 .and. NRSQ.gt.0) then
+if (jprint.ge.15 .and. NRSQ.gt.0 .and. NCONST.gt.0) then
 ! print energy-sorted list of thresholds, together with nearest integer
 ! value for L
   allocate(nchan(N))
@@ -437,7 +439,7 @@ if (NRSQ.ne.0) then
       if (abs(realL-dble(nint(realL))).gt.tol_L) then
         write(6,*) ' Eigenvalues of centrifugal operator are not integer'
         write(6,930) 'Solution #',i,' is ',realL
-        stop
+!       stop
       endif
       L(i)=nint(realL)
     else
