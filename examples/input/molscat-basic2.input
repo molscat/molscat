@@ -3,7 +3,7 @@
     URED   =  1.00794,
     IPRINT = 11,    ISIGPR =   1,
     RMIN   =  0.43, RMID   =   2.0, RMAX   = 20.0,  IRXSET =  1,
-    IPROPS =  6,    IPROPL =   1,   STEPS  = 15.0,
+    IPROPS =  6,    IPROPL =   9,   STEPS  = 15.0,
     JTOTL  =  6,    JTOTU  =   6,
     NNRG   =  1,    ENERGY = 700.0,
  /

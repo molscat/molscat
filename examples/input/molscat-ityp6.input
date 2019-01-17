@@ -2,15 +2,15 @@
     LABEL  = 'Ar-CH4 (A) on MSV potential of Buck et al (1983)',
     URED   = 11.42857,
     IPRINT =  3,     ISIGPR =     1,   ISIGU  =  10,
-    RMIN   =  0.73,  RMAX   =     6.0, STEPS  =  10.0,    IRMSET =   8,
-    IPROPS =  6,     IPROPL =     1,   RVFAC  =   1.3,
+    RMIN   =  0.73,  RMAX   =     6.0, STEPS  =  15.0,    IRMSET =   8,
+    IPROPS =  6,     IPROPL =     9,   RVFAC  =   1.3,
     JTOTL  =  0,     JTOTU  = 99999,   OTOL   =   0.0001, DTOL   = 10.00,
     EUNITS =  1,     NNRG   =     1,   ENERGY = 300.0,    TOLHI  =  1.D-4,
  /
 
  &BASIS
     ITYPE  =   6,
-    ROTI   =   5.2410356,  0.0, 5.2410356, 0.0,      5.2410356, 0.,
+    ROTI   =   5.2410356,  0.0, 5.2410356, 0.0,      5.2410356, 0.0,
                1.10864E-4, 0.0, 0.0,       4.425E-6,
     JMAX   =   9, JZCSMX = 0,
     ISYM   = 224,

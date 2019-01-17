@@ -1,0 +1,25 @@
+ &INPUT
+    LABEL  = 'model system: ITYPE=1; IPROPS=4, IPROPL=4',
+    URED   = 20.0,
+    IPRINT =  3,   ISIGPR =    1,   ISCRU  = 30,
+    RMIN   =  0.5, RMID   =    1.0  RMAX   = 20.0,
+    IPROPS =  4,   STEPS  =   12.0, TOLHIS =  1.0,
+    IPROPL =  4,   STEPL  =   12.0, TOLHIL =  0.0
+    JTOTL  = 10,   JTOTU  =   10,   IBFIX  =  1,
+    NNRG   =  2,   ENERGY = 1000.0, 900.0,
+    LASTIN =  0,
+ /
+
+ &BASIS
+    ITYPE  = 1,  BE     = 30.0,
+    NLEVEL = 4,  JLEVEL =  0, 2, 4, 6,
+ /
+
+ &POTL
+    MXLAM =   2, LAMBDA =   0,          2,
+                 NTERM  =   2,          1,
+                 NPOWER = -12,   -6,   -6,
+                 A      =   1.0, -2.0, -0.2,
+    RM    = 3.5, EPSIL  =  50.0,
+ /
+

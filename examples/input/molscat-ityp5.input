@@ -1,162 +1,164 @@
  &INPUT
-    LABEL  = 'Ortho-NH3-He: Davis-Boggs plus (corrected) long-range potential; test STEPS',
+    LABEL  = 'NH3-He on simple analytic potential; STEPS convergence',
     URED   = 3.24,
-    IPRINT = 3,    ISCRU  =   1,   ISIGPR =  2,
-    RMIN   = 3.2,  RMAX   =  40.0, STEPS  = 80, IRMSET = 0,
-    IPROPS = 6,
-    JTOTL  = 5,    JTOTU  =   5,   IBFIX  =  1,
-    NNRG   = 3,    ENERGY = 300.0,
-    ICONV  = 1,
+    IPRINT = 3,    ISCRU  =  30,   ISIGPR =  2,
+    IPROPS = 6,    IPROPL =   9,
+    RMIN   = 3.0,  RMAX   =  30.0, RMID   =  8.0, STEPS  = 80.0, IRMSET = 0,
+    JTOTL  = 5,    JTOTU  =   6,   IBFIX  =  2,
+    NNRG   = 3,    ENERGY = 110.0,
+    NCONV  = 1,    ICON   =   0,
     LASTIN = 0,
  /
 
  &BASIS
-    ITYPE  =  5, A = 9.9402, B = 9.9402, C = 6.3044,
-    NLEVEL = 22, JLEVEL = 0,0,0, 1,0,0, 2,0,0, 3,0,0, 3,3,0, 3,3,1,
-                          4,0,0, 4,3,0, 4,3,1, 5,0,0, 5,3,0, 5,3,1,
-                          6,0,0, 6,3,0, 6,3,1, 6,6,0, 6,6,1,
-                          7,0,0, 7,3,0, 7,3,1, 7,6,0, 7,6,1,
+    ITYPE  = 5,
+    A      = 9.9441, B      = 9.9441, C      = 6.2294,   ROTI(10) = 0.7934,
+    JMAX   = 6,      KMAX   = 6,      ISYM   = , , 1, 1,
  /
 
  &POTL
-    RM     =   0.52917721067, EPSIL  = 1.0,
-    MXLAM  =  16,             NTERM  = 12*-1, 4*1,
-    LAMBDA =  0,0, 1,0, 2,0, 3,0, 3,3, 4,0, 4,3, 5,0, 5,3, 6,0, 6,3, 6,6,
-              0,0,      1,0,     3,0,     2,0,
-    NPOWER = -6,       -7,      -7,      -6,
-    A      = -8.562E6, -1.23E6, -0.54E6, -3.84E5,
+    RM     =  0.52917721067, EPSIL  = 1.0,
+    MXLAM  =  5, LAMBDA =  0,0,            1,0,    2,0,    3,0,    3,3,
+                 NTERM  =  2,              1,      1,      1,      1,
+                 NPOWER = -6,      0,      0,     -6,      0,      0,
+                 E      =         -2.4,   -2.4,           -2.4,   -2.4,
+                 A      = -1.2E7,  6.2E8, -5.4E7,  2.2E6,  3.6E7,  1.0E8,
  /
 
- &CONV
-    IVAR   = 0,
- /
 
  &INPUT
-    LABEL  = 'Ortho-NH3-He: Davis-Boggs plus (corrected) long-range potential; test DR',
+    LABEL  = 'NH3-He on simple analytic potential: DR convergence',
     URED   = 3.24,
-    IPRINT = 3,    ISCRU  =   1,   ISIGPR =  2,
-    RMIN   = 3.2,  RMAX   =  40.0, STEPS  = 80, IRMSET = 0,
-    IPROPS = 6,
-    JTOTL  = 5,    JTOTU  =   5,   IBFIX  = 1,
-    NNRG   = 3,    ENERGY = 300.0,
-    ICONV  = 1,
+    IPRINT = 3,    ISCRU  =  30,   ISIGPR =  2,
+    IPROPS = 6,    IPROPL =   9,
+    RMIN   = 3.0,  RMAX   =  30.0, RMID   =  8.0, DR     = 0.02, IRMSET = 0,
+    JTOTL  = 5,    JTOTU  =   6,   IBFIX  =  2,
+    NNRG   = 3,    ENERGY = 110.0,
+    NCONV  = 1,    ICON   =   0,
     LASTIN = 0,
  /
 
  &BASIS
-    ITYPE  =  5, A = 9.9402, B = 9.9402, C = 6.3044,
-    NLEVEL = 22, JLEVEL = 0,0,0, 1,0,0, 2,0,0, 3,0,0, 3,3,0, 3,3,1,
-                          4,0,0, 4,3,0, 4,3,1, 5,0,0, 5,3,0, 5,3,1,
-                          6,0,0, 6,3,0, 6,3,1, 6,6,0, 6,6,1,
-                          7,0,0, 7,3,0, 7,3,1, 7,6,0, 7,6,1,
+    ITYPE  = 5,
+    A      = 9.9441, B      = 9.9441, C      = 6.2294,   ROTI(10) = 0.7934,
+    JMAX   = 6,      KMAX   = 6,      ISYM   = , , 1, 1,
  /
 
  &POTL
-    RM     =   0.52917721067, EPSIL  = 1.0,
-    MXLAM  =  16,             NTERM  = 12*-1, 4*1,
-    LAMBDA =  0,0, 1,0, 2,0, 3,0, 3,3, 4,0, 4,3, 5,0, 5,3, 6,0, 6,3, 6,6,
-              0,0,      1,0,     3,0,     2,0,
-    NPOWER = -6,       -7,      -7,      -6,
-    A      = -8.562E6, -1.23E6, -0.54E6, -3.84E5,
+    RM     =  0.52917721067, EPSIL  = 1.0,
+    MXLAM  =  5, LAMBDA =  0,0,            1,0,    2,0,    3,0,    3,3,
+                 NTERM  =  2,              1,      1,      1,      1,
+                 NPOWER = -6,      0,      0,     -6,      0,      0,
+                 E      =         -2.4,   -2.4,           -2.4,   -2.4,
+                 A      = -1.2E7,  6.2E8, -5.4E7,  2.2E6,  3.6E7,  1.0E8,
  /
 
- &CONV
-    IVAR   = 0,
- /
 
  &INPUT
-    LABEL  = 'Ortho-NH3-He: Davis-Boggs plus (corrected) long-range potential; test RMIN',
+    LABEL  = 'NH3-He on simple analytic potential: RMIN convergence',
     URED   = 3.24,
-    IPRINT = 3,    ISCRU  =   1,   ISIGPR =  2,
-    RMIN   = 3.2,  RMAX   =  40.0, STEPS  = 80, IRMSET = 0,
-    IPROPS = 6,
-    JTOTL  = 5,    JTOTU  =   5,   IBFIX  =  1,
-    NNRG   = 3,    ENERGY = 300.0,
-    ICONV  = 1,
+    IPRINT = 3,    ISCRU  =  30,   ISIGPR =   2,
+    IPROPS = 6,    IPROPL =   9,
+    RMIN   = 3.0,  RMAX   =  30.0, RMID   =   8.0, STEPS  = 40.0, IRMSET = 0,
+    JTOTL  = 5,    JTOTU  =   6,   IBFIX  =   2,
+    NNRG   = 3,    ENERGY = 110.0,
+    NCONV  = 1,    ICON   =   2,   DRCON  = 0.1,
     LASTIN = 0,
  /
 
  &BASIS
-    ITYPE  =  5, A = 9.9402, B = 9.9402, C = 6.3044,
-    NLEVEL = 22, JLEVEL = 0,0,0, 1,0,0, 2,0,0, 3,0,0, 3,3,0, 3,3,1,
-                          4,0,0, 4,3,0, 4,3,1, 5,0,0, 5,3,0, 5,3,1,
-                          6,0,0, 6,3,0, 6,3,1, 6,6,0, 6,6,1,
-                          7,0,0, 7,3,0, 7,3,1, 7,6,0, 7,6,1,
+    ITYPE  = 5,
+    A      = 9.9441, B      = 9.9441, C      = 6.2294,   ROTI(10) = 0.7934,
+    JMAX   = 6,      KMAX   = 6,      ISYM   = , , 1, 1,
  /
 
  &POTL
-    RM     =   0.52917721067, EPSIL  = 1.0,
-    MXLAM  =  16,             NTERM  = 12*-1, 4*1,
-    LAMBDA =  0,0, 1,0, 2,0, 3,0, 3,3, 4,0, 4,3, 5,0, 5,3, 6,0, 6,3, 6,6,
-              0,0,      1,0,     3,0,     2,0,
-    NPOWER =   -6,     -7,      -7,      -6,
-    A      = -8.562E6, -1.23E6, -0.54E6, -3.84E5,
+    RM     =  0.52917721067, EPSIL  = 1.0,
+    MXLAM  =  5, LAMBDA =  0,0,            1,0,    2,0,    3,0,    3,3,
+                 NTERM  =  2,              1,      1,      1,      1,
+                 NPOWER = -6,      0,      0,     -6,      0,      0,
+                 E      =         -2.4,   -2.4,           -2.4,   -2.4,
+                 A      = -1.2E7,  6.2E8, -5.4E7,  2.2E6,  3.6E7,  1.0E8,
  /
 
- &CONV
-    IVAR   = 1,
-    DR     = 0.1,
- /
 
  &INPUT
-    LABEL  = 'Ortho-NH3-He: Davis-Boggs plus (corrected) long-range potential; test RMAX',
+    LABEL  = 'NH3-He on simple analytic potential: RMAX convergence',
     URED   = 3.24,
-    IPRINT = 3,    ISCRU  =   1,   ISIGPR =  2,
-    RMIN   = 3.2,  RMAX   =  40.0, STEPS  = 80, IRMSET = 0,
-    IPROPS = 6,
-    JTOTL  = 5,    JTOTU  =   5,   IBFIX  =  1,
-    NNRG   = 3,    ENERGY = 300.0,
-    ICONV  = 1,
+    IPRINT = 3,    ISCRU  =  30,   ISIGPR = 2,
+    IPROPS = 6,    IPROPL =   9,
+    RMIN   = 3.0,  RMAX   =  30.0, RMID   = 8.0, STEPS  = 40.0, IRMSET = 0,
+    JTOTL  = 5,    JTOTU  =   6,   IBFIX  = 2,
+    NNRG   = 3,    ENERGY = 110.0,
+    NCONV  = 1,    ICON   =   1,   DRCON  = 1.0,
     LASTIN = 0,
  /
 
  &BASIS
-    ITYPE  =  5, A = 9.9402, B = 9.9402, C = 6.3044,
-    NLEVEL = 22, JLEVEL = 0,0,0, 1,0,0, 2,0,0, 3,0,0, 3,3,0, 3,3,1,
-                          4,0,0, 4,3,0, 4,3,1, 5,0,0, 5,3,0, 5,3,1,
-                          6,0,0, 6,3,0, 6,3,1, 6,6,0, 6,6,1,
-                          7,0,0, 7,3,0, 7,3,1, 7,6,0, 7,6,1,
+    ITYPE  = 5,
+    A      = 9.9441, B      = 9.9441, C      = 6.2294,   ROTI(10) = 0.7934,
+    JMAX   = 6,      KMAX   = 6,      ISYM   = , , 1, 1,
  /
 
  &POTL
-    RM     =   0.52917721067, EPSIL  = 1.0,
-    MXLAM  =  16,             NTERM  = 12*-1, 4*1,
-    LAMBDA =  0,0, 1,0, 2,0, 3,0, 3,3, 4,0, 4,3, 5,0, 5,3, 6,0, 6,3, 6,6,
-              0,0,      1,0,     3,0,     2,0,
-    NPOWER = -6,       -7,      -7,      -6,
-    A      = -8.562E6, -1.23E6, -0.54E6, -3.84E5,
+    RM     =  0.52917721067, EPSIL  = 1.0,
+    MXLAM  =  5, LAMBDA =  0,0,            1,0,    2,0,    3,0,    3,3,
+                 NTERM  =  2,              1,      1,      1,      1,
+                 NPOWER = -6,      0,      0,     -6,      0,      0,
+                 E      =         -2.4,   -2.4,           -2.4,   -2.4,
+                 A      = -1.2E7,  6.2E8, -5.4E7,  2.2E6,  3.6E7,  1.0E8,
  /
 
- &CONV
-    IVAR   = 3,
-    DR     = 0.1,
- /
 
  &INPUT
-    LABEL  = 'Ortho-NH3-He: Davis-Boggs plus (corrected) long-range potential; ITYPE=25',
+    LABEL  = 'NH3-He on simple analytic potential: close-coupling x-sections',
     URED   = 3.24,
-    IPRINT = 3,    ISCRU  =   1,   ISIGPR =  2,
-    RMIN   = 3.2,  RMAX   =  40.0, STEPS  = 80, IRMSET = 0,
-    IPROPS = 6,
-    JTOTL  = 5,    JTOTU  =   6,
-    NNRG   = 2,    ENERGY = 300.0, 200.0,
+    IPRINT = 1,    ISCRU  =     30,   ISIGPR =  2,
+    IPROPS = 6,    IPROPL =      9,
+    RMIN   = 3.0,  RMAX   =     30.0, RMID   =  8.0, STEPS  = 40.0, IRMSET = 0,
+    JTOTL  = 0,    JTOTU  =  99999,   IBFIX  =  0,
+    NNRG   = 1,    ENERGY =    110.0,
+    LASTIN = 0,
  /
 
  &BASIS
-    ITYPE  = 25, A = 9.9402, B = 9.9402, C = 6.3044,
-    NLEVEL = 22, JLEVEL = 0,0,0, 1,0,0, 2,0,0, 3,0,0, 3,3,0, 3,3,1,
-                          4,0,0, 4,3,0, 4,3,1, 5,0,0, 5,3,0, 5,3,1,
-                          6,0,0, 6,3,0, 6,3,1, 6,6,0, 6,6,1,
-                          7,0,0, 7,3,0, 7,3,1, 7,6,0, 7,6,1,
-    JZCSMX = 3,
+    ITYPE  = 5,
+    A      = 9.9441, B      = 9.9441, C      = 6.2294,   ROTI(10) = 0.7934,
+    JMAX   = 6,      KMAX   = 6,      ISYM   = , , 1, 1,
  /
 
  &POTL
-    RM     =   0.52917721067, EPSIL  = 1.0,
-    MXLAM  =  16,             NTERM  = 12*-1, 4*1,
-    LAMBDA =  0,0, 1,0, 2,0, 3,0, 3,3, 4,0, 4,3, 5,0, 5,3, 6,0, 6,3, 6,6,
-              0,0,      1,0,     3,0,     2,0,
-    NPOWER = -6,       -7,      -7,      -6,
-    A      = -8.562E6, -1.23E6, -0.54E6, -3.84E5,
+    RM     =  0.52917721067, EPSIL  = 1.0,
+    MXLAM  =  5, LAMBDA =  0,0,            1,0,    2,0,    3,0,    3,3,
+                 NTERM  =  2,              1,      1,      1,      1,
+                 NPOWER = -6,      0,      0,     -6,      0,      0,
+                 E      =         -2.4,   -2.4,           -2.4,   -2.4,
+                 A      = -1.2E7,  6.2E8, -5.4E7,  2.2E6,  3.6E7,  1.0E8,
  /
 
+
+ &INPUT
+    LABEL  = 'NH3-He on simple analytic potential: CS x-sections',
+    URED   = 3.24,
+    IPRINT = 1,    ISCRU  =     30,   ISIGPR =  2,
+    IPROPS = 6,    IPROPL =      9,
+    RMIN   = 3.0,  RMAX   =     30.0, RMID   =  8.0, STEPS  = 40.0, IRMSET = 0,
+    JTOTL  = 0,    JTOTU  =  99999,   IBFIX  =  0,
+    NNRG   = 1,    ENERGY =    110.0,
+    LASTIN = 1,
+ /
+
+ &BASIS
+    ITYPE  = 25,
+    A      =  9.9441, B      = 9.9441, C      = 6.2294,   ROTI(10) = 0.7934,
+    JMAX   =  6,      KMAX   = 6,      ISYM   = , , 1, 1,
+ /
+
+ &POTL
+    RM     =  0.52917721067, EPSIL  = 1.0,
+    MXLAM  =  5, LAMBDA =  0,0,            1,0,    2,0,    3,0,    3,3,
+                 NTERM  =  2,              1,      1,      1,      1,
+                 NPOWER = -6,      0,      0,     -6,      0,      0,
+                 E      =         -2.4,   -2.4,           -2.4,   -2.4,
+                 A      = -1.2E7,  6.2E8, -5.4E7,  2.2E6,  3.6E7,  1.0E8,
+ /

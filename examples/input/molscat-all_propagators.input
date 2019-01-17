@@ -1,35 +1,11 @@
  &INPUT
     LABEL  = 'model system: ITYPE=1; IPROPS=2',
     URED   = 20.0,
-    IPRINT =  3,   ISIGPR =    1,   ISCRU  = 1,
+    IPRINT =  3,   ISIGPR =    1,   ISCRU  = 30,
     RMIN   =  0.5, RMAX   =   20.0,
     IPROPS =  2,   STEPS  =   30.0,
-    JTOTL  = 10,   JTOTU  =   10,   IBFIX  = 1,
-    NNRG   =  1,   ENERGY = 1250.0,
-    LASTIN =  0,
- /
-
- &BASIS
-    ITYPE  = 1,  BE     = 30.0,
-    NLEVEL = 4,  JLEVEL =  0, 2, 4, 6,
- /
-
- &POTL
-    MXLAM =   2, LAMBDA =   0,          2,
-                 NTERM  =   2,          1,
-                 NPOWER = -12,   -6,   -6,
-                 A      =   1.0, -2.0, -0.2,
-    RM    = 3.5, EPSIL  =  50.0,
- /
-
- &INPUT
-    LABEL  = 'model system: ITYPE=1; IPROPS=3',
-    URED   = 20.0,
-    IPRINT =  3,   ISIGPR =    1,   ISCRU  = 1,
-    RMIN   =  0.5, RMAX   =   20.0,
-    IPROPS =  3,   STEPS  =   12.0,
-    JTOTL  = 10,   JTOTU  =   10,   IBFIX  = 1,
-    NNRG   =  1,   ENERGY = 1250.0,
+    JTOTL  = 10,   JTOTU  =   10,   IBFIX  =  1,
+    NNRG   =  2,   ENERGY = 1000.0, 900.0,
     LASTIN =  0,
  /
 
@@ -49,11 +25,11 @@
  &INPUT
     LABEL  = 'model system: ITYPE=1; IPROPS=5',
     URED   = 20.0,
-    IPRINT =  3,   ISIGPR =    1,   ISCRU  = 1,
+    IPRINT =  3,   ISIGPR =    1,   ISCRU  = 30,
     RMIN   =  0.5, RMAX   =   20.0,
     IPROPS =  5,   STEPS  =   12.0,
-    JTOTL  = 10,   JTOTU  =   10,   IBFIX  = 1,
-    NNRG   =  1,   ENERGY = 1250.0,
+    JTOTL  = 10,   JTOTU  =   10,   IBFIX  =  1,
+    NNRG   =  2,   ENERGY = 1000.0, 900.0,
     LASTIN =  0,
  /
 
@@ -73,11 +49,11 @@
  &INPUT
     LABEL  = 'model system: ITYPE=1; IPROPS=6',
     URED   = 20.0,
-    IPRINT =  3,   ISIGPR =    1,   ISCRU  = 1,
+    IPRINT =  3,   ISIGPR =    1,   ISCRU  = 30,
     RMIN   =  0.5, RMAX   =   20.0,
     IPROPS =  6,   STEPS  =   12.0,
-    JTOTL  = 10,   JTOTU  =   10,   IBFIX  = 1,
-    NNRG   =  1,   ENERGY = 1250.0,
+    JTOTL  = 10,   JTOTU  =   10,   IBFIX  =  1,
+    NNRG   =  2,   ENERGY = 1000.0, 900.0,
     LASTIN =  0,
  /
 
@@ -97,11 +73,11 @@
  &INPUT
     LABEL  = 'model system: ITYPE=1; IPROPS=7',
     URED   = 20.0,
-    IPRINT =  3,   ISIGPR =    1,   ISCRU  = 1,
+    IPRINT =  3,   ISIGPR =    1,   ISCRU  = 30,
     RMIN   =  0.5, RMAX   =   20.0,
     IPROPS =  7,   STEPS  =   12.0,
-    JTOTL  = 10,   JTOTU  =   10,   IBFIX  = 1,
-    NNRG   =  1,   ENERGY = 1250.0,
+    JTOTL  = 10,   JTOTU  =   10,   IBFIX  =  1,
+    NNRG   =  2,   ENERGY = 1000.0, 900.0,
     LASTIN =  0,
  /
 
@@ -119,13 +95,13 @@
  /
 
  &INPUT
-    LABEL  = 'model system: ITYPE=1; IPROPS=9',
+    LABEL  = 'model system: ITYPE=1; IPROPS=8',
     URED   = 20.0,
-    IPRINT =  3,   ISIGPR =    1,   ISCRU  = 1,
+    IPRINT =  3,   ISIGPR =    1,   ISCRU  = 30,
     RMIN   =  0.5, RMAX   =   20.0,
-    IPROPS =  9,   IMGSEL =    5,   STEPS  =   12.0,
-    JTOTL  = 10,   JTOTU  =   10,   IBFIX  = 1,
-    NNRG   =  1,   ENERGY = 1250.0,
+    IPROPS =  8,   IMGSEL =    5,   STEPS  = 12.0,
+    JTOTL  = 10,   JTOTU  =   10,   IBFIX  =  1,
+    NNRG   =  2,   ENERGY = 1000.0, 900.0,
     LASTIN =  0,
  /
 
@@ -143,13 +119,14 @@
  /
 
  &INPUT
-    LABEL  = 'model system: ITYPE=1; IPROPS=5, IPROPL=1',
+    LABEL  = 'model system: ITYPE=1; IPROPS=3 ,IPROPL=3',
     URED   = 20.0,
-    IPRINT =  3,   ISIGPR =    1,   ISCRU  =  1,
-    RMIN   =  0.5, RMAX   =   20.0, RVFAC  =  1.15,
-    IPROPS =  5,   IPROPL =    1,   STEPS  = 12.0,
-    JTOTL  = 10,   JTOTU  =   10,   IBFIX  =  1,
-    NNRG   =  1,   ENERGY = 1250.0,
+    IPRINT =  3,   ISIGPR =    1,     ISCRU  = 30,
+    RMIN   =  0.5, RMAX   = 20.0,
+    IPROPS =  3,   STEPS  =   12.0,   POWRS  =  1.0,
+    IPROPL =  3,   DRL    =    0.005, POWRL  =  2.0,
+    JTOTL  = 10,   JTOTU  =   10,     IBFIX  =  1,
+    NNRG   =  2,   ENERGY = 1000.0, 900.0,
     LASTIN =  0,
  /
 
@@ -167,13 +144,14 @@
  /
 
  &INPUT
-    LABEL  = 'model system: ITYPE=1; IPROPS=6, IPROPL=1',
+    LABEL  = 'model system: ITYPE=1; IPROPS=9, IPROPL=9',
     URED   = 20.0,
-    IPRINT =  3,   ISIGPR =    1,   ISCRU  =  1,
-    RMIN   =  0.5, RMAX   =   20.0, RVFAC  =  1.15,
-    IPROPS =  6,   IPROPL =    1,   STEPS  = 12.0,
+    IPRINT =  3,   ISIGPR =    1,   ISCRU  = 30,
+    RMIN   =  0.5, RMID   =    1.0, RMAX   = 20.0,
+    IPROPS =  9,   STEPS  =   12.0, TOLHIS =  0.0, POWRS  =  1.0001,
+    IPROPL =  9,   POWRL  =    6.0, TOLHIL =  0.0,
     JTOTL  = 10,   JTOTU  =   10,   IBFIX  =  1,
-    NNRG   =  1,   ENERGY = 1250.0,
+    NNRG   =  2,   ENERGY = 1000.0, 900.0,
     LASTIN =  0,
  /
 
@@ -191,13 +169,13 @@
  /
 
  &INPUT
-    LABEL  = 'model system: ITYPE=1; IPROPS=7, IPROPL=1',
+    LABEL  = 'model system: ITYPE=1; IPROPS=6, IPROPL=9',
     URED   = 20.0,
-    IPRINT =  3,   ISIGPR =    1,   ISCRU  =  1,
-    RMIN   =  0.5, RMAX   =   20.0, RVFAC  =  1.15,
-    IPROPS =  7,   IPROPL =    1,   STEPS  = 12.0,
+    IPRINT =  3,   ISIGPR =    1,   ISCRU  = 30,
+    RMIN   =  0.5, RMAX   =   20.0, RVFAC  =  1.4,
+    IPROPS =  6,   IPROPL =    9,   STEPS  = 12.0,
     JTOTL  = 10,   JTOTU  =   10,   IBFIX  =  1,
-    NNRG   =  1,   ENERGY = 1250.0,
+    NNRG   =  2,   ENERGY = 1000.0, 900.0,
     LASTIN =  0,
  /
 
@@ -215,109 +193,13 @@
  /
 
  &INPUT
-    LABEL  = 'model system: ITYPE=1; IPROPS=9, IPROPL=1',
+    LABEL  = 'model system: ITYPE=1; IPROPS=5, IPROPL=4',
     URED   = 20.0,
-    IPRINT =  3,   ISIGPR =    1,   ISCRU  =  1,
-    RMIN   =  0.5, RMAX   =   20.0, RVFAC  =  1.15,
-    IPROPS =  9,   IMGSEL =    5,   IPROPL =  1,    STEPS  = 12.0,
+    IPRINT =  3,   ISIGPR =    1,   ISCRU  = 30,
+    RMIN   =  0.5, RMAX   =   20.0, RVFAC  =  1.4,
+    IPROPS =  5,   IPROPL =    4,   STEPS  = 12.0,
     JTOTL  = 10,   JTOTU  =   10,   IBFIX  =  1,
-    NNRG   =  1,   ENERGY = 1250.0,
-    LASTIN =  0,
- /
-
- &BASIS
-    ITYPE  = 1,  BE     = 30.0,
-    NLEVEL = 4,  JLEVEL =  0, 2, 4, 6,
- /
-
- &POTL
-    MXLAM =   2, LAMBDA =   0,          2,
-                 NTERM  =   2,          1,
-                 NPOWER = -12,   -6,   -6,
-                 A      =   1.0, -2.0, -0.2,
-    RM    = 3.5, EPSIL  =  50.0,
- /
-
- &INPUT
-    LABEL  = 'model system: ITYPE=1; IPROPS=5, IPROPL=14',
-    URED   = 20.0,
-    IPRINT =  3,   ISIGPR =    1,   ISCRU  =  1,
-    RMIN   =  0.5, RMAX   =   20.0, RVFAC  =  1.15,
-    IPROPS =  5,   IPROPL =   14,   STEPS  = 12.0,
-    JTOTL  = 10,   JTOTU  =   10,   IBFIX  =  1,
-    NNRG   =  1,   ENERGY = 1250.0,
-    LASTIN =  0,
- /
-
- &BASIS
-    ITYPE  = 1,  BE     = 30.0,
-    NLEVEL = 4,  JLEVEL =  0, 2, 4, 6,
- /
-
- &POTL
-    MXLAM =   2, LAMBDA =   0,          2,
-                 NTERM  =   2,          1,
-                 NPOWER = -12,   -6,   -6,
-                 A      =   1.0, -2.0, -0.2,
-    RM    = 3.5, EPSIL  =  50.0,
- /
-
- &INPUT
-    LABEL  = 'model system: ITYPE=1; IPROPS=6, IPROPL=14',
-    URED   = 20.0,
-    IPRINT =  3,   ISIGPR =    1,   ISCRU  =  1,
-    RMIN   =  0.5, RMAX   =   20.0, RVFAC  =  1.15,
-    IPROPS =  6,   IPROPL =   14,   STEPS  = 12.0,
-    JTOTL  = 10,   JTOTU  =   10,   IBFIX  =  1,
-    NNRG   =  1,   ENERGY = 1250.0,
-    LASTIN =  0,
- /
-
- &BASIS
-    ITYPE  = 1,  BE     = 30.0,
-    NLEVEL = 4,  JLEVEL =  0, 2, 4, 6,
- /
-
- &POTL
-    MXLAM =   2, LAMBDA =   0,          2,
-                 NTERM  =   2,          1,
-                 NPOWER = -12,   -6,   -6,
-                 A      =   1.0, -2.0, -0.2,
-    RM    = 3.5, EPSIL  =  50.0,
- /
-
- &INPUT
-    LABEL  = 'model system: ITYPE=1; IPROPS=7, IPROPL=14',
-    URED   = 20.0,
-    IPRINT =  3,   ISIGPR =    1,   ISCRU  =  1,
-    RMIN   =  0.5, RMAX   =   20.0, RVFAC  =  1.15,
-    IPROPS =  7,   IPROPL =   14,   STEPS  = 12.0,
-    JTOTL  = 10,   JTOTU  =   10,   IBFIX  =  1,
-    NNRG   =  1,   ENERGY = 1250.0,
-    LASTIN =  0,
- /
-
- &BASIS
-    ITYPE  = 1,  BE     = 30.0,
-    NLEVEL = 4,  JLEVEL =  0, 2, 4, 6,
- /
-
- &POTL
-    MXLAM =   2, LAMBDA =   0,          2,
-                 NTERM  =   2,          1,
-                 NPOWER = -12,   -6,   -6,
-                 A      =   1.0, -2.0, -0.2,
-    RM    = 3.5, EPSIL  =  50.0,
- /
-
- &INPUT
-    LABEL  = 'model system: ITYPE=1; IPROPS=9, IPROPL=14',
-    URED   = 20.0,
-    IPRINT =  3,   ISIGPR =    1,   ISCRU  =  1,
-    RMIN   =  0.5, RMAX   =   20.0, RVFAC  =  1.15,
-    IPROPS =  9,   IMGSEL =    5,   IPROPL = 14,    STEPS  = 12.0,
-    JTOTL  = 10,   JTOTU  =   10,   IBFIX  =  1,
-    NNRG   =  1,   ENERGY = 1250.0,
+    NNRG   =  2,   ENERGY = 1000.0, 900.0,
     LASTIN =  0,
  /
 
@@ -337,12 +219,12 @@
  &INPUT
     LABEL  = 'model system: ITYPE=1; IPROPS=-1 (using IOS approximation)',
     URED   = 20.0,
-    IPRINT =  3,     ISIGPR =    1,   ISCRU  = 1,
+    IPRINT =  3,     ISIGPR =    1,   ISCRU  = 30,
     RMIN   =  0.5,   RMAX   =   20.0,
     IPROPS = -1,     NGMP   =   18, 1, 22,
     TOL    =  0.002, STEPS  =   12.0,
-    JTOTL  = 10,     JTOTU  =   10,   IBFIX  = 1, LMAX   = 11,
-    NNRG   =  1,     ENERGY = 1250.0,
+    JTOTL  = 10,     JTOTU  =   10,   IBFIX  =  1, LMAX   = 11,
+    NNRG   =  2,     ENERGY = 1000.0, 900.0,
     LASTIN =  0,
  /
 
@@ -363,11 +245,11 @@
  &INPUT
     LABEL  = 'model system: ITYPE=1; IPROPS=6 (using IOS approximation)',
     URED   = 20.0,
-    IPRINT =  3,   ISIGPR =    1,   ISCRU  = 1,
+    IPRINT =  3,   ISIGPR =    1,   ISCRU  = 30,
     RMIN   =  0.5, RMAX   =   20.0,
     IPROPS =  6,   STEPS  =   12.0,
-    JTOTL  = 10,   JTOTU  =   10,   IBFIX  = 1, LMAX   = 11,
-    NNRG   =  1,   ENERGY = 1250.0,
+    JTOTL  = 10,   JTOTU  =   10,   IBFIX  =  1, LMAX   = 11,
+    NNRG   =  2,   ENERGY = 1000.0, 900.0,
  /
 
  &BASIS

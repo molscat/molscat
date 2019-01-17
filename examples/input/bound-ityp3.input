@@ -2,8 +2,8 @@
     LABEL  = 'p-H2 + o-H2: potential of Zarur and Rabitz; coefficients from VSTAR',
     URED   =   1.0,
     IPRINT =   2,
-    RMIN   =   0.43, RMAX   =  12.0,  RMID = 5.,
-    IPROPS =   6,    IPROPL =   1,    DR = 0.04,
+    RMIN   =   0.43, RMATCH =   5.0,  RMAX   = 12.0,
+    IPROPS =   6,    IPROPL =   9,    DR     =  0.04,
     JTOTL  =   0,    JTOTU  =   1,
     EMIN   = 100.0,  EMAX   = 121.59,
  /
