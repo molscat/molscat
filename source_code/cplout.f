@@ -38,7 +38,7 @@ C
             KF1=KF
             IF (KK.EQ.ITIME) KF1=MIN(N,KF)
             WRITE(6,11) (I,I=KS,KF1)
-   11       FORMAT(/10(10X,I2))
+   11       FORMAT(/10(9X,I3))
             J1=KS
             DO 700 JJ=J1,N
               KF1=MIN(JJ,KF)

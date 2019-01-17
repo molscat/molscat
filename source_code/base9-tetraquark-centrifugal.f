@@ -2,33 +2,27 @@
 C  Copyright (C) 2018 J. M. Hutson & C. R. Le Sueur
 C  Distributed under the GNU General Public License, version 3
 C
-C  CR Le Sueur Oct 2018
-C  This file provides a skeleton version of a plug-in basis-set suite
-C  with some indications of how to adapt it for your own use
-
-C  It must be read in conjunction with the full documentation,
-C  which specifies the values that must be given to the variables
-C  and arrays that are set in these routines.
+C  J. M. Hutson, January 2019
+C  This plug-in basis set suite is for a system of two heavy quarks
+C  and two light quarks, coded with coupled Born-Oppenheimer potentials
 
       IMPLICIT NONE
-
 c  quantities available to all routines in this basis-set suite
-      double precision :: xxxxx
-      integer          :: ixxxx
+      integer          :: LLTL,LLTU,ISLT,ISHV
 c  nqns and nlabvs are used to set variables nqn and nlabv that are
 c  returned from set9
 c  nqns is one greater than the number of quantum labels for a pair state
 c  nlabvs is the number of indices for each term in the potential expansion
 c  nqn is passed back into various routines in the basis-set suite
 c  nlabvs is used internally in potin9
-      integer, parameter        :: nqns=2, nlabvs=1
+      integer, parameter        :: nqns=7, nlabvs=3
       end module BASE9_SUITE
 C=========================================================================
       SUBROUTINE BAS9IN(PRTP, IBOUND, IPRINT)
       USE potential
       USE efvs  ! only needed if efvs are included in the calculation
-      USE base9_suite
 c     USE basis_data
+      USE base9_suite
       IMPLICIT NONE
 
       CHARACTER(32), INTENT(OUT)   :: PRTP
@@ -39,15 +33,14 @@ c     USE basis_data
 
       integer :: iconst,iextra,iefv
 
-c  bas9in may make use of input variables passed in module basis_data
-c  by uncommenting the USE line above and may also read any additional
-c  variables required, for example in a namelist block such as
-c     NAMELIST / BASIS9 / extra_variables
+c  bas9in may read any input variables needed to define the basis set
+c  that are not read by base and passed in module basis_data
+      NAMELIST / BASIS9 / LLTL,LLTU,ISLT,ISHV
 
-      PRTP = 'collision type'
+      PRTP = 'tetraquark with only centrifugal'
       IBOUND = 0
 
-C  NDGVL, NCONST, NRSQ and NEXTRA are in module potential
+C  these quantities are included in the potential module
 
 c  +ve only if H_intl is diagonal and some terms contributing to the
 c  internal energy need to be recalculated during the course of a run
@@ -64,32 +57,47 @@ c  +ve only if H_intl is non-diagonal
       endif
 
 c  only +ve if L^2 is non-diagonal
-      NRSQ = 0
+      NRSQ = 1
 
-c  needed only for MOLSCAT and only if extra operators are required 
-c  to resolve degeneracies in H_intl
+c  needed (for MOLSCAT) only if extra operators are required to resolve
+c  degeneracies in H_intl
       NEXTRA = 0 ! number of extra operators
 
-      if (nextra.gt.0) then
-        do iextra=1,nextra
-          nextms(iextra) = 0 ! number of coupling matrices used for each
-                             ! extra operator
-        enddo
-      endif
+      do iextra=1,nextra
+        nextms(iextra) = 0 ! number of coupling matrices used for each
+                           ! extra operator
+      enddo
 
 c  needed only if efvs are included in the calculation
       NEFV = 0 ! number of external field variables
 
-      if (nefv.gt.0) then
-        do iefv=1,nefv
-          efvnam(iefv) = 'efv name' ! name for efv
-          efvunt(iefv) = 'units'    ! units for efv
-        enddo
-        mapefv = 1 ! position of first efv in vconst
-      endif
+      do iefv=1,nefv
+        efvnam(iefv) = 'efv name' ! name for efv
+        efvunt(iefv) = 'units'    ! units for efv
+      enddo
+      mapefv = 1 ! position of first efv in vconst
 
-c  read any additional quantities required to define the basis set
-c     READ(5,&BASIS9)
+      LLTL=1
+      LLTU=1
+      ISLT=0
+      ISHV=0
+      READ(5,BASIS9)
+
+      WRITE(6,601) LLTL,LLTU,ISLT,ISHV
+  601 FORMAT('  TETRAQUARK BASIS SET ROUTINE BY J. M. HUTSON, JAN 2019'/
+     1 '  BORN-OPPENHEIMER BASIS WITH L_light FROM',I2,' TO',I2/
+     2 '  AND ALL ALLOWED BODY-FIXED PROJECTIONS LAMBDA OF L_light'//
+     3 '  FIXED SPINS S_light =',I2,' AND S_heavy =',I2//
+     4 '  JTOT IS TOTAL ANGULAR MOMENTUM (el IF ALL SPINS ZERO)'/
+     5 '  SYM BLOCK 2 IS EVEN COMBINATION OF +|LAMBDA| AND -|LAMBDA|'/
+     6 12X,'1 IS  ODD COMBINATION AND EXCLUDES LAMBDA = 0'//
+     7 '  BASIS SET [({LTOT L_light LAMBDA} S_light) N S_heavy] JTOT'//
+     8 '  THIS INITIAL VERSION INCLUDES ONLY CENTRIFUGAL COUPLING',
+     9 ' BETWEEN LAMBDA STATES AND DOES NOT INCLUDE:'/
+     A '  - NON-CENTRIFUGAL COUPLING BETWEEN LAMBDA STATES'/
+     B '  - COUPLING BETWEEN DIFFERENT VALUES OF L_light'/
+     C '  - COUPLING BETWEEN DIFFERENT VALUES OF LTOT OR N'/
+     D '  - COUPLING BETWEEN DIFFERENT VALUES OF S_light OR S_heavy')
 
       RETURN
       END SUBROUTINE BAS9IN
@@ -112,18 +120,21 @@ c
 
       INTEGER, INTENT(IN)       :: IPRINT
 
-      integer :: iqn,iqn1,iqn1mn,iqn1mx,iqn1st,ilevel,iloop,istate,
-     1           nqlev
+      integer :: iqn,iqn1,iqn2,iqn3,iqn4,iqn5,iqn6,ilevel,iloop,istate
 
-      NQN = nqns ! one greater than the number of quantum labels
-      do iqn=1,nqn-1
-        qname(iqn) = 'qn label' ! name of quantum label
-      enddo
+      NQN = nqns ! one greater than the number of quantum labels for pair states
+      qname(1) = 'L_light'
+      qname(2) = 'Lambda'
+      qname(3) = 'S_light'
+      qname(4) = 'LTOT-N'
+      qname(5) = 'S_heavy'
+      qname(6) = 'N-JTOT'
 
-c  number of symmetry blocks for each JTOT
-      NBLOCK = 1
+c  number of symmetry blocks for each JTOT 
+      NBLOCK = 2
 
-c  number of indices for each term in the potential expansion
+c  number of quantum labels for a potential term
+C  For now Lambda, L_light, S_light
       NLABV = nlabvs
 
       if (levin) then
@@ -132,47 +143,60 @@ c  number of indices for each term in the potential expansion
       endif
 
 c  set jlevel, elevel and nlevel only if H_intl is diagonal
-
+      if (nconst.eq.0) then
 c  nqlev is the number of quantum numbers that affect the pair energy.
 c  it is internal to set9 and not used elsewhere.
-      nqlev=2
-
-      if (nconst.eq.0) then
-        iqn1mn=jmin
-        iqn1mx=jmax
-        iqn1st=jstep
+c       nqlev=2
         ilevel=0
-        do iqn1=iqn1mn,iqn1mx,iqn1st
-c       do iqn2=iqn2mn,iqn2mx,iqn2st ! other quantum labels to cycle over
-          jlevel(1+nqlev*ilevel)=iqn1
+        do iqn1=LLTL,LLTU
+        do iqn2=0,iqn1
+c         jlevel(1+nqlev*ilevel)=iqn1
 c         jlevel(2+nqlev*ilevel)=iqn2
-          ilevel=ilevel+1
+c         ilevel=ilevel+1
           if (.not.ein) then
             elevel(ilevel) = 0.D0 ! internal energy as function of quantum numbers
           endif
         enddo
+        enddo
         nlevel=ilevel
       endif
 
-c  count the number of states and then assign values to the jstate array.
-c  this example (with loops over iqn2 and iqncpl uncommented) is for
-c  two angular momenta iqn1 and iqn2 that couple to give a resultant iqncpl
+c  count the number of states and then assign values to the jstate array
+
+c  this is based on basis functions where LTOT = L_light + L_heavy
+c  but there is strong coupling to the inter-heavy axis so both
+c  LTOT and L_light have projection Lambda onto the axis
+c  LTOT then couples to S_light to give resultant N
+c  N couples to S_heavy to give resultant JTOT
+
+c  The allowed values of N and LTOT depend on JTOT:
+c  to store them in a JTOT-independent way, the values placed in
+c  iqn4 and iqn6 and LTOT-N and N-JTOT, respectively.
+
+c  In this initial base9, ISLT and ISHV are both 0, so LTOT = N = JTOT.
+c  
       do iloop=1,2
         istate=0
-        do iqn1=iqn1mn,iqn1mx,iqn1st
-c       do iqn2=iqn2mn,iqn2mx,iqn2st       ! other quantum labels to cycle over
-c       do iqncpl=abs(iqn1-iqn2),iqn1+iqn2 ! and maybe some coupling between them
+        do iqn1=LLTL,LLTU                  ! L light
+        do iqn2=0,iqn1                     ! Lambda
+        iqn3=ISLT                          ! S light                          
+        do iqn4=-ISLT,ISLT                 ! LTOT-N
+        iqn5=ISHV                          ! S heavy
+        do iqn6=-ISHV,ISHV                 ! N-JTOT
           istate=istate+1
           if (iloop.eq.2) then
             jstate(istate)=iqn1
-c           jstate(istate+nstate)=iqn2     ! other quantum labels stored
-c           jstate(istate+nstate*2)=iqncpl ! and coupling label also stored
+            jstate(istate+nstate)=iqn2
+            jstate(istate+nstate*2)=iqn3
+            jstate(istate+nstate*3)=iqn4
+            jstate(istate+nstate*4)=iqn5
+            jstate(istate+nstate*5)=iqn6
           endif
-c       enddo
-c       enddo
+        enddo
+        enddo
+        enddo
         enddo
         nstate=istate
-
       enddo
 
       RETURN
@@ -192,24 +216,20 @@ C=========================================================================
       INTEGER, INTENT(IN)    :: JTOT, IBLOCK, NSTATE, NQN,
      1                          JSTATE(NSTATE,NQN), IPRINT
 
-      integer :: ifunc,istate,iqn1,lmin,lmax,ll
+      integer :: ifunc,istate,lambda,ltot
 
       ifunc=0
       do istate=1,nstate
-        iqn1=jstate(istate,1)
-c       iqn2=jstate(istate,2) 
-c       ... etc
-        lmin=0
-        do ll=lmin,lmax
-c         if (.not.(some conditions on jtot, iblock, ll, iqn1 (etc))) cycle
-
+        LAMBDA=jstate(istate,2)
+        IF(LAMBDA.EQ.0 .AND. IBLOCK.EQ.1) CYCLE
+        LTOT=JTOT+jstate(istate,4)+jstate(istate,6)
+        if(LAMBDA.GT.LTOT) CYCLE 
 c  now counting only those basis functions included in the current symmetry block
           ifunc=ifunc+1
           if (.not.lcount) then
             jsindx(ifunc)=istate ! pointer to basis function
-            l(ifunc)=ll          ! value of L for basis function
+            l(ifunc)=0           ! not used for NRSQ>0
           endif
-        enddo
       enddo
       n=ifunc
 
@@ -219,134 +239,40 @@ C=========================================================================
       SUBROUTINE POTIN9(ITYPP, LAM, MXLAM, NPTS, NDIM, XPT, XWT, MXPT,
      1                  IVMIN, IVMAX, L1MAX, L2MAX, MXLMB, XFN, MX,
      2                  IXFAC)
-      USE base9_suite
+      USE base9_suite, ONLY : LLTL, LLTU, ISLT, NLABVS
       IMPLICIT NONE
 
       INTEGER, INTENT(INOUT)          :: ITYPP, MXLAM
 
       INTEGER, INTENT(OUT)            :: LAM(*)
 
-      LOGICAL :: LVRTP
-      DATA LVRTP/.FALSE./
-
-      INTEGER, INTENT(IN)             :: IVMIN, IVMAX, L1MAX, L2MAX
-
-      INTEGER :: L1
-
-c  the remaining quantities are used only if quadrature is to be used
+c  the quantities below are used only if quadrature is to be used
 c  to project out potential expansion coefficients
-
       INTEGER, INTENT(INOUT)          :: NDIM, NPTS(NDIM), IXFAC, MX
 
       DOUBLE PRECISION, INTENT(INOUT) :: XFN(*)
 
       DOUBLE PRECISION, INTENT(OUT)   :: XPT(MXPT,NDIM), XWT(MXPT,NDIM)
 
-      INTEGER, INTENT(IN)             :: MXLMB, MXPT
+      INTEGER, INTENT(IN)             :: MXPT, IVMIN, IVMAX, L1MAX,
+     1                                   L2MAX, MXLMB
 
-      double precision, allocatable :: fn1(:,:) !,fn2(:,:) etc
-      integer :: il,npttot,nfun,ipt,ipt1tm,ipt1,i,ix
-      double precision pt1,wt1
+      integer :: l1,l2,nlabv
+      LOGICAL :: LVRTP
+      DATA LVRTP/.FALSE./
 
-c  optionally set itypp to one of the precoded values (1 to 8) and do nothing else
-      itypp = 1
-c  alternatively define a special-purpose set of potential indices for itypp=9
+      itypp = 9
+
       if (itypp.eq.9) then
         mxlam=0
-        do l1=0,l1max
-c       do l2=0,l2max
-c       do l3=0,l2max
-c       do lcpl=abs(11-l2),l1+l2 ! and maybe some coupling between them
+        do l1=LLTL,LLTU
+        do l2=0,l1
           lam(1+mxlam*nlabvs)=l1
-c         lam(2+mxlam*nlabvs)=l2
-c         lam(3+mxlam*nlabvs)=l3
+          lam(2+mxlam*nlabvs)=l2
+          lam(3+mxlam*nlabvs)=ISLT
           mxlam=mxlam+1
-c       enddo
-c       enddo
         enddo
-      endif
-
-c  if potential coefficients are to be obtained by quadrature and itypp=9,
-c  the points and weights must be defined here.
-c  This is complicated and seldom necessary, but the code might look something like this:
-
-      if (itypp.eq.9 .and. lvrtp) then
-
-c  set values for npts if not set in namelist
-c       npts(1)=
-
-c  zero everything to start with
-        xpt(1:npts(1),1)=0.D0
-        xwt(1:npts(1),1)=0.D0
-c  generate set of quadrature points and weights
-c       call getqpt(1,xpt(1,1),xwt(1,1))
-
-c  set up an array to hold the values of the functions for this quadrature
-        allocate (fn1(0:l1max,npts(1)))
-
-c  generate sets of functions at each quadrature point
-c       call quad1(xpt(1,1),fn1,l1max)
-
-c  do the same for all remaining quadratures
-        if (ndim.gt.1) then
-c         npts(2)=
-c         call getqpt(2,xpt(1,2),xwt(1,2))
-c         allocate (fn2(0:l2max,npts(2)))
-c         call quad2(xpt(1,2),fn2,l2max)
-        endif
-
-c  calculate the total number of points in the quadrature
-        npttot=product(npts(1:ndim))
-
-c  calculate the total number of evaluated functions
-        nfun=npttot*mxlam
-
-c  set where the evaluated functions are going to be stored
-c  (at the end of the x array)
-        ixfac=mx-nfun
-
-c  set the start point for storing evaluated functions
-        ix=ixfac
-
-c  cycle over the total number of points in the quadrature
-        do ipt=1,npttot
-
-c  work out the point number for the first quadrature
-          ipt1tm=ipt
-          ipt1=mod(ipt,npts(1))
-c  and get the point and weight corresponding to that value
-          pt1=xpt(ipt1,1)
-          wt1=xwt(ipt1,1)
-
-c  do the same for all remaining quadratures
-c         ipt2tm=(ipt1tm-1)/npts(1)+1
-c         ipt2=mod(ipt2tm,npts(2))
-c         pt2=xpt(ipt2,2)
-c         wt2=xwt(ipt2,2)
-
-c  cycle over the potential expansion
-          do i=1,mxlam
-
-c  get the index for the first label
-            l1=lam(i)
-
-c  get indices for all the other labels
-c           l2=lam(i+mxlam)
-
-c  set the index for this evaluated function
-            ix=ix+1
-
-c  calculate the evaluated function and store it
-            xfn(ix)=fn1(l1,ipt1)*wt1 !*fn2(l2,ipt2)*wt2 etc...
-          enddo
         enddo
-
-c  reset the size of the x array so these evaluated functions can't be overwritten
-        mx=ixfac
-
-c  these arrays are no longer needed
-        deallocate (fn1)
-c       deallocate (fn2) ! etc
       endif
 
       RETURN
@@ -369,8 +295,10 @@ C=========================================================================
      2                                 JSINDX(N), L(N), JTOT, IBOUND,
      3                                 IEXCH, IPRINT, LAM(*)
 
-      integer :: irc,icol,irow,i1col,i1row,lcol,lrow,ipotl,idgvl
-      logical livuse
+      integer :: irc,ipotl,idgvl,lcol,lrow
+      integer :: icol,i1col,i2col,i3col,i4col,i5col,i6col
+      integer :: irow,i1row,i2row,i3row,i4row,i5row,i6row
+      logical :: livuse
       data livuse/.false./
 
 c  Option to use IV array not supported in base9.
@@ -404,23 +332,57 @@ c  if nrsq = 0, its diagonal elements are stored in CENT.
 c  calculate the coupling matrices and store them in the VL array
       IRC = 0
       DO ICOL = 1, N
-        i1col=jstate(jsindx(icol),1) ! other quantum labels may also be needed
-        lcol=l(icol)
+        i1col=jstate(jsindx(icol),1)
+        i2col=jstate(jsindx(icol),2)
+        i3col=jstate(jsindx(icol),3)
+        i4col=jstate(jsindx(icol),4)
+        i5col=jstate(jsindx(icol),5)
+        i6col=jstate(jsindx(icol),6)
+        lcol=jtot+i4col+i6col
         DO IROW = 1, ICOL
-          i1row=jstate(jsindx(irow),1) ! other quantum labels may also be needed
-          lrow=l(irow)
+          i1row=jstate(jsindx(irow),1)
+          i2row=jstate(jsindx(irow),2)
+          i3row=jstate(jsindx(irow),3)
+          i4row=jstate(jsindx(irow),4)
+          i5row=jstate(jsindx(irow),5)
+          i6row=jstate(jsindx(irow),6)
+          lrow=jtot+i4row+i6row
           IRC = IRC + 1
           DO IPOTL = 1, NVLBLK
 
 c  the following will usually involve calculations that depend on the quantum labels
 c  of the row and column and of the potential (or H_intl) expansion term
             if (ipotl.le.mxlam) then
-              VL(IPOTL, IRC) = 0.D0 ! the ipotl-th term in the potential
-            elseif (ipotl.le.mxlam+nconst) then
+              vl(ipotl, irc) = 0.D0 ! the ipotl-th term in the potential
+c  the ipotl-mxlam-nconst-th term in the interaction potential: diagonal if qns match
+              if(i1row.eq.i1col .and. i2row.eq.i2col .and.
+     1           i3row.eq.i3col .and. i4row.eq.i4col .and.
+     2           i5row.eq.i5col .and. i6row.eq.i6col) then
+                   if(i1row.eq.lam(1+3*(ipotl-1)) .and.
+     1                i2row.eq.lam(2+3*(ipotl-1)) .and.
+     2                i3row.eq.lam(3+3*(ipotl-1))) 
+     3                vl(ipotl, irc) = 1.D0 
+              endif
+            elseif (ipotl.le.mxlam+nconst) then ! not used here because NCONST=0
               vl(ipotl, irc) = 0.D0 ! the ipotl-mxlam-th term in H_intl
             elseif (ipotl.le.mxlam+nconst+nrsq) then
-              vl(ipotl, irc) = 0.D0 ! the ipotl-mxlam-nconst-th term in L^2
-            else
+              vl(ipotl, irc) = 0.D0 
+c  the ipotl-mxlam-nconst-th term in L^2 ! zero unless diagonal in all but i2 (Lambda)
+              if(i1row.eq.i1col .and.
+     1           i3row.eq.i3col .and. i4row.eq.i4col .and.
+     2           i5row.eq.i5col .and. i6row.eq.i6col) then
+                if(i2row.eq.i2col) then
+                  vl(ipotl, irc) = 
+     1              dble(lrow*(lrow+1) + i1row*(i1row+1) - 2*i2row**2) ! diagonal
+                else
+                  if(abs(i2row-i2col).eq.1) vl(ipotl, irc) = 
+     1              sqrt(dble((i1row*(i1row+1)-i2row*i2col)
+     2                       *(lrow*(lrow+1)-i2row*i2col)))          ! Coriolis
+                  if(i2row.eq.0 .or. i2col.eq.0)
+     1              vl(ipotl, irc) = sqrt(2.D0) * vl(ipotl, irc)     ! Sym factor
+                endif
+              endif
+            else                                ! not used here because NEXTRA=0
               vl(ipotl, irc) = 0.D0 ! the ipotl-mxlam-nconst-nrsq-th
                                     ! term used for extra operators
             endif

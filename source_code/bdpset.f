@@ -1,0 +1,93 @@
+      SUBROUTINE BDPSET(IPRSEG,RBSEG,RESEG,DRSEG,
+     1                  STPSEG,TOLSEG,CAYSEG,POWSEG,ICHNGE)
+C  Copyright (C) 2018 J. M. Hutson & C. R. Le Sueur
+C  Distributed under the GNU General Public License, version 3
+
+C  CR Le Sueur Dec 2018
+      IMPLICIT NONE
+
+C  THIS ROUTINE SETS UP ARRAYS OF VALUES FOR CONTROLLING HOW EACH
+C  SEGMENT OF A BOUND-STATE PROPAGATION IS CARRIED OUT
+
+      DOUBLE PRECISION, INTENT(OUT) :: RBSEG(3),RESEG(3),DRSEG(3),
+     1                                 TOLSEG(3),STPSEG(3),CAYSEG(3),
+     2                                 POWSEG(3)
+      INTEGER,          INTENT(OUT) :: IPRSEG(3),ICHNGE
+C
+C  COMMON BLOCK FOR CONTROL OF PROPAGATION SEGMENTS
+      COMMON /RADIAL/ RMNINT,RMXINT,RMID,RMATCH,DRS,DRL,STEPS,STEPL,
+     1                POWRS,POWRL,TOLHIS,TOLHIL,CAYS,CAYL,UNSET,
+     2                IPROPS,IPROPL,NSEG
+      DOUBLE PRECISION RMNINT,RMXINT,RMID,RMATCH,
+     1                 STEPS,STEPL,TOLHIS,TOLHIL,DRS,DRL,CAYS,CAYL,
+     1                 POWRS,POWRL,UNSET
+      INTEGER          IPROPS,IPROPL,NSEG
+
+      IPRSEG(1)=IPROPS
+      RBSEG(1)=RMNINT
+      CAYSEG(1)=CAYS
+      DRSEG(1)=DRS
+      POWSEG(1)=POWRS
+      STPSEG(1)=STEPS
+      TOLSEG(1)=TOLHIS
+      RESEG(1)=RMATCH
+
+      IPRSEG(2)=IPROPL
+      RBSEG(2)=RMXINT
+      RESEG(2)=RMATCH
+      TOLSEG(2)=TOLHIL
+      DRSEG(2)=DRL
+      STPSEG(2)=STEPL
+      CAYSEG(2)=CAYL
+      POWSEG(2)=POWRL
+      ICHNGE=1
+
+      IF (NSEG.EQ.3) THEN
+        IF (RMID.LT.RMATCH) THEN
+C  RMNINT - 1 -> RMID; RMID - 2 -> RMATCH; RMATCH <- 3 - RMXINT
+          RESEG(1)=RMID
+
+          IPRSEG(2)=IPROPL
+          RBSEG(2)=RMID
+          RESEG(2)=RMATCH
+          CAYSEG(2)=CAYL
+          DRSEG(2)=UNSET
+          POWSEG(2)=POWRL
+          STPSEG(2)=STEPL
+          TOLSEG(2)=TOLHIL
+
+          IPRSEG(3)=IPROPL
+          RBSEG(3)=RMXINT
+          RESEG(3)=RMATCH
+          CAYSEG(3)=CAYL
+          DRSEG(3)=DRL
+          POWSEG(3)=POWRL
+          STPSEG(3)=STEPL
+          TOLSEG(3)=TOLHIL
+          ICHNGE=2
+        ELSE
+C  RMNINT - 1 -> RMATCH; RMATCH <- 3 - RMID; RMID <- 2 - RMXINT
+C  (COMMENTED-OUT LINES HAVE ALREADY BEEN SET.  LEFT HERE FOR COMPLETENESS)
+C         IPRSEG(2)=IPROPL
+C         RBSEG(2)=RMXINT
+          RESEG(2)=RMID
+C         CAYSEG(2)=CAYL
+C         DRSEG(2)=DRL
+C         POWSEG(2)=POWRL
+C         STPSEG(2)=STEPL
+C         TOLSEG(2)=TOLHIL
+C         ICHNGE=2
+
+          IPRSEG(3)=IPROPS
+          RBSEG(3)=RMID
+          RESEG(3)=RMATCH
+          CAYSEG(3)=CAYS
+          DRSEG(3)=DRS
+          POWSEG(3)=POWRS
+          STPSEG(3)=STEPS
+          TOLSEG(3)=TOLHIS
+        ENDIF
+      ENDIF
+
+      RETURN
+      END
