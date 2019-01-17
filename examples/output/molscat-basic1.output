@@ -7,7 +7,7 @@
  |                                                                            |
  |                               Version 2019.0 (beta)                        |
  |                                                                            |
- |                       Run on 14 Nov 2018   at 09:36:20                     |
+ |                       Run on 16 Jan 2019   at 11:24:42                     |
  |                                                                            |
   ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
 
@@ -30,7 +30,7 @@
 
   RUN LABEL = model system: ITYPE=1                                                           
 
-  REDUCED MASS FOR INTERACTION =  20.000000000 ATOMIC MASS UNITS
+  REDUCED MASS FOR INTERACTION =  20.000000000 ATOMIC MASS UNITS (DALTONS)
 
   ======================================================================================================================
 
@@ -71,32 +71,35 @@
 
   POTENL PROCESSING FINISHED.
 
-  UNITS FOR POTENTIAL ROUTINES:
-  POTENTIAL RETURNED IN UNITS OF EPSIL =      50.000000 CM-1
-  R                  IN UNITS OF RM    =       3.500000 ANGSTROMS
+  POTENTIAL RETURNED IN UNITS OF EPSIL  =  50.000000     CM-1
+        CODED WITH R IN UNITS OF RM     =  3.5000000     ANGSTROM
 
-  ALL LENGTHS ARE IN UNITS OF RM =  3.500000 ANGSTROM UNLESS OTHERWISE STATED
+  ALL LENGTHS ARE IN UNITS OF RM (  3.50000000 ANGSTROM ) UNLESS OTHERWISE STATED
 
   INTERACTION MATRIX USES   2 BLOCKS OF VL ARRAY FOR R-DEPENDENT TERMS IN POTENTIAL
 
   ======================================================================================================================
 
-  PROPAGATION ALGORITHM FOR COUPLED EQUATIONS SPECIFIED BY IPROPS =  6
+  PROPAGATION METHODS FOR COUPLED EQUATIONS SPECIFIED BY IPROPS =  6
 
   COUPLED EQUATIONS WILL BE PROPAGATED OUTWARDS IN 1 SEGMENT 
+
+  PROPAGATION RANGE IS CONTROLLED BY VARIABLES RMIN AND RMAX, WITH INPUT VALUES
+  RMIN =  0.5000     RMAX =   20.00    
   ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
   SEGMENT 1 WILL BE PROPAGATED OUTWARDS
 
-  FROM RMIN CHOSEN USING IRMSET =   9  TO RMAX   =     20.00
+  FROM RMIN CHOSEN USING IRMSET =  9 TO RMAX =     20.00
 
-  COUPLED EQUATIONS SOLVED BY DIABATIC MODIFIED LOG DERIVATIVE METHOD OF MANOLOPOULOS
+  COUPLED EQUATIONS SOLVED BY DIABATIC MODIFIED LOG-DERIVATIVE PROPAGATOR OF MANOLOPOULOS
 
   PROPAGATION STEP SIZE DETERMINED USING DR =  1.000E-03
+  STEP SIZE CONSTANT THROUGHOUT RANGE
+  STEP SIZE MAY BE ADJUSTED SLIGHTLY SO THAT RANGE IS A WHOLE NUMBER OF STEPS
 
-  LOG-DERIVATIVE MATRIX WILL BE INITIALISED IN THE LOCAL EIGENBASIS FOR RMIN IN THE OUTWARDS PROPAGATION PART
-  LOCALLY CLOSED CHANNELS WILL BE INITIALISED WITH A WKB BOUNDARY CONDITION
-  LOCALLY OPEN CHANNELS WILL BE INITIALISED WITH THE VALUE  1.0000000E+08
-  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+  LOG-DERIVATIVE MATRIX INITIALISED IN THE LOCAL EIGENBASIS AT RMIN
+  LOCALLY CLOSED CHANNELS INITIALISED WITH A WKB BOUNDARY CONDITION
+  LOCALLY  OPEN  CHANNELS INITIALISED WITH THE VALUE  1.000E+08
 
   ======================================================================================================================
 
@@ -107,9 +110,9 @@
 
   ======================================================================================================================
 
-  TOTAL ANGULAR MOMENTUM JTOT RUNS FROM  10  TO    20  IN STEPS OF  10
+  TOTAL ANGULAR MOMENTUM JTOT RUNS FROM  10  TO     20  IN STEPS OF  10
 
-  EACH JTOT IS SPLIT INTO A MAXIMUM OF   2 DIFFERENT SYMMETRY BLOCKS
+  EACH JTOT IS SPLIT INTO A MAXIMUM OF   2 SYMMETRY BLOCKS
 
   STATE-TO-STATE INTEGRAL CROSS-SECTIONS WILL BE COMPUTED BUT NOT STORED ON DISK
 
@@ -170,7 +173,7 @@
  |                                                                            |
  |                               Version 2019.0 (beta)                        |
  |                                                                            |
- |                    This run used       1.93 cpu secs and                   |
+ |                    This run used       1.82 cpu secs and                   |
  |               1279 of the allocated   1000000 words of storage             |
  |                                                                            |
   ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---

@@ -1,0 +1,244 @@
+  -- BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND --
+ |                                                                            |
+ |          Bound states of interacting pairs of atoms and molecules          |
+ |                                                                            |
+ |              Copyright (C) 2018 J. M. Hutson & C. R. Le Sueur              |
+ |                                                                            |
+ |                               Version 2019.0 (beta)                        |
+ |                                                                            |
+ |                       Run on 16 Jan 2019   at 11:45:15                     |
+ |                                                                            |
+  -- BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND --
+
+
+  This program is free software: you can redistribute it and/or modify it under
+  the terms of the GNU General Public License, version 3, as published by
+  the Free Software Foundation.
+
+  Publications resulting from the use of this program should refer to
+  J. M. Hutson & C. R. Le Sueur, BOUND computer code 2019.0 (beta)       
+  or to the published paper in Computer Physics Communications when available.
+
+
+  PHYSICAL CONSTANTS OBTAINED FROM NIST CODATA TABULATION OF 2014
+
+  MEMORY ALLOCATED TO MAIN WORKING ARRAY IS   1000000 (8-BYTE) WORDS (    7.63 MB)
+
+  PRINT LEVEL =  6
+
+  RUN LABEL = tetraquark                                                                      
+
+  REDUCED MASS FOR INTERACTION =   1.477000000 (UNITS OF 0.931494095     DALTONS)
+
+  NO SCRATCH FILE SPECIFIED BY ISCRU PARAMETER: FULL CALCULATION WILL BE DONE AT EACH ENERGY
+
+  ======================================================================================================================
+  TETRAQUARK BASIS SET ROUTINE BY J. M. HUTSON, JAN 2019
+  BORN-OPPENHEIMER BASIS WITH L_light FROM 1 TO 1
+  AND ALL ALLOWED BODY-FIXED PROJECTIONS LAMBDA OF L_light
+
+  FIXED SPINS S_light = 0 AND S_heavy = 0
+
+  JTOT IS TOTAL ANGULAR MOMENTUM (el IF ALL SPINS ZERO)
+  SYM BLOCK 2 IS EVEN COMBINATION OF +|LAMBDA| AND -|LAMBDA|
+            1 IS  ODD COMBINATION AND EXCLUDES LAMBDA = 0
+
+  BASIS SET [({LTOT L_light LAMBDA} S_light) N S_heavy] JTOT
+
+  THIS INITIAL VERSION INCLUDES ONLY CENTRIFUGAL COUPLING BETWEEN LAMBDA STATES AND DOES NOT INCLUDE:
+  - NON-CENTRIFUGAL COUPLING BETWEEN LAMBDA STATES
+  - COUPLING BETWEEN DIFFERENT VALUES OF L_light
+  - COUPLING BETWEEN DIFFERENT VALUES OF LTOT OR N
+  - COUPLING BETWEEN DIFFERENT VALUES OF S_light OR S_heavy
+
+  INTERACTION TYPE IS  tetraquark with only centrifugal
+
+  QUANTUM NUMBERS FOR INTERACTING PAIR:
+  THE BASIS FUNCTIONS ARE LABELLED BY A SET OF   6 PAIR STATE QUANTUM NUMBERS AND A VALUE OF L.
+  THE RESULTING BASIS SET IS ASYMPTOTICALLY NON-DIAGONAL.
+
+  THE SETS OF PAIR STATE QUANTUM NUMBERS ARE:
+
+      SET       ---------------- PAIR STATE QUANTUM NUMBERS ----------------
+                  L_light    Lambda   S_light    LTOT-N   S_heavy    N-JTOT
+        1               1         0         0         0         0         0
+        2               1         1         0         0         0         0
+
+  ======================================================================================================================
+  GENERAL-PURPOSE POTENL ROUTINE (MAY 18)
+
+  INTERACTION POTENTIAL FOR EXPANSION TERM NUMBER   1
+
+                -5.00000000E-02 * R ** -1
+                 1.00000000E+00 * R **  1
+
+  INTERACTION POTENTIAL FOR EXPANSION TERM NUMBER   2
+
+                 5.00000000E-02 * R ** -1
+                 1.00000000E+00 * R **  1
+
+  POTENL PROCESSING FINISHED.
+
+  POTENTIAL RETURNED IN UNITS OF EPSIL  = 8.06554400E+12 CM-1
+        CODED WITH R IN UNITS OF RM     = 1.00000000E-05 ANGSTROM
+
+  ALL LENGTHS ARE IN UNITS OF fm (  0.00001000 ANGSTROM ) UNLESS OTHERWISE STATED
+
+  INTERACTION MATRIX USES   2 BLOCKS OF VL ARRAY FOR R-DEPENDENT TERMS IN POTENTIAL
+                            1                    FOR CENTRIFUGAL OPERATOR
+
+  IN TOTAL:  3 BLOCKS OF VL ARRAY ARE USED
+
+
+  ======================================================================================================================
+
+  PROPAGATION METHODS FOR COUPLED EQUATIONS SPECIFIED BY IPROPS =  8 AND IPROPL =  8
+
+  COUPLED EQUATIONS WILL BE PROPAGATED TOWARDS RMATCH IN 3 SEGMENTS
+
+  PROPAGATION RANGES ARE CONTROLLED BY VARIABLES RMIN, RMID, RMATCH AND RMAX, WITH INPUT VALUES
+  RMIN =   0.000    RMID =  1.0000E-03 RMATCH =  0.5500     RMAX =   11.00    
+  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+  SEGMENT 1 WILL BE PROPAGATED OUTWARDS
+
+  FROM RMIN =      0.00 TO RMID =      0.00
+
+  COUPLED EQUATIONS SOLVED BY SYMPLECTIC LOG-DERIVATIVE PROPAGATOR OF MANOLOPOULOS AND GRAY
+  USING THE FIVE-STEP FOURTH-ORDER METHOD OF CALVO AND SANZ-SERNA
+
+  PROPAGATION STEP SIZE DETERMINED USING DR =  1.000E-06
+  STEP SIZE CONSTANT THROUGHOUT RANGE
+  STEP SIZE MAY BE ADJUSTED SLIGHTLY SO THAT RANGE IS A WHOLE NUMBER OF STEPS
+
+  LOG-DERIVATIVE MATRIX INITIALISED IN THE LOCAL EIGENBASIS AT RMIN IN THE OUTWARD PROPAGATION PART
+  LOCALLY CLOSED CHANNELS INITIALISED WITH A WKB BOUNDARY CONDITION
+  LOCALLY  OPEN  CHANNELS INITIALISED WITH THE VALUE  1.000E+08
+  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+  SEGMENT 2 WILL BE PROPAGATED OUTWARDS
+
+  FROM RMID =      0.00 TO RMATCH =      0.55
+
+  COUPLED EQUATIONS SOLVED BY SYMPLECTIC LOG-DERIVATIVE PROPAGATOR OF MANOLOPOULOS AND GRAY
+  USING THE FIVE-STEP FOURTH-ORDER METHOD OF CALVO AND SANZ-SERNA
+
+  INITIAL STEP SIZE TAKEN FROM SIZE OF FINAL STEP OF PREVIOUS SEGMENT
+  STEP SIZE CONSTANT THROUGHOUT RANGE
+  STEP SIZE MAY BE ADJUSTED SLIGHTLY SO THAT RANGE IS A WHOLE NUMBER OF STEPS
+  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+  SEGMENT 3 WILL BE PROPAGATED  INWARDS
+
+  TO RMATCH =      0.55 FROM RMAX =     11.00
+
+  COUPLED EQUATIONS SOLVED BY SYMPLECTIC LOG-DERIVATIVE PROPAGATOR OF MANOLOPOULOS AND GRAY
+  USING THE FIVE-STEP FOURTH-ORDER METHOD OF CALVO AND SANZ-SERNA
+
+  PROPAGATION STEP SIZE DETERMINED USING DR =  1.000E-03
+  STEP SIZE CONSTANT THROUGHOUT RANGE
+  STEP SIZE MAY BE ADJUSTED SLIGHTLY SO THAT RANGE IS A WHOLE NUMBER OF STEPS
+
+  LOG-DERIVATIVE MATRIX INITIALISED IN THE LOCAL EIGENBASIS AT RMAX IN THE INWARD PROPAGATION PART
+  LOCALLY CLOSED CHANNELS INITIALISED WITH A WKB BOUNDARY CONDITION
+  LOCALLY  OPEN  CHANNELS INITIALISED WITH THE VALUE  0.000E+00
+
+  ======================================================================================================================
+
+  PROGRAM WILL ATTEMPT TO CONVERGE ON BOUND STATES AS A FUNCTION OF ENERGY
+
+  FOR EACH LEVEL, THE BISECTION METHOD WILL BE USED UNTIL THE VWDB METHOD OFFERS RELIABLE CONVERGENCE.
+  VWDB CONVERGENCE WILL TERMINATE WHEN THE STEP SIZE IS LESS THAN  10.000     EV      
+
+  INPUT ENERGY VALUES CONVERTED FROM EV
+  TO INTERNAL WORKING UNITS OF CM-1 DUE TO INTEGER INPUT =   5
+
+  PROGRAM WILL SEEK EIGENVALUES WITH GENERALISED NODE COUNTS FROM    0 TO  99999
+  LYING IN ENERGY RANGE  1.00000E+09 TO  1.20000E+09 EV      
+
+  INITIALIZATION DONE.  TIME WAS   0.00 CPU SECS.        17 WORDS OF STORAGE USED.
+
+  ======================================================================================================================
+
+  TOTAL ANGULAR MOMENTUM JTOT =   1
+
+  EACH JTOT IS SPLIT INTO A MAXIMUM OF   2 SYMMETRY BLOCKS
+
+  CALCULATIONS WILL BE FOR SYMMETRY BLOCK   2  ONLY
+
+  ===================================================== tetraquark =====================================================
+
+  *******************************************  ANGULAR MOMENTUM JTOT  =   1  *******************************************
+
+  BASIS FUNCTION LIST:
+  BASIS FN        SET   ---------------- PAIR STATE QUANTUM NUMBERS ----------------           L 
+                          L_light   Lambda    S_light   LTOT-N    S_heavy   N-JTOT  
+        1           1          1         0         0         0         0         0             0
+        2           2          1         1         0         0         0         0             0
+  = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = 
+
+  THRESHOLDS CALCULATED FROM ASYMPTOTIC HAMILTONIAN:
+
+  THRESHOLD       L           ENERGY/CM-1                ENERGY/EV
+          1       0          0.00000000000              0.00000000000    
+          2       2          0.00000000000              0.00000000000    
+
+  NODE COUNT =    1 AT MINIMUM ENERGY =   1000000000.     EV    
+  NODE COUNT =    3 AT MAXIMUM ENERGY =   1200000000.     EV    
+
+  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+  SEARCHING FOR INODE =    1 CORRESPONDING TO NODE COUNT =    2
+
+  ENERGY SET     1: ENERGY =   1004331035.     EV      
+
+  ENERGY SET     2: ENERGY =   1005580539.     EV      
+
+  ENERGY SET     3: ENERGY =   1005560382.     EV      
+
+  ENERGY SET     4: ENERGY =   1005560678.     EV      
+
+  CONVERGED ON NODE NUMBER     2 AT                               ENERGY =   1005560676.     EV    
+
+  LAST STEP WAS                                                             -2.076293734     EV    
+
+  SMALLEST EIGENVALUE IS NUMBER  1 = -0.15323E-06
+
+  WITH PRINCIPAL EIGENVECTOR COMPONENTS
+  CHAN     VEC    VEC**2   L   QUANTUM NUMBERS
+
+   1   -0.9708    0.9424   0   1   0   0   0   0   0   0
+
+  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+  SEARCHING FOR INODE =    2 CORRESPONDING TO NODE COUNT =    3
+
+  ENERGY SET     1: ENERGY =   1072819565.     EV      
+
+  ENERGY SET     2: ENERGY =   1072790960.     EV      
+
+  ENERGY SET     3: ENERGY =   1072790889.     EV      
+
+  CONVERGED ON NODE NUMBER     3 AT                               ENERGY =   1072790885.     EV    
+
+  LAST STEP WAS                                                             -3.724918145     EV    
+
+  SMALLEST EIGENVALUE IS NUMBER  2 = -0.18671E-06
+
+  WITH PRINCIPAL EIGENVECTOR COMPONENTS
+  CHAN     VEC    VEC**2   L   QUANTUM NUMBERS
+
+   2   -0.9268    0.8589   2   1   1   0   0   0   0   0
+
+  ======================================================================================================================
+
+
+  -- BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND --
+ |                                                                            |
+ |          Bound states of interacting pairs of atoms and molecules          |
+ |                                                                            |
+ |              Copyright (C) 2018 J. M. Hutson & C. R. Le Sueur              |
+ |                                                                            |
+ |                               Version 2019.0 (beta)                        |
+ |                                                                            |
+ |                    This run used      11.61 cpu secs and                   |
+ |                 59 of the allocated   1000000 words of storage             |
+ |                                                                            |
+  -- BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND --

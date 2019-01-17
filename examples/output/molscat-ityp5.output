@@ -7,7 +7,7 @@
  |                                                                            |
  |                               Version 2019.0 (beta)                        |
  |                                                                            |
- |                       Run on 14 Nov 2018   at 09:41:42                     |
+ |                       Run on 16 Jan 2019   at 11:30:11                     |
  |                                                                            |
   ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
 
@@ -28,21 +28,27 @@
 
   PRINT LEVEL =  3     OTHER PRINT CONTROLS  ISIGPR = 2
 
-  RUN LABEL = Ortho-NH3-He: Davis-Boggs plus (corrected) long-range potential; test STEPS     
+  RUN LABEL = NH3-He on simple analytic potential; STEPS convergence                          
 
-  REDUCED MASS FOR INTERACTION =   3.240000000 ATOMIC MASS UNITS
+  REDUCED MASS FOR INTERACTION =   3.240000000 ATOMIC MASS UNITS (DALTONS)
 
-  ENERGY-INDEPENDENT MATRICES WILL BE SAVED TEMPORARILY ON UNIT  1
+  ENERGY-INDEPENDENT MATRICES WILL BE SAVED TEMPORARILY ON UNIT 30
 
   ======================================================================================================================
 
   INTERACTION TYPE IS  ATOM - NEAR SYM. TOP RIGID ROTOR
 
-  TARGET ROTATIONAL LEVELS TAKEN FROM &BASIS (JLEVEL) INPUT.  NLEVEL = 22
+  TARGET ROTATIONAL LEVELS COMPUTED FROM JMIN =  0,  JMAX =  6,  AND JSTEP = 1
 
   ENERGY LEVELS COMPUTED FROM ZEROTH-ORDER NEAR-SYMMETRIC TOP FORMULA
-          ROTATIONAL CONSTANTS ARE A, B, C (CM-1) =      9.9402      9.9402      6.3044
+          ROTATIONAL CONSTANTS ARE A, B, C (CM-1) =      9.9441      9.9441      6.2294
           N.B. THESE MOMENTS MUST CORRESPOND RESPECTIVELY TO X, Y, Z COORDINATES USED TO DEFINE INTERACTION POTENTIAL
+
+  TUNNELLING SPLITTING                   =   0.7934000
+  WITH CENTRIFUGAL TERMS FOR J(J+1)-K**2 =   0.0000000
+  AND                    FOR K**2        =   0.0000000
+  WITH K=0 STATE ALLOWED FOR STATE OF |-1> SYMMETRY
+  3-FOLD SYMMETRY: ONLY E STATES INCLUDED
 
   QUANTUM NUMBERS FOR INTERACTING PAIR:
   EACH PAIR STATE IS LABELLED BY  3 QUANTUM LABELS
@@ -51,28 +57,38 @@
 
   PAIR STATE    - PAIR STATE QUANTUM NUMBERS -   PAIR LEVEL     PAIR ENERGY (CM-1)
                         J         K      PRTY
-        1               0         0         0       1             0.0000000
-        2               1         0         0       2            19.8804000
-        3               2         0         0       3            59.6412000
-        4               3         0         0       4           119.2824000
-        5               3         3         0       5            86.5602000
-        6               3         3         1       6            86.5602000
-        7               4         0         0       7           198.8040000
-        8               4         3         0       8           166.0818000
-        9               4         3         1       9           166.0818000
-       10               5         0         0      10           298.2060000
-       11               5         3         0      11           265.4838000
-       12               5         3         1      12           265.4838000
-       13               6         0         0      13           417.4884000
-       14               6         3         0      14           384.7662000
-       15               6         3         1      15           384.7662000
-       16               6         6         0      16           286.5996000
-       17               6         6         1      17           286.5996000
-       18               7         0         0      18           556.6512000
-       19               7         3         0      19           523.9290000
-       20               7         3         1      20           523.9290000
-       21               7         6         0      21           425.7624000
-       22               7         6         1      22           425.7624000
+        1               1         1         2       1            15.3801000
+        2               1         1         1       2            16.1735000
+        3               2         1         2       3            55.9499000
+        4               2         1         1       4            55.1565000
+        5               2         2         2       5            44.8058000
+        6               2         2         1       6            44.0124000
+        7               3         1         2       7           114.8211000
+        8               3         1         1       8           115.6145000
+        9               3         2         2       9           103.6770000
+       10               3         2         1      10           104.4704000
+       11               4         1         2      11           195.1673000
+       12               4         1         1      12           194.3739000
+       13               4         2         2      13           184.0232000
+       14               4         2         1      14           183.2298000
+       15               4         4         2      15           139.4468000
+       16               4         4         1      16           138.6534000
+       17               5         1         2      17           293.8149000
+       18               5         1         1      18           294.6083000
+       19               5         2         2      19           282.6708000
+       20               5         2         1      20           283.4642000
+       21               5         4         2      21           238.0944000
+       22               5         4         1      22           238.8878000
+       23               5         5         2      23           204.6621000
+       24               5         5         1      24           205.4555000
+       25               6         1         2      25           413.9375000
+       26               6         1         1      26           413.1441000
+       27               6         2         2      27           402.7934000
+       28               6         2         1      28           402.0000000
+       29               6         4         2      29           358.2170000
+       30               6         4         1      30           357.4236000
+       31               6         5         2      31           324.7847000
+       32               6         5         1      32           323.9913000
 
   ======================================================================================================================
   GENERAL-PURPOSE POTENL ROUTINE (MAY 18)
@@ -84,6 +100,1906 @@
   INTERACTION POTENTIAL FOR EXPANSION TERM NUMBER   1
   WHICH HAS LAMBDA =   0,  ABS(KAP) =   0
 
+                -1.20000000E+07 * R ** -6
+                 6.20000000E+08 * EXP(   -2.4000 * R )
 
- *** ERROR.  DUMMY VERSION OF VINIT CALLED WITH I =   1
-              VINIT MUST BE PROVIDED IF NTERM(I) IS ZERO.
+  INTERACTION POTENTIAL FOR EXPANSION TERM NUMBER   2
+  WHICH HAS LAMBDA =   1,  ABS(KAP) =   0
+
+                -5.40000000E+07 * EXP(   -2.4000 * R )
+
+  INTERACTION POTENTIAL FOR EXPANSION TERM NUMBER   3
+  WHICH HAS LAMBDA =   2,  ABS(KAP) =   0
+
+                 2.20000000E+06 * R ** -6
+
+  INTERACTION POTENTIAL FOR EXPANSION TERM NUMBER   4
+  WHICH HAS LAMBDA =   3,  ABS(KAP) =   0
+
+                 3.60000000E+07 * EXP(   -2.4000 * R )
+
+  INTERACTION POTENTIAL FOR EXPANSION TERM NUMBER   5
+  WHICH HAS LAMBDA =   3,  ABS(KAP) =   3
+
+                 1.00000000E+08 * EXP(   -2.4000 * R )
+
+  POTENL PROCESSING FINISHED.
+
+  POTENTIAL RETURNED IN UNITS OF EPSIL  =  1.0000000     CM-1
+        CODED WITH R IN UNITS OF RM     = 0.52917721     ANGSTROM
+
+  ALL LENGTHS ARE IN UNITS OF BOHR (  0.52917721 ANGSTROM ) UNLESS OTHERWISE STATED
+
+  INTERACTION MATRIX USES   5 BLOCKS OF VL ARRAY FOR R-DEPENDENT TERMS IN POTENTIAL
+
+  ======================================================================================================================
+
+  PROPAGATION METHODS FOR COUPLED EQUATIONS SPECIFIED BY IPROPS =  6 AND IPROPL =  9
+
+  COUPLED EQUATIONS WILL BE PROPAGATED OUTWARDS IN 2 SEGMENTS
+
+  PROPAGATION RANGES ARE CONTROLLED BY VARIABLES RMIN, RMID AND RMAX, WITH INPUT VALUES
+  RMIN =   3.000     RMID =   8.000     RMAX =   30.00    
+  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+  SEGMENT 1 WILL BE PROPAGATED OUTWARDS
+
+  FROM RMIN =      3.00 TO RMID =      8.00
+
+  COUPLED EQUATIONS SOLVED BY DIABATIC MODIFIED LOG-DERIVATIVE PROPAGATOR OF MANOLOPOULOS
+
+  PROPAGATION STEP SIZE DETERMINED USING STEP =   80.0     (PER WAVELENGTH)
+  STEP SIZE CONSTANT THROUGHOUT RANGE
+  STEP SIZE MAY BE ADJUSTED SLIGHTLY SO THAT RANGE IS A WHOLE NUMBER OF STEPS
+
+  LOG-DERIVATIVE MATRIX INITIALISED IN THE LOCAL EIGENBASIS AT RMIN
+  LOCALLY CLOSED CHANNELS INITIALISED WITH A WKB BOUNDARY CONDITION
+  LOCALLY  OPEN  CHANNELS INITIALISED WITH THE VALUE  1.000E+08
+  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+  SEGMENT 2 WILL BE PROPAGATED OUTWARDS
+
+  FROM RMID =      8.00 TO RMAX =     30.00
+
+  COUPLED EQUATIONS SOLVED BY VARIABLE-STEP AIRY PROPAGATOR.
+  PUBLICATIONS RESULTING FROM THE USE OF THIS PROPAGATOR SHOULD REFERENCE
+  M. H. ALEXANDER AND D. E. MANOLOPOULOS,  J. CHEM. PHYS. 86, 2044 (1987).
+
+  PROPAGATION STEP SIZE DETERMINED USING STEP =   80.0     (PER WAVELENGTH)
+  STEP SIZES ADJUSTED TO MAINTAIN APPROXIMATE ACCURACY VIA PERTURBATION THEORY
+  WITH TOLHI =  1.00E-04 AND POWR =   3.0    
+
+  ======================================================================================================================
+
+  CONVERGENCE RUN REQUESTED
+  RESTRICTING JTOT TO FIRST VALUE
+
+  ======================================================================================================================
+
+  INPUT ENERGY VALUES ASSUMED TO BE IN UNITS OF CM-1 BY DEFAULT.
+  USING JUST THE FIRST ENERGY FOR CONVERGENCE TESTING
+
+  CONTROL DATA FOR CONVERGENCE TESTS.  CALCULATIONS WILL BE PERFORMED    3 TIMES
+       ENERGY =   110.00000000     CM-1
+
+  ======================================================================================================================
+
+  TOTAL ANGULAR MOMENTUM JTOT =   5
+
+  EACH JTOT IS SPLIT INTO A MAXIMUM OF   2 SYMMETRY BLOCKS
+
+  CALCULATION(S) WILL BE FOR SYMMETRY BLOCK   2
+
+  STATE-TO-STATE INTEGRAL CROSS-SECTIONS WILL BE COMPUTED BUT NOT STORED ON DISK
+
+  ======================================================================================================================
+
+  INITIALIZATION DONE.  TIME WAS   0.00 CPU SECS.      5253 WORDS OF STORAGE USED.
+
+  =============================== NH3-He on simple analytic potential; STEPS convergence ===============================
+
+  *******************************************  ANGULAR MOMENTUM JTOT  =   5  *******************************************
+
+  IBLOCK =   2
+
+  JTOT =    5   IBLOCK =   2   ENERGY(   1) =   110.00000000     CM-1
+
+  CONVERGENCE TESTS: STEPS WILL HALVE EACH TIME
+
+  CONVERGENCE TESTS: STEPL WILL HALVE EACH TIME
+
+  ------------------------------- NH3-He on simple analytic potential; STEPS convergence -------------------------------
+
+  JTOT =    5   IBLOCK =   2   ENERGY(   2) =   110.00000000     CM-1
+
+  FOR RMIN =   3.00 STEPS =  40.00 RMID =   8.00 STEPL =  40.00 RMAX =      30.00
+  RMS CHANGE IN S-MATRIX ELEMENTS IS         0.52994E-05     LOG IS  -5.276
+  RMS CHANGE IN TRANSITION PROBABILITIES IS  0.18388E-05     LOG IS  -5.735
+
+  ------------------------------- NH3-He on simple analytic potential; STEPS convergence -------------------------------
+
+  JTOT =    5   IBLOCK =   2   ENERGY(   3) =   110.00000000     CM-1
+
+  FOR RMIN =   3.00 STEPS =  20.00 RMID =   8.00 STEPL =  20.00 RMAX =      30.00
+  RMS CHANGE IN S-MATRIX ELEMENTS IS         0.67128E-05     LOG IS  -5.173
+  RMS CHANGE IN TRANSITION PROBABILITIES IS  0.24919E-05     LOG IS  -5.603
+
+  ======================================================================================================================
+
+  SIGMA NOT PRINTED BECAUSE ISIGPR = 0
+
+
+  ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
+ |                                                                            |
+ |                Non-reactive quantum scattering calculations                |
+ |                     on atomic and molecular collisions                     |
+ |                                                                            |
+ |              Copyright (C) 2018 J. M. Hutson & C. R. Le Sueur              |
+ |                                                                            |
+ |                               Version 2019.0 (beta)                        |
+ |                                                                            |
+ |                    This run used       4.39 cpu secs and                   |
+ |             199191 of the allocated   1000000 words of storage             |
+ |                                                                            |
+  ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
+  ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
+ |                                                                            |
+ |                Non-reactive quantum scattering calculations                |
+ |                     on atomic and molecular collisions                     |
+ |                                                                            |
+ |              Copyright (C) 2018 J. M. Hutson & C. R. Le Sueur              |
+ |                                                                            |
+ |                               Version 2019.0 (beta)                        |
+ |                                                                            |
+ |                       Run on 16 Jan 2019   at 11:30:16                     |
+ |                                                                            |
+  ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
+
+
+  This program is free software: you can redistribute it and/or modify it under
+  the terms of the GNU General Public License, version 3, as published by
+  the Free Software Foundation.
+
+  Publications resulting from the use of this program should refer to
+  J. M. Hutson & C. R. Le Sueur, MOLSCAT computer code 2019.0 (beta)       
+  or to the published paper in Computer Physics Communications when available.
+
+
+  PHYSICAL CONSTANTS OBTAINED FROM NIST CODATA TABULATION OF 2014
+
+  MEMORY ALLOCATED TO MAIN WORKING ARRAY IS   1000000 (8-BYTE) WORDS (    7.63 MB)
+  2 INTEGERS CAN BE STORED IN EACH WORD.
+
+  PRINT LEVEL =  3     OTHER PRINT CONTROLS  ISIGPR = 2
+
+  RUN LABEL = NH3-He on simple analytic potential: DR convergence                             
+
+  REDUCED MASS FOR INTERACTION =   3.240000000 ATOMIC MASS UNITS (DALTONS)
+
+  ENERGY-INDEPENDENT MATRICES WILL BE SAVED TEMPORARILY ON UNIT 30
+
+  ======================================================================================================================
+
+  INTERACTION TYPE IS  ATOM - NEAR SYM. TOP RIGID ROTOR
+
+  TARGET ROTATIONAL LEVELS COMPUTED FROM JMIN =  0,  JMAX =  6,  AND JSTEP = 1
+
+  ENERGY LEVELS COMPUTED FROM ZEROTH-ORDER NEAR-SYMMETRIC TOP FORMULA
+          ROTATIONAL CONSTANTS ARE A, B, C (CM-1) =      9.9441      9.9441      6.2294
+          N.B. THESE MOMENTS MUST CORRESPOND RESPECTIVELY TO X, Y, Z COORDINATES USED TO DEFINE INTERACTION POTENTIAL
+
+  TUNNELLING SPLITTING                   =   0.7934000
+  WITH CENTRIFUGAL TERMS FOR J(J+1)-K**2 =   0.0000000
+  AND                    FOR K**2        =   0.0000000
+  WITH K=0 STATE ALLOWED FOR STATE OF |-1> SYMMETRY
+  3-FOLD SYMMETRY: ONLY E STATES INCLUDED
+
+  QUANTUM NUMBERS FOR INTERACTING PAIR:
+  EACH PAIR STATE IS LABELLED BY  3 QUANTUM LABELS
+  EACH CHANNEL FUNCTION IS FORMED BY COMBINING A PAIR STATE WITH A VALUE OF L.
+  THE RESULTING BASIS SET IS ASYMPTOTICALLY DIAGONAL.
+
+  PAIR STATE    - PAIR STATE QUANTUM NUMBERS -   PAIR LEVEL     PAIR ENERGY (CM-1)
+                        J         K      PRTY
+        1               1         1         2       1            15.3801000
+        2               1         1         1       2            16.1735000
+        3               2         1         2       3            55.9499000
+        4               2         1         1       4            55.1565000
+        5               2         2         2       5            44.8058000
+        6               2         2         1       6            44.0124000
+        7               3         1         2       7           114.8211000
+        8               3         1         1       8           115.6145000
+        9               3         2         2       9           103.6770000
+       10               3         2         1      10           104.4704000
+       11               4         1         2      11           195.1673000
+       12               4         1         1      12           194.3739000
+       13               4         2         2      13           184.0232000
+       14               4         2         1      14           183.2298000
+       15               4         4         2      15           139.4468000
+       16               4         4         1      16           138.6534000
+       17               5         1         2      17           293.8149000
+       18               5         1         1      18           294.6083000
+       19               5         2         2      19           282.6708000
+       20               5         2         1      20           283.4642000
+       21               5         4         2      21           238.0944000
+       22               5         4         1      22           238.8878000
+       23               5         5         2      23           204.6621000
+       24               5         5         1      24           205.4555000
+       25               6         1         2      25           413.9375000
+       26               6         1         1      26           413.1441000
+       27               6         2         2      27           402.7934000
+       28               6         2         1      28           402.0000000
+       29               6         4         2      29           358.2170000
+       30               6         4         1      30           357.4236000
+       31               6         5         2      31           324.7847000
+       32               6         5         1      32           323.9913000
+
+  ======================================================================================================================
+  GENERAL-PURPOSE POTENL ROUTINE (MAY 18)
+
+  ANGULAR DEPENDENCE OF POTENTIAL EXPANDED IN TERMS OF
+  NORMALISED SPHERICAL HARMONICS: (Y(LAM,KAP) + (-1)**KAP Y(LAM,-KAP))
+                                  / (1+DELTA(KAP,0))
+
+  INTERACTION POTENTIAL FOR EXPANSION TERM NUMBER   1
+  WHICH HAS LAMBDA =   0,  ABS(KAP) =   0
+
+                -1.20000000E+07 * R ** -6
+                 6.20000000E+08 * EXP(   -2.4000 * R )
+
+  INTERACTION POTENTIAL FOR EXPANSION TERM NUMBER   2
+  WHICH HAS LAMBDA =   1,  ABS(KAP) =   0
+
+                -5.40000000E+07 * EXP(   -2.4000 * R )
+
+  INTERACTION POTENTIAL FOR EXPANSION TERM NUMBER   3
+  WHICH HAS LAMBDA =   2,  ABS(KAP) =   0
+
+                 2.20000000E+06 * R ** -6
+
+  INTERACTION POTENTIAL FOR EXPANSION TERM NUMBER   4
+  WHICH HAS LAMBDA =   3,  ABS(KAP) =   0
+
+                 3.60000000E+07 * EXP(   -2.4000 * R )
+
+  INTERACTION POTENTIAL FOR EXPANSION TERM NUMBER   5
+  WHICH HAS LAMBDA =   3,  ABS(KAP) =   3
+
+                 1.00000000E+08 * EXP(   -2.4000 * R )
+
+  POTENL PROCESSING FINISHED.
+
+  POTENTIAL RETURNED IN UNITS OF EPSIL  =  1.0000000     CM-1
+        CODED WITH R IN UNITS OF RM     = 0.52917721     ANGSTROM
+
+  ALL LENGTHS ARE IN UNITS OF BOHR (  0.52917721 ANGSTROM ) UNLESS OTHERWISE STATED
+
+  INTERACTION MATRIX USES   5 BLOCKS OF VL ARRAY FOR R-DEPENDENT TERMS IN POTENTIAL
+
+  ======================================================================================================================
+
+  PROPAGATION METHODS FOR COUPLED EQUATIONS SPECIFIED BY IPROPS =  6 AND IPROPL =  9
+
+  COUPLED EQUATIONS WILL BE PROPAGATED OUTWARDS IN 2 SEGMENTS
+
+  PROPAGATION RANGES ARE CONTROLLED BY VARIABLES RMIN, RMID AND RMAX, WITH INPUT VALUES
+  RMIN =   3.000     RMID =   8.000     RMAX =   30.00    
+  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+  SEGMENT 1 WILL BE PROPAGATED OUTWARDS
+
+  FROM RMIN =      3.00 TO RMID =      8.00
+
+  COUPLED EQUATIONS SOLVED BY DIABATIC MODIFIED LOG-DERIVATIVE PROPAGATOR OF MANOLOPOULOS
+
+  PROPAGATION STEP SIZE DETERMINED USING DR =  2.000E-02
+  STEP SIZE CONSTANT THROUGHOUT RANGE
+  STEP SIZE MAY BE ADJUSTED SLIGHTLY SO THAT RANGE IS A WHOLE NUMBER OF STEPS
+
+  LOG-DERIVATIVE MATRIX INITIALISED IN THE LOCAL EIGENBASIS AT RMIN
+  LOCALLY CLOSED CHANNELS INITIALISED WITH A WKB BOUNDARY CONDITION
+  LOCALLY  OPEN  CHANNELS INITIALISED WITH THE VALUE  1.000E+08
+  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+  SEGMENT 2 WILL BE PROPAGATED OUTWARDS
+
+  FROM RMID =      8.00 TO RMAX =     30.00
+
+  COUPLED EQUATIONS SOLVED BY VARIABLE-STEP AIRY PROPAGATOR.
+  PUBLICATIONS RESULTING FROM THE USE OF THIS PROPAGATOR SHOULD REFERENCE
+  M. H. ALEXANDER AND D. E. MANOLOPOULOS,  J. CHEM. PHYS. 86, 2044 (1987).
+
+  INITIAL STEP SIZE TAKEN FROM SIZE OF FINAL STEP OF PREVIOUS SEGMENT
+  STEP SIZES ADJUSTED TO MAINTAIN APPROXIMATE ACCURACY VIA PERTURBATION THEORY
+  WITH TOLHI =  1.00E-04 AND POWR =   3.0    
+
+  ======================================================================================================================
+
+  CONVERGENCE RUN REQUESTED
+  RESTRICTING JTOT TO FIRST VALUE
+
+  ======================================================================================================================
+
+  INPUT ENERGY VALUES ASSUMED TO BE IN UNITS OF CM-1 BY DEFAULT.
+  USING JUST THE FIRST ENERGY FOR CONVERGENCE TESTING
+
+  CONTROL DATA FOR CONVERGENCE TESTS.  CALCULATIONS WILL BE PERFORMED    3 TIMES
+       ENERGY =   110.00000000     CM-1
+
+  ======================================================================================================================
+
+  TOTAL ANGULAR MOMENTUM JTOT =   5
+
+  EACH JTOT IS SPLIT INTO A MAXIMUM OF   2 SYMMETRY BLOCKS
+
+  CALCULATION(S) WILL BE FOR SYMMETRY BLOCK   2
+
+  STATE-TO-STATE INTEGRAL CROSS-SECTIONS WILL BE COMPUTED BUT NOT STORED ON DISK
+
+  ======================================================================================================================
+
+  INITIALIZATION DONE.  TIME WAS   0.00 CPU SECS.      5253 WORDS OF STORAGE USED.
+
+  ================================ NH3-He on simple analytic potential: DR convergence =================================
+
+  *******************************************  ANGULAR MOMENTUM JTOT  =   5  *******************************************
+
+  IBLOCK =   2
+
+  JTOT =    5   IBLOCK =   2   ENERGY(   1) =   110.00000000     CM-1
+
+  CONVERGENCE TESTS: DRS WILL DOUBLE EACH TIME
+
+  CONVERGENCE TESTS: DRL WILL DOUBLE EACH TIME
+
+  -------------------------------- NH3-He on simple analytic potential: DR convergence ---------------------------------
+
+  JTOT =    5   IBLOCK =   2   ENERGY(   2) =   110.00000000     CM-1
+
+  FOR RMIN =   3.00 RMID =   8.00 RMAX =      30.00 DR =  0.0400
+  RMS CHANGE IN S-MATRIX ELEMENTS IS         0.76564E-05     LOG IS  -5.116
+  RMS CHANGE IN TRANSITION PROBABILITIES IS  0.23847E-05     LOG IS  -5.623
+
+  -------------------------------- NH3-He on simple analytic potential: DR convergence ---------------------------------
+
+  JTOT =    5   IBLOCK =   2   ENERGY(   3) =   110.00000000     CM-1
+
+  FOR RMIN =   3.00 RMID =   8.00 RMAX =      30.00 DR =  0.0800
+  RMS CHANGE IN S-MATRIX ELEMENTS IS         0.67394E-05     LOG IS  -5.171
+  RMS CHANGE IN TRANSITION PROBABILITIES IS  0.23526E-05     LOG IS  -5.628
+
+  ======================================================================================================================
+
+  SIGMA NOT PRINTED BECAUSE ISIGPR = 0
+
+
+  ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
+ |                                                                            |
+ |                Non-reactive quantum scattering calculations                |
+ |                     on atomic and molecular collisions                     |
+ |                                                                            |
+ |              Copyright (C) 2018 J. M. Hutson & C. R. Le Sueur              |
+ |                                                                            |
+ |                               Version 2019.0 (beta)                        |
+ |                                                                            |
+ |                    This run used       4.31 cpu secs and                   |
+ |             199191 of the allocated   1000000 words of storage             |
+ |                                                                            |
+  ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
+  ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
+ |                                                                            |
+ |                Non-reactive quantum scattering calculations                |
+ |                     on atomic and molecular collisions                     |
+ |                                                                            |
+ |              Copyright (C) 2018 J. M. Hutson & C. R. Le Sueur              |
+ |                                                                            |
+ |                               Version 2019.0 (beta)                        |
+ |                                                                            |
+ |                       Run on 16 Jan 2019   at 11:30:20                     |
+ |                                                                            |
+  ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
+
+
+  This program is free software: you can redistribute it and/or modify it under
+  the terms of the GNU General Public License, version 3, as published by
+  the Free Software Foundation.
+
+  Publications resulting from the use of this program should refer to
+  J. M. Hutson & C. R. Le Sueur, MOLSCAT computer code 2019.0 (beta)       
+  or to the published paper in Computer Physics Communications when available.
+
+
+  PHYSICAL CONSTANTS OBTAINED FROM NIST CODATA TABULATION OF 2014
+
+  MEMORY ALLOCATED TO MAIN WORKING ARRAY IS   1000000 (8-BYTE) WORDS (    7.63 MB)
+  2 INTEGERS CAN BE STORED IN EACH WORD.
+
+  PRINT LEVEL =  3     OTHER PRINT CONTROLS  ISIGPR = 2
+
+  RUN LABEL = NH3-He on simple analytic potential: RMIN convergence                           
+
+  REDUCED MASS FOR INTERACTION =   3.240000000 ATOMIC MASS UNITS (DALTONS)
+
+  ENERGY-INDEPENDENT MATRICES WILL BE SAVED TEMPORARILY ON UNIT 30
+
+  ======================================================================================================================
+
+  INTERACTION TYPE IS  ATOM - NEAR SYM. TOP RIGID ROTOR
+
+  TARGET ROTATIONAL LEVELS COMPUTED FROM JMIN =  0,  JMAX =  6,  AND JSTEP = 1
+
+  ENERGY LEVELS COMPUTED FROM ZEROTH-ORDER NEAR-SYMMETRIC TOP FORMULA
+          ROTATIONAL CONSTANTS ARE A, B, C (CM-1) =      9.9441      9.9441      6.2294
+          N.B. THESE MOMENTS MUST CORRESPOND RESPECTIVELY TO X, Y, Z COORDINATES USED TO DEFINE INTERACTION POTENTIAL
+
+  TUNNELLING SPLITTING                   =   0.7934000
+  WITH CENTRIFUGAL TERMS FOR J(J+1)-K**2 =   0.0000000
+  AND                    FOR K**2        =   0.0000000
+  WITH K=0 STATE ALLOWED FOR STATE OF |-1> SYMMETRY
+  3-FOLD SYMMETRY: ONLY E STATES INCLUDED
+
+  QUANTUM NUMBERS FOR INTERACTING PAIR:
+  EACH PAIR STATE IS LABELLED BY  3 QUANTUM LABELS
+  EACH CHANNEL FUNCTION IS FORMED BY COMBINING A PAIR STATE WITH A VALUE OF L.
+  THE RESULTING BASIS SET IS ASYMPTOTICALLY DIAGONAL.
+
+  PAIR STATE    - PAIR STATE QUANTUM NUMBERS -   PAIR LEVEL     PAIR ENERGY (CM-1)
+                        J         K      PRTY
+        1               1         1         2       1            15.3801000
+        2               1         1         1       2            16.1735000
+        3               2         1         2       3            55.9499000
+        4               2         1         1       4            55.1565000
+        5               2         2         2       5            44.8058000
+        6               2         2         1       6            44.0124000
+        7               3         1         2       7           114.8211000
+        8               3         1         1       8           115.6145000
+        9               3         2         2       9           103.6770000
+       10               3         2         1      10           104.4704000
+       11               4         1         2      11           195.1673000
+       12               4         1         1      12           194.3739000
+       13               4         2         2      13           184.0232000
+       14               4         2         1      14           183.2298000
+       15               4         4         2      15           139.4468000
+       16               4         4         1      16           138.6534000
+       17               5         1         2      17           293.8149000
+       18               5         1         1      18           294.6083000
+       19               5         2         2      19           282.6708000
+       20               5         2         1      20           283.4642000
+       21               5         4         2      21           238.0944000
+       22               5         4         1      22           238.8878000
+       23               5         5         2      23           204.6621000
+       24               5         5         1      24           205.4555000
+       25               6         1         2      25           413.9375000
+       26               6         1         1      26           413.1441000
+       27               6         2         2      27           402.7934000
+       28               6         2         1      28           402.0000000
+       29               6         4         2      29           358.2170000
+       30               6         4         1      30           357.4236000
+       31               6         5         2      31           324.7847000
+       32               6         5         1      32           323.9913000
+
+  ======================================================================================================================
+  GENERAL-PURPOSE POTENL ROUTINE (MAY 18)
+
+  ANGULAR DEPENDENCE OF POTENTIAL EXPANDED IN TERMS OF
+  NORMALISED SPHERICAL HARMONICS: (Y(LAM,KAP) + (-1)**KAP Y(LAM,-KAP))
+                                  / (1+DELTA(KAP,0))
+
+  INTERACTION POTENTIAL FOR EXPANSION TERM NUMBER   1
+  WHICH HAS LAMBDA =   0,  ABS(KAP) =   0
+
+                -1.20000000E+07 * R ** -6
+                 6.20000000E+08 * EXP(   -2.4000 * R )
+
+  INTERACTION POTENTIAL FOR EXPANSION TERM NUMBER   2
+  WHICH HAS LAMBDA =   1,  ABS(KAP) =   0
+
+                -5.40000000E+07 * EXP(   -2.4000 * R )
+
+  INTERACTION POTENTIAL FOR EXPANSION TERM NUMBER   3
+  WHICH HAS LAMBDA =   2,  ABS(KAP) =   0
+
+                 2.20000000E+06 * R ** -6
+
+  INTERACTION POTENTIAL FOR EXPANSION TERM NUMBER   4
+  WHICH HAS LAMBDA =   3,  ABS(KAP) =   0
+
+                 3.60000000E+07 * EXP(   -2.4000 * R )
+
+  INTERACTION POTENTIAL FOR EXPANSION TERM NUMBER   5
+  WHICH HAS LAMBDA =   3,  ABS(KAP) =   3
+
+                 1.00000000E+08 * EXP(   -2.4000 * R )
+
+  POTENL PROCESSING FINISHED.
+
+  POTENTIAL RETURNED IN UNITS OF EPSIL  =  1.0000000     CM-1
+        CODED WITH R IN UNITS OF RM     = 0.52917721     ANGSTROM
+
+  ALL LENGTHS ARE IN UNITS OF BOHR (  0.52917721 ANGSTROM ) UNLESS OTHERWISE STATED
+
+  INTERACTION MATRIX USES   5 BLOCKS OF VL ARRAY FOR R-DEPENDENT TERMS IN POTENTIAL
+
+  ======================================================================================================================
+
+  PROPAGATION METHODS FOR COUPLED EQUATIONS SPECIFIED BY IPROPS =  6 AND IPROPL =  9
+
+  COUPLED EQUATIONS WILL BE PROPAGATED OUTWARDS IN 2 SEGMENTS
+
+  PROPAGATION RANGES ARE CONTROLLED BY VARIABLES RMIN, RMID AND RMAX, WITH INPUT VALUES
+  RMIN =   3.000     RMID =   8.000     RMAX =   30.00    
+  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+  SEGMENT 1 WILL BE PROPAGATED OUTWARDS
+
+  FROM RMIN =      3.00 TO RMID =      8.00
+
+  COUPLED EQUATIONS SOLVED BY DIABATIC MODIFIED LOG-DERIVATIVE PROPAGATOR OF MANOLOPOULOS
+
+  PROPAGATION STEP SIZE DETERMINED USING STEP =   40.0     (PER WAVELENGTH)
+  STEP SIZE CONSTANT THROUGHOUT RANGE
+  STEP SIZE MAY BE ADJUSTED SLIGHTLY SO THAT RANGE IS A WHOLE NUMBER OF STEPS
+
+  LOG-DERIVATIVE MATRIX INITIALISED IN THE LOCAL EIGENBASIS AT RMIN
+  LOCALLY CLOSED CHANNELS INITIALISED WITH A WKB BOUNDARY CONDITION
+  LOCALLY  OPEN  CHANNELS INITIALISED WITH THE VALUE  1.000E+08
+  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+  SEGMENT 2 WILL BE PROPAGATED OUTWARDS
+
+  FROM RMID =      8.00 TO RMAX =     30.00
+
+  COUPLED EQUATIONS SOLVED BY VARIABLE-STEP AIRY PROPAGATOR.
+  PUBLICATIONS RESULTING FROM THE USE OF THIS PROPAGATOR SHOULD REFERENCE
+  M. H. ALEXANDER AND D. E. MANOLOPOULOS,  J. CHEM. PHYS. 86, 2044 (1987).
+
+  PROPAGATION STEP SIZE DETERMINED USING STEP =   40.0     (PER WAVELENGTH)
+  STEP SIZES ADJUSTED TO MAINTAIN APPROXIMATE ACCURACY VIA PERTURBATION THEORY
+  WITH TOLHI =  1.00E-04 AND POWR =   3.0    
+
+  ======================================================================================================================
+
+  CONVERGENCE RUN REQUESTED
+  RESTRICTING JTOT TO FIRST VALUE
+
+  ======================================================================================================================
+
+  INPUT ENERGY VALUES ASSUMED TO BE IN UNITS OF CM-1 BY DEFAULT.
+  USING JUST THE FIRST ENERGY FOR CONVERGENCE TESTING
+
+  CONTROL DATA FOR CONVERGENCE TESTS.  CALCULATIONS WILL BE PERFORMED    3 TIMES
+       ENERGY =   110.00000000     CM-1
+
+  ======================================================================================================================
+
+  TOTAL ANGULAR MOMENTUM JTOT =   5
+
+  EACH JTOT IS SPLIT INTO A MAXIMUM OF   2 SYMMETRY BLOCKS
+
+  CALCULATION(S) WILL BE FOR SYMMETRY BLOCK   2
+
+  STATE-TO-STATE INTEGRAL CROSS-SECTIONS WILL BE COMPUTED BUT NOT STORED ON DISK
+
+  ======================================================================================================================
+
+  INITIALIZATION DONE.  TIME WAS   0.00 CPU SECS.      5253 WORDS OF STORAGE USED.
+
+  =============================== NH3-He on simple analytic potential: RMIN convergence ================================
+
+  *******************************************  ANGULAR MOMENTUM JTOT  =   5  *******************************************
+
+  IBLOCK =   2
+
+  JTOT =    5   IBLOCK =   2   ENERGY(   1) =   110.00000000     CM-1
+
+  CONVERGENCE TESTS: RMIN WILL INCREASE BY  0.1000     EACH TIME
+
+  ------------------------------- NH3-He on simple analytic potential: RMIN convergence --------------------------------
+
+  JTOT =    5   IBLOCK =   2   ENERGY(   2) =   110.00000000     CM-1
+
+  FOR RMIN =   3.00 STEPS =  40.00 RMID =   8.00 STEPL =  40.00 RMAX =      30.00
+  RMS CHANGE IN S-MATRIX ELEMENTS IS         0.18884E-09     LOG IS  -9.724
+  RMS CHANGE IN TRANSITION PROBABILITIES IS  0.91633E-10     LOG IS -10.038
+
+  ------------------------------- NH3-He on simple analytic potential: RMIN convergence --------------------------------
+
+  JTOT =    5   IBLOCK =   2   ENERGY(   3) =   110.00000000     CM-1
+
+  FOR RMIN =   3.00 STEPS =  40.00 RMID =   8.00 STEPL =  40.00 RMAX =      30.00
+  RMS CHANGE IN S-MATRIX ELEMENTS IS         0.38627E-09     LOG IS  -9.413
+  RMS CHANGE IN TRANSITION PROBABILITIES IS  0.18752E-09     LOG IS  -9.727
+
+  ======================================================================================================================
+
+  SIGMA NOT PRINTED BECAUSE ISIGPR = 0
+
+
+  ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
+ |                                                                            |
+ |                Non-reactive quantum scattering calculations                |
+ |                     on atomic and molecular collisions                     |
+ |                                                                            |
+ |              Copyright (C) 2018 J. M. Hutson & C. R. Le Sueur              |
+ |                                                                            |
+ |                               Version 2019.0 (beta)                        |
+ |                                                                            |
+ |                    This run used       4.05 cpu secs and                   |
+ |             199191 of the allocated   1000000 words of storage             |
+ |                                                                            |
+  ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
+  ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
+ |                                                                            |
+ |                Non-reactive quantum scattering calculations                |
+ |                     on atomic and molecular collisions                     |
+ |                                                                            |
+ |              Copyright (C) 2018 J. M. Hutson & C. R. Le Sueur              |
+ |                                                                            |
+ |                               Version 2019.0 (beta)                        |
+ |                                                                            |
+ |                       Run on 16 Jan 2019   at 11:30:24                     |
+ |                                                                            |
+  ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
+
+
+  This program is free software: you can redistribute it and/or modify it under
+  the terms of the GNU General Public License, version 3, as published by
+  the Free Software Foundation.
+
+  Publications resulting from the use of this program should refer to
+  J. M. Hutson & C. R. Le Sueur, MOLSCAT computer code 2019.0 (beta)       
+  or to the published paper in Computer Physics Communications when available.
+
+
+  PHYSICAL CONSTANTS OBTAINED FROM NIST CODATA TABULATION OF 2014
+
+  MEMORY ALLOCATED TO MAIN WORKING ARRAY IS   1000000 (8-BYTE) WORDS (    7.63 MB)
+  2 INTEGERS CAN BE STORED IN EACH WORD.
+
+  PRINT LEVEL =  3     OTHER PRINT CONTROLS  ISIGPR = 2
+
+  RUN LABEL = NH3-He on simple analytic potential: RMAX convergence                           
+
+  REDUCED MASS FOR INTERACTION =   3.240000000 ATOMIC MASS UNITS (DALTONS)
+
+  ENERGY-INDEPENDENT MATRICES WILL BE SAVED TEMPORARILY ON UNIT 30
+
+  ======================================================================================================================
+
+  INTERACTION TYPE IS  ATOM - NEAR SYM. TOP RIGID ROTOR
+
+  TARGET ROTATIONAL LEVELS COMPUTED FROM JMIN =  0,  JMAX =  6,  AND JSTEP = 1
+
+  ENERGY LEVELS COMPUTED FROM ZEROTH-ORDER NEAR-SYMMETRIC TOP FORMULA
+          ROTATIONAL CONSTANTS ARE A, B, C (CM-1) =      9.9441      9.9441      6.2294
+          N.B. THESE MOMENTS MUST CORRESPOND RESPECTIVELY TO X, Y, Z COORDINATES USED TO DEFINE INTERACTION POTENTIAL
+
+  TUNNELLING SPLITTING                   =   0.7934000
+  WITH CENTRIFUGAL TERMS FOR J(J+1)-K**2 =   0.0000000
+  AND                    FOR K**2        =   0.0000000
+  WITH K=0 STATE ALLOWED FOR STATE OF |-1> SYMMETRY
+  3-FOLD SYMMETRY: ONLY E STATES INCLUDED
+
+  QUANTUM NUMBERS FOR INTERACTING PAIR:
+  EACH PAIR STATE IS LABELLED BY  3 QUANTUM LABELS
+  EACH CHANNEL FUNCTION IS FORMED BY COMBINING A PAIR STATE WITH A VALUE OF L.
+  THE RESULTING BASIS SET IS ASYMPTOTICALLY DIAGONAL.
+
+  PAIR STATE    - PAIR STATE QUANTUM NUMBERS -   PAIR LEVEL     PAIR ENERGY (CM-1)
+                        J         K      PRTY
+        1               1         1         2       1            15.3801000
+        2               1         1         1       2            16.1735000
+        3               2         1         2       3            55.9499000
+        4               2         1         1       4            55.1565000
+        5               2         2         2       5            44.8058000
+        6               2         2         1       6            44.0124000
+        7               3         1         2       7           114.8211000
+        8               3         1         1       8           115.6145000
+        9               3         2         2       9           103.6770000
+       10               3         2         1      10           104.4704000
+       11               4         1         2      11           195.1673000
+       12               4         1         1      12           194.3739000
+       13               4         2         2      13           184.0232000
+       14               4         2         1      14           183.2298000
+       15               4         4         2      15           139.4468000
+       16               4         4         1      16           138.6534000
+       17               5         1         2      17           293.8149000
+       18               5         1         1      18           294.6083000
+       19               5         2         2      19           282.6708000
+       20               5         2         1      20           283.4642000
+       21               5         4         2      21           238.0944000
+       22               5         4         1      22           238.8878000
+       23               5         5         2      23           204.6621000
+       24               5         5         1      24           205.4555000
+       25               6         1         2      25           413.9375000
+       26               6         1         1      26           413.1441000
+       27               6         2         2      27           402.7934000
+       28               6         2         1      28           402.0000000
+       29               6         4         2      29           358.2170000
+       30               6         4         1      30           357.4236000
+       31               6         5         2      31           324.7847000
+       32               6         5         1      32           323.9913000
+
+  ======================================================================================================================
+  GENERAL-PURPOSE POTENL ROUTINE (MAY 18)
+
+  ANGULAR DEPENDENCE OF POTENTIAL EXPANDED IN TERMS OF
+  NORMALISED SPHERICAL HARMONICS: (Y(LAM,KAP) + (-1)**KAP Y(LAM,-KAP))
+                                  / (1+DELTA(KAP,0))
+
+  INTERACTION POTENTIAL FOR EXPANSION TERM NUMBER   1
+  WHICH HAS LAMBDA =   0,  ABS(KAP) =   0
+
+                -1.20000000E+07 * R ** -6
+                 6.20000000E+08 * EXP(   -2.4000 * R )
+
+  INTERACTION POTENTIAL FOR EXPANSION TERM NUMBER   2
+  WHICH HAS LAMBDA =   1,  ABS(KAP) =   0
+
+                -5.40000000E+07 * EXP(   -2.4000 * R )
+
+  INTERACTION POTENTIAL FOR EXPANSION TERM NUMBER   3
+  WHICH HAS LAMBDA =   2,  ABS(KAP) =   0
+
+                 2.20000000E+06 * R ** -6
+
+  INTERACTION POTENTIAL FOR EXPANSION TERM NUMBER   4
+  WHICH HAS LAMBDA =   3,  ABS(KAP) =   0
+
+                 3.60000000E+07 * EXP(   -2.4000 * R )
+
+  INTERACTION POTENTIAL FOR EXPANSION TERM NUMBER   5
+  WHICH HAS LAMBDA =   3,  ABS(KAP) =   3
+
+                 1.00000000E+08 * EXP(   -2.4000 * R )
+
+  POTENL PROCESSING FINISHED.
+
+  POTENTIAL RETURNED IN UNITS OF EPSIL  =  1.0000000     CM-1
+        CODED WITH R IN UNITS OF RM     = 0.52917721     ANGSTROM
+
+  ALL LENGTHS ARE IN UNITS OF BOHR (  0.52917721 ANGSTROM ) UNLESS OTHERWISE STATED
+
+  INTERACTION MATRIX USES   5 BLOCKS OF VL ARRAY FOR R-DEPENDENT TERMS IN POTENTIAL
+
+  ======================================================================================================================
+
+  PROPAGATION METHODS FOR COUPLED EQUATIONS SPECIFIED BY IPROPS =  6 AND IPROPL =  9
+
+  COUPLED EQUATIONS WILL BE PROPAGATED OUTWARDS IN 2 SEGMENTS
+
+  PROPAGATION RANGES ARE CONTROLLED BY VARIABLES RMIN, RMID AND RMAX, WITH INPUT VALUES
+  RMIN =   3.000     RMID =   8.000     RMAX =   30.00    
+  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+  SEGMENT 1 WILL BE PROPAGATED OUTWARDS
+
+  FROM RMIN =      3.00 TO RMID =      8.00
+
+  COUPLED EQUATIONS SOLVED BY DIABATIC MODIFIED LOG-DERIVATIVE PROPAGATOR OF MANOLOPOULOS
+
+  PROPAGATION STEP SIZE DETERMINED USING STEP =   40.0     (PER WAVELENGTH)
+  STEP SIZE CONSTANT THROUGHOUT RANGE
+  STEP SIZE MAY BE ADJUSTED SLIGHTLY SO THAT RANGE IS A WHOLE NUMBER OF STEPS
+
+  LOG-DERIVATIVE MATRIX INITIALISED IN THE LOCAL EIGENBASIS AT RMIN
+  LOCALLY CLOSED CHANNELS INITIALISED WITH A WKB BOUNDARY CONDITION
+  LOCALLY  OPEN  CHANNELS INITIALISED WITH THE VALUE  1.000E+08
+  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+  SEGMENT 2 WILL BE PROPAGATED OUTWARDS
+
+  FROM RMID =      8.00 TO RMAX =     30.00
+
+  COUPLED EQUATIONS SOLVED BY VARIABLE-STEP AIRY PROPAGATOR.
+  PUBLICATIONS RESULTING FROM THE USE OF THIS PROPAGATOR SHOULD REFERENCE
+  M. H. ALEXANDER AND D. E. MANOLOPOULOS,  J. CHEM. PHYS. 86, 2044 (1987).
+
+  PROPAGATION STEP SIZE DETERMINED USING STEP =   40.0     (PER WAVELENGTH)
+  STEP SIZES ADJUSTED TO MAINTAIN APPROXIMATE ACCURACY VIA PERTURBATION THEORY
+  WITH TOLHI =  1.00E-04 AND POWR =   3.0    
+
+  ======================================================================================================================
+
+  CONVERGENCE RUN REQUESTED
+  RESTRICTING JTOT TO FIRST VALUE
+
+  ======================================================================================================================
+
+  INPUT ENERGY VALUES ASSUMED TO BE IN UNITS OF CM-1 BY DEFAULT.
+  USING JUST THE FIRST ENERGY FOR CONVERGENCE TESTING
+
+  CONTROL DATA FOR CONVERGENCE TESTS.  CALCULATIONS WILL BE PERFORMED    3 TIMES
+       ENERGY =   110.00000000     CM-1
+
+  ======================================================================================================================
+
+  TOTAL ANGULAR MOMENTUM JTOT =   5
+
+  EACH JTOT IS SPLIT INTO A MAXIMUM OF   2 SYMMETRY BLOCKS
+
+  CALCULATION(S) WILL BE FOR SYMMETRY BLOCK   2
+
+  STATE-TO-STATE INTEGRAL CROSS-SECTIONS WILL BE COMPUTED BUT NOT STORED ON DISK
+
+  ======================================================================================================================
+
+  INITIALIZATION DONE.  TIME WAS   0.00 CPU SECS.      5253 WORDS OF STORAGE USED.
+
+  =============================== NH3-He on simple analytic potential: RMAX convergence ================================
+
+  *******************************************  ANGULAR MOMENTUM JTOT  =   5  *******************************************
+
+  IBLOCK =   2
+
+  JTOT =    5   IBLOCK =   2   ENERGY(   1) =   110.00000000     CM-1
+
+  CONVERGENCE TESTS: RMAX WILL DECREASE BY   1.000     EACH TIME
+
+  ------------------------------- NH3-He on simple analytic potential: RMAX convergence --------------------------------
+
+  JTOT =    5   IBLOCK =   2   ENERGY(   2) =   110.00000000     CM-1
+
+  FOR RMIN =   3.00 STEPS =  40.00 RMID =   8.00 STEPL =  40.00 RMAX =      30.00
+  RMS CHANGE IN S-MATRIX ELEMENTS IS         0.90544E-04     LOG IS  -4.043
+  RMS CHANGE IN TRANSITION PROBABILITIES IS  0.66377E-05     LOG IS  -5.178
+
+  ------------------------------- NH3-He on simple analytic potential: RMAX convergence --------------------------------
+
+  JTOT =    5   IBLOCK =   2   ENERGY(   3) =   110.00000000     CM-1
+
+  FOR RMIN =   3.00 STEPS =  40.00 RMID =   8.00 STEPL =  40.00 RMAX =      30.00
+  RMS CHANGE IN S-MATRIX ELEMENTS IS         0.18759E-03     LOG IS  -3.727
+  RMS CHANGE IN TRANSITION PROBABILITIES IS  0.10737E-04     LOG IS  -4.969
+
+  ======================================================================================================================
+
+  SIGMA NOT PRINTED BECAUSE ISIGPR = 0
+
+
+  ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
+ |                                                                            |
+ |                Non-reactive quantum scattering calculations                |
+ |                     on atomic and molecular collisions                     |
+ |                                                                            |
+ |              Copyright (C) 2018 J. M. Hutson & C. R. Le Sueur              |
+ |                                                                            |
+ |                               Version 2019.0 (beta)                        |
+ |                                                                            |
+ |                    This run used       3.93 cpu secs and                   |
+ |             199191 of the allocated   1000000 words of storage             |
+ |                                                                            |
+  ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
+  ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
+ |                                                                            |
+ |                Non-reactive quantum scattering calculations                |
+ |                     on atomic and molecular collisions                     |
+ |                                                                            |
+ |              Copyright (C) 2018 J. M. Hutson & C. R. Le Sueur              |
+ |                                                                            |
+ |                               Version 2019.0 (beta)                        |
+ |                                                                            |
+ |                       Run on 16 Jan 2019   at 11:30:28                     |
+ |                                                                            |
+  ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
+
+
+  This program is free software: you can redistribute it and/or modify it under
+  the terms of the GNU General Public License, version 3, as published by
+  the Free Software Foundation.
+
+  Publications resulting from the use of this program should refer to
+  J. M. Hutson & C. R. Le Sueur, MOLSCAT computer code 2019.0 (beta)       
+  or to the published paper in Computer Physics Communications when available.
+
+
+  PHYSICAL CONSTANTS OBTAINED FROM NIST CODATA TABULATION OF 2014
+
+  MEMORY ALLOCATED TO MAIN WORKING ARRAY IS   1000000 (8-BYTE) WORDS (    7.63 MB)
+  2 INTEGERS CAN BE STORED IN EACH WORD.
+
+  PRINT LEVEL =  1     OTHER PRINT CONTROLS  ISIGPR = 2
+
+  RUN LABEL = NH3-He on simple analytic potential: close-coupling x-sections                  
+
+  REDUCED MASS FOR INTERACTION =   3.240000000 ATOMIC MASS UNITS (DALTONS)
+
+  ENERGY-INDEPENDENT MATRICES WILL BE SAVED TEMPORARILY ON UNIT 30
+
+  ======================================================================================================================
+
+  INTERACTION TYPE IS  ATOM - NEAR SYM. TOP RIGID ROTOR
+
+  TARGET ROTATIONAL LEVELS COMPUTED FROM JMIN =  0,  JMAX =  6,  AND JSTEP = 1
+
+  ENERGY LEVELS COMPUTED FROM ZEROTH-ORDER NEAR-SYMMETRIC TOP FORMULA
+          ROTATIONAL CONSTANTS ARE A, B, C (CM-1) =      9.9441      9.9441      6.2294
+          N.B. THESE MOMENTS MUST CORRESPOND RESPECTIVELY TO X, Y, Z COORDINATES USED TO DEFINE INTERACTION POTENTIAL
+
+  TUNNELLING SPLITTING                   =   0.7934000
+  WITH CENTRIFUGAL TERMS FOR J(J+1)-K**2 =   0.0000000
+  AND                    FOR K**2        =   0.0000000
+  WITH K=0 STATE ALLOWED FOR STATE OF |-1> SYMMETRY
+  3-FOLD SYMMETRY: ONLY E STATES INCLUDED
+
+  QUANTUM NUMBERS FOR INTERACTING PAIR:
+  EACH PAIR STATE IS LABELLED BY  3 QUANTUM LABELS
+  EACH CHANNEL FUNCTION IS FORMED BY COMBINING A PAIR STATE WITH A VALUE OF L.
+  THE RESULTING BASIS SET IS ASYMPTOTICALLY DIAGONAL.
+
+  PAIR STATE    - PAIR STATE QUANTUM NUMBERS -   PAIR LEVEL     PAIR ENERGY (CM-1)
+                        J         K      PRTY
+        1               1         1         2       1            15.3801000
+        2               1         1         1       2            16.1735000
+        3               2         1         2       3            55.9499000
+        4               2         1         1       4            55.1565000
+        5               2         2         2       5            44.8058000
+        6               2         2         1       6            44.0124000
+        7               3         1         2       7           114.8211000
+        8               3         1         1       8           115.6145000
+        9               3         2         2       9           103.6770000
+       10               3         2         1      10           104.4704000
+       11               4         1         2      11           195.1673000
+       12               4         1         1      12           194.3739000
+       13               4         2         2      13           184.0232000
+       14               4         2         1      14           183.2298000
+       15               4         4         2      15           139.4468000
+       16               4         4         1      16           138.6534000
+       17               5         1         2      17           293.8149000
+       18               5         1         1      18           294.6083000
+       19               5         2         2      19           282.6708000
+       20               5         2         1      20           283.4642000
+       21               5         4         2      21           238.0944000
+       22               5         4         1      22           238.8878000
+       23               5         5         2      23           204.6621000
+       24               5         5         1      24           205.4555000
+       25               6         1         2      25           413.9375000
+       26               6         1         1      26           413.1441000
+       27               6         2         2      27           402.7934000
+       28               6         2         1      28           402.0000000
+       29               6         4         2      29           358.2170000
+       30               6         4         1      30           357.4236000
+       31               6         5         2      31           324.7847000
+       32               6         5         1      32           323.9913000
+
+  ======================================================================================================================
+  GENERAL-PURPOSE POTENL ROUTINE (MAY 18)
+
+  ANGULAR DEPENDENCE OF POTENTIAL EXPANDED IN TERMS OF
+  NORMALISED SPHERICAL HARMONICS: (Y(LAM,KAP) + (-1)**KAP Y(LAM,-KAP))
+                                  / (1+DELTA(KAP,0))
+
+  INTERACTION POTENTIAL FOR EXPANSION TERM NUMBER   1
+  WHICH HAS LAMBDA =   0,  ABS(KAP) =   0
+
+                -1.20000000E+07 * R ** -6
+                 6.20000000E+08 * EXP(   -2.4000 * R )
+
+  INTERACTION POTENTIAL FOR EXPANSION TERM NUMBER   2
+  WHICH HAS LAMBDA =   1,  ABS(KAP) =   0
+
+                -5.40000000E+07 * EXP(   -2.4000 * R )
+
+  INTERACTION POTENTIAL FOR EXPANSION TERM NUMBER   3
+  WHICH HAS LAMBDA =   2,  ABS(KAP) =   0
+
+                 2.20000000E+06 * R ** -6
+
+  INTERACTION POTENTIAL FOR EXPANSION TERM NUMBER   4
+  WHICH HAS LAMBDA =   3,  ABS(KAP) =   0
+
+                 3.60000000E+07 * EXP(   -2.4000 * R )
+
+  INTERACTION POTENTIAL FOR EXPANSION TERM NUMBER   5
+  WHICH HAS LAMBDA =   3,  ABS(KAP) =   3
+
+                 1.00000000E+08 * EXP(   -2.4000 * R )
+
+  POTENL PROCESSING FINISHED.
+
+  POTENTIAL RETURNED IN UNITS OF EPSIL  =  1.0000000     CM-1
+        CODED WITH R IN UNITS OF RM     = 0.52917721     ANGSTROM
+
+  ALL LENGTHS ARE IN UNITS OF BOHR (  0.52917721 ANGSTROM ) UNLESS OTHERWISE STATED
+
+  INTERACTION MATRIX USES   5 BLOCKS OF VL ARRAY FOR R-DEPENDENT TERMS IN POTENTIAL
+
+  ======================================================================================================================
+
+  PROPAGATION METHODS FOR COUPLED EQUATIONS SPECIFIED BY IPROPS =  6 AND IPROPL =  9
+
+  COUPLED EQUATIONS WILL BE PROPAGATED OUTWARDS IN 2 SEGMENTS
+
+  PROPAGATION RANGES ARE CONTROLLED BY VARIABLES RMIN, RMID AND RMAX, WITH INPUT VALUES
+  RMIN =   3.000     RMID =   8.000     RMAX =   30.00    
+  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+  SEGMENT 1 WILL BE PROPAGATED OUTWARDS
+
+  FROM RMIN =      3.00 TO RMID =      8.00
+
+  COUPLED EQUATIONS SOLVED BY DIABATIC MODIFIED LOG-DERIVATIVE PROPAGATOR OF MANOLOPOULOS
+
+  PROPAGATION STEP SIZE DETERMINED USING STEP =   40.0     (PER WAVELENGTH)
+  STEP SIZE CONSTANT THROUGHOUT RANGE
+  STEP SIZE MAY BE ADJUSTED SLIGHTLY SO THAT RANGE IS A WHOLE NUMBER OF STEPS
+
+  LOG-DERIVATIVE MATRIX INITIALISED IN THE LOCAL EIGENBASIS AT RMIN
+  LOCALLY CLOSED CHANNELS INITIALISED WITH A WKB BOUNDARY CONDITION
+  LOCALLY  OPEN  CHANNELS INITIALISED WITH THE VALUE  1.000E+08
+  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+  SEGMENT 2 WILL BE PROPAGATED OUTWARDS
+
+  FROM RMID =      8.00 TO RMAX =     30.00
+
+  COUPLED EQUATIONS SOLVED BY VARIABLE-STEP AIRY PROPAGATOR.
+  PUBLICATIONS RESULTING FROM THE USE OF THIS PROPAGATOR SHOULD REFERENCE
+  M. H. ALEXANDER AND D. E. MANOLOPOULOS,  J. CHEM. PHYS. 86, 2044 (1987).
+
+  PROPAGATION STEP SIZE DETERMINED USING STEP =   40.0     (PER WAVELENGTH)
+  STEP SIZES ADJUSTED TO MAINTAIN APPROXIMATE ACCURACY VIA PERTURBATION THEORY
+  WITH TOLHI =  1.00E-04 AND POWR =   3.0    
+
+  ======================================================================================================================
+
+  INPUT ENERGY VALUES ASSUMED TO BE IN UNITS OF CM-1 BY DEFAULT.
+
+  CONTROL DATA FOR TOTAL ENERGIES.  CALCULATIONS WILL BE PERFORMED FOR   1 VALUE 
+       ENERGY NO.   1 =   110.00000000     CM-1
+
+  ======================================================================================================================
+
+  TOTAL ANGULAR MOMENTUM JTOT RUNS FROM   0  TO  99999  IN STEPS OF   1
+
+  JTOT SERIES WILL BE TERMINATED WHEN MAX CHANGE IN CROSS SECTIONS IS LESS THAN TOLERANCE FOR NCAC =  4 CONSECUTIVE JTOT
+                         DIAGONAL (DTOL) AND OFF-DIAGONAL (OTOL) TOLERANCES ARE  0.30000  0.00500
+
+  EACH JTOT IS SPLIT INTO A MAXIMUM OF   2 SYMMETRY BLOCKS
+
+  STATE-TO-STATE INTEGRAL CROSS-SECTIONS WILL BE COMPUTED BUT NOT STORED ON DISK
+
+  ======================================================================================================================
+
+  INITIALIZATION DONE.  TIME WAS   0.00 CPU SECS.      3205 WORDS OF STORAGE USED.
+
+  =========================== NH3-He on simple analytic potential: close-coupling x-sections ===========================
+
+  FOR JTOT =    0 IBLOCK =  1 ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  9.31E-01 &   2.54E-02
+
+  FOR JTOT =    0 IBLOCK =  2 ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  1.10E+00 &   2.27E-02
+
+  FOR JTOT =    1 IBLOCK =  1 ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  5.46E+00 &   9.05E-02
+
+  FOR JTOT =    1 IBLOCK =  2 ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  4.86E+00 &   9.04E-02
+
+  FOR JTOT =    2 IBLOCK =  1 ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  6.53E+00 &   3.33E-01
+
+  FOR JTOT =    2 IBLOCK =  2 ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  8.47E+00 &   3.69E-01
+
+  FOR JTOT =    3 IBLOCK =  1 ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  2.48E+01 &   5.29E-01
+
+  FOR JTOT =    3 IBLOCK =  2 ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  2.25E+01 &   4.27E-01
+
+  FOR JTOT =    4 IBLOCK =  1 ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  1.88E+01 &   1.60E+00
+
+  FOR JTOT =    4 IBLOCK =  2 ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  2.54E+01 &   4.89E-01
+
+  FOR JTOT =    5 IBLOCK =  1 ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  2.71E+01 &   7.90E-01
+
+  FOR JTOT =    5 IBLOCK =  2 ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  2.13E+01 &   5.95E-01
+
+  FOR JTOT =    6 IBLOCK =  1 ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  1.50E+01 &   3.30E-01
+
+  FOR JTOT =    6 IBLOCK =  2 ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  2.00E+01 &   4.12E-01
+
+  FOR JTOT =    7 IBLOCK =  1 ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  1.39E+01 &   4.72E-01
+
+  FOR JTOT =    7 IBLOCK =  2 ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  1.16E+01 &   3.52E-01
+
+  FOR JTOT =    8 IBLOCK =  1 ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  7.46E+00 &   5.00E-01
+
+  FOR JTOT =    8 IBLOCK =  2 ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  1.28E+01 &   8.31E-01
+
+  FOR JTOT =    9 IBLOCK =  1 ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  1.48E+01 &   7.38E-01
+
+  FOR JTOT =    9 IBLOCK =  2 ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  8.59E+00 &   4.44E-01
+
+  FOR JTOT =   10 IBLOCK =  1 ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  9.05E+00 &   3.23E-01
+
+  FOR JTOT =   10 IBLOCK =  2 ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  8.77E+00 &   3.22E-01
+
+  FOR JTOT =   11 IBLOCK =  1 ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  1.19E+01 &   2.85E-01
+
+  FOR JTOT =   11 IBLOCK =  2 ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  1.16E+01 &   2.84E-01
+
+  FOR JTOT =   12 IBLOCK =  1 ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  1.38E+01 &   2.32E-01
+
+  FOR JTOT =   12 IBLOCK =  2 ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  1.36E+01 &   2.29E-01
+
+  FOR JTOT =   13 IBLOCK =  1 ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  1.39E+01 &   1.72E-01
+
+  FOR JTOT =   13 IBLOCK =  2 ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  1.38E+01 &   1.71E-01
+
+  FOR JTOT =   14 IBLOCK =  1 ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  1.25E+01 &   1.69E-01
+
+  FOR JTOT =   14 IBLOCK =  2 ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  1.26E+01 &   1.68E-01
+
+  FOR JTOT =   15 IBLOCK =  1 ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  1.14E+01 &   1.37E-01
+
+  FOR JTOT =   15 IBLOCK =  2 ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  1.16E+01 &   1.40E-01
+
+  FOR JTOT =   16 IBLOCK =  1 ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  1.18E+01 &   7.63E-02
+
+  FOR JTOT =   16 IBLOCK =  2 ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  1.19E+01 &   8.06E-02
+
+  FOR JTOT =   17 IBLOCK =  1 ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  1.06E+01 &   2.95E-02
+
+  FOR JTOT =   17 IBLOCK =  2 ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  1.06E+01 &   3.21E-02
+
+  FOR JTOT =   18 IBLOCK =  1 ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  8.53E+00 &   9.99E-03
+
+  FOR JTOT =   18 IBLOCK =  2 ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  8.44E+00 &   1.10E-02
+
+  FOR JTOT =   19 IBLOCK =  1 ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  6.06E+00 &   3.51E-03
+
+  FOR JTOT =   19 IBLOCK =  2 ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  5.95E+00 &   3.89E-03
+
+  FOR JTOT =   20 IBLOCK =  1 ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  3.96E+00 &   1.33E-03
+
+  FOR JTOT =   20 IBLOCK =  2 ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  3.86E+00 &   1.48E-03
+
+  FOR JTOT =   21 IBLOCK =  1 ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  2.52E+00 &   5.47E-04
+
+  FOR JTOT =   21 IBLOCK =  2 ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  2.45E+00 &   6.09E-04
+
+  FOR JTOT =   22 IBLOCK =  1 ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  1.61E+00 &   2.37E-04
+
+  FOR JTOT =   22 IBLOCK =  2 ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  1.57E+00 &   2.65E-04
+
+  FOR JTOT =   23 IBLOCK =  1 ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  1.05E+00 &   1.06E-04
+
+  FOR JTOT =   23 IBLOCK =  2 ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  1.02E+00 &   1.19E-04
+
+  FOR JTOT =   24 IBLOCK =  1 ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  7.01E-01 &   4.92E-05
+
+  FOR JTOT =   24 IBLOCK =  2 ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  6.83E-01 &   5.54E-05
+
+  FOR JTOT =   25 IBLOCK =  1 ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  4.77E-01 &   2.32E-05
+
+  FOR JTOT =   25 IBLOCK =  2 ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  4.64E-01 &   2.63E-05
+
+  FOR JTOT =   26 IBLOCK =  1 ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  3.30E-01 &   1.10E-05
+
+  FOR JTOT =   26 IBLOCK =  2 ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  3.22E-01 &   1.26E-05
+
+  FOR JTOT =   27 IBLOCK =  1 ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  2.32E-01 &   5.39E-06
+
+  FOR JTOT =   27 IBLOCK =  2 ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  2.27E-01 &   6.15E-06
+
+  FOR JTOT =   28 IBLOCK =  1 ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  1.66E-01 &   2.60E-06
+
+  FOR JTOT =   28 IBLOCK =  2 ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  1.62E-01 &   3.00E-06
+
+  FOR JTOT =   29 IBLOCK =  1 ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  1.20E-01 &   1.25E-06
+
+  FOR JTOT =   29 IBLOCK =  2 ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  1.17E-01 &   1.44E-06
+
+  FOR JTOT =   30 IBLOCK =  1 ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  8.80E-02 &   6.23E-07
+
+  FOR JTOT =   30 IBLOCK =  2 ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  8.57E-02 &   7.24E-07
+
+
+
+  CALCULATION TERMINATED BY CONVERGENCE OF TOTAL CROSS SECTIONS.
+
+  DIAGONAL AND OFF-DIAGONAL TOLERANCES WERE   0.30000  0.00500   NCAC =  4
+
+  * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
+
+  =========================== NH3-He on simple analytic potential: close-coupling x-sections ===========================
+
+  LEVEL   7 WITH ENERGY    114.821100000000 IS NEVER OPEN
+  LEVEL   8 WITH ENERGY    115.614500000000 IS NEVER OPEN
+  LEVEL  11 WITH ENERGY    195.167300000000 IS NEVER OPEN
+  LEVEL  12 WITH ENERGY    194.373900000000 IS NEVER OPEN
+  LEVEL  13 WITH ENERGY    184.023200000000 IS NEVER OPEN
+  LEVEL  14 WITH ENERGY    183.229800000000 IS NEVER OPEN
+  LEVEL  15 WITH ENERGY    139.446800000000 IS NEVER OPEN
+  LEVEL  16 WITH ENERGY    138.653400000000 IS NEVER OPEN
+  LEVEL  17 WITH ENERGY    293.814900000000 IS NEVER OPEN
+  LEVEL  18 WITH ENERGY    294.608300000000 IS NEVER OPEN
+  LEVEL  19 WITH ENERGY    282.670800000000 IS NEVER OPEN
+  LEVEL  20 WITH ENERGY    283.464200000000 IS NEVER OPEN
+  LEVEL  21 WITH ENERGY    238.094400000000 IS NEVER OPEN
+  LEVEL  22 WITH ENERGY    238.887800000000 IS NEVER OPEN
+  LEVEL  23 WITH ENERGY    204.662100000000 IS NEVER OPEN
+  LEVEL  24 WITH ENERGY    205.455500000000 IS NEVER OPEN
+  LEVEL  25 WITH ENERGY    413.937500000000 IS NEVER OPEN
+  LEVEL  26 WITH ENERGY    413.144100000000 IS NEVER OPEN
+  LEVEL  27 WITH ENERGY    402.793400000000 IS NEVER OPEN
+  LEVEL  28 WITH ENERGY    402.000000000000 IS NEVER OPEN
+  LEVEL  29 WITH ENERGY    358.217000000000 IS NEVER OPEN
+  LEVEL  30 WITH ENERGY    357.423600000000 IS NEVER OPEN
+  LEVEL  31 WITH ENERGY    324.784700000000 IS NEVER OPEN
+  LEVEL  32 WITH ENERGY    323.991300000000 IS NEVER OPEN
+
+  STATE-TO-STATE INTEGRAL CROSS SECTIONS IN ANGSTROM**2 BETWEEN    8 LEVELS WITH THRESHOLD ENERGIES (IN CM-1):
+
+    1    15.380100000000
+    2    16.173500000000
+    3    55.949900000000
+    4    55.156500000000
+    5    44.805800000000
+    6    44.012400000000
+    9   103.677000000000
+   10   104.470400000000
+
+   ENERGY (CM-1)    JTOTL  JSTEP  JTOTU      F    I         SIG(F,I)
+   110.0000000          0      1     30      1    1          151.568      
+   110.0000000          0      1     30      2    1         0.721894      
+   110.0000000          0      1     30      3    1         0.574734      
+   110.0000000          0      1     30      4    1          3.22889      
+   110.0000000          0      1     30      5    1         4.805837E-03  
+   110.0000000          0      1     30      6    1          4.71595      
+   110.0000000          0      1     30      9    1         0.250817      
+   110.0000000          0      1     30     10    1         5.319570E-02  
+
+   110.0000000          0      1     30      1    2         0.727998      
+   110.0000000          0      1     30      2    2          152.131      
+   110.0000000          0      1     30      3    2          3.22361      
+   110.0000000          0      1     30      4    2         0.595187      
+   110.0000000          0      1     30      5    2          4.69126      
+   110.0000000          0      1     30      6    2         7.102275E-03  
+   110.0000000          0      1     30      9    2         5.478441E-02  
+   110.0000000          0      1     30     10    2         0.254865      
+
+   110.0000000          0      1     30      1    3         0.603677      
+   110.0000000          0      1     30      2    3          3.35756      
+   110.0000000          0      1     30      3    3          199.925      
+   110.0000000          0      1     30      4    3         0.535548      
+   110.0000000          0      1     30      5    3          2.64256      
+   110.0000000          0      1     30      6    3         0.129360      
+   110.0000000          0      1     30      9    3         7.890191E-02  
+   110.0000000          0      1     30     10    3          1.04977      
+
+   110.0000000          0      1     30      1    4          3.34242      
+   110.0000000          0      1     30      2    4         0.610950      
+   110.0000000          0      1     30      3    4         0.527801      
+   110.0000000          0      1     30      4    4          198.605      
+   110.0000000          0      1     30      5    4         0.126392      
+   110.0000000          0      1     30      6    4          2.67420      
+   110.0000000          0      1     30      9    4         0.818098      
+   110.0000000          0      1     30     10    4         0.174551      
+
+   110.0000000          0      1     30      1    5         4.184984E-03  
+   110.0000000          0      1     30      2    5          4.05096      
+   110.0000000          0      1     30      3    5          2.19085      
+   110.0000000          0      1     30      4    5         0.106325      
+   110.0000000          0      1     30      5    5          183.839      
+   110.0000000          0      1     30      6    5         0.989708      
+   110.0000000          0      1     30      9    5         0.197272      
+   110.0000000          0      1     30     10    5         0.816651      
+
+   110.0000000          0      1     30      1    6          4.05733      
+   110.0000000          0      1     30      2    6         6.059153E-03  
+   110.0000000          0      1     30      3    6         0.105958      
+   110.0000000          0      1     30      4    6          2.22258      
+   110.0000000          0      1     30      5    6         0.977808      
+   110.0000000          0      1     30      6    6          182.844      
+   110.0000000          0      1     30      9    6         0.675950      
+   110.0000000          0      1     30     10    6         0.225741      
+
+   110.0000000          0      1     30      1    9          1.60857      
+   110.0000000          0      1     30      2    9         0.348404      
+   110.0000000          0      1     30      3    9         0.481762      
+   110.0000000          0      1     30      4    9          5.06850      
+   110.0000000          0      1     30      5    9          1.45286      
+   110.0000000          0      1     30      6    9          5.03878      
+   110.0000000          0      1     30      9    9          214.071      
+   110.0000000          0      1     30     10    9          1.68579      
+
+   110.0000000          0      1     30      1   10         0.390111      
+   110.0000000          0      1     30      2   10          1.85339      
+   110.0000000          0      1     30      3   10          7.32939      
+   110.0000000          0      1     30      4   10          1.23659      
+   110.0000000          0      1     30      5   10          6.87739      
+   110.0000000          0      1     30      6   10          1.92421      
+   110.0000000          0      1     30      9   10          1.92767      
+   110.0000000          0      1     30     10   10          220.188      
+
+  TOTAL INELASTIC INTEGRAL CROSS SECTIONS IN ANGSTROM**2 FROM LEVEL
+   9.55029E+00                                                 1
+   9.55481E+00                                                 2
+   8.39737E+00                                                 3
+   8.27442E+00                                                 4
+   8.35595E+00                                                 5
+   8.27143E+00                                                 6
+   1.56847E+01                                                 9
+   2.15388E+01                                                10
+
+
+
+  ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
+ |                                                                            |
+ |                Non-reactive quantum scattering calculations                |
+ |                     on atomic and molecular collisions                     |
+ |                                                                            |
+ |              Copyright (C) 2018 J. M. Hutson & C. R. Le Sueur              |
+ |                                                                            |
+ |                               Version 2019.0 (beta)                        |
+ |                                                                            |
+ |                    This run used     130.39 cpu secs and                   |
+ |             174467 of the allocated   1000000 words of storage             |
+ |                                                                            |
+  ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
+  ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
+ |                                                                            |
+ |                Non-reactive quantum scattering calculations                |
+ |                     on atomic and molecular collisions                     |
+ |                                                                            |
+ |              Copyright (C) 2018 J. M. Hutson & C. R. Le Sueur              |
+ |                                                                            |
+ |                               Version 2019.0 (beta)                        |
+ |                                                                            |
+ |                       Run on 16 Jan 2019   at 11:32:38                     |
+ |                                                                            |
+  ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
+
+
+  This program is free software: you can redistribute it and/or modify it under
+  the terms of the GNU General Public License, version 3, as published by
+  the Free Software Foundation.
+
+  Publications resulting from the use of this program should refer to
+  J. M. Hutson & C. R. Le Sueur, MOLSCAT computer code 2019.0 (beta)       
+  or to the published paper in Computer Physics Communications when available.
+
+
+  PHYSICAL CONSTANTS OBTAINED FROM NIST CODATA TABULATION OF 2014
+
+  MEMORY ALLOCATED TO MAIN WORKING ARRAY IS   1000000 (8-BYTE) WORDS (    7.63 MB)
+  2 INTEGERS CAN BE STORED IN EACH WORD.
+
+  PRINT LEVEL =  1     OTHER PRINT CONTROLS  ISIGPR = 2
+
+  RUN LABEL = NH3-He on simple analytic potential: CS x-sections                              
+
+  REDUCED MASS FOR INTERACTION =   3.240000000 ATOMIC MASS UNITS (DALTONS)
+
+  ENERGY-INDEPENDENT MATRICES WILL BE SAVED TEMPORARILY ON UNIT 30
+
+  ======================================================================================================================
+
+  COUPLED STATES APPROXIMATION OF MCGUIRE AND KOURI (C.F.  J. CHEM. PHYS. 60, 2488 (1974))  WILL BE USED.
+
+           ITYPE = 25
+           L(I) = JTOT + ( 0) * (J(I)-2*M)
+
+  INTERACTION TYPE IS  ATOM - NEAR SYM. TOP RIGID ROTOR
+
+  TARGET ROTATIONAL LEVELS COMPUTED FROM JMIN =  0,  JMAX =  6,  AND JSTEP = 1
+
+  ENERGY LEVELS COMPUTED FROM ZEROTH-ORDER NEAR-SYMMETRIC TOP FORMULA
+          ROTATIONAL CONSTANTS ARE A, B, C (CM-1) =      9.9441      9.9441      6.2294
+          N.B. THESE MOMENTS MUST CORRESPOND RESPECTIVELY TO X, Y, Z COORDINATES USED TO DEFINE INTERACTION POTENTIAL
+
+  TUNNELLING SPLITTING                   =   0.7934000
+  WITH CENTRIFUGAL TERMS FOR J(J+1)-K**2 =   0.0000000
+  AND                    FOR K**2        =   0.0000000
+  WITH K=0 STATE ALLOWED FOR STATE OF |-1> SYMMETRY
+  3-FOLD SYMMETRY: ONLY E STATES INCLUDED
+
+  *** NOTE.  IN CS CALCULATION MINUS/PLUS M-VALUE ASSUMED TO BE IDENTICAL.
+
+  QUANTUM NUMBERS FOR INTERACTING PAIR:
+  EACH PAIR STATE IS LABELLED BY  3 QUANTUM LABELS
+  EACH CHANNEL FUNCTION IS FORMED BY COMBINING A PAIR STATE WITH A VALUE OF L.
+  THE RESULTING BASIS SET IS ASYMPTOTICALLY DIAGONAL.
+
+  PAIR STATE    - PAIR STATE QUANTUM NUMBERS -   PAIR LEVEL     PAIR ENERGY (CM-1)
+                        J         K      PRTY
+        1               1         1         2       1            15.3801000
+        2               1         1         1       2            16.1735000
+        3               2         1         2       3            55.9499000
+        4               2         1         1       4            55.1565000
+        5               2         2         2       5            44.8058000
+        6               2         2         1       6            44.0124000
+        7               3         1         2       7           114.8211000
+        8               3         1         1       8           115.6145000
+        9               3         2         2       9           103.6770000
+       10               3         2         1      10           104.4704000
+       11               4         1         2      11           195.1673000
+       12               4         1         1      12           194.3739000
+       13               4         2         2      13           184.0232000
+       14               4         2         1      14           183.2298000
+       15               4         4         2      15           139.4468000
+       16               4         4         1      16           138.6534000
+       17               5         1         2      17           293.8149000
+       18               5         1         1      18           294.6083000
+       19               5         2         2      19           282.6708000
+       20               5         2         1      20           283.4642000
+       21               5         4         2      21           238.0944000
+       22               5         4         1      22           238.8878000
+       23               5         5         2      23           204.6621000
+       24               5         5         1      24           205.4555000
+       25               6         1         2      25           413.9375000
+       26               6         1         1      26           413.1441000
+       27               6         2         2      27           402.7934000
+       28               6         2         1      28           402.0000000
+       29               6         4         2      29           358.2170000
+       30               6         4         1      30           357.4236000
+       31               6         5         2      31           324.7847000
+       32               6         5         1      32           323.9913000
+
+  ======================================================================================================================
+  GENERAL-PURPOSE POTENL ROUTINE (MAY 18)
+
+  ANGULAR DEPENDENCE OF POTENTIAL EXPANDED IN TERMS OF
+  NORMALISED SPHERICAL HARMONICS: (Y(LAM,KAP) + (-1)**KAP Y(LAM,-KAP))
+                                  / (1+DELTA(KAP,0))
+
+  INTERACTION POTENTIAL FOR EXPANSION TERM NUMBER   1
+  WHICH HAS LAMBDA =   0,  ABS(KAP) =   0
+
+                -1.20000000E+07 * R ** -6
+                 6.20000000E+08 * EXP(   -2.4000 * R )
+
+  INTERACTION POTENTIAL FOR EXPANSION TERM NUMBER   2
+  WHICH HAS LAMBDA =   1,  ABS(KAP) =   0
+
+                -5.40000000E+07 * EXP(   -2.4000 * R )
+
+  INTERACTION POTENTIAL FOR EXPANSION TERM NUMBER   3
+  WHICH HAS LAMBDA =   2,  ABS(KAP) =   0
+
+                 2.20000000E+06 * R ** -6
+
+  INTERACTION POTENTIAL FOR EXPANSION TERM NUMBER   4
+  WHICH HAS LAMBDA =   3,  ABS(KAP) =   0
+
+                 3.60000000E+07 * EXP(   -2.4000 * R )
+
+  INTERACTION POTENTIAL FOR EXPANSION TERM NUMBER   5
+  WHICH HAS LAMBDA =   3,  ABS(KAP) =   3
+
+                 1.00000000E+08 * EXP(   -2.4000 * R )
+
+  POTENL PROCESSING FINISHED.
+
+  POTENTIAL RETURNED IN UNITS OF EPSIL  =  1.0000000     CM-1
+        CODED WITH R IN UNITS OF RM     = 0.52917721     ANGSTROM
+
+  ALL LENGTHS ARE IN UNITS OF BOHR (  0.52917721 ANGSTROM ) UNLESS OTHERWISE STATED
+
+  INTERACTION MATRIX USES   5 BLOCKS OF VL ARRAY FOR R-DEPENDENT TERMS IN POTENTIAL
+
+  ======================================================================================================================
+
+  PROPAGATION METHODS FOR COUPLED EQUATIONS SPECIFIED BY IPROPS =  6 AND IPROPL =  9
+
+  COUPLED EQUATIONS WILL BE PROPAGATED OUTWARDS IN 2 SEGMENTS
+
+  PROPAGATION RANGES ARE CONTROLLED BY VARIABLES RMIN, RMID AND RMAX, WITH INPUT VALUES
+  RMIN =   3.000     RMID =   8.000     RMAX =   30.00    
+  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+  SEGMENT 1 WILL BE PROPAGATED OUTWARDS
+
+  FROM RMIN =      3.00 TO RMID =      8.00
+
+  COUPLED EQUATIONS SOLVED BY DIABATIC MODIFIED LOG-DERIVATIVE PROPAGATOR OF MANOLOPOULOS
+
+  PROPAGATION STEP SIZE DETERMINED USING STEP =   40.0     (PER WAVELENGTH)
+  STEP SIZE CONSTANT THROUGHOUT RANGE
+  STEP SIZE MAY BE ADJUSTED SLIGHTLY SO THAT RANGE IS A WHOLE NUMBER OF STEPS
+
+  LOG-DERIVATIVE MATRIX INITIALISED IN THE LOCAL EIGENBASIS AT RMIN
+  LOCALLY CLOSED CHANNELS INITIALISED WITH A WKB BOUNDARY CONDITION
+  LOCALLY  OPEN  CHANNELS INITIALISED WITH THE VALUE  1.000E+08
+  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+  SEGMENT 2 WILL BE PROPAGATED OUTWARDS
+
+  FROM RMID =      8.00 TO RMAX =     30.00
+
+  COUPLED EQUATIONS SOLVED BY VARIABLE-STEP AIRY PROPAGATOR.
+  PUBLICATIONS RESULTING FROM THE USE OF THIS PROPAGATOR SHOULD REFERENCE
+  M. H. ALEXANDER AND D. E. MANOLOPOULOS,  J. CHEM. PHYS. 86, 2044 (1987).
+
+  PROPAGATION STEP SIZE DETERMINED USING STEP =   40.0     (PER WAVELENGTH)
+  STEP SIZES ADJUSTED TO MAINTAIN APPROXIMATE ACCURACY VIA PERTURBATION THEORY
+  WITH TOLHI =  1.00E-04 AND POWR =   3.0    
+
+  ======================================================================================================================
+
+  INPUT ENERGY VALUES ASSUMED TO BE IN UNITS OF CM-1 BY DEFAULT.
+
+  CONTROL DATA FOR TOTAL ENERGIES.  CALCULATIONS WILL BE PERFORMED FOR   1 VALUE 
+       ENERGY NO.   1 =   110.00000000     CM-1
+
+  ======================================================================================================================
+
+  TOTAL ANGULAR MOMENTUM JTOT RUNS FROM   0  TO  99999  IN STEPS OF   1
+
+  JTOT SERIES WILL BE TERMINATED WHEN MAX CHANGE IN CROSS SECTIONS IS LESS THAN TOLERANCE FOR NCAC =  4 CONSECUTIVE JTOT
+                         DIAGONAL (DTOL) AND OFF-DIAGONAL (OTOL) TOLERANCES ARE  0.30000  0.00500
+
+  EACH JTOT IS SPLIT INTO A MAXIMUM OF   7 SYMMETRY BLOCKS
+
+  STATE-TO-STATE INTEGRAL CROSS-SECTIONS WILL BE COMPUTED BUT NOT STORED ON DISK
+
+  ======================================================================================================================
+
+  INITIALIZATION DONE.  TIME WAS   0.00 CPU SECS.      3205 WORDS OF STORAGE USED.
+
+  ================================= NH3-He on simple analytic potential: CS x-sections =================================
+
+  FOR JTOT =    0 IBLOCK =  1 ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  1.20E+00 &   2.71E-02
+
+  FOR JTOT =    0 IBLOCK =  2 ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  2.64E+00 &   1.09E-01
+
+  FOR JTOT =    0 IBLOCK =  3 ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  2.44E+00 &   5.11E-02
+
+  FOR JTOT =    0 IBLOCK =  4 ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  2.44E+00 &   3.94E-02
+
+  FOR JTOT =    1 IBLOCK =  1 ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  8.46E-01 &   9.18E-02
+
+  FOR JTOT =    1 IBLOCK =  2 ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  2.11E+00 &   5.01E-01
+
+  FOR JTOT =    1 IBLOCK =  3 ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  7.92E-01 &   5.42E-01
+
+  FOR JTOT =    1 IBLOCK =  4 ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  1.72E+00 &   1.09E-01
+
+  FOR JTOT =    2 IBLOCK =  1 ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  7.96E+00 &   1.40E-01
+
+  FOR JTOT =    2 IBLOCK =  2 ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  1.60E+01 &   1.90E-01
+
+  FOR JTOT =    2 IBLOCK =  3 ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  1.47E+01 &   7.21E-01
+
+  FOR JTOT =    2 IBLOCK =  4 ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  1.63E+01 &   9.63E-02
+
+  FOR JTOT =    3 IBLOCK =  1 ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  7.65E+00 &   1.81E-01
+
+  FOR JTOT =    3 IBLOCK =  2 ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  1.53E+01 &   2.11E-01
+
+  FOR JTOT =    3 IBLOCK =  3 ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  1.46E+01 &   5.75E-01
+
+  FOR JTOT =    3 IBLOCK =  4 ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  1.43E+01 &   2.80E+00
+
+  FOR JTOT =    4 IBLOCK =  1 ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  3.29E+00 &   2.07E-01
+
+  FOR JTOT =    4 IBLOCK =  2 ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  6.63E+00 &   2.27E-01
+
+  FOR JTOT =    4 IBLOCK =  3 ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  6.81E+00 &   6.20E-01
+
+  FOR JTOT =    4 IBLOCK =  4 ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  5.15E+00 &   2.77E-01
+
+  FOR JTOT =    5 IBLOCK =  1 ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  1.99E+00 &   2.34E-01
+
+  FOR JTOT =    5 IBLOCK =  2 ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  3.50E+00 &   2.44E-01
+
+  FOR JTOT =    5 IBLOCK =  3 ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  3.46E+00 &   6.79E-01
+
+  FOR JTOT =    5 IBLOCK =  4 ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  1.96E+00 &   3.27E-01
+
+  FOR JTOT =    6 IBLOCK =  1 ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  9.44E+00 &   6.15E-01
+
+  FOR JTOT =    6 IBLOCK =  2 ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  2.02E+01 &   6.27E-01
+
+  FOR JTOT =    6 IBLOCK =  3 ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  2.05E+01 &   1.71E+00
+
+  FOR JTOT =    6 IBLOCK =  4 ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  1.57E+01 &   1.46E+00
+
+  FOR JTOT =    7 IBLOCK =  1 ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  5.06E+00 &   2.46E-01
+
+  FOR JTOT =    7 IBLOCK =  2 ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  1.00E+01 &   2.55E-01
+
+  FOR JTOT =    7 IBLOCK =  3 ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  9.81E+00 &   1.57E-01
+
+  FOR JTOT =    7 IBLOCK =  4 ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  1.05E+01 &   4.59E-03
+
+  FOR JTOT =    8 IBLOCK =  1 ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  2.89E+00 &   2.54E-01
+
+  FOR JTOT =    8 IBLOCK =  2 ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  4.68E+00 &   2.70E-01
+
+  FOR JTOT =    8 IBLOCK =  3 ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  3.00E+00 &   1.26E-01
+
+  FOR JTOT =    8 IBLOCK =  4 ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  1.51E+00 &   9.17E-07
+
+  FOR JTOT =    9 IBLOCK =  1 ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  3.24E+00 &   2.53E-01
+
+  FOR JTOT =    9 IBLOCK =  2 ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  7.26E+00 &   2.80E-01
+
+  FOR JTOT =    9 IBLOCK =  3 ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  5.09E+00 &   1.08E-01
+
+  FOR JTOT =    9 IBLOCK =  4 ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  4.47E-01 &   6.23E-10
+
+  FOR JTOT =   10 IBLOCK =  1 ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  3.55E+00 &   2.43E-01
+
+  FOR JTOT =   10 IBLOCK =  2 ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  6.70E+00 &   2.81E-01
+
+  FOR JTOT =   10 IBLOCK =  3 ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  9.02E+00 &   8.99E-02
+
+  FOR JTOT =   10 IBLOCK =  4 ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  1.63E-01 &   5.93E-13
+
+  FOR JTOT =   11 IBLOCK =  1 ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  4.95E+00 &   2.22E-01
+
+  FOR JTOT =   11 IBLOCK =  2 ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  9.37E+00 &   2.69E-01
+
+  FOR JTOT =   11 IBLOCK =  3 ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  1.09E+01 &   7.03E-02
+
+  FOR JTOT =   11 IBLOCK =  4 ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  6.46E-02 &   6.94E-16
+
+  FOR JTOT =   12 IBLOCK =  1 ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  5.58E+00 &   1.91E-01
+
+  FOR JTOT =   12 IBLOCK =  2 ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  1.07E+01 &   2.35E-01
+
+  FOR JTOT =   12 IBLOCK =  3 ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  1.19E+01 &   4.81E-02
+
+  FOR JTOT =   12 IBLOCK =  4 ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  2.84E-02 &   9.98E-19
+
+  FOR JTOT =   13 IBLOCK =  1 ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  5.39E+00 &   1.47E-01
+
+  FOR JTOT =   13 IBLOCK =  2 ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  1.07E+01 &   1.66E-01
+
+  FOR JTOT =   13 IBLOCK =  3 ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  1.25E+01 &   2.51E-02
+
+  FOR JTOT =   13 IBLOCK =  4 ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  1.35E-02 &   1.75E-21
+
+  FOR JTOT =   14 IBLOCK =  1 ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  5.78E+00 &   8.98E-02
+
+  FOR JTOT =   14 IBLOCK =  2 ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  1.07E+01 &   7.75E-02
+
+  FOR JTOT =   14 IBLOCK =  3 ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  1.04E+01 &   9.38E-03
+
+  FOR JTOT =   14 IBLOCK =  4 ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  5.89E-03 &   3.58E-24
+
+  FOR JTOT =   15 IBLOCK =  1 ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  6.64E+00 &   3.40E-02
+
+  FOR JTOT =   15 IBLOCK =  2 ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  1.15E+01 &   2.51E-02
+
+  FOR JTOT =   15 IBLOCK =  3 ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  6.37E+00 &   1.72E-03
+
+  FOR JTOT =   15 IBLOCK =  4 ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  1.98E-03 &   8.05E-27
+
+  FOR JTOT =   16 IBLOCK =  1 ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  6.84E+00 &   6.97E-03
+
+  FOR JTOT =   16 IBLOCK =  2 ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  1.16E+01 &   1.10E-02
+
+  FOR JTOT =   16 IBLOCK =  3 ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  3.97E+00 &   1.67E-04
+
+  FOR JTOT =   16 IBLOCK =  4 ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  4.75E-04 &   1.97E-29
+
+  FOR JTOT =   17 IBLOCK =  1 ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  6.15E+00 &   8.72E-04
+
+  FOR JTOT =   17 IBLOCK =  2 ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  1.00E+01 &   3.29E-03
+
+  FOR JTOT =   17 IBLOCK =  3 ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  2.30E+00 &   1.18E-05
+
+  FOR JTOT =   17 IBLOCK =  4 ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  8.09E-05 &   3.91E-31
+
+  FOR JTOT =   18 IBLOCK =  1 ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  4.68E+00 &   7.87E-05
+
+  FOR JTOT =   18 IBLOCK =  2 ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  7.36E+00 &   8.30E-04
+
+  FOR JTOT =   18 IBLOCK =  3 ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  1.34E+00 &   7.79E-07
+
+  FOR JTOT =   18 IBLOCK =  4 ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  9.91E-06 &   1.04E-36
+
+  FOR JTOT =   19 IBLOCK =  1 ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  3.12E+00 &   6.08E-06
+
+  FOR JTOT =   19 IBLOCK =  2 ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  4.84E+00 &   3.17E-04
+
+  FOR JTOT =   19 IBLOCK =  3 ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  8.00E-01 &   5.36E-08
+
+  FOR JTOT =   19 IBLOCK =  4 ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  8.93E-07 &   1.18E-36
+
+  FOR JTOT =   20 IBLOCK =  1 ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  1.98E+00 &   4.65E-07
+
+  FOR JTOT =   20 IBLOCK =  2 ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  3.06E+00 &   1.27E-04
+
+  FOR JTOT =   20 IBLOCK =  3 ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  4.94E-01 &   3.95E-09
+
+  FOR JTOT =   20 IBLOCK =  4 ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  6.06E-08 &   6.24E-35
+
+  FOR JTOT =   21 IBLOCK =  1 ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  1.25E+00 &   3.78E-08
+
+  FOR JTOT =   21 IBLOCK =  2 ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  1.94E+00 &   5.34E-05
+
+  FOR JTOT =   21 IBLOCK =  3 ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  3.14E-01 &   6.65E-10
+
+  FOR JTOT =   21 IBLOCK =  4 ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  3.16E-09 &   6.43E-37
+
+  FOR JTOT =   22 IBLOCK =  1 ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  8.07E-01 &   3.32E-09
+
+  FOR JTOT =   22 IBLOCK =  2 ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  1.26E+00 &   2.30E-05
+
+  FOR JTOT =   22 IBLOCK =  3 ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  2.04E-01 &   2.58E-11
+
+  FOR JTOT =   22 IBLOCK =  4 ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  1.29E-10 &   3.23E-37
+
+  FOR JTOT =   23 IBLOCK =  1 ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  5.32E-01 &   3.10E-10
+
+  FOR JTOT =   23 IBLOCK =  2 ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  8.29E-01 &   1.03E-05
+
+  FOR JTOT =   23 IBLOCK =  3 ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  1.36E-01 &   2.60E-11
+
+  FOR JTOT =   23 IBLOCK =  4 ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  4.19E-12 &   8.27E-40
+
+  FOR JTOT =   24 IBLOCK =  1 ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  3.58E-01 &   3.04E-11
+
+  FOR JTOT =   24 IBLOCK =  2 ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  5.59E-01 &   4.81E-06
+
+  FOR JTOT =   24 IBLOCK =  3 ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  9.24E-02 &   4.39E-12
+
+  FOR JTOT =   24 IBLOCK =  4 ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  1.10E-13 &   2.62E-41
+
+  FOR JTOT =   25 IBLOCK =  1 ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  2.45E-01 &   3.10E-12
+
+  FOR JTOT =   25 IBLOCK =  2 ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  3.84E-01 &   2.21E-06
+
+  FOR JTOT =   25 IBLOCK =  3 ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  6.37E-02 &   1.79E-14
+
+  FOR JTOT =   25 IBLOCK =  4 ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  2.36E-15 &   5.62E-42
+
+  FOR JTOT =   26 IBLOCK =  1 ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  1.71E-01 &   3.24E-13
+
+  FOR JTOT =   26 IBLOCK =  2 ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  2.68E-01 &   1.12E-06
+
+  FOR JTOT =   26 IBLOCK =  3 ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  4.47E-02 &   1.34E-13
+
+  FOR JTOT =   26 IBLOCK =  4 ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  4.19E-17 &   1.16E-42
+
+  FOR JTOT =   27 IBLOCK =  1 ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  1.21E-01 &   3.45E-14
+
+  FOR JTOT =   27 IBLOCK =  2 ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  1.90E-01 &   5.71E-07
+
+  FOR JTOT =   27 IBLOCK =  3 ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  3.18E-02 &   1.26E-14
+
+  FOR JTOT =   27 IBLOCK =  4 ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  6.21E-19 &   9.62E-49
+
+  FOR JTOT =   28 IBLOCK =  1 ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  8.71E-02 &   3.73E-15
+
+  FOR JTOT =   28 IBLOCK =  2 ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  1.36E-01 &   2.73E-07
+
+  FOR JTOT =   28 IBLOCK =  3 ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  2.28E-02 &   5.26E-17
+
+  FOR JTOT =   28 IBLOCK =  4 ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  7.78E-21 &   1.46E-48
+
+  FOR JTOT =   29 IBLOCK =  1 ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  6.33E-02 &   4.06E-16
+
+  FOR JTOT =   29 IBLOCK =  2 ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  9.92E-02 &   1.66E-07
+
+
+
+  CALCULATION TERMINATED BY CONVERGENCE OF TOTAL CROSS SECTIONS.
+
+  DIAGONAL AND OFF-DIAGONAL TOLERANCES WERE   0.30000  0.00500   NCAC =  4
+
+  * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
+
+  ================================= NH3-He on simple analytic potential: CS x-sections =================================
+
+  LEVEL   7 WITH ENERGY    114.821100000000 IS NEVER OPEN
+  LEVEL   8 WITH ENERGY    115.614500000000 IS NEVER OPEN
+  LEVEL  11 WITH ENERGY    195.167300000000 IS NEVER OPEN
+  LEVEL  12 WITH ENERGY    194.373900000000 IS NEVER OPEN
+  LEVEL  13 WITH ENERGY    184.023200000000 IS NEVER OPEN
+  LEVEL  14 WITH ENERGY    183.229800000000 IS NEVER OPEN
+  LEVEL  15 WITH ENERGY    139.446800000000 IS NEVER OPEN
+  LEVEL  16 WITH ENERGY    138.653400000000 IS NEVER OPEN
+  LEVEL  17 WITH ENERGY    293.814900000000 IS NEVER OPEN
+  LEVEL  18 WITH ENERGY    294.608300000000 IS NEVER OPEN
+  LEVEL  19 WITH ENERGY    282.670800000000 IS NEVER OPEN
+  LEVEL  20 WITH ENERGY    283.464200000000 IS NEVER OPEN
+  LEVEL  21 WITH ENERGY    238.094400000000 IS NEVER OPEN
+  LEVEL  22 WITH ENERGY    238.887800000000 IS NEVER OPEN
+  LEVEL  23 WITH ENERGY    204.662100000000 IS NEVER OPEN
+  LEVEL  24 WITH ENERGY    205.455500000000 IS NEVER OPEN
+  LEVEL  25 WITH ENERGY    413.937500000000 IS NEVER OPEN
+  LEVEL  26 WITH ENERGY    413.144100000000 IS NEVER OPEN
+  LEVEL  27 WITH ENERGY    402.793400000000 IS NEVER OPEN
+  LEVEL  28 WITH ENERGY    402.000000000000 IS NEVER OPEN
+  LEVEL  29 WITH ENERGY    358.217000000000 IS NEVER OPEN
+  LEVEL  30 WITH ENERGY    357.423600000000 IS NEVER OPEN
+  LEVEL  31 WITH ENERGY    324.784700000000 IS NEVER OPEN
+  LEVEL  32 WITH ENERGY    323.991300000000 IS NEVER OPEN
+
+  STATE-TO-STATE INTEGRAL CROSS SECTIONS IN ANGSTROM**2 BETWEEN    8 LEVELS WITH THRESHOLD ENERGIES (IN CM-1):
+
+    1    15.380100000000
+    2    16.173500000000
+    3    55.949900000000
+    4    55.156500000000
+    5    44.805800000000
+    6    44.012400000000
+    9   103.677000000000
+   10   104.470400000000
+
+   ENERGY (CM-1)    JTOTL  JSTEP  JTOTU      F    I         SIG(F,I)
+   110.0000000          0      1     29      1    1          152.042      
+   110.0000000          0      1     29      2    1         0.739458      
+   110.0000000          0      1     29      3    1         0.586950      
+   110.0000000          0      1     29      4    1          2.61023      
+   110.0000000          0      1     29      5    1         5.386663E-03  
+   110.0000000          0      1     29      6    1          5.12020      
+   110.0000000          0      1     29      9    1         0.271487      
+   110.0000000          0      1     29     10    1         5.098642E-02  
+
+   110.0000000          0      1     29      1    2         0.745711      
+   110.0000000          0      1     29      2    2          152.902      
+   110.0000000          0      1     29      3    2          2.62224      
+   110.0000000          0      1     29      4    2         0.600190      
+   110.0000000          0      1     29      5    2          5.11117      
+   110.0000000          0      1     29      6    2         3.249340E-03  
+   110.0000000          0      1     29      9    2         6.920307E-02  
+   110.0000000          0      1     29     10    2         0.241565      
+
+   110.0000000          0      1     29      1    3         0.616507      
+   110.0000000          0      1     29      2    3          2.73119      
+   110.0000000          0      1     29      3    3          199.902      
+   110.0000000          0      1     29      4    3         0.581755      
+   110.0000000          0      1     29      5    3          2.95517      
+   110.0000000          0      1     29      6    3         0.148504      
+   110.0000000          0      1     29      9    3         5.647408E-02  
+   110.0000000          0      1     29     10    3         0.907581      
+
+   110.0000000          0      1     29      1    4          2.70201      
+   110.0000000          0      1     29      2    4         0.616085      
+   110.0000000          0      1     29      3    4         0.573339      
+   110.0000000          0      1     29      4    4          198.358      
+   110.0000000          0      1     29      5    4         0.196265      
+   110.0000000          0      1     29      6    4          2.95853      
+   110.0000000          0      1     29      9    4         0.842211      
+   110.0000000          0      1     29     10    4         6.753688E-02  
+
+   110.0000000          0      1     29      1    5         4.690774E-03  
+   110.0000000          0      1     29      2    5          4.41355      
+   110.0000000          0      1     29      3    5          2.45002      
+   110.0000000          0      1     29      4    5         0.165104      
+   110.0000000          0      1     29      5    5          181.618      
+   110.0000000          0      1     29      6    5          1.02552      
+   110.0000000          0      1     29      9    5         0.189859      
+   110.0000000          0      1     29     10    5         0.652235      
+
+   110.0000000          0      1     29      1    6          4.40513      
+   110.0000000          0      1     29      2    6         2.772104E-03  
+   110.0000000          0      1     29      3    6         0.121639      
+   110.0000000          0      1     29      4    6          2.45889      
+   110.0000000          0      1     29      5    6          1.01319      
+   110.0000000          0      1     29      6    6          180.918      
+   110.0000000          0      1     29      9    6         0.582809      
+   110.0000000          0      1     29     10    6         0.205775      
+
+   110.0000000          0      1     29      1    9          1.74113      
+   110.0000000          0      1     29      2    9         0.440100      
+   110.0000000          0      1     29      3    9         0.344822      
+   110.0000000          0      1     29      4    9          5.21789      
+   110.0000000          0      1     29      5    9          1.39827      
+   110.0000000          0      1     29      6    9          4.34447      
+   110.0000000          0      1     29      9    9          214.082      
+   110.0000000          0      1     29     10    9          4.61595      
+
+   110.0000000          0      1     29      1   10         0.373909      
+   110.0000000          0      1     29      2   10          1.75667      
+   110.0000000          0      1     29      3   10          6.33665      
+   110.0000000          0      1     29      4   10         0.478459      
+   110.0000000          0      1     29      5   10          5.49277      
+   110.0000000          0      1     29      6   10          1.75402      
+   110.0000000          0      1     29      9   10          5.27826      
+   110.0000000          0      1     29     10   10          213.679      
+
+  TOTAL INELASTIC INTEGRAL CROSS SECTIONS IN ANGSTROM**2 FROM LEVEL
+   9.38470E+00                                                 1
+   9.39333E+00                                                 2
+   7.99719E+00                                                 3
+   7.95597E+00                                                 4
+   8.90099E+00                                                 5
+   8.79020E+00                                                 6
+   1.81026E+01                                                 9
+   2.14707E+01                                                10
+
+
+
+  ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
+ |                                                                            |
+ |                Non-reactive quantum scattering calculations                |
+ |                     on atomic and molecular collisions                     |
+ |                                                                            |
+ |              Copyright (C) 2018 J. M. Hutson & C. R. Le Sueur              |
+ |                                                                            |
+ |                               Version 2019.0 (beta)                        |
+ |                                                                            |
+ |                    This run used       4.21 cpu secs and                   |
+ |              29930 of the allocated   1000000 words of storage             |
+ |                                                                            |
+  ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---

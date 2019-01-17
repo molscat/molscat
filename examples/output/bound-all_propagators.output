@@ -6,7 +6,7 @@
  |                                                                            |
  |                               Version 2019.0 (beta)                        |
  |                                                                            |
- |                       Run on 14 Nov 2018   at 09:49:55                     |
+ |                       Run on 16 Jan 2019   at 11:39:57                     |
  |                                                                            |
   -- BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND --
 
@@ -26,11 +26,11 @@
 
   PRINT LEVEL =  5
 
-  RUN LABEL = model system: ITYPE=1; IPROPS=6, IPROPL=1 (RMID > RMATCH)                       
+  RUN LABEL = model system: ITYPE=1; IPROPS=6, IPROPL=9 (RMID > RMATCH)                       
 
-  REDUCED MASS FOR INTERACTION =  20.000000000 ATOMIC MASS UNITS
+  REDUCED MASS FOR INTERACTION =  20.000000000 ATOMIC MASS UNITS (DALTONS)
 
-  *** WARNING - NO SCRATCH FILE SPECIFIED BY ISCRU PARAMETER - FULL CALCULATION WILL BE DONE AT EACH ENERGY
+  NO SCRATCH FILE SPECIFIED BY ISCRU PARAMETER: FULL CALCULATION WILL BE DONE AT EACH ENERGY
 
   ======================================================================================================================
 
@@ -71,61 +71,68 @@
 
   POTENL PROCESSING FINISHED.
 
-  UNITS FOR POTENTIAL ROUTINES:
-  POTENTIAL RETURNED IN UNITS OF EPSIL =      50.000000 CM-1
-  R                  IN UNITS OF RM    =       3.500000 ANGSTROMS
+  POTENTIAL RETURNED IN UNITS OF EPSIL  =  50.000000     CM-1
+        CODED WITH R IN UNITS OF RM     =  3.5000000     ANGSTROM
+
+  ALL LENGTHS ARE IN UNITS OF RM (  3.50000000 ANGSTROM ) UNLESS OTHERWISE STATED
+
   INTERACTION MATRIX USES   2 BLOCKS OF VL ARRAY FOR R-DEPENDENT TERMS IN POTENTIAL
 
   ======================================================================================================================
 
-  PROPAGATION ALGORITHMS FOR COUPLED EQUATIONS SPECIFIED BY IPROPS =  6 AND IPROPL =  1
+  PROPAGATION METHODS FOR COUPLED EQUATIONS SPECIFIED BY IPROPS =  6 AND IPROPL =  9
 
   COUPLED EQUATIONS WILL BE PROPAGATED TOWARDS RMATCH IN 3 SEGMENTS
+
+  PROPAGATION RANGES ARE CONTROLLED BY VARIABLES RMIN, RMID, RMATCH AND RMAX, WITH INPUT VALUES
+  RMIN =  0.5000    RMID =   2.000     RMATCH =   1.000     RMAX =   20.00    
   ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
   SEGMENT 1 WILL BE PROPAGATED OUTWARDS
 
-  FROM RMIN   =      0.50  TO RMATCH =      1.00
+  FROM RMIN =      0.50 TO RMATCH =      1.00
 
-  COUPLED EQUATIONS SOLVED BY DIABATIC MODIFIED LOG DERIVATIVE METHOD OF MANOLOPOULOS
+  COUPLED EQUATIONS SOLVED BY DIABATIC MODIFIED LOG-DERIVATIVE PROPAGATOR OF MANOLOPOULOS
 
   PROPAGATION STEP SIZE DETERMINED USING DR =  1.000E-03
+  STEP SIZE CONSTANT THROUGHOUT RANGE
+  STEP SIZE MAY BE ADJUSTED SLIGHTLY SO THAT RANGE IS A WHOLE NUMBER OF STEPS
 
-  LOG-DERIVATIVE MATRIX WILL BE INITIALISED IN THE LOCAL EIGENBASIS FOR RMIN IN THE OUTWARDS PROPAGATION PART
-  LOCALLY CLOSED CHANNELS WILL BE INITIALISED WITH A WKB BOUNDARY CONDITION
-  LOCALLY OPEN CHANNELS WILL BE INITIALISED WITH THE VALUE  1.0000000E+08
+  LOG-DERIVATIVE MATRIX INITIALISED IN THE LOCAL EIGENBASIS AT RMIN IN THE OUTWARD PROPAGATION PART
+  LOCALLY CLOSED CHANNELS INITIALISED WITH A WKB BOUNDARY CONDITION
+  LOCALLY  OPEN  CHANNELS INITIALISED WITH THE VALUE  1.000E+08
   ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
   SEGMENT 2 WILL BE PROPAGATED  INWARDS
 
-  FROM RMAX   =     20.00  TO RMID   =      2.00
+  TO RMID =      2.00 FROM RMAX =     20.00
 
-  COUPLED EQUATIONS SOLVED BY VARIABLE STEP AIRY METHOD.
-  ALL PUBLICATIONS RESULTING FROM THE USE OF THIS PROPAGATOR SHOULD REFERENCE
-  M.H. ALEXANDER AND D.E. MANOLOPOULOS,  J CHEM PHYS 86, 2044 (1987).
+  COUPLED EQUATIONS SOLVED BY VARIABLE-STEP AIRY PROPAGATOR.
+  PUBLICATIONS RESULTING FROM THE USE OF THIS PROPAGATOR SHOULD REFERENCE
+  M. H. ALEXANDER AND D. E. MANOLOPOULOS,  J. CHEM. PHYS. 86, 2044 (1987).
 
-  INITIAL STEP SIZE TAKEN FROM RMAX/400 =  5.000E-02
-                             WITH TOLHI =  1.00E-04         POWRX = 6.0
-  TOLHI.LT.1  --  AIRY STEPS ADJUSTED TO MAINTAIN APPROX. ACCURACY VIA PERTURBATION THEORY AND POWRX.
+  INITIAL STEP SIZE TAKEN FROM SIZE OF FINAL STEP OF SHORT-RANGE PROPAGATION
+  STEP SIZES ADJUSTED TO MAINTAIN APPROXIMATE ACCURACY VIA PERTURBATION THEORY
+  WITH TOLHI =  1.00E-04 AND POWR =   6.0    
 
-  LOG-DERIVATIVE MATRIX WILL BE INITIALISED IN THE LOCAL EIGENBASIS FOR RMAX IN THE INWARDS PROPAGATION PART
-  LOCALLY CLOSED CHANNELS WILL BE INITIALISED WITH A WKB BOUNDARY CONDITION
-  LOCALLY   OPEN CHANNELS WILL BE INITIALISED WITH THE VALUE  0.0000000E+00
+  LOG-DERIVATIVE MATRIX INITIALISED IN THE LOCAL EIGENBASIS AT RMAX IN THE INWARD PROPAGATION PART
+  LOCALLY CLOSED CHANNELS INITIALISED WITH A WKB BOUNDARY CONDITION
+  LOCALLY  OPEN  CHANNELS INITIALISED WITH THE VALUE  0.000E+00
   ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
   SEGMENT 3 WILL BE PROPAGATED  INWARDS
 
-  FROM RMID   =      2.00  TO RMATCH =      1.00
+  TO RMATCH =      1.00 FROM RMID =      2.00
 
-  COUPLED EQUATIONS SOLVED BY DIABATIC MODIFIED LOG DERIVATIVE METHOD OF MANOLOPOULOS
+  COUPLED EQUATIONS SOLVED BY DIABATIC MODIFIED LOG-DERIVATIVE PROPAGATOR OF MANOLOPOULOS
 
-  PROPAGATION STEP SIZE DETERMINED USING DR =  1.000E-03
-  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+  INITIAL STEP SIZE TAKEN FROM SIZE OF FINAL STEP OF SHORT-RANGE PROPAGATION
+  STEP SIZE CONSTANT THROUGHOUT RANGE
+  STEP SIZE MAY BE ADJUSTED SLIGHTLY SO THAT RANGE IS A WHOLE NUMBER OF STEPS
 
   ======================================================================================================================
 
   PROGRAM WILL ATTEMPT TO CONVERGE ON BOUND STATES AS A FUNCTION OF ENERGY
 
   FOR EACH LEVEL, THE BISECTION METHOD WILL BE USED UNTIL THE VWDB METHOD OFFERS RELIABLE CONVERGENCE.
-
-  BOUND STATE POSITIONS WILL BE IDENTIFIED WITH AN ACCURACY OF  1.00000E-07 CM-1    
+  VWDB CONVERGENCE WILL TERMINATE WHEN THE STEP SIZE IS LESS THAN 1.00000E-07 CM-1    
 
   INPUT ENERGY VALUES ASSUMED TO BE IN UNITS OF CM-1 BY DEFAULT.
 
@@ -138,11 +145,11 @@
 
   TOTAL ANGULAR MOMENTUM JTOT RUNS FROM   0  TO     2  IN STEPS OF   1
 
-  EACH JTOT IS SPLIT INTO A MAXIMUM OF   2 DIFFERENT SYMMETRY BLOCKS
+  EACH JTOT IS SPLIT INTO A MAXIMUM OF   2 SYMMETRY BLOCKS
 
   CALCULATIONS WILL BE FOR SYMMETRY BLOCK   2  ONLY
 
-  ============================= model system: ITYPE=1; IPROPS=6, IPROPL=1 (RMID > RMATCH) ==============================
+  ============================= model system: ITYPE=1; IPROPS=6, IPROPL=9 (RMID > RMATCH) ==============================
 
   *******************************************  ANGULAR MOMENTUM JTOT  =   0  *******************************************
 
@@ -167,7 +174,7 @@
 
   CONVERGED ON NODE NUMBER     4 AT                               ENERGY =  -5.065870698     CM-1  
 
-  SMALLEST EIGENVALUE IS NUMBER  1 = -0.10449E-05
+  SMALLEST EIGENVALUE IS NUMBER  1 = -0.10489E-05
 
   WITH PRINCIPAL EIGENVECTOR COMPONENTS
   CHAN     VEC    VEC**2   L   QUANTUM NUMBERS
@@ -180,7 +187,7 @@
 
   CONVERGED ON NODE NUMBER     5 AT                               ENERGY =  -1.463920391     CM-1  
 
-  SMALLEST EIGENVALUE IS NUMBER  1 =  0.61277E-02
+  SMALLEST EIGENVALUE IS NUMBER  1 =  0.61287E-02
 
   WITH PRINCIPAL EIGENVECTOR COMPONENTS
   CHAN     VEC    VEC**2   L   QUANTUM NUMBERS
@@ -215,7 +222,7 @@
 
   CONVERGED ON NODE NUMBER     4 AT                               ENERGY =  -4.992074666     CM-1  
 
-  SMALLEST EIGENVALUE IS NUMBER  1 =  0.14135E-07
+  SMALLEST EIGENVALUE IS NUMBER  1 =  0.13529E-07
 
   WITH PRINCIPAL EIGENVECTOR COMPONENTS
   CHAN     VEC    VEC**2   L   QUANTUM NUMBERS
@@ -228,7 +235,7 @@
 
   CONVERGED ON NODE NUMBER     5 AT                               ENERGY =  -1.413103871     CM-1  
 
-  SMALLEST EIGENVALUE IS NUMBER  1 =  0.20119E-01
+  SMALLEST EIGENVALUE IS NUMBER  1 =  0.20125E-01
 
   WITH PRINCIPAL EIGENVECTOR COMPONENTS
   CHAN     VEC    VEC**2   L   QUANTUM NUMBERS
@@ -268,7 +275,7 @@
 
   CONVERGED ON NODE NUMBER     4 AT                               ENERGY =  -4.844814122     CM-1  
 
-  SMALLEST EIGENVALUE IS NUMBER  1 =  0.47223E-05
+  SMALLEST EIGENVALUE IS NUMBER  1 =  0.47191E-05
 
   WITH PRINCIPAL EIGENVECTOR COMPONENTS
   CHAN     VEC    VEC**2   L   QUANTUM NUMBERS
@@ -281,7 +288,7 @@
 
   CONVERGED ON NODE NUMBER     5 AT                               ENERGY =  -1.312115812     CM-1  
 
-  SMALLEST EIGENVALUE IS NUMBER  1 =  0.21806E-01
+  SMALLEST EIGENVALUE IS NUMBER  1 =  0.21822E-01
 
   WITH PRINCIPAL EIGENVECTOR COMPONENTS
   CHAN     VEC    VEC**2   L   QUANTUM NUMBERS
@@ -302,7 +309,7 @@
  |                                                                            |
  |                               Version 2019.0 (beta)                        |
  |                                                                            |
- |                    This run used       1.12 cpu secs and                   |
+ |                    This run used       1.23 cpu secs and                   |
  |                841 of the allocated   1000000 words of storage             |
  |                                                                            |
   -- BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND --
@@ -314,7 +321,7 @@
  |                                                                            |
  |                               Version 2019.0 (beta)                        |
  |                                                                            |
- |                       Run on 14 Nov 2018   at 09:49:56                     |
+ |                       Run on 16 Jan 2019   at 11:39:58                     |
  |                                                                            |
   -- BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND --
 
@@ -334,11 +341,11 @@
 
   PRINT LEVEL =  5
 
-  RUN LABEL = model system: ITYPE=1; IPROPS=6, IPROPL=1 (RMID < RMATCH)                       
+  RUN LABEL = model system: ITYPE=1; IPROPS=6, IPROPL=9 (RMID < RMATCH)                       
 
-  REDUCED MASS FOR INTERACTION =  20.000000000 ATOMIC MASS UNITS
+  REDUCED MASS FOR INTERACTION =  20.000000000 ATOMIC MASS UNITS (DALTONS)
 
-  *** WARNING - NO SCRATCH FILE SPECIFIED BY ISCRU PARAMETER - FULL CALCULATION WILL BE DONE AT EACH ENERGY
+  NO SCRATCH FILE SPECIFIED BY ISCRU PARAMETER: FULL CALCULATION WILL BE DONE AT EACH ENERGY
 
   ======================================================================================================================
 
@@ -379,65 +386,68 @@
 
   POTENL PROCESSING FINISHED.
 
-  UNITS FOR POTENTIAL ROUTINES:
-  POTENTIAL RETURNED IN UNITS OF EPSIL =      50.000000 CM-1
-  R                  IN UNITS OF RM    =       3.500000 ANGSTROMS
+  POTENTIAL RETURNED IN UNITS OF EPSIL  =  50.000000     CM-1
+        CODED WITH R IN UNITS OF RM     =  3.5000000     ANGSTROM
+
+  ALL LENGTHS ARE IN UNITS OF RM (  3.50000000 ANGSTROM ) UNLESS OTHERWISE STATED
+
   INTERACTION MATRIX USES   2 BLOCKS OF VL ARRAY FOR R-DEPENDENT TERMS IN POTENTIAL
 
   ======================================================================================================================
 
-  PROPAGATION ALGORITHMS FOR COUPLED EQUATIONS SPECIFIED BY IPROPS =  6 AND IPROPL =  1
+  PROPAGATION METHODS FOR COUPLED EQUATIONS SPECIFIED BY IPROPS =  6 AND IPROPL =  9
 
   COUPLED EQUATIONS WILL BE PROPAGATED TOWARDS RMATCH IN 3 SEGMENTS
+
+  PROPAGATION RANGES ARE CONTROLLED BY VARIABLES RMIN, RMID, RMATCH AND RMAX, WITH INPUT VALUES
+  RMIN =  0.5000    RMID =   1.000     RMATCH =   2.000     RMAX =   20.00    
   ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
   SEGMENT 1 WILL BE PROPAGATED OUTWARDS
 
-  FROM RMIN   =      0.50  TO RMID   =      1.00
+  FROM RMIN =      0.50 TO RMID =      1.00
 
-  COUPLED EQUATIONS SOLVED BY DIABATIC MODIFIED LOG DERIVATIVE METHOD OF MANOLOPOULOS
+  COUPLED EQUATIONS SOLVED BY DIABATIC MODIFIED LOG-DERIVATIVE PROPAGATOR OF MANOLOPOULOS
 
   PROPAGATION STEP SIZE DETERMINED USING DR =  1.000E-03
+  STEP SIZE CONSTANT THROUGHOUT RANGE
+  STEP SIZE MAY BE ADJUSTED SLIGHTLY SO THAT RANGE IS A WHOLE NUMBER OF STEPS
 
-  LOG-DERIVATIVE MATRIX WILL BE INITIALISED IN THE LOCAL EIGENBASIS FOR RMIN IN THE OUTWARDS PROPAGATION PART
-  LOCALLY CLOSED CHANNELS WILL BE INITIALISED WITH A WKB BOUNDARY CONDITION
-  LOCALLY OPEN CHANNELS WILL BE INITIALISED WITH THE VALUE  1.0000000E+08
+  LOG-DERIVATIVE MATRIX INITIALISED IN THE LOCAL EIGENBASIS AT RMIN IN THE OUTWARD PROPAGATION PART
+  LOCALLY CLOSED CHANNELS INITIALISED WITH A WKB BOUNDARY CONDITION
+  LOCALLY  OPEN  CHANNELS INITIALISED WITH THE VALUE  1.000E+08
   ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
   SEGMENT 2 WILL BE PROPAGATED OUTWARDS
 
-  FROM RMID   =      1.00  TO RMATCH =      2.00
+  FROM RMID =      1.00 TO RMATCH =      2.00
 
-  COUPLED EQUATIONS SOLVED BY VARIABLE STEP AIRY METHOD.
-  ALL PUBLICATIONS RESULTING FROM THE USE OF THIS PROPAGATOR SHOULD REFERENCE
-  M.H. ALEXANDER AND D.E. MANOLOPOULOS,  J CHEM PHYS 86, 2044 (1987).
+  COUPLED EQUATIONS SOLVED BY DIABATIC MODIFIED LOG-DERIVATIVE PROPAGATOR OF MANOLOPOULOS
 
-  INITIAL STEP SIZE TAKEN FROM DR       =  1.000E-03
-                             WITH TOLHI =  1.00E-04         POWRX = 6.0
-  TOLHI.LT.1  --  AIRY STEPS ADJUSTED TO MAINTAIN APPROX. ACCURACY VIA PERTURBATION THEORY AND POWRX.
+  INITIAL STEP SIZE TAKEN FROM SIZE OF FINAL STEP OF PREVIOUS SEGMENT
+  STEP SIZE CONSTANT THROUGHOUT RANGE
+  STEP SIZE MAY BE ADJUSTED SLIGHTLY SO THAT RANGE IS A WHOLE NUMBER OF STEPS
   ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
   SEGMENT 3 WILL BE PROPAGATED  INWARDS
 
-  FROM RMAX   =     20.00  TO RMATCH =      2.00
+  TO RMATCH =      2.00 FROM RMAX =     20.00
 
-  COUPLED EQUATIONS SOLVED BY VARIABLE STEP AIRY METHOD.
-  ALL PUBLICATIONS RESULTING FROM THE USE OF THIS PROPAGATOR SHOULD REFERENCE
-  M.H. ALEXANDER AND D.E. MANOLOPOULOS,  J CHEM PHYS 86, 2044 (1987).
+  COUPLED EQUATIONS SOLVED BY VARIABLE-STEP AIRY PROPAGATOR.
+  PUBLICATIONS RESULTING FROM THE USE OF THIS PROPAGATOR SHOULD REFERENCE
+  M. H. ALEXANDER AND D. E. MANOLOPOULOS,  J. CHEM. PHYS. 86, 2044 (1987).
 
-  INITIAL STEP SIZE TAKEN FROM RMAX/400 =  5.000E-02
-                             WITH TOLHI =  1.00E-04         POWRX = 6.0
-  TOLHI.LT.1  --  AIRY STEPS ADJUSTED TO MAINTAIN APPROX. ACCURACY VIA PERTURBATION THEORY AND POWRX.
+  INITIAL STEP SIZE TAKEN FROM SIZE OF FINAL STEP OF SHORT-RANGE PROPAGATION
+  STEP SIZES ADJUSTED TO MAINTAIN APPROXIMATE ACCURACY VIA PERTURBATION THEORY
+  WITH TOLHI =  1.00E-04 AND POWR =   6.0    
 
-  LOG-DERIVATIVE MATRIX WILL BE INITIALISED IN THE LOCAL EIGENBASIS FOR RMAX IN THE INWARDS PROPAGATION PART
-  LOCALLY CLOSED CHANNELS WILL BE INITIALISED WITH A WKB BOUNDARY CONDITION
-  LOCALLY   OPEN CHANNELS WILL BE INITIALISED WITH THE VALUE  0.0000000E+00
-  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+  LOG-DERIVATIVE MATRIX INITIALISED IN THE LOCAL EIGENBASIS AT RMAX IN THE INWARD PROPAGATION PART
+  LOCALLY CLOSED CHANNELS INITIALISED WITH A WKB BOUNDARY CONDITION
+  LOCALLY  OPEN  CHANNELS INITIALISED WITH THE VALUE  0.000E+00
 
   ======================================================================================================================
 
   PROGRAM WILL ATTEMPT TO CONVERGE ON BOUND STATES AS A FUNCTION OF ENERGY
 
   FOR EACH LEVEL, THE BISECTION METHOD WILL BE USED UNTIL THE VWDB METHOD OFFERS RELIABLE CONVERGENCE.
-
-  BOUND STATE POSITIONS WILL BE IDENTIFIED WITH AN ACCURACY OF  1.00000E-07 CM-1    
+  VWDB CONVERGENCE WILL TERMINATE WHEN THE STEP SIZE IS LESS THAN 1.00000E-07 CM-1    
 
   INPUT ENERGY VALUES ASSUMED TO BE IN UNITS OF CM-1 BY DEFAULT.
 
@@ -450,11 +460,11 @@
 
   TOTAL ANGULAR MOMENTUM JTOT RUNS FROM   0  TO     2  IN STEPS OF   1
 
-  EACH JTOT IS SPLIT INTO A MAXIMUM OF   2 DIFFERENT SYMMETRY BLOCKS
+  EACH JTOT IS SPLIT INTO A MAXIMUM OF   2 SYMMETRY BLOCKS
 
   CALCULATIONS WILL BE FOR SYMMETRY BLOCK   2  ONLY
 
-  ============================= model system: ITYPE=1; IPROPS=6, IPROPL=1 (RMID < RMATCH) ==============================
+  ============================= model system: ITYPE=1; IPROPS=6, IPROPL=9 (RMID < RMATCH) ==============================
 
   *******************************************  ANGULAR MOMENTUM JTOT  =   0  *******************************************
 
@@ -527,7 +537,7 @@
 
   CONVERGED ON NODE NUMBER     4 AT                               ENERGY =  -4.992074136     CM-1  
 
-  SMALLEST EIGENVALUE IS NUMBER  1 =  0.36879E-04
+  SMALLEST EIGENVALUE IS NUMBER  1 =  0.36881E-04
 
   WITH PRINCIPAL EIGENVECTOR COMPONENTS
   CHAN     VEC    VEC**2   L   QUANTUM NUMBERS
@@ -538,9 +548,9 @@
 
   SEARCHING FOR INODE =    2 CORRESPONDING TO NODE COUNT =    5
 
-  CONVERGED ON NODE NUMBER     5 AT                               ENERGY =  -1.413103663     CM-1  
+  CONVERGED ON NODE NUMBER     5 AT                               ENERGY =  -1.413103664     CM-1  
 
-  SMALLEST EIGENVALUE IS NUMBER  1 =  0.12552E-07
+  SMALLEST EIGENVALUE IS NUMBER  1 =  0.12555E-07
 
   WITH PRINCIPAL EIGENVECTOR COMPONENTS
   CHAN     VEC    VEC**2   L   QUANTUM NUMBERS
@@ -589,9 +599,9 @@
 
   SEARCHING FOR INODE =    2 CORRESPONDING TO NODE COUNT =    5
 
-  CONVERGED ON NODE NUMBER     5 AT                               ENERGY =  -1.312115606     CM-1  
+  CONVERGED ON NODE NUMBER     5 AT                               ENERGY =  -1.312115607     CM-1  
 
-  SMALLEST EIGENVALUE IS NUMBER  1 = -0.11511E-10
+  SMALLEST EIGENVALUE IS NUMBER  1 = -0.12989E-10
 
   WITH PRINCIPAL EIGENVECTOR COMPONENTS
   CHAN     VEC    VEC**2   L   QUANTUM NUMBERS
@@ -609,7 +619,7 @@
  |                                                                            |
  |                               Version 2019.0 (beta)                        |
  |                                                                            |
- |                    This run used       0.54 cpu secs and                   |
+ |                    This run used       0.56 cpu secs and                   |
  |                841 of the allocated   1000000 words of storage             |
  |                                                                            |
   -- BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND --
@@ -621,7 +631,7 @@
  |                                                                            |
  |                               Version 2019.0 (beta)                        |
  |                                                                            |
- |                       Run on 14 Nov 2018   at 09:49:56                     |
+ |                       Run on 16 Jan 2019   at 11:39:59                     |
  |                                                                            |
   -- BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND --
 
@@ -641,11 +651,11 @@
 
   PRINT LEVEL =  5
 
-  RUN LABEL = model system: ITYPE=1; IPROPS=5, IPROPL=1                                       
+  RUN LABEL = model system: ITYPE=1; IPROPS=5, IPROPL=9                                       
 
-  REDUCED MASS FOR INTERACTION =  20.000000000 ATOMIC MASS UNITS
+  REDUCED MASS FOR INTERACTION =  20.000000000 ATOMIC MASS UNITS (DALTONS)
 
-  *** WARNING - NO SCRATCH FILE SPECIFIED BY ISCRU PARAMETER - FULL CALCULATION WILL BE DONE AT EACH ENERGY
+  NO SCRATCH FILE SPECIFIED BY ISCRU PARAMETER: FULL CALCULATION WILL BE DONE AT EACH ENERGY
 
   ======================================================================================================================
 
@@ -686,53 +696,58 @@
 
   POTENL PROCESSING FINISHED.
 
-  UNITS FOR POTENTIAL ROUTINES:
-  POTENTIAL RETURNED IN UNITS OF EPSIL =      50.000000 CM-1
-  R                  IN UNITS OF RM    =       3.500000 ANGSTROMS
+  POTENTIAL RETURNED IN UNITS OF EPSIL  =  50.000000     CM-1
+        CODED WITH R IN UNITS OF RM     =  3.5000000     ANGSTROM
+
+  ALL LENGTHS ARE IN UNITS OF RM (  3.50000000 ANGSTROM ) UNLESS OTHERWISE STATED
+
   INTERACTION MATRIX USES   2 BLOCKS OF VL ARRAY FOR R-DEPENDENT TERMS IN POTENTIAL
 
   ======================================================================================================================
 
-  PROPAGATION ALGORITHMS FOR COUPLED EQUATIONS SPECIFIED BY IPROPS =  5 AND IPROPL =  1
+  PROPAGATION METHODS FOR COUPLED EQUATIONS SPECIFIED BY IPROPS =  5 AND IPROPL =  9
 
   COUPLED EQUATIONS WILL BE PROPAGATED TOWARDS RMATCH IN 2 SEGMENTS
+
+  PROPAGATION RANGES ARE CONTROLLED BY VARIABLES RMIN, RMATCH AND RMAX, WITH INPUT VALUES
+  RMIN =  0.5000     RMATCH =   1.000     RMAX =   20.00    
   ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
   SEGMENT 1 WILL BE PROPAGATED OUTWARDS
 
-  FROM RMIN   =      0.50  TO RMATCH =      1.00
+  FROM RMIN =      0.50 TO RMATCH =      1.00
 
-  COUPLED EQUATIONS SOLVED BY LOG DERIVATIVE METHOD OF JOHNSON
+  COUPLED EQUATIONS SOLVED BY LOG-DERIVATIVE PROPAGATOR OF JOHNSON
 
   PROPAGATION STEP SIZE DETERMINED USING DR =  1.000E-03
+  STEP SIZE CONSTANT THROUGHOUT RANGE
+  STEP SIZE MAY BE ADJUSTED SLIGHTLY SO THAT RANGE IS A WHOLE NUMBER OF STEPS
 
-  LOG-DERIVATIVE MATRIX WILL BE INITIALISED IN THE LOCAL EIGENBASIS FOR RMIN IN THE OUTWARDS PROPAGATION PART
-  LOCALLY CLOSED CHANNELS WILL BE INITIALISED WITH A WKB BOUNDARY CONDITION
-  LOCALLY OPEN CHANNELS WILL BE INITIALISED WITH THE VALUE  1.0000000E+08
+  LOG-DERIVATIVE MATRIX INITIALISED IN THE LOCAL EIGENBASIS AT RMIN IN THE OUTWARD PROPAGATION PART
+  LOCALLY CLOSED CHANNELS INITIALISED WITH A WKB BOUNDARY CONDITION
+  LOCALLY  OPEN  CHANNELS INITIALISED WITH THE VALUE  1.000E+08
   ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
   SEGMENT 2 WILL BE PROPAGATED  INWARDS
 
-  FROM RMAX   =     20.00  TO RMATCH =      1.00
+  TO RMATCH =      1.00 FROM RMAX =     20.00
 
-  COUPLED EQUATIONS SOLVED BY VARIABLE STEP AIRY METHOD.
-  ALL PUBLICATIONS RESULTING FROM THE USE OF THIS PROPAGATOR SHOULD REFERENCE
-  M.H. ALEXANDER AND D.E. MANOLOPOULOS,  J CHEM PHYS 86, 2044 (1987).
+  COUPLED EQUATIONS SOLVED BY VARIABLE-STEP AIRY PROPAGATOR.
+  PUBLICATIONS RESULTING FROM THE USE OF THIS PROPAGATOR SHOULD REFERENCE
+  M. H. ALEXANDER AND D. E. MANOLOPOULOS,  J. CHEM. PHYS. 86, 2044 (1987).
 
-  INITIAL STEP SIZE TAKEN FROM RMAX/400 =  5.000E-02
-                             WITH TOLHI =  1.00E-04         POWRX = 6.0
-  TOLHI.LT.1  --  AIRY STEPS ADJUSTED TO MAINTAIN APPROX. ACCURACY VIA PERTURBATION THEORY AND POWRX.
+  INITIAL STEP SIZE TAKEN FROM SIZE OF FINAL STEP OF SHORT-RANGE PROPAGATION
+  STEP SIZES ADJUSTED TO MAINTAIN APPROXIMATE ACCURACY VIA PERTURBATION THEORY
+  WITH TOLHI =  1.00E-04 AND POWR =   6.0    
 
-  LOG-DERIVATIVE MATRIX WILL BE INITIALISED IN THE LOCAL EIGENBASIS FOR RMAX IN THE INWARDS PROPAGATION PART
-  LOCALLY CLOSED CHANNELS WILL BE INITIALISED WITH A WKB BOUNDARY CONDITION
-  LOCALLY   OPEN CHANNELS WILL BE INITIALISED WITH THE VALUE  0.0000000E+00
-  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+  LOG-DERIVATIVE MATRIX INITIALISED IN THE LOCAL EIGENBASIS AT RMAX IN THE INWARD PROPAGATION PART
+  LOCALLY CLOSED CHANNELS INITIALISED WITH A WKB BOUNDARY CONDITION
+  LOCALLY  OPEN  CHANNELS INITIALISED WITH THE VALUE  0.000E+00
 
   ======================================================================================================================
 
   PROGRAM WILL ATTEMPT TO CONVERGE ON BOUND STATES AS A FUNCTION OF ENERGY
 
   FOR EACH LEVEL, THE BISECTION METHOD WILL BE USED UNTIL THE VWDB METHOD OFFERS RELIABLE CONVERGENCE.
-
-  BOUND STATE POSITIONS WILL BE IDENTIFIED WITH AN ACCURACY OF  1.00000E-07 CM-1    
+  VWDB CONVERGENCE WILL TERMINATE WHEN THE STEP SIZE IS LESS THAN 1.00000E-07 CM-1    
 
   INPUT ENERGY VALUES ASSUMED TO BE IN UNITS OF CM-1 BY DEFAULT.
 
@@ -745,612 +760,11 @@
 
   TOTAL ANGULAR MOMENTUM JTOT RUNS FROM   0  TO     2  IN STEPS OF   1
 
-  EACH JTOT IS SPLIT INTO A MAXIMUM OF   2 DIFFERENT SYMMETRY BLOCKS
+  EACH JTOT IS SPLIT INTO A MAXIMUM OF   2 SYMMETRY BLOCKS
 
   CALCULATIONS WILL BE FOR SYMMETRY BLOCK   2  ONLY
 
-  ===================================== model system: ITYPE=1; IPROPS=5, IPROPL=1 ======================================
-
-  *******************************************  ANGULAR MOMENTUM JTOT  =   0  *******************************************
-
-  CHANNEL FUNCTION LIST:
-
-  EACH CHANNEL FUNCTION IS FORMED BY COMBINING A PAIR STATE WITH A VALUE OF L.
-
-  CHANNEL  PAIR STATE    PAIR STATE QUANTUM NUMBERS            L        PAIR LEVEL   PAIR ENERGY (CM-1)
-                         ---------      J   ---------
-        1           1                   0                      0             1         0.0000000
-        2           2                   2                      2             2       180.0000000
-        3           3                   4                      4             3       600.0000000
-        4           4                   6                      6             4      1260.0000000
-  = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = 
-
-  NODE COUNT =    3 AT MINIMUM ENERGY =  -10.00000000     CM-1  
-  NODE COUNT =    5 AT MAXIMUM ENERGY =  -1.000000000     CM-1  
-
-  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
-
-  SEARCHING FOR INODE =    1 CORRESPONDING TO NODE COUNT =    4
-
-  CONVERGED ON NODE NUMBER     4 AT                               ENERGY =  -5.065870157     CM-1  
-
-  SMALLEST EIGENVALUE IS NUMBER  1 = -0.10541E-05
-
-  WITH PRINCIPAL EIGENVECTOR COMPONENTS
-  CHAN     VEC    VEC**2   L   QUANTUM NUMBERS
-
-   1    0.9989    0.9977   0   0   1
-
-  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
-
-  SEARCHING FOR INODE =    2 CORRESPONDING TO NODE COUNT =    5
-
-  CONVERGED ON NODE NUMBER     5 AT                               ENERGY =  -1.463920175     CM-1  
-
-  SMALLEST EIGENVALUE IS NUMBER  1 =  0.60530E-02
-
-  WITH PRINCIPAL EIGENVECTOR COMPONENTS
-  CHAN     VEC    VEC**2   L   QUANTUM NUMBERS
-
-   1    0.9641    0.9295   0   0   1
-
-  ======================================================================================================================
-
-  *******************************************  ANGULAR MOMENTUM JTOT  =   1  *******************************************
-
-  CHANNEL FUNCTION LIST:
-
-  EACH CHANNEL FUNCTION IS FORMED BY COMBINING A PAIR STATE WITH A VALUE OF L.
-
-  CHANNEL  PAIR STATE    PAIR STATE QUANTUM NUMBERS            L        PAIR LEVEL   PAIR ENERGY (CM-1)
-                         ---------      J   ---------
-        1           1                   0                      1             1         0.0000000
-        2           2                   2                      1             2       180.0000000
-        3           2                   2                      3             2       180.0000000
-        4           3                   4                      3             3       600.0000000
-        5           3                   4                      5             3       600.0000000
-        6           4                   6                      5             4      1260.0000000
-        7           4                   6                      7             4      1260.0000000
-  = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = 
-
-  NODE COUNT =    3 AT MINIMUM ENERGY =  -10.00000000     CM-1  
-  NODE COUNT =    5 AT MAXIMUM ENERGY =  -1.000000000     CM-1  
-
-  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
-
-  SEARCHING FOR INODE =    1 CORRESPONDING TO NODE COUNT =    4
-
-  CONVERGED ON NODE NUMBER     4 AT                               ENERGY =  -4.992074132     CM-1  
-
-  SMALLEST EIGENVALUE IS NUMBER  1 =  0.15580E-07
-
-  WITH PRINCIPAL EIGENVECTOR COMPONENTS
-  CHAN     VEC    VEC**2   L   QUANTUM NUMBERS
-
-   1    0.9989    0.9978   1   0   1
-
-  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
-
-  SEARCHING FOR INODE =    2 CORRESPONDING TO NODE COUNT =    5
-
-  CONVERGED ON NODE NUMBER     5 AT                               ENERGY =  -1.413103659     CM-1  
-
-  SMALLEST EIGENVALUE IS NUMBER  1 =  0.16122E-01
-
-  WITH PRINCIPAL EIGENVECTOR COMPONENTS
-  CHAN     VEC    VEC**2   L   QUANTUM NUMBERS
-
-   1    0.9004    0.8107   1   0   1
-   2    0.2767    0.0766   1   2   2
-   3   -0.3357    0.1127   3   2   2
-
-  ======================================================================================================================
-
-  *******************************************  ANGULAR MOMENTUM JTOT  =   2  *******************************************
-
-  CHANNEL FUNCTION LIST:
-
-  EACH CHANNEL FUNCTION IS FORMED BY COMBINING A PAIR STATE WITH A VALUE OF L.
-
-  CHANNEL  PAIR STATE    PAIR STATE QUANTUM NUMBERS            L        PAIR LEVEL   PAIR ENERGY (CM-1)
-                         ---------      J   ---------
-        1           2                   2                      0             2       180.0000000
-        2           1                   0                      2             1         0.0000000
-        3           2                   2                      2             2       180.0000000
-        4           3                   4                      2             3       600.0000000
-        5           2                   2                      4             2       180.0000000
-        6           3                   4                      4             3       600.0000000
-        7           4                   6                      4             4      1260.0000000
-        8           3                   4                      6             3       600.0000000
-        9           4                   6                      6             4      1260.0000000
-       10           4                   6                      8             4      1260.0000000
-  = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = 
-
-  NODE COUNT =    3 AT MINIMUM ENERGY =  -10.00000000     CM-1  
-  NODE COUNT =    5 AT MAXIMUM ENERGY =  -1.000000000     CM-1  
-
-  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
-
-  SEARCHING FOR INODE =    1 CORRESPONDING TO NODE COUNT =    4
-
-  CONVERGED ON NODE NUMBER     4 AT                               ENERGY =  -4.844813585     CM-1  
-
-  SMALLEST EIGENVALUE IS NUMBER  1 =  0.47216E-05
-
-  WITH PRINCIPAL EIGENVECTOR COMPONENTS
-  CHAN     VEC    VEC**2   L   QUANTUM NUMBERS
-
-   2   -0.9989    0.9979   2   0   1
-
-  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
-
-  SEARCHING FOR INODE =    2 CORRESPONDING TO NODE COUNT =    5
-
-  CONVERGED ON NODE NUMBER     5 AT                               ENERGY =  -1.312115603     CM-1  
-
-  SMALLEST EIGENVALUE IS NUMBER  1 =  0.14434E-01
-
-  WITH PRINCIPAL EIGENVECTOR COMPONENTS
-  CHAN     VEC    VEC**2   L   QUANTUM NUMBERS
-
-   1    0.3610    0.1303   0   2   2
-   2    0.6021    0.3626   2   0   1
-   3   -0.4291    0.1841   2   2   2
-   5    0.5683    0.3229   4   2   2
-
-  ======================================================================================================================
-
-
-  -- BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND --
- |                                                                            |
- |          Bound states of interacting pairs of atoms and molecules          |
- |                                                                            |
- |              Copyright (C) 2018 J. M. Hutson & C. R. Le Sueur              |
- |                                                                            |
- |                               Version 2019.0 (beta)                        |
- |                                                                            |
- |                    This run used       0.67 cpu secs and                   |
- |                841 of the allocated   1000000 words of storage             |
- |                                                                            |
-  -- BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND --
-  -- BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND --
- |                                                                            |
- |          Bound states of interacting pairs of atoms and molecules          |
- |                                                                            |
- |              Copyright (C) 2018 J. M. Hutson & C. R. Le Sueur              |
- |                                                                            |
- |                               Version 2019.0 (beta)                        |
- |                                                                            |
- |                       Run on 14 Nov 2018   at 09:49:57                     |
- |                                                                            |
-  -- BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND --
-
-
-  This program is free software: you can redistribute it and/or modify it under
-  the terms of the GNU General Public License, version 3, as published by
-  the Free Software Foundation.
-
-  Publications resulting from the use of this program should refer to
-  J. M. Hutson & C. R. Le Sueur, BOUND computer code 2019.0 (beta)       
-  or to the published paper in Computer Physics Communications when available.
-
-
-  PHYSICAL CONSTANTS OBTAINED FROM NIST CODATA TABULATION OF 2014
-
-  MEMORY ALLOCATED TO MAIN WORKING ARRAY IS   1000000 (8-BYTE) WORDS (    7.63 MB)
-
-  PRINT LEVEL =  5
-
-  RUN LABEL = model system: ITYPE=1; IPROPS=7, IPROPL=1                                       
-
-  REDUCED MASS FOR INTERACTION =  20.000000000 ATOMIC MASS UNITS
-
-  *** WARNING - NO SCRATCH FILE SPECIFIED BY ISCRU PARAMETER - FULL CALCULATION WILL BE DONE AT EACH ENERGY
-
-  ======================================================================================================================
-
-  INTERACTION TYPE IS    LINEAR RIGID ROTOR  -  ATOM.  
-
-  TARGET ROTATIONAL LEVELS TAKEN FROM &BASIS (JLEVEL) INPUT.  NLEVEL =  4
-
-  ENERGY LEVELS COMPUTED FROM B(E) =   30.000000
-
-  QUANTUM NUMBERS FOR INTERACTING PAIR:
-  EACH PAIR STATE IS LABELLED BY  1 QUANTUM LABEL 
-  EACH CHANNEL FUNCTION IS FORMED BY COMBINING A PAIR STATE WITH A VALUE OF L.
-  THE RESULTING BASIS SET IS ASYMPTOTICALLY DIAGONAL.
-
-  PAIR STATE     PAIR STATE QUANTUM NUMBERS    PAIR LEVEL     PAIR ENERGY (CM-1)
-                ---------        J ---------
-        1                        0                1             0.0000000
-        2                        2                2           180.0000000
-        3                        4                3           600.0000000
-        4                        6                4          1260.0000000
-
-  ======================================================================================================================
-  GENERAL-PURPOSE POTENL ROUTINE (MAY 18)
-
-  ANGULAR DEPENDENCE OF POTENTIAL EXPANDED IN TERMS OF
-  LEGENDRE POLYNOMIALS, P(LAMBDA).
-
-  INTERACTION POTENTIAL FOR EXPANSION TERM NUMBER   1
-  WHICH HAS LAMBDA =   0
-
-                 1.00000000E+00 * R **-12
-                -2.00000000E+00 * R ** -6
-
-  INTERACTION POTENTIAL FOR EXPANSION TERM NUMBER   2
-  WHICH HAS LAMBDA =   2
-
-                -2.00000000E-01 * R ** -6
-
-  POTENL PROCESSING FINISHED.
-
-  UNITS FOR POTENTIAL ROUTINES:
-  POTENTIAL RETURNED IN UNITS OF EPSIL =      50.000000 CM-1
-  R                  IN UNITS OF RM    =       3.500000 ANGSTROMS
-  INTERACTION MATRIX USES   2 BLOCKS OF VL ARRAY FOR R-DEPENDENT TERMS IN POTENTIAL
-
-  ======================================================================================================================
-
-  PROPAGATION ALGORITHMS FOR COUPLED EQUATIONS SPECIFIED BY IPROPS =  7 AND IPROPL =  1
-
-  COUPLED EQUATIONS WILL BE PROPAGATED TOWARDS RMATCH IN 2 SEGMENTS
-  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-  SEGMENT 1 WILL BE PROPAGATED OUTWARDS
-
-  FROM RMIN   =      0.50  TO RMATCH =      1.00
-
-  COUPLED EQUATIONS SOLVED BY QUASIADIABATIC MODIFIED LOG DERIVATIVE METHOD OF MANOLOPOULOS
-
-  PROPAGATION STEP SIZE DETERMINED USING DR =  1.000E-03
-
-  LOG-DERIVATIVE MATRIX WILL BE INITIALISED IN THE LOCAL EIGENBASIS FOR RMIN IN THE OUTWARDS PROPAGATION PART
-  LOCALLY CLOSED CHANNELS WILL BE INITIALISED WITH A WKB BOUNDARY CONDITION
-  LOCALLY OPEN CHANNELS WILL BE INITIALISED WITH THE VALUE  1.0000000E+08
-  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-  SEGMENT 2 WILL BE PROPAGATED  INWARDS
-
-  FROM RMAX   =     20.00  TO RMATCH =      1.00
-
-  COUPLED EQUATIONS SOLVED BY VARIABLE STEP AIRY METHOD.
-  ALL PUBLICATIONS RESULTING FROM THE USE OF THIS PROPAGATOR SHOULD REFERENCE
-  M.H. ALEXANDER AND D.E. MANOLOPOULOS,  J CHEM PHYS 86, 2044 (1987).
-
-  INITIAL STEP SIZE TAKEN FROM RMAX/400 =  5.000E-02
-                             WITH TOLHI =  1.00E-04         POWRX = 6.0
-  TOLHI.LT.1  --  AIRY STEPS ADJUSTED TO MAINTAIN APPROX. ACCURACY VIA PERTURBATION THEORY AND POWRX.
-
-  LOG-DERIVATIVE MATRIX WILL BE INITIALISED IN THE LOCAL EIGENBASIS FOR RMAX IN THE INWARDS PROPAGATION PART
-  LOCALLY CLOSED CHANNELS WILL BE INITIALISED WITH A WKB BOUNDARY CONDITION
-  LOCALLY   OPEN CHANNELS WILL BE INITIALISED WITH THE VALUE  0.0000000E+00
-  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-
-  ======================================================================================================================
-
-  PROGRAM WILL ATTEMPT TO CONVERGE ON BOUND STATES AS A FUNCTION OF ENERGY
-
-  FOR EACH LEVEL, THE BISECTION METHOD WILL BE USED UNTIL THE VWDB METHOD OFFERS RELIABLE CONVERGENCE.
-
-  BOUND STATE POSITIONS WILL BE IDENTIFIED WITH AN ACCURACY OF  1.00000E-07 CM-1    
-
-  INPUT ENERGY VALUES ASSUMED TO BE IN UNITS OF CM-1 BY DEFAULT.
-
-  PROGRAM WILL SEEK EIGENVALUES WITH GENERALISED NODE COUNTS FROM    0 TO  99999
-  LYING IN ENERGY RANGE  -10.000     TO  -1.0000     CM-1    
-
-  INITIALIZATION DONE.  TIME WAS   0.00 CPU SECS.         9 WORDS OF STORAGE USED.
-
-  ======================================================================================================================
-
-  TOTAL ANGULAR MOMENTUM JTOT RUNS FROM   0  TO     2  IN STEPS OF   1
-
-  EACH JTOT IS SPLIT INTO A MAXIMUM OF   2 DIFFERENT SYMMETRY BLOCKS
-
-  CALCULATIONS WILL BE FOR SYMMETRY BLOCK   2  ONLY
-
-  ===================================== model system: ITYPE=1; IPROPS=7, IPROPL=1 ======================================
-
-  *******************************************  ANGULAR MOMENTUM JTOT  =   0  *******************************************
-
-  CHANNEL FUNCTION LIST:
-
-  EACH CHANNEL FUNCTION IS FORMED BY COMBINING A PAIR STATE WITH A VALUE OF L.
-
-  CHANNEL  PAIR STATE    PAIR STATE QUANTUM NUMBERS            L        PAIR LEVEL   PAIR ENERGY (CM-1)
-                         ---------      J   ---------
-        1           1                   0                      0             1         0.0000000
-        2           2                   2                      2             2       180.0000000
-        3           3                   4                      4             3       600.0000000
-        4           4                   6                      6             4      1260.0000000
-  = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = 
-
-  NODE COUNT =    3 AT MINIMUM ENERGY =  -10.00000000     CM-1  
-  NODE COUNT =    5 AT MAXIMUM ENERGY =  -1.000000000     CM-1  
-
-  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
-
-  SEARCHING FOR INODE =    1 CORRESPONDING TO NODE COUNT =    4
-
-  CONVERGED ON NODE NUMBER     4 AT                               ENERGY =  -5.065870157     CM-1  
-
-  SMALLEST EIGENVALUE IS NUMBER  1 = -0.10530E-05
-
-  WITH PRINCIPAL EIGENVECTOR COMPONENTS
-  CHAN     VEC    VEC**2   L   QUANTUM NUMBERS
-
-   1    0.9989    0.9977   0   0   1
-
-  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
-
-  SEARCHING FOR INODE =    2 CORRESPONDING TO NODE COUNT =    5
-
-  CONVERGED ON NODE NUMBER     5 AT                               ENERGY =  -1.463920175     CM-1  
-
-  SMALLEST EIGENVALUE IS NUMBER  1 =  0.60530E-02
-
-  WITH PRINCIPAL EIGENVECTOR COMPONENTS
-  CHAN     VEC    VEC**2   L   QUANTUM NUMBERS
-
-   1    0.9641    0.9295   0   0   1
-
-  ======================================================================================================================
-
-  *******************************************  ANGULAR MOMENTUM JTOT  =   1  *******************************************
-
-  CHANNEL FUNCTION LIST:
-
-  EACH CHANNEL FUNCTION IS FORMED BY COMBINING A PAIR STATE WITH A VALUE OF L.
-
-  CHANNEL  PAIR STATE    PAIR STATE QUANTUM NUMBERS            L        PAIR LEVEL   PAIR ENERGY (CM-1)
-                         ---------      J   ---------
-        1           1                   0                      1             1         0.0000000
-        2           2                   2                      1             2       180.0000000
-        3           2                   2                      3             2       180.0000000
-        4           3                   4                      3             3       600.0000000
-        5           3                   4                      5             3       600.0000000
-        6           4                   6                      5             4      1260.0000000
-        7           4                   6                      7             4      1260.0000000
-  = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = 
-
-  NODE COUNT =    3 AT MINIMUM ENERGY =  -10.00000000     CM-1  
-  NODE COUNT =    5 AT MAXIMUM ENERGY =  -1.000000000     CM-1  
-
-  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
-
-  SEARCHING FOR INODE =    1 CORRESPONDING TO NODE COUNT =    4
-
-  CONVERGED ON NODE NUMBER     4 AT                               ENERGY =  -4.992074132     CM-1  
-
-  SMALLEST EIGENVALUE IS NUMBER  1 =  0.15753E-07
-
-  WITH PRINCIPAL EIGENVECTOR COMPONENTS
-  CHAN     VEC    VEC**2   L   QUANTUM NUMBERS
-
-   1    0.9989    0.9978   1   0   1
-
-  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
-
-  SEARCHING FOR INODE =    2 CORRESPONDING TO NODE COUNT =    5
-
-  CONVERGED ON NODE NUMBER     5 AT                               ENERGY =  -1.413103660     CM-1  
-
-  SMALLEST EIGENVALUE IS NUMBER  1 =  0.16124E-01
-
-  WITH PRINCIPAL EIGENVECTOR COMPONENTS
-  CHAN     VEC    VEC**2   L   QUANTUM NUMBERS
-
-   1    0.9004    0.8107   1   0   1
-   2    0.2767    0.0766   1   2   2
-   3   -0.3357    0.1127   3   2   2
-
-  ======================================================================================================================
-
-  *******************************************  ANGULAR MOMENTUM JTOT  =   2  *******************************************
-
-  CHANNEL FUNCTION LIST:
-
-  EACH CHANNEL FUNCTION IS FORMED BY COMBINING A PAIR STATE WITH A VALUE OF L.
-
-  CHANNEL  PAIR STATE    PAIR STATE QUANTUM NUMBERS            L        PAIR LEVEL   PAIR ENERGY (CM-1)
-                         ---------      J   ---------
-        1           2                   2                      0             2       180.0000000
-        2           1                   0                      2             1         0.0000000
-        3           2                   2                      2             2       180.0000000
-        4           3                   4                      2             3       600.0000000
-        5           2                   2                      4             2       180.0000000
-        6           3                   4                      4             3       600.0000000
-        7           4                   6                      4             4      1260.0000000
-        8           3                   4                      6             3       600.0000000
-        9           4                   6                      6             4      1260.0000000
-       10           4                   6                      8             4      1260.0000000
-  = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = 
-
-  NODE COUNT =    3 AT MINIMUM ENERGY =  -10.00000000     CM-1  
-  NODE COUNT =    5 AT MAXIMUM ENERGY =  -1.000000000     CM-1  
-
-  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
-
-  SEARCHING FOR INODE =    1 CORRESPONDING TO NODE COUNT =    4
-
-  CONVERGED ON NODE NUMBER     4 AT                               ENERGY =  -4.844813585     CM-1  
-
-  SMALLEST EIGENVALUE IS NUMBER  1 =  0.47213E-05
-
-  WITH PRINCIPAL EIGENVECTOR COMPONENTS
-  CHAN     VEC    VEC**2   L   QUANTUM NUMBERS
-
-   2   -0.9989    0.9979   2   0   1
-
-  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
-
-  SEARCHING FOR INODE =    2 CORRESPONDING TO NODE COUNT =    5
-
-  CONVERGED ON NODE NUMBER     5 AT                               ENERGY =  -1.312115603     CM-1  
-
-  SMALLEST EIGENVALUE IS NUMBER  1 =  0.14436E-01
-
-  WITH PRINCIPAL EIGENVECTOR COMPONENTS
-  CHAN     VEC    VEC**2   L   QUANTUM NUMBERS
-
-   1    0.3610    0.1303   0   2   2
-   2    0.6021    0.3626   2   0   1
-   3   -0.4291    0.1841   2   2   2
-   5    0.5683    0.3229   4   2   2
-
-  ======================================================================================================================
-
-
-  -- BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND --
- |                                                                            |
- |          Bound states of interacting pairs of atoms and molecules          |
- |                                                                            |
- |              Copyright (C) 2018 J. M. Hutson & C. R. Le Sueur              |
- |                                                                            |
- |                               Version 2019.0 (beta)                        |
- |                                                                            |
- |                    This run used       1.23 cpu secs and                   |
- |                841 of the allocated   1000000 words of storage             |
- |                                                                            |
-  -- BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND --
-  -- BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND --
- |                                                                            |
- |          Bound states of interacting pairs of atoms and molecules          |
- |                                                                            |
- |              Copyright (C) 2018 J. M. Hutson & C. R. Le Sueur              |
- |                                                                            |
- |                               Version 2019.0 (beta)                        |
- |                                                                            |
- |                       Run on 14 Nov 2018   at 09:49:58                     |
- |                                                                            |
-  -- BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND --
-
-
-  This program is free software: you can redistribute it and/or modify it under
-  the terms of the GNU General Public License, version 3, as published by
-  the Free Software Foundation.
-
-  Publications resulting from the use of this program should refer to
-  J. M. Hutson & C. R. Le Sueur, BOUND computer code 2019.0 (beta)       
-  or to the published paper in Computer Physics Communications when available.
-
-
-  PHYSICAL CONSTANTS OBTAINED FROM NIST CODATA TABULATION OF 2014
-
-  MEMORY ALLOCATED TO MAIN WORKING ARRAY IS   1000000 (8-BYTE) WORDS (    7.63 MB)
-
-  PRINT LEVEL =  5
-
-  RUN LABEL = model system: ITYPE=1; IPROPS=9, IPROPL=1                                       
-
-  REDUCED MASS FOR INTERACTION =  20.000000000 ATOMIC MASS UNITS
-
-  *** WARNING - NO SCRATCH FILE SPECIFIED BY ISCRU PARAMETER - FULL CALCULATION WILL BE DONE AT EACH ENERGY
-
-  ======================================================================================================================
-
-  INTERACTION TYPE IS    LINEAR RIGID ROTOR  -  ATOM.  
-
-  TARGET ROTATIONAL LEVELS TAKEN FROM &BASIS (JLEVEL) INPUT.  NLEVEL =  4
-
-  ENERGY LEVELS COMPUTED FROM B(E) =   30.000000
-
-  QUANTUM NUMBERS FOR INTERACTING PAIR:
-  EACH PAIR STATE IS LABELLED BY  1 QUANTUM LABEL 
-  EACH CHANNEL FUNCTION IS FORMED BY COMBINING A PAIR STATE WITH A VALUE OF L.
-  THE RESULTING BASIS SET IS ASYMPTOTICALLY DIAGONAL.
-
-  PAIR STATE     PAIR STATE QUANTUM NUMBERS    PAIR LEVEL     PAIR ENERGY (CM-1)
-                ---------        J ---------
-        1                        0                1             0.0000000
-        2                        2                2           180.0000000
-        3                        4                3           600.0000000
-        4                        6                4          1260.0000000
-
-  ======================================================================================================================
-  GENERAL-PURPOSE POTENL ROUTINE (MAY 18)
-
-  ANGULAR DEPENDENCE OF POTENTIAL EXPANDED IN TERMS OF
-  LEGENDRE POLYNOMIALS, P(LAMBDA).
-
-  INTERACTION POTENTIAL FOR EXPANSION TERM NUMBER   1
-  WHICH HAS LAMBDA =   0
-
-                 1.00000000E+00 * R **-12
-                -2.00000000E+00 * R ** -6
-
-  INTERACTION POTENTIAL FOR EXPANSION TERM NUMBER   2
-  WHICH HAS LAMBDA =   2
-
-                -2.00000000E-01 * R ** -6
-
-  POTENL PROCESSING FINISHED.
-
-  UNITS FOR POTENTIAL ROUTINES:
-  POTENTIAL RETURNED IN UNITS OF EPSIL =      50.000000 CM-1
-  R                  IN UNITS OF RM    =       3.500000 ANGSTROMS
-  INTERACTION MATRIX USES   2 BLOCKS OF VL ARRAY FOR R-DEPENDENT TERMS IN POTENTIAL
-
-  ======================================================================================================================
-
-  PROPAGATION ALGORITHMS FOR COUPLED EQUATIONS SPECIFIED BY IPROPS =  9 AND IPROPL =  1
-
-  COUPLED EQUATIONS WILL BE PROPAGATED TOWARDS RMATCH IN 2 SEGMENTS
-  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-  SEGMENT 1 WILL BE PROPAGATED OUTWARDS
-
-  FROM RMIN   =      0.50  TO RMATCH =      1.00
-
-  COUPLED EQUATIONS SOLVED BY SYMPLECTIC LOG-DERIVATIVE METHOD OF MANOLOPOULOS AND GRAY
-  USING THE SIX-STEP FIFTH-ORDER METHOD OF MCLACHLAN AND ATELA
-
-  PROPAGATION STEP SIZE DETERMINED USING DR =  1.000E-03
-
-  LOG-DERIVATIVE MATRIX WILL BE INITIALISED IN THE LOCAL EIGENBASIS FOR RMIN IN THE OUTWARDS PROPAGATION PART
-  LOCALLY CLOSED CHANNELS WILL BE INITIALISED WITH A WKB BOUNDARY CONDITION
-  LOCALLY OPEN CHANNELS WILL BE INITIALISED WITH THE VALUE  1.0000000E+08
-  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-  SEGMENT 2 WILL BE PROPAGATED  INWARDS
-
-  FROM RMAX   =     20.00  TO RMATCH =      1.00
-
-  COUPLED EQUATIONS SOLVED BY VARIABLE STEP AIRY METHOD.
-  ALL PUBLICATIONS RESULTING FROM THE USE OF THIS PROPAGATOR SHOULD REFERENCE
-  M.H. ALEXANDER AND D.E. MANOLOPOULOS,  J CHEM PHYS 86, 2044 (1987).
-
-  INITIAL STEP SIZE TAKEN FROM RMAX/400 =  5.000E-02
-                             WITH TOLHI =  1.00E-04         POWRX = 6.0
-  TOLHI.LT.1  --  AIRY STEPS ADJUSTED TO MAINTAIN APPROX. ACCURACY VIA PERTURBATION THEORY AND POWRX.
-
-  LOG-DERIVATIVE MATRIX WILL BE INITIALISED IN THE LOCAL EIGENBASIS FOR RMAX IN THE INWARDS PROPAGATION PART
-  LOCALLY CLOSED CHANNELS WILL BE INITIALISED WITH A WKB BOUNDARY CONDITION
-  LOCALLY   OPEN CHANNELS WILL BE INITIALISED WITH THE VALUE  0.0000000E+00
-  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-
-  ======================================================================================================================
-
-  PROGRAM WILL ATTEMPT TO CONVERGE ON BOUND STATES AS A FUNCTION OF ENERGY
-
-  FOR EACH LEVEL, THE BISECTION METHOD WILL BE USED UNTIL THE VWDB METHOD OFFERS RELIABLE CONVERGENCE.
-
-  BOUND STATE POSITIONS WILL BE IDENTIFIED WITH AN ACCURACY OF  1.00000E-07 CM-1    
-
-  INPUT ENERGY VALUES ASSUMED TO BE IN UNITS OF CM-1 BY DEFAULT.
-
-  PROGRAM WILL SEEK EIGENVALUES WITH GENERALISED NODE COUNTS FROM    0 TO  99999
-  LYING IN ENERGY RANGE  -10.000     TO  -1.0000     CM-1    
-
-  INITIALIZATION DONE.  TIME WAS   0.00 CPU SECS.         9 WORDS OF STORAGE USED.
-
-  ======================================================================================================================
-
-  TOTAL ANGULAR MOMENTUM JTOT RUNS FROM   0  TO     2  IN STEPS OF   1
-
-  EACH JTOT IS SPLIT INTO A MAXIMUM OF   2 DIFFERENT SYMMETRY BLOCKS
-
-  CALCULATIONS WILL BE FOR SYMMETRY BLOCK   2  ONLY
-
-  ===================================== model system: ITYPE=1; IPROPS=9, IPROPL=1 ======================================
+  ===================================== model system: ITYPE=1; IPROPS=5, IPROPL=9 ======================================
 
   *******************************************  ANGULAR MOMENTUM JTOT  =   0  *******************************************
 
@@ -1375,7 +789,7 @@
 
   CONVERGED ON NODE NUMBER     4 AT                               ENERGY =  -5.065870156     CM-1  
 
-  SMALLEST EIGENVALUE IS NUMBER  1 = -0.10529E-05
+  SMALLEST EIGENVALUE IS NUMBER  1 = -0.10546E-05
 
   WITH PRINCIPAL EIGENVECTOR COMPONENTS
   CHAN     VEC    VEC**2   L   QUANTUM NUMBERS
@@ -1386,9 +800,9 @@
 
   SEARCHING FOR INODE =    2 CORRESPONDING TO NODE COUNT =    5
 
-  CONVERGED ON NODE NUMBER     5 AT                               ENERGY =  -1.463920175     CM-1  
+  CONVERGED ON NODE NUMBER     5 AT                               ENERGY =  -1.463920176     CM-1  
 
-  SMALLEST EIGENVALUE IS NUMBER  1 =  0.60527E-02
+  SMALLEST EIGENVALUE IS NUMBER  1 =  0.60536E-02
 
   WITH PRINCIPAL EIGENVECTOR COMPONENTS
   CHAN     VEC    VEC**2   L   QUANTUM NUMBERS
@@ -1421,9 +835,9 @@
 
   SEARCHING FOR INODE =    1 CORRESPONDING TO NODE COUNT =    4
 
-  CONVERGED ON NODE NUMBER     4 AT                               ENERGY =  -4.992074131     CM-1  
+  CONVERGED ON NODE NUMBER     4 AT                               ENERGY =  -4.992074129     CM-1  
 
-  SMALLEST EIGENVALUE IS NUMBER  1 =  0.15081E-07
+  SMALLEST EIGENVALUE IS NUMBER  1 =  0.14919E-07
 
   WITH PRINCIPAL EIGENVECTOR COMPONENTS
   CHAN     VEC    VEC**2   L   QUANTUM NUMBERS
@@ -1434,9 +848,9 @@
 
   SEARCHING FOR INODE =    2 CORRESPONDING TO NODE COUNT =    5
 
-  CONVERGED ON NODE NUMBER     5 AT                               ENERGY =  -1.413103659     CM-1  
+  CONVERGED ON NODE NUMBER     5 AT                               ENERGY =  -1.413103660     CM-1  
 
-  SMALLEST EIGENVALUE IS NUMBER  1 =  0.16116E-01
+  SMALLEST EIGENVALUE IS NUMBER  1 =  0.16125E-01
 
   WITH PRINCIPAL EIGENVECTOR COMPONENTS
   CHAN     VEC    VEC**2   L   QUANTUM NUMBERS
@@ -1474,9 +888,9 @@
 
   SEARCHING FOR INODE =    1 CORRESPONDING TO NODE COUNT =    4
 
-  CONVERGED ON NODE NUMBER     4 AT                               ENERGY =  -4.844813584     CM-1  
+  CONVERGED ON NODE NUMBER     4 AT                               ENERGY =  -4.844813583     CM-1  
 
-  SMALLEST EIGENVALUE IS NUMBER  1 =  0.47218E-05
+  SMALLEST EIGENVALUE IS NUMBER  1 =  0.47205E-05
 
   WITH PRINCIPAL EIGENVECTOR COMPONENTS
   CHAN     VEC    VEC**2   L   QUANTUM NUMBERS
@@ -1489,7 +903,7 @@
 
   CONVERGED ON NODE NUMBER     5 AT                               ENERGY =  -1.312115603     CM-1  
 
-  SMALLEST EIGENVALUE IS NUMBER  1 =  0.14422E-01
+  SMALLEST EIGENVALUE IS NUMBER  1 =  0.14425E-01
 
   WITH PRINCIPAL EIGENVECTOR COMPONENTS
   CHAN     VEC    VEC**2   L   QUANTUM NUMBERS
@@ -1510,8 +924,8 @@
  |                                                                            |
  |                               Version 2019.0 (beta)                        |
  |                                                                            |
- |                    This run used       0.99 cpu secs and                   |
- |               1021 of the allocated   1000000 words of storage             |
+ |                    This run used       0.64 cpu secs and                   |
+ |                841 of the allocated   1000000 words of storage             |
  |                                                                            |
   -- BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND --
   -- BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND --
@@ -1522,7 +936,7 @@
  |                                                                            |
  |                               Version 2019.0 (beta)                        |
  |                                                                            |
- |                       Run on 14 Nov 2018   at 09:49:59                     |
+ |                       Run on 16 Jan 2019   at 11:39:59                     |
  |                                                                            |
   -- BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND --
 
@@ -1542,11 +956,11 @@
 
   PRINT LEVEL =  5
 
-  RUN LABEL = model system: ITYPE=1; IPROPS=IPROPL=6                                          
+  RUN LABEL = model system: ITYPE=1; IPROPS=7, IPROPL=9                                       
 
-  REDUCED MASS FOR INTERACTION =  20.000000000 ATOMIC MASS UNITS
+  REDUCED MASS FOR INTERACTION =  20.000000000 ATOMIC MASS UNITS (DALTONS)
 
-  *** WARNING - NO SCRATCH FILE SPECIFIED BY ISCRU PARAMETER - FULL CALCULATION WILL BE DONE AT EACH ENERGY
+  NO SCRATCH FILE SPECIFIED BY ISCRU PARAMETER: FULL CALCULATION WILL BE DONE AT EACH ENERGY
 
   ======================================================================================================================
 
@@ -1587,49 +1001,58 @@
 
   POTENL PROCESSING FINISHED.
 
-  UNITS FOR POTENTIAL ROUTINES:
-  POTENTIAL RETURNED IN UNITS OF EPSIL =      50.000000 CM-1
-  R                  IN UNITS OF RM    =       3.500000 ANGSTROMS
+  POTENTIAL RETURNED IN UNITS OF EPSIL  =  50.000000     CM-1
+        CODED WITH R IN UNITS OF RM     =  3.5000000     ANGSTROM
+
+  ALL LENGTHS ARE IN UNITS OF RM (  3.50000000 ANGSTROM ) UNLESS OTHERWISE STATED
+
   INTERACTION MATRIX USES   2 BLOCKS OF VL ARRAY FOR R-DEPENDENT TERMS IN POTENTIAL
 
   ======================================================================================================================
 
-  PROPAGATION ALGORITHMS FOR COUPLED EQUATIONS SPECIFIED BY IPROPS =  6 AND IPROPL =  6
+  PROPAGATION METHODS FOR COUPLED EQUATIONS SPECIFIED BY IPROPS =  7 AND IPROPL =  9
 
   COUPLED EQUATIONS WILL BE PROPAGATED TOWARDS RMATCH IN 2 SEGMENTS
+
+  PROPAGATION RANGES ARE CONTROLLED BY VARIABLES RMIN, RMATCH AND RMAX, WITH INPUT VALUES
+  RMIN =  0.5000     RMATCH =   1.000     RMAX =   20.00    
   ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
   SEGMENT 1 WILL BE PROPAGATED OUTWARDS
 
-  FROM RMIN   =      0.50  TO RMATCH =      1.00
+  FROM RMIN =      0.50 TO RMATCH =      1.00
 
-  COUPLED EQUATIONS SOLVED BY DIABATIC MODIFIED LOG DERIVATIVE METHOD OF MANOLOPOULOS
+  COUPLED EQUATIONS SOLVED BY QUASIADIABATIC MODIFIED LOG-DERIVATIVE PROPAGATOR OF MANOLOPOULOS
 
   PROPAGATION STEP SIZE DETERMINED USING DR =  1.000E-03
+  STEP SIZE CONSTANT THROUGHOUT RANGE
+  STEP SIZE MAY BE ADJUSTED SLIGHTLY SO THAT RANGE IS A WHOLE NUMBER OF STEPS
 
-  LOG-DERIVATIVE MATRIX WILL BE INITIALISED IN THE LOCAL EIGENBASIS FOR RMIN IN THE OUTWARDS PROPAGATION PART
-  LOCALLY CLOSED CHANNELS WILL BE INITIALISED WITH A WKB BOUNDARY CONDITION
-  LOCALLY OPEN CHANNELS WILL BE INITIALISED WITH THE VALUE  1.0000000E+08
+  LOG-DERIVATIVE MATRIX INITIALISED IN THE LOCAL EIGENBASIS AT RMIN IN THE OUTWARD PROPAGATION PART
+  LOCALLY CLOSED CHANNELS INITIALISED WITH A WKB BOUNDARY CONDITION
+  LOCALLY  OPEN  CHANNELS INITIALISED WITH THE VALUE  1.000E+08
   ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
   SEGMENT 2 WILL BE PROPAGATED  INWARDS
 
-  FROM RMAX   =     20.00  TO RMATCH =      1.00
+  TO RMATCH =      1.00 FROM RMAX =     20.00
 
-  COUPLED EQUATIONS SOLVED BY DIABATIC MODIFIED LOG DERIVATIVE METHOD OF MANOLOPOULOS
+  COUPLED EQUATIONS SOLVED BY VARIABLE-STEP AIRY PROPAGATOR.
+  PUBLICATIONS RESULTING FROM THE USE OF THIS PROPAGATOR SHOULD REFERENCE
+  M. H. ALEXANDER AND D. E. MANOLOPOULOS,  J. CHEM. PHYS. 86, 2044 (1987).
 
-  PROPAGATION STEP SIZE DETERMINED USING DR =  5.000E-03
+  INITIAL STEP SIZE TAKEN FROM SIZE OF FINAL STEP OF SHORT-RANGE PROPAGATION
+  STEP BOUNDARIES ARE EQUALLY SPACED IN R**(1/ 6.00)
+  STEP SIZE MAY BE ADJUSTED SLIGHTLY SO THAT RANGE IS A WHOLE NUMBER OF STEPS
 
-  LOG-DERIVATIVE MATRIX WILL BE INITIALISED IN THE LOCAL EIGENBASIS FOR RMAX IN THE INWARDS PROPAGATION PART
-  LOCALLY CLOSED CHANNELS WILL BE INITIALISED WITH A WKB BOUNDARY CONDITION
-  LOCALLY   OPEN CHANNELS WILL BE INITIALISED WITH THE VALUE  0.0000000E+00
-  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+  LOG-DERIVATIVE MATRIX INITIALISED IN THE LOCAL EIGENBASIS AT RMAX IN THE INWARD PROPAGATION PART
+  LOCALLY CLOSED CHANNELS INITIALISED WITH A WKB BOUNDARY CONDITION
+  LOCALLY  OPEN  CHANNELS INITIALISED WITH THE VALUE  0.000E+00
 
   ======================================================================================================================
 
   PROGRAM WILL ATTEMPT TO CONVERGE ON BOUND STATES AS A FUNCTION OF ENERGY
 
   FOR EACH LEVEL, THE BISECTION METHOD WILL BE USED UNTIL THE VWDB METHOD OFFERS RELIABLE CONVERGENCE.
-
-  BOUND STATE POSITIONS WILL BE IDENTIFIED WITH AN ACCURACY OF  1.00000E-07 CM-1    
+  VWDB CONVERGENCE WILL TERMINATE WHEN THE STEP SIZE IS LESS THAN 1.00000E-07 CM-1    
 
   INPUT ENERGY VALUES ASSUMED TO BE IN UNITS OF CM-1 BY DEFAULT.
 
@@ -1642,7 +1065,616 @@
 
   TOTAL ANGULAR MOMENTUM JTOT RUNS FROM   0  TO     2  IN STEPS OF   1
 
-  EACH JTOT IS SPLIT INTO A MAXIMUM OF   2 DIFFERENT SYMMETRY BLOCKS
+  EACH JTOT IS SPLIT INTO A MAXIMUM OF   2 SYMMETRY BLOCKS
+
+  CALCULATIONS WILL BE FOR SYMMETRY BLOCK   2  ONLY
+
+  ===================================== model system: ITYPE=1; IPROPS=7, IPROPL=9 ======================================
+
+  *******************************************  ANGULAR MOMENTUM JTOT  =   0  *******************************************
+
+  CHANNEL FUNCTION LIST:
+
+  EACH CHANNEL FUNCTION IS FORMED BY COMBINING A PAIR STATE WITH A VALUE OF L.
+
+  CHANNEL  PAIR STATE    PAIR STATE QUANTUM NUMBERS            L        PAIR LEVEL   PAIR ENERGY (CM-1)
+                         ---------      J   ---------
+        1           1                   0                      0             1         0.0000000
+        2           2                   2                      2             2       180.0000000
+        3           3                   4                      4             3       600.0000000
+        4           4                   6                      6             4      1260.0000000
+  = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = 
+
+  NODE COUNT =    3 AT MINIMUM ENERGY =  -10.00000000     CM-1  
+  NODE COUNT =    5 AT MAXIMUM ENERGY =  -1.000000000     CM-1  
+
+  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+  SEARCHING FOR INODE =    1 CORRESPONDING TO NODE COUNT =    4
+
+  CONVERGED ON NODE NUMBER     4 AT                               ENERGY =  -5.065869929     CM-1  
+
+  SMALLEST EIGENVALUE IS NUMBER  1 = -0.10370E-05
+
+  WITH PRINCIPAL EIGENVECTOR COMPONENTS
+  CHAN     VEC    VEC**2   L   QUANTUM NUMBERS
+
+   1    0.9989    0.9977   0   0   1
+
+  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+  SEARCHING FOR INODE =    2 CORRESPONDING TO NODE COUNT =    5
+
+  CONVERGED ON NODE NUMBER     5 AT                               ENERGY =  -1.463920024     CM-1  
+
+  SMALLEST EIGENVALUE IS NUMBER  1 =  0.58917E-02
+
+  WITH PRINCIPAL EIGENVECTOR COMPONENTS
+  CHAN     VEC    VEC**2   L   QUANTUM NUMBERS
+
+   1    0.9647    0.9306   0   0   1
+
+  ======================================================================================================================
+
+  *******************************************  ANGULAR MOMENTUM JTOT  =   1  *******************************************
+
+  CHANNEL FUNCTION LIST:
+
+  EACH CHANNEL FUNCTION IS FORMED BY COMBINING A PAIR STATE WITH A VALUE OF L.
+
+  CHANNEL  PAIR STATE    PAIR STATE QUANTUM NUMBERS            L        PAIR LEVEL   PAIR ENERGY (CM-1)
+                         ---------      J   ---------
+        1           1                   0                      1             1         0.0000000
+        2           2                   2                      1             2       180.0000000
+        3           2                   2                      3             2       180.0000000
+        4           3                   4                      3             3       600.0000000
+        5           3                   4                      5             3       600.0000000
+        6           4                   6                      5             4      1260.0000000
+        7           4                   6                      7             4      1260.0000000
+  = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = 
+
+  NODE COUNT =    3 AT MINIMUM ENERGY =  -10.00000000     CM-1  
+  NODE COUNT =    5 AT MAXIMUM ENERGY =  -1.000000000     CM-1  
+
+  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+  SEARCHING FOR INODE =    1 CORRESPONDING TO NODE COUNT =    4
+
+  CONVERGED ON NODE NUMBER     4 AT                               ENERGY =  -4.992073903     CM-1  
+
+  SMALLEST EIGENVALUE IS NUMBER  1 =  0.13871E-07
+
+  WITH PRINCIPAL EIGENVECTOR COMPONENTS
+  CHAN     VEC    VEC**2   L   QUANTUM NUMBERS
+
+   1    0.9989    0.9978   1   0   1
+
+  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+  SEARCHING FOR INODE =    2 CORRESPONDING TO NODE COUNT =    5
+
+  CONVERGED ON NODE NUMBER     5 AT                               ENERGY =  -1.413103510     CM-1  
+
+  SMALLEST EIGENVALUE IS NUMBER  1 =  0.15010E-01
+
+  WITH PRINCIPAL EIGENVECTOR COMPONENTS
+  CHAN     VEC    VEC**2   L   QUANTUM NUMBERS
+
+   1    0.9017    0.8130   1   0   1
+   2    0.2750    0.0756   1   2   2
+   3   -0.3337    0.1113   3   2   2
+
+  ======================================================================================================================
+
+  *******************************************  ANGULAR MOMENTUM JTOT  =   2  *******************************************
+
+  CHANNEL FUNCTION LIST:
+
+  EACH CHANNEL FUNCTION IS FORMED BY COMBINING A PAIR STATE WITH A VALUE OF L.
+
+  CHANNEL  PAIR STATE    PAIR STATE QUANTUM NUMBERS            L        PAIR LEVEL   PAIR ENERGY (CM-1)
+                         ---------      J   ---------
+        1           2                   2                      0             2       180.0000000
+        2           1                   0                      2             1         0.0000000
+        3           2                   2                      2             2       180.0000000
+        4           3                   4                      2             3       600.0000000
+        5           2                   2                      4             2       180.0000000
+        6           3                   4                      4             3       600.0000000
+        7           4                   6                      4             4      1260.0000000
+        8           3                   4                      6             3       600.0000000
+        9           4                   6                      6             4      1260.0000000
+       10           4                   6                      8             4      1260.0000000
+  = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = 
+
+  NODE COUNT =    3 AT MINIMUM ENERGY =  -10.00000000     CM-1  
+  NODE COUNT =    5 AT MAXIMUM ENERGY =  -1.000000000     CM-1  
+
+  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+  SEARCHING FOR INODE =    1 CORRESPONDING TO NODE COUNT =    4
+
+  CONVERGED ON NODE NUMBER     4 AT                               ENERGY =  -4.844813372     CM-1  
+
+  SMALLEST EIGENVALUE IS NUMBER  1 =  0.47241E-05
+
+  WITH PRINCIPAL EIGENVECTOR COMPONENTS
+  CHAN     VEC    VEC**2   L   QUANTUM NUMBERS
+
+   2   -0.9989    0.9979   2   0   1
+
+  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+  SEARCHING FOR INODE =    2 CORRESPONDING TO NODE COUNT =    5
+
+  CONVERGED ON NODE NUMBER     5 AT                               ENERGY =  -1.312115460     CM-1  
+
+  SMALLEST EIGENVALUE IS NUMBER  1 =  0.10429E-01
+
+  WITH PRINCIPAL EIGENVECTOR COMPONENTS
+  CHAN     VEC    VEC**2   L   QUANTUM NUMBERS
+
+   1    0.3599    0.1296   0   2   2
+   2    0.6049    0.3659   2   0   1
+   3   -0.4279    0.1831   2   2   2
+   5    0.5669    0.3214   4   2   2
+
+  ======================================================================================================================
+
+
+  -- BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND --
+ |                                                                            |
+ |          Bound states of interacting pairs of atoms and molecules          |
+ |                                                                            |
+ |              Copyright (C) 2018 J. M. Hutson & C. R. Le Sueur              |
+ |                                                                            |
+ |                               Version 2019.0 (beta)                        |
+ |                                                                            |
+ |                    This run used       7.41 cpu secs and                   |
+ |                841 of the allocated   1000000 words of storage             |
+ |                                                                            |
+  -- BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND --
+  -- BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND --
+ |                                                                            |
+ |          Bound states of interacting pairs of atoms and molecules          |
+ |                                                                            |
+ |              Copyright (C) 2018 J. M. Hutson & C. R. Le Sueur              |
+ |                                                                            |
+ |                               Version 2019.0 (beta)                        |
+ |                                                                            |
+ |                       Run on 16 Jan 2019   at 11:40:07                     |
+ |                                                                            |
+  -- BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND --
+
+
+  This program is free software: you can redistribute it and/or modify it under
+  the terms of the GNU General Public License, version 3, as published by
+  the Free Software Foundation.
+
+  Publications resulting from the use of this program should refer to
+  J. M. Hutson & C. R. Le Sueur, BOUND computer code 2019.0 (beta)       
+  or to the published paper in Computer Physics Communications when available.
+
+
+  PHYSICAL CONSTANTS OBTAINED FROM NIST CODATA TABULATION OF 2014
+
+  MEMORY ALLOCATED TO MAIN WORKING ARRAY IS   1000000 (8-BYTE) WORDS (    7.63 MB)
+
+  PRINT LEVEL =  5
+
+  RUN LABEL = model system: ITYPE=1; IPROPS=8, IPROPL=9                                       
+
+  REDUCED MASS FOR INTERACTION =  20.000000000 ATOMIC MASS UNITS (DALTONS)
+
+  NO SCRATCH FILE SPECIFIED BY ISCRU PARAMETER: FULL CALCULATION WILL BE DONE AT EACH ENERGY
+
+  ======================================================================================================================
+
+  INTERACTION TYPE IS    LINEAR RIGID ROTOR  -  ATOM.  
+
+  TARGET ROTATIONAL LEVELS TAKEN FROM &BASIS (JLEVEL) INPUT.  NLEVEL =  4
+
+  ENERGY LEVELS COMPUTED FROM B(E) =   30.000000
+
+  QUANTUM NUMBERS FOR INTERACTING PAIR:
+  EACH PAIR STATE IS LABELLED BY  1 QUANTUM LABEL 
+  EACH CHANNEL FUNCTION IS FORMED BY COMBINING A PAIR STATE WITH A VALUE OF L.
+  THE RESULTING BASIS SET IS ASYMPTOTICALLY DIAGONAL.
+
+  PAIR STATE     PAIR STATE QUANTUM NUMBERS    PAIR LEVEL     PAIR ENERGY (CM-1)
+                ---------        J ---------
+        1                        0                1             0.0000000
+        2                        2                2           180.0000000
+        3                        4                3           600.0000000
+        4                        6                4          1260.0000000
+
+  ======================================================================================================================
+  GENERAL-PURPOSE POTENL ROUTINE (MAY 18)
+
+  ANGULAR DEPENDENCE OF POTENTIAL EXPANDED IN TERMS OF
+  LEGENDRE POLYNOMIALS, P(LAMBDA).
+
+  INTERACTION POTENTIAL FOR EXPANSION TERM NUMBER   1
+  WHICH HAS LAMBDA =   0
+
+                 1.00000000E+00 * R **-12
+                -2.00000000E+00 * R ** -6
+
+  INTERACTION POTENTIAL FOR EXPANSION TERM NUMBER   2
+  WHICH HAS LAMBDA =   2
+
+                -2.00000000E-01 * R ** -6
+
+  POTENL PROCESSING FINISHED.
+
+  POTENTIAL RETURNED IN UNITS OF EPSIL  =  50.000000     CM-1
+        CODED WITH R IN UNITS OF RM     =  3.5000000     ANGSTROM
+
+  ALL LENGTHS ARE IN UNITS OF RM (  3.50000000 ANGSTROM ) UNLESS OTHERWISE STATED
+
+  INTERACTION MATRIX USES   2 BLOCKS OF VL ARRAY FOR R-DEPENDENT TERMS IN POTENTIAL
+
+  ======================================================================================================================
+
+  PROPAGATION METHODS FOR COUPLED EQUATIONS SPECIFIED BY IPROPS =  8 AND IPROPL =  9
+
+  COUPLED EQUATIONS WILL BE PROPAGATED TOWARDS RMATCH IN 2 SEGMENTS
+
+  PROPAGATION RANGES ARE CONTROLLED BY VARIABLES RMIN, RMATCH AND RMAX, WITH INPUT VALUES
+  RMIN =  0.5000     RMATCH =   1.000     RMAX =   20.00    
+  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+  SEGMENT 1 WILL BE PROPAGATED OUTWARDS
+
+  FROM RMIN =      0.50 TO RMATCH =      1.00
+
+  COUPLED EQUATIONS SOLVED BY SYMPLECTIC LOG-DERIVATIVE PROPAGATOR OF MANOLOPOULOS AND GRAY
+  USING THE SIX-STEP FIFTH-ORDER METHOD OF MCLACHLAN AND ATELA
+
+  PROPAGATION STEP SIZE DETERMINED USING DR =  1.000E-03
+  STEP SIZE CONSTANT THROUGHOUT RANGE
+  STEP SIZE MAY BE ADJUSTED SLIGHTLY SO THAT RANGE IS A WHOLE NUMBER OF STEPS
+
+  LOG-DERIVATIVE MATRIX INITIALISED IN THE LOCAL EIGENBASIS AT RMIN IN THE OUTWARD PROPAGATION PART
+  LOCALLY CLOSED CHANNELS INITIALISED WITH A WKB BOUNDARY CONDITION
+  LOCALLY  OPEN  CHANNELS INITIALISED WITH THE VALUE  1.000E+08
+  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+  SEGMENT 2 WILL BE PROPAGATED  INWARDS
+
+  TO RMATCH =      1.00 FROM RMAX =     20.00
+
+  COUPLED EQUATIONS SOLVED BY VARIABLE-STEP AIRY PROPAGATOR.
+  PUBLICATIONS RESULTING FROM THE USE OF THIS PROPAGATOR SHOULD REFERENCE
+  M. H. ALEXANDER AND D. E. MANOLOPOULOS,  J. CHEM. PHYS. 86, 2044 (1987).
+
+  INITIAL STEP SIZE TAKEN FROM SIZE OF FINAL STEP OF SHORT-RANGE PROPAGATION
+  STEP SIZES ADJUSTED TO MAINTAIN APPROXIMATE ACCURACY VIA PERTURBATION THEORY
+  WITH TOLHI =  1.00E-04 AND POWR =   6.0    
+
+  LOG-DERIVATIVE MATRIX INITIALISED IN THE LOCAL EIGENBASIS AT RMAX IN THE INWARD PROPAGATION PART
+  LOCALLY CLOSED CHANNELS INITIALISED WITH A WKB BOUNDARY CONDITION
+  LOCALLY  OPEN  CHANNELS INITIALISED WITH THE VALUE  0.000E+00
+
+  ======================================================================================================================
+
+  PROGRAM WILL ATTEMPT TO CONVERGE ON BOUND STATES AS A FUNCTION OF ENERGY
+
+  FOR EACH LEVEL, THE BISECTION METHOD WILL BE USED UNTIL THE VWDB METHOD OFFERS RELIABLE CONVERGENCE.
+  VWDB CONVERGENCE WILL TERMINATE WHEN THE STEP SIZE IS LESS THAN 1.00000E-07 CM-1    
+
+  INPUT ENERGY VALUES ASSUMED TO BE IN UNITS OF CM-1 BY DEFAULT.
+
+  PROGRAM WILL SEEK EIGENVALUES WITH GENERALISED NODE COUNTS FROM    0 TO  99999
+  LYING IN ENERGY RANGE  -10.000     TO  -1.0000     CM-1    
+
+  INITIALIZATION DONE.  TIME WAS   0.00 CPU SECS.         9 WORDS OF STORAGE USED.
+
+  ======================================================================================================================
+
+  TOTAL ANGULAR MOMENTUM JTOT RUNS FROM   0  TO     2  IN STEPS OF   1
+
+  EACH JTOT IS SPLIT INTO A MAXIMUM OF   2 SYMMETRY BLOCKS
+
+  CALCULATIONS WILL BE FOR SYMMETRY BLOCK   2  ONLY
+
+  ===================================== model system: ITYPE=1; IPROPS=8, IPROPL=9 ======================================
+
+  *******************************************  ANGULAR MOMENTUM JTOT  =   0  *******************************************
+
+  CHANNEL FUNCTION LIST:
+
+  EACH CHANNEL FUNCTION IS FORMED BY COMBINING A PAIR STATE WITH A VALUE OF L.
+
+  CHANNEL  PAIR STATE    PAIR STATE QUANTUM NUMBERS            L        PAIR LEVEL   PAIR ENERGY (CM-1)
+                         ---------      J   ---------
+        1           1                   0                      0             1         0.0000000
+        2           2                   2                      2             2       180.0000000
+        3           3                   4                      4             3       600.0000000
+        4           4                   6                      6             4      1260.0000000
+  = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = 
+
+  NODE COUNT =    3 AT MINIMUM ENERGY =  -10.00000000     CM-1  
+  NODE COUNT =    5 AT MAXIMUM ENERGY =  -1.000000000     CM-1  
+
+  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+  SEARCHING FOR INODE =    1 CORRESPONDING TO NODE COUNT =    4
+
+  CONVERGED ON NODE NUMBER     4 AT                               ENERGY =  -5.065870155     CM-1  
+
+  SMALLEST EIGENVALUE IS NUMBER  1 = -0.10525E-05
+
+  WITH PRINCIPAL EIGENVECTOR COMPONENTS
+  CHAN     VEC    VEC**2   L   QUANTUM NUMBERS
+
+   1    0.9989    0.9977   0   0   1
+
+  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+  SEARCHING FOR INODE =    2 CORRESPONDING TO NODE COUNT =    5
+
+  CONVERGED ON NODE NUMBER     5 AT                               ENERGY =  -1.463920176     CM-1  
+
+  SMALLEST EIGENVALUE IS NUMBER  1 =  0.60533E-02
+
+  WITH PRINCIPAL EIGENVECTOR COMPONENTS
+  CHAN     VEC    VEC**2   L   QUANTUM NUMBERS
+
+   1    0.9641    0.9295   0   0   1
+
+  ======================================================================================================================
+
+  *******************************************  ANGULAR MOMENTUM JTOT  =   1  *******************************************
+
+  CHANNEL FUNCTION LIST:
+
+  EACH CHANNEL FUNCTION IS FORMED BY COMBINING A PAIR STATE WITH A VALUE OF L.
+
+  CHANNEL  PAIR STATE    PAIR STATE QUANTUM NUMBERS            L        PAIR LEVEL   PAIR ENERGY (CM-1)
+                         ---------      J   ---------
+        1           1                   0                      1             1         0.0000000
+        2           2                   2                      1             2       180.0000000
+        3           2                   2                      3             2       180.0000000
+        4           3                   4                      3             3       600.0000000
+        5           3                   4                      5             3       600.0000000
+        6           4                   6                      5             4      1260.0000000
+        7           4                   6                      7             4      1260.0000000
+  = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = 
+
+  NODE COUNT =    3 AT MINIMUM ENERGY =  -10.00000000     CM-1  
+  NODE COUNT =    5 AT MAXIMUM ENERGY =  -1.000000000     CM-1  
+
+  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+  SEARCHING FOR INODE =    1 CORRESPONDING TO NODE COUNT =    4
+
+  CONVERGED ON NODE NUMBER     4 AT                               ENERGY =  -4.992074128     CM-1  
+
+  SMALLEST EIGENVALUE IS NUMBER  1 =  0.14149E-07
+
+  WITH PRINCIPAL EIGENVECTOR COMPONENTS
+  CHAN     VEC    VEC**2   L   QUANTUM NUMBERS
+
+   1    0.9989    0.9978   1   0   1
+
+  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+  SEARCHING FOR INODE =    2 CORRESPONDING TO NODE COUNT =    5
+
+  CONVERGED ON NODE NUMBER     5 AT                               ENERGY =  -1.413103659     CM-1  
+
+  SMALLEST EIGENVALUE IS NUMBER  1 =  0.16119E-01
+
+  WITH PRINCIPAL EIGENVECTOR COMPONENTS
+  CHAN     VEC    VEC**2   L   QUANTUM NUMBERS
+
+   1    0.9004    0.8107   1   0   1
+   2    0.2767    0.0766   1   2   2
+   3   -0.3357    0.1127   3   2   2
+
+  ======================================================================================================================
+
+  *******************************************  ANGULAR MOMENTUM JTOT  =   2  *******************************************
+
+  CHANNEL FUNCTION LIST:
+
+  EACH CHANNEL FUNCTION IS FORMED BY COMBINING A PAIR STATE WITH A VALUE OF L.
+
+  CHANNEL  PAIR STATE    PAIR STATE QUANTUM NUMBERS            L        PAIR LEVEL   PAIR ENERGY (CM-1)
+                         ---------      J   ---------
+        1           2                   2                      0             2       180.0000000
+        2           1                   0                      2             1         0.0000000
+        3           2                   2                      2             2       180.0000000
+        4           3                   4                      2             3       600.0000000
+        5           2                   2                      4             2       180.0000000
+        6           3                   4                      4             3       600.0000000
+        7           4                   6                      4             4      1260.0000000
+        8           3                   4                      6             3       600.0000000
+        9           4                   6                      6             4      1260.0000000
+       10           4                   6                      8             4      1260.0000000
+  = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = 
+
+  NODE COUNT =    3 AT MINIMUM ENERGY =  -10.00000000     CM-1  
+  NODE COUNT =    5 AT MAXIMUM ENERGY =  -1.000000000     CM-1  
+
+  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+  SEARCHING FOR INODE =    1 CORRESPONDING TO NODE COUNT =    4
+
+  CONVERGED ON NODE NUMBER     4 AT                               ENERGY =  -4.844813582     CM-1  
+
+  SMALLEST EIGENVALUE IS NUMBER  1 =  0.47221E-05
+
+  WITH PRINCIPAL EIGENVECTOR COMPONENTS
+  CHAN     VEC    VEC**2   L   QUANTUM NUMBERS
+
+   2   -0.9989    0.9979   2   0   1
+
+  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+  SEARCHING FOR INODE =    2 CORRESPONDING TO NODE COUNT =    5
+
+  CONVERGED ON NODE NUMBER     5 AT                               ENERGY =  -1.312115602     CM-1  
+
+  SMALLEST EIGENVALUE IS NUMBER  1 =  0.14413E-01
+
+  WITH PRINCIPAL EIGENVECTOR COMPONENTS
+  CHAN     VEC    VEC**2   L   QUANTUM NUMBERS
+
+   1    0.3610    0.1303   0   2   2
+   2    0.6021    0.3626   2   0   1
+   3   -0.4291    0.1841   2   2   2
+   5    0.5683    0.3229   4   2   2
+
+  ======================================================================================================================
+
+
+  -- BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND --
+ |                                                                            |
+ |          Bound states of interacting pairs of atoms and molecules          |
+ |                                                                            |
+ |              Copyright (C) 2018 J. M. Hutson & C. R. Le Sueur              |
+ |                                                                            |
+ |                               Version 2019.0 (beta)                        |
+ |                                                                            |
+ |                    This run used       1.04 cpu secs and                   |
+ |                841 of the allocated   1000000 words of storage             |
+ |                                                                            |
+  -- BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND --
+  -- BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND --
+ |                                                                            |
+ |          Bound states of interacting pairs of atoms and molecules          |
+ |                                                                            |
+ |              Copyright (C) 2018 J. M. Hutson & C. R. Le Sueur              |
+ |                                                                            |
+ |                               Version 2019.0 (beta)                        |
+ |                                                                            |
+ |                       Run on 16 Jan 2019   at 11:40:08                     |
+ |                                                                            |
+  -- BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND --
+
+
+  This program is free software: you can redistribute it and/or modify it under
+  the terms of the GNU General Public License, version 3, as published by
+  the Free Software Foundation.
+
+  Publications resulting from the use of this program should refer to
+  J. M. Hutson & C. R. Le Sueur, BOUND computer code 2019.0 (beta)       
+  or to the published paper in Computer Physics Communications when available.
+
+
+  PHYSICAL CONSTANTS OBTAINED FROM NIST CODATA TABULATION OF 2014
+
+  MEMORY ALLOCATED TO MAIN WORKING ARRAY IS   1000000 (8-BYTE) WORDS (    7.63 MB)
+
+  PRINT LEVEL =  5
+
+  RUN LABEL = model system: ITYPE=1; IPROPS=IPROPL=6                                          
+
+  REDUCED MASS FOR INTERACTION =  20.000000000 ATOMIC MASS UNITS (DALTONS)
+
+  NO SCRATCH FILE SPECIFIED BY ISCRU PARAMETER: FULL CALCULATION WILL BE DONE AT EACH ENERGY
+
+  ======================================================================================================================
+
+  INTERACTION TYPE IS    LINEAR RIGID ROTOR  -  ATOM.  
+
+  TARGET ROTATIONAL LEVELS TAKEN FROM &BASIS (JLEVEL) INPUT.  NLEVEL =  4
+
+  ENERGY LEVELS COMPUTED FROM B(E) =   30.000000
+
+  QUANTUM NUMBERS FOR INTERACTING PAIR:
+  EACH PAIR STATE IS LABELLED BY  1 QUANTUM LABEL 
+  EACH CHANNEL FUNCTION IS FORMED BY COMBINING A PAIR STATE WITH A VALUE OF L.
+  THE RESULTING BASIS SET IS ASYMPTOTICALLY DIAGONAL.
+
+  PAIR STATE     PAIR STATE QUANTUM NUMBERS    PAIR LEVEL     PAIR ENERGY (CM-1)
+                ---------        J ---------
+        1                        0                1             0.0000000
+        2                        2                2           180.0000000
+        3                        4                3           600.0000000
+        4                        6                4          1260.0000000
+
+  ======================================================================================================================
+  GENERAL-PURPOSE POTENL ROUTINE (MAY 18)
+
+  ANGULAR DEPENDENCE OF POTENTIAL EXPANDED IN TERMS OF
+  LEGENDRE POLYNOMIALS, P(LAMBDA).
+
+  INTERACTION POTENTIAL FOR EXPANSION TERM NUMBER   1
+  WHICH HAS LAMBDA =   0
+
+                 1.00000000E+00 * R **-12
+                -2.00000000E+00 * R ** -6
+
+  INTERACTION POTENTIAL FOR EXPANSION TERM NUMBER   2
+  WHICH HAS LAMBDA =   2
+
+                -2.00000000E-01 * R ** -6
+
+  POTENL PROCESSING FINISHED.
+
+  POTENTIAL RETURNED IN UNITS OF EPSIL  =  50.000000     CM-1
+        CODED WITH R IN UNITS OF RM     =  3.5000000     ANGSTROM
+
+  ALL LENGTHS ARE IN UNITS OF RM (  3.50000000 ANGSTROM ) UNLESS OTHERWISE STATED
+
+  INTERACTION MATRIX USES   2 BLOCKS OF VL ARRAY FOR R-DEPENDENT TERMS IN POTENTIAL
+
+  ======================================================================================================================
+
+  PROPAGATION METHODS FOR COUPLED EQUATIONS SPECIFIED BY IPROPS =  6 AND IPROPL =  6
+
+  COUPLED EQUATIONS WILL BE PROPAGATED TOWARDS RMATCH IN 2 SEGMENTS
+
+  PROPAGATION RANGES ARE CONTROLLED BY VARIABLES RMIN, RMATCH AND RMAX, WITH INPUT VALUES
+  RMIN =  0.5000     RMATCH =   1.000     RMAX =   20.00    
+  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+  SEGMENT 1 WILL BE PROPAGATED OUTWARDS
+
+  FROM RMIN =      0.50 TO RMATCH =      1.00
+
+  COUPLED EQUATIONS SOLVED BY DIABATIC MODIFIED LOG-DERIVATIVE PROPAGATOR OF MANOLOPOULOS
+
+  PROPAGATION STEP SIZE DETERMINED USING DR =  1.000E-03
+  STEP SIZE CONSTANT THROUGHOUT RANGE
+  STEP SIZE MAY BE ADJUSTED SLIGHTLY SO THAT RANGE IS A WHOLE NUMBER OF STEPS
+
+  LOG-DERIVATIVE MATRIX INITIALISED IN THE LOCAL EIGENBASIS AT RMIN IN THE OUTWARD PROPAGATION PART
+  LOCALLY CLOSED CHANNELS INITIALISED WITH A WKB BOUNDARY CONDITION
+  LOCALLY  OPEN  CHANNELS INITIALISED WITH THE VALUE  1.000E+08
+  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+  SEGMENT 2 WILL BE PROPAGATED  INWARDS
+
+  TO RMATCH =      1.00 FROM RMAX =     20.00
+
+  COUPLED EQUATIONS SOLVED BY DIABATIC MODIFIED LOG-DERIVATIVE PROPAGATOR OF MANOLOPOULOS
+
+  PROPAGATION STEP SIZE DETERMINED USING DR =  5.000E-03
+  STEP SIZE CONSTANT THROUGHOUT RANGE
+  STEP SIZE MAY BE ADJUSTED SLIGHTLY SO THAT RANGE IS A WHOLE NUMBER OF STEPS
+
+  LOG-DERIVATIVE MATRIX INITIALISED IN THE LOCAL EIGENBASIS AT RMAX IN THE INWARD PROPAGATION PART
+  LOCALLY CLOSED CHANNELS INITIALISED WITH A WKB BOUNDARY CONDITION
+  LOCALLY  OPEN  CHANNELS INITIALISED WITH THE VALUE  0.000E+00
+
+  ======================================================================================================================
+
+  PROGRAM WILL ATTEMPT TO CONVERGE ON BOUND STATES AS A FUNCTION OF ENERGY
+
+  FOR EACH LEVEL, THE BISECTION METHOD WILL BE USED UNTIL THE VWDB METHOD OFFERS RELIABLE CONVERGENCE.
+  VWDB CONVERGENCE WILL TERMINATE WHEN THE STEP SIZE IS LESS THAN 1.00000E-07 CM-1    
+
+  INPUT ENERGY VALUES ASSUMED TO BE IN UNITS OF CM-1 BY DEFAULT.
+
+  PROGRAM WILL SEEK EIGENVALUES WITH GENERALISED NODE COUNTS FROM    0 TO  99999
+  LYING IN ENERGY RANGE  -10.000     TO  -1.0000     CM-1    
+
+  INITIALIZATION DONE.  TIME WAS   0.00 CPU SECS.         9 WORDS OF STORAGE USED.
+
+  ======================================================================================================================
+
+  TOTAL ANGULAR MOMENTUM JTOT RUNS FROM   0  TO     2  IN STEPS OF   1
+
+  EACH JTOT IS SPLIT INTO A MAXIMUM OF   2 SYMMETRY BLOCKS
 
   CALCULATIONS WILL BE FOR SYMMETRY BLOCK   2  ONLY
 
@@ -1806,7 +1838,7 @@
  |                                                                            |
  |                               Version 2019.0 (beta)                        |
  |                                                                            |
- |                    This run used       2.04 cpu secs and                   |
+ |                    This run used       2.29 cpu secs and                   |
  |                591 of the allocated   1000000 words of storage             |
  |                                                                            |
   -- BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND --
@@ -1818,7 +1850,7 @@
  |                                                                            |
  |                               Version 2019.0 (beta)                        |
  |                                                                            |
- |                       Run on 14 Nov 2018   at 09:50:01                     |
+ |                       Run on 16 Jan 2019   at 11:40:10                     |
  |                                                                            |
   -- BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND --
 
@@ -1840,9 +1872,9 @@
 
   RUN LABEL = model system: ITYPE=1; IPROPS=IPROPL=5                                          
 
-  REDUCED MASS FOR INTERACTION =  20.000000000 ATOMIC MASS UNITS
+  REDUCED MASS FOR INTERACTION =  20.000000000 ATOMIC MASS UNITS (DALTONS)
 
-  *** WARNING - NO SCRATCH FILE SPECIFIED BY ISCRU PARAMETER - FULL CALCULATION WILL BE DONE AT EACH ENERGY
+  NO SCRATCH FILE SPECIFIED BY ISCRU PARAMETER: FULL CALCULATION WILL BE DONE AT EACH ENERGY
 
   ======================================================================================================================
 
@@ -1883,49 +1915,56 @@
 
   POTENL PROCESSING FINISHED.
 
-  UNITS FOR POTENTIAL ROUTINES:
-  POTENTIAL RETURNED IN UNITS OF EPSIL =      50.000000 CM-1
-  R                  IN UNITS OF RM    =       3.500000 ANGSTROMS
+  POTENTIAL RETURNED IN UNITS OF EPSIL  =  50.000000     CM-1
+        CODED WITH R IN UNITS OF RM     =  3.5000000     ANGSTROM
+
+  ALL LENGTHS ARE IN UNITS OF RM (  3.50000000 ANGSTROM ) UNLESS OTHERWISE STATED
+
   INTERACTION MATRIX USES   2 BLOCKS OF VL ARRAY FOR R-DEPENDENT TERMS IN POTENTIAL
 
   ======================================================================================================================
 
-  PROPAGATION ALGORITHMS FOR COUPLED EQUATIONS SPECIFIED BY IPROPS =  5 AND IPROPL =  5
+  PROPAGATION METHODS FOR COUPLED EQUATIONS SPECIFIED BY IPROPS =  5 AND IPROPL =  5
 
   COUPLED EQUATIONS WILL BE PROPAGATED TOWARDS RMATCH IN 2 SEGMENTS
+
+  PROPAGATION RANGES ARE CONTROLLED BY VARIABLES RMIN, RMATCH AND RMAX, WITH INPUT VALUES
+  RMIN =  0.5000     RMATCH =   1.000     RMAX =   20.00    
   ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
   SEGMENT 1 WILL BE PROPAGATED OUTWARDS
 
-  FROM RMIN   =      0.50  TO RMATCH =      1.00
+  FROM RMIN =      0.50 TO RMATCH =      1.00
 
-  COUPLED EQUATIONS SOLVED BY LOG DERIVATIVE METHOD OF JOHNSON
+  COUPLED EQUATIONS SOLVED BY LOG-DERIVATIVE PROPAGATOR OF JOHNSON
 
   PROPAGATION STEP SIZE DETERMINED USING DR =  1.000E-03
+  STEP SIZE CONSTANT THROUGHOUT RANGE
+  STEP SIZE MAY BE ADJUSTED SLIGHTLY SO THAT RANGE IS A WHOLE NUMBER OF STEPS
 
-  LOG-DERIVATIVE MATRIX WILL BE INITIALISED IN THE LOCAL EIGENBASIS FOR RMIN IN THE OUTWARDS PROPAGATION PART
-  LOCALLY CLOSED CHANNELS WILL BE INITIALISED WITH A WKB BOUNDARY CONDITION
-  LOCALLY OPEN CHANNELS WILL BE INITIALISED WITH THE VALUE  1.0000000E+08
+  LOG-DERIVATIVE MATRIX INITIALISED IN THE LOCAL EIGENBASIS AT RMIN IN THE OUTWARD PROPAGATION PART
+  LOCALLY CLOSED CHANNELS INITIALISED WITH A WKB BOUNDARY CONDITION
+  LOCALLY  OPEN  CHANNELS INITIALISED WITH THE VALUE  1.000E+08
   ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
   SEGMENT 2 WILL BE PROPAGATED  INWARDS
 
-  FROM RMAX   =     20.00  TO RMATCH =      1.00
+  TO RMATCH =      1.00 FROM RMAX =     20.00
 
-  COUPLED EQUATIONS SOLVED BY LOG DERIVATIVE METHOD OF JOHNSON
+  COUPLED EQUATIONS SOLVED BY LOG-DERIVATIVE PROPAGATOR OF JOHNSON
 
-  PROPAGATION STEP SIZE DETERMINED USING DR =  1.000E-03
+  INITIAL STEP SIZE TAKEN FROM SIZE OF FINAL STEP OF SHORT-RANGE PROPAGATION
+  STEP SIZE CONSTANT THROUGHOUT RANGE
+  STEP SIZE MAY BE ADJUSTED SLIGHTLY SO THAT RANGE IS A WHOLE NUMBER OF STEPS
 
-  LOG-DERIVATIVE MATRIX WILL BE INITIALISED IN THE LOCAL EIGENBASIS FOR RMAX IN THE INWARDS PROPAGATION PART
-  LOCALLY CLOSED CHANNELS WILL BE INITIALISED WITH A WKB BOUNDARY CONDITION
-  LOCALLY   OPEN CHANNELS WILL BE INITIALISED WITH THE VALUE  0.0000000E+00
-  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+  LOG-DERIVATIVE MATRIX INITIALISED IN THE LOCAL EIGENBASIS AT RMAX IN THE INWARD PROPAGATION PART
+  LOCALLY CLOSED CHANNELS INITIALISED WITH A WKB BOUNDARY CONDITION
+  LOCALLY  OPEN  CHANNELS INITIALISED WITH THE VALUE  0.000E+00
 
   ======================================================================================================================
 
   PROGRAM WILL ATTEMPT TO CONVERGE ON BOUND STATES AS A FUNCTION OF ENERGY
 
   FOR EACH LEVEL, THE BISECTION METHOD WILL BE USED UNTIL THE VWDB METHOD OFFERS RELIABLE CONVERGENCE.
-
-  BOUND STATE POSITIONS WILL BE IDENTIFIED WITH AN ACCURACY OF  1.00000E-07 CM-1    
+  VWDB CONVERGENCE WILL TERMINATE WHEN THE STEP SIZE IS LESS THAN 1.00000E-07 CM-1    
 
   INPUT ENERGY VALUES ASSUMED TO BE IN UNITS OF CM-1 BY DEFAULT.
 
@@ -1938,7 +1977,7 @@
 
   TOTAL ANGULAR MOMENTUM JTOT RUNS FROM   0  TO     2  IN STEPS OF   1
 
-  EACH JTOT IS SPLIT INTO A MAXIMUM OF   2 DIFFERENT SYMMETRY BLOCKS
+  EACH JTOT IS SPLIT INTO A MAXIMUM OF   2 SYMMETRY BLOCKS
 
   CALCULATIONS WILL BE FOR SYMMETRY BLOCK   2  ONLY
 
@@ -2102,7 +2141,7 @@
  |                                                                            |
  |                               Version 2019.0 (beta)                        |
  |                                                                            |
- |                    This run used       8.97 cpu secs and                   |
+ |                    This run used       8.95 cpu secs and                   |
  |                591 of the allocated   1000000 words of storage             |
  |                                                                            |
   -- BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND --
@@ -2114,7 +2153,7 @@
  |                                                                            |
  |                               Version 2019.0 (beta)                        |
  |                                                                            |
- |                       Run on 14 Nov 2018   at 09:50:10                     |
+ |                       Run on 16 Jan 2019   at 11:40:19                     |
  |                                                                            |
   -- BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND --
 
@@ -2136,9 +2175,9 @@
 
   RUN LABEL = model system: ITYPE=1; IPROPS=IPROPL=7                                          
 
-  REDUCED MASS FOR INTERACTION =  20.000000000 ATOMIC MASS UNITS
+  REDUCED MASS FOR INTERACTION =  20.000000000 ATOMIC MASS UNITS (DALTONS)
 
-  *** WARNING - NO SCRATCH FILE SPECIFIED BY ISCRU PARAMETER - FULL CALCULATION WILL BE DONE AT EACH ENERGY
+  NO SCRATCH FILE SPECIFIED BY ISCRU PARAMETER: FULL CALCULATION WILL BE DONE AT EACH ENERGY
 
   ======================================================================================================================
 
@@ -2179,49 +2218,56 @@
 
   POTENL PROCESSING FINISHED.
 
-  UNITS FOR POTENTIAL ROUTINES:
-  POTENTIAL RETURNED IN UNITS OF EPSIL =      50.000000 CM-1
-  R                  IN UNITS OF RM    =       3.500000 ANGSTROMS
+  POTENTIAL RETURNED IN UNITS OF EPSIL  =  50.000000     CM-1
+        CODED WITH R IN UNITS OF RM     =  3.5000000     ANGSTROM
+
+  ALL LENGTHS ARE IN UNITS OF RM (  3.50000000 ANGSTROM ) UNLESS OTHERWISE STATED
+
   INTERACTION MATRIX USES   2 BLOCKS OF VL ARRAY FOR R-DEPENDENT TERMS IN POTENTIAL
 
   ======================================================================================================================
 
-  PROPAGATION ALGORITHMS FOR COUPLED EQUATIONS SPECIFIED BY IPROPS =  7 AND IPROPL =  7
+  PROPAGATION METHODS FOR COUPLED EQUATIONS SPECIFIED BY IPROPS =  7 AND IPROPL =  7
 
   COUPLED EQUATIONS WILL BE PROPAGATED TOWARDS RMATCH IN 2 SEGMENTS
+
+  PROPAGATION RANGES ARE CONTROLLED BY VARIABLES RMIN, RMATCH AND RMAX, WITH INPUT VALUES
+  RMIN =  0.5000     RMATCH =   1.000     RMAX =   20.00    
   ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
   SEGMENT 1 WILL BE PROPAGATED OUTWARDS
 
-  FROM RMIN   =      0.50  TO RMATCH =      1.00
+  FROM RMIN =      0.50 TO RMATCH =      1.00
 
-  COUPLED EQUATIONS SOLVED BY QUASIADIABATIC MODIFIED LOG DERIVATIVE METHOD OF MANOLOPOULOS
+  COUPLED EQUATIONS SOLVED BY QUASIADIABATIC MODIFIED LOG-DERIVATIVE PROPAGATOR OF MANOLOPOULOS
 
   PROPAGATION STEP SIZE DETERMINED USING DR =  1.000E-03
+  STEP SIZE CONSTANT THROUGHOUT RANGE
+  STEP SIZE MAY BE ADJUSTED SLIGHTLY SO THAT RANGE IS A WHOLE NUMBER OF STEPS
 
-  LOG-DERIVATIVE MATRIX WILL BE INITIALISED IN THE LOCAL EIGENBASIS FOR RMIN IN THE OUTWARDS PROPAGATION PART
-  LOCALLY CLOSED CHANNELS WILL BE INITIALISED WITH A WKB BOUNDARY CONDITION
-  LOCALLY OPEN CHANNELS WILL BE INITIALISED WITH THE VALUE  1.0000000E+08
+  LOG-DERIVATIVE MATRIX INITIALISED IN THE LOCAL EIGENBASIS AT RMIN IN THE OUTWARD PROPAGATION PART
+  LOCALLY CLOSED CHANNELS INITIALISED WITH A WKB BOUNDARY CONDITION
+  LOCALLY  OPEN  CHANNELS INITIALISED WITH THE VALUE  1.000E+08
   ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
   SEGMENT 2 WILL BE PROPAGATED  INWARDS
 
-  FROM RMAX   =     20.00  TO RMATCH =      1.00
+  TO RMATCH =      1.00 FROM RMAX =     20.00
 
-  COUPLED EQUATIONS SOLVED BY QUASIADIABATIC MODIFIED LOG DERIVATIVE METHOD OF MANOLOPOULOS
+  COUPLED EQUATIONS SOLVED BY QUASIADIABATIC MODIFIED LOG-DERIVATIVE PROPAGATOR OF MANOLOPOULOS
 
-  PROPAGATION STEP SIZE DETERMINED USING DR =  1.000E-03
+  INITIAL STEP SIZE TAKEN FROM SIZE OF FINAL STEP OF SHORT-RANGE PROPAGATION
+  STEP SIZE CONSTANT THROUGHOUT RANGE
+  STEP SIZE MAY BE ADJUSTED SLIGHTLY SO THAT RANGE IS A WHOLE NUMBER OF STEPS
 
-  LOG-DERIVATIVE MATRIX WILL BE INITIALISED IN THE LOCAL EIGENBASIS FOR RMAX IN THE INWARDS PROPAGATION PART
-  LOCALLY CLOSED CHANNELS WILL BE INITIALISED WITH A WKB BOUNDARY CONDITION
-  LOCALLY   OPEN CHANNELS WILL BE INITIALISED WITH THE VALUE  0.0000000E+00
-  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+  LOG-DERIVATIVE MATRIX INITIALISED IN THE LOCAL EIGENBASIS AT RMAX IN THE INWARD PROPAGATION PART
+  LOCALLY CLOSED CHANNELS INITIALISED WITH A WKB BOUNDARY CONDITION
+  LOCALLY  OPEN  CHANNELS INITIALISED WITH THE VALUE  0.000E+00
 
   ======================================================================================================================
 
   PROGRAM WILL ATTEMPT TO CONVERGE ON BOUND STATES AS A FUNCTION OF ENERGY
 
   FOR EACH LEVEL, THE BISECTION METHOD WILL BE USED UNTIL THE VWDB METHOD OFFERS RELIABLE CONVERGENCE.
-
-  BOUND STATE POSITIONS WILL BE IDENTIFIED WITH AN ACCURACY OF  1.00000E-07 CM-1    
+  VWDB CONVERGENCE WILL TERMINATE WHEN THE STEP SIZE IS LESS THAN 1.00000E-07 CM-1    
 
   INPUT ENERGY VALUES ASSUMED TO BE IN UNITS OF CM-1 BY DEFAULT.
 
@@ -2234,7 +2280,7 @@
 
   TOTAL ANGULAR MOMENTUM JTOT RUNS FROM   0  TO     2  IN STEPS OF   1
 
-  EACH JTOT IS SPLIT INTO A MAXIMUM OF   2 DIFFERENT SYMMETRY BLOCKS
+  EACH JTOT IS SPLIT INTO A MAXIMUM OF   2 SYMMETRY BLOCKS
 
   CALCULATIONS WILL BE FOR SYMMETRY BLOCK   2  ONLY
 
@@ -2398,7 +2444,7 @@
  |                                                                            |
  |                               Version 2019.0 (beta)                        |
  |                                                                            |
- |                    This run used      24.69 cpu secs and                   |
+ |                    This run used      24.21 cpu secs and                   |
  |                831 of the allocated   1000000 words of storage             |
  |                                                                            |
   -- BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND --
@@ -2410,7 +2456,7 @@
  |                                                                            |
  |                               Version 2019.0 (beta)                        |
  |                                                                            |
- |                       Run on 14 Nov 2018   at 09:50:35                     |
+ |                       Run on 16 Jan 2019   at 11:40:43                     |
  |                                                                            |
   -- BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND --
 
@@ -2430,11 +2476,11 @@
 
   PRINT LEVEL =  5
 
-  RUN LABEL = model system: ITYPE=1; IPROPS=IPROPL=9                                          
+  RUN LABEL = model system: ITYPE=1; IPROPS=IPROPL=8                                          
 
-  REDUCED MASS FOR INTERACTION =  20.000000000 ATOMIC MASS UNITS
+  REDUCED MASS FOR INTERACTION =  20.000000000 ATOMIC MASS UNITS (DALTONS)
 
-  *** WARNING - NO SCRATCH FILE SPECIFIED BY ISCRU PARAMETER - FULL CALCULATION WILL BE DONE AT EACH ENERGY
+  NO SCRATCH FILE SPECIFIED BY ISCRU PARAMETER: FULL CALCULATION WILL BE DONE AT EACH ENERGY
 
   ======================================================================================================================
 
@@ -2475,51 +2521,58 @@
 
   POTENL PROCESSING FINISHED.
 
-  UNITS FOR POTENTIAL ROUTINES:
-  POTENTIAL RETURNED IN UNITS OF EPSIL =      50.000000 CM-1
-  R                  IN UNITS OF RM    =       3.500000 ANGSTROMS
+  POTENTIAL RETURNED IN UNITS OF EPSIL  =  50.000000     CM-1
+        CODED WITH R IN UNITS OF RM     =  3.5000000     ANGSTROM
+
+  ALL LENGTHS ARE IN UNITS OF RM (  3.50000000 ANGSTROM ) UNLESS OTHERWISE STATED
+
   INTERACTION MATRIX USES   2 BLOCKS OF VL ARRAY FOR R-DEPENDENT TERMS IN POTENTIAL
 
   ======================================================================================================================
 
-  PROPAGATION ALGORITHMS FOR COUPLED EQUATIONS SPECIFIED BY IPROPS =  9 AND IPROPL =  9
+  PROPAGATION METHODS FOR COUPLED EQUATIONS SPECIFIED BY IPROPS =  8 AND IPROPL =  8
 
   COUPLED EQUATIONS WILL BE PROPAGATED TOWARDS RMATCH IN 2 SEGMENTS
+
+  PROPAGATION RANGES ARE CONTROLLED BY VARIABLES RMIN, RMATCH AND RMAX, WITH INPUT VALUES
+  RMIN =  0.5000     RMATCH =   1.000     RMAX =   20.00    
   ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
   SEGMENT 1 WILL BE PROPAGATED OUTWARDS
 
-  FROM RMIN   =      0.50  TO RMATCH =      1.00
+  FROM RMIN =      0.50 TO RMATCH =      1.00
 
-  COUPLED EQUATIONS SOLVED BY SYMPLECTIC LOG-DERIVATIVE METHOD OF MANOLOPOULOS AND GRAY
+  COUPLED EQUATIONS SOLVED BY SYMPLECTIC LOG-DERIVATIVE PROPAGATOR OF MANOLOPOULOS AND GRAY
   USING THE SIX-STEP FIFTH-ORDER METHOD OF MCLACHLAN AND ATELA
 
   PROPAGATION STEP SIZE DETERMINED USING DR =  1.000E-03
+  STEP SIZE CONSTANT THROUGHOUT RANGE
+  STEP SIZE MAY BE ADJUSTED SLIGHTLY SO THAT RANGE IS A WHOLE NUMBER OF STEPS
 
-  LOG-DERIVATIVE MATRIX WILL BE INITIALISED IN THE LOCAL EIGENBASIS FOR RMIN IN THE OUTWARDS PROPAGATION PART
-  LOCALLY CLOSED CHANNELS WILL BE INITIALISED WITH A WKB BOUNDARY CONDITION
-  LOCALLY OPEN CHANNELS WILL BE INITIALISED WITH THE VALUE  1.0000000E+08
+  LOG-DERIVATIVE MATRIX INITIALISED IN THE LOCAL EIGENBASIS AT RMIN IN THE OUTWARD PROPAGATION PART
+  LOCALLY CLOSED CHANNELS INITIALISED WITH A WKB BOUNDARY CONDITION
+  LOCALLY  OPEN  CHANNELS INITIALISED WITH THE VALUE  1.000E+08
   ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
   SEGMENT 2 WILL BE PROPAGATED  INWARDS
 
-  FROM RMAX   =     20.00  TO RMATCH =      1.00
+  TO RMATCH =      1.00 FROM RMAX =     20.00
 
-  COUPLED EQUATIONS SOLVED BY SYMPLECTIC LOG-DERIVATIVE METHOD OF MANOLOPOULOS AND GRAY
+  COUPLED EQUATIONS SOLVED BY SYMPLECTIC LOG-DERIVATIVE PROPAGATOR OF MANOLOPOULOS AND GRAY
   USING THE SIX-STEP FIFTH-ORDER METHOD OF MCLACHLAN AND ATELA
 
-  PROPAGATION STEP SIZE DETERMINED USING DR =  1.000E-03
+  INITIAL STEP SIZE TAKEN FROM SIZE OF FINAL STEP OF SHORT-RANGE PROPAGATION
+  STEP SIZE CONSTANT THROUGHOUT RANGE
+  STEP SIZE MAY BE ADJUSTED SLIGHTLY SO THAT RANGE IS A WHOLE NUMBER OF STEPS
 
-  LOG-DERIVATIVE MATRIX WILL BE INITIALISED IN THE LOCAL EIGENBASIS FOR RMAX IN THE INWARDS PROPAGATION PART
-  LOCALLY CLOSED CHANNELS WILL BE INITIALISED WITH A WKB BOUNDARY CONDITION
-  LOCALLY   OPEN CHANNELS WILL BE INITIALISED WITH THE VALUE  0.0000000E+00
-  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+  LOG-DERIVATIVE MATRIX INITIALISED IN THE LOCAL EIGENBASIS AT RMAX IN THE INWARD PROPAGATION PART
+  LOCALLY CLOSED CHANNELS INITIALISED WITH A WKB BOUNDARY CONDITION
+  LOCALLY  OPEN  CHANNELS INITIALISED WITH THE VALUE  0.000E+00
 
   ======================================================================================================================
 
   PROGRAM WILL ATTEMPT TO CONVERGE ON BOUND STATES AS A FUNCTION OF ENERGY
 
   FOR EACH LEVEL, THE BISECTION METHOD WILL BE USED UNTIL THE VWDB METHOD OFFERS RELIABLE CONVERGENCE.
-
-  BOUND STATE POSITIONS WILL BE IDENTIFIED WITH AN ACCURACY OF  1.00000E-07 CM-1    
+  VWDB CONVERGENCE WILL TERMINATE WHEN THE STEP SIZE IS LESS THAN 1.00000E-07 CM-1    
 
   INPUT ENERGY VALUES ASSUMED TO BE IN UNITS OF CM-1 BY DEFAULT.
 
@@ -2532,11 +2585,11 @@
 
   TOTAL ANGULAR MOMENTUM JTOT RUNS FROM   0  TO     2  IN STEPS OF   1
 
-  EACH JTOT IS SPLIT INTO A MAXIMUM OF   2 DIFFERENT SYMMETRY BLOCKS
+  EACH JTOT IS SPLIT INTO A MAXIMUM OF   2 SYMMETRY BLOCKS
 
   CALCULATIONS WILL BE FOR SYMMETRY BLOCK   2  ONLY
 
-  ======================================= model system: ITYPE=1; IPROPS=IPROPL=9 =======================================
+  ======================================= model system: ITYPE=1; IPROPS=IPROPL=8 =======================================
 
   *******************************************  ANGULAR MOMENTUM JTOT  =   0  *******************************************
 
@@ -2696,7 +2749,7 @@
  |                                                                            |
  |                               Version 2019.0 (beta)                        |
  |                                                                            |
- |                    This run used      20.18 cpu secs and                   |
- |                931 of the allocated   1000000 words of storage             |
+ |                    This run used      20.65 cpu secs and                   |
+ |                591 of the allocated   1000000 words of storage             |
  |                                                                            |
   -- BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND --

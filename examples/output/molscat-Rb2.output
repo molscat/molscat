@@ -7,7 +7,7 @@
  |                                                                            |
  |                               Version 2019.0 (beta)                        |
  |                                                                            |
- |                       Run on 14 Nov 2018   at 09:43:17                     |
+ |                       Run on 16 Jan 2019   at 11:34:18                     |
  |                                                                            |
   ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
 
@@ -26,11 +26,11 @@
   MEMORY ALLOCATED TO MAIN WORKING ARRAY IS   1000000 (8-BYTE) WORDS (    7.63 MB)
   2 INTEGERS CAN BE STORED IN EACH WORD.
 
-  PRINT LEVEL =  2     OTHER PRINT CONTROLS  ISIGPR = 0
+  PRINT LEVEL =  3     OTHER PRINT CONTROLS  ISIGPR = 0
 
   RUN LABEL = 85Rb-85Rb elastic pole characterisation in aa channel                           
 
-  REDUCED MASS FOR INTERACTION =  42.455894869 ATOMIC MASS UNITS
+  REDUCED MASS FOR INTERACTION =  42.455894869 ATOMIC MASS UNITS (DALTONS)
 
   ======================================================================================================================
   ATOM - ATOM WITH NUC SP + MAG FL
@@ -182,11 +182,10 @@
 
   POTENL PROCESSING FINISHED.
 
-  UNITS FOR POTENTIAL ROUTINES:
-  POTENTIAL RETURNED IN UNITS OF EPSIL =       1.000000 CM-1
-  R                  IN UNITS OF RM    =       0.529177 ANGSTROMS
+  POTENTIAL RETURNED IN UNITS OF EPSIL  =  1.0000000     CM-1
+        CODED WITH R IN UNITS OF RM     = 0.52917721     ANGSTROM
 
-  ALL LENGTHS ARE IN UNITS OF RM =  0.529177 ANGSTROM UNLESS OTHERWISE STATED
+  ALL LENGTHS ARE IN UNITS OF BOHR (  0.52917721 ANGSTROM ) UNLESS OTHERWISE STATED
 
   INTERACTION MATRIX USES   3 BLOCKS OF VL ARRAY FOR R-DEPENDENT TERMS IN POTENTIAL
                             2                    FOR CONSTANT    TERMS IN POTENTIAL
@@ -196,34 +195,38 @@
 
   ======================================================================================================================
 
-  PROPAGATION ALGORITHMS FOR COUPLED EQUATIONS SPECIFIED BY IPROPS =  6 AND IPROPL =  1
+  PROPAGATION METHODS FOR COUPLED EQUATIONS SPECIFIED BY IPROPS =  6 AND IPROPL =  9
 
   COUPLED EQUATIONS WILL BE PROPAGATED OUTWARDS IN 2 SEGMENTS
+
+  PROPAGATION RANGES ARE CONTROLLED BY VARIABLES RMIN, RMID AND RMAX, WITH INPUT VALUES
+  RMIN =   3.000     RMID =   21.00     RMAX =  1.5000E+04
   ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
   SEGMENT 1 WILL BE PROPAGATED OUTWARDS
 
-  FROM RMIN   =      3.00  TO RMID   =     21.00
+  FROM RMIN =      3.00 TO RMID =     21.00
 
-  COUPLED EQUATIONS SOLVED BY DIABATIC MODIFIED LOG DERIVATIVE METHOD OF MANOLOPOULOS
+  COUPLED EQUATIONS SOLVED BY DIABATIC MODIFIED LOG-DERIVATIVE PROPAGATOR OF MANOLOPOULOS
 
   PROPAGATION STEP SIZE DETERMINED USING DR =  2.000E-03
+  STEP SIZE CONSTANT THROUGHOUT RANGE
+  STEP SIZE MAY BE ADJUSTED SLIGHTLY SO THAT RANGE IS A WHOLE NUMBER OF STEPS
 
-  LOG-DERIVATIVE MATRIX WILL BE INITIALISED IN THE LOCAL EIGENBASIS FOR RMIN IN THE OUTWARDS PROPAGATION PART
-  LOCALLY CLOSED CHANNELS WILL BE INITIALISED WITH A WKB BOUNDARY CONDITION
-  LOCALLY OPEN CHANNELS WILL BE INITIALISED WITH THE VALUE  1.0000000E+08
+  LOG-DERIVATIVE MATRIX INITIALISED IN THE LOCAL EIGENBASIS AT RMIN
+  LOCALLY CLOSED CHANNELS INITIALISED WITH A WKB BOUNDARY CONDITION
+  LOCALLY  OPEN  CHANNELS INITIALISED WITH THE VALUE  1.000E+08
   ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
   SEGMENT 2 WILL BE PROPAGATED OUTWARDS
 
-  FROM RMID   =     21.00  TO RMAX   =  15000.00
+  FROM RMID =     21.00 TO RMAX =  15000.00
 
-  COUPLED EQUATIONS SOLVED BY VARIABLE STEP AIRY METHOD.
-  ALL PUBLICATIONS RESULTING FROM THE USE OF THIS PROPAGATOR SHOULD REFERENCE
-  M.H. ALEXANDER AND D.E. MANOLOPOULOS,  J CHEM PHYS 86, 2044 (1987).
+  COUPLED EQUATIONS SOLVED BY VARIABLE-STEP AIRY PROPAGATOR.
+  PUBLICATIONS RESULTING FROM THE USE OF THIS PROPAGATOR SHOULD REFERENCE
+  M. H. ALEXANDER AND D. E. MANOLOPOULOS,  J. CHEM. PHYS. 86, 2044 (1987).
 
-  INITIAL STEP SIZE TAKEN FROM DR       =  2.000E-03
-                             WITH TOLHI =  1.00E-07         POWRX = 6.0
-  TOLHI.LT.1  --  AIRY STEPS ADJUSTED TO MAINTAIN APPROX. ACCURACY VIA PERTURBATION THEORY AND POWRX.
-  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+  INITIAL STEP SIZE TAKEN FROM SIZE OF FINAL STEP OF PREVIOUS SEGMENT
+  STEP SIZES ADJUSTED TO MAINTAIN APPROXIMATE ACCURACY VIA PERTURBATION THEORY
+  WITH TOLHI =  1.00E-06 AND POWR =   6.0    
 
   ======================================================================================================================
 
@@ -251,7 +254,7 @@
 
   TOTAL ANGULAR MOMENTUM JTOT =   8
 
-  EACH JTOT IS SPLIT INTO A MAXIMUM OF   2 DIFFERENT SYMMETRY BLOCKS
+  EACH JTOT IS SPLIT INTO A MAXIMUM OF   2 SYMMETRY BLOCKS
 
   CALCULATION(S) WILL BE FOR SYMMETRY BLOCK   2
 
@@ -291,45 +294,45 @@
 
   JTOT =    8   IBLOCK =   2   ENERGY(   1) =  6.95034570000E-10 CM-1 =   1.00000000000E-09 K
 
-  EFV SET     4:  MAGNETIC Z FIELD =   171.5942056     GAUSS
+  EFV SET     4:  MAGNETIC Z FIELD =   171.5942213     GAUSS
 
   ------------------------------- 85Rb-85Rb elastic pole characterisation in aa channel --------------------------------
 
   JTOT =    8   IBLOCK =   2   ENERGY(   1) =  6.95034570000E-10 CM-1 =   1.00000000000E-09 K
 
-  EFV SET     5:  MAGNETIC Z FIELD =   171.5642802     GAUSS
+  EFV SET     5:  MAGNETIC Z FIELD =   171.5642880     GAUSS
 
   ------------------------------- 85Rb-85Rb elastic pole characterisation in aa channel --------------------------------
 
   JTOT =    8   IBLOCK =   2   ENERGY(   1) =  6.95034570000E-10 CM-1 =   1.00000000000E-09 K
 
-  EFV SET     6:  MAGNETIC Z FIELD =   171.5603348     GAUSS
+  EFV SET     6:  MAGNETIC Z FIELD =   171.5603429     GAUSS
 
   ------------------------------- 85Rb-85Rb elastic pole characterisation in aa channel --------------------------------
 
   JTOT =    8   IBLOCK =   2   ENERGY(   1) =  6.95034570000E-10 CM-1 =   1.00000000000E-09 K
 
-  EFV SET     7:  MAGNETIC Z FIELD =   171.5604789     GAUSS
+  EFV SET     7:  MAGNETIC Z FIELD =   171.5604869     GAUSS
 
   ------------------------------- 85Rb-85Rb elastic pole characterisation in aa channel --------------------------------
 
   JTOT =    8   IBLOCK =   2   ENERGY(   1) =  6.95034570000E-10 CM-1 =   1.00000000000E-09 K
 
-  EFV SET     8:  MAGNETIC Z FIELD =   171.5604823     GAUSS
+  EFV SET     8:  MAGNETIC Z FIELD =   171.5604903     GAUSS
 
   ------------------------------- 85Rb-85Rb elastic pole characterisation in aa channel --------------------------------
 
   JTOT =    8   IBLOCK =   2   ENERGY(   1) =  6.95034570000E-10 CM-1 =   1.00000000000E-09 K
 
-  EFV SET     9:  MAGNETIC Z FIELD =   171.5604429     GAUSS
+  EFV SET     9:  MAGNETIC Z FIELD =   171.5604509     GAUSS
 
   ------------------------------- 85Rb-85Rb elastic pole characterisation in aa channel --------------------------------
 
   JTOT =    8   IBLOCK =   2   ENERGY(   1) =  6.95034570000E-10 CM-1 =   1.00000000000E-09 K
 
-  EFV SET    10:  MAGNETIC Z FIELD =   171.5604787     GAUSS
+  EFV SET    10:  MAGNETIC Z FIELD =   171.5604867     GAUSS
 
-  CONVERGED ON RESONANCE AT MAGNETIC Z FIELD_RES =   171.560478736 GAUSS, WITH LAST STEP =  1.38630E-09 GAUSS
+  CONVERGED ON RESONANCE AT MAGNETIC Z FIELD_RES =   171.560486690 GAUSS, WITH LAST STEP = -5.67582E-10 GAUSS
 
   ======================================================================================================================
 
@@ -343,7 +346,7 @@
  |                                                                            |
  |                               Version 2019.0 (beta)                        |
  |                                                                            |
- |                    This run used      16.73 cpu secs and                   |
+ |                    This run used      14.63 cpu secs and                   |
  |               6817 of the allocated   1000000 words of storage             |
  |                                                                            |
   ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
@@ -356,7 +359,7 @@
  |                                                                            |
  |                               Version 2019.0 (beta)                        |
  |                                                                            |
- |                       Run on 14 Nov 2018   at 09:43:33                     |
+ |                       Run on 16 Jan 2019   at 11:34:33                     |
  |                                                                            |
   ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
 
@@ -375,11 +378,11 @@
   MEMORY ALLOCATED TO MAIN WORKING ARRAY IS   1000000 (8-BYTE) WORDS (    7.63 MB)
   2 INTEGERS CAN BE STORED IN EACH WORD.
 
-  PRINT LEVEL =  2     OTHER PRINT CONTROLS  ISIGPR = 0
+  PRINT LEVEL =  4     OTHER PRINT CONTROLS  ISIGPR = 0
 
   RUN LABEL = 85Rb-85Rb weakly decayed resonance characterisation in ee channel               
 
-  REDUCED MASS FOR INTERACTION =  42.455894869 ATOMIC MASS UNITS
+  REDUCED MASS FOR INTERACTION =  42.455894869 ATOMIC MASS UNITS (DALTONS)
 
   ======================================================================================================================
   ATOM - ATOM WITH NUC SP + MAG FL
@@ -531,11 +534,10 @@
 
   POTENL PROCESSING FINISHED.
 
-  UNITS FOR POTENTIAL ROUTINES:
-  POTENTIAL RETURNED IN UNITS OF EPSIL =       1.000000 CM-1
-  R                  IN UNITS OF RM    =       0.529177 ANGSTROMS
+  POTENTIAL RETURNED IN UNITS OF EPSIL  =  1.0000000     CM-1
+        CODED WITH R IN UNITS OF RM     = 0.52917721     ANGSTROM
 
-  ALL LENGTHS ARE IN UNITS OF RM =  0.529177 ANGSTROM UNLESS OTHERWISE STATED
+  ALL LENGTHS ARE IN UNITS OF BOHR (  0.52917721 ANGSTROM ) UNLESS OTHERWISE STATED
 
   INTERACTION MATRIX USES   3 BLOCKS OF VL ARRAY FOR R-DEPENDENT TERMS IN POTENTIAL
                             2                    FOR CONSTANT    TERMS IN POTENTIAL
@@ -545,34 +547,38 @@
 
   ======================================================================================================================
 
-  PROPAGATION ALGORITHMS FOR COUPLED EQUATIONS SPECIFIED BY IPROPS =  6 AND IPROPL =  1
+  PROPAGATION METHODS FOR COUPLED EQUATIONS SPECIFIED BY IPROPS =  6 AND IPROPL =  9
 
   COUPLED EQUATIONS WILL BE PROPAGATED OUTWARDS IN 2 SEGMENTS
+
+  PROPAGATION RANGES ARE CONTROLLED BY VARIABLES RMIN, RMID AND RMAX, WITH INPUT VALUES
+  RMIN =   3.000     RMID =   21.00     RMAX =  1.5000E+04
   ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
   SEGMENT 1 WILL BE PROPAGATED OUTWARDS
 
-  FROM RMIN   =      3.00  TO RMID   =     21.00
+  FROM RMIN =      3.00 TO RMID =     21.00
 
-  COUPLED EQUATIONS SOLVED BY DIABATIC MODIFIED LOG DERIVATIVE METHOD OF MANOLOPOULOS
+  COUPLED EQUATIONS SOLVED BY DIABATIC MODIFIED LOG-DERIVATIVE PROPAGATOR OF MANOLOPOULOS
 
   PROPAGATION STEP SIZE DETERMINED USING DR =  2.000E-03
+  STEP SIZE CONSTANT THROUGHOUT RANGE
+  STEP SIZE MAY BE ADJUSTED SLIGHTLY SO THAT RANGE IS A WHOLE NUMBER OF STEPS
 
-  LOG-DERIVATIVE MATRIX WILL BE INITIALISED IN THE LOCAL EIGENBASIS FOR RMIN IN THE OUTWARDS PROPAGATION PART
-  LOCALLY CLOSED CHANNELS WILL BE INITIALISED WITH A WKB BOUNDARY CONDITION
-  LOCALLY OPEN CHANNELS WILL BE INITIALISED WITH THE VALUE  1.0000000E+08
+  LOG-DERIVATIVE MATRIX INITIALISED IN THE LOCAL EIGENBASIS AT RMIN
+  LOCALLY CLOSED CHANNELS INITIALISED WITH A WKB BOUNDARY CONDITION
+  LOCALLY  OPEN  CHANNELS INITIALISED WITH THE VALUE  1.000E+08
   ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
   SEGMENT 2 WILL BE PROPAGATED OUTWARDS
 
-  FROM RMID   =     21.00  TO RMAX   =  15000.00
+  FROM RMID =     21.00 TO RMAX =  15000.00
 
-  COUPLED EQUATIONS SOLVED BY VARIABLE STEP AIRY METHOD.
-  ALL PUBLICATIONS RESULTING FROM THE USE OF THIS PROPAGATOR SHOULD REFERENCE
-  M.H. ALEXANDER AND D.E. MANOLOPOULOS,  J CHEM PHYS 86, 2044 (1987).
+  COUPLED EQUATIONS SOLVED BY VARIABLE-STEP AIRY PROPAGATOR.
+  PUBLICATIONS RESULTING FROM THE USE OF THIS PROPAGATOR SHOULD REFERENCE
+  M. H. ALEXANDER AND D. E. MANOLOPOULOS,  J. CHEM. PHYS. 86, 2044 (1987).
 
-  INITIAL STEP SIZE TAKEN FROM DR       =  2.000E-03
-                             WITH TOLHI =  1.00E-07         POWRX = 6.0
-  TOLHI.LT.1  --  AIRY STEPS ADJUSTED TO MAINTAIN APPROX. ACCURACY VIA PERTURBATION THEORY AND POWRX.
-  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+  INITIAL STEP SIZE TAKEN FROM SIZE OF FINAL STEP OF PREVIOUS SEGMENT
+  STEP SIZES ADJUSTED TO MAINTAIN APPROXIMATE ACCURACY VIA PERTURBATION THEORY
+  WITH TOLHI =  1.00E-06 AND POWR =   6.0    
 
   ======================================================================================================================
 
@@ -601,7 +607,7 @@
 
   TOTAL ANGULAR MOMENTUM JTOT =  -8
 
-  EACH JTOT IS SPLIT INTO A MAXIMUM OF   2 DIFFERENT SYMMETRY BLOCKS
+  EACH JTOT IS SPLIT INTO A MAXIMUM OF   2 SYMMETRY BLOCKS
 
   CALCULATION(S) WILL BE FOR SYMMETRY BLOCK   2
 
@@ -624,82 +630,115 @@
   JTOT =   -8   IBLOCK =   2   ENERGY(   1) =  6.95034570000E-10 CM-1 =   1.00000000000E-09 K
 
   EFV SET     1:  MAGNETIC Z FIELD =   214.9800000     GAUSS
-  ** ESTIMATED CORRECTIONS LARGER THAN 5*TOLAI IN AIRPRP
-   CHECK FOR DISCONTINUITIES OR UNPHYSICAL OSCILLATIONS IN YOUR POTENTIAL
-   STEP    RNOW       DRNOW      CDIAG       COFF
-   1244  1.2019E+03  3.9689E+01  1.8010E-07  3.7279E-06
+
+  REFERENCE ENERGY EREF = -0.1525026289     K = -0.1059945991     CM-1
+  TOLMIN =   0.1000  TOLMAX =   1.0000
 
   ------------------------- 85Rb-85Rb weakly decayed resonance characterisation in ee channel --------------------------
 
   JTOT =   -8   IBLOCK =   2   ENERGY(   1) =  6.95034570000E-10 CM-1 =   1.00000000000E-09 K
 
   EFV SET     2:  MAGNETIC Z FIELD =   215.3800000     GAUSS
-  ** ESTIMATED CORRECTIONS LARGER THAN 5*TOLAI IN AIRPRP
-   CHECK FOR DISCONTINUITIES OR UNPHYSICAL OSCILLATIONS IN YOUR POTENTIAL
-   STEP    RNOW       DRNOW      CDIAG       COFF
-   1244  1.2005E+03  3.9631E+01  1.4325E-07  4.5323E-06
+
+  REFERENCE ENERGY EREF = -0.1524739854     K = -0.1059746909     CM-1
 
   ------------------------- 85Rb-85Rb weakly decayed resonance characterisation in ee channel --------------------------
 
   JTOT =   -8   IBLOCK =   2   ENERGY(   1) =  6.95034570000E-10 CM-1 =   1.00000000000E-09 K
 
   EFV SET     3:  MAGNETIC Z FIELD =   215.1800000     GAUSS
-  ** ESTIMATED CORRECTIONS LARGER THAN 5*TOLAI IN AIRPRP
-   CHECK FOR DISCONTINUITIES OR UNPHYSICAL OSCILLATIONS IN YOUR POTENTIAL
-   STEP    RNOW       DRNOW      CDIAG       COFF
-   1244  1.2012E+03  3.9661E+01  1.6676E-07  4.2224E-06
+
+  REFERENCE ENERGY EREF = -0.1524883051     K = -0.1059846436     CM-1
+  3-POINT POLE FORMULA ESTIMATES     MAGNETIC Z FIELD_RES =    215.087657897     GAUSS
+                                                    DELTA =      5.469934996E-03 GAUSS
+                                       A_BG =      -381.503226     BOHR      
+
+  SCATTERING LENGTH FOR POINT  3 GIVES A_RES =    786689.96    
+  THIS IMPLIES GAMMA_INEL = -2*A_BG*DELTA/A_RES
+                          =   5.30526120E-06 GAUSS
+
 
   ------------------------- 85Rb-85Rb weakly decayed resonance characterisation in ee channel --------------------------
 
   JTOT =   -8   IBLOCK =   2   ENERGY(   1) =  6.95034570000E-10 CM-1 =   1.00000000000E-09 K
 
-  EFV SET     4:  MAGNETIC Z FIELD =   215.0876566     GAUSS
-  ** ESTIMATED CORRECTIONS LARGER THAN 5*TOLAI IN AIRPRP
-   CHECK FOR DISCONTINUITIES OR UNPHYSICAL OSCILLATIONS IN YOUR POTENTIAL
-   STEP    RNOW       DRNOW      CDIAG       COFF
-   1244  1.2017E+03  3.9682E+01  1.9134E-07  3.0234E-06
+  EFV SET     4:  MAGNETIC Z FIELD =   215.0876579     GAUSS
+
+  REFERENCE ENERGY EREF = -0.1524949180     K = -0.1059892398     CM-1
+  3-POINT POLE FORMULA ESTIMATES     MAGNETIC Z FIELD_RES =    215.085276970     GAUSS
+                                                    DELTA =      5.494077534E-03 GAUSS
+                                       A_BG =      -381.003444     BOHR      
+
+  SCATTERING LENGTH FOR POINT  4 GIVES A_RES =   3.72184982E+08
+  THIS IMPLIES GAMMA_INEL = -2*A_BG*DELTA/A_RES
+                          =   1.12485058E-08 GAUSS
+
 
   ------------------------- 85Rb-85Rb weakly decayed resonance characterisation in ee channel --------------------------
 
   JTOT =   -8   IBLOCK =   2   ENERGY(   1) =  6.95034570000E-10 CM-1 =   1.00000000000E-09 K
 
-  EFV SET     5:  MAGNETIC Z FIELD =   215.0852756     GAUSS
-  ** ESTIMATED CORRECTIONS LARGER THAN 5*TOLAI IN AIRPRP
-   CHECK FOR DISCONTINUITIES OR UNPHYSICAL OSCILLATIONS IN YOUR POTENTIAL
-   STEP    RNOW       DRNOW      CDIAG       COFF
-   1244  1.2017E+03  3.9683E+01  1.9233E-07  2.9418E-06
+  EFV SET     5:  MAGNETIC Z FIELD =   215.0852770     GAUSS
+
+  REFERENCE ENERGY EREF = -0.1524950886     K = -0.1059893583     CM-1
+  3-POINT POLE FORMULA ESTIMATES     MAGNETIC Z FIELD_RES =    215.085257520     GAUSS
+                                                    DELTA =      5.537474011E-03 GAUSS
+                                       A_BG =      -381.183976     BOHR      
+
+  SCATTERING LENGTH FOR POINT  5 GIVES A_RES =   1.77645007E+08
+  THIS IMPLIES GAMMA_INEL = -2*A_BG*DELTA/A_RES
+                          =   2.37642071E-08 GAUSS
+
 
   ------------------------- 85Rb-85Rb weakly decayed resonance characterisation in ee channel --------------------------
 
   JTOT =   -8   IBLOCK =   2   ENERGY(   1) =  6.95034570000E-10 CM-1 =   1.00000000000E-09 K
 
-  EFV SET     6:  MAGNETIC Z FIELD =   215.0769500     GAUSS
-  ** ESTIMATED CORRECTIONS LARGER THAN 5*TOLAI IN AIRPRP
-   CHECK FOR DISCONTINUITIES OR UNPHYSICAL OSCILLATIONS IN YOUR POTENTIAL
-   STEP    RNOW       DRNOW      CDIAG       COFF
-   1244  1.2018E+03  3.9685E+01  1.9444E-07  2.7509E-06
+  EFV SET     6:  MAGNETIC Z FIELD =   215.0769513     GAUSS
+
+  REFERENCE ENERGY EREF = -0.1524956848     K = -0.1059897727     CM-1
+  3-POINT POLE FORMULA ESTIMATES     MAGNETIC Z FIELD_RES =    215.085257524     GAUSS
+                                                    DELTA =      5.538923541E-03 GAUSS
+                                       A_BG =      -381.006830     BOHR      
+
+  SCATTERING LENGTH FOR POINT  5 GIVES A_RES =   1.77644427E+08
+  THIS IMPLIES GAMMA_INEL = -2*A_BG*DELTA/A_RES
+                          =   2.37594586E-08 GAUSS
+
 
   ------------------------- 85Rb-85Rb weakly decayed resonance characterisation in ee channel --------------------------
 
   JTOT =   -8   IBLOCK =   2   ENERGY(   1) =  6.95034570000E-10 CM-1 =   1.00000000000E-09 K
 
-  EFV SET     7:  MAGNETIC Z FIELD =   215.0860869     GAUSS
-  ** ESTIMATED CORRECTIONS LARGER THAN 5*TOLAI IN AIRPRP
-   CHECK FOR DISCONTINUITIES OR UNPHYSICAL OSCILLATIONS IN YOUR POTENTIAL
-   STEP    RNOW       DRNOW      CDIAG       COFF
-   1244  1.2017E+03  3.9682E+01  1.9200E-07  2.9696E-06
+  EFV SET     7:  MAGNETIC Z FIELD =   215.0860884     GAUSS
+
+  REFERENCE ENERGY EREF = -0.1524950305     K = -0.1059893179     CM-1
+  3-POINT POLE FORMULA ESTIMATES     MAGNETIC Z FIELD_RES =    215.085257524     GAUSS
+                                                    DELTA =      5.539026992E-03 GAUSS
+                                       A_BG =      -381.003979     BOHR      
+
+  SCATTERING LENGTH FOR POINT  5 GIVES A_RES =   1.77644417E+08
+  THIS IMPLIES GAMMA_INEL = -2*A_BG*DELTA/A_RES
+                          =   2.37597258E-08 GAUSS
+
 
   ------------------------- 85Rb-85Rb weakly decayed resonance characterisation in ee channel --------------------------
 
   JTOT =   -8   IBLOCK =   2   ENERGY(   1) =  6.95034570000E-10 CM-1 =   1.00000000000E-09 K
 
-  EFV SET     8:  MAGNETIC Z FIELD =   215.0852561     GAUSS
-  ** ESTIMATED CORRECTIONS LARGER THAN 5*TOLAI IN AIRPRP
-   CHECK FOR DISCONTINUITIES OR UNPHYSICAL OSCILLATIONS IN YOUR POTENTIAL
-   STEP    RNOW       DRNOW      CDIAG       COFF
-   1244  1.2017E+03  3.9683E+01  1.9234E-07  2.9411E-06
+  EFV SET     8:  MAGNETIC Z FIELD =   215.0852575     GAUSS
 
-  CONVERGED ON RESONANCE AT MAGNETIC Z FIELD_RES =   215.085256105 GAUSS, WITH LAST STEP = -1.09139E-09 GAUSS
+  REFERENCE ENERGY EREF = -0.1524950900     K = -0.1059893593     CM-1
+  3-POINT POLE FORMULA ESTIMATES     MAGNETIC Z FIELD_RES =    215.085257524     GAUSS
+                                                    DELTA =      5.539026757E-03 GAUSS
+                                       A_BG =      -381.003986     BOHR      
+
+  SCATTERING LENGTH FOR POINT  8 GIVES A_RES =   1.76652028E+08
+  THIS IMPLIES GAMMA_INEL = -2*A_BG*DELTA/A_RES
+                          =   2.38932018E-08 GAUSS
+
+
+  CONVERGED ON RESONANCE AT MAGNETIC Z FIELD_RES =   215.085257524 GAUSS, WITH LAST STEP =  2.24532E-11 GAUSS
 
   ======================================================================================================================
 
@@ -713,7 +752,7 @@
  |                                                                            |
  |                               Version 2019.0 (beta)                        |
  |                                                                            |
- |                    This run used      13.61 cpu secs and                   |
+ |                    This run used      11.15 cpu secs and                   |
  |               6817 of the allocated   1000000 words of storage             |
  |                                                                            |
   ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
@@ -726,7 +765,7 @@
  |                                                                            |
  |                               Version 2019.0 (beta)                        |
  |                                                                            |
- |                       Run on 14 Nov 2018   at 09:43:47                     |
+ |                       Run on 16 Jan 2019   at 11:34:44                     |
  |                                                                            |
   ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
 
@@ -745,11 +784,11 @@
   MEMORY ALLOCATED TO MAIN WORKING ARRAY IS   1000000 (8-BYTE) WORDS (    7.63 MB)
   2 INTEGERS CAN BE STORED IN EACH WORD.
 
-  PRINT LEVEL =  2     OTHER PRINT CONTROLS  ISIGPR = 0
+  PRINT LEVEL =  4     OTHER PRINT CONTROLS  ISIGPR = 0
 
   RUN LABEL = 85Rb-85Rb quite strongly decayed resonance in ee channel                        
 
-  REDUCED MASS FOR INTERACTION =  42.455894869 ATOMIC MASS UNITS
+  REDUCED MASS FOR INTERACTION =  42.455894869 ATOMIC MASS UNITS (DALTONS)
 
   ======================================================================================================================
   ATOM - ATOM WITH NUC SP + MAG FL
@@ -901,11 +940,10 @@
 
   POTENL PROCESSING FINISHED.
 
-  UNITS FOR POTENTIAL ROUTINES:
-  POTENTIAL RETURNED IN UNITS OF EPSIL =       1.000000 CM-1
-  R                  IN UNITS OF RM    =       0.529177 ANGSTROMS
+  POTENTIAL RETURNED IN UNITS OF EPSIL  =  1.0000000     CM-1
+        CODED WITH R IN UNITS OF RM     = 0.52917721     ANGSTROM
 
-  ALL LENGTHS ARE IN UNITS OF RM =  0.529177 ANGSTROM UNLESS OTHERWISE STATED
+  ALL LENGTHS ARE IN UNITS OF BOHR (  0.52917721 ANGSTROM ) UNLESS OTHERWISE STATED
 
   INTERACTION MATRIX USES   3 BLOCKS OF VL ARRAY FOR R-DEPENDENT TERMS IN POTENTIAL
                             2                    FOR CONSTANT    TERMS IN POTENTIAL
@@ -915,34 +953,38 @@
 
   ======================================================================================================================
 
-  PROPAGATION ALGORITHMS FOR COUPLED EQUATIONS SPECIFIED BY IPROPS =  6 AND IPROPL =  1
+  PROPAGATION METHODS FOR COUPLED EQUATIONS SPECIFIED BY IPROPS =  6 AND IPROPL =  9
 
   COUPLED EQUATIONS WILL BE PROPAGATED OUTWARDS IN 2 SEGMENTS
+
+  PROPAGATION RANGES ARE CONTROLLED BY VARIABLES RMIN, RMID AND RMAX, WITH INPUT VALUES
+  RMIN =   3.000     RMID =   21.00     RMAX =  1.5000E+04
   ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
   SEGMENT 1 WILL BE PROPAGATED OUTWARDS
 
-  FROM RMIN   =      3.00  TO RMID   =     21.00
+  FROM RMIN =      3.00 TO RMID =     21.00
 
-  COUPLED EQUATIONS SOLVED BY DIABATIC MODIFIED LOG DERIVATIVE METHOD OF MANOLOPOULOS
+  COUPLED EQUATIONS SOLVED BY DIABATIC MODIFIED LOG-DERIVATIVE PROPAGATOR OF MANOLOPOULOS
 
   PROPAGATION STEP SIZE DETERMINED USING DR =  2.000E-03
+  STEP SIZE CONSTANT THROUGHOUT RANGE
+  STEP SIZE MAY BE ADJUSTED SLIGHTLY SO THAT RANGE IS A WHOLE NUMBER OF STEPS
 
-  LOG-DERIVATIVE MATRIX WILL BE INITIALISED IN THE LOCAL EIGENBASIS FOR RMIN IN THE OUTWARDS PROPAGATION PART
-  LOCALLY CLOSED CHANNELS WILL BE INITIALISED WITH A WKB BOUNDARY CONDITION
-  LOCALLY OPEN CHANNELS WILL BE INITIALISED WITH THE VALUE  1.0000000E+08
+  LOG-DERIVATIVE MATRIX INITIALISED IN THE LOCAL EIGENBASIS AT RMIN
+  LOCALLY CLOSED CHANNELS INITIALISED WITH A WKB BOUNDARY CONDITION
+  LOCALLY  OPEN  CHANNELS INITIALISED WITH THE VALUE  1.000E+08
   ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
   SEGMENT 2 WILL BE PROPAGATED OUTWARDS
 
-  FROM RMID   =     21.00  TO RMAX   =  15000.00
+  FROM RMID =     21.00 TO RMAX =  15000.00
 
-  COUPLED EQUATIONS SOLVED BY VARIABLE STEP AIRY METHOD.
-  ALL PUBLICATIONS RESULTING FROM THE USE OF THIS PROPAGATOR SHOULD REFERENCE
-  M.H. ALEXANDER AND D.E. MANOLOPOULOS,  J CHEM PHYS 86, 2044 (1987).
+  COUPLED EQUATIONS SOLVED BY VARIABLE-STEP AIRY PROPAGATOR.
+  PUBLICATIONS RESULTING FROM THE USE OF THIS PROPAGATOR SHOULD REFERENCE
+  M. H. ALEXANDER AND D. E. MANOLOPOULOS,  J. CHEM. PHYS. 86, 2044 (1987).
 
-  INITIAL STEP SIZE TAKEN FROM DR       =  2.000E-03
-                             WITH TOLHI =  1.00E-07         POWRX = 6.0
-  TOLHI.LT.1  --  AIRY STEPS ADJUSTED TO MAINTAIN APPROX. ACCURACY VIA PERTURBATION THEORY AND POWRX.
-  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+  INITIAL STEP SIZE TAKEN FROM SIZE OF FINAL STEP OF PREVIOUS SEGMENT
+  STEP SIZES ADJUSTED TO MAINTAIN APPROXIMATE ACCURACY VIA PERTURBATION THEORY
+  WITH TOLHI =  1.00E-07 AND POWR =   6.0    
 
   ======================================================================================================================
 
@@ -971,7 +1013,7 @@
 
   TOTAL ANGULAR MOMENTUM JTOT =  -8
 
-  EACH JTOT IS SPLIT INTO A MAXIMUM OF   2 DIFFERENT SYMMETRY BLOCKS
+  EACH JTOT IS SPLIT INTO A MAXIMUM OF   2 SYMMETRY BLOCKS
 
   CALCULATION(S) WILL BE FOR SYMMETRY BLOCK   2
 
@@ -995,11 +1037,16 @@
 
   EFV SET     1:  MAGNETIC Z FIELD =   603.8700000     GAUSS
 
+  REFERENCE ENERGY EREF = -0.1339843295     K = -9.3123740809E-02 CM-1
+  TOLMIN =   0.1000  TOLMAX =   1.0000
+
   ------------------------------ 85Rb-85Rb quite strongly decayed resonance in ee channel ------------------------------
 
   JTOT =   -8   IBLOCK =   2   ENERGY(   1) =  6.95034570000E-10 CM-1 =   1.00000000000E-09 K
 
   EFV SET     2:  MAGNETIC Z FIELD =   604.2700000     GAUSS
+
+  REFERENCE ENERGY EREF = -0.1339765172     K = -9.3118310998E-02 CM-1
 
   ------------------------------ 85Rb-85Rb quite strongly decayed resonance in ee channel ------------------------------
 
@@ -1007,17 +1054,47 @@
 
   EFV SET     3:  MAGNETIC Z FIELD =   604.0700000     GAUSS
 
+  REFERENCE ENERGY EREF = -0.1339804201     K = -9.3121023659E-02 CM-1
+  3-POINT POLE FORMULA ESTIMATES     MAGNETIC Z FIELD_RES =    603.987407015     GAUSS
+                                                    DELTA =      1.758272800E-04 GAUSS
+                                       A_BG =      -475.903490     BOHR      
+
+  SCATTERING LENGTH FOR POINT  3 GIVES A_RES =    1360.0876    
+  THIS IMPLIES GAMMA_INEL = -2*A_BG*DELTA/A_RES
+                          =   1.23046215E-04 GAUSS
+
+
   ------------------------------ 85Rb-85Rb quite strongly decayed resonance in ee channel ------------------------------
 
   JTOT =   -8   IBLOCK =   2   ENERGY(   1) =  6.95034570000E-10 CM-1 =   1.00000000000E-09 K
 
   EFV SET     4:  MAGNETIC Z FIELD =   603.9874070     GAUSS
 
+  REFERENCE ENERGY EREF = -0.1339820337     K = -9.3122145203E-02 CM-1
+  3-POINT POLE FORMULA ESTIMATES     MAGNETIC Z FIELD_RES =    603.977707150     GAUSS
+                                                    DELTA =      1.802759413E-04 GAUSS
+                                       A_BG =      -475.819788     BOHR      
+
+  SCATTERING LENGTH FOR POINT  4 GIVES A_RES =    797.36597    
+  THIS IMPLIES GAMMA_INEL = -2*A_BG*DELTA/A_RES
+                          =   2.15155557E-04 GAUSS
+
+
   ------------------------------ 85Rb-85Rb quite strongly decayed resonance in ee channel ------------------------------
 
   JTOT =   -8   IBLOCK =   2   ENERGY(   1) =  6.95034570000E-10 CM-1 =   1.00000000000E-09 K
 
-  EFV SET     5:  MAGNETIC Z FIELD =   603.9777072     GAUSS
+  EFV SET     5:  MAGNETIC Z FIELD =   603.9777071     GAUSS
+
+  REFERENCE ENERGY EREF = -0.1339822233     K = -9.3122276969E-02 CM-1
+  3-POINT POLE FORMULA ESTIMATES     MAGNETIC Z FIELD_RES =    603.977360310     GAUSS
+                                                    DELTA =      1.874109551E-04 GAUSS
+                                       A_BG =      -475.853023     BOHR      
+
+  SCATTERING LENGTH FOR POINT  5 GIVES A_RES =    763.59130    
+  THIS IMPLIES GAMMA_INEL = -2*A_BG*DELTA/A_RES
+                          =   2.33580633E-04 GAUSS
+
 
   ------------------------------ 85Rb-85Rb quite strongly decayed resonance in ee channel ------------------------------
 
@@ -1025,11 +1102,31 @@
 
   EFV SET     6:  MAGNETIC Z FIELD =   603.9773603     GAUSS
 
+  REFERENCE ENERGY EREF = -0.1339822301     K = -9.3122281681E-02 CM-1
+  3-POINT POLE FORMULA ESTIMATES     MAGNETIC Z FIELD_RES =    603.977361416     GAUSS
+                                                    DELTA =      1.868010885E-04 GAUSS
+                                       A_BG =      -475.824586     BOHR      
+
+  SCATTERING LENGTH FOR POINT  6 GIVES A_RES =    762.20130    
+  THIS IMPLIES GAMMA_INEL = -2*A_BG*DELTA/A_RES
+                          =   2.33231169E-04 GAUSS
+
+
   ------------------------------ 85Rb-85Rb quite strongly decayed resonance in ee channel ------------------------------
 
   JTOT =   -8   IBLOCK =   2   ENERGY(   1) =  6.95034570000E-10 CM-1 =   1.00000000000E-09 K
 
   EFV SET     7:  MAGNETIC Z FIELD =   603.9773334     GAUSS
+
+  REFERENCE ENERGY EREF = -0.1339822306     K = -9.3122282046E-02 CM-1
+  3-POINT POLE FORMULA ESTIMATES     MAGNETIC Z FIELD_RES =    603.977361421     GAUSS
+                                                    DELTA =      1.868014761E-04 GAUSS
+                                       A_BG =      -475.825781     BOHR      
+
+  SCATTERING LENGTH FOR POINT  6 GIVES A_RES =    762.20128    
+  THIS IMPLIES GAMMA_INEL = -2*A_BG*DELTA/A_RES
+                          =   2.33232246E-04 GAUSS
+
 
   ------------------------------ 85Rb-85Rb quite strongly decayed resonance in ee channel ------------------------------
 
@@ -1037,7 +1134,17 @@
 
   EFV SET     8:  MAGNETIC Z FIELD =   603.9773614     GAUSS
 
-  CONVERGED ON RESONANCE AT MAGNETIC Z FIELD_RES =   603.977361422 GAUSS, WITH LAST STEP =  1.79045E-09 GAUSS
+  REFERENCE ENERGY EREF = -0.1339822301     K = -9.3122281666E-02 CM-1
+  3-POINT POLE FORMULA ESTIMATES     MAGNETIC Z FIELD_RES =    603.977361420     GAUSS
+                                                    DELTA =      1.867996032E-04 GAUSS
+                                       A_BG =      -475.818972     BOHR      
+
+  SCATTERING LENGTH FOR POINT  8 GIVES A_RES =    762.20521    
+  THIS IMPLIES GAMMA_INEL = -2*A_BG*DELTA/A_RES
+                          =   2.33225367E-04 GAUSS
+
+
+  CONVERGED ON RESONANCE AT MAGNETIC Z FIELD_RES =   603.977361420 GAUSS, WITH LAST STEP = -9.24956E-10 GAUSS
 
   ======================================================================================================================
 
@@ -1051,7 +1158,7 @@
  |                                                                            |
  |                               Version 2019.0 (beta)                        |
  |                                                                            |
- |                    This run used      13.32 cpu secs and                   |
+ |                    This run used      13.36 cpu secs and                   |
  |               6817 of the allocated   1000000 words of storage             |
  |                                                                            |
   ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
@@ -1064,7 +1171,7 @@
  |                                                                            |
  |                               Version 2019.0 (beta)                        |
  |                                                                            |
- |                       Run on 14 Nov 2018   at 09:44:00                     |
+ |                       Run on 16 Jan 2019   at 11:34:57                     |
  |                                                                            |
   ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
 
@@ -1083,11 +1190,11 @@
   MEMORY ALLOCATED TO MAIN WORKING ARRAY IS   1000000 (8-BYTE) WORDS (    7.63 MB)
   2 INTEGERS CAN BE STORED IN EACH WORD.
 
-  PRINT LEVEL =  2     OTHER PRINT CONTROLS  ISIGPR = 0
+  PRINT LEVEL =  4     OTHER PRINT CONTROLS  ISIGPR = 0
 
   RUN LABEL = 85Rb-85Rb strongly decayed resonance characterisation in kk channel             
 
-  REDUCED MASS FOR INTERACTION =  42.455894869 ATOMIC MASS UNITS
+  REDUCED MASS FOR INTERACTION =  42.455894869 ATOMIC MASS UNITS (DALTONS)
 
   ======================================================================================================================
   ATOM - ATOM WITH NUC SP + MAG FL
@@ -1239,11 +1346,10 @@
 
   POTENL PROCESSING FINISHED.
 
-  UNITS FOR POTENTIAL ROUTINES:
-  POTENTIAL RETURNED IN UNITS OF EPSIL =       1.000000 CM-1
-  R                  IN UNITS OF RM    =       0.529177 ANGSTROMS
+  POTENTIAL RETURNED IN UNITS OF EPSIL  =  1.0000000     CM-1
+        CODED WITH R IN UNITS OF RM     = 0.52917721     ANGSTROM
 
-  ALL LENGTHS ARE IN UNITS OF RM =  0.529177 ANGSTROM UNLESS OTHERWISE STATED
+  ALL LENGTHS ARE IN UNITS OF BOHR (  0.52917721 ANGSTROM ) UNLESS OTHERWISE STATED
 
   INTERACTION MATRIX USES   3 BLOCKS OF VL ARRAY FOR R-DEPENDENT TERMS IN POTENTIAL
                             2                    FOR CONSTANT    TERMS IN POTENTIAL
@@ -1253,34 +1359,38 @@
 
   ======================================================================================================================
 
-  PROPAGATION ALGORITHMS FOR COUPLED EQUATIONS SPECIFIED BY IPROPS =  6 AND IPROPL =  1
+  PROPAGATION METHODS FOR COUPLED EQUATIONS SPECIFIED BY IPROPS =  6 AND IPROPL =  9
 
   COUPLED EQUATIONS WILL BE PROPAGATED OUTWARDS IN 2 SEGMENTS
+
+  PROPAGATION RANGES ARE CONTROLLED BY VARIABLES RMIN, RMID AND RMAX, WITH INPUT VALUES
+  RMIN =   3.000     RMID =   21.00     RMAX =  1.5000E+04
   ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
   SEGMENT 1 WILL BE PROPAGATED OUTWARDS
 
-  FROM RMIN   =      3.00  TO RMID   =     21.00
+  FROM RMIN =      3.00 TO RMID =     21.00
 
-  COUPLED EQUATIONS SOLVED BY DIABATIC MODIFIED LOG DERIVATIVE METHOD OF MANOLOPOULOS
+  COUPLED EQUATIONS SOLVED BY DIABATIC MODIFIED LOG-DERIVATIVE PROPAGATOR OF MANOLOPOULOS
 
   PROPAGATION STEP SIZE DETERMINED USING DR =  2.000E-03
+  STEP SIZE CONSTANT THROUGHOUT RANGE
+  STEP SIZE MAY BE ADJUSTED SLIGHTLY SO THAT RANGE IS A WHOLE NUMBER OF STEPS
 
-  LOG-DERIVATIVE MATRIX WILL BE INITIALISED IN THE LOCAL EIGENBASIS FOR RMIN IN THE OUTWARDS PROPAGATION PART
-  LOCALLY CLOSED CHANNELS WILL BE INITIALISED WITH A WKB BOUNDARY CONDITION
-  LOCALLY OPEN CHANNELS WILL BE INITIALISED WITH THE VALUE  1.0000000E+08
+  LOG-DERIVATIVE MATRIX INITIALISED IN THE LOCAL EIGENBASIS AT RMIN
+  LOCALLY CLOSED CHANNELS INITIALISED WITH A WKB BOUNDARY CONDITION
+  LOCALLY  OPEN  CHANNELS INITIALISED WITH THE VALUE  1.000E+08
   ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
   SEGMENT 2 WILL BE PROPAGATED OUTWARDS
 
-  FROM RMID   =     21.00  TO RMAX   =  15000.00
+  FROM RMID =     21.00 TO RMAX =  15000.00
 
-  COUPLED EQUATIONS SOLVED BY VARIABLE STEP AIRY METHOD.
-  ALL PUBLICATIONS RESULTING FROM THE USE OF THIS PROPAGATOR SHOULD REFERENCE
-  M.H. ALEXANDER AND D.E. MANOLOPOULOS,  J CHEM PHYS 86, 2044 (1987).
+  COUPLED EQUATIONS SOLVED BY VARIABLE-STEP AIRY PROPAGATOR.
+  PUBLICATIONS RESULTING FROM THE USE OF THIS PROPAGATOR SHOULD REFERENCE
+  M. H. ALEXANDER AND D. E. MANOLOPOULOS,  J. CHEM. PHYS. 86, 2044 (1987).
 
-  INITIAL STEP SIZE TAKEN FROM DR       =  2.000E-03
-                             WITH TOLHI =  1.00E-07         POWRX = 6.0
-  TOLHI.LT.1  --  AIRY STEPS ADJUSTED TO MAINTAIN APPROX. ACCURACY VIA PERTURBATION THEORY AND POWRX.
-  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+  INITIAL STEP SIZE TAKEN FROM SIZE OF FINAL STEP OF PREVIOUS SEGMENT
+  STEP SIZES ADJUSTED TO MAINTAIN APPROXIMATE ACCURACY VIA PERTURBATION THEORY
+  WITH TOLHI =  1.00E-06 AND POWR =   6.0    
 
   ======================================================================================================================
 
@@ -1309,7 +1419,7 @@
 
   TOTAL ANGULAR MOMENTUM JTOT =   8
 
-  EACH JTOT IS SPLIT INTO A MAXIMUM OF   2 DIFFERENT SYMMETRY BLOCKS
+  EACH JTOT IS SPLIT INTO A MAXIMUM OF   2 SYMMETRY BLOCKS
 
   CALCULATION(S) WILL BE FOR SYMMETRY BLOCK   2
 
@@ -1333,11 +1443,16 @@
 
   EFV SET     1:  MAGNETIC Z FIELD =   171.7400000     GAUSS
 
+  REFERENCE ENERGY EREF =  0.1377157673     K =  9.5717219086E-02 CM-1
+  TOLMIN =   0.1000  TOLMAX =   1.0000
+
   ------------------------ 85Rb-85Rb strongly decayed resonance characterisation in kk channel -------------------------
 
   JTOT =    8   IBLOCK =   2   ENERGY(   1) =  6.95034570000E-10 CM-1 =   1.00000000000E-09 K
 
   EFV SET     2:  MAGNETIC Z FIELD =   172.1400000     GAUSS
+
+  REFERENCE ENERGY EREF =  0.1377556707     K =  9.5744953356E-02 CM-1
 
   ------------------------ 85Rb-85Rb strongly decayed resonance characterisation in kk channel -------------------------
 
@@ -1345,49 +1460,129 @@
 
   EFV SET     3:  MAGNETIC Z FIELD =   171.9400000     GAUSS
 
-  ------------------------ 85Rb-85Rb strongly decayed resonance characterisation in kk channel -------------------------
+  REFERENCE ENERGY EREF =  0.1377357180     K =  9.5731085524E-02 CM-1
 
-  JTOT =    8   IBLOCK =   2   ENERGY(   1) =  6.95034570000E-10 CM-1 =   1.00000000000E-09 K
-
-  EFV SET     4:  MAGNETIC Z FIELD =   171.9099545     GAUSS
-
-  ------------------------ 85Rb-85Rb strongly decayed resonance characterisation in kk channel -------------------------
-
-  JTOT =    8   IBLOCK =   2   ENERGY(   1) =  6.95034570000E-10 CM-1 =   1.00000000000E-09 K
-
-  EFV SET     5:  MAGNETIC Z FIELD =   171.8585853     GAUSS
+  PARAMETERS OBTAINED ARE:
+  MAGNETIC Z FIELD_RES =    171.909515923     GAUSS
+       A_BG  (IN BOHR) =      -491.007888          -22.3770378     i 
+       A_RES (IN BOHR) =      0.119881342         -6.843243440E-02 i 
+                GAMMA_INEL =     -4.555762242E-02 GAUSS
+                     DELTA = -ALPHA_RES*GAMMA_INEL/2*ALPHA_BG
+                           =     -5.561528694E-06 GAUSS
 
   ------------------------ 85Rb-85Rb strongly decayed resonance characterisation in kk channel -------------------------
 
   JTOT =    8   IBLOCK =   2   ENERGY(   1) =  6.95034570000E-10 CM-1 =   1.00000000000E-09 K
 
-  EFV SET     6:  MAGNETIC Z FIELD =   171.8415754     GAUSS
+  EFV SET     4:  MAGNETIC Z FIELD =   171.9095159     GAUSS
+
+  REFERENCE ENERGY EREF =  0.1377326770     K =  9.5728971906E-02 CM-1
+
+  PARAMETERS OBTAINED ARE:
+  MAGNETIC Z FIELD_RES =    171.858447307     GAUSS
+       A_BG  (IN BOHR) =      -491.032643          -22.3849546     i 
+       A_RES (IN BOHR) =      0.800072490         -2.626045254E-02 i 
+                GAMMA_INEL =     -1.170310785E-02 GAUSS
+                     DELTA = -ALPHA_RES*GAMMA_INEL/2*ALPHA_BG
+                           =     -9.534330116E-06 GAUSS
 
   ------------------------ 85Rb-85Rb strongly decayed resonance characterisation in kk channel -------------------------
 
   JTOT =    8   IBLOCK =   2   ENERGY(   1) =  6.95034570000E-10 CM-1 =   1.00000000000E-09 K
 
-  EFV SET     7:  MAGNETIC Z FIELD =   171.8437917     GAUSS
+  EFV SET     5:  MAGNETIC Z FIELD =   171.8584473     GAUSS
+
+  REFERENCE ENERGY EREF =  0.1377275826     K =  9.5725431129E-02 CM-1
+
+  PARAMETERS OBTAINED ARE:
+  MAGNETIC Z FIELD_RES =    171.841603433     GAUSS
+       A_BG  (IN BOHR) =      -491.014934          -22.3766157     i 
+       A_RES (IN BOHR) =       8.41979061          +1.10999238     i 
+                GAMMA_INEL =     -1.754142134E-03 GAUSS
+                     DELTA = -ALPHA_RES*GAMMA_INEL/2*ALPHA_BG
+                           =     -1.503977624E-05 GAUSS
 
   ------------------------ 85Rb-85Rb strongly decayed resonance characterisation in kk channel -------------------------
 
   JTOT =    8   IBLOCK =   2   ENERGY(   1) =  6.95034570000E-10 CM-1 =   1.00000000000E-09 K
 
-  EFV SET     8:  MAGNETIC Z FIELD =   171.8476720     GAUSS
+  EFV SET     6:  MAGNETIC Z FIELD =   171.8416034     GAUSS
+
+  REFERENCE ENERGY EREF =  0.1377259023     K =  9.5724263300E-02 CM-1
+
+  PARAMETERS OBTAINED ARE:
+  MAGNETIC Z FIELD_RES =    171.843788261     GAUSS
+       A_BG  (IN BOHR) =      -491.028272          -22.3823832     i 
+       A_RES (IN BOHR) =       4.65324868         +0.391064882     i 
+                GAMMA_INEL =     -2.695129347E-03 GAUSS
+                     DELTA = -ALPHA_RES*GAMMA_INEL/2*ALPHA_BG
+                           =     -1.277024948E-05 GAUSS
 
   ------------------------ 85Rb-85Rb strongly decayed resonance characterisation in kk channel -------------------------
 
   JTOT =    8   IBLOCK =   2   ENERGY(   1) =  6.95034570000E-10 CM-1 =   1.00000000000E-09 K
 
-  EFV SET     9:  MAGNETIC Z FIELD =   171.8433567     GAUSS
+  EFV SET     7:  MAGNETIC Z FIELD =   171.8437883     GAUSS
+
+  REFERENCE ENERGY EREF =  0.1377261203     K =  9.5724414780E-02 CM-1
+
+  PARAMETERS OBTAINED ARE:
+  MAGNETIC Z FIELD_RES =    171.843747722     GAUSS
+       A_BG  (IN BOHR) =      -491.037008          -22.3861064     i 
+       A_RES (IN BOHR) =       4.70480887         +0.385163278     i 
+                GAMMA_INEL =     -2.614916076E-03 GAUSS
+                     DELTA = -ALPHA_RES*GAMMA_INEL/2*ALPHA_BG
+                           =     -1.252724352E-05 GAUSS
 
   ------------------------ 85Rb-85Rb strongly decayed resonance characterisation in kk channel -------------------------
 
   JTOT =    8   IBLOCK =   2   ENERGY(   1) =  6.95034570000E-10 CM-1 =   1.00000000000E-09 K
 
-  EFV SET    10:  MAGNETIC Z FIELD =   171.8437491     GAUSS
+  EFV SET     8:  MAGNETIC Z FIELD =   171.8476701     GAUSS
 
-  CONVERGED ON RESONANCE AT MAGNETIC Z FIELD_RES =   171.843749046 GAUSS, WITH LAST STEP = -8.01788E-09 GAUSS
+  REFERENCE ENERGY EREF =  0.1377265075     K =  9.5724683916E-02 CM-1
+
+  PARAMETERS OBTAINED ARE:
+  MAGNETIC Z FIELD_RES =    171.843747070     GAUSS
+       A_BG  (IN BOHR) =      -491.038449          -22.3867194     i 
+       A_RES (IN BOHR) =       4.70403414         +0.388877707     i 
+                GAMMA_INEL =     -2.615953566E-03 GAUSS
+                     DELTA = -ALPHA_RES*GAMMA_INEL/2*ALPHA_BG
+                           =     -1.253011338E-05 GAUSS
+
+  ------------------------ 85Rb-85Rb strongly decayed resonance characterisation in kk channel -------------------------
+
+  JTOT =    8   IBLOCK =   2   ENERGY(   1) =  6.95034570000E-10 CM-1 =   1.00000000000E-09 K
+
+  EFV SET     9:  MAGNETIC Z FIELD =   171.8433547     GAUSS
+
+  REFERENCE ENERGY EREF =  0.1377260770     K =  9.5724384718E-02 CM-1
+
+  PARAMETERS OBTAINED ARE:
+  MAGNETIC Z FIELD_RES =    171.843747067     GAUSS
+       A_BG  (IN BOHR) =      -491.038230          -22.3866302     i 
+       A_RES (IN BOHR) =       4.70413094         +0.388647481     i 
+                GAMMA_INEL =     -2.616368753E-03 GAUSS
+                     DELTA = -ALPHA_RES*GAMMA_INEL/2*ALPHA_BG
+                           =     -1.253236556E-05 GAUSS
+
+  ------------------------ 85Rb-85Rb strongly decayed resonance characterisation in kk channel -------------------------
+
+  JTOT =    8   IBLOCK =   2   ENERGY(   1) =  6.95034570000E-10 CM-1 =   1.00000000000E-09 K
+
+  EFV SET    10:  MAGNETIC Z FIELD =   171.8437471     GAUSS
+
+  REFERENCE ENERGY EREF =  0.1377261162     K =  9.5724411923E-02 CM-1
+
+  PARAMETERS OBTAINED ARE:
+  MAGNETIC Z FIELD_RES =    171.843747064     GAUSS
+       A_BG  (IN BOHR) =      -491.038236          -22.3866314     i 
+       A_RES (IN BOHR) =       4.70412995         +0.388658584     i 
+                GAMMA_INEL =     -2.616358368E-03 GAUSS
+                     DELTA = -ALPHA_RES*GAMMA_INEL/2*ALPHA_BG
+                           =     -1.253231303E-05 GAUSS
+
+  CONVERGED ON RESONANCE AT MAGNETIC Z FIELD_RES =   171.843747064 GAUSS, WITH LAST STEP = -2.90905E-09 GAUSS
 
   ======================================================================================================================
 
@@ -1401,7 +1596,7 @@
  |                                                                            |
  |                               Version 2019.0 (beta)                        |
  |                                                                            |
- |                    This run used      15.74 cpu secs and                   |
+ |                    This run used      14.21 cpu secs and                   |
  |               6817 of the allocated   1000000 words of storage             |
  |                                                                            |
   ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
@@ -1414,7 +1609,7 @@
  |                                                                            |
  |                               Version 2019.0 (beta)                        |
  |                                                                            |
- |                       Run on 14 Nov 2018   at 09:44:16                     |
+ |                       Run on 16 Jan 2019   at 11:35:11                     |
  |                                                                            |
   ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
 
@@ -1437,9 +1632,9 @@
 
   RUN LABEL = 85Rb-85Rb effective range across resonances in aa channel                       
 
-  REDUCED MASS FOR INTERACTION =  42.455894869 ATOMIC MASS UNITS
+  REDUCED MASS FOR INTERACTION =  42.455894869 ATOMIC MASS UNITS (DALTONS)
 
-  ***** WARNING - NO SCRATCH FILE SPECIFIED BY ISCRU PARAMETER - FULL CALCULATION WILL BE DONE AT EACH ENERGY
+  NO SCRATCH FILE SPECIFIED BY ISCRU PARAMETER: FULL CALCULATION WILL BE DONE AT EVERY ENERGY
 
   ======================================================================================================================
   ATOM - ATOM WITH NUC SP + MAG FL
@@ -1591,11 +1786,10 @@
 
   POTENL PROCESSING FINISHED.
 
-  UNITS FOR POTENTIAL ROUTINES:
-  POTENTIAL RETURNED IN UNITS OF EPSIL =       1.000000 CM-1
-  R                  IN UNITS OF RM    =       0.529177 ANGSTROMS
+  POTENTIAL RETURNED IN UNITS OF EPSIL  =  1.0000000     CM-1
+        CODED WITH R IN UNITS OF RM     = 0.52917721     ANGSTROM
 
-  ALL LENGTHS ARE IN UNITS OF RM =  0.529177 ANGSTROM UNLESS OTHERWISE STATED
+  ALL LENGTHS ARE IN UNITS OF BOHR (  0.52917721 ANGSTROM ) UNLESS OTHERWISE STATED
 
   INTERACTION MATRIX USES   3 BLOCKS OF VL ARRAY FOR R-DEPENDENT TERMS IN POTENTIAL
                             2                    FOR CONSTANT    TERMS IN POTENTIAL
@@ -1605,34 +1799,38 @@
 
   ======================================================================================================================
 
-  PROPAGATION ALGORITHMS FOR COUPLED EQUATIONS SPECIFIED BY IPROPS =  6 AND IPROPL =  1
+  PROPAGATION METHODS FOR COUPLED EQUATIONS SPECIFIED BY IPROPS =  6 AND IPROPL =  9
 
   COUPLED EQUATIONS WILL BE PROPAGATED OUTWARDS IN 2 SEGMENTS
+
+  PROPAGATION RANGES ARE CONTROLLED BY VARIABLES RMIN, RMID AND RMAX, WITH INPUT VALUES
+  RMIN =   3.000     RMID =   21.00     RMAX =  1.5000E+04
   ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
   SEGMENT 1 WILL BE PROPAGATED OUTWARDS
 
-  FROM RMIN   =      3.00  TO RMID   =     21.00
+  FROM RMIN =      3.00 TO RMID =     21.00
 
-  COUPLED EQUATIONS SOLVED BY DIABATIC MODIFIED LOG DERIVATIVE METHOD OF MANOLOPOULOS
+  COUPLED EQUATIONS SOLVED BY DIABATIC MODIFIED LOG-DERIVATIVE PROPAGATOR OF MANOLOPOULOS
 
   PROPAGATION STEP SIZE DETERMINED USING DR =  2.000E-03
+  STEP SIZE CONSTANT THROUGHOUT RANGE
+  STEP SIZE MAY BE ADJUSTED SLIGHTLY SO THAT RANGE IS A WHOLE NUMBER OF STEPS
 
-  LOG-DERIVATIVE MATRIX WILL BE INITIALISED IN THE LOCAL EIGENBASIS FOR RMIN IN THE OUTWARDS PROPAGATION PART
-  LOCALLY CLOSED CHANNELS WILL BE INITIALISED WITH A WKB BOUNDARY CONDITION
-  LOCALLY OPEN CHANNELS WILL BE INITIALISED WITH THE VALUE  1.0000000E+08
+  LOG-DERIVATIVE MATRIX INITIALISED IN THE LOCAL EIGENBASIS AT RMIN
+  LOCALLY CLOSED CHANNELS INITIALISED WITH A WKB BOUNDARY CONDITION
+  LOCALLY  OPEN  CHANNELS INITIALISED WITH THE VALUE  1.000E+08
   ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
   SEGMENT 2 WILL BE PROPAGATED OUTWARDS
 
-  FROM RMID   =     21.00  TO RMAX   =  15000.00
+  FROM RMID =     21.00 TO RMAX =  15000.00
 
-  COUPLED EQUATIONS SOLVED BY VARIABLE STEP AIRY METHOD.
-  ALL PUBLICATIONS RESULTING FROM THE USE OF THIS PROPAGATOR SHOULD REFERENCE
-  M.H. ALEXANDER AND D.E. MANOLOPOULOS,  J CHEM PHYS 86, 2044 (1987).
+  COUPLED EQUATIONS SOLVED BY VARIABLE-STEP AIRY PROPAGATOR.
+  PUBLICATIONS RESULTING FROM THE USE OF THIS PROPAGATOR SHOULD REFERENCE
+  M. H. ALEXANDER AND D. E. MANOLOPOULOS,  J. CHEM. PHYS. 86, 2044 (1987).
 
-  INITIAL STEP SIZE TAKEN FROM DR       =  2.000E-03
-                             WITH TOLHI =  1.00E-07         POWRX = 6.0
-  TOLHI.LT.1  --  AIRY STEPS ADJUSTED TO MAINTAIN APPROX. ACCURACY VIA PERTURBATION THEORY AND POWRX.
-  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+  INITIAL STEP SIZE TAKEN FROM SIZE OF FINAL STEP OF PREVIOUS SEGMENT
+  STEP SIZES ADJUSTED TO MAINTAIN APPROXIMATE ACCURACY VIA PERTURBATION THEORY
+  WITH TOLHI =  1.00E-06 AND POWR =   6.0    
 
   ======================================================================================================================
 
@@ -1757,7 +1955,7 @@
 
   TOTAL ANGULAR MOMENTUM JTOT =   8
 
-  EACH JTOT IS SPLIT INTO A MAXIMUM OF   2 DIFFERENT SYMMETRY BLOCKS
+  EACH JTOT IS SPLIT INTO A MAXIMUM OF   2 SYMMETRY BLOCKS
 
   CALCULATION(S) WILL BE FOR SYMMETRY BLOCK   2
 
@@ -1776,608 +1974,608 @@
   EFV SET     1:  MAGNETIC Z FIELD =   800.0000000     GAUSS
 
   EFFECTIVE RANGE FOR CHANNEL   1:
-  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   338.85     BOHR WITH 1/A(K=0) =  -0.2548662271E-02 BOHR^-1
-  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   335.57     BOHR WITH   A(K=0) =   -392.3544451     BOHR
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   338.84     BOHR WITH 1/A(K=0) =  -0.2548665311E-02 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   335.57     BOHR WITH   A(K=0) =   -392.3539773     BOHR
 
   EFV SET     2:  MAGNETIC Z FIELD =   801.0000000     GAUSS
 
   EFFECTIVE RANGE FOR CHANNEL   1:
-  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   338.92     BOHR WITH 1/A(K=0) =  -0.2550156720E-02 BOHR^-1
-  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   335.65     BOHR WITH   A(K=0) =   -392.1245226     BOHR
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   338.92     BOHR WITH 1/A(K=0) =  -0.2550159775E-02 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   335.64     BOHR WITH   A(K=0) =   -392.1240530     BOHR
 
   EFV SET     3:  MAGNETIC Z FIELD =   802.0000000     GAUSS
 
   EFFECTIVE RANGE FOR CHANNEL   1:
-  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   338.99     BOHR WITH 1/A(K=0) =  -0.2551706024E-02 BOHR^-1
-  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   335.72     BOHR WITH   A(K=0) =   -391.8864451     BOHR
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   338.99     BOHR WITH 1/A(K=0) =  -0.2551709088E-02 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   335.72     BOHR WITH   A(K=0) =   -391.8859747     BOHR
 
   EFV SET     4:  MAGNETIC Z FIELD =   803.0000000     GAUSS
 
   EFFECTIVE RANGE FOR CHANNEL   1:
-  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   339.07     BOHR WITH 1/A(K=0) =  -0.2553314004E-02 BOHR^-1
-  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   335.80     BOHR WITH   A(K=0) =   -391.6396564     BOHR
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   339.07     BOHR WITH 1/A(K=0) =  -0.2553317076E-02 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   335.80     BOHR WITH   A(K=0) =   -391.6391853     BOHR
 
   EFV SET     5:  MAGNETIC Z FIELD =   804.0000000     GAUSS
 
   EFFECTIVE RANGE FOR CHANNEL   1:
-  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   339.16     BOHR WITH 1/A(K=0) =  -0.2554985656E-02 BOHR^-1
-  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   335.88     BOHR WITH   A(K=0) =   -391.3834248     BOHR
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   339.15     BOHR WITH 1/A(K=0) =  -0.2554988741E-02 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   335.88     BOHR WITH   A(K=0) =   -391.3829525     BOHR
 
   EFV SET     6:  MAGNETIC Z FIELD =   805.0000000     GAUSS
 
   EFFECTIVE RANGE FOR CHANNEL   1:
-  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   339.24     BOHR WITH 1/A(K=0) =  -0.2556726335E-02 BOHR^-1
-  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   335.97     BOHR WITH   A(K=0) =   -391.1169689     BOHR
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   339.24     BOHR WITH 1/A(K=0) =  -0.2556729424E-02 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   335.97     BOHR WITH   A(K=0) =   -391.1164965     BOHR
 
   EFV SET     7:  MAGNETIC Z FIELD =   806.0000000     GAUSS
 
   EFFECTIVE RANGE FOR CHANNEL   1:
-  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   339.33     BOHR WITH 1/A(K=0) =  -0.2558542531E-02 BOHR^-1
-  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   336.06     BOHR WITH   A(K=0) =   -390.8393396     BOHR
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   339.33     BOHR WITH 1/A(K=0) =  -0.2558545682E-02 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   336.06     BOHR WITH   A(K=0) =   -390.8388584     BOHR
 
   EFV SET     8:  MAGNETIC Z FIELD =   807.0000000     GAUSS
 
   EFFECTIVE RANGE FOR CHANNEL   1:
-  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   339.42     BOHR WITH 1/A(K=0) =  -0.2560442823E-02 BOHR^-1
-  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   336.15     BOHR WITH   A(K=0) =   -390.5492767     BOHR
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   339.42     BOHR WITH 1/A(K=0) =  -0.2560445990E-02 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   336.15     BOHR WITH   A(K=0) =   -390.5487939     BOHR
 
   EFV SET     9:  MAGNETIC Z FIELD =   808.0000000     GAUSS
 
   EFFECTIVE RANGE FOR CHANNEL   1:
-  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   339.52     BOHR WITH 1/A(K=0) =  -0.2562438834E-02 BOHR^-1
-  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   336.25     BOHR WITH   A(K=0) =   -390.2450665     BOHR
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   339.51     BOHR WITH 1/A(K=0) =  -0.2562442013E-02 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   336.25     BOHR WITH   A(K=0) =   -390.2445826     BOHR
 
   EFV SET    10:  MAGNETIC Z FIELD =   809.0000000     GAUSS
 
   EFFECTIVE RANGE FOR CHANNEL   1:
-  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   339.62     BOHR WITH 1/A(K=0) =  -0.2564552290E-02 BOHR^-1
-  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   336.35     BOHR WITH   A(K=0) =   -389.9234729     BOHR
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   339.61     BOHR WITH 1/A(K=0) =  -0.2564555479E-02 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   336.35     BOHR WITH   A(K=0) =   -389.9229881     BOHR
 
   EFV SET    11:  MAGNETIC Z FIELD =   810.0000000     GAUSS
 
   EFFECTIVE RANGE FOR CHANNEL   1:
-  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   339.72     BOHR WITH 1/A(K=0) =  -0.2566858405E-02 BOHR^-1
-  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   336.46     BOHR WITH   A(K=0) =   -389.5731676     BOHR
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   339.72     BOHR WITH 1/A(K=0) =  -0.2566861608E-02 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   336.45     BOHR WITH   A(K=0) =   -389.5726816     BOHR
 
   EFV SET    12:  MAGNETIC Z FIELD =   811.0000000     GAUSS
 
   EFFECTIVE RANGE FOR CHANNEL   1:
-  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   336.26     BOHR WITH 1/A(K=0) =  -0.2564155671E-02 BOHR^-1
-  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   333.06     BOHR WITH   A(K=0) =   -389.9839423     BOHR
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   336.26     BOHR WITH 1/A(K=0) =  -0.2564158328E-02 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   333.05     BOHR WITH   A(K=0) =   -389.9835385     BOHR
 
   EFV SET    13:  MAGNETIC Z FIELD =   812.0000000     GAUSS
 
   EFFECTIVE RANGE FOR CHANNEL   1:
-  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   339.93     BOHR WITH 1/A(K=0) =  -0.2571155285E-02 BOHR^-1
-  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   336.66     BOHR WITH   A(K=0) =   -388.9221354     BOHR
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   339.93     BOHR WITH 1/A(K=0) =  -0.2571158482E-02 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   336.66     BOHR WITH   A(K=0) =   -388.9216519     BOHR
 
   EFV SET    14:  MAGNETIC Z FIELD =   813.0000000     GAUSS
 
   EFFECTIVE RANGE FOR CHANNEL   1:
-  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   340.07     BOHR WITH 1/A(K=0) =  -0.2573886516E-02 BOHR^-1
-  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   336.80     BOHR WITH   A(K=0) =   -388.5094487     BOHR
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   340.06     BOHR WITH 1/A(K=0) =  -0.2573889737E-02 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   336.80     BOHR WITH   A(K=0) =   -388.5089626     BOHR
 
   EFV SET    15:  MAGNETIC Z FIELD =   814.0000000     GAUSS
 
   EFFECTIVE RANGE FOR CHANNEL   1:
-  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   340.20     BOHR WITH 1/A(K=0) =  -0.2576766325E-02 BOHR^-1
-  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   336.94     BOHR WITH   A(K=0) =   -388.0752598     BOHR
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   340.20     BOHR WITH 1/A(K=0) =  -0.2576769561E-02 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   336.94     BOHR WITH   A(K=0) =   -388.0747725     BOHR
 
   EFV SET    16:  MAGNETIC Z FIELD =   815.0000000     GAUSS
 
   EFFECTIVE RANGE FOR CHANNEL   1:
-  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   340.35     BOHR WITH 1/A(K=0) =  -0.2579925408E-02 BOHR^-1
-  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   337.09     BOHR WITH   A(K=0) =   -387.6000796     BOHR
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   340.35     BOHR WITH 1/A(K=0) =  -0.2579928686E-02 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   337.08     BOHR WITH   A(K=0) =   -387.5995873     BOHR
 
   EFV SET    17:  MAGNETIC Z FIELD =   816.0000000     GAUSS
 
   EFFECTIVE RANGE FOR CHANNEL   1:
-  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   340.51     BOHR WITH 1/A(K=0) =  -0.2583531880E-02 BOHR^-1
-  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   337.25     BOHR WITH   A(K=0) =   -387.0590254     BOHR
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   340.51     BOHR WITH 1/A(K=0) =  -0.2583535178E-02 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   337.25     BOHR WITH   A(K=0) =   -387.0585314     BOHR
 
   EFV SET    18:  MAGNETIC Z FIELD =   817.0000000     GAUSS
 
   EFFECTIVE RANGE FOR CHANNEL   1:
-  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   340.70     BOHR WITH 1/A(K=0) =  -0.2587977007E-02 BOHR^-1
-  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   337.44     BOHR WITH   A(K=0) =   -386.3942289     BOHR
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   340.69     BOHR WITH 1/A(K=0) =  -0.2587980347E-02 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   337.43     BOHR WITH   A(K=0) =   -386.3937303     BOHR
 
   EFV SET    19:  MAGNETIC Z FIELD =   818.0000000     GAUSS
 
   EFFECTIVE RANGE FOR CHANNEL   1:
-  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   340.90     BOHR WITH 1/A(K=0) =  -0.2594613573E-02 BOHR^-1
-  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   337.65     BOHR WITH   A(K=0) =   -385.4059312     BOHR
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   340.90     BOHR WITH 1/A(K=0) =  -0.2594616965E-02 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   337.64     BOHR WITH   A(K=0) =   -385.4054275     BOHR
 
   EFV SET    20:  MAGNETIC Z FIELD =   819.0000000     GAUSS
 
   EFFECTIVE RANGE FOR CHANNEL   1:
-  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   340.60     BOHR WITH 1/A(K=0) =  -0.2614320567E-02 BOHR^-1
-  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   337.38     BOHR WITH   A(K=0) =   -382.5008361     BOHR
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   340.60     BOHR WITH 1/A(K=0) =  -0.2614324301E-02 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   337.37     BOHR WITH   A(K=0) =   -382.5002900     BOHR
 
   EFV SET    21:  MAGNETIC Z FIELD =   820.0000000     GAUSS
 
   EFFECTIVE RANGE FOR CHANNEL   1:
-  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   336.84     BOHR WITH 1/A(K=0) =  -0.2558815106E-02 BOHR^-1
-  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   333.62     BOHR WITH   A(K=0) =   -390.7978266     BOHR
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   336.84     BOHR WITH 1/A(K=0) =  -0.2558819293E-02 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   333.62     BOHR WITH   A(K=0) =   -390.7971872     BOHR
 
   EFV SET    22:  MAGNETIC Z FIELD =   821.0000000     GAUSS
 
   EFFECTIVE RANGE FOR CHANNEL   1:
-  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   340.39     BOHR WITH 1/A(K=0) =  -0.2585403234E-02 BOHR^-1
-  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   337.13     BOHR WITH   A(K=0) =   -386.7788836     BOHR
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   340.38     BOHR WITH 1/A(K=0) =  -0.2585406799E-02 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   337.13     BOHR WITH   A(K=0) =   -386.7783503     BOHR
 
   EFV SET    23:  MAGNETIC Z FIELD =   822.0000000     GAUSS
 
   EFFECTIVE RANGE FOR CHANNEL   1:
-  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   340.93     BOHR WITH 1/A(K=0) =  -0.2593355929E-02 BOHR^-1
-  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   337.67     BOHR WITH   A(K=0) =   -385.5928244     BOHR
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   340.92     BOHR WITH 1/A(K=0) =  -0.2593359492E-02 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   337.67     BOHR WITH   A(K=0) =   -385.5922948     BOHR
 
   EFV SET    24:  MAGNETIC Z FIELD =   823.0000000     GAUSS
 
   EFFECTIVE RANGE FOR CHANNEL   1:
-  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   341.25     BOHR WITH 1/A(K=0) =  -0.2599161406E-02 BOHR^-1
-  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   337.99     BOHR WITH   A(K=0) =   -384.7315862     BOHR
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   341.24     BOHR WITH 1/A(K=0) =  -0.2599165007E-02 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   337.99     BOHR WITH   A(K=0) =   -384.7310533     BOHR
 
   EFV SET    25:  MAGNETIC Z FIELD =   824.0000000     GAUSS
 
   EFFECTIVE RANGE FOR CHANNEL   1:
-  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   341.52     BOHR WITH 1/A(K=0) =  -0.2604473968E-02 BOHR^-1
-  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   338.27     BOHR WITH   A(K=0) =   -383.9468365     BOHR
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   341.52     BOHR WITH 1/A(K=0) =  -0.2604477664E-02 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   338.26     BOHR WITH   A(K=0) =   -383.9462918     BOHR
 
   EFV SET    26:  MAGNETIC Z FIELD =   825.0000000     GAUSS
 
   EFFECTIVE RANGE FOR CHANNEL   1:
-  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   341.78     BOHR WITH 1/A(K=0) =  -0.2609757068E-02 BOHR^-1
-  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   338.53     BOHR WITH   A(K=0) =   -383.1696077     BOHR
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   341.78     BOHR WITH 1/A(K=0) =  -0.2609760819E-02 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   338.53     BOHR WITH   A(K=0) =   -383.1690572     BOHR
 
   EFV SET    27:  MAGNETIC Z FIELD =   826.0000000     GAUSS
 
   EFFECTIVE RANGE FOR CHANNEL   1:
-  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   342.05     BOHR WITH 1/A(K=0) =  -0.2615212430E-02 BOHR^-1
-  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   338.80     BOHR WITH   A(K=0) =   -382.3703320     BOHR
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   342.05     BOHR WITH 1/A(K=0) =  -0.2615216235E-02 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   338.80     BOHR WITH   A(K=0) =   -382.3697758     BOHR
 
   EFV SET    28:  MAGNETIC Z FIELD =   827.0000000     GAUSS
 
   EFFECTIVE RANGE FOR CHANNEL   1:
-  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   342.33     BOHR WITH 1/A(K=0) =  -0.2620960684E-02 BOHR^-1
-  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   339.08     BOHR WITH   A(K=0) =   -381.5317441     BOHR
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   342.32     BOHR WITH 1/A(K=0) =  -0.2620964560E-02 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   339.08     BOHR WITH   A(K=0) =   -381.5311801     BOHR
 
   EFV SET    29:  MAGNETIC Z FIELD =   828.0000000     GAUSS
 
   EFFECTIVE RANGE FOR CHANNEL   1:
-  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   342.62     BOHR WITH 1/A(K=0) =  -0.2627095013E-02 BOHR^-1
-  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   339.37     BOHR WITH   A(K=0) =   -380.6408812     BOHR
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   342.62     BOHR WITH 1/A(K=0) =  -0.2627098922E-02 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   339.37     BOHR WITH   A(K=0) =   -380.6403150     BOHR
 
   EFV SET    30:  MAGNETIC Z FIELD =   829.0000000     GAUSS
 
   EFFECTIVE RANGE FOR CHANNEL   1:
-  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   342.94     BOHR WITH 1/A(K=0) =  -0.2633701347E-02 BOHR^-1
-  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   339.69     BOHR WITH   A(K=0) =   -379.6861120     BOHR
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   342.94     BOHR WITH 1/A(K=0) =  -0.2633705342E-02 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   339.69     BOHR WITH   A(K=0) =   -379.6855362     BOHR
 
   EFV SET    31:  MAGNETIC Z FIELD =   830.0000000     GAUSS
 
   EFFECTIVE RANGE FOR CHANNEL   1:
-  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   343.28     BOHR WITH 1/A(K=0) =  -0.2640869411E-02 BOHR^-1
-  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   340.04     BOHR WITH   A(K=0) =   -378.6555629     BOHR
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   343.28     BOHR WITH 1/A(K=0) =  -0.2640873502E-02 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   340.04     BOHR WITH   A(K=0) =   -378.6549765     BOHR
 
   EFV SET    32:  MAGNETIC Z FIELD =   831.0000000     GAUSS
 
   EFFECTIVE RANGE FOR CHANNEL   1:
-  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   343.65     BOHR WITH 1/A(K=0) =  -0.2648699300E-02 BOHR^-1
-  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   340.41     BOHR WITH   A(K=0) =   -377.5362377     BOHR
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   343.65     BOHR WITH 1/A(K=0) =  -0.2648703495E-02 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   340.41     BOHR WITH   A(K=0) =   -377.5356399     BOHR
 
   EFV SET    33:  MAGNETIC Z FIELD =   832.0000000     GAUSS
 
   EFFECTIVE RANGE FOR CHANNEL   1:
-  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   344.06     BOHR WITH 1/A(K=0) =  -0.2657307604E-02 BOHR^-1
-  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   340.82     BOHR WITH   A(K=0) =   -376.3132462     BOHR
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   344.06     BOHR WITH 1/A(K=0) =  -0.2657311915E-02 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   340.82     BOHR WITH   A(K=0) =   -376.3126358     BOHR
 
   EFV SET    34:  MAGNETIC Z FIELD =   833.0000000     GAUSS
 
   EFFECTIVE RANGE FOR CHANNEL   1:
-  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   344.51     BOHR WITH 1/A(K=0) =  -0.2666834017E-02 BOHR^-1
-  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   341.28     BOHR WITH   A(K=0) =   -374.9690209     BOHR
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   344.51     BOHR WITH 1/A(K=0) =  -0.2666838473E-02 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   341.27     BOHR WITH   A(K=0) =   -374.9683945     BOHR
 
   EFV SET    35:  MAGNETIC Z FIELD =   834.0000000     GAUSS
 
   EFFECTIVE RANGE FOR CHANNEL   1:
-  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   345.01     BOHR WITH 1/A(K=0) =  -0.2677449527E-02 BOHR^-1
-  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   341.78     BOHR WITH   A(K=0) =   -373.4823867     BOHR
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   345.01     BOHR WITH 1/A(K=0) =  -0.2677454130E-02 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   341.78     BOHR WITH   A(K=0) =   -373.4817448     BOHR
 
   EFV SET    36:  MAGNETIC Z FIELD =   835.0000000     GAUSS
 
   EFFECTIVE RANGE FOR CHANNEL   1:
-  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   345.57     BOHR WITH 1/A(K=0) =  -0.2689367313E-02 BOHR^-1
-  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   342.34     BOHR WITH   A(K=0) =   -371.8273609     BOHR
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   345.57     BOHR WITH 1/A(K=0) =  -0.2689372098E-02 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   342.34     BOHR WITH   A(K=0) =   -371.8266995     BOHR
 
   EFV SET    37:  MAGNETIC Z FIELD =   836.0000000     GAUSS
 
   EFFECTIVE RANGE FOR CHANNEL   1:
-  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   346.20     BOHR WITH 1/A(K=0) =  -0.2702857124E-02 BOHR^-1
-  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   342.98     BOHR WITH   A(K=0) =   -369.9716370     BOHR
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   346.20     BOHR WITH 1/A(K=0) =  -0.2702862107E-02 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   342.97     BOHR WITH   A(K=0) =   -369.9709551     BOHR
 
   EFV SET    38:  MAGNETIC Z FIELD =   837.0000000     GAUSS
 
   EFFECTIVE RANGE FOR CHANNEL   1:
-  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   346.92     BOHR WITH 1/A(K=0) =  -0.2718266964E-02 BOHR^-1
-  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   343.70     BOHR WITH   A(K=0) =   -367.8743214     BOHR
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   346.91     BOHR WITH 1/A(K=0) =  -0.2718272186E-02 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   343.70     BOHR WITH   A(K=0) =   -367.8736148     BOHR
 
   EFV SET    39:  MAGNETIC Z FIELD =   838.0000000     GAUSS
 
   EFFECTIVE RANGE FOR CHANNEL   1:
-  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   347.74     BOHR WITH 1/A(K=0) =  -0.2736053851E-02 BOHR^-1
-  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   344.53     BOHR WITH   A(K=0) =   -365.4828555     BOHR
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   347.74     BOHR WITH 1/A(K=0) =  -0.2736059340E-02 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   344.52     BOHR WITH   A(K=0) =   -365.4821224     BOHR
 
   EFV SET    40:  MAGNETIC Z FIELD =   839.0000000     GAUSS
 
   EFFECTIVE RANGE FOR CHANNEL   1:
-  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   348.70     BOHR WITH 1/A(K=0) =  -0.2756830868E-02 BOHR^-1
-  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   345.49     BOHR WITH   A(K=0) =   -362.7284392     BOHR
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   348.69     BOHR WITH 1/A(K=0) =  -0.2756836743E-02 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   345.48     BOHR WITH   A(K=0) =   -362.7276664     BOHR
 
   EFV SET    41:  MAGNETIC Z FIELD =   840.0000000     GAUSS
 
   EFFECTIVE RANGE FOR CHANNEL   1:
-  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   349.82     BOHR WITH 1/A(K=0) =  -0.2781440437E-02 BOHR^-1
-  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   346.62     BOHR WITH   A(K=0) =   -359.5191752     BOHR
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   349.81     BOHR WITH 1/A(K=0) =  -0.2781446717E-02 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   346.61     BOHR WITH   A(K=0) =   -359.5183636     BOHR
 
   EFV SET    42:  MAGNETIC Z FIELD =   841.0000000     GAUSS
 
   EFFECTIVE RANGE FOR CHANNEL   1:
-  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   351.16     BOHR WITH 1/A(K=0) =  -0.2811073030E-02 BOHR^-1
-  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   347.97     BOHR WITH   A(K=0) =   -355.7294362     BOHR
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   351.15     BOHR WITH 1/A(K=0) =  -0.2811079809E-02 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   347.96     BOHR WITH   A(K=0) =   -355.7285785     BOHR
 
   EFV SET    43:  MAGNETIC Z FIELD =   842.0000000     GAUSS
 
   EFFECTIVE RANGE FOR CHANNEL   1:
-  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   352.79     BOHR WITH 1/A(K=0) =  -0.2847467827E-02 BOHR^-1
-  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   349.61     BOHR WITH   A(K=0) =   -351.1828007     BOHR
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   352.78     BOHR WITH 1/A(K=0) =  -0.2847475220E-02 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   349.60     BOHR WITH   A(K=0) =   -351.1818890     BOHR
 
   EFV SET    44:  MAGNETIC Z FIELD =   843.0000000     GAUSS
 
   EFFECTIVE RANGE FOR CHANNEL   1:
-  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   354.81     BOHR WITH 1/A(K=0) =  -0.2893270536E-02 BOHR^-1
-  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   351.64     BOHR WITH   A(K=0) =   -345.6234330     BOHR
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   354.80     BOHR WITH 1/A(K=0) =  -0.2893278736E-02 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   351.64     BOHR WITH   A(K=0) =   -345.6224536     BOHR
 
   EFV SET    45:  MAGNETIC Z FIELD =   844.0000000     GAUSS
 
   EFFECTIVE RANGE FOR CHANNEL   1:
-  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   357.38     BOHR WITH 1/A(K=0) =  -0.2952713061E-02 BOHR^-1
-  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   354.24     BOHR WITH   A(K=0) =   -338.6656731     BOHR
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   357.38     BOHR WITH 1/A(K=0) =  -0.2952722331E-02 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   354.23     BOHR WITH   A(K=0) =   -338.6646101     BOHR
 
   EFV SET    46:  MAGNETIC Z FIELD =   845.0000000     GAUSS
 
   EFFECTIVE RANGE FOR CHANNEL   1:
-  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   360.78     BOHR WITH 1/A(K=0) =  -0.3033011720E-02 BOHR^-1
-  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   357.66     BOHR WITH   A(K=0) =   -329.6997314     BOHR
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   360.77     BOHR WITH 1/A(K=0) =  -0.3033022490E-02 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   357.65     BOHR WITH   A(K=0) =   -329.6985608     BOHR
 
   EFV SET    47:  MAGNETIC Z FIELD =   846.0000000     GAUSS
 
   EFFECTIVE RANGE FOR CHANNEL   1:
-  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   365.46     BOHR WITH 1/A(K=0) =  -0.3147562250E-02 BOHR^-1
-  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   362.37     BOHR WITH   A(K=0) =   -317.7010849     BOHR
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   365.46     BOHR WITH 1/A(K=0) =  -0.3147575208E-02 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   362.37     BOHR WITH   A(K=0) =   -317.6997772     BOHR
 
   EFV SET    48:  MAGNETIC Z FIELD =   847.0000000     GAUSS
 
   EFFECTIVE RANGE FOR CHANNEL   1:
-  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   372.30     BOHR WITH 1/A(K=0) =  -0.3324355344E-02 BOHR^-1
-  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   369.27     BOHR WITH   A(K=0) =   -300.8057057     BOHR
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   372.30     BOHR WITH 1/A(K=0) =  -0.3324372044E-02 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   369.26     BOHR WITH   A(K=0) =   -300.8041948     BOHR
 
   EFV SET    49:  MAGNETIC Z FIELD =   848.0000000     GAUSS
 
   EFFECTIVE RANGE FOR CHANNEL   1:
-  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   383.15     BOHR WITH 1/A(K=0) =  -0.3633297170E-02 BOHR^-1
-  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   380.21     BOHR WITH   A(K=0) =   -275.2284484     BOHR
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   383.15     BOHR WITH 1/A(K=0) =  -0.3633321086E-02 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   380.21     BOHR WITH   A(K=0) =   -275.2266369     BOHR
 
   EFV SET    50:  MAGNETIC Z FIELD =   849.0000000     GAUSS
 
   EFFECTIVE RANGE FOR CHANNEL   1:
-  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   402.04     BOHR WITH 1/A(K=0) =  -0.4311615905E-02 BOHR^-1
-  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   399.31     BOHR WITH   A(K=0) =   -231.9291995     BOHR
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   402.03     BOHR WITH 1/A(K=0) =  -0.4311658817E-02 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   399.30     BOHR WITH   A(K=0) =   -231.9268914     BOHR
 
   EFV SET    51:  MAGNETIC Z FIELD =   850.0000000     GAUSS
 
   EFFECTIVE RANGE FOR CHANNEL   1:
-  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   410.09     BOHR WITH 1/A(K=0) =  -0.7010370542E-02 BOHR^-1
-  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   408.34     BOHR WITH   A(K=0) =   -142.6452283     BOHR
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   410.06     BOHR WITH 1/A(K=0) =  -0.7010531346E-02 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   408.31     BOHR WITH   A(K=0) =   -142.6419565     BOHR
 
   EFV SET    52:  MAGNETIC Z FIELD =   851.0000000     GAUSS
 
   EFFECTIVE RANGE FOR CHANNEL   1:
-  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS  -749.16     BOHR WITH 1/A(K=0) =   0.6702980797E-02 BOHR^-1
-  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS  -743.07     BOHR WITH   A(K=0) =    149.1851381     BOHR
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS  -749.13     BOHR WITH 1/A(K=0) =   0.6702717421E-02 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS  -743.03     BOHR WITH   A(K=0) =    149.1910002     BOHR
 
   EFV SET    53:  MAGNETIC Z FIELD =   852.0000000     GAUSS
 
   EFFECTIVE RANGE FOR CHANNEL   1:
-  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   185.22     BOHR WITH 1/A(K=0) =  -0.2237209132E-03 BOHR^-1
-  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   174.73     BOHR WITH   A(K=0) =   -4466.388040     BOHR
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   185.22     BOHR WITH 1/A(K=0) =  -0.2237141524E-03 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   174.73     BOHR WITH   A(K=0) =   -4466.522802     BOHR
 
   EFV SET    54:  MAGNETIC Z FIELD =   853.0000000     GAUSS
 
   EFFECTIVE RANGE FOR CHANNEL   1:
-  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   259.62     BOHR WITH 1/A(K=0) =  -0.1202047419E-02 BOHR^-1
-  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   255.58     BOHR WITH   A(K=0) =   -831.8680459     BOHR
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   259.62     BOHR WITH 1/A(K=0) =  -0.1202038407E-02 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   255.58     BOHR WITH   A(K=0) =   -831.8742821     BOHR
 
   EFV SET    55:  MAGNETIC Z FIELD =   854.0000000     GAUSS
 
   EFFECTIVE RANGE FOR CHANNEL   1:
-  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   285.37     BOHR WITH 1/A(K=0) =  -0.1592763553E-02 BOHR^-1
-  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   281.67     BOHR WITH   A(K=0) =   -627.8156831     BOHR
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   285.37     BOHR WITH 1/A(K=0) =  -0.1592756108E-02 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   281.67     BOHR WITH   A(K=0) =   -627.8186178     BOHR
 
   EFV SET    56:  MAGNETIC Z FIELD =   855.0000000     GAUSS
 
   EFFECTIVE RANGE FOR CHANNEL   1:
-  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   298.30     BOHR WITH 1/A(K=0) =  -0.1803099159E-02 BOHR^-1
-  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   294.72     BOHR WITH   A(K=0) =   -554.5826536     BOHR
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   298.30     BOHR WITH 1/A(K=0) =  -0.1803093132E-02 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   294.72     BOHR WITH   A(K=0) =   -554.5845075     BOHR
 
   EFV SET    57:  MAGNETIC Z FIELD =   856.0000000     GAUSS
 
   EFFECTIVE RANGE FOR CHANNEL   1:
-  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   306.05     BOHR WITH 1/A(K=0) =  -0.1934604087E-02 BOHR^-1
-  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   302.54     BOHR WITH   A(K=0) =   -516.8862655     BOHR
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   306.04     BOHR WITH 1/A(K=0) =  -0.1934599162E-02 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   302.53     BOHR WITH   A(K=0) =   -516.8875815     BOHR
 
   EFV SET    58:  MAGNETIC Z FIELD =   857.0000000     GAUSS
 
   EFFECTIVE RANGE FOR CHANNEL   1:
-  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   311.20     BOHR WITH 1/A(K=0) =  -0.2024645985E-02 BOHR^-1
-  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   307.74     BOHR WITH   A(K=0) =   -493.8996456     BOHR
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   311.20     BOHR WITH 1/A(K=0) =  -0.2024641894E-02 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   307.73     BOHR WITH   A(K=0) =   -493.9006438     BOHR
 
   EFV SET    59:  MAGNETIC Z FIELD =   858.0000000     GAUSS
 
   EFFECTIVE RANGE FOR CHANNEL   1:
-  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   314.88     BOHR WITH 1/A(K=0) =  -0.2090197723E-02 BOHR^-1
-  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   311.44     BOHR WITH   A(K=0) =   -478.4107380     BOHR
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   314.88     BOHR WITH 1/A(K=0) =  -0.2090194276E-02 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   311.44     BOHR WITH   A(K=0) =   -478.4115269     BOHR
 
   EFV SET    60:  MAGNETIC Z FIELD =   859.0000000     GAUSS
 
   EFFECTIVE RANGE FOR CHANNEL   1:
-  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   317.64     BOHR WITH 1/A(K=0) =  -0.2140080632E-02 BOHR^-1
-  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   314.22     BOHR WITH   A(K=0) =   -467.2598805     BOHR
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   317.64     BOHR WITH 1/A(K=0) =  -0.2140077747E-02 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   314.22     BOHR WITH   A(K=0) =   -467.2605107     BOHR
 
   EFV SET    61:  MAGNETIC Z FIELD =   860.0000000     GAUSS
 
   EFFECTIVE RANGE FOR CHANNEL   1:
-  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   319.79     BOHR WITH 1/A(K=0) =  -0.2179333938E-02 BOHR^-1
-  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   316.38     BOHR WITH   A(K=0) =   -458.8440499     BOHR
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   319.78     BOHR WITH 1/A(K=0) =  -0.2179331476E-02 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   316.38     BOHR WITH   A(K=0) =   -458.8445684     BOHR
 
   EFV SET    62:  MAGNETIC Z FIELD =   861.0000000     GAUSS
 
   EFFECTIVE RANGE FOR CHANNEL   1:
-  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   321.50     BOHR WITH 1/A(K=0) =  -0.2211045135E-02 BOHR^-1
-  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   318.11     BOHR WITH   A(K=0) =   -452.2634355     BOHR
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   321.50     BOHR WITH 1/A(K=0) =  -0.2211043024E-02 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   318.11     BOHR WITH   A(K=0) =   -452.2638675     BOHR
 
   EFV SET    63:  MAGNETIC Z FIELD =   862.0000000     GAUSS
 
   EFFECTIVE RANGE FOR CHANNEL   1:
-  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   322.91     BOHR WITH 1/A(K=0) =  -0.2237211807E-02 BOHR^-1
-  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   319.52     BOHR WITH   A(K=0) =   -446.9738778     BOHR
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   322.90     BOHR WITH 1/A(K=0) =  -0.2237209985E-02 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   319.52     BOHR WITH   A(K=0) =   -446.9742419     BOHR
 
   EFV SET    64:  MAGNETIC Z FIELD =   863.0000000     GAUSS
 
   EFFECTIVE RANGE FOR CHANNEL   1:
-  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   324.08     BOHR WITH 1/A(K=0) =  -0.2259183282E-02 BOHR^-1
-  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   320.70     BOHR WITH   A(K=0) =   -442.6270085     BOHR
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   324.07     BOHR WITH 1/A(K=0) =  -0.2259181673E-02 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   320.70     BOHR WITH   A(K=0) =   -442.6273239     BOHR
 
   EFV SET    65:  MAGNETIC Z FIELD =   864.0000000     GAUSS
 
   EFFECTIVE RANGE FOR CHANNEL   1:
-  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   325.07     BOHR WITH 1/A(K=0) =  -0.2277904005E-02 BOHR^-1
-  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   321.70     BOHR WITH   A(K=0) =   -438.9894337     BOHR
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   325.07     BOHR WITH 1/A(K=0) =  -0.2277902607E-02 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   321.70     BOHR WITH   A(K=0) =   -438.9897033     BOHR
 
   EFV SET    66:  MAGNETIC Z FIELD =   865.0000000     GAUSS
 
   EFFECTIVE RANGE FOR CHANNEL   1:
-  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   325.92     BOHR WITH 1/A(K=0) =  -0.2294054876E-02 BOHR^-1
-  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   322.56     BOHR WITH   A(K=0) =   -435.8989026     BOHR
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   325.92     BOHR WITH 1/A(K=0) =  -0.2294053663E-02 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   322.56     BOHR WITH   A(K=0) =   -435.8991332     BOHR
 
   EFV SET    67:  MAGNETIC Z FIELD =   866.0000000     GAUSS
 
   EFFECTIVE RANGE FOR CHANNEL   1:
-  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   326.66     BOHR WITH 1/A(K=0) =  -0.2308138909E-02 BOHR^-1
-  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   323.30     BOHR WITH   A(K=0) =   -433.2391704     BOHR
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   326.66     BOHR WITH 1/A(K=0) =  -0.2308137857E-02 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   323.30     BOHR WITH   A(K=0) =   -433.2393679     BOHR
 
   EFV SET    68:  MAGNETIC Z FIELD =   867.0000000     GAUSS
 
   EFFECTIVE RANGE FOR CHANNEL   1:
-  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   327.31     BOHR WITH 1/A(K=0) =  -0.2320536209E-02 BOHR^-1
-  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   323.96     BOHR WITH   A(K=0) =   -430.9246894     BOHR
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   327.31     BOHR WITH 1/A(K=0) =  -0.2320535301E-02 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   323.95     BOHR WITH   A(K=0) =   -430.9248582     BOHR
 
   EFV SET    69:  MAGNETIC Z FIELD =   868.0000000     GAUSS
 
   EFFECTIVE RANGE FOR CHANNEL   1:
-  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   327.88     BOHR WITH 1/A(K=0) =  -0.2331538959E-02 BOHR^-1
-  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   324.53     BOHR WITH   A(K=0) =   -428.8911756     BOHR
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   327.88     BOHR WITH 1/A(K=0) =  -0.2331538177E-02 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   324.53     BOHR WITH   A(K=0) =   -428.8913197     BOHR
 
   EFV SET    70:  MAGNETIC Z FIELD =   869.0000000     GAUSS
 
   EFFECTIVE RANGE FOR CHANNEL   1:
-  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   328.39     BOHR WITH 1/A(K=0) =  -0.2341375496E-02 BOHR^-1
-  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   325.05     BOHR WITH   A(K=0) =   -427.0893800     BOHR
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   328.39     BOHR WITH 1/A(K=0) =  -0.2341374832E-02 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   325.05     BOHR WITH   A(K=0) =   -427.0895011     BOHR
 
   EFV SET    71:  MAGNETIC Z FIELD =   870.0000000     GAUSS
 
   EFFECTIVE RANGE FOR CHANNEL   1:
-  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   328.85     BOHR WITH 1/A(K=0) =  -0.2350227231E-02 BOHR^-1
-  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   325.51     BOHR WITH   A(K=0) =   -425.4808666     BOHR
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   328.85     BOHR WITH 1/A(K=0) =  -0.2350226667E-02 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   325.51     BOHR WITH   A(K=0) =   -425.4809689     BOHR
 
   EFV SET    72:  MAGNETIC Z FIELD =   871.0000000     GAUSS
 
   EFFECTIVE RANGE FOR CHANNEL   1:
-  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   329.27     BOHR WITH 1/A(K=0) =  -0.2358239560E-02 BOHR^-1
-  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   325.93     BOHR WITH   A(K=0) =   -424.0352995     BOHR
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   329.27     BOHR WITH 1/A(K=0) =  -0.2358239084E-02 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   325.93     BOHR WITH   A(K=0) =   -424.0353852     BOHR
 
   EFV SET    73:  MAGNETIC Z FIELD =   872.0000000     GAUSS
 
   EFFECTIVE RANGE FOR CHANNEL   1:
-  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   329.64     BOHR WITH 1/A(K=0) =  -0.2365530802E-02 BOHR^-1
-  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   326.31     BOHR WITH   A(K=0) =   -422.7283394     BOHR
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   329.64     BOHR WITH 1/A(K=0) =  -0.2365530408E-02 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   326.31     BOHR WITH   A(K=0) =   -422.7284100     BOHR
 
   EFV SET    74:  MAGNETIC Z FIELD =   873.0000000     GAUSS
 
   EFFECTIVE RANGE FOR CHANNEL   1:
-  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   329.99     BOHR WITH 1/A(K=0) =  -0.2372197935E-02 BOHR^-1
-  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   326.66     BOHR WITH   A(K=0) =   -421.5402830     BOHR
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   329.99     BOHR WITH 1/A(K=0) =  -0.2372197657E-02 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   326.65     BOHR WITH   A(K=0) =   -421.5403325     BOHR
 
   EFV SET    75:  MAGNETIC Z FIELD =   874.0000000     GAUSS
 
   EFFECTIVE RANGE FOR CHANNEL   1:
-  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   330.30     BOHR WITH 1/A(K=0) =  -0.2378321602E-02 BOHR^-1
-  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   326.97     BOHR WITH   A(K=0) =   -420.4549386     BOHR
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   330.30     BOHR WITH 1/A(K=0) =  -0.2378321390E-02 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   326.97     BOHR WITH   A(K=0) =   -420.4549763     BOHR
 
   EFV SET    76:  MAGNETIC Z FIELD =   875.0000000     GAUSS
 
   EFFECTIVE RANGE FOR CHANNEL   1:
-  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   330.59     BOHR WITH 1/A(K=0) =  -0.2383968871E-02 BOHR^-1
-  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   327.26     BOHR WITH   A(K=0) =   -419.4589718     BOHR
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   330.59     BOHR WITH 1/A(K=0) =  -0.2383968720E-02 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   327.26     BOHR WITH   A(K=0) =   -419.4589986     BOHR
 
   EFV SET    77:  MAGNETIC Z FIELD =   876.0000000     GAUSS
 
   EFFECTIVE RANGE FOR CHANNEL   1:
-  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   330.86     BOHR WITH 1/A(K=0) =  -0.2389196358E-02 BOHR^-1
-  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   327.53     BOHR WITH   A(K=0) =   -418.5412348     BOHR
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   330.86     BOHR WITH 1/A(K=0) =  -0.2389196263E-02 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   327.53     BOHR WITH   A(K=0) =   -418.5412516     BOHR
 
   EFV SET    78:  MAGNETIC Z FIELD =   877.0000000     GAUSS
 
   EFFECTIVE RANGE FOR CHANNEL   1:
-  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   331.11     BOHR WITH 1/A(K=0) =  -0.2394052118E-02 BOHR^-1
-  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   327.78     BOHR WITH   A(K=0) =   -417.6923486     BOHR
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   331.11     BOHR WITH 1/A(K=0) =  -0.2394052082E-02 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   327.78     BOHR WITH   A(K=0) =   -417.6923551     BOHR
 
   EFV SET    79:  MAGNETIC Z FIELD =   878.0000000     GAUSS
 
   EFFECTIVE RANGE FOR CHANNEL   1:
-  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   331.34     BOHR WITH 1/A(K=0) =  -0.2398577221E-02 BOHR^-1
-  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   328.02     BOHR WITH   A(K=0) =   -416.9043620     BOHR
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   331.34     BOHR WITH 1/A(K=0) =  -0.2398577191E-02 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   328.01     BOHR WITH   A(K=0) =   -416.9043673     BOHR
 
   EFV SET    80:  MAGNETIC Z FIELD =   879.0000000     GAUSS
 
   EFFECTIVE RANGE FOR CHANNEL   1:
-  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   331.56     BOHR WITH 1/A(K=0) =  -0.2402806710E-02 BOHR^-1
-  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   328.23     BOHR WITH   A(K=0) =   -416.1705358     BOHR
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   331.55     BOHR WITH 1/A(K=0) =  -0.2402806722E-02 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   328.23     BOHR WITH   A(K=0) =   -416.1705339     BOHR
 
   EFV SET    81:  MAGNETIC Z FIELD =   880.0000000     GAUSS
 
   EFFECTIVE RANGE FOR CHANNEL   1:
-  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   331.76     BOHR WITH 1/A(K=0) =  -0.2406771067E-02 BOHR^-1
-  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   328.44     BOHR WITH   A(K=0) =   -415.4850522     BOHR
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   331.76     BOHR WITH 1/A(K=0) =  -0.2406771165E-02 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   328.43     BOHR WITH   A(K=0) =   -415.4850355     BOHR
 
   EFV SET    82:  MAGNETIC Z FIELD =   881.0000000     GAUSS
 
   EFFECTIVE RANGE FOR CHANNEL   1:
-  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   331.95     BOHR WITH 1/A(K=0) =  -0.2410496754E-02 BOHR^-1
-  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   328.63     BOHR WITH   A(K=0) =   -414.8428927     BOHR
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   331.95     BOHR WITH 1/A(K=0) =  -0.2410496885E-02 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   328.63     BOHR WITH   A(K=0) =   -414.8428705     BOHR
 
   EFV SET    83:  MAGNETIC Z FIELD =   882.0000000     GAUSS
 
   EFFECTIVE RANGE FOR CHANNEL   1:
-  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   332.13     BOHR WITH 1/A(K=0) =  -0.2414006820E-02 BOHR^-1
-  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   328.81     BOHR WITH   A(K=0) =   -414.2397112     BOHR
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   332.12     BOHR WITH 1/A(K=0) =  -0.2414006939E-02 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   328.81     BOHR WITH   A(K=0) =   -414.2396908     BOHR
 
   EFV SET    84:  MAGNETIC Z FIELD =   883.0000000     GAUSS
 
   EFFECTIVE RANGE FOR CHANNEL   1:
-  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   332.30     BOHR WITH 1/A(K=0) =  -0.2417321329E-02 BOHR^-1
-  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   328.98     BOHR WITH   A(K=0) =   -413.6717425     BOHR
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   332.29     BOHR WITH 1/A(K=0) =  -0.2417321477E-02 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   328.98     BOHR WITH   A(K=0) =   -413.6717173     BOHR
 
   EFV SET    85:  MAGNETIC Z FIELD =   884.0000000     GAUSS
 
   EFFECTIVE RANGE FOR CHANNEL   1:
-  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   332.46     BOHR WITH 1/A(K=0) =  -0.2420458108E-02 BOHR^-1
-  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   329.14     BOHR WITH   A(K=0) =   -413.1356620     BOHR
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   332.45     BOHR WITH 1/A(K=0) =  -0.2420458286E-02 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   329.14     BOHR WITH   A(K=0) =   -413.1356318     BOHR
 
   EFV SET    86:  MAGNETIC Z FIELD =   885.0000000     GAUSS
 
   EFFECTIVE RANGE FOR CHANNEL   1:
-  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   332.61     BOHR WITH 1/A(K=0) =  -0.2423432983E-02 BOHR^-1
-  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   329.29     BOHR WITH   A(K=0) =   -412.6285334     BOHR
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   332.60     BOHR WITH 1/A(K=0) =  -0.2423433186E-02 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   329.29     BOHR WITH   A(K=0) =   -412.6284989     BOHR
 
   EFV SET    87:  MAGNETIC Z FIELD =   886.0000000     GAUSS
 
   EFFECTIVE RANGE FOR CHANNEL   1:
-  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   332.75     BOHR WITH 1/A(K=0) =  -0.2426259789E-02 BOHR^-1
-  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   329.43     BOHR WITH   A(K=0) =   -412.1477983     BOHR
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   332.75     BOHR WITH 1/A(K=0) =  -0.2426260015E-02 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   329.43     BOHR WITH   A(K=0) =   -412.1477602     BOHR
 
   EFV SET    88:  MAGNETIC Z FIELD =   887.0000000     GAUSS
 
   EFFECTIVE RANGE FOR CHANNEL   1:
-  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   332.88     BOHR WITH 1/A(K=0) =  -0.2428950917E-02 BOHR^-1
-  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   329.57     BOHR WITH   A(K=0) =   -411.6911767     BOHR
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   332.88     BOHR WITH 1/A(K=0) =  -0.2428951175E-02 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   329.57     BOHR WITH   A(K=0) =   -411.6911331     BOHR
 
   EFV SET    89:  MAGNETIC Z FIELD =   888.0000000     GAUSS
 
   EFFECTIVE RANGE FOR CHANNEL   1:
-  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   333.01     BOHR WITH 1/A(K=0) =  -0.2431517454E-02 BOHR^-1
-  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   329.70     BOHR WITH   A(K=0) =   -411.2566370     BOHR
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   333.01     BOHR WITH 1/A(K=0) =  -0.2431517735E-02 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   329.70     BOHR WITH   A(K=0) =   -411.2565896     BOHR
 
   EFV SET    90:  MAGNETIC Z FIELD =   889.0000000     GAUSS
 
   EFFECTIVE RANGE FOR CHANNEL   1:
-  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   333.14     BOHR WITH 1/A(K=0) =  -0.2433969311E-02 BOHR^-1
-  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   329.83     BOHR WITH   A(K=0) =   -410.8423695     BOHR
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   333.14     BOHR WITH 1/A(K=0) =  -0.2433969612E-02 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   329.83     BOHR WITH   A(K=0) =   -410.8423189     BOHR
 
   EFV SET    91:  MAGNETIC Z FIELD =   890.0000000     GAUSS
 
   EFFECTIVE RANGE FOR CHANNEL   1:
-  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   333.26     BOHR WITH 1/A(K=0) =  -0.2436315534E-02 BOHR^-1
-  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   329.95     BOHR WITH   A(K=0) =   -410.4467307     BOHR
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   333.26     BOHR WITH 1/A(K=0) =  -0.2436315862E-02 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   329.94     BOHR WITH   A(K=0) =   -410.4466756     BOHR
 
   EFV SET    92:  MAGNETIC Z FIELD =   891.0000000     GAUSS
 
   EFFECTIVE RANGE FOR CHANNEL   1:
-  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   333.37     BOHR WITH 1/A(K=0) =  -0.2438564062E-02 BOHR^-1
-  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   330.06     BOHR WITH   A(K=0) =   -410.0682806     BOHR
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   333.37     BOHR WITH 1/A(K=0) =  -0.2438564405E-02 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   330.06     BOHR WITH   A(K=0) =   -410.0682230     BOHR
 
   EFV SET    93:  MAGNETIC Z FIELD =   892.0000000     GAUSS
 
   EFFECTIVE RANGE FOR CHANNEL   1:
-  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   333.48     BOHR WITH 1/A(K=0) =  -0.2440722199E-02 BOHR^-1
-  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   330.17     BOHR WITH   A(K=0) =   -409.7056997     BOHR
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   333.48     BOHR WITH 1/A(K=0) =  -0.2440722561E-02 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   330.17     BOHR WITH   A(K=0) =   -409.7056391     BOHR
 
   EFV SET    94:  MAGNETIC Z FIELD =   893.0000000     GAUSS
 
   EFFECTIVE RANGE FOR CHANNEL   1:
-  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   333.58     BOHR WITH 1/A(K=0) =  -0.2442796489E-02 BOHR^-1
-  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   330.28     BOHR WITH   A(K=0) =   -409.3578096     BOHR
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   333.58     BOHR WITH 1/A(K=0) =  -0.2442796866E-02 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   330.27     BOHR WITH   A(K=0) =   -409.3577466     BOHR
 
   EFV SET    95:  MAGNETIC Z FIELD =   894.0000000     GAUSS
 
   EFFECTIVE RANGE FOR CHANNEL   1:
-  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   333.69     BOHR WITH 1/A(K=0) =  -0.2444792907E-02 BOHR^-1
-  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   330.38     BOHR WITH   A(K=0) =   -409.0235372     BOHR
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   333.68     BOHR WITH 1/A(K=0) =  -0.2444793303E-02 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   330.38     BOHR WITH   A(K=0) =   -409.0234712     BOHR
 
   EFV SET    96:  MAGNETIC Z FIELD =   895.0000000     GAUSS
 
   EFFECTIVE RANGE FOR CHANNEL   1:
-  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   333.78     BOHR WITH 1/A(K=0) =  -0.2446716993E-02 BOHR^-1
-  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   330.48     BOHR WITH   A(K=0) =   -408.7018922     BOHR
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   333.78     BOHR WITH 1/A(K=0) =  -0.2446717446E-02 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   330.47     BOHR WITH   A(K=0) =   -408.7018166     BOHR
 
   EFV SET    97:  MAGNETIC Z FIELD =   896.0000000     GAUSS
 
   EFFECTIVE RANGE FOR CHANNEL   1:
-  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   333.88     BOHR WITH 1/A(K=0) =  -0.2448573620E-02 BOHR^-1
-  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   330.57     BOHR WITH   A(K=0) =   -408.3920032     BOHR
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   333.87     BOHR WITH 1/A(K=0) =  -0.2448574086E-02 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   330.57     BOHR WITH   A(K=0) =   -408.3919257     BOHR
 
   EFV SET    98:  MAGNETIC Z FIELD =   897.0000000     GAUSS
 
   EFFECTIVE RANGE FOR CHANNEL   1:
-  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   333.97     BOHR WITH 1/A(K=0) =  -0.2450367381E-02 BOHR^-1
-  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   330.66     BOHR WITH   A(K=0) =   -408.0930532     BOHR
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   333.96     BOHR WITH 1/A(K=0) =  -0.2450367863E-02 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   330.66     BOHR WITH   A(K=0) =   -408.0929731     BOHR
 
   EFV SET    99:  MAGNETIC Z FIELD =   898.0000000     GAUSS
 
   EFFECTIVE RANGE FOR CHANNEL   1:
-  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   334.05     BOHR WITH 1/A(K=0) =  -0.2452102508E-02 BOHR^-1
-  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   330.75     BOHR WITH   A(K=0) =   -407.8042913     BOHR
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   334.05     BOHR WITH 1/A(K=0) =  -0.2452103006E-02 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   330.74     BOHR WITH   A(K=0) =   -407.8042088     BOHR
 
   EFV SET   100:  MAGNETIC Z FIELD =   899.0000000     GAUSS
 
   EFFECTIVE RANGE FOR CHANNEL   1:
-  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   334.14     BOHR WITH 1/A(K=0) =  -0.2453782730E-02 BOHR^-1
-  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   330.83     BOHR WITH   A(K=0) =   -407.5250561     BOHR
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   334.13     BOHR WITH 1/A(K=0) =  -0.2453783238E-02 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   330.83     BOHR WITH   A(K=0) =   -407.5249720     BOHR
 
   EFV SET   101:  MAGNETIC Z FIELD =   900.0000000     GAUSS
 
   EFFECTIVE RANGE FOR CHANNEL   1:
-  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   334.22     BOHR WITH 1/A(K=0) =  -0.2455411545E-02 BOHR^-1
-  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   330.92     BOHR WITH   A(K=0) =   -407.2547288     BOHR
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   334.22     BOHR WITH 1/A(K=0) =  -0.2455412061E-02 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   330.91     BOHR WITH   A(K=0) =   -407.2546434     BOHR
 
 
   ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
@@ -2389,7 +2587,7 @@
  |                                                                            |
  |                               Version 2019.0 (beta)                        |
  |                                                                            |
- |                    This run used     338.31 cpu secs and                   |
+ |                    This run used     285.56 cpu secs and                   |
  |               6817 of the allocated   1000000 words of storage             |
  |                                                                            |
   ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---

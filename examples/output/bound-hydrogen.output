@@ -1,0 +1,458 @@
+  -- BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND --
+ |                                                                            |
+ |          Bound states of interacting pairs of atoms and molecules          |
+ |                                                                            |
+ |              Copyright (C) 2018 J. M. Hutson & C. R. Le Sueur              |
+ |                                                                            |
+ |                               Version 2019.0 (beta)                        |
+ |                                                                            |
+ |                       Run on 16 Jan 2019   at 11:45:27                     |
+ |                                                                            |
+  -- BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND --
+
+
+  This program is free software: you can redistribute it and/or modify it under
+  the terms of the GNU General Public License, version 3, as published by
+  the Free Software Foundation.
+
+  Publications resulting from the use of this program should refer to
+  J. M. Hutson & C. R. Le Sueur, BOUND computer code 2019.0 (beta)       
+  or to the published paper in Computer Physics Communications when available.
+
+
+  PHYSICAL CONSTANTS OBTAINED FROM NIST CODATA TABULATION OF 2014
+
+  MEMORY ALLOCATED TO MAIN WORKING ARRAY IS   1000000 (8-BYTE) WORDS (    7.63 MB)
+
+  PRINT LEVEL =  5
+
+  RUN LABEL = Hydrogen: ITYPE=1; IPROPS=8, IPROPL=9                                           
+
+  REDUCED MASS FOR INTERACTION =   1.000000000 (UNITS OF 5.485799091E-04 DALTONS)
+
+  NO SCRATCH FILE SPECIFIED BY ISCRU PARAMETER: FULL CALCULATION WILL BE DONE AT EACH ENERGY
+
+  ======================================================================================================================
+
+  INTERACTION TYPE IS    LINEAR RIGID ROTOR  -  ATOM.  
+
+  TARGET ROTATIONAL LEVELS TAKEN FROM &BASIS (JLEVEL) INPUT.  NLEVEL =  1
+
+  ENERGY LEVELS COMPUTED FROM B(E) =    1.000000
+
+  QUANTUM NUMBERS FOR INTERACTING PAIR:
+  EACH PAIR STATE IS LABELLED BY  1 QUANTUM LABEL 
+  EACH CHANNEL FUNCTION IS FORMED BY COMBINING A PAIR STATE WITH A VALUE OF L.
+  THE RESULTING BASIS SET IS ASYMPTOTICALLY DIAGONAL.
+
+  PAIR STATE     PAIR STATE QUANTUM NUMBERS    PAIR LEVEL     PAIR ENERGY (CM-1)
+                ---------        J ---------
+        1                        0                1             0.0000000
+
+  ======================================================================================================================
+  GENERAL-PURPOSE POTENL ROUTINE (MAY 18)
+
+  ANGULAR DEPENDENCE OF POTENTIAL EXPANDED IN TERMS OF
+  LEGENDRE POLYNOMIALS, P(LAMBDA).
+
+  INTERACTION POTENTIAL FOR EXPANSION TERM NUMBER   1
+  WHICH HAS LAMBDA =   0
+
+                -1.00000000E+00 * R ** -1
+
+  POTENL PROCESSING FINISHED.
+
+  POTENTIAL RETURNED IN UNITS OF EPSIL  =  219474.63     CM-1
+
+  ALL LENGTHS ARE IN UNITS OF BOHR (  0.52917721 ANGSTROM ) UNLESS OTHERWISE STATED
+
+  INTERACTION MATRIX USES   1 BLOCKS OF VL ARRAY FOR R-DEPENDENT TERMS IN POTENTIAL
+
+  ======================================================================================================================
+
+  PROPAGATION METHODS FOR COUPLED EQUATIONS SPECIFIED BY IPROPS =  8 AND IPROPL =  9
+
+  COUPLED EQUATIONS WILL BE PROPAGATED TOWARDS RMATCH IN 3 SEGMENTS
+
+  PROPAGATION RANGES ARE CONTROLLED BY VARIABLES RMIN, RMID, RMATCH AND RMAX, WITH INPUT VALUES
+  RMIN =   0.000    RMID =   3.000     RMATCH =   1.000     RMAX =   100.0    
+  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+  SEGMENT 1 WILL BE PROPAGATED OUTWARDS
+
+  FROM RMIN =      0.00 TO RMATCH =      1.00
+
+  COUPLED EQUATIONS SOLVED BY SYMPLECTIC LOG-DERIVATIVE PROPAGATOR OF MANOLOPOULOS AND GRAY
+  USING THE FIVE-STEP FOURTH-ORDER METHOD OF CALVO AND SANZ-SERNA
+
+  PROPAGATION STEP SIZE DETERMINED USING DR =  1.000E-04
+  STEP SIZE CONSTANT THROUGHOUT RANGE
+  STEP SIZE MAY BE ADJUSTED SLIGHTLY SO THAT RANGE IS A WHOLE NUMBER OF STEPS
+
+  LOG-DERIVATIVE MATRIX INITIALISED IN THE LOCAL EIGENBASIS AT RMIN IN THE OUTWARD PROPAGATION PART
+  LOCALLY CLOSED CHANNELS INITIALISED WITH A WKB BOUNDARY CONDITION
+  LOCALLY  OPEN  CHANNELS INITIALISED WITH THE VALUE  1.000E+08
+  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+  SEGMENT 2 WILL BE PROPAGATED  INWARDS
+
+  TO RMID =      3.00 FROM RMAX =    100.00
+
+  COUPLED EQUATIONS SOLVED BY VARIABLE-STEP AIRY PROPAGATOR.
+  PUBLICATIONS RESULTING FROM THE USE OF THIS PROPAGATOR SHOULD REFERENCE
+  M. H. ALEXANDER AND D. E. MANOLOPOULOS,  J. CHEM. PHYS. 86, 2044 (1987).
+
+  PROPAGATION STEP SIZE DETERMINED USING DR =  1.000E-03
+  STEP SIZES ADJUSTED TO MAINTAIN APPROXIMATE ACCURACY VIA PERTURBATION THEORY
+  WITH TOLHI =  1.00E-04 AND POWR =   6.0    
+
+  LOG-DERIVATIVE MATRIX INITIALISED IN THE LOCAL EIGENBASIS AT RMAX IN THE INWARD PROPAGATION PART
+  LOCALLY CLOSED CHANNELS INITIALISED WITH A WKB BOUNDARY CONDITION
+  LOCALLY  OPEN  CHANNELS INITIALISED WITH THE VALUE  0.000E+00
+  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+  SEGMENT 3 WILL BE PROPAGATED  INWARDS
+
+  TO RMATCH =      1.00 FROM RMID =      3.00
+
+  COUPLED EQUATIONS SOLVED BY SYMPLECTIC LOG-DERIVATIVE PROPAGATOR OF MANOLOPOULOS AND GRAY
+  USING THE FIVE-STEP FOURTH-ORDER METHOD OF CALVO AND SANZ-SERNA
+
+  INITIAL STEP SIZE TAKEN FROM SIZE OF FINAL STEP OF SHORT-RANGE PROPAGATION
+  STEP SIZE CONSTANT THROUGHOUT RANGE
+  STEP SIZE MAY BE ADJUSTED SLIGHTLY SO THAT RANGE IS A WHOLE NUMBER OF STEPS
+
+  ======================================================================================================================
+
+  PROGRAM WILL ATTEMPT TO CONVERGE ON BOUND STATES AS A FUNCTION OF ENERGY
+
+  FOR EACH LEVEL, THE BISECTION METHOD WILL BE USED UNTIL THE VWDB METHOD OFFERS RELIABLE CONVERGENCE.
+  VWDB CONVERGENCE WILL TERMINATE WHEN THE STEP SIZE IS LESS THAN 1.00000E-07 AU      
+
+  INPUT ENERGY VALUES CONVERTED FROM AU
+  TO INTERNAL WORKING UNITS OF CM-1 DUE TO INTEGER INPUT =   7
+
+  PROGRAM WILL SEEK EIGENVALUES WITH GENERALISED NODE COUNTS FROM    0 TO  99999
+  LYING IN ENERGY RANGE  -1.0000     TO   0.0000     AU      
+
+  INITIALIZATION DONE.  TIME WAS   0.00 CPU SECS.         3 WORDS OF STORAGE USED.
+
+  ======================================================================================================================
+
+  TOTAL ANGULAR MOMENTUM JTOT RUNS FROM   0  TO     1  IN STEPS OF   1
+
+  EACH JTOT IS SPLIT INTO A MAXIMUM OF   2 SYMMETRY BLOCKS
+
+  CALCULATIONS WILL BE FOR SYMMETRY BLOCK   2  ONLY
+
+  ======================================= Hydrogen: ITYPE=1; IPROPS=8, IPROPL=9 ========================================
+
+  *******************************************  ANGULAR MOMENTUM JTOT  =   0  *******************************************
+
+  CHANNEL FUNCTION LIST:
+
+  EACH CHANNEL FUNCTION IS FORMED BY COMBINING A PAIR STATE WITH A VALUE OF L.
+
+  CHANNEL  PAIR STATE    PAIR STATE QUANTUM NUMBERS            L        PAIR LEVEL   PAIR ENERGY (CM-1)
+                         ---------      J   ---------
+        1           1                   0                      0             1         0.0000000
+  = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = 
+  **** WARNING:    1 OPEN CHANNELS DETECTED AT RMIN
+  **** WARNING:    1 OPEN CHANNELS DETECTED AT RMIN
+
+  NODE COUNT =    0 AT MINIMUM ENERGY =  -1.000000000     AU    
+  NODE COUNT =    9 AT MAXIMUM ENERGY =   0.000000000     AU    
+
+  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+  SEARCHING FOR INODE =    1 CORRESPONDING TO NODE COUNT =    1
+  **** WARNING:    1 OPEN CHANNELS DETECTED AT RMIN
+  **** WARNING:    1 OPEN CHANNELS DETECTED AT RMIN
+
+  CONVERGED ON NODE NUMBER     1 AT                               ENERGY = -0.4999999670     AU    
+
+  SMALLEST EIGENVALUE IS NUMBER  1 =  -1.8774    
+
+  WITH PRINCIPAL EIGENVECTOR COMPONENTS
+  CHAN     VEC    VEC**2   L   QUANTUM NUMBERS
+
+   1    1.0000    1.0000   0   0   1
+
+  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+  SEARCHING FOR INODE =    2 CORRESPONDING TO NODE COUNT =    2
+  **** WARNING:    1 OPEN CHANNELS DETECTED AT RMIN
+  **** WARNING:    1 OPEN CHANNELS DETECTED AT RMIN
+  **** WARNING:    1 OPEN CHANNELS DETECTED AT RMIN
+
+  CONVERGED ON NODE NUMBER     2 AT                               ENERGY = -0.1250000031     AU    
+
+  SMALLEST EIGENVALUE IS NUMBER  1 =   2.4066    
+
+  WITH PRINCIPAL EIGENVECTOR COMPONENTS
+  CHAN     VEC    VEC**2   L   QUANTUM NUMBERS
+
+   1    1.0000    1.0000   0   0   1
+
+  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+  SEARCHING FOR INODE =    3 CORRESPONDING TO NODE COUNT =    3
+  **** WARNING:    1 OPEN CHANNELS DETECTED AT RMIN
+  **** WARNING:    1 OPEN CHANNELS DETECTED AT RMIN
+  **** WARNING:    1 OPEN CHANNELS DETECTED AT RMIN
+  **** WARNING:    1 OPEN CHANNELS DETECTED AT RMIN
+  **** WARNING:    1 OPEN CHANNELS DETECTED AT RMIN
+  **** WARNING:    1 OPEN CHANNELS DETECTED AT RMIN
+  **** WARNING:    1 OPEN CHANNELS DETECTED AT RMIN
+
+  CONVERGED ON NODE NUMBER     3 AT                               ENERGY = -5.5555506272E-02 AU    
+
+  SMALLEST EIGENVALUE IS NUMBER  1 = -0.17261E-05
+
+  WITH PRINCIPAL EIGENVECTOR COMPONENTS
+  CHAN     VEC    VEC**2   L   QUANTUM NUMBERS
+
+   1    1.0000    1.0000   0   0   1
+
+  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+  SEARCHING FOR INODE =    4 CORRESPONDING TO NODE COUNT =    4
+  **** WARNING:    1 OPEN CHANNELS DETECTED AT RMIN
+  **** WARNING:    1 OPEN CHANNELS DETECTED AT RMIN
+
+  CONVERGED ON NODE NUMBER     4 AT                               ENERGY = -3.1249973290E-02 AU    
+
+  SMALLEST EIGENVALUE IS NUMBER  1 =  -7.0270    
+
+  WITH PRINCIPAL EIGENVECTOR COMPONENTS
+  CHAN     VEC    VEC**2   L   QUANTUM NUMBERS
+
+   1    1.0000    1.0000   0   0   1
+
+  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+  SEARCHING FOR INODE =    5 CORRESPONDING TO NODE COUNT =    5
+  **** WARNING:    1 OPEN CHANNELS DETECTED AT RMIN
+  **** WARNING:    1 OPEN CHANNELS DETECTED AT RMIN
+  **** WARNING:    1 OPEN CHANNELS DETECTED AT RMIN
+  **** WARNING:    1 OPEN CHANNELS DETECTED AT RMIN
+  **** WARNING:    1 OPEN CHANNELS DETECTED AT RMIN
+  **** WARNING:    1 OPEN CHANNELS DETECTED AT RMIN
+
+  CONVERGED ON NODE NUMBER     5 AT                               ENERGY = -1.9999988109E-02 AU    
+
+  SMALLEST EIGENVALUE IS NUMBER  1 = -0.72409E-07
+
+  WITH PRINCIPAL EIGENVECTOR COMPONENTS
+  CHAN     VEC    VEC**2   L   QUANTUM NUMBERS
+
+   1    1.0000    1.0000   0   0   1
+
+  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+  SEARCHING FOR INODE =    6 CORRESPONDING TO NODE COUNT =    6
+  **** WARNING:    1 OPEN CHANNELS DETECTED AT RMIN
+  **** WARNING:    1 OPEN CHANNELS DETECTED AT RMIN
+  **** WARNING:    1 OPEN CHANNELS DETECTED AT RMIN
+  **** WARNING:    1 OPEN CHANNELS DETECTED AT RMIN
+  **** WARNING:    1 OPEN CHANNELS DETECTED AT RMIN
+  **** WARNING:    1 OPEN CHANNELS DETECTED AT RMIN
+  **** WARNING:    1 OPEN CHANNELS DETECTED AT RMIN
+
+  CONVERGED ON NODE NUMBER     6 AT                               ENERGY = -1.3889513166E-02 AU    
+
+  SMALLEST EIGENVALUE IS NUMBER  1 = -0.43586E-04
+
+  WITH PRINCIPAL EIGENVECTOR COMPONENTS
+  CHAN     VEC    VEC**2   L   QUANTUM NUMBERS
+
+   1    1.0000    1.0000   0   0   1
+
+  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+  SEARCHING FOR INODE =    7 CORRESPONDING TO NODE COUNT =    7
+  **** WARNING:    1 OPEN CHANNELS DETECTED AT RMIN
+  **** WARNING:    1 OPEN CHANNELS DETECTED AT RMIN
+  **** WARNING:    1 OPEN CHANNELS DETECTED AT RMIN
+  **** WARNING:    1 OPEN CHANNELS DETECTED AT RMIN
+  **** WARNING:    1 OPEN CHANNELS DETECTED AT RMIN
+  **** WARNING:    1 OPEN CHANNELS DETECTED AT RMIN
+
+  CONVERGED ON NODE NUMBER     7 AT                               ENERGY = -1.0332294705E-02 AU    
+
+  SMALLEST EIGENVALUE IS NUMBER  1 = -0.72934E-06
+
+  WITH PRINCIPAL EIGENVECTOR COMPONENTS
+  CHAN     VEC    VEC**2   L   QUANTUM NUMBERS
+
+   1    1.0000    1.0000   0   0   1
+
+  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+  SEARCHING FOR INODE =    8 CORRESPONDING TO NODE COUNT =    8
+  **** WARNING:    1 OPEN CHANNELS DETECTED AT RMIN
+  **** WARNING:    1 OPEN CHANNELS DETECTED AT RMIN
+  **** WARNING:    1 OPEN CHANNELS DETECTED AT RMIN
+  **** WARNING:    1 OPEN CHANNELS DETECTED AT RMIN
+  **** WARNING:    1 OPEN CHANNELS DETECTED AT RMIN
+
+  CONVERGED ON NODE NUMBER     8 AT                               ENERGY = -7.1322386039E-03 AU    
+
+  SMALLEST EIGENVALUE IS NUMBER  1 = -0.12037E-05
+
+  WITH PRINCIPAL EIGENVECTOR COMPONENTS
+  CHAN     VEC    VEC**2   L   QUANTUM NUMBERS
+
+   1    1.0000    1.0000   0   0   1
+
+  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+  SEARCHING FOR INODE =    9 CORRESPONDING TO NODE COUNT =    9
+  **** WARNING:    1 OPEN CHANNELS DETECTED AT RMIN
+  **** WARNING:    1 OPEN CHANNELS DETECTED AT RMIN
+  **** WARNING:    1 OPEN CHANNELS DETECTED AT RMIN
+  **** WARNING:    1 OPEN CHANNELS DETECTED AT RMIN
+  **** WARNING:    1 OPEN CHANNELS DETECTED AT RMIN
+  **** WARNING:    1 OPEN CHANNELS DETECTED AT RMIN
+
+  CONVERGED ON NODE NUMBER     9 AT                               ENERGY = -1.6253579649E-03 AU    
+
+  SMALLEST EIGENVALUE IS NUMBER  1 =  0.41599E-09
+
+  WITH PRINCIPAL EIGENVECTOR COMPONENTS
+  CHAN     VEC    VEC**2   L   QUANTUM NUMBERS
+
+   1    1.0000    1.0000   0   0   1
+
+  ======================================================================================================================
+
+  *******************************************  ANGULAR MOMENTUM JTOT  =   1  *******************************************
+
+  CHANNEL FUNCTION LIST:
+
+  EACH CHANNEL FUNCTION IS FORMED BY COMBINING A PAIR STATE WITH A VALUE OF L.
+
+  CHANNEL  PAIR STATE    PAIR STATE QUANTUM NUMBERS            L        PAIR LEVEL   PAIR ENERGY (CM-1)
+                         ---------      J   ---------
+        1           1                   0                      1             1         0.0000000
+  = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = 
+
+  NODE COUNT =    0 AT MINIMUM ENERGY =  -1.000000000     AU    
+  NODE COUNT =    8 AT MAXIMUM ENERGY =   0.000000000     AU    
+
+  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+  SEARCHING FOR INODE =    1 CORRESPONDING TO NODE COUNT =    1
+
+  CONVERGED ON NODE NUMBER     1 AT                               ENERGY = -0.1249999984     AU    
+
+  SMALLEST EIGENVALUE IS NUMBER  1 =  -2.5759    
+
+  WITH PRINCIPAL EIGENVECTOR COMPONENTS
+  CHAN     VEC    VEC**2   L   QUANTUM NUMBERS
+
+   1    1.0000    1.0000   1   0   1
+
+  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+  SEARCHING FOR INODE =    2 CORRESPONDING TO NODE COUNT =    2
+
+  CONVERGED ON NODE NUMBER     2 AT                               ENERGY = -5.5555529307E-02 AU    
+
+  SMALLEST EIGENVALUE IS NUMBER  1 =  0.56980E-06
+
+  WITH PRINCIPAL EIGENVECTOR COMPONENTS
+  CHAN     VEC    VEC**2   L   QUANTUM NUMBERS
+
+   1    1.0000    1.0000   1   0   1
+
+  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+  SEARCHING FOR INODE =    3 CORRESPONDING TO NODE COUNT =    3
+
+  CONVERGED ON NODE NUMBER     3 AT                               ENERGY = -3.1250035018E-02 AU    
+
+  SMALLEST EIGENVALUE IS NUMBER  1 =   1.6873    
+
+  WITH PRINCIPAL EIGENVECTOR COMPONENTS
+  CHAN     VEC    VEC**2   L   QUANTUM NUMBERS
+
+   1    1.0000    1.0000   1   0   1
+
+  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+  SEARCHING FOR INODE =    4 CORRESPONDING TO NODE COUNT =    4
+
+  CONVERGED ON NODE NUMBER     4 AT                               ENERGY = -1.9999991664E-02 AU    
+
+  SMALLEST EIGENVALUE IS NUMBER  1 =  0.12046E-04
+
+  WITH PRINCIPAL EIGENVECTOR COMPONENTS
+  CHAN     VEC    VEC**2   L   QUANTUM NUMBERS
+
+   1    1.0000    1.0000   1   0   1
+
+  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+  SEARCHING FOR INODE =    5 CORRESPONDING TO NODE COUNT =    5
+
+  CONVERGED ON NODE NUMBER     5 AT                               ENERGY = -1.3889369081E-02 AU    
+
+  SMALLEST EIGENVALUE IS NUMBER  1 = -0.33706E-05
+
+  WITH PRINCIPAL EIGENVECTOR COMPONENTS
+  CHAN     VEC    VEC**2   L   QUANTUM NUMBERS
+
+   1    1.0000    1.0000   1   0   1
+
+  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+  SEARCHING FOR INODE =    6 CORRESPONDING TO NODE COUNT =    6
+
+  CONVERGED ON NODE NUMBER     6 AT                               ENERGY = -1.0310479410E-02 AU    
+
+  SMALLEST EIGENVALUE IS NUMBER  1 =  0.12868E-03
+
+  WITH PRINCIPAL EIGENVECTOR COMPONENTS
+  CHAN     VEC    VEC**2   L   QUANTUM NUMBERS
+
+   1    1.0000    1.0000   1   0   1
+
+  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+  SEARCHING FOR INODE =    7 CORRESPONDING TO NODE COUNT =    7
+
+  CONVERGED ON NODE NUMBER     7 AT                               ENERGY = -7.2377620030E-03 AU    
+
+  SMALLEST EIGENVALUE IS NUMBER  1 = -0.87579E-06
+
+  WITH PRINCIPAL EIGENVECTOR COMPONENTS
+  CHAN     VEC    VEC**2   L   QUANTUM NUMBERS
+
+   1    1.0000    1.0000   1   0   1
+
+  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+  SEARCHING FOR INODE =    8 CORRESPONDING TO NODE COUNT =    8
+
+  CONVERGED ON NODE NUMBER     8 AT                               ENERGY = -1.8795461126E-03 AU    
+
+  SMALLEST EIGENVALUE IS NUMBER  1 =  0.10090E-03
+
+  WITH PRINCIPAL EIGENVECTOR COMPONENTS
+  CHAN     VEC    VEC**2   L   QUANTUM NUMBERS
+
+   1    1.0000    1.0000   1   0   1
+
+  ======================================================================================================================
+
+
+  -- BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND --
+ |                                                                            |
+ |          Bound states of interacting pairs of atoms and molecules          |
+ |                                                                            |
+ |              Copyright (C) 2018 J. M. Hutson & C. R. Le Sueur              |
+ |                                                                            |
+ |                               Version 2019.0 (beta)                        |
+ |                                                                            |
+ |                    This run used       2.76 cpu secs and                   |
+ |                 23 of the allocated   1000000 words of storage             |
+ |                                                                            |
+  -- BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND --

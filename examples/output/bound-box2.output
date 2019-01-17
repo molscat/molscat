@@ -1,0 +1,1296 @@
+  -- BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND --
+ |                                                                            |
+ |          Bound states of interacting pairs of atoms and molecules          |
+ |                                                                            |
+ |              Copyright (C) 2018 J. M. Hutson & C. R. Le Sueur              |
+ |                                                                            |
+ |                               Version 2019.0 (beta)                        |
+ |                                                                            |
+ |                       Run on 27 Nov 2018   at 21:19:13                     |
+ |                                                                            |
+  -- BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND --
+
+
+  This program is free software: you can redistribute it and/or modify it under
+  the terms of the GNU General Public License, version 3, as published by
+  the Free Software Foundation.
+
+  Publications resulting from the use of this program should refer to
+  J. M. Hutson & C. R. Le Sueur, BOUND computer code 2019.0 (beta)       
+  or to the published paper in Computer Physics Communications when available.
+
+
+  PHYSICAL CONSTANTS OBTAINED FROM NIST CODATA TABULATION OF 2014
+
+  MEMORY ALLOCATED TO MAIN WORKING ARRAY IS   1000000 (8-BYTE) WORDS (    7.63 MB)
+
+  PRINT LEVEL =  3
+
+  RUN LABEL = Testing BOUND for 2-channel particle in an infinite-wall box                    
+
+  REDUCED MASS FOR INTERACTION =  16.857629180 ATOMIC MASS UNITS
+
+  NO SCRATCH FILE SPECIFIED BY ISCRU PARAMETER: FULL CALCULATION WILL BE DONE AT EACH ENERGY
+
+  ======================================================================================================================
+
+  INTERACTION TYPE IS    DIATOMIC VIB-ROTOR  -  ATOM.  
+
+  TARGET ROTATIONAL LEVELS TAKEN FROM &BASIS (JLEVEL) INPUT.  NLEVEL =  2
+
+  TARGET ENERGY LEVELS TAKEN FROM &BASIS (ELEVEL) INPUT
+
+  QUANTUM NUMBERS FOR INTERACTING PAIR:
+  EACH PAIR STATE IS LABELLED BY  2 QUANTUM LABELS
+  EACH CHANNEL FUNCTION IS FORMED BY COMBINING A PAIR STATE WITH A VALUE OF L.
+  THE RESULTING BASIS SET IS ASYMPTOTICALLY DIAGONAL.
+
+  PAIR STATE     PAIR STATE QUANTUM NUMBERS    PAIR LEVEL     PAIR ENERGY (CM-1)
+                ----        J         V ----
+        1                   0         0           1             1.0000000
+        2                   0         1           2             4.0000000
+
+  ======================================================================================================================
+  GENERAL-PURPOSE POTENL ROUTINE (MAY 18)
+
+  ANGULAR DEPENDENCE OF POTENTIAL EXPANDED IN TERMS OF
+  LEGENDRE POLYNOMIALS, P(LAMBDA).
+  INTEGRATED OVER DIATOM VIBRATIONAL FUNCTIONS
+
+  INTERACTION POTENTIAL FOR EXPANSION TERM NUMBER   1
+  WHICH HAS LAMBDA =   0,  V =   0,  V-PRIME =   1
+
+                 2.00000000E+00 * EXP(   -0.0000 * R )
+
+  INTERACTION POTENTIAL FOR EXPANSION TERM NUMBER   2
+  WHICH HAS LAMBDA =   0,  V =   1,  V-PRIME =   0
+
+                 2.00000000E+00 * EXP(   -0.0000 * R )
+
+  POTENL PROCESSING FINISHED.
+
+  UNITS FOR POTENTIAL ROUTINES:
+  POTENTIAL RETURNED IN UNITS OF EPSIL =       1.000000 CM-1
+  R                  IN UNITS OF RM    =       1.000000 ANGSTROMS
+  IVCHK.  COMPLETED SUCCESSFULLY.
+  INTERACTION MATRIX USES   1 BLOCKS OF VL ARRAY FOR R-DEPENDENT TERMS IN POTENTIAL
+
+  ======================================================================================================================
+
+  PROPAGATION METHODS FOR COUPLED EQUATIONS SPECIFIED BY IPROPS =  6 AND IPROPL =  6
+ nsegs =           2
+   1.0000000000000000E-008   2.0000000000000000        0.0000000000000000        2.0000000000000000        3.1415926500000002        0.0000000000000000     
+
+  COUPLED EQUATIONS WILL BE PROPAGATED TOWARDS RMATCH IN 2 SEGMENTS
+  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+  SEGMENT 1 WILL BE PROPAGATED OUTWARDS
+
+  FROM RMIN   =      0.00  TO RMATCH =      2.00
+
+  COUPLED EQUATIONS SOLVED BY DIABATIC MODIFIED LOG-DERIVATIVE PROPAGATOR OF MANOLOPOULOS
+
+  PROPAGATION STEP SIZE DETERMINED USING DR =  1.000E-03
+
+  LOG-DERIVATIVE MATRIX WILL BE INITIALISED IN THE LOCAL EIGENBASIS FOR RMIN IN THE OUTWARDS PROPAGATION PART
+  LOCALLY CLOSED CHANNELS WILL BE INITIALISED WITH THE VALUE  1.0000000E+08
+  LOCALLY   OPEN CHANNELS WILL BE INITIALISED WITH THE VALUE  1.0000000E+08
+  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+  SEGMENT 2 WILL BE PROPAGATED  INWARDS
+
+  FROM RMAX   =      3.14  TO RMATCH =      2.00
+
+  COUPLED EQUATIONS SOLVED BY DIABATIC MODIFIED LOG-DERIVATIVE PROPAGATOR OF MANOLOPOULOS
+
+  PROPAGATION STEP SIZE DETERMINED USING DR =  1.000E-03
+
+  LOG-DERIVATIVE MATRIX WILL BE INITIALISED IN THE LOCAL EIGENBASIS FOR RMAX IN THE INWARDS PROPAGATION PART
+  LOCALLY CLOSED CHANNELS WILL BE INITIALISED WITH THE VALUE -1.0000000E+08
+  LOCALLY   OPEN CHANNELS WILL BE INITIALISED WITH THE VALUE -1.0000000E+08
+  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+  ======================================================================================================================
+
+  PROGRAM WILL ATTEMPT TO CONVERGE ON BOUND STATES AS A FUNCTION OF ENERGY
+
+  FOR EACH LEVEL, THE BISECTION METHOD WILL BE USED UNTIL THE VWDB METHOD OFFERS RELIABLE CONVERGENCE.
+
+  BOUND STATE POSITIONS WILL BE IDENTIFIED WITH AN ACCURACY OF  1.00000E-07 CM-1    
+
+  INPUT ENERGY VALUES CONVERTED FROM CM-1
+  TO INTERNAL WORKING UNITS OF CM-1 DUE TO INTEGER INPUT =   1
+
+  PROGRAM WILL SEEK EIGENVALUES WITH GENERALISED NODE COUNTS FROM    0 TO  99999
+  LYING IN ENERGY RANGE  -1.0000     TO   8.0000     CM-1    
+
+  INITIALIZATION DONE.  TIME WAS   0.24 CPU SECS.         9 WORDS OF STORAGE USED.
+
+  ======================================================================================================================
+
+  TOTAL ANGULAR MOMENTUM JTOT =   0
+
+  EACH JTOT IS SPLIT INTO A MAXIMUM OF   2 DIFFERENT SYMMETRY BLOCKS
+
+  CALCULATIONS WILL BE FOR SYMMETRY BLOCK   2  ONLY
+
+  ============================ Testing BOUND for 2-channel particle in an infinite-wall box ============================
+
+  *******************************************  ANGULAR MOMENTUM JTOT  =   0  *******************************************
+  = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = 
+  **** WARNING:    2 OPEN CHANNELS DETECTED AT RMIN
+
+  NODE COUNT =    0 AT MINIMUM ENERGY =  -1.000000000     CM-1  
+  NODE COUNT =    3 AT MAXIMUM ENERGY =   8.000000000     CM-1  
+
+  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+  SEARCHING FOR INODE =    1 CORRESPONDING TO NODE COUNT =    1
+  **** WARNING:    1 OPEN CHANNELS DETECTED AT RMIN
+  **** WARNING:    1 OPEN CHANNELS DETECTED AT RMIN
+  **** WARNING:    1 OPEN CHANNELS DETECTED AT RMIN
+  **** WARNING:    1 OPEN CHANNELS DETECTED AT RMIN
+  **** WARNING:    1 OPEN CHANNELS DETECTED AT RMIN
+  **** WARNING:    1 OPEN CHANNELS DETECTED AT RMIN
+  **** WARNING:    1 OPEN CHANNELS DETECTED AT RMIN
+
+  CONVERGED ON NODE NUMBER     1 AT                               ENERGY =  0.9999999951     CM-1  
+
+  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+  SEARCHING FOR INODE =    2 CORRESPONDING TO NODE COUNT =    2
+  **** WARNING:    2 OPEN CHANNELS DETECTED AT RMIN
+  **** WARNING:    1 OPEN CHANNELS DETECTED AT RMIN
+  **** WARNING:    1 OPEN CHANNELS DETECTED AT RMIN
+  **** WARNING:    1 OPEN CHANNELS DETECTED AT RMIN
+  **** WARNING:    1 OPEN CHANNELS DETECTED AT RMIN
+  **** WARNING:    1 OPEN CHANNELS DETECTED AT RMIN
+
+  CONVERGED ON NODE NUMBER     2 AT                               ENERGY =   3.999999983     CM-1  
+
+  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+  SEARCHING FOR INODE =    3 CORRESPONDING TO NODE COUNT =    3
+  **** WARNING:    2 OPEN CHANNELS DETECTED AT RMIN
+  **** WARNING:    2 OPEN CHANNELS DETECTED AT RMIN
+  **** WARNING:    2 OPEN CHANNELS DETECTED AT RMIN
+  **** WARNING:    2 OPEN CHANNELS DETECTED AT RMIN
+  **** WARNING:    2 OPEN CHANNELS DETECTED AT RMIN
+  **** WARNING:    2 OPEN CHANNELS DETECTED AT RMIN
+
+  CONVERGED ON NODE NUMBER     3 AT                               ENERGY =   5.999999998     CM-1  
+
+  ======================================================================================================================
+
+
+  -- BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND --
+ |                                                                            |
+ |          Bound states of interacting pairs of atoms and molecules          |
+ |                                                                            |
+ |              Copyright (C) 2018 J. M. Hutson & C. R. Le Sueur              |
+ |                                                                            |
+ |                               Version 2019.0 (beta)                        |
+ |                                                                            |
+ |                    This run used       1.66 cpu secs and                   |
+ |                 46 of the allocated   1000000 words of storage             |
+ |                                                                            |
+  -- BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND --
+  -- BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND --
+ |                                                                            |
+ |          Bound states of interacting pairs of atoms and molecules          |
+ |                                                                            |
+ |              Copyright (C) 2018 J. M. Hutson & C. R. Le Sueur              |
+ |                                                                            |
+ |                               Version 2019.0 (beta)                        |
+ |                                                                            |
+ |                       Run on 27 Nov 2018   at 21:19:13                     |
+ |                                                                            |
+  -- BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND --
+
+
+  This program is free software: you can redistribute it and/or modify it under
+  the terms of the GNU General Public License, version 3, as published by
+  the Free Software Foundation.
+
+  Publications resulting from the use of this program should refer to
+  J. M. Hutson & C. R. Le Sueur, BOUND computer code 2019.0 (beta)       
+  or to the published paper in Computer Physics Communications when available.
+
+
+  PHYSICAL CONSTANTS OBTAINED FROM NIST CODATA TABULATION OF 2014
+
+  MEMORY ALLOCATED TO MAIN WORKING ARRAY IS   1000000 (8-BYTE) WORDS (    7.63 MB)
+
+  PRINT LEVEL =  3
+
+  RUN LABEL = Testing BOUND 2-channel particle in a box with finite boundary conditions: LDJ  
+
+  REDUCED MASS FOR INTERACTION =  16.857629180 ATOMIC MASS UNITS
+
+  NO SCRATCH FILE SPECIFIED BY ISCRU PARAMETER: FULL CALCULATION WILL BE DONE AT EACH ENERGY
+
+  ======================================================================================================================
+
+  INTERACTION TYPE IS    DIATOMIC VIB-ROTOR  -  ATOM.  
+
+  TARGET ROTATIONAL LEVELS TAKEN FROM &BASIS (JLEVEL) INPUT.  NLEVEL =  2
+
+  TARGET ENERGY LEVELS TAKEN FROM &BASIS (ELEVEL) INPUT
+
+  QUANTUM NUMBERS FOR INTERACTING PAIR:
+  EACH PAIR STATE IS LABELLED BY  2 QUANTUM LABELS
+  EACH CHANNEL FUNCTION IS FORMED BY COMBINING A PAIR STATE WITH A VALUE OF L.
+  THE RESULTING BASIS SET IS ASYMPTOTICALLY DIAGONAL.
+
+  PAIR STATE     PAIR STATE QUANTUM NUMBERS    PAIR LEVEL     PAIR ENERGY (CM-1)
+                ----        J         V ----
+        1                   0         0           1             1.0000000
+        2                   0         1           2             4.0000000
+
+  ======================================================================================================================
+  GENERAL-PURPOSE POTENL ROUTINE (MAY 18)
+
+  ANGULAR DEPENDENCE OF POTENTIAL EXPANDED IN TERMS OF
+  LEGENDRE POLYNOMIALS, P(LAMBDA).
+  INTEGRATED OVER DIATOM VIBRATIONAL FUNCTIONS
+
+  INTERACTION POTENTIAL FOR EXPANSION TERM NUMBER   1
+  WHICH HAS LAMBDA =   0,  V =   0,  V-PRIME =   1
+
+                 2.00000000E+00 * EXP(   -0.0000 * R )
+
+  INTERACTION POTENTIAL FOR EXPANSION TERM NUMBER   2
+  WHICH HAS LAMBDA =   0,  V =   1,  V-PRIME =   0
+
+                 2.00000000E+00 * EXP(   -0.0000 * R )
+
+  POTENL PROCESSING FINISHED.
+
+  UNITS FOR POTENTIAL ROUTINES:
+  POTENTIAL RETURNED IN UNITS OF EPSIL =       1.000000 CM-1
+  R                  IN UNITS OF RM    =       1.000000 ANGSTROMS
+  IVCHK.  COMPLETED SUCCESSFULLY.
+  INTERACTION MATRIX USES   1 BLOCKS OF VL ARRAY FOR R-DEPENDENT TERMS IN POTENTIAL
+
+  ======================================================================================================================
+
+  PROPAGATION METHODS FOR COUPLED EQUATIONS SPECIFIED BY IPROPS =  5 AND IPROPL =  5
+ nsegs =           2
+   1.0000000000000000E-008   2.0000000000000000        0.0000000000000000        2.0000000000000000        3.1415926500000002        0.0000000000000000     
+
+  COUPLED EQUATIONS WILL BE PROPAGATED TOWARDS RMATCH IN 2 SEGMENTS
+  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+  SEGMENT 1 WILL BE PROPAGATED OUTWARDS
+
+  FROM RMIN   =      0.00  TO RMATCH =      2.00
+
+  COUPLED EQUATIONS SOLVED BY LOG-DERIVATIVE PROPAGATOR OF JOHNSON
+
+  PROPAGATION STEP SIZE DETERMINED USING DR =  1.000E-03
+
+  LOG-DERIVATIVE MATRIX WILL BE INITIALISED IN THE LOCAL EIGENBASIS FOR RMIN IN THE OUTWARDS PROPAGATION PART
+  LOCALLY CLOSED CHANNELS WILL BE INITIALISED WITH THE VALUE  1.0000000E+00
+  LOCALLY   OPEN CHANNELS WILL BE INITIALISED WITH THE VALUE  1.0000000E-01
+  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+  SEGMENT 2 WILL BE PROPAGATED  INWARDS
+
+  FROM RMAX   =      3.14  TO RMATCH =      2.00
+
+  COUPLED EQUATIONS SOLVED BY LOG-DERIVATIVE PROPAGATOR OF JOHNSON
+
+  PROPAGATION STEP SIZE DETERMINED USING DR =  1.000E-03
+
+  LOG-DERIVATIVE MATRIX WILL BE INITIALISED IN THE LOCAL EIGENBASIS FOR RMAX IN THE INWARDS PROPAGATION PART
+  LOCALLY CLOSED CHANNELS WILL BE INITIALISED WITH THE VALUE -1.0000000E+00
+  LOCALLY   OPEN CHANNELS WILL BE INITIALISED WITH THE VALUE -1.0000000E-01
+  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+  ======================================================================================================================
+
+  PROGRAM WILL ATTEMPT TO CONVERGE ON BOUND STATES AS A FUNCTION OF ENERGY
+
+  FOR EACH LEVEL, THE BISECTION METHOD WILL BE USED UNTIL THE VWDB METHOD OFFERS RELIABLE CONVERGENCE.
+
+  BOUND STATE POSITIONS WILL BE IDENTIFIED WITH AN ACCURACY OF  1.00000E-07 CM-1    
+
+  INPUT ENERGY VALUES CONVERTED FROM CM-1
+  TO INTERNAL WORKING UNITS OF CM-1 DUE TO INTEGER INPUT =   1
+
+  PROGRAM WILL SEEK EIGENVALUES WITH GENERALISED NODE COUNTS FROM    0 TO  99999
+  LYING IN ENERGY RANGE  -1.0000     TO   8.0000     CM-1    
+
+  INITIALIZATION DONE.  TIME WAS   0.02 CPU SECS.         9 WORDS OF STORAGE USED.
+
+  ======================================================================================================================
+
+  TOTAL ANGULAR MOMENTUM JTOT =   0
+
+  EACH JTOT IS SPLIT INTO A MAXIMUM OF   2 DIFFERENT SYMMETRY BLOCKS
+
+  CALCULATIONS WILL BE FOR SYMMETRY BLOCK   2  ONLY
+
+  =================== Testing BOUND 2-channel particle in a box with finite boundary conditions: LDJ ===================
+
+  *******************************************  ANGULAR MOMENTUM JTOT  =   0  *******************************************
+  = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = 
+  **** WARNING:    2 OPEN CHANNELS DETECTED AT RMIN
+
+  NODE COUNT =    0 AT MINIMUM ENERGY =  -1.000000000     CM-1  
+  NODE COUNT =    5 AT MAXIMUM ENERGY =   8.000000000     CM-1  
+
+  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+  SEARCHING FOR INODE =    1 CORRESPONDING TO NODE COUNT =    1
+  **** WARNING:    1 OPEN CHANNELS DETECTED AT RMIN
+  **** WARNING:    1 OPEN CHANNELS DETECTED AT RMIN
+  **** WARNING:    1 OPEN CHANNELS DETECTED AT RMIN
+  **** WARNING:    1 OPEN CHANNELS DETECTED AT RMIN
+  **** WARNING:    1 OPEN CHANNELS DETECTED AT RMIN
+  **** WARNING:    1 OPEN CHANNELS DETECTED AT RMIN
+  **** WARNING:    1 OPEN CHANNELS DETECTED AT RMIN
+
+  CONVERGED ON NODE NUMBER     1 AT                               ENERGY =  6.0469916193E-02 CM-1  
+
+  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+  SEARCHING FOR INODE =    2 CORRESPONDING TO NODE COUNT =    2
+  **** WARNING:    1 OPEN CHANNELS DETECTED AT RMIN
+  **** WARNING:    1 OPEN CHANNELS DETECTED AT RMIN
+  **** WARNING:    1 OPEN CHANNELS DETECTED AT RMIN
+  **** WARNING:    1 OPEN CHANNELS DETECTED AT RMIN
+  **** WARNING:    1 OPEN CHANNELS DETECTED AT RMIN
+
+  CONVERGED ON NODE NUMBER     2 AT                               ENERGY =   1.123585339     CM-1  
+
+  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+  SEARCHING FOR INODE =    3 CORRESPONDING TO NODE COUNT =    3
+  **** WARNING:    2 OPEN CHANNELS DETECTED AT RMIN
+  **** WARNING:    1 OPEN CHANNELS DETECTED AT RMIN
+  **** WARNING:    1 OPEN CHANNELS DETECTED AT RMIN
+  **** WARNING:    1 OPEN CHANNELS DETECTED AT RMIN
+  **** WARNING:    1 OPEN CHANNELS DETECTED AT RMIN
+  **** WARNING:    1 OPEN CHANNELS DETECTED AT RMIN
+  **** WARNING:    1 OPEN CHANNELS DETECTED AT RMIN
+
+  CONVERGED ON NODE NUMBER     3 AT                               ENERGY =   4.127100884     CM-1  
+
+  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+  SEARCHING FOR INODE =    4 CORRESPONDING TO NODE COUNT =    4
+  **** WARNING:    2 OPEN CHANNELS DETECTED AT RMIN
+  **** WARNING:    2 OPEN CHANNELS DETECTED AT RMIN
+  **** WARNING:    2 OPEN CHANNELS DETECTED AT RMIN
+  **** WARNING:    2 OPEN CHANNELS DETECTED AT RMIN
+  **** WARNING:    2 OPEN CHANNELS DETECTED AT RMIN
+
+  CONVERGED ON NODE NUMBER     4 AT                               ENERGY =   5.060469921     CM-1  
+
+  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+  SEARCHING FOR INODE =    5 CORRESPONDING TO NODE COUNT =    5
+  **** WARNING:    2 OPEN CHANNELS DETECTED AT RMIN
+  **** WARNING:    2 OPEN CHANNELS DETECTED AT RMIN
+  **** WARNING:    2 OPEN CHANNELS DETECTED AT RMIN
+  **** WARNING:    2 OPEN CHANNELS DETECTED AT RMIN
+  **** WARNING:    2 OPEN CHANNELS DETECTED AT RMIN
+  **** WARNING:    2 OPEN CHANNELS DETECTED AT RMIN
+  **** WARNING:    2 OPEN CHANNELS DETECTED AT RMIN
+
+  CONVERGED ON NODE NUMBER     5 AT                               ENERGY =   6.123585345     CM-1  
+
+  ======================================================================================================================
+
+
+  -- BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND --
+ |                                                                            |
+ |          Bound states of interacting pairs of atoms and molecules          |
+ |                                                                            |
+ |              Copyright (C) 2018 J. M. Hutson & C. R. Le Sueur              |
+ |                                                                            |
+ |                               Version 2019.0 (beta)                        |
+ |                                                                            |
+ |                    This run used       1.22 cpu secs and                   |
+ |                 46 of the allocated   1000000 words of storage             |
+ |                                                                            |
+  -- BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND --
+  -- BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND --
+ |                                                                            |
+ |          Bound states of interacting pairs of atoms and molecules          |
+ |                                                                            |
+ |              Copyright (C) 2018 J. M. Hutson & C. R. Le Sueur              |
+ |                                                                            |
+ |                               Version 2019.0 (beta)                        |
+ |                                                                            |
+ |                       Run on 27 Nov 2018   at 21:19:13                     |
+ |                                                                            |
+  -- BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND --
+
+
+  This program is free software: you can redistribute it and/or modify it under
+  the terms of the GNU General Public License, version 3, as published by
+  the Free Software Foundation.
+
+  Publications resulting from the use of this program should refer to
+  J. M. Hutson & C. R. Le Sueur, BOUND computer code 2019.0 (beta)       
+  or to the published paper in Computer Physics Communications when available.
+
+
+  PHYSICAL CONSTANTS OBTAINED FROM NIST CODATA TABULATION OF 2014
+
+  MEMORY ALLOCATED TO MAIN WORKING ARRAY IS   1000000 (8-BYTE) WORDS (    7.63 MB)
+
+  PRINT LEVEL =  3
+
+  RUN LABEL = Testing BOUND 2-channel particle in a box with finite boundary conditions: LDMD 
+
+  REDUCED MASS FOR INTERACTION =  16.857629180 ATOMIC MASS UNITS
+
+  NO SCRATCH FILE SPECIFIED BY ISCRU PARAMETER: FULL CALCULATION WILL BE DONE AT EACH ENERGY
+
+  ======================================================================================================================
+
+  INTERACTION TYPE IS    DIATOMIC VIB-ROTOR  -  ATOM.  
+
+  TARGET ROTATIONAL LEVELS TAKEN FROM &BASIS (JLEVEL) INPUT.  NLEVEL =  2
+
+  TARGET ENERGY LEVELS TAKEN FROM &BASIS (ELEVEL) INPUT
+
+  QUANTUM NUMBERS FOR INTERACTING PAIR:
+  EACH PAIR STATE IS LABELLED BY  2 QUANTUM LABELS
+  EACH CHANNEL FUNCTION IS FORMED BY COMBINING A PAIR STATE WITH A VALUE OF L.
+  THE RESULTING BASIS SET IS ASYMPTOTICALLY DIAGONAL.
+
+  PAIR STATE     PAIR STATE QUANTUM NUMBERS    PAIR LEVEL     PAIR ENERGY (CM-1)
+                ----        J         V ----
+        1                   0         0           1             1.0000000
+        2                   0         1           2             4.0000000
+
+  ======================================================================================================================
+  GENERAL-PURPOSE POTENL ROUTINE (MAY 18)
+
+  ANGULAR DEPENDENCE OF POTENTIAL EXPANDED IN TERMS OF
+  LEGENDRE POLYNOMIALS, P(LAMBDA).
+  INTEGRATED OVER DIATOM VIBRATIONAL FUNCTIONS
+
+  INTERACTION POTENTIAL FOR EXPANSION TERM NUMBER   1
+  WHICH HAS LAMBDA =   0,  V =   0,  V-PRIME =   1
+
+                 2.00000000E+00 * EXP(   -0.0000 * R )
+
+  INTERACTION POTENTIAL FOR EXPANSION TERM NUMBER   2
+  WHICH HAS LAMBDA =   0,  V =   1,  V-PRIME =   0
+
+                 2.00000000E+00 * EXP(   -0.0000 * R )
+
+  POTENL PROCESSING FINISHED.
+
+  UNITS FOR POTENTIAL ROUTINES:
+  POTENTIAL RETURNED IN UNITS OF EPSIL =       1.000000 CM-1
+  R                  IN UNITS OF RM    =       1.000000 ANGSTROMS
+  IVCHK.  COMPLETED SUCCESSFULLY.
+  INTERACTION MATRIX USES   1 BLOCKS OF VL ARRAY FOR R-DEPENDENT TERMS IN POTENTIAL
+
+  ======================================================================================================================
+
+  PROPAGATION METHODS FOR COUPLED EQUATIONS SPECIFIED BY IPROPS =  6 AND IPROPL =  6
+ nsegs =           2
+   1.0000000000000000E-008   2.0000000000000000        0.0000000000000000        2.0000000000000000        3.1415926500000002        0.0000000000000000     
+
+  COUPLED EQUATIONS WILL BE PROPAGATED TOWARDS RMATCH IN 2 SEGMENTS
+  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+  SEGMENT 1 WILL BE PROPAGATED OUTWARDS
+
+  FROM RMIN   =      0.00  TO RMATCH =      2.00
+
+  COUPLED EQUATIONS SOLVED BY DIABATIC MODIFIED LOG-DERIVATIVE PROPAGATOR OF MANOLOPOULOS
+
+  PROPAGATION STEP SIZE DETERMINED USING DR =  1.000E-03
+
+  LOG-DERIVATIVE MATRIX WILL BE INITIALISED IN THE LOCAL EIGENBASIS FOR RMIN IN THE OUTWARDS PROPAGATION PART
+  LOCALLY CLOSED CHANNELS WILL BE INITIALISED WITH THE VALUE  1.0000000E+00
+  LOCALLY   OPEN CHANNELS WILL BE INITIALISED WITH THE VALUE  1.0000000E-01
+  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+  SEGMENT 2 WILL BE PROPAGATED  INWARDS
+
+  FROM RMAX   =      3.14  TO RMATCH =      2.00
+
+  COUPLED EQUATIONS SOLVED BY DIABATIC MODIFIED LOG-DERIVATIVE PROPAGATOR OF MANOLOPOULOS
+
+  PROPAGATION STEP SIZE DETERMINED USING DR =  1.000E-03
+
+  LOG-DERIVATIVE MATRIX WILL BE INITIALISED IN THE LOCAL EIGENBASIS FOR RMAX IN THE INWARDS PROPAGATION PART
+  LOCALLY CLOSED CHANNELS WILL BE INITIALISED WITH THE VALUE -1.0000000E+00
+  LOCALLY   OPEN CHANNELS WILL BE INITIALISED WITH THE VALUE -1.0000000E-01
+  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+  ======================================================================================================================
+
+  PROGRAM WILL ATTEMPT TO CONVERGE ON BOUND STATES AS A FUNCTION OF ENERGY
+
+  FOR EACH LEVEL, THE BISECTION METHOD WILL BE USED UNTIL THE VWDB METHOD OFFERS RELIABLE CONVERGENCE.
+
+  BOUND STATE POSITIONS WILL BE IDENTIFIED WITH AN ACCURACY OF  1.00000E-07 CM-1    
+
+  INPUT ENERGY VALUES CONVERTED FROM CM-1
+  TO INTERNAL WORKING UNITS OF CM-1 DUE TO INTEGER INPUT =   1
+
+  PROGRAM WILL SEEK EIGENVALUES WITH GENERALISED NODE COUNTS FROM    0 TO  99999
+  LYING IN ENERGY RANGE  -1.0000     TO   8.0000     CM-1    
+
+  INITIALIZATION DONE.  TIME WAS   0.00 CPU SECS.         9 WORDS OF STORAGE USED.
+
+  ======================================================================================================================
+
+  TOTAL ANGULAR MOMENTUM JTOT =   0
+
+  EACH JTOT IS SPLIT INTO A MAXIMUM OF   2 DIFFERENT SYMMETRY BLOCKS
+
+  CALCULATIONS WILL BE FOR SYMMETRY BLOCK   2  ONLY
+
+  ================== Testing BOUND 2-channel particle in a box with finite boundary conditions: LDMD ===================
+
+  *******************************************  ANGULAR MOMENTUM JTOT  =   0  *******************************************
+  = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = 
+  **** WARNING:    2 OPEN CHANNELS DETECTED AT RMIN
+
+  NODE COUNT =    0 AT MINIMUM ENERGY =  -1.000000000     CM-1  
+  NODE COUNT =    5 AT MAXIMUM ENERGY =   8.000000000     CM-1  
+
+  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+  SEARCHING FOR INODE =    1 CORRESPONDING TO NODE COUNT =    1
+  **** WARNING:    1 OPEN CHANNELS DETECTED AT RMIN
+  **** WARNING:    1 OPEN CHANNELS DETECTED AT RMIN
+  **** WARNING:    1 OPEN CHANNELS DETECTED AT RMIN
+  **** WARNING:    1 OPEN CHANNELS DETECTED AT RMIN
+  **** WARNING:    1 OPEN CHANNELS DETECTED AT RMIN
+  **** WARNING:    1 OPEN CHANNELS DETECTED AT RMIN
+  **** WARNING:    1 OPEN CHANNELS DETECTED AT RMIN
+
+  CONVERGED ON NODE NUMBER     1 AT                               ENERGY =  6.0469918062E-02 CM-1  
+
+  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+  SEARCHING FOR INODE =    2 CORRESPONDING TO NODE COUNT =    2
+  **** WARNING:    1 OPEN CHANNELS DETECTED AT RMIN
+  **** WARNING:    1 OPEN CHANNELS DETECTED AT RMIN
+  **** WARNING:    1 OPEN CHANNELS DETECTED AT RMIN
+  **** WARNING:    1 OPEN CHANNELS DETECTED AT RMIN
+  **** WARNING:    1 OPEN CHANNELS DETECTED AT RMIN
+
+  CONVERGED ON NODE NUMBER     2 AT                               ENERGY =   1.123585340     CM-1  
+
+  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+  SEARCHING FOR INODE =    3 CORRESPONDING TO NODE COUNT =    3
+  **** WARNING:    2 OPEN CHANNELS DETECTED AT RMIN
+  **** WARNING:    1 OPEN CHANNELS DETECTED AT RMIN
+  **** WARNING:    1 OPEN CHANNELS DETECTED AT RMIN
+  **** WARNING:    1 OPEN CHANNELS DETECTED AT RMIN
+  **** WARNING:    1 OPEN CHANNELS DETECTED AT RMIN
+  **** WARNING:    1 OPEN CHANNELS DETECTED AT RMIN
+  **** WARNING:    1 OPEN CHANNELS DETECTED AT RMIN
+
+  CONVERGED ON NODE NUMBER     3 AT                               ENERGY =   4.127100883     CM-1  
+
+  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+  SEARCHING FOR INODE =    4 CORRESPONDING TO NODE COUNT =    4
+  **** WARNING:    2 OPEN CHANNELS DETECTED AT RMIN
+  **** WARNING:    2 OPEN CHANNELS DETECTED AT RMIN
+  **** WARNING:    2 OPEN CHANNELS DETECTED AT RMIN
+  **** WARNING:    2 OPEN CHANNELS DETECTED AT RMIN
+  **** WARNING:    2 OPEN CHANNELS DETECTED AT RMIN
+
+  CONVERGED ON NODE NUMBER     4 AT                               ENERGY =   5.060469923     CM-1  
+
+  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+  SEARCHING FOR INODE =    5 CORRESPONDING TO NODE COUNT =    5
+  **** WARNING:    2 OPEN CHANNELS DETECTED AT RMIN
+  **** WARNING:    2 OPEN CHANNELS DETECTED AT RMIN
+  **** WARNING:    2 OPEN CHANNELS DETECTED AT RMIN
+  **** WARNING:    2 OPEN CHANNELS DETECTED AT RMIN
+  **** WARNING:    2 OPEN CHANNELS DETECTED AT RMIN
+  **** WARNING:    2 OPEN CHANNELS DETECTED AT RMIN
+  **** WARNING:    2 OPEN CHANNELS DETECTED AT RMIN
+
+  CONVERGED ON NODE NUMBER     5 AT                               ENERGY =   6.123585345     CM-1  
+
+  ======================================================================================================================
+
+
+  -- BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND --
+ |                                                                            |
+ |          Bound states of interacting pairs of atoms and molecules          |
+ |                                                                            |
+ |              Copyright (C) 2018 J. M. Hutson & C. R. Le Sueur              |
+ |                                                                            |
+ |                               Version 2019.0 (beta)                        |
+ |                                                                            |
+ |                    This run used       0.06 cpu secs and                   |
+ |                 46 of the allocated   1000000 words of storage             |
+ |                                                                            |
+  -- BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND --
+  -- BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND --
+ |                                                                            |
+ |          Bound states of interacting pairs of atoms and molecules          |
+ |                                                                            |
+ |              Copyright (C) 2018 J. M. Hutson & C. R. Le Sueur              |
+ |                                                                            |
+ |                               Version 2019.0 (beta)                        |
+ |                                                                            |
+ |                       Run on 27 Nov 2018   at 21:19:13                     |
+ |                                                                            |
+  -- BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND --
+
+
+  This program is free software: you can redistribute it and/or modify it under
+  the terms of the GNU General Public License, version 3, as published by
+  the Free Software Foundation.
+
+  Publications resulting from the use of this program should refer to
+  J. M. Hutson & C. R. Le Sueur, BOUND computer code 2019.0 (beta)       
+  or to the published paper in Computer Physics Communications when available.
+
+
+  PHYSICAL CONSTANTS OBTAINED FROM NIST CODATA TABULATION OF 2014
+
+  MEMORY ALLOCATED TO MAIN WORKING ARRAY IS   1000000 (8-BYTE) WORDS (    7.63 MB)
+
+  PRINT LEVEL =  3
+
+  RUN LABEL = Testing BOUND 2-channel particle in a box with finite boundary conditions: LDMA 
+
+  REDUCED MASS FOR INTERACTION =  16.857629180 ATOMIC MASS UNITS
+
+  NO SCRATCH FILE SPECIFIED BY ISCRU PARAMETER: FULL CALCULATION WILL BE DONE AT EACH ENERGY
+
+  ======================================================================================================================
+
+  INTERACTION TYPE IS    DIATOMIC VIB-ROTOR  -  ATOM.  
+
+  TARGET ROTATIONAL LEVELS TAKEN FROM &BASIS (JLEVEL) INPUT.  NLEVEL =  2
+
+  TARGET ENERGY LEVELS TAKEN FROM &BASIS (ELEVEL) INPUT
+
+  QUANTUM NUMBERS FOR INTERACTING PAIR:
+  EACH PAIR STATE IS LABELLED BY  2 QUANTUM LABELS
+  EACH CHANNEL FUNCTION IS FORMED BY COMBINING A PAIR STATE WITH A VALUE OF L.
+  THE RESULTING BASIS SET IS ASYMPTOTICALLY DIAGONAL.
+
+  PAIR STATE     PAIR STATE QUANTUM NUMBERS    PAIR LEVEL     PAIR ENERGY (CM-1)
+                ----        J         V ----
+        1                   0         0           1             1.0000000
+        2                   0         1           2             4.0000000
+
+  ======================================================================================================================
+  GENERAL-PURPOSE POTENL ROUTINE (MAY 18)
+
+  ANGULAR DEPENDENCE OF POTENTIAL EXPANDED IN TERMS OF
+  LEGENDRE POLYNOMIALS, P(LAMBDA).
+  INTEGRATED OVER DIATOM VIBRATIONAL FUNCTIONS
+
+  INTERACTION POTENTIAL FOR EXPANSION TERM NUMBER   1
+  WHICH HAS LAMBDA =   0,  V =   0,  V-PRIME =   1
+
+                 2.00000000E+00 * EXP(   -0.0000 * R )
+
+  INTERACTION POTENTIAL FOR EXPANSION TERM NUMBER   2
+  WHICH HAS LAMBDA =   0,  V =   1,  V-PRIME =   0
+
+                 2.00000000E+00 * EXP(   -0.0000 * R )
+
+  POTENL PROCESSING FINISHED.
+
+  UNITS FOR POTENTIAL ROUTINES:
+  POTENTIAL RETURNED IN UNITS OF EPSIL =       1.000000 CM-1
+  R                  IN UNITS OF RM    =       1.000000 ANGSTROMS
+  IVCHK.  COMPLETED SUCCESSFULLY.
+  INTERACTION MATRIX USES   1 BLOCKS OF VL ARRAY FOR R-DEPENDENT TERMS IN POTENTIAL
+
+  ======================================================================================================================
+
+  PROPAGATION METHODS FOR COUPLED EQUATIONS SPECIFIED BY IPROPS =  7 AND IPROPL =  7
+ nsegs =           2
+   1.0000000000000000E-008   2.0000000000000000        0.0000000000000000        2.0000000000000000        3.1415926500000002        0.0000000000000000     
+
+  COUPLED EQUATIONS WILL BE PROPAGATED TOWARDS RMATCH IN 2 SEGMENTS
+  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+  SEGMENT 1 WILL BE PROPAGATED OUTWARDS
+
+  FROM RMIN   =      0.00  TO RMATCH =      2.00
+
+  COUPLED EQUATIONS SOLVED BY QUASIADIABATIC MODIFIED LOG-DERIVATIVE PROPAGATOR OF MANOLOPOULOS
+
+  PROPAGATION STEP SIZE DETERMINED USING DR =  1.000E-03
+
+  LOG-DERIVATIVE MATRIX WILL BE INITIALISED IN THE LOCAL EIGENBASIS FOR RMIN IN THE OUTWARDS PROPAGATION PART
+  LOCALLY CLOSED CHANNELS WILL BE INITIALISED WITH THE VALUE  1.0000000E+00
+  LOCALLY   OPEN CHANNELS WILL BE INITIALISED WITH THE VALUE  1.0000000E-01
+  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+  SEGMENT 2 WILL BE PROPAGATED  INWARDS
+
+  FROM RMAX   =      3.14  TO RMATCH =      2.00
+
+  COUPLED EQUATIONS SOLVED BY QUASIADIABATIC MODIFIED LOG-DERIVATIVE PROPAGATOR OF MANOLOPOULOS
+
+  PROPAGATION STEP SIZE DETERMINED USING DR =  1.000E-03
+
+  LOG-DERIVATIVE MATRIX WILL BE INITIALISED IN THE LOCAL EIGENBASIS FOR RMAX IN THE INWARDS PROPAGATION PART
+  LOCALLY CLOSED CHANNELS WILL BE INITIALISED WITH THE VALUE -1.0000000E+00
+  LOCALLY   OPEN CHANNELS WILL BE INITIALISED WITH THE VALUE -1.0000000E-01
+  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+  ======================================================================================================================
+
+  PROGRAM WILL ATTEMPT TO CONVERGE ON BOUND STATES AS A FUNCTION OF ENERGY
+
+  FOR EACH LEVEL, THE BISECTION METHOD WILL BE USED UNTIL THE VWDB METHOD OFFERS RELIABLE CONVERGENCE.
+
+  BOUND STATE POSITIONS WILL BE IDENTIFIED WITH AN ACCURACY OF  1.00000E-07 CM-1    
+
+  INPUT ENERGY VALUES CONVERTED FROM CM-1
+  TO INTERNAL WORKING UNITS OF CM-1 DUE TO INTEGER INPUT =   1
+
+  PROGRAM WILL SEEK EIGENVALUES WITH GENERALISED NODE COUNTS FROM    0 TO  99999
+  LYING IN ENERGY RANGE  -1.0000     TO   8.0000     CM-1    
+
+  INITIALIZATION DONE.  TIME WAS   0.00 CPU SECS.         9 WORDS OF STORAGE USED.
+
+  ======================================================================================================================
+
+  TOTAL ANGULAR MOMENTUM JTOT =   0
+
+  EACH JTOT IS SPLIT INTO A MAXIMUM OF   2 DIFFERENT SYMMETRY BLOCKS
+
+  CALCULATIONS WILL BE FOR SYMMETRY BLOCK   2  ONLY
+
+  ================== Testing BOUND 2-channel particle in a box with finite boundary conditions: LDMA ===================
+
+  *******************************************  ANGULAR MOMENTUM JTOT  =   0  *******************************************
+  = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = 
+  **** WARNING:    2 OPEN CHANNELS DETECTED AT RMIN
+
+  NODE COUNT =    0 AT MINIMUM ENERGY =  -1.000000000     CM-1  
+  NODE COUNT =    5 AT MAXIMUM ENERGY =   8.000000000     CM-1  
+
+  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+  SEARCHING FOR INODE =    1 CORRESPONDING TO NODE COUNT =    1
+  **** WARNING:    1 OPEN CHANNELS DETECTED AT RMIN
+  **** WARNING:    1 OPEN CHANNELS DETECTED AT RMIN
+  **** WARNING:    1 OPEN CHANNELS DETECTED AT RMIN
+  **** WARNING:    1 OPEN CHANNELS DETECTED AT RMIN
+  **** WARNING:    1 OPEN CHANNELS DETECTED AT RMIN
+  **** WARNING:    1 OPEN CHANNELS DETECTED AT RMIN
+  **** WARNING:    1 OPEN CHANNELS DETECTED AT RMIN
+
+  CONVERGED ON NODE NUMBER     1 AT                               ENERGY =  6.0464134770E-02 CM-1  
+
+  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+  SEARCHING FOR INODE =    2 CORRESPONDING TO NODE COUNT =    2
+  **** WARNING:    1 OPEN CHANNELS DETECTED AT RMIN
+  **** WARNING:    1 OPEN CHANNELS DETECTED AT RMIN
+  **** WARNING:    1 OPEN CHANNELS DETECTED AT RMIN
+  **** WARNING:    1 OPEN CHANNELS DETECTED AT RMIN
+  **** WARNING:    1 OPEN CHANNELS DETECTED AT RMIN
+
+  CONVERGED ON NODE NUMBER     2 AT                               ENERGY =   1.123361634     CM-1  
+
+  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+  SEARCHING FOR INODE =    3 CORRESPONDING TO NODE COUNT =    3
+  **** WARNING:    2 OPEN CHANNELS DETECTED AT RMIN
+  **** WARNING:    1 OPEN CHANNELS DETECTED AT RMIN
+  **** WARNING:    1 OPEN CHANNELS DETECTED AT RMIN
+  **** WARNING:    1 OPEN CHANNELS DETECTED AT RMIN
+  **** WARNING:    1 OPEN CHANNELS DETECTED AT RMIN
+  **** WARNING:    1 OPEN CHANNELS DETECTED AT RMIN
+  **** WARNING:    1 OPEN CHANNELS DETECTED AT RMIN
+
+  CONVERGED ON NODE NUMBER     3 AT                               ENERGY =   4.126240657     CM-1  
+
+  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+  SEARCHING FOR INODE =    4 CORRESPONDING TO NODE COUNT =    4
+  **** WARNING:    2 OPEN CHANNELS DETECTED AT RMIN
+  **** WARNING:    2 OPEN CHANNELS DETECTED AT RMIN
+  **** WARNING:    2 OPEN CHANNELS DETECTED AT RMIN
+  **** WARNING:    2 OPEN CHANNELS DETECTED AT RMIN
+  **** WARNING:    2 OPEN CHANNELS DETECTED AT RMIN
+
+  CONVERGED ON NODE NUMBER     4 AT                               ENERGY =   5.059985705     CM-1  
+
+  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+  SEARCHING FOR INODE =    5 CORRESPONDING TO NODE COUNT =    5
+  **** WARNING:    2 OPEN CHANNELS DETECTED AT RMIN
+  **** WARNING:    2 OPEN CHANNELS DETECTED AT RMIN
+  **** WARNING:    2 OPEN CHANNELS DETECTED AT RMIN
+  **** WARNING:    2 OPEN CHANNELS DETECTED AT RMIN
+  **** WARNING:    2 OPEN CHANNELS DETECTED AT RMIN
+  **** WARNING:    2 OPEN CHANNELS DETECTED AT RMIN
+  **** WARNING:    2 OPEN CHANNELS DETECTED AT RMIN
+
+  CONVERGED ON NODE NUMBER     5 AT                               ENERGY =   6.122365814     CM-1  
+
+  ======================================================================================================================
+
+
+  -- BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND --
+ |                                                                            |
+ |          Bound states of interacting pairs of atoms and molecules          |
+ |                                                                            |
+ |              Copyright (C) 2018 J. M. Hutson & C. R. Le Sueur              |
+ |                                                                            |
+ |                               Version 2019.0 (beta)                        |
+ |                                                                            |
+ |                    This run used       0.34 cpu secs and                   |
+ |                 62 of the allocated   1000000 words of storage             |
+ |                                                                            |
+  -- BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND --
+  -- BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND --
+ |                                                                            |
+ |          Bound states of interacting pairs of atoms and molecules          |
+ |                                                                            |
+ |              Copyright (C) 2018 J. M. Hutson & C. R. Le Sueur              |
+ |                                                                            |
+ |                               Version 2019.0 (beta)                        |
+ |                                                                            |
+ |                       Run on 27 Nov 2018   at 21:19:14                     |
+ |                                                                            |
+  -- BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND --
+
+
+  This program is free software: you can redistribute it and/or modify it under
+  the terms of the GNU General Public License, version 3, as published by
+  the Free Software Foundation.
+
+  Publications resulting from the use of this program should refer to
+  J. M. Hutson & C. R. Le Sueur, BOUND computer code 2019.0 (beta)       
+  or to the published paper in Computer Physics Communications when available.
+
+
+  PHYSICAL CONSTANTS OBTAINED FROM NIST CODATA TABULATION OF 2014
+
+  MEMORY ALLOCATED TO MAIN WORKING ARRAY IS   1000000 (8-BYTE) WORDS (    7.63 MB)
+
+  PRINT LEVEL =  3
+
+  RUN LABEL = Testing BOUND 2-channel particle in a box with finite boundary conditions: LDMG 
+
+  REDUCED MASS FOR INTERACTION =  16.857629180 ATOMIC MASS UNITS
+
+  NO SCRATCH FILE SPECIFIED BY ISCRU PARAMETER: FULL CALCULATION WILL BE DONE AT EACH ENERGY
+
+  ======================================================================================================================
+
+  INTERACTION TYPE IS    DIATOMIC VIB-ROTOR  -  ATOM.  
+
+  TARGET ROTATIONAL LEVELS TAKEN FROM &BASIS (JLEVEL) INPUT.  NLEVEL =  2
+
+  TARGET ENERGY LEVELS TAKEN FROM &BASIS (ELEVEL) INPUT
+
+  QUANTUM NUMBERS FOR INTERACTING PAIR:
+  EACH PAIR STATE IS LABELLED BY  2 QUANTUM LABELS
+  EACH CHANNEL FUNCTION IS FORMED BY COMBINING A PAIR STATE WITH A VALUE OF L.
+  THE RESULTING BASIS SET IS ASYMPTOTICALLY DIAGONAL.
+
+  PAIR STATE     PAIR STATE QUANTUM NUMBERS    PAIR LEVEL     PAIR ENERGY (CM-1)
+                ----        J         V ----
+        1                   0         0           1             1.0000000
+        2                   0         1           2             4.0000000
+
+  ======================================================================================================================
+  GENERAL-PURPOSE POTENL ROUTINE (MAY 18)
+
+  ANGULAR DEPENDENCE OF POTENTIAL EXPANDED IN TERMS OF
+  LEGENDRE POLYNOMIALS, P(LAMBDA).
+  INTEGRATED OVER DIATOM VIBRATIONAL FUNCTIONS
+
+  INTERACTION POTENTIAL FOR EXPANSION TERM NUMBER   1
+  WHICH HAS LAMBDA =   0,  V =   0,  V-PRIME =   1
+
+                 2.00000000E+00 * EXP(   -0.0000 * R )
+
+  INTERACTION POTENTIAL FOR EXPANSION TERM NUMBER   2
+  WHICH HAS LAMBDA =   0,  V =   1,  V-PRIME =   0
+
+                 2.00000000E+00 * EXP(   -0.0000 * R )
+
+  POTENL PROCESSING FINISHED.
+
+  UNITS FOR POTENTIAL ROUTINES:
+  POTENTIAL RETURNED IN UNITS OF EPSIL =       1.000000 CM-1
+  R                  IN UNITS OF RM    =       1.000000 ANGSTROMS
+  IVCHK.  COMPLETED SUCCESSFULLY.
+  INTERACTION MATRIX USES   1 BLOCKS OF VL ARRAY FOR R-DEPENDENT TERMS IN POTENTIAL
+
+  ======================================================================================================================
+
+  PROPAGATION METHODS FOR COUPLED EQUATIONS SPECIFIED BY IPROPS =  8 AND IPROPL =  8
+ nsegs =           2
+   1.0000000000000000E-008   2.0000000000000000        0.0000000000000000        2.0000000000000000        3.1415926500000002        0.0000000000000000     
+
+  COUPLED EQUATIONS WILL BE PROPAGATED TOWARDS RMATCH IN 2 SEGMENTS
+  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+  SEGMENT 1 WILL BE PROPAGATED OUTWARDS
+
+  FROM RMIN   =      0.00  TO RMATCH =      2.00
+
+  COUPLED EQUATIONS SOLVED BY SYMPLECTIC LOG-DERIVATIVE PROPAGATOR OF MANOLOPOULOS AND GRAY
+  USING THE FIVE-STEP FOURTH-ORDER METHOD OF CALVO AND SANZ-SERNA
+
+  PROPAGATION STEP SIZE DETERMINED USING DR =  1.000E-03
+
+  LOG-DERIVATIVE MATRIX WILL BE INITIALISED IN THE LOCAL EIGENBASIS FOR RMIN IN THE OUTWARDS PROPAGATION PART
+  LOCALLY CLOSED CHANNELS WILL BE INITIALISED WITH THE VALUE  1.0000000E+00
+  LOCALLY   OPEN CHANNELS WILL BE INITIALISED WITH THE VALUE  1.0000000E-01
+  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+  SEGMENT 2 WILL BE PROPAGATED  INWARDS
+
+  FROM RMAX   =      3.14  TO RMATCH =      2.00
+
+  COUPLED EQUATIONS SOLVED BY SYMPLECTIC LOG-DERIVATIVE PROPAGATOR OF MANOLOPOULOS AND GRAY
+  USING THE FIVE-STEP FOURTH-ORDER METHOD OF CALVO AND SANZ-SERNA
+
+  PROPAGATION STEP SIZE DETERMINED USING DR =  1.000E-03
+
+  LOG-DERIVATIVE MATRIX WILL BE INITIALISED IN THE LOCAL EIGENBASIS FOR RMAX IN THE INWARDS PROPAGATION PART
+  LOCALLY CLOSED CHANNELS WILL BE INITIALISED WITH THE VALUE -1.0000000E+00
+  LOCALLY   OPEN CHANNELS WILL BE INITIALISED WITH THE VALUE -1.0000000E-01
+  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+  ======================================================================================================================
+
+  PROGRAM WILL ATTEMPT TO CONVERGE ON BOUND STATES AS A FUNCTION OF ENERGY
+
+  FOR EACH LEVEL, THE BISECTION METHOD WILL BE USED UNTIL THE VWDB METHOD OFFERS RELIABLE CONVERGENCE.
+
+  BOUND STATE POSITIONS WILL BE IDENTIFIED WITH AN ACCURACY OF  1.00000E-07 CM-1    
+
+  INPUT ENERGY VALUES CONVERTED FROM CM-1
+  TO INTERNAL WORKING UNITS OF CM-1 DUE TO INTEGER INPUT =   1
+
+  PROGRAM WILL SEEK EIGENVALUES WITH GENERALISED NODE COUNTS FROM    0 TO  99999
+  LYING IN ENERGY RANGE  -1.0000     TO   8.0000     CM-1    
+
+  INITIALIZATION DONE.  TIME WAS   0.00 CPU SECS.         9 WORDS OF STORAGE USED.
+
+  ======================================================================================================================
+
+  TOTAL ANGULAR MOMENTUM JTOT =   0
+
+  EACH JTOT IS SPLIT INTO A MAXIMUM OF   2 DIFFERENT SYMMETRY BLOCKS
+
+  CALCULATIONS WILL BE FOR SYMMETRY BLOCK   2  ONLY
+
+  ================== Testing BOUND 2-channel particle in a box with finite boundary conditions: LDMG ===================
+
+  *******************************************  ANGULAR MOMENTUM JTOT  =   0  *******************************************
+  = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = 
+  **** WARNING:    2 OPEN CHANNELS DETECTED AT RMIN
+
+  NODE COUNT =    0 AT MINIMUM ENERGY =  -1.000000000     CM-1  
+  NODE COUNT =    5 AT MAXIMUM ENERGY =   8.000000000     CM-1  
+
+  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+  SEARCHING FOR INODE =    1 CORRESPONDING TO NODE COUNT =    1
+  **** WARNING:    1 OPEN CHANNELS DETECTED AT RMIN
+  **** WARNING:    1 OPEN CHANNELS DETECTED AT RMIN
+  **** WARNING:    1 OPEN CHANNELS DETECTED AT RMIN
+  **** WARNING:    1 OPEN CHANNELS DETECTED AT RMIN
+  **** WARNING:    1 OPEN CHANNELS DETECTED AT RMIN
+  **** WARNING:    1 OPEN CHANNELS DETECTED AT RMIN
+  **** WARNING:    1 OPEN CHANNELS DETECTED AT RMIN
+
+  CONVERGED ON NODE NUMBER     1 AT                               ENERGY =  6.0466281742E-02 CM-1  
+
+  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+  SEARCHING FOR INODE =    2 CORRESPONDING TO NODE COUNT =    2
+  **** WARNING:    1 OPEN CHANNELS DETECTED AT RMIN
+  **** WARNING:    1 OPEN CHANNELS DETECTED AT RMIN
+  **** WARNING:    1 OPEN CHANNELS DETECTED AT RMIN
+  **** WARNING:    1 OPEN CHANNELS DETECTED AT RMIN
+  **** WARNING:    1 OPEN CHANNELS DETECTED AT RMIN
+
+  CONVERGED ON NODE NUMBER     2 AT                               ENERGY =   1.123444527     CM-1  
+
+  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+  SEARCHING FOR INODE =    3 CORRESPONDING TO NODE COUNT =    3
+  **** WARNING:    2 OPEN CHANNELS DETECTED AT RMIN
+  **** WARNING:    1 OPEN CHANNELS DETECTED AT RMIN
+  **** WARNING:    1 OPEN CHANNELS DETECTED AT RMIN
+  **** WARNING:    1 OPEN CHANNELS DETECTED AT RMIN
+  **** WARNING:    1 OPEN CHANNELS DETECTED AT RMIN
+  **** WARNING:    1 OPEN CHANNELS DETECTED AT RMIN
+  **** WARNING:    1 OPEN CHANNELS DETECTED AT RMIN
+
+  CONVERGED ON NODE NUMBER     3 AT                               ENERGY =   4.126559385     CM-1  
+
+  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+  SEARCHING FOR INODE =    4 CORRESPONDING TO NODE COUNT =    4
+  **** WARNING:    2 OPEN CHANNELS DETECTED AT RMIN
+  **** WARNING:    2 OPEN CHANNELS DETECTED AT RMIN
+  **** WARNING:    2 OPEN CHANNELS DETECTED AT RMIN
+  **** WARNING:    2 OPEN CHANNELS DETECTED AT RMIN
+  **** WARNING:    2 OPEN CHANNELS DETECTED AT RMIN
+
+  CONVERGED ON NODE NUMBER     4 AT                               ENERGY =   5.060466283     CM-1  
+
+  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+  SEARCHING FOR INODE =    5 CORRESPONDING TO NODE COUNT =    5
+  **** WARNING:    2 OPEN CHANNELS DETECTED AT RMIN
+  **** WARNING:    2 OPEN CHANNELS DETECTED AT RMIN
+  **** WARNING:    2 OPEN CHANNELS DETECTED AT RMIN
+  **** WARNING:    2 OPEN CHANNELS DETECTED AT RMIN
+  **** WARNING:    2 OPEN CHANNELS DETECTED AT RMIN
+  **** WARNING:    2 OPEN CHANNELS DETECTED AT RMIN
+  **** WARNING:    2 OPEN CHANNELS DETECTED AT RMIN
+
+  CONVERGED ON NODE NUMBER     5 AT                               ENERGY =   6.123444529     CM-1  
+
+  ======================================================================================================================
+
+
+  -- BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND --
+ |                                                                            |
+ |          Bound states of interacting pairs of atoms and molecules          |
+ |                                                                            |
+ |              Copyright (C) 2018 J. M. Hutson & C. R. Le Sueur              |
+ |                                                                            |
+ |                               Version 2019.0 (beta)                        |
+ |                                                                            |
+ |                    This run used       0.15 cpu secs and                   |
+ |                 46 of the allocated   1000000 words of storage             |
+ |                                                                            |
+  -- BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND --
+  -- BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND --
+ |                                                                            |
+ |          Bound states of interacting pairs of atoms and molecules          |
+ |                                                                            |
+ |              Copyright (C) 2018 J. M. Hutson & C. R. Le Sueur              |
+ |                                                                            |
+ |                               Version 2019.0 (beta)                        |
+ |                                                                            |
+ |                       Run on 27 Nov 2018   at 21:19:14                     |
+ |                                                                            |
+  -- BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND --
+
+
+  This program is free software: you can redistribute it and/or modify it under
+  the terms of the GNU General Public License, version 3, as published by
+  the Free Software Foundation.
+
+  Publications resulting from the use of this program should refer to
+  J. M. Hutson & C. R. Le Sueur, BOUND computer code 2019.0 (beta)       
+  or to the published paper in Computer Physics Communications when available.
+
+
+  PHYSICAL CONSTANTS OBTAINED FROM NIST CODATA TABULATION OF 2014
+
+  MEMORY ALLOCATED TO MAIN WORKING ARRAY IS   1000000 (8-BYTE) WORDS (    7.63 MB)
+
+  PRINT LEVEL =  3
+
+  RUN LABEL = Testing BOUND 2-channel particle in a box with finite boundary conditions: LDMD+
+
+  REDUCED MASS FOR INTERACTION =  16.857629180 ATOMIC MASS UNITS
+
+  NO SCRATCH FILE SPECIFIED BY ISCRU PARAMETER: FULL CALCULATION WILL BE DONE AT EACH ENERGY
+
+  ======================================================================================================================
+
+  INTERACTION TYPE IS    DIATOMIC VIB-ROTOR  -  ATOM.  
+
+  TARGET ROTATIONAL LEVELS TAKEN FROM &BASIS (JLEVEL) INPUT.  NLEVEL =  2
+
+  TARGET ENERGY LEVELS TAKEN FROM &BASIS (ELEVEL) INPUT
+
+  QUANTUM NUMBERS FOR INTERACTING PAIR:
+  EACH PAIR STATE IS LABELLED BY  2 QUANTUM LABELS
+  EACH CHANNEL FUNCTION IS FORMED BY COMBINING A PAIR STATE WITH A VALUE OF L.
+  THE RESULTING BASIS SET IS ASYMPTOTICALLY DIAGONAL.
+
+  PAIR STATE     PAIR STATE QUANTUM NUMBERS    PAIR LEVEL     PAIR ENERGY (CM-1)
+                ----        J         V ----
+        1                   0         0           1             1.0000000
+        2                   0         1           2             4.0000000
+
+  ======================================================================================================================
+  GENERAL-PURPOSE POTENL ROUTINE (MAY 18)
+
+  ANGULAR DEPENDENCE OF POTENTIAL EXPANDED IN TERMS OF
+  LEGENDRE POLYNOMIALS, P(LAMBDA).
+  INTEGRATED OVER DIATOM VIBRATIONAL FUNCTIONS
+
+  INTERACTION POTENTIAL FOR EXPANSION TERM NUMBER   1
+  WHICH HAS LAMBDA =   0,  V =   0,  V-PRIME =   1
+
+                 2.00000000E+00 * EXP(   -0.0000 * R )
+
+  INTERACTION POTENTIAL FOR EXPANSION TERM NUMBER   2
+  WHICH HAS LAMBDA =   0,  V =   1,  V-PRIME =   0
+
+                 2.00000000E+00 * EXP(   -0.0000 * R )
+
+  POTENL PROCESSING FINISHED.
+
+  UNITS FOR POTENTIAL ROUTINES:
+  POTENTIAL RETURNED IN UNITS OF EPSIL =       1.000000 CM-1
+  R                  IN UNITS OF RM    =       1.000000 ANGSTROMS
+  IVCHK.  COMPLETED SUCCESSFULLY.
+  INTERACTION MATRIX USES   1 BLOCKS OF VL ARRAY FOR R-DEPENDENT TERMS IN POTENTIAL
+
+  ======================================================================================================================
+
+  PROPAGATION METHODS FOR COUPLED EQUATIONS SPECIFIED BY IPROPS =  6 AND IPROPL =  1
+ nsegs =           2
+   1.0000000000000000E-008   2.0000000000000000        0.0000000000000000        2.0000000000000000        3.1415926500000002        0.0000000000000000     
+
+  COUPLED EQUATIONS WILL BE PROPAGATED TOWARDS RMATCH IN 2 SEGMENTS
+  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+  SEGMENT 1 WILL BE PROPAGATED OUTWARDS
+
+  FROM RMIN   =      0.00  TO RMATCH =      2.00
+
+  COUPLED EQUATIONS SOLVED BY DIABATIC MODIFIED LOG-DERIVATIVE PROPAGATOR OF MANOLOPOULOS
+
+  PROPAGATION STEP SIZE DETERMINED USING DR =  1.000E-03
+
+  LOG-DERIVATIVE MATRIX WILL BE INITIALISED IN THE LOCAL EIGENBASIS FOR RMIN IN THE OUTWARDS PROPAGATION PART
+  LOCALLY CLOSED CHANNELS WILL BE INITIALISED WITH THE VALUE  1.0000000E+00
+  LOCALLY   OPEN CHANNELS WILL BE INITIALISED WITH THE VALUE  1.0000000E-01
+  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+  SEGMENT 2 WILL BE PROPAGATED  INWARDS
+
+  FROM RMAX   =      3.14  TO RMATCH =      2.00
+
+  COUPLED EQUATIONS SOLVED BY VARIABLE-STEP AIRY PROPAGATOR.
+  PUBLICATIONS RESULTING FROM THE USE OF THIS PROPAGATOR SHOULD REFERENCE
+  M.H. ALEXANDER AND D.E. MANOLOPOULOS,  J CHEM PHYS 86, 2044 (1987).
+
+  INITIAL STEP SIZE TAKEN FROM DRLR     =  1.000E-03
+                             WITH TOLHI =  1.00E-04         POWRX = 6.0
+  TOLHI.LT.1  --  AIRY STEPS ADJUSTED TO MAINTAIN APPROX. ACCURACY VIA PERTURBATION THEORY AND POWRX.
+
+  LOG-DERIVATIVE MATRIX WILL BE INITIALISED IN THE LOCAL EIGENBASIS FOR RMAX IN THE INWARDS PROPAGATION PART
+  LOCALLY CLOSED CHANNELS WILL BE INITIALISED WITH THE VALUE -1.0000000E+00
+  LOCALLY   OPEN CHANNELS WILL BE INITIALISED WITH THE VALUE -1.0000000E-01
+  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+  ======================================================================================================================
+
+  PROGRAM WILL ATTEMPT TO CONVERGE ON BOUND STATES AS A FUNCTION OF ENERGY
+
+  FOR EACH LEVEL, THE BISECTION METHOD WILL BE USED UNTIL THE VWDB METHOD OFFERS RELIABLE CONVERGENCE.
+
+  BOUND STATE POSITIONS WILL BE IDENTIFIED WITH AN ACCURACY OF  1.00000E-07 CM-1    
+
+  INPUT ENERGY VALUES CONVERTED FROM CM-1
+  TO INTERNAL WORKING UNITS OF CM-1 DUE TO INTEGER INPUT =   1
+
+  PROGRAM WILL SEEK EIGENVALUES WITH GENERALISED NODE COUNTS FROM    0 TO  99999
+  LYING IN ENERGY RANGE  -1.0000     TO   8.0000     CM-1    
+
+  INITIALIZATION DONE.  TIME WAS   0.00 CPU SECS.         9 WORDS OF STORAGE USED.
+
+  ======================================================================================================================
+
+  TOTAL ANGULAR MOMENTUM JTOT =   0
+
+  EACH JTOT IS SPLIT INTO A MAXIMUM OF   2 DIFFERENT SYMMETRY BLOCKS
+
+  CALCULATIONS WILL BE FOR SYMMETRY BLOCK   2  ONLY
+
+  ================== Testing BOUND 2-channel particle in a box with finite boundary conditions: LDMD+ ==================
+
+  *******************************************  ANGULAR MOMENTUM JTOT  =   0  *******************************************
+  = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = 
+  **** WARNING:    2 OPEN CHANNELS DETECTED AT RMIN
+
+  NODE COUNT =    0 AT MINIMUM ENERGY =  -1.000000000     CM-1  
+  NODE COUNT =    5 AT MAXIMUM ENERGY =   8.000000000     CM-1  
+
+  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+  SEARCHING FOR INODE =    1 CORRESPONDING TO NODE COUNT =    1
+  **** WARNING:    1 OPEN CHANNELS DETECTED AT RMIN
+  **** WARNING:    1 OPEN CHANNELS DETECTED AT RMIN
+  **** WARNING:    1 OPEN CHANNELS DETECTED AT RMIN
+  **** WARNING:    1 OPEN CHANNELS DETECTED AT RMIN
+  **** WARNING:    1 OPEN CHANNELS DETECTED AT RMIN
+  **** WARNING:    1 OPEN CHANNELS DETECTED AT RMIN
+  **** WARNING:    1 OPEN CHANNELS DETECTED AT RMIN
+
+  CONVERGED ON NODE NUMBER     1 AT                               ENERGY =  6.0455053016E-02 CM-1  
+
+  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+  SEARCHING FOR INODE =    2 CORRESPONDING TO NODE COUNT =    2
+  **** WARNING:    1 OPEN CHANNELS DETECTED AT RMIN
+  **** WARNING:    1 OPEN CHANNELS DETECTED AT RMIN
+  **** WARNING:    1 OPEN CHANNELS DETECTED AT RMIN
+  **** WARNING:    1 OPEN CHANNELS DETECTED AT RMIN
+  **** WARNING:    1 OPEN CHANNELS DETECTED AT RMIN
+
+  CONVERGED ON NODE NUMBER     2 AT                               ENERGY =   1.123448569     CM-1  
+
+  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+  SEARCHING FOR INODE =    3 CORRESPONDING TO NODE COUNT =    3
+  **** WARNING:    2 OPEN CHANNELS DETECTED AT RMIN
+  **** WARNING:    1 OPEN CHANNELS DETECTED AT RMIN
+  **** WARNING:    1 OPEN CHANNELS DETECTED AT RMIN
+  **** WARNING:    1 OPEN CHANNELS DETECTED AT RMIN
+  **** WARNING:    1 OPEN CHANNELS DETECTED AT RMIN
+  **** WARNING:    1 OPEN CHANNELS DETECTED AT RMIN
+  **** WARNING:    1 OPEN CHANNELS DETECTED AT RMIN
+
+  CONVERGED ON NODE NUMBER     3 AT                               ENERGY =   4.126681997     CM-1  
+
+  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+  SEARCHING FOR INODE =    4 CORRESPONDING TO NODE COUNT =    4
+  **** WARNING:    2 OPEN CHANNELS DETECTED AT RMIN
+  **** WARNING:    2 OPEN CHANNELS DETECTED AT RMIN
+  **** WARNING:    2 OPEN CHANNELS DETECTED AT RMIN
+  **** WARNING:    2 OPEN CHANNELS DETECTED AT RMIN
+  **** WARNING:    2 OPEN CHANNELS DETECTED AT RMIN
+
+  CONVERGED ON NODE NUMBER     4 AT                               ENERGY =   5.060461044     CM-1  
+
+  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+  SEARCHING FOR INODE =    5 CORRESPONDING TO NODE COUNT =    5
+  **** WARNING:    2 OPEN CHANNELS DETECTED AT RMIN
+  **** WARNING:    2 OPEN CHANNELS DETECTED AT RMIN
+  **** WARNING:    2 OPEN CHANNELS DETECTED AT RMIN
+  **** WARNING:    2 OPEN CHANNELS DETECTED AT RMIN
+  **** WARNING:    2 OPEN CHANNELS DETECTED AT RMIN
+  **** WARNING:    2 OPEN CHANNELS DETECTED AT RMIN
+  **** WARNING:    2 OPEN CHANNELS DETECTED AT RMIN
+
+  CONVERGED ON NODE NUMBER     5 AT                               ENERGY =   6.123461039     CM-1  
+
+  ======================================================================================================================
+
+
+  -- BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND --
+ |                                                                            |
+ |          Bound states of interacting pairs of atoms and molecules          |
+ |                                                                            |
+ |              Copyright (C) 2018 J. M. Hutson & C. R. Le Sueur              |
+ |                                                                            |
+ |                               Version 2019.0 (beta)                        |
+ |                                                                            |
+ |                    This run used       0.04 cpu secs and                   |
+ |                 64 of the allocated   1000000 words of storage             |
+ |                                                                            |
+  -- BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND --
