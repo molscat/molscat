@@ -18,6 +18,6 @@ C
 
       IF (I.GT.0) P(I)=P(I)+EPS/R**IPOW
 C  LINE BELOW ONLY IN PERTRB-V2EXP
-      IF (I.GT.100) P(1)=P(1)+EPS*P(I-100)
+C     IF (I.GT.100) P(1)=P(1)+EPS*P(I-100)
       RETURN
       END

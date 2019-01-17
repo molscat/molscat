@@ -8,10 +8,9 @@ C  DATA FOR POTENTIAL-RELATED QUANTITIES
       INTEGER          :: NDGVL, NCONST, NRSQ, IREF, NVLBLK, NEXTRA,
      1                    NEXBLK, NEXTMS(MXOMEG), LAMBDA(MXLMDA)
 
-      DOUBLE PRECISION :: VCONST(MXOMEG), RM, EPSIL
+      DOUBLE PRECISION :: VCONST(MXOMEG), RSCALE, EPSIL
 
-      CHARACTER(10)    :: RMUNIT
-      CHARACTER(11)    :: EPUNIT
+      CHARACTER(10)    :: RUNAME, RMNAME, EPNAME
 c  VL is arranged: MXLAM, NCONST, NRSQ, NEXBLK (total NVLBLK)
 c                  |------------------|
 c                    normally = NPOTL
