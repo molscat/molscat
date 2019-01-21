@@ -5,7 +5,7 @@
      4                  SIGDEG, JSTATE, ISST, JECONV,
      5                  MINJTN, MAXJTN, NSTATE,
      6                  NQN, OTOL, DTOL, IPHSUM, ISIGU, IPARTU, ISAVEU,
-     6                  ISIGPR, IRSTRT, ICHAN, TEMP1, TEMP2, CENT,
+     6                  ISIGPR, IRSTRT, ICHAN, TEMP1, CENT,
      7                  EINT, IBOUND, INDUSE, INDACC, LNEVER,
      8                  CINT, JFIELD, IPRINT, LRESRT, PTIME)
 C  Copyright (C) 2018 J. M. Hutson & C. R. Le Sueur
@@ -51,7 +51,7 @@ C            NOT ACCUMULATED
 C
       PARAMETER (AWVMAX=0.2D0)
       DIMENSION NBASIS(1),JSINDX(1),L(1),INDLEV(1),CENT(1),EINT(1),
-     1          WVEC(1),TEMP1(1),TEMP2(1),SIG(1),
+     1          WVEC(1),TEMP1(1),SIG(1),
      1          INDUSE(1),INDACC(1),SIGTOT(1)
       DIMENSION SREAL(NOPEN,NOPEN),SIMAG(NOPEN,NOPEN),AKMAT(NOPEN,NOPEN)
       DOUBLE COMPLEX SCATLN,SCLEN
@@ -263,7 +263,7 @@ C
      1           SCLEN,ICHAN,IPRINT)
 
       IF (IPHSUM.GT.0) THEN
-        ESUM=EPSUM(AKMAT,NOPEN,TEMP1,TEMP2)
+        ESUM=EPSUM(AKMAT,NOPEN,TEMP1)
         IS=INRG-5*((INRG-1)/5)
         EPSM(IS)=ESUM
 

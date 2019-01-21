@@ -49,8 +49,8 @@ logical zinc,zorder
 double precision query(1),avgval,maxel
 
 integer, allocatable::setbeg(:),setend(:),point(:)
-double precision, allocatable::wks(:),tot_evec(:,:),sum_eval(:), &
-                               wks2(:,:),etmp(:)
+double precision, allocatable::tot_evec(:,:),sum_eval(:), &
+                               wks(:,:),etmp(:)
 logical, allocatable::zused(:)
 
 iend=ibeg+ncurr-1
@@ -73,10 +73,10 @@ endif
 
 ! diagonalise current W matrix
 ! on return evec contains current eigenvectors
-allocate (wks2(ncurr,ncurr),wks(nn))
-wks2=evec(ibeg:iend,ibeg:iend,i_op)
-call f02abf(wks2,ncurr,ncurr,eval(ibeg,i_op),evec(ibeg,ibeg,i_op),nn,wks,ifail)
-deallocate (wks2,wks)
+allocate (wks(ncurr,ncurr))
+wks=evec(ibeg:iend,ibeg:iend,i_op)
+call diagvc(wks,ncurr,ncurr,eval(ibeg,i_op),evec(ibeg,ibeg,i_op))
+deallocate (wks)
 
 ! check whether current operator is in Hamiltonian in order to know whether
 ! reordering might be necessary

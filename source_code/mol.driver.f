@@ -1497,7 +1497,7 @@ C  FORCE IRSTRT=0  SO THAT ISAVEU WILL BE UPDATED.
      2                                      NOPEN*NOPEN,IPRINT)
 C
                 IT1=IXNEXT             ! TEMP1/INDUSE
-                IT2=IXNEXT+MAX(N,NSIG) ! TEMP2/INDACC
+                IT2=IXNEXT+MAX(N,NSIG) ! INDACC
                 IXNEXT=IT2+MAX(N,NSIG)
                 CALL CHKSTR(NUSED)
                 CALL OUTPUT(JTOT,X(ISNB),X(ISJIND),X(ISL),X(ISINLV),
@@ -1507,7 +1507,7 @@ C
      4                      X(IDEG),X(ISJSTT),ISST,IECONV(IFXE),
      5                      MINJT(IFXE),MAXJT(IFXE),NSTATE,
      6                      NQN,OTOL,DTOL,IPHSUM,ISIGU,IPARTU,ISAVEU,
-     7                      ISIGPR,IRSTRX,ICHAN,X(IT1),X(IT2),X(ISCENT),
+     7                      ISIGPR,IRSTRX,ICHAN,X(IT1),X(ISCENT),
      8                      X(ISEINT),IBOUND,X(IT1),X(IT2),
      9                      X(ISNEVR),CINT,JFIELD,IPRINT,.FALSE.,PTIME)
                 IXNEXT=IT1

@@ -62,7 +62,6 @@ C  ---------------------------------------------------------------------
         CDIAG = CDIAG + ABS(W2P)
         CAY = CAY + SQRT(ABS(EIGNOW(I)))
 30    CONTINUE
-
       CAY = CAY / DBLE(NCH)
       CDIAG = CDIAG / DBLE(NCH)
 C  CAY NOW CONTAINS AVERAGE WAVEVECTOR MAGNITUDE

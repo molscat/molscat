@@ -123,7 +123,7 @@ BASIS_DEPS =      asrot.o base.o base9-1S_3Sigma_cpld.o base9-alk_alk.o \
 MODULES =   physical_constants.o efvs_module.o sizes_module.o potential_module.o \
             basis_module.o angles_module.o
 CLOCK =     gclock.o gdate.o 
-DIAG =      f02aaf-alloc.o f02abf-alloc.o
+DIAG =      diagvc.o diagvl.o
 LA_UTILS =  dgemul.o syminl-alloc.o dsyneg.o syminv.o
 #
 # set up dependencies ======================================================
