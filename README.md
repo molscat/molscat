@@ -1,4 +1,37 @@
 # molscat-source
+
+MOLSCAT is a general-purpose package for performing non-reactive quantum scattering calculations for atomic and molecular collisions using coupled-channel methods. Simple atom-molecule and molecule-molecule collision types are coded internally and additional ones may be handled with plug-in routines. Plug-in routines may include external magnetic, electric or photon fields (and combinations of them). Simple interaction potentials may be specified in input data and more complicated ones may be handled with plug-in routines.
+
+BOUND is a general-purpose package for performing calculations of bound-state energies in weakly bound atomic and molecular systems using coupled-channel methods. It solves the same sets of coupled equations as MOLSCAT, and can use the same plug-in routines if desired, but applies bound-state boundary conditions.
+
+FIELD is a development of BOUND that locates values of external fields at which a bound state exists with a specified energy.  One important use is to locate the positions of magnetically tunable Feshbach resonance positions in ultracold collisions.
+
+The three programs have different applications, but they use closely related methods and share many subroutines. They are therefore released with a single code base and are documented together.
+
+The programs have built-in capabilities to generate the coupled equations for
+- Atom + linear rigid rotor;
+- Atom + vibrating diatom;
+- Linear rigid rotor + linear rigid rotor;
+- Atom + symmetric top;
+- Atom + asymmetric top;
+- Asymmetric top + linear molecule;
+- Atom + rigid corrugated surface: diffractive (elastic) scattering.
+
+For these cases, the programs implement both close-coupling calculations, with no dynamical approximations, and a variety of approximate methods including the coupled states and helicity decoupling approximations. MOLSCAT can loop over total angular momentum (partial wave) to calculate elastic and inelastic integral cross sections and spectroscopic line-shape cross sections. Post-processors are available that read MOLSCAT S-matrix files and calculate differential cross sections, transport, relaxation and Senftleben-Beenakker cross sections, and fit the parameters of scattering resonances.
+
+The programs provide an interface for a plug-in basis-set suite to set up other sets of coupled equations. This capability has been widely used in bound-state and scattering calculations related to the spectroscopy of Van der Waals complexes and in ultracold atomic and molecular collisions. Basis-set suites can be programmed to handle a wide variety of interacting species and to take account of one or more external fields, such as electric, magnetic and photon fields. Two such suites are included in this distribution, for
+- closed-shell atom + triplet-Sigma diatom in a magnetic field;
+- Alkali-metal atom + alkali-metal atom in a magnetic field, including hyperfine structure.
+
+For low-energy scattering, MOLSCAT can calculate scattering lengths and effective ranges and can locate and characterize scattering resonances as a function of an external variable such as the magnetic field.
+
+Further information on the programs is available at
+MOLSCAT: https://arxiv.org/abs/1811.09584
+BOUND and FIELD: https://arxiv.org/abs/1811.09111
+The programs themselves are free software, distributed under the terms of the GNU General Public License, Version 3.
+
+The programs are written in FORTRAN 90, though with many features from older versions of FORTRAN. They have been tested with common FORTRAN compilers including gfortran and ifort. 
+
 This release contains the following files:
 
 1. Fortran source code files ending in .f or .f90, which contain the code needed to construct basic executables for MOLSCAT, BOUND or FIELD, together with some additional source code files needed to produce variants of MOLSCAT, BOUND or FIELD with special-purpose basis-set suites and/or potential routines, used for the example calculations outlined in the documentation.  These are contained in the directory source_code
