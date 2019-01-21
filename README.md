@@ -14,27 +14,15 @@ The programs are supplied with a makefile named GNUmakefile.  This is designed f
 
 GNUmakefile first needs to be adapted for your own working environment.  MOLSCAT, BOUND and FIELD executables make use of BLAS and LAPACK library routines.  If optimised versions of these library routines are available, include the libraries containing them in the variable LIBS.  Otherwise, download the requisite routines from the Netlib repository and include the object code files in the variable LIBUTILS.
 
-The routines used are:
+The BLAS routines used are:
 
-daxpy     dcopy     dgemm     dgemv     dgesv     dscal     dswap      dsyevx
+daxpy     dcopy     dgemm     dgemv     dgesv     dscal     dswap     dsymm     idamax
 
-dsymm     dsyr2k    dsytrf    dsytri    idamax    ilaenv    lsame
+and the LAPACK routines are:
 
-and their dependencies are:
+dgesv     dsyevr    dsyr2k    dsytrf    dsytri    ilaenv    lsame
 
-daxpy     dcopy     dgemm     dgemv     dger      dgetrf    dgetrf2    dgetrs
-
-dlacpy    dlae2     dlaebz    dlaev2    dlagtf    dlagts    dlarf      dlarfb
-
-dlarfg    dlarft    dlarnv    dlarst    dlartg    dlaruv    dlascl     dlaset
-
-dlasr     dlaswp    dlasyf    dlatrd    dorg2l    dorg2r    dorgql     dorgqr
-
-dorgtr    dorm2l    dorm2r    dormql    dormqr    dormtr    dscal      dstebz
-
-dstein    dsteqr    dsterf    dswap     dsymv     dsyr      dsyr2      dsyr2k
-
-dsytd2    dsytf2    dsytrd    dtrmm     dtrmv     dtrsm     ieeeck     xerbla
+Many of the LAPACK routines call other BLAS and LAPACK routines.
 
 GNUmakefile sets the compiler (in the variable Compiler) to be gfortran.  If gfortran is not available, or you prefer to use another compiler, you will need to change this.
 
@@ -56,4 +44,4 @@ GNUmakefile places the object files in the directory named in the variable OBJDI
 
 #$(PROGS) : %: $(EXECDIR)/%
 
-(this line is commented out because otherwise make will produce a warning about a circular dependency if the variable EXECDIR is set to the current directory.)
+(this line is commented out in GNUmakefile because otherwise make will produce a warning about a circular dependency if the variable EXECDIR is set to the current directory.)
