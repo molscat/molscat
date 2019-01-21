@@ -1,4 +1,4 @@
-# molscat-source
+# MOLSCAT
 
 MOLSCAT is a general-purpose package for performing non-reactive quantum scattering calculations for atomic and molecular collisions using coupled-channel methods. Simple atom-molecule and molecule-molecule collision types are coded internally and additional ones may be handled with plug-in routines. Plug-in routines may include external magnetic, electric or photon fields (and combinations of them). Simple interaction potentials may be specified in input data and more complicated ones may be handled with plug-in routines.
 
