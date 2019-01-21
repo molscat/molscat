@@ -28,9 +28,14 @@ For low-energy scattering, MOLSCAT can calculate scattering lengths and effectiv
 Further information on the programs is available at
 MOLSCAT: https://arxiv.org/abs/1811.09584
 BOUND and FIELD: https://arxiv.org/abs/1811.09111
-The programs themselves are free software, distributed under the terms of the GNU General Public License, Version 3.
+
+Full program documentation is in the file molscat_bound_field.pdf
+
+The programs are free software, distributed under the terms of the GNU General Public License, Version 3.
 
 The programs are written in FORTRAN 90, though with many features from older versions of FORTRAN. They have been tested with common FORTRAN compilers including gfortran and ifort. 
+
+--------------------------------------------------------------------------------
 
 This release contains the following files:
 
