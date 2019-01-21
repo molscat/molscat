@@ -26,8 +26,8 @@ The programs provide an interface for a plug-in basis-set suite to set up other 
 For low-energy scattering, MOLSCAT can calculate scattering lengths and effective ranges and can locate and characterize scattering resonances as a function of an external variable such as the magnetic field.
 
 Further information on the programs is available at
-MOLSCAT: https://arxiv.org/abs/1811.09584
-BOUND and FIELD: https://arxiv.org/abs/1811.09111
+- MOLSCAT: https://arxiv.org/abs/1811.09584
+- BOUND and FIELD: https://arxiv.org/abs/1811.09111
 
 Full program documentation is in the file molscat_bound_field.pdf
 
@@ -58,7 +58,7 @@ daxpy     dcopy     dgemm     dgemv     dgesv     dscal     dswap     dsymm     
 
 and the LAPACK routines are:
 
-dgesv     dsyevr    dsyr2k    dsytrf    dsytri    ilaenv    lsame
+dgesv     dlamch    dsyevr    dsyr2k    dsytrf    dsytri    ilaenv    lsame
 
 Many of the LAPACK routines call other BLAS and LAPACK routines.
 
