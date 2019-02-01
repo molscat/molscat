@@ -66,7 +66,7 @@ c  +ve only if H_intl is non-diagonal
 c  only +ve if L^2 is non-diagonal
       NRSQ = 0
 
-c  needed only for MOLSCAT and only if extra operators are required 
+c  needed only for MOLSCAT and only if extra operators are required
 c  to resolve degeneracies in H_intl
       NEXTRA = 0 ! number of extra operators
 
@@ -197,7 +197,7 @@ C=========================================================================
       ifunc=0
       do istate=1,nstate
         iqn1=jstate(istate,1)
-c       iqn2=jstate(istate,2) 
+c       iqn2=jstate(istate,2)
 c       ... etc
         lmin=0
         do ll=lmin,lmax

@@ -29,7 +29,7 @@ C
       ENDIF
       IF (IPRINT.GE.1) WRITE(6,*) ' JMH routine for Tiemann-style',
      1                            ' alkali dimer potentials'
-      IF (IPRINT.GE.1) WRITE(6,*) POTNAM 
+      IF (IPRINT.GE.1) WRITE(6,*) POTNAM
       IF (IPRINT.GE.2) WRITE(6,100) ' For potential ',NV,' at RLR =',
      1                              RLR(NV)
   100 FORMAT(1X,A,I2,A,G20.13)
@@ -48,9 +48,9 @@ C
       ELSEIF (GAMBET.EQ.1) THEN
         GAMMA = 7.D0 / (BETA * bohr_to_angstrom) - 1.D0
       ENDIF
-C 
+C
       VEXCH = AEX * RLR(NV)**GAMMA * EXP(-BETA*RLR(NV))
-      VLR = EXSIGN(NV)*VEXCH 
+      VLR = EXSIGN(NV)*VEXCH
      X    - C6/RLR(NV)**6 - C8/RLR(NV)**8 - C10/RLR(NV)**10
       IF (NEX.GT.0) VLR = VLR - CEX/RLR(NV)**NEX
       XI = (RLR(NV) - RM(NV))/(RLR(NV)+B(NV)*RM(NV))

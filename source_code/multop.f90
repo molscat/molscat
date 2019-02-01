@@ -68,7 +68,7 @@ endif
 
 if (iprint.ge.25 .and. i_op.gt.1) then
   call matprn(6,evec(ibeg,ibeg,i_op),nn,ncurr,ncurr, &
-              0,evec(ibeg,ibeg,i_op),' Submatrix of this operator',1)
+              2,evec(ibeg,ibeg,i_op),' Submatrix of this operator',1)
 endif
 
 ! diagonalise current W matrix
@@ -96,7 +96,7 @@ if (iprint.ge.15) then
   write(6,905)(eval(ibeg+ival,i_op),ival=0,ncurr-1)
 905 format(1x,(5(1x,1pg22.15)))
   if (iprint.ge.25) call matprn(6,evec(ibeg,ibeg,i_op),nn,ncurr,ncurr, &
-                                1,evec(ibeg,ibeg,i_op),' with eigenvectors',1)
+                                3,evec(ibeg,ibeg,i_op),' with eigenvectors',1)
 endif
 
 if (i_op .eq. n_ops) return ! end of recursion
@@ -115,7 +115,7 @@ do j_op=i_op+1,n_ops
   if (iprint.ge.30) then
     write(6,940) j_op
 940 format(/'  For operator #',i2,':')
-    call matprn(6,evec(ibeg,ibeg,j_op),nn,ncurr,ncurr,0, &
+    call matprn(6,evec(ibeg,ibeg,j_op),nn,ncurr,ncurr,2, &
                 evec(ibeg,ibeg,j_op),' transformed submatrix',1)
   endif
 enddo
@@ -213,7 +213,7 @@ if (iprint.ge.15) then
   write(6,*) ' Complete EIGENVALUES before reordering:'
   write(6,45) sum_eval(:)
   if (iprint.ge.25) call matprn(6,tot_evec,nn,nn,nn, &
-                                1,tot_evec,' Complete EIGENVECTORS:',1)
+                                3,tot_evec,' Complete EIGENVECTORS:',1)
 endif
 deallocate (tot_evec,sum_eval)
 
@@ -228,7 +228,7 @@ if (iprint.ge.15) then
   write(6,*) ' Complete EIGENVALUES after reordering:'
   write(6,45) eval(:,1)
   if (iprint.ge.25) call matprn(6,evec,nn,nn,nn, &
-                                1,evec,' Complete EIGENVECTORS:',1)
+                                3,evec,' Complete EIGENVECTORS:',1)
 endif
 
 45 format((3X,7(F22.15)))

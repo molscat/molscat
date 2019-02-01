@@ -130,7 +130,7 @@ c
       qname(5) = 'S_heavy'
       qname(6) = 'N-JTOT'
 
-c  number of symmetry blocks for each JTOT 
+c  number of symmetry blocks for each JTOT
       NBLOCK = 2
 
 c  number of quantum labels for a potential term
@@ -174,12 +174,12 @@ c  to store them in a JTOT-independent way, the values placed in
 c  iqn4 and iqn6 and LTOT-N and N-JTOT, respectively.
 
 c  In this initial base9, ISLT and ISHV are both 0, so LTOT = N = JTOT.
-c  
+c
       do iloop=1,2
         istate=0
         do iqn1=LLTL,LLTU                  ! L light
         do iqn2=0,iqn1                     ! Lambda
-        iqn3=ISLT                          ! S light                          
+        iqn3=ISLT                          ! S light
         do iqn4=-ISLT,ISLT                 ! LTOT-N
         iqn5=ISHV                          ! S heavy
         do iqn6=-ISHV,ISHV                 ! N-JTOT
@@ -221,9 +221,9 @@ C=========================================================================
       ifunc=0
       do istate=1,nstate
         LAMBDA=jstate(istate,2)
-        IF(LAMBDA.EQ.0 .AND. IBLOCK.EQ.1) CYCLE
+        IF (LAMBDA.EQ.0 .AND. IBLOCK.EQ.1) CYCLE
         LTOT=JTOT+jstate(istate,4)+jstate(istate,6)
-        if(LAMBDA.GT.LTOT) CYCLE 
+        if (LAMBDA.GT.LTOT) CYCLE
 c  now counting only those basis functions included in the current symmetry block
           ifunc=ifunc+1
           if (.not.lcount) then
@@ -355,30 +355,30 @@ c  of the row and column and of the potential (or H_intl) expansion term
             if (ipotl.le.mxlam) then
               vl(ipotl, irc) = 0.D0 ! the ipotl-th term in the potential
 c  the ipotl-mxlam-nconst-th term in the interaction potential: diagonal if qns match
-              if(i1row.eq.i1col .and. i2row.eq.i2col .and.
-     1           i3row.eq.i3col .and. i4row.eq.i4col .and.
-     2           i5row.eq.i5col .and. i6row.eq.i6col) then
-                   if(i1row.eq.lam(1+3*(ipotl-1)) .and.
-     1                i2row.eq.lam(2+3*(ipotl-1)) .and.
-     2                i3row.eq.lam(3+3*(ipotl-1))) 
-     3                vl(ipotl, irc) = 1.D0 
+              if (i1row.eq.i1col .and. i2row.eq.i2col .and.
+     1            i3row.eq.i3col .and. i4row.eq.i4col .and.
+     2            i5row.eq.i5col .and. i6row.eq.i6col) then
+                   if (i1row.eq.lam(1+3*(ipotl-1)) .and.
+     1                 i2row.eq.lam(2+3*(ipotl-1)) .and.
+     2                 i3row.eq.lam(3+3*(ipotl-1)))
+     3                 vl(ipotl, irc) = 1.D0
               endif
             elseif (ipotl.le.mxlam+nconst) then ! not used here because NCONST=0
               vl(ipotl, irc) = 0.D0 ! the ipotl-mxlam-th term in H_intl
             elseif (ipotl.le.mxlam+nconst+nrsq) then
-              vl(ipotl, irc) = 0.D0 
+              vl(ipotl, irc) = 0.D0
 c  the ipotl-mxlam-nconst-th term in L^2 ! zero unless diagonal in all but i2 (Lambda)
-              if(i1row.eq.i1col .and.
-     1           i3row.eq.i3col .and. i4row.eq.i4col .and.
-     2           i5row.eq.i5col .and. i6row.eq.i6col) then
-                if(i2row.eq.i2col) then
-                  vl(ipotl, irc) = 
+              if (i1row.eq.i1col .and.
+     1            i3row.eq.i3col .and. i4row.eq.i4col .and.
+     2            i5row.eq.i5col .and. i6row.eq.i6col) then
+                if (i2row.eq.i2col) then
+                  vl(ipotl, irc) =
      1              dble(lrow*(lrow+1) + i1row*(i1row+1) - 2*i2row**2) ! diagonal
                 else
-                  if(abs(i2row-i2col).eq.1) vl(ipotl, irc) = 
+                  if (abs(i2row-i2col).eq.1) vl(ipotl, irc) =
      1              sqrt(dble((i1row*(i1row+1)-i2row*i2col)
      2                       *(lrow*(lrow+1)-i2row*i2col)))          ! Coriolis
-                  if(i2row.eq.0 .or. i2col.eq.0)
+                  if (i2row.eq.0 .or. i2col.eq.0)
      1              vl(ipotl, irc) = sqrt(2.D0) * vl(ipotl, irc)     ! Sym factor
                 endif
               endif

@@ -57,6 +57,8 @@ C  INTERNAL VARIABLES
       LOGICAL ADIAB
       DOUBLE PRECISION WREF,WVAL
       DOUBLE PRECISION, PARAMETER:: ZERTOL=1D-10
+      CHARACTER(1) PLUR(2)
+      DATA PLUR /' ','S'/
 
 c  ADIAB MEANS INITIALISE IN DIABATIC BASIS
       ADIAB=(ZOUT .AND. ADIAMN) .OR. (.NOT.ZOUT .AND. ADIAMX)
@@ -67,7 +69,7 @@ c     IF (IREAD) THEN
 c       READ(ISCRU) W
 c       IF (ADIAB) THEN
 c         READ(ISCRU) EVAL,EVECS
-c  If we revive the IREAD/IWRITE capability, 
+c  If we revive the IREAD/IWRITE capability,
 c  I think this shift needs to be inside the read section
 c         DO I=1,N
 c           EVAL(I)=EVAL(I)-ESHIFT
@@ -132,10 +134,11 @@ C  OPEN CHANNEL
 C
       IF (NOPEN.GT.0) THEN
         IF (ZOUT) THEN
-          IF (IPRINT.GE.3) WRITE(6,601) NOPEN,'RMIN'
+          IF (IPRINT.GE.3) WRITE(6,601) NOPEN,PLUR(MIN(NOPEN,2)),'RMIN'
         ELSEIF (IPRINT.GE.8) THEN
-          WRITE(6,601) NOPEN,'RMAX'
-  601     FORMAT('  **** WARNING:',I5,' OPEN CHANNELS DETECTED AT ',A4)
+          WRITE(6,601) NOPEN,PLUR(MIN(NOPEN,2)),'RMAX'
+  601     FORMAT('  **** WARNING:',I5,' OPEN CHANNEL',A,
+     1           ' DETECTED AT ',A4)
         ENDIF
       ENDIF
 C

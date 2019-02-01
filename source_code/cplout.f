@@ -5,9 +5,15 @@ C
 C  THIS ROUTINE PRINTS OUT THE COUPLING MATRIX ELEMENTS.
       IMPLICIT DOUBLE PRECISION (A-H,O-Z)
       DIMENSION IV(1), VL(1)
+      PARAMETER (NCOLS=10)
+      CHARACTER(20) F11,F20
+      CHARACTER(2) CNCOLS
 C
       COMMON /VLFLAG/ IVLFL
 
+      WRITE(CNCOLS,'(I2)') NCOLS
+      F11='(/'//CNCOLS//'(9X,I3))'
+      F20='(I4,'//CNCOLS//'(1X,F11.5))'
       WRITE(6,602) NPOTL
   602 FORMAT(/'  COUPLING MATRIX ELEMENTS BETWEEN CHANNELS FOR',I4,
      1       ' EXPANSION TERMS.')
@@ -26,24 +32,24 @@ C
       ELSE
         DO 900 LL=1,NPOTL
           WRITE(6,*) ' POTENTIAL TERM',LL
-          ITIME=(N+9)/10
+          ITIME=(N+NCOLS-1)/NCOLS
           KF=0
           KF1=KF
           WRITE(6,16)
    16     FORMAT(/)
           J1=1
           DO 800 KK=1,ITIME
-            KS=(KK-1)*10 + 1
-            KF=KS + 9
+            KS=(KK-1)*NCOLS + 1
+            KF=KS + NCOLS-1
             KF1=KF
             IF (KK.EQ.ITIME) KF1=MIN(N,KF)
-            WRITE(6,11) (I,I=KS,KF1)
+            WRITE(6,FMT=F11) (I,I=KS,KF1)
    11       FORMAT(/10(9X,I3))
             J1=KS
             DO 700 JJ=J1,N
               KF1=MIN(JJ,KF)
               II1=JJ*(JJ-1)/2
-              WRITE(6,20) JJ,(VL(NPOTL*(II1+I-1)+LL),I=KS,KF1)
+              WRITE(6,FMT=F20) JJ,(VL(NPOTL*(II1+I-1)+LL),I=KS,KF1)
    20         FORMAT(I4,10(1X,F11.5))
   700       CONTINUE
             WRITE(6,16)

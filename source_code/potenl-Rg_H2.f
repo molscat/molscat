@@ -521,7 +521,7 @@ C
   680   P(IND) = VPOT
       RETURN
       END
- 
+
 C***********************************************************************
       SUBROUTINE VHOM (RR,R0,J,AA,C8,C6,BETA,RM6,RM8,REP,VLAM,IDAMP)
 C  SUBROUTINE TO GENERATE THE LEGENDRE RADIAL STRENGTH FUNCTIONS

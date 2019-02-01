@@ -54,7 +54,7 @@ C
 C  STATEMENT FUNCTIONS TO CHECK:
 C  (1) WHETHER CERTAIN 'DIAGONALITY' CONDITION IS FULFILLED
       DIAG(J1,K1,L1,M1,N1,J2,K2,L2,M2,N2)=J1.EQ.J2 .AND. K1.EQ.K2 .AND.
-     &                                    L1.EQ.L2 .AND. M1.EQ.M2 .AND. 
+     &                                    L1.EQ.L2 .AND. M1.EQ.M2 .AND.
      &                                    N1.EQ.N2
 C  (2) WHETHER A NUMBER IS ODD
       ODD(NMBR)=2*(NMBR/2).NE.NMBR

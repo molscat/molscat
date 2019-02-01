@@ -755,7 +755,7 @@ C  FORMAT FOR EIGENPHASE SUM (LENGTH 22)
                                        ! LINE OF HEADER
           WRITE(C2,'(I3)') L2
           L3=LEFVN+LEFVU+5-19 ! SPACES NEEDED TO PAD EFVS
-                              ! 5 IS NUMBER OF CHARACTERS USED FOR 
+                              ! 5 IS NUMBER OF CHARACTERS USED FOR
                               !   BRACKETS AND SPACING IN F842 BELOW
                               ! 19 IS LENGTH OF NUMBER IN F242 BELOW
           WRITE(C3,'(I3)') L3

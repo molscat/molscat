@@ -296,7 +296,7 @@ C
             WRITE(IPSI,FMT=F2000) R,PSIMID/SQRT(ANORM)
           ELSE
             WRITE(IPSI) R,PSIMID/SQRT(ANORM)
-          ENDIF 
+          ENDIF
         ENDDO
         CLOSE (IPSISC)
         CLOSE (IWAVSC)

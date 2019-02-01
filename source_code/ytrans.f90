@@ -223,7 +223,7 @@ do LL=Lmin,Lmax
       write(6,'(/,a)') ' Asymptotic Hamiltonian'
     endif
     write(6,'(a,I3,a,I3)') ' submatrix',nn,'*',nn
-    call MATPRN(6,Wsub,nn,nn,nn,0,Wsub, 'submatrix is:',1)
+    call MATPRN(6,Wsub,nn,nn,nn,2,Wsub, 'submatrix is:',1)
   endif
 
 !  recursively (if necessary) diagonalise submatrices of asymptotic
@@ -301,7 +301,7 @@ do LL=Lmin,Lmax
 
 
 ! if (jprint.ge.20) then
-!   call MATPRN(6,Wsub,nn,nn,nn,1,Wsub,' EIGENVECTORS:',1)
+!   call MATPRN(6,Wsub,nn,nn,nn,3,Wsub,' EIGENVECTORS:',1)
 ! endif
 
 !  check for degeneracies
@@ -403,8 +403,8 @@ if (lquiet) then
 ! this is original code
 ! Y=matmul(matmul(transpose(EVEC),Y),EVEC)
   if (iprint.ge.20) then
-    call matprn(6,EVEC,N,N,N,1,EVEC,' Eigenvectors (last time):',1)
-    call matprn(6,Y,N,N,N,1,Y,' transformed Y:',1)
+    call MATPRN(6,EVEC,N,N,N,3,EVEC,' Eigenvectors (last time):',1)
+    call MATPRN(6,Y,N,N,N,3,Y,' transformed Y:',1)
     do ll=1,NPOTL
       it=ll
       do j=1,N
@@ -415,9 +415,9 @@ if (lquiet) then
       enddo
       enddo
       write (6,*) ' For potential term ',ll,':'
-      if (iprint.ge.23) call matprn(6,wks,N,N,N,0,wks,'original VL',1)
+      if (iprint.ge.23) call MATPRN(6,wks,N,N,N,2,wks,'original VL',1)
       call trnsfm(eval,wks(:,:,1),wks(:,:,2),N,.false.,.false.)
-      call matprn(6,wks,N,N,N,0,wks,'transformed VL',1)
+      call MATPRN(6,wks,N,N,N,2,wks,'transformed VL',1)
     enddo
   endif
   deallocate (eval,wks)
