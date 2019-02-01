@@ -7,7 +7,7 @@
  |                                                                            |
  |                               Version 2019.0 (beta)                        |
  |                                                                            |
- |                       Run on 01 Feb 2019   at 00:00:25                     |
+ |                       Run on 01 Feb 2019   at 10:30:14                     |
  |                                                                            |
   ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
 
@@ -200,7 +200,7 @@
 
   SYMMETRY BLOCK =   2
 
-  JTOT =    5   IBLOCK =   2   ENERGY(   1) =   110.00000000     CM-1
+  JTOT =    5,  SYMMETRY BLOCK =   2,  ENERGY(   1) =   110.00000000     CM-1
 
   CONVERGENCE TESTS: STEPS WILL HALVE EACH TIME
 
@@ -208,7 +208,7 @@
 
   ------------------------------- NH3-He on simple analytic potential; STEPS convergence -------------------------------
 
-  JTOT =    5   IBLOCK =   2   ENERGY(   2) =   110.00000000     CM-1
+  JTOT =    5,  SYMMETRY BLOCK =   2,  ENERGY(   2) =   110.00000000     CM-1
 
   FOR RMIN =   3.00 STEPS =  40.00 RMID =   8.00 STEPL =  40.00 RMAX =      30.00
   RMS CHANGE IN S-MATRIX ELEMENTS IS         5.29943E-06     LOG IS  -5.276
@@ -216,7 +216,7 @@
 
   ------------------------------- NH3-He on simple analytic potential; STEPS convergence -------------------------------
 
-  JTOT =    5   IBLOCK =   2   ENERGY(   3) =   110.00000000     CM-1
+  JTOT =    5,  SYMMETRY BLOCK =   2,  ENERGY(   3) =   110.00000000     CM-1
 
   FOR RMIN =   3.00 STEPS =  20.00 RMID =   8.00 STEPL =  20.00 RMAX =      30.00
   RMS CHANGE IN S-MATRIX ELEMENTS IS         6.71284E-06     LOG IS  -5.173
@@ -236,7 +236,7 @@
  |                                                                            |
  |                               Version 2019.0 (beta)                        |
  |                                                                            |
- |                    This run used       4.13 cpu secs and                   |
+ |                    This run used       3.74 cpu secs and                   |
  |             199191 of the allocated   1000000 words of storage             |
  |                                                                            |
   ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
@@ -249,7 +249,7 @@
  |                                                                            |
  |                               Version 2019.0 (beta)                        |
  |                                                                            |
- |                       Run on 01 Feb 2019   at 00:00:29                     |
+ |                       Run on 01 Feb 2019   at 10:30:18                     |
  |                                                                            |
   ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
 
@@ -442,7 +442,7 @@
 
   SYMMETRY BLOCK =   2
 
-  JTOT =    5   IBLOCK =   2   ENERGY(   1) =   110.00000000     CM-1
+  JTOT =    5,  SYMMETRY BLOCK =   2,  ENERGY(   1) =   110.00000000     CM-1
 
   CONVERGENCE TESTS: DRS WILL DOUBLE EACH TIME
 
@@ -450,7 +450,7 @@
 
   -------------------------------- NH3-He on simple analytic potential: DR convergence ---------------------------------
 
-  JTOT =    5   IBLOCK =   2   ENERGY(   2) =   110.00000000     CM-1
+  JTOT =    5,  SYMMETRY BLOCK =   2,  ENERGY(   2) =   110.00000000     CM-1
 
   FOR RMIN =   3.00 RMID =   8.00 RMAX =      30.00 DR =  0.0400
   RMS CHANGE IN S-MATRIX ELEMENTS IS         7.65642E-06     LOG IS  -5.116
@@ -458,7 +458,7 @@
 
   -------------------------------- NH3-He on simple analytic potential: DR convergence ---------------------------------
 
-  JTOT =    5   IBLOCK =   2   ENERGY(   3) =   110.00000000     CM-1
+  JTOT =    5,  SYMMETRY BLOCK =   2,  ENERGY(   3) =   110.00000000     CM-1
 
   FOR RMIN =   3.00 RMID =   8.00 RMAX =      30.00 DR =  0.0800
   RMS CHANGE IN S-MATRIX ELEMENTS IS         6.73937E-06     LOG IS  -5.171
@@ -478,7 +478,7 @@
  |                                                                            |
  |                               Version 2019.0 (beta)                        |
  |                                                                            |
- |                    This run used       3.82 cpu secs and                   |
+ |                    This run used       3.92 cpu secs and                   |
  |             199191 of the allocated   1000000 words of storage             |
  |                                                                            |
   ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
@@ -491,7 +491,7 @@
  |                                                                            |
  |                               Version 2019.0 (beta)                        |
  |                                                                            |
- |                       Run on 01 Feb 2019   at 00:00:33                     |
+ |                       Run on 01 Feb 2019   at 10:30:22                     |
  |                                                                            |
   ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
 
@@ -684,13 +684,13 @@
 
   SYMMETRY BLOCK =   2
 
-  JTOT =    5   IBLOCK =   2   ENERGY(   1) =   110.00000000     CM-1
+  JTOT =    5,  SYMMETRY BLOCK =   2,  ENERGY(   1) =   110.00000000     CM-1
 
   CONVERGENCE TESTS: RMIN WILL INCREASE BY  0.1000     EACH TIME
 
   ------------------------------- NH3-He on simple analytic potential: RMIN convergence --------------------------------
 
-  JTOT =    5   IBLOCK =   2   ENERGY(   2) =   110.00000000     CM-1
+  JTOT =    5,  SYMMETRY BLOCK =   2,  ENERGY(   2) =   110.00000000     CM-1
 
   FOR RMIN =   3.00 STEPS =  40.00 RMID =   8.00 STEPL =  40.00 RMAX =      30.00
   RMS CHANGE IN S-MATRIX ELEMENTS IS         1.88835E-10     LOG IS  -9.724
@@ -698,7 +698,7 @@
 
   ------------------------------- NH3-He on simple analytic potential: RMIN convergence --------------------------------
 
-  JTOT =    5   IBLOCK =   2   ENERGY(   3) =   110.00000000     CM-1
+  JTOT =    5,  SYMMETRY BLOCK =   2,  ENERGY(   3) =   110.00000000     CM-1
 
   FOR RMIN =   3.00 STEPS =  40.00 RMID =   8.00 STEPL =  40.00 RMAX =      30.00
   RMS CHANGE IN S-MATRIX ELEMENTS IS         3.86264E-10     LOG IS  -9.413
@@ -718,7 +718,7 @@
  |                                                                            |
  |                               Version 2019.0 (beta)                        |
  |                                                                            |
- |                    This run used       3.86 cpu secs and                   |
+ |                    This run used       3.40 cpu secs and                   |
  |             199191 of the allocated   1000000 words of storage             |
  |                                                                            |
   ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
@@ -731,7 +731,7 @@
  |                                                                            |
  |                               Version 2019.0 (beta)                        |
  |                                                                            |
- |                       Run on 01 Feb 2019   at 00:00:37                     |
+ |                       Run on 01 Feb 2019   at 10:30:25                     |
  |                                                                            |
   ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
 
@@ -924,13 +924,13 @@
 
   SYMMETRY BLOCK =   2
 
-  JTOT =    5   IBLOCK =   2   ENERGY(   1) =   110.00000000     CM-1
+  JTOT =    5,  SYMMETRY BLOCK =   2,  ENERGY(   1) =   110.00000000     CM-1
 
   CONVERGENCE TESTS: RMAX WILL DECREASE BY   1.000     EACH TIME
 
   ------------------------------- NH3-He on simple analytic potential: RMAX convergence --------------------------------
 
-  JTOT =    5   IBLOCK =   2   ENERGY(   2) =   110.00000000     CM-1
+  JTOT =    5,  SYMMETRY BLOCK =   2,  ENERGY(   2) =   110.00000000     CM-1
 
   FOR RMIN =   3.00 STEPS =  40.00 RMID =   8.00 STEPL =  40.00 RMAX =      30.00
   RMS CHANGE IN S-MATRIX ELEMENTS IS         9.05439E-05     LOG IS  -4.043
@@ -938,7 +938,7 @@
 
   ------------------------------- NH3-He on simple analytic potential: RMAX convergence --------------------------------
 
-  JTOT =    5   IBLOCK =   2   ENERGY(   3) =   110.00000000     CM-1
+  JTOT =    5,  SYMMETRY BLOCK =   2,  ENERGY(   3) =   110.00000000     CM-1
 
   FOR RMIN =   3.00 STEPS =  40.00 RMID =   8.00 STEPL =  40.00 RMAX =      30.00
   RMS CHANGE IN S-MATRIX ELEMENTS IS         1.87587E-04     LOG IS  -3.727
@@ -958,7 +958,7 @@
  |                                                                            |
  |                               Version 2019.0 (beta)                        |
  |                                                                            |
- |                    This run used       3.69 cpu secs and                   |
+ |                    This run used       3.68 cpu secs and                   |
  |             199191 of the allocated   1000000 words of storage             |
  |                                                                            |
   ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
@@ -971,7 +971,7 @@
  |                                                                            |
  |                               Version 2019.0 (beta)                        |
  |                                                                            |
- |                       Run on 01 Feb 2019   at 00:00:41                     |
+ |                       Run on 01 Feb 2019   at 10:30:29                     |
  |                                                                            |
   ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
 
@@ -1155,129 +1155,129 @@
 
   =========================== NH3-He on simple analytic potential: close-coupling x-sections ===========================
 
-  FOR JTOT =    0 IBLOCK =  1 ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  9.31E-01 &   2.54E-02
+  FOR JTOT =    0, SYMMETRY BLOCK =  1, ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  9.31E-01 &   2.54E-02
 
-  FOR JTOT =    0 IBLOCK =  2 ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  1.10E+00 &   2.27E-02
+  FOR JTOT =    0, SYMMETRY BLOCK =  2, ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  1.10E+00 &   2.27E-02
 
-  FOR JTOT =    1 IBLOCK =  1 ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  5.46E+00 &   9.05E-02
+  FOR JTOT =    1, SYMMETRY BLOCK =  1, ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  5.46E+00 &   9.05E-02
 
-  FOR JTOT =    1 IBLOCK =  2 ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  4.86E+00 &   9.04E-02
+  FOR JTOT =    1, SYMMETRY BLOCK =  2, ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  4.86E+00 &   9.04E-02
 
-  FOR JTOT =    2 IBLOCK =  1 ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  6.53E+00 &   3.33E-01
+  FOR JTOT =    2, SYMMETRY BLOCK =  1, ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  6.53E+00 &   3.33E-01
 
-  FOR JTOT =    2 IBLOCK =  2 ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  8.47E+00 &   3.69E-01
+  FOR JTOT =    2, SYMMETRY BLOCK =  2, ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  8.47E+00 &   3.69E-01
 
-  FOR JTOT =    3 IBLOCK =  1 ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  2.48E+01 &   5.29E-01
+  FOR JTOT =    3, SYMMETRY BLOCK =  1, ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  2.48E+01 &   5.29E-01
 
-  FOR JTOT =    3 IBLOCK =  2 ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  2.25E+01 &   4.27E-01
+  FOR JTOT =    3, SYMMETRY BLOCK =  2, ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  2.25E+01 &   4.27E-01
 
-  FOR JTOT =    4 IBLOCK =  1 ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  1.88E+01 &   1.60E+00
+  FOR JTOT =    4, SYMMETRY BLOCK =  1, ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  1.88E+01 &   1.60E+00
 
-  FOR JTOT =    4 IBLOCK =  2 ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  2.54E+01 &   4.89E-01
+  FOR JTOT =    4, SYMMETRY BLOCK =  2, ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  2.54E+01 &   4.89E-01
 
-  FOR JTOT =    5 IBLOCK =  1 ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  2.71E+01 &   7.90E-01
+  FOR JTOT =    5, SYMMETRY BLOCK =  1, ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  2.71E+01 &   7.90E-01
 
-  FOR JTOT =    5 IBLOCK =  2 ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  2.13E+01 &   5.95E-01
+  FOR JTOT =    5, SYMMETRY BLOCK =  2, ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  2.13E+01 &   5.95E-01
 
-  FOR JTOT =    6 IBLOCK =  1 ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  1.50E+01 &   3.30E-01
+  FOR JTOT =    6, SYMMETRY BLOCK =  1, ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  1.50E+01 &   3.30E-01
 
-  FOR JTOT =    6 IBLOCK =  2 ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  2.00E+01 &   4.12E-01
+  FOR JTOT =    6, SYMMETRY BLOCK =  2, ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  2.00E+01 &   4.12E-01
 
-  FOR JTOT =    7 IBLOCK =  1 ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  1.39E+01 &   4.72E-01
+  FOR JTOT =    7, SYMMETRY BLOCK =  1, ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  1.39E+01 &   4.72E-01
 
-  FOR JTOT =    7 IBLOCK =  2 ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  1.16E+01 &   3.52E-01
+  FOR JTOT =    7, SYMMETRY BLOCK =  2, ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  1.16E+01 &   3.52E-01
 
-  FOR JTOT =    8 IBLOCK =  1 ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  7.46E+00 &   5.00E-01
+  FOR JTOT =    8, SYMMETRY BLOCK =  1, ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  7.46E+00 &   5.00E-01
 
-  FOR JTOT =    8 IBLOCK =  2 ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  1.28E+01 &   8.31E-01
+  FOR JTOT =    8, SYMMETRY BLOCK =  2, ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  1.28E+01 &   8.31E-01
 
-  FOR JTOT =    9 IBLOCK =  1 ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  1.48E+01 &   7.38E-01
+  FOR JTOT =    9, SYMMETRY BLOCK =  1, ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  1.48E+01 &   7.38E-01
 
-  FOR JTOT =    9 IBLOCK =  2 ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  8.59E+00 &   4.44E-01
+  FOR JTOT =    9, SYMMETRY BLOCK =  2, ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  8.59E+00 &   4.44E-01
 
-  FOR JTOT =   10 IBLOCK =  1 ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  9.05E+00 &   3.23E-01
+  FOR JTOT =   10, SYMMETRY BLOCK =  1, ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  9.05E+00 &   3.23E-01
 
-  FOR JTOT =   10 IBLOCK =  2 ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  8.77E+00 &   3.22E-01
+  FOR JTOT =   10, SYMMETRY BLOCK =  2, ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  8.77E+00 &   3.22E-01
 
-  FOR JTOT =   11 IBLOCK =  1 ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  1.19E+01 &   2.85E-01
+  FOR JTOT =   11, SYMMETRY BLOCK =  1, ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  1.19E+01 &   2.85E-01
 
-  FOR JTOT =   11 IBLOCK =  2 ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  1.16E+01 &   2.84E-01
+  FOR JTOT =   11, SYMMETRY BLOCK =  2, ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  1.16E+01 &   2.84E-01
 
-  FOR JTOT =   12 IBLOCK =  1 ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  1.38E+01 &   2.32E-01
+  FOR JTOT =   12, SYMMETRY BLOCK =  1, ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  1.38E+01 &   2.32E-01
 
-  FOR JTOT =   12 IBLOCK =  2 ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  1.36E+01 &   2.29E-01
+  FOR JTOT =   12, SYMMETRY BLOCK =  2, ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  1.36E+01 &   2.29E-01
 
-  FOR JTOT =   13 IBLOCK =  1 ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  1.39E+01 &   1.72E-01
+  FOR JTOT =   13, SYMMETRY BLOCK =  1, ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  1.39E+01 &   1.72E-01
 
-  FOR JTOT =   13 IBLOCK =  2 ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  1.38E+01 &   1.71E-01
+  FOR JTOT =   13, SYMMETRY BLOCK =  2, ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  1.38E+01 &   1.71E-01
 
-  FOR JTOT =   14 IBLOCK =  1 ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  1.25E+01 &   1.69E-01
+  FOR JTOT =   14, SYMMETRY BLOCK =  1, ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  1.25E+01 &   1.69E-01
 
-  FOR JTOT =   14 IBLOCK =  2 ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  1.26E+01 &   1.68E-01
+  FOR JTOT =   14, SYMMETRY BLOCK =  2, ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  1.26E+01 &   1.68E-01
 
-  FOR JTOT =   15 IBLOCK =  1 ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  1.14E+01 &   1.37E-01
+  FOR JTOT =   15, SYMMETRY BLOCK =  1, ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  1.14E+01 &   1.37E-01
 
-  FOR JTOT =   15 IBLOCK =  2 ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  1.16E+01 &   1.40E-01
+  FOR JTOT =   15, SYMMETRY BLOCK =  2, ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  1.16E+01 &   1.40E-01
 
-  FOR JTOT =   16 IBLOCK =  1 ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  1.18E+01 &   7.63E-02
+  FOR JTOT =   16, SYMMETRY BLOCK =  1, ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  1.18E+01 &   7.63E-02
 
-  FOR JTOT =   16 IBLOCK =  2 ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  1.19E+01 &   8.06E-02
+  FOR JTOT =   16, SYMMETRY BLOCK =  2, ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  1.19E+01 &   8.06E-02
 
-  FOR JTOT =   17 IBLOCK =  1 ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  1.06E+01 &   2.95E-02
+  FOR JTOT =   17, SYMMETRY BLOCK =  1, ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  1.06E+01 &   2.95E-02
 
-  FOR JTOT =   17 IBLOCK =  2 ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  1.06E+01 &   3.21E-02
+  FOR JTOT =   17, SYMMETRY BLOCK =  2, ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  1.06E+01 &   3.21E-02
 
-  FOR JTOT =   18 IBLOCK =  1 ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  8.53E+00 &   9.99E-03
+  FOR JTOT =   18, SYMMETRY BLOCK =  1, ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  8.53E+00 &   9.99E-03
 
-  FOR JTOT =   18 IBLOCK =  2 ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  8.44E+00 &   1.10E-02
+  FOR JTOT =   18, SYMMETRY BLOCK =  2, ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  8.44E+00 &   1.10E-02
 
-  FOR JTOT =   19 IBLOCK =  1 ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  6.06E+00 &   3.51E-03
+  FOR JTOT =   19, SYMMETRY BLOCK =  1, ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  6.06E+00 &   3.51E-03
 
-  FOR JTOT =   19 IBLOCK =  2 ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  5.95E+00 &   3.89E-03
+  FOR JTOT =   19, SYMMETRY BLOCK =  2, ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  5.95E+00 &   3.89E-03
 
-  FOR JTOT =   20 IBLOCK =  1 ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  3.96E+00 &   1.33E-03
+  FOR JTOT =   20, SYMMETRY BLOCK =  1, ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  3.96E+00 &   1.33E-03
 
-  FOR JTOT =   20 IBLOCK =  2 ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  3.86E+00 &   1.48E-03
+  FOR JTOT =   20, SYMMETRY BLOCK =  2, ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  3.86E+00 &   1.48E-03
 
-  FOR JTOT =   21 IBLOCK =  1 ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  2.52E+00 &   5.47E-04
+  FOR JTOT =   21, SYMMETRY BLOCK =  1, ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  2.52E+00 &   5.47E-04
 
-  FOR JTOT =   21 IBLOCK =  2 ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  2.45E+00 &   6.09E-04
+  FOR JTOT =   21, SYMMETRY BLOCK =  2, ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  2.45E+00 &   6.09E-04
 
-  FOR JTOT =   22 IBLOCK =  1 ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  1.61E+00 &   2.37E-04
+  FOR JTOT =   22, SYMMETRY BLOCK =  1, ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  1.61E+00 &   2.37E-04
 
-  FOR JTOT =   22 IBLOCK =  2 ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  1.57E+00 &   2.65E-04
+  FOR JTOT =   22, SYMMETRY BLOCK =  2, ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  1.57E+00 &   2.65E-04
 
-  FOR JTOT =   23 IBLOCK =  1 ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  1.05E+00 &   1.06E-04
+  FOR JTOT =   23, SYMMETRY BLOCK =  1, ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  1.05E+00 &   1.06E-04
 
-  FOR JTOT =   23 IBLOCK =  2 ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  1.02E+00 &   1.19E-04
+  FOR JTOT =   23, SYMMETRY BLOCK =  2, ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  1.02E+00 &   1.19E-04
 
-  FOR JTOT =   24 IBLOCK =  1 ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  7.01E-01 &   4.92E-05
+  FOR JTOT =   24, SYMMETRY BLOCK =  1, ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  7.01E-01 &   4.92E-05
 
-  FOR JTOT =   24 IBLOCK =  2 ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  6.83E-01 &   5.54E-05
+  FOR JTOT =   24, SYMMETRY BLOCK =  2, ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  6.83E-01 &   5.54E-05
 
-  FOR JTOT =   25 IBLOCK =  1 ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  4.77E-01 &   2.32E-05
+  FOR JTOT =   25, SYMMETRY BLOCK =  1, ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  4.77E-01 &   2.32E-05
 
-  FOR JTOT =   25 IBLOCK =  2 ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  4.64E-01 &   2.63E-05
+  FOR JTOT =   25, SYMMETRY BLOCK =  2, ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  4.64E-01 &   2.63E-05
 
-  FOR JTOT =   26 IBLOCK =  1 ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  3.30E-01 &   1.10E-05
+  FOR JTOT =   26, SYMMETRY BLOCK =  1, ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  3.30E-01 &   1.10E-05
 
-  FOR JTOT =   26 IBLOCK =  2 ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  3.22E-01 &   1.26E-05
+  FOR JTOT =   26, SYMMETRY BLOCK =  2, ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  3.22E-01 &   1.26E-05
 
-  FOR JTOT =   27 IBLOCK =  1 ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  2.32E-01 &   5.39E-06
+  FOR JTOT =   27, SYMMETRY BLOCK =  1, ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  2.32E-01 &   5.39E-06
 
-  FOR JTOT =   27 IBLOCK =  2 ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  2.27E-01 &   6.15E-06
+  FOR JTOT =   27, SYMMETRY BLOCK =  2, ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  2.27E-01 &   6.15E-06
 
-  FOR JTOT =   28 IBLOCK =  1 ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  1.66E-01 &   2.60E-06
+  FOR JTOT =   28, SYMMETRY BLOCK =  1, ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  1.66E-01 &   2.60E-06
 
-  FOR JTOT =   28 IBLOCK =  2 ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  1.62E-01 &   3.00E-06
+  FOR JTOT =   28, SYMMETRY BLOCK =  2, ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  1.62E-01 &   3.00E-06
 
-  FOR JTOT =   29 IBLOCK =  1 ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  1.20E-01 &   1.25E-06
+  FOR JTOT =   29, SYMMETRY BLOCK =  1, ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  1.20E-01 &   1.25E-06
 
-  FOR JTOT =   29 IBLOCK =  2 ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  1.17E-01 &   1.44E-06
+  FOR JTOT =   29, SYMMETRY BLOCK =  2, ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  1.17E-01 &   1.44E-06
 
-  FOR JTOT =   30 IBLOCK =  1 ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  8.80E-02 &   6.23E-07
+  FOR JTOT =   30, SYMMETRY BLOCK =  1, ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  8.80E-02 &   6.23E-07
 
-  FOR JTOT =   30 IBLOCK =  2 ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  8.57E-02 &   7.23E-07
+  FOR JTOT =   30, SYMMETRY BLOCK =  2, ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  8.57E-02 &   7.23E-07
 
 
 
@@ -1419,7 +1419,7 @@
  |                                                                            |
  |                               Version 2019.0 (beta)                        |
  |                                                                            |
- |                    This run used     123.11 cpu secs and                   |
+ |                    This run used     110.57 cpu secs and                   |
  |             174467 of the allocated   1000000 words of storage             |
  |                                                                            |
   ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
@@ -1432,7 +1432,7 @@
  |                                                                            |
  |                               Version 2019.0 (beta)                        |
  |                                                                            |
- |                       Run on 01 Feb 2019   at 00:02:45                     |
+ |                       Run on 01 Feb 2019   at 10:32:20                     |
  |                                                                            |
   ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
 
@@ -1623,241 +1623,241 @@
 
   ================================= NH3-He on simple analytic potential: CS x-sections =================================
 
-  FOR JTOT =    0 IBLOCK =  1 ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  1.20E+00 &   2.71E-02
+  FOR JTOT =    0, SYMMETRY BLOCK =  1, ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  1.20E+00 &   2.71E-02
 
-  FOR JTOT =    0 IBLOCK =  2 ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  2.64E+00 &   1.09E-01
+  FOR JTOT =    0, SYMMETRY BLOCK =  2, ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  2.64E+00 &   1.09E-01
 
-  FOR JTOT =    0 IBLOCK =  3 ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  2.44E+00 &   5.11E-02
+  FOR JTOT =    0, SYMMETRY BLOCK =  3, ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  2.44E+00 &   5.11E-02
 
-  FOR JTOT =    0 IBLOCK =  4 ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  2.44E+00 &   3.94E-02
+  FOR JTOT =    0, SYMMETRY BLOCK =  4, ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  2.44E+00 &   3.94E-02
 
-  FOR JTOT =    1 IBLOCK =  1 ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  8.46E-01 &   9.18E-02
+  FOR JTOT =    1, SYMMETRY BLOCK =  1, ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  8.46E-01 &   9.18E-02
 
-  FOR JTOT =    1 IBLOCK =  2 ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  2.11E+00 &   5.01E-01
+  FOR JTOT =    1, SYMMETRY BLOCK =  2, ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  2.11E+00 &   5.01E-01
 
-  FOR JTOT =    1 IBLOCK =  3 ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  7.92E-01 &   5.42E-01
+  FOR JTOT =    1, SYMMETRY BLOCK =  3, ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  7.92E-01 &   5.42E-01
 
-  FOR JTOT =    1 IBLOCK =  4 ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  1.72E+00 &   1.09E-01
+  FOR JTOT =    1, SYMMETRY BLOCK =  4, ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  1.72E+00 &   1.09E-01
 
-  FOR JTOT =    2 IBLOCK =  1 ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  7.96E+00 &   1.40E-01
+  FOR JTOT =    2, SYMMETRY BLOCK =  1, ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  7.96E+00 &   1.40E-01
 
-  FOR JTOT =    2 IBLOCK =  2 ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  1.60E+01 &   1.90E-01
+  FOR JTOT =    2, SYMMETRY BLOCK =  2, ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  1.60E+01 &   1.90E-01
 
-  FOR JTOT =    2 IBLOCK =  3 ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  1.47E+01 &   7.21E-01
+  FOR JTOT =    2, SYMMETRY BLOCK =  3, ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  1.47E+01 &   7.21E-01
 
-  FOR JTOT =    2 IBLOCK =  4 ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  1.63E+01 &   9.63E-02
+  FOR JTOT =    2, SYMMETRY BLOCK =  4, ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  1.63E+01 &   9.63E-02
 
-  FOR JTOT =    3 IBLOCK =  1 ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  7.65E+00 &   1.81E-01
+  FOR JTOT =    3, SYMMETRY BLOCK =  1, ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  7.65E+00 &   1.81E-01
 
-  FOR JTOT =    3 IBLOCK =  2 ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  1.53E+01 &   2.11E-01
+  FOR JTOT =    3, SYMMETRY BLOCK =  2, ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  1.53E+01 &   2.11E-01
 
-  FOR JTOT =    3 IBLOCK =  3 ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  1.46E+01 &   5.75E-01
+  FOR JTOT =    3, SYMMETRY BLOCK =  3, ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  1.46E+01 &   5.75E-01
 
-  FOR JTOT =    3 IBLOCK =  4 ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  1.43E+01 &   2.80E+00
+  FOR JTOT =    3, SYMMETRY BLOCK =  4, ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  1.43E+01 &   2.80E+00
 
-  FOR JTOT =    4 IBLOCK =  1 ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  3.29E+00 &   2.07E-01
+  FOR JTOT =    4, SYMMETRY BLOCK =  1, ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  3.29E+00 &   2.07E-01
 
-  FOR JTOT =    4 IBLOCK =  2 ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  6.63E+00 &   2.27E-01
+  FOR JTOT =    4, SYMMETRY BLOCK =  2, ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  6.63E+00 &   2.27E-01
 
-  FOR JTOT =    4 IBLOCK =  3 ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  6.81E+00 &   6.20E-01
+  FOR JTOT =    4, SYMMETRY BLOCK =  3, ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  6.81E+00 &   6.20E-01
 
-  FOR JTOT =    4 IBLOCK =  4 ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  5.15E+00 &   2.77E-01
+  FOR JTOT =    4, SYMMETRY BLOCK =  4, ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  5.15E+00 &   2.77E-01
 
-  FOR JTOT =    5 IBLOCK =  1 ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  1.99E+00 &   2.34E-01
+  FOR JTOT =    5, SYMMETRY BLOCK =  1, ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  1.99E+00 &   2.34E-01
 
-  FOR JTOT =    5 IBLOCK =  2 ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  3.50E+00 &   2.44E-01
+  FOR JTOT =    5, SYMMETRY BLOCK =  2, ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  3.50E+00 &   2.44E-01
 
-  FOR JTOT =    5 IBLOCK =  3 ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  3.46E+00 &   6.79E-01
+  FOR JTOT =    5, SYMMETRY BLOCK =  3, ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  3.46E+00 &   6.79E-01
 
-  FOR JTOT =    5 IBLOCK =  4 ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  1.96E+00 &   3.27E-01
+  FOR JTOT =    5, SYMMETRY BLOCK =  4, ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  1.96E+00 &   3.27E-01
 
-  FOR JTOT =    6 IBLOCK =  1 ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  9.44E+00 &   6.15E-01
+  FOR JTOT =    6, SYMMETRY BLOCK =  1, ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  9.44E+00 &   6.15E-01
 
-  FOR JTOT =    6 IBLOCK =  2 ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  2.02E+01 &   6.27E-01
+  FOR JTOT =    6, SYMMETRY BLOCK =  2, ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  2.02E+01 &   6.27E-01
 
-  FOR JTOT =    6 IBLOCK =  3 ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  2.05E+01 &   1.71E+00
+  FOR JTOT =    6, SYMMETRY BLOCK =  3, ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  2.05E+01 &   1.71E+00
 
-  FOR JTOT =    6 IBLOCK =  4 ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  1.57E+01 &   1.46E+00
+  FOR JTOT =    6, SYMMETRY BLOCK =  4, ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  1.57E+01 &   1.46E+00
 
-  FOR JTOT =    7 IBLOCK =  1 ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  5.06E+00 &   2.46E-01
+  FOR JTOT =    7, SYMMETRY BLOCK =  1, ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  5.06E+00 &   2.46E-01
 
-  FOR JTOT =    7 IBLOCK =  2 ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  1.00E+01 &   2.55E-01
+  FOR JTOT =    7, SYMMETRY BLOCK =  2, ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  1.00E+01 &   2.55E-01
 
-  FOR JTOT =    7 IBLOCK =  3 ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  9.81E+00 &   1.57E-01
+  FOR JTOT =    7, SYMMETRY BLOCK =  3, ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  9.81E+00 &   1.57E-01
 
-  FOR JTOT =    7 IBLOCK =  4 ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  1.05E+01 &   4.59E-03
+  FOR JTOT =    7, SYMMETRY BLOCK =  4, ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  1.05E+01 &   4.59E-03
 
-  FOR JTOT =    8 IBLOCK =  1 ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  2.89E+00 &   2.54E-01
+  FOR JTOT =    8, SYMMETRY BLOCK =  1, ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  2.89E+00 &   2.54E-01
 
-  FOR JTOT =    8 IBLOCK =  2 ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  4.68E+00 &   2.70E-01
+  FOR JTOT =    8, SYMMETRY BLOCK =  2, ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  4.68E+00 &   2.70E-01
 
-  FOR JTOT =    8 IBLOCK =  3 ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  3.00E+00 &   1.26E-01
+  FOR JTOT =    8, SYMMETRY BLOCK =  3, ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  3.00E+00 &   1.26E-01
 
-  FOR JTOT =    8 IBLOCK =  4 ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  1.51E+00 &   9.17E-07
+  FOR JTOT =    8, SYMMETRY BLOCK =  4, ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  1.51E+00 &   9.17E-07
 
-  FOR JTOT =    9 IBLOCK =  1 ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  3.24E+00 &   2.53E-01
+  FOR JTOT =    9, SYMMETRY BLOCK =  1, ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  3.24E+00 &   2.53E-01
 
-  FOR JTOT =    9 IBLOCK =  2 ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  7.26E+00 &   2.80E-01
+  FOR JTOT =    9, SYMMETRY BLOCK =  2, ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  7.26E+00 &   2.80E-01
 
-  FOR JTOT =    9 IBLOCK =  3 ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  5.09E+00 &   1.08E-01
+  FOR JTOT =    9, SYMMETRY BLOCK =  3, ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  5.09E+00 &   1.08E-01
 
-  FOR JTOT =    9 IBLOCK =  4 ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  4.47E-01 &   6.23E-10
+  FOR JTOT =    9, SYMMETRY BLOCK =  4, ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  4.47E-01 &   6.23E-10
 
-  FOR JTOT =   10 IBLOCK =  1 ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  3.55E+00 &   2.43E-01
+  FOR JTOT =   10, SYMMETRY BLOCK =  1, ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  3.55E+00 &   2.43E-01
 
-  FOR JTOT =   10 IBLOCK =  2 ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  6.70E+00 &   2.81E-01
+  FOR JTOT =   10, SYMMETRY BLOCK =  2, ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  6.70E+00 &   2.81E-01
 
-  FOR JTOT =   10 IBLOCK =  3 ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  9.02E+00 &   8.99E-02
+  FOR JTOT =   10, SYMMETRY BLOCK =  3, ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  9.02E+00 &   8.99E-02
 
-  FOR JTOT =   10 IBLOCK =  4 ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  1.63E-01 &   5.93E-13
+  FOR JTOT =   10, SYMMETRY BLOCK =  4, ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  1.63E-01 &   5.93E-13
 
-  FOR JTOT =   11 IBLOCK =  1 ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  4.95E+00 &   2.22E-01
+  FOR JTOT =   11, SYMMETRY BLOCK =  1, ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  4.95E+00 &   2.22E-01
 
-  FOR JTOT =   11 IBLOCK =  2 ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  9.37E+00 &   2.69E-01
+  FOR JTOT =   11, SYMMETRY BLOCK =  2, ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  9.37E+00 &   2.69E-01
 
-  FOR JTOT =   11 IBLOCK =  3 ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  1.09E+01 &   7.03E-02
+  FOR JTOT =   11, SYMMETRY BLOCK =  3, ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  1.09E+01 &   7.03E-02
 
-  FOR JTOT =   11 IBLOCK =  4 ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  6.46E-02 &   6.94E-16
+  FOR JTOT =   11, SYMMETRY BLOCK =  4, ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  6.46E-02 &   6.94E-16
 
-  FOR JTOT =   12 IBLOCK =  1 ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  5.58E+00 &   1.91E-01
+  FOR JTOT =   12, SYMMETRY BLOCK =  1, ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  5.58E+00 &   1.91E-01
 
-  FOR JTOT =   12 IBLOCK =  2 ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  1.07E+01 &   2.35E-01
+  FOR JTOT =   12, SYMMETRY BLOCK =  2, ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  1.07E+01 &   2.35E-01
 
-  FOR JTOT =   12 IBLOCK =  3 ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  1.19E+01 &   4.81E-02
+  FOR JTOT =   12, SYMMETRY BLOCK =  3, ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  1.19E+01 &   4.81E-02
 
-  FOR JTOT =   12 IBLOCK =  4 ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  2.84E-02 &   9.98E-19
+  FOR JTOT =   12, SYMMETRY BLOCK =  4, ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  2.84E-02 &   9.98E-19
 
-  FOR JTOT =   13 IBLOCK =  1 ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  5.39E+00 &   1.47E-01
+  FOR JTOT =   13, SYMMETRY BLOCK =  1, ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  5.39E+00 &   1.47E-01
 
-  FOR JTOT =   13 IBLOCK =  2 ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  1.07E+01 &   1.66E-01
+  FOR JTOT =   13, SYMMETRY BLOCK =  2, ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  1.07E+01 &   1.66E-01
 
-  FOR JTOT =   13 IBLOCK =  3 ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  1.25E+01 &   2.51E-02
+  FOR JTOT =   13, SYMMETRY BLOCK =  3, ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  1.25E+01 &   2.51E-02
 
-  FOR JTOT =   13 IBLOCK =  4 ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  1.35E-02 &   1.75E-21
+  FOR JTOT =   13, SYMMETRY BLOCK =  4, ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  1.35E-02 &   1.75E-21
 
-  FOR JTOT =   14 IBLOCK =  1 ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  5.78E+00 &   8.98E-02
+  FOR JTOT =   14, SYMMETRY BLOCK =  1, ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  5.78E+00 &   8.98E-02
 
-  FOR JTOT =   14 IBLOCK =  2 ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  1.07E+01 &   7.75E-02
+  FOR JTOT =   14, SYMMETRY BLOCK =  2, ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  1.07E+01 &   7.75E-02
 
-  FOR JTOT =   14 IBLOCK =  3 ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  1.04E+01 &   9.38E-03
+  FOR JTOT =   14, SYMMETRY BLOCK =  3, ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  1.04E+01 &   9.38E-03
 
-  FOR JTOT =   14 IBLOCK =  4 ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  5.89E-03 &   3.58E-24
+  FOR JTOT =   14, SYMMETRY BLOCK =  4, ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  5.89E-03 &   3.58E-24
 
-  FOR JTOT =   15 IBLOCK =  1 ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  6.64E+00 &   3.40E-02
+  FOR JTOT =   15, SYMMETRY BLOCK =  1, ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  6.64E+00 &   3.40E-02
 
-  FOR JTOT =   15 IBLOCK =  2 ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  1.15E+01 &   2.51E-02
+  FOR JTOT =   15, SYMMETRY BLOCK =  2, ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  1.15E+01 &   2.51E-02
 
-  FOR JTOT =   15 IBLOCK =  3 ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  6.37E+00 &   1.72E-03
+  FOR JTOT =   15, SYMMETRY BLOCK =  3, ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  6.37E+00 &   1.72E-03
 
-  FOR JTOT =   15 IBLOCK =  4 ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  1.98E-03 &   8.14E-27
+  FOR JTOT =   15, SYMMETRY BLOCK =  4, ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  1.98E-03 &   8.14E-27
 
-  FOR JTOT =   16 IBLOCK =  1 ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  6.84E+00 &   6.97E-03
+  FOR JTOT =   16, SYMMETRY BLOCK =  1, ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  6.84E+00 &   6.97E-03
 
-  FOR JTOT =   16 IBLOCK =  2 ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  1.16E+01 &   1.10E-02
+  FOR JTOT =   16, SYMMETRY BLOCK =  2, ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  1.16E+01 &   1.10E-02
 
-  FOR JTOT =   16 IBLOCK =  3 ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  3.97E+00 &   1.67E-04
+  FOR JTOT =   16, SYMMETRY BLOCK =  3, ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  3.97E+00 &   1.67E-04
 
-  FOR JTOT =   16 IBLOCK =  4 ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  4.75E-04 &   1.98E-29
+  FOR JTOT =   16, SYMMETRY BLOCK =  4, ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  4.75E-04 &   1.98E-29
 
-  FOR JTOT =   17 IBLOCK =  1 ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  6.15E+00 &   8.72E-04
+  FOR JTOT =   17, SYMMETRY BLOCK =  1, ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  6.15E+00 &   8.72E-04
 
-  FOR JTOT =   17 IBLOCK =  2 ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  1.00E+01 &   3.29E-03
+  FOR JTOT =   17, SYMMETRY BLOCK =  2, ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  1.00E+01 &   3.29E-03
 
-  FOR JTOT =   17 IBLOCK =  3 ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  2.30E+00 &   1.18E-05
+  FOR JTOT =   17, SYMMETRY BLOCK =  3, ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  2.30E+00 &   1.18E-05
 
-  FOR JTOT =   17 IBLOCK =  4 ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  8.09E-05 &   5.02E-32
+  FOR JTOT =   17, SYMMETRY BLOCK =  4, ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  8.09E-05 &   5.02E-32
 
-  FOR JTOT =   18 IBLOCK =  1 ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  4.68E+00 &   7.87E-05
+  FOR JTOT =   18, SYMMETRY BLOCK =  1, ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  4.68E+00 &   7.87E-05
 
-  FOR JTOT =   18 IBLOCK =  2 ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  7.36E+00 &   8.30E-04
+  FOR JTOT =   18, SYMMETRY BLOCK =  2, ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  7.36E+00 &   8.30E-04
 
-  FOR JTOT =   18 IBLOCK =  3 ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  1.34E+00 &   7.79E-07
+  FOR JTOT =   18, SYMMETRY BLOCK =  3, ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  1.34E+00 &   7.79E-07
 
-  FOR JTOT =   18 IBLOCK =  4 ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  9.91E-06 &   1.26E-34
+  FOR JTOT =   18, SYMMETRY BLOCK =  4, ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  9.91E-06 &   1.26E-34
 
-  FOR JTOT =   19 IBLOCK =  1 ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  3.12E+00 &   6.08E-06
+  FOR JTOT =   19, SYMMETRY BLOCK =  1, ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  3.12E+00 &   6.08E-06
 
-  FOR JTOT =   19 IBLOCK =  2 ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  4.84E+00 &   3.17E-04
+  FOR JTOT =   19, SYMMETRY BLOCK =  2, ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  4.84E+00 &   3.17E-04
 
-  FOR JTOT =   19 IBLOCK =  3 ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  8.00E-01 &   5.36E-08
+  FOR JTOT =   19, SYMMETRY BLOCK =  3, ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  8.00E-01 &   5.36E-08
 
-  FOR JTOT =   19 IBLOCK =  4 ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  8.93E-07 &   2.38E-37
+  FOR JTOT =   19, SYMMETRY BLOCK =  4, ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  8.93E-07 &   2.38E-37
 
-  FOR JTOT =   20 IBLOCK =  1 ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  1.98E+00 &   4.65E-07
+  FOR JTOT =   20, SYMMETRY BLOCK =  1, ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  1.98E+00 &   4.65E-07
 
-  FOR JTOT =   20 IBLOCK =  2 ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  3.06E+00 &   1.27E-04
+  FOR JTOT =   20, SYMMETRY BLOCK =  2, ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  3.06E+00 &   1.27E-04
 
-  FOR JTOT =   20 IBLOCK =  3 ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  4.94E-01 &   3.95E-09
+  FOR JTOT =   20, SYMMETRY BLOCK =  3, ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  4.94E-01 &   3.95E-09
 
-  FOR JTOT =   20 IBLOCK =  4 ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  6.06E-08 &   4.14E-40
+  FOR JTOT =   20, SYMMETRY BLOCK =  4, ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  6.06E-08 &   4.14E-40
 
-  FOR JTOT =   21 IBLOCK =  1 ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  1.25E+00 &   3.78E-08
+  FOR JTOT =   21, SYMMETRY BLOCK =  1, ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  1.25E+00 &   3.78E-08
 
-  FOR JTOT =   21 IBLOCK =  2 ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  1.94E+00 &   5.34E-05
+  FOR JTOT =   21, SYMMETRY BLOCK =  2, ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  1.94E+00 &   5.34E-05
 
-  FOR JTOT =   21 IBLOCK =  3 ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  3.14E-01 &   6.65E-10
+  FOR JTOT =   21, SYMMETRY BLOCK =  3, ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  3.14E-01 &   6.65E-10
 
-  FOR JTOT =   21 IBLOCK =  4 ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  3.16E-09 &   1.11E-41
+  FOR JTOT =   21, SYMMETRY BLOCK =  4, ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  3.16E-09 &   1.11E-41
 
-  FOR JTOT =   22 IBLOCK =  1 ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  8.07E-01 &   3.32E-09
+  FOR JTOT =   22, SYMMETRY BLOCK =  1, ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  8.07E-01 &   3.32E-09
 
-  FOR JTOT =   22 IBLOCK =  2 ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  1.26E+00 &   2.30E-05
+  FOR JTOT =   22, SYMMETRY BLOCK =  2, ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  1.26E+00 &   2.30E-05
 
-  FOR JTOT =   22 IBLOCK =  3 ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  2.04E-01 &   2.58E-11
+  FOR JTOT =   22, SYMMETRY BLOCK =  3, ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  2.04E-01 &   2.58E-11
 
-  FOR JTOT =   22 IBLOCK =  4 ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  1.29E-10 &   1.53E-43
+  FOR JTOT =   22, SYMMETRY BLOCK =  4, ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  1.29E-10 &   1.53E-43
 
-  FOR JTOT =   23 IBLOCK =  1 ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  5.32E-01 &   3.10E-10
+  FOR JTOT =   23, SYMMETRY BLOCK =  1, ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  5.32E-01 &   3.10E-10
 
-  FOR JTOT =   23 IBLOCK =  2 ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  8.29E-01 &   1.03E-05
+  FOR JTOT =   23, SYMMETRY BLOCK =  2, ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  8.29E-01 &   1.03E-05
 
-  FOR JTOT =   23 IBLOCK =  3 ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  1.36E-01 &   2.60E-11
+  FOR JTOT =   23, SYMMETRY BLOCK =  3, ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  1.36E-01 &   2.60E-11
 
-  FOR JTOT =   23 IBLOCK =  4 ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  4.19E-12 &   1.25E-45
+  FOR JTOT =   23, SYMMETRY BLOCK =  4, ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  4.19E-12 &   1.25E-45
 
-  FOR JTOT =   24 IBLOCK =  1 ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  3.58E-01 &   3.04E-11
+  FOR JTOT =   24, SYMMETRY BLOCK =  1, ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  3.58E-01 &   3.04E-11
 
-  FOR JTOT =   24 IBLOCK =  2 ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  5.59E-01 &   4.81E-06
+  FOR JTOT =   24, SYMMETRY BLOCK =  2, ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  5.59E-01 &   4.81E-06
 
-  FOR JTOT =   24 IBLOCK =  3 ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  9.24E-02 &   4.39E-12
+  FOR JTOT =   24, SYMMETRY BLOCK =  3, ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  9.24E-02 &   4.39E-12
 
-  FOR JTOT =   24 IBLOCK =  4 ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  1.10E-13 &   1.64E-47
+  FOR JTOT =   24, SYMMETRY BLOCK =  4, ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  1.10E-13 &   1.64E-47
 
-  FOR JTOT =   25 IBLOCK =  1 ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  2.45E-01 &   3.10E-12
+  FOR JTOT =   25, SYMMETRY BLOCK =  1, ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  2.45E-01 &   3.10E-12
 
-  FOR JTOT =   25 IBLOCK =  2 ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  3.84E-01 &   2.21E-06
+  FOR JTOT =   25, SYMMETRY BLOCK =  2, ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  3.84E-01 &   2.21E-06
 
-  FOR JTOT =   25 IBLOCK =  3 ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  6.37E-02 &   1.79E-14
+  FOR JTOT =   25, SYMMETRY BLOCK =  3, ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  6.37E-02 &   1.79E-14
 
-  FOR JTOT =   25 IBLOCK =  4 ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  2.36E-15 &   1.62E-48
+  FOR JTOT =   25, SYMMETRY BLOCK =  4, ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  2.36E-15 &   1.62E-48
 
-  FOR JTOT =   26 IBLOCK =  1 ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  1.71E-01 &   3.24E-13
+  FOR JTOT =   26, SYMMETRY BLOCK =  1, ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  1.71E-01 &   3.24E-13
 
-  FOR JTOT =   26 IBLOCK =  2 ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  2.68E-01 &   1.12E-06
+  FOR JTOT =   26, SYMMETRY BLOCK =  2, ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  2.68E-01 &   1.12E-06
 
-  FOR JTOT =   26 IBLOCK =  3 ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  4.47E-02 &   1.34E-13
+  FOR JTOT =   26, SYMMETRY BLOCK =  3, ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  4.47E-02 &   1.34E-13
 
-  FOR JTOT =   26 IBLOCK =  4 ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  4.19E-17 &   6.29E-50
+  FOR JTOT =   26, SYMMETRY BLOCK =  4, ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  4.19E-17 &   6.29E-50
 
-  FOR JTOT =   27 IBLOCK =  1 ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  1.21E-01 &   3.45E-14
+  FOR JTOT =   27, SYMMETRY BLOCK =  1, ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  1.21E-01 &   3.45E-14
 
-  FOR JTOT =   27 IBLOCK =  2 ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  1.90E-01 &   5.71E-07
+  FOR JTOT =   27, SYMMETRY BLOCK =  2, ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  1.90E-01 &   5.71E-07
 
-  FOR JTOT =   27 IBLOCK =  3 ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  3.18E-02 &   1.26E-14
+  FOR JTOT =   27, SYMMETRY BLOCK =  3, ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  3.18E-02 &   1.26E-14
 
-  FOR JTOT =   27 IBLOCK =  4 ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  6.21E-19 &   5.04E-52
+  FOR JTOT =   27, SYMMETRY BLOCK =  4, ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  6.21E-19 &   5.04E-52
 
-  FOR JTOT =   28 IBLOCK =  1 ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  8.71E-02 &   3.73E-15
+  FOR JTOT =   28, SYMMETRY BLOCK =  1, ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  8.71E-02 &   3.73E-15
 
-  FOR JTOT =   28 IBLOCK =  2 ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  1.36E-01 &   2.73E-07
+  FOR JTOT =   28, SYMMETRY BLOCK =  2, ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  1.36E-01 &   2.73E-07
 
-  FOR JTOT =   28 IBLOCK =  3 ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  2.28E-02 &   5.26E-17
+  FOR JTOT =   28, SYMMETRY BLOCK =  3, ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  2.28E-02 &   5.26E-17
 
-  FOR JTOT =   28 IBLOCK =  4 ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  7.78E-21 &   2.12E-56
+  FOR JTOT =   28, SYMMETRY BLOCK =  4, ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  7.78E-21 &   2.12E-56
 
-  FOR JTOT =   29 IBLOCK =  1 ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  6.33E-02 &   4.06E-16
+  FOR JTOT =   29, SYMMETRY BLOCK =  1, ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  6.33E-02 &   4.06E-16
 
-  FOR JTOT =   29 IBLOCK =  2 ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  9.92E-02 &   1.66E-07
+  FOR JTOT =   29, SYMMETRY BLOCK =  2, ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  9.92E-02 &   1.66E-07
 
 
 
@@ -1999,7 +1999,7 @@
  |                                                                            |
  |                               Version 2019.0 (beta)                        |
  |                                                                            |
- |                    This run used       5.45 cpu secs and                   |
+ |                    This run used       5.19 cpu secs and                   |
  |              29930 of the allocated   1000000 words of storage             |
  |                                                                            |
   ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---

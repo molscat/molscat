@@ -7,7 +7,7 @@
  |                                                                            |
  |                               Version 2019.0 (beta)                        |
  |                                                                            |
- |                       Run on 01 Feb 2019   at 00:04:19                     |
+ |                       Run on 01 Feb 2019   at 10:33:49                     |
  |                                                                            |
   ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
 
@@ -316,7 +316,7 @@
        5       2           2       -0.007707189057       -0.110889290834E-01
        9       4           3       -0.006772487996       -0.974410236302E-02
 
-  JTOT =   -2   IBLOCK =   1   ENERGY(   1) =  6.95034570000E-04 CM-1 =   1.00000000000E-03 K
+  JTOT =   -2,  SYMMETRY BLOCK =   1,  ENERGY(   1) =  6.95034570000E-04 CM-1 =   1.00000000000E-03 K
 
   EFV SET     1:  MAGNETIC Z FIELD =   10.00000000     GAUSS
 
@@ -336,7 +336,7 @@
    10    6   4 1.9510520059248E-002  -3.9901825470889E-014   2.3070707478118E-034
    11    8   4 1.9510520059248E-002   1.0819050815297E-023   1.6961087883806E-053
 
-  * * * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  -2 AND IBLOCK =   1 * * * * * * * * *
+  * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  -2 AND SYMMETRY BLOCK =   1 * * * * * * *
 
     F  I =      1              2              3
     1       1.69920E-05    7.79039E-07    2.55542E-14
@@ -345,13 +345,13 @@
 
   * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
 
-  FOR JTOT =   -2 IBLOCK =  1 EFV SET =   1 ENERGY(  1) = 6.9503457E-04:  MAXIMUM DIAGONAL & OFF-DIAGONAL =  1.70E-05 &   7.79E-07
+  FOR JTOT =   -2, SYMMETRY BLOCK =  1, EFV SET =   1, ENERGY(  1) = 6.9503457E-04:  MAXIMUM DIAGONAL & OFF-DIAGONAL =  1.70E-05 &   7.79E-07
 
-  FINISHED JTOT =   -2   IBLOCK =   1   ENERGY(   1) = 6.9503457E-04
+  FINISHED JTOT =   -2,  SYMMETRY BLOCK =   1,  ENERGY(   1) = 6.9503457E-04
 
   ---------------------- ITYP = 9: Mg + NH in magnetic field; cross sections, non-diagonal H_intl ----------------------
 
-  JTOT =   -2   IBLOCK =   1   ENERGY(   2) =  6.95034570000E-03 CM-1 =   1.00000000000E-02 K
+  JTOT =   -2,  SYMMETRY BLOCK =   1,  ENERGY(   2) =  6.95034570000E-03 CM-1 =   1.00000000000E-02 K
 
   EFV SET     1:  MAGNETIC Z FIELD =   10.00000000     GAUSS
 
@@ -371,7 +371,7 @@
    10    6   4 6.1697681708620E-002  -1.3234883851598E-009   2.5381404561548E-023
    11    8   4 6.1697681708620E-002   9.6235108588247E-018   1.3419689402857E-039
 
-  * * * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  -2 AND IBLOCK =   1 * * * * * * * * *
+  * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  -2 AND SYMMETRY BLOCK =   1 * * * * * * *
 
     F  I =      1              2              3
     1       2.50773E-03    1.98772E-04    1.84595E-09
@@ -380,17 +380,17 @@
 
   * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
 
-  FOR JTOT =   -2 IBLOCK =  1 EFV SET =   1 ENERGY(  2) = 6.9503457E-03:  MAXIMUM DIAGONAL & OFF-DIAGONAL =  2.51E-03 &   1.99E-04
+  FOR JTOT =   -2, SYMMETRY BLOCK =  1, EFV SET =   1, ENERGY(  2) = 6.9503457E-03:  MAXIMUM DIAGONAL & OFF-DIAGONAL =  2.51E-03 &   1.99E-04
 
   EFFECTIVE RANGE FOR CHANNEL   1:
   FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS  -12.551     ANGSTROM WITH 1/A(K=0) =  -0.4765441391E-01 ANGSTROM^-1
   FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS  -29.548     ANGSTROM WITH   A(K=0) =   -19.87119934     ANGSTROM
 
-  FINISHED JTOT =   -2   IBLOCK =   1   ENERGY(   2) = 6.9503457E-03
+  FINISHED JTOT =   -2,  SYMMETRY BLOCK =   1,  ENERGY(   2) = 6.9503457E-03
 
   ---------------------- ITYP = 9: Mg + NH in magnetic field; cross sections, non-diagonal H_intl ----------------------
 
-  JTOT =   -2   IBLOCK =   1   ENERGY(   3) =  6.95034570000E-02 CM-1 =   0.10000000000     K
+  JTOT =   -2,  SYMMETRY BLOCK =   1,  ENERGY(   3) =  6.95034570000E-02 CM-1 =   0.10000000000     K
 
   EFV SET     1:  MAGNETIC Z FIELD =   10.00000000     GAUSS
 
@@ -410,7 +410,7 @@
    10    6   4 1.9510520054723E-001   4.4237718894030E-005  -4.5434084974256E-011
    11    8   4 1.9510520054723E-001  -3.2780201222584E-010   1.5570358538843E-022
 
-  * * * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  -2 AND IBLOCK =   1 * * * * * * * * *
+  * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  -2 AND SYMMETRY BLOCK =   1 * * * * * * *
 
     F  I =      1              2              3
     1       3.25264E+01    5.91425E+00    3.18538E-03
@@ -419,13 +419,13 @@
 
   * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
 
-  FOR JTOT =   -2 IBLOCK =  1 EFV SET =   1 ENERGY(  3) = 6.9503457E-02:  MAXIMUM DIAGONAL & OFF-DIAGONAL =  3.25E+01 &   5.91E+00
+  FOR JTOT =   -2, SYMMETRY BLOCK =  1, EFV SET =   1, ENERGY(  3) = 6.9503457E-02:  MAXIMUM DIAGONAL & OFF-DIAGONAL =  3.25E+01 &   5.91E+00
 
   EFFECTIVE RANGE FOR CHANNEL   1:
   FROM EXPANSION OF 1/A AT ENERGIES 1 AND   3 IS  -2.1651     ANGSTROM WITH 1/A(K=0) =  -0.4567759278E-01 ANGSTROM^-1
   FROM EXPANSION OF  A  AT ENERGIES 1 AND   3 IS  -26.605     ANGSTROM WITH   A(K=0) =   -20.05519942     ANGSTROM
 
-  FINISHED JTOT =   -2   IBLOCK =   1   ENERGY(   3) = 6.9503457E-02
+  FINISHED JTOT =   -2,  SYMMETRY BLOCK =   1,  ENERGY(   3) = 6.9503457E-02
 
   ======================================================================================================================
 
@@ -533,7 +533,7 @@
 
   THRESHOLD LIST: NO NEW LEVELS IDENTIFIED
 
-  JTOT =   -2   IBLOCK =   2   ENERGY(   1) =  6.95034570000E-04 CM-1 =   1.00000000000E-03 K
+  JTOT =   -2,  SYMMETRY BLOCK =   2,  ENERGY(   1) =  6.95034570000E-04 CM-1 =   1.00000000000E-03 K
 
   EFV SET     1:  MAGNETIC Z FIELD =   10.00000000     GAUSS
 
@@ -552,7 +552,7 @@
     9    5   4 1.9510520059248E-002  -1.9298542995985E-009   5.3966521633096E-025
    10    7   4 1.9510520059248E-002  -3.6234614003080E-017   1.9024912225803E-040
 
-  * * * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  -2 AND IBLOCK =   2 * * * * * * * * *
+  * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  -2 AND SYMMETRY BLOCK =   2 * * * * * * *
 
     F  I =      1              2              3
     1       3.44846E+00    1.02522E-07    3.66285E-08
@@ -561,13 +561,13 @@
 
   * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
 
-  FOR JTOT =   -2 IBLOCK =  2 EFV SET =   1 ENERGY(  1) = 6.9503457E-04:  MAXIMUM DIAGONAL & OFF-DIAGONAL =  3.45E+00 &   1.03E-07
+  FOR JTOT =   -2, SYMMETRY BLOCK =  2, EFV SET =   1, ENERGY(  1) = 6.9503457E-04:  MAXIMUM DIAGONAL & OFF-DIAGONAL =  3.45E+00 &   1.03E-07
 
-  FINISHED JTOT =   -2   IBLOCK =   2   ENERGY(   1) = 6.9503457E-04
+  FINISHED JTOT =   -2,  SYMMETRY BLOCK =   2,  ENERGY(   1) = 6.9503457E-04
 
   ---------------------- ITYP = 9: Mg + NH in magnetic field; cross sections, non-diagonal H_intl ----------------------
 
-  JTOT =   -2   IBLOCK =   2   ENERGY(   2) =  6.95034570000E-03 CM-1 =   1.00000000000E-02 K
+  JTOT =   -2,  SYMMETRY BLOCK =   2,  ENERGY(   2) =  6.95034570000E-03 CM-1 =   1.00000000000E-02 K
 
   EFV SET     1:  MAGNETIC Z FIELD =   10.00000000     GAUSS
 
@@ -586,7 +586,7 @@
     9    5   4 6.1697681708620E-002  -8.1015606670855E-006   9.5107060679225E-016
    10    7   4 6.1697681708620E-002   1.6149327210607E-011   3.7790640361549E-027
 
-  * * * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  -2 AND IBLOCK =   2 * * * * * * * * *
+  * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  -2 AND SYMMETRY BLOCK =   2 * * * * * * *
 
     F  I =      1              2              3
     1       2.63029E+01    2.20233E-05    4.83234E-05
@@ -595,17 +595,17 @@
 
   * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
 
-  FOR JTOT =   -2 IBLOCK =  2 EFV SET =   1 ENERGY(  2) = 6.9503457E-03:  MAXIMUM DIAGONAL & OFF-DIAGONAL =  2.63E+01 &   4.83E-05
+  FOR JTOT =   -2, SYMMETRY BLOCK =  2, EFV SET =   1, ENERGY(  2) = 6.9503457E-03:  MAXIMUM DIAGONAL & OFF-DIAGONAL =  2.63E+01 &   4.83E-05
 
   EFFECTIVE RANGE FOR CHANNEL   1:
   FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS -0.37437     ANGSTROM WITH 1/A(K=0) =   0.2609344007E-02 ANGSTROM^-1
   FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS -0.28954     ANGSTROM WITH   A(K=0) =    381.0530004     ANGSTROM
 
-  FINISHED JTOT =   -2   IBLOCK =   2   ENERGY(   2) = 6.9503457E-03
+  FINISHED JTOT =   -2,  SYMMETRY BLOCK =   2,  ENERGY(   2) = 6.9503457E-03
 
   ---------------------- ITYP = 9: Mg + NH in magnetic field; cross sections, non-diagonal H_intl ----------------------
 
-  JTOT =   -2   IBLOCK =   2   ENERGY(   3) =  6.95034570000E-02 CM-1 =   0.10000000000     K
+  JTOT =   -2,  SYMMETRY BLOCK =   2,  ENERGY(   3) =  6.95034570000E-02 CM-1 =   0.10000000000     K
 
   EFV SET     1:  MAGNETIC Z FIELD =   10.00000000     GAUSS
 
@@ -624,7 +624,7 @@
     9    5   4 1.9510520054723E-001   1.2087227280572E-002  -2.1634845038330E-006
    10    7   4 1.9510520054723E-001   9.4376955901654E-008  -3.2179729973887E-012
 
-  * * * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  -2 AND IBLOCK =   2 * * * * * * * * *
+  * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  -2 AND SYMMETRY BLOCK =   2 * * * * * * *
 
     F  I =      1              2              3
     1       1.71892E+02    1.45948E-02    4.24211E-02
@@ -633,13 +633,13 @@
 
   * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
 
-  FOR JTOT =   -2 IBLOCK =  2 EFV SET =   1 ENERGY(  3) = 6.9503457E-02:  MAXIMUM DIAGONAL & OFF-DIAGONAL =  1.72E+02 &   4.24E-02
+  FOR JTOT =   -2, SYMMETRY BLOCK =  2, EFV SET =   1, ENERGY(  3) = 6.9503457E-02:  MAXIMUM DIAGONAL & OFF-DIAGONAL =  1.72E+02 &   4.24E-02
 
   EFFECTIVE RANGE FOR CHANNEL   1:
   FROM EXPANSION OF 1/A AT ENERGIES 1 AND   3 IS -0.24022     ANGSTROM WITH 1/A(K=0) =   0.2634876725E-02 ANGSTROM^-1
   FROM EXPANSION OF  A  AT ENERGIES 1 AND   3 IS -0.88225E-01 ANGSTROM WITH   A(K=0) =    375.4177567     ANGSTROM
 
-  FINISHED JTOT =   -2   IBLOCK =   2   ENERGY(   3) = 6.9503457E-02
+  FINISHED JTOT =   -2,  SYMMETRY BLOCK =   2,  ENERGY(   3) = 6.9503457E-02
 
   ======================================================================================================================
 
@@ -763,7 +763,7 @@
 
   THRESHOLD LIST: NO NEW LEVELS IDENTIFIED
 
-  JTOT =   -1   IBLOCK =   1   ENERGY(   1) =  6.95034570000E-04 CM-1 =   1.00000000000E-03 K
+  JTOT =   -1,  SYMMETRY BLOCK =   1,  ENERGY(   1) =  6.95034570000E-04 CM-1 =   1.00000000000E-03 K
 
   EFV SET     1:  MAGNETIC Z FIELD =   10.00000000     GAUSS
 
@@ -785,7 +785,7 @@
    12    6   4 1.9510520059248E-002  -4.1286085458788E-014   2.4699194926595E-034
    13    8   4 1.9510520059248E-002   1.5847770647702E-023   3.6392487205018E-053
 
-  * * * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  -1 AND IBLOCK =   1 * * * * * * * * *
+  * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  -1 AND SYMMETRY BLOCK =   1 * * * * * * *
 
     F  I =      1              2              3
     1       1.02130E+03    1.51961E-03    8.44386E-04
@@ -794,13 +794,13 @@
 
   * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
 
-  FOR JTOT =   -1 IBLOCK =  1 EFV SET =   1 ENERGY(  1) = 6.9503457E-04:  MAXIMUM DIAGONAL & OFF-DIAGONAL =  1.02E+03 &   1.52E-03
+  FOR JTOT =   -1, SYMMETRY BLOCK =  1, EFV SET =   1, ENERGY(  1) = 6.9503457E-04:  MAXIMUM DIAGONAL & OFF-DIAGONAL =  1.02E+03 &   1.52E-03
 
-  FINISHED JTOT =   -1   IBLOCK =   1   ENERGY(   1) = 6.9503457E-04
+  FINISHED JTOT =   -1,  SYMMETRY BLOCK =   1,  ENERGY(   1) = 6.9503457E-04
 
   ---------------------- ITYP = 9: Mg + NH in magnetic field; cross sections, non-diagonal H_intl ----------------------
 
-  JTOT =   -1   IBLOCK =   1   ENERGY(   2) =  6.95034570000E-03 CM-1 =   1.00000000000E-02 K
+  JTOT =   -1,  SYMMETRY BLOCK =   1,  ENERGY(   2) =  6.95034570000E-03 CM-1 =   1.00000000000E-02 K
 
   EFV SET     1:  MAGNETIC Z FIELD =   10.00000000     GAUSS
 
@@ -822,7 +822,7 @@
    12    6   4 6.1697681708620E-002  -1.3745493014866E-009   2.7377641092286E-023
    13    8   4 6.1697681708620E-002   2.4061739621616E-017   8.3893715437033E-039
 
-  * * * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  -1 AND IBLOCK =   1 * * * * * * * * *
+  * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  -1 AND SYMMETRY BLOCK =   1 * * * * * * *
 
     F  I =      1              2              3
     1       9.15571E+02    3.11653E-02    5.15508E-02
@@ -831,17 +831,17 @@
 
   * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
 
-  FOR JTOT =   -1 IBLOCK =  1 EFV SET =   1 ENERGY(  2) = 6.9503457E-03:  MAXIMUM DIAGONAL & OFF-DIAGONAL =  9.16E+02 &   5.16E-02
+  FOR JTOT =   -1, SYMMETRY BLOCK =  1, EFV SET =   1, ENERGY(  2) = 6.9503457E-03:  MAXIMUM DIAGONAL & OFF-DIAGONAL =  9.16E+02 &   5.16E-02
 
   EFFECTIVE RANGE FOR CHANNEL   1:
   FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   5.8920     ANGSTROM WITH 1/A(K=0) =   0.1055237914     ANGSTROM^-1
   FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   6.6805     ANGSTROM WITH   A(K=0) =    9.464431927     ANGSTROM
 
-  FINISHED JTOT =   -1   IBLOCK =   1   ENERGY(   2) = 6.9503457E-03
+  FINISHED JTOT =   -1,  SYMMETRY BLOCK =   1,  ENERGY(   2) = 6.9503457E-03
 
   ---------------------- ITYP = 9: Mg + NH in magnetic field; cross sections, non-diagonal H_intl ----------------------
 
-  JTOT =   -1   IBLOCK =   1   ENERGY(   3) =  6.95034570000E-02 CM-1 =   0.10000000000     K
+  JTOT =   -1,  SYMMETRY BLOCK =   1,  ENERGY(   3) =  6.95034570000E-02 CM-1 =   0.10000000000     K
 
   EFV SET     1:  MAGNETIC Z FIELD =   10.00000000     GAUSS
 
@@ -863,7 +863,7 @@
    12    6   4 1.9510520054723E-001   5.1535912096843E-005  -3.7832045427478E-011
    13    8   4 1.9510520054723E-001  -3.0074899958985E-010   1.3106410482392E-022
 
-  * * * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  -1 AND IBLOCK =   1 * * * * * * * * *
+  * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  -1 AND SYMMETRY BLOCK =   1 * * * * * * *
 
     F  I =      1              2              3
     1       2.95359E+02    9.28400E+00    2.46094E+01
@@ -872,13 +872,13 @@
 
   * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
 
-  FOR JTOT =   -1 IBLOCK =  1 EFV SET =   1 ENERGY(  3) = 6.9503457E-02:  MAXIMUM DIAGONAL & OFF-DIAGONAL =  2.95E+02 &   2.46E+01
+  FOR JTOT =   -1, SYMMETRY BLOCK =  1, EFV SET =   1, ENERGY(  3) = 6.9503457E-02:  MAXIMUM DIAGONAL & OFF-DIAGONAL =  2.95E+02 &   2.46E+01
 
   EFFECTIVE RANGE FOR CHANNEL   1:
   FROM EXPANSION OF 1/A AT ENERGIES 1 AND   3 IS   7.6285     ANGSTROM WITH 1/A(K=0) =   0.1058542943     ANGSTROM^-1
   FROM EXPANSION OF  A  AT ENERGIES 1 AND   3 IS  -18.830     ANGSTROM WITH   A(K=0) =    9.931846105     ANGSTROM
 
-  FINISHED JTOT =   -1   IBLOCK =   1   ENERGY(   3) = 6.9503457E-02
+  FINISHED JTOT =   -1,  SYMMETRY BLOCK =   1,  ENERGY(   3) = 6.9503457E-02
 
   ======================================================================================================================
 
@@ -994,7 +994,7 @@
 
   THRESHOLD LIST: NO NEW LEVELS IDENTIFIED
 
-  JTOT =   -1   IBLOCK =   2   ENERGY(   1) =  6.95034570000E-04 CM-1 =   1.00000000000E-03 K
+  JTOT =   -1,  SYMMETRY BLOCK =   2,  ENERGY(   1) =  6.95034570000E-04 CM-1 =   1.00000000000E-03 K
 
   EFV SET     1:  MAGNETIC Z FIELD =   10.00000000     GAUSS
 
@@ -1014,7 +1014,7 @@
    10    5   4 1.9510520059248E-002  -2.4178409566534E-009   8.4709251285361E-025
    11    7   4 1.9510520059248E-002  -3.8773712528561E-017   2.1784628361086E-040
 
-  * * * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  -1 AND IBLOCK =   2 * * * * * * * * *
+  * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  -1 AND SYMMETRY BLOCK =   2 * * * * * * *
 
     F  I =      1              2              3
     1       7.74325E+00    7.34458E-01    1.17872E-08
@@ -1023,13 +1023,13 @@
 
   * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
 
-  FOR JTOT =   -1 IBLOCK =  2 EFV SET =   1 ENERGY(  1) = 6.9503457E-04:  MAXIMUM DIAGONAL & OFF-DIAGONAL =  7.74E+00 &   7.34E-01
+  FOR JTOT =   -1, SYMMETRY BLOCK =  2, EFV SET =   1, ENERGY(  1) = 6.9503457E-04:  MAXIMUM DIAGONAL & OFF-DIAGONAL =  7.74E+00 &   7.34E-01
 
-  FINISHED JTOT =   -1   IBLOCK =   2   ENERGY(   1) = 6.9503457E-04
+  FINISHED JTOT =   -1,  SYMMETRY BLOCK =   2,  ENERGY(   1) = 6.9503457E-04
 
   ---------------------- ITYP = 9: Mg + NH in magnetic field; cross sections, non-diagonal H_intl ----------------------
 
-  JTOT =   -1   IBLOCK =   2   ENERGY(   2) =  6.95034570000E-03 CM-1 =   1.00000000000E-02 K
+  JTOT =   -1,  SYMMETRY BLOCK =   2,  ENERGY(   2) =  6.95034570000E-03 CM-1 =   1.00000000000E-02 K
 
   EFV SET     1:  MAGNETIC Z FIELD =   10.00000000     GAUSS
 
@@ -1049,7 +1049,7 @@
    10    5   4 6.1697681708620E-002  -9.9566646035974E-006   1.4364917584373E-015
    11    7   4 6.1697681708620E-002   1.7666708744460E-011   4.5225844107957E-027
 
-  * * * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  -1 AND IBLOCK =   2 * * * * * * * * *
+  * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  -1 AND SYMMETRY BLOCK =   2 * * * * * * *
 
     F  I =      1              2              3
     1       4.74849E+01    3.16831E+00    1.57970E-05
@@ -1058,17 +1058,17 @@
 
   * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
 
-  FOR JTOT =   -1 IBLOCK =  2 EFV SET =   1 ENERGY(  2) = 6.9503457E-03:  MAXIMUM DIAGONAL & OFF-DIAGONAL =  4.75E+01 &   3.17E+00
+  FOR JTOT =   -1, SYMMETRY BLOCK =  2, EFV SET =   1, ENERGY(  2) = 6.9503457E-03:  MAXIMUM DIAGONAL & OFF-DIAGONAL =  4.75E+01 &   3.17E+00
 
   EFFECTIVE RANGE FOR CHANNEL   1:
   FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS -0.39179     ANGSTROM WITH 1/A(K=0) =   0.1713795938E-02 ANGSTROM^-1
   FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS -0.26836     ANGSTROM WITH   A(K=0) =    576.1232244     ANGSTROM
 
-  FINISHED JTOT =   -1   IBLOCK =   2   ENERGY(   2) = 6.9503457E-03
+  FINISHED JTOT =   -1,  SYMMETRY BLOCK =   2,  ENERGY(   2) = 6.9503457E-03
 
   ---------------------- ITYP = 9: Mg + NH in magnetic field; cross sections, non-diagonal H_intl ----------------------
 
-  JTOT =   -1   IBLOCK =   2   ENERGY(   3) =  6.95034570000E-02 CM-1 =   0.10000000000     K
+  JTOT =   -1,  SYMMETRY BLOCK =   2,  ENERGY(   3) =  6.95034570000E-02 CM-1 =   0.10000000000     K
 
   EFV SET     1:  MAGNETIC Z FIELD =   10.00000000     GAUSS
 
@@ -1088,7 +1088,7 @@
    10    5   4 1.9510520054723E-001   1.2323772301124E-002  -1.8439838335196E-006
    11    7   4 1.9510520054723E-001   1.2723196296465E-007  -2.6050127511318E-012
 
-  * * * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  -1 AND IBLOCK =   2 * * * * * * * * *
+  * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  -1 AND SYMMETRY BLOCK =   2 * * * * * * *
 
     F  I =      1              2              3
     1       1.93038E+02    1.73329E+00    1.41983E-02
@@ -1097,13 +1097,13 @@
 
   * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
 
-  FOR JTOT =   -1 IBLOCK =  2 EFV SET =   1 ENERGY(  3) = 6.9503457E-02:  MAXIMUM DIAGONAL & OFF-DIAGONAL =  1.93E+02 &   1.73E+00
+  FOR JTOT =   -1, SYMMETRY BLOCK =  2, EFV SET =   1, ENERGY(  3) = 6.9503457E-02:  MAXIMUM DIAGONAL & OFF-DIAGONAL =  1.93E+02 &   1.73E+00
 
   EFFECTIVE RANGE FOR CHANNEL   1:
   FROM EXPANSION OF 1/A AT ENERGIES 1 AND   3 IS -0.23517     ANGSTROM WITH 1/A(K=0) =   0.1743606574E-02 ANGSTROM^-1
   FROM EXPANSION OF  A  AT ENERGIES 1 AND   3 IS -0.66657E-01 ANGSTROM WITH   A(K=0) =    563.1937083     ANGSTROM
 
-  FINISHED JTOT =   -1   IBLOCK =   2   ENERGY(   3) = 6.9503457E-02
+  FINISHED JTOT =   -1,  SYMMETRY BLOCK =   2,  ENERGY(   3) = 6.9503457E-02
 
   ======================================================================================================================
 
@@ -1229,7 +1229,7 @@
 
   THRESHOLD LIST: NO NEW LEVELS IDENTIFIED
 
-  JTOT =    0   IBLOCK =   1   ENERGY(   1) =  6.95034570000E-04 CM-1 =   1.00000000000E-03 K
+  JTOT =    0,  SYMMETRY BLOCK =   1,  ENERGY(   1) =  6.95034570000E-04 CM-1 =   1.00000000000E-03 K
 
   EFV SET     1:  MAGNETIC Z FIELD =   10.00000000     GAUSS
 
@@ -1251,7 +1251,7 @@
    12    6   4 1.9510520059248E-002  -4.1941062152084E-014   2.5489084243574E-034
    13    8   4 1.9510520059248E-002   1.8285834048394E-023   4.8451243906148E-053
 
-  * * * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =   0 AND IBLOCK =   1 * * * * * * * * *
+  * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =   0 AND SYMMETRY BLOCK =   1 * * * * * * *
 
     F  I =      1              2              3
     1       1.63067E-05    3.81293E-03    3.92463E-07
@@ -1260,13 +1260,13 @@
 
   * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
 
-  FOR JTOT =    0 IBLOCK =  1 EFV SET =   1 ENERGY(  1) = 6.9503457E-04:  MAXIMUM DIAGONAL & OFF-DIAGONAL =  1.04E+03 &   3.81E-03
+  FOR JTOT =    0, SYMMETRY BLOCK =  1, EFV SET =   1, ENERGY(  1) = 6.9503457E-04:  MAXIMUM DIAGONAL & OFF-DIAGONAL =  1.04E+03 &   3.81E-03
 
-  FINISHED JTOT =    0   IBLOCK =   1   ENERGY(   1) = 6.9503457E-04
+  FINISHED JTOT =    0,  SYMMETRY BLOCK =   1,  ENERGY(   1) = 6.9503457E-04
 
   ---------------------- ITYP = 9: Mg + NH in magnetic field; cross sections, non-diagonal H_intl ----------------------
 
-  JTOT =    0   IBLOCK =   1   ENERGY(   2) =  6.95034570000E-03 CM-1 =   1.00000000000E-02 K
+  JTOT =    0,  SYMMETRY BLOCK =   1,  ENERGY(   2) =  6.95034570000E-03 CM-1 =   1.00000000000E-02 K
 
   EFV SET     1:  MAGNETIC Z FIELD =   10.00000000     GAUSS
 
@@ -1288,7 +1288,7 @@
    12    6   4 6.1697681708620E-002  -1.3991321623033E-009   2.8365658028867E-023
    13    8   4 6.1697681708620E-002   3.1017474071306E-017   1.3940817394748E-038
 
-  * * * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =   0 AND IBLOCK =   1 * * * * * * * * *
+  * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =   0 AND SYMMETRY BLOCK =   1 * * * * * * *
 
     F  I =      1              2              3
     1       2.42851E-03    3.95401E-02    3.04491E-04
@@ -1297,17 +1297,17 @@
 
   * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
 
-  FOR JTOT =    0 IBLOCK =  1 EFV SET =   1 ENERGY(  2) = 6.9503457E-03:  MAXIMUM DIAGONAL & OFF-DIAGONAL =  9.30E+02 &   3.95E-02
+  FOR JTOT =    0, SYMMETRY BLOCK =  1, EFV SET =   1, ENERGY(  2) = 6.9503457E-03:  MAXIMUM DIAGONAL & OFF-DIAGONAL =  9.30E+02 &   3.95E-02
 
   EFFECTIVE RANGE FOR CHANNEL   1:
   FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS  -12.876     ANGSTROM WITH 1/A(K=0) =  -0.4865849691E-01 ANGSTROM^-1
   FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS  -30.512     ANGSTROM WITH   A(K=0) =   -19.44544850     ANGSTROM
 
-  FINISHED JTOT =    0   IBLOCK =   1   ENERGY(   2) = 6.9503457E-03
+  FINISHED JTOT =    0,  SYMMETRY BLOCK =   1,  ENERGY(   2) = 6.9503457E-03
 
   ---------------------- ITYP = 9: Mg + NH in magnetic field; cross sections, non-diagonal H_intl ----------------------
 
-  JTOT =    0   IBLOCK =   1   ENERGY(   3) =  6.95034570000E-02 CM-1 =   0.10000000000     K
+  JTOT =    0,  SYMMETRY BLOCK =   1,  ENERGY(   3) =  6.95034570000E-02 CM-1 =   0.10000000000     K
 
   EFV SET     1:  MAGNETIC Z FIELD =   10.00000000     GAUSS
 
@@ -1329,7 +1329,7 @@
    12    6   4 1.9510520054723E-001   5.4835805405188E-005  -3.0887444227872E-011
    13    8   4 1.9510520054723E-001  -2.8748131194298E-010   1.1975526581828E-022
 
-  * * * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =   0 AND IBLOCK =   1 * * * * * * * * *
+  * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =   0 AND SYMMETRY BLOCK =   1 * * * * * * *
 
     F  I =      1              2              3
     1       3.28794E+01    1.14817E+01    1.35251E+01
@@ -1338,13 +1338,13 @@
 
   * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
 
-  FOR JTOT =    0 IBLOCK =  1 EFV SET =   1 ENERGY(  3) = 6.9503457E-02:  MAXIMUM DIAGONAL & OFF-DIAGONAL =  3.59E+02 &   1.35E+01
+  FOR JTOT =    0, SYMMETRY BLOCK =  1, EFV SET =   1, ENERGY(  3) = 6.9503457E-02:  MAXIMUM DIAGONAL & OFF-DIAGONAL =  3.59E+02 &   1.35E+01
 
   EFFECTIVE RANGE FOR CHANNEL   1:
   FROM EXPANSION OF 1/A AT ENERGIES 1 AND   3 IS  -2.2245     ANGSTROM WITH 1/A(K=0) =  -0.4663124472E-01 ANGSTROM^-1
   FROM EXPANSION OF  A  AT ENERGIES 1 AND   3 IS  -29.482     ANGSTROM WITH   A(K=0) =   -19.50629236     ANGSTROM
 
-  FINISHED JTOT =    0   IBLOCK =   1   ENERGY(   3) = 6.9503457E-02
+  FINISHED JTOT =    0,  SYMMETRY BLOCK =   1,  ENERGY(   3) = 6.9503457E-02
 
   ======================================================================================================================
 
@@ -1465,7 +1465,7 @@
 
   THRESHOLD LIST: NO NEW LEVELS IDENTIFIED
 
-  JTOT =    0   IBLOCK =   2   ENERGY(   1) =  6.95034570000E-04 CM-1 =   1.00000000000E-03 K
+  JTOT =    0,  SYMMETRY BLOCK =   2,  ENERGY(   1) =  6.95034570000E-04 CM-1 =   1.00000000000E-03 K
 
   EFV SET     1:  MAGNETIC Z FIELD =   10.00000000     GAUSS
 
@@ -1486,7 +1486,7 @@
    11    5   4 1.9510520059248E-002  -2.7240517316099E-009   1.0752416656841E-024
    12    7   4 1.9510520059248E-002  -3.9864335068760E-017   2.3027374935757E-040
 
-  * * * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =   0 AND IBLOCK =   2 * * * * * * * * *
+  * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =   0 AND SYMMETRY BLOCK =   2 * * * * * * *
 
     F  I =      1              2              3
     1       7.01690E+00    2.12421E-02    7.39187E-01
@@ -1495,13 +1495,13 @@
 
   * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
 
-  FOR JTOT =    0 IBLOCK =  2 EFV SET =   1 ENERGY(  1) = 6.9503457E-04:  MAXIMUM DIAGONAL & OFF-DIAGONAL =  7.02E+00 &   7.39E-01
+  FOR JTOT =    0, SYMMETRY BLOCK =  2, EFV SET =   1, ENERGY(  1) = 6.9503457E-04:  MAXIMUM DIAGONAL & OFF-DIAGONAL =  7.02E+00 &   7.39E-01
 
-  FINISHED JTOT =    0   IBLOCK =   2   ENERGY(   1) = 6.9503457E-04
+  FINISHED JTOT =    0,  SYMMETRY BLOCK =   2,  ENERGY(   1) = 6.9503457E-04
 
   ---------------------- ITYP = 9: Mg + NH in magnetic field; cross sections, non-diagonal H_intl ----------------------
 
-  JTOT =    0   IBLOCK =   2   ENERGY(   2) =  6.95034570000E-03 CM-1 =   1.00000000000E-02 K
+  JTOT =    0,  SYMMETRY BLOCK =   2,  ENERGY(   2) =  6.95034570000E-03 CM-1 =   1.00000000000E-02 K
 
   EFV SET     1:  MAGNETIC Z FIELD =   10.00000000     GAUSS
 
@@ -1522,7 +1522,7 @@
    11    5   4 6.1697681708620E-002  -1.1077494353872E-005   1.7781093168680E-015
    12    7   4 6.1697681708620E-002   1.8549894859196E-011   4.9860690391076E-027
 
-  * * * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =   0 AND IBLOCK =   2 * * * * * * * * *
+  * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =   0 AND SYMMETRY BLOCK =   2 * * * * * * *
 
     F  I =      1              2              3
     1       4.26952E+01    1.47320E-01    4.76194E+00
@@ -1531,17 +1531,17 @@
 
   * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
 
-  FOR JTOT =    0 IBLOCK =  2 EFV SET =   1 ENERGY(  2) = 6.9503457E-03:  MAXIMUM DIAGONAL & OFF-DIAGONAL =  4.27E+01 &   4.76E+00
+  FOR JTOT =    0, SYMMETRY BLOCK =  2, EFV SET =   1, ENERGY(  2) = 6.9503457E-03:  MAXIMUM DIAGONAL & OFF-DIAGONAL =  4.27E+01 &   4.76E+00
 
   EFFECTIVE RANGE FOR CHANNEL   1:
   FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS -0.41826     ANGSTROM WITH 1/A(K=0) =   0.1799167585E-02 ANGSTROM^-1
   FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS -0.28504     ANGSTROM WITH   A(K=0) =    548.5883631     ANGSTROM
 
-  FINISHED JTOT =    0   IBLOCK =   2   ENERGY(   2) = 6.9503457E-03
+  FINISHED JTOT =    0,  SYMMETRY BLOCK =   2,  ENERGY(   2) = 6.9503457E-03
 
   ---------------------- ITYP = 9: Mg + NH in magnetic field; cross sections, non-diagonal H_intl ----------------------
 
-  JTOT =    0   IBLOCK =   2   ENERGY(   3) =  6.95034570000E-02 CM-1 =   0.10000000000     K
+  JTOT =    0,  SYMMETRY BLOCK =   2,  ENERGY(   3) =  6.95034570000E-02 CM-1 =   0.10000000000     K
 
   EFV SET     1:  MAGNETIC Z FIELD =   10.00000000     GAUSS
 
@@ -1562,7 +1562,7 @@
    11    5   4 1.9510520054723E-001   1.1348550979103E-002  -1.5939465477377E-006
    12    7   4 1.9510520054723E-001   1.5136096005216E-007  -1.9920533145815E-012
 
-  * * * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =   0 AND IBLOCK =   2 * * * * * * * * *
+  * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =   0 AND SYMMETRY BLOCK =   2 * * * * * * *
 
     F  I =      1              2              3
     1       1.82562E+02    2.60573E-01    3.28037E+00
@@ -1571,13 +1571,13 @@
 
   * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
 
-  FOR JTOT =    0 IBLOCK =  2 EFV SET =   1 ENERGY(  3) = 6.9503457E-02:  MAXIMUM DIAGONAL & OFF-DIAGONAL =  1.83E+02 &   3.28E+00
+  FOR JTOT =    0, SYMMETRY BLOCK =  2, EFV SET =   1, ENERGY(  3) = 6.9503457E-02:  MAXIMUM DIAGONAL & OFF-DIAGONAL =  1.83E+02 &   3.28E+00
 
   EFFECTIVE RANGE FOR CHANNEL   1:
   FROM EXPANSION OF 1/A AT ENERGIES 1 AND   3 IS -0.24920     ANGSTROM WITH 1/A(K=0) =   0.1831345547E-02 ANGSTROM^-1
   FROM EXPANSION OF  A  AT ENERGIES 1 AND   3 IS -0.70198E-01 ANGSTROM WITH   A(K=0) =    536.1013990     ANGSTROM
 
-  FINISHED JTOT =    0   IBLOCK =   2   ENERGY(   3) = 6.9503457E-02
+  FINISHED JTOT =    0,  SYMMETRY BLOCK =   2,  ENERGY(   3) = 6.9503457E-02
 
   ======================================================================================================================
 
@@ -1701,7 +1701,7 @@
 
   THRESHOLD LIST: NO NEW LEVELS IDENTIFIED
 
-  JTOT =    1   IBLOCK =   1   ENERGY(   1) =  6.95034570000E-04 CM-1 =   1.00000000000E-03 K
+  JTOT =    1,  SYMMETRY BLOCK =   1,  ENERGY(   1) =  6.95034570000E-04 CM-1 =   1.00000000000E-03 K
 
   EFV SET     1:  MAGNETIC Z FIELD =   10.00000000     GAUSS
 
@@ -1723,7 +1723,7 @@
    12    6   4 1.9510520059248E-002  -4.1861713752730E-014   2.5392729753315E-034
    13    8   4 1.9510520059248E-002   1.8118642092153E-023   4.7569290689579E-053
 
-  * * * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =   1 AND IBLOCK =   1 * * * * * * * * *
+  * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =   1 AND SYMMETRY BLOCK =   1 * * * * * * *
 
     F  I =      1              2              3
     1       2.33696E-05    6.40726E-07    1.18015E-02
@@ -1732,13 +1732,13 @@
 
   * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
 
-  FOR JTOT =    1 IBLOCK =  1 EFV SET =   1 ENERGY(  1) = 6.9503457E-04:  MAXIMUM DIAGONAL & OFF-DIAGONAL =  1.05E+03 &   1.18E-02
+  FOR JTOT =    1, SYMMETRY BLOCK =  1, EFV SET =   1, ENERGY(  1) = 6.9503457E-04:  MAXIMUM DIAGONAL & OFF-DIAGONAL =  1.05E+03 &   1.18E-02
 
-  FINISHED JTOT =    1   IBLOCK =   1   ENERGY(   1) = 6.9503457E-04
+  FINISHED JTOT =    1,  SYMMETRY BLOCK =   1,  ENERGY(   1) = 6.9503457E-04
 
   ---------------------- ITYP = 9: Mg + NH in magnetic field; cross sections, non-diagonal H_intl ----------------------
 
-  JTOT =    1   IBLOCK =   1   ENERGY(   2) =  6.95034570000E-03 CM-1 =   1.00000000000E-02 K
+  JTOT =    1,  SYMMETRY BLOCK =   1,  ENERGY(   2) =  6.95034570000E-03 CM-1 =   1.00000000000E-02 K
 
   EFV SET     1:  MAGNETIC Z FIELD =   10.00000000     GAUSS
 
@@ -1760,7 +1760,7 @@
    12    6   4 6.1697681708620E-002  -1.3970334481113E-009   2.8280624231805E-023
    13    8   4 6.1697681708620E-002   3.0453286001594E-017   1.3438280601277E-038
 
-  * * * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =   1 AND IBLOCK =   1 * * * * * * * * *
+  * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =   1 AND SYMMETRY BLOCK =   1 * * * * * * *
 
     F  I =      1              2              3
     1       3.52730E-03    1.72509E-04    8.53152E-02
@@ -1769,17 +1769,17 @@
 
   * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
 
-  FOR JTOT =    1 IBLOCK =  1 EFV SET =   1 ENERGY(  2) = 6.9503457E-03:  MAXIMUM DIAGONAL & OFF-DIAGONAL =  9.44E+02 &   8.53E-02
+  FOR JTOT =    1, SYMMETRY BLOCK =  1, EFV SET =   1, ENERGY(  2) = 6.9503457E-03:  MAXIMUM DIAGONAL & OFF-DIAGONAL =  9.44E+02 &   8.53E-02
 
   EFFECTIVE RANGE FOR CHANNEL   1:
   FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS  -10.833     ANGSTROM WITH 1/A(K=0) =  -0.4066066553E-01 ANGSTROM^-1
   FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS  -25.920     ANGSTROM WITH   A(K=0) =   -23.24242898     ANGSTROM
 
-  FINISHED JTOT =    1   IBLOCK =   1   ENERGY(   2) = 6.9503457E-03
+  FINISHED JTOT =    1,  SYMMETRY BLOCK =   1,  ENERGY(   2) = 6.9503457E-03
 
   ---------------------- ITYP = 9: Mg + NH in magnetic field; cross sections, non-diagonal H_intl ----------------------
 
-  JTOT =    1   IBLOCK =   1   ENERGY(   3) =  6.95034570000E-02 CM-1 =   0.10000000000     K
+  JTOT =    1,  SYMMETRY BLOCK =   1,  ENERGY(   3) =  6.95034570000E-02 CM-1 =   0.10000000000     K
 
   EFV SET     1:  MAGNETIC Z FIELD =   10.00000000     GAUSS
 
@@ -1801,7 +1801,7 @@
    12    6   4 1.9510520054723E-001   5.4236338756077E-005  -2.5005929247063E-011
    13    8   4 1.9510520054723E-001  -2.8802876386247E-010   1.2021180104858E-022
 
-  * * * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =   1 AND IBLOCK =   1 * * * * * * * * *
+  * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =   1 AND SYMMETRY BLOCK =   1 * * * * * * *
 
     F  I =      1              2              3
     1       5.92105E+01    9.55031E+00    2.57981E+01
@@ -1810,13 +1810,13 @@
 
   * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
 
-  FOR JTOT =    1 IBLOCK =  1 EFV SET =   1 ENERGY(  3) = 6.9503457E-02:  MAXIMUM DIAGONAL & OFF-DIAGONAL =  2.98E+02 &   2.58E+01
+  FOR JTOT =    1, SYMMETRY BLOCK =  1, EFV SET =   1, ENERGY(  3) = 6.9503457E-02:  MAXIMUM DIAGONAL & OFF-DIAGONAL =  2.98E+02 &   2.58E+01
 
   EFFECTIVE RANGE FOR CHANNEL   1:
   FROM EXPANSION OF 1/A AT ENERGIES 1 AND   3 IS  -1.8937     ANGSTROM WITH 1/A(K=0) =  -0.3895932060E-01 ANGSTROM^-1
   FROM EXPANSION OF  A  AT ENERGIES 1 AND   3 IS  -32.632     ANGSTROM WITH   A(K=0) =   -22.70553427     ANGSTROM
 
-  FINISHED JTOT =    1   IBLOCK =   1   ENERGY(   3) = 6.9503457E-02
+  FINISHED JTOT =    1,  SYMMETRY BLOCK =   1,  ENERGY(   3) = 6.9503457E-02
 
   ======================================================================================================================
 
@@ -1932,7 +1932,7 @@
 
   THRESHOLD LIST: NO NEW LEVELS IDENTIFIED
 
-  JTOT =    1   IBLOCK =   2   ENERGY(   1) =  6.95034570000E-04 CM-1 =   1.00000000000E-03 K
+  JTOT =    1,  SYMMETRY BLOCK =   2,  ENERGY(   1) =  6.95034570000E-04 CM-1 =   1.00000000000E-03 K
 
   EFV SET     1:  MAGNETIC Z FIELD =   10.00000000     GAUSS
 
@@ -1952,7 +1952,7 @@
    10    5   4 1.9510520059248E-002  -2.8498414888907E-009   1.1768382967457E-024
    11    7   4 1.9510520059248E-002  -3.9535492443264E-017   2.2649034247825E-040
 
-  * * * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =   1 AND IBLOCK =   2 * * * * * * * * *
+  * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =   1 AND SYMMETRY BLOCK =   2 * * * * * * *
 
     F  I =      1              2              3
     1       7.83746E-14    2.61464E-07    1.99166E-07
@@ -1961,13 +1961,13 @@
 
   * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
 
-  FOR JTOT =    1 IBLOCK =  2 EFV SET =   1 ENERGY(  1) = 6.9503457E-04:  MAXIMUM DIAGONAL & OFF-DIAGONAL =  3.54E+00 &   3.03E-01
+  FOR JTOT =    1, SYMMETRY BLOCK =  2, EFV SET =   1, ENERGY(  1) = 6.9503457E-04:  MAXIMUM DIAGONAL & OFF-DIAGONAL =  3.54E+00 &   3.03E-01
 
-  FINISHED JTOT =    1   IBLOCK =   2   ENERGY(   1) = 6.9503457E-04
+  FINISHED JTOT =    1,  SYMMETRY BLOCK =   2,  ENERGY(   1) = 6.9503457E-04
 
   ---------------------- ITYP = 9: Mg + NH in magnetic field; cross sections, non-diagonal H_intl ----------------------
 
-  JTOT =    1   IBLOCK =   2   ENERGY(   2) =  6.95034570000E-03 CM-1 =   1.00000000000E-02 K
+  JTOT =    1,  SYMMETRY BLOCK =   2,  ENERGY(   2) =  6.95034570000E-03 CM-1 =   1.00000000000E-02 K
 
   EFV SET     1:  MAGNETIC Z FIELD =   10.00000000     GAUSS
 
@@ -1987,7 +1987,7 @@
    10    5   4 6.1697681708620E-002  -1.1470139702320E-005   1.9063945942059E-015
    11    7   4 6.1697681708620E-002   1.8777114318791E-011   5.1089668363845E-027
 
-  * * * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =   1 AND IBLOCK =   2 * * * * * * * * *
+  * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =   1 AND SYMMETRY BLOCK =   2 * * * * * * *
 
     F  I =      1              2              3
     1       4.63878E-11    2.84433E-05    2.94848E-05
@@ -1996,17 +1996,17 @@
 
   * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
 
-  FOR JTOT =    1 IBLOCK =  2 EFV SET =   1 ENERGY(  2) = 6.9503457E-03:  MAXIMUM DIAGONAL & OFF-DIAGONAL =  4.13E+01 &   2.93E+00
+  FOR JTOT =    1, SYMMETRY BLOCK =  2, EFV SET =   1, ENERGY(  2) = 6.9503457E-03:  MAXIMUM DIAGONAL & OFF-DIAGONAL =  4.13E+01 &   2.93E+00
 
   EFFECTIVE RANGE FOR CHANNEL   1:
   FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS  0.28606E+06 ANGSTROM WITH 1/A(K=0) =    720.9764896     ANGSTROM^-1
   FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS  0.22587E+07 ANGSTROM WITH   A(K=0) =   0.1037528567E-02 ANGSTROM
 
-  FINISHED JTOT =    1   IBLOCK =   2   ENERGY(   2) = 6.9503457E-03
+  FINISHED JTOT =    1,  SYMMETRY BLOCK =   2,  ENERGY(   2) = 6.9503457E-03
 
   ---------------------- ITYP = 9: Mg + NH in magnetic field; cross sections, non-diagonal H_intl ----------------------
 
-  JTOT =    1   IBLOCK =   2   ENERGY(   3) =  6.95034570000E-02 CM-1 =   0.10000000000     K
+  JTOT =    1,  SYMMETRY BLOCK =   2,  ENERGY(   3) =  6.95034570000E-02 CM-1 =   0.10000000000     K
 
   EFV SET     1:  MAGNETIC Z FIELD =   10.00000000     GAUSS
 
@@ -2026,7 +2026,7 @@
    10    5   4 1.9510520054723E-001   9.1694813240596E-003  -1.4008972504452E-006
    11    7   4 1.9510520054723E-001   1.6674142881752E-007  -1.5323339531631E-012
 
-  * * * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =   1 AND IBLOCK =   2 * * * * * * * * *
+  * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =   1 AND SYMMETRY BLOCK =   2 * * * * * * *
 
     F  I =      1              2              3
     1       7.66721E-05    1.52471E-02    1.55601E-02
@@ -2035,13 +2035,13 @@
 
   * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
 
-  FOR JTOT =    1 IBLOCK =  2 EFV SET =   1 ENERGY(  3) = 6.9503457E-02:  MAXIMUM DIAGONAL & OFF-DIAGONAL =  1.93E+02 &   1.76E+00
+  FOR JTOT =    1, SYMMETRY BLOCK =  2, EFV SET =   1, ENERGY(  3) = 6.9503457E-02:  MAXIMUM DIAGONAL & OFF-DIAGONAL =  1.93E+02 &   1.76E+00
 
   EFFECTIVE RANGE FOR CHANNEL   1:
   FROM EXPANSION OF 1/A AT ENERGIES 1 AND   3 IS   35543.     ANGSTROM WITH 1/A(K=0) =    673.2949991     ANGSTROM^-1
   FROM EXPANSION OF  A  AT ENERGIES 1 AND   3 IS -0.76296E+06 ANGSTROM WITH   A(K=0) =   0.4677675199E-02 ANGSTROM
 
-  FINISHED JTOT =    1   IBLOCK =   2   ENERGY(   3) = 6.9503457E-02
+  FINISHED JTOT =    1,  SYMMETRY BLOCK =   2,  ENERGY(   3) = 6.9503457E-02
 
   ======================================================================================================================
 
@@ -2154,7 +2154,7 @@
 
   THRESHOLD LIST: NO NEW LEVELS IDENTIFIED
 
-  JTOT =    2   IBLOCK =   1   ENERGY(   1) =  6.95034570000E-04 CM-1 =   1.00000000000E-03 K
+  JTOT =    2,  SYMMETRY BLOCK =   1,  ENERGY(   1) =  6.95034570000E-04 CM-1 =   1.00000000000E-03 K
 
   EFV SET     1:  MAGNETIC Z FIELD =   10.00000000     GAUSS
 
@@ -2174,7 +2174,7 @@
    10    6   4 1.9510520059248E-002  -4.1042828311511E-014   2.4408997619483E-034
    11    8   4 1.9510520059248E-002   1.5331499801939E-023   3.4060001809758E-053
 
-  * * * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =   2 AND IBLOCK =   1 * * * * * * * * *
+  * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =   2 AND SYMMETRY BLOCK =   1 * * * * * * *
 
     F  I =      1              2              3
     1       1.06644E-17    6.13804E-13    3.41040E-13
@@ -2183,13 +2183,13 @@
 
   * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
 
-  FOR JTOT =    2 IBLOCK =  1 EFV SET =   1 ENERGY(  1) = 6.9503457E-04:  MAXIMUM DIAGONAL & OFF-DIAGONAL =  1.71E-06 &   6.90E-08
+  FOR JTOT =    2, SYMMETRY BLOCK =  1, EFV SET =   1, ENERGY(  1) = 6.9503457E-04:  MAXIMUM DIAGONAL & OFF-DIAGONAL =  1.71E-06 &   6.90E-08
 
-  FINISHED JTOT =    2   IBLOCK =   1   ENERGY(   1) = 6.9503457E-04
+  FINISHED JTOT =    2,  SYMMETRY BLOCK =   1,  ENERGY(   1) = 6.9503457E-04
 
   ---------------------- ITYP = 9: Mg + NH in magnetic field; cross sections, non-diagonal H_intl ----------------------
 
-  JTOT =    2   IBLOCK =   1   ENERGY(   2) =  6.95034570000E-03 CM-1 =   1.00000000000E-02 K
+  JTOT =    2,  SYMMETRY BLOCK =   1,  ENERGY(   2) =  6.95034570000E-03 CM-1 =   1.00000000000E-02 K
 
   EFV SET     1:  MAGNETIC Z FIELD =   10.00000000     GAUSS
 
@@ -2209,7 +2209,7 @@
    10    6   4 6.1697681708620E-002  -1.3680425794879E-009   2.7119058776424E-023
    11    8   4 6.1697681708620E-002   2.2331537984432E-017   7.2262444900833E-039
 
-  * * * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =   2 AND IBLOCK =   1 * * * * * * * * *
+  * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =   2 AND SYMMETRY BLOCK =   1 * * * * * * *
 
     F  I =      1              2              3
     1       1.92300E-13    1.76163E-09    2.90636E-09
@@ -2218,17 +2218,17 @@
 
   * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
 
-  FOR JTOT =    2 IBLOCK =  1 EFV SET =   1 ENERGY(  2) = 6.9503457E-03:  MAXIMUM DIAGONAL & OFF-DIAGONAL =  9.75E-04 &   1.22E-04
+  FOR JTOT =    2, SYMMETRY BLOCK =  1, EFV SET =   1, ENERGY(  2) = 6.9503457E-03:  MAXIMUM DIAGONAL & OFF-DIAGONAL =  9.75E-04 &   1.22E-04
 
   EFFECTIVE RANGE FOR CHANNEL   1:
   FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS  0.31772E+08 ANGSTROM WITH 1/A(K=0) =    63184.74752     ANGSTROM^-1
   FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS  0.44345E+09 ANGSTROM WITH   A(K=0) =  -0.2149498623E-04 ANGSTROM
 
-  FINISHED JTOT =    2   IBLOCK =   1   ENERGY(   2) = 6.9503457E-03
+  FINISHED JTOT =    2,  SYMMETRY BLOCK =   1,  ENERGY(   2) = 6.9503457E-03
 
   ---------------------- ITYP = 9: Mg + NH in magnetic field; cross sections, non-diagonal H_intl ----------------------
 
-  JTOT =    2   IBLOCK =   1   ENERGY(   3) =  6.95034570000E-02 CM-1 =   0.10000000000     K
+  JTOT =    2,  SYMMETRY BLOCK =   1,  ENERGY(   3) =  6.95034570000E-02 CM-1 =   0.10000000000     K
 
   EFV SET     1:  MAGNETIC Z FIELD =   10.00000000     GAUSS
 
@@ -2248,7 +2248,7 @@
    10    6   4 1.9510520054723E-001   4.9835362533916E-005  -1.9999822005364E-011
    11    8   4 1.9510520054723E-001  -3.0242123043257E-010   1.3252564753226E-022
 
-  * * * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =   2 AND IBLOCK =   1 * * * * * * * * *
+  * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =   2 AND SYMMETRY BLOCK =   1 * * * * * * *
 
     F  I =      1              2              3
     1       1.17617E-06    1.65656E-03    3.21802E-03
@@ -2257,13 +2257,13 @@
 
   * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
 
-  FOR JTOT =    2 IBLOCK =  1 EFV SET =   1 ENERGY(  3) = 6.9503457E-02:  MAXIMUM DIAGONAL & OFF-DIAGONAL =  2.83E+01 &   5.41E+00
+  FOR JTOT =    2, SYMMETRY BLOCK =  1, EFV SET =   1, ENERGY(  3) = 6.9503457E-02:  MAXIMUM DIAGONAL & OFF-DIAGONAL =  2.83E+01 &   5.41E+00
 
   EFFECTIVE RANGE FOR CHANNEL   1:
   FROM EXPANSION OF 1/A AT ENERGIES 1 AND   3 IS  0.30310E+07 ANGSTROM WITH 1/A(K=0) =    57714.54963     ANGSTROM^-1
   FROM EXPANSION OF  A  AT ENERGIES 1 AND   3 IS  0.14873E+08 ANGSTROM WITH   A(K=0) =  -0.3699675518E-03 ANGSTROM
 
-  FINISHED JTOT =    2   IBLOCK =   1   ENERGY(   3) = 6.9503457E-02
+  FINISHED JTOT =    2,  SYMMETRY BLOCK =   1,  ENERGY(   3) = 6.9503457E-02
 
   ======================================================================================================================
 
@@ -2371,7 +2371,7 @@
 
   THRESHOLD LIST: NO NEW LEVELS IDENTIFIED
 
-  JTOT =    2   IBLOCK =   2   ENERGY(   1) =  6.95034570000E-04 CM-1 =   1.00000000000E-03 K
+  JTOT =    2,  SYMMETRY BLOCK =   2,  ENERGY(   1) =  6.95034570000E-04 CM-1 =   1.00000000000E-03 K
 
   EFV SET     1:  MAGNETIC Z FIELD =   10.00000000     GAUSS
 
@@ -2390,7 +2390,7 @@
     9    5   4 1.9510520059248E-002  -2.7965393233218E-009   1.1332278633780E-024
    10    7   4 1.9510520059248E-002  -3.7813637909546E-017   2.0719167705469E-040
 
-  * * * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =   2 AND IBLOCK =   2 * * * * * * * * *
+  * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =   2 AND SYMMETRY BLOCK =   2 * * * * * * *
 
     F  I =      1              2              3
     1       1.62054E-14    2.44853E-14    5.74701E-07
@@ -2399,13 +2399,13 @@
 
   * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
 
-  FOR JTOT =    2 IBLOCK =  2 EFV SET =   1 ENERGY(  1) = 6.9503457E-04:  MAXIMUM DIAGONAL & OFF-DIAGONAL =  2.95E-01 &   5.75E-07
+  FOR JTOT =    2, SYMMETRY BLOCK =  2, EFV SET =   1, ENERGY(  1) = 6.9503457E-04:  MAXIMUM DIAGONAL & OFF-DIAGONAL =  2.95E-01 &   5.75E-07
 
-  FINISHED JTOT =    2   IBLOCK =   2   ENERGY(   1) = 6.9503457E-04
+  FINISHED JTOT =    2,  SYMMETRY BLOCK =   2,  ENERGY(   1) = 6.9503457E-04
 
   ---------------------- ITYP = 9: Mg + NH in magnetic field; cross sections, non-diagonal H_intl ----------------------
 
-  JTOT =    2   IBLOCK =   2   ENERGY(   2) =  6.95034570000E-03 CM-1 =   1.00000000000E-02 K
+  JTOT =    2,  SYMMETRY BLOCK =   2,  ENERGY(   2) =  6.95034570000E-03 CM-1 =   1.00000000000E-02 K
 
   EFV SET     1:  MAGNETIC Z FIELD =   10.00000000     GAUSS
 
@@ -2424,7 +2424,7 @@
     9    5   4 6.1697681708620E-002  -1.1140576726342E-005   1.7984183736147E-015
    10    7   4 6.1697681708620E-002   1.8326987068038E-011   4.8669572291435E-027
 
-  * * * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =   2 AND IBLOCK =   2 * * * * * * * * *
+  * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =   2 AND SYMMETRY BLOCK =   2 * * * * * * *
 
     F  I =      1              2              3
     1       2.44544E-12    1.35527E-10    8.66340E-05
@@ -2433,17 +2433,17 @@
 
   * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
 
-  FOR JTOT =    2 IBLOCK =  2 EFV SET =   1 ENERGY(  2) = 6.9503457E-03:  MAXIMUM DIAGONAL & OFF-DIAGONAL =  1.84E+01 &   8.66E-05
+  FOR JTOT =    2, SYMMETRY BLOCK =  2, EFV SET =   1, ENERGY(  2) = 6.9503457E-03:  MAXIMUM DIAGONAL & OFF-DIAGONAL =  1.84E+01 &   8.66E-05
 
   EFFECTIVE RANGE FOR CHANNEL   1:
   FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS  0.17205E+07 ANGSTROM WITH 1/A(K=0) =    1793.347284     ANGSTROM^-1
   FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS -0.11420E+07 ANGSTROM WITH   A(K=0) =   0.8329900663E-03 ANGSTROM
 
-  FINISHED JTOT =    2   IBLOCK =   2   ENERGY(   2) = 6.9503457E-03
+  FINISHED JTOT =    2,  SYMMETRY BLOCK =   2,  ENERGY(   2) = 6.9503457E-03
 
   ---------------------- ITYP = 9: Mg + NH in magnetic field; cross sections, non-diagonal H_intl ----------------------
 
-  JTOT =    2   IBLOCK =   2   ENERGY(   3) =  6.95034570000E-02 CM-1 =   0.10000000000     K
+  JTOT =    2,  SYMMETRY BLOCK =   2,  ENERGY(   3) =  6.95034570000E-02 CM-1 =   0.10000000000     K
 
   EFV SET     1:  MAGNETIC Z FIELD =   10.00000000     GAUSS
 
@@ -2462,7 +2462,7 @@
     9    5   4 1.9510520054723E-001   5.7944798376137E-003  -1.2399520518715E-006
    10    7   4 1.9510520054723E-001   1.7335169718592E-007  -1.0726184236247E-012
 
-  * * * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =   2 AND IBLOCK =   2 * * * * * * * * *
+  * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =   2 AND SYMMETRY BLOCK =   2 * * * * * * *
 
     F  I =      1              2              3
     1       1.99305E-04    8.47724E-05    4.63219E-02
@@ -2471,13 +2471,13 @@
 
   * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
 
-  FOR JTOT =    2 IBLOCK =  2 EFV SET =   1 ENERGY(  3) = 6.9503457E-02:  MAXIMUM DIAGONAL & OFF-DIAGONAL =  1.71E+02 &   4.63E-02
+  FOR JTOT =    2, SYMMETRY BLOCK =  2, EFV SET =   1, ENERGY(  3) = 6.9503457E-02:  MAXIMUM DIAGONAL & OFF-DIAGONAL =  1.71E+02 &   4.63E-02
 
   EFFECTIVE RANGE FOR CHANNEL   1:
   FROM EXPANSION OF 1/A AT ENERGIES 1 AND   3 IS   77901.     ANGSTROM WITH 1/A(K=0) =    1480.720021     ANGSTROM^-1
   FROM EXPANSION OF  A  AT ENERGIES 1 AND   3 IS -0.79831E+06 ANGSTROM WITH   A(K=0) =   0.5808520743E-02 ANGSTROM
 
-  FINISHED JTOT =    2   IBLOCK =   2   ENERGY(   3) = 6.9503457E-02
+  FINISHED JTOT =    2,  SYMMETRY BLOCK =   2,  ENERGY(   3) = 6.9503457E-02
 
   ======================================================================================================================
 
@@ -2579,7 +2579,7 @@
 
   THRESHOLD LIST: NO NEW LEVELS IDENTIFIED
 
-  JTOT =    3   IBLOCK =   1   ENERGY(   1) =  6.95034570000E-04 CM-1 =   1.00000000000E-03 K
+  JTOT =    3,  SYMMETRY BLOCK =   1,  ENERGY(   1) =  6.95034570000E-04 CM-1 =   1.00000000000E-03 K
 
   EFV SET     1:  MAGNETIC Z FIELD =   10.00000000     GAUSS
 
@@ -2598,7 +2598,7 @@
     9    6   4 1.9510520059248E-002  -3.9479058566148E-014   2.2584420884496E-034
    10    8   4 1.9510520059248E-002   9.9095601233966E-024   1.4229319702991E-053
 
-  * * * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =   3 AND IBLOCK =   1 * * * * * * * * *
+  * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =   3 AND SYMMETRY BLOCK =   1 * * * * * * *
 
     F  I =      1              2              3
     1       7.55029E-18    2.21340E-19    6.80999E-13
@@ -2607,13 +2607,13 @@
 
   * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
 
-  FOR JTOT =    3 IBLOCK =  1 EFV SET =   1 ENERGY(  1) = 6.9503457E-04:  MAXIMUM DIAGONAL & OFF-DIAGONAL =  1.33E-07 &   6.81E-13
+  FOR JTOT =    3, SYMMETRY BLOCK =  1, EFV SET =   1, ENERGY(  1) = 6.9503457E-04:  MAXIMUM DIAGONAL & OFF-DIAGONAL =  1.33E-07 &   6.81E-13
 
-  FINISHED JTOT =    3   IBLOCK =   1   ENERGY(   1) = 6.9503457E-04
+  FINISHED JTOT =    3,  SYMMETRY BLOCK =   1,  ENERGY(   1) = 6.9503457E-04
 
   ---------------------- ITYP = 9: Mg + NH in magnetic field; cross sections, non-diagonal H_intl ----------------------
 
-  JTOT =    3   IBLOCK =   1   ENERGY(   2) =  6.95034570000E-03 CM-1 =   1.00000000000E-02 K
+  JTOT =    3,  SYMMETRY BLOCK =   1,  ENERGY(   2) =  6.95034570000E-03 CM-1 =   1.00000000000E-02 K
 
   EFV SET     1:  MAGNETIC Z FIELD =   10.00000000     GAUSS
 
@@ -2632,7 +2632,7 @@
     9    6   4 6.1697681708620E-002  -1.3119432320582E-009   2.4940518030721E-023
    10    8   4 6.1697681708620E-002   6.6142266331482E-018   6.3391864608627E-040
 
-  * * * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =   3 AND IBLOCK =   1 * * * * * * * * *
+  * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =   3 AND SYMMETRY BLOCK =   1 * * * * * * *
 
     F  I =      1              2              3
     1       1.34522E-13    1.40412E-14    5.80171E-09
@@ -2641,17 +2641,17 @@
 
   * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
 
-  FOR JTOT =    3 IBLOCK =  1 EFV SET =   1 ENERGY(  2) = 6.9503457E-03:  MAXIMUM DIAGONAL & OFF-DIAGONAL =  1.41E-03 &   5.80E-09
+  FOR JTOT =    3, SYMMETRY BLOCK =  1, EFV SET =   1, ENERGY(  2) = 6.9503457E-03:  MAXIMUM DIAGONAL & OFF-DIAGONAL =  1.41E-03 &   5.80E-09
 
   EFFECTIVE RANGE FOR CHANNEL   1:
   FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS  0.37748E+08 ANGSTROM WITH 1/A(K=0) =    75090.53235     ANGSTROM^-1
   FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS  0.53586E+09 ANGSTROM WITH   A(K=0) =  -0.1788017367E-04 ANGSTROM
 
-  FINISHED JTOT =    3   IBLOCK =   1   ENERGY(   2) = 6.9503457E-03
+  FINISHED JTOT =    3,  SYMMETRY BLOCK =   1,  ENERGY(   2) = 6.9503457E-03
 
   ---------------------- ITYP = 9: Mg + NH in magnetic field; cross sections, non-diagonal H_intl ----------------------
 
-  JTOT =    3   IBLOCK =   1   ENERGY(   3) =  6.95034570000E-02 CM-1 =   0.10000000000     K
+  JTOT =    3,  SYMMETRY BLOCK =   1,  ENERGY(   3) =  6.95034570000E-02 CM-1 =   0.10000000000     K
 
   EFV SET     1:  MAGNETIC Z FIELD =   10.00000000     GAUSS
 
@@ -2670,7 +2670,7 @@
     9    6   4 1.9510520054723E-001   4.1729295419607E-005  -1.5712019695680E-011
    10    8   4 1.9510520054723E-001  -3.3068887096503E-010   1.5845813553247E-022
 
-  * * * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =   3 AND IBLOCK =   1 * * * * * * * * *
+  * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =   3 AND SYMMETRY BLOCK =   1 * * * * * * *
 
     F  I =      1              2              3
     1       6.33523E-07    4.63082E-07    6.40733E-03
@@ -2679,13 +2679,13 @@
 
   * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
 
-  FOR JTOT =    3 IBLOCK =  1 EFV SET =   1 ENERGY(  3) = 6.9503457E-02:  MAXIMUM DIAGONAL & OFF-DIAGONAL =  4.77E+01 &   6.41E-03
+  FOR JTOT =    3, SYMMETRY BLOCK =  1, EFV SET =   1, ENERGY(  3) = 6.9503457E-02:  MAXIMUM DIAGONAL & OFF-DIAGONAL =  4.77E+01 &   6.41E-03
 
   EFFECTIVE RANGE FOR CHANNEL   1:
   FROM EXPANSION OF 1/A AT ENERGIES 1 AND   3 IS  0.36018E+07 ANGSTROM WITH 1/A(K=0) =    68591.49275     ANGSTROM^-1
   FROM EXPANSION OF  A  AT ENERGIES 1 AND   3 IS  0.22344E+08 ANGSTROM WITH   A(K=0) =  -0.2490461833E-03 ANGSTROM
 
-  FINISHED JTOT =    3   IBLOCK =   1   ENERGY(   3) = 6.9503457E-02
+  FINISHED JTOT =    3,  SYMMETRY BLOCK =   1,  ENERGY(   3) = 6.9503457E-02
 
   ======================================================================================================================
 
@@ -2779,7 +2779,7 @@
 
   THRESHOLD LIST: NO NEW LEVELS IDENTIFIED
 
-  JTOT =    3   IBLOCK =   2   ENERGY(   1) =  6.95034570000E-04 CM-1 =   1.00000000000E-03 K
+  JTOT =    3,  SYMMETRY BLOCK =   2,  ENERGY(   1) =  6.95034570000E-04 CM-1 =   1.00000000000E-03 K
 
   EFV SET     1:  MAGNETIC Z FIELD =   10.00000000     GAUSS
 
@@ -2796,7 +2796,7 @@
     7    5   4 1.9510520059248E-002  -2.5654515439030E-009   9.5368074782191E-025
     8    7   4 1.9510520059248E-002  -3.4723087904416E-017   1.7470770662532E-040
 
-  * * * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =   3 AND IBLOCK =   2 * * * * * * * * *
+  * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =   3 AND SYMMETRY BLOCK =   2 * * * * * * *
 
     F  I =      1              2              3
     1       4.92418E-22    6.06784E-19    2.16817E-19
@@ -2805,13 +2805,13 @@
 
   * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
 
-  FOR JTOT =    3 IBLOCK =  2 EFV SET =   1 ENERGY(  1) = 6.9503457E-04:  MAXIMUM DIAGONAL & OFF-DIAGONAL =  2.46E-14 &   7.97E-16
+  FOR JTOT =    3, SYMMETRY BLOCK =  2, EFV SET =   1, ENERGY(  1) = 6.9503457E-04:  MAXIMUM DIAGONAL & OFF-DIAGONAL =  2.46E-14 &   7.97E-16
 
-  FINISHED JTOT =    3   IBLOCK =   2   ENERGY(   1) = 6.9503457E-04
+  FINISHED JTOT =    3,  SYMMETRY BLOCK =   2,  ENERGY(   1) = 6.9503457E-04
 
   ---------------------- ITYP = 9: Mg + NH in magnetic field; cross sections, non-diagonal H_intl ----------------------
 
-  JTOT =    3   IBLOCK =   2   ENERGY(   2) =  6.95034570000E-03 CM-1 =   1.00000000000E-02 K
+  JTOT =    3,  SYMMETRY BLOCK =   2,  ENERGY(   2) =  6.95034570000E-03 CM-1 =   1.00000000000E-02 K
 
   EFV SET     1:  MAGNETIC Z FIELD =   10.00000000     GAUSS
 
@@ -2828,7 +2828,7 @@
     7    5   4 6.1697681708620E-002  -1.0094693794102E-005   1.4765959830061E-015
     8    7   4 6.1697681708620E-002   1.7178432391153E-011   4.2760467317302E-027
 
-  * * * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =   3 AND IBLOCK =   2 * * * * * * * * *
+  * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =   3 AND SYMMETRY BLOCK =   2 * * * * * * *
 
     F  I =      1              2              3
     1       2.18111E-16    2.61759E-14    5.69985E-14
@@ -2837,17 +2837,17 @@
 
   * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
 
-  FOR JTOT =    3 IBLOCK =  2 EFV SET =   1 ENERGY(  2) = 6.9503457E-03:  MAXIMUM DIAGONAL & OFF-DIAGONAL =  2.61E-10 &   6.45E-11
+  FOR JTOT =    3, SYMMETRY BLOCK =  2, EFV SET =   1, ENERGY(  2) = 6.9503457E-03:  MAXIMUM DIAGONAL & OFF-DIAGONAL =  2.61E-10 &   6.45E-11
 
   EFFECTIVE RANGE FOR CHANNEL   1:
   FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS -0.48617E+10 ANGSTROM WITH 1/A(K=0) =   -9333921.549     ANGSTROM^-1
   FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS -0.46164E+10 ANGSTROM WITH   A(K=0) =   0.1246688515E-05 ANGSTROM
 
-  FINISHED JTOT =    3   IBLOCK =   2   ENERGY(   2) = 6.9503457E-03
+  FINISHED JTOT =    3,  SYMMETRY BLOCK =   2,  ENERGY(   2) = 6.9503457E-03
 
   ---------------------- ITYP = 9: Mg + NH in magnetic field; cross sections, non-diagonal H_intl ----------------------
 
-  JTOT =    3   IBLOCK =   2   ENERGY(   3) =  6.95034570000E-02 CM-1 =   0.10000000000     K
+  JTOT =    3,  SYMMETRY BLOCK =   2,  ENERGY(   3) =  6.95034570000E-02 CM-1 =   0.10000000000     K
 
   EFV SET     1:  MAGNETIC Z FIELD =   10.00000000     GAUSS
 
@@ -2864,7 +2864,7 @@
     7    5   4 1.9510520054723E-001   1.2313356620754E-003  -1.0740865918083E-006
     8    7   4 1.9510520054723E-001   1.7117144735086E-007  -6.1290724007442E-013
 
-  * * * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =   3 AND IBLOCK =   2 * * * * * * * * *
+  * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =   3 AND SYMMETRY BLOCK =   2 * * * * * * *
 
     F  I =      1              2              3
     1       1.02204E-07    3.03525E-07    9.56287E-07
@@ -2873,13 +2873,13 @@
 
   * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
 
-  FOR JTOT =    3 IBLOCK =  2 EFV SET =   1 ENERGY(  3) = 6.9503457E-02:  MAXIMUM DIAGONAL & OFF-DIAGONAL =  3.31E-05 &   4.90E-05
+  FOR JTOT =    3, SYMMETRY BLOCK =  2, EFV SET =   1, ENERGY(  3) = 6.9503457E-02:  MAXIMUM DIAGONAL & OFF-DIAGONAL =  3.31E-05 &   4.90E-05
 
   EFFECTIVE RANGE FOR CHANNEL   1:
   FROM EXPANSION OF 1/A AT ENERGIES 1 AND   3 IS -0.44626E+09 ANGSTROM WITH 1/A(K=0) =   -8493523.860     ANGSTROM^-1
   FROM EXPANSION OF  A  AT ENERGIES 1 AND   3 IS  0.44485E+08 ANGSTROM WITH   A(K=0) =  -0.1179881214E-03 ANGSTROM
 
-  FINISHED JTOT =    3   IBLOCK =   2   ENERGY(   3) = 6.9503457E-02
+  FINISHED JTOT =    3,  SYMMETRY BLOCK =   2,  ENERGY(   3) = 6.9503457E-02
 
   ======================================================================================================================
 
@@ -2966,7 +2966,7 @@
 
   THRESHOLD LIST: NO NEW LEVELS IDENTIFIED
 
-  JTOT =    4   IBLOCK =   1   ENERGY(   1) =  6.95034570000E-04 CM-1 =   1.00000000000E-03 K
+  JTOT =    4,  SYMMETRY BLOCK =   1,  ENERGY(   1) =  6.95034570000E-04 CM-1 =   1.00000000000E-03 K
 
   EFV SET     1:  MAGNETIC Z FIELD =   10.00000000     GAUSS
 
@@ -2983,7 +2983,7 @@
     7    6   4 1.9510520059248E-002  -3.7165007197899E-014   2.0014457632072E-034
     8    8   4 1.9510520059248E-002   1.8377581979647E-024   4.8938665303743E-055
 
-  * * * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =   4 AND IBLOCK =   1 * * * * * * * * *
+  * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =   4 AND SYMMETRY BLOCK =   1 * * * * * * *
 
     F  I =      1              2              3
     1       5.44734E-30    4.48030E-27    9.12182E-28
@@ -2992,13 +2992,13 @@
 
   * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
 
-  FOR JTOT =    4 IBLOCK =  1 EFV SET =   1 ENERGY(  1) = 6.9503457E-04:  MAXIMUM DIAGONAL & OFF-DIAGONAL =  6.25E-19 &   6.70E-22
+  FOR JTOT =    4, SYMMETRY BLOCK =  1, EFV SET =   1, ENERGY(  1) = 6.9503457E-04:  MAXIMUM DIAGONAL & OFF-DIAGONAL =  6.25E-19 &   6.70E-22
 
-  FINISHED JTOT =    4   IBLOCK =   1   ENERGY(   1) = 6.9503457E-04
+  FINISHED JTOT =    4,  SYMMETRY BLOCK =   1,  ENERGY(   1) = 6.9503457E-04
 
   ---------------------- ITYP = 9: Mg + NH in magnetic field; cross sections, non-diagonal H_intl ----------------------
 
-  JTOT =    4   IBLOCK =   1   ENERGY(   2) =  6.95034570000E-03 CM-1 =   1.00000000000E-02 K
+  JTOT =    4,  SYMMETRY BLOCK =   1,  ENERGY(   2) =  6.95034570000E-03 CM-1 =   1.00000000000E-02 K
 
   EFV SET     1:  MAGNETIC Z FIELD =   10.00000000     GAUSS
 
@@ -3015,7 +3015,7 @@
     7    6   4 6.1697681708620E-002  -1.2285167215235E-009   2.1869433184890E-023
     8    8   4 6.1697681708620E-002  -1.6737198490740E-017   4.0592043567961E-039
 
-  * * * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =   4 AND IBLOCK =   1 * * * * * * * * *
+  * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =   4 AND SYMMETRY BLOCK =   1 * * * * * * *
 
     F  I =      1              2              3
     1       1.59720E-23    3.41588E-21    8.82644E-21
@@ -3024,17 +3024,17 @@
 
   * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
 
-  FOR JTOT =    4 IBLOCK =  1 EFV SET =   1 ENERGY(  2) = 6.9503457E-03:  MAXIMUM DIAGONAL & OFF-DIAGONAL =  1.76E-13 &   2.43E-15
+  FOR JTOT =    4, SYMMETRY BLOCK =  1, EFV SET =   1, ENERGY(  2) = 6.9503457E-03:  MAXIMUM DIAGONAL & OFF-DIAGONAL =  1.76E-13 &   2.43E-15
 
   EFFECTIVE RANGE FOR CHANNEL   1:
   FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS -0.46497E+14 ANGSTROM WITH 1/A(K=0) =  -0.8879596185E+11 ANGSTROM^-1
   FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS -0.15135E+14 ANGSTROM WITH   A(K=0) =   0.3592239337E-09 ANGSTROM
 
-  FINISHED JTOT =    4   IBLOCK =   1   ENERGY(   2) = 6.9503457E-03
+  FINISHED JTOT =    4,  SYMMETRY BLOCK =   1,  ENERGY(   2) = 6.9503457E-03
 
   ---------------------- ITYP = 9: Mg + NH in magnetic field; cross sections, non-diagonal H_intl ----------------------
 
-  JTOT =    4   IBLOCK =   1   ENERGY(   3) =  6.95034570000E-02 CM-1 =   0.10000000000     K
+  JTOT =    4,  SYMMETRY BLOCK =   1,  ENERGY(   3) =  6.95034570000E-02 CM-1 =   0.10000000000     K
 
   EFV SET     1:  MAGNETIC Z FIELD =   10.00000000     GAUSS
 
@@ -3051,7 +3051,7 @@
     7    6   4 1.9510520054723E-001   3.0011803004290E-005  -1.2026508503944E-011
     8    8   4 1.9510520054723E-001  -3.7286237261858E-010   2.0145242535758E-022
 
-  * * * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =   4 AND IBLOCK =   1 * * * * * * * * *
+  * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =   4 AND SYMMETRY BLOCK =   1 * * * * * * *
 
     F  I =      1              2              3
     1       2.01241E-13    7.86576E-12    2.35156E-11
@@ -3060,13 +3060,13 @@
 
   * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
 
-  FOR JTOT =    4 IBLOCK =  1 EFV SET =   1 ENERGY(  3) = 6.9503457E-02:  MAXIMUM DIAGONAL & OFF-DIAGONAL =  3.86E-06 &   8.94E-08
+  FOR JTOT =    4, SYMMETRY BLOCK =  1, EFV SET =   1, ENERGY(  3) = 6.9503457E-02:  MAXIMUM DIAGONAL & OFF-DIAGONAL =  3.86E-06 &   8.94E-08
 
   EFFECTIVE RANGE FOR CHANNEL   1:
   FROM EXPANSION OF 1/A AT ENERGIES 1 AND   3 IS -0.42428E+13 ANGSTROM WITH 1/A(K=0) =  -0.8075368184E+11 ANGSTROM^-1
   FROM EXPANSION OF  A  AT ENERGIES 1 AND   3 IS  0.31762E+11 ANGSTROM WITH   A(K=0) =  -0.1654073806E-06 ANGSTROM
 
-  FINISHED JTOT =    4   IBLOCK =   1   ENERGY(   3) = 6.9503457E-02
+  FINISHED JTOT =    4,  SYMMETRY BLOCK =   1,  ENERGY(   3) = 6.9503457E-02
 
   ======================================================================================================================
 
@@ -3148,7 +3148,7 @@
 
   THRESHOLD LIST: NO NEW LEVELS IDENTIFIED
 
-  JTOT =    4   IBLOCK =   2   ENERGY(   1) =  6.95034570000E-04 CM-1 =   1.00000000000E-03 K
+  JTOT =    4,  SYMMETRY BLOCK =   2,  ENERGY(   1) =  6.95034570000E-04 CM-1 =   1.00000000000E-03 K
 
   EFV SET     1:  MAGNETIC Z FIELD =   10.00000000     GAUSS
 
@@ -3164,7 +3164,7 @@
     6    5   4 1.9510520059133E-002  -2.1578744652378E-009   6.7472644963033E-025
     7    7   4 1.9510520059248E-002  -3.0287035726163E-017   1.3291956855227E-040
 
-  * * * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =   4 AND IBLOCK =   2 * * * * * * * * *
+  * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =   4 AND SYMMETRY BLOCK =   2 * * * * * * *
 
     F  I =      1              2              3
     1       4.87180E-23    1.51009E-22    3.56576E-19
@@ -3173,13 +3173,13 @@
 
   * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
 
-  FOR JTOT =    4 IBLOCK =  2 EFV SET =   1 ENERGY(  1) = 6.9503457E-04:  MAXIMUM DIAGONAL & OFF-DIAGONAL =  1.68E-18 &   3.57E-19
+  FOR JTOT =    4, SYMMETRY BLOCK =  2, EFV SET =   1, ENERGY(  1) = 6.9503457E-04:  MAXIMUM DIAGONAL & OFF-DIAGONAL =  1.68E-18 &   3.57E-19
 
-  FINISHED JTOT =    4   IBLOCK =   2   ENERGY(   1) = 6.9503457E-04
+  FINISHED JTOT =    4,  SYMMETRY BLOCK =   2,  ENERGY(   1) = 6.9503457E-04
 
   ---------------------- ITYP = 9: Mg + NH in magnetic field; cross sections, non-diagonal H_intl ----------------------
 
-  JTOT =    4   IBLOCK =   2   ENERGY(   2) =  6.95034570000E-03 CM-1 =   1.00000000000E-02 K
+  JTOT =    4,  SYMMETRY BLOCK =   2,  ENERGY(   2) =  6.95034570000E-03 CM-1 =   1.00000000000E-02 K
 
   EFV SET     1:  MAGNETIC Z FIELD =   10.00000000     GAUSS
 
@@ -3195,7 +3195,7 @@
     6    5   4 6.1697681708584E-002  -8.3383634413747E-006   1.0074813702333E-015
     7    7   4 6.1697681708620E-002   1.5310027961256E-011   3.3964666187639E-027
 
-  * * * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =   4 AND IBLOCK =   2 * * * * * * * * *
+  * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =   4 AND SYMMETRY BLOCK =   2 * * * * * * *
 
     F  I =      1              2              3
     1       3.28073E-17    2.47489E-16    9.32441E-14
@@ -3204,17 +3204,17 @@
 
   * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
 
-  FOR JTOT =    4 IBLOCK =  2 EFV SET =   1 ENERGY(  2) = 6.9503457E-03:  MAXIMUM DIAGONAL & OFF-DIAGONAL =  2.09E-15 &   9.32E-14
+  FOR JTOT =    4, SYMMETRY BLOCK =  2, EFV SET =   1, ENERGY(  2) = 6.9503457E-03:  MAXIMUM DIAGONAL & OFF-DIAGONAL =  2.09E-15 &   9.32E-14
 
   EFFECTIVE RANGE FOR CHANNEL   1:
   FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS -0.15485E+11 ANGSTROM WITH 1/A(K=0) =   -29680082.87     ANGSTROM^-1
   FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS -0.11461E+11 ANGSTROM WITH   A(K=0) =   0.4931935872E-06 ANGSTROM
 
-  FINISHED JTOT =    4   IBLOCK =   2   ENERGY(   2) = 6.9503457E-03
+  FINISHED JTOT =    4,  SYMMETRY BLOCK =   2,  ENERGY(   2) = 6.9503457E-03
 
   ---------------------- ITYP = 9: Mg + NH in magnetic field; cross sections, non-diagonal H_intl ----------------------
 
-  JTOT =    4   IBLOCK =   2   ENERGY(   3) =  6.95034570000E-02 CM-1 =   0.10000000000     K
+  JTOT =    4,  SYMMETRY BLOCK =   2,  ENERGY(   3) =  6.95034570000E-02 CM-1 =   0.10000000000     K
 
   EFV SET     1:  MAGNETIC Z FIELD =   10.00000000     GAUSS
 
@@ -3230,7 +3230,7 @@
     6    5   4 1.9510520054722E-001  -4.5124705450035E-003  -8.5440481387126E-007
     7    7   4 1.9510520054723E-001   1.6018149116144E-007  -4.5967509277855E-013
 
-  * * * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =   4 AND IBLOCK =   2 * * * * * * * * *
+  * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =   4 AND SYMMETRY BLOCK =   2 * * * * * * *
 
     F  I =      1              2              3
     1       5.64911E-08    3.19229E-08    1.44509E-06
@@ -3239,13 +3239,13 @@
 
   * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
 
-  FOR JTOT =    4 IBLOCK =  2 EFV SET =   1 ENERGY(  3) = 6.9503457E-02:  MAXIMUM DIAGONAL & OFF-DIAGONAL =  9.36E-05 &   1.45E-06
+  FOR JTOT =    4, SYMMETRY BLOCK =  2, EFV SET =   1, ENERGY(  3) = 6.9503457E-02:  MAXIMUM DIAGONAL & OFF-DIAGONAL =  9.36E-05 &   1.45E-06
 
   EFFECTIVE RANGE FOR CHANNEL   1:
   FROM EXPANSION OF 1/A AT ENERGIES 1 AND   3 IS -0.14187E+10 ANGSTROM WITH 1/A(K=0) =   -27002882.43     ANGSTROM^-1
   FROM EXPANSION OF  A  AT ENERGIES 1 AND   3 IS  0.59906E+08 ANGSTROM WITH   A(K=0) =  -0.8766781201E-04 ANGSTROM
 
-  FINISHED JTOT =    4   IBLOCK =   2   ENERGY(   3) = 6.9503457E-02
+  FINISHED JTOT =    4,  SYMMETRY BLOCK =   2,  ENERGY(   3) = 6.9503457E-02
 
   ======================================================================================================================
 
@@ -3327,7 +3327,7 @@
  |                                                                            |
  |                               Version 2019.0 (beta)                        |
  |                                                                            |
- |                    This run used       8.16 cpu secs and                   |
+ |                    This run used       7.15 cpu secs and                   |
  |             124853 of the allocated   1000000 words of storage             |
  |                                                                            |
   ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
@@ -3340,7 +3340,7 @@
  |                                                                            |
  |                               Version 2019.0 (beta)                        |
  |                                                                            |
- |                       Run on 01 Feb 2019   at 00:04:27                     |
+ |                       Run on 01 Feb 2019   at 10:33:56                     |
  |                                                                            |
   ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
 
@@ -3639,7 +3639,7 @@
        94          27          2         3         3             6            27        97.7727619
        95          27          2         3         3             8            27        97.7727619
 
-  JTOT =   -2   IBLOCK =   1   ENERGY(   1) =  6.95034570000E-04 CM-1 =   1.00000000000E-03 K
+  JTOT =   -2,  SYMMETRY BLOCK =   1,  ENERGY(   1) =  6.95034570000E-04 CM-1 =   1.00000000000E-03 K
 
   EFV SET     1:  POTL SCALING FACTOR =   1.000000000     ;  MAGNETIC Z FIELD =   10.00000000     GAUSS
 
@@ -3676,7 +3676,7 @@
    10    6   4 1.9510520054678E-002  -4.3439689904071E-014   2.7343167038307E-034
    11    8   4 1.9510520054678E-002  -2.0713299476246E-024   6.2169009985326E-055
 
-  * * * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  -2 AND IBLOCK =   1 * * * * * * * * *
+  * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  -2 AND SYMMETRY BLOCK =   1 * * * * * * *
 
     F  I =      1              2              3
     1       1.62217E-05    7.48632E-07    2.81368E-14
@@ -3685,13 +3685,13 @@
 
   * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
 
-  FOR JTOT =   -2 IBLOCK =  1 EFV SET =   1 ENERGY(  1) = 6.9503457E-04:  MAXIMUM DIAGONAL & OFF-DIAGONAL =  1.62E-05 &   7.49E-07
+  FOR JTOT =   -2, SYMMETRY BLOCK =  1, EFV SET =   1, ENERGY(  1) = 6.9503457E-04:  MAXIMUM DIAGONAL & OFF-DIAGONAL =  1.62E-05 &   7.49E-07
 
-  FINISHED JTOT =   -2   IBLOCK =   1   ENERGY(   1) = 6.9503457E-04
+  FINISHED JTOT =   -2,  SYMMETRY BLOCK =   1,  ENERGY(   1) = 6.9503457E-04
 
   ------------------------ ITYP = 9: Mg + NH in magnetic field; cross sections, diagonal H_intl ------------------------
 
-  JTOT =   -2   IBLOCK =   1   ENERGY(   2) =  6.95034570000E-03 CM-1 =   1.00000000000E-02 K
+  JTOT =   -2,  SYMMETRY BLOCK =   1,  ENERGY(   2) =  6.95034570000E-03 CM-1 =   1.00000000000E-02 K
 
   EFV SET     1:  POTL SCALING FACTOR =   1.000000000     ;  MAGNETIC Z FIELD =   10.00000000     GAUSS
 
@@ -3728,7 +3728,7 @@
    10    6   4 6.1697681707175E-002  -1.4681853974960E-009   3.1234688806684E-023
    11    8   4 6.1697681707175E-002  -2.4654192549949E-017   8.8075871639290E-039
 
-  * * * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  -2 AND IBLOCK =   1 * * * * * * * * *
+  * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  -2 AND SYMMETRY BLOCK =   1 * * * * * * *
 
     F  I =      1              2              3
     1       2.39096E-03    1.90386E-04    2.02713E-09
@@ -3737,17 +3737,17 @@
 
   * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
 
-  FOR JTOT =   -2 IBLOCK =  1 EFV SET =   1 ENERGY(  2) = 6.9503457E-03:  MAXIMUM DIAGONAL & OFF-DIAGONAL =  2.39E-03 &   1.90E-04
+  FOR JTOT =   -2, SYMMETRY BLOCK =  1, EFV SET =   1, ENERGY(  2) = 6.9503457E-03:  MAXIMUM DIAGONAL & OFF-DIAGONAL =  2.39E-03 &   1.90E-04
 
   EFFECTIVE RANGE FOR CHANNEL   1:
   FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS  -12.840     ANGSTROM WITH 1/A(K=0) =  -0.4877765311E-01 ANGSTROM^-1
   FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS  -30.203     ANGSTROM WITH   A(K=0) =   -19.41553329     ANGSTROM
 
-  FINISHED JTOT =   -2   IBLOCK =   1   ENERGY(   2) = 6.9503457E-03
+  FINISHED JTOT =   -2,  SYMMETRY BLOCK =   1,  ENERGY(   2) = 6.9503457E-03
 
   ------------------------ ITYP = 9: Mg + NH in magnetic field; cross sections, diagonal H_intl ------------------------
 
-  JTOT =   -2   IBLOCK =   1   ENERGY(   3) =  6.95034570000E-02 CM-1 =   0.10000000000     K
+  JTOT =   -2,  SYMMETRY BLOCK =   1,  ENERGY(   3) =  6.95034570000E-02 CM-1 =   0.10000000000     K
 
   EFV SET     1:  POTL SCALING FACTOR =   1.000000000     ;  MAGNETIC Z FIELD =   10.00000000     GAUSS
 
@@ -3784,7 +3784,7 @@
    10    6   4 1.9510520054678E-001   1.3830752337752E-005  -5.0137929238121E-011
    11    8   4 1.9510520054678E-001  -3.6847838805001E-010   1.9674306114593E-022
 
-  * * * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  -2 AND IBLOCK =   1 * * * * * * * * *
+  * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  -2 AND SYMMETRY BLOCK =   1 * * * * * * *
 
     F  I =      1              2              3
     1       3.01180E+01    5.36362E+00    3.34205E-03
@@ -3793,13 +3793,13 @@
 
   * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
 
-  FOR JTOT =   -2 IBLOCK =  1 EFV SET =   1 ENERGY(  3) = 6.9503457E-02:  MAXIMUM DIAGONAL & OFF-DIAGONAL =  3.01E+01 &   5.36E+00
+  FOR JTOT =   -2, SYMMETRY BLOCK =  1, EFV SET =   1, ENERGY(  3) = 6.9503457E-02:  MAXIMUM DIAGONAL & OFF-DIAGONAL =  3.01E+01 &   5.36E+00
 
   EFFECTIVE RANGE FOR CHANNEL   1:
   FROM EXPANSION OF 1/A AT ENERGIES 1 AND   3 IS  -2.2110     ANGSTROM WITH 1/A(K=0) =  -0.4675467598E-01 ANGSTROM^-1
   FROM EXPANSION OF  A  AT ENERGIES 1 AND   3 IS  -26.474     ANGSTROM WITH   A(K=0) =   -19.63902926     ANGSTROM
 
-  FINISHED JTOT =   -2   IBLOCK =   1   ENERGY(   3) = 6.9503457E-02
+  FINISHED JTOT =   -2,  SYMMETRY BLOCK =   1,  ENERGY(   3) = 6.9503457E-02
 
   ======================================================================================================================
 
@@ -3910,7 +3910,7 @@
        91          27          2         3         3             5            27        97.7727619
        92          27          2         3         3             7            27        97.7727619
 
-  JTOT =   -2   IBLOCK =   2   ENERGY(   1) =  6.95034570000E-04 CM-1 =   1.00000000000E-03 K
+  JTOT =   -2,  SYMMETRY BLOCK =   2,  ENERGY(   1) =  6.95034570000E-04 CM-1 =   1.00000000000E-03 K
 
   EFV SET     1:  POTL SCALING FACTOR =   1.000000000     ;  MAGNETIC Z FIELD =   10.00000000     GAUSS
 
@@ -3945,7 +3945,7 @@
     9    5   4 1.9510520054678E-002  -1.6790143159672E-009   4.0849258829537E-025
    10    7   4 1.9510520054678E-002  -3.6936992017985E-017   1.9769625112506E-040
 
-  * * * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  -2 AND IBLOCK =   2 * * * * * * * * *
+  * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  -2 AND SYMMETRY BLOCK =   2 * * * * * * *
 
     F  I =      1              2              3
     1       3.52107E+00    1.10022E-07    3.93098E-08
@@ -3954,13 +3954,13 @@
 
   * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
 
-  FOR JTOT =   -2 IBLOCK =  2 EFV SET =   1 ENERGY(  1) = 6.9503457E-04:  MAXIMUM DIAGONAL & OFF-DIAGONAL =  3.52E+00 &   1.10E-07
+  FOR JTOT =   -2, SYMMETRY BLOCK =  2, EFV SET =   1, ENERGY(  1) = 6.9503457E-04:  MAXIMUM DIAGONAL & OFF-DIAGONAL =  3.52E+00 &   1.10E-07
 
-  FINISHED JTOT =   -2   IBLOCK =   2   ENERGY(   1) = 6.9503457E-04
+  FINISHED JTOT =   -2,  SYMMETRY BLOCK =   2,  ENERGY(   1) = 6.9503457E-04
 
   ------------------------ ITYP = 9: Mg + NH in magnetic field; cross sections, diagonal H_intl ------------------------
 
-  JTOT =   -2   IBLOCK =   2   ENERGY(   2) =  6.95034570000E-03 CM-1 =   1.00000000000E-02 K
+  JTOT =   -2,  SYMMETRY BLOCK =   2,  ENERGY(   2) =  6.95034570000E-03 CM-1 =   1.00000000000E-02 K
 
   EFV SET     1:  POTL SCALING FACTOR =   1.000000000     ;  MAGNETIC Z FIELD =   10.00000000     GAUSS
 
@@ -3995,7 +3995,7 @@
     9    5   4 6.1697681707175E-002  -6.7772501708961E-006   6.6555265035287E-016
    10    7   4 6.1697681707175E-002   1.5980971309298E-011   3.7006816483502E-027
 
-  * * * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  -2 AND IBLOCK =   2 * * * * * * * * *
+  * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  -2 AND SYMMETRY BLOCK =   2 * * * * * * *
 
     F  I =      1              2              3
     1       2.67549E+01    2.35136E-05    5.16032E-05
@@ -4004,17 +4004,17 @@
 
   * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
 
-  FOR JTOT =   -2 IBLOCK =  2 EFV SET =   1 ENERGY(  2) = 6.9503457E-03:  MAXIMUM DIAGONAL & OFF-DIAGONAL =  2.68E+01 &   5.16E-05
+  FOR JTOT =   -2, SYMMETRY BLOCK =  2, EFV SET =   1, ENERGY(  2) = 6.9503457E-03:  MAXIMUM DIAGONAL & OFF-DIAGONAL =  2.68E+01 &   5.16E-05
 
   EFFECTIVE RANGE FOR CHANNEL   1:
   FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS -0.37389     ANGSTROM WITH 1/A(K=0) =   0.2581871820E-02 ANGSTROM^-1
   FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS -0.28858     ANGSTROM WITH   A(K=0) =    385.0711644     ANGSTROM
 
-  FINISHED JTOT =   -2   IBLOCK =   2   ENERGY(   2) = 6.9503457E-03
+  FINISHED JTOT =   -2,  SYMMETRY BLOCK =   2,  ENERGY(   2) = 6.9503457E-03
 
   ------------------------ ITYP = 9: Mg + NH in magnetic field; cross sections, diagonal H_intl ------------------------
 
-  JTOT =   -2   IBLOCK =   2   ENERGY(   3) =  6.95034570000E-02 CM-1 =   0.10000000000     K
+  JTOT =   -2,  SYMMETRY BLOCK =   2,  ENERGY(   3) =  6.95034570000E-02 CM-1 =   0.10000000000     K
 
   EFV SET     1:  POTL SCALING FACTOR =   1.000000000     ;  MAGNETIC Z FIELD =   10.00000000     GAUSS
 
@@ -4049,7 +4049,7 @@
     9    5   4 1.9510520054678E-001   1.3591076311463E-002  -2.4897975877877E-006
    10    7   4 1.9510520054678E-001   1.0246785719863E-007  -2.7582584176456E-012
 
-  * * * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  -2 AND IBLOCK =   2 * * * * * * * * *
+  * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  -2 AND SYMMETRY BLOCK =   2 * * * * * * *
 
     F  I =      1              2              3
     1       1.72761E+02    1.52024E-02    4.42182E-02
@@ -4058,13 +4058,13 @@
 
   * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
 
-  FOR JTOT =   -2 IBLOCK =  2 EFV SET =   1 ENERGY(  3) = 6.9503457E-02:  MAXIMUM DIAGONAL & OFF-DIAGONAL =  1.73E+02 &   4.42E-02
+  FOR JTOT =   -2, SYMMETRY BLOCK =  2, EFV SET =   1, ENERGY(  3) = 6.9503457E-02:  MAXIMUM DIAGONAL & OFF-DIAGONAL =  1.73E+02 &   4.42E-02
 
   EFFECTIVE RANGE FOR CHANNEL   1:
   FROM EXPANSION OF 1/A AT ENERGIES 1 AND   3 IS -0.23960     ANGSTROM WITH 1/A(K=0) =   0.2607430009E-02 ANGSTROM^-1
   FROM EXPANSION OF  A  AT ENERGIES 1 AND   3 IS -0.87567E-01 ANGSTROM WITH   A(K=0) =    379.3250677     ANGSTROM
 
-  FINISHED JTOT =   -2   IBLOCK =   2   ENERGY(   3) = 6.9503457E-02
+  FINISHED JTOT =   -2,  SYMMETRY BLOCK =   2,  ENERGY(   3) = 6.9503457E-02
 
   ======================================================================================================================
 
@@ -4191,7 +4191,7 @@
       105          27          2         3         3             6            27        97.7727619
       106          27          2         3         3             8            27        97.7727619
 
-  JTOT =   -1   IBLOCK =   1   ENERGY(   1) =  6.95034570000E-04 CM-1 =   1.00000000000E-03 K
+  JTOT =   -1,  SYMMETRY BLOCK =   1,  ENERGY(   1) =  6.95034570000E-04 CM-1 =   1.00000000000E-03 K
 
   EFV SET     1:  POTL SCALING FACTOR =   1.000000000     ;  MAGNETIC Z FIELD =   10.00000000     GAUSS
 
@@ -4232,7 +4232,7 @@
    12    6   4 1.9510520054678E-002  -4.5194652202787E-014   2.9597121821630E-034
    13    8   4 1.9510520054678E-002   2.2950538505719E-024   7.6324003568621E-055
 
-  * * * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  -1 AND IBLOCK =   1 * * * * * * * * *
+  * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  -1 AND SYMMETRY BLOCK =   1 * * * * * * *
 
     F  I =      1              2              3
     1       1.02528E+03    1.48495E-03    8.25867E-04
@@ -4241,13 +4241,13 @@
 
   * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
 
-  FOR JTOT =   -1 IBLOCK =  1 EFV SET =   1 ENERGY(  1) = 6.9503457E-04:  MAXIMUM DIAGONAL & OFF-DIAGONAL =  1.03E+03 &   1.48E-03
+  FOR JTOT =   -1, SYMMETRY BLOCK =  1, EFV SET =   1, ENERGY(  1) = 6.9503457E-04:  MAXIMUM DIAGONAL & OFF-DIAGONAL =  1.03E+03 &   1.48E-03
 
-  FINISHED JTOT =   -1   IBLOCK =   1   ENERGY(   1) = 6.9503457E-04
+  FINISHED JTOT =   -1,  SYMMETRY BLOCK =   1,  ENERGY(   1) = 6.9503457E-04
 
   ------------------------ ITYP = 9: Mg + NH in magnetic field; cross sections, diagonal H_intl ------------------------
 
-  JTOT =   -1   IBLOCK =   1   ENERGY(   2) =  6.95034570000E-03 CM-1 =   1.00000000000E-02 K
+  JTOT =   -1,  SYMMETRY BLOCK =   1,  ENERGY(   2) =  6.95034570000E-03 CM-1 =   1.00000000000E-02 K
 
   EFV SET     1:  POTL SCALING FACTOR =   1.000000000     ;  MAGNETIC Z FIELD =   10.00000000     GAUSS
 
@@ -4288,7 +4288,7 @@
    12    6   4 6.1697681707175E-002  -1.5345456562916E-009   3.4122041849714E-023
    13    8   4 6.1697681707175E-002  -1.1839427993537E-017   2.0311258053176E-039
 
-  * * * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  -1 AND IBLOCK =   1 * * * * * * * * *
+  * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  -1 AND SYMMETRY BLOCK =   1 * * * * * * *
 
     F  I =      1              2              3
     1       9.18811E+02    3.03770E-02    5.03078E-02
@@ -4297,17 +4297,17 @@
 
   * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
 
-  FOR JTOT =   -1 IBLOCK =  1 EFV SET =   1 ENERGY(  2) = 6.9503457E-03:  MAXIMUM DIAGONAL & OFF-DIAGONAL =  9.19E+02 &   5.03E-02
+  FOR JTOT =   -1, SYMMETRY BLOCK =  1, EFV SET =   1, ENERGY(  2) = 6.9503457E-03:  MAXIMUM DIAGONAL & OFF-DIAGONAL =  9.19E+02 &   5.03E-02
 
   EFFECTIVE RANGE FOR CHANNEL   1:
   FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   5.9081     ANGSTROM WITH 1/A(K=0) =   0.1052967883     ANGSTROM^-1
   FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   6.7031     ANGSTROM WITH   A(K=0) =    9.484709192     ANGSTROM
 
-  FINISHED JTOT =   -1   IBLOCK =   1   ENERGY(   2) = 6.9503457E-03
+  FINISHED JTOT =   -1,  SYMMETRY BLOCK =   1,  ENERGY(   2) = 6.9503457E-03
 
   ------------------------ ITYP = 9: Mg + NH in magnetic field; cross sections, diagonal H_intl ------------------------
 
-  JTOT =   -1   IBLOCK =   1   ENERGY(   3) =  6.95034570000E-02 CM-1 =   0.10000000000     K
+  JTOT =   -1,  SYMMETRY BLOCK =   1,  ENERGY(   3) =  6.95034570000E-02 CM-1 =   0.10000000000     K
 
   EFV SET     1:  POTL SCALING FACTOR =   1.000000000     ;  MAGNETIC Z FIELD =   10.00000000     GAUSS
 
@@ -4348,7 +4348,7 @@
    12    6   4 1.9510520054678E-001   1.8357435377731E-005  -3.9659890835537E-011
    13    8   4 1.9510520054678E-001  -3.4142619685115E-010   1.6891532914593E-022
 
-  * * * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  -1 AND IBLOCK =   1 * * * * * * * * *
+  * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  -1 AND SYMMETRY BLOCK =   1 * * * * * * *
 
     F  I =      1              2              3
     1       2.95764E+02    8.73512E+00    2.35976E+01
@@ -4357,13 +4357,13 @@
 
   * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
 
-  FOR JTOT =   -1 IBLOCK =  1 EFV SET =   1 ENERGY(  3) = 6.9503457E-02:  MAXIMUM DIAGONAL & OFF-DIAGONAL =  2.96E+02 &   2.36E+01
+  FOR JTOT =   -1, SYMMETRY BLOCK =  1, EFV SET =   1, ENERGY(  3) = 6.9503457E-02:  MAXIMUM DIAGONAL & OFF-DIAGONAL =  2.96E+02 &   2.36E+01
 
   EFFECTIVE RANGE FOR CHANNEL   1:
   FROM EXPANSION OF 1/A AT ENERGIES 1 AND   3 IS   7.5509     ANGSTROM WITH 1/A(K=0) =   0.1056094617     ANGSTROM^-1
   FROM EXPANSION OF  A  AT ENERGIES 1 AND   3 IS  -19.169     ANGSTROM WITH   A(K=0) =    9.961519860     ANGSTROM
 
-  FINISHED JTOT =   -1   IBLOCK =   1   ENERGY(   3) = 6.9503457E-02
+  FINISHED JTOT =   -1,  SYMMETRY BLOCK =   1,  ENERGY(   3) = 6.9503457E-02
 
   ======================================================================================================================
 
@@ -4482,7 +4482,7 @@
        99          27          2         3         3             5            27        97.7727619
       100          27          2         3         3             7            27        97.7727619
 
-  JTOT =   -1   IBLOCK =   2   ENERGY(   1) =  6.95034570000E-04 CM-1 =   1.00000000000E-03 K
+  JTOT =   -1,  SYMMETRY BLOCK =   2,  ENERGY(   1) =  6.95034570000E-04 CM-1 =   1.00000000000E-03 K
 
   EFV SET     1:  POTL SCALING FACTOR =   1.000000000     ;  MAGNETIC Z FIELD =   10.00000000     GAUSS
 
@@ -4519,7 +4519,7 @@
    10    5   4 1.9510520054678E-002  -2.1212992586349E-009   6.5204754363959E-025
    11    7   4 1.9510520054678E-002  -3.9289389234217E-017   2.2367937371329E-040
 
-  * * * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  -1 AND IBLOCK =   2 * * * * * * * * *
+  * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  -1 AND SYMMETRY BLOCK =   2 * * * * * * *
 
     F  I =      1              2              3
     1       7.85903E+00    7.35614E-01    1.26715E-08
@@ -4528,13 +4528,13 @@
 
   * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
 
-  FOR JTOT =   -1 IBLOCK =  2 EFV SET =   1 ENERGY(  1) = 6.9503457E-04:  MAXIMUM DIAGONAL & OFF-DIAGONAL =  7.86E+00 &   7.36E-01
+  FOR JTOT =   -1, SYMMETRY BLOCK =  2, EFV SET =   1, ENERGY(  1) = 6.9503457E-04:  MAXIMUM DIAGONAL & OFF-DIAGONAL =  7.86E+00 &   7.36E-01
 
-  FINISHED JTOT =   -1   IBLOCK =   2   ENERGY(   1) = 6.9503457E-04
+  FINISHED JTOT =   -1,  SYMMETRY BLOCK =   2,  ENERGY(   1) = 6.9503457E-04
 
   ------------------------ ITYP = 9: Mg + NH in magnetic field; cross sections, diagonal H_intl ------------------------
 
-  JTOT =   -1   IBLOCK =   2   ENERGY(   2) =  6.95034570000E-03 CM-1 =   1.00000000000E-02 K
+  JTOT =   -1,  SYMMETRY BLOCK =   2,  ENERGY(   2) =  6.95034570000E-03 CM-1 =   1.00000000000E-02 K
 
   EFV SET     1:  POTL SCALING FACTOR =   1.000000000     ;  MAGNETIC Z FIELD =   10.00000000     GAUSS
 
@@ -4571,7 +4571,7 @@
    10    5   4 6.1697681707175E-002  -8.4073400847558E-006   1.0242184942779E-015
    11    7   4 6.1697681707175E-002   1.7621700744292E-011   4.4995701414431E-027
 
-  * * * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  -1 AND IBLOCK =   2 * * * * * * * * *
+  * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  -1 AND SYMMETRY BLOCK =   2 * * * * * * *
 
     F  I =      1              2              3
     1       4.80059E+01    3.14295E+00    1.68894E-05
@@ -4580,17 +4580,17 @@
 
   * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
 
-  FOR JTOT =   -1 IBLOCK =  2 EFV SET =   1 ENERGY(  2) = 6.9503457E-03:  MAXIMUM DIAGONAL & OFF-DIAGONAL =  4.80E+01 &   3.14E+00
+  FOR JTOT =   -1, SYMMETRY BLOCK =  2, EFV SET =   1, ENERGY(  2) = 6.9503457E-03:  MAXIMUM DIAGONAL & OFF-DIAGONAL =  4.80E+01 &   3.14E+00
 
   EFFECTIVE RANGE FOR CHANNEL   1:
   FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS -0.39152     ANGSTROM WITH 1/A(K=0) =   0.1700768026E-02 ANGSTROM^-1
   FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS -0.26761     ANGSTROM WITH   A(K=0) =    580.4506336     ANGSTROM
 
-  FINISHED JTOT =   -1   IBLOCK =   2   ENERGY(   2) = 6.9503457E-03
+  FINISHED JTOT =   -1,  SYMMETRY BLOCK =   2,  ENERGY(   2) = 6.9503457E-03
 
   ------------------------ ITYP = 9: Mg + NH in magnetic field; cross sections, diagonal H_intl ------------------------
 
-  JTOT =   -1   IBLOCK =   2   ENERGY(   3) =  6.95034570000E-02 CM-1 =   0.10000000000     K
+  JTOT =   -1,  SYMMETRY BLOCK =   2,  ENERGY(   3) =  6.95034570000E-02 CM-1 =   0.10000000000     K
 
   EFV SET     1:  POTL SCALING FACTOR =   1.000000000     ;  MAGNETIC Z FIELD =   10.00000000     GAUSS
 
@@ -4627,7 +4627,7 @@
    10    5   4 1.9510520054678E-001   1.4207200657375E-002  -2.1016803038204E-006
    11    7   4 1.9510520054678E-001   1.3402651484900E-007  -2.1452979069617E-012
 
-  * * * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  -1 AND IBLOCK =   2 * * * * * * * * *
+  * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  -1 AND SYMMETRY BLOCK =   2 * * * * * * *
 
     F  I =      1              2              3
     1       1.93516E+02    1.66593E+00    1.48036E-02
@@ -4636,13 +4636,13 @@
 
   * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
 
-  FOR JTOT =   -1 IBLOCK =  2 EFV SET =   1 ENERGY(  3) = 6.9503457E-02:  MAXIMUM DIAGONAL & OFF-DIAGONAL =  1.94E+02 &   1.67E+00
+  FOR JTOT =   -1, SYMMETRY BLOCK =  2, EFV SET =   1, ENERGY(  3) = 6.9503457E-02:  MAXIMUM DIAGONAL & OFF-DIAGONAL =  1.94E+02 &   1.67E+00
 
   EFFECTIVE RANGE FOR CHANNEL   1:
   FROM EXPANSION OF 1/A AT ENERGIES 1 AND   3 IS -0.23500     ANGSTROM WITH 1/A(K=0) =   0.1730558976E-02 ANGSTROM^-1
   FROM EXPANSION OF  A  AT ENERGIES 1 AND   3 IS -0.66293E-01 ANGSTROM WITH   A(K=0) =    567.3509695     ANGSTROM
 
-  FINISHED JTOT =   -1   IBLOCK =   2   ENERGY(   3) = 6.9503457E-02
+  FINISHED JTOT =   -1,  SYMMETRY BLOCK =   2,  ENERGY(   3) = 6.9503457E-02
 
   ======================================================================================================================
 
@@ -4771,7 +4771,7 @@
       107          27          2         3         3             6            27        97.7727619
       108          27          2         3         3             8            27        97.7727619
 
-  JTOT =    0   IBLOCK =   1   ENERGY(   1) =  6.95034570000E-04 CM-1 =   1.00000000000E-03 K
+  JTOT =    0,  SYMMETRY BLOCK =   1,  ENERGY(   1) =  6.95034570000E-04 CM-1 =   1.00000000000E-03 K
 
   EFV SET     1:  POTL SCALING FACTOR =   1.000000000     ;  MAGNETIC Z FIELD =   10.00000000     GAUSS
 
@@ -4812,7 +4812,7 @@
    12    6   4 1.9510520054678E-002  -4.6039466287339E-014   3.0713969147698E-034
    13    8   4 1.9510520054678E-002   4.3965524962401E-024   2.8009148692000E-054
 
-  * * * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =   0 AND IBLOCK =   1 * * * * * * * * *
+  * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =   0 AND SYMMETRY BLOCK =   1 * * * * * * *
 
     F  I =      1              2              3
     1       1.58178E-05    3.71911E-03    3.92212E-07
@@ -4821,13 +4821,13 @@
 
   * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
 
-  FOR JTOT =    0 IBLOCK =  1 EFV SET =   1 ENERGY(  1) = 6.9503457E-04:  MAXIMUM DIAGONAL & OFF-DIAGONAL =  1.04E+03 &   3.72E-03
+  FOR JTOT =    0, SYMMETRY BLOCK =  1, EFV SET =   1, ENERGY(  1) = 6.9503457E-04:  MAXIMUM DIAGONAL & OFF-DIAGONAL =  1.04E+03 &   3.72E-03
 
-  FINISHED JTOT =    0   IBLOCK =   1   ENERGY(   1) = 6.9503457E-04
+  FINISHED JTOT =    0,  SYMMETRY BLOCK =   1,  ENERGY(   1) = 6.9503457E-04
 
   ------------------------ ITYP = 9: Mg + NH in magnetic field; cross sections, diagonal H_intl ------------------------
 
-  JTOT =    0   IBLOCK =   1   ENERGY(   2) =  6.95034570000E-03 CM-1 =   1.00000000000E-02 K
+  JTOT =    0,  SYMMETRY BLOCK =   1,  ENERGY(   2) =  6.95034570000E-03 CM-1 =   1.00000000000E-02 K
 
   EFV SET     1:  POTL SCALING FACTOR =   1.000000000     ;  MAGNETIC Z FIELD =   10.00000000     GAUSS
 
@@ -4868,7 +4868,7 @@
    12    6   4 6.1697681707175E-002  -1.5668871897854E-009   3.5575486083416E-023
    13    8   4 6.1697681707175E-002  -5.6711180711824E-018   4.6602880537126E-040
 
-  * * * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =   0 AND IBLOCK =   1 * * * * * * * * *
+  * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =   0 AND SYMMETRY BLOCK =   1 * * * * * * *
 
     F  I =      1              2              3
     1       2.35428E-03    3.84732E-02    3.03495E-04
@@ -4877,17 +4877,17 @@
 
   * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
 
-  FOR JTOT =    0 IBLOCK =  1 EFV SET =   1 ENERGY(  2) = 6.9503457E-03:  MAXIMUM DIAGONAL & OFF-DIAGONAL =  9.33E+02 &   3.85E-02
+  FOR JTOT =    0, SYMMETRY BLOCK =  1, EFV SET =   1, ENERGY(  2) = 6.9503457E-03:  MAXIMUM DIAGONAL & OFF-DIAGONAL =  9.33E+02 &   3.85E-02
 
   EFFECTIVE RANGE FOR CHANNEL   1:
   FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS  -13.072     ANGSTROM WITH 1/A(K=0) =  -0.4941047683E-01 ANGSTROM^-1
   FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS  -30.967     ANGSTROM WITH   A(K=0) =   -19.15023928     ANGSTROM
 
-  FINISHED JTOT =    0   IBLOCK =   1   ENERGY(   2) = 6.9503457E-03
+  FINISHED JTOT =    0,  SYMMETRY BLOCK =   1,  ENERGY(   2) = 6.9503457E-03
 
   ------------------------ ITYP = 9: Mg + NH in magnetic field; cross sections, diagonal H_intl ------------------------
 
-  JTOT =    0   IBLOCK =   1   ENERGY(   3) =  6.95034570000E-02 CM-1 =   0.10000000000     K
+  JTOT =    0,  SYMMETRY BLOCK =   1,  ENERGY(   3) =  6.95034570000E-02 CM-1 =   0.10000000000     K
 
   EFV SET     1:  POTL SCALING FACTOR =   1.000000000     ;  MAGNETIC Z FIELD =   10.00000000     GAUSS
 
@@ -4928,7 +4928,7 @@
    12    6   4 1.9510520054678E-001   2.0603969046167E-005  -3.0645289973617E-011
    13    8   4 1.9510520054678E-001  -3.2760422664595E-010   1.5551574863109E-022
 
-  * * * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =   0 AND IBLOCK =   1 * * * * * * * * *
+  * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =   0 AND SYMMETRY BLOCK =   1 * * * * * * *
 
     F  I =      1              2              3
     1       3.16270E+01    1.11801E+01    1.30584E+01
@@ -4937,13 +4937,13 @@
 
   * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
 
-  FOR JTOT =    0 IBLOCK =  1 EFV SET =   1 ENERGY(  3) = 6.9503457E-02:  MAXIMUM DIAGONAL & OFF-DIAGONAL =  3.57E+02 &   1.31E+01
+  FOR JTOT =    0, SYMMETRY BLOCK =  1, EFV SET =   1, ENERGY(  3) = 6.9503457E-02:  MAXIMUM DIAGONAL & OFF-DIAGONAL =  3.57E+02 &   1.31E+01
 
   EFFECTIVE RANGE FOR CHANNEL   1:
   FROM EXPANSION OF 1/A AT ENERGIES 1 AND   3 IS  -2.2570     ANGSTROM WITH 1/A(K=0) =  -0.4735207473E-01 ANGSTROM^-1
   FROM EXPANSION OF  A  AT ENERGIES 1 AND   3 IS  -29.602     ANGSTROM WITH   A(K=0) =   -19.22854720     ANGSTROM
 
-  FINISHED JTOT =    0   IBLOCK =   1   ENERGY(   3) = 6.9503457E-02
+  FINISHED JTOT =    0,  SYMMETRY BLOCK =   1,  ENERGY(   3) = 6.9503457E-02
 
   ======================================================================================================================
 
@@ -5067,7 +5067,7 @@
       104          27          2         3         3             5            27        97.7727619
       105          27          2         3         3             7            27        97.7727619
 
-  JTOT =    0   IBLOCK =   2   ENERGY(   1) =  6.95034570000E-04 CM-1 =   1.00000000000E-03 K
+  JTOT =    0,  SYMMETRY BLOCK =   2,  ENERGY(   1) =  6.95034570000E-04 CM-1 =   1.00000000000E-03 K
 
   EFV SET     1:  POTL SCALING FACTOR =   1.000000000     ;  MAGNETIC Z FIELD =   10.00000000     GAUSS
 
@@ -5106,7 +5106,7 @@
    11    5   4 1.9510520054678E-002  -2.4046564894915E-009   8.3787932323740E-025
    12    7   4 1.9510520054678E-002  -4.0156827348660E-017   2.3366527120256E-040
 
-  * * * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =   0 AND IBLOCK =   2 * * * * * * * * *
+  * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =   0 AND SYMMETRY BLOCK =   2 * * * * * * *
 
     F  I =      1              2              3
     1       7.10997E+00    2.17994E-02    7.40530E-01
@@ -5115,13 +5115,13 @@
 
   * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
 
-  FOR JTOT =    0 IBLOCK =  2 EFV SET =   1 ENERGY(  1) = 6.9503457E-04:  MAXIMUM DIAGONAL & OFF-DIAGONAL =  7.11E+00 &   7.41E-01
+  FOR JTOT =    0, SYMMETRY BLOCK =  2, EFV SET =   1, ENERGY(  1) = 6.9503457E-04:  MAXIMUM DIAGONAL & OFF-DIAGONAL =  7.11E+00 &   7.41E-01
 
-  FINISHED JTOT =    0   IBLOCK =   2   ENERGY(   1) = 6.9503457E-04
+  FINISHED JTOT =    0,  SYMMETRY BLOCK =   2,  ENERGY(   1) = 6.9503457E-04
 
   ------------------------ ITYP = 9: Mg + NH in magnetic field; cross sections, diagonal H_intl ------------------------
 
-  JTOT =    0   IBLOCK =   2   ENERGY(   2) =  6.95034570000E-03 CM-1 =   1.00000000000E-02 K
+  JTOT =    0,  SYMMETRY BLOCK =   2,  ENERGY(   2) =  6.95034570000E-03 CM-1 =   1.00000000000E-02 K
 
   EFV SET     1:  POTL SCALING FACTOR =   1.000000000     ;  MAGNETIC Z FIELD =   10.00000000     GAUSS
 
@@ -5160,7 +5160,7 @@
    11    5   4 6.1697681707175E-002  -9.4200430271993E-006   1.2858228991209E-015
    12    7   4 6.1697681707175E-002   1.8653826571614E-011   5.0420976488135E-027
 
-  * * * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =   0 AND IBLOCK =   2 * * * * * * * * *
+  * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =   0 AND SYMMETRY BLOCK =   2 * * * * * * *
 
     F  I =      1              2              3
     1       4.31214E+01    1.49873E-01    4.73207E+00
@@ -5169,17 +5169,17 @@
 
   * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
 
-  FOR JTOT =    0 IBLOCK =  2 EFV SET =   1 ENERGY(  2) = 6.9503457E-03:  MAXIMUM DIAGONAL & OFF-DIAGONAL =  4.31E+01 &   4.73E+00
+  FOR JTOT =    0, SYMMETRY BLOCK =  2, EFV SET =   1, ENERGY(  2) = 6.9503457E-03:  MAXIMUM DIAGONAL & OFF-DIAGONAL =  4.31E+01 &   4.73E+00
 
   EFFECTIVE RANGE FOR CHANNEL   1:
   FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS -0.41779     ANGSTROM WITH 1/A(K=0) =   0.1787070330E-02 ANGSTROM^-1
   FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS -0.28423     ANGSTROM WITH   A(K=0) =    552.2341384     ANGSTROM
 
-  FINISHED JTOT =    0   IBLOCK =   2   ENERGY(   2) = 6.9503457E-03
+  FINISHED JTOT =    0,  SYMMETRY BLOCK =   2,  ENERGY(   2) = 6.9503457E-03
 
   ------------------------ ITYP = 9: Mg + NH in magnetic field; cross sections, diagonal H_intl ------------------------
 
-  JTOT =    0   IBLOCK =   2   ENERGY(   3) =  6.95034570000E-02 CM-1 =   0.10000000000     K
+  JTOT =    0,  SYMMETRY BLOCK =   2,  ENERGY(   3) =  6.95034570000E-02 CM-1 =   0.10000000000     K
 
   EFV SET     1:  POTL SCALING FACTOR =   1.000000000     ;  MAGNETIC Z FIELD =   10.00000000     GAUSS
 
@@ -5218,7 +5218,7 @@
    11    5   4 1.9510520054678E-001   1.3520400086391E-002  -1.7911541660027E-006
    12    7   4 1.9510520054678E-001   1.5697076925225E-007  -1.6855759602613E-012
 
-  * * * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =   0 AND IBLOCK =   2 * * * * * * * * *
+  * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =   0 AND SYMMETRY BLOCK =   2 * * * * * * *
 
     F  I =      1              2              3
     1       1.83169E+02    2.56352E-01    3.16537E+00
@@ -5227,13 +5227,13 @@
 
   * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
 
-  FOR JTOT =    0 IBLOCK =  2 EFV SET =   1 ENERGY(  3) = 6.9503457E-02:  MAXIMUM DIAGONAL & OFF-DIAGONAL =  1.83E+02 &   3.17E+00
+  FOR JTOT =    0, SYMMETRY BLOCK =  2, EFV SET =   1, ENERGY(  3) = 6.9503457E-02:  MAXIMUM DIAGONAL & OFF-DIAGONAL =  1.83E+02 &   3.17E+00
 
   EFFECTIVE RANGE FOR CHANNEL   1:
   FROM EXPANSION OF 1/A AT ENERGIES 1 AND   3 IS -0.24877     ANGSTROM WITH 1/A(K=0) =   0.1819240710E-02 ANGSTROM^-1
   FROM EXPANSION OF  A  AT ENERGIES 1 AND   3 IS -0.69837E-01 ANGSTROM WITH   A(K=0) =    539.6067982     ANGSTROM
 
-  FINISHED JTOT =    0   IBLOCK =   2   ENERGY(   3) = 6.9503457E-02
+  FINISHED JTOT =    0,  SYMMETRY BLOCK =   2,  ENERGY(   3) = 6.9503457E-02
 
   ======================================================================================================================
 
@@ -5360,7 +5360,7 @@
       105          27          2         3         3             6            27        97.7727619
       106          27          2         3         3             8            27        97.7727619
 
-  JTOT =    1   IBLOCK =   1   ENERGY(   1) =  6.95034570000E-04 CM-1 =   1.00000000000E-03 K
+  JTOT =    1,  SYMMETRY BLOCK =   1,  ENERGY(   1) =  6.95034570000E-04 CM-1 =   1.00000000000E-03 K
 
   EFV SET     1:  POTL SCALING FACTOR =   1.000000000     ;  MAGNETIC Z FIELD =   10.00000000     GAUSS
 
@@ -5401,7 +5401,7 @@
    12    6   4 1.9510520054678E-002  -4.5970795808606E-014   3.0622414219640E-034
    13    8   4 1.9510520054678E-002   4.2281581271023E-024   2.5904655715956E-054
 
-  * * * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =   1 AND IBLOCK =   1 * * * * * * * * *
+  * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =   1 AND SYMMETRY BLOCK =   1 * * * * * * *
 
     F  I =      1              2              3
     1       2.29371E-05    6.66859E-07    1.15014E-02
@@ -5410,13 +5410,13 @@
 
   * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
 
-  FOR JTOT =    1 IBLOCK =  1 EFV SET =   1 ENERGY(  1) = 6.9503457E-04:  MAXIMUM DIAGONAL & OFF-DIAGONAL =  1.06E+03 &   1.15E-02
+  FOR JTOT =    1, SYMMETRY BLOCK =  1, EFV SET =   1, ENERGY(  1) = 6.9503457E-04:  MAXIMUM DIAGONAL & OFF-DIAGONAL =  1.06E+03 &   1.15E-02
 
-  FINISHED JTOT =    1   IBLOCK =   1   ENERGY(   1) = 6.9503457E-04
+  FINISHED JTOT =    1,  SYMMETRY BLOCK =   1,  ENERGY(   1) = 6.9503457E-04
 
   ------------------------ ITYP = 9: Mg + NH in magnetic field; cross sections, diagonal H_intl ------------------------
 
-  JTOT =    1   IBLOCK =   1   ENERGY(   2) =  6.95034570000E-03 CM-1 =   1.00000000000E-02 K
+  JTOT =    1,  SYMMETRY BLOCK =   1,  ENERGY(   2) =  6.95034570000E-03 CM-1 =   1.00000000000E-02 K
 
   EFV SET     1:  POTL SCALING FACTOR =   1.000000000     ;  MAGNETIC Z FIELD =   10.00000000     GAUSS
 
@@ -5457,7 +5457,7 @@
    12    6   4 6.1697681707175E-002  -1.5650702379572E-009   3.5493027732290E-023
    13    8   4 6.1697681707175E-002  -6.1622063542290E-018   5.5023455114948E-040
 
-  * * * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =   1 AND IBLOCK =   1 * * * * * * * * *
+  * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =   1 AND SYMMETRY BLOCK =   1 * * * * * * *
 
     F  I =      1              2              3
     1       3.45949E-03    1.78892E-04    8.29373E-02
@@ -5466,17 +5466,17 @@
 
   * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
 
-  FOR JTOT =    1 IBLOCK =  1 EFV SET =   1 ENERGY(  2) = 6.9503457E-03:  MAXIMUM DIAGONAL & OFF-DIAGONAL =  9.47E+02 &   8.29E-02
+  FOR JTOT =    1, SYMMETRY BLOCK =  1, EFV SET =   1, ENERGY(  2) = 6.9503457E-03:  MAXIMUM DIAGONAL & OFF-DIAGONAL =  9.47E+02 &   8.29E-02
 
   EFFECTIVE RANGE FOR CHANNEL   1:
   FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS  -10.933     ANGSTROM WITH 1/A(K=0) =  -0.4104687950E-01 ANGSTROM^-1
   FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS  -26.149     ANGSTROM WITH   A(K=0) =   -23.02486596     ANGSTROM
 
-  FINISHED JTOT =    1   IBLOCK =   1   ENERGY(   2) = 6.9503457E-03
+  FINISHED JTOT =    1,  SYMMETRY BLOCK =   1,  ENERGY(   2) = 6.9503457E-03
 
   ------------------------ ITYP = 9: Mg + NH in magnetic field; cross sections, diagonal H_intl ------------------------
 
-  JTOT =    1   IBLOCK =   1   ENERGY(   3) =  6.95034570000E-02 CM-1 =   0.10000000000     K
+  JTOT =    1,  SYMMETRY BLOCK =   1,  ENERGY(   3) =  6.95034570000E-02 CM-1 =   0.10000000000     K
 
   EFV SET     1:  POTL SCALING FACTOR =   1.000000000     ;  MAGNETIC Z FIELD =   10.00000000     GAUSS
 
@@ -5517,7 +5517,7 @@
    12    6   4 1.9510520054678E-001   2.0580995658436E-005  -2.2831552355166E-011
    13    8   4 1.9510520054678E-001  -3.2702121793437E-010   1.5496272548452E-022
 
-  * * * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =   1 AND IBLOCK =   1 * * * * * * * * *
+  * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =   1 AND SYMMETRY BLOCK =   1 * * * * * * *
 
     F  I =      1              2              3
     1       5.78281E+01    9.58342E+00    2.46674E+01
@@ -5526,13 +5526,13 @@
 
   * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
 
-  FOR JTOT =    1 IBLOCK =  1 EFV SET =   1 ENERGY(  3) = 6.9503457E-02:  MAXIMUM DIAGONAL & OFF-DIAGONAL =  2.99E+02 &   2.47E+01
+  FOR JTOT =    1, SYMMETRY BLOCK =  1, EFV SET =   1, ENERGY(  3) = 6.9503457E-02:  MAXIMUM DIAGONAL & OFF-DIAGONAL =  2.99E+02 &   2.47E+01
 
   EFFECTIVE RANGE FOR CHANNEL   1:
   FROM EXPANSION OF 1/A AT ENERGIES 1 AND   3 IS  -1.9104     ANGSTROM WITH 1/A(K=0) =  -0.3932970537E-01 ANGSTROM^-1
   FROM EXPANSION OF  A  AT ENERGIES 1 AND   3 IS  -32.573     ANGSTROM WITH   A(K=0) =   -22.51939756     ANGSTROM
 
-  FINISHED JTOT =    1   IBLOCK =   1   ENERGY(   3) = 6.9503457E-02
+  FINISHED JTOT =    1,  SYMMETRY BLOCK =   1,  ENERGY(   3) = 6.9503457E-02
 
   ======================================================================================================================
 
@@ -5651,7 +5651,7 @@
        99          27          2         3         3             5            27        97.7727619
       100          27          2         3         3             7            27        97.7727619
 
-  JTOT =    1   IBLOCK =   2   ENERGY(   1) =  6.95034570000E-04 CM-1 =   1.00000000000E-03 K
+  JTOT =    1,  SYMMETRY BLOCK =   2,  ENERGY(   1) =  6.95034570000E-04 CM-1 =   1.00000000000E-03 K
 
   EFV SET     1:  POTL SCALING FACTOR =   1.000000000     ;  MAGNETIC Z FIELD =   10.00000000     GAUSS
 
@@ -5688,7 +5688,7 @@
    10    5   4 1.9510520054678E-002  -2.5295170826163E-009   9.2715130981865E-025
    11    7   4 1.9510520054678E-002  -3.9594750958702E-017   2.2716980970823E-040
 
-  * * * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =   1 AND IBLOCK =   2 * * * * * * * * *
+  * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =   1 AND SYMMETRY BLOCK =   2 * * * * * * *
 
     F  I =      1              2              3
     1       1.21014E-13    2.80720E-07    2.12723E-07
@@ -5697,13 +5697,13 @@
 
   * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
 
-  FOR JTOT =    1 IBLOCK =  2 EFV SET =   1 ENERGY(  1) = 6.9503457E-04:  MAXIMUM DIAGONAL & OFF-DIAGONAL =  3.58E+00 &   3.02E-01
+  FOR JTOT =    1, SYMMETRY BLOCK =  2, EFV SET =   1, ENERGY(  1) = 6.9503457E-04:  MAXIMUM DIAGONAL & OFF-DIAGONAL =  3.58E+00 &   3.02E-01
 
-  FINISHED JTOT =    1   IBLOCK =   2   ENERGY(   1) = 6.9503457E-04
+  FINISHED JTOT =    1,  SYMMETRY BLOCK =   2,  ENERGY(   1) = 6.9503457E-04
 
   ------------------------ ITYP = 9: Mg + NH in magnetic field; cross sections, diagonal H_intl ------------------------
 
-  JTOT =    1   IBLOCK =   2   ENERGY(   2) =  6.95034570000E-03 CM-1 =   1.00000000000E-02 K
+  JTOT =    1,  SYMMETRY BLOCK =   2,  ENERGY(   2) =  6.95034570000E-03 CM-1 =   1.00000000000E-02 K
 
   EFV SET     1:  POTL SCALING FACTOR =   1.000000000     ;  MAGNETIC Z FIELD =   10.00000000     GAUSS
 
@@ -5740,7 +5740,7 @@
    10    5   4 6.1697681707175E-002  -9.8169677991064E-006   1.3964651942643E-015
    11    7   4 6.1697681707175E-002   1.9040886788806E-011   5.2535119509908E-027
 
-  * * * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =   1 AND IBLOCK =   2 * * * * * * * * *
+  * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =   1 AND SYMMETRY BLOCK =   2 * * * * * * *
 
     F  I =      1              2              3
     1       8.62787E-11    3.03612E-05    3.13477E-05
@@ -5749,17 +5749,17 @@
 
   * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
 
-  FOR JTOT =    1 IBLOCK =  2 EFV SET =   1 ENERGY(  2) = 6.9503457E-03:  MAXIMUM DIAGONAL & OFF-DIAGONAL =  4.16E+01 &   2.89E+00
+  FOR JTOT =    1, SYMMETRY BLOCK =  2, EFV SET =   1, ENERGY(  2) = 6.9503457E-03:  MAXIMUM DIAGONAL & OFF-DIAGONAL =  4.16E+01 &   2.89E+00
 
   EFFECTIVE RANGE FOR CHANNEL   1:
   FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS  0.23792E+06 ANGSTROM WITH 1/A(K=0) =    581.7470541     ANGSTROM^-1
   FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS  0.23523E+07 ANGSTROM WITH   A(K=0) =   0.1209309898E-02 ANGSTROM
 
-  FINISHED JTOT =    1   IBLOCK =   2   ENERGY(   2) = 6.9503457E-03
+  FINISHED JTOT =    1,  SYMMETRY BLOCK =   2,  ENERGY(   2) = 6.9503457E-03
 
   ------------------------ ITYP = 9: Mg + NH in magnetic field; cross sections, diagonal H_intl ------------------------
 
-  JTOT =    1   IBLOCK =   2   ENERGY(   3) =  6.95034570000E-02 CM-1 =   0.10000000000     K
+  JTOT =    1,  SYMMETRY BLOCK =   2,  ENERGY(   3) =  6.95034570000E-02 CM-1 =   0.10000000000     K
 
   EFV SET     1:  POTL SCALING FACTOR =   1.000000000     ;  MAGNETIC Z FIELD =   10.00000000     GAUSS
 
@@ -5796,7 +5796,7 @@
    10    5   4 1.9510520054678E-001   1.1538587661925E-002  -1.5481306756680E-006
    11    7   4 1.9510520054678E-001   1.7127749913036E-007  -1.2258568834334E-012
 
-  * * * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =   1 AND IBLOCK =   2 * * * * * * * * *
+  * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =   1 AND SYMMETRY BLOCK =   2 * * * * * * *
 
     F  I =      1              2              3
     1       6.42057E-05    1.58806E-02    1.61726E-02
@@ -5805,13 +5805,13 @@
 
   * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
 
-  FOR JTOT =    1 IBLOCK =  2 EFV SET =   1 ENERGY(  3) = 6.9503457E-02:  MAXIMUM DIAGONAL & OFF-DIAGONAL =  1.93E+02 &   1.69E+00
+  FOR JTOT =    1, SYMMETRY BLOCK =  2, EFV SET =   1, ENERGY(  3) = 6.9503457E-02:  MAXIMUM DIAGONAL & OFF-DIAGONAL =  1.93E+02 &   1.69E+00
 
   EFFECTIVE RANGE FOR CHANNEL   1:
   FROM EXPANSION OF 1/A AT ENERGIES 1 AND   3 IS   28657.     ANGSTROM WITH 1/A(K=0) =    541.9186198     ANGSTROM^-1
   FROM EXPANSION OF  A  AT ENERGIES 1 AND   3 IS -0.67166E+06 ANGSTROM WITH   A(K=0) =   0.4757540895E-02 ANGSTROM
 
-  FINISHED JTOT =    1   IBLOCK =   2   ENERGY(   3) = 6.9503457E-02
+  FINISHED JTOT =    1,  SYMMETRY BLOCK =   2,  ENERGY(   3) = 6.9503457E-02
 
   ======================================================================================================================
 
@@ -5927,7 +5927,7 @@
        94          27          2         3         3             6            27        97.7727619
        95          27          2         3         3             8            27        97.7727619
 
-  JTOT =    2   IBLOCK =   1   ENERGY(   1) =  6.95034570000E-04 CM-1 =   1.00000000000E-03 K
+  JTOT =    2,  SYMMETRY BLOCK =   1,  ENERGY(   1) =  6.95034570000E-04 CM-1 =   1.00000000000E-03 K
 
   EFV SET     1:  POTL SCALING FACTOR =   1.000000000     ;  MAGNETIC Z FIELD =   10.00000000     GAUSS
 
@@ -5964,7 +5964,7 @@
    10    6   4 1.9510520054678E-002  -4.4985106116008E-014   2.9323302553835E-034
    11    8   4 1.9510520054678E-002   1.7848589419309E-024   4.6161847457497E-055
 
-  * * * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =   2 AND IBLOCK =   1 * * * * * * * * *
+  * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =   2 AND SYMMETRY BLOCK =   1 * * * * * * *
 
     F  I =      1              2              3
     1       1.04422E-17    6.77300E-13    3.76605E-13
@@ -5973,13 +5973,13 @@
 
   * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
 
-  FOR JTOT =    2 IBLOCK =  1 EFV SET =   1 ENERGY(  1) = 6.9503457E-04:  MAXIMUM DIAGONAL & OFF-DIAGONAL =  1.63E-06 &   6.65E-08
+  FOR JTOT =    2, SYMMETRY BLOCK =  1, EFV SET =   1, ENERGY(  1) = 6.9503457E-04:  MAXIMUM DIAGONAL & OFF-DIAGONAL =  1.63E-06 &   6.65E-08
 
-  FINISHED JTOT =    2   IBLOCK =   1   ENERGY(   1) = 6.9503457E-04
+  FINISHED JTOT =    2,  SYMMETRY BLOCK =   1,  ENERGY(   1) = 6.9503457E-04
 
   ------------------------ ITYP = 9: Mg + NH in magnetic field; cross sections, diagonal H_intl ------------------------
 
-  JTOT =    2   IBLOCK =   1   ENERGY(   2) =  6.95034570000E-03 CM-1 =   1.00000000000E-02 K
+  JTOT =    2,  SYMMETRY BLOCK =   1,  ENERGY(   2) =  6.95034570000E-03 CM-1 =   1.00000000000E-02 K
 
   EFV SET     1:  POTL SCALING FACTOR =   1.000000000     ;  MAGNETIC Z FIELD =   10.00000000     GAUSS
 
@@ -6016,7 +6016,7 @@
    10    6   4 6.1697681707175E-002  -1.5289465300689E-009   3.3873492622126E-023
    11    8   4 6.1697681707175E-002  -1.3325636199302E-017   2.5730681428599E-039
 
-  * * * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =   2 AND IBLOCK =   1 * * * * * * * * *
+  * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =   2 AND SYMMETRY BLOCK =   1 * * * * * * *
 
     F  I =      1              2              3
     1       1.87802E-13    1.93862E-09    3.20126E-09
@@ -6025,17 +6025,17 @@
 
   * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
 
-  FOR JTOT =    2 IBLOCK =  1 EFV SET =   1 ENERGY(  2) = 6.9503457E-03:  MAXIMUM DIAGONAL & OFF-DIAGONAL =  9.32E-04 &   1.18E-04
+  FOR JTOT =    2, SYMMETRY BLOCK =  1, EFV SET =   1, ENERGY(  2) = 6.9503457E-03:  MAXIMUM DIAGONAL & OFF-DIAGONAL =  9.32E-04 &   1.18E-04
 
   EFFECTIVE RANGE FOR CHANNEL   1:
   FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS  0.32110E+08 ANGSTROM WITH 1/A(K=0) =    63861.11888     ANGSTROM^-1
   FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS  0.44971E+09 ANGSTROM WITH   A(K=0) =  -0.2121791090E-04 ANGSTROM
 
-  FINISHED JTOT =    2   IBLOCK =   1   ENERGY(   2) = 6.9503457E-03
+  FINISHED JTOT =    2,  SYMMETRY BLOCK =   1,  ENERGY(   2) = 6.9503457E-03
 
   ------------------------ ITYP = 9: Mg + NH in magnetic field; cross sections, diagonal H_intl ------------------------
 
-  JTOT =    2   IBLOCK =   1   ENERGY(   3) =  6.95034570000E-02 CM-1 =   0.10000000000     K
+  JTOT =    2,  SYMMETRY BLOCK =   1,  ENERGY(   3) =  6.95034570000E-02 CM-1 =   0.10000000000     K
 
   EFV SET     1:  POTL SCALING FACTOR =   1.000000000     ;  MAGNETIC Z FIELD =   10.00000000     GAUSS
 
@@ -6072,7 +6072,7 @@
    10    6   4 1.9510520054678E-001   1.8299812465255E-005  -1.6370863156599E-011
    11    8   4 1.9510520054678E-001  -3.3968588334117E-010   1.6719773141604E-022
 
-  * * * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =   2 AND IBLOCK =   1 * * * * * * * * *
+  * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =   2 AND SYMMETRY BLOCK =   1 * * * * * * *
 
     F  I =      1              2              3
     1       1.09487E-06    1.74600E-03    3.39824E-03
@@ -6081,13 +6081,13 @@
 
   * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
 
-  FOR JTOT =    2 IBLOCK =  1 EFV SET =   1 ENERGY(  3) = 6.9503457E-02:  MAXIMUM DIAGONAL & OFF-DIAGONAL =  2.64E+01 &   4.94E+00
+  FOR JTOT =    2, SYMMETRY BLOCK =  1, EFV SET =   1, ENERGY(  3) = 6.9503457E-02:  MAXIMUM DIAGONAL & OFF-DIAGONAL =  2.64E+01 &   4.94E+00
 
   EFFECTIVE RANGE FOR CHANNEL   1:
   FROM EXPANSION OF 1/A AT ENERGIES 1 AND   3 IS  0.30634E+07 ANGSTROM WITH 1/A(K=0) =    58332.69504     ANGSTROM^-1
   FROM EXPANSION OF  A  AT ENERGIES 1 AND   3 IS  0.15561E+08 ANGSTROM WITH   A(K=0) =  -0.3541589649E-03 ANGSTROM
 
-  FINISHED JTOT =    2   IBLOCK =   1   ENERGY(   3) = 6.9503457E-02
+  FINISHED JTOT =    2,  SYMMETRY BLOCK =   1,  ENERGY(   3) = 6.9503457E-02
 
   ======================================================================================================================
 
@@ -6198,7 +6198,7 @@
        91          27          2         3         3             5            27        97.7727619
        92          27          2         3         3             7            27        97.7727619
 
-  JTOT =    2   IBLOCK =   2   ENERGY(   1) =  6.95034570000E-04 CM-1 =   1.00000000000E-03 K
+  JTOT =    2,  SYMMETRY BLOCK =   2,  ENERGY(   1) =  6.95034570000E-04 CM-1 =   1.00000000000E-03 K
 
   EFV SET     1:  POTL SCALING FACTOR =   1.000000000     ;  MAGNETIC Z FIELD =   10.00000000     GAUSS
 
@@ -6233,7 +6233,7 @@
     9    5   4 1.9510520054678E-002  -2.4962995277725E-009   9.0296054045450E-025
    10    7   4 1.9510520054678E-002  -3.7654107608580E-017   2.0544714082941E-040
 
-  * * * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =   2 AND IBLOCK =   2 * * * * * * * * *
+  * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =   2 AND SYMMETRY BLOCK =   2 * * * * * * *
 
     F  I =      1              2              3
     1       3.31841E-14    2.86789E-14    6.14975E-07
@@ -6242,13 +6242,13 @@
 
   * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
 
-  FOR JTOT =    2 IBLOCK =  2 EFV SET =   1 ENERGY(  1) = 6.9503457E-04:  MAXIMUM DIAGONAL & OFF-DIAGONAL =  3.01E-01 &   6.15E-07
+  FOR JTOT =    2, SYMMETRY BLOCK =  2, EFV SET =   1, ENERGY(  1) = 6.9503457E-04:  MAXIMUM DIAGONAL & OFF-DIAGONAL =  3.01E-01 &   6.15E-07
 
-  FINISHED JTOT =    2   IBLOCK =   2   ENERGY(   1) = 6.9503457E-04
+  FINISHED JTOT =    2,  SYMMETRY BLOCK =   2,  ENERGY(   1) = 6.9503457E-04
 
   ------------------------ ITYP = 9: Mg + NH in magnetic field; cross sections, diagonal H_intl ------------------------
 
-  JTOT =    2   IBLOCK =   2   ENERGY(   2) =  6.95034570000E-03 CM-1 =   1.00000000000E-02 K
+  JTOT =    2,  SYMMETRY BLOCK =   2,  ENERGY(   2) =  6.95034570000E-03 CM-1 =   1.00000000000E-02 K
 
   EFV SET     1:  POTL SCALING FACTOR =   1.000000000     ;  MAGNETIC Z FIELD =   10.00000000     GAUSS
 
@@ -6283,7 +6283,7 @@
     9    5   4 6.1697681707175E-002  -9.5996703128272E-006   1.3353281946197E-015
    10    7   4 6.1697681707175E-002   1.8744904172774E-011   5.0914540890699E-027
 
-  * * * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =   2 AND IBLOCK =   2 * * * * * * * * *
+  * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =   2 AND SYMMETRY BLOCK =   2 * * * * * * *
 
     F  I =      1              2              3
     1       3.18488E-12    1.57900E-10    9.22269E-05
@@ -6292,17 +6292,17 @@
 
   * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
 
-  FOR JTOT =    2 IBLOCK =  2 EFV SET =   1 ENERGY(  2) = 6.9503457E-03:  MAXIMUM DIAGONAL & OFF-DIAGONAL =  1.87E+01 &   9.22E-05
+  FOR JTOT =    2, SYMMETRY BLOCK =  2, EFV SET =   1, ENERGY(  2) = 6.9503457E-03:  MAXIMUM DIAGONAL & OFF-DIAGONAL =  1.87E+01 &   9.22E-05
 
   EFFECTIVE RANGE FOR CHANNEL   1:
   FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS  -51102.     ANGSTROM WITH 1/A(K=0) =    1014.755400     ANGSTROM^-1
   FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS  -46266.     ANGSTROM WITH   A(K=0) =   0.9846408519E-03 ANGSTROM
 
-  FINISHED JTOT =    2   IBLOCK =   2   ENERGY(   2) = 6.9503457E-03
+  FINISHED JTOT =    2,  SYMMETRY BLOCK =   2,  ENERGY(   2) = 6.9503457E-03
 
   ------------------------ ITYP = 9: Mg + NH in magnetic field; cross sections, diagonal H_intl ------------------------
 
-  JTOT =    2   IBLOCK =   2   ENERGY(   3) =  6.95034570000E-02 CM-1 =   0.10000000000     K
+  JTOT =    2,  SYMMETRY BLOCK =   2,  ENERGY(   3) =  6.95034570000E-02 CM-1 =   0.10000000000     K
 
   EFV SET     1:  POTL SCALING FACTOR =   1.000000000     ;  MAGNETIC Z FIELD =   10.00000000     GAUSS
 
@@ -6337,7 +6337,7 @@
     9    5   4 1.9510520054678E-001   8.2696986600435E-003  -1.3481148659039E-006
    10    7   4 1.9510520054678E-001   1.7692438802099E-007  -9.1937918629164E-013
 
-  * * * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =   2 AND IBLOCK =   2 * * * * * * * * *
+  * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =   2 AND SYMMETRY BLOCK =   2 * * * * * * *
 
     F  I =      1              2              3
     1       1.88318E-04    9.63728E-05    4.81596E-02
@@ -6346,13 +6346,13 @@
 
   * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
 
-  FOR JTOT =    2 IBLOCK =  2 EFV SET =   1 ENERGY(  3) = 6.9503457E-02:  MAXIMUM DIAGONAL & OFF-DIAGONAL =  1.72E+02 &   4.82E-02
+  FOR JTOT =    2, SYMMETRY BLOCK =  2, EFV SET =   1, ENERGY(  3) = 6.9503457E-02:  MAXIMUM DIAGONAL & OFF-DIAGONAL =  1.72E+02 &   4.82E-02
 
   EFFECTIVE RANGE FOR CHANNEL   1:
   FROM EXPANSION OF 1/A AT ENERGIES 1 AND   3 IS   54478.     ANGSTROM WITH 1/A(K=0) =    1034.850518     ANGSTROM^-1
   FROM EXPANSION OF  A  AT ENERGIES 1 AND   3 IS -0.73820E+06 ANGSTROM WITH   A(K=0) =   0.5949701057E-02 ANGSTROM
 
-  FINISHED JTOT =    2   IBLOCK =   2   ENERGY(   3) = 6.9503457E-02
+  FINISHED JTOT =    2,  SYMMETRY BLOCK =   2,  ENERGY(   3) = 6.9503457E-02
 
   ======================================================================================================================
 
@@ -6457,7 +6457,7 @@
        83          27          2         3         3             6            27        97.7727619
        84          27          2         3         3             8            27        97.7727619
 
-  JTOT =    3   IBLOCK =   1   ENERGY(   1) =  6.95034570000E-04 CM-1 =   1.00000000000E-03 K
+  JTOT =    3,  SYMMETRY BLOCK =   1,  ENERGY(   1) =  6.95034570000E-04 CM-1 =   1.00000000000E-03 K
 
   EFV SET     1:  POTL SCALING FACTOR =   1.000000000     ;  MAGNETIC Z FIELD =   10.00000000     GAUSS
 
@@ -6492,7 +6492,7 @@
     9    6   4 1.9510520054678E-002  -4.3078713646697E-014   2.6890621259974E-034
    10    8   4 1.9510520054678E-002  -2.9384074224080E-024   1.2511212702124E-054
 
-  * * * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =   3 AND IBLOCK =   1 * * * * * * * * *
+  * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =   3 AND SYMMETRY BLOCK =   1 * * * * * * *
 
     F  I =      1              2              3
     1       7.13136E-18    2.59436E-19    7.52109E-13
@@ -6501,13 +6501,13 @@
 
   * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
 
-  FOR JTOT =    3 IBLOCK =  1 EFV SET =   1 ENERGY(  1) = 6.9503457E-04:  MAXIMUM DIAGONAL & OFF-DIAGONAL =  1.28E-07 &   7.52E-13
+  FOR JTOT =    3, SYMMETRY BLOCK =  1, EFV SET =   1, ENERGY(  1) = 6.9503457E-04:  MAXIMUM DIAGONAL & OFF-DIAGONAL =  1.28E-07 &   7.52E-13
 
-  FINISHED JTOT =    3   IBLOCK =   1   ENERGY(   1) = 6.9503457E-04
+  FINISHED JTOT =    3,  SYMMETRY BLOCK =   1,  ENERGY(   1) = 6.9503457E-04
 
   ------------------------ ITYP = 9: Mg + NH in magnetic field; cross sections, diagonal H_intl ------------------------
 
-  JTOT =    3   IBLOCK =   1   ENERGY(   2) =  6.95034570000E-03 CM-1 =   1.00000000000E-02 K
+  JTOT =    3,  SYMMETRY BLOCK =   1,  ENERGY(   2) =  6.95034570000E-03 CM-1 =   1.00000000000E-02 K
 
   EFV SET     1:  POTL SCALING FACTOR =   1.000000000     ;  MAGNETIC Z FIELD =   10.00000000     GAUSS
 
@@ -6542,7 +6542,7 @@
     9    6   4 6.1697681707175E-002  -1.4583612650556E-009   3.0818083263116E-023
    10    8   4 6.1697681707175E-002  -2.7174484513532E-017   1.0700350701084E-038
 
-  * * * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =   3 AND IBLOCK =   1 * * * * * * * * *
+  * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =   3 AND SYMMETRY BLOCK =   1 * * * * * * *
 
     F  I =      1              2              3
     1       1.26490E-13    1.64513E-14    6.39133E-09
@@ -6551,17 +6551,17 @@
 
   * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
 
-  FOR JTOT =    3 IBLOCK =  1 EFV SET =   1 ENERGY(  2) = 6.9503457E-03:  MAXIMUM DIAGONAL & OFF-DIAGONAL =  1.35E-03 &   6.39E-09
+  FOR JTOT =    3, SYMMETRY BLOCK =  1, EFV SET =   1, ENERGY(  2) = 6.9503457E-03:  MAXIMUM DIAGONAL & OFF-DIAGONAL =  1.35E-03 &   6.39E-09
 
   EFFECTIVE RANGE FOR CHANNEL   1:
   FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS  0.38842E+08 ANGSTROM WITH 1/A(K=0) =    77273.85801     ANGSTROM^-1
   FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS  0.55476E+09 ANGSTROM WITH   A(K=0) =  -0.1730338304E-04 ANGSTROM
 
-  FINISHED JTOT =    3   IBLOCK =   1   ENERGY(   2) = 6.9503457E-03
+  FINISHED JTOT =    3,  SYMMETRY BLOCK =   1,  ENERGY(   2) = 6.9503457E-03
 
   ------------------------ ITYP = 9: Mg + NH in magnetic field; cross sections, diagonal H_intl ------------------------
 
-  JTOT =    3   IBLOCK =   1   ENERGY(   3) =  6.95034570000E-02 CM-1 =   0.10000000000     K
+  JTOT =    3,  SYMMETRY BLOCK =   1,  ENERGY(   3) =  6.95034570000E-02 CM-1 =   0.10000000000     K
 
   EFV SET     1:  POTL SCALING FACTOR =   1.000000000     ;  MAGNETIC Z FIELD =   10.00000000     GAUSS
 
@@ -6596,7 +6596,7 @@
     9    6   4 1.9510520054678E-001   1.3772279403036E-005  -1.1064724887074E-011
    10    8   4 1.9510520054678E-001  -3.6560712105572E-010   1.9368887422746E-022
 
-  * * * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =   3 AND IBLOCK =   1 * * * * * * * * *
+  * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =   3 AND SYMMETRY BLOCK =   1 * * * * * * *
 
     F  I =      1              2              3
     1       5.51163E-07    5.40032E-07    6.77006E-03
@@ -6605,13 +6605,13 @@
 
   * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
 
-  FOR JTOT =    3 IBLOCK =  1 EFV SET =   1 ENERGY(  3) = 6.9503457E-02:  MAXIMUM DIAGONAL & OFF-DIAGONAL =  4.44E+01 &   6.77E-03
+  FOR JTOT =    3, SYMMETRY BLOCK =  1, EFV SET =   1, ENERGY(  3) = 6.9503457E-02:  MAXIMUM DIAGONAL & OFF-DIAGONAL =  4.44E+01 &   6.77E-03
 
   EFFECTIVE RANGE FOR CHANNEL   1:
   FROM EXPANSION OF 1/A AT ENERGIES 1 AND   3 IS  0.37064E+07 ANGSTROM WITH 1/A(K=0) =    70586.55062     ANGSTROM^-1
   FROM EXPANSION OF  A  AT ENERGIES 1 AND   3 IS  0.25033E+08 ANGSTROM WITH   A(K=0) =  -0.2233287075E-03 ANGSTROM
 
-  FINISHED JTOT =    3   IBLOCK =   1   ENERGY(   3) = 6.9503457E-02
+  FINISHED JTOT =    3,  SYMMETRY BLOCK =   1,  ENERGY(   3) = 6.9503457E-02
 
   ======================================================================================================================
 
@@ -6708,7 +6708,7 @@
        77          27          2         3         3             5            27        97.7727619
        78          27          2         3         3             7            27        97.7727619
 
-  JTOT =    3   IBLOCK =   2   ENERGY(   1) =  6.95034570000E-04 CM-1 =   1.00000000000E-03 K
+  JTOT =    3,  SYMMETRY BLOCK =   2,  ENERGY(   1) =  6.95034570000E-04 CM-1 =   1.00000000000E-03 K
 
   EFV SET     1:  POTL SCALING FACTOR =   1.000000000     ;  MAGNETIC Z FIELD =   10.00000000     GAUSS
 
@@ -6739,7 +6739,7 @@
     7    5   4 1.9510520054678E-002  -2.3054116915185E-009   7.7014476094828E-025
     8    7   4 1.9510520054678E-002  -3.4382002924776E-017   1.7129225577083E-040
 
-  * * * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =   3 AND IBLOCK =   2 * * * * * * * * *
+  * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =   3 AND SYMMETRY BLOCK =   2 * * * * * * *
 
     F  I =      1              2              3
     1       3.70889E-22    6.87004E-19    2.45444E-19
@@ -6748,13 +6748,13 @@
 
   * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
 
-  FOR JTOT =    3 IBLOCK =  2 EFV SET =   1 ENERGY(  1) = 6.9503457E-04:  MAXIMUM DIAGONAL & OFF-DIAGONAL =  3.26E-14 &   6.73E-16
+  FOR JTOT =    3, SYMMETRY BLOCK =  2, EFV SET =   1, ENERGY(  1) = 6.9503457E-04:  MAXIMUM DIAGONAL & OFF-DIAGONAL =  3.26E-14 &   6.73E-16
 
-  FINISHED JTOT =    3   IBLOCK =   2   ENERGY(   1) = 6.9503457E-04
+  FINISHED JTOT =    3,  SYMMETRY BLOCK =   2,  ENERGY(   1) = 6.9503457E-04
 
   ------------------------ ITYP = 9: Mg + NH in magnetic field; cross sections, diagonal H_intl ------------------------
 
-  JTOT =    3   IBLOCK =   2   ENERGY(   2) =  6.95034570000E-03 CM-1 =   1.00000000000E-02 K
+  JTOT =    3,  SYMMETRY BLOCK =   2,  ENERGY(   2) =  6.95034570000E-03 CM-1 =   1.00000000000E-02 K
 
   EFV SET     1:  POTL SCALING FACTOR =   1.000000000     ;  MAGNETIC Z FIELD =   10.00000000     GAUSS
 
@@ -6785,7 +6785,7 @@
     7    5   4 6.1697681707175E-002  -8.7696687484888E-006   1.1144016886059E-015
     8    7   4 6.1697681707175E-002   1.7726167767413E-011   4.5530780323479E-027
 
-  * * * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =   3 AND IBLOCK =   2 * * * * * * * * *
+  * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =   3 AND SYMMETRY BLOCK =   2 * * * * * * *
 
     F  I =      1              2              3
     1       1.51893E-16    2.94685E-14    6.43298E-14
@@ -6794,17 +6794,17 @@
 
   * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
 
-  FOR JTOT =    3 IBLOCK =  2 EFV SET =   1 ENERGY(  2) = 6.9503457E-03:  MAXIMUM DIAGONAL & OFF-DIAGONAL =  3.51E-10 &   5.51E-11
+  FOR JTOT =    3, SYMMETRY BLOCK =  2, EFV SET =   1, ENERGY(  2) = 6.9503457E-03:  MAXIMUM DIAGONAL & OFF-DIAGONAL =  3.51E-10 &   5.51E-11
 
   EFFECTIVE RANGE FOR CHANNEL   1:
   FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS -0.56005E+10 ANGSTROM WITH 1/A(K=0) =   -10755941.16     ANGSTROM^-1
   FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS -0.55770E+10 ANGSTROM WITH   A(K=0) =   0.1035931480E-05 ANGSTROM
 
-  FINISHED JTOT =    3   IBLOCK =   2   ENERGY(   2) = 6.9503457E-03
+  FINISHED JTOT =    3,  SYMMETRY BLOCK =   2,  ENERGY(   2) = 6.9503457E-03
 
   ------------------------ ITYP = 9: Mg + NH in magnetic field; cross sections, diagonal H_intl ------------------------
 
-  JTOT =    3   IBLOCK =   2   ENERGY(   3) =  6.95034570000E-02 CM-1 =   0.10000000000     K
+  JTOT =    3,  SYMMETRY BLOCK =   2,  ENERGY(   3) =  6.95034570000E-02 CM-1 =   0.10000000000     K
 
   EFV SET     1:  POTL SCALING FACTOR =   1.000000000     ;  MAGNETIC Z FIELD =   10.00000000     GAUSS
 
@@ -6835,7 +6835,7 @@
     7    5   4 1.9510520054678E-001   3.7215698934965E-003  -1.1524938703833E-006
     8    7   4 1.9510520054678E-001   1.7389035834525E-007  -6.1290588061757E-013
 
-  * * * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =   3 AND IBLOCK =   2 * * * * * * * * *
+  * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =   3 AND SYMMETRY BLOCK =   2 * * * * * * *
 
     F  I =      1              2              3
     1       1.22234E-07    3.60590E-07    1.10629E-06
@@ -6844,13 +6844,13 @@
 
   * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
 
-  FOR JTOT =    3 IBLOCK =  2 EFV SET =   1 ENERGY(  3) = 6.9503457E-02:  MAXIMUM DIAGONAL & OFF-DIAGONAL =  1.71E-05 &   4.52E-05
+  FOR JTOT =    3, SYMMETRY BLOCK =  2, EFV SET =   1, ENERGY(  3) = 6.9503457E-02:  MAXIMUM DIAGONAL & OFF-DIAGONAL =  1.71E-05 &   4.52E-05
 
   EFFECTIVE RANGE FOR CHANNEL   1:
   FROM EXPANSION OF 1/A AT ENERGIES 1 AND   3 IS -0.51426E+09 ANGSTROM WITH 1/A(K=0) =   -9787883.487     ANGSTROM^-1
   FROM EXPANSION OF  A  AT ENERGIES 1 AND   3 IS  0.40695E+08 ANGSTROM WITH   A(K=0) =  -0.1290056456E-03 ANGSTROM
 
-  FINISHED JTOT =    3   IBLOCK =   2   ENERGY(   3) = 6.9503457E-02
+  FINISHED JTOT =    3,  SYMMETRY BLOCK =   2,  ENERGY(   3) = 6.9503457E-02
 
   ======================================================================================================================
 
@@ -6940,7 +6940,7 @@
        68          27          2         3         3             6            27        97.7727619
        69          27          2         3         3             8            27        97.7727619
 
-  JTOT =    4   IBLOCK =   1   ENERGY(   1) =  6.95034570000E-04 CM-1 =   1.00000000000E-03 K
+  JTOT =    4,  SYMMETRY BLOCK =   1,  ENERGY(   1) =  6.95034570000E-04 CM-1 =   1.00000000000E-03 K
 
   EFV SET     1:  POTL SCALING FACTOR =   1.000000000     ;  MAGNETIC Z FIELD =   10.00000000     GAUSS
 
@@ -6971,7 +6971,7 @@
     7    6   4 1.9510520054678E-002  -4.0247910691724E-014   2.3472646813635E-034
     8    8   4 1.9510520054678E-002  -9.9468064889128E-024   1.4336486194420E-053
 
-  * * * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =   4 AND IBLOCK =   1 * * * * * * * * *
+  * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =   4 AND SYMMETRY BLOCK =   1 * * * * * * *
 
     F  I =      1              2              3
     1       6.16172E-30    6.05797E-27    1.23214E-27
@@ -6980,13 +6980,13 @@
 
   * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
 
-  FOR JTOT =    4 IBLOCK =  1 EFV SET =   1 ENERGY(  1) = 6.9503457E-04:  MAXIMUM DIAGONAL & OFF-DIAGONAL =  6.48E-19 &   8.46E-22
+  FOR JTOT =    4, SYMMETRY BLOCK =  1, EFV SET =   1, ENERGY(  1) = 6.9503457E-04:  MAXIMUM DIAGONAL & OFF-DIAGONAL =  6.48E-19 &   8.46E-22
 
-  FINISHED JTOT =    4   IBLOCK =   1   ENERGY(   1) = 6.9503457E-04
+  FINISHED JTOT =    4,  SYMMETRY BLOCK =   1,  ENERGY(   1) = 6.9503457E-04
 
   ------------------------ ITYP = 9: Mg + NH in magnetic field; cross sections, diagonal H_intl ------------------------
 
-  JTOT =    4   IBLOCK =   1   ENERGY(   2) =  6.95034570000E-03 CM-1 =   1.00000000000E-02 K
+  JTOT =    4,  SYMMETRY BLOCK =   1,  ENERGY(   2) =  6.95034570000E-03 CM-1 =   1.00000000000E-02 K
 
   EFV SET     1:  POTL SCALING FACTOR =   1.000000000     ;  MAGNETIC Z FIELD =   10.00000000     GAUSS
 
@@ -7017,7 +7017,7 @@
     7    6   4 6.1697681707175E-002  -1.3531583621086E-009   2.6532161625288E-023
     8    8   4 6.1697681707175E-002  -4.7722110864678E-017   3.3000055742453E-038
 
-  * * * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =   4 AND IBLOCK =   1 * * * * * * * * *
+  * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =   4 AND SYMMETRY BLOCK =   1 * * * * * * *
 
     F  I =      1              2              3
     1       1.85773E-23    4.61941E-21    1.19261E-20
@@ -7026,17 +7026,17 @@
 
   * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
 
-  FOR JTOT =    4 IBLOCK =  1 EFV SET =   1 ENERGY(  2) = 6.9503457E-03:  MAXIMUM DIAGONAL & OFF-DIAGONAL =  1.83E-13 &   3.06E-15
+  FOR JTOT =    4, SYMMETRY BLOCK =  1, EFV SET =   1, ENERGY(  2) = 6.9503457E-03:  MAXIMUM DIAGONAL & OFF-DIAGONAL =  1.83E-13 &   3.06E-15
 
   EFFECTIVE RANGE FOR CHANNEL   1:
   FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS -0.43727E+14 ANGSTROM WITH 1/A(K=0) =  -0.8350128093E+11 ANGSTROM^-1
   FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS -0.14020E+14 ANGSTROM WITH   A(K=0) =   0.3876097271E-09 ANGSTROM
 
-  FINISHED JTOT =    4   IBLOCK =   1   ENERGY(   2) = 6.9503457E-03
+  FINISHED JTOT =    4,  SYMMETRY BLOCK =   1,  ENERGY(   2) = 6.9503457E-03
 
   ------------------------ ITYP = 9: Mg + NH in magnetic field; cross sections, diagonal H_intl ------------------------
 
-  JTOT =    4   IBLOCK =   1   ENERGY(   3) =  6.95034570000E-02 CM-1 =   0.10000000000     K
+  JTOT =    4,  SYMMETRY BLOCK =   1,  ENERGY(   3) =  6.95034570000E-02 CM-1 =   0.10000000000     K
 
   EFV SET     1:  POTL SCALING FACTOR =   1.000000000     ;  MAGNETIC Z FIELD =   10.00000000     GAUSS
 
@@ -7067,7 +7067,7 @@
     7    6   4 1.9510520054678E-001   7.0103714954906E-006  -7.1309462283463E-012
     8    8   4 1.9510520054678E-001  -4.0479424267341E-010   2.3743461654746E-022
 
-  * * * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =   4 AND IBLOCK =   1 * * * * * * * * *
+  * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =   4 AND SYMMETRY BLOCK =   1 * * * * * * *
 
     F  I =      1              2              3
     1       4.99079E-15    8.36765E-12    2.96733E-11
@@ -7076,13 +7076,13 @@
 
   * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
 
-  FOR JTOT =    4 IBLOCK =  1 EFV SET =   1 ENERGY(  3) = 6.9503457E-02:  MAXIMUM DIAGONAL & OFF-DIAGONAL =  4.00E-06 &   1.13E-07
+  FOR JTOT =    4, SYMMETRY BLOCK =  1, EFV SET =   1, ENERGY(  3) = 6.9503457E-02:  MAXIMUM DIAGONAL & OFF-DIAGONAL =  4.00E-06 &   1.13E-07
 
   EFFECTIVE RANGE FOR CHANNEL   1:
   FROM EXPANSION OF 1/A AT ENERGIES 1 AND   3 IS -0.39898E+13 ANGSTROM WITH 1/A(K=0) =  -0.7593814323E+11 ANGSTROM^-1
   FROM EXPANSION OF  A  AT ENERGIES 1 AND   3 IS -0.20193E+12 ANGSTROM WITH   A(K=0) =   0.2603228802E-07 ANGSTROM
 
-  FINISHED JTOT =    4   IBLOCK =   1   ENERGY(   3) = 6.9503457E-02
+  FINISHED JTOT =    4,  SYMMETRY BLOCK =   1,  ENERGY(   3) = 6.9503457E-02
 
   ======================================================================================================================
 
@@ -7167,7 +7167,7 @@
        65          27          2         3         3             5            27        97.7727619
        66          27          2         3         3             7            27        97.7727619
 
-  JTOT =    4   IBLOCK =   2   ENERGY(   1) =  6.95034570000E-04 CM-1 =   1.00000000000E-03 K
+  JTOT =    4,  SYMMETRY BLOCK =   2,  ENERGY(   1) =  6.95034570000E-04 CM-1 =   1.00000000000E-03 K
 
   EFV SET     1:  POTL SCALING FACTOR =   1.000000000     ;  MAGNETIC Z FIELD =   10.00000000     GAUSS
 
@@ -7196,7 +7196,7 @@
     6    5   4 1.9510520054678E-002  -1.9572602497260E-009   5.5510167131334E-025
     7    7   4 1.9510520054678E-002  -2.9822881772837E-017   1.2887675621900E-040
 
-  * * * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =   4 AND IBLOCK =   2 * * * * * * * * *
+  * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =   4 AND SYMMETRY BLOCK =   2 * * * * * * *
 
     F  I =      1              2              3
     1       3.17520E-23    1.21379E-22    4.05597E-19
@@ -7205,13 +7205,13 @@
 
   * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
 
-  FOR JTOT =    4 IBLOCK =  2 EFV SET =   1 ENERGY(  1) = 6.9503457E-04:  MAXIMUM DIAGONAL & OFF-DIAGONAL =  1.57E-17 &   4.06E-19
+  FOR JTOT =    4, SYMMETRY BLOCK =  2, EFV SET =   1, ENERGY(  1) = 6.9503457E-04:  MAXIMUM DIAGONAL & OFF-DIAGONAL =  1.57E-17 &   4.06E-19
 
-  FINISHED JTOT =    4   IBLOCK =   2   ENERGY(   1) = 6.9503457E-04
+  FINISHED JTOT =    4,  SYMMETRY BLOCK =   2,  ENERGY(   1) = 6.9503457E-04
 
   ------------------------ ITYP = 9: Mg + NH in magnetic field; cross sections, diagonal H_intl ------------------------
 
-  JTOT =    4   IBLOCK =   2   ENERGY(   2) =  6.95034570000E-03 CM-1 =   1.00000000000E-02 K
+  JTOT =    4,  SYMMETRY BLOCK =   2,  ENERGY(   2) =  6.95034570000E-03 CM-1 =   1.00000000000E-02 K
 
   EFV SET     1:  POTL SCALING FACTOR =   1.000000000     ;  MAGNETIC Z FIELD =   10.00000000     GAUSS
 
@@ -7240,7 +7240,7 @@
     6    5   4 6.1697681707175E-002  -7.3284919012004E-006   7.7822397713581E-016
     7    7   4 6.1697681707175E-002   1.5942402762013E-011   3.6828407199267E-027
 
-  * * * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =   4 AND IBLOCK =   2 * * * * * * * * *
+  * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =   4 AND SYMMETRY BLOCK =   2 * * * * * * *
 
     F  I =      1              2              3
     1       2.03158E-17    1.85657E-16    1.05985E-13
@@ -7249,17 +7249,17 @@
 
   * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
 
-  FOR JTOT =    4 IBLOCK =  2 EFV SET =   1 ENERGY(  2) = 6.9503457E-03:  MAXIMUM DIAGONAL & OFF-DIAGONAL =  6.75E-12 &   1.06E-13
+  FOR JTOT =    4, SYMMETRY BLOCK =  2, EFV SET =   1, ENERGY(  2) = 6.9503457E-03:  MAXIMUM DIAGONAL & OFF-DIAGONAL =  6.75E-12 &   1.06E-13
 
   EFFECTIVE RANGE FOR CHANNEL   1:
   FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS -0.19179E+11 ANGSTROM WITH 1/A(K=0) =   -36768116.75     ANGSTROM^-1
   FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS -0.14626E+11 ANGSTROM WITH   A(K=0) =   0.3872464678E-06 ANGSTROM
 
-  FINISHED JTOT =    4   IBLOCK =   2   ENERGY(   2) = 6.9503457E-03
+  FINISHED JTOT =    4,  SYMMETRY BLOCK =   2,  ENERGY(   2) = 6.9503457E-03
 
   ------------------------ ITYP = 9: Mg + NH in magnetic field; cross sections, diagonal H_intl ------------------------
 
-  JTOT =    4   IBLOCK =   2   ENERGY(   3) =  6.95034570000E-02 CM-1 =   0.10000000000     K
+  JTOT =    4,  SYMMETRY BLOCK =   2,  ENERGY(   3) =  6.95034570000E-02 CM-1 =   0.10000000000     K
 
   EFV SET     1:  POTL SCALING FACTOR =   1.000000000     ;  MAGNETIC Z FIELD =   10.00000000     GAUSS
 
@@ -7288,7 +7288,7 @@
     6    5   4 1.9510520054678E-001  -2.0982374644727E-003  -9.0882981928179E-007
     7    7   4 1.9510520054678E-001   1.6215532675681E-007  -3.0643674686193E-013
 
-  * * * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =   4 AND IBLOCK =   2 * * * * * * * * *
+  * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =   4 AND SYMMETRY BLOCK =   2 * * * * * * *
 
     F  I =      1              2              3
     1       6.31600E-08    4.56089E-08    1.67054E-06
@@ -7297,13 +7297,13 @@
 
   * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
 
-  FOR JTOT =    4 IBLOCK =  2 EFV SET =   1 ENERGY(  3) = 6.9503457E-02:  MAXIMUM DIAGONAL & OFF-DIAGONAL =  6.23E-05 &   1.67E-06
+  FOR JTOT =    4, SYMMETRY BLOCK =  2, EFV SET =   1, ENERGY(  3) = 6.9503457E-02:  MAXIMUM DIAGONAL & OFF-DIAGONAL =  6.23E-05 &   1.67E-06
 
   EFFECTIVE RANGE FOR CHANNEL   1:
   FROM EXPANSION OF 1/A AT ENERGIES 1 AND   3 IS -0.17576E+10 ANGSTROM WITH 1/A(K=0) =   -33452233.43     ANGSTROM^-1
   FROM EXPANSION OF  A  AT ENERGIES 1 AND   3 IS  0.56666E+08 ANGSTROM WITH   A(K=0) =  -0.9268832739E-04 ANGSTROM
 
-  FINISHED JTOT =    4   IBLOCK =   2   ENERGY(   3) = 6.9503457E-02
+  FINISHED JTOT =    4,  SYMMETRY BLOCK =   2,  ENERGY(   3) = 6.9503457E-02
 
   ======================================================================================================================
 
@@ -7387,7 +7387,7 @@
  |                                                                            |
  |                               Version 2019.0 (beta)                        |
  |                                                                            |
- |                    This run used       7.97 cpu secs and                   |
+ |                    This run used       7.36 cpu secs and                   |
  |             101413 of the allocated   1000000 words of storage             |
  |                                                                            |
   ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---

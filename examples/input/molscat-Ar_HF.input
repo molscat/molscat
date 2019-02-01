@@ -4,13 +4,13 @@
     IPRINT =   6,   ISAVEU = 12,    ISCRU  = 30,      IPHSUM = 4,
     RMIN   =   2.5, RMAX   = 15.0,  IRMSET =  0,
     IPROPS =   6,   DR     =  0.03,
-    JTOTL  =   1,   JTOTU  =  1,    JSTEP  =  1,      IBFIX  = 2,
+    JTOTL  =   1,   JTOTU  =  1,    IBFIX  =  2,
     NNRG   = -10,   ENERGY = 16.93, DNRG   =  0.0001, DTOL   = 1.D-8,
  /
 
  &BASIS
     ITYPE  =  1,
-    JMAX   =  8, JSTEP  = 1,
+    JMAX   =  8,
     ROTI   = 20.559743, ! rotational constant for HF v=0
  /
 

@@ -1326,9 +1326,9 @@ C
                     LWARN=.TRUE.
                     IF (IPRINT.GE.4) WRITE(6,2510) JTOT,IB,J,ENERGY(J)
  2510               FORMAT(/'  ****** S MATRIX FOR JTOT =',I5,
-     1                     '   IBLOCK =',I4,3X,'ENERGY(',I4,') =',
-     2                     F18.9/9X,'WILL NOT BE USED IN PRESSURE ',
-     3                     'BROADENING CALCULATION: SKIPPING')
+     1                     '   SYMMETRY BLOCK =',I4,3X,'ENERGY(',I4,
+     2                     ') =',F18.9/9X,'WILL NOT BE USED IN ',
+     3                     'PRESSURE BROADENING CALCULATION: SKIPPING')
                     IF (IECONV(IFXE).GE.0) IECONV(IFXE)=IECONV(IFXE)+1
                     IF (LACCXS) CALL OUTSIG(ISIGU,IB,MXPAR,J,ENERGY(J),
      1                                      MINJT(IFXE),MAXJT(IFXE),
@@ -1346,8 +1346,8 @@ C
                   ELSE
                     WRITE(6,2520) JTOT,IB,J,ENERGY(J)
                   ENDIF
- 2520             FORMAT(/'  JTOT =',I5,'   IBLOCK =',I4,
-     1                   '   ENERGY(',I4,') =',1PG19.11,' CM-1',:
+ 2520             FORMAT(/'  JTOT =',I5,',  SYMMETRY BLOCK =',I4,
+     1                   ',  ENERGY(',I4,') =',1PG19.11,' CM-1',:
      2                   ' = ',G19.11,1X,A)
                   IF (LENEFV.GT.0)
      1              CALL MSGEFV(JFIELD,NFIELD)
@@ -1422,8 +1422,8 @@ C
  2540           FORMAT(/'  RMID =',F9.4,' OBTAINED FROM RVFAC =',F6.3)
                 IF (RMNINT.GT.RMXINT) THEN
                   IF (IPRINT.GE.4) WRITE(6,2550) JTOT,IB,J
- 2550             FORMAT(2X,'SKIPPING JTOT =',I5,' IBLOCK =',
-     1                   I3,' ENERGY(',I3,') BECAUSE RMIN > RMAX')
+ 2550             FORMAT(2X,'SKIPPING JTOT =',I5,', SYMMETRY BLOCK =',
+     1                   I3,', ENERGY(',I3,') BECAUSE RMIN > RMAX')
                   IECONV(IFXE)=IECONV(IFXE)+1
                   IF (LACCXS) CALL OUTSIG(ISIGU,IB,MXPAR,J,ENERGY(J),
      1                                    MINJT(IFXE),MAXJT(IFXE),
@@ -1489,8 +1489,8 @@ C  RESET ICODE TO ALLOW "SUBSEQUENT ENERGY" CALCULATIONS
                     WRITE(6,2560) JTOT,IB,J,ENERGY(J)
                     IF (PTIME) WRITE(6,2570) TTIME
                   ENDIF
- 2560             FORMAT(/'  ****** NO OPEN CHANNELS FOR JTOT =',I5,3X,
-     1                   'IBLOCK =',I4,'   ENERGY(',I4,') =',
+ 2560             FORMAT(/'  ****** NO OPEN CHANNELS FOR JTOT =',I5,
+     1                   ', SYMMETRY BLOCK =',I4,',  ENERGY(',I4,') =',
      2                   1PG19.11)
  2570             FORMAT(2X,'STEP TIME =',0PF6.2,' SECS')
                   IF (IECONV(IFXE).GE.0) IECONV(IFXE)=IECONV(IFXE)+1
@@ -1655,8 +1655,8 @@ C
                   WRITE(6,2800) JTOT,IB,J,ENERGY(J)
                   IF (PTIME) WRITE(6,2570) TTIME
                 ENDIF
- 2800           FORMAT(/'  FINISHED JTOT =',I5,'   IBLOCK =',I4,
-     1                 '   ENERGY(',I4,') =',1PG14.7)
+ 2800           FORMAT(/'  FINISHED JTOT =',I5,',  SYMMETRY BLOCK =',I4,
+     1                 ',  ENERGY(',I4,') =',1PG14.7)
 C
   500         CONTINUE
 C

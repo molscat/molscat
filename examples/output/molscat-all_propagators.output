@@ -7,7 +7,7 @@
  |                                                                            |
  |                               Version 2019.0 (beta)                        |
  |                                                                            |
- |                       Run on 31 Jan 2019   at 23:54:33                     |
+ |                       Run on 01 Feb 2019   at 10:24:41                     |
  |                                                                            |
   ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
 
@@ -153,7 +153,7 @@
        11           4                   6                     13             4      1260.0000000
        12           4                   6                     15             4      1260.0000000
 
-  JTOT =   10   IBLOCK =   1   ENERGY(   1) =   1000.0000000     CM-1
+  JTOT =   10,  SYMMETRY BLOCK =   1,  ENERGY(   1) =   1000.0000000     CM-1
   INNER CLASSICAL TURNING POINT AT R =  0.7607
   RADIAL PROPAGATION WILL START AT R =  0.6409
 
@@ -205,13 +205,13 @@
     5    6 3.6592110484373E-002   3.5402158184923E-001  -1.1631197283257E-001   1.5186716386424E-001
     6    6 9.6261697210567E-001   5.4661733297930E-002   9.2383105838181E-001   3.3038333443867E-001
 
-  FOR JTOT =   10 IBLOCK =  1 ENERGY(  1) =  1000.000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  1.00E-01 &   3.73E-07
+  FOR JTOT =   10, SYMMETRY BLOCK =  1, ENERGY(  1) =  1000.000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  1.00E-01 &   3.73E-07
 
-  FINISHED JTOT =   10   IBLOCK =   1   ENERGY(   1) =  1000.000    
+  FINISHED JTOT =   10,  SYMMETRY BLOCK =   1,  ENERGY(   1) =  1000.000    
 
   ------------------------------------------ model system: ITYPE=1; IPROPS=2 -------------------------------------------
 
-  JTOT =   10   IBLOCK =   1   ENERGY(   2) =   900.00000000     CM-1
+  JTOT =   10,  SYMMETRY BLOCK =   1,  ENERGY(   2) =   900.00000000     CM-1
 
  DEVOGELAERE PROPAGATION WITH STORED POTENTIAL MATRICES
 
@@ -263,9 +263,9 @@
     5    6 3.9759792848186E-002  -1.8685050954465E-001   7.7057673456328E-002  -1.8390733484471E-001
     6    6 9.5931059428316E-001  -4.9422247208125E-001  -9.7879874665837E-001  -3.5547261823783E-002
 
-  FOR JTOT =   10 IBLOCK =  1 ENERGY(  2) =  900.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  2.09E-01 &   2.03E-07
+  FOR JTOT =   10, SYMMETRY BLOCK =  1, ENERGY(  2) =  900.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  2.09E-01 &   2.03E-07
 
-  FINISHED JTOT =   10   IBLOCK =   1   ENERGY(   2) =  900.0000    
+  FINISHED JTOT =   10,  SYMMETRY BLOCK =   1,  ENERGY(   2) =  900.0000    
 
   ======================================================================================================================
 
@@ -281,7 +281,7 @@
  |                                                                            |
  |                               Version 2019.0 (beta)                        |
  |                                                                            |
- |                    This run used       0.48 cpu secs and                   |
+ |                    This run used       0.46 cpu secs and                   |
  |               2203 of the allocated   1000000 words of storage             |
  |                                                                            |
   ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
@@ -294,7 +294,7 @@
  |                                                                            |
  |                               Version 2019.0 (beta)                        |
  |                                                                            |
- |                       Run on 31 Jan 2019   at 23:54:34                     |
+ |                       Run on 01 Feb 2019   at 10:24:41                     |
  |                                                                            |
   ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
 
@@ -437,7 +437,7 @@
        11           4                   6                     13             4      1260.0000000
        12           4                   6                     15             4      1260.0000000
 
-  JTOT =   10   IBLOCK =   1   ENERGY(   1) =   1000.0000000     CM-1
+  JTOT =   10,  SYMMETRY BLOCK =   1,  ENERGY(   1) =   1000.0000000     CM-1
   INNER CLASSICAL TURNING POINT AT R =  0.7607
   RADIAL PROPAGATION WILL START AT R =  0.6409
 
@@ -489,13 +489,13 @@
     5    6 3.6592085459148E-002   3.5424427627241E-001  -1.1652431619896E-001   1.5170421613625E-001
     6    6 9.6261699685207E-001   5.4884395918393E-002   9.2336794993714E-001   3.3167548278543E-001
 
-  FOR JTOT =   10 IBLOCK =  1 ENERGY(  1) =  1000.000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  1.00E-01 &   3.73E-07
+  FOR JTOT =   10, SYMMETRY BLOCK =  1, ENERGY(  1) =  1000.000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  1.00E-01 &   3.73E-07
 
-  FINISHED JTOT =   10   IBLOCK =   1   ENERGY(   1) =  1000.000    
+  FINISHED JTOT =   10,  SYMMETRY BLOCK =   1,  ENERGY(   1) =  1000.000    
 
   ------------------------------------------ model system: ITYPE=1; IPROPS=5 -------------------------------------------
 
-  JTOT =   10   IBLOCK =   1   ENERGY(   2) =   900.00000000     CM-1
+  JTOT =   10,  SYMMETRY BLOCK =   1,  ENERGY(   2) =   900.00000000     CM-1
 
   LDPROP. LOG-DERIVATIVE MATRIX PROPAGATED FROM       0.6409  TO  20.000      IN   8073  STEPS.
 
@@ -545,9 +545,9 @@
     5    6 3.9759936731588E-002  -1.8674201708322E-001   7.7183160826584E-002  -1.8385509624812E-001
     6    6 9.5931044328167E-001  -4.9411411139861E-001  -9.7877424040104E-001  -3.6213666053504E-002
 
-  FOR JTOT =   10 IBLOCK =  1 ENERGY(  2) =  900.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  2.09E-01 &   2.03E-07
+  FOR JTOT =   10, SYMMETRY BLOCK =  1, ENERGY(  2) =  900.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  2.09E-01 &   2.03E-07
 
-  FINISHED JTOT =   10   IBLOCK =   1   ENERGY(   2) =  900.0000    
+  FINISHED JTOT =   10,  SYMMETRY BLOCK =   1,  ENERGY(   2) =  900.0000    
 
   ======================================================================================================================
 
@@ -563,7 +563,7 @@
  |                                                                            |
  |                               Version 2019.0 (beta)                        |
  |                                                                            |
- |                    This run used       0.31 cpu secs and                   |
+ |                    This run used       0.35 cpu secs and                   |
  |                799 of the allocated   1000000 words of storage             |
  |                                                                            |
   ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
@@ -576,7 +576,7 @@
  |                                                                            |
  |                               Version 2019.0 (beta)                        |
  |                                                                            |
- |                       Run on 31 Jan 2019   at 23:54:34                     |
+ |                       Run on 01 Feb 2019   at 10:24:42                     |
  |                                                                            |
   ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
 
@@ -719,7 +719,7 @@
        11           4                   6                     13             4      1260.0000000
        12           4                   6                     15             4      1260.0000000
 
-  JTOT =   10   IBLOCK =   1   ENERGY(   1) =   1000.0000000     CM-1
+  JTOT =   10,  SYMMETRY BLOCK =   1,  ENERGY(   1) =   1000.0000000     CM-1
   INNER CLASSICAL TURNING POINT AT R =  0.7607
   RADIAL PROPAGATION WILL START AT R =  0.6409
 
@@ -771,13 +771,13 @@
     5    6 3.6592135482727E-002   3.5406335130410E-001  -1.1635186538207E-001   1.5183668497711E-001
     6    6 9.6261694532122E-001   5.4703482355860E-002   9.2374434855947E-001   3.3062565512323E-001
 
-  FOR JTOT =   10 IBLOCK =  1 ENERGY(  1) =  1000.000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  1.00E-01 &   3.73E-07
+  FOR JTOT =   10, SYMMETRY BLOCK =  1, ENERGY(  1) =  1000.000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  1.00E-01 &   3.73E-07
 
-  FINISHED JTOT =   10   IBLOCK =   1   ENERGY(   1) =  1000.000    
+  FINISHED JTOT =   10,  SYMMETRY BLOCK =   1,  ENERGY(   1) =  1000.000    
 
   ------------------------------------------ model system: ITYPE=1; IPROPS=6 -------------------------------------------
 
-  JTOT =   10   IBLOCK =   1   ENERGY(   2) =   900.00000000     CM-1
+  JTOT =   10,  SYMMETRY BLOCK =   1,  ENERGY(   2) =   900.00000000     CM-1
 
   MDPROP. LOG-DERIVATIVE MATRIX PROPAGATED FROM       0.6409  TO  20.000      IN   8073  STEPS.
 
@@ -827,9 +827,9 @@
     5    6 3.9759814228295E-002  -1.8683012441169E-001   7.7081249056306E-002  -1.8389751295821E-001
     6    6 9.5931057168650E-001  -4.9420210305794E-001  -9.7879417769244E-001  -3.5672530073971E-002
 
-  FOR JTOT =   10 IBLOCK =  1 ENERGY(  2) =  900.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  2.09E-01 &   2.03E-07
+  FOR JTOT =   10, SYMMETRY BLOCK =  1, ENERGY(  2) =  900.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  2.09E-01 &   2.03E-07
 
-  FINISHED JTOT =   10   IBLOCK =   1   ENERGY(   2) =  900.0000    
+  FINISHED JTOT =   10,  SYMMETRY BLOCK =   1,  ENERGY(   2) =  900.0000    
 
   ======================================================================================================================
 
@@ -858,7 +858,7 @@
  |                                                                            |
  |                               Version 2019.0 (beta)                        |
  |                                                                            |
- |                       Run on 31 Jan 2019   at 23:54:35                     |
+ |                       Run on 01 Feb 2019   at 10:24:42                     |
  |                                                                            |
   ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
 
@@ -1001,7 +1001,7 @@
        11           4                   6                     13             4      1260.0000000
        12           4                   6                     15             4      1260.0000000
 
-  JTOT =   10   IBLOCK =   1   ENERGY(   1) =   1000.0000000     CM-1
+  JTOT =   10,  SYMMETRY BLOCK =   1,  ENERGY(   1) =   1000.0000000     CM-1
   INNER CLASSICAL TURNING POINT AT R =  0.7607
   RADIAL PROPAGATION WILL START AT R =  0.6409
 
@@ -1053,13 +1053,13 @@
     5    6 3.6592129806303E-002   3.5406335018967E-001  -1.1635185529424E-001   1.5183667401485E-001
     6    6 9.6261695126331E-001   5.4703481470755E-002   9.2374435324923E-001   3.3062565100649E-001
 
-  FOR JTOT =   10 IBLOCK =  1 ENERGY(  1) =  1000.000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  1.00E-01 &   3.73E-07
+  FOR JTOT =   10, SYMMETRY BLOCK =  1, ENERGY(  1) =  1000.000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  1.00E-01 &   3.73E-07
 
-  FINISHED JTOT =   10   IBLOCK =   1   ENERGY(   1) =  1000.000    
+  FINISHED JTOT =   10,  SYMMETRY BLOCK =   1,  ENERGY(   1) =  1000.000    
 
   ------------------------------------------ model system: ITYPE=1; IPROPS=7 -------------------------------------------
 
-  JTOT =   10   IBLOCK =   1   ENERGY(   2) =   900.00000000     CM-1
+  JTOT =   10,  SYMMETRY BLOCK =   1,  ENERGY(   2) =   900.00000000     CM-1
 
   MAPROP. LOG-DERIVATIVE MATRIX PROPAGATED FROM       0.6409  TO  20.000      IN   8073  STEPS.
 
@@ -1109,9 +1109,9 @@
     5    6 3.9759809548318E-002  -1.8683012517941E-001   7.7081243632772E-002  -1.8389750250708E-001
     6    6 9.5931057659318E-001  -4.9420210363469E-001  -9.7879418032488E-001  -3.5672526618199E-002
 
-  FOR JTOT =   10 IBLOCK =  1 ENERGY(  2) =  900.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  2.09E-01 &   2.03E-07
+  FOR JTOT =   10, SYMMETRY BLOCK =  1, ENERGY(  2) =  900.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  2.09E-01 &   2.03E-07
 
-  FINISHED JTOT =   10   IBLOCK =   1   ENERGY(   2) =  900.0000    
+  FINISHED JTOT =   10,  SYMMETRY BLOCK =   1,  ENERGY(   2) =  900.0000    
 
   ======================================================================================================================
 
@@ -1127,7 +1127,7 @@
  |                                                                            |
  |                               Version 2019.0 (beta)                        |
  |                                                                            |
- |                    This run used       0.56 cpu secs and                   |
+ |                    This run used       0.53 cpu secs and                   |
  |               1111 of the allocated   1000000 words of storage             |
  |                                                                            |
   ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
@@ -1140,7 +1140,7 @@
  |                                                                            |
  |                               Version 2019.0 (beta)                        |
  |                                                                            |
- |                       Run on 31 Jan 2019   at 23:54:35                     |
+ |                       Run on 01 Feb 2019   at 10:24:43                     |
  |                                                                            |
   ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
 
@@ -1284,7 +1284,7 @@
        11           4                   6                     13             4      1260.0000000
        12           4                   6                     15             4      1260.0000000
 
-  JTOT =   10   IBLOCK =   1   ENERGY(   1) =   1000.0000000     CM-1
+  JTOT =   10,  SYMMETRY BLOCK =   1,  ENERGY(   1) =   1000.0000000     CM-1
   INNER CLASSICAL TURNING POINT AT R =  0.7607
   RADIAL PROPAGATION WILL START AT R =  0.6409
 
@@ -1336,13 +1336,13 @@
     5    6 3.6592127581312E-002   3.5406324520853E-001  -1.1635175160292E-001   1.5183674614613E-001
     6    6 9.6261695359717E-001   5.4703377068811E-002   9.2374457125159E-001   3.3062504545239E-001
 
-  FOR JTOT =   10 IBLOCK =  1 ENERGY(  1) =  1000.000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  1.00E-01 &   3.73E-07
+  FOR JTOT =   10, SYMMETRY BLOCK =  1, ENERGY(  1) =  1000.000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  1.00E-01 &   3.73E-07
 
-  FINISHED JTOT =   10   IBLOCK =   1   ENERGY(   1) =  1000.000    
+  FINISHED JTOT =   10,  SYMMETRY BLOCK =   1,  ENERGY(   1) =  1000.000    
 
   ------------------------------------------ model system: ITYPE=1; IPROPS=8 -------------------------------------------
 
-  JTOT =   10   IBLOCK =   1   ENERGY(   2) =   900.00000000     CM-1
+  JTOT =   10,  SYMMETRY BLOCK =   1,  ENERGY(   2) =   900.00000000     CM-1
 
   MGPROP. LOG-DERIVATIVE MATRIX PROPAGATED FROM       0.6409  TO  20.000      IN   8073  STEPS.
 
@@ -1392,9 +1392,9 @@
     5    6 3.9759807372300E-002  -1.8683020339168E-001   7.7081151152154E-002  -1.8389753535423E-001
     6    6 9.5931057884347E-001  -4.9420218145135E-001  -9.7879419891436E-001  -3.5672048091882E-002
 
-  FOR JTOT =   10 IBLOCK =  1 ENERGY(  2) =  900.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  2.09E-01 &   2.03E-07
+  FOR JTOT =   10, SYMMETRY BLOCK =  1, ENERGY(  2) =  900.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  2.09E-01 &   2.03E-07
 
-  FINISHED JTOT =   10   IBLOCK =   1   ENERGY(   2) =  900.0000    
+  FINISHED JTOT =   10,  SYMMETRY BLOCK =   1,  ENERGY(   2) =  900.0000    
 
   ======================================================================================================================
 
@@ -1410,7 +1410,7 @@
  |                                                                            |
  |                               Version 2019.0 (beta)                        |
  |                                                                            |
- |                    This run used       0.60 cpu secs and                   |
+ |                    This run used       0.55 cpu secs and                   |
  |                799 of the allocated   1000000 words of storage             |
  |                                                                            |
   ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
@@ -1423,7 +1423,7 @@
  |                                                                            |
  |                               Version 2019.0 (beta)                        |
  |                                                                            |
- |                       Run on 31 Jan 2019   at 23:54:36                     |
+ |                       Run on 01 Feb 2019   at 10:24:43                     |
  |                                                                            |
   ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
 
@@ -1567,7 +1567,7 @@
        11           4                   6                     13             4      1260.0000000
        12           4                   6                     15             4      1260.0000000
 
-  JTOT =   10   IBLOCK =   1   ENERGY(   1) =   1000.0000000     CM-1
+  JTOT =   10,  SYMMETRY BLOCK =   1,  ENERGY(   1) =   1000.0000000     CM-1
   INNER CLASSICAL TURNING POINT AT R =  0.7607
   RADIAL PROPAGATION WILL START AT R =  0.6409
 
@@ -1621,7 +1621,7 @@
     5    6 3.6590970023796E-002   3.5394470407831E-001  -1.1623679035505E-001   1.5192096166017E-001
     6    6 9.6261816261756E-001   5.4584835399581E-002   9.2399115116215E-001   3.2993713824243E-001
 
-  * * * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  10 AND IBLOCK =   1 * * * * * * * * *
+  * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  10 AND SYMMETRY BLOCK =   1 * * * * * * *
 
     F  I =      2              3
     2       9.44595E-02    3.73136E-07
@@ -1629,7 +1629,7 @@
 
   * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
 
-  FOR JTOT =   10 IBLOCK =  1 ENERGY(  1) =  1000.000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  1.00E-01 &   3.73E-07
+  FOR JTOT =   10, SYMMETRY BLOCK =  1, ENERGY(  1) =  1000.000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  1.00E-01 &   3.73E-07
 
   * * * * * * * * * * * STATE-TO-STATE INTEGRAL CROSS SECTIONS ACCUMULATED FROM JTOT =  10 TO  10 * * * * * * * * * * * *
 
@@ -1640,11 +1640,11 @@
 
   * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
 
-  FINISHED JTOT =   10   IBLOCK =   1   ENERGY(   1) =  1000.000    
+  FINISHED JTOT =   10,  SYMMETRY BLOCK =   1,  ENERGY(   1) =  1000.000    
 
   ------------------------------------- model system: ITYPE=1; IPROPS=3 ,IPROPL=3 --------------------------------------
 
-  JTOT =   10   IBLOCK =   1   ENERGY(   2) =   900.00000000     CM-1
+  JTOT =   10,  SYMMETRY BLOCK =   1,  ENERGY(   2) =   900.00000000     CM-1
 
   RMPROP. R MATRIX PROPAGATED FROM       0.6409  TO  20.000      IN   8073  STEPS.
 
@@ -1694,7 +1694,7 @@
     5    6 3.9758578520098E-002  -1.8693554219086E-001   7.6958229969948E-002  -1.8394566958749E-001
     6    6 9.5931186714080E-001  -4.9430749987469E-001  -9.7881824730450E-001  -3.5024361300963E-002
 
-  * * * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  10 AND IBLOCK =   1 * * * * * * * * *
+  * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  10 AND SYMMETRY BLOCK =   1 * * * * * * *
 
     F  I =      2              3
     2       2.90584E-02    2.03109E-07
@@ -1702,7 +1702,7 @@
 
   * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
 
-  FOR JTOT =   10 IBLOCK =  1 ENERGY(  2) =  900.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  2.10E-01 &   2.03E-07
+  FOR JTOT =   10, SYMMETRY BLOCK =  1, ENERGY(  2) =  900.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  2.10E-01 &   2.03E-07
 
   * * * * * * * * * * * STATE-TO-STATE INTEGRAL CROSS SECTIONS ACCUMULATED FROM JTOT =  10 TO  10 * * * * * * * * * * * *
 
@@ -1713,7 +1713,7 @@
 
   * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
 
-  FINISHED JTOT =   10   IBLOCK =   1   ENERGY(   2) =  900.0000    
+  FINISHED JTOT =   10,  SYMMETRY BLOCK =   1,  ENERGY(   2) =  900.0000    
 
   ======================================================================================================================
 
@@ -1763,7 +1763,7 @@
  |                                                                            |
  |                               Version 2019.0 (beta)                        |
  |                                                                            |
- |                    This run used       0.43 cpu secs and                   |
+ |                    This run used       0.38 cpu secs and                   |
  |               1123 of the allocated   1000000 words of storage             |
  |                                                                            |
   ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
@@ -1776,7 +1776,7 @@
  |                                                                            |
  |                               Version 2019.0 (beta)                        |
  |                                                                            |
- |                       Run on 31 Jan 2019   at 23:54:36                     |
+ |                       Run on 01 Feb 2019   at 10:24:44                     |
  |                                                                            |
   ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
 
@@ -1933,7 +1933,7 @@
        11           4                   6                     13             4      1260.0000000
        12           4                   6                     15             4      1260.0000000
 
-  JTOT =   10   IBLOCK =   1   ENERGY(   1) =   1000.0000000     CM-1
+  JTOT =   10,  SYMMETRY BLOCK =   1,  ENERGY(   1) =   1000.0000000     CM-1
   INNER CLASSICAL TURNING POINT AT R =  0.7607
   RADIAL PROPAGATION WILL START AT R =  0.6409
 
@@ -1987,13 +1987,13 @@
     5    6 3.6592164793025E-002   3.5406362031521E-001  -1.1635216862237E-001   1.5183654912404E-001
     6    6 9.6261691465593E-001   5.4703844992701E-002   9.2374358050826E-001   3.3062775462097E-001
 
-  FOR JTOT =   10 IBLOCK =  1 ENERGY(  1) =  1000.000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  1.00E-01 &   3.73E-07
+  FOR JTOT =   10, SYMMETRY BLOCK =  1, ENERGY(  1) =  1000.000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  1.00E-01 &   3.73E-07
 
-  FINISHED JTOT =   10   IBLOCK =   1   ENERGY(   1) =  1000.000    
+  FINISHED JTOT =   10,  SYMMETRY BLOCK =   1,  ENERGY(   1) =  1000.000    
 
   ------------------------------------- model system: ITYPE=1; IPROPS=9, IPROPL=9 --------------------------------------
 
-  JTOT =   10   IBLOCK =   1   ENERGY(   2) =   900.00000000     CM-1
+  JTOT =   10,  SYMMETRY BLOCK =   1,  ENERGY(   2) =   900.00000000     CM-1
 
   AIPROP. LOG-DERIVATIVE MATRIX PROPAGATED FROM       0.6409  TO  1.0000      IN    150  STEPS.
 
@@ -2045,9 +2045,9 @@
     5    6 3.9759853977035E-002  -1.8682979793205E-001   7.7081664821086E-002  -1.8389744676163E-001
     6    6 9.5931053098892E-001  -4.9420168043829E-001  -9.7879406220217E-001  -3.5675128404769E-002
 
-  FOR JTOT =   10 IBLOCK =  1 ENERGY(  2) =  900.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  2.09E-01 &   2.03E-07
+  FOR JTOT =   10, SYMMETRY BLOCK =  1, ENERGY(  2) =  900.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  2.09E-01 &   2.03E-07
 
-  FINISHED JTOT =   10   IBLOCK =   1   ENERGY(   2) =  900.0000    
+  FINISHED JTOT =   10,  SYMMETRY BLOCK =   1,  ENERGY(   2) =  900.0000    
 
   ======================================================================================================================
 
@@ -2063,7 +2063,7 @@
  |                                                                            |
  |                               Version 2019.0 (beta)                        |
  |                                                                            |
- |                    This run used       0.25 cpu secs and                   |
+ |                    This run used       0.24 cpu secs and                   |
  |               1123 of the allocated   1000000 words of storage             |
  |                                                                            |
   ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
@@ -2076,7 +2076,7 @@
  |                                                                            |
  |                               Version 2019.0 (beta)                        |
  |                                                                            |
- |                       Run on 31 Jan 2019   at 23:54:36                     |
+ |                       Run on 01 Feb 2019   at 10:24:44                     |
  |                                                                            |
   ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
 
@@ -2231,7 +2231,7 @@
        11           4                   6                     13             4      1260.0000000
        12           4                   6                     15             4      1260.0000000
 
-  JTOT =   10   IBLOCK =   1   ENERGY(   1) =   1000.0000000     CM-1
+  JTOT =   10,  SYMMETRY BLOCK =   1,  ENERGY(   1) =   1000.0000000     CM-1
   INNER CLASSICAL TURNING POINT AT R =  0.7607
   RADIAL PROPAGATION WILL START AT R =  0.6409
 
@@ -2287,13 +2287,13 @@
     5    6 3.6592074698637E-002   3.5406316540058E-001  -1.1635159138933E-001   1.5183669477372E-001
     6    6 9.6261699295516E-001   5.4703260912813E-002   9.2374483143563E-001   3.3062437803514E-001
 
-  FOR JTOT =   10 IBLOCK =  1 ENERGY(  1) =  1000.000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  1.00E-01 &   3.73E-07
+  FOR JTOT =   10, SYMMETRY BLOCK =  1, ENERGY(  1) =  1000.000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  1.00E-01 &   3.73E-07
 
-  FINISHED JTOT =   10   IBLOCK =   1   ENERGY(   1) =  1000.000    
+  FINISHED JTOT =   10,  SYMMETRY BLOCK =   1,  ENERGY(   1) =  1000.000    
 
   ------------------------------------- model system: ITYPE=1; IPROPS=6, IPROPL=9 --------------------------------------
 
-  JTOT =   10   IBLOCK =   1   ENERGY(   2) =   900.00000000     CM-1
+  JTOT =   10,  SYMMETRY BLOCK =   1,  ENERGY(   2) =   900.00000000     CM-1
 
   RMID =   1.0650 OBTAINED FROM RVFAC = 1.400
 
@@ -2347,9 +2347,9 @@
     5    6 3.9759661294383E-002  -1.8683025854889E-001   7.7080945821616E-002  -1.8389722424666E-001
     6    6 9.5931073212975E-001  -4.9420223145766E-001  -9.7879428832219E-001  -3.5671743405752E-002
 
-  FOR JTOT =   10 IBLOCK =  1 ENERGY(  2) =  900.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  2.09E-01 &   2.03E-07
+  FOR JTOT =   10, SYMMETRY BLOCK =  1, ENERGY(  2) =  900.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  2.09E-01 &   2.03E-07
 
-  FINISHED JTOT =   10   IBLOCK =   1   ENERGY(   2) =  900.0000    
+  FINISHED JTOT =   10,  SYMMETRY BLOCK =   1,  ENERGY(   2) =  900.0000    
 
   ======================================================================================================================
 
@@ -2365,7 +2365,7 @@
  |                                                                            |
  |                               Version 2019.0 (beta)                        |
  |                                                                            |
- |                    This run used       0.08 cpu secs and                   |
+ |                    This run used       0.07 cpu secs and                   |
  |               1123 of the allocated   1000000 words of storage             |
  |                                                                            |
   ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
@@ -2378,7 +2378,7 @@
  |                                                                            |
  |                               Version 2019.0 (beta)                        |
  |                                                                            |
- |                       Run on 31 Jan 2019   at 23:54:36                     |
+ |                       Run on 01 Feb 2019   at 10:24:44                     |
  |                                                                            |
   ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
 
@@ -2539,7 +2539,7 @@
        11           4                   6                     13             4      1260.0000000
        12           4                   6                     15             4      1260.0000000
 
-  JTOT =   10   IBLOCK =   1   ENERGY(   1) =   1000.0000000     CM-1
+  JTOT =   10,  SYMMETRY BLOCK =   1,  ENERGY(   1) =   1000.0000000     CM-1
   INNER CLASSICAL TURNING POINT AT R =  0.7607
   RADIAL PROPAGATION WILL START AT R =  0.6409
 
@@ -2595,13 +2595,13 @@
     5    6 3.6594523459968E-002   3.5405684863203E-001  -1.1634945787500E-001   1.5184639314834E-001
     6    6 9.6261446503158E-001   5.4696671010806E-002   9.2375730739685E-001   3.3058569548985E-001
 
-  FOR JTOT =   10 IBLOCK =  1 ENERGY(  1) =  1000.000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  1.00E-01 &   3.73E-07
+  FOR JTOT =   10, SYMMETRY BLOCK =  1, ENERGY(  1) =  1000.000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  1.00E-01 &   3.73E-07
 
-  FINISHED JTOT =   10   IBLOCK =   1   ENERGY(   1) =  1000.000    
+  FINISHED JTOT =   10,  SYMMETRY BLOCK =   1,  ENERGY(   1) =  1000.000    
 
   ------------------------------------- model system: ITYPE=1; IPROPS=5, IPROPL=4 --------------------------------------
 
-  JTOT =   10   IBLOCK =   1   ENERGY(   2) =   900.00000000     CM-1
+  JTOT =   10,  SYMMETRY BLOCK =   1,  ENERGY(   2) =   900.00000000     CM-1
 
   RMID =   1.0650 OBTAINED FROM RVFAC = 1.400
 
@@ -2655,9 +2655,9 @@
     5    6 3.9759861907602E-002  -1.8683171661499E-001   7.7079455537962E-002  -1.8389839434202E-001
     6    6 9.5931053964658E-001  -4.9420334114511E-001  -9.7879443881878E-001  -3.5664915309044E-002
 
-  FOR JTOT =   10 IBLOCK =  1 ENERGY(  2) =  900.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  2.09E-01 &   2.03E-07
+  FOR JTOT =   10, SYMMETRY BLOCK =  1, ENERGY(  2) =  900.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  2.09E-01 &   2.03E-07
 
-  FINISHED JTOT =   10   IBLOCK =   1   ENERGY(   2) =  900.0000    
+  FINISHED JTOT =   10,  SYMMETRY BLOCK =   1,  ENERGY(   2) =  900.0000    
 
   ======================================================================================================================
 
@@ -2673,7 +2673,7 @@
  |                                                                            |
  |                               Version 2019.0 (beta)                        |
  |                                                                            |
- |                    This run used       0.10 cpu secs and                   |
+ |                    This run used       0.08 cpu secs and                   |
  |               2083 of the allocated   1000000 words of storage             |
  |                                                                            |
   ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
@@ -2686,7 +2686,7 @@
  |                                                                            |
  |                               Version 2019.0 (beta)                        |
  |                                                                            |
- |                       Run on 31 Jan 2019   at 23:54:37                     |
+ |                       Run on 01 Feb 2019   at 10:24:44                     |
  |                                                                            |
   ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
 
@@ -3037,7 +3037,7 @@
  |                                                                            |
  |                               Version 2019.0 (beta)                        |
  |                                                                            |
- |                       Run on 31 Jan 2019   at 23:54:37                     |
+ |                       Run on 01 Feb 2019   at 10:24:44                     |
  |                                                                            |
   ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
 
@@ -3288,7 +3288,7 @@
 
                       PARTIAL WAVES FROM   10 TO    10 (IN STEPS OF    1)
 
-  ***** ***** ***** TIME WAS     0.00  SEC.
+  ***** ***** ***** TIME WAS     0.01  SEC.
  
 
   ***** ***** STORAGE SO FAR USED     44801  OF THE   1000000  AVAILABLE WORDS.

@@ -402,9 +402,9 @@ C  SORT THE LIST
         ENDDO
 
         WRITE(6,190) JTOT,IB
-  190   FORMAT(/2X,9('* ')'STATE-TO-STATE PARTIAL CROSS SECTIONS ',
-     1         '(ANGSTROM**2) FOR JTOT = ',I3,' AND IBLOCK = ',
-     2         I3,9(' *'))
+  190   FORMAT(/2X,7('* ')'STATE-TO-STATE PARTIAL CROSS SECTIONS ',
+     1         '(ANGSTROM**2) FOR JTOT = ',I3,' AND SYMMETRY BLOCK = ',
+     2         I3,7(' *'))
 
         NCOLS=6
         NCOLS=MIN(NCOLS,10) ! OR CHANGE 10 TO HIGHER VALUE IN FORMAT
@@ -489,11 +489,11 @@ C
         ENDIF
       ENDIF
       IF (IPRINT.GE.2 .AND. PTIME) WRITE(6,180) TTIME
-  170 FORMAT(/'  FOR JTOT =',I5,' IBLOCK =',I3,
-     1        ' ENERGY(',I3,') =',1P,G14.7,
+  170 FORMAT(/'  FOR JTOT =',I5,', SYMMETRY BLOCK =',I3,
+     1        ', ENERGY(',I3,') =',1P,G14.7,
      2        ':  MAXIMUM DIAGONAL & OFF-DIAGONAL =',E10.2,' & ',E10.2)
-  171 FORMAT(/'  FOR JTOT =',I5,' IBLOCK =',I3,' EFV SET = ',I3,
-     1        ' ENERGY(',I3,') =',1P,G14.7,
+  171 FORMAT(/'  FOR JTOT =',I5,', SYMMETRY BLOCK =',I3,
+     1        ', EFV SET = ',I3,', ENERGY(',I3,') =',1P,G14.7,
      2        ':  MAXIMUM DIAGONAL & OFF-DIAGONAL =',E10.2,' & ',E10.2)
   180 FORMAT(2X,'TIME =',F8.2)
 C

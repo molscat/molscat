@@ -2,11 +2,11 @@
     LABEL  = 'tetraquark',
     URED   = 1.477,
     IPRINT = 6,     IBDSUM = 4,
-    RUNAME = 'fm',  MUNIT  = 0.9314940954D0,          EUNITS =  5, !eV
-    RMIN   = 0.0,   RMID   = 0.001, RMATCH =   0.55,  RMAX   = 11.0, IRMSET = 0,
-    IPROPS = 8,     IPROPL = 8,     DRS    =   1.D-6, DRL    =  0.001,
-    JTOTL  = 1,     JTOTU  = 1,     JSTEP  =   1,     IBFIX  =  2,
-    EMIN   = 1.0D9, EMAX   = 1.2D9, DTOL   =   1.D1,
+    RUNAME = 'fm',  MUNIT  = 0.9314940954D0,        EUNITS =  5, !eV
+    RMIN   = 0.0,   RMID   = 0.001, RMATCH = 0.55,  RMAX   = 11.0,   IRMSET = 0,
+    IPROPS = 8,     IPROPL = 8,     DRS    = 1.D-6, DRL    =  0.001,
+    JTOTL  = 1,     JTOTU  = 1,     IBFIX  = 2,
+    EMIN   = 1.0D9, EMAX   = 1.2D9, DTOL   = 1.D1,
  /
  &BASIS
     ITYPE  =  9,

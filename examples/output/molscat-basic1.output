@@ -7,7 +7,7 @@
  |                                                                            |
  |                               Version 2019.0 (beta)                        |
  |                                                                            |
- |                       Run on 31 Jan 2019   at 23:51:26                     |
+ |                       Run on 01 Feb 2019   at 10:21:50                     |
  |                                                                            |
   ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
 
@@ -122,13 +122,13 @@
 
   =============================================== model system: ITYPE=1 ================================================
 
-  FOR JTOT =   10 IBLOCK =  1 ENERGY(  1) =  1250.000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  9.88E-02 &   1.16E-06
+  FOR JTOT =   10, SYMMETRY BLOCK =  1, ENERGY(  1) =  1250.000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  9.88E-02 &   1.16E-06
 
-  FOR JTOT =   10 IBLOCK =  2 ENERGY(  1) =  1250.000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  1.75E-01 &   1.29E-03
+  FOR JTOT =   10, SYMMETRY BLOCK =  2, ENERGY(  1) =  1250.000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  1.75E-01 &   1.29E-03
 
-  FOR JTOT =   20 IBLOCK =  1 ENERGY(  1) =  1250.000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  1.88E-01 &   1.95E-06
+  FOR JTOT =   20, SYMMETRY BLOCK =  1, ENERGY(  1) =  1250.000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  1.88E-01 &   1.95E-06
 
-  FOR JTOT =   20 IBLOCK =  2 ENERGY(  1) =  1250.000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  1.68E-01 &   2.43E-03
+  FOR JTOT =   20, SYMMETRY BLOCK =  2, ENERGY(  1) =  1250.000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  1.68E-01 &   2.43E-03
 
   * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
 
@@ -173,7 +173,7 @@
  |                                                                            |
  |                               Version 2019.0 (beta)                        |
  |                                                                            |
- |                    This run used       1.96 cpu secs and                   |
+ |                    This run used       1.75 cpu secs and                   |
  |               1279 of the allocated   1000000 words of storage             |
  |                                                                            |
   ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---

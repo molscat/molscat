@@ -4,14 +4,14 @@
     IPRINT =    3,
     RMIN   =    2.7, RMATCH =    4.0, RMAX   =  7.6,   IRMSET = 0,
     IPROPS =    6,   IPROPL =    6,   DR     =  0.04,
-    JTOTL  =    0,   JTOTU  =    1,   JSTEP  =  1,
+    JTOTL  =    0,   JTOTU  =    1,
     EMIN   = -120.0, EMAX   =  -80.0, DTOL   =  1.D-8,
     LASTIN =    0,
  /
 
  &BASIS
     ITYPE  =  1,
-    JMAX   =  7, JSTEP  = 1,
+    JMAX   =  7,
     ROTI   = 10.44019,  ! rotational constant for HF v=0
  /
 
@@ -97,7 +97,7 @@
     IPRINT =    3,
     RMIN   =    2.7, RMATCH =    4.0,     RMAX   =  7.6,    IRMSET = 0,
     IPROPS =    6,   IPROPL =    6,       DR     =  0.04,
-    JTOTL  =    0,   JTOTU  =    1,       JSTEP  =  1,      IBFIX  = 1, IBHI   = 2,
+    JTOTL  =    0,   JTOTU  =    1,       IBFIX  = 1, IBHI   = 2,
     EMIN   = -120.0, EMAX   =  -80.0,     DTOL   =  1.D-8,
     NPERT  =    2,   IPPERT =    3,1,     NPOW   =  0,2,
                      DELTA  =    2*1.D-3, FACTOR =  2*1.D0,
@@ -105,7 +105,7 @@
 
  &BASIS
     ITYPE  = 21, IBOUND = 1,
-    JMAX   =  7, JSTEP  = 1,
+    JMAX   =  7,
     ROTI   = 10.44019,  ! rotational constant for HF v=0
  /
 

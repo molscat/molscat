@@ -7,7 +7,7 @@
  |                                                                            |
  |                               Version 2019.0 (beta)                        |
  |                                                                            |
- |                       Run on 01 Feb 2019   at 00:04:19                     |
+ |                       Run on 01 Feb 2019   at 10:33:48                     |
  |                                                                            |
   ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
 
@@ -198,7 +198,7 @@
        17          27              0         3                 0            27       225.8601665
        18          29              3         0                 0            29       398.8584389
 
-  JTOT =    0   IBLOCK =   1   ENERGY(   1) =   161.31088010     CM-1 =   2.00000000000E-02 EV
+  JTOT =    0,  SYMMETRY BLOCK =   1,  ENERGY(   1) =   161.31088010     CM-1 =   2.00000000000E-02 EV
   INNER CLASSICAL TURNING POINT AT R = -1.2118
   RADIAL PROPAGATION WILL START AT R = -2.4041
 
@@ -232,11 +232,11 @@
     0    2 4.7296406455874E-002  -1.5953012576437E-001   1.1707180264335E-001  -1.8327738398861E-001
     1    1 2.0085964362875E-001  -1.9347660657122E-001   1.5584260467701E-001  -4.2020557611273E-001
 
-  FINISHED JTOT =    0   IBLOCK =   1   ENERGY(   1) =  161.3109    
+  FINISHED JTOT =    0,  SYMMETRY BLOCK =   1,  ENERGY(   1) =  161.3109    
 
   --------------------------- He-LiF potential of Wolken, JCP 58, 3047 (1973). Basis set 16 ----------------------------
 
-  JTOT =    0   IBLOCK =   1   ENERGY(   2) =   177.44196811     CM-1 =   2.20000000000E-02 EV
+  JTOT =    0,  SYMMETRY BLOCK =   1,  ENERGY(   2) =   177.44196811     CM-1 =   2.20000000000E-02 EV
 
   NOTE: K VECTORS PARALLEL TO SURFACE WERE CALCULATED FOR ENERGY(1)
   SUBSEQUENT ENERGY(   2) =  177.4420 CORRESPONDS TO THETA =   28.4721 DEGREES
@@ -271,7 +271,7 @@
     0    2 5.7491865638864E-002  -5.9785135114008E-002   2.2305575855854E-001  -8.7965869590071E-002
     1    1 2.3833046962828E-001  -1.4462547432411E-001   3.0012263322310E-001  -3.8504139343129E-001
 
-  FINISHED JTOT =    0   IBLOCK =   1   ENERGY(   2) =  177.4420    
+  FINISHED JTOT =    0,  SYMMETRY BLOCK =   1,  ENERGY(   2) =  177.4420    
 
   ======================================================================================================================
 
@@ -317,7 +317,7 @@
        28          28              0        -3                 0            28       225.8571471
        29          29              3         0                 0            29       398.8584388
 
-  JTOT =    0   IBLOCK =   2   ENERGY(   1) =   161.31088010     CM-1 =   2.00000000000E-02 EV
+  JTOT =    0,  SYMMETRY BLOCK =   2,  ENERGY(   1) =   161.31088010     CM-1 =   2.00000000000E-02 EV
   INNER CLASSICAL TURNING POINT AT R = -1.2118
   RADIAL PROPAGATION WILL START AT R = -2.4041
 
@@ -365,11 +365,11 @@
     1   -1 1.0043200104846E-001  -1.9346973441350E-001   1.1021138798266E-001  -2.9712867752440E-001
     1    1 1.0042763937622E-001  -1.9348348380138E-001   1.1018332597954E-001  -2.9713174527861E-001
 
-  FINISHED JTOT =    0   IBLOCK =   2   ENERGY(   1) =  161.3109    
+  FINISHED JTOT =    0,  SYMMETRY BLOCK =   2,  ENERGY(   1) =  161.3109    
 
   --------------------------- He-LiF potential of Wolken, JCP 58, 3047 (1973). Basis set 16 ----------------------------
 
-  JTOT =    0   IBLOCK =   2   ENERGY(   2) =   177.44196811     CM-1 =   2.20000000000E-02 EV
+  JTOT =    0,  SYMMETRY BLOCK =   2,  ENERGY(   2) =   177.44196811     CM-1 =   2.20000000000E-02 EV
 
   NOTE: K VECTORS PARALLEL TO SURFACE WERE CALCULATED FOR ENERGY(1)
   SUBSEQUENT ENERGY(   2) =  177.4420 CORRESPONDS TO THETA =   28.4721 DEGREES
@@ -418,7 +418,7 @@
     1   -1 1.1916419303171E-001  -1.4461605311692E-001   2.1223393785268E-001  -2.7225162746117E-001
     1    1 1.1916627803150E-001  -1.4463488997161E-001   2.1220357032701E-001  -2.7227912658148E-001
 
-  FINISHED JTOT =    0   IBLOCK =   2   ENERGY(   2) =  177.4420    
+  FINISHED JTOT =    0,  SYMMETRY BLOCK =   2,  ENERGY(   2) =  177.4420    
 
   ======================================================================================================================
 
@@ -432,7 +432,7 @@
  |                                                                            |
  |                               Version 2019.0 (beta)                        |
  |                                                                            |
- |                    This run used       0.07 cpu secs and                   |
+ |                    This run used       0.12 cpu secs and                   |
  |               4271 of the allocated   1000000 words of storage             |
  |                                                                            |
   ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---

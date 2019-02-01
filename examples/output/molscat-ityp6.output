@@ -7,7 +7,7 @@
  |                                                                            |
  |                               Version 2019.0 (beta)                        |
  |                                                                            |
- |                       Run on 01 Feb 2019   at 00:02:50                     |
+ |                       Run on 01 Feb 2019   at 10:32:25                     |
  |                                                                            |
   ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
 
@@ -231,9 +231,9 @@
 
   SYMMETRY BLOCK =   1
 
-  JTOT =    0   IBLOCK =   1   ENERGY(   1) =   300.00000000     CM-1
+  JTOT =    0,  SYMMETRY BLOCK =   1,  ENERGY(   1) =   300.00000000     CM-1
 
-  * * * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =   0 AND IBLOCK =   1 * * * * * * * * *
+  * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =   0 AND SYMMETRY BLOCK =   1 * * * * * * *
 
     F  I =      4
     4       3.79111E-03
@@ -244,9 +244,9 @@
 
   SYMMETRY BLOCK =   2
 
-  JTOT =    0   IBLOCK =   2   ENERGY(   1) =   300.00000000     CM-1
+  JTOT =    0,  SYMMETRY BLOCK =   2,  ENERGY(   1) =   300.00000000     CM-1
 
-  * * * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =   0 AND IBLOCK =   2 * * * * * * * * *
+  * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =   0 AND SYMMETRY BLOCK =   2 * * * * * * *
 
     F  I =      1              2              3              5              6
     1       5.77864E-03    1.06279E-03    3.89003E-04    2.09818E-04    5.77977E-03
@@ -266,9 +266,9 @@
 
   SYMMETRY BLOCK =   1
 
-  JTOT =    1   IBLOCK =   1   ENERGY(   1) =   300.00000000     CM-1
+  JTOT =    1,  SYMMETRY BLOCK =   1,  ENERGY(   1) =   300.00000000     CM-1
 
-  * * * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =   1 AND IBLOCK =   1 * * * * * * * * *
+  * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =   1 AND SYMMETRY BLOCK =   1 * * * * * * *
 
     F  I =      2              3              4              5              6
     2       6.54895E-03    4.20313E-03    2.00758E-03    6.11334E-04    1.62370E-02
@@ -283,9 +283,9 @@
 
   SYMMETRY BLOCK =   2
 
-  JTOT =    1   IBLOCK =   2   ENERGY(   1) =   300.00000000     CM-1
+  JTOT =    1,  SYMMETRY BLOCK =   2,  ENERGY(   1) =   300.00000000     CM-1
 
-  * * * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =   1 AND IBLOCK =   2 * * * * * * * * *
+  * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =   1 AND SYMMETRY BLOCK =   2 * * * * * * *
 
     F  I =      1              2              3              4              5              6
     1       1.03961E-01    3.18919E-03    1.17246E-03    5.12547E-07    6.31803E-04    1.72442E-02
@@ -306,9 +306,9 @@
 
   SYMMETRY BLOCK =   1
 
-  JTOT =    2   IBLOCK =   1   ENERGY(   1) =   300.00000000     CM-1
+  JTOT =    2,  SYMMETRY BLOCK =   1,  ENERGY(   1) =   300.00000000     CM-1
 
-  * * * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =   2 AND IBLOCK =   1 * * * * * * * * *
+  * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =   2 AND SYMMETRY BLOCK =   1 * * * * * * *
 
     F  I =      2              3              4              5              6
     2       2.62025E-02    1.18604E-02    7.24014E-03    5.95167E-03    3.37619E-02
@@ -323,9 +323,9 @@
 
   SYMMETRY BLOCK =   2
 
-  JTOT =    2   IBLOCK =   2   ENERGY(   1) =   300.00000000     CM-1
+  JTOT =    2,  SYMMETRY BLOCK =   2,  ENERGY(   1) =   300.00000000     CM-1
 
-  * * * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =   2 AND IBLOCK =   2 * * * * * * * * *
+  * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =   2 AND SYMMETRY BLOCK =   2 * * * * * * *
 
     F  I =      1              2              3              4              5              6
     1       2.35736E-02    5.31937E-03    1.97303E-03    2.60555E-06    1.06280E-03    2.83807E-02
@@ -346,9 +346,9 @@
 
   SYMMETRY BLOCK =   1
 
-  JTOT =    3   IBLOCK =   1   ENERGY(   1) =   300.00000000     CM-1
+  JTOT =    3,  SYMMETRY BLOCK =   1,  ENERGY(   1) =   300.00000000     CM-1
 
-  * * * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =   3 AND IBLOCK =   1 * * * * * * * * *
+  * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =   3 AND SYMMETRY BLOCK =   1 * * * * * * *
 
     F  I =      2              3              4              5              6
     2       6.69344E-02    2.03598E-02    1.99989E-02    1.07858E-02    5.83748E-02
@@ -363,9 +363,9 @@
 
   SYMMETRY BLOCK =   2
 
-  JTOT =    3   IBLOCK =   2   ENERGY(   1) =   300.00000000     CM-1
+  JTOT =    3,  SYMMETRY BLOCK =   2,  ENERGY(   1) =   300.00000000     CM-1
 
-  * * * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =   3 AND IBLOCK =   2 * * * * * * * * *
+  * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =   3 AND SYMMETRY BLOCK =   2 * * * * * * *
 
     F  I =      1              2              3              4              5              6
     1       2.52381E-01    7.46297E-03    2.80579E-03    7.57918E-06    1.52095E-03    3.87188E-02
@@ -386,9 +386,9 @@
 
   SYMMETRY BLOCK =   1
 
-  JTOT =    4   IBLOCK =   1   ENERGY(   1) =   300.00000000     CM-1
+  JTOT =    4,  SYMMETRY BLOCK =   1,  ENERGY(   1) =   300.00000000     CM-1
 
-  * * * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =   4 AND IBLOCK =   1 * * * * * * * * *
+  * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =   4 AND SYMMETRY BLOCK =   1 * * * * * * *
 
     F  I =      2              3              4              5              6
     2       1.04831E-01    2.61809E-02    2.56091E-02    1.38859E-02    7.35335E-02
@@ -403,9 +403,9 @@
 
   SYMMETRY BLOCK =   2
 
-  JTOT =    4   IBLOCK =   2   ENERGY(   1) =   300.00000000     CM-1
+  JTOT =    4,  SYMMETRY BLOCK =   2,  ENERGY(   1) =   300.00000000     CM-1
 
-  * * * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =   4 AND IBLOCK =   2 * * * * * * * * *
+  * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =   4 AND SYMMETRY BLOCK =   2 * * * * * * *
 
     F  I =      1              2              3              4              5              6
     1       3.03288E-02    9.66832E-03    3.71086E-03    1.84973E-05    2.12969E-03    4.58270E-02
@@ -426,9 +426,9 @@
 
   SYMMETRY BLOCK =   1
 
-  JTOT =    5   IBLOCK =   1   ENERGY(   1) =   300.00000000     CM-1
+  JTOT =    5,  SYMMETRY BLOCK =   1,  ENERGY(   1) =   300.00000000     CM-1
 
-  * * * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =   5 AND IBLOCK =   1 * * * * * * * * *
+  * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =   5 AND SYMMETRY BLOCK =   1 * * * * * * *
 
     F  I =      2              3              4              5              6
     2       9.64148E-02    3.21010E-02    3.09762E-02    1.70784E-02    8.54053E-02
@@ -443,9 +443,9 @@
 
   SYMMETRY BLOCK =   2
 
-  JTOT =    5   IBLOCK =   2   ENERGY(   1) =   300.00000000     CM-1
+  JTOT =    5,  SYMMETRY BLOCK =   2,  ENERGY(   1) =   300.00000000     CM-1
 
-  * * * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =   5 AND IBLOCK =   2 * * * * * * * * *
+  * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =   5 AND SYMMETRY BLOCK =   2 * * * * * * *
 
     F  I =      1              2              3              4              5              6
     1       4.08694E-01    1.11810E-02    4.47942E-03    2.70846E-05    2.66540E-03    5.97453E-02
@@ -466,9 +466,9 @@
 
   SYMMETRY BLOCK =   1
 
-  JTOT =    6   IBLOCK =   1   ENERGY(   1) =   300.00000000     CM-1
+  JTOT =    6,  SYMMETRY BLOCK =   1,  ENERGY(   1) =   300.00000000     CM-1
 
-  * * * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =   6 AND IBLOCK =   1 * * * * * * * * *
+  * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =   6 AND SYMMETRY BLOCK =   1 * * * * * * *
 
     F  I =      2              3              4              5              6
     2       1.61973E-01    3.76047E-02    3.55783E-02    1.95632E-02    1.17211E-01
@@ -483,9 +483,9 @@
 
   SYMMETRY BLOCK =   2
 
-  JTOT =    6   IBLOCK =   2   ENERGY(   1) =   300.00000000     CM-1
+  JTOT =    6,  SYMMETRY BLOCK =   2,  ENERGY(   1) =   300.00000000     CM-1
 
-  * * * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =   6 AND IBLOCK =   2 * * * * * * * * *
+  * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =   6 AND SYMMETRY BLOCK =   2 * * * * * * *
 
     F  I =      1              2              3              4              5              6
     1       5.83172E-02    1.36018E-02    5.47871E-03    5.41056E-05    2.79744E-03    7.09660E-02
@@ -506,9 +506,9 @@
 
   SYMMETRY BLOCK =   1
 
-  JTOT =    7   IBLOCK =   1   ENERGY(   1) =   300.00000000     CM-1
+  JTOT =    7,  SYMMETRY BLOCK =   1,  ENERGY(   1) =   300.00000000     CM-1
 
-  * * * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =   7 AND IBLOCK =   1 * * * * * * * * *
+  * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =   7 AND SYMMETRY BLOCK =   1 * * * * * * *
 
     F  I =      2              3              4              5              6
     2       1.25339E-01    4.33973E-02    4.19014E-02    2.30468E-02    1.20734E-01
@@ -523,9 +523,9 @@
 
   SYMMETRY BLOCK =   2
 
-  JTOT =    7   IBLOCK =   2   ENERGY(   1) =   300.00000000     CM-1
+  JTOT =    7,  SYMMETRY BLOCK =   2,  ENERGY(   1) =   300.00000000     CM-1
 
-  * * * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =   7 AND IBLOCK =   2 * * * * * * * * *
+  * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =   7 AND SYMMETRY BLOCK =   2 * * * * * * *
 
     F  I =      1              2              3              4              5              6
     1       4.94085E-01    1.52576E-02    6.39277E-03    1.24996E-04    3.27706E-03    8.27813E-02
@@ -546,9 +546,9 @@
 
   SYMMETRY BLOCK =   1
 
-  JTOT =    8   IBLOCK =   1   ENERGY(   1) =   300.00000000     CM-1
+  JTOT =    8,  SYMMETRY BLOCK =   1,  ENERGY(   1) =   300.00000000     CM-1
 
-  * * * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =   8 AND IBLOCK =   1 * * * * * * * * *
+  * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =   8 AND SYMMETRY BLOCK =   1 * * * * * * *
 
     F  I =      2              3              4              5              6
     2       2.10920E-01    4.87078E-02    4.75149E-02    2.58734E-02    1.36273E-01
@@ -563,9 +563,9 @@
 
   SYMMETRY BLOCK =   2
 
-  JTOT =    8   IBLOCK =   2   ENERGY(   1) =   300.00000000     CM-1
+  JTOT =    8,  SYMMETRY BLOCK =   2,  ENERGY(   1) =   300.00000000     CM-1
 
-  * * * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =   8 AND IBLOCK =   2 * * * * * * * * *
+  * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =   8 AND SYMMETRY BLOCK =   2 * * * * * * *
 
     F  I =      1              2              3              4              5              6
     1       2.03294E-01    1.76115E-02    7.58010E-03    1.11865E-04    3.70084E-03    8.90296E-02
@@ -586,9 +586,9 @@
 
   SYMMETRY BLOCK =   1
 
-  JTOT =    9   IBLOCK =   1   ENERGY(   1) =   300.00000000     CM-1
+  JTOT =    9,  SYMMETRY BLOCK =   1,  ENERGY(   1) =   300.00000000     CM-1
 
-  * * * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =   9 AND IBLOCK =   1 * * * * * * * * *
+  * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =   9 AND SYMMETRY BLOCK =   1 * * * * * * *
 
     F  I =      2              3              4              5              6
     2       1.76058E-01    5.45098E-02    5.22878E-02    2.92255E-02    1.46597E-01
@@ -603,9 +603,9 @@
 
   SYMMETRY BLOCK =   2
 
-  JTOT =    9   IBLOCK =   2   ENERGY(   1) =   300.00000000     CM-1
+  JTOT =    9,  SYMMETRY BLOCK =   2,  ENERGY(   1) =   300.00000000     CM-1
 
-  * * * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =   9 AND IBLOCK =   2 * * * * * * * * *
+  * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =   9 AND SYMMETRY BLOCK =   2 * * * * * * *
 
     F  I =      1              2              3              4              5              6
     1       4.09101E-01    1.92759E-02    8.67362E-03    1.61906E-04    4.15553E-03    9.95037E-02
@@ -626,9 +626,9 @@
 
   SYMMETRY BLOCK =   1
 
-  JTOT =   10   IBLOCK =   1   ENERGY(   1) =   300.00000000     CM-1
+  JTOT =   10,  SYMMETRY BLOCK =   1,  ENERGY(   1) =   300.00000000     CM-1
 
-  * * * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  10 AND IBLOCK =   1 * * * * * * * * *
+  * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  10 AND SYMMETRY BLOCK =   1 * * * * * * *
 
     F  I =      2              3              4              5              6
     2       2.25738E-01    6.01019E-02    5.75322E-02    3.14533E-02    1.61319E-01
@@ -643,9 +643,9 @@
 
   SYMMETRY BLOCK =   2
 
-  JTOT =   10   IBLOCK =   2   ENERGY(   1) =   300.00000000     CM-1
+  JTOT =   10,  SYMMETRY BLOCK =   2,  ENERGY(   1) =   300.00000000     CM-1
 
-  * * * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  10 AND IBLOCK =   2 * * * * * * * * *
+  * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  10 AND SYMMETRY BLOCK =   2 * * * * * * *
 
     F  I =      1              2              3              4              5              6
     1       5.43980E-01    2.14882E-02    1.00217E-02    1.93305E-04    4.49962E-03    1.05498E-01
@@ -666,9 +666,9 @@
 
   SYMMETRY BLOCK =   1
 
-  JTOT =   11   IBLOCK =   1   ENERGY(   1) =   300.00000000     CM-1
+  JTOT =   11,  SYMMETRY BLOCK =   1,  ENERGY(   1) =   300.00000000     CM-1
 
-  * * * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  11 AND IBLOCK =   1 * * * * * * * * *
+  * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  11 AND SYMMETRY BLOCK =   1 * * * * * * *
 
     F  I =      2              3              4              5              6
     2       2.68962E-01    6.57450E-02    6.25353E-02    3.45801E-02    1.71102E-01
@@ -683,9 +683,9 @@
 
   SYMMETRY BLOCK =   2
 
-  JTOT =   11   IBLOCK =   2   ENERGY(   1) =   300.00000000     CM-1
+  JTOT =   11,  SYMMETRY BLOCK =   2,  ENERGY(   1) =   300.00000000     CM-1
 
-  * * * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  11 AND IBLOCK =   2 * * * * * * * * *
+  * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  11 AND SYMMETRY BLOCK =   2 * * * * * * *
 
     F  I =      1              2              3              4              5              6
     1       1.68731E-01    2.33730E-02    1.13920E-02    2.73164E-04    5.41307E-03    1.08629E-01
@@ -706,9 +706,9 @@
 
   SYMMETRY BLOCK =   1
 
-  JTOT =   12   IBLOCK =   1   ENERGY(   1) =   300.00000000     CM-1
+  JTOT =   12,  SYMMETRY BLOCK =   1,  ENERGY(   1) =   300.00000000     CM-1
 
-  * * * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  12 AND IBLOCK =   1 * * * * * * * * *
+  * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  12 AND SYMMETRY BLOCK =   1 * * * * * * *
 
     F  I =      2              3              4              5              6
     2       2.15085E-01    7.11005E-02    6.82001E-02    3.75022E-02    1.74672E-01
@@ -723,9 +723,9 @@
 
   SYMMETRY BLOCK =   2
 
-  JTOT =   12   IBLOCK =   2   ENERGY(   1) =   300.00000000     CM-1
+  JTOT =   12,  SYMMETRY BLOCK =   2,  ENERGY(   1) =   300.00000000     CM-1
 
-  * * * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  12 AND IBLOCK =   2 * * * * * * * * *
+  * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  12 AND SYMMETRY BLOCK =   2 * * * * * * *
 
     F  I =      1              2              3              4              5              6
     1       9.16173E-01    2.43212E-02    1.30723E-02    2.64328E-04    6.70510E-03    1.04783E-01
@@ -746,9 +746,9 @@
 
   SYMMETRY BLOCK =   1
 
-  JTOT =   13   IBLOCK =   1   ENERGY(   1) =   300.00000000     CM-1
+  JTOT =   13,  SYMMETRY BLOCK =   1,  ENERGY(   1) =   300.00000000     CM-1
 
-  * * * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  13 AND IBLOCK =   1 * * * * * * * * *
+  * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  13 AND SYMMETRY BLOCK =   1 * * * * * * *
 
     F  I =      2              3              4              5              6
     2       3.48579E-01    7.73634E-02    7.31759E-02    3.98302E-02    1.65427E-01
@@ -763,9 +763,9 @@
 
   SYMMETRY BLOCK =   2
 
-  JTOT =   13   IBLOCK =   2   ENERGY(   1) =   300.00000000     CM-1
+  JTOT =   13,  SYMMETRY BLOCK =   2,  ENERGY(   1) =   300.00000000     CM-1
 
-  * * * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  13 AND IBLOCK =   2 * * * * * * * * *
+  * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  13 AND SYMMETRY BLOCK =   2 * * * * * * *
 
     F  I =      1              2              3              4              5              6
     1       1.42673E-01    2.94226E-02    1.45206E-02    6.33049E-04    7.35777E-03    9.86310E-02
@@ -786,9 +786,9 @@
 
   SYMMETRY BLOCK =   1
 
-  JTOT =   14   IBLOCK =   1   ENERGY(   1) =   300.00000000     CM-1
+  JTOT =   14,  SYMMETRY BLOCK =   1,  ENERGY(   1) =   300.00000000     CM-1
 
-  * * * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  14 AND IBLOCK =   1 * * * * * * * * *
+  * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  14 AND SYMMETRY BLOCK =   1 * * * * * * *
 
     F  I =      2              3              4              5              6
     2       2.73420E-01    8.11650E-02    7.77626E-02    4.87172E-02    1.64878E-01
@@ -803,9 +803,9 @@
 
   SYMMETRY BLOCK =   2
 
-  JTOT =   14   IBLOCK =   2   ENERGY(   1) =   300.00000000     CM-1
+  JTOT =   14,  SYMMETRY BLOCK =   2,  ENERGY(   1) =   300.00000000     CM-1
 
-  * * * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  14 AND IBLOCK =   2 * * * * * * * * *
+  * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  14 AND SYMMETRY BLOCK =   2 * * * * * * *
 
     F  I =      1              2              3              4              5              6
     1       8.14557E-01    2.82037E-02    1.66844E-02    4.78466E-04    8.79204E-03    1.00752E-01
@@ -826,9 +826,9 @@
 
   SYMMETRY BLOCK =   1
 
-  JTOT =   15   IBLOCK =   1   ENERGY(   1) =   300.00000000     CM-1
+  JTOT =   15,  SYMMETRY BLOCK =   1,  ENERGY(   1) =   300.00000000     CM-1
 
-  * * * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  15 AND IBLOCK =   1 * * * * * * * * *
+  * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  15 AND SYMMETRY BLOCK =   1 * * * * * * *
 
     F  I =      2              3              4              5              6
     2       3.16987E-01    8.73897E-02    8.23610E-02    4.76825E-02    1.56618E-01
@@ -843,9 +843,9 @@
 
   SYMMETRY BLOCK =   2
 
-  JTOT =   15   IBLOCK =   2   ENERGY(   1) =   300.00000000     CM-1
+  JTOT =   15,  SYMMETRY BLOCK =   2,  ENERGY(   1) =   300.00000000     CM-1
 
-  * * * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  15 AND IBLOCK =   2 * * * * * * * * *
+  * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  15 AND SYMMETRY BLOCK =   2 * * * * * * *
 
     F  I =      1              2              3              4              5              6
     1       6.95456E-01    3.09288E-02    1.84585E-02    8.38627E-04    9.54549E-03    9.91760E-02
@@ -866,9 +866,9 @@
 
   SYMMETRY BLOCK =   1
 
-  JTOT =   16   IBLOCK =   1   ENERGY(   1) =   300.00000000     CM-1
+  JTOT =   16,  SYMMETRY BLOCK =   1,  ENERGY(   1) =   300.00000000     CM-1
 
-  * * * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  16 AND IBLOCK =   1 * * * * * * * * *
+  * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  16 AND SYMMETRY BLOCK =   1 * * * * * * *
 
     F  I =      2              3              4              5              6
     2       4.33328E-01    9.36450E-02    8.65927E-02    5.22700E-02    1.62083E-01
@@ -883,9 +883,9 @@
 
   SYMMETRY BLOCK =   2
 
-  JTOT =   16   IBLOCK =   2   ENERGY(   1) =   300.00000000     CM-1
+  JTOT =   16,  SYMMETRY BLOCK =   2,  ENERGY(   1) =   300.00000000     CM-1
 
-  * * * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  16 AND IBLOCK =   2 * * * * * * * * *
+  * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  16 AND SYMMETRY BLOCK =   2 * * * * * * *
 
     F  I =      1              2              3              4              5              6
     1       2.13447E-01    2.77921E-02    2.05357E-02    4.31672E-04    1.03243E-02    9.75870E-02
@@ -906,9 +906,9 @@
 
   SYMMETRY BLOCK =   1
 
-  JTOT =   17   IBLOCK =   1   ENERGY(   1) =   300.00000000     CM-1
+  JTOT =   17,  SYMMETRY BLOCK =   1,  ENERGY(   1) =   300.00000000     CM-1
 
-  * * * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  17 AND IBLOCK =   1 * * * * * * * * *
+  * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  17 AND SYMMETRY BLOCK =   1 * * * * * * *
 
     F  I =      2              3              4              5              6
     2       3.05089E-01    9.85286E-02    9.05851E-02    5.09779E-02    1.44574E-01
@@ -923,9 +923,9 @@
 
   SYMMETRY BLOCK =   2
 
-  JTOT =   17   IBLOCK =   2   ENERGY(   1) =   300.00000000     CM-1
+  JTOT =   17,  SYMMETRY BLOCK =   2,  ENERGY(   1) =   300.00000000     CM-1
 
-  * * * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  17 AND IBLOCK =   2 * * * * * * * * *
+  * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  17 AND SYMMETRY BLOCK =   2 * * * * * * *
 
     F  I =      1              2              3              4              5              6
     1       1.23577E+00    3.39425E-02    2.30987E-02    1.35903E-03    1.11095E-02    9.14116E-02
@@ -946,9 +946,9 @@
 
   SYMMETRY BLOCK =   1
 
-  JTOT =   18   IBLOCK =   1   ENERGY(   1) =   300.00000000     CM-1
+  JTOT =   18,  SYMMETRY BLOCK =   1,  ENERGY(   1) =   300.00000000     CM-1
 
-  * * * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  18 AND IBLOCK =   1 * * * * * * * * *
+  * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  18 AND SYMMETRY BLOCK =   1 * * * * * * *
 
     F  I =      2              3              4              5              6
     2       4.21966E-01    1.03661E-01    9.40537E-02    5.91605E-02    1.46225E-01
@@ -963,9 +963,9 @@
 
   SYMMETRY BLOCK =   2
 
-  JTOT =   18   IBLOCK =   2   ENERGY(   1) =   300.00000000     CM-1
+  JTOT =   18,  SYMMETRY BLOCK =   2,  ENERGY(   1) =   300.00000000     CM-1
 
-  * * * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  18 AND IBLOCK =   2 * * * * * * * * *
+  * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  18 AND SYMMETRY BLOCK =   2 * * * * * * *
 
     F  I =      1              2              3              4              5              6
     1       3.66951E-01    3.11928E-02    2.58315E-02    1.38620E-03    1.20609E-02    8.95688E-02
@@ -986,9 +986,9 @@
 
   SYMMETRY BLOCK =   1
 
-  JTOT =   19   IBLOCK =   1   ENERGY(   1) =   300.00000000     CM-1
+  JTOT =   19,  SYMMETRY BLOCK =   1,  ENERGY(   1) =   300.00000000     CM-1
 
-  * * * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  19 AND IBLOCK =   1 * * * * * * * * *
+  * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  19 AND SYMMETRY BLOCK =   1 * * * * * * *
 
     F  I =      2              3              4              5              6
     2       5.13458E-01    1.06955E-01    9.82025E-02    5.87559E-02    1.29169E-01
@@ -1003,9 +1003,9 @@
 
   SYMMETRY BLOCK =   2
 
-  JTOT =   19   IBLOCK =   2   ENERGY(   1) =   300.00000000     CM-1
+  JTOT =   19,  SYMMETRY BLOCK =   2,  ENERGY(   1) =   300.00000000     CM-1
 
-  * * * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  19 AND IBLOCK =   2 * * * * * * * * *
+  * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  19 AND SYMMETRY BLOCK =   2 * * * * * * *
 
     F  I =      1              2              3              4              5              6
     1       6.13838E-01    3.49681E-02    2.86296E-02    2.13806E-03    1.24568E-02    8.52162E-02
@@ -1026,9 +1026,9 @@
 
   SYMMETRY BLOCK =   1
 
-  JTOT =   20   IBLOCK =   1   ENERGY(   1) =   300.00000000     CM-1
+  JTOT =   20,  SYMMETRY BLOCK =   1,  ENERGY(   1) =   300.00000000     CM-1
 
-  * * * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  20 AND IBLOCK =   1 * * * * * * * * *
+  * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  20 AND SYMMETRY BLOCK =   1 * * * * * * *
 
     F  I =      2              3              4              5              6
     2       3.33396E-01    1.14490E-01    1.01729E-01    6.14081E-02    1.52901E-01
@@ -1043,9 +1043,9 @@
 
   SYMMETRY BLOCK =   2
 
-  JTOT =   20   IBLOCK =   2   ENERGY(   1) =   300.00000000     CM-1
+  JTOT =   20,  SYMMETRY BLOCK =   2,  ENERGY(   1) =   300.00000000     CM-1
 
-  * * * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  20 AND IBLOCK =   2 * * * * * * * * *
+  * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  20 AND SYMMETRY BLOCK =   2 * * * * * * *
 
     F  I =      1              2              3              4              5              6
     1       1.45586E+00    3.22102E-02    3.18079E-02    2.03157E-03    1.30235E-02    8.00552E-02
@@ -1066,9 +1066,9 @@
 
   SYMMETRY BLOCK =   1
 
-  JTOT =   21   IBLOCK =   1   ENERGY(   1) =   300.00000000     CM-1
+  JTOT =   21,  SYMMETRY BLOCK =   1,  ENERGY(   1) =   300.00000000     CM-1
 
-  * * * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  21 AND IBLOCK =   1 * * * * * * * * *
+  * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  21 AND SYMMETRY BLOCK =   1 * * * * * * *
 
     F  I =      2              3              4              5              6
     2       5.10005E-01    1.17337E-01    1.07847E-01    6.10765E-02    1.12221E-01
@@ -1083,9 +1083,9 @@
 
   SYMMETRY BLOCK =   2
 
-  JTOT =   21   IBLOCK =   2   ENERGY(   1) =   300.00000000     CM-1
+  JTOT =   21,  SYMMETRY BLOCK =   2,  ENERGY(   1) =   300.00000000     CM-1
 
-  * * * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  21 AND IBLOCK =   2 * * * * * * * * *
+  * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  21 AND SYMMETRY BLOCK =   2 * * * * * * *
 
     F  I =      1              2              3              4              5              6
     1       2.77413E-01    3.72988E-02    3.45005E-02    2.50246E-03    1.32447E-02    8.45886E-02
@@ -1106,9 +1106,9 @@
 
   SYMMETRY BLOCK =   1
 
-  JTOT =   22   IBLOCK =   1   ENERGY(   1) =   300.00000000     CM-1
+  JTOT =   22,  SYMMETRY BLOCK =   1,  ENERGY(   1) =   300.00000000     CM-1
 
-  * * * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  22 AND IBLOCK =   1 * * * * * * * * *
+  * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  22 AND SYMMETRY BLOCK =   1 * * * * * * *
 
     F  I =      2              3              4              5              6
     2       6.24436E-01    1.25247E-01    1.09334E-01    7.23835E-02    8.25138E-02
@@ -1123,9 +1123,9 @@
 
   SYMMETRY BLOCK =   2
 
-  JTOT =   22   IBLOCK =   2   ENERGY(   1) =   300.00000000     CM-1
+  JTOT =   22,  SYMMETRY BLOCK =   2,  ENERGY(   1) =   300.00000000     CM-1
 
-  * * * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  22 AND IBLOCK =   2 * * * * * * * * *
+  * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  22 AND SYMMETRY BLOCK =   2 * * * * * * *
 
     F  I =      1              2              3              4              5              6
     1       9.13247E-01    3.32934E-02    3.86556E-02    2.16215E-03    1.41746E-02    8.50447E-02
@@ -1146,9 +1146,9 @@
 
   SYMMETRY BLOCK =   1
 
-  JTOT =   23   IBLOCK =   1   ENERGY(   1) =   300.00000000     CM-1
+  JTOT =   23,  SYMMETRY BLOCK =   1,  ENERGY(   1) =   300.00000000     CM-1
 
-  * * * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  23 AND IBLOCK =   1 * * * * * * * * *
+  * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  23 AND SYMMETRY BLOCK =   1 * * * * * * *
 
     F  I =      2              3              4              5              6
     2       3.91663E-01    1.28208E-01    1.10623E-01    7.02480E-02    6.26287E-02
@@ -1163,9 +1163,9 @@
 
   SYMMETRY BLOCK =   2
 
-  JTOT =   23   IBLOCK =   2   ENERGY(   1) =   300.00000000     CM-1
+  JTOT =   23,  SYMMETRY BLOCK =   2,  ENERGY(   1) =   300.00000000     CM-1
 
-  * * * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  23 AND IBLOCK =   2 * * * * * * * * *
+  * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  23 AND SYMMETRY BLOCK =   2 * * * * * * *
 
     F  I =      1              2              3              4              5              6
     1       1.56812E+00    3.68852E-02    4.30455E-02    2.42759E-03    1.49467E-02    7.18641E-02
@@ -1186,9 +1186,9 @@
 
   SYMMETRY BLOCK =   1
 
-  JTOT =   24   IBLOCK =   1   ENERGY(   1) =   300.00000000     CM-1
+  JTOT =   24,  SYMMETRY BLOCK =   1,  ENERGY(   1) =   300.00000000     CM-1
 
-  * * * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  24 AND IBLOCK =   1 * * * * * * * * *
+  * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  24 AND SYMMETRY BLOCK =   1 * * * * * * *
 
     F  I =      2              3              4              5              6
     2       5.09338E-01    1.36036E-01    1.14259E-01    7.75801E-02    4.93362E-02
@@ -1203,9 +1203,9 @@
 
   SYMMETRY BLOCK =   2
 
-  JTOT =   24   IBLOCK =   2   ENERGY(   1) =   300.00000000     CM-1
+  JTOT =   24,  SYMMETRY BLOCK =   2,  ENERGY(   1) =   300.00000000     CM-1
 
-  * * * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  24 AND IBLOCK =   2 * * * * * * * * *
+  * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  24 AND SYMMETRY BLOCK =   2 * * * * * * *
 
     F  I =      1              2              3              4              5              6
     1       2.94971E-01    3.35734E-02    4.72740E-02    2.24954E-03    1.56986E-02    6.70955E-02
@@ -1226,9 +1226,9 @@
 
   SYMMETRY BLOCK =   1
 
-  JTOT =   25   IBLOCK =   1   ENERGY(   1) =   300.00000000     CM-1
+  JTOT =   25,  SYMMETRY BLOCK =   1,  ENERGY(   1) =   300.00000000     CM-1
 
-  * * * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  25 AND IBLOCK =   1 * * * * * * * * *
+  * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  25 AND SYMMETRY BLOCK =   1 * * * * * * *
 
     F  I =      2              3              4              5              6
     2       7.94200E-01    1.39797E-01    1.15308E-01    7.23603E-02    1.25987E-02
@@ -1243,9 +1243,9 @@
 
   SYMMETRY BLOCK =   2
 
-  JTOT =   25   IBLOCK =   2   ENERGY(   1) =   300.00000000     CM-1
+  JTOT =   25,  SYMMETRY BLOCK =   2,  ENERGY(   1) =   300.00000000     CM-1
 
-  * * * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  25 AND IBLOCK =   2 * * * * * * * * *
+  * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  25 AND SYMMETRY BLOCK =   2 * * * * * * *
 
     F  I =      1              2              3              4              5              6
     1       8.08611E-01    3.43844E-02    5.21929E-02    2.73113E-03    1.80122E-02    4.49290E-02
@@ -1266,9 +1266,9 @@
 
   SYMMETRY BLOCK =   1
 
-  JTOT =   26   IBLOCK =   1   ENERGY(   1) =   300.00000000     CM-1
+  JTOT =   26,  SYMMETRY BLOCK =   1,  ENERGY(   1) =   300.00000000     CM-1
 
-  * * * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  26 AND IBLOCK =   1 * * * * * * * * *
+  * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  26 AND SYMMETRY BLOCK =   1 * * * * * * *
 
     F  I =      2              3              4              5              6
     2       5.52586E-01    1.48083E-01    1.17881E-01    8.08883E-02    4.29752E-03
@@ -1283,9 +1283,9 @@
 
   SYMMETRY BLOCK =   2
 
-  JTOT =   26   IBLOCK =   2   ENERGY(   1) =   300.00000000     CM-1
+  JTOT =   26,  SYMMETRY BLOCK =   2,  ENERGY(   1) =   300.00000000     CM-1
 
-  * * * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  26 AND IBLOCK =   2 * * * * * * * * *
+  * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  26 AND SYMMETRY BLOCK =   2 * * * * * * *
 
     F  I =      1              2              3              4              5              6
     1       1.85561E+00    3.39238E-02    5.68737E-02    3.82101E-03    1.82793E-02    1.43233E-02
@@ -1306,9 +1306,9 @@
 
   SYMMETRY BLOCK =   1
 
-  JTOT =   27   IBLOCK =   1   ENERGY(   1) =   300.00000000     CM-1
+  JTOT =   27,  SYMMETRY BLOCK =   1,  ENERGY(   1) =   300.00000000     CM-1
 
-  * * * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  27 AND IBLOCK =   1 * * * * * * * * *
+  * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  27 AND SYMMETRY BLOCK =   1 * * * * * * *
 
     F  I =      2              3              4              5              6
     2       4.21937E-01    1.51700E-01    1.18891E-01    7.54898E-02    2.57268E-05
@@ -1323,9 +1323,9 @@
 
   SYMMETRY BLOCK =   2
 
-  JTOT =   27   IBLOCK =   2   ENERGY(   1) =   300.00000000     CM-1
+  JTOT =   27,  SYMMETRY BLOCK =   2,  ENERGY(   1) =   300.00000000     CM-1
 
-  * * * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  27 AND IBLOCK =   2 * * * * * * * * *
+  * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  27 AND SYMMETRY BLOCK =   2 * * * * * * *
 
     F  I =      1              2              3              4              5              6
     1       7.22635E-01    3.02220E-02    6.26246E-02    3.29019E-03    2.15897E-02    4.98008E-03
@@ -1346,9 +1346,9 @@
 
   SYMMETRY BLOCK =   1
 
-  JTOT =   28   IBLOCK =   1   ENERGY(   1) =   300.00000000     CM-1
+  JTOT =   28,  SYMMETRY BLOCK =   1,  ENERGY(   1) =   300.00000000     CM-1
 
-  * * * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  28 AND IBLOCK =   1 * * * * * * * * *
+  * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  28 AND SYMMETRY BLOCK =   1 * * * * * * *
 
     F  I =      2              3              4              5              6
     2       7.94317E-01    1.59893E-01    1.17978E-01    7.53059E-02    8.18221E-07
@@ -1363,9 +1363,9 @@
 
   SYMMETRY BLOCK =   2
 
-  JTOT =   28   IBLOCK =   2   ENERGY(   1) =   300.00000000     CM-1
+  JTOT =   28,  SYMMETRY BLOCK =   2,  ENERGY(   1) =   300.00000000     CM-1
 
-  * * * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  28 AND IBLOCK =   2 * * * * * * * * *
+  * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  28 AND SYMMETRY BLOCK =   2 * * * * * * *
 
     F  I =      1              2              3              4              5              6
     1       4.72599E-01    3.04457E-02    6.74648E-02    4.28600E-03    1.99967E-02    2.31538E-05
@@ -1386,9 +1386,9 @@
 
   SYMMETRY BLOCK =   1
 
-  JTOT =   29   IBLOCK =   1   ENERGY(   1) =   300.00000000     CM-1
+  JTOT =   29,  SYMMETRY BLOCK =   1,  ENERGY(   1) =   300.00000000     CM-1
 
-  * * * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  29 AND IBLOCK =   1 * * * * * * * * *
+  * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  29 AND SYMMETRY BLOCK =   1 * * * * * * *
 
     F  I =      2              3              4              5              6
     2       9.26718E-01    1.65672E-01    1.17305E-01    7.10349E-02    3.25323E-07
@@ -1403,9 +1403,9 @@
 
   SYMMETRY BLOCK =   2
 
-  JTOT =   29   IBLOCK =   2   ENERGY(   1) =   300.00000000     CM-1
+  JTOT =   29,  SYMMETRY BLOCK =   2,  ENERGY(   1) =   300.00000000     CM-1
 
-  * * * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  29 AND IBLOCK =   2 * * * * * * * * *
+  * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  29 AND SYMMETRY BLOCK =   2 * * * * * * *
 
     F  I =      1              2              3              4              5              6
     1       1.88690E+00    3.04829E-02    7.40498E-02    4.38063E-03    1.97562E-02    9.48188E-07
@@ -1426,9 +1426,9 @@
 
   SYMMETRY BLOCK =   1
 
-  JTOT =   30   IBLOCK =   1   ENERGY(   1) =   300.00000000     CM-1
+  JTOT =   30,  SYMMETRY BLOCK =   1,  ENERGY(   1) =   300.00000000     CM-1
 
-  * * * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  30 AND IBLOCK =   1 * * * * * * * * *
+  * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  30 AND SYMMETRY BLOCK =   1 * * * * * * *
 
     F  I =      2              3              4              5              6
     2       5.47860E-01    1.73572E-01    1.19934E-01    7.37817E-02    1.32148E-09
@@ -1443,9 +1443,9 @@
 
   SYMMETRY BLOCK =   2
 
-  JTOT =   30   IBLOCK =   2   ENERGY(   1) =   300.00000000     CM-1
+  JTOT =   30,  SYMMETRY BLOCK =   2,  ENERGY(   1) =   300.00000000     CM-1
 
-  * * * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  30 AND IBLOCK =   2 * * * * * * * * *
+  * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  30 AND SYMMETRY BLOCK =   2 * * * * * * *
 
     F  I =      1              2              3              4              5              6
     1       1.52698E+00    2.86966E-02    7.71816E-02    4.43633E-03    1.59729E-02    3.49511E-07
@@ -1466,9 +1466,9 @@
 
   SYMMETRY BLOCK =   1
 
-  JTOT =   31   IBLOCK =   1   ENERGY(   1) =   300.00000000     CM-1
+  JTOT =   31,  SYMMETRY BLOCK =   1,  ENERGY(   1) =   300.00000000     CM-1
 
-  * * * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  31 AND IBLOCK =   1 * * * * * * * * *
+  * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  31 AND SYMMETRY BLOCK =   1 * * * * * * *
 
     F  I =      2              3              4              5              6
     2       4.95877E-01    1.82162E-01    1.17297E-01    6.93792E-02    1.29131E-11
@@ -1483,9 +1483,9 @@
 
   SYMMETRY BLOCK =   2
 
-  JTOT =   31   IBLOCK =   2   ENERGY(   1) =   300.00000000     CM-1
+  JTOT =   31,  SYMMETRY BLOCK =   2,  ENERGY(   1) =   300.00000000     CM-1
 
-  * * * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  31 AND IBLOCK =   2 * * * * * * * * *
+  * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  31 AND SYMMETRY BLOCK =   2 * * * * * * *
 
     F  I =      1              2              3              4              5              6
     1       2.92648E-01    2.44018E-02    8.59727E-02    4.53025E-03    2.08733E-02    1.51394E-09
@@ -1506,9 +1506,9 @@
 
   SYMMETRY BLOCK =   1
 
-  JTOT =   32   IBLOCK =   1   ENERGY(   1) =   300.00000000     CM-1
+  JTOT =   32,  SYMMETRY BLOCK =   1,  ENERGY(   1) =   300.00000000     CM-1
 
-  * * * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  32 AND IBLOCK =   1 * * * * * * * * *
+  * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  32 AND SYMMETRY BLOCK =   1 * * * * * * *
 
     F  I =      2              3              4              5              6
     2       9.17135E-01    1.89818E-01    1.15149E-01    7.07857E-02    2.78887E-12
@@ -1523,9 +1523,9 @@
 
   SYMMETRY BLOCK =   2
 
-  JTOT =   32   IBLOCK =   2   ENERGY(   1) =   300.00000000     CM-1
+  JTOT =   32,  SYMMETRY BLOCK =   2,  ENERGY(   1) =   300.00000000     CM-1
 
-  * * * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  32 AND IBLOCK =   2 * * * * * * * * *
+  * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  32 AND SYMMETRY BLOCK =   2 * * * * * * *
 
     F  I =      1              2              3              4              5              6
     1       1.03058E+00    2.53567E-02    9.19059E-02    4.80287E-03    1.90511E-02    1.48512E-11
@@ -1546,9 +1546,9 @@
 
   SYMMETRY BLOCK =   1
 
-  JTOT =   33   IBLOCK =   1   ENERGY(   1) =   300.00000000     CM-1
+  JTOT =   33,  SYMMETRY BLOCK =   1,  ENERGY(   1) =   300.00000000     CM-1
 
-  * * * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  33 AND IBLOCK =   1 * * * * * * * * *
+  * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  33 AND SYMMETRY BLOCK =   1 * * * * * * *
 
     F  I =      2              3              4              5              6
     2       1.09971E+00    1.99893E-01    1.11931E-01    6.50142E-02    2.46837E-12
@@ -1563,9 +1563,9 @@
 
   SYMMETRY BLOCK =   2
 
-  JTOT =   33   IBLOCK =   2   ENERGY(   1) =   300.00000000     CM-1
+  JTOT =   33,  SYMMETRY BLOCK =   2,  ENERGY(   1) =   300.00000000     CM-1
 
-  * * * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  33 AND IBLOCK =   2 * * * * * * * * *
+  * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  33 AND SYMMETRY BLOCK =   2 * * * * * * *
 
     F  I =      1              2              3              4              5              6
     1       2.27072E+00    2.35775E-02    9.79924E-02    4.71395E-03    1.94031E-02    1.79138E-12
@@ -1586,9 +1586,9 @@
 
   SYMMETRY BLOCK =   1
 
-  JTOT =   34   IBLOCK =   1   ENERGY(   1) =   300.00000000     CM-1
+  JTOT =   34,  SYMMETRY BLOCK =   1,  ENERGY(   1) =   300.00000000     CM-1
 
-  * * * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  34 AND IBLOCK =   1 * * * * * * * * *
+  * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  34 AND SYMMETRY BLOCK =   1 * * * * * * *
 
     F  I =      2              3              4              5              6
     2       7.81538E-01    2.11486E-01    1.10524E-01    6.78868E-02    2.01421E-12
@@ -1603,9 +1603,9 @@
 
   SYMMETRY BLOCK =   2
 
-  JTOT =   34   IBLOCK =   2   ENERGY(   1) =   300.00000000     CM-1
+  JTOT =   34,  SYMMETRY BLOCK =   2,  ENERGY(   1) =   300.00000000     CM-1
 
-  * * * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  34 AND IBLOCK =   2 * * * * * * * * *
+  * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  34 AND SYMMETRY BLOCK =   2 * * * * * * *
 
     F  I =      1              2              3              4              5              6
     1       1.50826E+00    2.61698E-02    1.03412E-01    4.94247E-03    1.62762E-02    1.06142E-12
@@ -1626,9 +1626,9 @@
 
   SYMMETRY BLOCK =   1
 
-  JTOT =   35   IBLOCK =   1   ENERGY(   1) =   300.00000000     CM-1
+  JTOT =   35,  SYMMETRY BLOCK =   1,  ENERGY(   1) =   300.00000000     CM-1
 
-  * * * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  35 AND IBLOCK =   1 * * * * * * * * *
+  * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  35 AND SYMMETRY BLOCK =   1 * * * * * * *
 
     F  I =      2              3              4              5              6
     2       5.49207E-01    2.22487E-01    1.06495E-01    6.09288E-02    2.85531E-12
@@ -1643,9 +1643,9 @@
 
   SYMMETRY BLOCK =   2
 
-  JTOT =   35   IBLOCK =   2   ENERGY(   1) =   300.00000000     CM-1
+  JTOT =   35,  SYMMETRY BLOCK =   2,  ENERGY(   1) =   300.00000000     CM-1
 
-  * * * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  35 AND IBLOCK =   2 * * * * * * * * *
+  * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  35 AND SYMMETRY BLOCK =   2 * * * * * * *
 
     F  I =      1              2              3              4              5              6
     1       3.56002E-01    1.97340E-02    1.09664E-01    4.78990E-03    2.06779E-02    7.65021E-13
@@ -1666,9 +1666,9 @@
 
   SYMMETRY BLOCK =   1
 
-  JTOT =   36   IBLOCK =   1   ENERGY(   1) =   300.00000000     CM-1
+  JTOT =   36,  SYMMETRY BLOCK =   1,  ENERGY(   1) =   300.00000000     CM-1
 
-  * * * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  36 AND IBLOCK =   1 * * * * * * * * *
+  * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  36 AND SYMMETRY BLOCK =   1 * * * * * * *
 
     F  I =      2              3              4              5              6
     2       7.33346E-01    2.34330E-01    1.01216E-01    5.64136E-02    2.62588E-12
@@ -1683,9 +1683,9 @@
 
   SYMMETRY BLOCK =   2
 
-  JTOT =   36   IBLOCK =   2   ENERGY(   1) =   300.00000000     CM-1
+  JTOT =   36,  SYMMETRY BLOCK =   2,  ENERGY(   1) =   300.00000000     CM-1
 
-  * * * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  36 AND IBLOCK =   2 * * * * * * * * *
+  * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  36 AND SYMMETRY BLOCK =   2 * * * * * * *
 
     F  I =      1              2              3              4              5              6
     1       9.06568E-01    2.34922E-02    1.15154E-01    4.94882E-03    1.87580E-02    7.30244E-13
@@ -1706,9 +1706,9 @@
 
   SYMMETRY BLOCK =   1
 
-  JTOT =   37   IBLOCK =   1   ENERGY(   1) =   300.00000000     CM-1
+  JTOT =   37,  SYMMETRY BLOCK =   1,  ENERGY(   1) =   300.00000000     CM-1
 
-  * * * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  37 AND IBLOCK =   1 * * * * * * * * *
+  * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  37 AND SYMMETRY BLOCK =   1 * * * * * * *
 
     F  I =      2              3              4              5              6
     2       1.05943E+00    2.47175E-01    9.43743E-02    5.54424E-02    2.15572E-12
@@ -1723,9 +1723,9 @@
 
   SYMMETRY BLOCK =   2
 
-  JTOT =   37   IBLOCK =   2   ENERGY(   1) =   300.00000000     CM-1
+  JTOT =   37,  SYMMETRY BLOCK =   2,  ENERGY(   1) =   300.00000000     CM-1
 
-  * * * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  37 AND IBLOCK =   2 * * * * * * * * *
+  * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  37 AND SYMMETRY BLOCK =   2 * * * * * * *
 
     F  I =      1              2              3              4              5              6
     1       2.22666E+00    2.73867E-02    1.19763E-01    4.72846E-03    1.70401E-02    8.68915E-13
@@ -1746,9 +1746,9 @@
 
   SYMMETRY BLOCK =   1
 
-  JTOT =   38   IBLOCK =   1   ENERGY(   1) =   300.00000000     CM-1
+  JTOT =   38,  SYMMETRY BLOCK =   1,  ENERGY(   1) =   300.00000000     CM-1
 
-  * * * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  38 AND IBLOCK =   1 * * * * * * * * *
+  * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  38 AND SYMMETRY BLOCK =   1 * * * * * * *
 
     F  I =      2              3              4              5              6
     2       1.16370E+00    2.58593E-01    9.22947E-02    5.09728E-02    3.04523E-12
@@ -1763,9 +1763,9 @@
 
   SYMMETRY BLOCK =   2
 
-  JTOT =   38   IBLOCK =   2   ENERGY(   1) =   300.00000000     CM-1
+  JTOT =   38,  SYMMETRY BLOCK =   2,  ENERGY(   1) =   300.00000000     CM-1
 
-  * * * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  38 AND IBLOCK =   2 * * * * * * * * *
+  * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  38 AND SYMMETRY BLOCK =   2 * * * * * * *
 
     F  I =      1              2              3              4              5              6
     1       2.19495E+00    3.04692E-02    1.23652E-01    4.63292E-03    1.70322E-02    1.04303E-12
@@ -1786,9 +1786,9 @@
 
   SYMMETRY BLOCK =   1
 
-  JTOT =   39   IBLOCK =   1   ENERGY(   1) =   300.00000000     CM-1
+  JTOT =   39,  SYMMETRY BLOCK =   1,  ENERGY(   1) =   300.00000000     CM-1
 
-  * * * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  39 AND IBLOCK =   1 * * * * * * * * *
+  * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  39 AND SYMMETRY BLOCK =   1 * * * * * * *
 
     F  I =      2              3              4              5              6
     2       1.05321E+00    2.74830E-01    8.30684E-02    5.36584E-02    3.39752E-12
@@ -1803,9 +1803,9 @@
 
   SYMMETRY BLOCK =   2
 
-  JTOT =   39   IBLOCK =   2   ENERGY(   1) =   300.00000000     CM-1
+  JTOT =   39,  SYMMETRY BLOCK =   2,  ENERGY(   1) =   300.00000000     CM-1
 
-  * * * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  39 AND IBLOCK =   2 * * * * * * * * *
+  * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  39 AND SYMMETRY BLOCK =   2 * * * * * * *
 
     F  I =      1              2              3              4              5              6
     1       1.00202E+00    3.80502E-02    1.26614E-01    5.12515E-03    1.45676E-02    1.42298E-12
@@ -1826,9 +1826,9 @@
 
   SYMMETRY BLOCK =   1
 
-  JTOT =   40   IBLOCK =   1   ENERGY(   1) =   300.00000000     CM-1
+  JTOT =   40,  SYMMETRY BLOCK =   1,  ENERGY(   1) =   300.00000000     CM-1
 
-  * * * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  40 AND IBLOCK =   1 * * * * * * * * *
+  * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  40 AND SYMMETRY BLOCK =   1 * * * * * * *
 
     F  I =      2              3              4              5              6
     2       9.32429E-01    2.85822E-01    8.24770E-02    4.95111E-02    3.33430E-12
@@ -1843,9 +1843,9 @@
 
   SYMMETRY BLOCK =   2
 
-  JTOT =   40   IBLOCK =   2   ENERGY(   1) =   300.00000000     CM-1
+  JTOT =   40,  SYMMETRY BLOCK =   2,  ENERGY(   1) =   300.00000000     CM-1
 
-  * * * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  40 AND IBLOCK =   2 * * * * * * * * *
+  * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  40 AND SYMMETRY BLOCK =   2 * * * * * * *
 
     F  I =      1              2              3              4              5              6
     1       4.57571E-01    4.04827E-02    1.28925E-01    3.69319E-03    1.81268E-02    9.71957E-13
@@ -1866,9 +1866,9 @@
 
   SYMMETRY BLOCK =   1
 
-  JTOT =   41   IBLOCK =   1   ENERGY(   1) =   300.00000000     CM-1
+  JTOT =   41,  SYMMETRY BLOCK =   1,  ENERGY(   1) =   300.00000000     CM-1
 
-  * * * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  41 AND IBLOCK =   1 * * * * * * * * *
+  * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  41 AND SYMMETRY BLOCK =   1 * * * * * * *
 
     F  I =      2              3              4              5              6
     2       9.08433E-01    3.02243E-01    6.76901E-02    4.11544E-02    3.58911E-12
@@ -1883,9 +1883,9 @@
 
   SYMMETRY BLOCK =   2
 
-  JTOT =   41   IBLOCK =   2   ENERGY(   1) =   300.00000000     CM-1
+  JTOT =   41,  SYMMETRY BLOCK =   2,  ENERGY(   1) =   300.00000000     CM-1
 
-  * * * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  41 AND IBLOCK =   2 * * * * * * * * *
+  * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  41 AND SYMMETRY BLOCK =   2 * * * * * * *
 
     F  I =      1              2              3              4              5              6
     1       1.14869E+00    5.20069E-02    1.29905E-01    4.35841E-03    1.52672E-02    8.44352E-13
@@ -1906,9 +1906,9 @@
 
   SYMMETRY BLOCK =   1
 
-  JTOT =   42   IBLOCK =   1   ENERGY(   1) =   300.00000000     CM-1
+  JTOT =   42,  SYMMETRY BLOCK =   1,  ENERGY(   1) =   300.00000000     CM-1
 
-  * * * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  42 AND IBLOCK =   1 * * * * * * * * *
+  * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  42 AND SYMMETRY BLOCK =   1 * * * * * * *
 
     F  I =      2              3              4              5              6
     2       8.97978E-01    3.14417E-01    6.03423E-02    3.88189E-02    2.90557E-12
@@ -1923,9 +1923,9 @@
 
   SYMMETRY BLOCK =   2
 
-  JTOT =   42   IBLOCK =   2   ENERGY(   1) =   300.00000000     CM-1
+  JTOT =   42,  SYMMETRY BLOCK =   2,  ENERGY(   1) =   300.00000000     CM-1
 
-  * * * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  42 AND IBLOCK =   2 * * * * * * * * *
+  * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  42 AND SYMMETRY BLOCK =   2 * * * * * * *
 
     F  I =      1              2              3              4              5              6
     1       2.06869E+00    6.37369E-02    1.29783E-01    3.17370E-03    1.41705E-02    1.09799E-12
@@ -1946,9 +1946,9 @@
 
   SYMMETRY BLOCK =   1
 
-  JTOT =   43   IBLOCK =   1   ENERGY(   1) =   300.00000000     CM-1
+  JTOT =   43,  SYMMETRY BLOCK =   1,  ENERGY(   1) =   300.00000000     CM-1
 
-  * * * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  43 AND IBLOCK =   1 * * * * * * * * *
+  * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  43 AND SYMMETRY BLOCK =   1 * * * * * * *
 
     F  I =      2              3              4              5              6
     2       8.40774E-01    3.26431E-01    5.09687E-02    3.47210E-02    3.21330E-12
@@ -1963,9 +1963,9 @@
 
   SYMMETRY BLOCK =   2
 
-  JTOT =   43   IBLOCK =   2   ENERGY(   1) =   300.00000000     CM-1
+  JTOT =   43,  SYMMETRY BLOCK =   2,  ENERGY(   1) =   300.00000000     CM-1
 
-  * * * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  43 AND IBLOCK =   2 * * * * * * * * *
+  * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  43 AND SYMMETRY BLOCK =   2 * * * * * * *
 
     F  I =      1              2              3              4              5              6
     1       2.20718E+00    7.73583E-02    1.27745E-01    3.57817E-03    1.19829E-02    1.29774E-12
@@ -1986,9 +1986,9 @@
 
   SYMMETRY BLOCK =   1
 
-  JTOT =   44   IBLOCK =   1   ENERGY(   1) =   300.00000000     CM-1
+  JTOT =   44,  SYMMETRY BLOCK =   1,  ENERGY(   1) =   300.00000000     CM-1
 
-  * * * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  44 AND IBLOCK =   1 * * * * * * * * *
+  * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  44 AND SYMMETRY BLOCK =   1 * * * * * * *
 
     F  I =      2              3              4              5              6
     2       7.89082E-01    3.34297E-01    4.54759E-02    2.60601E-02    3.00667E-12
@@ -2003,9 +2003,9 @@
 
   SYMMETRY BLOCK =   2
 
-  JTOT =   44   IBLOCK =   2   ENERGY(   1) =   300.00000000     CM-1
+  JTOT =   44,  SYMMETRY BLOCK =   2,  ENERGY(   1) =   300.00000000     CM-1
 
-  * * * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  44 AND IBLOCK =   2 * * * * * * * * *
+  * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  44 AND SYMMETRY BLOCK =   2 * * * * * * *
 
     F  I =      1              2              3              4              5              6
     1       1.63743E+00    9.26575E-02    1.24079E-01    2.69374E-03    1.22737E-02    8.93947E-13
@@ -2026,9 +2026,9 @@
 
   SYMMETRY BLOCK =   1
 
-  JTOT =   45   IBLOCK =   1   ENERGY(   1) =   300.00000000     CM-1
+  JTOT =   45,  SYMMETRY BLOCK =   1,  ENERGY(   1) =   300.00000000     CM-1
 
-  * * * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  45 AND IBLOCK =   1 * * * * * * * * *
+  * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  45 AND SYMMETRY BLOCK =   1 * * * * * * *
 
     F  I =      2              3              4              5              6
     2       8.34757E-01    3.42648E-01    3.18481E-02    3.15027E-02    3.33285E-12
@@ -2043,9 +2043,9 @@
 
   SYMMETRY BLOCK =   2
 
-  JTOT =   45   IBLOCK =   2   ENERGY(   1) =   300.00000000     CM-1
+  JTOT =   45,  SYMMETRY BLOCK =   2,  ENERGY(   1) =   300.00000000     CM-1
 
-  * * * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  45 AND IBLOCK =   2 * * * * * * * * *
+  * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  45 AND SYMMETRY BLOCK =   2 * * * * * * *
 
     F  I =      1              2              3              4              5              6
     1       1.10054E+00    1.09890E-01    1.19437E-01    2.94836E-03    8.41390E-03    4.02827E-13
@@ -2066,9 +2066,9 @@
 
   SYMMETRY BLOCK =   1
 
-  JTOT =   46   IBLOCK =   1   ENERGY(   1) =   300.00000000     CM-1
+  JTOT =   46,  SYMMETRY BLOCK =   1,  ENERGY(   1) =   300.00000000     CM-1
 
-  * * * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  46 AND IBLOCK =   1 * * * * * * * * *
+  * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  46 AND SYMMETRY BLOCK =   1 * * * * * * *
 
     F  I =      2              3              4              5              6
     2       1.04177E+00    3.31783E-01    5.08163E-02    1.23512E-02    2.08985E-12
@@ -2083,9 +2083,9 @@
 
   SYMMETRY BLOCK =   2
 
-  JTOT =   46   IBLOCK =   2   ENERGY(   1) =   300.00000000     CM-1
+  JTOT =   46,  SYMMETRY BLOCK =   2,  ENERGY(   1) =   300.00000000     CM-1
 
-  * * * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  46 AND IBLOCK =   2 * * * * * * * * *
+  * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  46 AND SYMMETRY BLOCK =   2 * * * * * * *
 
     F  I =      1              2              3              4              5              6
     1       1.03912E+00    1.27353E-01    1.12299E-01    2.78427E-03    9.34638E-03    9.71029E-13
@@ -2106,9 +2106,9 @@
 
   SYMMETRY BLOCK =   1
 
-  JTOT =   47   IBLOCK =   1   ENERGY(   1) =   300.00000000     CM-1
+  JTOT =   47,  SYMMETRY BLOCK =   1,  ENERGY(   1) =   300.00000000     CM-1
 
-  * * * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  47 AND IBLOCK =   1 * * * * * * * * *
+  * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  47 AND SYMMETRY BLOCK =   1 * * * * * * *
 
     F  I =      2              3              4              5              6
     2       1.38499E+00    3.41028E-01    1.44503E-02    3.03507E-02    2.51074E-12
@@ -2123,9 +2123,9 @@
 
   SYMMETRY BLOCK =   2
 
-  JTOT =   47   IBLOCK =   2   ENERGY(   1) =   300.00000000     CM-1
+  JTOT =   47,  SYMMETRY BLOCK =   2,  ENERGY(   1) =   300.00000000     CM-1
 
-  * * * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  47 AND IBLOCK =   2 * * * * * * * * *
+  * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  47 AND SYMMETRY BLOCK =   2 * * * * * * *
 
     F  I =      1              2              3              4              5              6
     1       1.30524E+00    1.46873E-01    1.04447E-01    3.36229E-03    5.10914E-03    1.05644E-12
@@ -2146,9 +2146,9 @@
 
   SYMMETRY BLOCK =   1
 
-  JTOT =   48   IBLOCK =   1   ENERGY(   1) =   300.00000000     CM-1
+  JTOT =   48,  SYMMETRY BLOCK =   1,  ENERGY(   1) =   300.00000000     CM-1
 
-  * * * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  48 AND IBLOCK =   1 * * * * * * * * *
+  * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  48 AND SYMMETRY BLOCK =   1 * * * * * * *
 
     F  I =      2              3              4              5              6
     2       1.80355E+00    3.19910E-01    3.56986E-02    4.54612E-03    9.65686E-13
@@ -2163,9 +2163,9 @@
 
   SYMMETRY BLOCK =   2
 
-  JTOT =   48   IBLOCK =   2   ENERGY(   1) =   300.00000000     CM-1
+  JTOT =   48,  SYMMETRY BLOCK =   2,  ENERGY(   1) =   300.00000000     CM-1
 
-  * * * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  48 AND IBLOCK =   2 * * * * * * * * *
+  * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  48 AND SYMMETRY BLOCK =   2 * * * * * * *
 
     F  I =      1              2              3              4              5              6
     1       1.54663E+00    1.66605E-01    9.43697E-02    1.75527E-03    4.56126E-03    3.07213E-13
@@ -2186,9 +2186,9 @@
 
   SYMMETRY BLOCK =   1
 
-  JTOT =   49   IBLOCK =   1   ENERGY(   1) =   300.00000000     CM-1
+  JTOT =   49,  SYMMETRY BLOCK =   1,  ENERGY(   1) =   300.00000000     CM-1
 
-  * * * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  49 AND IBLOCK =   1 * * * * * * * * *
+  * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  49 AND SYMMETRY BLOCK =   1 * * * * * * *
 
     F  I =      2              3              4              5              6
     2       2.18493E+00    3.12917E-01    7.13344E-03    2.34968E-02    1.98378E-12
@@ -2203,9 +2203,9 @@
 
   SYMMETRY BLOCK =   2
 
-  JTOT =   49   IBLOCK =   2   ENERGY(   1) =   300.00000000     CM-1
+  JTOT =   49,  SYMMETRY BLOCK =   2,  ENERGY(   1) =   300.00000000     CM-1
 
-  * * * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  49 AND IBLOCK =   2 * * * * * * * * *
+  * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  49 AND SYMMETRY BLOCK =   2 * * * * * * *
 
     F  I =      1              2              3              4              5              6
     1       1.50375E+00    1.82650E-01    8.37120E-02    5.57535E-03    1.79876E-03    1.20921E-13
@@ -2226,9 +2226,9 @@
 
   SYMMETRY BLOCK =   1
 
-  JTOT =   50   IBLOCK =   1   ENERGY(   1) =   300.00000000     CM-1
+  JTOT =   50,  SYMMETRY BLOCK =   1,  ENERGY(   1) =   300.00000000     CM-1
 
-  * * * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  50 AND IBLOCK =   1 * * * * * * * * *
+  * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  50 AND SYMMETRY BLOCK =   1 * * * * * * *
 
     F  I =      2              3              4              5              6
     2       2.51404E+00    2.81737E-01    2.19395E-02    1.52705E-03    1.74045E-12
@@ -2243,9 +2243,9 @@
 
   SYMMETRY BLOCK =   2
 
-  JTOT =   50   IBLOCK =   2   ENERGY(   1) =   300.00000000     CM-1
+  JTOT =   50,  SYMMETRY BLOCK =   2,  ENERGY(   1) =   300.00000000     CM-1
 
-  * * * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  50 AND IBLOCK =   2 * * * * * * * * *
+  * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  50 AND SYMMETRY BLOCK =   2 * * * * * * *
 
     F  I =      1              2              3              4              5              6
     1       1.28330E+00    1.95067E-01    7.27379E-02    7.57078E-04    1.01501E-02    1.88672E-13
@@ -2266,9 +2266,9 @@
 
   SYMMETRY BLOCK =   1
 
-  JTOT =   51   IBLOCK =   1   ENERGY(   1) =   300.00000000     CM-1
+  JTOT =   51,  SYMMETRY BLOCK =   1,  ENERGY(   1) =   300.00000000     CM-1
 
-  * * * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  51 AND IBLOCK =   1 * * * * * * * * *
+  * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  51 AND SYMMETRY BLOCK =   1 * * * * * * *
 
     F  I =      2              3              4              5              6
     2       2.77250E+00    2.60715E-01    2.11248E-05    1.81581E-06    1.90642E-12
@@ -2283,9 +2283,9 @@
 
   SYMMETRY BLOCK =   2
 
-  JTOT =   51   IBLOCK =   2   ENERGY(   1) =   300.00000000     CM-1
+  JTOT =   51,  SYMMETRY BLOCK =   2,  ENERGY(   1) =   300.00000000     CM-1
 
-  * * * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  51 AND IBLOCK =   2 * * * * * * * * *
+  * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  51 AND SYMMETRY BLOCK =   2 * * * * * * *
 
     F  I =      1              2              3              4              5              6
     1       1.05904E+00    2.13490E-01    6.06760E-02    4.05774E-07    1.07260E-05    2.41125E-13
@@ -2306,9 +2306,9 @@
 
   SYMMETRY BLOCK =   1
 
-  JTOT =   52   IBLOCK =   1   ENERGY(   1) =   300.00000000     CM-1
+  JTOT =   52,  SYMMETRY BLOCK =   1,  ENERGY(   1) =   300.00000000     CM-1
 
-  * * * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  52 AND IBLOCK =   1 * * * * * * * * *
+  * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  52 AND SYMMETRY BLOCK =   1 * * * * * * *
 
     F  I =      2              3              4              5              6
     2       2.97240E+00    2.23887E-01    2.74706E-07    2.85119E-08    1.62125E-12
@@ -2323,9 +2323,9 @@
 
   SYMMETRY BLOCK =   2
 
-  JTOT =   52   IBLOCK =   2   ENERGY(   1) =   300.00000000     CM-1
+  JTOT =   52,  SYMMETRY BLOCK =   2,  ENERGY(   1) =   300.00000000     CM-1
 
-  * * * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  52 AND IBLOCK =   2 * * * * * * * * *
+  * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  52 AND SYMMETRY BLOCK =   2 * * * * * * *
 
     F  I =      1              2              3              4              5              6
     1       1.02574E+00    2.20468E-01    4.93166E-02    3.78994E-09    1.46325E-07    5.05849E-13
@@ -2346,9 +2346,9 @@
 
   SYMMETRY BLOCK =   1
 
-  JTOT =   53   IBLOCK =   1   ENERGY(   1) =   300.00000000     CM-1
+  JTOT =   53,  SYMMETRY BLOCK =   1,  ENERGY(   1) =   300.00000000     CM-1
 
-  * * * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  53 AND IBLOCK =   1 * * * * * * * * *
+  * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  53 AND SYMMETRY BLOCK =   1 * * * * * * *
 
     F  I =      2              3              4              5              6
     2       3.12483E+00    1.83085E-01    6.75381E-09    7.94776E-10    1.10404E-12
@@ -2363,9 +2363,9 @@
 
   SYMMETRY BLOCK =   2
 
-  JTOT =   53   IBLOCK =   2   ENERGY(   1) =   300.00000000     CM-1
+  JTOT =   53,  SYMMETRY BLOCK =   2,  ENERGY(   1) =   300.00000000     CM-1
 
-  * * * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  53 AND IBLOCK =   2 * * * * * * * * *
+  * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  53 AND SYMMETRY BLOCK =   2 * * * * * * *
 
     F  I =      1              2              3              4              5              6
     1       1.25336E+00    2.22119E-01    3.83143E-02    8.79744E-11    3.82157E-09    6.11167E-13
@@ -2386,9 +2386,9 @@
 
   SYMMETRY BLOCK =   1
 
-  JTOT =   54   IBLOCK =   1   ENERGY(   1) =   300.00000000     CM-1
+  JTOT =   54,  SYMMETRY BLOCK =   1,  ENERGY(   1) =   300.00000000     CM-1
 
-  * * * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  54 AND IBLOCK =   1 * * * * * * * * *
+  * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  54 AND SYMMETRY BLOCK =   1 * * * * * * *
 
     F  I =      2              3              4              5              6
     2       3.20390E+00    1.40260E-01    2.01443E-10    2.72605E-11    5.97649E-13
@@ -2403,9 +2403,9 @@
 
   SYMMETRY BLOCK =   2
 
-  JTOT =   54   IBLOCK =   2   ENERGY(   1) =   300.00000000     CM-1
+  JTOT =   54,  SYMMETRY BLOCK =   2,  ENERGY(   1) =   300.00000000     CM-1
 
-  * * * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  54 AND IBLOCK =   2 * * * * * * * * *
+  * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  54 AND SYMMETRY BLOCK =   2 * * * * * * *
 
     F  I =      1              2              3              4              5              6
     1       1.70522E+00    2.17189E-01    2.84973E-02    3.19968E-12    1.27769E-10    5.19555E-13
@@ -2426,9 +2426,9 @@
 
   SYMMETRY BLOCK =   1
 
-  JTOT =   55   IBLOCK =   1   ENERGY(   1) =   300.00000000     CM-1
+  JTOT =   55,  SYMMETRY BLOCK =   1,  ENERGY(   1) =   300.00000000     CM-1
 
-  * * * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  55 AND IBLOCK =   1 * * * * * * * * *
+  * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  55 AND SYMMETRY BLOCK =   1 * * * * * * *
 
     F  I =      2              3              4              5              6
     2       3.13565E+00    1.00697E-01    6.34162E-12    1.88563E-12    2.66337E-13
@@ -2443,9 +2443,9 @@
 
   SYMMETRY BLOCK =   2
 
-  JTOT =   55   IBLOCK =   2   ENERGY(   1) =   300.00000000     CM-1
+  JTOT =   55,  SYMMETRY BLOCK =   2,  ENERGY(   1) =   300.00000000     CM-1
 
-  * * * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  55 AND IBLOCK =   2 * * * * * * * * *
+  * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  55 AND SYMMETRY BLOCK =   2 * * * * * * *
 
     F  I =      1              2              3              4              5              6
     1       2.28469E+00    2.04892E-01    2.06432E-02    1.31954E-13    6.63941E-12    3.42813E-13
@@ -2466,9 +2466,9 @@
 
   SYMMETRY BLOCK =   1
 
-  JTOT =   56   IBLOCK =   1   ENERGY(   1) =   300.00000000     CM-1
+  JTOT =   56,  SYMMETRY BLOCK =   1,  ENERGY(   1) =   300.00000000     CM-1
 
-  * * * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  56 AND IBLOCK =   1 * * * * * * * * *
+  * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  56 AND SYMMETRY BLOCK =   1 * * * * * * *
 
     F  I =      2              3              4              5              6
     2       2.83045E+00    7.16419E-02    4.11917E-13    1.36541E-12    1.07836E-13
@@ -2483,9 +2483,9 @@
 
   SYMMETRY BLOCK =   2
 
-  JTOT =   56   IBLOCK =   2   ENERGY(   1) =   300.00000000     CM-1
+  JTOT =   56,  SYMMETRY BLOCK =   2,  ENERGY(   1) =   300.00000000     CM-1
 
-  * * * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  56 AND IBLOCK =   2 * * * * * * * * *
+  * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  56 AND SYMMETRY BLOCK =   2 * * * * * * *
 
     F  I =      1              2              3              4              5              6
     1       2.88609E+00    1.86068E-01    1.45839E-02    8.38182E-15    5.21610E-13    1.85258E-13
@@ -2506,9 +2506,9 @@
 
   SYMMETRY BLOCK =   1
 
-  JTOT =   57   IBLOCK =   1   ENERGY(   1) =   300.00000000     CM-1
+  JTOT =   57,  SYMMETRY BLOCK =   1,  ENERGY(   1) =   300.00000000     CM-1
 
-  * * * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  57 AND IBLOCK =   1 * * * * * * * * *
+  * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  57 AND SYMMETRY BLOCK =   1 * * * * * * *
 
     F  I =      2              3              4              5              6
     2       2.29861E+00    5.51160E-02    6.47601E-14    3.23483E-13    4.95322E-14
@@ -2523,9 +2523,9 @@
 
   SYMMETRY BLOCK =   2
 
-  JTOT =   57   IBLOCK =   2   ENERGY(   1) =   300.00000000     CM-1
+  JTOT =   57,  SYMMETRY BLOCK =   2,  ENERGY(   1) =   300.00000000     CM-1
 
-  * * * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  57 AND IBLOCK =   2 * * * * * * * * *
+  * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  57 AND SYMMETRY BLOCK =   2 * * * * * * *
 
     F  I =      1              2              3              4              5              6
     1       3.41765E+00    1.61769E-01    1.01070E-02    7.85523E-15    9.54088E-14    8.45026E-14
@@ -2546,9 +2546,9 @@
 
   SYMMETRY BLOCK =   1
 
-  JTOT =   58   IBLOCK =   1   ENERGY(   1) =   300.00000000     CM-1
+  JTOT =   58,  SYMMETRY BLOCK =   1,  ENERGY(   1) =   300.00000000     CM-1
 
-  * * * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  58 AND IBLOCK =   1 * * * * * * * * *
+  * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  58 AND SYMMETRY BLOCK =   1 * * * * * * *
 
     F  I =      2              3              4              5              6
     2       1.77294E+00    5.56519E-02    4.56812E-14    5.41449E-13    3.02782E-14
@@ -2563,9 +2563,9 @@
 
   SYMMETRY BLOCK =   2
 
-  JTOT =   58   IBLOCK =   2   ENERGY(   1) =   300.00000000     CM-1
+  JTOT =   58,  SYMMETRY BLOCK =   2,  ENERGY(   1) =   300.00000000     CM-1
 
-  * * * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  58 AND IBLOCK =   2 * * * * * * * * *
+  * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  58 AND SYMMETRY BLOCK =   2 * * * * * * *
 
     F  I =      1              2              3              4              5              6
     1       3.79426E+00    1.33404E-01    7.03283E-03    2.75763E-15    5.78413E-14    3.34360E-14
@@ -2586,9 +2586,9 @@
 
   SYMMETRY BLOCK =   1
 
-  JTOT =   59   IBLOCK =   1   ENERGY(   1) =   300.00000000     CM-1
+  JTOT =   59,  SYMMETRY BLOCK =   1,  ENERGY(   1) =   300.00000000     CM-1
 
-  * * * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  59 AND IBLOCK =   1 * * * * * * * * *
+  * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  59 AND SYMMETRY BLOCK =   1 * * * * * * *
 
     F  I =      2              3              4              5              6
     2       1.64029E+00    6.55444E-02    4.88058E-14    3.98198E-13    2.06186E-14
@@ -2603,9 +2603,9 @@
 
   SYMMETRY BLOCK =   2
 
-  JTOT =   59   IBLOCK =   2   ENERGY(   1) =   300.00000000     CM-1
+  JTOT =   59,  SYMMETRY BLOCK =   2,  ENERGY(   1) =   300.00000000     CM-1
 
-  * * * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  59 AND IBLOCK =   2 * * * * * * * * *
+  * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  59 AND SYMMETRY BLOCK =   2 * * * * * * *
 
     F  I =      1              2              3              4              5              6
     1       3.91823E+00    1.03242E-01    5.12705E-03    2.41774E-15    1.32883E-14    1.21701E-14
@@ -2626,9 +2626,9 @@
 
   SYMMETRY BLOCK =   1
 
-  JTOT =   60   IBLOCK =   1   ENERGY(   1) =   300.00000000     CM-1
+  JTOT =   60,  SYMMETRY BLOCK =   1,  ENERGY(   1) =   300.00000000     CM-1
 
-  * * * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  60 AND IBLOCK =   1 * * * * * * * * *
+  * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  60 AND SYMMETRY BLOCK =   1 * * * * * * *
 
     F  I =      2              3              4              5              6
     2       1.78862E+00    7.50347E-02    7.09694E-14    7.96039E-13    1.23114E-14
@@ -2643,9 +2643,9 @@
 
   SYMMETRY BLOCK =   2
 
-  JTOT =   60   IBLOCK =   2   ENERGY(   1) =   300.00000000     CM-1
+  JTOT =   60,  SYMMETRY BLOCK =   2,  ENERGY(   1) =   300.00000000     CM-1
 
-  * * * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  60 AND IBLOCK =   2 * * * * * * * * *
+  * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  60 AND SYMMETRY BLOCK =   2 * * * * * * *
 
     F  I =      1              2              3              4              5              6
     1       3.68266E+00    7.42384E-02    3.79632E-03    1.15574E-15    2.13614E-14    3.98434E-15
@@ -2666,9 +2666,9 @@
 
   SYMMETRY BLOCK =   1
 
-  JTOT =   61   IBLOCK =   1   ENERGY(   1) =   300.00000000     CM-1
+  JTOT =   61,  SYMMETRY BLOCK =   1,  ENERGY(   1) =   300.00000000     CM-1
 
-  * * * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  61 AND IBLOCK =   1 * * * * * * * * *
+  * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  61 AND SYMMETRY BLOCK =   1 * * * * * * *
 
     F  I =      2              3              4              5              6
     2       1.65203E+00    7.35751E-02    7.45325E-14    5.68635E-13    5.20995E-15
@@ -2683,9 +2683,9 @@
 
   SYMMETRY BLOCK =   2
 
-  JTOT =   61   IBLOCK =   2   ENERGY(   1) =   300.00000000     CM-1
+  JTOT =   61,  SYMMETRY BLOCK =   2,  ENERGY(   1) =   300.00000000     CM-1
 
-  * * * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  61 AND IBLOCK =   2 * * * * * * * * *
+  * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  61 AND SYMMETRY BLOCK =   2 * * * * * * *
 
     F  I =      1              2              3              4              5              6
     1       3.00554E+00    4.85141E-02    2.37916E-03    5.80040E-16    9.69926E-15    1.03275E-15
@@ -2706,9 +2706,9 @@
 
   SYMMETRY BLOCK =   1
 
-  JTOT =   62   IBLOCK =   1   ENERGY(   1) =   300.00000000     CM-1
+  JTOT =   62,  SYMMETRY BLOCK =   1,  ENERGY(   1) =   300.00000000     CM-1
 
-  * * * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  62 AND IBLOCK =   1 * * * * * * * * *
+  * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  62 AND SYMMETRY BLOCK =   1 * * * * * * *
 
     F  I =      2              3              4              5              6
     2       1.64627E+00    6.19263E-02    4.90956E-14    6.56994E-13    1.64300E-15
@@ -2723,9 +2723,9 @@
 
   SYMMETRY BLOCK =   2
 
-  JTOT =   62   IBLOCK =   2   ENERGY(   1) =   300.00000000     CM-1
+  JTOT =   62,  SYMMETRY BLOCK =   2,  ENERGY(   1) =   300.00000000     CM-1
 
-  * * * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  62 AND IBLOCK =   2 * * * * * * * * *
+  * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  62 AND SYMMETRY BLOCK =   2 * * * * * * *
 
     F  I =      1              2              3              4              5              6
     1       1.90733E+00    2.79616E-02    9.75160E-04    4.14086E-16    6.90601E-15    1.62372E-16
@@ -2746,9 +2746,9 @@
 
   SYMMETRY BLOCK =   1
 
-  JTOT =   63   IBLOCK =   1   ENERGY(   1) =   300.00000000     CM-1
+  JTOT =   63,  SYMMETRY BLOCK =   1,  ENERGY(   1) =   300.00000000     CM-1
 
-  * * * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  63 AND IBLOCK =   1 * * * * * * * * *
+  * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  63 AND SYMMETRY BLOCK =   1 * * * * * * *
 
     F  I =      2              3              4              5              6
     2       1.91722E+00    4.83407E-02    5.14429E-14    6.06438E-13    4.40618E-16
@@ -2763,9 +2763,9 @@
 
   SYMMETRY BLOCK =   2
 
-  JTOT =   63   IBLOCK =   2   ENERGY(   1) =   300.00000000     CM-1
+  JTOT =   63,  SYMMETRY BLOCK =   2,  ENERGY(   1) =   300.00000000     CM-1
 
-  * * * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  63 AND IBLOCK =   2 * * * * * * * * *
+  * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  63 AND SYMMETRY BLOCK =   2 * * * * * * *
 
     F  I =      1              2              3              4              5              6
     1       6.78154E-01    1.36678E-02    2.68412E-04    5.67486E-17    4.80090E-15    1.58565E-17
@@ -2786,9 +2786,9 @@
 
   SYMMETRY BLOCK =   1
 
-  JTOT =   64   IBLOCK =   1   ENERGY(   1) =   300.00000000     CM-1
+  JTOT =   64,  SYMMETRY BLOCK =   1,  ENERGY(   1) =   300.00000000     CM-1
 
-  * * * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  64 AND IBLOCK =   1 * * * * * * * * *
+  * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  64 AND SYMMETRY BLOCK =   1 * * * * * * *
 
     F  I =      2              3              4              5              6
     2       2.02060E+00    3.54234E-02    2.47723E-14    4.58732E-13    1.02250E-16
@@ -2803,9 +2803,9 @@
 
   SYMMETRY BLOCK =   2
 
-  JTOT =   64   IBLOCK =   2   ENERGY(   1) =   300.00000000     CM-1
+  JTOT =   64,  SYMMETRY BLOCK =   2,  ENERGY(   1) =   300.00000000     CM-1
 
-  * * * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  64 AND IBLOCK =   2 * * * * * * * * *
+  * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  64 AND SYMMETRY BLOCK =   2 * * * * * * *
 
     F  I =      1              2              3              4              5              6
     1       1.81678E-03    5.01307E-03    6.37893E-05    3.10380E-17    9.08336E-16    1.25994E-18
@@ -2826,9 +2826,9 @@
 
   SYMMETRY BLOCK =   1
 
-  JTOT =   65   IBLOCK =   1   ENERGY(   1) =   300.00000000     CM-1
+  JTOT =   65,  SYMMETRY BLOCK =   1,  ENERGY(   1) =   300.00000000     CM-1
 
-  * * * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  65 AND IBLOCK =   1 * * * * * * * * *
+  * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  65 AND SYMMETRY BLOCK =   1 * * * * * * *
 
     F  I =      2              3              4              5              6
     2       1.57966E+00    2.50137E-02    2.48371E-14    9.37361E-13    2.13423E-17
@@ -2843,9 +2843,9 @@
 
   SYMMETRY BLOCK =   2
 
-  JTOT =   65   IBLOCK =   2   ENERGY(   1) =   300.00000000     CM-1
+  JTOT =   65,  SYMMETRY BLOCK =   2,  ENERGY(   1) =   300.00000000     CM-1
 
-  * * * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  65 AND IBLOCK =   2 * * * * * * * * *
+  * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  65 AND SYMMETRY BLOCK =   2 * * * * * * *
 
     F  I =      1              2              3              4              5              6
     1       8.69127E-01    1.12787E-03    1.44401E-05    5.39344E-18    2.76003E-16    8.86781E-20
@@ -2866,9 +2866,9 @@
 
   SYMMETRY BLOCK =   1
 
-  JTOT =   66   IBLOCK =   1   ENERGY(   1) =   300.00000000     CM-1
+  JTOT =   66,  SYMMETRY BLOCK =   1,  ENERGY(   1) =   300.00000000     CM-1
 
-  * * * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  66 AND IBLOCK =   1 * * * * * * * * *
+  * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  66 AND SYMMETRY BLOCK =   1 * * * * * * *
 
     F  I =      2              3              4              5              6
     2       1.14457E+00    1.74500E-02    1.56490E-14    5.99186E-13    4.10140E-18
@@ -2883,9 +2883,9 @@
 
   SYMMETRY BLOCK =   2
 
-  JTOT =   66   IBLOCK =   2   ENERGY(   1) =   300.00000000     CM-1
+  JTOT =   66,  SYMMETRY BLOCK =   2,  ENERGY(   1) =   300.00000000     CM-1
 
-  * * * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  66 AND IBLOCK =   2 * * * * * * * * *
+  * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  66 AND SYMMETRY BLOCK =   2 * * * * * * *
 
     F  I =      1              2              3              4              5              6
     1       3.79687E+00    3.30822E-04    2.74176E-06    1.01490E-18    1.29373E-16    4.87698E-21
@@ -2906,9 +2906,9 @@
 
   SYMMETRY BLOCK =   1
 
-  JTOT =   67   IBLOCK =   1   ENERGY(   1) =   300.00000000     CM-1
+  JTOT =   67,  SYMMETRY BLOCK =   1,  ENERGY(   1) =   300.00000000     CM-1
 
-  * * * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  67 AND IBLOCK =   1 * * * * * * * * *
+  * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  67 AND SYMMETRY BLOCK =   1 * * * * * * *
 
     F  I =      2              3              4              5              6
     2       1.29371E+00    1.21860E-02    1.01046E-14    9.49902E-13    7.48649E-19
@@ -2923,9 +2923,9 @@
 
   SYMMETRY BLOCK =   2
 
-  JTOT =   67   IBLOCK =   2   ENERGY(   1) =   300.00000000     CM-1
+  JTOT =   67,  SYMMETRY BLOCK =   2,  ENERGY(   1) =   300.00000000     CM-1
 
-  * * * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  67 AND IBLOCK =   2 * * * * * * * * *
+  * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  67 AND SYMMETRY BLOCK =   2 * * * * * * *
 
     F  I =      1              2              3              4              5              6
     1       7.32529E+00    7.03962E-04    3.21295E-07    1.64344E-19    2.94534E-16    1.41366E-22
@@ -2946,9 +2946,9 @@
 
   SYMMETRY BLOCK =   1
 
-  JTOT =   68   IBLOCK =   1   ENERGY(   1) =   300.00000000     CM-1
+  JTOT =   68,  SYMMETRY BLOCK =   1,  ENERGY(   1) =   300.00000000     CM-1
 
-  * * * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  68 AND IBLOCK =   1 * * * * * * * * *
+  * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  68 AND SYMMETRY BLOCK =   1 * * * * * * *
 
     F  I =      2              3              4              5              6
     2       1.93774E+00    8.56868E-03    8.96561E-15    4.42800E-13    1.30793E-19
@@ -2963,9 +2963,9 @@
 
   SYMMETRY BLOCK =   2
 
-  JTOT =   68   IBLOCK =   2   ENERGY(   1) =   300.00000000     CM-1
+  JTOT =   68,  SYMMETRY BLOCK =   2,  ENERGY(   1) =   300.00000000     CM-1
 
-  * * * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  68 AND IBLOCK =   2 * * * * * * * * *
+  * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  68 AND SYMMETRY BLOCK =   2 * * * * * * *
 
     F  I =      1              2              3              4              5              6
     1       8.29984E+00    1.15694E-03    7.64691E-08    3.16497E-20    7.43374E-16    7.92058E-24
@@ -2986,9 +2986,9 @@
 
   SYMMETRY BLOCK =   1
 
-  JTOT =   69   IBLOCK =   1   ENERGY(   1) =   300.00000000     CM-1
+  JTOT =   69,  SYMMETRY BLOCK =   1,  ENERGY(   1) =   300.00000000     CM-1
 
-  * * * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  69 AND IBLOCK =   1 * * * * * * * * *
+  * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  69 AND SYMMETRY BLOCK =   1 * * * * * * *
 
     F  I =      2              3              4              5              6
     2       2.76469E+00    6.07961E-03    4.52377E-15    5.66910E-13    2.18157E-20
@@ -3003,9 +3003,9 @@
 
   SYMMETRY BLOCK =   2
 
-  JTOT =   69   IBLOCK =   2   ENERGY(   1) =   300.00000000     CM-1
+  JTOT =   69,  SYMMETRY BLOCK =   2,  ENERGY(   1) =   300.00000000     CM-1
 
-  * * * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  69 AND IBLOCK =   2 * * * * * * * * *
+  * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  69 AND SYMMETRY BLOCK =   2 * * * * * * *
 
     F  I =      1              2              3              4              5              6
     1       5.82731E+00    1.33095E-03    1.37732E-07    1.08575E-19    3.38698E-16    4.41475E-24
@@ -3026,9 +3026,9 @@
 
   SYMMETRY BLOCK =   1
 
-  JTOT =   70   IBLOCK =   1   ENERGY(   1) =   300.00000000     CM-1
+  JTOT =   70,  SYMMETRY BLOCK =   1,  ENERGY(   1) =   300.00000000     CM-1
 
-  * * * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  70 AND IBLOCK =   1 * * * * * * * * *
+  * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  70 AND SYMMETRY BLOCK =   1 * * * * * * *
 
     F  I =      2              3              4              5              6
     2       3.53865E+00    4.35387E-03    4.01953E-15    5.20487E-13    3.49686E-21
@@ -3043,9 +3043,9 @@
 
   SYMMETRY BLOCK =   2
 
-  JTOT =   70   IBLOCK =   2   ENERGY(   1) =   300.00000000     CM-1
+  JTOT =   70,  SYMMETRY BLOCK =   2,  ENERGY(   1) =   300.00000000     CM-1
 
-  * * * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  70 AND IBLOCK =   2 * * * * * * * * *
+  * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  70 AND SYMMETRY BLOCK =   2 * * * * * * *
 
     F  I =      1              2              3              4              5              6
     1       2.39586E+00    1.25515E-03    1.46460E-07    5.28669E-20    7.59329E-16    1.14183E-24
@@ -3066,9 +3066,9 @@
 
   SYMMETRY BLOCK =   1
 
-  JTOT =   71   IBLOCK =   1   ENERGY(   1) =   300.00000000     CM-1
+  JTOT =   71,  SYMMETRY BLOCK =   1,  ENERGY(   1) =   300.00000000     CM-1
 
-  * * * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  71 AND IBLOCK =   1 * * * * * * * * *
+  * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  71 AND SYMMETRY BLOCK =   1 * * * * * * *
 
     F  I =      2              3              4              5              6
     2       4.13695E+00    3.14611E-03    2.79244E-15    6.59388E-13    5.41141E-22
@@ -3083,9 +3083,9 @@
 
   SYMMETRY BLOCK =   2
 
-  JTOT =   71   IBLOCK =   2   ENERGY(   1) =   300.00000000     CM-1
+  JTOT =   71,  SYMMETRY BLOCK =   2,  ENERGY(   1) =   300.00000000     CM-1
 
-  * * * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  71 AND IBLOCK =   2 * * * * * * * * *
+  * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  71 AND SYMMETRY BLOCK =   2 * * * * * * *
 
     F  I =      1              2              3              4              5              6
     1       3.18889E-01    1.05524E-03    1.12770E-07    4.93851E-20    4.51146E-16    1.99903E-25
@@ -3106,9 +3106,9 @@
 
   SYMMETRY BLOCK =   1
 
-  JTOT =   72   IBLOCK =   1   ENERGY(   1) =   300.00000000     CM-1
+  JTOT =   72,  SYMMETRY BLOCK =   1,  ENERGY(   1) =   300.00000000     CM-1
 
-  * * * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  72 AND IBLOCK =   1 * * * * * * * * *
+  * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  72 AND SYMMETRY BLOCK =   1 * * * * * * *
 
     F  I =      2              3              4              5              6
     2       4.51989E+00    2.29249E-03    1.65154E-15    6.69141E-13    8.07395E-23
@@ -3123,9 +3123,9 @@
 
   SYMMETRY BLOCK =   2
 
-  JTOT =   72   IBLOCK =   2   ENERGY(   1) =   300.00000000     CM-1
+  JTOT =   72,  SYMMETRY BLOCK =   2,  ENERGY(   1) =   300.00000000     CM-1
 
-  * * * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  72 AND IBLOCK =   2 * * * * * * * * *
+  * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  72 AND SYMMETRY BLOCK =   2 * * * * * * *
 
     F  I =      1              2              3              4              5              6
     1       1.27304E-01    8.24723E-04    7.37291E-08    6.18363E-20    2.63634E-16    2.81930E-26
@@ -3146,9 +3146,9 @@
 
   SYMMETRY BLOCK =   1
 
-  JTOT =   73   IBLOCK =   1   ENERGY(   1) =   300.00000000     CM-1
+  JTOT =   73,  SYMMETRY BLOCK =   1,  ENERGY(   1) =   300.00000000     CM-1
 
-  * * * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  73 AND IBLOCK =   1 * * * * * * * * *
+  * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  73 AND SYMMETRY BLOCK =   1 * * * * * * *
 
     F  I =      2              3              4              5              6
     2       4.69843E+00    1.68336E-03    1.74656E-15    1.19917E-12    1.15959E-23
@@ -3163,9 +3163,9 @@
 
   SYMMETRY BLOCK =   2
 
-  JTOT =   73   IBLOCK =   2   ENERGY(   1) =   300.00000000     CM-1
+  JTOT =   73,  SYMMETRY BLOCK =   2,  ENERGY(   1) =   300.00000000     CM-1
 
-  * * * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  73 AND IBLOCK =   2 * * * * * * * * *
+  * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  73 AND SYMMETRY BLOCK =   2 * * * * * * *
 
     F  I =      1              2              3              4              5              6
     1       1.29635E+00    6.16235E-04    4.41425E-08    7.02579E-21    3.98191E-16    3.45482E-27
@@ -3186,9 +3186,9 @@
 
   SYMMETRY BLOCK =   1
 
-  JTOT =   74   IBLOCK =   1   ENERGY(   1) =   300.00000000     CM-1
+  JTOT =   74,  SYMMETRY BLOCK =   1,  ENERGY(   1) =   300.00000000     CM-1
 
-  * * * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  74 AND IBLOCK =   1 * * * * * * * * *
+  * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  74 AND SYMMETRY BLOCK =   1 * * * * * * *
 
     F  I =      2              3              4              5              6
     2       4.70877E+00    1.24474E-03    9.85311E-16    5.85776E-13    1.60621E-24
@@ -3203,9 +3203,9 @@
 
   SYMMETRY BLOCK =   2
 
-  JTOT =   74   IBLOCK =   2   ENERGY(   1) =   300.00000000     CM-1
+  JTOT =   74,  SYMMETRY BLOCK =   2,  ENERGY(   1) =   300.00000000     CM-1
 
-  * * * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  74 AND IBLOCK =   2 * * * * * * * * *
+  * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  74 AND SYMMETRY BLOCK =   2 * * * * * * *
 
     F  I =      1              2              3              4              5              6
     1       3.11647E+00    4.50204E-04    2.52800E-08    2.12476E-20    1.22475E-16    3.88537E-28
@@ -3226,9 +3226,9 @@
 
   SYMMETRY BLOCK =   1
 
-  JTOT =   75   IBLOCK =   1   ENERGY(   1) =   300.00000000     CM-1
+  JTOT =   75,  SYMMETRY BLOCK =   1,  ENERGY(   1) =   300.00000000     CM-1
 
-  * * * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  75 AND IBLOCK =   1 * * * * * * * * *
+  * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  75 AND SYMMETRY BLOCK =   1 * * * * * * *
 
     F  I =      2              3              4              5              6
     2       4.59412E+00    9.26133E-04    8.81951E-16    1.37607E-12    2.15056E-25
@@ -3243,9 +3243,9 @@
 
   SYMMETRY BLOCK =   2
 
-  JTOT =   75   IBLOCK =   2   ENERGY(   1) =   300.00000000     CM-1
+  JTOT =   75,  SYMMETRY BLOCK =   2,  ENERGY(   1) =   300.00000000     CM-1
 
-  * * * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  75 AND IBLOCK =   2 * * * * * * * * *
+  * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  75 AND SYMMETRY BLOCK =   2 * * * * * * *
 
     F  I =      1              2              3              4              5              6
     1       5.05875E+00    3.26612E-04    1.41905E-08    7.71613E-21    1.54435E-16    4.10890E-29
@@ -3266,9 +3266,9 @@
 
   SYMMETRY BLOCK =   1
 
-  JTOT =   76   IBLOCK =   1   ENERGY(   1) =   300.00000000     CM-1
+  JTOT =   76,  SYMMETRY BLOCK =   1,  ENERGY(   1) =   300.00000000     CM-1
 
-  * * * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  76 AND IBLOCK =   1 * * * * * * * * *
+  * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  76 AND SYMMETRY BLOCK =   1 * * * * * * *
 
     F  I =      2              3              4              5              6
     2       4.39443E+00    6.92965E-04    7.27478E-16    4.72274E-13    2.78534E-26
@@ -3283,9 +3283,9 @@
 
   SYMMETRY BLOCK =   2
 
-  JTOT =   76   IBLOCK =   2   ENERGY(   1) =   300.00000000     CM-1
+  JTOT =   76,  SYMMETRY BLOCK =   2,  ENERGY(   1) =   300.00000000     CM-1
 
-  * * * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  76 AND IBLOCK =   2 * * * * * * * * *
+  * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  76 AND SYMMETRY BLOCK =   2 * * * * * * *
 
     F  I =      1              2              3              4              5              6
     1       6.80563E+00    2.37262E-04    7.91147E-09    2.49776E-21    1.34024E-16    4.13320E-30
@@ -3306,9 +3306,9 @@
 
   SYMMETRY BLOCK =   1
 
-  JTOT =   77   IBLOCK =   1   ENERGY(   1) =   300.00000000     CM-1
+  JTOT =   77,  SYMMETRY BLOCK =   1,  ENERGY(   1) =   300.00000000     CM-1
 
-  * * * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  77 AND IBLOCK =   1 * * * * * * * * *
+  * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  77 AND SYMMETRY BLOCK =   1 * * * * * * *
 
     F  I =      2              3              4              5              6
     2       4.14221E+00    5.21062E-04    4.55329E-16    1.03147E-12    3.48854E-27
@@ -3323,9 +3323,9 @@
 
   SYMMETRY BLOCK =   2
 
-  JTOT =   77   IBLOCK =   2   ENERGY(   1) =   300.00000000     CM-1
+  JTOT =   77,  SYMMETRY BLOCK =   2,  ENERGY(   1) =   300.00000000     CM-1
 
-  * * * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  77 AND IBLOCK =   2 * * * * * * * * *
+  * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  77 AND SYMMETRY BLOCK =   2 * * * * * * *
 
     F  I =      1              2              3              4              5              6
     1       8.19247E+00    1.73066E-04    4.40302E-09    4.49992E-21    4.02622E-17    3.99414E-31
@@ -3346,9 +3346,9 @@
 
   SYMMETRY BLOCK =   1
 
-  JTOT =   78   IBLOCK =   1   ENERGY(   1) =   300.00000000     CM-1
+  JTOT =   78,  SYMMETRY BLOCK =   1,  ENERGY(   1) =   300.00000000     CM-1
 
-  * * * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  78 AND IBLOCK =   1 * * * * * * * * *
+  * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  78 AND SYMMETRY BLOCK =   1 * * * * * * *
 
     F  I =      2              3              4              5              6
     2       3.86203E+00    3.93573E-04    4.08013E-16    4.51551E-13    4.22297E-28
@@ -3363,9 +3363,9 @@
 
   SYMMETRY BLOCK =   2
 
-  JTOT =   78   IBLOCK =   2   ENERGY(   1) =   300.00000000     CM-1
+  JTOT =   78,  SYMMETRY BLOCK =   2,  ENERGY(   1) =   300.00000000     CM-1
 
-  * * * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  78 AND IBLOCK =   2 * * * * * * * * *
+  * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  78 AND SYMMETRY BLOCK =   2 * * * * * * *
 
     F  I =      1              2              3              4              5              6
     1       9.16093E+00    1.26739E-04    2.45014E-09    6.49474E-22    7.50036E-17    3.71321E-32
@@ -3386,9 +3386,9 @@
 
   SYMMETRY BLOCK =   1
 
-  JTOT =   79   IBLOCK =   1   ENERGY(   1) =   300.00000000     CM-1
+  JTOT =   79,  SYMMETRY BLOCK =   1,  ENERGY(   1) =   300.00000000     CM-1
 
-  * * * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  79 AND IBLOCK =   1 * * * * * * * * *
+  * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  79 AND SYMMETRY BLOCK =   1 * * * * * * *
 
     F  I =      2              3              4              5              6
     2       3.57140E+00    2.98464E-04    3.01594E-16    6.98379E-13    4.93738E-29
@@ -3403,9 +3403,9 @@
 
   SYMMETRY BLOCK =   2
 
-  JTOT =   79   IBLOCK =   2   ENERGY(   1) =   300.00000000     CM-1
+  JTOT =   79,  SYMMETRY BLOCK =   2,  ENERGY(   1) =   300.00000000     CM-1
 
-  * * * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  79 AND IBLOCK =   2 * * * * * * * * *
+  * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  79 AND SYMMETRY BLOCK =   2 * * * * * * *
 
     F  I =      1              2              3              4              5              6
     1       9.72485E+00    9.31063E-05    1.36360E-09    9.20118E-22    4.15474E-17    3.31720E-33
@@ -3426,9 +3426,9 @@
 
   SYMMETRY BLOCK =   1
 
-  JTOT =   80   IBLOCK =   1   ENERGY(   1) =   300.00000000     CM-1
+  JTOT =   80,  SYMMETRY BLOCK =   1,  ENERGY(   1) =   300.00000000     CM-1
 
-  * * * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  80 AND IBLOCK =   1 * * * * * * * * *
+  * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  80 AND SYMMETRY BLOCK =   1 * * * * * * *
 
     F  I =      2              3              4              5              6
     2       3.28246E+00    2.27160E-04    1.85843E-16    5.73419E-13    5.58420E-30
@@ -3443,9 +3443,9 @@
 
   SYMMETRY BLOCK =   2
 
-  JTOT =   80   IBLOCK =   2   ENERGY(   1) =   300.00000000     CM-1
+  JTOT =   80,  SYMMETRY BLOCK =   2,  ENERGY(   1) =   300.00000000     CM-1
 
-  * * * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  80 AND IBLOCK =   2 * * * * * * * * *
+  * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  80 AND SYMMETRY BLOCK =   2 * * * * * * *
 
     F  I =      1              2              3              4              5              6
     1       9.94094E+00    6.85540E-05    7.59257E-10    7.26678E-22    1.89151E-17    2.85154E-34
@@ -3466,9 +3466,9 @@
 
   SYMMETRY BLOCK =   1
 
-  JTOT =   81   IBLOCK =   1   ENERGY(   1) =   300.00000000     CM-1
+  JTOT =   81,  SYMMETRY BLOCK =   1,  ENERGY(   1) =   300.00000000     CM-1
 
-  * * * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  81 AND IBLOCK =   1 * * * * * * * * *
+  * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  81 AND SYMMETRY BLOCK =   1 * * * * * * *
 
     F  I =      2              3              4              5              6
     2       3.00301E+00    1.73468E-04    1.73382E-16    5.65255E-13    6.14631E-31
@@ -3483,9 +3483,9 @@
 
   SYMMETRY BLOCK =   2
 
-  JTOT =   81   IBLOCK =   2   ENERGY(   1) =   300.00000000     CM-1
+  JTOT =   81,  SYMMETRY BLOCK =   2,  ENERGY(   1) =   300.00000000     CM-1
 
-  * * * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  81 AND IBLOCK =   2 * * * * * * * * *
+  * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  81 AND SYMMETRY BLOCK =   2 * * * * * * *
 
     F  I =      1              2              3              4              5              6
     1       9.88281E+00    5.05776E-05    4.23101E-10    7.11093E-23    3.24401E-17    2.36695E-35
@@ -3506,9 +3506,9 @@
 
   SYMMETRY BLOCK =   1
 
-  JTOT =   82   IBLOCK =   1   ENERGY(   1) =   300.00000000     CM-1
+  JTOT =   82,  SYMMETRY BLOCK =   1,  ENERGY(   1) =   300.00000000     CM-1
 
-  * * * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  82 AND IBLOCK =   1 * * * * * * * * *
+  * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  82 AND SYMMETRY BLOCK =   1 * * * * * * *
 
     F  I =      2              3              4              5              6
     2       2.73801E+00    1.32854E-04    1.17318E-16    1.07173E-12    6.53349E-32
@@ -3523,9 +3523,9 @@
 
   SYMMETRY BLOCK =   2
 
-  JTOT =   82   IBLOCK =   2   ENERGY(   1) =   300.00000000     CM-1
+  JTOT =   82,  SYMMETRY BLOCK =   2,  ENERGY(   1) =   300.00000000     CM-1
 
-  * * * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  82 AND IBLOCK =   2 * * * * * * * * *
+  * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  82 AND SYMMETRY BLOCK =   2 * * * * * * *
 
     F  I =      1              2              3              4              5              6
     1       9.62338E+00    3.73765E-05    2.36068E-10    2.47736E-22    1.30577E-17    1.90462E-36
@@ -3546,9 +3546,9 @@
 
   SYMMETRY BLOCK =   1
 
-  JTOT =   83   IBLOCK =   1   ENERGY(   1) =   300.00000000     CM-1
+  JTOT =   83,  SYMMETRY BLOCK =   1,  ENERGY(   1) =   300.00000000     CM-1
 
-  * * * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  83 AND IBLOCK =   1 * * * * * * * * *
+  * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  83 AND SYMMETRY BLOCK =   1 * * * * * * *
 
     F  I =      2              3              4              5              6
     2       2.49011E+00    1.02038E-04    7.50406E-17    5.91669E-13    6.72454E-33
@@ -3563,9 +3563,9 @@
 
   SYMMETRY BLOCK =   2
 
-  JTOT =   83   IBLOCK =   2   ENERGY(   1) =   300.00000000     CM-1
+  JTOT =   83,  SYMMETRY BLOCK =   2,  ENERGY(   1) =   300.00000000     CM-1
 
-  * * * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  83 AND IBLOCK =   2 * * * * * * * * *
+  * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  83 AND SYMMETRY BLOCK =   2 * * * * * * *
 
     F  I =      1              2              3              4              5              6
     1       9.22588E+00    2.76701E-05    1.31941E-10    1.01617E-22    9.60203E-18    1.47819E-37
@@ -3586,9 +3586,9 @@
 
   SYMMETRY BLOCK =   1
 
-  JTOT =   84   IBLOCK =   1   ENERGY(   1) =   300.00000000     CM-1
+  JTOT =   84,  SYMMETRY BLOCK =   1,  ENERGY(   1) =   300.00000000     CM-1
 
-  * * * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  84 AND IBLOCK =   1 * * * * * * * * *
+  * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  84 AND SYMMETRY BLOCK =   1 * * * * * * *
 
     F  I =      2              3              4              5              6
     2       2.26059E+00    7.85606E-05    8.24389E-17    1.32263E-12    6.74014E-34
@@ -3603,9 +3603,9 @@
 
   SYMMETRY BLOCK =   2
 
-  JTOT =   84   IBLOCK =   2   ENERGY(   1) =   300.00000000     CM-1
+  JTOT =   84,  SYMMETRY BLOCK =   2,  ENERGY(   1) =   300.00000000     CM-1
 
-  * * * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  84 AND IBLOCK =   2 * * * * * * * * *
+  * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  84 AND SYMMETRY BLOCK =   2 * * * * * * *
 
     F  I =      1              2              3              4              5              6
     1       8.74088E+00    2.05169E-05    7.38804E-11    1.98675E-23    1.32674E-17    1.11282E-38
@@ -3626,9 +3626,9 @@
 
   SYMMETRY BLOCK =   1
 
-  JTOT =   85   IBLOCK =   1   ENERGY(   1) =   300.00000000     CM-1
+  JTOT =   85,  SYMMETRY BLOCK =   1,  ENERGY(   1) =   300.00000000     CM-1
 
-  * * * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  85 AND IBLOCK =   1 * * * * * * * * *
+  * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  85 AND SYMMETRY BLOCK =   1 * * * * * * *
 
     F  I =      2              3              4              5              6
     2       2.04968E+00    6.06276E-05    4.84914E-17    8.55861E-13    6.52772E-35
@@ -3643,9 +3643,9 @@
 
   SYMMETRY BLOCK =   2
 
-  JTOT =   85   IBLOCK =   2   ENERGY(   1) =   300.00000000     CM-1
+  JTOT =   85,  SYMMETRY BLOCK =   2,  ENERGY(   1) =   300.00000000     CM-1
 
-  * * * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  85 AND IBLOCK =   2 * * * * * * * * *
+  * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  85 AND SYMMETRY BLOCK =   2 * * * * * * *
 
     F  I =      1              2              3              4              5              6
     1       8.20693E+00    1.52386E-05    4.14670E-11    5.66318E-23    4.42917E-18    8.11725E-40
@@ -3666,9 +3666,9 @@
 
   SYMMETRY BLOCK =   1
 
-  JTOT =   86   IBLOCK =   1   ENERGY(   1) =   300.00000000     CM-1
+  JTOT =   86,  SYMMETRY BLOCK =   1,  ENERGY(   1) =   300.00000000     CM-1
 
-  * * * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  86 AND IBLOCK =   1 * * * * * * * * *
+  * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  86 AND SYMMETRY BLOCK =   1 * * * * * * *
 
     F  I =      2              3              4              5              6
     2       1.85692E+00    4.68896E-05    4.41405E-17    1.18717E-12    6.15811E-36
@@ -3683,9 +3683,9 @@
 
   SYMMETRY BLOCK =   2
 
-  JTOT =   86   IBLOCK =   2   ENERGY(   1) =   300.00000000     CM-1
+  JTOT =   86,  SYMMETRY BLOCK =   2,  ENERGY(   1) =   300.00000000     CM-1
 
-  * * * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  86 AND IBLOCK =   2 * * * * * * * * *
+  * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  86 AND SYMMETRY BLOCK =   2 * * * * * * *
 
     F  I =      1              2              3              4              5              6
     1       7.65232E+00    1.13364E-05    2.33236E-11    1.37218E-23    4.64541E-18    5.74598E-41
@@ -3706,9 +3706,9 @@
 
   SYMMETRY BLOCK =   1
 
-  JTOT =   87   IBLOCK =   1   ENERGY(   1) =   300.00000000     CM-1
+  JTOT =   87,  SYMMETRY BLOCK =   1,  ENERGY(   1) =   300.00000000     CM-1
 
-  * * * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  87 AND IBLOCK =   1 * * * * * * * * *
+  * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  87 AND SYMMETRY BLOCK =   1 * * * * * * *
 
     F  I =      2              3              4              5              6
     2       1.68156E+00    3.63325E-05    4.24081E-17    1.06844E-12    5.63265E-37
@@ -3723,9 +3723,9 @@
 
   SYMMETRY BLOCK =   2
 
-  JTOT =   87   IBLOCK =   2   ENERGY(   1) =   300.00000000     CM-1
+  JTOT =   87,  SYMMETRY BLOCK =   2,  ENERGY(   1) =   300.00000000     CM-1
 
-  * * * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  87 AND IBLOCK =   2 * * * * * * * * *
+  * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  87 AND SYMMETRY BLOCK =   2 * * * * * * *
 
     F  I =      1              2              3              4              5              6
     1       7.09703E+00    8.44590E-06    1.31526E-11    6.74206E-24    5.34393E-18    3.95228E-42
@@ -3746,9 +3746,9 @@
 
   SYMMETRY BLOCK =   1
 
-  JTOT =   88   IBLOCK =   1   ENERGY(   1) =   300.00000000     CM-1
+  JTOT =   88,  SYMMETRY BLOCK =   1,  ENERGY(   1) =   300.00000000     CM-1
 
-  * * * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  88 AND IBLOCK =   1 * * * * * * * * *
+  * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  88 AND SYMMETRY BLOCK =   1 * * * * * * *
 
     F  I =      2              3              4              5              6
     2       1.52244E+00    2.82086E-05    2.74437E-17    7.34173E-13    5.00714E-38
@@ -3763,9 +3763,9 @@
 
   SYMMETRY BLOCK =   2
 
-  JTOT =   88   IBLOCK =   2   ENERGY(   1) =   300.00000000     CM-1
+  JTOT =   88,  SYMMETRY BLOCK =   2,  ENERGY(   1) =   300.00000000     CM-1
 
-  * * * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  88 AND IBLOCK =   2 * * * * * * * * *
+  * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  88 AND SYMMETRY BLOCK =   2 * * * * * * *
 
     F  I =      1              2              3              4              5              6
     1       6.55501E+00    6.30292E-06    7.43370E-12    1.22607E-23    1.66066E-18    2.63709E-43
@@ -3871,7 +3871,7 @@
  |                                                                            |
  |                               Version 2019.0 (beta)                        |
  |                                                                            |
- |                    This run used      88.50 cpu secs and                   |
+ |                    This run used      83.44 cpu secs and                   |
  |              22338 of the allocated   1000000 words of storage             |
  |                                                                            |
   ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---

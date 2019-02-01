@@ -866,7 +866,7 @@ C
 
             NNODES=MIN(NODHI-NODLO,MXNODE)
             IF (NODHI.EQ.NODLO) THEN
-              IF (IPRINT.GE.3 .AND..NOT.NOBIS)
+              IF (IPRINT.GE.3)
      1          WRITE(6,2410)
  2410         FORMAT(/'  NO NODES BETWEEN EMIN AND EMAX.'/
      1               '  CONVERGENCE WILL BE SKIPPED FOR THIS JTOT AND ',

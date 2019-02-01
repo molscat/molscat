@@ -15,7 +15,7 @@
  &BASIS
     ITYPE  =  9,
     ROTI   = 16.343D0, -0.055D0, 0.92D0, ! B, GAMMA, LAMBDA
-    JMIN   =  0, JMAX   = 2, JSTEP  = 1,
+    JMIN   =  0, JMAX   = 2,
  /
 
  &BASIS9

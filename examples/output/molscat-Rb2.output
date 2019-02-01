@@ -7,7 +7,7 @@
  |                                                                            |
  |                               Version 2019.0 (beta)                        |
  |                                                                            |
- |                       Run on 01 Feb 2019   at 00:04:35                     |
+ |                       Run on 01 Feb 2019   at 10:34:03                     |
  |                                                                            |
   ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
 
@@ -270,59 +270,59 @@
   *******************************************  ANGULAR MOMENTUM JTOT  =   8  *******************************************
 
   SYMMETRY BLOCK =   2
-  IBLOCK =  2 SELECTS PARITY  1
+  SYMMETRY BLOCK =  2 SELECTS PARITY  1
   MTOT =  8/2
   BASIS SET GENERATED FOR TWO IDENTICAL BOSONS
 
-  JTOT =    8   IBLOCK =   2   ENERGY(   1) =  6.95034570000E-10 CM-1 =   1.00000000000E-09 K
+  JTOT =    8,  SYMMETRY BLOCK =   2,  ENERGY(   1) =  6.95034570000E-10 CM-1 =   1.00000000000E-09 K
 
   EFV SET     1:  MAGNETIC Z FIELD =   171.4600000     GAUSS
 
   ------------------------------- 85Rb-85Rb elastic pole characterisation in aa channel --------------------------------
 
-  JTOT =    8   IBLOCK =   2   ENERGY(   1) =  6.95034570000E-10 CM-1 =   1.00000000000E-09 K
+  JTOT =    8,  SYMMETRY BLOCK =   2,  ENERGY(   1) =  6.95034570000E-10 CM-1 =   1.00000000000E-09 K
 
   EFV SET     2:  MAGNETIC Z FIELD =   171.8600000     GAUSS
 
   ------------------------------- 85Rb-85Rb elastic pole characterisation in aa channel --------------------------------
 
-  JTOT =    8   IBLOCK =   2   ENERGY(   1) =  6.95034570000E-10 CM-1 =   1.00000000000E-09 K
+  JTOT =    8,  SYMMETRY BLOCK =   2,  ENERGY(   1) =  6.95034570000E-10 CM-1 =   1.00000000000E-09 K
 
   EFV SET     3:  MAGNETIC Z FIELD =   171.6600000     GAUSS
 
   ------------------------------- 85Rb-85Rb elastic pole characterisation in aa channel --------------------------------
 
-  JTOT =    8   IBLOCK =   2   ENERGY(   1) =  6.95034570000E-10 CM-1 =   1.00000000000E-09 K
+  JTOT =    8,  SYMMETRY BLOCK =   2,  ENERGY(   1) =  6.95034570000E-10 CM-1 =   1.00000000000E-09 K
 
   EFV SET     4:  MAGNETIC Z FIELD =   171.5942193     GAUSS
 
   ------------------------------- 85Rb-85Rb elastic pole characterisation in aa channel --------------------------------
 
-  JTOT =    8   IBLOCK =   2   ENERGY(   1) =  6.95034570000E-10 CM-1 =   1.00000000000E-09 K
+  JTOT =    8,  SYMMETRY BLOCK =   2,  ENERGY(   1) =  6.95034570000E-10 CM-1 =   1.00000000000E-09 K
 
   EFV SET     5:  MAGNETIC Z FIELD =   171.5642995     GAUSS
 
   ------------------------------- 85Rb-85Rb elastic pole characterisation in aa channel --------------------------------
 
-  JTOT =    8   IBLOCK =   2   ENERGY(   1) =  6.95034570000E-10 CM-1 =   1.00000000000E-09 K
+  JTOT =    8,  SYMMETRY BLOCK =   2,  ENERGY(   1) =  6.95034570000E-10 CM-1 =   1.00000000000E-09 K
 
   EFV SET     6:  MAGNETIC Z FIELD =   171.5603368     GAUSS
 
   ------------------------------- 85Rb-85Rb elastic pole characterisation in aa channel --------------------------------
 
-  JTOT =    8   IBLOCK =   2   ENERGY(   1) =  6.95034570000E-10 CM-1 =   1.00000000000E-09 K
+  JTOT =    8,  SYMMETRY BLOCK =   2,  ENERGY(   1) =  6.95034570000E-10 CM-1 =   1.00000000000E-09 K
 
   EFV SET     7:  MAGNETIC Z FIELD =   171.5604821     GAUSS
 
   ------------------------------- 85Rb-85Rb elastic pole characterisation in aa channel --------------------------------
 
-  JTOT =    8   IBLOCK =   2   ENERGY(   1) =  6.95034570000E-10 CM-1 =   1.00000000000E-09 K
+  JTOT =    8,  SYMMETRY BLOCK =   2,  ENERGY(   1) =  6.95034570000E-10 CM-1 =   1.00000000000E-09 K
 
   EFV SET     8:  MAGNETIC Z FIELD =   171.5604855     GAUSS
 
   ------------------------------- 85Rb-85Rb elastic pole characterisation in aa channel --------------------------------
 
-  JTOT =    8   IBLOCK =   2   ENERGY(   1) =  6.95034570000E-10 CM-1 =   1.00000000000E-09 K
+  JTOT =    8,  SYMMETRY BLOCK =   2,  ENERGY(   1) =  6.95034570000E-10 CM-1 =   1.00000000000E-09 K
 
   EFV SET     9:  MAGNETIC Z FIELD =   171.5604461     GAUSS
 
@@ -340,7 +340,7 @@
  |                                                                            |
  |                               Version 2019.0 (beta)                        |
  |                                                                            |
- |                    This run used      13.90 cpu secs and                   |
+ |                    This run used      12.97 cpu secs and                   |
  |               6817 of the allocated   1000000 words of storage             |
  |                                                                            |
   ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
@@ -353,7 +353,7 @@
  |                                                                            |
  |                               Version 2019.0 (beta)                        |
  |                                                                            |
- |                       Run on 01 Feb 2019   at 00:04:49                     |
+ |                       Run on 01 Feb 2019   at 10:34:16                     |
  |                                                                            |
   ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
 
@@ -617,11 +617,11 @@
   *******************************************  ANGULAR MOMENTUM JTOT  =  -8  *******************************************
 
   SYMMETRY BLOCK =   2
-  IBLOCK =  2 SELECTS PARITY  1
+  SYMMETRY BLOCK =  2 SELECTS PARITY  1
   MTOT = -8/2
   BASIS SET GENERATED FOR TWO IDENTICAL BOSONS
 
-  JTOT =   -8   IBLOCK =   2   ENERGY(   1) =  6.95034570000E-10 CM-1 =   1.00000000000E-09 K
+  JTOT =   -8,  SYMMETRY BLOCK =   2,  ENERGY(   1) =  6.95034570000E-10 CM-1 =   1.00000000000E-09 K
 
   EFV SET     1:  MAGNETIC Z FIELD =   214.9800000     GAUSS
 
@@ -630,7 +630,7 @@
 
   ------------------------- 85Rb-85Rb weakly decayed resonance characterisation in ee channel --------------------------
 
-  JTOT =   -8   IBLOCK =   2   ENERGY(   1) =  6.95034570000E-10 CM-1 =   1.00000000000E-09 K
+  JTOT =   -8,  SYMMETRY BLOCK =   2,  ENERGY(   1) =  6.95034570000E-10 CM-1 =   1.00000000000E-09 K
 
   EFV SET     2:  MAGNETIC Z FIELD =   215.3800000     GAUSS
 
@@ -638,7 +638,7 @@
 
   ------------------------- 85Rb-85Rb weakly decayed resonance characterisation in ee channel --------------------------
 
-  JTOT =   -8   IBLOCK =   2   ENERGY(   1) =  6.95034570000E-10 CM-1 =   1.00000000000E-09 K
+  JTOT =   -8,  SYMMETRY BLOCK =   2,  ENERGY(   1) =  6.95034570000E-10 CM-1 =   1.00000000000E-09 K
 
   EFV SET     3:  MAGNETIC Z FIELD =   215.1800000     GAUSS
 
@@ -654,7 +654,7 @@
 
   ------------------------- 85Rb-85Rb weakly decayed resonance characterisation in ee channel --------------------------
 
-  JTOT =   -8   IBLOCK =   2   ENERGY(   1) =  6.95034570000E-10 CM-1 =   1.00000000000E-09 K
+  JTOT =   -8,  SYMMETRY BLOCK =   2,  ENERGY(   1) =  6.95034570000E-10 CM-1 =   1.00000000000E-09 K
 
   EFV SET     4:  MAGNETIC Z FIELD =   215.0876577     GAUSS
 
@@ -670,7 +670,7 @@
 
   ------------------------- 85Rb-85Rb weakly decayed resonance characterisation in ee channel --------------------------
 
-  JTOT =   -8   IBLOCK =   2   ENERGY(   1) =  6.95034570000E-10 CM-1 =   1.00000000000E-09 K
+  JTOT =   -8,  SYMMETRY BLOCK =   2,  ENERGY(   1) =  6.95034570000E-10 CM-1 =   1.00000000000E-09 K
 
   EFV SET     5:  MAGNETIC Z FIELD =   215.0852770     GAUSS
 
@@ -686,7 +686,7 @@
 
   ------------------------- 85Rb-85Rb weakly decayed resonance characterisation in ee channel --------------------------
 
-  JTOT =   -8   IBLOCK =   2   ENERGY(   1) =  6.95034570000E-10 CM-1 =   1.00000000000E-09 K
+  JTOT =   -8,  SYMMETRY BLOCK =   2,  ENERGY(   1) =  6.95034570000E-10 CM-1 =   1.00000000000E-09 K
 
   EFV SET     6:  MAGNETIC Z FIELD =   215.0769513     GAUSS
 
@@ -702,7 +702,7 @@
 
   ------------------------- 85Rb-85Rb weakly decayed resonance characterisation in ee channel --------------------------
 
-  JTOT =   -8   IBLOCK =   2   ENERGY(   1) =  6.95034570000E-10 CM-1 =   1.00000000000E-09 K
+  JTOT =   -8,  SYMMETRY BLOCK =   2,  ENERGY(   1) =  6.95034570000E-10 CM-1 =   1.00000000000E-09 K
 
   EFV SET     7:  MAGNETIC Z FIELD =   215.0860884     GAUSS
 
@@ -718,7 +718,7 @@
 
   ------------------------- 85Rb-85Rb weakly decayed resonance characterisation in ee channel --------------------------
 
-  JTOT =   -8   IBLOCK =   2   ENERGY(   1) =  6.95034570000E-10 CM-1 =   1.00000000000E-09 K
+  JTOT =   -8,  SYMMETRY BLOCK =   2,  ENERGY(   1) =  6.95034570000E-10 CM-1 =   1.00000000000E-09 K
 
   EFV SET     8:  MAGNETIC Z FIELD =   215.0852575     GAUSS
 
@@ -746,7 +746,7 @@
  |                                                                            |
  |                               Version 2019.0 (beta)                        |
  |                                                                            |
- |                    This run used      11.93 cpu secs and                   |
+ |                    This run used      10.61 cpu secs and                   |
  |               6817 of the allocated   1000000 words of storage             |
  |                                                                            |
   ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
@@ -759,7 +759,7 @@
  |                                                                            |
  |                               Version 2019.0 (beta)                        |
  |                                                                            |
- |                       Run on 01 Feb 2019   at 00:05:01                     |
+ |                       Run on 01 Feb 2019   at 10:34:27                     |
  |                                                                            |
   ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
 
@@ -1023,11 +1023,11 @@
   *******************************************  ANGULAR MOMENTUM JTOT  =  -8  *******************************************
 
   SYMMETRY BLOCK =   2
-  IBLOCK =  2 SELECTS PARITY  1
+  SYMMETRY BLOCK =  2 SELECTS PARITY  1
   MTOT = -8/2
   BASIS SET GENERATED FOR TWO IDENTICAL BOSONS
 
-  JTOT =   -8   IBLOCK =   2   ENERGY(   1) =  6.95034570000E-10 CM-1 =   1.00000000000E-09 K
+  JTOT =   -8,  SYMMETRY BLOCK =   2,  ENERGY(   1) =  6.95034570000E-10 CM-1 =   1.00000000000E-09 K
 
   EFV SET     1:  MAGNETIC Z FIELD =   603.8700000     GAUSS
 
@@ -1036,7 +1036,7 @@
 
   ------------------------------ 85Rb-85Rb quite strongly decayed resonance in ee channel ------------------------------
 
-  JTOT =   -8   IBLOCK =   2   ENERGY(   1) =  6.95034570000E-10 CM-1 =   1.00000000000E-09 K
+  JTOT =   -8,  SYMMETRY BLOCK =   2,  ENERGY(   1) =  6.95034570000E-10 CM-1 =   1.00000000000E-09 K
 
   EFV SET     2:  MAGNETIC Z FIELD =   604.2700000     GAUSS
 
@@ -1044,7 +1044,7 @@
 
   ------------------------------ 85Rb-85Rb quite strongly decayed resonance in ee channel ------------------------------
 
-  JTOT =   -8   IBLOCK =   2   ENERGY(   1) =  6.95034570000E-10 CM-1 =   1.00000000000E-09 K
+  JTOT =   -8,  SYMMETRY BLOCK =   2,  ENERGY(   1) =  6.95034570000E-10 CM-1 =   1.00000000000E-09 K
 
   EFV SET     3:  MAGNETIC Z FIELD =   604.0700000     GAUSS
 
@@ -1060,7 +1060,7 @@
 
   ------------------------------ 85Rb-85Rb quite strongly decayed resonance in ee channel ------------------------------
 
-  JTOT =   -8   IBLOCK =   2   ENERGY(   1) =  6.95034570000E-10 CM-1 =   1.00000000000E-09 K
+  JTOT =   -8,  SYMMETRY BLOCK =   2,  ENERGY(   1) =  6.95034570000E-10 CM-1 =   1.00000000000E-09 K
 
   EFV SET     4:  MAGNETIC Z FIELD =   603.9874068     GAUSS
 
@@ -1076,7 +1076,7 @@
 
   ------------------------------ 85Rb-85Rb quite strongly decayed resonance in ee channel ------------------------------
 
-  JTOT =   -8   IBLOCK =   2   ENERGY(   1) =  6.95034570000E-10 CM-1 =   1.00000000000E-09 K
+  JTOT =   -8,  SYMMETRY BLOCK =   2,  ENERGY(   1) =  6.95034570000E-10 CM-1 =   1.00000000000E-09 K
 
   EFV SET     5:  MAGNETIC Z FIELD =   603.9777075     GAUSS
 
@@ -1092,7 +1092,7 @@
 
   ------------------------------ 85Rb-85Rb quite strongly decayed resonance in ee channel ------------------------------
 
-  JTOT =   -8   IBLOCK =   2   ENERGY(   1) =  6.95034570000E-10 CM-1 =   1.00000000000E-09 K
+  JTOT =   -8,  SYMMETRY BLOCK =   2,  ENERGY(   1) =  6.95034570000E-10 CM-1 =   1.00000000000E-09 K
 
   EFV SET     6:  MAGNETIC Z FIELD =   603.9773606     GAUSS
 
@@ -1108,7 +1108,7 @@
 
   ------------------------------ 85Rb-85Rb quite strongly decayed resonance in ee channel ------------------------------
 
-  JTOT =   -8   IBLOCK =   2   ENERGY(   1) =  6.95034570000E-10 CM-1 =   1.00000000000E-09 K
+  JTOT =   -8,  SYMMETRY BLOCK =   2,  ENERGY(   1) =  6.95034570000E-10 CM-1 =   1.00000000000E-09 K
 
   EFV SET     7:  MAGNETIC Z FIELD =   603.9773336     GAUSS
 
@@ -1124,7 +1124,7 @@
 
   ------------------------------ 85Rb-85Rb quite strongly decayed resonance in ee channel ------------------------------
 
-  JTOT =   -8   IBLOCK =   2   ENERGY(   1) =  6.95034570000E-10 CM-1 =   1.00000000000E-09 K
+  JTOT =   -8,  SYMMETRY BLOCK =   2,  ENERGY(   1) =  6.95034570000E-10 CM-1 =   1.00000000000E-09 K
 
   EFV SET     8:  MAGNETIC Z FIELD =   603.9773617     GAUSS
 
@@ -1152,7 +1152,7 @@
  |                                                                            |
  |                               Version 2019.0 (beta)                        |
  |                                                                            |
- |                    This run used      13.82 cpu secs and                   |
+ |                    This run used      12.08 cpu secs and                   |
  |               6817 of the allocated   1000000 words of storage             |
  |                                                                            |
   ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
@@ -1165,7 +1165,7 @@
  |                                                                            |
  |                               Version 2019.0 (beta)                        |
  |                                                                            |
- |                       Run on 01 Feb 2019   at 00:05:15                     |
+ |                       Run on 01 Feb 2019   at 10:34:39                     |
  |                                                                            |
   ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
 
@@ -1429,11 +1429,11 @@
   *******************************************  ANGULAR MOMENTUM JTOT  =   8  *******************************************
 
   SYMMETRY BLOCK =   2
-  IBLOCK =  2 SELECTS PARITY  1
+  SYMMETRY BLOCK =  2 SELECTS PARITY  1
   MTOT =  8/2
   BASIS SET GENERATED FOR TWO IDENTICAL BOSONS
 
-  JTOT =    8   IBLOCK =   2   ENERGY(   1) =  6.95034570000E-10 CM-1 =   1.00000000000E-09 K
+  JTOT =    8,  SYMMETRY BLOCK =   2,  ENERGY(   1) =  6.95034570000E-10 CM-1 =   1.00000000000E-09 K
 
   EFV SET     1:  MAGNETIC Z FIELD =   171.7400000     GAUSS
 
@@ -1442,7 +1442,7 @@
 
   ------------------------ 85Rb-85Rb strongly decayed resonance characterisation in kk channel -------------------------
 
-  JTOT =    8   IBLOCK =   2   ENERGY(   1) =  6.95034570000E-10 CM-1 =   1.00000000000E-09 K
+  JTOT =    8,  SYMMETRY BLOCK =   2,  ENERGY(   1) =  6.95034570000E-10 CM-1 =   1.00000000000E-09 K
 
   EFV SET     2:  MAGNETIC Z FIELD =   172.1400000     GAUSS
 
@@ -1450,7 +1450,7 @@
 
   ------------------------ 85Rb-85Rb strongly decayed resonance characterisation in kk channel -------------------------
 
-  JTOT =    8   IBLOCK =   2   ENERGY(   1) =  6.95034570000E-10 CM-1 =   1.00000000000E-09 K
+  JTOT =    8,  SYMMETRY BLOCK =   2,  ENERGY(   1) =  6.95034570000E-10 CM-1 =   1.00000000000E-09 K
 
   EFV SET     3:  MAGNETIC Z FIELD =   171.9400000     GAUSS
 
@@ -1466,7 +1466,7 @@
 
   ------------------------ 85Rb-85Rb strongly decayed resonance characterisation in kk channel -------------------------
 
-  JTOT =    8   IBLOCK =   2   ENERGY(   1) =  6.95034570000E-10 CM-1 =   1.00000000000E-09 K
+  JTOT =    8,  SYMMETRY BLOCK =   2,  ENERGY(   1) =  6.95034570000E-10 CM-1 =   1.00000000000E-09 K
 
   EFV SET     4:  MAGNETIC Z FIELD =   171.9099598     GAUSS
 
@@ -1482,7 +1482,7 @@
 
   ------------------------ 85Rb-85Rb strongly decayed resonance characterisation in kk channel -------------------------
 
-  JTOT =    8   IBLOCK =   2   ENERGY(   1) =  6.95034570000E-10 CM-1 =   1.00000000000E-09 K
+  JTOT =    8,  SYMMETRY BLOCK =   2,  ENERGY(   1) =  6.95034570000E-10 CM-1 =   1.00000000000E-09 K
 
   EFV SET     5:  MAGNETIC Z FIELD =   171.8586022     GAUSS
 
@@ -1498,7 +1498,7 @@
 
   ------------------------ 85Rb-85Rb strongly decayed resonance characterisation in kk channel -------------------------
 
-  JTOT =    8   IBLOCK =   2   ENERGY(   1) =  6.95034570000E-10 CM-1 =   1.00000000000E-09 K
+  JTOT =    8,  SYMMETRY BLOCK =   2,  ENERGY(   1) =  6.95034570000E-10 CM-1 =   1.00000000000E-09 K
 
   EFV SET     6:  MAGNETIC Z FIELD =   171.8415509     GAUSS
 
@@ -1514,7 +1514,7 @@
 
   ------------------------ 85Rb-85Rb strongly decayed resonance characterisation in kk channel -------------------------
 
-  JTOT =    8   IBLOCK =   2   ENERGY(   1) =  6.95034570000E-10 CM-1 =   1.00000000000E-09 K
+  JTOT =    8,  SYMMETRY BLOCK =   2,  ENERGY(   1) =  6.95034570000E-10 CM-1 =   1.00000000000E-09 K
 
   EFV SET     7:  MAGNETIC Z FIELD =   171.8437899     GAUSS
 
@@ -1530,7 +1530,7 @@
 
   ------------------------ 85Rb-85Rb strongly decayed resonance characterisation in kk channel -------------------------
 
-  JTOT =    8   IBLOCK =   2   ENERGY(   1) =  6.95034570000E-10 CM-1 =   1.00000000000E-09 K
+  JTOT =    8,  SYMMETRY BLOCK =   2,  ENERGY(   1) =  6.95034570000E-10 CM-1 =   1.00000000000E-09 K
 
   EFV SET     8:  MAGNETIC Z FIELD =   171.8476697     GAUSS
 
@@ -1546,7 +1546,7 @@
 
   ------------------------ 85Rb-85Rb strongly decayed resonance characterisation in kk channel -------------------------
 
-  JTOT =    8   IBLOCK =   2   ENERGY(   1) =  6.95034570000E-10 CM-1 =   1.00000000000E-09 K
+  JTOT =    8,  SYMMETRY BLOCK =   2,  ENERGY(   1) =  6.95034570000E-10 CM-1 =   1.00000000000E-09 K
 
   EFV SET     9:  MAGNETIC Z FIELD =   171.8433544     GAUSS
 
@@ -1562,7 +1562,7 @@
 
   ------------------------ 85Rb-85Rb strongly decayed resonance characterisation in kk channel -------------------------
 
-  JTOT =    8   IBLOCK =   2   ENERGY(   1) =  6.95034570000E-10 CM-1 =   1.00000000000E-09 K
+  JTOT =    8,  SYMMETRY BLOCK =   2,  ENERGY(   1) =  6.95034570000E-10 CM-1 =   1.00000000000E-09 K
 
   EFV SET    10:  MAGNETIC Z FIELD =   171.8437468     GAUSS
 
@@ -1590,7 +1590,7 @@
  |                                                                            |
  |                               Version 2019.0 (beta)                        |
  |                                                                            |
- |                    This run used      15.10 cpu secs and                   |
+ |                    This run used      13.05 cpu secs and                   |
  |               6817 of the allocated   1000000 words of storage             |
  |                                                                            |
   ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
@@ -1603,7 +1603,7 @@
  |                                                                            |
  |                               Version 2019.0 (beta)                        |
  |                                                                            |
- |                       Run on 01 Feb 2019   at 00:05:30                     |
+ |                       Run on 01 Feb 2019   at 10:34:52                     |
  |                                                                            |
   ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
 
@@ -1961,7 +1961,7 @@
   INITIALIZATION DONE.  TIME WAS   0.00 CPU SECS.       392 WORDS OF STORAGE USED.
 
   ============================= 85Rb-85Rb effective range across resonances in aa channel ==============================
-  IBLOCK =  2 SELECTS PARITY  1
+  SYMMETRY BLOCK =  2 SELECTS PARITY  1
   MTOT =  8/2
   BASIS SET GENERATED FOR TWO IDENTICAL BOSONS
 
@@ -2581,7 +2581,7 @@
  |                                                                            |
  |                               Version 2019.0 (beta)                        |
  |                                                                            |
- |                    This run used     302.92 cpu secs and                   |
+ |                    This run used     276.51 cpu secs and                   |
  |               6817 of the allocated   1000000 words of storage             |
  |                                                                            |
   ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---

@@ -7,7 +7,7 @@
  |                                                                            |
  |                               Version 2019.0 (beta)                        |
  |                                                                            |
- |                       Run on 31 Jan 2019   at 23:51:28                     |
+ |                       Run on 01 Feb 2019   at 10:21:52                     |
  |                                                                            |
   ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
 
@@ -190,7 +190,7 @@
        10           4          2         1         2             8             3       472.5360000
        11           5          2         1         3             8             3       472.5360000
 
-  JTOT =    6   IBLOCK =   1   ENERGY(   1) =   700.00000000     CM-1
+  JTOT =    6,  SYMMETRY BLOCK =   1,  ENERGY(   1) =   700.00000000     CM-1
   INNER CLASSICAL TURNING POINT AT R =  0.7344
   RADIAL PROPAGATION WILL START AT R =  0.4242
 
@@ -274,7 +274,7 @@
     7    8 1.2342641865821E-003   1.6557767627091E-003   3.5130195020473E-002   3.6549200495845E-004
     8    8 9.9351391981286E-001  -2.4320435045890E-001   4.2546696804104E-002  -9.9584320974936E-001
 
-  * * * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =   6 AND IBLOCK =   1 * * * * * * * * *
+  * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =   6 AND SYMMETRY BLOCK =   1 * * * * * * *
 
     F  I =      1              3
     1       3.42292E-01    1.43838E-03
@@ -282,7 +282,7 @@
 
   * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
 
-  FOR JTOT =    6 IBLOCK =  1 ENERGY(  1) =  700.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  3.43E+00 &   2.81E-03
+  FOR JTOT =    6, SYMMETRY BLOCK =  1, ENERGY(  1) =  700.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  3.43E+00 &   2.81E-03
 
   * * * * * * * * * * * STATE-TO-STATE INTEGRAL CROSS SECTIONS ACCUMULATED FROM JTOT =   6 TO   6 * * * * * * * * * * * *
 
@@ -292,7 +292,7 @@
 
   * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
 
-  FINISHED JTOT =    6   IBLOCK =   1   ENERGY(   1) =  700.0000    
+  FINISHED JTOT =    6,  SYMMETRY BLOCK =   1,  ENERGY(   1) =  700.0000    
 
   ======================================================================================================================
 
@@ -319,7 +319,7 @@
        13           2          0         3         3             9             2       708.8040000
        14           5          2         1         3             9             3       472.5360000
 
-  JTOT =    6   IBLOCK =   2   ENERGY(   1) =   700.00000000     CM-1
+  JTOT =    6,  SYMMETRY BLOCK =   2,  ENERGY(   1) =   700.00000000     CM-1
   INNER CLASSICAL TURNING POINT AT R =  0.7323
   RADIAL PROPAGATION WILL START AT R =  0.4238
 
@@ -441,7 +441,7 @@
     9   10 2.1347381279898E-003  -2.2077473551877E-002   4.5759409032018E-002  -6.3886315459764E-003
    10   10 9.9410157154064E-001  -8.6487051500910E-002   8.5342022899091E-001  -5.1553417373607E-001
 
-  * * * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =   6 AND IBLOCK =   2 * * * * * * * * *
+  * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =   6 AND SYMMETRY BLOCK =   2 * * * * * * *
 
     F  I =      1              3
     1       1.94114E+00    2.07216E-03
@@ -449,7 +449,7 @@
 
   * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
 
-  FOR JTOT =    6 IBLOCK =  2 ENERGY(  1) =  700.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  2.97E+00 &   4.05E-03
+  FOR JTOT =    6, SYMMETRY BLOCK =  2, ENERGY(  1) =  700.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  2.97E+00 &   4.05E-03
 
   * * * * * * * * * * * STATE-TO-STATE INTEGRAL CROSS SECTIONS ACCUMULATED FROM JTOT =   6 TO   6 * * * * * * * * * * * *
 
@@ -459,7 +459,7 @@
 
   * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
 
-  FINISHED JTOT =    6   IBLOCK =   2   ENERGY(   1) =  700.0000    
+  FINISHED JTOT =    6,  SYMMETRY BLOCK =   2,  ENERGY(   1) =  700.0000    
 
   ======================================================================================================================
 
@@ -496,7 +496,7 @@
  |                                                                            |
  |                               Version 2019.0 (beta)                        |
  |                                                                            |
- |                    This run used       0.04 cpu secs and                   |
+ |                    This run used       0.07 cpu secs and                   |
  |               1764 of the allocated   1000000 words of storage             |
  |                                                                            |
   ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---

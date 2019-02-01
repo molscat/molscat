@@ -244,8 +244,8 @@ C
 C
       IF (LCOUNT) THEN
         WRITE(6,605) IBLOCK,(-1)**IBLOCK,MTOT
-  605   FORMAT('  IBLOCK = ',I2,' SELECTS PARITY',I3,/'  MTOT =',I3,
-     1         '/2')
+  605   FORMAT('  SYMMETRY BLOCK = ',I2,' SELECTS PARITY',I3,/
+     1         '  MTOT =',I3,'/2')
         IF (IDENTN) THEN
           IFA=INUCA+ISA
           IF (2*(IFA/2).EQ.IFA) THEN
