@@ -5,7 +5,7 @@
     EUNITS =   7,     MUNIT  = 5.48579909070D-4,     RUNIT  =   0.52917721067D0,
     RMIN   =   0.0,   RMATCH = 1.0,    RMID   = 3.0, RMAX   = 100.0,
     IPROPS =   8,     DR     = 0.0001,
-    IPROPL =   9,     DRL    = 0.001,  POWRL  = 1.0,
+    IPROPL =   9,     DRL    = 0.001,
     JTOTL  =   0,     JTOTU  = 1,      JSTEP  = 1,   IBFIX  =   2,
     EMIN   =  -1.0,   EMAX   = 0.0,
     LASTIN =   0,

@@ -2,12 +2,13 @@
     LABEL  = '85Rb-85Rb scattering length in lowest (aa) channel',
     URED   =  42.455894869D0,
     IPRINT =   6,
-    RMIN   =   3.0D0, RMID   =  21.0D0, RMAX   = 15.0D3, IRMSET = 0,
-    IPROPS =   6,     IPROPL =   9,     DR     =  0.002, TOLHI  = 1.0D-7,
-    JTOTL  =   8,     JTOTU  =   8,     IBFIX  =  2,     JSTEP  = 2,
-    EUNITS =   2,     NNRG   =   1,     ENERGY =  1.D-7,
-                      DTOL   =   1.D-8, MONQN  =  4, 4, 4, 4,
-    FLDMIN = 800.0,   FLDMAX = 900.0,   DFIELD =  1.0,
+    RMIN   =   3.0D0, RMID   =  21.0D0,  RMAX   = 15.0D3, IRMSET = 0,
+    IPROPS =   6,     DR     =   0.002,
+    IPROPL =   9,     TOLHI  =   1.0D-6,
+    JTOTL  =   8,     JTOTU  =   8,      IBFIX  =  2,     JSTEP  = 2,
+    EUNITS =   2,     NNRG   =   1,      ENERGY =  1.D-7,
+                      DTOL   =   1.D-6,  MONQN  =  4, 4, 4, 4,
+    FLDMIN = 800.0,   FLDMAX = 900.0,    DFIELD =  1.0,
  /
 
  &BASIS

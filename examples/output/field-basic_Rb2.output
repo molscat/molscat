@@ -8,7 +8,7 @@
  |                                                                            |
  |                               Version 2019.0 (beta)                        |
  |                                                                            |
- |                       Run on 16 Jan 2019   at 11:27:21                     |
+ |                       Run on 31 Jan 2019   at 23:54:02                     |
  |                                                                            |
   -- FIELD ------ FIELD ------ FIELD ------ FIELD ------ FIELD ------ FIELD --
 
@@ -227,7 +227,7 @@
 
   INITIAL STEP SIZE TAKEN FROM SIZE OF FINAL STEP OF SHORT-RANGE PROPAGATION
   STEP SIZES ADJUSTED TO MAINTAIN APPROXIMATE ACCURACY VIA PERTURBATION THEORY
-  WITH TOLHI =  1.00E-07 AND POWR =   6.0    
+  WITH TOLHI =  1.00E-07 AND POWR =   3.0    
 
   LOG-DERIVATIVE MATRIX INITIALISED IN THE LOCAL EIGENBASIS AT RMAX IN THE INWARD PROPAGATION PART
   LOCALLY CLOSED CHANNELS INITIALISED WITH A WKB BOUNDARY CONDITION
@@ -239,6 +239,8 @@
 
   FOR EACH LEVEL, THE BISECTION METHOD WILL BE USED UNTIL THE VWDB METHOD OFFERS RELIABLE CONVERGENCE
 
+  VWDB CONVERGENCE WILL TERMINATE WHEN THE STEP SIZE IS LESS THAN 1.00000E-06 GAUSS 
+
   PROGRAM WILL SEEK EIGENVALUES WITH GENERALISED NODE COUNTS FROM    0 TO  99999
   LYING IN 
 
@@ -249,17 +251,11 @@
   INPUT ENERGY VALUES CONVERTED FROM MHZ
   TO INTERNAL WORKING UNITS OF CM-1 DUE TO INTEGER INPUT =   3
 
-  VWDB CONVERGENCE WILL TERMINATE WHEN THE STEP SIZE IS LESS THAN 1.00000E-08 GAUSS 
-
   PROGRAM WILL SEEK EIGENVALUES AT ENERGIES (IN MHZ)
-                    0.000000E+00
+                     0.00000    
 
   THESE ENERGY VALUES ARE RELATIVE TO THE REFERENCE ENERGY SPECIFIED BY MONOMER QUANTUM NUMBERS   4   4   4   4
   THE REFERENCE ENERGY WILL BE CALCULATED FOR EVERY EFV SET
-
-  FOR EACH LEVEL, THE BISECTION METHOD WILL BE USED UNTIL THE VWDB METHOD OFFERS RELIABLE CONVERGENCE.
-
-  INITIALIZATION DONE.  TIME WAS   0.00 CPU SECS.       392 WORDS OF STORAGE USED.
 
   ======================================================================================================================
 
@@ -268,6 +264,8 @@
   EACH JTOT IS SPLIT INTO A MAXIMUM OF   2 SYMMETRY BLOCKS
 
   CALCULATIONS WILL BE FOR SYMMETRY BLOCK   2  ONLY
+
+  INITIALIZATION DONE.  TIME WAS   0.00 CPU SECS.       392 WORDS OF STORAGE USED.
 
   ================================ 85Rb-85Rb: positions of bound states on aa threshold ================================
 
@@ -309,11 +307,7 @@
        28          78          1         5         1         5             2
   = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = 
 
-  ENERGY SET     1: ENERGY =   0.000000000     MHZ     
-
-  REFERENCE ENERGY EREF =  -5336.330905     MHZ = -0.1780008389     CM-1
-
-  REFERENCE ENERGY EREF =  -5585.811497     MHZ = -0.1863226158     CM-1
+  ENERGY      1 =   0.000000000     MHZ     
 
   NODE COUNT = 1471 AT MINIMUM MAGNETIC Z FIELD =   800.0000000     GAUSS 
   NODE COUNT = 1468 AT MAXIMUM MAGNETIC Z FIELD =   900.0000000     GAUSS 
@@ -325,41 +319,53 @@
 
   SEARCHING FOR INODE =    1 CORRESPONDING TO NODE COUNT = 1469
 
-  EFV SET     1:  MAGNETIC Z FIELD =   852.0134341     GAUSS
+  PROPAGATION   1:                                      MAGNETIC Z FIELD =   850.0000000     GAUSS 
 
-  EFV SET     2:  MAGNETIC Z FIELD =   851.8815145     GAUSS
+  PROPAGATION   2:                                      MAGNETIC Z FIELD =   852.0134291     GAUSS 
 
-  EFV SET     3:  MAGNETIC Z FIELD =   851.8811699     GAUSS
+  PROPAGATION   3:                                      MAGNETIC Z FIELD =   851.8815106     GAUSS 
 
-  CONVERGED ON NODE NUMBER  1469 AT                     MAGNETIC Z FIELD =   851.8811699     GAUSS 
+  PROPAGATION   4:                                      MAGNETIC Z FIELD =   851.8811666     GAUSS 
 
-  LAST STEP WAS                                                            -3.4457913375E-04 GAUSS 
+  PROPAGATION   5:                                      MAGNETIC Z FIELD =   851.8811663     GAUSS 
 
-  SMALLEST EIGENVALUE IS NUMBER  8 =  0.37174E-10
+  CONVERGED ON NODE NUMBER  1469 AT                     MAGNETIC Z FIELD =   851.8811663     GAUSS 
+
+  LAST STEP WAS                                                            -3.1985109672E-07 GAUSS 
+
+  SMALLEST EIGENVALUE OF MATCHING MATRIX IS NUMBER  8 =  1.15441E-09
 
   WITH PRINCIPAL EIGENVECTOR COMPONENTS
   CHAN     VEC    VEC**2   L   QUANTUM NUMBERS
 
-   1   -0.1811    0.0328   0  -1   5  -1   5   0
-   2   -0.1877    0.0352   0   1   3  -1   5   0
-   4   -0.9034    0.8161   0   1   5  -1   3   0
-   5    0.3328    0.1108   0   1   5   1   1   0
+   1    0.1811    0.0328   0  -1   5  -1   5   0
+   2    0.1877    0.0352   0   1   3  -1   5   0
+   4    0.9034    0.8161   0   1   5  -1   3   0
+   5   -0.3328    0.1108   0   1   5   1   1   0
 
   - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
   SEARCHING FOR INODE =    2 CORRESPONDING TO NODE COUNT = 1470
 
-  EFV SET     1:  MAGNETIC Z FIELD =   819.5732570     GAUSS
+  PROPAGATION   1:                                      MAGNETIC Z FIELD =   825.0000000     GAUSS 
 
-  EFV SET     2:  MAGNETIC Z FIELD =   819.5674107     GAUSS
+  PROPAGATION   2:                                      MAGNETIC Z FIELD =   812.5000000     GAUSS 
 
-  EFV SET     3:  MAGNETIC Z FIELD =   819.5674044     GAUSS
+  PROPAGATION   3:                                      MAGNETIC Z FIELD =   818.7500000     GAUSS 
 
-  CONVERGED ON NODE NUMBER  1470 AT                     MAGNETIC Z FIELD =   819.5674044     GAUSS 
+  PROPAGATION   4:                                      MAGNETIC Z FIELD =   819.5732570     GAUSS 
 
-  LAST STEP WAS                                                            -6.3245111050E-06 GAUSS 
+  PROPAGATION   5:                                      MAGNETIC Z FIELD =   819.5674106     GAUSS 
 
-  SMALLEST EIGENVALUE IS NUMBER  9 = -0.47043E-11
+  PROPAGATION   6:                                      MAGNETIC Z FIELD =   819.5674043     GAUSS 
+
+  PROPAGATION   7:                                      MAGNETIC Z FIELD =   819.5674043     GAUSS 
+
+  CONVERGED ON NODE NUMBER  1470 AT                     MAGNETIC Z FIELD =   819.5674043     GAUSS 
+
+  LAST STEP WAS                                                             2.5859208108E-09 GAUSS 
+
+  SMALLEST EIGENVALUE OF MATCHING MATRIX IS NUMBER  9 =  2.43077E-11
 
   WITH PRINCIPAL EIGENVECTOR COMPONENTS
   CHAN     VEC    VEC**2   L   QUANTUM NUMBERS
@@ -371,17 +377,19 @@
 
   SEARCHING FOR INODE =    3 CORRESPONDING TO NODE COUNT = 1471
 
-  EFV SET     1:  MAGNETIC Z FIELD =   810.9617084     GAUSS
+  PROPAGATION   1:                                      MAGNETIC Z FIELD =   806.2500000     GAUSS 
 
-  EFV SET     2:  MAGNETIC Z FIELD =   810.9519395     GAUSS
+  PROPAGATION   2:                                      MAGNETIC Z FIELD =   810.9617084     GAUSS 
 
-  EFV SET     3:  MAGNETIC Z FIELD =   810.9519396     GAUSS
+  PROPAGATION   3:                                      MAGNETIC Z FIELD =   810.9519395     GAUSS 
+
+  PROPAGATION   4:                                      MAGNETIC Z FIELD =   810.9519396     GAUSS 
 
   CONVERGED ON NODE NUMBER  1471 AT                     MAGNETIC Z FIELD =   810.9519396     GAUSS 
 
-  LAST STEP WAS                                                             6.5707808972E-08 GAUSS 
+  LAST STEP WAS                                                             6.5738390731E-08 GAUSS 
 
-  SMALLEST EIGENVALUE IS NUMBER  9 = -0.50824E-11
+  SMALLEST EIGENVALUE OF MATCHING MATRIX IS NUMBER  9 =  2.19558E-12
 
   WITH PRINCIPAL EIGENVECTOR COMPONENTS
   CHAN     VEC    VEC**2   L   QUANTUM NUMBERS
@@ -403,7 +411,7 @@
  |                                                                            |
  |                               Version 2019.0 (beta)                        |
  |                                                                            |
- |                    This run used      27.43 cpu secs and                   |
+ |                    This run used      31.34 cpu secs and                   |
  |               7467 of the allocated   1000000 words of storage             |
  |                                                                            |
   -- FIELD ------ FIELD ------ FIELD ------ FIELD ------ FIELD ------ FIELD --

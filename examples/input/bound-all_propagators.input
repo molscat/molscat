@@ -1,7 +1,7 @@
  &INPUT
     LABEL  = 'model system: ITYPE=1; IPROPS=6, IPROPL=9 (RMID > RMATCH)',
     URED   =  20.0,
-    IPRINT =   5,   IBDSUM = 106,
+    IPRINT =   5,   IBDSUM = 609,
     RMIN   =   0.5, RMID   =   2.0, RMATCH = 1.0,   RMAX   = 20.0,
     IPROPS =   6,   IPROPL =   9,   DR     = 0.001,
     JTOTL  =   0,   JTOTU  =   2,   IBFIX  = 2,
@@ -23,7 +23,7 @@
  &INPUT
     LABEL  = 'model system: ITYPE=1; IPROPS=6, IPROPL=9 (RMID < RMATCH)',
     URED   =  20.0,
-    IPRINT =   5,   IBDSUM = 116,
+    IPRINT =   5,   IBDSUM = 619,
     RMIN   =   0.5, RMID   =   1.0, RMATCH = 2.0,   RMAX   = 20.0,
     IPROPS =   6,   IPROPL =   9,   DR     = 0.001,
     JTOTL  =   0,   JTOTU  =   2,   IBFIX  = 2,
@@ -45,7 +45,7 @@
  &INPUT
     LABEL  = 'model system: ITYPE=1; IPROPS=5, IPROPL=9',
     URED   =  20.0,
-    IPRINT =   5,   IBDSUM = 105,
+    IPRINT =   5,   IBDSUM = 509,
     RMIN   =   0.5, RMATCH =   1.0, RMAX   = 20.0,
     IPROPS =   5,   IPROPL =   9,   DR     =  0.001,
     JTOTL  =   0,   JTOTU  =   2,   IBFIX  =  2,
@@ -67,10 +67,11 @@
  &INPUT
     LABEL  = 'model system: ITYPE=1; IPROPS=7, IPROPL=9',
     URED   =  20.0,
-    IPRINT =   5,   IBDSUM = 107,
-    RMIN   =   0.5, RMATCH =   1.0, RMAX   = 20.0,
-    IPROPS =   7,   IPROPL =   9,   DR     =  0.001, TOLHI  = 0.0,
-    JTOTL  =   0,   JTOTU  =   2,   IBFIX  =  2,
+    IPRINT =   5,   IBDSUM = 709,
+    RMIN   =   0.5, RMATCH =   1.0,   RMAX   = 20.0,
+    IPROPS =   7,   DR     =   0.001,
+    IPROPL =   9,   TOLHIL =   0.0,   POWRL  =  3.0,
+    JTOTL  =   0,   JTOTU  =   2,     IBFIX  =  2,
     EMIN   = -10.0, EMAX   =  -1.0,
     LASTIN =   0,
  /
@@ -89,7 +90,7 @@
  &INPUT
     LABEL  = 'model system: ITYPE=1; IPROPS=8, IPROPL=9',
     URED   =  20.0,
-    IPRINT =   5,   IBDSUM = 108,
+    IPRINT =   5,   IBDSUM = 809,
     RMIN   =   0.5, RMATCH =   1.0, RMAX   = 20.0,
     IPROPS =   8,   IMGSEL =   5,   IPROPL =  9,   DR     =  0.001,
     JTOTL  =   0,   JTOTU  =   2,   IBFIX  =  2,

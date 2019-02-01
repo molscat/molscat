@@ -6,7 +6,7 @@
     IPROPS =   6,     IPROPL =   9,     DR     =    0.002, TOLHI  =  1.0D-7,
     JTOTL  =   8,     JTOTU  =   8,     JSTEP  =    2,     IBFIX  =  2,
     EUNITS =   3,     NNRG   =   5,     ENERGY = -225.0,   DNRG   = 50.0,
-                      DTOL   =   1.D-8, MONQN  =  4, 4, 4, 4,
+                      DTOL   =   1.D-6, MONQN  =  4, 4, 4, 4,
     FLDMIN = 750.0,   FLDMAX = 850.0,
  /
 

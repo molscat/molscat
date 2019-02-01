@@ -6,7 +6,7 @@
  |                                                                            |
  |                               Version 2019.0 (beta)                        |
  |                                                                            |
- |                       Run on 16 Jan 2019   at 11:41:05                     |
+ |                       Run on 01 Feb 2019   at 00:12:22                     |
  |                                                                            |
   -- BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND --
 
@@ -198,14 +198,13 @@
   PROGRAM WILL ATTEMPT TO CONVERGE ON BOUND STATES AS A FUNCTION OF ENERGY
 
   FOR EACH LEVEL, THE BISECTION METHOD WILL BE USED UNTIL THE VWDB METHOD OFFERS RELIABLE CONVERGENCE.
+
   VWDB CONVERGENCE WILL TERMINATE WHEN THE STEP SIZE IS LESS THAN 1.00000E-08 CM-1    
 
   INPUT ENERGY VALUES ASSUMED TO BE IN UNITS OF CM-1 BY DEFAULT.
 
   PROGRAM WILL SEEK EIGENVALUES WITH GENERALISED NODE COUNTS FROM    0 TO  99999
   LYING IN ENERGY RANGE  -180.00     TO  -130.00     CM-1    
-
-  INITIALIZATION DONE.  TIME WAS   0.00 CPU SECS.       178 WORDS OF STORAGE USED.
 
   ======================================================================================================================
 
@@ -214,6 +213,8 @@
   EACH JTOT IS SPLIT INTO A MAXIMUM OF   2 SYMMETRY BLOCKS
 
   CALCULATIONS WILL BE FOR SYMMETRY BLOCK   2  ONLY
+
+  INITIALIZATION DONE.  TIME WAS   0.00 CPU SECS.       178 WORDS OF STORAGE USED.
 
   ============================ Ar-CO2 on split repulsion potential of JCP 105, 9130 (1996) =============================
 
@@ -251,7 +252,7 @@
 
   CONVERGED ON NODE NUMBER     1 AT                               ENERGY =  -165.6289795     CM-1  
 
-  SMALLEST EIGENVALUE IS NUMBER  1 = -0.95882E-12
+  SMALLEST EIGENVALUE OF MATCHING MATRIX IS NUMBER  1 =  5.40012E-13
 
   WITH PRINCIPAL EIGENVECTOR COMPONENTS
   CHAN     VEC    VEC**2   L   QUANTUM NUMBERS
@@ -267,7 +268,7 @@
 
   CONVERGED ON NODE NUMBER     2 AT                               ENERGY =  -131.1638128     CM-1  
 
-  SMALLEST EIGENVALUE IS NUMBER  1 =  0.61403E-11
+  SMALLEST EIGENVALUE OF MATCHING MATRIX IS NUMBER  1 =  1.34715E-12
 
   WITH PRINCIPAL EIGENVECTOR COMPONENTS
   CHAN     VEC    VEC**2   L   QUANTUM NUMBERS
@@ -306,7 +307,7 @@
  |                                                                            |
  |                               Version 2019.0 (beta)                        |
  |                                                                            |
- |                    This run used       0.12 cpu secs and                   |
+ |                    This run used       0.07 cpu secs and                   |
  |               2332 of the allocated   1000000 words of storage             |
  |                                                                            |
   -- BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND --

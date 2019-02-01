@@ -6,7 +6,7 @@
  |                                                                            |
  |                               Version 2019.0 (beta)                        |
  |                                                                            |
- |                       Run on 16 Jan 2019   at 11:41:04                     |
+ |                       Run on 01 Feb 2019   at 00:12:21                     |
  |                                                                            |
   -- BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND --
 
@@ -166,6 +166,7 @@
   PROGRAM WILL ATTEMPT TO CONVERGE ON BOUND STATES AS A FUNCTION OF ENERGY
 
   FOR EACH LEVEL, THE BISECTION METHOD WILL BE USED UNTIL THE VWDB METHOD OFFERS RELIABLE CONVERGENCE.
+
   VWDB CONVERGENCE WILL TERMINATE WHEN THE STEP SIZE IS LESS THAN 1.00000E-08 CM-1    
 
   INPUT ENERGY VALUES ASSUMED TO BE IN UNITS OF CM-1 BY DEFAULT.
@@ -173,13 +174,13 @@
   PROGRAM WILL SEEK EIGENVALUES WITH GENERALISED NODE COUNTS FROM    0 TO  99999
   LYING IN ENERGY RANGE  -120.00     TO  -80.000     CM-1    
 
-  INITIALIZATION DONE.  TIME WAS   0.00 CPU SECS.       129 WORDS OF STORAGE USED.
-
   ======================================================================================================================
 
   TOTAL ANGULAR MOMENTUM JTOT RUNS FROM   0  TO     1  IN STEPS OF   1
 
   EACH JTOT IS SPLIT INTO A MAXIMUM OF   2 SYMMETRY BLOCKS
+
+  INITIALIZATION DONE.  TIME WAS   0.00 CPU SECS.       129 WORDS OF STORAGE USED.
 
   ============================= Ar-HCl v=0 on H6(4,3,0) potential: see JPC 96, 4237 (1992) =============================
 
@@ -271,7 +272,7 @@
  |                                                                            |
  |                               Version 2019.0 (beta)                        |
  |                                                                            |
- |                    This run used       0.35 cpu secs and                   |
+ |                    This run used       0.38 cpu secs and                   |
  |               2223 of the allocated   1000000 words of storage             |
  |                                                                            |
   -- BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND --
@@ -283,7 +284,7 @@
  |                                                                            |
  |                               Version 2019.0 (beta)                        |
  |                                                                            |
- |                       Run on 16 Jan 2019   at 11:41:04                     |
+ |                       Run on 01 Feb 2019   at 00:12:21                     |
  |                                                                            |
   -- BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND --
 
@@ -452,6 +453,7 @@
   PROGRAM WILL ATTEMPT TO CONVERGE ON BOUND STATES AS A FUNCTION OF ENERGY
 
   FOR EACH LEVEL, THE BISECTION METHOD WILL BE USED UNTIL THE VWDB METHOD OFFERS RELIABLE CONVERGENCE.
+
   VWDB CONVERGENCE WILL TERMINATE WHEN THE STEP SIZE IS LESS THAN 1.00000E-08 CM-1    
 
   INPUT ENERGY VALUES ASSUMED TO BE IN UNITS OF CM-1 BY DEFAULT.
@@ -459,13 +461,15 @@
   PROGRAM WILL SEEK EIGENVALUES WITH GENERALISED NODE COUNTS FROM    0 TO  99999
   LYING IN ENERGY RANGE  -120.00     TO  -80.000     CM-1    
 
-  INITIALIZATION DONE.  TIME WAS   0.00 CPU SECS.       129 WORDS OF STORAGE USED.
-
   ======================================================================================================================
 
   TOTAL ANGULAR MOMENTUM JTOT RUNS FROM   0  TO     1  IN STEPS OF   1
 
   EACH JTOT IS SPLIT INTO A MAXIMUM OF   8 SYMMETRY BLOCKS
+
+  CALCULATIONS WILL BE FOR SYMMETRY BLOCKS   1  TO   2
+
+  INITIALIZATION DONE.  TIME WAS   0.00 CPU SECS.       129 WORDS OF STORAGE USED.
 
   ========================== Ar-HCl v=0 on H6(4,3,0) potential (HD): see JPC 96, 4237 (1992) ===========================
 
@@ -534,24 +538,6 @@
   ======================================================================================================================
 
   SYMMETRY BLOCK =   2
-  BASIS SIZE IS 0 FOR THIS COMBINATION OF SYMMETRY LABELS
-
-  SYMMETRY BLOCK =   3
-  BASIS SIZE IS 0 FOR THIS COMBINATION OF SYMMETRY LABELS
-
-  SYMMETRY BLOCK =   4
-  BASIS SIZE IS 0 FOR THIS COMBINATION OF SYMMETRY LABELS
-
-  SYMMETRY BLOCK =   5
-  BASIS SIZE IS 0 FOR THIS COMBINATION OF SYMMETRY LABELS
-
-  SYMMETRY BLOCK =   6
-  BASIS SIZE IS 0 FOR THIS COMBINATION OF SYMMETRY LABELS
-
-  SYMMETRY BLOCK =   7
-  BASIS SIZE IS 0 FOR THIS COMBINATION OF SYMMETRY LABELS
-
-  SYMMETRY BLOCK =   8
   BASIS SIZE IS 0 FOR THIS COMBINATION OF SYMMETRY LABELS
 
   *******************************************  ANGULAR MOMENTUM JTOT  =   1  *******************************************
@@ -648,24 +634,6 @@
 
   ======================================================================================================================
 
-  SYMMETRY BLOCK =   3
-  BASIS SIZE IS 0 FOR THIS COMBINATION OF SYMMETRY LABELS
-
-  SYMMETRY BLOCK =   4
-  BASIS SIZE IS 0 FOR THIS COMBINATION OF SYMMETRY LABELS
-
-  SYMMETRY BLOCK =   5
-  BASIS SIZE IS 0 FOR THIS COMBINATION OF SYMMETRY LABELS
-
-  SYMMETRY BLOCK =   6
-  BASIS SIZE IS 0 FOR THIS COMBINATION OF SYMMETRY LABELS
-
-  SYMMETRY BLOCK =   7
-  BASIS SIZE IS 0 FOR THIS COMBINATION OF SYMMETRY LABELS
-
-  SYMMETRY BLOCK =   8
-  BASIS SIZE IS 0 FOR THIS COMBINATION OF SYMMETRY LABELS
-
 
   -- BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND --
  |                                                                            |
@@ -675,7 +643,7 @@
  |                                                                            |
  |                               Version 2019.0 (beta)                        |
  |                                                                            |
- |                    This run used       0.37 cpu secs and                   |
+ |                    This run used       0.42 cpu secs and                   |
  |               1283 of the allocated   1000000 words of storage             |
  |                                                                            |
   -- BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND --

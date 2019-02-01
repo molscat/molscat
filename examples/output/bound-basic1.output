@@ -6,7 +6,7 @@
  |                                                                            |
  |                               Version 2019.0 (beta)                        |
  |                                                                            |
- |                       Run on 16 Jan 2019   at 11:27:18                     |
+ |                       Run on 31 Jan 2019   at 23:53:59                     |
  |                                                                            |
   -- BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND --
 
@@ -120,14 +120,13 @@
   PROGRAM WILL ATTEMPT TO CONVERGE ON BOUND STATES AS A FUNCTION OF ENERGY
 
   FOR EACH LEVEL, THE BISECTION METHOD WILL BE USED UNTIL THE VWDB METHOD OFFERS RELIABLE CONVERGENCE.
+
   VWDB CONVERGENCE WILL TERMINATE WHEN THE STEP SIZE IS LESS THAN 1.00000E-07 CM-1    
 
   INPUT ENERGY VALUES ASSUMED TO BE IN UNITS OF CM-1 BY DEFAULT.
 
   PROGRAM WILL SEEK EIGENVALUES WITH GENERALISED NODE COUNTS FROM    0 TO  99999
   LYING IN ENERGY RANGE  -10.000     TO  -1.0000     CM-1    
-
-  INITIALIZATION DONE.  TIME WAS   0.00 CPU SECS.         9 WORDS OF STORAGE USED.
 
   ======================================================================================================================
 
@@ -137,10 +136,9 @@
 
   CALCULATIONS WILL BE FOR SYMMETRY BLOCK   2  ONLY
 
-  =============================================== model system: ITYPE=1 ================================================
+  INITIALIZATION DONE.  TIME WAS   0.00 CPU SECS.         9 WORDS OF STORAGE USED.
 
-  NODE COUNT =    3 AT MINIMUM ENERGY =  -10.00000000     CM-1  
-  NODE COUNT =    5 AT MAXIMUM ENERGY =  -1.000000000     CM-1  
+  =============================================== model system: ITYPE=1 ================================================
 
   CONVERGED ON NODE NUMBER     4 AT                               ENERGY =  -4.992074666     CM-1  
 
@@ -155,7 +153,7 @@
  |                                                                            |
  |                               Version 2019.0 (beta)                        |
  |                                                                            |
- |                    This run used       2.81 cpu secs and                   |
+ |                    This run used       3.21 cpu secs and                   |
  |                312 of the allocated   1000000 words of storage             |
  |                                                                            |
   -- BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND --

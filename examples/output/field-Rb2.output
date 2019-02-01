@@ -8,7 +8,7 @@
  |                                                                            |
  |                               Version 2019.0 (beta)                        |
  |                                                                            |
- |                       Run on 16 Jan 2019   at 11:43:05                     |
+ |                       Run on 01 Feb 2019   at 00:18:05                     |
  |                                                                            |
   -- FIELD ------ FIELD ------ FIELD ------ FIELD ------ FIELD ------ FIELD --
 
@@ -227,7 +227,7 @@
 
   INITIAL STEP SIZE TAKEN FROM SIZE OF FINAL STEP OF SHORT-RANGE PROPAGATION
   STEP SIZES ADJUSTED TO MAINTAIN APPROXIMATE ACCURACY VIA PERTURBATION THEORY
-  WITH TOLHI =  1.00E-07 AND POWR =   6.0    
+  WITH TOLHI =  1.00E-07 AND POWR =   3.0    
 
   LOG-DERIVATIVE MATRIX INITIALISED IN THE LOCAL EIGENBASIS AT RMAX IN THE INWARD PROPAGATION PART
   LOCALLY CLOSED CHANNELS INITIALISED WITH A WKB BOUNDARY CONDITION
@@ -239,6 +239,8 @@
 
   FOR EACH LEVEL, THE BISECTION METHOD WILL BE USED UNTIL THE VWDB METHOD OFFERS RELIABLE CONVERGENCE
 
+  VWDB CONVERGENCE WILL TERMINATE WHEN THE STEP SIZE IS LESS THAN 1.00000E-06 GAUSS 
+
   PROGRAM WILL SEEK EIGENVALUES WITH GENERALISED NODE COUNTS FROM    0 TO  99999
   LYING IN 
 
@@ -249,17 +251,11 @@
   INPUT ENERGY VALUES CONVERTED FROM MHZ
   TO INTERNAL WORKING UNITS OF CM-1 DUE TO INTEGER INPUT =   3
 
-  VWDB CONVERGENCE WILL TERMINATE WHEN THE STEP SIZE IS LESS THAN 1.00000E-08 GAUSS 
-
   PROGRAM WILL SEEK EIGENVALUES AT ENERGIES (IN MHZ)
-                   -0.225000E+03   -0.175000E+03   -0.125000E+03   -0.750000E+02   -0.250000E+02
+                    -225.000        -175.000        -125.000        -75.0000        -25.0000    
 
   THESE ENERGY VALUES ARE RELATIVE TO THE REFERENCE ENERGY SPECIFIED BY MONOMER QUANTUM NUMBERS   4   4   4   4
   THE REFERENCE ENERGY WILL BE CALCULATED FOR EVERY EFV SET
-
-  FOR EACH LEVEL, THE BISECTION METHOD WILL BE USED UNTIL THE VWDB METHOD OFFERS RELIABLE CONVERGENCE.
-
-  INITIALIZATION DONE.  TIME WAS   0.00 CPU SECS.       392 WORDS OF STORAGE USED.
 
   ======================================================================================================================
 
@@ -268,6 +264,8 @@
   EACH JTOT IS SPLIT INTO A MAXIMUM OF   2 SYMMETRY BLOCKS
 
   CALCULATIONS WILL BE FOR SYMMETRY BLOCK   2  ONLY
+
+  INITIALIZATION DONE.  TIME WAS   0.00 CPU SECS.       392 WORDS OF STORAGE USED.
 
   ============================== 85Rb-85Rb: positions of bound states below aa threshold ===============================
 
@@ -309,7 +307,7 @@
        28          78          1         5         1         5             2
   = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = 
 
-  ENERGY SET     1: ENERGY =  -225.0000000     MHZ     
+  ENERGY      1 =  -225.0000000     MHZ     
 
   NODE COUNT = 1467 AT MINIMUM MAGNETIC Z FIELD =   750.0000000     GAUSS 
   NODE COUNT = 1466 AT MAXIMUM MAGNETIC Z FIELD =   850.0000000     GAUSS 
@@ -321,19 +319,19 @@
 
   SEARCHING FOR INODE =    1 CORRESPONDING TO NODE COUNT = 1467
 
-  CONVERGED ON NODE NUMBER  1467 AT                     MAGNETIC Z FIELD =   774.7975186     GAUSS 
+  CONVERGED ON NODE NUMBER  1467 AT                     MAGNETIC Z FIELD =   774.7975188     GAUSS 
 
-  SMALLEST EIGENVALUE IS NUMBER  8 =  0.42717E-10
+  SMALLEST EIGENVALUE OF MATCHING MATRIX IS NUMBER  8 =  2.69651E-11
 
   WITH PRINCIPAL EIGENVECTOR COMPONENTS
   CHAN     VEC    VEC**2   L   QUANTUM NUMBERS
 
-   1    0.4977    0.2477   0  -1   5  -1   5   0
-   4    0.8036    0.6458   0   1   5  -1   3   0
-   5   -0.3091    0.0955   0   1   5   1   1   0
+   1   -0.4977    0.2477   0  -1   5  -1   5   0
+   4   -0.8036    0.6458   0   1   5  -1   3   0
+   5    0.3091    0.0955   0   1   5   1   1   0
   = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = 
 
-  ENERGY SET     2: ENERGY =  -175.0000000     MHZ     
+  ENERGY      2 =  -175.0000000     MHZ     
 
   NODE COUNT = 1469 AT MINIMUM MAGNETIC Z FIELD =   750.0000000     GAUSS 
   NODE COUNT = 1467 AT MAXIMUM MAGNETIC Z FIELD =   850.0000000     GAUSS 
@@ -347,14 +345,14 @@
 
   CONVERGED ON NODE NUMBER  1468 AT                     MAGNETIC Z FIELD =   787.3487285     GAUSS 
 
-  SMALLEST EIGENVALUE IS NUMBER  9 = -0.38686E-10
+  SMALLEST EIGENVALUE OF MATCHING MATRIX IS NUMBER  9 =  5.23670E-12
 
   WITH PRINCIPAL EIGENVECTOR COMPONENTS
   CHAN     VEC    VEC**2   L   QUANTUM NUMBERS
 
-   2    0.2410    0.0581   0   1   3  -1   5   0
-   4    0.9033    0.8159   0   1   5  -1   3   0
-   5   -0.3443    0.1185   0   1   5   1   1   0
+   2   -0.2410    0.0581   0   1   3  -1   5   0
+   4   -0.9033    0.8159   0   1   5  -1   3   0
+   5    0.3443    0.1185   0   1   5   1   1   0
 
   - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
@@ -362,7 +360,7 @@
 
   CONVERGED ON NODE NUMBER  1469 AT                     MAGNETIC Z FIELD =   753.1871768     GAUSS 
 
-  SMALLEST EIGENVALUE IS NUMBER  9 =  0.74653E-11
+  SMALLEST EIGENVALUE OF MATCHING MATRIX IS NUMBER  9 = -4.59721E-12
 
   WITH PRINCIPAL EIGENVECTOR COMPONENTS
   CHAN     VEC    VEC**2   L   QUANTUM NUMBERS
@@ -371,7 +369,7 @@
   27    0.2477    0.0614   2   1   5   1   3   0
   = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = 
 
-  ENERGY SET     3: ENERGY =  -125.0000000     MHZ     
+  ENERGY      3 =  -125.0000000     MHZ     
 
   NODE COUNT = 1471 AT MINIMUM MAGNETIC Z FIELD =   750.0000000     GAUSS 
   NODE COUNT = 1468 AT MAXIMUM MAGNETIC Z FIELD =   850.0000000     GAUSS 
@@ -383,9 +381,9 @@
 
   SEARCHING FOR INODE =    1 CORRESPONDING TO NODE COUNT = 1469
 
-  CONVERGED ON NODE NUMBER  1469 AT                     MAGNETIC Z FIELD =   805.7569285     GAUSS 
+  CONVERGED ON NODE NUMBER  1469 AT                     MAGNETIC Z FIELD =   805.7569284     GAUSS 
 
-  SMALLEST EIGENVALUE IS NUMBER 10 =  0.80349E-10
+  SMALLEST EIGENVALUE OF MATCHING MATRIX IS NUMBER 10 = -9.54188E-11
 
   WITH PRINCIPAL EIGENVECTOR COMPONENTS
   CHAN     VEC    VEC**2   L   QUANTUM NUMBERS
@@ -398,9 +396,9 @@
 
   SEARCHING FOR INODE =    2 CORRESPONDING TO NODE COUNT = 1470
 
-  CONVERGED ON NODE NUMBER  1470 AT                     MAGNETIC Z FIELD =   772.1831036     GAUSS 
+  CONVERGED ON NODE NUMBER  1470 AT                     MAGNETIC Z FIELD =   772.1831035     GAUSS 
 
-  SMALLEST EIGENVALUE IS NUMBER 10 =  0.48985E-11
+  SMALLEST EIGENVALUE OF MATCHING MATRIX IS NUMBER 10 = -3.26419E-13
 
   WITH PRINCIPAL EIGENVECTOR COMPONENTS
   CHAN     VEC    VEC**2   L   QUANTUM NUMBERS
@@ -414,7 +412,7 @@
 
   CONVERGED ON NODE NUMBER  1471 AT                     MAGNETIC Z FIELD =   764.0184567     GAUSS 
 
-  SMALLEST EIGENVALUE IS NUMBER 11 = -0.65551E-11
+  SMALLEST EIGENVALUE OF MATCHING MATRIX IS NUMBER 11 =  1.27898E-13
 
   WITH PRINCIPAL EIGENVECTOR COMPONENTS
   CHAN     VEC    VEC**2   L   QUANTUM NUMBERS
@@ -424,7 +422,7 @@
   16   -0.2399    0.0576   2  -1   5  -1   3   0
   = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = 
 
-  ENERGY SET     4: ENERGY =  -75.00000000     MHZ     
+  ENERGY      4 =  -75.00000000     MHZ     
 
   NODE COUNT = 1471 AT MINIMUM MAGNETIC Z FIELD =   750.0000000     GAUSS 
   NODE COUNT = 1468 AT MAXIMUM MAGNETIC Z FIELD =   850.0000000     GAUSS 
@@ -438,7 +436,7 @@
 
   CONVERGED ON NODE NUMBER  1469 AT                     MAGNETIC Z FIELD =   823.8673232     GAUSS 
 
-  SMALLEST EIGENVALUE IS NUMBER 10 = -0.19627E-11
+  SMALLEST EIGENVALUE OF MATCHING MATRIX IS NUMBER 10 =  2.74412E-11
 
   WITH PRINCIPAL EIGENVECTOR COMPONENTS
   CHAN     VEC    VEC**2   L   QUANTUM NUMBERS
@@ -453,7 +451,7 @@
 
   CONVERGED ON NODE NUMBER  1470 AT                     MAGNETIC Z FIELD =   791.1539042     GAUSS 
 
-  SMALLEST EIGENVALUE IS NUMBER 10 = -0.30696E-10
+  SMALLEST EIGENVALUE OF MATCHING MATRIX IS NUMBER 10 =  1.73377E-12
 
   WITH PRINCIPAL EIGENVECTOR COMPONENTS
   CHAN     VEC    VEC**2   L   QUANTUM NUMBERS
@@ -467,17 +465,17 @@
 
   CONVERGED ON NODE NUMBER  1471 AT                     MAGNETIC Z FIELD =   782.8050521     GAUSS 
 
-  SMALLEST EIGENVALUE IS NUMBER 11 =  0.10971E-10
+  SMALLEST EIGENVALUE OF MATCHING MATRIX IS NUMBER 11 =  1.63078E-12
 
   WITH PRINCIPAL EIGENVECTOR COMPONENTS
   CHAN     VEC    VEC**2   L   QUANTUM NUMBERS
 
-  11   -0.9028    0.8150   2   1   3  -1   3   0
-  15    0.3505    0.1229   2   1   3   1   1   0
-  16   -0.2381    0.0567   2  -1   5  -1   3   0
+  11    0.9028    0.8150   2   1   3  -1   3   0
+  15   -0.3505    0.1229   2   1   3   1   1   0
+  16    0.2381    0.0567   2  -1   5  -1   3   0
   = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = 
 
-  ENERGY SET     5: ENERGY =  -25.00000000     MHZ     
+  ENERGY      5 =  -25.00000000     MHZ     
 
   NODE COUNT = 1472 AT MINIMUM MAGNETIC Z FIELD =   750.0000000     GAUSS 
   NODE COUNT = 1468 AT MAXIMUM MAGNETIC Z FIELD =   850.0000000     GAUSS 
@@ -491,7 +489,7 @@
 
   CONVERGED ON NODE NUMBER  1469 AT                     MAGNETIC Z FIELD =   841.9413525     GAUSS 
 
-  SMALLEST EIGENVALUE IS NUMBER  9 =  0.42677E-10
+  SMALLEST EIGENVALUE OF MATCHING MATRIX IS NUMBER  9 = -5.69102E-10
 
   WITH PRINCIPAL EIGENVECTOR COMPONENTS
   CHAN     VEC    VEC**2   L   QUANTUM NUMBERS
@@ -506,21 +504,21 @@
 
   CONVERGED ON NODE NUMBER  1470 AT                     MAGNETIC Z FIELD =   810.0994707     GAUSS 
 
-  SMALLEST EIGENVALUE IS NUMBER  9 =  0.12200E-11
+  SMALLEST EIGENVALUE OF MATCHING MATRIX IS NUMBER  9 =  8.98242E-12
 
   WITH PRINCIPAL EIGENVECTOR COMPONENTS
   CHAN     VEC    VEC**2   L   QUANTUM NUMBERS
 
-  22    0.9707    0.9423   2   1   5  -1   5   0
-  27   -0.2401    0.0577   2   1   5   1   3   0
+  22   -0.9707    0.9423   2   1   5  -1   5   0
+  27    0.2401    0.0577   2   1   5   1   3   0
 
   - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
   SEARCHING FOR INODE =    3 CORRESPONDING TO NODE COUNT = 1471
 
-  CONVERGED ON NODE NUMBER  1471 AT                     MAGNETIC Z FIELD =   801.5738204     GAUSS 
+  CONVERGED ON NODE NUMBER  1471 AT                     MAGNETIC Z FIELD =   801.5738205     GAUSS 
 
-  SMALLEST EIGENVALUE IS NUMBER 10 = -0.55950E-10
+  SMALLEST EIGENVALUE OF MATCHING MATRIX IS NUMBER 10 = -3.84796E-12
 
   WITH PRINCIPAL EIGENVECTOR COMPONENTS
   CHAN     VEC    VEC**2   L   QUANTUM NUMBERS
@@ -535,14 +533,14 @@
 
   CONVERGED ON NODE NUMBER  1472 AT                     MAGNETIC Z FIELD =   762.1331274     GAUSS 
 
-  SMALLEST EIGENVALUE IS NUMBER 10 =  0.39503E-10
+  SMALLEST EIGENVALUE OF MATCHING MATRIX IS NUMBER 10 = -4.00604E-11
 
   WITH PRINCIPAL EIGENVECTOR COMPONENTS
   CHAN     VEC    VEC**2   L   QUANTUM NUMBERS
 
-  13    0.2251    0.0507   2   1   3  -1   5   0
-  21    0.9025    0.8145   2   1   5  -1   3   0
-  26   -0.3490    0.1218   2   1   5   1   1   0
+  13   -0.2251    0.0507   2   1   3  -1   5   0
+  21   -0.9025    0.8145   2   1   5  -1   3   0
+  26    0.3490    0.1218   2   1   5   1   1   0
 
   ======================================================================================================================
 
@@ -557,7 +555,7 @@
  |                                                                            |
  |                               Version 2019.0 (beta)                        |
  |                                                                            |
- |                    This run used     129.60 cpu secs and                   |
+ |                    This run used     147.07 cpu secs and                   |
  |               7467 of the allocated   1000000 words of storage             |
  |                                                                            |
   -- FIELD ------ FIELD ------ FIELD ------ FIELD ------ FIELD ------ FIELD --

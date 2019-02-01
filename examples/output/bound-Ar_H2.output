@@ -6,7 +6,7 @@
  |                                                                            |
  |                               Version 2019.0 (beta)                        |
  |                                                                            |
- |                       Run on 16 Jan 2019   at 11:41:05                     |
+ |                       Run on 01 Feb 2019   at 00:12:22                     |
  |                                                                            |
   -- BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND --
 
@@ -145,14 +145,13 @@
   PROGRAM WILL ATTEMPT TO CONVERGE ON BOUND STATES AS A FUNCTION OF ENERGY
 
   FOR EACH LEVEL, THE BISECTION METHOD WILL BE USED UNTIL THE VWDB METHOD OFFERS RELIABLE CONVERGENCE.
+
   VWDB CONVERGENCE WILL TERMINATE WHEN THE STEP SIZE IS LESS THAN 1.00000E-07 CM-1    
 
   INPUT ENERGY VALUES ASSUMED TO BE IN UNITS OF CM-1 BY DEFAULT.
 
   PROGRAM WILL SEEK EIGENVALUES WITH GENERALISED NODE COUNTS FROM    0 TO  99999
   LYING IN ENERGY RANGE   4460.0     TO   4480.0     CM-1    
-
-  INITIALIZATION DONE.  TIME WAS   0.00 CPU SECS.        39 WORDS OF STORAGE USED.
 
   ======================================================================================================================
 
@@ -161,6 +160,8 @@
   EACH JTOT IS SPLIT INTO A MAXIMUM OF   2 SYMMETRY BLOCKS
 
   CALCULATIONS WILL BE FOR SYMMETRY BLOCK   1  ONLY
+
+  INITIALIZATION DONE.  TIME WAS   0.00 CPU SECS.        39 WORDS OF STORAGE USED.
 
   ================================= ground state for Ar-H2 v=1 (LeRoy-Hutson TT3(6,8)) =================================
 

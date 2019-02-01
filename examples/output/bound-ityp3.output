@@ -6,7 +6,7 @@
  |                                                                            |
  |                               Version 2019.0 (beta)                        |
  |                                                                            |
- |                       Run on 16 Jan 2019   at 11:41:05                     |
+ |                       Run on 01 Feb 2019   at 00:12:22                     |
  |                                                                            |
   -- BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND --
 
@@ -139,7 +139,7 @@
 
   INITIAL STEP SIZE TAKEN FROM SIZE OF FINAL STEP OF SHORT-RANGE PROPAGATION
   STEP SIZES ADJUSTED TO MAINTAIN APPROXIMATE ACCURACY VIA PERTURBATION THEORY
-  WITH TOLHI =  1.00E-04 AND POWR =   6.0    
+  WITH TOLHI =  1.00E-04 AND POWR =   3.0    
 
   LOG-DERIVATIVE MATRIX INITIALISED IN THE LOCAL EIGENBASIS AT RMAX IN THE INWARD PROPAGATION PART
   LOCALLY CLOSED CHANNELS INITIALISED WITH A WKB BOUNDARY CONDITION
@@ -150,6 +150,7 @@
   PROGRAM WILL ATTEMPT TO CONVERGE ON BOUND STATES AS A FUNCTION OF ENERGY
 
   FOR EACH LEVEL, THE BISECTION METHOD WILL BE USED UNTIL THE VWDB METHOD OFFERS RELIABLE CONVERGENCE.
+
   VWDB CONVERGENCE WILL TERMINATE WHEN THE STEP SIZE IS LESS THAN 1.00000E-07 CM-1    
 
   INPUT ENERGY VALUES ASSUMED TO BE IN UNITS OF CM-1 BY DEFAULT.
@@ -157,13 +158,13 @@
   PROGRAM WILL SEEK EIGENVALUES WITH GENERALISED NODE COUNTS FROM    0 TO  99999
   LYING IN ENERGY RANGE   100.00     TO   121.59     CM-1    
 
-  INITIALIZATION DONE.  TIME WAS   0.00 CPU SECS.        26 WORDS OF STORAGE USED.
-
   ======================================================================================================================
 
   TOTAL ANGULAR MOMENTUM JTOT RUNS FROM   0  TO     1  IN STEPS OF   1
 
   EACH JTOT IS SPLIT INTO A MAXIMUM OF   2 SYMMETRY BLOCKS
+
+  INITIALIZATION DONE.  TIME WAS   0.00 CPU SECS.        26 WORDS OF STORAGE USED.
 
   ======================== p-H2 + o-H2: potential of Zarur and Rabitz; coefficients from VSTAR =========================
 
@@ -229,7 +230,7 @@
  |                                                                            |
  |                               Version 2019.0 (beta)                        |
  |                                                                            |
- |                    This run used       0.11 cpu secs and                   |
+ |                    This run used       0.12 cpu secs and                   |
  |                864 of the allocated   1000000 words of storage             |
  |                                                                            |
   -- BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND --

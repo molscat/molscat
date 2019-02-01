@@ -6,7 +6,7 @@
  |                                                                            |
  |                               Version 2019.0 (beta)                        |
  |                                                                            |
- |                       Run on 16 Jan 2019   at 11:45:15                     |
+ |                       Run on 01 Feb 2019   at 00:20:32                     |
  |                                                                            |
   -- BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND --
 
@@ -145,6 +145,7 @@
   PROGRAM WILL ATTEMPT TO CONVERGE ON BOUND STATES AS A FUNCTION OF ENERGY
 
   FOR EACH LEVEL, THE BISECTION METHOD WILL BE USED UNTIL THE VWDB METHOD OFFERS RELIABLE CONVERGENCE.
+
   VWDB CONVERGENCE WILL TERMINATE WHEN THE STEP SIZE IS LESS THAN  10.000     EV      
 
   INPUT ENERGY VALUES CONVERTED FROM EV
@@ -153,8 +154,6 @@
   PROGRAM WILL SEEK EIGENVALUES WITH GENERALISED NODE COUNTS FROM    0 TO  99999
   LYING IN ENERGY RANGE  1.00000E+09 TO  1.20000E+09 EV      
 
-  INITIALIZATION DONE.  TIME WAS   0.00 CPU SECS.        17 WORDS OF STORAGE USED.
-
   ======================================================================================================================
 
   TOTAL ANGULAR MOMENTUM JTOT =   1
@@ -162,6 +161,8 @@
   EACH JTOT IS SPLIT INTO A MAXIMUM OF   2 SYMMETRY BLOCKS
 
   CALCULATIONS WILL BE FOR SYMMETRY BLOCK   2  ONLY
+
+  INITIALIZATION DONE.  TIME WAS   0.00 CPU SECS.        17 WORDS OF STORAGE USED.
 
   ===================================================== tetraquark =====================================================
 
@@ -187,19 +188,27 @@
 
   SEARCHING FOR INODE =    1 CORRESPONDING TO NODE COUNT =    2
 
-  ENERGY SET     1: ENERGY =   1004331035.     EV      
+  PROPAGATION   1:                                                ENERGY =   1100000000.     EV    
 
-  ENERGY SET     2: ENERGY =   1005580539.     EV      
+  PROPAGATION   2:                                                ENERGY =   1050000000.     EV    
 
-  ENERGY SET     3: ENERGY =   1005560382.     EV      
+  PROPAGATION   3:                                                ENERGY =   1025000000.     EV    
 
-  ENERGY SET     4: ENERGY =   1005560678.     EV      
+  PROPAGATION   4:                                                ENERGY =   1004331035.     EV    
+
+  PROPAGATION   5:                                                ENERGY =   1005580539.     EV    
+
+  PROPAGATION   6:                                                ENERGY =   1005560382.     EV    
+
+  PROPAGATION   7:                                                ENERGY =   1005560678.     EV    
+
+  PROPAGATION   8:                                                ENERGY =   1005560676.     EV    
 
   CONVERGED ON NODE NUMBER     2 AT                               ENERGY =   1005560676.     EV    
 
   LAST STEP WAS                                                             -2.076293734     EV    
 
-  SMALLEST EIGENVALUE IS NUMBER  1 = -0.15323E-06
+  SMALLEST EIGENVALUE OF MATCHING MATRIX IS NUMBER  1 = -6.36228E-08
 
   WITH PRINCIPAL EIGENVECTOR COMPONENTS
   CHAN     VEC    VEC**2   L   QUANTUM NUMBERS
@@ -210,17 +219,21 @@
 
   SEARCHING FOR INODE =    2 CORRESPONDING TO NODE COUNT =    3
 
-  ENERGY SET     1: ENERGY =   1072819565.     EV      
+  PROPAGATION   1:                                                ENERGY =   1075000000.     EV    
 
-  ENERGY SET     2: ENERGY =   1072790960.     EV      
+  PROPAGATION   2:                                                ENERGY =   1072819565.     EV    
 
-  ENERGY SET     3: ENERGY =   1072790889.     EV      
+  PROPAGATION   3:                                                ENERGY =   1072790960.     EV    
+
+  PROPAGATION   4:                                                ENERGY =   1072790889.     EV    
+
+  PROPAGATION   5:                                                ENERGY =   1072790885.     EV    
 
   CONVERGED ON NODE NUMBER     3 AT                               ENERGY =   1072790885.     EV    
 
   LAST STEP WAS                                                             -3.724918145     EV    
 
-  SMALLEST EIGENVALUE IS NUMBER  2 = -0.18671E-06
+  SMALLEST EIGENVALUE OF MATCHING MATRIX IS NUMBER  2 =  3.31980E-07
 
   WITH PRINCIPAL EIGENVECTOR COMPONENTS
   CHAN     VEC    VEC**2   L   QUANTUM NUMBERS
@@ -238,7 +251,7 @@
  |                                                                            |
  |                               Version 2019.0 (beta)                        |
  |                                                                            |
- |                    This run used      11.61 cpu secs and                   |
+ |                    This run used      12.88 cpu secs and                   |
  |                 59 of the allocated   1000000 words of storage             |
  |                                                                            |
   -- BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND --
