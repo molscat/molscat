@@ -26,9 +26,6 @@ USE potential
 !
 !  altered by CRLS 17-07-2018 to use new structure for extra operators
 !
-!  minor alteration by CRLS 14-01-2019 to always call wvcalc and hence
-!  return NOPEN and WVEC
-!
 !  This latest version has the capability to find degenerate sets of
 !  eigenvalues and then to form linear (orthonormal) combinations of
 !  them based on diagonalisation of futher operators (which may or may

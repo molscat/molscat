@@ -148,8 +148,7 @@ IOSBIN =    chck6i.o plm.o set6i.o get102.o gaussp.o gasleg.o zbes.o \
             yrr.o sig6.o iosclc.o iosout.o iospb.o isutp.o
 PRBR =      prbr.o dasize.o prbr3.o
 RESTRT =    sread.o epsum.o restrt.o
-PROPS =     dvprop.o stabil.o rmprop.o \
-            sgnchk.o vvprop.o \
+PROPS =     dvprop.o stabil.o rmprop.o sgnchk.o vvprop.o \
             pert1.o pert2.o delrd.o odprop.o wkb.o
 YTOS =      ytok.o rbesjy.o rbessk.o ytokg.o ksym.o ktos.o
 #
@@ -192,7 +191,7 @@ ALK2-BASE9   = base9-alk_alk.o \
                efv9-dummy.o degen9-nondegenerate.o
 MGNH-BASE9   = base9-1S_3Sigma_cpld.o \
                efv9-dummy.o degen9-nondegenerate.o potin9-example.o
-TETRAQUARK-BASE9   = base9-tetraquark-centrifugal.o \
+TETQ-BASE9   = base9-tetraquark-centrifugal.o \
                efv9-dummy.o degen9-nondegenerate.o thrsh9-dummy.o
 # definitions for MOLSCAT post-processors
 #
@@ -212,8 +211,7 @@ PROGS =     molscat-basic \
             bound-basic \
             bound-Rg_HX   bound-Rb2      bound-Ar_CH4 \
             bound-H2_H2   bound-Rg_H2    bound-Mg_NH \
-            bound-Rg_CO2 \
-            bound-tetraquark \
+            bound-Rg_CO2  bound-tetraquark \
             field-basic \
             field-Mg_NH   field-Rb2
 ##############################################################################
@@ -288,7 +286,7 @@ $(EXECDIR)/bound-Mg_NH       : $(addprefix $(OBJDIR)/,$(BASIC_BND) \
                                                       $(MGNH-POTENL))
 	$(LINK.f) $^ $(LIBS) -o $@
 $(EXECDIR)/bound-tetraquark  : $(addprefix $(OBJDIR)/,$(BASIC_BND) \
-                                                      $(TETRAQUARK-BASE9) \
+                                                      $(TETQ-BASE9) \
                                                       $(BASIC-POTENL))
 	$(LINK.f) $^ $(LIBS) -o $@
 $(EXECDIR)/field-basic       : $(addprefix $(OBJDIR)/,$(BASIC_FLD) \
