@@ -2,11 +2,11 @@
  |                                                                            |
  |          Bound states of interacting pairs of atoms and molecules          |
  |                                                                            |
- |              Copyright (C) 2018 J. M. Hutson & C. R. Le Sueur              |
+ |              Copyright (C) 2019 J. M. Hutson & C. R. Le Sueur              |
  |                                                                            |
- |                               Version 2019.0 (beta)                        |
+ |                               Version 2019.0                               |
  |                                                                            |
- |                       Run on 01 Feb 2019   at 00:12:22                     |
+ |                       Run on 18 Feb 2019   at 22:37:51                     |
  |                                                                            |
   -- BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND --
 
@@ -16,17 +16,15 @@
   the Free Software Foundation.
 
   Publications resulting from the use of this program should refer to
-  J. M. Hutson & C. R. Le Sueur, BOUND computer code 2019.0 (beta)       
+  J. M. Hutson & C. R. Le Sueur, BOUND computer code 2019.0              
   or to the published paper in Computer Physics Communications when available.
 
 
-  PHYSICAL CONSTANTS OBTAINED FROM NIST CODATA TABULATION OF 2014
+  USING CODATA 2014 RECOMMENDED VALUES OF FUNDAMENTAL PHYSICAL CONSTANTS
 
   MEMORY ALLOCATED TO MAIN WORKING ARRAY IS   1000000 (8-BYTE) WORDS (    7.63 MB)
 
-  PRINT LEVEL =  2
-
-  RUN LABEL = p-H2 + o-H2: potential of Zarur and Rabitz; coefficients from VSTAR             
+  PRINT LEVEL (IPRINT) =  2
 
   REDUCED MASS FOR INTERACTION =   1.000000000 ATOMIC MASS UNITS (DALTONS)
 
@@ -36,14 +34,14 @@
 
   INTERACTION TYPE IS    LINEAR ROTOR - LINEAR ROTOR.  
 
-  TARGET/PROJECTILE ENERGY LEVELS TAKEN FROM &BASIS (JLEVEL) INPUT.  NLEVEL =  3
+  PAIR LEVEL QUANTUM NUMBERS TAKEN FROM JLEVEL INPUT.  NLEVEL =  3
 
-  ENERGY LEVELS COMPUTED FROM B(E) =   60.800000
+  ENERGY LEVELS OF ROTOR 1 OBTAINED FROM B(E) =   60.800000
 
-  PROJECTILE ENERGY LEVELS COMPUTED FROM B(E) =   60.800000
+  ENERGY LEVELS OF ROTOR 2 OBTAINED FROM B(E) =   60.800000
 
   QUANTUM NUMBERS FOR INTERACTING PAIR:
-  EACH PAIR STATE IS LABELLED BY  3 QUANTUM LABELS
+  EACH PAIR STATE IS LABELLED BY  3 QUANTUM NUMBERS
   EACH CHANNEL FUNCTION IS FORMED BY COMBINING A PAIR STATE WITH A VALUE OF L.
   THE RESULTING BASIS SET IS ASYMPTOTICALLY DIAGONAL.
 
@@ -168,17 +166,11 @@
 
   ======================== p-H2 + o-H2: potential of Zarur and Rabitz; coefficients from VSTAR =========================
 
-  *******************************************  ANGULAR MOMENTUM JTOT  =   0  *******************************************
-
-  SYMMETRY BLOCK =   1
-  = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = 
+  *****************************  ANGULAR MOMENTUM JTOT  =   0   AND SYMMETRY BLOCK  =    1  ****************************
 
   NO NODES FOUND AT EMAX =   121.5900000     CM-1. END SEARCH.
 
-  ======================================================================================================================
-
-  SYMMETRY BLOCK =   2
-  = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = 
+  *****************************  ANGULAR MOMENTUM JTOT  =   0   AND SYMMETRY BLOCK  =    2  ****************************
 
   NODE COUNT =    0 AT MINIMUM ENERGY =   100.0000000     CM-1  
   NODE COUNT =    1 AT MAXIMUM ENERGY =   121.5900000     CM-1  
@@ -189,12 +181,7 @@
 
   CONVERGED ON NODE NUMBER     1 AT                               ENERGY =   120.7043669     CM-1  
 
-  ======================================================================================================================
-
-  *******************************************  ANGULAR MOMENTUM JTOT  =   1  *******************************************
-
-  SYMMETRY BLOCK =   1
-  = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = 
+  *****************************  ANGULAR MOMENTUM JTOT  =   1   AND SYMMETRY BLOCK  =    1  ****************************
 
   NODE COUNT =    0 AT MINIMUM ENERGY =   100.0000000     CM-1  
   NODE COUNT =    1 AT MAXIMUM ENERGY =   121.5900000     CM-1  
@@ -205,10 +192,7 @@
 
   CONVERGED ON NODE NUMBER     1 AT                               ENERGY =   121.1536791     CM-1  
 
-  ======================================================================================================================
-
-  SYMMETRY BLOCK =   2
-  = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = 
+  *****************************  ANGULAR MOMENTUM JTOT  =   1   AND SYMMETRY BLOCK  =    2  ****************************
 
   NODE COUNT =    0 AT MINIMUM ENERGY =   100.0000000     CM-1  
   NODE COUNT =    1 AT MAXIMUM ENERGY =   121.5900000     CM-1  
@@ -219,18 +203,16 @@
 
   CONVERGED ON NODE NUMBER     1 AT                               ENERGY =   119.6219102     CM-1  
 
-  ======================================================================================================================
-
 
   -- BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND --
  |                                                                            |
  |          Bound states of interacting pairs of atoms and molecules          |
  |                                                                            |
- |              Copyright (C) 2018 J. M. Hutson & C. R. Le Sueur              |
+ |              Copyright (C) 2019 J. M. Hutson & C. R. Le Sueur              |
  |                                                                            |
- |                               Version 2019.0 (beta)                        |
+ |                               Version 2019.0                               |
  |                                                                            |
- |                    This run used       0.12 cpu secs and                   |
- |                864 of the allocated   1000000 words of storage             |
+ |                    This run used       0.14 cpu secs and                   |
+ |                900 of the allocated   1000000 words of storage             |
  |                                                                            |
   -- BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND --

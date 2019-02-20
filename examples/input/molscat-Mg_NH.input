@@ -1,22 +1,22 @@
  &INPUT
     LABEL  = 'ITYP = 9: Mg + NH in magnetic field; cross sections, non-diagonal H_intl',
     URED   =  9.232679959,
-    IPRINT =  6,     ISIGPR =  1,       ISCRU  = 30,
+    IPRINT =  6,   ISIGPR =  1,    ISCRU  = 30,
     MXSIG  =  5,
-    RMIN   =  2.3D0, RMID   =  5.0D0,   RMAX   =  7.0D0, IRMSET = 0,
-    IPROPS =  6,     IPROPL =  9,       DR     =  0.04,  TOLHI  = 0.0,
-    JTOTL  = -2,     JTOTU  =  4,
-    EUNITS =  2,     NNRG   =  3,       LOGNRG = .TRUE.,
+    RMIN   =  2.3, RMID   =  5.0,  RMAX   =  7.0,   IRMSET = 0,
+    IPROPS =  6,   DR     =  0.04,
+    IPROPL =  9,   DRL    =  0.01, TOLHI  =  1.E-6,
+    JTOTL  = -2,   JTOTU  =  4,
+    EUNITS =  2,   NNRG   =  3,    LOGNRG = .TRUE., ENERGY = 0.001, 0.100,
     MONQN  =  0, 1, 1,
-    ENERGY =  0.001, 0.100,
-    FLDMIN = 10.0D0, FLDMAX = 10.0D0,   DFIELD = 10.0,
+    FLDMIN = 10.0, FLDMAX = 10.0,  DFIELD = 10.0,
     LASTIN =  0,
  /
 
  &BASIS
     ITYPE  =  9,
     JMIN   =  0, JMAX   = 2,
-    ROTI   = 16.343D0, -0.055D0, 0.92D0, ! B, GAMMA, LAMBDA
+    ROTI   = 16.343, -0.055, 0.92, ! B, GAMMA, LAMBDA
  /
 
  &BASIS9
@@ -38,21 +38,21 @@
  &INPUT
     LABEL  = 'ITYP = 9: Mg + NH in magnetic field; cross sections, diagonal H_intl',
     URED   =  9.232679959,
-    IPRINT = 10,     ISIGPR =  1,       ISCRU  = 30,
+    IPRINT = 10,   ISIGPR =  1,    ISCRU  = 30,
     MXSIG  =  5,
-    RMIN   =  2.3D0, RMID   =  5.0D0,   RMAX   =  7.0D0, IRMSET = 0,
-    IPROPS =  6,     IPROPL =  9,       DR     =  0.04,  TOLHI  = 0.0,
-    JTOTL  = -2,     JTOTU  =  4,
-    EUNITS =  2,     NNRG   =  3,       LOGNRG = .TRUE.,
+    RMIN   =  2.3, RMID   =  5.0,  RMAX   =  7.0,   IRMSET = 0,
+    IPROPS =  6,   DR     =  0.04,
+    IPROPL =  9,   DRL    =  0.01, TOLHI  =  1.E-6,
+    JTOTL  = -2,   JTOTU  =  4,
+    EUNITS =  2,   NNRG   =  3,    LOGNRG = .TRUE., ENERGY = 0.001, 0.100,
     MONQN  =  0, 1, 1,
-    ENERGY =  0.001, 0.100,
-    FLDMIN = 10.0D0, FLDMAX = 10.0D0,   DFIELD = 10.0,
+    FLDMIN = 10.0, FLDMAX = 10.0,  DFIELD = 10.0,
  /
 
  &BASIS
     ITYPE  =  9,
     JMIN   =  0, JMAX   = 2,
-    ROTI   = 16.343D0, -0.055D0, 0.92D0, ! B, GAMMA, LAMBDA
+    ROTI   = 16.343, -0.055, 0.92, ! B, GAMMA, LAMBDA
  /
 
  &BASIS9
@@ -63,7 +63,7 @@
 
  &POTL
     MXLAM  = 7,
-    LAMBDA = 0,1,2,3,4,5,6,
+    LAMBDA = 0, 1, 2, 3, 4, 5, 6,
     NTERM  = 7*-1,
  /
 

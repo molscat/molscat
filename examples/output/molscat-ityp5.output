@@ -3,11 +3,11 @@
  |                Non-reactive quantum scattering calculations                |
  |                     on atomic and molecular collisions                     |
  |                                                                            |
- |              Copyright (C) 2018 J. M. Hutson & C. R. Le Sueur              |
+ |              Copyright (C) 2019 J. M. Hutson & C. R. Le Sueur              |
  |                                                                            |
- |                               Version 2019.0 (beta)                        |
+ |                               Version 2019.0                               |
  |                                                                            |
- |                       Run on 01 Feb 2019   at 10:30:14                     |
+ |                       Run on 18 Feb 2019   at 22:24:52                     |
  |                                                                            |
   ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
 
@@ -17,18 +17,16 @@
   the Free Software Foundation.
 
   Publications resulting from the use of this program should refer to
-  J. M. Hutson & C. R. Le Sueur, MOLSCAT computer code 2019.0 (beta)       
+  J. M. Hutson & C. R. Le Sueur, MOLSCAT computer code 2019.0              
   or to the published paper in Computer Physics Communications when available.
 
 
-  PHYSICAL CONSTANTS OBTAINED FROM NIST CODATA TABULATION OF 2014
+  USING CODATA 2014 RECOMMENDED VALUES OF FUNDAMENTAL PHYSICAL CONSTANTS
 
   MEMORY ALLOCATED TO MAIN WORKING ARRAY IS   1000000 (8-BYTE) WORDS (    7.63 MB)
   2 INTEGERS CAN BE STORED IN EACH WORD.
 
-  PRINT LEVEL =  3     OTHER PRINT CONTROLS  ISIGPR = 2
-
-  RUN LABEL = NH3-He on simple analytic potential; STEPS convergence                          
+  PRINT LEVEL (IPRINT) =  3     OTHER PRINT CONTROLS  ISIGPR = 2
 
   REDUCED MASS FOR INTERACTION =   3.240000000 ATOMIC MASS UNITS (DALTONS)
 
@@ -38,9 +36,9 @@
 
   INTERACTION TYPE IS  ATOM - NEAR SYM. TOP RIGID ROTOR
 
-  TARGET ROTATIONAL LEVELS COMPUTED FROM JMIN =  0,  JMAX =  6,  AND JSTEP = 1
+  MOLECULAR QUANTUM NUMBERS OBTAINED FROM JMIN =  0,  JMAX =  6,  AND JSTEP = 1
 
-  ENERGY LEVELS COMPUTED FROM ZEROTH-ORDER NEAR-SYMMETRIC TOP FORMULA
+  ENERGY LEVELS OBTAINED FROM ZEROTH-ORDER NEAR-SYMMETRIC TOP FORMULA
           ROTATIONAL CONSTANTS ARE A, B, C (CM-1) =      9.9441      9.9441      6.2294
           N.B. THESE MOMENTS MUST CORRESPOND RESPECTIVELY TO X, Y, Z COORDINATES USED TO DEFINE INTERACTION POTENTIAL
 
@@ -51,7 +49,7 @@
   3-FOLD SYMMETRY: ONLY E STATES INCLUDED
 
   QUANTUM NUMBERS FOR INTERACTING PAIR:
-  EACH PAIR STATE IS LABELLED BY  3 QUANTUM LABELS
+  EACH PAIR STATE IS LABELLED BY  3 QUANTUM NUMBERS
   EACH CHANNEL FUNCTION IS FORMED BY COMBINING A PAIR STATE WITH A VALUE OF L.
   THE RESULTING BASIS SET IS ASYMPTOTICALLY DIAGONAL.
 
@@ -196,35 +194,98 @@
 
   =============================== NH3-He on simple analytic potential; STEPS convergence ===============================
 
-  *******************************************  ANGULAR MOMENTUM JTOT  =   5  *******************************************
-
-  SYMMETRY BLOCK =   2
-
-  JTOT =    5,  SYMMETRY BLOCK =   2,  ENERGY(   1) =   110.00000000     CM-1
+  *****************************  ANGULAR MOMENTUM JTOT  =   5   AND SYMMETRY BLOCK  =    2  ****************************
 
   CONVERGENCE TESTS: STEPS WILL HALVE EACH TIME
 
   CONVERGENCE TESTS: STEPL WILL HALVE EACH TIME
 
-  ------------------------------- NH3-He on simple analytic potential; STEPS convergence -------------------------------
+  * * * * * * * * * *  STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FROM LEVEL I TO LEVEL F  * * * * * * * * * *
+                       FOR JTOT =   5 AND SYMMETRY BLOCK =   2 AT ENERGY(  1) =  110.0000     CM-1
 
-  JTOT =    5,  SYMMETRY BLOCK =   2,  ENERGY(   2) =   110.00000000     CM-1
+    F  I =      1              2              3              4              5              6
+    1       1.66957E+00    2.94549E-02    9.16428E-03    9.61824E-02    7.97689E-05    8.21141E-02
+    2       2.92080E-02    1.14522E+00    9.18620E-02    3.97240E-02    2.50250E-01    7.04062E-05
+    3       8.72491E-03    8.81974E-02    2.31466E+00    1.58541E-02    1.17782E-01    3.42220E-03
+    4       9.29153E-02    3.86991E-02    1.60869E-02    4.59107E+00    7.20864E-03    1.11297E-01
+    5       9.16028E-05    2.89806E-01    1.42067E-01    8.56914E-03    2.86604E+00    4.11498E-02
+    6       9.54435E-02    8.25270E-05    4.17803E-03    1.33912E-01    4.16506E-02    2.77730E+00
+    9       1.32432E-02    4.66655E-03    1.58496E-03    9.60677E-02    1.73218E-02    6.17055E-02
+   10       1.57411E-03    1.33466E-02    3.78878E-02    1.11658E-03    3.67434E-02    5.54663E-03
+
+    F  I =      9             10
+    1       8.49330E-02    1.15438E-02
+    2       2.96771E-02    9.70568E-02
+    3       9.67748E-03    2.64530E-01
+    4       5.95184E-01    7.91029E-03
+    5       1.27571E-01    3.09433E-01
+    6       4.59976E-01    4.72791E-02
+    9       2.12747E+01    1.69743E-01
+   10       1.48444E-01    1.21603E+01
+
+  FOR JTOT =    5, SYMMETRY BLOCK =  2, ENERGY(  1) =  110.0000    : MAX DIAG & OFF-DIAG =  2.13E+01 &   5.95E-01
+
+  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
   FOR RMIN =   3.00 STEPS =  40.00 RMID =   8.00 STEPL =  40.00 RMAX =      30.00
   RMS CHANGE IN S-MATRIX ELEMENTS IS         5.29943E-06     LOG IS  -5.276
   RMS CHANGE IN TRANSITION PROBABILITIES IS  1.83884E-06     LOG IS  -5.735
 
-  ------------------------------- NH3-He on simple analytic potential; STEPS convergence -------------------------------
+  * * * * * * * * * *  STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FROM LEVEL I TO LEVEL F  * * * * * * * * * *
+                       FOR JTOT =   5 AND SYMMETRY BLOCK =   2 AT ENERGY(  2) =  110.0000     CM-1
 
-  JTOT =    5,  SYMMETRY BLOCK =   2,  ENERGY(   3) =   110.00000000     CM-1
+    F  I =      1              2              3              4              5              6
+    1       1.66959E+00    2.94553E-02    9.16460E-03    9.61786E-02    7.97497E-05    8.21122E-02
+    2       2.92083E-02    1.14520E+00    9.18599E-02    3.97239E-02    2.50248E-01    7.04021E-05
+    3       8.72522E-03    8.81954E-02    2.31467E+00    1.58543E-02    1.17779E-01    3.42216E-03
+    4       9.29116E-02    3.86991E-02    1.60870E-02    4.59109E+00    7.20850E-03    1.11296E-01
+    5       9.15808E-05    2.89803E-01    1.42063E-01    8.56897E-03    2.86603E+00    4.11494E-02
+    6       9.54413E-02    8.25223E-05    4.17798E-03    1.33911E-01    4.16502E-02    2.77730E+00
+    9       1.32428E-02    4.66653E-03    1.58499E-03    9.60683E-02    1.73219E-02    6.17119E-02
+   10       1.57411E-03    1.33464E-02    3.78869E-02    1.11659E-03    3.67511E-02    5.54682E-03
+
+    F  I =      9             10
+    1       8.49303E-02    1.15438E-02
+    2       2.96770E-02    9.70554E-02
+    3       9.67768E-03    2.64524E-01
+    4       5.95188E-01    7.91037E-03
+    5       1.27572E-01    3.09498E-01
+    6       4.60023E-01    4.72808E-02
+    9       2.12746E+01    1.69743E-01
+   10       1.48444E-01    1.21603E+01
+
+  FOR JTOT =    5, SYMMETRY BLOCK =  2, ENERGY(  2) =  110.0000    : MAX DIAG & OFF-DIAG =  2.13E+01 &   5.95E-01
+
+  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
   FOR RMIN =   3.00 STEPS =  20.00 RMID =   8.00 STEPL =  20.00 RMAX =      30.00
   RMS CHANGE IN S-MATRIX ELEMENTS IS         6.71284E-06     LOG IS  -5.173
   RMS CHANGE IN TRANSITION PROBABILITIES IS  2.49193E-06     LOG IS  -5.603
 
-  ======================================================================================================================
+  * * * * * * * * * *  STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FROM LEVEL I TO LEVEL F  * * * * * * * * * *
+                       FOR JTOT =   5 AND SYMMETRY BLOCK =   2 AT ENERGY(  3) =  110.0000     CM-1
 
-  SIGMA NOT PRINTED BECAUSE ISIGPR = 0
+    F  I =      1              2              3              4              5              6
+    1       1.66958E+00    2.94554E-02    9.16437E-03    9.61808E-02    7.97666E-05    8.21132E-02
+    2       2.92084E-02    1.14520E+00    9.18613E-02    3.97235E-02    2.50251E-01    7.03953E-05
+    3       8.72500E-03    8.81967E-02    2.31467E+00    1.58544E-02    1.17781E-01    3.42212E-03
+    4       9.29137E-02    3.86987E-02    1.60872E-02    4.59104E+00    7.20855E-03    1.11299E-01
+    5       9.16002E-05    2.89807E-01    1.42065E-01    8.56904E-03    2.86604E+00    4.11492E-02
+    6       9.54424E-02    8.25143E-05    4.17793E-03    1.33914E-01    4.16500E-02    2.77729E+00
+    9       1.32432E-02    4.66666E-03    1.58506E-03    9.60677E-02    1.73221E-02    6.17122E-02
+   10       1.57420E-03    1.33472E-02    3.78876E-02    1.11660E-03    3.67576E-02    5.54688E-03
+
+    F  I =      9             10
+    1       8.49331E-02    1.15444E-02
+    2       2.96778E-02    9.70609E-02
+    3       9.67811E-03    2.64528E-01
+    4       5.95184E-01    7.91048E-03
+    5       1.27573E-01    3.09552E-01
+    6       4.60026E-01    4.72813E-02
+    9       2.12745E+01    1.69743E-01
+   10       1.48444E-01    1.21602E+01
+
+  FOR JTOT =    5, SYMMETRY BLOCK =  2, ENERGY(  3) =  110.0000    : MAX DIAG & OFF-DIAG =  2.13E+01 &   5.95E-01
 
 
   ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
@@ -232,11 +293,11 @@
  |                Non-reactive quantum scattering calculations                |
  |                     on atomic and molecular collisions                     |
  |                                                                            |
- |              Copyright (C) 2018 J. M. Hutson & C. R. Le Sueur              |
+ |              Copyright (C) 2019 J. M. Hutson & C. R. Le Sueur              |
  |                                                                            |
- |                               Version 2019.0 (beta)                        |
+ |                               Version 2019.0                               |
  |                                                                            |
- |                    This run used       3.74 cpu secs and                   |
+ |                    This run used       3.89 cpu secs and                   |
  |             199191 of the allocated   1000000 words of storage             |
  |                                                                            |
   ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
@@ -245,11 +306,11 @@
  |                Non-reactive quantum scattering calculations                |
  |                     on atomic and molecular collisions                     |
  |                                                                            |
- |              Copyright (C) 2018 J. M. Hutson & C. R. Le Sueur              |
+ |              Copyright (C) 2019 J. M. Hutson & C. R. Le Sueur              |
  |                                                                            |
- |                               Version 2019.0 (beta)                        |
+ |                               Version 2019.0                               |
  |                                                                            |
- |                       Run on 01 Feb 2019   at 10:30:18                     |
+ |                       Run on 18 Feb 2019   at 22:24:56                     |
  |                                                                            |
   ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
 
@@ -259,18 +320,16 @@
   the Free Software Foundation.
 
   Publications resulting from the use of this program should refer to
-  J. M. Hutson & C. R. Le Sueur, MOLSCAT computer code 2019.0 (beta)       
+  J. M. Hutson & C. R. Le Sueur, MOLSCAT computer code 2019.0              
   or to the published paper in Computer Physics Communications when available.
 
 
-  PHYSICAL CONSTANTS OBTAINED FROM NIST CODATA TABULATION OF 2014
+  USING CODATA 2014 RECOMMENDED VALUES OF FUNDAMENTAL PHYSICAL CONSTANTS
 
   MEMORY ALLOCATED TO MAIN WORKING ARRAY IS   1000000 (8-BYTE) WORDS (    7.63 MB)
   2 INTEGERS CAN BE STORED IN EACH WORD.
 
-  PRINT LEVEL =  3     OTHER PRINT CONTROLS  ISIGPR = 2
-
-  RUN LABEL = NH3-He on simple analytic potential: DR convergence                             
+  PRINT LEVEL (IPRINT) =  3     OTHER PRINT CONTROLS  ISIGPR = 2
 
   REDUCED MASS FOR INTERACTION =   3.240000000 ATOMIC MASS UNITS (DALTONS)
 
@@ -280,9 +339,9 @@
 
   INTERACTION TYPE IS  ATOM - NEAR SYM. TOP RIGID ROTOR
 
-  TARGET ROTATIONAL LEVELS COMPUTED FROM JMIN =  0,  JMAX =  6,  AND JSTEP = 1
+  MOLECULAR QUANTUM NUMBERS OBTAINED FROM JMIN =  0,  JMAX =  6,  AND JSTEP = 1
 
-  ENERGY LEVELS COMPUTED FROM ZEROTH-ORDER NEAR-SYMMETRIC TOP FORMULA
+  ENERGY LEVELS OBTAINED FROM ZEROTH-ORDER NEAR-SYMMETRIC TOP FORMULA
           ROTATIONAL CONSTANTS ARE A, B, C (CM-1) =      9.9441      9.9441      6.2294
           N.B. THESE MOMENTS MUST CORRESPOND RESPECTIVELY TO X, Y, Z COORDINATES USED TO DEFINE INTERACTION POTENTIAL
 
@@ -293,7 +352,7 @@
   3-FOLD SYMMETRY: ONLY E STATES INCLUDED
 
   QUANTUM NUMBERS FOR INTERACTING PAIR:
-  EACH PAIR STATE IS LABELLED BY  3 QUANTUM LABELS
+  EACH PAIR STATE IS LABELLED BY  3 QUANTUM NUMBERS
   EACH CHANNEL FUNCTION IS FORMED BY COMBINING A PAIR STATE WITH A VALUE OF L.
   THE RESULTING BASIS SET IS ASYMPTOTICALLY DIAGONAL.
 
@@ -438,35 +497,98 @@
 
   ================================ NH3-He on simple analytic potential: DR convergence =================================
 
-  *******************************************  ANGULAR MOMENTUM JTOT  =   5  *******************************************
-
-  SYMMETRY BLOCK =   2
-
-  JTOT =    5,  SYMMETRY BLOCK =   2,  ENERGY(   1) =   110.00000000     CM-1
+  *****************************  ANGULAR MOMENTUM JTOT  =   5   AND SYMMETRY BLOCK  =    2  ****************************
 
   CONVERGENCE TESTS: DRS WILL DOUBLE EACH TIME
 
   CONVERGENCE TESTS: DRL WILL DOUBLE EACH TIME
 
-  -------------------------------- NH3-He on simple analytic potential: DR convergence ---------------------------------
+  * * * * * * * * * *  STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FROM LEVEL I TO LEVEL F  * * * * * * * * * *
+                       FOR JTOT =   5 AND SYMMETRY BLOCK =   2 AT ENERGY(  1) =  110.0000     CM-1
 
-  JTOT =    5,  SYMMETRY BLOCK =   2,  ENERGY(   2) =   110.00000000     CM-1
+    F  I =      1              2              3              4              5              6
+    1       1.66960E+00    2.94552E-02    9.16428E-03    9.61714E-02    7.97605E-05    8.21141E-02
+    2       2.92082E-02    1.14521E+00    9.18474E-02    3.97234E-02    2.50251E-01    7.03972E-05
+    3       8.72491E-03    8.81833E-02    2.31469E+00    1.58540E-02    1.17781E-01    3.42227E-03
+    4       9.29046E-02    3.86986E-02    1.60867E-02    4.59107E+00    7.20861E-03    1.11299E-01
+    5       9.15932E-05    2.89806E-01    1.42066E-01    8.56911E-03    2.86603E+00    4.11485E-02
+    6       9.54435E-02    8.25165E-05    4.17811E-03    1.33915E-01    4.16493E-02    2.77727E+00
+    9       1.32436E-02    4.66667E-03    1.58499E-03    9.60684E-02    1.73221E-02    6.17239E-02
+   10       1.57419E-03    1.33469E-02    3.78877E-02    1.11661E-03    3.67630E-02    5.54694E-03
+
+    F  I =      9             10
+    1       8.49355E-02    1.15443E-02
+    2       2.96778E-02    9.70592E-02
+    3       9.67770E-03    2.64529E-01
+    4       5.95189E-01    7.91054E-03
+    5       1.27573E-01    3.09598E-01
+    6       4.60113E-01    4.72818E-02
+    9       2.12744E+01    1.69742E-01
+   10       1.48443E-01    1.21601E+01
+
+  FOR JTOT =    5, SYMMETRY BLOCK =  2, ENERGY(  1) =  110.0000    : MAX DIAG & OFF-DIAG =  2.13E+01 &   5.95E-01
+
+  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
   FOR RMIN =   3.00 RMID =   8.00 RMAX =      30.00 DR =  0.0400
   RMS CHANGE IN S-MATRIX ELEMENTS IS         7.65642E-06     LOG IS  -5.116
   RMS CHANGE IN TRANSITION PROBABILITIES IS  2.38471E-06     LOG IS  -5.623
 
-  -------------------------------- NH3-He on simple analytic potential: DR convergence ---------------------------------
+  * * * * * * * * * *  STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FROM LEVEL I TO LEVEL F  * * * * * * * * * *
+                       FOR JTOT =   5 AND SYMMETRY BLOCK =   2 AT ENERGY(  2) =  110.0000     CM-1
 
-  JTOT =    5,  SYMMETRY BLOCK =   2,  ENERGY(   3) =   110.00000000     CM-1
+    F  I =      1              2              3              4              5              6
+    1       1.66959E+00    2.94556E-02    9.16460E-03    9.61720E-02    7.97683E-05    8.21128E-02
+    2       2.92086E-02    1.14521E+00    9.18515E-02    3.97236E-02    2.50248E-01    7.03942E-05
+    3       8.72522E-03    8.81873E-02    2.31468E+00    1.58540E-02    1.17783E-01    3.42220E-03
+    4       9.29052E-02    3.86988E-02    1.60867E-02    4.59109E+00    7.20855E-03    1.11297E-01
+    5       9.16022E-05    2.89803E-01    1.42067E-01    8.56903E-03    2.86605E+00    4.11494E-02
+    6       9.54420E-02    8.25130E-05    4.17802E-03    1.33913E-01    4.16502E-02    2.77728E+00
+    9       1.32441E-02    4.66661E-03    1.58498E-03    9.60702E-02    1.73218E-02    6.17117E-02
+   10       1.57416E-03    1.33478E-02    3.78894E-02    1.11659E-03    3.67508E-02    5.54659E-03
+
+    F  I =      9             10
+    1       8.49383E-02    1.15441E-02
+    2       2.96775E-02    9.70657E-02
+    3       9.67764E-03    2.64540E-01
+    4       5.95200E-01    7.91037E-03
+    5       1.27571E-01    3.09495E-01
+    6       4.60022E-01    4.72788E-02
+    9       2.12745E+01    1.69742E-01
+   10       1.48443E-01    1.21601E+01
+
+  FOR JTOT =    5, SYMMETRY BLOCK =  2, ENERGY(  2) =  110.0000    : MAX DIAG & OFF-DIAG =  2.13E+01 &   5.95E-01
+
+  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
   FOR RMIN =   3.00 RMID =   8.00 RMAX =      30.00 DR =  0.0800
   RMS CHANGE IN S-MATRIX ELEMENTS IS         6.73937E-06     LOG IS  -5.171
   RMS CHANGE IN TRANSITION PROBABILITIES IS  2.35264E-06     LOG IS  -5.628
 
-  ======================================================================================================================
+  * * * * * * * * * *  STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FROM LEVEL I TO LEVEL F  * * * * * * * * * *
+                       FOR JTOT =   5 AND SYMMETRY BLOCK =   2 AT ENERGY(  3) =  110.0000     CM-1
 
-  SIGMA NOT PRINTED BECAUSE ISIGPR = 0
+    F  I =      1              2              3              4              5              6
+    1       1.66959E+00    2.94566E-02    9.16492E-03    9.61744E-02    7.97533E-05    8.21116E-02
+    2       2.92096E-02    1.14521E+00    9.18566E-02    3.97238E-02    2.50248E-01    7.03964E-05
+    3       8.72552E-03    8.81921E-02    2.31468E+00    1.58541E-02    1.17780E-01    3.42216E-03
+    4       9.29075E-02    3.86990E-02    1.60868E-02    4.59105E+00    7.20853E-03    1.11296E-01
+    5       9.15849E-05    2.89803E-01    1.42064E-01    8.56901E-03    2.86604E+00    4.11496E-02
+    6       9.54406E-02    8.25156E-05    4.17798E-03    1.33912E-01    4.16504E-02    2.77729E+00
+    9       1.32434E-02    4.66669E-03    1.58502E-03    9.60704E-02    1.73223E-02    6.17144E-02
+   10       1.57422E-03    1.33478E-02    3.78882E-02    1.11660E-03    3.67563E-02    5.54685E-03
+
+    F  I =      9             10
+    1       8.49340E-02    1.15446E-02
+    2       2.96780E-02    9.70656E-02
+    3       9.67787E-03    2.64532E-01
+    4       5.95201E-01    7.91045E-03
+    5       1.27574E-01    3.09542E-01
+    6       4.60042E-01    4.72810E-02
+    9       2.12745E+01    1.69742E-01
+   10       1.48443E-01    1.21602E+01
+
+  FOR JTOT =    5, SYMMETRY BLOCK =  2, ENERGY(  3) =  110.0000    : MAX DIAG & OFF-DIAG =  2.13E+01 &   5.95E-01
 
 
   ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
@@ -474,11 +596,11 @@
  |                Non-reactive quantum scattering calculations                |
  |                     on atomic and molecular collisions                     |
  |                                                                            |
- |              Copyright (C) 2018 J. M. Hutson & C. R. Le Sueur              |
+ |              Copyright (C) 2019 J. M. Hutson & C. R. Le Sueur              |
  |                                                                            |
- |                               Version 2019.0 (beta)                        |
+ |                               Version 2019.0                               |
  |                                                                            |
- |                    This run used       3.92 cpu secs and                   |
+ |                    This run used       3.49 cpu secs and                   |
  |             199191 of the allocated   1000000 words of storage             |
  |                                                                            |
   ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
@@ -487,11 +609,11 @@
  |                Non-reactive quantum scattering calculations                |
  |                     on atomic and molecular collisions                     |
  |                                                                            |
- |              Copyright (C) 2018 J. M. Hutson & C. R. Le Sueur              |
+ |              Copyright (C) 2019 J. M. Hutson & C. R. Le Sueur              |
  |                                                                            |
- |                               Version 2019.0 (beta)                        |
+ |                               Version 2019.0                               |
  |                                                                            |
- |                       Run on 01 Feb 2019   at 10:30:22                     |
+ |                       Run on 18 Feb 2019   at 22:25:00                     |
  |                                                                            |
   ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
 
@@ -501,18 +623,16 @@
   the Free Software Foundation.
 
   Publications resulting from the use of this program should refer to
-  J. M. Hutson & C. R. Le Sueur, MOLSCAT computer code 2019.0 (beta)       
+  J. M. Hutson & C. R. Le Sueur, MOLSCAT computer code 2019.0              
   or to the published paper in Computer Physics Communications when available.
 
 
-  PHYSICAL CONSTANTS OBTAINED FROM NIST CODATA TABULATION OF 2014
+  USING CODATA 2014 RECOMMENDED VALUES OF FUNDAMENTAL PHYSICAL CONSTANTS
 
   MEMORY ALLOCATED TO MAIN WORKING ARRAY IS   1000000 (8-BYTE) WORDS (    7.63 MB)
   2 INTEGERS CAN BE STORED IN EACH WORD.
 
-  PRINT LEVEL =  3     OTHER PRINT CONTROLS  ISIGPR = 2
-
-  RUN LABEL = NH3-He on simple analytic potential: RMIN convergence                           
+  PRINT LEVEL (IPRINT) =  3     OTHER PRINT CONTROLS  ISIGPR = 2
 
   REDUCED MASS FOR INTERACTION =   3.240000000 ATOMIC MASS UNITS (DALTONS)
 
@@ -522,9 +642,9 @@
 
   INTERACTION TYPE IS  ATOM - NEAR SYM. TOP RIGID ROTOR
 
-  TARGET ROTATIONAL LEVELS COMPUTED FROM JMIN =  0,  JMAX =  6,  AND JSTEP = 1
+  MOLECULAR QUANTUM NUMBERS OBTAINED FROM JMIN =  0,  JMAX =  6,  AND JSTEP = 1
 
-  ENERGY LEVELS COMPUTED FROM ZEROTH-ORDER NEAR-SYMMETRIC TOP FORMULA
+  ENERGY LEVELS OBTAINED FROM ZEROTH-ORDER NEAR-SYMMETRIC TOP FORMULA
           ROTATIONAL CONSTANTS ARE A, B, C (CM-1) =      9.9441      9.9441      6.2294
           N.B. THESE MOMENTS MUST CORRESPOND RESPECTIVELY TO X, Y, Z COORDINATES USED TO DEFINE INTERACTION POTENTIAL
 
@@ -535,7 +655,7 @@
   3-FOLD SYMMETRY: ONLY E STATES INCLUDED
 
   QUANTUM NUMBERS FOR INTERACTING PAIR:
-  EACH PAIR STATE IS LABELLED BY  3 QUANTUM LABELS
+  EACH PAIR STATE IS LABELLED BY  3 QUANTUM NUMBERS
   EACH CHANNEL FUNCTION IS FORMED BY COMBINING A PAIR STATE WITH A VALUE OF L.
   THE RESULTING BASIS SET IS ASYMPTOTICALLY DIAGONAL.
 
@@ -680,33 +800,96 @@
 
   =============================== NH3-He on simple analytic potential: RMIN convergence ================================
 
-  *******************************************  ANGULAR MOMENTUM JTOT  =   5  *******************************************
-
-  SYMMETRY BLOCK =   2
-
-  JTOT =    5,  SYMMETRY BLOCK =   2,  ENERGY(   1) =   110.00000000     CM-1
+  *****************************  ANGULAR MOMENTUM JTOT  =   5   AND SYMMETRY BLOCK  =    2  ****************************
 
   CONVERGENCE TESTS: RMIN WILL INCREASE BY  0.1000     EACH TIME
 
-  ------------------------------- NH3-He on simple analytic potential: RMIN convergence --------------------------------
+  * * * * * * * * * *  STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FROM LEVEL I TO LEVEL F  * * * * * * * * * *
+                       FOR JTOT =   5 AND SYMMETRY BLOCK =   2 AT ENERGY(  1) =  110.0000     CM-1
 
-  JTOT =    5,  SYMMETRY BLOCK =   2,  ENERGY(   2) =   110.00000000     CM-1
+    F  I =      1              2              3              4              5              6
+    1       1.66959E+00    2.94553E-02    9.16460E-03    9.61786E-02    7.97497E-05    8.21122E-02
+    2       2.92083E-02    1.14520E+00    9.18599E-02    3.97239E-02    2.50248E-01    7.04021E-05
+    3       8.72522E-03    8.81954E-02    2.31467E+00    1.58543E-02    1.17779E-01    3.42216E-03
+    4       9.29116E-02    3.86991E-02    1.60870E-02    4.59109E+00    7.20850E-03    1.11296E-01
+    5       9.15808E-05    2.89803E-01    1.42063E-01    8.56897E-03    2.86603E+00    4.11494E-02
+    6       9.54413E-02    8.25223E-05    4.17798E-03    1.33911E-01    4.16502E-02    2.77730E+00
+    9       1.32428E-02    4.66653E-03    1.58499E-03    9.60683E-02    1.73219E-02    6.17119E-02
+   10       1.57411E-03    1.33464E-02    3.78869E-02    1.11659E-03    3.67511E-02    5.54682E-03
 
-  FOR RMIN =   3.00 STEPS =  40.00 RMID =   8.00 STEPL =  40.00 RMAX =      30.00
+    F  I =      9             10
+    1       8.49303E-02    1.15438E-02
+    2       2.96770E-02    9.70554E-02
+    3       9.67768E-03    2.64524E-01
+    4       5.95188E-01    7.91037E-03
+    5       1.27572E-01    3.09498E-01
+    6       4.60023E-01    4.72808E-02
+    9       2.12746E+01    1.69743E-01
+   10       1.48444E-01    1.21603E+01
+
+  FOR JTOT =    5, SYMMETRY BLOCK =  2, ENERGY(  1) =  110.0000    : MAX DIAG & OFF-DIAG =  2.13E+01 &   5.95E-01
+
+  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+  FOR RMIN =   3.10 STEPS =  40.00 RMID =   8.00 STEPL =  40.00 RMAX =      30.00
   RMS CHANGE IN S-MATRIX ELEMENTS IS         1.88835E-10     LOG IS  -9.724
   RMS CHANGE IN TRANSITION PROBABILITIES IS  9.16319E-11     LOG IS -10.038
 
-  ------------------------------- NH3-He on simple analytic potential: RMIN convergence --------------------------------
+  * * * * * * * * * *  STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FROM LEVEL I TO LEVEL F  * * * * * * * * * *
+                       FOR JTOT =   5 AND SYMMETRY BLOCK =   2 AT ENERGY(  2) =  110.0000     CM-1
 
-  JTOT =    5,  SYMMETRY BLOCK =   2,  ENERGY(   3) =   110.00000000     CM-1
+    F  I =      1              2              3              4              5              6
+    1       1.66959E+00    2.94553E-02    9.16460E-03    9.61786E-02    7.97497E-05    8.21122E-02
+    2       2.92083E-02    1.14520E+00    9.18599E-02    3.97239E-02    2.50248E-01    7.04021E-05
+    3       8.72522E-03    8.81954E-02    2.31467E+00    1.58543E-02    1.17779E-01    3.42216E-03
+    4       9.29116E-02    3.86991E-02    1.60870E-02    4.59109E+00    7.20850E-03    1.11296E-01
+    5       9.15808E-05    2.89803E-01    1.42063E-01    8.56897E-03    2.86603E+00    4.11494E-02
+    6       9.54413E-02    8.25223E-05    4.17798E-03    1.33911E-01    4.16502E-02    2.77730E+00
+    9       1.32428E-02    4.66653E-03    1.58499E-03    9.60683E-02    1.73219E-02    6.17119E-02
+   10       1.57411E-03    1.33464E-02    3.78869E-02    1.11659E-03    3.67511E-02    5.54682E-03
 
-  FOR RMIN =   3.00 STEPS =  40.00 RMID =   8.00 STEPL =  40.00 RMAX =      30.00
+    F  I =      9             10
+    1       8.49303E-02    1.15438E-02
+    2       2.96770E-02    9.70554E-02
+    3       9.67768E-03    2.64524E-01
+    4       5.95188E-01    7.91037E-03
+    5       1.27572E-01    3.09498E-01
+    6       4.60023E-01    4.72808E-02
+    9       2.12746E+01    1.69743E-01
+   10       1.48444E-01    1.21603E+01
+
+  FOR JTOT =    5, SYMMETRY BLOCK =  2, ENERGY(  2) =  110.0000    : MAX DIAG & OFF-DIAG =  2.13E+01 &   5.95E-01
+
+  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+  FOR RMIN =   3.20 STEPS =  40.00 RMID =   8.00 STEPL =  40.00 RMAX =      30.00
   RMS CHANGE IN S-MATRIX ELEMENTS IS         3.86264E-10     LOG IS  -9.413
   RMS CHANGE IN TRANSITION PROBABILITIES IS  1.87521E-10     LOG IS  -9.727
 
-  ======================================================================================================================
+  * * * * * * * * * *  STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FROM LEVEL I TO LEVEL F  * * * * * * * * * *
+                       FOR JTOT =   5 AND SYMMETRY BLOCK =   2 AT ENERGY(  3) =  110.0000     CM-1
 
-  SIGMA NOT PRINTED BECAUSE ISIGPR = 0
+    F  I =      1              2              3              4              5              6
+    1       1.66959E+00    2.94553E-02    9.16460E-03    9.61786E-02    7.97497E-05    8.21122E-02
+    2       2.92083E-02    1.14520E+00    9.18599E-02    3.97239E-02    2.50248E-01    7.04021E-05
+    3       8.72522E-03    8.81954E-02    2.31467E+00    1.58543E-02    1.17779E-01    3.42216E-03
+    4       9.29116E-02    3.86991E-02    1.60870E-02    4.59109E+00    7.20850E-03    1.11296E-01
+    5       9.15808E-05    2.89803E-01    1.42063E-01    8.56897E-03    2.86603E+00    4.11494E-02
+    6       9.54413E-02    8.25223E-05    4.17798E-03    1.33911E-01    4.16502E-02    2.77730E+00
+    9       1.32428E-02    4.66653E-03    1.58499E-03    9.60683E-02    1.73219E-02    6.17119E-02
+   10       1.57411E-03    1.33464E-02    3.78869E-02    1.11659E-03    3.67511E-02    5.54682E-03
+
+    F  I =      9             10
+    1       8.49303E-02    1.15438E-02
+    2       2.96770E-02    9.70554E-02
+    3       9.67768E-03    2.64524E-01
+    4       5.95188E-01    7.91037E-03
+    5       1.27572E-01    3.09498E-01
+    6       4.60023E-01    4.72808E-02
+    9       2.12746E+01    1.69743E-01
+   10       1.48444E-01    1.21603E+01
+
+  FOR JTOT =    5, SYMMETRY BLOCK =  2, ENERGY(  3) =  110.0000    : MAX DIAG & OFF-DIAG =  2.13E+01 &   5.95E-01
 
 
   ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
@@ -714,11 +897,11 @@
  |                Non-reactive quantum scattering calculations                |
  |                     on atomic and molecular collisions                     |
  |                                                                            |
- |              Copyright (C) 2018 J. M. Hutson & C. R. Le Sueur              |
+ |              Copyright (C) 2019 J. M. Hutson & C. R. Le Sueur              |
  |                                                                            |
- |                               Version 2019.0 (beta)                        |
+ |                               Version 2019.0                               |
  |                                                                            |
- |                    This run used       3.40 cpu secs and                   |
+ |                    This run used       3.48 cpu secs and                   |
  |             199191 of the allocated   1000000 words of storage             |
  |                                                                            |
   ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
@@ -727,11 +910,11 @@
  |                Non-reactive quantum scattering calculations                |
  |                     on atomic and molecular collisions                     |
  |                                                                            |
- |              Copyright (C) 2018 J. M. Hutson & C. R. Le Sueur              |
+ |              Copyright (C) 2019 J. M. Hutson & C. R. Le Sueur              |
  |                                                                            |
- |                               Version 2019.0 (beta)                        |
+ |                               Version 2019.0                               |
  |                                                                            |
- |                       Run on 01 Feb 2019   at 10:30:25                     |
+ |                       Run on 18 Feb 2019   at 22:25:03                     |
  |                                                                            |
   ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
 
@@ -741,18 +924,16 @@
   the Free Software Foundation.
 
   Publications resulting from the use of this program should refer to
-  J. M. Hutson & C. R. Le Sueur, MOLSCAT computer code 2019.0 (beta)       
+  J. M. Hutson & C. R. Le Sueur, MOLSCAT computer code 2019.0              
   or to the published paper in Computer Physics Communications when available.
 
 
-  PHYSICAL CONSTANTS OBTAINED FROM NIST CODATA TABULATION OF 2014
+  USING CODATA 2014 RECOMMENDED VALUES OF FUNDAMENTAL PHYSICAL CONSTANTS
 
   MEMORY ALLOCATED TO MAIN WORKING ARRAY IS   1000000 (8-BYTE) WORDS (    7.63 MB)
   2 INTEGERS CAN BE STORED IN EACH WORD.
 
-  PRINT LEVEL =  3     OTHER PRINT CONTROLS  ISIGPR = 2
-
-  RUN LABEL = NH3-He on simple analytic potential: RMAX convergence                           
+  PRINT LEVEL (IPRINT) =  3     OTHER PRINT CONTROLS  ISIGPR = 2
 
   REDUCED MASS FOR INTERACTION =   3.240000000 ATOMIC MASS UNITS (DALTONS)
 
@@ -762,9 +943,9 @@
 
   INTERACTION TYPE IS  ATOM - NEAR SYM. TOP RIGID ROTOR
 
-  TARGET ROTATIONAL LEVELS COMPUTED FROM JMIN =  0,  JMAX =  6,  AND JSTEP = 1
+  MOLECULAR QUANTUM NUMBERS OBTAINED FROM JMIN =  0,  JMAX =  6,  AND JSTEP = 1
 
-  ENERGY LEVELS COMPUTED FROM ZEROTH-ORDER NEAR-SYMMETRIC TOP FORMULA
+  ENERGY LEVELS OBTAINED FROM ZEROTH-ORDER NEAR-SYMMETRIC TOP FORMULA
           ROTATIONAL CONSTANTS ARE A, B, C (CM-1) =      9.9441      9.9441      6.2294
           N.B. THESE MOMENTS MUST CORRESPOND RESPECTIVELY TO X, Y, Z COORDINATES USED TO DEFINE INTERACTION POTENTIAL
 
@@ -775,7 +956,7 @@
   3-FOLD SYMMETRY: ONLY E STATES INCLUDED
 
   QUANTUM NUMBERS FOR INTERACTING PAIR:
-  EACH PAIR STATE IS LABELLED BY  3 QUANTUM LABELS
+  EACH PAIR STATE IS LABELLED BY  3 QUANTUM NUMBERS
   EACH CHANNEL FUNCTION IS FORMED BY COMBINING A PAIR STATE WITH A VALUE OF L.
   THE RESULTING BASIS SET IS ASYMPTOTICALLY DIAGONAL.
 
@@ -920,33 +1101,96 @@
 
   =============================== NH3-He on simple analytic potential: RMAX convergence ================================
 
-  *******************************************  ANGULAR MOMENTUM JTOT  =   5  *******************************************
-
-  SYMMETRY BLOCK =   2
-
-  JTOT =    5,  SYMMETRY BLOCK =   2,  ENERGY(   1) =   110.00000000     CM-1
+  *****************************  ANGULAR MOMENTUM JTOT  =   5   AND SYMMETRY BLOCK  =    2  ****************************
 
   CONVERGENCE TESTS: RMAX WILL DECREASE BY   1.000     EACH TIME
 
-  ------------------------------- NH3-He on simple analytic potential: RMAX convergence --------------------------------
+  * * * * * * * * * *  STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FROM LEVEL I TO LEVEL F  * * * * * * * * * *
+                       FOR JTOT =   5 AND SYMMETRY BLOCK =   2 AT ENERGY(  1) =  110.0000     CM-1
 
-  JTOT =    5,  SYMMETRY BLOCK =   2,  ENERGY(   2) =   110.00000000     CM-1
+    F  I =      1              2              3              4              5              6
+    1       1.66959E+00    2.94553E-02    9.16460E-03    9.61786E-02    7.97497E-05    8.21122E-02
+    2       2.92083E-02    1.14520E+00    9.18599E-02    3.97239E-02    2.50248E-01    7.04021E-05
+    3       8.72522E-03    8.81954E-02    2.31467E+00    1.58543E-02    1.17779E-01    3.42216E-03
+    4       9.29116E-02    3.86991E-02    1.60870E-02    4.59109E+00    7.20850E-03    1.11296E-01
+    5       9.15808E-05    2.89803E-01    1.42063E-01    8.56897E-03    2.86603E+00    4.11494E-02
+    6       9.54413E-02    8.25223E-05    4.17798E-03    1.33911E-01    4.16502E-02    2.77730E+00
+    9       1.32428E-02    4.66653E-03    1.58499E-03    9.60683E-02    1.73219E-02    6.17119E-02
+   10       1.57411E-03    1.33464E-02    3.78869E-02    1.11659E-03    3.67511E-02    5.54682E-03
 
-  FOR RMIN =   3.00 STEPS =  40.00 RMID =   8.00 STEPL =  40.00 RMAX =      30.00
+    F  I =      9             10
+    1       8.49303E-02    1.15438E-02
+    2       2.96770E-02    9.70554E-02
+    3       9.67768E-03    2.64524E-01
+    4       5.95188E-01    7.91037E-03
+    5       1.27572E-01    3.09498E-01
+    6       4.60023E-01    4.72808E-02
+    9       2.12746E+01    1.69743E-01
+   10       1.48444E-01    1.21603E+01
+
+  FOR JTOT =    5, SYMMETRY BLOCK =  2, ENERGY(  1) =  110.0000    : MAX DIAG & OFF-DIAG =  2.13E+01 &   5.95E-01
+
+  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+  FOR RMIN =   3.00 STEPS =  40.00 RMID =   8.00 STEPL =  40.00 RMAX =      29.00
   RMS CHANGE IN S-MATRIX ELEMENTS IS         9.05439E-05     LOG IS  -4.043
   RMS CHANGE IN TRANSITION PROBABILITIES IS  6.63767E-06     LOG IS  -5.178
 
-  ------------------------------- NH3-He on simple analytic potential: RMAX convergence --------------------------------
+  * * * * * * * * * *  STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FROM LEVEL I TO LEVEL F  * * * * * * * * * *
+                       FOR JTOT =   5 AND SYMMETRY BLOCK =   2 AT ENERGY(  2) =  110.0000     CM-1
 
-  JTOT =    5,  SYMMETRY BLOCK =   2,  ENERGY(   3) =   110.00000000     CM-1
+    F  I =      1              2              3              4              5              6
+    1       1.66954E+00    2.94543E-02    9.16479E-03    9.61720E-02    7.97029E-05    8.21059E-02
+    2       2.92073E-02    1.14524E+00    9.18615E-02    3.97230E-02    2.50240E-01    7.03634E-05
+    3       8.72540E-03    8.81969E-02    2.31474E+00    1.58541E-02    1.17783E-01    3.42214E-03
+    4       9.29052E-02    3.86982E-02    1.60868E-02    4.59128E+00    7.20819E-03    1.11288E-01
+    5       9.15270E-05    2.89794E-01    1.42067E-01    8.56861E-03    2.86592E+00    4.11461E-02
+    6       9.54340E-02    8.24769E-05    4.17795E-03    1.33902E-01    4.16469E-02    2.77732E+00
+    9       1.32442E-02    4.66735E-03    1.58518E-03    9.60955E-02    1.73251E-02    6.17312E-02
+   10       1.57418E-03    1.33493E-02    3.78872E-02    1.11684E-03    3.67445E-02    5.54741E-03
 
-  FOR RMIN =   3.00 STEPS =  40.00 RMID =   8.00 STEPL =  40.00 RMAX =      30.00
+    F  I =      9             10
+    1       8.49393E-02    1.15443E-02
+    2       2.96822E-02    9.70765E-02
+    3       9.67887E-03    2.64525E-01
+    4       5.95356E-01    7.91217E-03
+    5       1.27595E-01    3.09442E-01
+    6       4.60168E-01    4.72858E-02
+    9       2.12832E+01    1.69797E-01
+   10       1.48491E-01    1.21659E+01
+
+  FOR JTOT =    5, SYMMETRY BLOCK =  2, ENERGY(  2) =  110.0000    : MAX DIAG & OFF-DIAG =  2.13E+01 &   5.95E-01
+
+  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+  FOR RMIN =   3.00 STEPS =  40.00 RMID =   8.00 STEPL =  40.00 RMAX =      28.00
   RMS CHANGE IN S-MATRIX ELEMENTS IS         1.87587E-04     LOG IS  -3.727
   RMS CHANGE IN TRANSITION PROBABILITIES IS  1.07370E-05     LOG IS  -4.969
 
-  ======================================================================================================================
+  * * * * * * * * * *  STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FROM LEVEL I TO LEVEL F  * * * * * * * * * *
+                       FOR JTOT =   5 AND SYMMETRY BLOCK =   2 AT ENERGY(  3) =  110.0000     CM-1
 
-  SIGMA NOT PRINTED BECAUSE ISIGPR = 0
+    F  I =      1              2              3              4              5              6
+    1       1.66940E+00    2.94530E-02    9.16394E-03    9.61642E-02    7.97504E-05    8.21077E-02
+    2       2.92060E-02    1.14533E+00    9.18438E-02    3.97219E-02    2.50235E-01    7.03542E-05
+    3       8.72459E-03    8.81799E-02    2.31491E+00    1.58529E-02    1.17782E-01    3.42220E-03
+    4       9.28976E-02    3.86971E-02    1.60856E-02    4.59102E+00    7.20840E-03    1.11301E-01
+    5       9.15815E-05    2.89788E-01    1.42066E-01    8.56885E-03    2.86599E+00    4.11477E-02
+    6       9.54360E-02    8.24661E-05    4.17803E-03    1.33917E-01    4.16484E-02    2.77714E+00
+    9       1.32472E-02    4.66809E-03    1.58510E-03    9.61123E-02    1.73291E-02    6.17402E-02
+   10       1.57468E-03    1.33512E-02    3.78796E-02    1.11760E-03    3.67451E-02    5.54848E-03
+
+    F  I =      9             10
+    1       8.49585E-02    1.15479E-02
+    2       2.96869E-02    9.70903E-02
+    3       9.67835E-03    2.64472E-01
+    4       5.95461E-01    7.91756E-03
+    5       1.27624E-01    3.09448E-01
+    6       4.60235E-01    4.72949E-02
+    9       2.12928E+01    1.69777E-01
+   10       1.48474E-01    1.21743E+01
+
+  FOR JTOT =    5, SYMMETRY BLOCK =  2, ENERGY(  3) =  110.0000    : MAX DIAG & OFF-DIAG =  2.13E+01 &   5.95E-01
 
 
   ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
@@ -954,11 +1198,11 @@
  |                Non-reactive quantum scattering calculations                |
  |                     on atomic and molecular collisions                     |
  |                                                                            |
- |              Copyright (C) 2018 J. M. Hutson & C. R. Le Sueur              |
+ |              Copyright (C) 2019 J. M. Hutson & C. R. Le Sueur              |
  |                                                                            |
- |                               Version 2019.0 (beta)                        |
+ |                               Version 2019.0                               |
  |                                                                            |
- |                    This run used       3.68 cpu secs and                   |
+ |                    This run used       3.80 cpu secs and                   |
  |             199191 of the allocated   1000000 words of storage             |
  |                                                                            |
   ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
@@ -967,11 +1211,11 @@
  |                Non-reactive quantum scattering calculations                |
  |                     on atomic and molecular collisions                     |
  |                                                                            |
- |              Copyright (C) 2018 J. M. Hutson & C. R. Le Sueur              |
+ |              Copyright (C) 2019 J. M. Hutson & C. R. Le Sueur              |
  |                                                                            |
- |                               Version 2019.0 (beta)                        |
+ |                               Version 2019.0                               |
  |                                                                            |
- |                       Run on 01 Feb 2019   at 10:30:29                     |
+ |                       Run on 18 Feb 2019   at 22:25:07                     |
  |                                                                            |
   ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
 
@@ -981,18 +1225,16 @@
   the Free Software Foundation.
 
   Publications resulting from the use of this program should refer to
-  J. M. Hutson & C. R. Le Sueur, MOLSCAT computer code 2019.0 (beta)       
+  J. M. Hutson & C. R. Le Sueur, MOLSCAT computer code 2019.0              
   or to the published paper in Computer Physics Communications when available.
 
 
-  PHYSICAL CONSTANTS OBTAINED FROM NIST CODATA TABULATION OF 2014
+  USING CODATA 2014 RECOMMENDED VALUES OF FUNDAMENTAL PHYSICAL CONSTANTS
 
   MEMORY ALLOCATED TO MAIN WORKING ARRAY IS   1000000 (8-BYTE) WORDS (    7.63 MB)
   2 INTEGERS CAN BE STORED IN EACH WORD.
 
-  PRINT LEVEL =  1     OTHER PRINT CONTROLS  ISIGPR = 2
-
-  RUN LABEL = NH3-He on simple analytic potential: close-coupling x-sections                  
+  PRINT LEVEL (IPRINT) =  1     OTHER PRINT CONTROLS  ISIGPR = 2
 
   REDUCED MASS FOR INTERACTION =   3.240000000 ATOMIC MASS UNITS (DALTONS)
 
@@ -1002,9 +1244,9 @@
 
   INTERACTION TYPE IS  ATOM - NEAR SYM. TOP RIGID ROTOR
 
-  TARGET ROTATIONAL LEVELS COMPUTED FROM JMIN =  0,  JMAX =  6,  AND JSTEP = 1
+  MOLECULAR QUANTUM NUMBERS OBTAINED FROM JMIN =  0,  JMAX =  6,  AND JSTEP = 1
 
-  ENERGY LEVELS COMPUTED FROM ZEROTH-ORDER NEAR-SYMMETRIC TOP FORMULA
+  ENERGY LEVELS OBTAINED FROM ZEROTH-ORDER NEAR-SYMMETRIC TOP FORMULA
           ROTATIONAL CONSTANTS ARE A, B, C (CM-1) =      9.9441      9.9441      6.2294
           N.B. THESE MOMENTS MUST CORRESPOND RESPECTIVELY TO X, Y, Z COORDINATES USED TO DEFINE INTERACTION POTENTIAL
 
@@ -1015,7 +1257,7 @@
   3-FOLD SYMMETRY: ONLY E STATES INCLUDED
 
   QUANTUM NUMBERS FOR INTERACTING PAIR:
-  EACH PAIR STATE IS LABELLED BY  3 QUANTUM LABELS
+  EACH PAIR STATE IS LABELLED BY  3 QUANTUM NUMBERS
   EACH CHANNEL FUNCTION IS FORMED BY COMBINING A PAIR STATE WITH A VALUE OF L.
   THE RESULTING BASIS SET IS ASYMPTOTICALLY DIAGONAL.
 
@@ -1143,7 +1385,7 @@
   TOTAL ANGULAR MOMENTUM JTOT RUNS FROM   0  TO  99999  IN STEPS OF   1
 
   JTOT SERIES WILL BE TERMINATED WHEN MAX CHANGE IN CROSS SECTIONS IS LESS THAN TOLERANCE FOR NCAC =  4 CONSECUTIVE JTOT
-                         DIAGONAL (DTOL) AND OFF-DIAGONAL (OTOL) TOLERANCES ARE  0.30000  0.00500
+  DIAGONAL (DTOL) AND OFF-DIAGONAL (OTOL) TOLERANCES ARE  0.30000 AND   0.00500
 
   EACH JTOT IS SPLIT INTO A MAXIMUM OF   2 SYMMETRY BLOCKS
 
@@ -1155,137 +1397,135 @@
 
   =========================== NH3-He on simple analytic potential: close-coupling x-sections ===========================
 
-  FOR JTOT =    0, SYMMETRY BLOCK =  1, ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  9.31E-01 &   2.54E-02
+  FOR JTOT =    0, SYMMETRY BLOCK =  1, ENERGY(  1) =  110.0000    : MAX DIAG & OFF-DIAG =  9.31E-01 &   2.54E-02
 
-  FOR JTOT =    0, SYMMETRY BLOCK =  2, ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  1.10E+00 &   2.27E-02
+  FOR JTOT =    0, SYMMETRY BLOCK =  2, ENERGY(  1) =  110.0000    : MAX DIAG & OFF-DIAG =  1.10E+00 &   2.27E-02
 
-  FOR JTOT =    1, SYMMETRY BLOCK =  1, ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  5.46E+00 &   9.05E-02
+  FOR JTOT =    1, SYMMETRY BLOCK =  1, ENERGY(  1) =  110.0000    : MAX DIAG & OFF-DIAG =  5.46E+00 &   9.05E-02
 
-  FOR JTOT =    1, SYMMETRY BLOCK =  2, ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  4.86E+00 &   9.04E-02
+  FOR JTOT =    1, SYMMETRY BLOCK =  2, ENERGY(  1) =  110.0000    : MAX DIAG & OFF-DIAG =  4.86E+00 &   9.04E-02
 
-  FOR JTOT =    2, SYMMETRY BLOCK =  1, ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  6.53E+00 &   3.33E-01
+  FOR JTOT =    2, SYMMETRY BLOCK =  1, ENERGY(  1) =  110.0000    : MAX DIAG & OFF-DIAG =  6.53E+00 &   3.33E-01
 
-  FOR JTOT =    2, SYMMETRY BLOCK =  2, ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  8.47E+00 &   3.69E-01
+  FOR JTOT =    2, SYMMETRY BLOCK =  2, ENERGY(  1) =  110.0000    : MAX DIAG & OFF-DIAG =  8.47E+00 &   3.69E-01
 
-  FOR JTOT =    3, SYMMETRY BLOCK =  1, ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  2.48E+01 &   5.29E-01
+  FOR JTOT =    3, SYMMETRY BLOCK =  1, ENERGY(  1) =  110.0000    : MAX DIAG & OFF-DIAG =  2.48E+01 &   5.29E-01
 
-  FOR JTOT =    3, SYMMETRY BLOCK =  2, ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  2.25E+01 &   4.27E-01
+  FOR JTOT =    3, SYMMETRY BLOCK =  2, ENERGY(  1) =  110.0000    : MAX DIAG & OFF-DIAG =  2.25E+01 &   4.27E-01
 
-  FOR JTOT =    4, SYMMETRY BLOCK =  1, ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  1.88E+01 &   1.60E+00
+  FOR JTOT =    4, SYMMETRY BLOCK =  1, ENERGY(  1) =  110.0000    : MAX DIAG & OFF-DIAG =  1.88E+01 &   1.60E+00
 
-  FOR JTOT =    4, SYMMETRY BLOCK =  2, ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  2.54E+01 &   4.89E-01
+  FOR JTOT =    4, SYMMETRY BLOCK =  2, ENERGY(  1) =  110.0000    : MAX DIAG & OFF-DIAG =  2.54E+01 &   4.89E-01
 
-  FOR JTOT =    5, SYMMETRY BLOCK =  1, ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  2.71E+01 &   7.90E-01
+  FOR JTOT =    5, SYMMETRY BLOCK =  1, ENERGY(  1) =  110.0000    : MAX DIAG & OFF-DIAG =  2.71E+01 &   7.90E-01
 
-  FOR JTOT =    5, SYMMETRY BLOCK =  2, ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  2.13E+01 &   5.95E-01
+  FOR JTOT =    5, SYMMETRY BLOCK =  2, ENERGY(  1) =  110.0000    : MAX DIAG & OFF-DIAG =  2.13E+01 &   5.95E-01
 
-  FOR JTOT =    6, SYMMETRY BLOCK =  1, ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  1.50E+01 &   3.30E-01
+  FOR JTOT =    6, SYMMETRY BLOCK =  1, ENERGY(  1) =  110.0000    : MAX DIAG & OFF-DIAG =  1.50E+01 &   3.30E-01
 
-  FOR JTOT =    6, SYMMETRY BLOCK =  2, ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  2.00E+01 &   4.12E-01
+  FOR JTOT =    6, SYMMETRY BLOCK =  2, ENERGY(  1) =  110.0000    : MAX DIAG & OFF-DIAG =  2.00E+01 &   4.12E-01
 
-  FOR JTOT =    7, SYMMETRY BLOCK =  1, ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  1.39E+01 &   4.72E-01
+  FOR JTOT =    7, SYMMETRY BLOCK =  1, ENERGY(  1) =  110.0000    : MAX DIAG & OFF-DIAG =  1.39E+01 &   4.72E-01
 
-  FOR JTOT =    7, SYMMETRY BLOCK =  2, ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  1.16E+01 &   3.52E-01
+  FOR JTOT =    7, SYMMETRY BLOCK =  2, ENERGY(  1) =  110.0000    : MAX DIAG & OFF-DIAG =  1.16E+01 &   3.52E-01
 
-  FOR JTOT =    8, SYMMETRY BLOCK =  1, ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  7.46E+00 &   5.00E-01
+  FOR JTOT =    8, SYMMETRY BLOCK =  1, ENERGY(  1) =  110.0000    : MAX DIAG & OFF-DIAG =  7.46E+00 &   5.00E-01
 
-  FOR JTOT =    8, SYMMETRY BLOCK =  2, ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  1.28E+01 &   8.31E-01
+  FOR JTOT =    8, SYMMETRY BLOCK =  2, ENERGY(  1) =  110.0000    : MAX DIAG & OFF-DIAG =  1.28E+01 &   8.31E-01
 
-  FOR JTOT =    9, SYMMETRY BLOCK =  1, ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  1.48E+01 &   7.38E-01
+  FOR JTOT =    9, SYMMETRY BLOCK =  1, ENERGY(  1) =  110.0000    : MAX DIAG & OFF-DIAG =  1.48E+01 &   7.38E-01
 
-  FOR JTOT =    9, SYMMETRY BLOCK =  2, ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  8.59E+00 &   4.44E-01
+  FOR JTOT =    9, SYMMETRY BLOCK =  2, ENERGY(  1) =  110.0000    : MAX DIAG & OFF-DIAG =  8.59E+00 &   4.44E-01
 
-  FOR JTOT =   10, SYMMETRY BLOCK =  1, ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  9.05E+00 &   3.23E-01
+  FOR JTOT =   10, SYMMETRY BLOCK =  1, ENERGY(  1) =  110.0000    : MAX DIAG & OFF-DIAG =  9.05E+00 &   3.23E-01
 
-  FOR JTOT =   10, SYMMETRY BLOCK =  2, ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  8.77E+00 &   3.22E-01
+  FOR JTOT =   10, SYMMETRY BLOCK =  2, ENERGY(  1) =  110.0000    : MAX DIAG & OFF-DIAG =  8.77E+00 &   3.22E-01
 
-  FOR JTOT =   11, SYMMETRY BLOCK =  1, ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  1.19E+01 &   2.85E-01
+  FOR JTOT =   11, SYMMETRY BLOCK =  1, ENERGY(  1) =  110.0000    : MAX DIAG & OFF-DIAG =  1.19E+01 &   2.85E-01
 
-  FOR JTOT =   11, SYMMETRY BLOCK =  2, ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  1.16E+01 &   2.84E-01
+  FOR JTOT =   11, SYMMETRY BLOCK =  2, ENERGY(  1) =  110.0000    : MAX DIAG & OFF-DIAG =  1.16E+01 &   2.84E-01
 
-  FOR JTOT =   12, SYMMETRY BLOCK =  1, ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  1.38E+01 &   2.32E-01
+  FOR JTOT =   12, SYMMETRY BLOCK =  1, ENERGY(  1) =  110.0000    : MAX DIAG & OFF-DIAG =  1.38E+01 &   2.32E-01
 
-  FOR JTOT =   12, SYMMETRY BLOCK =  2, ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  1.36E+01 &   2.29E-01
+  FOR JTOT =   12, SYMMETRY BLOCK =  2, ENERGY(  1) =  110.0000    : MAX DIAG & OFF-DIAG =  1.36E+01 &   2.29E-01
 
-  FOR JTOT =   13, SYMMETRY BLOCK =  1, ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  1.39E+01 &   1.72E-01
+  FOR JTOT =   13, SYMMETRY BLOCK =  1, ENERGY(  1) =  110.0000    : MAX DIAG & OFF-DIAG =  1.39E+01 &   1.72E-01
 
-  FOR JTOT =   13, SYMMETRY BLOCK =  2, ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  1.38E+01 &   1.71E-01
+  FOR JTOT =   13, SYMMETRY BLOCK =  2, ENERGY(  1) =  110.0000    : MAX DIAG & OFF-DIAG =  1.38E+01 &   1.71E-01
 
-  FOR JTOT =   14, SYMMETRY BLOCK =  1, ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  1.25E+01 &   1.69E-01
+  FOR JTOT =   14, SYMMETRY BLOCK =  1, ENERGY(  1) =  110.0000    : MAX DIAG & OFF-DIAG =  1.25E+01 &   1.69E-01
 
-  FOR JTOT =   14, SYMMETRY BLOCK =  2, ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  1.26E+01 &   1.68E-01
+  FOR JTOT =   14, SYMMETRY BLOCK =  2, ENERGY(  1) =  110.0000    : MAX DIAG & OFF-DIAG =  1.26E+01 &   1.68E-01
 
-  FOR JTOT =   15, SYMMETRY BLOCK =  1, ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  1.14E+01 &   1.37E-01
+  FOR JTOT =   15, SYMMETRY BLOCK =  1, ENERGY(  1) =  110.0000    : MAX DIAG & OFF-DIAG =  1.14E+01 &   1.37E-01
 
-  FOR JTOT =   15, SYMMETRY BLOCK =  2, ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  1.16E+01 &   1.40E-01
+  FOR JTOT =   15, SYMMETRY BLOCK =  2, ENERGY(  1) =  110.0000    : MAX DIAG & OFF-DIAG =  1.16E+01 &   1.40E-01
 
-  FOR JTOT =   16, SYMMETRY BLOCK =  1, ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  1.18E+01 &   7.63E-02
+  FOR JTOT =   16, SYMMETRY BLOCK =  1, ENERGY(  1) =  110.0000    : MAX DIAG & OFF-DIAG =  1.18E+01 &   7.63E-02
 
-  FOR JTOT =   16, SYMMETRY BLOCK =  2, ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  1.19E+01 &   8.06E-02
+  FOR JTOT =   16, SYMMETRY BLOCK =  2, ENERGY(  1) =  110.0000    : MAX DIAG & OFF-DIAG =  1.19E+01 &   8.06E-02
 
-  FOR JTOT =   17, SYMMETRY BLOCK =  1, ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  1.06E+01 &   2.95E-02
+  FOR JTOT =   17, SYMMETRY BLOCK =  1, ENERGY(  1) =  110.0000    : MAX DIAG & OFF-DIAG =  1.06E+01 &   2.95E-02
 
-  FOR JTOT =   17, SYMMETRY BLOCK =  2, ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  1.06E+01 &   3.21E-02
+  FOR JTOT =   17, SYMMETRY BLOCK =  2, ENERGY(  1) =  110.0000    : MAX DIAG & OFF-DIAG =  1.06E+01 &   3.21E-02
 
-  FOR JTOT =   18, SYMMETRY BLOCK =  1, ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  8.53E+00 &   9.99E-03
+  FOR JTOT =   18, SYMMETRY BLOCK =  1, ENERGY(  1) =  110.0000    : MAX DIAG & OFF-DIAG =  8.53E+00 &   9.99E-03
 
-  FOR JTOT =   18, SYMMETRY BLOCK =  2, ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  8.44E+00 &   1.10E-02
+  FOR JTOT =   18, SYMMETRY BLOCK =  2, ENERGY(  1) =  110.0000    : MAX DIAG & OFF-DIAG =  8.44E+00 &   1.10E-02
 
-  FOR JTOT =   19, SYMMETRY BLOCK =  1, ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  6.06E+00 &   3.51E-03
+  FOR JTOT =   19, SYMMETRY BLOCK =  1, ENERGY(  1) =  110.0000    : MAX DIAG & OFF-DIAG =  6.06E+00 &   3.51E-03
 
-  FOR JTOT =   19, SYMMETRY BLOCK =  2, ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  5.95E+00 &   3.89E-03
+  FOR JTOT =   19, SYMMETRY BLOCK =  2, ENERGY(  1) =  110.0000    : MAX DIAG & OFF-DIAG =  5.95E+00 &   3.89E-03
 
-  FOR JTOT =   20, SYMMETRY BLOCK =  1, ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  3.96E+00 &   1.33E-03
+  FOR JTOT =   20, SYMMETRY BLOCK =  1, ENERGY(  1) =  110.0000    : MAX DIAG & OFF-DIAG =  3.96E+00 &   1.33E-03
 
-  FOR JTOT =   20, SYMMETRY BLOCK =  2, ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  3.86E+00 &   1.48E-03
+  FOR JTOT =   20, SYMMETRY BLOCK =  2, ENERGY(  1) =  110.0000    : MAX DIAG & OFF-DIAG =  3.86E+00 &   1.48E-03
 
-  FOR JTOT =   21, SYMMETRY BLOCK =  1, ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  2.52E+00 &   5.47E-04
+  FOR JTOT =   21, SYMMETRY BLOCK =  1, ENERGY(  1) =  110.0000    : MAX DIAG & OFF-DIAG =  2.52E+00 &   5.47E-04
 
-  FOR JTOT =   21, SYMMETRY BLOCK =  2, ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  2.45E+00 &   6.09E-04
+  FOR JTOT =   21, SYMMETRY BLOCK =  2, ENERGY(  1) =  110.0000    : MAX DIAG & OFF-DIAG =  2.45E+00 &   6.09E-04
 
-  FOR JTOT =   22, SYMMETRY BLOCK =  1, ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  1.61E+00 &   2.37E-04
+  FOR JTOT =   22, SYMMETRY BLOCK =  1, ENERGY(  1) =  110.0000    : MAX DIAG & OFF-DIAG =  1.61E+00 &   2.37E-04
 
-  FOR JTOT =   22, SYMMETRY BLOCK =  2, ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  1.57E+00 &   2.65E-04
+  FOR JTOT =   22, SYMMETRY BLOCK =  2, ENERGY(  1) =  110.0000    : MAX DIAG & OFF-DIAG =  1.57E+00 &   2.65E-04
 
-  FOR JTOT =   23, SYMMETRY BLOCK =  1, ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  1.05E+00 &   1.06E-04
+  FOR JTOT =   23, SYMMETRY BLOCK =  1, ENERGY(  1) =  110.0000    : MAX DIAG & OFF-DIAG =  1.05E+00 &   1.06E-04
 
-  FOR JTOT =   23, SYMMETRY BLOCK =  2, ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  1.02E+00 &   1.19E-04
+  FOR JTOT =   23, SYMMETRY BLOCK =  2, ENERGY(  1) =  110.0000    : MAX DIAG & OFF-DIAG =  1.02E+00 &   1.19E-04
 
-  FOR JTOT =   24, SYMMETRY BLOCK =  1, ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  7.01E-01 &   4.92E-05
+  FOR JTOT =   24, SYMMETRY BLOCK =  1, ENERGY(  1) =  110.0000    : MAX DIAG & OFF-DIAG =  7.01E-01 &   4.92E-05
 
-  FOR JTOT =   24, SYMMETRY BLOCK =  2, ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  6.83E-01 &   5.54E-05
+  FOR JTOT =   24, SYMMETRY BLOCK =  2, ENERGY(  1) =  110.0000    : MAX DIAG & OFF-DIAG =  6.83E-01 &   5.54E-05
 
-  FOR JTOT =   25, SYMMETRY BLOCK =  1, ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  4.77E-01 &   2.32E-05
+  FOR JTOT =   25, SYMMETRY BLOCK =  1, ENERGY(  1) =  110.0000    : MAX DIAG & OFF-DIAG =  4.77E-01 &   2.32E-05
 
-  FOR JTOT =   25, SYMMETRY BLOCK =  2, ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  4.64E-01 &   2.63E-05
+  FOR JTOT =   25, SYMMETRY BLOCK =  2, ENERGY(  1) =  110.0000    : MAX DIAG & OFF-DIAG =  4.64E-01 &   2.63E-05
 
-  FOR JTOT =   26, SYMMETRY BLOCK =  1, ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  3.30E-01 &   1.10E-05
+  FOR JTOT =   26, SYMMETRY BLOCK =  1, ENERGY(  1) =  110.0000    : MAX DIAG & OFF-DIAG =  3.30E-01 &   1.10E-05
 
-  FOR JTOT =   26, SYMMETRY BLOCK =  2, ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  3.22E-01 &   1.26E-05
+  FOR JTOT =   26, SYMMETRY BLOCK =  2, ENERGY(  1) =  110.0000    : MAX DIAG & OFF-DIAG =  3.22E-01 &   1.26E-05
 
-  FOR JTOT =   27, SYMMETRY BLOCK =  1, ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  2.32E-01 &   5.39E-06
+  FOR JTOT =   27, SYMMETRY BLOCK =  1, ENERGY(  1) =  110.0000    : MAX DIAG & OFF-DIAG =  2.32E-01 &   5.39E-06
 
-  FOR JTOT =   27, SYMMETRY BLOCK =  2, ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  2.27E-01 &   6.15E-06
+  FOR JTOT =   27, SYMMETRY BLOCK =  2, ENERGY(  1) =  110.0000    : MAX DIAG & OFF-DIAG =  2.27E-01 &   6.15E-06
 
-  FOR JTOT =   28, SYMMETRY BLOCK =  1, ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  1.66E-01 &   2.60E-06
+  FOR JTOT =   28, SYMMETRY BLOCK =  1, ENERGY(  1) =  110.0000    : MAX DIAG & OFF-DIAG =  1.66E-01 &   2.60E-06
 
-  FOR JTOT =   28, SYMMETRY BLOCK =  2, ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  1.62E-01 &   3.00E-06
+  FOR JTOT =   28, SYMMETRY BLOCK =  2, ENERGY(  1) =  110.0000    : MAX DIAG & OFF-DIAG =  1.62E-01 &   3.00E-06
 
-  FOR JTOT =   29, SYMMETRY BLOCK =  1, ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  1.20E-01 &   1.25E-06
+  FOR JTOT =   29, SYMMETRY BLOCK =  1, ENERGY(  1) =  110.0000    : MAX DIAG & OFF-DIAG =  1.20E-01 &   1.25E-06
 
-  FOR JTOT =   29, SYMMETRY BLOCK =  2, ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  1.17E-01 &   1.44E-06
+  FOR JTOT =   29, SYMMETRY BLOCK =  2, ENERGY(  1) =  110.0000    : MAX DIAG & OFF-DIAG =  1.17E-01 &   1.44E-06
 
-  FOR JTOT =   30, SYMMETRY BLOCK =  1, ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  8.80E-02 &   6.23E-07
+  FOR JTOT =   30, SYMMETRY BLOCK =  1, ENERGY(  1) =  110.0000    : MAX DIAG & OFF-DIAG =  8.80E-02 &   6.23E-07
 
-  FOR JTOT =   30, SYMMETRY BLOCK =  2, ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  8.57E-02 &   7.23E-07
+  FOR JTOT =   30, SYMMETRY BLOCK =  2, ENERGY(  1) =  110.0000    : MAX DIAG & OFF-DIAG =  8.57E-02 &   7.23E-07
 
 
 
   CALCULATION TERMINATED BY CONVERGENCE OF TOTAL CROSS SECTIONS.
 
   DIAGONAL AND OFF-DIAGONAL TOLERANCES WERE   0.30000  0.00500   NCAC =  4
-
-  * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
 
   =========================== NH3-He on simple analytic potential: close-coupling x-sections ===========================
 
@@ -1415,11 +1655,11 @@
  |                Non-reactive quantum scattering calculations                |
  |                     on atomic and molecular collisions                     |
  |                                                                            |
- |              Copyright (C) 2018 J. M. Hutson & C. R. Le Sueur              |
+ |              Copyright (C) 2019 J. M. Hutson & C. R. Le Sueur              |
  |                                                                            |
- |                               Version 2019.0 (beta)                        |
+ |                               Version 2019.0                               |
  |                                                                            |
- |                    This run used     110.57 cpu secs and                   |
+ |                    This run used     118.98 cpu secs and                   |
  |             174467 of the allocated   1000000 words of storage             |
  |                                                                            |
   ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
@@ -1428,11 +1668,11 @@
  |                Non-reactive quantum scattering calculations                |
  |                     on atomic and molecular collisions                     |
  |                                                                            |
- |              Copyright (C) 2018 J. M. Hutson & C. R. Le Sueur              |
+ |              Copyright (C) 2019 J. M. Hutson & C. R. Le Sueur              |
  |                                                                            |
- |                               Version 2019.0 (beta)                        |
+ |                               Version 2019.0                               |
  |                                                                            |
- |                       Run on 01 Feb 2019   at 10:32:20                     |
+ |                       Run on 18 Feb 2019   at 22:27:07                     |
  |                                                                            |
   ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
 
@@ -1442,18 +1682,16 @@
   the Free Software Foundation.
 
   Publications resulting from the use of this program should refer to
-  J. M. Hutson & C. R. Le Sueur, MOLSCAT computer code 2019.0 (beta)       
+  J. M. Hutson & C. R. Le Sueur, MOLSCAT computer code 2019.0              
   or to the published paper in Computer Physics Communications when available.
 
 
-  PHYSICAL CONSTANTS OBTAINED FROM NIST CODATA TABULATION OF 2014
+  USING CODATA 2014 RECOMMENDED VALUES OF FUNDAMENTAL PHYSICAL CONSTANTS
 
   MEMORY ALLOCATED TO MAIN WORKING ARRAY IS   1000000 (8-BYTE) WORDS (    7.63 MB)
   2 INTEGERS CAN BE STORED IN EACH WORD.
 
-  PRINT LEVEL =  1     OTHER PRINT CONTROLS  ISIGPR = 2
-
-  RUN LABEL = NH3-He on simple analytic potential: CS x-sections                              
+  PRINT LEVEL (IPRINT) =  1     OTHER PRINT CONTROLS  ISIGPR = 2
 
   REDUCED MASS FOR INTERACTION =   3.240000000 ATOMIC MASS UNITS (DALTONS)
 
@@ -1468,9 +1706,9 @@
 
   INTERACTION TYPE IS  ATOM - NEAR SYM. TOP RIGID ROTOR
 
-  TARGET ROTATIONAL LEVELS COMPUTED FROM JMIN =  0,  JMAX =  6,  AND JSTEP = 1
+  MOLECULAR QUANTUM NUMBERS OBTAINED FROM JMIN =  0,  JMAX =  6,  AND JSTEP = 1
 
-  ENERGY LEVELS COMPUTED FROM ZEROTH-ORDER NEAR-SYMMETRIC TOP FORMULA
+  ENERGY LEVELS OBTAINED FROM ZEROTH-ORDER NEAR-SYMMETRIC TOP FORMULA
           ROTATIONAL CONSTANTS ARE A, B, C (CM-1) =      9.9441      9.9441      6.2294
           N.B. THESE MOMENTS MUST CORRESPOND RESPECTIVELY TO X, Y, Z COORDINATES USED TO DEFINE INTERACTION POTENTIAL
 
@@ -1483,7 +1721,7 @@
   *** NOTE.  IN CS CALCULATION MINUS/PLUS M-VALUE ASSUMED TO BE IDENTICAL.
 
   QUANTUM NUMBERS FOR INTERACTING PAIR:
-  EACH PAIR STATE IS LABELLED BY  3 QUANTUM LABELS
+  EACH PAIR STATE IS LABELLED BY  3 QUANTUM NUMBERS
   EACH CHANNEL FUNCTION IS FORMED BY COMBINING A PAIR STATE WITH A VALUE OF L.
   THE RESULTING BASIS SET IS ASYMPTOTICALLY DIAGONAL.
 
@@ -1611,7 +1849,7 @@
   TOTAL ANGULAR MOMENTUM JTOT RUNS FROM   0  TO  99999  IN STEPS OF   1
 
   JTOT SERIES WILL BE TERMINATED WHEN MAX CHANGE IN CROSS SECTIONS IS LESS THAN TOLERANCE FOR NCAC =  4 CONSECUTIVE JTOT
-                         DIAGONAL (DTOL) AND OFF-DIAGONAL (OTOL) TOLERANCES ARE  0.30000  0.00500
+  DIAGONAL (DTOL) AND OFF-DIAGONAL (OTOL) TOLERANCES ARE  0.30000 AND   0.00500
 
   EACH JTOT IS SPLIT INTO A MAXIMUM OF   7 SYMMETRY BLOCKS
 
@@ -1623,249 +1861,247 @@
 
   ================================= NH3-He on simple analytic potential: CS x-sections =================================
 
-  FOR JTOT =    0, SYMMETRY BLOCK =  1, ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  1.20E+00 &   2.71E-02
+  FOR JTOT =    0, SYMMETRY BLOCK =  1, ENERGY(  1) =  110.0000    : MAX DIAG & OFF-DIAG =  1.20E+00 &   2.71E-02
 
-  FOR JTOT =    0, SYMMETRY BLOCK =  2, ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  2.64E+00 &   1.09E-01
+  FOR JTOT =    0, SYMMETRY BLOCK =  2, ENERGY(  1) =  110.0000    : MAX DIAG & OFF-DIAG =  2.64E+00 &   1.09E-01
 
-  FOR JTOT =    0, SYMMETRY BLOCK =  3, ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  2.44E+00 &   5.11E-02
+  FOR JTOT =    0, SYMMETRY BLOCK =  3, ENERGY(  1) =  110.0000    : MAX DIAG & OFF-DIAG =  2.44E+00 &   5.11E-02
 
-  FOR JTOT =    0, SYMMETRY BLOCK =  4, ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  2.44E+00 &   3.94E-02
+  FOR JTOT =    0, SYMMETRY BLOCK =  4, ENERGY(  1) =  110.0000    : MAX DIAG & OFF-DIAG =  2.44E+00 &   3.94E-02
 
-  FOR JTOT =    1, SYMMETRY BLOCK =  1, ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  8.46E-01 &   9.18E-02
+  FOR JTOT =    1, SYMMETRY BLOCK =  1, ENERGY(  1) =  110.0000    : MAX DIAG & OFF-DIAG =  8.46E-01 &   9.18E-02
 
-  FOR JTOT =    1, SYMMETRY BLOCK =  2, ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  2.11E+00 &   5.01E-01
+  FOR JTOT =    1, SYMMETRY BLOCK =  2, ENERGY(  1) =  110.0000    : MAX DIAG & OFF-DIAG =  2.11E+00 &   5.01E-01
 
-  FOR JTOT =    1, SYMMETRY BLOCK =  3, ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  7.92E-01 &   5.42E-01
+  FOR JTOT =    1, SYMMETRY BLOCK =  3, ENERGY(  1) =  110.0000    : MAX DIAG & OFF-DIAG =  7.92E-01 &   5.42E-01
 
-  FOR JTOT =    1, SYMMETRY BLOCK =  4, ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  1.72E+00 &   1.09E-01
+  FOR JTOT =    1, SYMMETRY BLOCK =  4, ENERGY(  1) =  110.0000    : MAX DIAG & OFF-DIAG =  1.72E+00 &   1.09E-01
 
-  FOR JTOT =    2, SYMMETRY BLOCK =  1, ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  7.96E+00 &   1.40E-01
+  FOR JTOT =    2, SYMMETRY BLOCK =  1, ENERGY(  1) =  110.0000    : MAX DIAG & OFF-DIAG =  7.96E+00 &   1.40E-01
 
-  FOR JTOT =    2, SYMMETRY BLOCK =  2, ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  1.60E+01 &   1.90E-01
+  FOR JTOT =    2, SYMMETRY BLOCK =  2, ENERGY(  1) =  110.0000    : MAX DIAG & OFF-DIAG =  1.60E+01 &   1.90E-01
 
-  FOR JTOT =    2, SYMMETRY BLOCK =  3, ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  1.47E+01 &   7.21E-01
+  FOR JTOT =    2, SYMMETRY BLOCK =  3, ENERGY(  1) =  110.0000    : MAX DIAG & OFF-DIAG =  1.47E+01 &   7.21E-01
 
-  FOR JTOT =    2, SYMMETRY BLOCK =  4, ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  1.63E+01 &   9.63E-02
+  FOR JTOT =    2, SYMMETRY BLOCK =  4, ENERGY(  1) =  110.0000    : MAX DIAG & OFF-DIAG =  1.63E+01 &   9.63E-02
 
-  FOR JTOT =    3, SYMMETRY BLOCK =  1, ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  7.65E+00 &   1.81E-01
+  FOR JTOT =    3, SYMMETRY BLOCK =  1, ENERGY(  1) =  110.0000    : MAX DIAG & OFF-DIAG =  7.65E+00 &   1.81E-01
 
-  FOR JTOT =    3, SYMMETRY BLOCK =  2, ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  1.53E+01 &   2.11E-01
+  FOR JTOT =    3, SYMMETRY BLOCK =  2, ENERGY(  1) =  110.0000    : MAX DIAG & OFF-DIAG =  1.53E+01 &   2.11E-01
 
-  FOR JTOT =    3, SYMMETRY BLOCK =  3, ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  1.46E+01 &   5.75E-01
+  FOR JTOT =    3, SYMMETRY BLOCK =  3, ENERGY(  1) =  110.0000    : MAX DIAG & OFF-DIAG =  1.46E+01 &   5.75E-01
 
-  FOR JTOT =    3, SYMMETRY BLOCK =  4, ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  1.43E+01 &   2.80E+00
+  FOR JTOT =    3, SYMMETRY BLOCK =  4, ENERGY(  1) =  110.0000    : MAX DIAG & OFF-DIAG =  1.43E+01 &   2.80E+00
 
-  FOR JTOT =    4, SYMMETRY BLOCK =  1, ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  3.29E+00 &   2.07E-01
+  FOR JTOT =    4, SYMMETRY BLOCK =  1, ENERGY(  1) =  110.0000    : MAX DIAG & OFF-DIAG =  3.29E+00 &   2.07E-01
 
-  FOR JTOT =    4, SYMMETRY BLOCK =  2, ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  6.63E+00 &   2.27E-01
+  FOR JTOT =    4, SYMMETRY BLOCK =  2, ENERGY(  1) =  110.0000    : MAX DIAG & OFF-DIAG =  6.63E+00 &   2.27E-01
 
-  FOR JTOT =    4, SYMMETRY BLOCK =  3, ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  6.81E+00 &   6.20E-01
+  FOR JTOT =    4, SYMMETRY BLOCK =  3, ENERGY(  1) =  110.0000    : MAX DIAG & OFF-DIAG =  6.81E+00 &   6.20E-01
 
-  FOR JTOT =    4, SYMMETRY BLOCK =  4, ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  5.15E+00 &   2.77E-01
+  FOR JTOT =    4, SYMMETRY BLOCK =  4, ENERGY(  1) =  110.0000    : MAX DIAG & OFF-DIAG =  5.15E+00 &   2.77E-01
 
-  FOR JTOT =    5, SYMMETRY BLOCK =  1, ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  1.99E+00 &   2.34E-01
+  FOR JTOT =    5, SYMMETRY BLOCK =  1, ENERGY(  1) =  110.0000    : MAX DIAG & OFF-DIAG =  1.99E+00 &   2.34E-01
 
-  FOR JTOT =    5, SYMMETRY BLOCK =  2, ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  3.50E+00 &   2.44E-01
+  FOR JTOT =    5, SYMMETRY BLOCK =  2, ENERGY(  1) =  110.0000    : MAX DIAG & OFF-DIAG =  3.50E+00 &   2.44E-01
 
-  FOR JTOT =    5, SYMMETRY BLOCK =  3, ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  3.46E+00 &   6.79E-01
+  FOR JTOT =    5, SYMMETRY BLOCK =  3, ENERGY(  1) =  110.0000    : MAX DIAG & OFF-DIAG =  3.46E+00 &   6.79E-01
 
-  FOR JTOT =    5, SYMMETRY BLOCK =  4, ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  1.96E+00 &   3.27E-01
+  FOR JTOT =    5, SYMMETRY BLOCK =  4, ENERGY(  1) =  110.0000    : MAX DIAG & OFF-DIAG =  1.96E+00 &   3.27E-01
 
-  FOR JTOT =    6, SYMMETRY BLOCK =  1, ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  9.44E+00 &   6.15E-01
+  FOR JTOT =    6, SYMMETRY BLOCK =  1, ENERGY(  1) =  110.0000    : MAX DIAG & OFF-DIAG =  9.44E+00 &   6.15E-01
 
-  FOR JTOT =    6, SYMMETRY BLOCK =  2, ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  2.02E+01 &   6.27E-01
+  FOR JTOT =    6, SYMMETRY BLOCK =  2, ENERGY(  1) =  110.0000    : MAX DIAG & OFF-DIAG =  2.02E+01 &   6.27E-01
 
-  FOR JTOT =    6, SYMMETRY BLOCK =  3, ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  2.05E+01 &   1.71E+00
+  FOR JTOT =    6, SYMMETRY BLOCK =  3, ENERGY(  1) =  110.0000    : MAX DIAG & OFF-DIAG =  2.05E+01 &   1.71E+00
 
-  FOR JTOT =    6, SYMMETRY BLOCK =  4, ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  1.57E+01 &   1.46E+00
+  FOR JTOT =    6, SYMMETRY BLOCK =  4, ENERGY(  1) =  110.0000    : MAX DIAG & OFF-DIAG =  1.57E+01 &   1.46E+00
 
-  FOR JTOT =    7, SYMMETRY BLOCK =  1, ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  5.06E+00 &   2.46E-01
+  FOR JTOT =    7, SYMMETRY BLOCK =  1, ENERGY(  1) =  110.0000    : MAX DIAG & OFF-DIAG =  5.06E+00 &   2.46E-01
 
-  FOR JTOT =    7, SYMMETRY BLOCK =  2, ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  1.00E+01 &   2.55E-01
+  FOR JTOT =    7, SYMMETRY BLOCK =  2, ENERGY(  1) =  110.0000    : MAX DIAG & OFF-DIAG =  1.00E+01 &   2.55E-01
 
-  FOR JTOT =    7, SYMMETRY BLOCK =  3, ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  9.81E+00 &   1.57E-01
+  FOR JTOT =    7, SYMMETRY BLOCK =  3, ENERGY(  1) =  110.0000    : MAX DIAG & OFF-DIAG =  9.81E+00 &   1.57E-01
 
-  FOR JTOT =    7, SYMMETRY BLOCK =  4, ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  1.05E+01 &   4.59E-03
+  FOR JTOT =    7, SYMMETRY BLOCK =  4, ENERGY(  1) =  110.0000    : MAX DIAG & OFF-DIAG =  1.05E+01 &   4.59E-03
 
-  FOR JTOT =    8, SYMMETRY BLOCK =  1, ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  2.89E+00 &   2.54E-01
+  FOR JTOT =    8, SYMMETRY BLOCK =  1, ENERGY(  1) =  110.0000    : MAX DIAG & OFF-DIAG =  2.89E+00 &   2.54E-01
 
-  FOR JTOT =    8, SYMMETRY BLOCK =  2, ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  4.68E+00 &   2.70E-01
+  FOR JTOT =    8, SYMMETRY BLOCK =  2, ENERGY(  1) =  110.0000    : MAX DIAG & OFF-DIAG =  4.68E+00 &   2.70E-01
 
-  FOR JTOT =    8, SYMMETRY BLOCK =  3, ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  3.00E+00 &   1.26E-01
+  FOR JTOT =    8, SYMMETRY BLOCK =  3, ENERGY(  1) =  110.0000    : MAX DIAG & OFF-DIAG =  3.00E+00 &   1.26E-01
 
-  FOR JTOT =    8, SYMMETRY BLOCK =  4, ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  1.51E+00 &   9.17E-07
+  FOR JTOT =    8, SYMMETRY BLOCK =  4, ENERGY(  1) =  110.0000    : MAX DIAG & OFF-DIAG =  1.51E+00 &   9.17E-07
 
-  FOR JTOT =    9, SYMMETRY BLOCK =  1, ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  3.24E+00 &   2.53E-01
+  FOR JTOT =    9, SYMMETRY BLOCK =  1, ENERGY(  1) =  110.0000    : MAX DIAG & OFF-DIAG =  3.24E+00 &   2.53E-01
 
-  FOR JTOT =    9, SYMMETRY BLOCK =  2, ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  7.26E+00 &   2.80E-01
+  FOR JTOT =    9, SYMMETRY BLOCK =  2, ENERGY(  1) =  110.0000    : MAX DIAG & OFF-DIAG =  7.26E+00 &   2.80E-01
 
-  FOR JTOT =    9, SYMMETRY BLOCK =  3, ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  5.09E+00 &   1.08E-01
+  FOR JTOT =    9, SYMMETRY BLOCK =  3, ENERGY(  1) =  110.0000    : MAX DIAG & OFF-DIAG =  5.09E+00 &   1.08E-01
 
-  FOR JTOT =    9, SYMMETRY BLOCK =  4, ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  4.47E-01 &   6.23E-10
+  FOR JTOT =    9, SYMMETRY BLOCK =  4, ENERGY(  1) =  110.0000    : MAX DIAG & OFF-DIAG =  4.47E-01 &   6.23E-10
 
-  FOR JTOT =   10, SYMMETRY BLOCK =  1, ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  3.55E+00 &   2.43E-01
+  FOR JTOT =   10, SYMMETRY BLOCK =  1, ENERGY(  1) =  110.0000    : MAX DIAG & OFF-DIAG =  3.55E+00 &   2.43E-01
 
-  FOR JTOT =   10, SYMMETRY BLOCK =  2, ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  6.70E+00 &   2.81E-01
+  FOR JTOT =   10, SYMMETRY BLOCK =  2, ENERGY(  1) =  110.0000    : MAX DIAG & OFF-DIAG =  6.70E+00 &   2.81E-01
 
-  FOR JTOT =   10, SYMMETRY BLOCK =  3, ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  9.02E+00 &   8.99E-02
+  FOR JTOT =   10, SYMMETRY BLOCK =  3, ENERGY(  1) =  110.0000    : MAX DIAG & OFF-DIAG =  9.02E+00 &   8.99E-02
 
-  FOR JTOT =   10, SYMMETRY BLOCK =  4, ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  1.63E-01 &   5.93E-13
+  FOR JTOT =   10, SYMMETRY BLOCK =  4, ENERGY(  1) =  110.0000    : MAX DIAG & OFF-DIAG =  1.63E-01 &   5.93E-13
 
-  FOR JTOT =   11, SYMMETRY BLOCK =  1, ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  4.95E+00 &   2.22E-01
+  FOR JTOT =   11, SYMMETRY BLOCK =  1, ENERGY(  1) =  110.0000    : MAX DIAG & OFF-DIAG =  4.95E+00 &   2.22E-01
 
-  FOR JTOT =   11, SYMMETRY BLOCK =  2, ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  9.37E+00 &   2.69E-01
+  FOR JTOT =   11, SYMMETRY BLOCK =  2, ENERGY(  1) =  110.0000    : MAX DIAG & OFF-DIAG =  9.37E+00 &   2.69E-01
 
-  FOR JTOT =   11, SYMMETRY BLOCK =  3, ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  1.09E+01 &   7.03E-02
+  FOR JTOT =   11, SYMMETRY BLOCK =  3, ENERGY(  1) =  110.0000    : MAX DIAG & OFF-DIAG =  1.09E+01 &   7.03E-02
 
-  FOR JTOT =   11, SYMMETRY BLOCK =  4, ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  6.46E-02 &   6.94E-16
+  FOR JTOT =   11, SYMMETRY BLOCK =  4, ENERGY(  1) =  110.0000    : MAX DIAG & OFF-DIAG =  6.46E-02 &   6.94E-16
 
-  FOR JTOT =   12, SYMMETRY BLOCK =  1, ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  5.58E+00 &   1.91E-01
+  FOR JTOT =   12, SYMMETRY BLOCK =  1, ENERGY(  1) =  110.0000    : MAX DIAG & OFF-DIAG =  5.58E+00 &   1.91E-01
 
-  FOR JTOT =   12, SYMMETRY BLOCK =  2, ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  1.07E+01 &   2.35E-01
+  FOR JTOT =   12, SYMMETRY BLOCK =  2, ENERGY(  1) =  110.0000    : MAX DIAG & OFF-DIAG =  1.07E+01 &   2.35E-01
 
-  FOR JTOT =   12, SYMMETRY BLOCK =  3, ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  1.19E+01 &   4.81E-02
+  FOR JTOT =   12, SYMMETRY BLOCK =  3, ENERGY(  1) =  110.0000    : MAX DIAG & OFF-DIAG =  1.19E+01 &   4.81E-02
 
-  FOR JTOT =   12, SYMMETRY BLOCK =  4, ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  2.84E-02 &   9.98E-19
+  FOR JTOT =   12, SYMMETRY BLOCK =  4, ENERGY(  1) =  110.0000    : MAX DIAG & OFF-DIAG =  2.84E-02 &   9.98E-19
 
-  FOR JTOT =   13, SYMMETRY BLOCK =  1, ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  5.39E+00 &   1.47E-01
+  FOR JTOT =   13, SYMMETRY BLOCK =  1, ENERGY(  1) =  110.0000    : MAX DIAG & OFF-DIAG =  5.39E+00 &   1.47E-01
 
-  FOR JTOT =   13, SYMMETRY BLOCK =  2, ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  1.07E+01 &   1.66E-01
+  FOR JTOT =   13, SYMMETRY BLOCK =  2, ENERGY(  1) =  110.0000    : MAX DIAG & OFF-DIAG =  1.07E+01 &   1.66E-01
 
-  FOR JTOT =   13, SYMMETRY BLOCK =  3, ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  1.25E+01 &   2.51E-02
+  FOR JTOT =   13, SYMMETRY BLOCK =  3, ENERGY(  1) =  110.0000    : MAX DIAG & OFF-DIAG =  1.25E+01 &   2.51E-02
 
-  FOR JTOT =   13, SYMMETRY BLOCK =  4, ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  1.35E-02 &   1.75E-21
+  FOR JTOT =   13, SYMMETRY BLOCK =  4, ENERGY(  1) =  110.0000    : MAX DIAG & OFF-DIAG =  1.35E-02 &   1.75E-21
 
-  FOR JTOT =   14, SYMMETRY BLOCK =  1, ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  5.78E+00 &   8.98E-02
+  FOR JTOT =   14, SYMMETRY BLOCK =  1, ENERGY(  1) =  110.0000    : MAX DIAG & OFF-DIAG =  5.78E+00 &   8.98E-02
 
-  FOR JTOT =   14, SYMMETRY BLOCK =  2, ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  1.07E+01 &   7.75E-02
+  FOR JTOT =   14, SYMMETRY BLOCK =  2, ENERGY(  1) =  110.0000    : MAX DIAG & OFF-DIAG =  1.07E+01 &   7.75E-02
 
-  FOR JTOT =   14, SYMMETRY BLOCK =  3, ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  1.04E+01 &   9.38E-03
+  FOR JTOT =   14, SYMMETRY BLOCK =  3, ENERGY(  1) =  110.0000    : MAX DIAG & OFF-DIAG =  1.04E+01 &   9.38E-03
 
-  FOR JTOT =   14, SYMMETRY BLOCK =  4, ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  5.89E-03 &   3.58E-24
+  FOR JTOT =   14, SYMMETRY BLOCK =  4, ENERGY(  1) =  110.0000    : MAX DIAG & OFF-DIAG =  5.89E-03 &   3.58E-24
 
-  FOR JTOT =   15, SYMMETRY BLOCK =  1, ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  6.64E+00 &   3.40E-02
+  FOR JTOT =   15, SYMMETRY BLOCK =  1, ENERGY(  1) =  110.0000    : MAX DIAG & OFF-DIAG =  6.64E+00 &   3.40E-02
 
-  FOR JTOT =   15, SYMMETRY BLOCK =  2, ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  1.15E+01 &   2.51E-02
+  FOR JTOT =   15, SYMMETRY BLOCK =  2, ENERGY(  1) =  110.0000    : MAX DIAG & OFF-DIAG =  1.15E+01 &   2.51E-02
 
-  FOR JTOT =   15, SYMMETRY BLOCK =  3, ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  6.37E+00 &   1.72E-03
+  FOR JTOT =   15, SYMMETRY BLOCK =  3, ENERGY(  1) =  110.0000    : MAX DIAG & OFF-DIAG =  6.37E+00 &   1.72E-03
 
-  FOR JTOT =   15, SYMMETRY BLOCK =  4, ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  1.98E-03 &   8.14E-27
+  FOR JTOT =   15, SYMMETRY BLOCK =  4, ENERGY(  1) =  110.0000    : MAX DIAG & OFF-DIAG =  1.98E-03 &   8.14E-27
 
-  FOR JTOT =   16, SYMMETRY BLOCK =  1, ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  6.84E+00 &   6.97E-03
+  FOR JTOT =   16, SYMMETRY BLOCK =  1, ENERGY(  1) =  110.0000    : MAX DIAG & OFF-DIAG =  6.84E+00 &   6.97E-03
 
-  FOR JTOT =   16, SYMMETRY BLOCK =  2, ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  1.16E+01 &   1.10E-02
+  FOR JTOT =   16, SYMMETRY BLOCK =  2, ENERGY(  1) =  110.0000    : MAX DIAG & OFF-DIAG =  1.16E+01 &   1.10E-02
 
-  FOR JTOT =   16, SYMMETRY BLOCK =  3, ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  3.97E+00 &   1.67E-04
+  FOR JTOT =   16, SYMMETRY BLOCK =  3, ENERGY(  1) =  110.0000    : MAX DIAG & OFF-DIAG =  3.97E+00 &   1.67E-04
 
-  FOR JTOT =   16, SYMMETRY BLOCK =  4, ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  4.75E-04 &   1.98E-29
+  FOR JTOT =   16, SYMMETRY BLOCK =  4, ENERGY(  1) =  110.0000    : MAX DIAG & OFF-DIAG =  4.75E-04 &   1.98E-29
 
-  FOR JTOT =   17, SYMMETRY BLOCK =  1, ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  6.15E+00 &   8.72E-04
+  FOR JTOT =   17, SYMMETRY BLOCK =  1, ENERGY(  1) =  110.0000    : MAX DIAG & OFF-DIAG =  6.15E+00 &   8.72E-04
 
-  FOR JTOT =   17, SYMMETRY BLOCK =  2, ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  1.00E+01 &   3.29E-03
+  FOR JTOT =   17, SYMMETRY BLOCK =  2, ENERGY(  1) =  110.0000    : MAX DIAG & OFF-DIAG =  1.00E+01 &   3.29E-03
 
-  FOR JTOT =   17, SYMMETRY BLOCK =  3, ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  2.30E+00 &   1.18E-05
+  FOR JTOT =   17, SYMMETRY BLOCK =  3, ENERGY(  1) =  110.0000    : MAX DIAG & OFF-DIAG =  2.30E+00 &   1.18E-05
 
-  FOR JTOT =   17, SYMMETRY BLOCK =  4, ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  8.09E-05 &   5.02E-32
+  FOR JTOT =   17, SYMMETRY BLOCK =  4, ENERGY(  1) =  110.0000    : MAX DIAG & OFF-DIAG =  8.09E-05 &   5.02E-32
 
-  FOR JTOT =   18, SYMMETRY BLOCK =  1, ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  4.68E+00 &   7.87E-05
+  FOR JTOT =   18, SYMMETRY BLOCK =  1, ENERGY(  1) =  110.0000    : MAX DIAG & OFF-DIAG =  4.68E+00 &   7.87E-05
 
-  FOR JTOT =   18, SYMMETRY BLOCK =  2, ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  7.36E+00 &   8.30E-04
+  FOR JTOT =   18, SYMMETRY BLOCK =  2, ENERGY(  1) =  110.0000    : MAX DIAG & OFF-DIAG =  7.36E+00 &   8.30E-04
 
-  FOR JTOT =   18, SYMMETRY BLOCK =  3, ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  1.34E+00 &   7.79E-07
+  FOR JTOT =   18, SYMMETRY BLOCK =  3, ENERGY(  1) =  110.0000    : MAX DIAG & OFF-DIAG =  1.34E+00 &   7.79E-07
 
-  FOR JTOT =   18, SYMMETRY BLOCK =  4, ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  9.91E-06 &   1.26E-34
+  FOR JTOT =   18, SYMMETRY BLOCK =  4, ENERGY(  1) =  110.0000    : MAX DIAG & OFF-DIAG =  9.91E-06 &   1.26E-34
 
-  FOR JTOT =   19, SYMMETRY BLOCK =  1, ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  3.12E+00 &   6.08E-06
+  FOR JTOT =   19, SYMMETRY BLOCK =  1, ENERGY(  1) =  110.0000    : MAX DIAG & OFF-DIAG =  3.12E+00 &   6.08E-06
 
-  FOR JTOT =   19, SYMMETRY BLOCK =  2, ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  4.84E+00 &   3.17E-04
+  FOR JTOT =   19, SYMMETRY BLOCK =  2, ENERGY(  1) =  110.0000    : MAX DIAG & OFF-DIAG =  4.84E+00 &   3.17E-04
 
-  FOR JTOT =   19, SYMMETRY BLOCK =  3, ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  8.00E-01 &   5.36E-08
+  FOR JTOT =   19, SYMMETRY BLOCK =  3, ENERGY(  1) =  110.0000    : MAX DIAG & OFF-DIAG =  8.00E-01 &   5.36E-08
 
-  FOR JTOT =   19, SYMMETRY BLOCK =  4, ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  8.93E-07 &   2.38E-37
+  FOR JTOT =   19, SYMMETRY BLOCK =  4, ENERGY(  1) =  110.0000    : MAX DIAG & OFF-DIAG =  8.93E-07 &   2.38E-37
 
-  FOR JTOT =   20, SYMMETRY BLOCK =  1, ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  1.98E+00 &   4.65E-07
+  FOR JTOT =   20, SYMMETRY BLOCK =  1, ENERGY(  1) =  110.0000    : MAX DIAG & OFF-DIAG =  1.98E+00 &   4.65E-07
 
-  FOR JTOT =   20, SYMMETRY BLOCK =  2, ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  3.06E+00 &   1.27E-04
+  FOR JTOT =   20, SYMMETRY BLOCK =  2, ENERGY(  1) =  110.0000    : MAX DIAG & OFF-DIAG =  3.06E+00 &   1.27E-04
 
-  FOR JTOT =   20, SYMMETRY BLOCK =  3, ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  4.94E-01 &   3.95E-09
+  FOR JTOT =   20, SYMMETRY BLOCK =  3, ENERGY(  1) =  110.0000    : MAX DIAG & OFF-DIAG =  4.94E-01 &   3.95E-09
 
-  FOR JTOT =   20, SYMMETRY BLOCK =  4, ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  6.06E-08 &   4.14E-40
+  FOR JTOT =   20, SYMMETRY BLOCK =  4, ENERGY(  1) =  110.0000    : MAX DIAG & OFF-DIAG =  6.06E-08 &   4.14E-40
 
-  FOR JTOT =   21, SYMMETRY BLOCK =  1, ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  1.25E+00 &   3.78E-08
+  FOR JTOT =   21, SYMMETRY BLOCK =  1, ENERGY(  1) =  110.0000    : MAX DIAG & OFF-DIAG =  1.25E+00 &   3.78E-08
 
-  FOR JTOT =   21, SYMMETRY BLOCK =  2, ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  1.94E+00 &   5.34E-05
+  FOR JTOT =   21, SYMMETRY BLOCK =  2, ENERGY(  1) =  110.0000    : MAX DIAG & OFF-DIAG =  1.94E+00 &   5.34E-05
 
-  FOR JTOT =   21, SYMMETRY BLOCK =  3, ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  3.14E-01 &   6.65E-10
+  FOR JTOT =   21, SYMMETRY BLOCK =  3, ENERGY(  1) =  110.0000    : MAX DIAG & OFF-DIAG =  3.14E-01 &   6.65E-10
 
-  FOR JTOT =   21, SYMMETRY BLOCK =  4, ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  3.16E-09 &   1.11E-41
+  FOR JTOT =   21, SYMMETRY BLOCK =  4, ENERGY(  1) =  110.0000    : MAX DIAG & OFF-DIAG =  3.16E-09 &   1.11E-41
 
-  FOR JTOT =   22, SYMMETRY BLOCK =  1, ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  8.07E-01 &   3.32E-09
+  FOR JTOT =   22, SYMMETRY BLOCK =  1, ENERGY(  1) =  110.0000    : MAX DIAG & OFF-DIAG =  8.07E-01 &   3.32E-09
 
-  FOR JTOT =   22, SYMMETRY BLOCK =  2, ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  1.26E+00 &   2.30E-05
+  FOR JTOT =   22, SYMMETRY BLOCK =  2, ENERGY(  1) =  110.0000    : MAX DIAG & OFF-DIAG =  1.26E+00 &   2.30E-05
 
-  FOR JTOT =   22, SYMMETRY BLOCK =  3, ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  2.04E-01 &   2.58E-11
+  FOR JTOT =   22, SYMMETRY BLOCK =  3, ENERGY(  1) =  110.0000    : MAX DIAG & OFF-DIAG =  2.04E-01 &   2.58E-11
 
-  FOR JTOT =   22, SYMMETRY BLOCK =  4, ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  1.29E-10 &   1.53E-43
+  FOR JTOT =   22, SYMMETRY BLOCK =  4, ENERGY(  1) =  110.0000    : MAX DIAG & OFF-DIAG =  1.29E-10 &   1.53E-43
 
-  FOR JTOT =   23, SYMMETRY BLOCK =  1, ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  5.32E-01 &   3.10E-10
+  FOR JTOT =   23, SYMMETRY BLOCK =  1, ENERGY(  1) =  110.0000    : MAX DIAG & OFF-DIAG =  5.32E-01 &   3.10E-10
 
-  FOR JTOT =   23, SYMMETRY BLOCK =  2, ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  8.29E-01 &   1.03E-05
+  FOR JTOT =   23, SYMMETRY BLOCK =  2, ENERGY(  1) =  110.0000    : MAX DIAG & OFF-DIAG =  8.29E-01 &   1.03E-05
 
-  FOR JTOT =   23, SYMMETRY BLOCK =  3, ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  1.36E-01 &   2.60E-11
+  FOR JTOT =   23, SYMMETRY BLOCK =  3, ENERGY(  1) =  110.0000    : MAX DIAG & OFF-DIAG =  1.36E-01 &   2.60E-11
 
-  FOR JTOT =   23, SYMMETRY BLOCK =  4, ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  4.19E-12 &   1.25E-45
+  FOR JTOT =   23, SYMMETRY BLOCK =  4, ENERGY(  1) =  110.0000    : MAX DIAG & OFF-DIAG =  4.19E-12 &   1.25E-45
 
-  FOR JTOT =   24, SYMMETRY BLOCK =  1, ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  3.58E-01 &   3.04E-11
+  FOR JTOT =   24, SYMMETRY BLOCK =  1, ENERGY(  1) =  110.0000    : MAX DIAG & OFF-DIAG =  3.58E-01 &   3.04E-11
 
-  FOR JTOT =   24, SYMMETRY BLOCK =  2, ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  5.59E-01 &   4.81E-06
+  FOR JTOT =   24, SYMMETRY BLOCK =  2, ENERGY(  1) =  110.0000    : MAX DIAG & OFF-DIAG =  5.59E-01 &   4.81E-06
 
-  FOR JTOT =   24, SYMMETRY BLOCK =  3, ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  9.24E-02 &   4.39E-12
+  FOR JTOT =   24, SYMMETRY BLOCK =  3, ENERGY(  1) =  110.0000    : MAX DIAG & OFF-DIAG =  9.24E-02 &   4.39E-12
 
-  FOR JTOT =   24, SYMMETRY BLOCK =  4, ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  1.10E-13 &   1.64E-47
+  FOR JTOT =   24, SYMMETRY BLOCK =  4, ENERGY(  1) =  110.0000    : MAX DIAG & OFF-DIAG =  1.10E-13 &   1.64E-47
 
-  FOR JTOT =   25, SYMMETRY BLOCK =  1, ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  2.45E-01 &   3.10E-12
+  FOR JTOT =   25, SYMMETRY BLOCK =  1, ENERGY(  1) =  110.0000    : MAX DIAG & OFF-DIAG =  2.45E-01 &   3.10E-12
 
-  FOR JTOT =   25, SYMMETRY BLOCK =  2, ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  3.84E-01 &   2.21E-06
+  FOR JTOT =   25, SYMMETRY BLOCK =  2, ENERGY(  1) =  110.0000    : MAX DIAG & OFF-DIAG =  3.84E-01 &   2.21E-06
 
-  FOR JTOT =   25, SYMMETRY BLOCK =  3, ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  6.37E-02 &   1.79E-14
+  FOR JTOT =   25, SYMMETRY BLOCK =  3, ENERGY(  1) =  110.0000    : MAX DIAG & OFF-DIAG =  6.37E-02 &   1.79E-14
 
-  FOR JTOT =   25, SYMMETRY BLOCK =  4, ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  2.36E-15 &   1.62E-48
+  FOR JTOT =   25, SYMMETRY BLOCK =  4, ENERGY(  1) =  110.0000    : MAX DIAG & OFF-DIAG =  2.36E-15 &   1.62E-48
 
-  FOR JTOT =   26, SYMMETRY BLOCK =  1, ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  1.71E-01 &   3.24E-13
+  FOR JTOT =   26, SYMMETRY BLOCK =  1, ENERGY(  1) =  110.0000    : MAX DIAG & OFF-DIAG =  1.71E-01 &   3.24E-13
 
-  FOR JTOT =   26, SYMMETRY BLOCK =  2, ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  2.68E-01 &   1.12E-06
+  FOR JTOT =   26, SYMMETRY BLOCK =  2, ENERGY(  1) =  110.0000    : MAX DIAG & OFF-DIAG =  2.68E-01 &   1.12E-06
 
-  FOR JTOT =   26, SYMMETRY BLOCK =  3, ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  4.47E-02 &   1.34E-13
+  FOR JTOT =   26, SYMMETRY BLOCK =  3, ENERGY(  1) =  110.0000    : MAX DIAG & OFF-DIAG =  4.47E-02 &   1.34E-13
 
-  FOR JTOT =   26, SYMMETRY BLOCK =  4, ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  4.19E-17 &   6.29E-50
+  FOR JTOT =   26, SYMMETRY BLOCK =  4, ENERGY(  1) =  110.0000    : MAX DIAG & OFF-DIAG =  4.19E-17 &   6.29E-50
 
-  FOR JTOT =   27, SYMMETRY BLOCK =  1, ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  1.21E-01 &   3.45E-14
+  FOR JTOT =   27, SYMMETRY BLOCK =  1, ENERGY(  1) =  110.0000    : MAX DIAG & OFF-DIAG =  1.21E-01 &   3.45E-14
 
-  FOR JTOT =   27, SYMMETRY BLOCK =  2, ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  1.90E-01 &   5.71E-07
+  FOR JTOT =   27, SYMMETRY BLOCK =  2, ENERGY(  1) =  110.0000    : MAX DIAG & OFF-DIAG =  1.90E-01 &   5.71E-07
 
-  FOR JTOT =   27, SYMMETRY BLOCK =  3, ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  3.18E-02 &   1.26E-14
+  FOR JTOT =   27, SYMMETRY BLOCK =  3, ENERGY(  1) =  110.0000    : MAX DIAG & OFF-DIAG =  3.18E-02 &   1.26E-14
 
-  FOR JTOT =   27, SYMMETRY BLOCK =  4, ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  6.21E-19 &   5.04E-52
+  FOR JTOT =   27, SYMMETRY BLOCK =  4, ENERGY(  1) =  110.0000    : MAX DIAG & OFF-DIAG =  6.21E-19 &   5.04E-52
 
-  FOR JTOT =   28, SYMMETRY BLOCK =  1, ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  8.71E-02 &   3.73E-15
+  FOR JTOT =   28, SYMMETRY BLOCK =  1, ENERGY(  1) =  110.0000    : MAX DIAG & OFF-DIAG =  8.71E-02 &   3.73E-15
 
-  FOR JTOT =   28, SYMMETRY BLOCK =  2, ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  1.36E-01 &   2.73E-07
+  FOR JTOT =   28, SYMMETRY BLOCK =  2, ENERGY(  1) =  110.0000    : MAX DIAG & OFF-DIAG =  1.36E-01 &   2.73E-07
 
-  FOR JTOT =   28, SYMMETRY BLOCK =  3, ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  2.28E-02 &   5.26E-17
+  FOR JTOT =   28, SYMMETRY BLOCK =  3, ENERGY(  1) =  110.0000    : MAX DIAG & OFF-DIAG =  2.28E-02 &   5.26E-17
 
-  FOR JTOT =   28, SYMMETRY BLOCK =  4, ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  7.78E-21 &   2.12E-56
+  FOR JTOT =   28, SYMMETRY BLOCK =  4, ENERGY(  1) =  110.0000    : MAX DIAG & OFF-DIAG =  7.78E-21 &   2.12E-56
 
-  FOR JTOT =   29, SYMMETRY BLOCK =  1, ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  6.33E-02 &   4.06E-16
+  FOR JTOT =   29, SYMMETRY BLOCK =  1, ENERGY(  1) =  110.0000    : MAX DIAG & OFF-DIAG =  6.33E-02 &   4.06E-16
 
-  FOR JTOT =   29, SYMMETRY BLOCK =  2, ENERGY(  1) =  110.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  9.92E-02 &   1.66E-07
+  FOR JTOT =   29, SYMMETRY BLOCK =  2, ENERGY(  1) =  110.0000    : MAX DIAG & OFF-DIAG =  9.92E-02 &   1.66E-07
 
 
 
   CALCULATION TERMINATED BY CONVERGENCE OF TOTAL CROSS SECTIONS.
 
   DIAGONAL AND OFF-DIAGONAL TOLERANCES WERE   0.30000  0.00500   NCAC =  4
-
-  * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
 
   ================================= NH3-He on simple analytic potential: CS x-sections =================================
 
@@ -1995,11 +2231,11 @@
  |                Non-reactive quantum scattering calculations                |
  |                     on atomic and molecular collisions                     |
  |                                                                            |
- |              Copyright (C) 2018 J. M. Hutson & C. R. Le Sueur              |
+ |              Copyright (C) 2019 J. M. Hutson & C. R. Le Sueur              |
  |                                                                            |
- |                               Version 2019.0 (beta)                        |
+ |                               Version 2019.0                               |
  |                                                                            |
- |                    This run used       5.19 cpu secs and                   |
+ |                    This run used       5.06 cpu secs and                   |
  |              29930 of the allocated   1000000 words of storage             |
  |                                                                            |
   ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---

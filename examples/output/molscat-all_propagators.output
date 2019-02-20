@@ -3,11 +3,11 @@
  |                Non-reactive quantum scattering calculations                |
  |                     on atomic and molecular collisions                     |
  |                                                                            |
- |              Copyright (C) 2018 J. M. Hutson & C. R. Le Sueur              |
+ |              Copyright (C) 2019 J. M. Hutson & C. R. Le Sueur              |
  |                                                                            |
- |                               Version 2019.0 (beta)                        |
+ |                               Version 2019.0                               |
  |                                                                            |
- |                       Run on 01 Feb 2019   at 10:24:41                     |
+ |                       Run on 18 Feb 2019   at 22:19:37                     |
  |                                                                            |
   ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
 
@@ -17,18 +17,16 @@
   the Free Software Foundation.
 
   Publications resulting from the use of this program should refer to
-  J. M. Hutson & C. R. Le Sueur, MOLSCAT computer code 2019.0 (beta)       
+  J. M. Hutson & C. R. Le Sueur, MOLSCAT computer code 2019.0              
   or to the published paper in Computer Physics Communications when available.
 
 
-  PHYSICAL CONSTANTS OBTAINED FROM NIST CODATA TABULATION OF 2014
+  USING CODATA 2014 RECOMMENDED VALUES OF FUNDAMENTAL PHYSICAL CONSTANTS
 
   MEMORY ALLOCATED TO MAIN WORKING ARRAY IS   1000000 (8-BYTE) WORDS (    7.63 MB)
   2 INTEGERS CAN BE STORED IN EACH WORD.
 
-  PRINT LEVEL = 11     OTHER PRINT CONTROLS  ISIGPR = 0
-
-  RUN LABEL = model system: ITYPE=1; IPROPS=2                                                 
+  PRINT LEVEL (IPRINT) = 11     OTHER PRINT CONTROLS  ISIGPR = 0
 
   REDUCED MASS FOR INTERACTION =  20.000000000 ATOMIC MASS UNITS (DALTONS)
 
@@ -38,12 +36,12 @@
 
   INTERACTION TYPE IS    LINEAR RIGID ROTOR  -  ATOM.  
 
-  TARGET ROTATIONAL LEVELS TAKEN FROM &BASIS (JLEVEL) INPUT.  NLEVEL =  4
+  MOLECULAR QUANTUM NUMBERS TAKEN FROM JLEVEL INPUT.  NLEVEL =  4
 
-  ENERGY LEVELS COMPUTED FROM B(E) =   30.000000
+  ENERGY LEVELS OBTAINED FROM B(E) =   30.000000
 
   QUANTUM NUMBERS FOR INTERACTING PAIR:
-  EACH PAIR STATE IS LABELLED BY  1 QUANTUM LABEL 
+  EACH PAIR STATE IS LABELLED BY  1 QUANTUM NUMBER 
   EACH CHANNEL FUNCTION IS FORMED BY COMBINING A PAIR STATE WITH A VALUE OF L.
   THE RESULTING BASIS SET IS ASYMPTOTICALLY DIAGONAL.
 
@@ -94,7 +92,7 @@
   FROM RMIN CHOSEN USING IRMSET =  9 TO RMAX =     20.00
 
 
-  COUPLED EQUATIONS SOLVED BY PROPAGATOR OF DEVOGELAERE
+  COUPLED EQUATIONS SOLVED BY PROPAGATOR OF DE VOGELAERE
   PROPAGATION PARAMETERS ARE:    TOLHI  = 0.00E+00
                                  NSTAB =  5  (STEPS PER STABILIZATION)
 
@@ -130,9 +128,7 @@
 
   ========================================== model system: ITYPE=1; IPROPS=2 ===========================================
 
-  *******************************************  ANGULAR MOMENTUM JTOT  =  10  *******************************************
-
-  SYMMETRY BLOCK =   1
+  *****************************  ANGULAR MOMENTUM JTOT  =  10   AND SYMMETRY BLOCK  =    1  ****************************
 
   CHANNEL FUNCTION LIST:
 
@@ -152,8 +148,6 @@
        10           3                   4                     13             3       600.0000000
        11           4                   6                     13             4      1260.0000000
        12           4                   6                     15             4      1260.0000000
-
-  JTOT =   10,  SYMMETRY BLOCK =   1,  ENERGY(   1) =   1000.0000000     CM-1
   INNER CLASSICAL TURNING POINT AT R =  0.7607
   RADIAL PROPAGATION WILL START AT R =  0.6409
 
@@ -205,15 +199,11 @@
     5    6 3.6592110484373E-002   3.5402158184923E-001  -1.1631197283257E-001   1.5186716386424E-001
     6    6 9.6261697210567E-001   5.4661733297930E-002   9.2383105838181E-001   3.3038333443867E-001
 
-  FOR JTOT =   10, SYMMETRY BLOCK =  1, ENERGY(  1) =  1000.000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  1.00E-01 &   3.73E-07
+  FOR JTOT =   10, SYMMETRY BLOCK =  1, ENERGY(  1) =  1000.000    : MAX DIAG & OFF-DIAG =  1.00E-01 &   3.73E-07
 
-  FINISHED JTOT =   10,  SYMMETRY BLOCK =   1,  ENERGY(   1) =  1000.000    
+  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
-  ------------------------------------------ model system: ITYPE=1; IPROPS=2 -------------------------------------------
-
-  JTOT =   10,  SYMMETRY BLOCK =   1,  ENERGY(   2) =   900.00000000     CM-1
-
- DEVOGELAERE PROPAGATION WITH STORED POTENTIAL MATRICES
+  DE VOGELAERE PROPAGATION WITH STORED POTENTIAL MATRICES
 
   DVPROP. PSI AND PSI' PROPAGATED FROM       0.6409  TO  20.000      IN  20181  STEPS.
 
@@ -263,11 +253,7 @@
     5    6 3.9759792848186E-002  -1.8685050954465E-001   7.7057673456328E-002  -1.8390733484471E-001
     6    6 9.5931059428316E-001  -4.9422247208125E-001  -9.7879874665837E-001  -3.5547261823783E-002
 
-  FOR JTOT =   10, SYMMETRY BLOCK =  1, ENERGY(  2) =  900.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  2.09E-01 &   2.03E-07
-
-  FINISHED JTOT =   10,  SYMMETRY BLOCK =   1,  ENERGY(   2) =  900.0000    
-
-  ======================================================================================================================
+  FOR JTOT =   10, SYMMETRY BLOCK =  1, ENERGY(  2) =  900.0000    : MAX DIAG & OFF-DIAG =  2.09E-01 &   2.03E-07
 
   SIGMA NOT PRINTED BECAUSE ISIGPR = 0
 
@@ -277,9 +263,9 @@
  |                Non-reactive quantum scattering calculations                |
  |                     on atomic and molecular collisions                     |
  |                                                                            |
- |              Copyright (C) 2018 J. M. Hutson & C. R. Le Sueur              |
+ |              Copyright (C) 2019 J. M. Hutson & C. R. Le Sueur              |
  |                                                                            |
- |                               Version 2019.0 (beta)                        |
+ |                               Version 2019.0                               |
  |                                                                            |
  |                    This run used       0.46 cpu secs and                   |
  |               2203 of the allocated   1000000 words of storage             |
@@ -290,11 +276,11 @@
  |                Non-reactive quantum scattering calculations                |
  |                     on atomic and molecular collisions                     |
  |                                                                            |
- |              Copyright (C) 2018 J. M. Hutson & C. R. Le Sueur              |
+ |              Copyright (C) 2019 J. M. Hutson & C. R. Le Sueur              |
  |                                                                            |
- |                               Version 2019.0 (beta)                        |
+ |                               Version 2019.0                               |
  |                                                                            |
- |                       Run on 01 Feb 2019   at 10:24:41                     |
+ |                       Run on 18 Feb 2019   at 22:19:37                     |
  |                                                                            |
   ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
 
@@ -304,18 +290,16 @@
   the Free Software Foundation.
 
   Publications resulting from the use of this program should refer to
-  J. M. Hutson & C. R. Le Sueur, MOLSCAT computer code 2019.0 (beta)       
+  J. M. Hutson & C. R. Le Sueur, MOLSCAT computer code 2019.0              
   or to the published paper in Computer Physics Communications when available.
 
 
-  PHYSICAL CONSTANTS OBTAINED FROM NIST CODATA TABULATION OF 2014
+  USING CODATA 2014 RECOMMENDED VALUES OF FUNDAMENTAL PHYSICAL CONSTANTS
 
   MEMORY ALLOCATED TO MAIN WORKING ARRAY IS   1000000 (8-BYTE) WORDS (    7.63 MB)
   2 INTEGERS CAN BE STORED IN EACH WORD.
 
-  PRINT LEVEL = 11     OTHER PRINT CONTROLS  ISIGPR = 0
-
-  RUN LABEL = model system: ITYPE=1; IPROPS=5                                                 
+  PRINT LEVEL (IPRINT) = 11     OTHER PRINT CONTROLS  ISIGPR = 0
 
   REDUCED MASS FOR INTERACTION =  20.000000000 ATOMIC MASS UNITS (DALTONS)
 
@@ -325,12 +309,12 @@
 
   INTERACTION TYPE IS    LINEAR RIGID ROTOR  -  ATOM.  
 
-  TARGET ROTATIONAL LEVELS TAKEN FROM &BASIS (JLEVEL) INPUT.  NLEVEL =  4
+  MOLECULAR QUANTUM NUMBERS TAKEN FROM JLEVEL INPUT.  NLEVEL =  4
 
-  ENERGY LEVELS COMPUTED FROM B(E) =   30.000000
+  ENERGY LEVELS OBTAINED FROM B(E) =   30.000000
 
   QUANTUM NUMBERS FOR INTERACTING PAIR:
-  EACH PAIR STATE IS LABELLED BY  1 QUANTUM LABEL 
+  EACH PAIR STATE IS LABELLED BY  1 QUANTUM NUMBER 
   EACH CHANNEL FUNCTION IS FORMED BY COMBINING A PAIR STATE WITH A VALUE OF L.
   THE RESULTING BASIS SET IS ASYMPTOTICALLY DIAGONAL.
 
@@ -414,9 +398,7 @@
 
   ========================================== model system: ITYPE=1; IPROPS=5 ===========================================
 
-  *******************************************  ANGULAR MOMENTUM JTOT  =  10  *******************************************
-
-  SYMMETRY BLOCK =   1
+  *****************************  ANGULAR MOMENTUM JTOT  =  10   AND SYMMETRY BLOCK  =    1  ****************************
 
   CHANNEL FUNCTION LIST:
 
@@ -436,8 +418,6 @@
        10           3                   4                     13             3       600.0000000
        11           4                   6                     13             4      1260.0000000
        12           4                   6                     15             4      1260.0000000
-
-  JTOT =   10,  SYMMETRY BLOCK =   1,  ENERGY(   1) =   1000.0000000     CM-1
   INNER CLASSICAL TURNING POINT AT R =  0.7607
   RADIAL PROPAGATION WILL START AT R =  0.6409
 
@@ -489,13 +469,9 @@
     5    6 3.6592085459148E-002   3.5424427627241E-001  -1.1652431619896E-001   1.5170421613625E-001
     6    6 9.6261699685207E-001   5.4884395918393E-002   9.2336794993714E-001   3.3167548278543E-001
 
-  FOR JTOT =   10, SYMMETRY BLOCK =  1, ENERGY(  1) =  1000.000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  1.00E-01 &   3.73E-07
+  FOR JTOT =   10, SYMMETRY BLOCK =  1, ENERGY(  1) =  1000.000    : MAX DIAG & OFF-DIAG =  1.00E-01 &   3.73E-07
 
-  FINISHED JTOT =   10,  SYMMETRY BLOCK =   1,  ENERGY(   1) =  1000.000    
-
-  ------------------------------------------ model system: ITYPE=1; IPROPS=5 -------------------------------------------
-
-  JTOT =   10,  SYMMETRY BLOCK =   1,  ENERGY(   2) =   900.00000000     CM-1
+  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
   LDPROP. LOG-DERIVATIVE MATRIX PROPAGATED FROM       0.6409  TO  20.000      IN   8073  STEPS.
 
@@ -545,11 +521,7 @@
     5    6 3.9759936731588E-002  -1.8674201708322E-001   7.7183160826584E-002  -1.8385509624812E-001
     6    6 9.5931044328167E-001  -4.9411411139861E-001  -9.7877424040104E-001  -3.6213666053504E-002
 
-  FOR JTOT =   10, SYMMETRY BLOCK =  1, ENERGY(  2) =  900.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  2.09E-01 &   2.03E-07
-
-  FINISHED JTOT =   10,  SYMMETRY BLOCK =   1,  ENERGY(   2) =  900.0000    
-
-  ======================================================================================================================
+  FOR JTOT =   10, SYMMETRY BLOCK =  1, ENERGY(  2) =  900.0000    : MAX DIAG & OFF-DIAG =  2.09E-01 &   2.03E-07
 
   SIGMA NOT PRINTED BECAUSE ISIGPR = 0
 
@@ -559,11 +531,11 @@
  |                Non-reactive quantum scattering calculations                |
  |                     on atomic and molecular collisions                     |
  |                                                                            |
- |              Copyright (C) 2018 J. M. Hutson & C. R. Le Sueur              |
+ |              Copyright (C) 2019 J. M. Hutson & C. R. Le Sueur              |
  |                                                                            |
- |                               Version 2019.0 (beta)                        |
+ |                               Version 2019.0                               |
  |                                                                            |
- |                    This run used       0.35 cpu secs and                   |
+ |                    This run used       0.28 cpu secs and                   |
  |                799 of the allocated   1000000 words of storage             |
  |                                                                            |
   ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
@@ -572,11 +544,11 @@
  |                Non-reactive quantum scattering calculations                |
  |                     on atomic and molecular collisions                     |
  |                                                                            |
- |              Copyright (C) 2018 J. M. Hutson & C. R. Le Sueur              |
+ |              Copyright (C) 2019 J. M. Hutson & C. R. Le Sueur              |
  |                                                                            |
- |                               Version 2019.0 (beta)                        |
+ |                               Version 2019.0                               |
  |                                                                            |
- |                       Run on 01 Feb 2019   at 10:24:42                     |
+ |                       Run on 18 Feb 2019   at 22:19:37                     |
  |                                                                            |
   ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
 
@@ -586,18 +558,16 @@
   the Free Software Foundation.
 
   Publications resulting from the use of this program should refer to
-  J. M. Hutson & C. R. Le Sueur, MOLSCAT computer code 2019.0 (beta)       
+  J. M. Hutson & C. R. Le Sueur, MOLSCAT computer code 2019.0              
   or to the published paper in Computer Physics Communications when available.
 
 
-  PHYSICAL CONSTANTS OBTAINED FROM NIST CODATA TABULATION OF 2014
+  USING CODATA 2014 RECOMMENDED VALUES OF FUNDAMENTAL PHYSICAL CONSTANTS
 
   MEMORY ALLOCATED TO MAIN WORKING ARRAY IS   1000000 (8-BYTE) WORDS (    7.63 MB)
   2 INTEGERS CAN BE STORED IN EACH WORD.
 
-  PRINT LEVEL = 11     OTHER PRINT CONTROLS  ISIGPR = 0
-
-  RUN LABEL = model system: ITYPE=1; IPROPS=6                                                 
+  PRINT LEVEL (IPRINT) = 11     OTHER PRINT CONTROLS  ISIGPR = 0
 
   REDUCED MASS FOR INTERACTION =  20.000000000 ATOMIC MASS UNITS (DALTONS)
 
@@ -607,12 +577,12 @@
 
   INTERACTION TYPE IS    LINEAR RIGID ROTOR  -  ATOM.  
 
-  TARGET ROTATIONAL LEVELS TAKEN FROM &BASIS (JLEVEL) INPUT.  NLEVEL =  4
+  MOLECULAR QUANTUM NUMBERS TAKEN FROM JLEVEL INPUT.  NLEVEL =  4
 
-  ENERGY LEVELS COMPUTED FROM B(E) =   30.000000
+  ENERGY LEVELS OBTAINED FROM B(E) =   30.000000
 
   QUANTUM NUMBERS FOR INTERACTING PAIR:
-  EACH PAIR STATE IS LABELLED BY  1 QUANTUM LABEL 
+  EACH PAIR STATE IS LABELLED BY  1 QUANTUM NUMBER 
   EACH CHANNEL FUNCTION IS FORMED BY COMBINING A PAIR STATE WITH A VALUE OF L.
   THE RESULTING BASIS SET IS ASYMPTOTICALLY DIAGONAL.
 
@@ -696,9 +666,7 @@
 
   ========================================== model system: ITYPE=1; IPROPS=6 ===========================================
 
-  *******************************************  ANGULAR MOMENTUM JTOT  =  10  *******************************************
-
-  SYMMETRY BLOCK =   1
+  *****************************  ANGULAR MOMENTUM JTOT  =  10   AND SYMMETRY BLOCK  =    1  ****************************
 
   CHANNEL FUNCTION LIST:
 
@@ -718,8 +686,6 @@
        10           3                   4                     13             3       600.0000000
        11           4                   6                     13             4      1260.0000000
        12           4                   6                     15             4      1260.0000000
-
-  JTOT =   10,  SYMMETRY BLOCK =   1,  ENERGY(   1) =   1000.0000000     CM-1
   INNER CLASSICAL TURNING POINT AT R =  0.7607
   RADIAL PROPAGATION WILL START AT R =  0.6409
 
@@ -771,13 +737,9 @@
     5    6 3.6592135482727E-002   3.5406335130410E-001  -1.1635186538207E-001   1.5183668497711E-001
     6    6 9.6261694532122E-001   5.4703482355860E-002   9.2374434855947E-001   3.3062565512323E-001
 
-  FOR JTOT =   10, SYMMETRY BLOCK =  1, ENERGY(  1) =  1000.000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  1.00E-01 &   3.73E-07
+  FOR JTOT =   10, SYMMETRY BLOCK =  1, ENERGY(  1) =  1000.000    : MAX DIAG & OFF-DIAG =  1.00E-01 &   3.73E-07
 
-  FINISHED JTOT =   10,  SYMMETRY BLOCK =   1,  ENERGY(   1) =  1000.000    
-
-  ------------------------------------------ model system: ITYPE=1; IPROPS=6 -------------------------------------------
-
-  JTOT =   10,  SYMMETRY BLOCK =   1,  ENERGY(   2) =   900.00000000     CM-1
+  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
   MDPROP. LOG-DERIVATIVE MATRIX PROPAGATED FROM       0.6409  TO  20.000      IN   8073  STEPS.
 
@@ -827,11 +789,7 @@
     5    6 3.9759814228295E-002  -1.8683012441169E-001   7.7081249056306E-002  -1.8389751295821E-001
     6    6 9.5931057168650E-001  -4.9420210305794E-001  -9.7879417769244E-001  -3.5672530073971E-002
 
-  FOR JTOT =   10, SYMMETRY BLOCK =  1, ENERGY(  2) =  900.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  2.09E-01 &   2.03E-07
-
-  FINISHED JTOT =   10,  SYMMETRY BLOCK =   1,  ENERGY(   2) =  900.0000    
-
-  ======================================================================================================================
+  FOR JTOT =   10, SYMMETRY BLOCK =  1, ENERGY(  2) =  900.0000    : MAX DIAG & OFF-DIAG =  2.09E-01 &   2.03E-07
 
   SIGMA NOT PRINTED BECAUSE ISIGPR = 0
 
@@ -841,11 +799,11 @@
  |                Non-reactive quantum scattering calculations                |
  |                     on atomic and molecular collisions                     |
  |                                                                            |
- |              Copyright (C) 2018 J. M. Hutson & C. R. Le Sueur              |
+ |              Copyright (C) 2019 J. M. Hutson & C. R. Le Sueur              |
  |                                                                            |
- |                               Version 2019.0 (beta)                        |
+ |                               Version 2019.0                               |
  |                                                                            |
- |                    This run used       0.32 cpu secs and                   |
+ |                    This run used       0.22 cpu secs and                   |
  |                799 of the allocated   1000000 words of storage             |
  |                                                                            |
   ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
@@ -854,11 +812,11 @@
  |                Non-reactive quantum scattering calculations                |
  |                     on atomic and molecular collisions                     |
  |                                                                            |
- |              Copyright (C) 2018 J. M. Hutson & C. R. Le Sueur              |
+ |              Copyright (C) 2019 J. M. Hutson & C. R. Le Sueur              |
  |                                                                            |
- |                               Version 2019.0 (beta)                        |
+ |                               Version 2019.0                               |
  |                                                                            |
- |                       Run on 01 Feb 2019   at 10:24:42                     |
+ |                       Run on 18 Feb 2019   at 22:19:38                     |
  |                                                                            |
   ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
 
@@ -868,18 +826,16 @@
   the Free Software Foundation.
 
   Publications resulting from the use of this program should refer to
-  J. M. Hutson & C. R. Le Sueur, MOLSCAT computer code 2019.0 (beta)       
+  J. M. Hutson & C. R. Le Sueur, MOLSCAT computer code 2019.0              
   or to the published paper in Computer Physics Communications when available.
 
 
-  PHYSICAL CONSTANTS OBTAINED FROM NIST CODATA TABULATION OF 2014
+  USING CODATA 2014 RECOMMENDED VALUES OF FUNDAMENTAL PHYSICAL CONSTANTS
 
   MEMORY ALLOCATED TO MAIN WORKING ARRAY IS   1000000 (8-BYTE) WORDS (    7.63 MB)
   2 INTEGERS CAN BE STORED IN EACH WORD.
 
-  PRINT LEVEL = 11     OTHER PRINT CONTROLS  ISIGPR = 0
-
-  RUN LABEL = model system: ITYPE=1; IPROPS=7                                                 
+  PRINT LEVEL (IPRINT) = 11     OTHER PRINT CONTROLS  ISIGPR = 0
 
   REDUCED MASS FOR INTERACTION =  20.000000000 ATOMIC MASS UNITS (DALTONS)
 
@@ -889,12 +845,12 @@
 
   INTERACTION TYPE IS    LINEAR RIGID ROTOR  -  ATOM.  
 
-  TARGET ROTATIONAL LEVELS TAKEN FROM &BASIS (JLEVEL) INPUT.  NLEVEL =  4
+  MOLECULAR QUANTUM NUMBERS TAKEN FROM JLEVEL INPUT.  NLEVEL =  4
 
-  ENERGY LEVELS COMPUTED FROM B(E) =   30.000000
+  ENERGY LEVELS OBTAINED FROM B(E) =   30.000000
 
   QUANTUM NUMBERS FOR INTERACTING PAIR:
-  EACH PAIR STATE IS LABELLED BY  1 QUANTUM LABEL 
+  EACH PAIR STATE IS LABELLED BY  1 QUANTUM NUMBER 
   EACH CHANNEL FUNCTION IS FORMED BY COMBINING A PAIR STATE WITH A VALUE OF L.
   THE RESULTING BASIS SET IS ASYMPTOTICALLY DIAGONAL.
 
@@ -978,9 +934,7 @@
 
   ========================================== model system: ITYPE=1; IPROPS=7 ===========================================
 
-  *******************************************  ANGULAR MOMENTUM JTOT  =  10  *******************************************
-
-  SYMMETRY BLOCK =   1
+  *****************************  ANGULAR MOMENTUM JTOT  =  10   AND SYMMETRY BLOCK  =    1  ****************************
 
   CHANNEL FUNCTION LIST:
 
@@ -1000,8 +954,6 @@
        10           3                   4                     13             3       600.0000000
        11           4                   6                     13             4      1260.0000000
        12           4                   6                     15             4      1260.0000000
-
-  JTOT =   10,  SYMMETRY BLOCK =   1,  ENERGY(   1) =   1000.0000000     CM-1
   INNER CLASSICAL TURNING POINT AT R =  0.7607
   RADIAL PROPAGATION WILL START AT R =  0.6409
 
@@ -1053,13 +1005,9 @@
     5    6 3.6592129806303E-002   3.5406335018967E-001  -1.1635185529424E-001   1.5183667401485E-001
     6    6 9.6261695126331E-001   5.4703481470755E-002   9.2374435324923E-001   3.3062565100649E-001
 
-  FOR JTOT =   10, SYMMETRY BLOCK =  1, ENERGY(  1) =  1000.000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  1.00E-01 &   3.73E-07
+  FOR JTOT =   10, SYMMETRY BLOCK =  1, ENERGY(  1) =  1000.000    : MAX DIAG & OFF-DIAG =  1.00E-01 &   3.73E-07
 
-  FINISHED JTOT =   10,  SYMMETRY BLOCK =   1,  ENERGY(   1) =  1000.000    
-
-  ------------------------------------------ model system: ITYPE=1; IPROPS=7 -------------------------------------------
-
-  JTOT =   10,  SYMMETRY BLOCK =   1,  ENERGY(   2) =   900.00000000     CM-1
+  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
   MAPROP. LOG-DERIVATIVE MATRIX PROPAGATED FROM       0.6409  TO  20.000      IN   8073  STEPS.
 
@@ -1109,11 +1057,7 @@
     5    6 3.9759809548318E-002  -1.8683012517941E-001   7.7081243632772E-002  -1.8389750250708E-001
     6    6 9.5931057659318E-001  -4.9420210363469E-001  -9.7879418032488E-001  -3.5672526618199E-002
 
-  FOR JTOT =   10, SYMMETRY BLOCK =  1, ENERGY(  2) =  900.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  2.09E-01 &   2.03E-07
-
-  FINISHED JTOT =   10,  SYMMETRY BLOCK =   1,  ENERGY(   2) =  900.0000    
-
-  ======================================================================================================================
+  FOR JTOT =   10, SYMMETRY BLOCK =  1, ENERGY(  2) =  900.0000    : MAX DIAG & OFF-DIAG =  2.09E-01 &   2.03E-07
 
   SIGMA NOT PRINTED BECAUSE ISIGPR = 0
 
@@ -1123,11 +1067,11 @@
  |                Non-reactive quantum scattering calculations                |
  |                     on atomic and molecular collisions                     |
  |                                                                            |
- |              Copyright (C) 2018 J. M. Hutson & C. R. Le Sueur              |
+ |              Copyright (C) 2019 J. M. Hutson & C. R. Le Sueur              |
  |                                                                            |
- |                               Version 2019.0 (beta)                        |
+ |                               Version 2019.0                               |
  |                                                                            |
- |                    This run used       0.53 cpu secs and                   |
+ |                    This run used       0.44 cpu secs and                   |
  |               1111 of the allocated   1000000 words of storage             |
  |                                                                            |
   ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
@@ -1136,11 +1080,11 @@
  |                Non-reactive quantum scattering calculations                |
  |                     on atomic and molecular collisions                     |
  |                                                                            |
- |              Copyright (C) 2018 J. M. Hutson & C. R. Le Sueur              |
+ |              Copyright (C) 2019 J. M. Hutson & C. R. Le Sueur              |
  |                                                                            |
- |                               Version 2019.0 (beta)                        |
+ |                               Version 2019.0                               |
  |                                                                            |
- |                       Run on 01 Feb 2019   at 10:24:43                     |
+ |                       Run on 18 Feb 2019   at 22:19:38                     |
  |                                                                            |
   ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
 
@@ -1150,18 +1094,16 @@
   the Free Software Foundation.
 
   Publications resulting from the use of this program should refer to
-  J. M. Hutson & C. R. Le Sueur, MOLSCAT computer code 2019.0 (beta)       
+  J. M. Hutson & C. R. Le Sueur, MOLSCAT computer code 2019.0              
   or to the published paper in Computer Physics Communications when available.
 
 
-  PHYSICAL CONSTANTS OBTAINED FROM NIST CODATA TABULATION OF 2014
+  USING CODATA 2014 RECOMMENDED VALUES OF FUNDAMENTAL PHYSICAL CONSTANTS
 
   MEMORY ALLOCATED TO MAIN WORKING ARRAY IS   1000000 (8-BYTE) WORDS (    7.63 MB)
   2 INTEGERS CAN BE STORED IN EACH WORD.
 
-  PRINT LEVEL = 11     OTHER PRINT CONTROLS  ISIGPR = 0
-
-  RUN LABEL = model system: ITYPE=1; IPROPS=8                                                 
+  PRINT LEVEL (IPRINT) = 11     OTHER PRINT CONTROLS  ISIGPR = 0
 
   REDUCED MASS FOR INTERACTION =  20.000000000 ATOMIC MASS UNITS (DALTONS)
 
@@ -1171,12 +1113,12 @@
 
   INTERACTION TYPE IS    LINEAR RIGID ROTOR  -  ATOM.  
 
-  TARGET ROTATIONAL LEVELS TAKEN FROM &BASIS (JLEVEL) INPUT.  NLEVEL =  4
+  MOLECULAR QUANTUM NUMBERS TAKEN FROM JLEVEL INPUT.  NLEVEL =  4
 
-  ENERGY LEVELS COMPUTED FROM B(E) =   30.000000
+  ENERGY LEVELS OBTAINED FROM B(E) =   30.000000
 
   QUANTUM NUMBERS FOR INTERACTING PAIR:
-  EACH PAIR STATE IS LABELLED BY  1 QUANTUM LABEL 
+  EACH PAIR STATE IS LABELLED BY  1 QUANTUM NUMBER 
   EACH CHANNEL FUNCTION IS FORMED BY COMBINING A PAIR STATE WITH A VALUE OF L.
   THE RESULTING BASIS SET IS ASYMPTOTICALLY DIAGONAL.
 
@@ -1261,9 +1203,7 @@
 
   ========================================== model system: ITYPE=1; IPROPS=8 ===========================================
 
-  *******************************************  ANGULAR MOMENTUM JTOT  =  10  *******************************************
-
-  SYMMETRY BLOCK =   1
+  *****************************  ANGULAR MOMENTUM JTOT  =  10   AND SYMMETRY BLOCK  =    1  ****************************
 
   CHANNEL FUNCTION LIST:
 
@@ -1283,8 +1223,6 @@
        10           3                   4                     13             3       600.0000000
        11           4                   6                     13             4      1260.0000000
        12           4                   6                     15             4      1260.0000000
-
-  JTOT =   10,  SYMMETRY BLOCK =   1,  ENERGY(   1) =   1000.0000000     CM-1
   INNER CLASSICAL TURNING POINT AT R =  0.7607
   RADIAL PROPAGATION WILL START AT R =  0.6409
 
@@ -1336,13 +1274,9 @@
     5    6 3.6592127581312E-002   3.5406324520853E-001  -1.1635175160292E-001   1.5183674614613E-001
     6    6 9.6261695359717E-001   5.4703377068811E-002   9.2374457125159E-001   3.3062504545239E-001
 
-  FOR JTOT =   10, SYMMETRY BLOCK =  1, ENERGY(  1) =  1000.000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  1.00E-01 &   3.73E-07
+  FOR JTOT =   10, SYMMETRY BLOCK =  1, ENERGY(  1) =  1000.000    : MAX DIAG & OFF-DIAG =  1.00E-01 &   3.73E-07
 
-  FINISHED JTOT =   10,  SYMMETRY BLOCK =   1,  ENERGY(   1) =  1000.000    
-
-  ------------------------------------------ model system: ITYPE=1; IPROPS=8 -------------------------------------------
-
-  JTOT =   10,  SYMMETRY BLOCK =   1,  ENERGY(   2) =   900.00000000     CM-1
+  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
   MGPROP. LOG-DERIVATIVE MATRIX PROPAGATED FROM       0.6409  TO  20.000      IN   8073  STEPS.
 
@@ -1392,11 +1326,7 @@
     5    6 3.9759807372300E-002  -1.8683020339168E-001   7.7081151152154E-002  -1.8389753535423E-001
     6    6 9.5931057884347E-001  -4.9420218145135E-001  -9.7879419891436E-001  -3.5672048091882E-002
 
-  FOR JTOT =   10, SYMMETRY BLOCK =  1, ENERGY(  2) =  900.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  2.09E-01 &   2.03E-07
-
-  FINISHED JTOT =   10,  SYMMETRY BLOCK =   1,  ENERGY(   2) =  900.0000    
-
-  ======================================================================================================================
+  FOR JTOT =   10, SYMMETRY BLOCK =  1, ENERGY(  2) =  900.0000    : MAX DIAG & OFF-DIAG =  2.09E-01 &   2.03E-07
 
   SIGMA NOT PRINTED BECAUSE ISIGPR = 0
 
@@ -1406,9 +1336,9 @@
  |                Non-reactive quantum scattering calculations                |
  |                     on atomic and molecular collisions                     |
  |                                                                            |
- |              Copyright (C) 2018 J. M. Hutson & C. R. Le Sueur              |
+ |              Copyright (C) 2019 J. M. Hutson & C. R. Le Sueur              |
  |                                                                            |
- |                               Version 2019.0 (beta)                        |
+ |                               Version 2019.0                               |
  |                                                                            |
  |                    This run used       0.55 cpu secs and                   |
  |                799 of the allocated   1000000 words of storage             |
@@ -1419,11 +1349,11 @@
  |                Non-reactive quantum scattering calculations                |
  |                     on atomic and molecular collisions                     |
  |                                                                            |
- |              Copyright (C) 2018 J. M. Hutson & C. R. Le Sueur              |
+ |              Copyright (C) 2019 J. M. Hutson & C. R. Le Sueur              |
  |                                                                            |
- |                               Version 2019.0 (beta)                        |
+ |                               Version 2019.0                               |
  |                                                                            |
- |                       Run on 01 Feb 2019   at 10:24:43                     |
+ |                       Run on 18 Feb 2019   at 22:19:39                     |
  |                                                                            |
   ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
 
@@ -1433,18 +1363,16 @@
   the Free Software Foundation.
 
   Publications resulting from the use of this program should refer to
-  J. M. Hutson & C. R. Le Sueur, MOLSCAT computer code 2019.0 (beta)       
+  J. M. Hutson & C. R. Le Sueur, MOLSCAT computer code 2019.0              
   or to the published paper in Computer Physics Communications when available.
 
 
-  PHYSICAL CONSTANTS OBTAINED FROM NIST CODATA TABULATION OF 2014
+  USING CODATA 2014 RECOMMENDED VALUES OF FUNDAMENTAL PHYSICAL CONSTANTS
 
   MEMORY ALLOCATED TO MAIN WORKING ARRAY IS   1000000 (8-BYTE) WORDS (    7.63 MB)
   2 INTEGERS CAN BE STORED IN EACH WORD.
 
-  PRINT LEVEL = 11     OTHER PRINT CONTROLS  ISIGPR = 1
-
-  RUN LABEL = model system: ITYPE=1; IPROPS=3 ,IPROPL=3                                       
+  PRINT LEVEL (IPRINT) = 11     OTHER PRINT CONTROLS  ISIGPR = 1
 
   REDUCED MASS FOR INTERACTION =  20.000000000 ATOMIC MASS UNITS (DALTONS)
 
@@ -1454,12 +1382,12 @@
 
   INTERACTION TYPE IS    LINEAR RIGID ROTOR  -  ATOM.  
 
-  TARGET ROTATIONAL LEVELS TAKEN FROM &BASIS (JLEVEL) INPUT.  NLEVEL =  4
+  MOLECULAR QUANTUM NUMBERS TAKEN FROM JLEVEL INPUT.  NLEVEL =  4
 
-  ENERGY LEVELS COMPUTED FROM B(E) =   30.000000
+  ENERGY LEVELS OBTAINED FROM B(E) =   30.000000
 
   QUANTUM NUMBERS FOR INTERACTING PAIR:
-  EACH PAIR STATE IS LABELLED BY  1 QUANTUM LABEL 
+  EACH PAIR STATE IS LABELLED BY  1 QUANTUM NUMBER 
   EACH CHANNEL FUNCTION IS FORMED BY COMBINING A PAIR STATE WITH A VALUE OF L.
   THE RESULTING BASIS SET IS ASYMPTOTICALLY DIAGONAL.
 
@@ -1544,9 +1472,7 @@
 
   ===================================== model system: ITYPE=1; IPROPS=3 ,IPROPL=3 ======================================
 
-  *******************************************  ANGULAR MOMENTUM JTOT  =  10  *******************************************
-
-  SYMMETRY BLOCK =   1
+  *****************************  ANGULAR MOMENTUM JTOT  =  10   AND SYMMETRY BLOCK  =    1  ****************************
 
   CHANNEL FUNCTION LIST:
 
@@ -1566,8 +1492,6 @@
        10           3                   4                     13             3       600.0000000
        11           4                   6                     13             4      1260.0000000
        12           4                   6                     15             4      1260.0000000
-
-  JTOT =   10,  SYMMETRY BLOCK =   1,  ENERGY(   1) =   1000.0000000     CM-1
   INNER CLASSICAL TURNING POINT AT R =  0.7607
   RADIAL PROPAGATION WILL START AT R =  0.6409
 
@@ -1621,30 +1545,23 @@
     5    6 3.6590970023796E-002   3.5394470407831E-001  -1.1623679035505E-001   1.5192096166017E-001
     6    6 9.6261816261756E-001   5.4584835399581E-002   9.2399115116215E-001   3.2993713824243E-001
 
-  * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  10 AND SYMMETRY BLOCK =   1 * * * * * * *
+  * * * * * * * * * *  STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FROM LEVEL I TO LEVEL F  * * * * * * * * * *
+                       FOR JTOT =  10 AND SYMMETRY BLOCK =   1 AT ENERGY(  1) =  1000.000     CM-1
 
     F  I =      2              3
     2       9.44595E-02    3.73136E-07
     3       3.27632E-07    1.00216E-01
 
-  * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
+  FOR JTOT =   10, SYMMETRY BLOCK =  1, ENERGY(  1) =  1000.000    : MAX DIAG & OFF-DIAG =  1.00E-01 &   3.73E-07
 
-  FOR JTOT =   10, SYMMETRY BLOCK =  1, ENERGY(  1) =  1000.000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  1.00E-01 &   3.73E-07
-
-  * * * * * * * * * * * STATE-TO-STATE INTEGRAL CROSS SECTIONS ACCUMULATED FROM JTOT =  10 TO  10 * * * * * * * * * * * *
+  * * * * * * * * * * STATE-TO-STATE INTEGRAL CROSS SECTIONS: ACCUMULATED FROM JTOT =  10 TO  10  * * * * * * * * * *
 
     F  I =      1              2              3
     1       0.00000E+00    0.00000E+00    0.00000E+00
     2       0.00000E+00    9.44595E-02    3.73136E-07
     3       0.00000E+00    3.27632E-07    1.00216E-01
 
-  * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
-
-  FINISHED JTOT =   10,  SYMMETRY BLOCK =   1,  ENERGY(   1) =  1000.000    
-
-  ------------------------------------- model system: ITYPE=1; IPROPS=3 ,IPROPL=3 --------------------------------------
-
-  JTOT =   10,  SYMMETRY BLOCK =   1,  ENERGY(   2) =   900.00000000     CM-1
+  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
   RMPROP. R MATRIX PROPAGATED FROM       0.6409  TO  20.000      IN   8073  STEPS.
 
@@ -1694,30 +1611,21 @@
     5    6 3.9758578520098E-002  -1.8693554219086E-001   7.6958229969948E-002  -1.8394566958749E-001
     6    6 9.5931186714080E-001  -4.9430749987469E-001  -9.7881824730450E-001  -3.5024361300963E-002
 
-  * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =  10 AND SYMMETRY BLOCK =   1 * * * * * * *
+  * * * * * * * * * *  STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FROM LEVEL I TO LEVEL F  * * * * * * * * * *
+                       FOR JTOT =  10 AND SYMMETRY BLOCK =   1 AT ENERGY(  2) =  900.0000     CM-1
 
     F  I =      2              3
     2       2.90584E-02    2.03109E-07
     3       1.52332E-07    2.09539E-01
 
-  * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
+  FOR JTOT =   10, SYMMETRY BLOCK =  1, ENERGY(  2) =  900.0000    : MAX DIAG & OFF-DIAG =  2.10E-01 &   2.03E-07
 
-  FOR JTOT =   10, SYMMETRY BLOCK =  1, ENERGY(  2) =  900.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  2.10E-01 &   2.03E-07
-
-  * * * * * * * * * * * STATE-TO-STATE INTEGRAL CROSS SECTIONS ACCUMULATED FROM JTOT =  10 TO  10 * * * * * * * * * * * *
+  * * * * * * * * * * STATE-TO-STATE INTEGRAL CROSS SECTIONS: ACCUMULATED FROM JTOT =  10 TO  10  * * * * * * * * * *
 
     F  I =      1              2              3
     1       0.00000E+00    0.00000E+00    0.00000E+00
     2       0.00000E+00    2.90584E-02    2.03109E-07
     3       0.00000E+00    1.52332E-07    2.09539E-01
-
-  * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
-
-  FINISHED JTOT =   10,  SYMMETRY BLOCK =   1,  ENERGY(   2) =  900.0000    
-
-  ======================================================================================================================
-
-  * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
 
   ===================================== model system: ITYPE=1; IPROPS=3 ,IPROPL=3 ======================================
 
@@ -1759,11 +1667,11 @@
  |                Non-reactive quantum scattering calculations                |
  |                     on atomic and molecular collisions                     |
  |                                                                            |
- |              Copyright (C) 2018 J. M. Hutson & C. R. Le Sueur              |
+ |              Copyright (C) 2019 J. M. Hutson & C. R. Le Sueur              |
  |                                                                            |
- |                               Version 2019.0 (beta)                        |
+ |                               Version 2019.0                               |
  |                                                                            |
- |                    This run used       0.38 cpu secs and                   |
+ |                    This run used       0.39 cpu secs and                   |
  |               1123 of the allocated   1000000 words of storage             |
  |                                                                            |
   ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
@@ -1772,11 +1680,11 @@
  |                Non-reactive quantum scattering calculations                |
  |                     on atomic and molecular collisions                     |
  |                                                                            |
- |              Copyright (C) 2018 J. M. Hutson & C. R. Le Sueur              |
+ |              Copyright (C) 2019 J. M. Hutson & C. R. Le Sueur              |
  |                                                                            |
- |                               Version 2019.0 (beta)                        |
+ |                               Version 2019.0                               |
  |                                                                            |
- |                       Run on 01 Feb 2019   at 10:24:44                     |
+ |                       Run on 18 Feb 2019   at 22:19:39                     |
  |                                                                            |
   ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
 
@@ -1786,18 +1694,16 @@
   the Free Software Foundation.
 
   Publications resulting from the use of this program should refer to
-  J. M. Hutson & C. R. Le Sueur, MOLSCAT computer code 2019.0 (beta)       
+  J. M. Hutson & C. R. Le Sueur, MOLSCAT computer code 2019.0              
   or to the published paper in Computer Physics Communications when available.
 
 
-  PHYSICAL CONSTANTS OBTAINED FROM NIST CODATA TABULATION OF 2014
+  USING CODATA 2014 RECOMMENDED VALUES OF FUNDAMENTAL PHYSICAL CONSTANTS
 
   MEMORY ALLOCATED TO MAIN WORKING ARRAY IS   1000000 (8-BYTE) WORDS (    7.63 MB)
   2 INTEGERS CAN BE STORED IN EACH WORD.
 
-  PRINT LEVEL = 11     OTHER PRINT CONTROLS  ISIGPR = 0
-
-  RUN LABEL = model system: ITYPE=1; IPROPS=9, IPROPL=9                                       
+  PRINT LEVEL (IPRINT) = 11     OTHER PRINT CONTROLS  ISIGPR = 0
 
   REDUCED MASS FOR INTERACTION =  20.000000000 ATOMIC MASS UNITS (DALTONS)
 
@@ -1807,12 +1713,12 @@
 
   INTERACTION TYPE IS    LINEAR RIGID ROTOR  -  ATOM.  
 
-  TARGET ROTATIONAL LEVELS TAKEN FROM &BASIS (JLEVEL) INPUT.  NLEVEL =  4
+  MOLECULAR QUANTUM NUMBERS TAKEN FROM JLEVEL INPUT.  NLEVEL =  4
 
-  ENERGY LEVELS COMPUTED FROM B(E) =   30.000000
+  ENERGY LEVELS OBTAINED FROM B(E) =   30.000000
 
   QUANTUM NUMBERS FOR INTERACTING PAIR:
-  EACH PAIR STATE IS LABELLED BY  1 QUANTUM LABEL 
+  EACH PAIR STATE IS LABELLED BY  1 QUANTUM NUMBER 
   EACH CHANNEL FUNCTION IS FORMED BY COMBINING A PAIR STATE WITH A VALUE OF L.
   THE RESULTING BASIS SET IS ASYMPTOTICALLY DIAGONAL.
 
@@ -1883,7 +1789,7 @@
   M. H. ALEXANDER AND D. E. MANOLOPOULOS,  J. CHEM. PHYS. 86, 2044 (1987).
 
   PROPAGATION STEP SIZE DETERMINED USING STEP =   12.0     (PER WAVELENGTH)
-  STEP BOUNDARIES ARE EQUALLY SPACED IN R**(-1/3.00)
+  STEP SIZE SCALES AS R**1.33
   STEP SIZE MAY BE ADJUSTED SLIGHTLY SO THAT RANGE IS A WHOLE NUMBER OF STEPS
 
   ======================================================================================================================
@@ -1910,9 +1816,7 @@
 
   ===================================== model system: ITYPE=1; IPROPS=9, IPROPL=9 ======================================
 
-  *******************************************  ANGULAR MOMENTUM JTOT  =  10  *******************************************
-
-  SYMMETRY BLOCK =   1
+  *****************************  ANGULAR MOMENTUM JTOT  =  10   AND SYMMETRY BLOCK  =    1  ****************************
 
   CHANNEL FUNCTION LIST:
 
@@ -1932,8 +1836,6 @@
        10           3                   4                     13             3       600.0000000
        11           4                   6                     13             4      1260.0000000
        12           4                   6                     15             4      1260.0000000
-
-  JTOT =   10,  SYMMETRY BLOCK =   1,  ENERGY(   1) =   1000.0000000     CM-1
   INNER CLASSICAL TURNING POINT AT R =  0.7607
   RADIAL PROPAGATION WILL START AT R =  0.6409
 
@@ -1950,50 +1852,46 @@
            6    2.17844573E+01        10           13         3            600.000000000000
 
   ROW  COL       S**2                  PHASE/2PI              RE (S)                 IM (S)
-    1    1 9.1079778975904E-001  -3.6022136585070E-001  -6.0935240540208E-001  -7.3449808426553E-001
-    2    1 8.9189180647886E-002  -1.4676406017753E-001   1.8041524897716E-001  -2.3799058507512E-001
-    3    1 4.9624998029740E-006   2.3983261706697E-001   1.4221449374143E-004   2.2231227678075E-003
-    4    1 6.2525821156098E-006   2.7469515244398E-001  -3.8643566967255E-004   2.4704755794815E-003
-    5    1 1.4131698097646E-006   2.2188485330522E-001   2.0890857446802E-004   1.1702679254249E-003
-    6    1 4.0134134346453E-007   4.3813851786713E-001  -5.8625952767548E-004   2.4008562987869E-004
-    1    2 8.9189180647886E-002  -1.4676406017753E-001   1.8041524897716E-001  -2.3799058507512E-001
-    2    2 9.1079968797297E-001  -4.3330757946038E-001  -8.7178682909820E-001  -3.8831354931791E-001
-    3    2 4.3055110176233E-007   3.1032312904695E-001  -2.4278819895970E-004   6.0959412087736E-004
-    4    2 3.2666187280766E-007  -4.2327823679541E-001  -5.0641212105076E-004  -2.6496912359845E-004
-    5    2 2.8181239579152E-006   1.5934502893568E-001   9.0533222982404E-004   1.4136822526852E-003
-    6    2 7.5560422090189E-006   6.7252693271037E-002   2.5070433515049E-003   1.1272869389352E-003
-    1    3 4.9624998029740E-006   2.3983261706697E-001   1.4221449374143E-004   2.2231227678075E-003
-    2    3 4.3055110176233E-007   3.1032312904695E-001  -2.4278819895970E-004   6.0959412087736E-004
-    3    3 8.4456800949752E-001   2.5399490351772E-001  -2.3065234360596E-002   9.1871432146310E-001
-    4    3 7.6000152657158E-002  -4.3516390741715E-001  -2.5312036552770E-001  -1.0922560694399E-001
-    5    3 7.8650332611112E-002   4.5374692899132E-001  -2.6868680012478E-001   8.0360040130783E-002
-    6    3 7.7611218330713E-004  -3.4268416164003E-001  -1.5322044271380E-002  -2.3266867916696E-002
-    1    4 6.2525821156098E-006   2.7469515244398E-001  -3.8643566967255E-004   2.4704755794815E-003
-    2    4 3.2666187280766E-007  -4.2327823679541E-001  -5.0641212105076E-004  -2.6496912359845E-004
-    3    4 7.6000152657158E-002  -4.3516390741715E-001  -2.5312036552770E-001  -1.0922560694399E-001
-    4    4 9.2235211278515E-001   3.7566599992882E-001  -6.8193525123619E-001   6.7625174743330E-001
-    5    4 1.6343043295122E-003  -2.3560525955813E-001   3.6513873225277E-003  -4.0261292827392E-002
-    6    4 6.8509841886304E-006  -3.0517426359357E-002   2.5694683377826E-003  -4.9881524612156E-004
-    1    5 1.4131698097646E-006   2.2188485330522E-001   2.0890857446802E-004   1.1702679254249E-003
-    2    5 2.8181239579152E-006   1.5934502893568E-001   9.0533222982404E-004   1.4136822526852E-003
-    3    5 7.8650332611112E-002   4.5374692899132E-001  -2.6868680012478E-001   8.0360040130783E-002
-    4    5 1.6343043295122E-003  -2.3560525955813E-001   3.6513873225277E-003  -4.0261292827392E-002
-    5    5 8.8311896697258E-001   1.5354941855352E-001   5.3527651283643E-001   7.7239758012196E-001
-    6    5 3.6592164793025E-002   3.5406362031521E-001  -1.1635216862237E-001   1.5183654912404E-001
-    1    6 4.0134134346453E-007   4.3813851786713E-001  -5.8625952767548E-004   2.4008562987870E-004
-    2    6 7.5560422090189E-006   6.7252693271037E-002   2.5070433515049E-003   1.1272869389352E-003
-    3    6 7.7611218330713E-004  -3.4268416164003E-001  -1.5322044271380E-002  -2.3266867916696E-002
-    4    6 6.8509841886304E-006  -3.0517426359357E-002   2.5694683377826E-003  -4.9881524612156E-004
-    5    6 3.6592164793025E-002   3.5406362031521E-001  -1.1635216862237E-001   1.5183654912404E-001
-    6    6 9.6261691465593E-001   5.4703844992701E-002   9.2374358050826E-001   3.3062775462097E-001
+    1    1 9.1079778975942E-001  -3.6022136585068E-001  -6.0935240540213E-001  -7.3449808426575E-001
+    2    1 8.9189180647513E-002  -1.4676406017754E-001   1.8041524897677E-001  -2.3799058507463E-001
+    3    1 4.9624998028209E-006   2.3983261706761E-001   1.4221449373028E-004   2.2231227677737E-003
+    4    1 6.2525821156240E-006   2.7469515244363E-001  -3.8643566966764E-004   2.4704755794851E-003
+    5    1 1.4131698097647E-006   2.2188485330457E-001   2.0890857447276E-004   1.1702679254241E-003
+    6    1 4.0134134346293E-007   4.3813851786705E-001  -5.8625952767419E-004   2.4008562987852E-004
+    1    2 8.9189180647513E-002  -1.4676406017754E-001   1.8041524897677E-001  -2.3799058507463E-001
+    2    2 9.1079968797335E-001  -4.3330757946042E-001  -8.7178682909847E-001  -3.8831354931780E-001
+    3    2 4.3055110175662E-007   3.1032312904642E-001  -2.4278819895607E-004   6.0959412087412E-004
+    4    2 3.2666187280722E-007  -4.2327823679527E-001  -5.0641212105018E-004  -2.6496912359872E-004
+    5    2 2.8181239579630E-006   1.5934502893510E-001   9.0533222983692E-004   1.4136822526938E-003
+    6    2 7.5560422090259E-006   6.7252693271060E-002   2.5070433515059E-003   1.1272869389361E-003
+    1    3 4.9624998028209E-006   2.3983261706761E-001   1.4221449373028E-004   2.2231227677737E-003
+    2    3 4.3055110175662E-007   3.1032312904642E-001  -2.4278819895607E-004   6.0959412087412E-004
+    3    3 8.4456800949836E-001   2.5399490351778E-001  -2.3065234360928E-002   9.1871432146355E-001
+    4    3 7.6000152656817E-002  -4.3516390741708E-001  -2.5312036552708E-001  -1.0922560694386E-001
+    5    3 7.8650332610621E-002   4.5374692899136E-001  -2.6868680012396E-001   8.0360040130470E-002
+    6    3 7.7611218329658E-004  -3.4268416164020E-001  -1.5322044271300E-002  -2.3266867916522E-002
+    1    4 6.2525821156240E-006   2.7469515244363E-001  -3.8643566966764E-004   2.4704755794851E-003
+    2    4 3.2666187280722E-007  -4.2327823679527E-001  -5.0641212105018E-004  -2.6496912359872E-004
+    3    4 7.6000152656817E-002  -4.3516390741708E-001  -2.5312036552708E-001  -1.0922560694386E-001
+    4    4 9.2235211278551E-001   3.7566599992890E-001  -6.8193525123667E-001   6.7625174743308E-001
+    5    4 1.6343043294938E-003  -2.3560525955843E-001   3.6513873224308E-003  -4.0261292827173E-002
+    6    4 6.8509841884846E-006  -3.0517426360128E-002   2.5694683377528E-003  -4.9881524612870E-004
+    1    5 1.4131698097647E-006   2.2188485330457E-001   2.0890857447276E-004   1.1702679254241E-003
+    2    5 2.8181239579630E-006   1.5934502893510E-001   9.0533222983692E-004   1.4136822526938E-003
+    3    5 7.8650332610621E-002   4.5374692899136E-001  -2.6868680012396E-001   8.0360040130470E-002
+    4    5 1.6343043294938E-003  -2.3560525955843E-001   3.6513873224308E-003  -4.0261292827173E-002
+    5    5 8.8311896697334E-001   1.5354941855352E-001   5.3527651283667E-001   7.7239758012228E-001
+    6    5 3.6592164792774E-002   3.5406362031519E-001  -1.1635216862195E-001   1.5183654912353E-001
+    1    6 4.0134134346293E-007   4.3813851786705E-001  -5.8625952767419E-004   2.4008562987852E-004
+    2    6 7.5560422090259E-006   6.7252693271060E-002   2.5070433515059E-003   1.1272869389361E-003
+    3    6 7.7611218329658E-004  -3.4268416164020E-001  -1.5322044271300E-002  -2.3266867916522E-002
+    4    6 6.8509841884846E-006  -3.0517426360128E-002   2.5694683377528E-003  -4.9881524612870E-004
+    5    6 3.6592164792774E-002   3.5406362031519E-001  -1.1635216862195E-001   1.5183654912353E-001
+    6    6 9.6261691465619E-001   5.4703844992661E-002   9.2374358050847E-001   3.3062775462079E-001
 
-  FOR JTOT =   10, SYMMETRY BLOCK =  1, ENERGY(  1) =  1000.000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  1.00E-01 &   3.73E-07
+  FOR JTOT =   10, SYMMETRY BLOCK =  1, ENERGY(  1) =  1000.000    : MAX DIAG & OFF-DIAG =  1.00E-01 &   3.73E-07
 
-  FINISHED JTOT =   10,  SYMMETRY BLOCK =   1,  ENERGY(   1) =  1000.000    
-
-  ------------------------------------- model system: ITYPE=1; IPROPS=9, IPROPL=9 --------------------------------------
-
-  JTOT =   10,  SYMMETRY BLOCK =   1,  ENERGY(   2) =   900.00000000     CM-1
+  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
   AIPROP. LOG-DERIVATIVE MATRIX PROPAGATED FROM       0.6409  TO  1.0000      IN    150  STEPS.
 
@@ -2008,48 +1906,44 @@
            6    1.88658934E+01        10           13         3            600.000000000000
 
   ROW  COL       S**2                  PHASE/2PI              RE (S)                 IM (S)
-    1    1 9.0789578535488E-001   1.9193514213600E-001   3.3996471185984E-001   8.9012346337176E-001
-    2    1 9.2098832584032E-002   4.0305954221159E-001  -2.4890231389429E-001   1.7362739047195E-001
-    3    1 2.0376788362069E-006   2.5830583183758E-001  -7.4461832330774E-005   1.4255294706644E-003
-    4    1 2.6053530019779E-006   2.9861886791615E-001  -4.8544744201095E-004   1.5393809739707E-003
-    5    1 5.7110395537275E-007   2.3441513705939E-001   7.3883277864285E-005   7.5209388817140E-004
-    6    1 1.6792529119548E-007   4.3975209718374E-001  -3.8077477693450E-004   1.5144589940293E-004
-    1    2 9.2098832584032E-002   4.0305954221159E-001  -2.4890231389429E-001   1.7362739047195E-001
-    2    2 9.0789668600581E-001   1.1418362100402E-001   7.1795569496300E-001   6.2644736895929E-001
-    3    2 1.7846149682605E-007   3.2814884523222E-001  -1.9919597042300E-004   3.7253518249058E-004
-    4    2 1.4224025231431E-007  -4.0160083022064E-001  -3.0733302614208E-004  -2.1860160876962E-004
-    5    2 1.1434997203160E-006   1.6805590350068E-001   5.2656886539412E-004   9.3071206627698E-004
-    6    2 3.0172086882177E-006   6.6934767814781E-002   1.5856465153736E-003   7.0917826849207E-004
-    1    3 2.0376788362069E-006   2.5830583183758E-001  -7.4461832330774E-005   1.4255294706645E-003
-    2    3 1.7846149682564E-007   3.2814884523232E-001  -1.9919597042300E-004   3.7253518249002E-004
-    3    3 8.3188486495409E-001  -2.6472103296935E-001  -8.4242322923792E-002  -9.0817844941537E-001
-    4    3 8.2162307954605E-002   5.2793486121080E-002   2.7101393298738E-001   9.3347501741164E-002
-    5    3 8.5033062710515E-002  -7.2033173123395E-002   2.6224385742428E-001  -1.2751949636721E-001
-    6    3 9.1754824047642E-004   1.2255796102203E-001   2.1745127548908E-002   2.1087855945025E-002
-    1    4 2.6053530019778E-006   2.9861886791615E-001  -4.8544744201095E-004   1.5393809739706E-003
-    2    4 1.4224025231428E-007  -4.0160083022066E-001  -3.0733302614208E-004  -2.1860160876954E-004
-    3    4 8.2162307954605E-002   5.2793486121082E-002   2.7101393298738E-001   9.3347501741167E-002
-    4    4 9.1590083286187E-001  -1.2975896101231E-001   6.5618594128516E-001  -6.9664972785581E-001
-    5    4 1.9252299306795E-003   2.4408167670670E-001   1.6312471332334E-003   4.3847108952242E-002
-    6    4 8.8816595972097E-006   4.3904017017191E-001  -2.7642637602471E-003   1.1137798081283E-003
-    1    5 5.7110395537302E-007   2.3441513705939E-001   7.3883277864285E-005   7.5209388817158E-004
-    2    5 1.1434997203129E-006   1.6805590350055E-001   5.2656886539412E-004   9.3071206627528E-004
-    3    5 8.5033062710526E-002  -7.2033173123417E-002   2.6224385742428E-001  -1.2751949636726E-001
-    4    5 1.9252299306791E-003   2.4408167670670E-001   1.6312471332334E-003   4.3847108952238E-002
-    5    5 8.7328013877817E-001  -3.7936473471818E-001  -6.7865844079041E-001  -6.4241953544557E-001
-    6    5 3.9759853977036E-002  -1.8682979793205E-001   7.7081664821086E-002  -1.8389744676163E-001
-    1    6 1.6792529119549E-007   4.3975209718372E-001  -3.8077477693450E-004   1.5144589940298E-004
-    2    6 3.0172086882172E-006   6.6934767814746E-002   1.5856465153736E-003   7.0917826849167E-004
-    3    6 9.1754824047600E-004   1.2255796102199E-001   2.1745127548908E-002   2.1087855945015E-002
-    4    6 8.8816595972069E-006   4.3904017017197E-001  -2.7642637602471E-003   1.1137798081271E-003
-    5    6 3.9759853977035E-002  -1.8682979793205E-001   7.7081664821086E-002  -1.8389744676163E-001
-    6    6 9.5931053098892E-001  -4.9420168043829E-001  -9.7879406220217E-001  -3.5675128404769E-002
+    1    1 9.0789578535469E-001   1.9193514213596E-001   3.3996471186006E-001   8.9012346337157E-001
+    2    1 9.2098832584220E-002   4.0305954221158E-001  -2.4890231389453E-001   1.7362739047215E-001
+    3    1 2.0376788361883E-006   2.5830583183770E-001  -7.4461832331459E-005   1.4255294706579E-003
+    4    1 2.6053530019781E-006   2.9861886791602E-001  -4.8544744200972E-004   1.5393809739711E-003
+    5    1 5.7110395536564E-007   2.3441513705955E-001   7.3883277863035E-005   7.5209388816680E-004
+    6    1 1.6792529119531E-007   4.3975209718392E-001  -3.8077477693448E-004   1.5144589940243E-004
+    1    2 9.2098832584220E-002   4.0305954221158E-001  -2.4890231389453E-001   1.7362739047215E-001
+    2    2 9.0789668600562E-001   1.1418362100404E-001   7.1795569496285E-001   6.2644736895930E-001
+    3    2 1.7846149682591E-007   3.2814884523177E-001  -1.9919597042187E-004   3.7253518249100E-004
+    4    2 1.4224025231454E-007  -4.0160083022076E-001  -3.0733302614249E-004  -2.1860160876955E-004
+    5    2 1.1434997203128E-006   1.6805590350065E-001   5.2656886539356E-004   9.3071206627559E-004
+    6    2 3.0172086882130E-006   6.6934767814773E-002   1.5856465153723E-003   7.0917826849144E-004
+    1    3 2.0376788361882E-006   2.5830583183770E-001  -7.4461832331459E-005   1.4255294706579E-003
+    2    3 1.7846149682572E-007   3.2814884523181E-001  -1.9919597042187E-004   3.7253518249075E-004
+    3    3 8.3188486495433E-001  -2.6472103296931E-001  -8.4242322923556E-002  -9.0817844941552E-001
+    4    3 8.2162307954470E-002   5.2793486121117E-002   2.7101393298714E-001   9.3347501741151E-002
+    5    3 8.5033062710414E-002  -7.2033173123411E-002   2.6224385742411E-001  -1.2751949636716E-001
+    6    3 9.1754824047505E-004   1.2255796102229E-001   2.1745127548858E-002   2.1087855945045E-002
+    1    4 2.6053530019781E-006   2.9861886791603E-001  -4.8544744200972E-004   1.5393809739711E-003
+    2    4 1.4224025231452E-007  -4.0160083022077E-001  -3.0733302614249E-004  -2.1860160876952E-004
+    3    4 8.2162307954471E-002   5.2793486121119E-002   2.7101393298714E-001   9.3347501741154E-002
+    4    4 9.1590083286201E-001  -1.2975896101228E-001   6.5618594128536E-001  -6.9664972785572E-001
+    5    4 1.9252299306738E-003   2.4408167670671E-001   1.6312471332294E-003   4.3847108952178E-002
+    6    4 8.8816595971475E-006   4.3904017017233E-001  -2.7642637602404E-003   1.1137798081171E-003
+    1    5 5.7110395536580E-007   2.3441513705956E-001   7.3883277863035E-005   7.5209388816690E-004
+    2    5 1.1434997203113E-006   1.6805590350059E-001   5.2656886539356E-004   9.3071206627478E-004
+    3    5 8.5033062710416E-002  -7.2033173123414E-002   2.6224385742411E-001  -1.2751949636717E-001
+    4    5 1.9252299306735E-003   2.4408167670671E-001   1.6312471332294E-003   4.3847108952174E-002
+    5    5 8.7328013877823E-001  -3.7936473471825E-001  -6.7865844079073E-001  -6.4241953544527E-001
+    6    5 3.9759853977019E-002  -1.8682979793209E-001   7.7081664821028E-002  -1.8389744676161E-001
+    1    6 1.6792529119532E-007   4.3975209718391E-001  -3.8077477693448E-004   1.5144589940245E-004
+    2    6 3.0172086882127E-006   6.6934767814757E-002   1.5856465153723E-003   7.0917826849124E-004
+    3    6 9.1754824047503E-004   1.2255796102228E-001   2.1745127548858E-002   2.1087855945044E-002
+    4    6 8.8816595971450E-006   4.3904017017239E-001  -2.7642637602404E-003   1.1137798081160E-003
+    5    6 3.9759853977019E-002  -1.8682979793209E-001   7.7081664821028E-002  -1.8389744676161E-001
+    6    6 9.5931053098893E-001  -4.9420168043830E-001  -9.7879406220217E-001  -3.5675128404761E-002
 
-  FOR JTOT =   10, SYMMETRY BLOCK =  1, ENERGY(  2) =  900.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  2.09E-01 &   2.03E-07
-
-  FINISHED JTOT =   10,  SYMMETRY BLOCK =   1,  ENERGY(   2) =  900.0000    
-
-  ======================================================================================================================
+  FOR JTOT =   10, SYMMETRY BLOCK =  1, ENERGY(  2) =  900.0000    : MAX DIAG & OFF-DIAG =  2.09E-01 &   2.03E-07
 
   SIGMA NOT PRINTED BECAUSE ISIGPR = 0
 
@@ -2059,11 +1953,11 @@
  |                Non-reactive quantum scattering calculations                |
  |                     on atomic and molecular collisions                     |
  |                                                                            |
- |              Copyright (C) 2018 J. M. Hutson & C. R. Le Sueur              |
+ |              Copyright (C) 2019 J. M. Hutson & C. R. Le Sueur              |
  |                                                                            |
- |                               Version 2019.0 (beta)                        |
+ |                               Version 2019.0                               |
  |                                                                            |
- |                    This run used       0.24 cpu secs and                   |
+ |                    This run used       0.23 cpu secs and                   |
  |               1123 of the allocated   1000000 words of storage             |
  |                                                                            |
   ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
@@ -2072,11 +1966,11 @@
  |                Non-reactive quantum scattering calculations                |
  |                     on atomic and molecular collisions                     |
  |                                                                            |
- |              Copyright (C) 2018 J. M. Hutson & C. R. Le Sueur              |
+ |              Copyright (C) 2019 J. M. Hutson & C. R. Le Sueur              |
  |                                                                            |
- |                               Version 2019.0 (beta)                        |
+ |                               Version 2019.0                               |
  |                                                                            |
- |                       Run on 01 Feb 2019   at 10:24:44                     |
+ |                       Run on 18 Feb 2019   at 22:19:39                     |
  |                                                                            |
   ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
 
@@ -2086,18 +1980,16 @@
   the Free Software Foundation.
 
   Publications resulting from the use of this program should refer to
-  J. M. Hutson & C. R. Le Sueur, MOLSCAT computer code 2019.0 (beta)       
+  J. M. Hutson & C. R. Le Sueur, MOLSCAT computer code 2019.0              
   or to the published paper in Computer Physics Communications when available.
 
 
-  PHYSICAL CONSTANTS OBTAINED FROM NIST CODATA TABULATION OF 2014
+  USING CODATA 2014 RECOMMENDED VALUES OF FUNDAMENTAL PHYSICAL CONSTANTS
 
   MEMORY ALLOCATED TO MAIN WORKING ARRAY IS   1000000 (8-BYTE) WORDS (    7.63 MB)
   2 INTEGERS CAN BE STORED IN EACH WORD.
 
-  PRINT LEVEL = 11     OTHER PRINT CONTROLS  ISIGPR = 0
-
-  RUN LABEL = model system: ITYPE=1; IPROPS=6, IPROPL=9                                       
+  PRINT LEVEL (IPRINT) = 11     OTHER PRINT CONTROLS  ISIGPR = 0
 
   REDUCED MASS FOR INTERACTION =  20.000000000 ATOMIC MASS UNITS (DALTONS)
 
@@ -2107,12 +1999,12 @@
 
   INTERACTION TYPE IS    LINEAR RIGID ROTOR  -  ATOM.  
 
-  TARGET ROTATIONAL LEVELS TAKEN FROM &BASIS (JLEVEL) INPUT.  NLEVEL =  4
+  MOLECULAR QUANTUM NUMBERS TAKEN FROM JLEVEL INPUT.  NLEVEL =  4
 
-  ENERGY LEVELS COMPUTED FROM B(E) =   30.000000
+  ENERGY LEVELS OBTAINED FROM B(E) =   30.000000
 
   QUANTUM NUMBERS FOR INTERACTING PAIR:
-  EACH PAIR STATE IS LABELLED BY  1 QUANTUM LABEL 
+  EACH PAIR STATE IS LABELLED BY  1 QUANTUM NUMBER 
   EACH CHANNEL FUNCTION IS FORMED BY COMBINING A PAIR STATE WITH A VALUE OF L.
   THE RESULTING BASIS SET IS ASYMPTOTICALLY DIAGONAL.
 
@@ -2208,9 +2100,7 @@
 
   ===================================== model system: ITYPE=1; IPROPS=6, IPROPL=9 ======================================
 
-  *******************************************  ANGULAR MOMENTUM JTOT  =  10  *******************************************
-
-  SYMMETRY BLOCK =   1
+  *****************************  ANGULAR MOMENTUM JTOT  =  10   AND SYMMETRY BLOCK  =    1  ****************************
 
   CHANNEL FUNCTION LIST:
 
@@ -2230,8 +2120,6 @@
        10           3                   4                     13             3       600.0000000
        11           4                   6                     13             4      1260.0000000
        12           4                   6                     15             4      1260.0000000
-
-  JTOT =   10,  SYMMETRY BLOCK =   1,  ENERGY(   1) =   1000.0000000     CM-1
   INNER CLASSICAL TURNING POINT AT R =  0.7607
   RADIAL PROPAGATION WILL START AT R =  0.6409
 
@@ -2287,13 +2175,9 @@
     5    6 3.6592074698637E-002   3.5406316540058E-001  -1.1635159138933E-001   1.5183669477372E-001
     6    6 9.6261699295516E-001   5.4703260912813E-002   9.2374483143563E-001   3.3062437803514E-001
 
-  FOR JTOT =   10, SYMMETRY BLOCK =  1, ENERGY(  1) =  1000.000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  1.00E-01 &   3.73E-07
+  FOR JTOT =   10, SYMMETRY BLOCK =  1, ENERGY(  1) =  1000.000    : MAX DIAG & OFF-DIAG =  1.00E-01 &   3.73E-07
 
-  FINISHED JTOT =   10,  SYMMETRY BLOCK =   1,  ENERGY(   1) =  1000.000    
-
-  ------------------------------------- model system: ITYPE=1; IPROPS=6, IPROPL=9 --------------------------------------
-
-  JTOT =   10,  SYMMETRY BLOCK =   1,  ENERGY(   2) =   900.00000000     CM-1
+  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
   RMID =   1.0650 OBTAINED FROM RVFAC = 1.400
 
@@ -2347,11 +2231,7 @@
     5    6 3.9759661294383E-002  -1.8683025854889E-001   7.7080945821616E-002  -1.8389722424666E-001
     6    6 9.5931073212975E-001  -4.9420223145766E-001  -9.7879428832219E-001  -3.5671743405752E-002
 
-  FOR JTOT =   10, SYMMETRY BLOCK =  1, ENERGY(  2) =  900.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  2.09E-01 &   2.03E-07
-
-  FINISHED JTOT =   10,  SYMMETRY BLOCK =   1,  ENERGY(   2) =  900.0000    
-
-  ======================================================================================================================
+  FOR JTOT =   10, SYMMETRY BLOCK =  1, ENERGY(  2) =  900.0000    : MAX DIAG & OFF-DIAG =  2.09E-01 &   2.03E-07
 
   SIGMA NOT PRINTED BECAUSE ISIGPR = 0
 
@@ -2361,9 +2241,9 @@
  |                Non-reactive quantum scattering calculations                |
  |                     on atomic and molecular collisions                     |
  |                                                                            |
- |              Copyright (C) 2018 J. M. Hutson & C. R. Le Sueur              |
+ |              Copyright (C) 2019 J. M. Hutson & C. R. Le Sueur              |
  |                                                                            |
- |                               Version 2019.0 (beta)                        |
+ |                               Version 2019.0                               |
  |                                                                            |
  |                    This run used       0.07 cpu secs and                   |
  |               1123 of the allocated   1000000 words of storage             |
@@ -2374,11 +2254,11 @@
  |                Non-reactive quantum scattering calculations                |
  |                     on atomic and molecular collisions                     |
  |                                                                            |
- |              Copyright (C) 2018 J. M. Hutson & C. R. Le Sueur              |
+ |              Copyright (C) 2019 J. M. Hutson & C. R. Le Sueur              |
  |                                                                            |
- |                               Version 2019.0 (beta)                        |
+ |                               Version 2019.0                               |
  |                                                                            |
- |                       Run on 01 Feb 2019   at 10:24:44                     |
+ |                       Run on 18 Feb 2019   at 22:19:39                     |
  |                                                                            |
   ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
 
@@ -2388,18 +2268,16 @@
   the Free Software Foundation.
 
   Publications resulting from the use of this program should refer to
-  J. M. Hutson & C. R. Le Sueur, MOLSCAT computer code 2019.0 (beta)       
+  J. M. Hutson & C. R. Le Sueur, MOLSCAT computer code 2019.0              
   or to the published paper in Computer Physics Communications when available.
 
 
-  PHYSICAL CONSTANTS OBTAINED FROM NIST CODATA TABULATION OF 2014
+  USING CODATA 2014 RECOMMENDED VALUES OF FUNDAMENTAL PHYSICAL CONSTANTS
 
   MEMORY ALLOCATED TO MAIN WORKING ARRAY IS   1000000 (8-BYTE) WORDS (    7.63 MB)
   2 INTEGERS CAN BE STORED IN EACH WORD.
 
-  PRINT LEVEL = 11     OTHER PRINT CONTROLS  ISIGPR = 0
-
-  RUN LABEL = model system: ITYPE=1; IPROPS=5, IPROPL=4                                       
+  PRINT LEVEL (IPRINT) = 11     OTHER PRINT CONTROLS  ISIGPR = 0
 
   REDUCED MASS FOR INTERACTION =  20.000000000 ATOMIC MASS UNITS (DALTONS)
 
@@ -2409,12 +2287,12 @@
 
   INTERACTION TYPE IS    LINEAR RIGID ROTOR  -  ATOM.  
 
-  TARGET ROTATIONAL LEVELS TAKEN FROM &BASIS (JLEVEL) INPUT.  NLEVEL =  4
+  MOLECULAR QUANTUM NUMBERS TAKEN FROM JLEVEL INPUT.  NLEVEL =  4
 
-  ENERGY LEVELS COMPUTED FROM B(E) =   30.000000
+  ENERGY LEVELS OBTAINED FROM B(E) =   30.000000
 
   QUANTUM NUMBERS FOR INTERACTING PAIR:
-  EACH PAIR STATE IS LABELLED BY  1 QUANTUM LABEL 
+  EACH PAIR STATE IS LABELLED BY  1 QUANTUM NUMBER 
   EACH CHANNEL FUNCTION IS FORMED BY COMBINING A PAIR STATE WITH A VALUE OF L.
   THE RESULTING BASIS SET IS ASYMPTOTICALLY DIAGONAL.
 
@@ -2516,9 +2394,7 @@
 
   ===================================== model system: ITYPE=1; IPROPS=5, IPROPL=4 ======================================
 
-  *******************************************  ANGULAR MOMENTUM JTOT  =  10  *******************************************
-
-  SYMMETRY BLOCK =   1
+  *****************************  ANGULAR MOMENTUM JTOT  =  10   AND SYMMETRY BLOCK  =    1  ****************************
 
   CHANNEL FUNCTION LIST:
 
@@ -2538,8 +2414,6 @@
        10           3                   4                     13             3       600.0000000
        11           4                   6                     13             4      1260.0000000
        12           4                   6                     15             4      1260.0000000
-
-  JTOT =   10,  SYMMETRY BLOCK =   1,  ENERGY(   1) =   1000.0000000     CM-1
   INNER CLASSICAL TURNING POINT AT R =  0.7607
   RADIAL PROPAGATION WILL START AT R =  0.6409
 
@@ -2595,13 +2469,9 @@
     5    6 3.6594523459968E-002   3.5405684863203E-001  -1.1634945787500E-001   1.5184639314834E-001
     6    6 9.6261446503158E-001   5.4696671010806E-002   9.2375730739685E-001   3.3058569548985E-001
 
-  FOR JTOT =   10, SYMMETRY BLOCK =  1, ENERGY(  1) =  1000.000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  1.00E-01 &   3.73E-07
+  FOR JTOT =   10, SYMMETRY BLOCK =  1, ENERGY(  1) =  1000.000    : MAX DIAG & OFF-DIAG =  1.00E-01 &   3.73E-07
 
-  FINISHED JTOT =   10,  SYMMETRY BLOCK =   1,  ENERGY(   1) =  1000.000    
-
-  ------------------------------------- model system: ITYPE=1; IPROPS=5, IPROPL=4 --------------------------------------
-
-  JTOT =   10,  SYMMETRY BLOCK =   1,  ENERGY(   2) =   900.00000000     CM-1
+  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
   RMID =   1.0650 OBTAINED FROM RVFAC = 1.400
 
@@ -2655,11 +2525,7 @@
     5    6 3.9759861907602E-002  -1.8683171661499E-001   7.7079455537962E-002  -1.8389839434202E-001
     6    6 9.5931053964658E-001  -4.9420334114511E-001  -9.7879443881878E-001  -3.5664915309044E-002
 
-  FOR JTOT =   10, SYMMETRY BLOCK =  1, ENERGY(  2) =  900.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  2.09E-01 &   2.03E-07
-
-  FINISHED JTOT =   10,  SYMMETRY BLOCK =   1,  ENERGY(   2) =  900.0000    
-
-  ======================================================================================================================
+  FOR JTOT =   10, SYMMETRY BLOCK =  1, ENERGY(  2) =  900.0000    : MAX DIAG & OFF-DIAG =  2.09E-01 &   2.03E-07
 
   SIGMA NOT PRINTED BECAUSE ISIGPR = 0
 
@@ -2669,11 +2535,11 @@
  |                Non-reactive quantum scattering calculations                |
  |                     on atomic and molecular collisions                     |
  |                                                                            |
- |              Copyright (C) 2018 J. M. Hutson & C. R. Le Sueur              |
+ |              Copyright (C) 2019 J. M. Hutson & C. R. Le Sueur              |
  |                                                                            |
- |                               Version 2019.0 (beta)                        |
+ |                               Version 2019.0                               |
  |                                                                            |
- |                    This run used       0.08 cpu secs and                   |
+ |                    This run used       0.09 cpu secs and                   |
  |               2083 of the allocated   1000000 words of storage             |
  |                                                                            |
   ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
@@ -2682,11 +2548,11 @@
  |                Non-reactive quantum scattering calculations                |
  |                     on atomic and molecular collisions                     |
  |                                                                            |
- |              Copyright (C) 2018 J. M. Hutson & C. R. Le Sueur              |
+ |              Copyright (C) 2019 J. M. Hutson & C. R. Le Sueur              |
  |                                                                            |
- |                               Version 2019.0 (beta)                        |
+ |                               Version 2019.0                               |
  |                                                                            |
- |                       Run on 01 Feb 2019   at 10:24:44                     |
+ |                       Run on 18 Feb 2019   at 22:19:39                     |
  |                                                                            |
   ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
 
@@ -2696,18 +2562,16 @@
   the Free Software Foundation.
 
   Publications resulting from the use of this program should refer to
-  J. M. Hutson & C. R. Le Sueur, MOLSCAT computer code 2019.0 (beta)       
+  J. M. Hutson & C. R. Le Sueur, MOLSCAT computer code 2019.0              
   or to the published paper in Computer Physics Communications when available.
 
 
-  PHYSICAL CONSTANTS OBTAINED FROM NIST CODATA TABULATION OF 2014
+  USING CODATA 2014 RECOMMENDED VALUES OF FUNDAMENTAL PHYSICAL CONSTANTS
 
   MEMORY ALLOCATED TO MAIN WORKING ARRAY IS   1000000 (8-BYTE) WORDS (    7.63 MB)
   2 INTEGERS CAN BE STORED IN EACH WORD.
 
-  PRINT LEVEL = 11     OTHER PRINT CONTROLS  ISIGPR = 0
-
-  RUN LABEL = model system: ITYPE=1; IPROPS=-1 (using IOS approximation)                      
+  PRINT LEVEL (IPRINT) = 11     OTHER PRINT CONTROLS  ISIGPR = 0
 
   REDUCED MASS FOR INTERACTION =  20.000000000 ATOMIC MASS UNITS (DALTONS)
 
@@ -3020,9 +2884,9 @@
  |                Non-reactive quantum scattering calculations                |
  |                     on atomic and molecular collisions                     |
  |                                                                            |
- |              Copyright (C) 2018 J. M. Hutson & C. R. Le Sueur              |
+ |              Copyright (C) 2019 J. M. Hutson & C. R. Le Sueur              |
  |                                                                            |
- |                               Version 2019.0 (beta)                        |
+ |                               Version 2019.0                               |
  |                                                                            |
  |                    This run used       0.00 cpu secs and                   |
  |                214 of the allocated   1000000 words of storage             |
@@ -3033,11 +2897,11 @@
  |                Non-reactive quantum scattering calculations                |
  |                     on atomic and molecular collisions                     |
  |                                                                            |
- |              Copyright (C) 2018 J. M. Hutson & C. R. Le Sueur              |
+ |              Copyright (C) 2019 J. M. Hutson & C. R. Le Sueur              |
  |                                                                            |
- |                               Version 2019.0 (beta)                        |
+ |                               Version 2019.0                               |
  |                                                                            |
- |                       Run on 01 Feb 2019   at 10:24:44                     |
+ |                       Run on 18 Feb 2019   at 22:19:39                     |
  |                                                                            |
   ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
 
@@ -3047,18 +2911,16 @@
   the Free Software Foundation.
 
   Publications resulting from the use of this program should refer to
-  J. M. Hutson & C. R. Le Sueur, MOLSCAT computer code 2019.0 (beta)       
+  J. M. Hutson & C. R. Le Sueur, MOLSCAT computer code 2019.0              
   or to the published paper in Computer Physics Communications when available.
 
 
-  PHYSICAL CONSTANTS OBTAINED FROM NIST CODATA TABULATION OF 2014
+  USING CODATA 2014 RECOMMENDED VALUES OF FUNDAMENTAL PHYSICAL CONSTANTS
 
   MEMORY ALLOCATED TO MAIN WORKING ARRAY IS   1000000 (8-BYTE) WORDS (    7.63 MB)
   2 INTEGERS CAN BE STORED IN EACH WORD.
 
-  PRINT LEVEL = 11     OTHER PRINT CONTROLS  ISIGPR = 0
-
-  RUN LABEL = model system: ITYPE=1; IPROPS=6 (using IOS approximation)                       
+  PRINT LEVEL (IPRINT) = 11     OTHER PRINT CONTROLS  ISIGPR = 0
 
   REDUCED MASS FOR INTERACTION =  20.000000000 ATOMIC MASS UNITS (DALTONS)
 
@@ -3288,7 +3150,7 @@
 
                       PARTIAL WAVES FROM   10 TO    10 (IN STEPS OF    1)
 
-  ***** ***** ***** TIME WAS     0.01  SEC.
+  ***** ***** ***** TIME WAS     0.00  SEC.
  
 
   ***** ***** STORAGE SO FAR USED     44801  OF THE   1000000  AVAILABLE WORDS.
@@ -3375,9 +3237,9 @@
  |                Non-reactive quantum scattering calculations                |
  |                     on atomic and molecular collisions                     |
  |                                                                            |
- |              Copyright (C) 2018 J. M. Hutson & C. R. Le Sueur              |
+ |              Copyright (C) 2019 J. M. Hutson & C. R. Le Sueur              |
  |                                                                            |
- |                               Version 2019.0 (beta)                        |
+ |                               Version 2019.0                               |
  |                                                                            |
  |                    This run used       0.02 cpu secs and                   |
  |              44801 of the allocated   1000000 words of storage             |

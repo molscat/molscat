@@ -3,11 +3,11 @@
  |                Non-reactive quantum scattering calculations                |
  |                     on atomic and molecular collisions                     |
  |                                                                            |
- |              Copyright (C) 2018 J. M. Hutson & C. R. Le Sueur              |
+ |              Copyright (C) 2019 J. M. Hutson & C. R. Le Sueur              |
  |                                                                            |
- |                               Version 2019.0 (beta)                        |
+ |                               Version 2019.0                               |
  |                                                                            |
- |                       Run on 01 Feb 2019   at 10:24:47                     |
+ |                       Run on 18 Feb 2019   at 22:19:42                     |
  |                                                                            |
   ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
 
@@ -17,18 +17,16 @@
   the Free Software Foundation.
 
   Publications resulting from the use of this program should refer to
-  J. M. Hutson & C. R. Le Sueur, MOLSCAT computer code 2019.0 (beta)       
+  J. M. Hutson & C. R. Le Sueur, MOLSCAT computer code 2019.0              
   or to the published paper in Computer Physics Communications when available.
 
 
-  PHYSICAL CONSTANTS OBTAINED FROM NIST CODATA TABULATION OF 2014
+  USING CODATA 2014 RECOMMENDED VALUES OF FUNDAMENTAL PHYSICAL CONSTANTS
 
   MEMORY ALLOCATED TO MAIN WORKING ARRAY IS   1000000 (8-BYTE) WORDS (    7.63 MB)
   2 INTEGERS CAN BE STORED IN EACH WORD.
 
-  PRINT LEVEL =  6     OTHER PRINT CONTROLS  ISIGPR = 0
-
-  RUN LABEL = Ar-HF v=0 on H6(4,3,2) potential: see JCP 96, 6752 (1992)                       
+  PRINT LEVEL (IPRINT) =  6     OTHER PRINT CONTROLS  ISIGPR = 0
 
   REDUCED MASS FOR INTERACTION =  13.331917000 ATOMIC MASS UNITS (DALTONS)
 
@@ -38,12 +36,12 @@
 
   INTERACTION TYPE IS    LINEAR RIGID ROTOR  -  ATOM.  
 
-  TARGET ROTATIONAL LEVELS COMPUTED FROM JMIN =  0,  JMAX =  8,  AND JSTEP = 1
+  MOLECULAR QUANTUM NUMBERS OBTAINED FROM JMIN =  0,  JMAX =  8,  AND JSTEP = 1
 
-  ENERGY LEVELS COMPUTED FROM B(E) =   20.559743
+  ENERGY LEVELS OBTAINED FROM B(E) =   20.559743
 
   QUANTUM NUMBERS FOR INTERACTING PAIR:
-  EACH PAIR STATE IS LABELLED BY  1 QUANTUM LABEL 
+  EACH PAIR STATE IS LABELLED BY  1 QUANTUM NUMBER 
   EACH CHANNEL FUNCTION IS FORMED BY COMBINING A PAIR STATE WITH A VALUE OF L.
   THE RESULTING BASIS SET IS ASYMPTOTICALLY DIAGONAL.
 
@@ -123,7 +121,7 @@
   POTENTIAL RETURNED IN UNITS OF EPSIL  =  1.0000000     CM-1
         CODED WITH R IN UNITS OF RM     =  1.0000000     ANGSTROM
 
-  ALL LENGTHS ARE IN UNITS OF ANGSTROM (  1.00000000 ANGSTROM ) UNLESS OTHERWISE STATED
+  ALL LENGTHS ARE IN UNITS OF ANGSTROM UNLESS OTHERWISE STATED
 
   INTERACTION MATRIX USES   9 BLOCKS OF VL ARRAY FOR R-DEPENDENT TERMS IN POTENTIAL
 
@@ -183,9 +181,7 @@
 
   ============================= Ar-HF v=0 on H6(4,3,2) potential: see JCP 96, 6752 (1992) ==============================
 
-  *******************************************  ANGULAR MOMENTUM JTOT  =   1  *******************************************
-
-  SYMMETRY BLOCK =   2
+  *****************************  ANGULAR MOMENTUM JTOT  =   1   AND SYMMETRY BLOCK  =    2  ****************************
 
   CHANNEL FUNCTION LIST:
 
@@ -211,53 +207,25 @@
        16           8                   7                      8             8      1151.3456080
        17           9                   8                      9             9      1480.3014960
 
-  JTOT =    1,  SYMMETRY BLOCK =   2,  ENERGY(   1) =   16.930000000     CM-1
-
   S-MATRIX EIGENPHASE SUM, EPSUM/PI = 10.24273
 
-  FOR JTOT =    1, SYMMETRY BLOCK =  2, ENERGY(  1) =  16.93000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  1.34E+00 &   0.00E+00
-
-  FINISHED JTOT =    1,  SYMMETRY BLOCK =   2,  ENERGY(   1) =  16.93000    
-
-  ----------------------------- Ar-HF v=0 on H6(4,3,2) potential: see JCP 96, 6752 (1992) ------------------------------
-
-  JTOT =    1,  SYMMETRY BLOCK =   2,  ENERGY(   2) =   16.930100000     CM-1
+  FOR JTOT =    1, SYMMETRY BLOCK =  2, ENERGY(  1) =  16.93000    : MAX DIAG & OFF-DIAG =  1.34E+00 &   0.00E+00
 
   S-MATRIX EIGENPHASE SUM, EPSUM/PI = 10.24271
 
-  FOR JTOT =    1, SYMMETRY BLOCK =  2, ENERGY(  2) =  16.93010    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  1.34E+00 &   0.00E+00
-
-  FINISHED JTOT =    1,  SYMMETRY BLOCK =   2,  ENERGY(   2) =  16.93010    
-
-  ----------------------------- Ar-HF v=0 on H6(4,3,2) potential: see JCP 96, 6752 (1992) ------------------------------
-
-  JTOT =    1,  SYMMETRY BLOCK =   2,  ENERGY(   3) =   16.930200000     CM-1
+  FOR JTOT =    1, SYMMETRY BLOCK =  2, ENERGY(  2) =  16.93010    : MAX DIAG & OFF-DIAG =  1.34E+00 &   0.00E+00
 
   S-MATRIX EIGENPHASE SUM, EPSUM/PI = 10.24270
 
-  FOR JTOT =    1, SYMMETRY BLOCK =  2, ENERGY(  3) =  16.93020    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  1.34E+00 &   0.00E+00
-
-  FINISHED JTOT =    1,  SYMMETRY BLOCK =   2,  ENERGY(   3) =  16.93020    
-
-  ----------------------------- Ar-HF v=0 on H6(4,3,2) potential: see JCP 96, 6752 (1992) ------------------------------
-
-  JTOT =    1,  SYMMETRY BLOCK =   2,  ENERGY(   4) =   16.930300000     CM-1
+  FOR JTOT =    1, SYMMETRY BLOCK =  2, ENERGY(  3) =  16.93020    : MAX DIAG & OFF-DIAG =  1.34E+00 &   0.00E+00
 
   S-MATRIX EIGENPHASE SUM, EPSUM/PI = 10.24268
 
-  FOR JTOT =    1, SYMMETRY BLOCK =  2, ENERGY(  4) =  16.93030    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  1.34E+00 &   0.00E+00
-
-  FINISHED JTOT =    1,  SYMMETRY BLOCK =   2,  ENERGY(   4) =  16.93030    
-
-  ----------------------------- Ar-HF v=0 on H6(4,3,2) potential: see JCP 96, 6752 (1992) ------------------------------
-
-  JTOT =    1,  SYMMETRY BLOCK =   2,  ENERGY(   5) =   16.930400000     CM-1
+  FOR JTOT =    1, SYMMETRY BLOCK =  2, ENERGY(  4) =  16.93030    : MAX DIAG & OFF-DIAG =  1.34E+00 &   0.00E+00
 
   S-MATRIX EIGENPHASE SUM, EPSUM/PI = 10.24267
 
-  FOR JTOT =    1, SYMMETRY BLOCK =  2, ENERGY(  5) =  16.93040    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  1.34E+00 &   0.00E+00
-
-  FINISHED JTOT =    1,  SYMMETRY BLOCK =   2,  ENERGY(   5) =  16.93040    
+  FOR JTOT =    1, SYMMETRY BLOCK =  2, ENERGY(  5) =  16.93040    : MAX DIAG & OFF-DIAG =  1.34E+00 &   0.00E+00
 
   ESTIMATE PARAMETERS OF DISTANT RESONANCE USING 5 ENERGIES
 
@@ -269,64 +237,36 @@
 
   ESTIMATED EIGENPHASE CURVATURES ARE   1.05274       1.07673       1.10146    
 
-  ESTIMATE RESONANCE ENERGY =   16.943462812271       WIDTH = 0.2512E-05 CM-1    
+  ESTIMATE RESONANCE ENERGY =   16.943462812271     CM-1       WIDTH = 0.2512E-05 CM-1    
 
-  CONTROL DATA FOR TOTAL ENERGIES.  CALCULATIONS WILL BE PERFORMED FOR  10 VALUES
+  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+  CONTROL DATA FOR TOTAL ENERGIES.  CALCULATIONS WILL BE PERFORMED FOR   5 VALUES
        ENERGY NO.   6 =   16.942932300     CM-1
        ENERGY NO.   7 =   16.943197556     CM-1
        ENERGY NO.   8 =   16.943462812     CM-1
        ENERGY NO.   9 =   16.943728069     CM-1
        ENERGY NO.  10 =   16.943993325     CM-1
 
-  ----------------------------- Ar-HF v=0 on H6(4,3,2) potential: see JCP 96, 6752 (1992) ------------------------------
-
-  JTOT =    1,  SYMMETRY BLOCK =   2,  ENERGY(   6) =   16.942932300     CM-1
-
   S-MATRIX EIGENPHASE SUM, EPSUM/PI = 10.24343
 
-  FOR JTOT =    1, SYMMETRY BLOCK =  2, ENERGY(  6) =  16.94293    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  1.35E+00 &   0.00E+00
-
-  FINISHED JTOT =    1,  SYMMETRY BLOCK =   2,  ENERGY(   6) =  16.94293    
-
-  ----------------------------- Ar-HF v=0 on H6(4,3,2) potential: see JCP 96, 6752 (1992) ------------------------------
-
-  JTOT =    1,  SYMMETRY BLOCK =   2,  ENERGY(   7) =   16.943197556     CM-1
+  FOR JTOT =    1, SYMMETRY BLOCK =  2, ENERGY(  6) =  16.94293    : MAX DIAG & OFF-DIAG =  1.35E+00 &   0.00E+00
 
   S-MATRIX EIGENPHASE SUM, EPSUM/PI = 10.24728
 
-  FOR JTOT =    1, SYMMETRY BLOCK =  2, ENERGY(  7) =  16.94320    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  1.38E+00 &   0.00E+00
-
-  FINISHED JTOT =    1,  SYMMETRY BLOCK =   2,  ENERGY(   7) =  16.94320    
-
-  ----------------------------- Ar-HF v=0 on H6(4,3,2) potential: see JCP 96, 6752 (1992) ------------------------------
-
-  JTOT =    1,  SYMMETRY BLOCK =   2,  ENERGY(   8) =   16.943462812     CM-1
+  FOR JTOT =    1, SYMMETRY BLOCK =  2, ENERGY(  7) =  16.94320    : MAX DIAG & OFF-DIAG =  1.38E+00 &   0.00E+00
 
   S-MATRIX EIGENPHASE SUM, EPSUM/PI = 10.22523
 
-  FOR JTOT =    1, SYMMETRY BLOCK =  2, ENERGY(  8) =  16.94346    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  1.19E+00 &   0.00E+00
-
-  FINISHED JTOT =    1,  SYMMETRY BLOCK =   2,  ENERGY(   8) =  16.94346    
-
-  ----------------------------- Ar-HF v=0 on H6(4,3,2) potential: see JCP 96, 6752 (1992) ------------------------------
-
-  JTOT =    1,  SYMMETRY BLOCK =   2,  ENERGY(   9) =   16.943728069     CM-1
+  FOR JTOT =    1, SYMMETRY BLOCK =  2, ENERGY(  8) =  16.94346    : MAX DIAG & OFF-DIAG =  1.19E+00 &   0.00E+00
 
   S-MATRIX EIGENPHASE SUM, EPSUM/PI = 10.23704
 
-  FOR JTOT =    1, SYMMETRY BLOCK =  2, ENERGY(  9) =  16.94373    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  1.29E+00 &   0.00E+00
-
-  FINISHED JTOT =    1,  SYMMETRY BLOCK =   2,  ENERGY(   9) =  16.94373    
-
-  ----------------------------- Ar-HF v=0 on H6(4,3,2) potential: see JCP 96, 6752 (1992) ------------------------------
-
-  JTOT =    1,  SYMMETRY BLOCK =   2,  ENERGY(  10) =   16.943993325     CM-1
+  FOR JTOT =    1, SYMMETRY BLOCK =  2, ENERGY(  9) =  16.94373    : MAX DIAG & OFF-DIAG =  1.29E+00 &   0.00E+00
 
   S-MATRIX EIGENPHASE SUM, EPSUM/PI = 10.23855
 
-  FOR JTOT =    1, SYMMETRY BLOCK =  2, ENERGY( 10) =  16.94399    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  1.31E+00 &   0.00E+00
-
-  FINISHED JTOT =    1,  SYMMETRY BLOCK =   2,  ENERGY(  10) =  16.94399    
+  FOR JTOT =    1, SYMMETRY BLOCK =  2, ENERGY( 10) =  16.94399    : MAX DIAG & OFF-DIAG =  1.31E+00 &   0.00E+00
 
   ESTIMATE PARAMETERS OF DISTANT RESONANCE USING 5 ENERGIES
 
@@ -341,8 +281,6 @@
   *** NEXTE: EIGENPHASE CURVATURES AMBIGUOUS: EITHER ENERGIES SPAN RESONANCE OR PHASES AFFECTED BY NUMERICAL NOISE:
              UNSAFE TO ESTIMATE RESONANCE ENERGY. DNRG INCREASED TO 0.26526E-02 CM-1    
 
-  ======================================================================================================================
-
   SIGMA NOT PRINTED BECAUSE ISIGPR = 0
 
 
@@ -351,11 +289,11 @@
  |                Non-reactive quantum scattering calculations                |
  |                     on atomic and molecular collisions                     |
  |                                                                            |
- |              Copyright (C) 2018 J. M. Hutson & C. R. Le Sueur              |
+ |              Copyright (C) 2019 J. M. Hutson & C. R. Le Sueur              |
  |                                                                            |
- |                               Version 2019.0 (beta)                        |
+ |                               Version 2019.0                               |
  |                                                                            |
- |                    This run used       0.17 cpu secs and                   |
+ |                    This run used       0.11 cpu secs and                   |
  |               3525 of the allocated   1000000 words of storage             |
  |                                                                            |
   ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---

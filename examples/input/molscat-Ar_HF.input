@@ -5,7 +5,7 @@
     RMIN   =   2.5, RMAX   = 15.0,  IRMSET =  0,
     IPROPS =   6,   DR     =  0.03,
     JTOTL  =   1,   JTOTU  =  1,    IBFIX  =  2,
-    NNRG   = -10,   ENERGY = 16.93, DNRG   =  0.0001, DTOL   = 1.D-8,
+    NNRG   = -10,   ENERGY = 16.93, DNRG   =  0.0001, DTOL   = 1.E-8,
  /
 
  &BASIS

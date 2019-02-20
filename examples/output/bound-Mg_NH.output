@@ -2,11 +2,11 @@
  |                                                                            |
  |          Bound states of interacting pairs of atoms and molecules          |
  |                                                                            |
- |              Copyright (C) 2018 J. M. Hutson & C. R. Le Sueur              |
+ |              Copyright (C) 2019 J. M. Hutson & C. R. Le Sueur              |
  |                                                                            |
- |                               Version 2019.0 (beta)                        |
+ |                               Version 2019.0                               |
  |                                                                            |
- |                       Run on 01 Feb 2019   at 00:12:26                     |
+ |                       Run on 18 Feb 2019   at 22:37:55                     |
  |                                                                            |
   -- BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND --
 
@@ -16,27 +16,25 @@
   the Free Software Foundation.
 
   Publications resulting from the use of this program should refer to
-  J. M. Hutson & C. R. Le Sueur, BOUND computer code 2019.0 (beta)       
+  J. M. Hutson & C. R. Le Sueur, BOUND computer code 2019.0              
   or to the published paper in Computer Physics Communications when available.
 
 
-  PHYSICAL CONSTANTS OBTAINED FROM NIST CODATA TABULATION OF 2014
+  USING CODATA 2014 RECOMMENDED VALUES OF FUNDAMENTAL PHYSICAL CONSTANTS
 
   MEMORY ALLOCATED TO MAIN WORKING ARRAY IS   1000000 (8-BYTE) WORDS (    7.63 MB)
 
-  PRINT LEVEL =  5
-
-  RUN LABEL = ITYP = 9: Mg + NH in magnetic field; near-threshold states                      
+  PRINT LEVEL (IPRINT) =  5
 
   REDUCED MASS FOR INTERACTION =   9.232679959 ATOMIC MASS UNITS (DALTONS)
 
-  NO SCRATCH FILE SPECIFIED BY ISCRU PARAMETER: FULL CALCULATION WILL BE DONE AT EACH ENERGY
+  ENERGY-INDEPENDENT MATRICES WILL BE SAVED TEMPORARILY ON UNIT 30
 
   ======================================================================================================================
 
   BASIS SETS USE DIATOM SPIN = 1
-                 NMAX =  2
-                 LMAX =  8
+                        NMAX =  2
+                        LMAX =  8
 
   BASIS SET IS <COUPLED>, OFF-DIAGONAL TERMS INCLUDED
 
@@ -118,7 +116,7 @@
 
   POTENTIAL RETURNED IN UNITS OF EPSIL  =  1.0000000     CM-1
 
-  ALL LENGTHS ARE IN UNITS OF ANGSTROM (  1.00000000 ANGSTROM ) UNLESS OTHERWISE STATED
+  ALL LENGTHS ARE IN UNITS OF ANGSTROM UNLESS OTHERWISE STATED
 
   INTERACTION MATRIX USES   7 BLOCKS OF VL ARRAY FOR R-DEPENDENT TERMS IN POTENTIAL
                             4                    FOR CONSTANT    TERMS IN POTENTIAL
@@ -158,8 +156,8 @@
   M. H. ALEXANDER AND D. E. MANOLOPOULOS,  J. CHEM. PHYS. 86, 2044 (1987).
 
   PROPAGATION STEP SIZE DETERMINED USING DR =  1.000E-02
-  STEP BOUNDARIES ARE EQUALLY SPACED IN R**(-1/3.00)
-  STEP SIZE MAY BE ADJUSTED SLIGHTLY SO THAT RANGE IS A WHOLE NUMBER OF STEPS
+  STEP SIZES ADJUSTED TO MAINTAIN APPROXIMATE ACCURACY VIA PERTURBATION THEORY
+  WITH TOLHI =  1.00E-06 AND POWR =   3.0    
 
   LOG-DERIVATIVE MATRIX INITIALISED IN THE LOCAL EIGENBASIS AT RMAX IN THE INWARD PROPAGATION PART
   LOCALLY CLOSED CHANNELS INITIALISED WITH A WKB BOUNDARY CONDITION
@@ -202,7 +200,7 @@
 
   ============================= ITYP = 9: Mg + NH in magnetic field; near-threshold states =============================
 
-  *******************************************  ANGULAR MOMENTUM JTOT  =  -1  *******************************************
+  *****************************  ANGULAR MOMENTUM JTOT  =  -1   AND SYMMETRY BLOCK  =    2  ****************************
 
   BASIS SET FOR MTOT = -1, PARITY = (-1)**1
   * * * NOTE.  FOR JTOT =  -1,  ALL COUPLING COEFFICIENTS ARE 0.0 FOR POTENTIAL SYMMETRY   6
@@ -311,9 +309,9 @@
        98          26          2         3         2             7
        99          27          2         3         3             5
       100          27          2         3         3             7
-  = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = 
 
   EFV SET     1:  MAGNETIC Z FIELD =   370.0000000     GAUSS
+  SCRATCH FILE OPENED ON UNIT           30
 
   REFERENCE ENERGY EREF =  -1267.856199     MHZ = -4.2291130564E-02 CM-1
 
@@ -324,9 +322,9 @@
 
   SEARCHING FOR INODE =    1 CORRESPONDING TO NODE COUNT =  170
 
-  CONVERGED ON NODE NUMBER   170 AT                               ENERGY =  -42.82423050     MHZ   
+  CONVERGED ON NODE NUMBER   170 AT                               ENERGY =  -42.82365517     MHZ   
 
-  SMALLEST EIGENVALUE OF MATCHING MATRIX IS NUMBER  7 = -5.54934E-12
+  SMALLEST EIGENVALUE OF MATCHING MATRIX IS NUMBER  7 =  3.18963E-11
 
   WITH PRINCIPAL EIGENVECTOR COMPONENTS
   CHAN     VEC    VEC**2   L   QUANTUM NUMBERS
@@ -339,6 +337,7 @@
   = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = 
 
   EFV SET     2:  MAGNETIC Z FIELD =   375.0000000     GAUSS
+  SCRATCH FILE OPENED ON UNIT           30
 
   REFERENCE ENERGY EREF =  -1281.867017     MHZ = -4.2758481155E-02 CM-1
 
@@ -349,9 +348,9 @@
 
   SEARCHING FOR INODE =    1 CORRESPONDING TO NODE COUNT =  170
 
-  CONVERGED ON NODE NUMBER   170 AT                               ENERGY =  -30.52326746     MHZ   
+  CONVERGED ON NODE NUMBER   170 AT                               ENERGY =  -30.52269678     MHZ   
 
-  SMALLEST EIGENVALUE OF MATCHING MATRIX IS NUMBER  7 =  4.73221E-12
+  SMALLEST EIGENVALUE OF MATCHING MATRIX IS NUMBER  7 =  1.57740E-10
 
   WITH PRINCIPAL EIGENVECTOR COMPONENTS
   CHAN     VEC    VEC**2   L   QUANTUM NUMBERS
@@ -364,6 +363,7 @@
   = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = 
 
   EFV SET     3:  MAGNETIC Z FIELD =   380.0000000     GAUSS
+  SCRATCH FILE OPENED ON UNIT           30
 
   REFERENCE ENERGY EREF =  -1295.877835     MHZ = -4.3225831746E-02 CM-1
 
@@ -374,9 +374,9 @@
 
   SEARCHING FOR INODE =    1 CORRESPONDING TO NODE COUNT =  170
 
-  CONVERGED ON NODE NUMBER   170 AT                               ENERGY =  -18.13841773     MHZ   
+  CONVERGED ON NODE NUMBER   170 AT                               ENERGY =  -18.13784005     MHZ   
 
-  SMALLEST EIGENVALUE OF MATCHING MATRIX IS NUMBER  7 =  2.18137E-12
+  SMALLEST EIGENVALUE OF MATCHING MATRIX IS NUMBER  7 =  8.59832E-09
 
   WITH PRINCIPAL EIGENVECTOR COMPONENTS
   CHAN     VEC    VEC**2   L   QUANTUM NUMBERS
@@ -389,6 +389,7 @@
   = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = 
 
   EFV SET     4:  MAGNETIC Z FIELD =   385.0000000     GAUSS
+  SCRATCH FILE OPENED ON UNIT           30
 
   REFERENCE ENERGY EREF =  -1309.888653     MHZ = -4.3693182338E-02 CM-1
 
@@ -399,9 +400,9 @@
 
   SEARCHING FOR INODE =    1 CORRESPONDING TO NODE COUNT =  170
 
-  CONVERGED ON NODE NUMBER   170 AT                               ENERGY =  -5.661512951     MHZ   
+  CONVERGED ON NODE NUMBER   170 AT                               ENERGY =  -5.660951575     MHZ   
 
-  SMALLEST EIGENVALUE OF MATCHING MATRIX IS NUMBER  7 =  1.56319E-12
+  SMALLEST EIGENVALUE OF MATCHING MATRIX IS NUMBER  7 =  1.23739E-09
 
   WITH PRINCIPAL EIGENVECTOR COMPONENTS
   CHAN     VEC    VEC**2   L   QUANTUM NUMBERS
@@ -412,18 +413,16 @@
    9    0.4319    0.1865   3   0   1   1   3
   10   -0.2283    0.0521   5   0   1   1   3
 
-  ======================================================================================================================
-
 
   -- BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND --
  |                                                                            |
  |          Bound states of interacting pairs of atoms and molecules          |
  |                                                                            |
- |              Copyright (C) 2018 J. M. Hutson & C. R. Le Sueur              |
+ |              Copyright (C) 2019 J. M. Hutson & C. R. Le Sueur              |
  |                                                                            |
- |                               Version 2019.0 (beta)                        |
+ |                               Version 2019.0                               |
  |                                                                            |
- |                    This run used     203.69 cpu secs and                   |
- |             206873 of the allocated   1000000 words of storage             |
+ |                    This run used      47.47 cpu secs and                   |
+ |             207873 of the allocated   1000000 words of storage             |
  |                                                                            |
   -- BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND --

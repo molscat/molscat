@@ -3,11 +3,11 @@
  |                Non-reactive quantum scattering calculations                |
  |                     on atomic and molecular collisions                     |
  |                                                                            |
- |              Copyright (C) 2018 J. M. Hutson & C. R. Le Sueur              |
+ |              Copyright (C) 2019 J. M. Hutson & C. R. Le Sueur              |
  |                                                                            |
- |                               Version 2019.0 (beta)                        |
+ |                               Version 2019.0                               |
  |                                                                            |
- |                       Run on 01 Feb 2019   at 10:21:50                     |
+ |                       Run on 18 Feb 2019   at 22:16:23                     |
  |                                                                            |
   ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
 
@@ -17,18 +17,16 @@
   the Free Software Foundation.
 
   Publications resulting from the use of this program should refer to
-  J. M. Hutson & C. R. Le Sueur, MOLSCAT computer code 2019.0 (beta)       
+  J. M. Hutson & C. R. Le Sueur, MOLSCAT computer code 2019.0              
   or to the published paper in Computer Physics Communications when available.
 
 
-  PHYSICAL CONSTANTS OBTAINED FROM NIST CODATA TABULATION OF 2014
+  USING CODATA 2014 RECOMMENDED VALUES OF FUNDAMENTAL PHYSICAL CONSTANTS
 
   MEMORY ALLOCATED TO MAIN WORKING ARRAY IS   1000000 (8-BYTE) WORDS (    7.63 MB)
   2 INTEGERS CAN BE STORED IN EACH WORD.
 
-  PRINT LEVEL =  1     OTHER PRINT CONTROLS  ISIGPR = 2
-
-  RUN LABEL = model system: ITYPE=1                                                           
+  PRINT LEVEL (IPRINT) =  1     OTHER PRINT CONTROLS  ISIGPR = 2
 
   REDUCED MASS FOR INTERACTION =  20.000000000 ATOMIC MASS UNITS (DALTONS)
 
@@ -36,12 +34,12 @@
 
   INTERACTION TYPE IS    LINEAR RIGID ROTOR  -  ATOM.  
 
-  TARGET ROTATIONAL LEVELS TAKEN FROM &BASIS (JLEVEL) INPUT.  NLEVEL =  4
+  MOLECULAR QUANTUM NUMBERS TAKEN FROM JLEVEL INPUT.  NLEVEL =  4
 
-  ENERGY LEVELS COMPUTED FROM B(E) =   30.000000
+  ENERGY LEVELS OBTAINED FROM B(E) =   30.000000
 
   QUANTUM NUMBERS FOR INTERACTING PAIR:
-  EACH PAIR STATE IS LABELLED BY  1 QUANTUM LABEL 
+  EACH PAIR STATE IS LABELLED BY  1 QUANTUM NUMBER 
   EACH CHANNEL FUNCTION IS FORMED BY COMBINING A PAIR STATE WITH A VALUE OF L.
   THE RESULTING BASIS SET IS ASYMPTOTICALLY DIAGONAL.
 
@@ -122,15 +120,13 @@
 
   =============================================== model system: ITYPE=1 ================================================
 
-  FOR JTOT =   10, SYMMETRY BLOCK =  1, ENERGY(  1) =  1250.000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  9.88E-02 &   1.16E-06
+  FOR JTOT =   10, SYMMETRY BLOCK =  1, ENERGY(  1) =  1250.000    : MAX DIAG & OFF-DIAG =  9.88E-02 &   1.16E-06
 
-  FOR JTOT =   10, SYMMETRY BLOCK =  2, ENERGY(  1) =  1250.000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  1.75E-01 &   1.29E-03
+  FOR JTOT =   10, SYMMETRY BLOCK =  2, ENERGY(  1) =  1250.000    : MAX DIAG & OFF-DIAG =  1.75E-01 &   1.29E-03
 
-  FOR JTOT =   20, SYMMETRY BLOCK =  1, ENERGY(  1) =  1250.000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  1.88E-01 &   1.95E-06
+  FOR JTOT =   20, SYMMETRY BLOCK =  1, ENERGY(  1) =  1250.000    : MAX DIAG & OFF-DIAG =  1.88E-01 &   1.95E-06
 
-  FOR JTOT =   20, SYMMETRY BLOCK =  2, ENERGY(  1) =  1250.000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  1.68E-01 &   2.43E-03
-
-  * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
+  FOR JTOT =   20, SYMMETRY BLOCK =  2, ENERGY(  1) =  1250.000    : MAX DIAG & OFF-DIAG =  1.68E-01 &   2.43E-03
 
   =============================================== model system: ITYPE=1 ================================================
 
@@ -169,11 +165,11 @@
  |                Non-reactive quantum scattering calculations                |
  |                     on atomic and molecular collisions                     |
  |                                                                            |
- |              Copyright (C) 2018 J. M. Hutson & C. R. Le Sueur              |
+ |              Copyright (C) 2019 J. M. Hutson & C. R. Le Sueur              |
  |                                                                            |
- |                               Version 2019.0 (beta)                        |
+ |                               Version 2019.0                               |
  |                                                                            |
- |                    This run used       1.75 cpu secs and                   |
+ |                    This run used       1.88 cpu secs and                   |
  |               1279 of the allocated   1000000 words of storage             |
  |                                                                            |
   ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---

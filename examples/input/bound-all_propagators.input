@@ -70,7 +70,7 @@
     IPRINT =   5,   IBDSUM = 709,
     RMIN   =   0.5, RMATCH =   1.0,   RMAX   = 20.0,
     IPROPS =   7,   DR     =   0.001,
-    IPROPL =   9,   TOLHIL =   0.0,   POWRL  =  3.0,
+    IPROPL =   9,   TOLHIL =   0.0,
     JTOTL  =   0,   JTOTU  =   2,     IBFIX  =  2,
     EMIN   = -10.0, EMAX   =  -1.0,
     LASTIN =   0,

@@ -2,11 +2,11 @@
  |                                                                            |
  |          Bound states of interacting pairs of atoms and molecules          |
  |                                                                            |
- |              Copyright (C) 2018 J. M. Hutson & C. R. Le Sueur              |
+ |              Copyright (C) 2019 J. M. Hutson & C. R. Le Sueur              |
  |                                                                            |
- |                               Version 2019.0 (beta)                        |
+ |                               Version 2019.0                               |
  |                                                                            |
- |                       Run on 01 Feb 2019   at 00:20:45                     |
+ |                       Run on 18 Feb 2019   at 22:43:20                     |
  |                                                                            |
   -- BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND --
 
@@ -16,17 +16,15 @@
   the Free Software Foundation.
 
   Publications resulting from the use of this program should refer to
-  J. M. Hutson & C. R. Le Sueur, BOUND computer code 2019.0 (beta)       
+  J. M. Hutson & C. R. Le Sueur, BOUND computer code 2019.0              
   or to the published paper in Computer Physics Communications when available.
 
 
-  PHYSICAL CONSTANTS OBTAINED FROM NIST CODATA TABULATION OF 2014
+  USING CODATA 2014 RECOMMENDED VALUES OF FUNDAMENTAL PHYSICAL CONSTANTS
 
   MEMORY ALLOCATED TO MAIN WORKING ARRAY IS   1000000 (8-BYTE) WORDS (    7.63 MB)
 
-  PRINT LEVEL =  5
-
-  RUN LABEL = Hydrogen: ITYPE=1; IPROPS=8, IPROPL=9                                           
+  PRINT LEVEL (IPRINT) =  5
 
   REDUCED MASS FOR INTERACTION =   1.000000000 (UNITS OF 5.485799091E-04 DALTONS)
 
@@ -36,12 +34,12 @@
 
   INTERACTION TYPE IS    LINEAR RIGID ROTOR  -  ATOM.  
 
-  TARGET ROTATIONAL LEVELS TAKEN FROM &BASIS (JLEVEL) INPUT.  NLEVEL =  1
+  MOLECULAR QUANTUM NUMBERS TAKEN FROM JLEVEL INPUT.  NLEVEL =  1
 
-  ENERGY LEVELS COMPUTED FROM B(E) =    1.000000
+  ENERGY LEVELS OBTAINED FROM B(E) =    1.000000
 
   QUANTUM NUMBERS FOR INTERACTING PAIR:
-  EACH PAIR STATE IS LABELLED BY  1 QUANTUM LABEL 
+  EACH PAIR STATE IS LABELLED BY  1 QUANTUM NUMBER 
   EACH CHANNEL FUNCTION IS FORMED BY COMBINING A PAIR STATE WITH A VALUE OF L.
   THE RESULTING BASIS SET IS ASYMPTOTICALLY DIAGONAL.
 
@@ -145,7 +143,7 @@
 
   ======================================= Hydrogen: ITYPE=1; IPROPS=8, IPROPL=9 ========================================
 
-  *******************************************  ANGULAR MOMENTUM JTOT  =   0  *******************************************
+  *****************************  ANGULAR MOMENTUM JTOT  =   0   AND SYMMETRY BLOCK  =    2  ****************************
 
   CHANNEL FUNCTION LIST:
 
@@ -154,7 +152,6 @@
   CHANNEL  PAIR STATE    PAIR STATE QUANTUM NUMBERS            L        PAIR LEVEL   PAIR ENERGY (CM-1)
                          ---------      J   ---------
         1           1                   0                      0             1         0.0000000
-  = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = 
   **** WARNING:    1 OPEN CHANNEL  DETECTED AT RMIN
   **** WARNING:    1 OPEN CHANNEL  DETECTED AT RMIN
 
@@ -166,11 +163,10 @@
   SEARCHING FOR INODE =    1 CORRESPONDING TO NODE COUNT =    1
   **** WARNING:    1 OPEN CHANNEL  DETECTED AT RMIN
   **** WARNING:    1 OPEN CHANNEL  DETECTED AT RMIN
-  **** WARNING:    1 OPEN CHANNEL  DETECTED AT RMIN
 
   CONVERGED ON NODE NUMBER     1 AT                               ENERGY = -0.4999999980     AU    
 
-  SMALLEST EIGENVALUE OF MATCHING MATRIX IS NUMBER  1 =  7.37413E-09
+  SMALLEST EIGENVALUE OF MATCHING MATRIX IS NUMBER  1 =  1.50136E-08
 
   WITH PRINCIPAL EIGENVECTOR COMPONENTS
   CHAN     VEC    VEC**2   L   QUANTUM NUMBERS
@@ -183,11 +179,10 @@
   **** WARNING:    1 OPEN CHANNEL  DETECTED AT RMIN
   **** WARNING:    1 OPEN CHANNEL  DETECTED AT RMIN
   **** WARNING:    1 OPEN CHANNEL  DETECTED AT RMIN
-  **** WARNING:    1 OPEN CHANNEL  DETECTED AT RMIN
 
   CONVERGED ON NODE NUMBER     2 AT                               ENERGY = -0.1249999950     AU    
 
-  SMALLEST EIGENVALUE OF MATCHING MATRIX IS NUMBER  1 =  4.17828E-09
+  SMALLEST EIGENVALUE OF MATCHING MATRIX IS NUMBER  1 =  2.19118E-07
 
   WITH PRINCIPAL EIGENVECTOR COMPONENTS
   CHAN     VEC    VEC**2   L   QUANTUM NUMBERS
@@ -203,11 +198,10 @@
   **** WARNING:    1 OPEN CHANNEL  DETECTED AT RMIN
   **** WARNING:    1 OPEN CHANNEL  DETECTED AT RMIN
   **** WARNING:    1 OPEN CHANNEL  DETECTED AT RMIN
-  **** WARNING:    1 OPEN CHANNEL  DETECTED AT RMIN
 
   CONVERGED ON NODE NUMBER     3 AT                               ENERGY = -5.5555550918E-02 AU    
 
-  SMALLEST EIGENVALUE OF MATCHING MATRIX IS NUMBER  1 =  1.38715E-09
+  SMALLEST EIGENVALUE OF MATCHING MATRIX IS NUMBER  1 = -1.72083E-06
 
   WITH PRINCIPAL EIGENVECTOR COMPONENTS
   CHAN     VEC    VEC**2   L   QUANTUM NUMBERS
@@ -219,11 +213,10 @@
   SEARCHING FOR INODE =    4 CORRESPONDING TO NODE COUNT =    4
   **** WARNING:    1 OPEN CHANNEL  DETECTED AT RMIN
   **** WARNING:    1 OPEN CHANNEL  DETECTED AT RMIN
-  **** WARNING:    1 OPEN CHANNEL  DETECTED AT RMIN
 
   CONVERGED ON NODE NUMBER     4 AT                               ENERGY = -3.1249998644E-02 AU    
 
-  SMALLEST EIGENVALUE OF MATCHING MATRIX IS NUMBER  1 =  6.96192E-07
+  SMALLEST EIGENVALUE OF MATCHING MATRIX IS NUMBER  1 =  1.21966E-06
 
   WITH PRINCIPAL EIGENVECTOR COMPONENTS
   CHAN     VEC    VEC**2   L   QUANTUM NUMBERS
@@ -239,11 +232,10 @@
   **** WARNING:    1 OPEN CHANNEL  DETECTED AT RMIN
   **** WARNING:    1 OPEN CHANNEL  DETECTED AT RMIN
   **** WARNING:    1 OPEN CHANNEL  DETECTED AT RMIN
-  **** WARNING:    1 OPEN CHANNEL  DETECTED AT RMIN
 
   CONVERGED ON NODE NUMBER     5 AT                               ENERGY = -1.9999998024E-02 AU    
 
-  SMALLEST EIGENVALUE OF MATCHING MATRIX IS NUMBER  1 =  1.51611E-09
+  SMALLEST EIGENVALUE OF MATCHING MATRIX IS NUMBER  1 = -7.08824E-08
 
   WITH PRINCIPAL EIGENVECTOR COMPONENTS
   CHAN     VEC    VEC**2   L   QUANTUM NUMBERS
@@ -260,11 +252,10 @@
   **** WARNING:    1 OPEN CHANNEL  DETECTED AT RMIN
   **** WARNING:    1 OPEN CHANNEL  DETECTED AT RMIN
   **** WARNING:    1 OPEN CHANNEL  DETECTED AT RMIN
-  **** WARNING:    1 OPEN CHANNEL  DETECTED AT RMIN
 
   CONVERGED ON NODE NUMBER     6 AT                               ENERGY = -1.3889504331E-02 AU    
 
-  SMALLEST EIGENVALUE OF MATCHING MATRIX IS NUMBER  1 = -1.75573E-08
+  SMALLEST EIGENVALUE OF MATCHING MATRIX IS NUMBER  1 = -4.35841E-05
 
   WITH PRINCIPAL EIGENVECTOR COMPONENTS
   CHAN     VEC    VEC**2   L   QUANTUM NUMBERS
@@ -280,11 +271,10 @@
   **** WARNING:    1 OPEN CHANNEL  DETECTED AT RMIN
   **** WARNING:    1 OPEN CHANNEL  DETECTED AT RMIN
   **** WARNING:    1 OPEN CHANNEL  DETECTED AT RMIN
-  **** WARNING:    1 OPEN CHANNEL  DETECTED AT RMIN
 
   CONVERGED ON NODE NUMBER     7 AT                               ENERGY = -1.0332270779E-02 AU    
 
-  SMALLEST EIGENVALUE OF MATCHING MATRIX IS NUMBER  1 =  1.03033E-09
+  SMALLEST EIGENVALUE OF MATCHING MATRIX IS NUMBER  1 = -7.32162E-07
 
   WITH PRINCIPAL EIGENVECTOR COMPONENTS
   CHAN     VEC    VEC**2   L   QUANTUM NUMBERS
@@ -299,11 +289,10 @@
   **** WARNING:    1 OPEN CHANNEL  DETECTED AT RMIN
   **** WARNING:    1 OPEN CHANNEL  DETECTED AT RMIN
   **** WARNING:    1 OPEN CHANNEL  DETECTED AT RMIN
-  **** WARNING:    1 OPEN CHANNEL  DETECTED AT RMIN
 
   CONVERGED ON NODE NUMBER     8 AT                               ENERGY = -7.1321668680E-03 AU    
 
-  SMALLEST EIGENVALUE OF MATCHING MATRIX IS NUMBER  1 = -4.61441E-11
+  SMALLEST EIGENVALUE OF MATCHING MATRIX IS NUMBER  1 = -1.18552E-06
 
   WITH PRINCIPAL EIGENVECTOR COMPONENTS
   CHAN     VEC    VEC**2   L   QUANTUM NUMBERS
@@ -319,20 +308,17 @@
   **** WARNING:    1 OPEN CHANNEL  DETECTED AT RMIN
   **** WARNING:    1 OPEN CHANNEL  DETECTED AT RMIN
   **** WARNING:    1 OPEN CHANNEL  DETECTED AT RMIN
-  **** WARNING:    1 OPEN CHANNEL  DETECTED AT RMIN
 
   CONVERGED ON NODE NUMBER     9 AT                               ENERGY = -1.6256807716E-03 AU    
 
-  SMALLEST EIGENVALUE OF MATCHING MATRIX IS NUMBER  1 =  2.39421E-10
+  SMALLEST EIGENVALUE OF MATCHING MATRIX IS NUMBER  1 =  4.29729E-09
 
   WITH PRINCIPAL EIGENVECTOR COMPONENTS
   CHAN     VEC    VEC**2   L   QUANTUM NUMBERS
 
    1    1.0000    1.0000   0   0   1
 
-  ======================================================================================================================
-
-  *******************************************  ANGULAR MOMENTUM JTOT  =   1  *******************************************
+  *****************************  ANGULAR MOMENTUM JTOT  =   1   AND SYMMETRY BLOCK  =    2  ****************************
 
   CHANNEL FUNCTION LIST:
 
@@ -341,7 +327,6 @@
   CHANNEL  PAIR STATE    PAIR STATE QUANTUM NUMBERS            L        PAIR LEVEL   PAIR ENERGY (CM-1)
                          ---------      J   ---------
         1           1                   0                      1             1         0.0000000
-  = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = 
 
   NODE COUNT =    0 AT MINIMUM ENERGY =  -1.000000000     AU    
   NODE COUNT =    8 AT MAXIMUM ENERGY =   0.000000000     AU    
@@ -352,7 +337,7 @@
 
   CONVERGED ON NODE NUMBER     1 AT                               ENERGY = -0.1249999971     AU    
 
-  SMALLEST EIGENVALUE OF MATCHING MATRIX IS NUMBER  1 =  5.91668E-07
+  SMALLEST EIGENVALUE OF MATCHING MATRIX IS NUMBER  1 =  9.58076E-07
 
   WITH PRINCIPAL EIGENVECTOR COMPONENTS
   CHAN     VEC    VEC**2   L   QUANTUM NUMBERS
@@ -365,7 +350,7 @@
 
   CONVERGED ON NODE NUMBER     2 AT                               ENERGY = -5.5555549771E-02 AU    
 
-  SMALLEST EIGENVALUE OF MATCHING MATRIX IS NUMBER  1 = -1.83519E-09
+  SMALLEST EIGENVALUE OF MATCHING MATRIX IS NUMBER  1 =  5.71229E-07
 
   WITH PRINCIPAL EIGENVECTOR COMPONENTS
   CHAN     VEC    VEC**2   L   QUANTUM NUMBERS
@@ -378,7 +363,7 @@
 
   CONVERGED ON NODE NUMBER     3 AT                               ENERGY = -3.1249998128E-02 AU    
 
-  SMALLEST EIGENVALUE OF MATCHING MATRIX IS NUMBER  1 =  1.56693E-06
+  SMALLEST EIGENVALUE OF MATCHING MATRIX IS NUMBER  1 =  3.19638E-06
 
   WITH PRINCIPAL EIGENVECTOR COMPONENTS
   CHAN     VEC    VEC**2   L   QUANTUM NUMBERS
@@ -391,7 +376,7 @@
 
   CONVERGED ON NODE NUMBER     4 AT                               ENERGY = -1.9999997697E-02 AU    
 
-  SMALLEST EIGENVALUE OF MATCHING MATRIX IS NUMBER  1 =  1.59813E-09
+  SMALLEST EIGENVALUE OF MATCHING MATRIX IS NUMBER  1 =  1.20402E-05
 
   WITH PRINCIPAL EIGENVECTOR COMPONENTS
   CHAN     VEC    VEC**2   L   QUANTUM NUMBERS
@@ -404,7 +389,7 @@
 
   CONVERGED ON NODE NUMBER     5 AT                               ENERGY = -1.3889377565E-02 AU    
 
-  SMALLEST EIGENVALUE OF MATCHING MATRIX IS NUMBER  1 =  1.55422E-08
+  SMALLEST EIGENVALUE OF MATCHING MATRIX IS NUMBER  1 = -3.38157E-06
 
   WITH PRINCIPAL EIGENVECTOR COMPONENTS
   CHAN     VEC    VEC**2   L   QUANTUM NUMBERS
@@ -417,7 +402,7 @@
 
   CONVERGED ON NODE NUMBER     6 AT                               ENERGY = -1.0310452689E-02 AU    
 
-  SMALLEST EIGENVALUE OF MATCHING MATRIX IS NUMBER  1 =  2.22580E-07
+  SMALLEST EIGENVALUE OF MATCHING MATRIX IS NUMBER  1 =  1.28426E-04
 
   WITH PRINCIPAL EIGENVECTOR COMPONENTS
   CHAN     VEC    VEC**2   L   QUANTUM NUMBERS
@@ -430,7 +415,7 @@
 
   CONVERGED ON NODE NUMBER     7 AT                               ENERGY = -7.2376953121E-03 AU    
 
-  SMALLEST EIGENVALUE OF MATCHING MATRIX IS NUMBER  1 =  2.29249E-09
+  SMALLEST EIGENVALUE OF MATCHING MATRIX IS NUMBER  1 = -8.68287E-07
 
   WITH PRINCIPAL EIGENVECTOR COMPONENTS
   CHAN     VEC    VEC**2   L   QUANTUM NUMBERS
@@ -443,25 +428,23 @@
 
   CONVERGED ON NODE NUMBER     8 AT                               ENERGY = -1.8797040553E-03 AU    
 
-  SMALLEST EIGENVALUE OF MATCHING MATRIX IS NUMBER  1 =  1.34174E-07
+  SMALLEST EIGENVALUE OF MATCHING MATRIX IS NUMBER  1 =  1.00351E-04
 
   WITH PRINCIPAL EIGENVECTOR COMPONENTS
   CHAN     VEC    VEC**2   L   QUANTUM NUMBERS
 
    1    1.0000    1.0000   1   0   1
 
-  ======================================================================================================================
-
 
   -- BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND --
  |                                                                            |
  |          Bound states of interacting pairs of atoms and molecules          |
  |                                                                            |
- |              Copyright (C) 2018 J. M. Hutson & C. R. Le Sueur              |
+ |              Copyright (C) 2019 J. M. Hutson & C. R. Le Sueur              |
  |                                                                            |
- |                               Version 2019.0 (beta)                        |
+ |                               Version 2019.0                               |
  |                                                                            |
- |                    This run used       2.91 cpu secs and                   |
- |                 23 of the allocated   1000000 words of storage             |
+ |                    This run used       2.65 cpu secs and                   |
+ |                 43 of the allocated   1000000 words of storage             |
  |                                                                            |
   -- BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND --

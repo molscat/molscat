@@ -1,17 +1,15 @@
   -- FIELD ------ FIELD ------ FIELD ------ FIELD ------ FIELD ------ FIELD --
-
  |                                                                            |
  |          Bound states of interacting pairs of atoms and molecules          |
  |                      as a function of external field                       |
  |                                                                            |
- |              Copyright (C) 2018 J. M. Hutson & C. R. Le Sueur              |
+ |              Copyright (C) 2019 J. M. Hutson & C. R. Le Sueur              |
  |                                                                            |
- |                               Version 2019.0 (beta)                        |
+ |                               Version 2019.0                               |
  |                                                                            |
- |                       Run on 01 Feb 2019   at 10:46:23                     |
+ |                       Run on 18 Feb 2019   at 22:41:10                     |
  |                                                                            |
   -- FIELD ------ FIELD ------ FIELD ------ FIELD ------ FIELD ------ FIELD --
-
 
 
   This program is free software: you can redistribute it and/or modify it under
@@ -19,17 +17,15 @@
   the Free Software Foundation.
 
   Publications resulting from the use of this program should refer to
-  J. M. Hutson & C. R. Le Sueur, FIELD computer code 2019.0 (beta)       
+  J. M. Hutson & C. R. Le Sueur, FIELD computer code 2019.0              
   or to the published paper in Computer Physics Communications when available.
 
 
-  PHYSICAL CONSTANTS OBTAINED FROM NIST CODATA TABULATION OF 2014
+  USING CODATA 2014 RECOMMENDED VALUES OF FUNDAMENTAL PHYSICAL CONSTANTS
 
   MEMORY ALLOCATED TO MAIN WORKING ARRAY IS   1000000 (8-BYTE) WORDS (    7.63 MB)
 
-  PRINT LEVEL =  5
-
-  RUN LABEL = 85Rb-85Rb: positions of bound states below aa threshold                         
+  PRINT LEVEL (IPRINT) =  5
 
   REDUCED MASS FOR INTERACTION =  42.455894869 ATOMIC MASS UNITS (DALTONS)
 
@@ -269,8 +265,8 @@
 
   ============================== 85Rb-85Rb: positions of bound states below aa threshold ===============================
 
-  *******************************************  ANGULAR MOMENTUM JTOT  =   8  *******************************************
-  SYMMETRY BLOCK =  2 SELECTS PARITY  1
+  *****************************  ANGULAR MOMENTUM JTOT  =   8   AND SYMMETRY BLOCK  =    2  ****************************
+  SYMMETRY BLOCK =   2 SELECTS PARITY  1
   MTOT =  8/2
   BASIS SET GENERATED FOR TWO IDENTICAL BOSONS
 
@@ -307,7 +303,7 @@
        28          78          1         5         1         5             2
   = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = 
 
-  ENERGY      1 =  -225.0000000     MHZ     
+  ENERGY #    1 =  -225.0000000     MHZ     
 
   NODE COUNT = 1467 AT MINIMUM MAGNETIC Z FIELD =   750.0000000     GAUSS 
   NODE COUNT = 1466 AT MAXIMUM MAGNETIC Z FIELD =   850.0000000     GAUSS 
@@ -321,7 +317,7 @@
 
   CONVERGED ON NODE NUMBER  1467 AT                     MAGNETIC Z FIELD =   774.7975188     GAUSS 
 
-  SMALLEST EIGENVALUE OF MATCHING MATRIX IS NUMBER  8 =  2.69651E-11
+  SMALLEST EIGENVALUE OF MATCHING MATRIX IS NUMBER  8 = -1.26548E-11
 
   WITH PRINCIPAL EIGENVECTOR COMPONENTS
   CHAN     VEC    VEC**2   L   QUANTUM NUMBERS
@@ -331,7 +327,7 @@
    5    0.3091    0.0955   0   1   5   1   1   0
   = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = 
 
-  ENERGY      2 =  -175.0000000     MHZ     
+  ENERGY #    2 =  -175.0000000     MHZ     
 
   NODE COUNT = 1469 AT MINIMUM MAGNETIC Z FIELD =   750.0000000     GAUSS 
   NODE COUNT = 1467 AT MAXIMUM MAGNETIC Z FIELD =   850.0000000     GAUSS 
@@ -345,7 +341,7 @@
 
   CONVERGED ON NODE NUMBER  1468 AT                     MAGNETIC Z FIELD =   787.3487285     GAUSS 
 
-  SMALLEST EIGENVALUE OF MATCHING MATRIX IS NUMBER  9 =  5.23670E-12
+  SMALLEST EIGENVALUE OF MATCHING MATRIX IS NUMBER  9 =  3.13634E-11
 
   WITH PRINCIPAL EIGENVECTOR COMPONENTS
   CHAN     VEC    VEC**2   L   QUANTUM NUMBERS
@@ -360,7 +356,7 @@
 
   CONVERGED ON NODE NUMBER  1469 AT                     MAGNETIC Z FIELD =   753.1871768     GAUSS 
 
-  SMALLEST EIGENVALUE OF MATCHING MATRIX IS NUMBER  9 = -4.59721E-12
+  SMALLEST EIGENVALUE OF MATCHING MATRIX IS NUMBER  9 = -1.98952E-13
 
   WITH PRINCIPAL EIGENVECTOR COMPONENTS
   CHAN     VEC    VEC**2   L   QUANTUM NUMBERS
@@ -369,7 +365,7 @@
   27    0.2477    0.0614   2   1   5   1   3   0
   = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = 
 
-  ENERGY      3 =  -125.0000000     MHZ     
+  ENERGY #    3 =  -125.0000000     MHZ     
 
   NODE COUNT = 1471 AT MINIMUM MAGNETIC Z FIELD =   750.0000000     GAUSS 
   NODE COUNT = 1468 AT MAXIMUM MAGNETIC Z FIELD =   850.0000000     GAUSS 
@@ -383,7 +379,7 @@
 
   CONVERGED ON NODE NUMBER  1469 AT                     MAGNETIC Z FIELD =   805.7569284     GAUSS 
 
-  SMALLEST EIGENVALUE OF MATCHING MATRIX IS NUMBER 10 = -9.54188E-11
+  SMALLEST EIGENVALUE OF MATCHING MATRIX IS NUMBER 10 =  2.08189E-11
 
   WITH PRINCIPAL EIGENVECTOR COMPONENTS
   CHAN     VEC    VEC**2   L   QUANTUM NUMBERS
@@ -398,7 +394,7 @@
 
   CONVERGED ON NODE NUMBER  1470 AT                     MAGNETIC Z FIELD =   772.1831035     GAUSS 
 
-  SMALLEST EIGENVALUE OF MATCHING MATRIX IS NUMBER 10 = -3.26419E-13
+  SMALLEST EIGENVALUE OF MATCHING MATRIX IS NUMBER 10 = -9.37054E-10
 
   WITH PRINCIPAL EIGENVECTOR COMPONENTS
   CHAN     VEC    VEC**2   L   QUANTUM NUMBERS
@@ -412,7 +408,7 @@
 
   CONVERGED ON NODE NUMBER  1471 AT                     MAGNETIC Z FIELD =   764.0184567     GAUSS 
 
-  SMALLEST EIGENVALUE OF MATCHING MATRIX IS NUMBER 11 =  1.27898E-13
+  SMALLEST EIGENVALUE OF MATCHING MATRIX IS NUMBER 11 = -9.87654E-13
 
   WITH PRINCIPAL EIGENVECTOR COMPONENTS
   CHAN     VEC    VEC**2   L   QUANTUM NUMBERS
@@ -422,7 +418,7 @@
   16   -0.2399    0.0576   2  -1   5  -1   3   0
   = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = 
 
-  ENERGY      4 =  -75.00000000     MHZ     
+  ENERGY #    4 =  -75.00000000     MHZ     
 
   NODE COUNT = 1471 AT MINIMUM MAGNETIC Z FIELD =   750.0000000     GAUSS 
   NODE COUNT = 1468 AT MAXIMUM MAGNETIC Z FIELD =   850.0000000     GAUSS 
@@ -436,7 +432,7 @@
 
   CONVERGED ON NODE NUMBER  1469 AT                     MAGNETIC Z FIELD =   823.8673232     GAUSS 
 
-  SMALLEST EIGENVALUE OF MATCHING MATRIX IS NUMBER 10 =  2.74412E-11
+  SMALLEST EIGENVALUE OF MATCHING MATRIX IS NUMBER 10 = -1.50814E-09
 
   WITH PRINCIPAL EIGENVECTOR COMPONENTS
   CHAN     VEC    VEC**2   L   QUANTUM NUMBERS
@@ -451,7 +447,7 @@
 
   CONVERGED ON NODE NUMBER  1470 AT                     MAGNETIC Z FIELD =   791.1539042     GAUSS 
 
-  SMALLEST EIGENVALUE OF MATCHING MATRIX IS NUMBER 10 =  1.73377E-12
+  SMALLEST EIGENVALUE OF MATCHING MATRIX IS NUMBER 10 = -1.06906E-11
 
   WITH PRINCIPAL EIGENVECTOR COMPONENTS
   CHAN     VEC    VEC**2   L   QUANTUM NUMBERS
@@ -465,7 +461,7 @@
 
   CONVERGED ON NODE NUMBER  1471 AT                     MAGNETIC Z FIELD =   782.8050521     GAUSS 
 
-  SMALLEST EIGENVALUE OF MATCHING MATRIX IS NUMBER 11 =  1.63078E-12
+  SMALLEST EIGENVALUE OF MATCHING MATRIX IS NUMBER 11 = -1.04375E-12
 
   WITH PRINCIPAL EIGENVECTOR COMPONENTS
   CHAN     VEC    VEC**2   L   QUANTUM NUMBERS
@@ -475,7 +471,7 @@
   16    0.2381    0.0567   2  -1   5  -1   3   0
   = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = 
 
-  ENERGY      5 =  -25.00000000     MHZ     
+  ENERGY #    5 =  -25.00000000     MHZ     
 
   NODE COUNT = 1472 AT MINIMUM MAGNETIC Z FIELD =   750.0000000     GAUSS 
   NODE COUNT = 1468 AT MAXIMUM MAGNETIC Z FIELD =   850.0000000     GAUSS 
@@ -489,7 +485,7 @@
 
   CONVERGED ON NODE NUMBER  1469 AT                     MAGNETIC Z FIELD =   841.9413525     GAUSS 
 
-  SMALLEST EIGENVALUE OF MATCHING MATRIX IS NUMBER  9 = -5.69102E-10
+  SMALLEST EIGENVALUE OF MATCHING MATRIX IS NUMBER  9 = -3.19957E-10
 
   WITH PRINCIPAL EIGENVECTOR COMPONENTS
   CHAN     VEC    VEC**2   L   QUANTUM NUMBERS
@@ -504,7 +500,7 @@
 
   CONVERGED ON NODE NUMBER  1470 AT                     MAGNETIC Z FIELD =   810.0994707     GAUSS 
 
-  SMALLEST EIGENVALUE OF MATCHING MATRIX IS NUMBER  9 =  8.98242E-12
+  SMALLEST EIGENVALUE OF MATCHING MATRIX IS NUMBER  9 = -8.93032E-10
 
   WITH PRINCIPAL EIGENVECTOR COMPONENTS
   CHAN     VEC    VEC**2   L   QUANTUM NUMBERS
@@ -518,7 +514,7 @@
 
   CONVERGED ON NODE NUMBER  1471 AT                     MAGNETIC Z FIELD =   801.5738205     GAUSS 
 
-  SMALLEST EIGENVALUE OF MATCHING MATRIX IS NUMBER 10 = -3.84796E-12
+  SMALLEST EIGENVALUE OF MATCHING MATRIX IS NUMBER 10 = -5.09479E-11
 
   WITH PRINCIPAL EIGENVECTOR COMPONENTS
   CHAN     VEC    VEC**2   L   QUANTUM NUMBERS
@@ -533,30 +529,26 @@
 
   CONVERGED ON NODE NUMBER  1472 AT                     MAGNETIC Z FIELD =   762.1331274     GAUSS 
 
-  SMALLEST EIGENVALUE OF MATCHING MATRIX IS NUMBER 10 = -4.00604E-11
+  SMALLEST EIGENVALUE OF MATCHING MATRIX IS NUMBER 10 = -2.54801E-11
 
   WITH PRINCIPAL EIGENVECTOR COMPONENTS
   CHAN     VEC    VEC**2   L   QUANTUM NUMBERS
 
-  13   -0.2251    0.0507   2   1   3  -1   5   0
-  21   -0.9025    0.8145   2   1   5  -1   3   0
-  26    0.3490    0.1218   2   1   5   1   1   0
-
-  ======================================================================================================================
+  13    0.2251    0.0507   2   1   3  -1   5   0
+  21    0.9025    0.8145   2   1   5  -1   3   0
+  26   -0.3490    0.1218   2   1   5   1   1   0
 
 
   -- FIELD ------ FIELD ------ FIELD ------ FIELD ------ FIELD ------ FIELD --
-
  |                                                                            |
  |          Bound states of interacting pairs of atoms and molecules          |
  |                      as a function of external field                       |
  |                                                                            |
- |              Copyright (C) 2018 J. M. Hutson & C. R. Le Sueur              |
+ |              Copyright (C) 2019 J. M. Hutson & C. R. Le Sueur              |
  |                                                                            |
- |                               Version 2019.0 (beta)                        |
+ |                               Version 2019.0                               |
  |                                                                            |
- |                    This run used     135.07 cpu secs and                   |
- |               7467 of the allocated   1000000 words of storage             |
+ |                    This run used     118.61 cpu secs and                   |
+ |               7747 of the allocated   1000000 words of storage             |
  |                                                                            |
   -- FIELD ------ FIELD ------ FIELD ------ FIELD ------ FIELD ------ FIELD --
-

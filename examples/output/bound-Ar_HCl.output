@@ -2,11 +2,11 @@
  |                                                                            |
  |          Bound states of interacting pairs of atoms and molecules          |
  |                                                                            |
- |              Copyright (C) 2018 J. M. Hutson & C. R. Le Sueur              |
+ |              Copyright (C) 2019 J. M. Hutson & C. R. Le Sueur              |
  |                                                                            |
- |                               Version 2019.0 (beta)                        |
+ |                               Version 2019.0                               |
  |                                                                            |
- |                       Run on 01 Feb 2019   at 00:12:21                     |
+ |                       Run on 18 Feb 2019   at 22:37:50                     |
  |                                                                            |
   -- BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND --
 
@@ -16,17 +16,15 @@
   the Free Software Foundation.
 
   Publications resulting from the use of this program should refer to
-  J. M. Hutson & C. R. Le Sueur, BOUND computer code 2019.0 (beta)       
+  J. M. Hutson & C. R. Le Sueur, BOUND computer code 2019.0              
   or to the published paper in Computer Physics Communications when available.
 
 
-  PHYSICAL CONSTANTS OBTAINED FROM NIST CODATA TABULATION OF 2014
+  USING CODATA 2014 RECOMMENDED VALUES OF FUNDAMENTAL PHYSICAL CONSTANTS
 
   MEMORY ALLOCATED TO MAIN WORKING ARRAY IS   1000000 (8-BYTE) WORDS (    7.63 MB)
 
-  PRINT LEVEL =  3
-
-  RUN LABEL = Ar-HCl v=0 on H6(4,3,0) potential: see JPC 96, 4237 (1992)                      
+  PRINT LEVEL (IPRINT) =  3
 
   REDUCED MASS FOR INTERACTION =  18.932467000 ATOMIC MASS UNITS (DALTONS)
 
@@ -36,12 +34,12 @@
 
   INTERACTION TYPE IS    LINEAR RIGID ROTOR  -  ATOM.  
 
-  TARGET ROTATIONAL LEVELS COMPUTED FROM JMIN =  0,  JMAX =  7,  AND JSTEP = 1
+  MOLECULAR QUANTUM NUMBERS OBTAINED FROM JMIN =  0,  JMAX =  7,  AND JSTEP = 1
 
-  ENERGY LEVELS COMPUTED FROM B(E) =   10.440190
+  ENERGY LEVELS OBTAINED FROM B(E) =   10.440190
 
   QUANTUM NUMBERS FOR INTERACTING PAIR:
-  EACH PAIR STATE IS LABELLED BY  1 QUANTUM LABEL 
+  EACH PAIR STATE IS LABELLED BY  1 QUANTUM NUMBER 
   EACH CHANNEL FUNCTION IS FORMED BY COMBINING A PAIR STATE WITH A VALUE OF L.
   THE RESULTING BASIS SET IS ASYMPTOTICALLY DIAGONAL.
 
@@ -120,7 +118,7 @@
   POTENTIAL RETURNED IN UNITS OF EPSIL  =  1.0000000     CM-1
         CODED WITH R IN UNITS OF RM     =  1.0000000     ANGSTROM
 
-  ALL LENGTHS ARE IN UNITS OF ANGSTROM (  1.00000000 ANGSTROM ) UNLESS OTHERWISE STATED
+  ALL LENGTHS ARE IN UNITS OF ANGSTROM UNLESS OTHERWISE STATED
 
   INTERACTION MATRIX USES   9 BLOCKS OF VL ARRAY FOR R-DEPENDENT TERMS IN POTENTIAL
 
@@ -184,13 +182,9 @@
 
   ============================= Ar-HCl v=0 on H6(4,3,0) potential: see JPC 96, 4237 (1992) =============================
 
-  *******************************************  ANGULAR MOMENTUM JTOT  =   0  *******************************************
+  *****************************  ANGULAR MOMENTUM JTOT  =   0   AND SYMMETRY BLOCK  =    1  ****************************
 
-  SYMMETRY BLOCK =   1
-  BASIS SIZE IS 0 FOR THIS COMBINATION OF SYMMETRY LABELS
-
-  SYMMETRY BLOCK =   2
-  = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = 
+  *****************************  ANGULAR MOMENTUM JTOT  =   0   AND SYMMETRY BLOCK  =    2  ****************************
 
   NODE COUNT =    0 AT MINIMUM ENERGY =  -120.0000000     CM-1  
   NODE COUNT =    3 AT MAXIMUM ENERGY =  -80.00000000     CM-1  
@@ -213,12 +207,7 @@
 
   CONVERGED ON NODE NUMBER     3 AT                               ENERGY =  -82.71731237     CM-1  
 
-  ======================================================================================================================
-
-  *******************************************  ANGULAR MOMENTUM JTOT  =   1  *******************************************
-
-  SYMMETRY BLOCK =   1
-  = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = 
+  *****************************  ANGULAR MOMENTUM JTOT  =   1   AND SYMMETRY BLOCK  =    1  ****************************
 
   NODE COUNT =    0 AT MINIMUM ENERGY =  -120.0000000     CM-1  
   NODE COUNT =    1 AT MAXIMUM ENERGY =  -80.00000000     CM-1  
@@ -229,10 +218,7 @@
 
   CONVERGED ON NODE NUMBER     1 AT                               ENERGY =  -81.11694089     CM-1  
 
-  ======================================================================================================================
-
-  SYMMETRY BLOCK =   2
-  = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = 
+  *****************************  ANGULAR MOMENTUM JTOT  =   1   AND SYMMETRY BLOCK  =    2  ****************************
 
   NODE COUNT =    0 AT MINIMUM ENERGY =  -120.0000000     CM-1  
   NODE COUNT =    4 AT MAXIMUM ENERGY =  -80.00000000     CM-1  
@@ -261,30 +247,28 @@
 
   CONVERGED ON NODE NUMBER     4 AT                               ENERGY =  -81.11358888     CM-1  
 
-  ======================================================================================================================
-
 
   -- BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND --
  |                                                                            |
  |          Bound states of interacting pairs of atoms and molecules          |
  |                                                                            |
- |              Copyright (C) 2018 J. M. Hutson & C. R. Le Sueur              |
+ |              Copyright (C) 2019 J. M. Hutson & C. R. Le Sueur              |
  |                                                                            |
- |                               Version 2019.0 (beta)                        |
+ |                               Version 2019.0                               |
  |                                                                            |
- |                    This run used       0.38 cpu secs and                   |
- |               2223 of the allocated   1000000 words of storage             |
+ |                    This run used       0.30 cpu secs and                   |
+ |               2373 of the allocated   1000000 words of storage             |
  |                                                                            |
   -- BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND --
   -- BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND --
  |                                                                            |
  |          Bound states of interacting pairs of atoms and molecules          |
  |                                                                            |
- |              Copyright (C) 2018 J. M. Hutson & C. R. Le Sueur              |
+ |              Copyright (C) 2019 J. M. Hutson & C. R. Le Sueur              |
  |                                                                            |
- |                               Version 2019.0 (beta)                        |
+ |                               Version 2019.0                               |
  |                                                                            |
- |                       Run on 01 Feb 2019   at 00:12:21                     |
+ |                       Run on 18 Feb 2019   at 22:37:50                     |
  |                                                                            |
   -- BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND --
 
@@ -294,17 +278,15 @@
   the Free Software Foundation.
 
   Publications resulting from the use of this program should refer to
-  J. M. Hutson & C. R. Le Sueur, BOUND computer code 2019.0 (beta)       
+  J. M. Hutson & C. R. Le Sueur, BOUND computer code 2019.0              
   or to the published paper in Computer Physics Communications when available.
 
 
-  PHYSICAL CONSTANTS OBTAINED FROM NIST CODATA TABULATION OF 2014
+  USING CODATA 2014 RECOMMENDED VALUES OF FUNDAMENTAL PHYSICAL CONSTANTS
 
   MEMORY ALLOCATED TO MAIN WORKING ARRAY IS   1000000 (8-BYTE) WORDS (    7.63 MB)
 
-  PRINT LEVEL =  3
-
-  RUN LABEL = Ar-HCl v=0 on H6(4,3,0) potential (HD): see JPC 96, 4237 (1992)                 
+  PRINT LEVEL (IPRINT) =  3
 
   REDUCED MASS FOR INTERACTION =  18.932467000 ATOMIC MASS UNITS (DALTONS)
 
@@ -321,14 +303,14 @@
 
   INTERACTION TYPE IS    LINEAR RIGID ROTOR  -  ATOM.  
 
-  TARGET ROTATIONAL LEVELS COMPUTED FROM JMIN =  0,  JMAX =  7,  AND JSTEP = 1
+  MOLECULAR QUANTUM NUMBERS OBTAINED FROM JMIN =  0,  JMAX =  7,  AND JSTEP = 1
 
-  ENERGY LEVELS COMPUTED FROM B(E) =   10.440190
+  ENERGY LEVELS OBTAINED FROM B(E) =   10.440190
 
   *** NOTE.  IN CS CALCULATION MINUS/PLUS M-VALUE ASSUMED TO BE IDENTICAL.
 
   QUANTUM NUMBERS FOR INTERACTING PAIR:
-  EACH PAIR STATE IS LABELLED BY  1 QUANTUM LABEL 
+  EACH PAIR STATE IS LABELLED BY  1 QUANTUM NUMBER 
   EACH CHANNEL FUNCTION IS FORMED BY COMBINING A PAIR STATE WITH A VALUE OF L.
   THE RESULTING BASIS SET IS ASYMPTOTICALLY DIAGONAL.
 
@@ -407,7 +389,7 @@
   POTENTIAL RETURNED IN UNITS OF EPSIL  =  1.0000000     CM-1
         CODED WITH R IN UNITS OF RM     =  1.0000000     ANGSTROM
 
-  ALL LENGTHS ARE IN UNITS OF ANGSTROM (  1.00000000 ANGSTROM ) UNLESS OTHERWISE STATED
+  ALL LENGTHS ARE IN UNITS OF ANGSTROM UNLESS OTHERWISE STATED
 
   INTERACTION MATRIX USES   9 BLOCKS OF VL ARRAY FOR R-DEPENDENT TERMS IN POTENTIAL
 
@@ -473,10 +455,7 @@
 
   ========================== Ar-HCl v=0 on H6(4,3,0) potential (HD): see JPC 96, 4237 (1992) ===========================
 
-  *******************************************  ANGULAR MOMENTUM JTOT  =   0  *******************************************
-
-  SYMMETRY BLOCK =   1
-  = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = 
+  *****************************  ANGULAR MOMENTUM JTOT  =   0   AND SYMMETRY BLOCK  =    1  ****************************
 
   NODE COUNT =    0 AT MINIMUM ENERGY =  -120.0000000     CM-1  
   NODE COUNT =    3 AT MAXIMUM ENERGY =  -80.00000000     CM-1  
@@ -535,15 +514,9 @@
 
   - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
-  ======================================================================================================================
+  *****************************  ANGULAR MOMENTUM JTOT  =   0   AND SYMMETRY BLOCK  =    2  ****************************
 
-  SYMMETRY BLOCK =   2
-  BASIS SIZE IS 0 FOR THIS COMBINATION OF SYMMETRY LABELS
-
-  *******************************************  ANGULAR MOMENTUM JTOT  =   1  *******************************************
-
-  SYMMETRY BLOCK =   1
-  = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = 
+  *****************************  ANGULAR MOMENTUM JTOT  =   1   AND SYMMETRY BLOCK  =    1  ****************************
 
   NODE COUNT =    0 AT MINIMUM ENERGY =  -120.0000000     CM-1  
   NODE COUNT =    3 AT MAXIMUM ENERGY =  -80.00000000     CM-1  
@@ -602,10 +575,7 @@
 
   - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
-  ======================================================================================================================
-
-  SYMMETRY BLOCK =   2
-  = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = 
+  *****************************  ANGULAR MOMENTUM JTOT  =   1   AND SYMMETRY BLOCK  =    2  ****************************
 
   NODE COUNT =    0 AT MINIMUM ENERGY =  -120.0000000     CM-1  
   NODE COUNT =    1 AT MAXIMUM ENERGY =  -80.00000000     CM-1  
@@ -632,18 +602,16 @@
 
   - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
-  ======================================================================================================================
-
 
   -- BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND --
  |                                                                            |
  |          Bound states of interacting pairs of atoms and molecules          |
  |                                                                            |
- |              Copyright (C) 2018 J. M. Hutson & C. R. Le Sueur              |
+ |              Copyright (C) 2019 J. M. Hutson & C. R. Le Sueur              |
  |                                                                            |
- |                               Version 2019.0 (beta)                        |
+ |                               Version 2019.0                               |
  |                                                                            |
- |                    This run used       0.42 cpu secs and                   |
- |               1283 of the allocated   1000000 words of storage             |
+ |                    This run used       0.35 cpu secs and                   |
+ |               1311 of the allocated   1000000 words of storage             |
  |                                                                            |
   -- BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND --

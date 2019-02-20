@@ -2,11 +2,11 @@
  |                                                                            |
  |          Bound states of interacting pairs of atoms and molecules          |
  |                                                                            |
- |              Copyright (C) 2018 J. M. Hutson & C. R. Le Sueur              |
+ |              Copyright (C) 2019 J. M. Hutson & C. R. Le Sueur              |
  |                                                                            |
- |                               Version 2019.0 (beta)                        |
+ |                               Version 2019.0                               |
  |                                                                            |
- |                       Run on 01 Feb 2019   at 00:12:22                     |
+ |                       Run on 18 Feb 2019   at 22:37:51                     |
  |                                                                            |
   -- BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND --
 
@@ -16,17 +16,15 @@
   the Free Software Foundation.
 
   Publications resulting from the use of this program should refer to
-  J. M. Hutson & C. R. Le Sueur, BOUND computer code 2019.0 (beta)       
+  J. M. Hutson & C. R. Le Sueur, BOUND computer code 2019.0              
   or to the published paper in Computer Physics Communications when available.
 
 
-  PHYSICAL CONSTANTS OBTAINED FROM NIST CODATA TABULATION OF 2014
+  USING CODATA 2014 RECOMMENDED VALUES OF FUNDAMENTAL PHYSICAL CONSTANTS
 
   MEMORY ALLOCATED TO MAIN WORKING ARRAY IS   1000000 (8-BYTE) WORDS (    7.63 MB)
 
-  PRINT LEVEL =  5
-
-  RUN LABEL = Ar-CO2 on split repulsion potential of JCP 105, 9130 (1996)                     
+  PRINT LEVEL (IPRINT) =  5
 
   REDUCED MASS FOR INTERACTION =  20.939751000 ATOMIC MASS UNITS (DALTONS)
 
@@ -36,12 +34,12 @@
 
   INTERACTION TYPE IS    LINEAR RIGID ROTOR  -  ATOM.  
 
-  TARGET ROTATIONAL LEVELS COMPUTED FROM JMIN =  0,  JMAX = 26,  AND JSTEP = 2
+  MOLECULAR QUANTUM NUMBERS OBTAINED FROM JMIN =  0,  JMAX = 26,  AND JSTEP = 2
 
-  ENERGY LEVELS COMPUTED FROM B(E) =    0.387141
+  ENERGY LEVELS OBTAINED FROM B(E) =    0.387141
 
   QUANTUM NUMBERS FOR INTERACTING PAIR:
-  EACH PAIR STATE IS LABELLED BY  1 QUANTUM LABEL 
+  EACH PAIR STATE IS LABELLED BY  1 QUANTUM NUMBER 
   EACH CHANNEL FUNCTION IS FORMED BY COMBINING A PAIR STATE WITH A VALUE OF L.
   THE RESULTING BASIS SET IS ASYMPTOTICALLY DIAGONAL.
 
@@ -68,12 +66,12 @@
   UNEXPANDED POTENTIAL IS OBTAINED FROM VRTP ROUTINE.
 
   A SUITABLE VRTP ROUTINE MUST BE SUPPLIED.
-  CARBON ATOM C_N(0   0.000       0.0          0.
-  CARBON ATOM C_N(2   0.000       0.0          0.
-  OXYGEN ATOM C_N(0  50.500    1475.1      52783.
-  OXYGEN ATOM C_N(2  13.635     398.3      14251.
-  CENTRAL     C_N(0 101.000    4293.4         43.
-  CENTRAL     C_N(2  27.270    7444.4          2.
+  CARBON ATOM C_N(0)    0.000       0.0          0.
+  CARBON ATOM C_N(2)    0.000       0.0          0.
+  OXYGEN ATOM C_N(0)   50.500    1475.1      52783.
+  OXYGEN ATOM C_N(2)   13.635     398.3      14251.
+  CENTRAL     C_N(0)  101.000    4293.4         43.
+  CENTRAL     C_N(2)   27.270    7444.4          2.
 
   DISPERSION SITES AT   1.587 A0 FROM CENTRE
 
@@ -152,7 +150,7 @@
   POTENTIAL RETURNED IN UNITS OF EPSIL  =  1.0000000     CM-1
         CODED WITH R IN UNITS OF RM     =  1.0000000     ANGSTROM
 
-  ALL LENGTHS ARE IN UNITS OF ANGSTROM (  1.00000000 ANGSTROM ) UNLESS OTHERWISE STATED
+  ALL LENGTHS ARE IN UNITS OF ANGSTROM UNLESS OTHERWISE STATED
 
   INTERACTION MATRIX USES  12 BLOCKS OF VL ARRAY FOR R-DEPENDENT TERMS IN POTENTIAL
 
@@ -218,7 +216,7 @@
 
   ============================ Ar-CO2 on split repulsion potential of JCP 105, 9130 (1996) =============================
 
-  *******************************************  ANGULAR MOMENTUM JTOT  =   0  *******************************************
+  *****************************  ANGULAR MOMENTUM JTOT  =   0   AND SYMMETRY BLOCK  =    2  ****************************
 
   CHANNEL FUNCTION LIST:
 
@@ -240,7 +238,6 @@
        12          12                  22                     22            12       195.8935433
        13          13                  24                     24            13       232.2848340
        14          14                  26                     26            14       271.7732558
-  = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = 
   SCRATCH FILE OPENED ON UNIT           30
 
   NODE COUNT =    0 AT MINIMUM ENERGY =  -180.0000000     CM-1  
@@ -252,7 +249,7 @@
 
   CONVERGED ON NODE NUMBER     1 AT                               ENERGY =  -165.6289795     CM-1  
 
-  SMALLEST EIGENVALUE OF MATCHING MATRIX IS NUMBER  1 =  5.40012E-13
+  SMALLEST EIGENVALUE OF MATCHING MATRIX IS NUMBER  1 = -8.52651E-13
 
   WITH PRINCIPAL EIGENVECTOR COMPONENTS
   CHAN     VEC    VEC**2   L   QUANTUM NUMBERS
@@ -268,7 +265,7 @@
 
   CONVERGED ON NODE NUMBER     2 AT                               ENERGY =  -131.1638128     CM-1  
 
-  SMALLEST EIGENVALUE OF MATCHING MATRIX IS NUMBER  1 =  1.34715E-12
+  SMALLEST EIGENVALUE OF MATCHING MATRIX IS NUMBER  1 =  1.68499E-12
 
   WITH PRINCIPAL EIGENVECTOR COMPONENTS
   CHAN     VEC    VEC**2   L   QUANTUM NUMBERS
@@ -282,7 +279,7 @@
 
   ENERGY CONVERGED: E =  -165.6292008     CM-1 FOR DR =  6.000E-02
 
-  FOR INODE =    1, RICHARDSON EXTRAPOLATION BASED ON ERROR PROPORTIONAL TO DR**4
+  FOR INODE =    1, RICHARDSON EXTRAPOLATION BASED ON ERROR PROPORTIONAL TO DR**4 FOR IPROPS =  5
   GIVES EXTRAPOLATED ENERGY =                                               -165.6289648     CM-1
   THIS IS THE BEST AVAILABLE EXTRAPOLATED VALUE FROM THIS SET OF CALCULATIONS.
 
@@ -290,24 +287,22 @@
 
   ENERGY CONVERGED: E =  -131.1647456     CM-1 FOR DR =  6.000E-02
 
-  FOR INODE =    2, RICHARDSON EXTRAPOLATION BASED ON ERROR PROPORTIONAL TO DR**4
+  FOR INODE =    2, RICHARDSON EXTRAPOLATION BASED ON ERROR PROPORTIONAL TO DR**4 FOR IPROPS =  5
   GIVES EXTRAPOLATED ENERGY =                                               -131.1637506     CM-1
   THIS IS THE BEST AVAILABLE EXTRAPOLATED VALUE FROM THIS SET OF CALCULATIONS.
 
   - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
-
-  ======================================================================================================================
 
 
   -- BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND --
  |                                                                            |
  |          Bound states of interacting pairs of atoms and molecules          |
  |                                                                            |
- |              Copyright (C) 2018 J. M. Hutson & C. R. Le Sueur              |
+ |              Copyright (C) 2019 J. M. Hutson & C. R. Le Sueur              |
  |                                                                            |
- |                               Version 2019.0 (beta)                        |
+ |                               Version 2019.0                               |
  |                                                                            |
  |                    This run used       0.07 cpu secs and                   |
- |               2332 of the allocated   1000000 words of storage             |
+ |               2416 of the allocated   1000000 words of storage             |
  |                                                                            |
   -- BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND --

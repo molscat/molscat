@@ -3,11 +3,11 @@
  |                Non-reactive quantum scattering calculations                |
  |                     on atomic and molecular collisions                     |
  |                                                                            |
- |              Copyright (C) 2018 J. M. Hutson & C. R. Le Sueur              |
+ |              Copyright (C) 2019 J. M. Hutson & C. R. Le Sueur              |
  |                                                                            |
- |                               Version 2019.0 (beta)                        |
+ |                               Version 2019.0                               |
  |                                                                            |
- |                       Run on 01 Feb 2019   at 10:33:48                     |
+ |                       Run on 18 Feb 2019   at 22:28:37                     |
  |                                                                            |
   ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
 
@@ -17,18 +17,16 @@
   the Free Software Foundation.
 
   Publications resulting from the use of this program should refer to
-  J. M. Hutson & C. R. Le Sueur, MOLSCAT computer code 2019.0 (beta)       
+  J. M. Hutson & C. R. Le Sueur, MOLSCAT computer code 2019.0              
   or to the published paper in Computer Physics Communications when available.
 
 
-  PHYSICAL CONSTANTS OBTAINED FROM NIST CODATA TABULATION OF 2014
+  USING CODATA 2014 RECOMMENDED VALUES OF FUNDAMENTAL PHYSICAL CONSTANTS
 
   MEMORY ALLOCATED TO MAIN WORKING ARRAY IS   1000000 (8-BYTE) WORDS (    7.63 MB)
   2 INTEGERS CAN BE STORED IN EACH WORD.
 
-  PRINT LEVEL = 11     OTHER PRINT CONTROLS  ISIGPR = 0
-
-  RUN LABEL = He-LiF potential of Wolken, JCP 58, 3047 (1973). Basis set 16                   
+  PRINT LEVEL (IPRINT) = 11     OTHER PRINT CONTROLS  ISIGPR = 0
 
   REDUCED MASS FOR INTERACTION =   4.002600000 ATOMIC MASS UNITS (DALTONS)
 
@@ -48,7 +46,7 @@
 
 
   QUANTUM NUMBERS FOR INTERACTING PAIR:
-  EACH PAIR STATE IS LABELLED BY  2 QUANTUM LABELS
+  EACH PAIR STATE IS LABELLED BY  2 QUANTUM NUMBERS
   EACH CHANNEL FUNCTION IS FORMED BY COMBINING A PAIR STATE WITH A VALUE OF L.
   THE RESULTING BASIS SET IS ASYMPTOTICALLY DIAGONAL.
 
@@ -105,7 +103,7 @@
   POTENTIAL RETURNED IN UNITS OF EPSIL  =  8.0655440     CM-1
         CODED WITH R IN UNITS OF RM     =  1.0000000     ANGSTROM
 
-  ALL LENGTHS ARE IN UNITS OF ANGSTROM (  1.00000000 ANGSTROM ) UNLESS OTHERWISE STATED
+  ALL LENGTHS ARE IN UNITS OF ANGSTROM UNLESS OTHERWISE STATED
 
   SURFACE FOURIER COMPONENTS
   NRPOTL = 2 FROM SURBAS
@@ -163,9 +161,7 @@
 
   =========================== He-LiF potential of Wolken, JCP 58, 3047 (1973). Basis set 16 ============================
 
-  *******************************************  ANGULAR MOMENTUM JTOT  =   0  *******************************************
-
-  SYMMETRY BLOCK =   1
+  *****************************  ANGULAR MOMENTUM JTOT  =   0   AND SYMMETRY BLOCK  =    1  ****************************
 
   18 CHANNEL BASIS FOR THETA =  30.000  PHI =   0.000 DEGREES
   CORRESPONDING TO K = (  3.094387  0.000000 ) A-1
@@ -197,8 +193,6 @@
        16          26             -3         0                 0            26        52.8618942
        17          27              0         3                 0            27       225.8601665
        18          29              3         0                 0            29       398.8584389
-
-  JTOT =    0,  SYMMETRY BLOCK =   1,  ENERGY(   1) =   161.31088010     CM-1 =   2.00000000000E-02 EV
   INNER CLASSICAL TURNING POINT AT R = -1.2118
   RADIAL PROPAGATION WILL START AT R = -2.4041
 
@@ -232,11 +226,7 @@
     0    2 4.7296406455874E-002  -1.5953012576437E-001   1.1707180264335E-001  -1.8327738398861E-001
     1    1 2.0085964362875E-001  -1.9347660657122E-001   1.5584260467701E-001  -4.2020557611273E-001
 
-  FINISHED JTOT =    0,  SYMMETRY BLOCK =   1,  ENERGY(   1) =  161.3109    
-
-  --------------------------- He-LiF potential of Wolken, JCP 58, 3047 (1973). Basis set 16 ----------------------------
-
-  JTOT =    0,  SYMMETRY BLOCK =   1,  ENERGY(   2) =   177.44196811     CM-1 =   2.20000000000E-02 EV
+  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
   NOTE: K VECTORS PARALLEL TO SURFACE WERE CALCULATED FOR ENERGY(1)
   SUBSEQUENT ENERGY(   2) =  177.4420 CORRESPONDS TO THETA =   28.4721 DEGREES
@@ -271,11 +261,7 @@
     0    2 5.7491865638864E-002  -5.9785135114008E-002   2.2305575855854E-001  -8.7965869590071E-002
     1    1 2.3833046962828E-001  -1.4462547432411E-001   3.0012263322310E-001  -3.8504139343129E-001
 
-  FINISHED JTOT =    0,  SYMMETRY BLOCK =   1,  ENERGY(   2) =  177.4420    
-
-  ======================================================================================================================
-
-  SYMMETRY BLOCK =   2
+  *****************************  ANGULAR MOMENTUM JTOT  =   0   AND SYMMETRY BLOCK  =    2  ****************************
 
   29 CHANNEL BASIS FOR THETA =  30.000  PHI =   0.001 DEGREES
   CORRESPONDING TO K = (  3.094387  0.000054 ) A-1
@@ -316,8 +302,6 @@
        27          27              0         3                 0            27       225.8631859
        28          28              0        -3                 0            28       225.8571471
        29          29              3         0                 0            29       398.8584388
-
-  JTOT =    0,  SYMMETRY BLOCK =   2,  ENERGY(   1) =   161.31088010     CM-1 =   2.00000000000E-02 EV
   INNER CLASSICAL TURNING POINT AT R = -1.2118
   RADIAL PROPAGATION WILL START AT R = -2.4041
 
@@ -365,11 +349,7 @@
     1   -1 1.0043200104846E-001  -1.9346973441350E-001   1.1021138798266E-001  -2.9712867752440E-001
     1    1 1.0042763937622E-001  -1.9348348380138E-001   1.1018332597954E-001  -2.9713174527861E-001
 
-  FINISHED JTOT =    0,  SYMMETRY BLOCK =   2,  ENERGY(   1) =  161.3109    
-
-  --------------------------- He-LiF potential of Wolken, JCP 58, 3047 (1973). Basis set 16 ----------------------------
-
-  JTOT =    0,  SYMMETRY BLOCK =   2,  ENERGY(   2) =   177.44196811     CM-1 =   2.20000000000E-02 EV
+  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
   NOTE: K VECTORS PARALLEL TO SURFACE WERE CALCULATED FOR ENERGY(1)
   SUBSEQUENT ENERGY(   2) =  177.4420 CORRESPONDS TO THETA =   28.4721 DEGREES
@@ -418,21 +398,17 @@
     1   -1 1.1916419303171E-001  -1.4461605311692E-001   2.1223393785268E-001  -2.7225162746117E-001
     1    1 1.1916627803150E-001  -1.4463488997161E-001   2.1220357032701E-001  -2.7227912658148E-001
 
-  FINISHED JTOT =    0,  SYMMETRY BLOCK =   2,  ENERGY(   2) =  177.4420    
-
-  ======================================================================================================================
-
 
   ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
  |                                                                            |
  |                Non-reactive quantum scattering calculations                |
  |                     on atomic and molecular collisions                     |
  |                                                                            |
- |              Copyright (C) 2018 J. M. Hutson & C. R. Le Sueur              |
+ |              Copyright (C) 2019 J. M. Hutson & C. R. Le Sueur              |
  |                                                                            |
- |                               Version 2019.0 (beta)                        |
+ |                               Version 2019.0                               |
  |                                                                            |
- |                    This run used       0.12 cpu secs and                   |
+ |                    This run used       0.13 cpu secs and                   |
  |               4271 of the allocated   1000000 words of storage             |
  |                                                                            |
   ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---

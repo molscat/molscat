@@ -4,8 +4,8 @@
     IPRINT =   1,   ISIGPR =    2,
     RMIN   =   0.5, RMAX   =   20.0,
     IPROPS =   6,   DR     =    0.001,
-    JTOTL  =  10,   JTOTU  =   20,     JSTEP = 10,
     NNRG   =   1,   ENERGY = 1250.0,
+    JTOTL  =  10,   JTOTU  =   20,     JSTEP = 10,
  /
 
  &BASIS

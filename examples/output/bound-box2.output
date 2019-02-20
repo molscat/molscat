@@ -2,11 +2,11 @@
  |                                                                            |
  |          Bound states of interacting pairs of atoms and molecules          |
  |                                                                            |
- |              Copyright (C) 2018 J. M. Hutson & C. R. Le Sueur              |
+ |              Copyright (C) 2019 J. M. Hutson & C. R. Le Sueur              |
  |                                                                            |
- |                               Version 2019.0 (beta)                        |
+ |                               Version 2019.0                               |
  |                                                                            |
- |                       Run on 01 Feb 2019   at 00:20:48                     |
+ |                       Run on 18 Feb 2019   at 22:43:22                     |
  |                                                                            |
   -- BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND --
 
@@ -16,17 +16,15 @@
   the Free Software Foundation.
 
   Publications resulting from the use of this program should refer to
-  J. M. Hutson & C. R. Le Sueur, BOUND computer code 2019.0 (beta)       
+  J. M. Hutson & C. R. Le Sueur, BOUND computer code 2019.0              
   or to the published paper in Computer Physics Communications when available.
 
 
-  PHYSICAL CONSTANTS OBTAINED FROM NIST CODATA TABULATION OF 2014
+  USING CODATA 2014 RECOMMENDED VALUES OF FUNDAMENTAL PHYSICAL CONSTANTS
 
   MEMORY ALLOCATED TO MAIN WORKING ARRAY IS   1000000 (8-BYTE) WORDS (    7.63 MB)
 
-  PRINT LEVEL =  3
-
-  RUN LABEL = Testing BOUND for 2-channel particle in an infinite-wall box                    
+  PRINT LEVEL (IPRINT) =  3
 
   REDUCED MASS FOR INTERACTION =  16.857629180 ATOMIC MASS UNITS (DALTONS)
 
@@ -36,12 +34,12 @@
 
   INTERACTION TYPE IS    DIATOMIC VIB-ROTOR  -  ATOM.  
 
-  TARGET ROTATIONAL LEVELS TAKEN FROM &BASIS (JLEVEL) INPUT.  NLEVEL =  2
+  MOLECULAR QUANTUM NUMBERS TAKEN FROM JLEVEL INPUT.  NLEVEL =  2
 
-  TARGET ENERGY LEVELS TAKEN FROM &BASIS (ELEVEL) INPUT
+  ENERGY LEVELS TAKEN FROM ELEVEL INPUT
 
   QUANTUM NUMBERS FOR INTERACTING PAIR:
-  EACH PAIR STATE IS LABELLED BY  2 QUANTUM LABELS
+  EACH PAIR STATE IS LABELLED BY  2 QUANTUM NUMBERS
   EACH CHANNEL FUNCTION IS FORMED BY COMBINING A PAIR STATE WITH A VALUE OF L.
   THE RESULTING BASIS SET IS ASYMPTOTICALLY DIAGONAL.
 
@@ -72,7 +70,7 @@
   POTENTIAL RETURNED IN UNITS OF EPSIL  =  1.0000000     CM-1
         CODED WITH R IN UNITS OF RM     =  1.0000000     ANGSTROM
 
-  ALL LENGTHS ARE IN UNITS OF ANGSTROM (  1.00000000 ANGSTROM ) UNLESS OTHERWISE STATED
+  ALL LENGTHS ARE IN UNITS OF ANGSTROM UNLESS OTHERWISE STATED
 
   IVCHK.  COMPLETED SUCCESSFULLY.
   INTERACTION MATRIX USES   1 BLOCKS OF VL ARRAY FOR R-DEPENDENT TERMS IN POTENTIAL
@@ -139,8 +137,7 @@
 
   ============================ Testing BOUND for 2-channel particle in an infinite-wall box ============================
 
-  *******************************************  ANGULAR MOMENTUM JTOT  =   0  *******************************************
-  = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = 
+  *****************************  ANGULAR MOMENTUM JTOT  =   0   AND SYMMETRY BLOCK  =    2  ****************************
   **** WARNING:    2 OPEN CHANNELS DETECTED AT RMIN
 
   NODE COUNT =    0 AT MINIMUM ENERGY =  -1.000000000     CM-1  
@@ -149,7 +146,6 @@
   - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
   SEARCHING FOR INODE =    1 CORRESPONDING TO NODE COUNT =    1
-  **** WARNING:    1 OPEN CHANNEL  DETECTED AT RMIN
   **** WARNING:    1 OPEN CHANNEL  DETECTED AT RMIN
   **** WARNING:    1 OPEN CHANNEL  DETECTED AT RMIN
   **** WARNING:    1 OPEN CHANNEL  DETECTED AT RMIN
@@ -169,7 +165,6 @@
   **** WARNING:    1 OPEN CHANNEL  DETECTED AT RMIN
   **** WARNING:    1 OPEN CHANNEL  DETECTED AT RMIN
   **** WARNING:    1 OPEN CHANNEL  DETECTED AT RMIN
-  **** WARNING:    1 OPEN CHANNEL  DETECTED AT RMIN
 
   CONVERGED ON NODE NUMBER     2 AT                               ENERGY =   3.999999983     CM-1  
 
@@ -182,34 +177,31 @@
   **** WARNING:    2 OPEN CHANNELS DETECTED AT RMIN
   **** WARNING:    2 OPEN CHANNELS DETECTED AT RMIN
   **** WARNING:    2 OPEN CHANNELS DETECTED AT RMIN
-  **** WARNING:    2 OPEN CHANNELS DETECTED AT RMIN
 
   CONVERGED ON NODE NUMBER     3 AT                               ENERGY =   5.999999997     CM-1  
 
-  ======================================================================================================================
-
 
   -- BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND --
  |                                                                            |
  |          Bound states of interacting pairs of atoms and molecules          |
  |                                                                            |
- |              Copyright (C) 2018 J. M. Hutson & C. R. Le Sueur              |
+ |              Copyright (C) 2019 J. M. Hutson & C. R. Le Sueur              |
  |                                                                            |
- |                               Version 2019.0 (beta)                        |
+ |                               Version 2019.0                               |
  |                                                                            |
  |                    This run used       0.05 cpu secs and                   |
- |                 46 of the allocated   1000000 words of storage             |
+ |                 62 of the allocated   1000000 words of storage             |
  |                                                                            |
   -- BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND --
   -- BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND --
  |                                                                            |
  |          Bound states of interacting pairs of atoms and molecules          |
  |                                                                            |
- |              Copyright (C) 2018 J. M. Hutson & C. R. Le Sueur              |
+ |              Copyright (C) 2019 J. M. Hutson & C. R. Le Sueur              |
  |                                                                            |
- |                               Version 2019.0 (beta)                        |
+ |                               Version 2019.0                               |
  |                                                                            |
- |                       Run on 01 Feb 2019   at 00:20:48                     |
+ |                       Run on 18 Feb 2019   at 22:43:22                     |
  |                                                                            |
   -- BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND --
 
@@ -219,17 +211,15 @@
   the Free Software Foundation.
 
   Publications resulting from the use of this program should refer to
-  J. M. Hutson & C. R. Le Sueur, BOUND computer code 2019.0 (beta)       
+  J. M. Hutson & C. R. Le Sueur, BOUND computer code 2019.0              
   or to the published paper in Computer Physics Communications when available.
 
 
-  PHYSICAL CONSTANTS OBTAINED FROM NIST CODATA TABULATION OF 2014
+  USING CODATA 2014 RECOMMENDED VALUES OF FUNDAMENTAL PHYSICAL CONSTANTS
 
   MEMORY ALLOCATED TO MAIN WORKING ARRAY IS   1000000 (8-BYTE) WORDS (    7.63 MB)
 
-  PRINT LEVEL =  3
-
-  RUN LABEL = Testing BOUND 2-channel particle in a box with finite boundary conditions: LDJ  
+  PRINT LEVEL (IPRINT) =  3
 
   REDUCED MASS FOR INTERACTION =  16.857629180 ATOMIC MASS UNITS (DALTONS)
 
@@ -239,12 +229,12 @@
 
   INTERACTION TYPE IS    DIATOMIC VIB-ROTOR  -  ATOM.  
 
-  TARGET ROTATIONAL LEVELS TAKEN FROM &BASIS (JLEVEL) INPUT.  NLEVEL =  2
+  MOLECULAR QUANTUM NUMBERS TAKEN FROM JLEVEL INPUT.  NLEVEL =  2
 
-  TARGET ENERGY LEVELS TAKEN FROM &BASIS (ELEVEL) INPUT
+  ENERGY LEVELS TAKEN FROM ELEVEL INPUT
 
   QUANTUM NUMBERS FOR INTERACTING PAIR:
-  EACH PAIR STATE IS LABELLED BY  2 QUANTUM LABELS
+  EACH PAIR STATE IS LABELLED BY  2 QUANTUM NUMBERS
   EACH CHANNEL FUNCTION IS FORMED BY COMBINING A PAIR STATE WITH A VALUE OF L.
   THE RESULTING BASIS SET IS ASYMPTOTICALLY DIAGONAL.
 
@@ -275,7 +265,7 @@
   POTENTIAL RETURNED IN UNITS OF EPSIL  =  1.0000000     CM-1
         CODED WITH R IN UNITS OF RM     =  1.0000000     ANGSTROM
 
-  ALL LENGTHS ARE IN UNITS OF ANGSTROM (  1.00000000 ANGSTROM ) UNLESS OTHERWISE STATED
+  ALL LENGTHS ARE IN UNITS OF ANGSTROM UNLESS OTHERWISE STATED
 
   IVCHK.  COMPLETED SUCCESSFULLY.
   INTERACTION MATRIX USES   1 BLOCKS OF VL ARRAY FOR R-DEPENDENT TERMS IN POTENTIAL
@@ -342,8 +332,7 @@
 
   =================== Testing BOUND 2-channel particle in a box with finite boundary conditions: LDJ ===================
 
-  *******************************************  ANGULAR MOMENTUM JTOT  =   0  *******************************************
-  = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = 
+  *****************************  ANGULAR MOMENTUM JTOT  =   0   AND SYMMETRY BLOCK  =    2  ****************************
   **** WARNING:    2 OPEN CHANNELS DETECTED AT RMIN
 
   NODE COUNT =    0 AT MINIMUM ENERGY =  -1.000000000     CM-1  
@@ -352,7 +341,6 @@
   - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
   SEARCHING FOR INODE =    1 CORRESPONDING TO NODE COUNT =    1
-  **** WARNING:    1 OPEN CHANNEL  DETECTED AT RMIN
   **** WARNING:    1 OPEN CHANNEL  DETECTED AT RMIN
   **** WARNING:    1 OPEN CHANNEL  DETECTED AT RMIN
   **** WARNING:    1 OPEN CHANNEL  DETECTED AT RMIN
@@ -371,7 +359,6 @@
   **** WARNING:    1 OPEN CHANNEL  DETECTED AT RMIN
   **** WARNING:    1 OPEN CHANNEL  DETECTED AT RMIN
   **** WARNING:    1 OPEN CHANNEL  DETECTED AT RMIN
-  **** WARNING:    1 OPEN CHANNEL  DETECTED AT RMIN
 
   CONVERGED ON NODE NUMBER     2 AT                               ENERGY =   1.123361643     CM-1  
 
@@ -385,14 +372,12 @@
   **** WARNING:    1 OPEN CHANNEL  DETECTED AT RMIN
   **** WARNING:    1 OPEN CHANNEL  DETECTED AT RMIN
   **** WARNING:    1 OPEN CHANNEL  DETECTED AT RMIN
-  **** WARNING:    1 OPEN CHANNEL  DETECTED AT RMIN
 
   CONVERGED ON NODE NUMBER     3 AT                               ENERGY =   4.126240653     CM-1  
 
   - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
   SEARCHING FOR INODE =    4 CORRESPONDING TO NODE COUNT =    4
-  **** WARNING:    2 OPEN CHANNELS DETECTED AT RMIN
   **** WARNING:    2 OPEN CHANNELS DETECTED AT RMIN
   **** WARNING:    2 OPEN CHANNELS DETECTED AT RMIN
   **** WARNING:    2 OPEN CHANNELS DETECTED AT RMIN
@@ -411,34 +396,31 @@
   **** WARNING:    2 OPEN CHANNELS DETECTED AT RMIN
   **** WARNING:    2 OPEN CHANNELS DETECTED AT RMIN
   **** WARNING:    2 OPEN CHANNELS DETECTED AT RMIN
-  **** WARNING:    2 OPEN CHANNELS DETECTED AT RMIN
 
   CONVERGED ON NODE NUMBER     5 AT                               ENERGY =   6.123361643     CM-1  
 
-  ======================================================================================================================
-
 
   -- BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND --
  |                                                                            |
  |          Bound states of interacting pairs of atoms and molecules          |
  |                                                                            |
- |              Copyright (C) 2018 J. M. Hutson & C. R. Le Sueur              |
+ |              Copyright (C) 2019 J. M. Hutson & C. R. Le Sueur              |
  |                                                                            |
- |                               Version 2019.0 (beta)                        |
+ |                               Version 2019.0                               |
  |                                                                            |
  |                    This run used       0.06 cpu secs and                   |
- |                 46 of the allocated   1000000 words of storage             |
+ |                 70 of the allocated   1000000 words of storage             |
  |                                                                            |
   -- BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND --
   -- BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND --
  |                                                                            |
  |          Bound states of interacting pairs of atoms and molecules          |
  |                                                                            |
- |              Copyright (C) 2018 J. M. Hutson & C. R. Le Sueur              |
+ |              Copyright (C) 2019 J. M. Hutson & C. R. Le Sueur              |
  |                                                                            |
- |                               Version 2019.0 (beta)                        |
+ |                               Version 2019.0                               |
  |                                                                            |
- |                       Run on 01 Feb 2019   at 00:20:48                     |
+ |                       Run on 18 Feb 2019   at 22:43:22                     |
  |                                                                            |
   -- BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND --
 
@@ -448,17 +430,15 @@
   the Free Software Foundation.
 
   Publications resulting from the use of this program should refer to
-  J. M. Hutson & C. R. Le Sueur, BOUND computer code 2019.0 (beta)       
+  J. M. Hutson & C. R. Le Sueur, BOUND computer code 2019.0              
   or to the published paper in Computer Physics Communications when available.
 
 
-  PHYSICAL CONSTANTS OBTAINED FROM NIST CODATA TABULATION OF 2014
+  USING CODATA 2014 RECOMMENDED VALUES OF FUNDAMENTAL PHYSICAL CONSTANTS
 
   MEMORY ALLOCATED TO MAIN WORKING ARRAY IS   1000000 (8-BYTE) WORDS (    7.63 MB)
 
-  PRINT LEVEL =  3
-
-  RUN LABEL = Testing BOUND 2-channel particle in a box with finite boundary conditions: LDMD 
+  PRINT LEVEL (IPRINT) =  3
 
   REDUCED MASS FOR INTERACTION =  16.857629180 ATOMIC MASS UNITS (DALTONS)
 
@@ -468,12 +448,12 @@
 
   INTERACTION TYPE IS    DIATOMIC VIB-ROTOR  -  ATOM.  
 
-  TARGET ROTATIONAL LEVELS TAKEN FROM &BASIS (JLEVEL) INPUT.  NLEVEL =  2
+  MOLECULAR QUANTUM NUMBERS TAKEN FROM JLEVEL INPUT.  NLEVEL =  2
 
-  TARGET ENERGY LEVELS TAKEN FROM &BASIS (ELEVEL) INPUT
+  ENERGY LEVELS TAKEN FROM ELEVEL INPUT
 
   QUANTUM NUMBERS FOR INTERACTING PAIR:
-  EACH PAIR STATE IS LABELLED BY  2 QUANTUM LABELS
+  EACH PAIR STATE IS LABELLED BY  2 QUANTUM NUMBERS
   EACH CHANNEL FUNCTION IS FORMED BY COMBINING A PAIR STATE WITH A VALUE OF L.
   THE RESULTING BASIS SET IS ASYMPTOTICALLY DIAGONAL.
 
@@ -504,7 +484,7 @@
   POTENTIAL RETURNED IN UNITS OF EPSIL  =  1.0000000     CM-1
         CODED WITH R IN UNITS OF RM     =  1.0000000     ANGSTROM
 
-  ALL LENGTHS ARE IN UNITS OF ANGSTROM (  1.00000000 ANGSTROM ) UNLESS OTHERWISE STATED
+  ALL LENGTHS ARE IN UNITS OF ANGSTROM UNLESS OTHERWISE STATED
 
   IVCHK.  COMPLETED SUCCESSFULLY.
   INTERACTION MATRIX USES   1 BLOCKS OF VL ARRAY FOR R-DEPENDENT TERMS IN POTENTIAL
@@ -571,8 +551,7 @@
 
   ================== Testing BOUND 2-channel particle in a box with finite boundary conditions: LDMD ===================
 
-  *******************************************  ANGULAR MOMENTUM JTOT  =   0  *******************************************
-  = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = 
+  *****************************  ANGULAR MOMENTUM JTOT  =   0   AND SYMMETRY BLOCK  =    2  ****************************
   **** WARNING:    2 OPEN CHANNELS DETECTED AT RMIN
 
   NODE COUNT =    0 AT MINIMUM ENERGY =  -1.000000000     CM-1  
@@ -581,7 +560,6 @@
   - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
   SEARCHING FOR INODE =    1 CORRESPONDING TO NODE COUNT =    1
-  **** WARNING:    1 OPEN CHANNEL  DETECTED AT RMIN
   **** WARNING:    1 OPEN CHANNEL  DETECTED AT RMIN
   **** WARNING:    1 OPEN CHANNEL  DETECTED AT RMIN
   **** WARNING:    1 OPEN CHANNEL  DETECTED AT RMIN
@@ -600,7 +578,6 @@
   **** WARNING:    1 OPEN CHANNEL  DETECTED AT RMIN
   **** WARNING:    1 OPEN CHANNEL  DETECTED AT RMIN
   **** WARNING:    1 OPEN CHANNEL  DETECTED AT RMIN
-  **** WARNING:    1 OPEN CHANNEL  DETECTED AT RMIN
 
   CONVERGED ON NODE NUMBER     2 AT                               ENERGY =   1.123361643     CM-1  
 
@@ -614,14 +591,12 @@
   **** WARNING:    1 OPEN CHANNEL  DETECTED AT RMIN
   **** WARNING:    1 OPEN CHANNEL  DETECTED AT RMIN
   **** WARNING:    1 OPEN CHANNEL  DETECTED AT RMIN
-  **** WARNING:    1 OPEN CHANNEL  DETECTED AT RMIN
 
   CONVERGED ON NODE NUMBER     3 AT                               ENERGY =   4.126240653     CM-1  
 
   - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
   SEARCHING FOR INODE =    4 CORRESPONDING TO NODE COUNT =    4
-  **** WARNING:    2 OPEN CHANNELS DETECTED AT RMIN
   **** WARNING:    2 OPEN CHANNELS DETECTED AT RMIN
   **** WARNING:    2 OPEN CHANNELS DETECTED AT RMIN
   **** WARNING:    2 OPEN CHANNELS DETECTED AT RMIN
@@ -640,34 +615,31 @@
   **** WARNING:    2 OPEN CHANNELS DETECTED AT RMIN
   **** WARNING:    2 OPEN CHANNELS DETECTED AT RMIN
   **** WARNING:    2 OPEN CHANNELS DETECTED AT RMIN
-  **** WARNING:    2 OPEN CHANNELS DETECTED AT RMIN
 
   CONVERGED ON NODE NUMBER     5 AT                               ENERGY =   6.123361643     CM-1  
 
-  ======================================================================================================================
-
 
   -- BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND --
  |                                                                            |
  |          Bound states of interacting pairs of atoms and molecules          |
  |                                                                            |
- |              Copyright (C) 2018 J. M. Hutson & C. R. Le Sueur              |
+ |              Copyright (C) 2019 J. M. Hutson & C. R. Le Sueur              |
  |                                                                            |
- |                               Version 2019.0 (beta)                        |
+ |                               Version 2019.0                               |
  |                                                                            |
- |                    This run used       0.07 cpu secs and                   |
- |                 46 of the allocated   1000000 words of storage             |
+ |                    This run used       0.08 cpu secs and                   |
+ |                 70 of the allocated   1000000 words of storage             |
  |                                                                            |
   -- BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND --
   -- BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND --
  |                                                                            |
  |          Bound states of interacting pairs of atoms and molecules          |
  |                                                                            |
- |              Copyright (C) 2018 J. M. Hutson & C. R. Le Sueur              |
+ |              Copyright (C) 2019 J. M. Hutson & C. R. Le Sueur              |
  |                                                                            |
- |                               Version 2019.0 (beta)                        |
+ |                               Version 2019.0                               |
  |                                                                            |
- |                       Run on 01 Feb 2019   at 00:20:48                     |
+ |                       Run on 18 Feb 2019   at 22:43:23                     |
  |                                                                            |
   -- BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND --
 
@@ -677,17 +649,15 @@
   the Free Software Foundation.
 
   Publications resulting from the use of this program should refer to
-  J. M. Hutson & C. R. Le Sueur, BOUND computer code 2019.0 (beta)       
+  J. M. Hutson & C. R. Le Sueur, BOUND computer code 2019.0              
   or to the published paper in Computer Physics Communications when available.
 
 
-  PHYSICAL CONSTANTS OBTAINED FROM NIST CODATA TABULATION OF 2014
+  USING CODATA 2014 RECOMMENDED VALUES OF FUNDAMENTAL PHYSICAL CONSTANTS
 
   MEMORY ALLOCATED TO MAIN WORKING ARRAY IS   1000000 (8-BYTE) WORDS (    7.63 MB)
 
-  PRINT LEVEL =  3
-
-  RUN LABEL = Testing BOUND 2-channel particle in a box with finite boundary conditions: LDMA 
+  PRINT LEVEL (IPRINT) =  3
 
   REDUCED MASS FOR INTERACTION =  16.857629180 ATOMIC MASS UNITS (DALTONS)
 
@@ -697,12 +667,12 @@
 
   INTERACTION TYPE IS    DIATOMIC VIB-ROTOR  -  ATOM.  
 
-  TARGET ROTATIONAL LEVELS TAKEN FROM &BASIS (JLEVEL) INPUT.  NLEVEL =  2
+  MOLECULAR QUANTUM NUMBERS TAKEN FROM JLEVEL INPUT.  NLEVEL =  2
 
-  TARGET ENERGY LEVELS TAKEN FROM &BASIS (ELEVEL) INPUT
+  ENERGY LEVELS TAKEN FROM ELEVEL INPUT
 
   QUANTUM NUMBERS FOR INTERACTING PAIR:
-  EACH PAIR STATE IS LABELLED BY  2 QUANTUM LABELS
+  EACH PAIR STATE IS LABELLED BY  2 QUANTUM NUMBERS
   EACH CHANNEL FUNCTION IS FORMED BY COMBINING A PAIR STATE WITH A VALUE OF L.
   THE RESULTING BASIS SET IS ASYMPTOTICALLY DIAGONAL.
 
@@ -733,7 +703,7 @@
   POTENTIAL RETURNED IN UNITS OF EPSIL  =  1.0000000     CM-1
         CODED WITH R IN UNITS OF RM     =  1.0000000     ANGSTROM
 
-  ALL LENGTHS ARE IN UNITS OF ANGSTROM (  1.00000000 ANGSTROM ) UNLESS OTHERWISE STATED
+  ALL LENGTHS ARE IN UNITS OF ANGSTROM UNLESS OTHERWISE STATED
 
   IVCHK.  COMPLETED SUCCESSFULLY.
   INTERACTION MATRIX USES   1 BLOCKS OF VL ARRAY FOR R-DEPENDENT TERMS IN POTENTIAL
@@ -800,8 +770,7 @@
 
   ================== Testing BOUND 2-channel particle in a box with finite boundary conditions: LDMA ===================
 
-  *******************************************  ANGULAR MOMENTUM JTOT  =   0  *******************************************
-  = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = 
+  *****************************  ANGULAR MOMENTUM JTOT  =   0   AND SYMMETRY BLOCK  =    2  ****************************
   **** WARNING:    2 OPEN CHANNELS DETECTED AT RMIN
 
   NODE COUNT =    0 AT MINIMUM ENERGY =  -1.000000000     CM-1  
@@ -810,7 +779,6 @@
   - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
   SEARCHING FOR INODE =    1 CORRESPONDING TO NODE COUNT =    1
-  **** WARNING:    1 OPEN CHANNEL  DETECTED AT RMIN
   **** WARNING:    1 OPEN CHANNEL  DETECTED AT RMIN
   **** WARNING:    1 OPEN CHANNEL  DETECTED AT RMIN
   **** WARNING:    1 OPEN CHANNEL  DETECTED AT RMIN
@@ -829,7 +797,6 @@
   **** WARNING:    1 OPEN CHANNEL  DETECTED AT RMIN
   **** WARNING:    1 OPEN CHANNEL  DETECTED AT RMIN
   **** WARNING:    1 OPEN CHANNEL  DETECTED AT RMIN
-  **** WARNING:    1 OPEN CHANNEL  DETECTED AT RMIN
 
   CONVERGED ON NODE NUMBER     2 AT                               ENERGY =   1.123137999     CM-1  
 
@@ -843,14 +810,12 @@
   **** WARNING:    1 OPEN CHANNEL  DETECTED AT RMIN
   **** WARNING:    1 OPEN CHANNEL  DETECTED AT RMIN
   **** WARNING:    1 OPEN CHANNEL  DETECTED AT RMIN
-  **** WARNING:    1 OPEN CHANNEL  DETECTED AT RMIN
 
   CONVERGED ON NODE NUMBER     3 AT                               ENERGY =   4.125380670     CM-1  
 
   - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
   SEARCHING FOR INODE =    4 CORRESPONDING TO NODE COUNT =    4
-  **** WARNING:    2 OPEN CHANNELS DETECTED AT RMIN
   **** WARNING:    2 OPEN CHANNELS DETECTED AT RMIN
   **** WARNING:    2 OPEN CHANNELS DETECTED AT RMIN
   **** WARNING:    2 OPEN CHANNELS DETECTED AT RMIN
@@ -869,34 +834,31 @@
   **** WARNING:    2 OPEN CHANNELS DETECTED AT RMIN
   **** WARNING:    2 OPEN CHANNELS DETECTED AT RMIN
   **** WARNING:    2 OPEN CHANNELS DETECTED AT RMIN
-  **** WARNING:    2 OPEN CHANNELS DETECTED AT RMIN
 
   CONVERGED ON NODE NUMBER     5 AT                               ENERGY =   6.122142255     CM-1  
 
-  ======================================================================================================================
-
 
   -- BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND --
  |                                                                            |
  |          Bound states of interacting pairs of atoms and molecules          |
  |                                                                            |
- |              Copyright (C) 2018 J. M. Hutson & C. R. Le Sueur              |
+ |              Copyright (C) 2019 J. M. Hutson & C. R. Le Sueur              |
  |                                                                            |
- |                               Version 2019.0 (beta)                        |
+ |                               Version 2019.0                               |
  |                                                                            |
  |                    This run used       0.23 cpu secs and                   |
- |                 62 of the allocated   1000000 words of storage             |
+ |                 86 of the allocated   1000000 words of storage             |
  |                                                                            |
   -- BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND --
   -- BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND --
  |                                                                            |
  |          Bound states of interacting pairs of atoms and molecules          |
  |                                                                            |
- |              Copyright (C) 2018 J. M. Hutson & C. R. Le Sueur              |
+ |              Copyright (C) 2019 J. M. Hutson & C. R. Le Sueur              |
  |                                                                            |
- |                               Version 2019.0 (beta)                        |
+ |                               Version 2019.0                               |
  |                                                                            |
- |                       Run on 01 Feb 2019   at 00:20:48                     |
+ |                       Run on 18 Feb 2019   at 22:43:23                     |
  |                                                                            |
   -- BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND --
 
@@ -906,17 +868,15 @@
   the Free Software Foundation.
 
   Publications resulting from the use of this program should refer to
-  J. M. Hutson & C. R. Le Sueur, BOUND computer code 2019.0 (beta)       
+  J. M. Hutson & C. R. Le Sueur, BOUND computer code 2019.0              
   or to the published paper in Computer Physics Communications when available.
 
 
-  PHYSICAL CONSTANTS OBTAINED FROM NIST CODATA TABULATION OF 2014
+  USING CODATA 2014 RECOMMENDED VALUES OF FUNDAMENTAL PHYSICAL CONSTANTS
 
   MEMORY ALLOCATED TO MAIN WORKING ARRAY IS   1000000 (8-BYTE) WORDS (    7.63 MB)
 
-  PRINT LEVEL =  3
-
-  RUN LABEL = Testing BOUND 2-channel particle in a box with finite boundary conditions: LDMG 
+  PRINT LEVEL (IPRINT) =  3
 
   REDUCED MASS FOR INTERACTION =  16.857629180 ATOMIC MASS UNITS (DALTONS)
 
@@ -926,12 +886,12 @@
 
   INTERACTION TYPE IS    DIATOMIC VIB-ROTOR  -  ATOM.  
 
-  TARGET ROTATIONAL LEVELS TAKEN FROM &BASIS (JLEVEL) INPUT.  NLEVEL =  2
+  MOLECULAR QUANTUM NUMBERS TAKEN FROM JLEVEL INPUT.  NLEVEL =  2
 
-  TARGET ENERGY LEVELS TAKEN FROM &BASIS (ELEVEL) INPUT
+  ENERGY LEVELS TAKEN FROM ELEVEL INPUT
 
   QUANTUM NUMBERS FOR INTERACTING PAIR:
-  EACH PAIR STATE IS LABELLED BY  2 QUANTUM LABELS
+  EACH PAIR STATE IS LABELLED BY  2 QUANTUM NUMBERS
   EACH CHANNEL FUNCTION IS FORMED BY COMBINING A PAIR STATE WITH A VALUE OF L.
   THE RESULTING BASIS SET IS ASYMPTOTICALLY DIAGONAL.
 
@@ -962,7 +922,7 @@
   POTENTIAL RETURNED IN UNITS OF EPSIL  =  1.0000000     CM-1
         CODED WITH R IN UNITS OF RM     =  1.0000000     ANGSTROM
 
-  ALL LENGTHS ARE IN UNITS OF ANGSTROM (  1.00000000 ANGSTROM ) UNLESS OTHERWISE STATED
+  ALL LENGTHS ARE IN UNITS OF ANGSTROM UNLESS OTHERWISE STATED
 
   IVCHK.  COMPLETED SUCCESSFULLY.
   INTERACTION MATRIX USES   1 BLOCKS OF VL ARRAY FOR R-DEPENDENT TERMS IN POTENTIAL
@@ -1031,8 +991,7 @@
 
   ================== Testing BOUND 2-channel particle in a box with finite boundary conditions: LDMG ===================
 
-  *******************************************  ANGULAR MOMENTUM JTOT  =   0  *******************************************
-  = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = 
+  *****************************  ANGULAR MOMENTUM JTOT  =   0   AND SYMMETRY BLOCK  =    2  ****************************
   **** WARNING:    2 OPEN CHANNELS DETECTED AT RMIN
 
   NODE COUNT =    0 AT MINIMUM ENERGY =  -1.000000000     CM-1  
@@ -1041,7 +1000,6 @@
   - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
   SEARCHING FOR INODE =    1 CORRESPONDING TO NODE COUNT =    1
-  **** WARNING:    1 OPEN CHANNEL  DETECTED AT RMIN
   **** WARNING:    1 OPEN CHANNEL  DETECTED AT RMIN
   **** WARNING:    1 OPEN CHANNEL  DETECTED AT RMIN
   **** WARNING:    1 OPEN CHANNEL  DETECTED AT RMIN
@@ -1060,7 +1018,6 @@
   **** WARNING:    1 OPEN CHANNEL  DETECTED AT RMIN
   **** WARNING:    1 OPEN CHANNEL  DETECTED AT RMIN
   **** WARNING:    1 OPEN CHANNEL  DETECTED AT RMIN
-  **** WARNING:    1 OPEN CHANNEL  DETECTED AT RMIN
 
   CONVERGED ON NODE NUMBER     2 AT                               ENERGY =   1.123361643     CM-1  
 
@@ -1074,14 +1031,12 @@
   **** WARNING:    1 OPEN CHANNEL  DETECTED AT RMIN
   **** WARNING:    1 OPEN CHANNEL  DETECTED AT RMIN
   **** WARNING:    1 OPEN CHANNEL  DETECTED AT RMIN
-  **** WARNING:    1 OPEN CHANNEL  DETECTED AT RMIN
 
   CONVERGED ON NODE NUMBER     3 AT                               ENERGY =   4.126240653     CM-1  
 
   - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
   SEARCHING FOR INODE =    4 CORRESPONDING TO NODE COUNT =    4
-  **** WARNING:    2 OPEN CHANNELS DETECTED AT RMIN
   **** WARNING:    2 OPEN CHANNELS DETECTED AT RMIN
   **** WARNING:    2 OPEN CHANNELS DETECTED AT RMIN
   **** WARNING:    2 OPEN CHANNELS DETECTED AT RMIN
@@ -1100,34 +1055,31 @@
   **** WARNING:    2 OPEN CHANNELS DETECTED AT RMIN
   **** WARNING:    2 OPEN CHANNELS DETECTED AT RMIN
   **** WARNING:    2 OPEN CHANNELS DETECTED AT RMIN
-  **** WARNING:    2 OPEN CHANNELS DETECTED AT RMIN
 
   CONVERGED ON NODE NUMBER     5 AT                               ENERGY =   6.123361643     CM-1  
 
-  ======================================================================================================================
-
 
   -- BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND --
  |                                                                            |
  |          Bound states of interacting pairs of atoms and molecules          |
  |                                                                            |
- |              Copyright (C) 2018 J. M. Hutson & C. R. Le Sueur              |
+ |              Copyright (C) 2019 J. M. Hutson & C. R. Le Sueur              |
  |                                                                            |
- |                               Version 2019.0 (beta)                        |
+ |                               Version 2019.0                               |
  |                                                                            |
- |                    This run used       0.14 cpu secs and                   |
- |                 46 of the allocated   1000000 words of storage             |
+ |                    This run used       0.15 cpu secs and                   |
+ |                 70 of the allocated   1000000 words of storage             |
  |                                                                            |
   -- BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND --
   -- BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND --
  |                                                                            |
  |          Bound states of interacting pairs of atoms and molecules          |
  |                                                                            |
- |              Copyright (C) 2018 J. M. Hutson & C. R. Le Sueur              |
+ |              Copyright (C) 2019 J. M. Hutson & C. R. Le Sueur              |
  |                                                                            |
- |                               Version 2019.0 (beta)                        |
+ |                               Version 2019.0                               |
  |                                                                            |
- |                       Run on 01 Feb 2019   at 00:20:49                     |
+ |                       Run on 18 Feb 2019   at 22:43:23                     |
  |                                                                            |
   -- BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND --
 
@@ -1137,17 +1089,15 @@
   the Free Software Foundation.
 
   Publications resulting from the use of this program should refer to
-  J. M. Hutson & C. R. Le Sueur, BOUND computer code 2019.0 (beta)       
+  J. M. Hutson & C. R. Le Sueur, BOUND computer code 2019.0              
   or to the published paper in Computer Physics Communications when available.
 
 
-  PHYSICAL CONSTANTS OBTAINED FROM NIST CODATA TABULATION OF 2014
+  USING CODATA 2014 RECOMMENDED VALUES OF FUNDAMENTAL PHYSICAL CONSTANTS
 
   MEMORY ALLOCATED TO MAIN WORKING ARRAY IS   1000000 (8-BYTE) WORDS (    7.63 MB)
 
-  PRINT LEVEL =  3
-
-  RUN LABEL = Testing BOUND 2-channel particle in a box with finite boundary conditions: LDMD+
+  PRINT LEVEL (IPRINT) =  3
 
   REDUCED MASS FOR INTERACTION =  16.857629180 ATOMIC MASS UNITS (DALTONS)
 
@@ -1157,12 +1107,12 @@
 
   INTERACTION TYPE IS    DIATOMIC VIB-ROTOR  -  ATOM.  
 
-  TARGET ROTATIONAL LEVELS TAKEN FROM &BASIS (JLEVEL) INPUT.  NLEVEL =  2
+  MOLECULAR QUANTUM NUMBERS TAKEN FROM JLEVEL INPUT.  NLEVEL =  2
 
-  TARGET ENERGY LEVELS TAKEN FROM &BASIS (ELEVEL) INPUT
+  ENERGY LEVELS TAKEN FROM ELEVEL INPUT
 
   QUANTUM NUMBERS FOR INTERACTING PAIR:
-  EACH PAIR STATE IS LABELLED BY  2 QUANTUM LABELS
+  EACH PAIR STATE IS LABELLED BY  2 QUANTUM NUMBERS
   EACH CHANNEL FUNCTION IS FORMED BY COMBINING A PAIR STATE WITH A VALUE OF L.
   THE RESULTING BASIS SET IS ASYMPTOTICALLY DIAGONAL.
 
@@ -1193,7 +1143,7 @@
   POTENTIAL RETURNED IN UNITS OF EPSIL  =  1.0000000     CM-1
         CODED WITH R IN UNITS OF RM     =  1.0000000     ANGSTROM
 
-  ALL LENGTHS ARE IN UNITS OF ANGSTROM (  1.00000000 ANGSTROM ) UNLESS OTHERWISE STATED
+  ALL LENGTHS ARE IN UNITS OF ANGSTROM UNLESS OTHERWISE STATED
 
   IVCHK.  COMPLETED SUCCESSFULLY.
   INTERACTION MATRIX USES   1 BLOCKS OF VL ARRAY FOR R-DEPENDENT TERMS IN POTENTIAL
@@ -1260,10 +1210,9 @@
 
   INITIALIZATION DONE.  TIME WAS   0.00 CPU SECS.         9 WORDS OF STORAGE USED.
 
-  ================== Testing BOUND 2-channel particle in a box with finite boundary conditions: LDMD+ ==================
+  =================== Testing BOUND 2-channel particle in box, finite boundary conditions: LDMD+AIRY ===================
 
-  *******************************************  ANGULAR MOMENTUM JTOT  =   0  *******************************************
-  = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = 
+  *****************************  ANGULAR MOMENTUM JTOT  =   0   AND SYMMETRY BLOCK  =    2  ****************************
   **** WARNING:    2 OPEN CHANNELS DETECTED AT RMIN
 
   NODE COUNT =    0 AT MINIMUM ENERGY =  -1.000000000     CM-1  
@@ -1272,7 +1221,6 @@
   - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
   SEARCHING FOR INODE =    1 CORRESPONDING TO NODE COUNT =    1
-  **** WARNING:    1 OPEN CHANNEL  DETECTED AT RMIN
   **** WARNING:    1 OPEN CHANNEL  DETECTED AT RMIN
   **** WARNING:    1 OPEN CHANNEL  DETECTED AT RMIN
   **** WARNING:    1 OPEN CHANNEL  DETECTED AT RMIN
@@ -1291,7 +1239,6 @@
   **** WARNING:    1 OPEN CHANNEL  DETECTED AT RMIN
   **** WARNING:    1 OPEN CHANNEL  DETECTED AT RMIN
   **** WARNING:    1 OPEN CHANNEL  DETECTED AT RMIN
-  **** WARNING:    1 OPEN CHANNEL  DETECTED AT RMIN
 
   CONVERGED ON NODE NUMBER     2 AT                               ENERGY =   1.123361643     CM-1  
 
@@ -1305,14 +1252,12 @@
   **** WARNING:    1 OPEN CHANNEL  DETECTED AT RMIN
   **** WARNING:    1 OPEN CHANNEL  DETECTED AT RMIN
   **** WARNING:    1 OPEN CHANNEL  DETECTED AT RMIN
-  **** WARNING:    1 OPEN CHANNEL  DETECTED AT RMIN
 
   CONVERGED ON NODE NUMBER     3 AT                               ENERGY =   4.126240653     CM-1  
 
   - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
   SEARCHING FOR INODE =    4 CORRESPONDING TO NODE COUNT =    4
-  **** WARNING:    2 OPEN CHANNELS DETECTED AT RMIN
   **** WARNING:    2 OPEN CHANNELS DETECTED AT RMIN
   **** WARNING:    2 OPEN CHANNELS DETECTED AT RMIN
   **** WARNING:    2 OPEN CHANNELS DETECTED AT RMIN
@@ -1331,22 +1276,19 @@
   **** WARNING:    2 OPEN CHANNELS DETECTED AT RMIN
   **** WARNING:    2 OPEN CHANNELS DETECTED AT RMIN
   **** WARNING:    2 OPEN CHANNELS DETECTED AT RMIN
-  **** WARNING:    2 OPEN CHANNELS DETECTED AT RMIN
 
   CONVERGED ON NODE NUMBER     5 AT                               ENERGY =   6.123361644     CM-1  
-
-  ======================================================================================================================
 
 
   -- BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND --
  |                                                                            |
  |          Bound states of interacting pairs of atoms and molecules          |
  |                                                                            |
- |              Copyright (C) 2018 J. M. Hutson & C. R. Le Sueur              |
+ |              Copyright (C) 2019 J. M. Hutson & C. R. Le Sueur              |
  |                                                                            |
- |                               Version 2019.0 (beta)                        |
+ |                               Version 2019.0                               |
  |                                                                            |
- |                    This run used       0.05 cpu secs and                   |
- |                 64 of the allocated   1000000 words of storage             |
+ |                    This run used       0.04 cpu secs and                   |
+ |                 88 of the allocated   1000000 words of storage             |
  |                                                                            |
   -- BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND --

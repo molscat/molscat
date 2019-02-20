@@ -5,7 +5,7 @@
     RMIN   =    2.4, RMATCH =    3.6, RMAX   =  6.0,   IRMSET = 0,
     IPROPS =    5,   IPROPL =    5,   DR     =  0.03,
     JTOTL  =    0,   JTOTU  =    0,   IBFIX  =  2,
-    EMIN   = -180.0, EMAX   = -130.0, DTOL   =  1.D-8,
+    EMIN   = -180.0, EMAX   = -130.0, DTOL   =  1.E-8,
     NCONV  =    1,   ICON   =    1,   DRCON  =  0.3,
  /
 

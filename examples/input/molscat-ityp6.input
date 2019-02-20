@@ -5,7 +5,7 @@
     RMIN   =  0.73,  RMAX   =     6.0, STEPS  =  15.0,    IRMSET =   8,
     IPROPS =  6,     IPROPL =     9,   RVFAC  =   1.3,
     JTOTL  =  0,     JTOTU  = 99999,   OTOL   =   0.0001, DTOL   = 10.00,
-    EUNITS =  1,     NNRG   =     1,   ENERGY = 300.0,    TOLHI  =  1.D-4,
+    EUNITS =  1,     NNRG   =     1,   ENERGY = 300.0,    TOLHI  =  1.E-4,
  /
 
  &BASIS
@@ -23,5 +23,5 @@
 116.1429  3.88
 7.0 7.0
 1.233445 0.446167
-0.   0.1  1.10 1.40
+0.0  0.1  1.10 1.40
 0.78 0.58

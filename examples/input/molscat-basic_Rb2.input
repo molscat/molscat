@@ -1,14 +1,14 @@
  &INPUT
     LABEL  = '85Rb-85Rb scattering length in lowest (aa) channel',
-    URED   =  42.455894869D0,
+    URED   =  42.455894869,
     IPRINT =   6,
-    RMIN   =   3.0D0, RMID   =  21.0D0,  RMAX   = 15.0D3, IRMSET = 0,
-    IPROPS =   6,     DR     =   0.002,
-    IPROPL =   9,     TOLHI  =   1.0D-6,
-    JTOTL  =   8,     JTOTU  =   8,      IBFIX  =  2,
-    EUNITS =   2,     NNRG   =   1,      ENERGY =  1.D-7,
-                      DTOL   =   1.D-6,  MONQN  =  4, 4, 4, 4,
-    FLDMIN = 800.0,   FLDMAX = 900.0,    DFIELD =  1.0,
+    RMIN   =   3.0, RMID   =  21.0,   RMAX   = 15.0E3, IRMSET = 0,
+    IPROPS =   6,   DR     =   0.002,
+    IPROPL =   9,   TOLHIL =   1.E-7,
+    JTOTL  =   8,   JTOTU  =   8,     IBFIX  =  2,
+    EUNITS =   2,   NNRG   =   1,     ENERGY =  1.E-7,
+                    DTOL   =   1.E-6, MONQN  =  4, 4, 4, 4,
+    FLDMIN = 800.0, FLDMAX = 900.0,   DFIELD =  1.0,
  /
 
  &BASIS
@@ -20,7 +20,7 @@
     GSA    =  2.00231930,
     INUCA  =  5,
     HFSPLA = +3.035732440300,
-    GA     = -2.936400D-4,
+    GA     = -2.936400E-4,
     INUCB  = -1,
     LMAX   =  2,
  /
@@ -28,7 +28,7 @@
  &POTL
     MXLAM  =  3, LAMBDA =  1,  2,  3,
                  NTERM  = -1, -1,  2,
-                 NPOWER =         -3,                 0,
-                 A      =         -1.002320649155D0,  9.182916799D0,
-                 E      =                            -0.7196D0,
+                 NPOWER =         -3,               0,
+                 E      =                          -0.7196,
+                 A      =         -1.002320649155,  9.182916799,
  /

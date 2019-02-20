@@ -7,7 +7,7 @@
     JTOTL  =  0,   JTOTU  =  -1,
     NNRG   =  1,   ENERGY = 200.0,
     NLPRBR =  1,   LINE   =   6,7,6,7, IFEGEN =  1,
-    DTOL   = 10.0, OTOL   =   1.D-4,
+    DTOL   = 10.0, OTOL   =   1.E-4,
  /
 
  &BASIS

@@ -3,11 +3,11 @@
  |                Non-reactive quantum scattering calculations                |
  |                     on atomic and molecular collisions                     |
  |                                                                            |
- |              Copyright (C) 2018 J. M. Hutson & C. R. Le Sueur              |
+ |              Copyright (C) 2019 J. M. Hutson & C. R. Le Sueur              |
  |                                                                            |
- |                               Version 2019.0 (beta)                        |
+ |                               Version 2019.0                               |
  |                                                                            |
- |                       Run on 01 Feb 2019   at 10:21:52                     |
+ |                       Run on 18 Feb 2019   at 22:16:25                     |
  |                                                                            |
   ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
 
@@ -17,18 +17,16 @@
   the Free Software Foundation.
 
   Publications resulting from the use of this program should refer to
-  J. M. Hutson & C. R. Le Sueur, MOLSCAT computer code 2019.0 (beta)       
+  J. M. Hutson & C. R. Le Sueur, MOLSCAT computer code 2019.0              
   or to the published paper in Computer Physics Communications when available.
 
 
-  PHYSICAL CONSTANTS OBTAINED FROM NIST CODATA TABULATION OF 2014
+  USING CODATA 2014 RECOMMENDED VALUES OF FUNDAMENTAL PHYSICAL CONSTANTS
 
   MEMORY ALLOCATED TO MAIN WORKING ARRAY IS   1000000 (8-BYTE) WORDS (    7.63 MB)
   2 INTEGERS CAN BE STORED IN EACH WORD.
 
-  PRINT LEVEL = 11     OTHER PRINT CONTROLS  ISIGPR = 1
-
-  RUN LABEL = p-H2 + o-H2: potential of Zarur and Rabitz supplied by VRTP                     
+  PRINT LEVEL (IPRINT) = 11     OTHER PRINT CONTROLS  ISIGPR = 1
 
   REDUCED MASS FOR INTERACTION =   1.007940000 ATOMIC MASS UNITS (DALTONS)
 
@@ -36,14 +34,14 @@
 
   INTERACTION TYPE IS    LINEAR ROTOR - LINEAR ROTOR.  
 
-  TARGET/PROJECTILE ENERGY LEVELS TAKEN FROM &BASIS (JLEVEL) INPUT.  NLEVEL =  3
+  PAIR LEVEL QUANTUM NUMBERS TAKEN FROM JLEVEL INPUT.  NLEVEL =  3
 
-  ENERGY LEVELS COMPUTED FROM B(E) =   59.067000
+  ENERGY LEVELS OF ROTOR 1 OBTAINED FROM B(E) =   59.067000
 
-  PROJECTILE ENERGY LEVELS COMPUTED FROM B(E) =   59.067000
+  ENERGY LEVELS OF ROTOR 2 OBTAINED FROM B(E) =   59.067000
 
   QUANTUM NUMBERS FOR INTERACTING PAIR:
-  EACH PAIR STATE IS LABELLED BY  3 QUANTUM LABELS
+  EACH PAIR STATE IS LABELLED BY  3 QUANTUM NUMBERS
   EACH CHANNEL FUNCTION IS FORMED BY COMBINING A PAIR STATE WITH A VALUE OF L.
   THE RESULTING BASIS SET IS ASYMPTOTICALLY DIAGONAL.
 
@@ -165,9 +163,7 @@
 
   ============================ p-H2 + o-H2: potential of Zarur and Rabitz supplied by VRTP =============================
 
-  *******************************************  ANGULAR MOMENTUM JTOT  =   6  *******************************************
-
-  SYMMETRY BLOCK =   1
+  *****************************  ANGULAR MOMENTUM JTOT  =   6   AND SYMMETRY BLOCK  =    1  ****************************
 
   CPL3 (JAN 93).  JTOT-INDEPENDENT PARTS OF COUPLING MATRIX STORED.  NSTATE, MXLAM, IEX =   5   4   0
                  REQUIRED AND AVAILABLE STORAGE =       60   999188
@@ -189,8 +185,6 @@
         9           2          0         3         3             8             2       708.8040000
        10           4          2         1         2             8             3       472.5360000
        11           5          2         1         3             8             3       472.5360000
-
-  JTOT =    6,  SYMMETRY BLOCK =   1,  ENERGY(   1) =   700.00000000     CM-1
   INNER CLASSICAL TURNING POINT AT R =  0.7344
   RADIAL PROPAGATION WILL START AT R =  0.4242
 
@@ -274,29 +268,16 @@
     7    8 1.2342641865821E-003   1.6557767627091E-003   3.5130195020473E-002   3.6549200495845E-004
     8    8 9.9351391981286E-001  -2.4320435045890E-001   4.2546696804104E-002  -9.9584320974936E-001
 
-  * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =   6 AND SYMMETRY BLOCK =   1 * * * * * * *
+  * * * * * * * * * *  STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FROM LEVEL I TO LEVEL F  * * * * * * * * * *
+                       FOR JTOT =   6 AND SYMMETRY BLOCK =   1 AT ENERGY(  1) =  700.0000     CM-1
 
     F  I =      1              3
     1       3.42292E-01    1.43838E-03
     3       2.81148E-03    3.42742E+00
 
-  * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
+  FOR JTOT =    6, SYMMETRY BLOCK =  1, ENERGY(  1) =  700.0000    : MAX DIAG & OFF-DIAG =  3.43E+00 &   2.81E-03
 
-  FOR JTOT =    6, SYMMETRY BLOCK =  1, ENERGY(  1) =  700.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  3.43E+00 &   2.81E-03
-
-  * * * * * * * * * * * STATE-TO-STATE INTEGRAL CROSS SECTIONS ACCUMULATED FROM JTOT =   6 TO   6 * * * * * * * * * * * *
-
-    F  I =      1              3
-    1       3.42292E-01    1.43838E-03
-    3       2.81148E-03    3.42742E+00
-
-  * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
-
-  FINISHED JTOT =    6,  SYMMETRY BLOCK =   1,  ENERGY(   1) =  700.0000    
-
-  ======================================================================================================================
-
-  SYMMETRY BLOCK =   2
+  *****************************  ANGULAR MOMENTUM JTOT  =   6   AND SYMMETRY BLOCK  =    2  ****************************
 
   CHANNEL FUNCTION LIST:
 
@@ -318,8 +299,6 @@
        12           5          2         1         3             7             3       472.5360000
        13           2          0         3         3             9             2       708.8040000
        14           5          2         1         3             9             3       472.5360000
-
-  JTOT =    6,  SYMMETRY BLOCK =   2,  ENERGY(   1) =   700.00000000     CM-1
   INNER CLASSICAL TURNING POINT AT R =  0.7323
   RADIAL PROPAGATION WILL START AT R =  0.4238
 
@@ -441,29 +420,20 @@
     9   10 2.1347381279898E-003  -2.2077473551877E-002   4.5759409032018E-002  -6.3886315459764E-003
    10   10 9.9410157154064E-001  -8.6487051500910E-002   8.5342022899091E-001  -5.1553417373607E-001
 
-  * * * * * * * STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FOR JTOT =   6 AND SYMMETRY BLOCK =   2 * * * * * * *
+  * * * * * * * * * *  STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FROM LEVEL I TO LEVEL F  * * * * * * * * * *
+                       FOR JTOT =   6 AND SYMMETRY BLOCK =   2 AT ENERGY(  1) =  700.0000     CM-1
 
     F  I =      1              3
     1       1.94114E+00    2.07216E-03
     3       4.05025E-03    2.96884E+00
 
-  * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
+  FOR JTOT =    6, SYMMETRY BLOCK =  2, ENERGY(  1) =  700.0000    : MAX DIAG & OFF-DIAG =  2.97E+00 &   4.05E-03
 
-  FOR JTOT =    6, SYMMETRY BLOCK =  2, ENERGY(  1) =  700.0000    :  MAXIMUM DIAGONAL & OFF-DIAGONAL =  2.97E+00 &   4.05E-03
-
-  * * * * * * * * * * * STATE-TO-STATE INTEGRAL CROSS SECTIONS ACCUMULATED FROM JTOT =   6 TO   6 * * * * * * * * * * * *
+  * * * * * * * * * * STATE-TO-STATE INTEGRAL CROSS SECTIONS: ACCUMULATED FROM JTOT =   6 TO   6  * * * * * * * * * *
 
     F  I =      1              3
     1       2.28343E+00    3.51054E-03
     3       6.86173E-03    6.39626E+00
-
-  * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
-
-  FINISHED JTOT =    6,  SYMMETRY BLOCK =   2,  ENERGY(   1) =  700.0000    
-
-  ======================================================================================================================
-
-  * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
 
   ============================ p-H2 + o-H2: potential of Zarur and Rabitz supplied by VRTP =============================
 
@@ -492,11 +462,11 @@
  |                Non-reactive quantum scattering calculations                |
  |                     on atomic and molecular collisions                     |
  |                                                                            |
- |              Copyright (C) 2018 J. M. Hutson & C. R. Le Sueur              |
+ |              Copyright (C) 2019 J. M. Hutson & C. R. Le Sueur              |
  |                                                                            |
- |                               Version 2019.0 (beta)                        |
+ |                               Version 2019.0                               |
  |                                                                            |
- |                    This run used       0.07 cpu secs and                   |
+ |                    This run used       0.09 cpu secs and                   |
  |               1764 of the allocated   1000000 words of storage             |
  |                                                                            |
   ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---

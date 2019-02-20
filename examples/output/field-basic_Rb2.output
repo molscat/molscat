@@ -1,17 +1,15 @@
   -- FIELD ------ FIELD ------ FIELD ------ FIELD ------ FIELD ------ FIELD --
-
  |                                                                            |
  |          Bound states of interacting pairs of atoms and molecules          |
  |                      as a function of external field                       |
  |                                                                            |
- |              Copyright (C) 2018 J. M. Hutson & C. R. Le Sueur              |
+ |              Copyright (C) 2019 J. M. Hutson & C. R. Le Sueur              |
  |                                                                            |
- |                               Version 2019.0 (beta)                        |
+ |                               Version 2019.0                               |
  |                                                                            |
- |                       Run on 31 Jan 2019   at 23:54:02                     |
+ |                       Run on 18 Feb 2019   at 22:19:12                     |
  |                                                                            |
   -- FIELD ------ FIELD ------ FIELD ------ FIELD ------ FIELD ------ FIELD --
-
 
 
   This program is free software: you can redistribute it and/or modify it under
@@ -19,17 +17,15 @@
   the Free Software Foundation.
 
   Publications resulting from the use of this program should refer to
-  J. M. Hutson & C. R. Le Sueur, FIELD computer code 2019.0 (beta)       
+  J. M. Hutson & C. R. Le Sueur, FIELD computer code 2019.0              
   or to the published paper in Computer Physics Communications when available.
 
 
-  PHYSICAL CONSTANTS OBTAINED FROM NIST CODATA TABULATION OF 2014
+  USING CODATA 2014 RECOMMENDED VALUES OF FUNDAMENTAL PHYSICAL CONSTANTS
 
   MEMORY ALLOCATED TO MAIN WORKING ARRAY IS   1000000 (8-BYTE) WORDS (    7.63 MB)
 
-  PRINT LEVEL =  6
-
-  RUN LABEL = 85Rb-85Rb: positions of bound states on aa threshold                            
+  PRINT LEVEL (IPRINT) =  6
 
   REDUCED MASS FOR INTERACTION =  42.455894869 ATOMIC MASS UNITS (DALTONS)
 
@@ -269,8 +265,8 @@
 
   ================================ 85Rb-85Rb: positions of bound states on aa threshold ================================
 
-  *******************************************  ANGULAR MOMENTUM JTOT  =   8  *******************************************
-  IBLOCK =  2 SELECTS PARITY  1
+  *****************************  ANGULAR MOMENTUM JTOT  =   8   AND SYMMETRY BLOCK  =    2  ****************************
+  SYMMETRY BLOCK =   2 SELECTS PARITY  1
   MTOT =  8/2
   BASIS SET GENERATED FOR TWO IDENTICAL BOSONS
 
@@ -307,7 +303,7 @@
        28          78          1         5         1         5             2
   = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = 
 
-  ENERGY      1 =   0.000000000     MHZ     
+  ENERGY #    1 =   0.000000000     MHZ     
 
   NODE COUNT = 1471 AT MINIMUM MAGNETIC Z FIELD =   800.0000000     GAUSS 
   NODE COUNT = 1468 AT MAXIMUM MAGNETIC Z FIELD =   900.0000000     GAUSS 
@@ -319,21 +315,19 @@
 
   SEARCHING FOR INODE =    1 CORRESPONDING TO NODE COUNT = 1469
 
-  PROPAGATION   1:                                      MAGNETIC Z FIELD =   850.0000000     GAUSS 
+  PROPAGATION   1: - - - - - - - - - - - - - - - - - -  MAGNETIC Z FIELD =   850.0000000     GAUSS 
 
-  PROPAGATION   2:                                      MAGNETIC Z FIELD =   852.0134291     GAUSS 
+  PROPAGATION   2: - - - - - - - - - - - - - - - - - -  MAGNETIC Z FIELD =   852.0134291     GAUSS 
 
-  PROPAGATION   3:                                      MAGNETIC Z FIELD =   851.8815106     GAUSS 
+  PROPAGATION   3: - - - - - - - - - - - - - - - - - -  MAGNETIC Z FIELD =   851.8815111     GAUSS 
 
-  PROPAGATION   4:                                      MAGNETIC Z FIELD =   851.8811666     GAUSS 
+  PROPAGATION   4: - - - - - - - - - - - - - - - - - -  MAGNETIC Z FIELD =   851.8811661     GAUSS 
 
-  PROPAGATION   5:                                      MAGNETIC Z FIELD =   851.8811663     GAUSS 
+  CONVERGED ON NODE NUMBER  1469 AT                     MAGNETIC Z FIELD =   851.8811658     GAUSS 
 
-  CONVERGED ON NODE NUMBER  1469 AT                     MAGNETIC Z FIELD =   851.8811663     GAUSS 
+  LAST STEP WAS                                                            -2.7564090033E-07 GAUSS 
 
-  LAST STEP WAS                                                            -3.1985109672E-07 GAUSS 
-
-  SMALLEST EIGENVALUE OF MATCHING MATRIX IS NUMBER  8 =  1.15441E-09
+  SMALLEST EIGENVALUE OF MATCHING MATRIX IS NUMBER  8 =  2.30809E-09
 
   WITH PRINCIPAL EIGENVECTOR COMPONENTS
   CHAN     VEC    VEC**2   L   QUANTUM NUMBERS
@@ -347,25 +341,23 @@
 
   SEARCHING FOR INODE =    2 CORRESPONDING TO NODE COUNT = 1470
 
-  PROPAGATION   1:                                      MAGNETIC Z FIELD =   825.0000000     GAUSS 
+  PROPAGATION   1: - - - - - - - - - - - - - - - - - -  MAGNETIC Z FIELD =   825.0000000     GAUSS 
 
-  PROPAGATION   2:                                      MAGNETIC Z FIELD =   812.5000000     GAUSS 
+  PROPAGATION   2: - - - - - - - - - - - - - - - - - -  MAGNETIC Z FIELD =   812.5000000     GAUSS 
 
-  PROPAGATION   3:                                      MAGNETIC Z FIELD =   818.7500000     GAUSS 
+  PROPAGATION   3: - - - - - - - - - - - - - - - - - -  MAGNETIC Z FIELD =   818.7500000     GAUSS 
 
-  PROPAGATION   4:                                      MAGNETIC Z FIELD =   819.5732570     GAUSS 
+  PROPAGATION   4: - - - - - - - - - - - - - - - - - -  MAGNETIC Z FIELD =   819.5732570     GAUSS 
 
-  PROPAGATION   5:                                      MAGNETIC Z FIELD =   819.5674106     GAUSS 
+  PROPAGATION   5: - - - - - - - - - - - - - - - - - -  MAGNETIC Z FIELD =   819.5674106     GAUSS 
 
-  PROPAGATION   6:                                      MAGNETIC Z FIELD =   819.5674043     GAUSS 
-
-  PROPAGATION   7:                                      MAGNETIC Z FIELD =   819.5674043     GAUSS 
+  PROPAGATION   6: - - - - - - - - - - - - - - - - - -  MAGNETIC Z FIELD =   819.5674043     GAUSS 
 
   CONVERGED ON NODE NUMBER  1470 AT                     MAGNETIC Z FIELD =   819.5674043     GAUSS 
 
-  LAST STEP WAS                                                             2.5859208108E-09 GAUSS 
+  LAST STEP WAS                                                            -8.7538865046E-11 GAUSS 
 
-  SMALLEST EIGENVALUE OF MATCHING MATRIX IS NUMBER  9 =  2.43077E-11
+  SMALLEST EIGENVALUE OF MATCHING MATRIX IS NUMBER  9 =  7.60281E-13
 
   WITH PRINCIPAL EIGENVECTOR COMPONENTS
   CHAN     VEC    VEC**2   L   QUANTUM NUMBERS
@@ -377,19 +369,17 @@
 
   SEARCHING FOR INODE =    3 CORRESPONDING TO NODE COUNT = 1471
 
-  PROPAGATION   1:                                      MAGNETIC Z FIELD =   806.2500000     GAUSS 
+  PROPAGATION   1: - - - - - - - - - - - - - - - - - -  MAGNETIC Z FIELD =   806.2500000     GAUSS 
 
-  PROPAGATION   2:                                      MAGNETIC Z FIELD =   810.9617084     GAUSS 
+  PROPAGATION   2: - - - - - - - - - - - - - - - - - -  MAGNETIC Z FIELD =   810.9617084     GAUSS 
 
-  PROPAGATION   3:                                      MAGNETIC Z FIELD =   810.9519395     GAUSS 
-
-  PROPAGATION   4:                                      MAGNETIC Z FIELD =   810.9519396     GAUSS 
+  PROPAGATION   3: - - - - - - - - - - - - - - - - - -  MAGNETIC Z FIELD =   810.9519395     GAUSS 
 
   CONVERGED ON NODE NUMBER  1471 AT                     MAGNETIC Z FIELD =   810.9519396     GAUSS 
 
-  LAST STEP WAS                                                             6.5738390731E-08 GAUSS 
+  LAST STEP WAS                                                             6.6840470936E-08 GAUSS 
 
-  SMALLEST EIGENVALUE OF MATCHING MATRIX IS NUMBER  9 =  2.19558E-12
+  SMALLEST EIGENVALUE OF MATCHING MATRIX IS NUMBER  9 = -5.85935E-10
 
   WITH PRINCIPAL EIGENVECTOR COMPONENTS
   CHAN     VEC    VEC**2   L   QUANTUM NUMBERS
@@ -398,21 +388,17 @@
   15    0.3449    0.1190   2   1   3   1   1   0
   16   -0.2361    0.0558   2  -1   5  -1   3   0
 
-  ======================================================================================================================
-
 
   -- FIELD ------ FIELD ------ FIELD ------ FIELD ------ FIELD ------ FIELD --
-
  |                                                                            |
  |          Bound states of interacting pairs of atoms and molecules          |
  |                      as a function of external field                       |
  |                                                                            |
- |              Copyright (C) 2018 J. M. Hutson & C. R. Le Sueur              |
+ |              Copyright (C) 2019 J. M. Hutson & C. R. Le Sueur              |
  |                                                                            |
- |                               Version 2019.0 (beta)                        |
+ |                               Version 2019.0                               |
  |                                                                            |
- |                    This run used      31.34 cpu secs and                   |
- |               7467 of the allocated   1000000 words of storage             |
+ |                    This run used      24.50 cpu secs and                   |
+ |               7523 of the allocated   1000000 words of storage             |
  |                                                                            |
   -- FIELD ------ FIELD ------ FIELD ------ FIELD ------ FIELD ------ FIELD --
-

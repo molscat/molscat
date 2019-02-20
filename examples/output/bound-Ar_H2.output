@@ -2,11 +2,11 @@
  |                                                                            |
  |          Bound states of interacting pairs of atoms and molecules          |
  |                                                                            |
- |              Copyright (C) 2018 J. M. Hutson & C. R. Le Sueur              |
+ |              Copyright (C) 2019 J. M. Hutson & C. R. Le Sueur              |
  |                                                                            |
- |                               Version 2019.0 (beta)                        |
+ |                               Version 2019.0                               |
  |                                                                            |
- |                       Run on 01 Feb 2019   at 00:12:22                     |
+ |                       Run on 18 Feb 2019   at 22:37:51                     |
  |                                                                            |
   -- BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND --
 
@@ -16,17 +16,15 @@
   the Free Software Foundation.
 
   Publications resulting from the use of this program should refer to
-  J. M. Hutson & C. R. Le Sueur, BOUND computer code 2019.0 (beta)       
+  J. M. Hutson & C. R. Le Sueur, BOUND computer code 2019.0              
   or to the published paper in Computer Physics Communications when available.
 
 
-  PHYSICAL CONSTANTS OBTAINED FROM NIST CODATA TABULATION OF 2014
+  USING CODATA 2014 RECOMMENDED VALUES OF FUNDAMENTAL PHYSICAL CONSTANTS
 
   MEMORY ALLOCATED TO MAIN WORKING ARRAY IS   1000000 (8-BYTE) WORDS (    7.63 MB)
 
-  PRINT LEVEL =  2
-
-  RUN LABEL = ground state for Ar-H2 v=1 (LeRoy-Hutson TT3(6,8))                              
+  PRINT LEVEL (IPRINT) =  2
 
   REDUCED MASS FOR INTERACTION =   1.918865040 ATOMIC MASS UNITS (DALTONS)
 
@@ -39,12 +37,12 @@
   ITYPE = 10*N+7 OPTION. ALL POTENTIAL MATRICES WILL BE CONSTRUCTED FROM POTENTIAL TERMS IN WHICH DIATOM STRETCHING
   DEPENDENCE IS PROPERLY AVERAGED OVER RELEVANT (V,J) AND (V',J') DIATOM INTERNAL STATES.
 
-  TARGET ROTATIONAL LEVELS TAKEN FROM &BASIS (JLEVEL) INPUT.  NLEVEL =  3
+  MOLECULAR QUANTUM NUMBERS TAKEN FROM JLEVEL INPUT.  NLEVEL =  3
 
-  TARGET ENERGY LEVELS TAKEN FROM &BASIS (ELEVEL) INPUT
+  ENERGY LEVELS TAKEN FROM ELEVEL INPUT
 
   QUANTUM NUMBERS FOR INTERACTING PAIR:
-  EACH PAIR STATE IS LABELLED BY  2 QUANTUM LABELS
+  EACH PAIR STATE IS LABELLED BY  2 QUANTUM NUMBERS
   EACH CHANNEL FUNCTION IS FORMED BY COMBINING A PAIR STATE WITH A VALUE OF L.
   THE RESULTING BASIS SET IS ASYMPTOTICALLY DIAGONAL.
 
@@ -64,42 +62,42 @@
   DAMPING FUNCTION IS:  1 - ] SUM(K=0,N) (BETA*R)**K/K! ( EXP(-BETA*R)
 
                 LAMBDA   K   MM   BETA/A-1   EPS/CM-1   REQ/A     C6(L,K)      C8(L,K)     A(L,K)
-                 --------------------------------------------------------------------------------
-                    0     0    0    3.5815    51.0690  3.581710   134500.00  1202346.51  18778228.93
-                    0     1    0    3.5815    33.5700  3.765600   115800.00  1077813.79  22164141.65
-                    0     2    0    3.5815     0.8100  4.556908     3051.00   216489.95   8233820.59
-                    0     3                                       -25270.00
-                    2     0    0    3.5815     6.0812  3.746160    13500.00   319950.59   4212301.98
-                    2     1    0    3.5815    11.7100  3.938493    29600.00   948286.77  15411405.70
-                    2     2    0    3.5815     4.0351  4.141310     5705.00   628336.94  11199126.43
-                    2     3                                       -10395.00
-                 --------------------------------------------------------------------------------
+                ------------------------------------------------------------------------------------
+                   0     0    0    3.5815    51.0690  3.581710   134500.00  1202346.51  18778228.93
+                   0     1    0    3.5815    33.5700  3.765600   115800.00  1077813.79  22164141.65
+                   0     2    0    3.5815     0.8100  4.556908     3051.00   216489.95   8233820.59
+                   0     3                                       -25270.00
+                   2     0    0    3.5815     6.0812  3.746160    13500.00   319950.59   4212301.98
+                   2     1    0    3.5815    11.7100  3.938493    29600.00   948286.77  15411405.70
+                   2     2    0    3.5815     4.0351  4.141310     5705.00   628336.94  11199126.43
+                   2     3                                       -10395.00
+                ------------------------------------------------------------------------------------
 
-   V = 1  J = 0   VIBRATIONALLY AVERAGED POTENTIAL:  LAMBDA = 0   142184.62  1284063.40  20630283.24
+   V = 1, J = 0   VIBRATIONALLY AVERAGED POTENTIAL:  LAMBDA = 0   142184.62  1284063.40  20630283.24
                                                               2    15660.09   411718.05   5748506.30
-         V = 1,  J = 0  DIAGONAL EXPECTATION VALUES  1.00000000  0.06670190  0.04538160  0.00704060
+   V = 1, J = 0   DIAGONAL EXPECTATION VALUES        1.00000000  0.06670190  0.04538160  0.00704060
 
-         (V= 1,J= 0: V'= 1,J'= 2) POTENTIAL MATRIX:  LAMBDA = 0   142371.82  1285985.16  20674589.71
-                                                              2    15720.16   413990.57   5786375.05
-          (V= 1,J= 0: V'= 1,J'= 2)  MATRIX ELEMENTS  0.99944470  0.06902550  0.04577430  0.00737250
+         (V = 1, J = 0: V' = 1, J' = 2) POTENTIAL MATRIX:  LAMBDA = 0   142371.82  1285985.16  20674589.71
+                                                                    2    15720.16   413990.57   5786375.05
+         (V = 1, J = 0: V' = 1, J' = 2) MATRIX ELEMENTS    0.99944470  0.06902550  0.04577430  0.00737250
 
-         (V= 1,J= 0: V'= 1,J'= 4) POTENTIAL MATRIX:  LAMBDA = 0   142212.61  1285113.34  20692558.65
-                                                              2    15795.48   417651.39   5852132.86
-          (V= 1,J= 0: V'= 1,J'= 4)  MATRIX ELEMENTS  0.99394260  0.07418570  0.04661440  0.00813590
+         (V = 1, J = 0: V' = 1, J' = 4) POTENTIAL MATRIX:  LAMBDA = 0   142212.61  1285113.34  20692558.65
+                                                                    2    15795.48   417651.39   5852132.86
+         (V = 1, J = 0: V' = 1, J' = 4) MATRIX ELEMENTS    0.99394260  0.07418570  0.04661440  0.00813590
 
-   V = 1  J = 2   VIBRATIONALLY AVERAGED POTENTIAL:  LAMBDA = 0   142713.93  1289303.12  20741153.12
+   V = 1, J = 2   VIBRATIONALLY AVERAGED POTENTIAL:  LAMBDA = 0   142713.93  1289303.12  20741153.12
                                                               2    15796.81   416689.36   5830114.04
-         V = 1,  J = 2  DIAGONAL EXPECTATION VALUES  1.00000000  0.07139760  0.04620670  0.00771210
+   V = 1, J = 2   DIAGONAL EXPECTATION VALUES        1.00000000  0.07139760  0.04620670  0.00771210
 
-         (V= 1,J= 2: V'= 1,J'= 4) POTENTIAL MATRIX:  LAMBDA = 0   142911.96  1291651.76  20810517.14
-                                                              2    15910.52   421340.48   5909536.78
-          (V= 1,J= 2: V'= 1,J'= 4)  MATRIX ELEMENTS  0.99705090  0.07667910  0.04713980  0.00849440
+         (V = 1, J = 2: V' = 1, J' = 4) POTENTIAL MATRIX:  LAMBDA = 0   142911.96  1291651.76  20810517.14
+                                                                    2    15910.52   421340.48   5909536.78
+         (V = 1, J = 2: V' = 1, J' = 4) MATRIX ELEMENTS    0.99705090  0.07667910  0.04713980  0.00849440
 
-   V = 1  J = 4   VIBRATIONALLY AVERAGED POTENTIAL:  LAMBDA = 0   143937.93  1301466.41  20999159.62
+   V = 1, J = 4   VIBRATIONALLY AVERAGED POTENTIAL:  LAMBDA = 0   143937.93  1301466.41  20999159.62
                                                               2    16113.60   428303.35   6020920.36
-         V = 1,  J = 4  DIAGONAL EXPECTATION VALUES  1.00000000  0.08226420  0.04829050  0.00932330
+   V = 1, J = 4   DIAGONAL EXPECTATION VALUES        1.00000000  0.08226420  0.04829050  0.00932330
 
-  ALL LENGTHS ARE IN UNITS OF ANGSTROM (  1.00000000 ANGSTROM ) UNLESS OTHERWISE STATED
+  ALL LENGTHS ARE IN UNITS OF ANGSTROM UNLESS OTHERWISE STATED
 
   INTERACTION MATRIX USES   3 BLOCKS OF VL ARRAY FOR R-DEPENDENT TERMS IN POTENTIAL
 
@@ -165,8 +163,7 @@
 
   ================================= ground state for Ar-H2 v=1 (LeRoy-Hutson TT3(6,8)) =================================
 
-  *******************************************  ANGULAR MOMENTUM JTOT  =   1  *******************************************
-  = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = 
+  *****************************  ANGULAR MOMENTUM JTOT  =   1   AND SYMMETRY BLOCK  =    1  ****************************
   SCRATCH FILE OPENED ON UNIT           30
 
   NODE COUNT =    0 AT MINIMUM ENERGY =   4460.000000     CM-1  
@@ -183,24 +180,22 @@
 
   ENERGY CONVERGED: E =   4478.290754     CM-1 FOR DR =  8.000E-02
 
-  FOR INODE =    1, RICHARDSON EXTRAPOLATION BASED ON ERROR PROPORTIONAL TO DR**4
+  FOR INODE =    1, RICHARDSON EXTRAPOLATION BASED ON ERROR PROPORTIONAL TO DR**4 FOR IPROPS =  6
   GIVES EXTRAPOLATED ENERGY =                                                4478.290883     CM-1
   THIS IS THE BEST AVAILABLE EXTRAPOLATED VALUE FROM THIS SET OF CALCULATIONS.
 
   - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
-
-  ======================================================================================================================
 
 
   -- BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND --
  |                                                                            |
  |          Bound states of interacting pairs of atoms and molecules          |
  |                                                                            |
- |              Copyright (C) 2018 J. M. Hutson & C. R. Le Sueur              |
+ |              Copyright (C) 2019 J. M. Hutson & C. R. Le Sueur              |
  |                                                                            |
- |                               Version 2019.0 (beta)                        |
+ |                               Version 2019.0                               |
  |                                                                            |
  |                    This run used       0.01 cpu secs and                   |
- |                 99 of the allocated   1000000 words of storage             |
+ |                103 of the allocated   1000000 words of storage             |
  |                                                                            |
   -- BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND --

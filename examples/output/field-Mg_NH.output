@@ -1,17 +1,15 @@
   -- FIELD ------ FIELD ------ FIELD ------ FIELD ------ FIELD ------ FIELD --
-
  |                                                                            |
  |          Bound states of interacting pairs of atoms and molecules          |
  |                      as a function of external field                       |
  |                                                                            |
- |              Copyright (C) 2018 J. M. Hutson & C. R. Le Sueur              |
+ |              Copyright (C) 2019 J. M. Hutson & C. R. Le Sueur              |
  |                                                                            |
- |                               Version 2019.0 (beta)                        |
+ |                               Version 2019.0                               |
  |                                                                            |
- |                       Run on 01 Feb 2019   at 00:15:50                     |
+ |                       Run on 18 Feb 2019   at 22:38:43                     |
  |                                                                            |
   -- FIELD ------ FIELD ------ FIELD ------ FIELD ------ FIELD ------ FIELD --
-
 
 
   This program is free software: you can redistribute it and/or modify it under
@@ -19,25 +17,23 @@
   the Free Software Foundation.
 
   Publications resulting from the use of this program should refer to
-  J. M. Hutson & C. R. Le Sueur, FIELD computer code 2019.0 (beta)       
+  J. M. Hutson & C. R. Le Sueur, FIELD computer code 2019.0              
   or to the published paper in Computer Physics Communications when available.
 
 
-  PHYSICAL CONSTANTS OBTAINED FROM NIST CODATA TABULATION OF 2014
+  USING CODATA 2014 RECOMMENDED VALUES OF FUNDAMENTAL PHYSICAL CONSTANTS
 
   MEMORY ALLOCATED TO MAIN WORKING ARRAY IS   1000000 (8-BYTE) WORDS (    7.63 MB)
 
-  PRINT LEVEL =  3
-
-  RUN LABEL = ITYP = 9: Mg + NH in magnetic field; bound states and threshold crossings       
+  PRINT LEVEL (IPRINT) =  3
 
   REDUCED MASS FOR INTERACTION =   9.232679959 ATOMIC MASS UNITS (DALTONS)
 
   ======================================================================================================================
 
   BASIS SETS USE DIATOM SPIN = 1
-                 NMAX =  2
-                 LMAX =  8
+                        NMAX =  2
+                        LMAX =  8
 
   BASIS SET IS <COUPLED>, OFF-DIAGONAL TERMS INCLUDED
 
@@ -119,7 +115,7 @@
 
   POTENTIAL RETURNED IN UNITS OF EPSIL  =  1.0000000     CM-1
 
-  ALL LENGTHS ARE IN UNITS OF ANGSTROM (  1.00000000 ANGSTROM ) UNLESS OTHERWISE STATED
+  ALL LENGTHS ARE IN UNITS OF ANGSTROM UNLESS OTHERWISE STATED
 
   INTERACTION MATRIX USES   7 BLOCKS OF VL ARRAY FOR R-DEPENDENT TERMS IN POTENTIAL
                             4                    FOR CONSTANT    TERMS IN POTENTIAL
@@ -159,8 +155,8 @@
   M. H. ALEXANDER AND D. E. MANOLOPOULOS,  J. CHEM. PHYS. 86, 2044 (1987).
 
   PROPAGATION STEP SIZE DETERMINED USING DR =  1.000E-02
-  STEP SIZES ADJUSTED TO MAINTAIN APPROXIMATE ACCURACY VIA PERTURBATION THEORY
-  WITH TOLHI =  1.00E-07 AND POWR =   3.0    
+  STEP SIZE SCALES AS R**1.33
+  STEP SIZE MAY BE ADJUSTED SLIGHTLY SO THAT RANGE IS A WHOLE NUMBER OF STEPS
 
   LOG-DERIVATIVE MATRIX INITIALISED IN THE LOCAL EIGENBASIS AT RMAX IN THE INWARD PROPAGATION PART
   LOCALLY CLOSED CHANNELS INITIALISED WITH A WKB BOUNDARY CONDITION
@@ -202,14 +198,14 @@
 
   ===================== ITYP = 9: Mg + NH in magnetic field; bound states and threshold crossings ======================
 
-  *******************************************  ANGULAR MOMENTUM JTOT  =  -1  *******************************************
+  *****************************  ANGULAR MOMENTUM JTOT  =  -1   AND SYMMETRY BLOCK  =    2  ****************************
 
   BASIS SET FOR MTOT = -1, PARITY = (-1)**1
   * * * NOTE.  FOR JTOT =  -1,  ALL COUPLING COEFFICIENTS ARE 0.0 FOR POTENTIAL SYMMETRY   6
   * * * NOTE.  FOR JTOT =  -1,  ALL COUPLING COEFFICIENTS ARE 0.0 FOR POTENTIAL SYMMETRY   7
   = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = 
 
-  ENERGY      1 =   0.000000000     MHZ     
+  ENERGY #    1 =   0.000000000     MHZ     
 
   NODE COUNT =  170 AT MINIMUM MAGNETIC Z FIELD =   1.000000000     GAUSS 
   NODE COUNT =  169 AT MAXIMUM MAGNETIC Z FIELD =   400.0000000     GAUSS 
@@ -221,10 +217,10 @@
 
   SEARCHING FOR INODE =    1 CORRESPONDING TO NODE COUNT =  170
 
-  CONVERGED ON NODE NUMBER   170 AT                     MAGNETIC Z FIELD =   387.2559270     GAUSS 
+  CONVERGED ON NODE NUMBER   170 AT                     MAGNETIC Z FIELD =   387.2558555     GAUSS 
   = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = 
 
-  ENERGY      2 =  -20.00000000     MHZ     
+  ENERGY #    2 =  -20.00000000     MHZ     
 
   NODE COUNT =  170 AT MINIMUM MAGNETIC Z FIELD =   1.000000000     GAUSS 
   NODE COUNT =  169 AT MAXIMUM MAGNETIC Z FIELD =   400.0000000     GAUSS 
@@ -236,10 +232,10 @@
 
   SEARCHING FOR INODE =    1 CORRESPONDING TO NODE COUNT =  170
 
-  CONVERGED ON NODE NUMBER   170 AT                     MAGNETIC Z FIELD =   379.2508044     GAUSS 
+  CONVERGED ON NODE NUMBER   170 AT                     MAGNETIC Z FIELD =   379.2507306     GAUSS 
   = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = 
 
-  ENERGY      3 =  -40.00000000     MHZ     
+  ENERGY #    3 =  -40.00000000     MHZ     
 
   NODE COUNT =  170 AT MINIMUM MAGNETIC Z FIELD =   1.000000000     GAUSS 
   NODE COUNT =  169 AT MAXIMUM MAGNETIC Z FIELD =   400.0000000     GAUSS 
@@ -251,23 +247,19 @@
 
   SEARCHING FOR INODE =    1 CORRESPONDING TO NODE COUNT =  170
 
-  CONVERGED ON NODE NUMBER   170 AT                     MAGNETIC Z FIELD =   371.1508964     GAUSS 
-
-  ======================================================================================================================
+  CONVERGED ON NODE NUMBER   170 AT                     MAGNETIC Z FIELD =   371.1508192     GAUSS 
 
 
   -- FIELD ------ FIELD ------ FIELD ------ FIELD ------ FIELD ------ FIELD --
-
  |                                                                            |
  |          Bound states of interacting pairs of atoms and molecules          |
  |                      as a function of external field                       |
  |                                                                            |
- |              Copyright (C) 2018 J. M. Hutson & C. R. Le Sueur              |
+ |              Copyright (C) 2019 J. M. Hutson & C. R. Le Sueur              |
  |                                                                            |
- |                               Version 2019.0 (beta)                        |
+ |                               Version 2019.0                               |
  |                                                                            |
- |                    This run used     135.43 cpu secs and                   |
- |             116873 of the allocated   1000000 words of storage             |
+ |                    This run used     146.67 cpu secs and                   |
+ |             117473 of the allocated   1000000 words of storage             |
  |                                                                            |
   -- FIELD ------ FIELD ------ FIELD ------ FIELD ------ FIELD ------ FIELD --
-

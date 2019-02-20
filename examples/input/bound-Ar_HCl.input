@@ -5,7 +5,7 @@
     RMIN   =    2.7, RMATCH =    4.0, RMAX   =  7.6,   IRMSET = 0,
     IPROPS =    6,   IPROPL =    6,   DR     =  0.04,
     JTOTL  =    0,   JTOTU  =    1,
-    EMIN   = -120.0, EMAX   =  -80.0, DTOL   =  1.D-8,
+    EMIN   = -120.0, EMAX   =  -80.0, DTOL   =  1.E-8,
     LASTIN =    0,
  /
 
@@ -97,10 +97,10 @@
     IPRINT =    3,
     RMIN   =    2.7, RMATCH =    4.0,     RMAX   =  7.6,    IRMSET = 0,
     IPROPS =    6,   IPROPL =    6,       DR     =  0.04,
-    JTOTL  =    0,   JTOTU  =    1,       IBFIX  = 1, IBHI   = 2,
-    EMIN   = -120.0, EMAX   =  -80.0,     DTOL   =  1.D-8,
+    JTOTL  =    0,   JTOTU  =    1,       IBFIX  =  1,      IBHI   = 2,
+    EMIN   = -120.0, EMAX   =  -80.0,     DTOL   =  1.E-8,
     NPERT  =    2,   IPPERT =    3,1,     NPOW   =  0,2,
-                     DELTA  =    2*1.D-3, FACTOR =  2*1.D0,
+                     DELTA  =    2*1.E-3, FACTOR =  2*1.0,
  /
 
  &BASIS
@@ -110,8 +110,8 @@
  /
 
  &POTL
-    MXLAM  = 9,
-    LAMBDA = 0, 1, 2, 3, 4, 5, 6, 7, 8,
+    MXLAM  =  9,
+    LAMBDA =  0, 1, 2, 3, 4, 5, 6, 7, 8,
     LVRTP  = .TRUE.,
     NPT    = 12,
  /
