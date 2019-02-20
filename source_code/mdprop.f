@@ -3,7 +3,7 @@
      2                  Y14,Y23,DIAG,W,W2,W3,
      3                  RSTART,RSTOP,NSTEP,DR,NODES,IREC,WAVE,
      4                  ERED,RMLMDA,IPRINT)
-C  Copyright (C) 2018 J. M. Hutson & C. R. Le Sueur
+C  Copyright (C) 2019 J. M. Hutson & C. R. Le Sueur
 C  Distributed under the GNU General Public License, version 3
 C
 C  ROUTINE ORIGINALLY BY DE Manolopoulos, 1986.

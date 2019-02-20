@@ -1,5 +1,5 @@
       SUBROUTINE  VINIT(II,RM,RESULT)
-C  Copyright (C) 2018 J. M. Hutson & C. R. Le Sueur
+C  Copyright (C) 2019 J. M. Hutson & C. R. Le Sueur
 C  Distributed under the GNU General Public License, version 3
 C -------------------------------------------------------
       IMPLICIT DOUBLE PRECISION (A-H,O-Z)
@@ -11,9 +11,8 @@ C -------------------------------------------------------
       INTEGER, ALLOCATABLE:: NRA(:)
       LOGICAL LFIRST
       CHARACTER(80) FILNAM
-      COMMON /PES_DATA/ LMAX
 
-      DATA LFIRST/.TRUE./
+      DATA LFIRST /.TRUE./
       DATA FILNAM /'data/pot-Mg_NH.data'/
 
 C

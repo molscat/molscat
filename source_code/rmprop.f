@@ -4,7 +4,7 @@
      3                  R3,R4,N1,N2,
      4                  RSTART,RSTOP,NSTEP,DR,POW,
      5                  ERED,RMLMDA,IPRINT)
-C  Copyright (C) 2018 J. M. Hutson & C. R. Le Sueur
+C  Copyright (C) 2019 J. M. Hutson & C. R. Le Sueur
 C  Distributed under the GNU General Public License, version 3
 C
 C  THIS ROUTINE SOLVES THE COUPLED EQUATIONS USING THE

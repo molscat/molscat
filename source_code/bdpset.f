@@ -1,6 +1,6 @@
       SUBROUTINE BDPSET(IPRSEG,RBSEG,RESEG,DRSEG,
      1                  STPSEG,TOLSEG,CAYSEG,POWSEG,ICHNGE)
-C  Copyright (C) 2018 J. M. Hutson & C. R. Le Sueur
+C  Copyright (C) 2019 J. M. Hutson & C. R. Le Sueur
 C  Distributed under the GNU General Public License, version 3
 
 C  CR Le Sueur Dec 2018
@@ -76,7 +76,7 @@ C         DRSEG(2)=DRL
 C         POWSEG(2)=POWRL
 C         STPSEG(2)=STEPL
 C         TOLSEG(2)=TOLHIL
-C         ICHNGE=2
+C         ICHNGE=1
 
           IPRSEG(3)=IPROPS
           RBSEG(3)=RMID

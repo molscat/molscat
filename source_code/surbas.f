@@ -1,7 +1,7 @@
       SUBROUTINE SURBAS(JSTATE, N, JSINDX, L, EINT, CENT, VL, IV,
      1                  MXLAM, NPOTL, LAM, ERED, WVEC, LCOUNT, THETA,
      2                  PHI, EMAXK, IPRINT)
-C  Copyright (C) 2018 J. M. Hutson & C. R. Le Sueur
+C  Copyright (C) 2019 J. M. Hutson & C. R. Le Sueur
 C  Distributed under the GNU General Public License, version 3
       USE basis_data
       USE physical_constants
@@ -19,7 +19,7 @@ C
       LOGICAL LCOUNT,LEVIN,EIN,HEX,ORTHOG,EQUIV
       DIMENSION JSTATE(1), JSINDX(1), L(1), EINT(1), CENT(1),
      1          WVEC(1), VL(1), IV(1), LAM(1)
-      COMMON /NPOT/ NPTL
+      COMMON /NPOT  / NPTL
       COMMON /LATSYM/ HEX,ORTHOG,EQUIV
 C  16-10-16: BFCT IS NOW STORED IN MODULE physical_constants
 C     DATA BFCT /16.857630D0/

@@ -1,5 +1,5 @@
       SUBROUTINE EAVG(NT,T,NGP,E,NNRG,IPRINT)
-C  Copyright (C) 2018 J. M. Hutson & C. R. Le Sueur
+C  Copyright (C) 2019 J. M. Hutson & C. R. Le Sueur
 C  Distributed under the GNU General Public License, version 3
       USE physical_constants
       USE sizes, MXNRG => MXNRG_in_MOLSCAT
@@ -35,7 +35,7 @@ C  16-10-16: NOW OBTAIN FROM MODULE physical_constants
      A         0.521755610583D0, 0.398666811083D0, 0.759424496817D-1,
      B         0.361175867992D-2, 0.233699723858D-4, 6*0.D0/
 
-      NGP=MAX(2,MIN(6,IABS(NGP)))
+      NGP=MAX(2,MIN(6,ABS(NGP)))
       IST=NGP*(NGP-1)/2-1
       IF (IPRINT.GE.1) WRITE(6,600) NGP
   600 FORMAT(/' ENERGY VALUES WILL BE GENERATED TO FACILITATE',I4,

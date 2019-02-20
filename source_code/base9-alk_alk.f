@@ -1,5 +1,5 @@
       SUBROUTINE BAS9IN(PRTP,IBOUND,IPRINT)
-C  Copyright (C) 2018 J. M. Hutson & C. R. Le Sueur
+C  Copyright (C) 2019 J. M. Hutson & C. R. Le Sueur
 C  Distributed under the GNU General Public License, version 3
       USE efvs
       USE potential
@@ -154,6 +154,8 @@ C
       ANSB=0.D0
       IF (NSFAC.NE.0) ANSB=2.D0*HFSPLB/DBLE(NSFAC)
 C
+      IF (IPRINT.LE.0) RETURN
+
       WRITE(6,'(2X,4A8/)') PRTP
       IF (IDENTN) THEN
         WRITE(6,601) 'S ',ISA,GSA,INUCA,GA,HFSPLA,ANSA
@@ -243,17 +245,18 @@ C
       MTOT=JTOT
 C
       IF (LCOUNT) THEN
-        WRITE(6,605) IBLOCK,(-1)**IBLOCK,MTOT
-  605   FORMAT('  SYMMETRY BLOCK = ',I2,' SELECTS PARITY',I3,/
+        IF (IPRINT.GE.1) WRITE(6,605) IBLOCK,(-1)**IBLOCK,MTOT
+  605   FORMAT('  SYMMETRY BLOCK = ',I3,' SELECTS PARITY',I3,/
      1         '  MTOT =',I3,'/2')
         IF (IDENTN) THEN
           IFA=INUCA+ISA
           IF (2*(IFA/2).EQ.IFA) THEN
             IBOSFR=0
-            WRITE(6,*) ' BASIS SET GENERATED FOR TWO IDENTICAL BOSONS'
+            IF (IPRINT.GE.1) WRITE(6,610) 'BOSONS'
+  610         FORMAT(2X,'BASIS SET GENERATED FOR TWO IDENTICAL ',A)
           ELSE
             IBOSFR=1
-            WRITE(6,*) ' BASIS SET GENERATED FOR TWO IDENTICAL FERMIONS'
+            IF (IPRINT.GE.1) WRITE(6,610) 'FERMIONS'
           ENDIF
         ENDIF
       ENDIF
@@ -560,7 +563,7 @@ C
       IF (MS1+MI1.EQ.MS2+MI2) THEN
         IF (MS1.EQ.MS2) THEN
           SDOTI2=0.25D0*DBLE(MI1*MS1)
-        ELSEIF (IABS(MS1-MS2).EQ.2) THEN
+        ELSEIF (ABS(MS1-MS2).EQ.2) THEN
           SDOTI2=0.125D0*SQRT(DBLE(II*(II+2)-MI1*MI2))
      1                  *SQRT(DBLE(IS*(IS+2)-MS1*MS2))
         ENDIF

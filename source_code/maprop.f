@@ -4,7 +4,7 @@
      3                  DIAG,
      4                  RSTART,RSTOP,NSTEP,DR,NODES,
      5                  ERED,RMLMDA,IPRINT)
-C  Copyright (C) 2018 J. M. Hutson & C. R. Le Sueur
+C  Copyright (C) 2019 J. M. Hutson & C. R. Le Sueur
 C  Distributed under the GNU General Public License, version 3
       IMPLICIT DOUBLE PRECISION (A-H,O-Z)
 C

@@ -1,5 +1,5 @@
       FUNCTION IPASYM(JI,NK,A)
-C  Copyright (C) 2018 J. M. Hutson & C. R. Le Sueur
+C  Copyright (C) 2019 J. M. Hutson & C. R. Le Sueur
 C  Distributed under the GNU General Public License, version 3
       IMPLICIT DOUBLE PRECISION (A-H,O-Z)
 C
@@ -52,7 +52,7 @@ C  DETERMINE EVEN/ODD K
       KPAR=0
  3100 IF (JI.LE.0) GOTO 4000
       DO 3200 I=1,JI
-        LP=IABS(LP-1)
+        LP=ABS(LP-1)
         IF (ABS(A(NMID+I)).LE.EPS .AND. ABS(A(NMID-I)).LE.EPS)
      &    GOTO 3200
         IF (KPAR.GE.0) GOTO 3300

@@ -1,7 +1,7 @@
       SUBROUTINE CNTRCT(N, M, R, EMAX, W, T,
      1                  VL, IV, EINT, CENT,
      2                  P, RMLMDA, MXLAM, NPOTL, IPRINT)
-C  Copyright (C) 2018 J. M. Hutson & C. R. Le Sueur
+C  Copyright (C) 2019 J. M. Hutson & C. R. Le Sueur
 C  Distributed under the GNU General Public License, version 3
       USE potential
       IMPLICIT DOUBLE PRECISION (A-H,O-Z)

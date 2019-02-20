@@ -1,5 +1,5 @@
       SUBROUTINE DSYFIL(UPLO, N, A, LDA)
-C  Copyright (C) 2018 J. M. Hutson & C. R. Le Sueur
+C  Copyright (C) 2019 J. M. Hutson & C. R. Le Sueur
 C  Distributed under the GNU General Public License, version 3
 C
 C  SUBROUTINE TO FILL IN THE SECOND TRIANGLE OF A SYMMETRIC MATRIX.

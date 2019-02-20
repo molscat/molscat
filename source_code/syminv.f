@@ -1,5 +1,5 @@
       SUBROUTINE SYMINV(A, IA, N, IFAIL)
-C  Copyright (C) 2018 J. M. Hutson & C. R. Le Sueur
+C  Copyright (C) 2019 J. M. Hutson & C. R. Le Sueur
 C  Distributed under the GNU General Public License, version 3
       IMPLICIT DOUBLE PRECISION (A-H,O-Z)
       DIMENSION A(IA,N)

@@ -1,5 +1,5 @@
       SUBROUTINE CPLOUT(IV,VL,N,NPOTL)
-C  Copyright (C) 2018 J. M. Hutson & C. R. Le Sueur
+C  Copyright (C) 2019 J. M. Hutson & C. R. Le Sueur
 C  Distributed under the GNU General Public License, version 3
 C
 C  THIS ROUTINE PRINTS OUT THE COUPLING MATRIX ELEMENTS.

@@ -1,6 +1,6 @@
       FUNCTION QSYMTP(J1,K1,J1P,K1P,J2,J2P,LL,LLP,
      1                JJ,JJP,JT,P1,Q1,P2,PP)
-C  Copyright (C) 2018 J. M. Hutson & C. R. Le Sueur
+C  Copyright (C) 2019 J. M. Hutson & C. R. Le Sueur
 C  Distributed under the GNU General Public License, version 3
       IMPLICIT DOUBLE PRECISION (A-H,O-Z)
       INTEGER P1,Q1,P2,PP

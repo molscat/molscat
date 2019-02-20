@@ -3,7 +3,7 @@
      2                  U,W,Q,Y1,Y2,
      3                  RSTART,RSTOP,NSTEP,DR,NODES,
      4                  ERED,RMLMDA,IPRINT)
-C  Copyright (C) 2018 J. M. Hutson & C. R. Le Sueur
+C  Copyright (C) 2019 J. M. Hutson & C. R. Le Sueur
 C  Distributed under the GNU General Public License, version 3
       USE potential, ONLY: NRSQ
 C  VERSION (1/27/93) USES /MEMORY/ ..,IVLFL, ONLY TO CHECK USE OF

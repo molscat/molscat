@@ -1,6 +1,6 @@
-      SUBROUTINE EFPROP(N, RBEGIN, REND, NSTEP, PSIB, RAB, PSIA,
-     1                  IWREC, SUMPSI, IPRINT, IPREC)
-C  Copyright (C) 2018 J. M. Hutson & C. R. Le Sueur
+      SUBROUTINE EFPROP(N, RBEGIN, REND, NSTEP, PSIB,
+     1                  RAB, PSIA, IWREC, SUMPSI, IPRINT, IPREC)
+C  Copyright (C) 2019 J. M. Hutson & C. R. Le Sueur
 C  Distributed under the GNU General Public License, version 3
       IMPLICIT DOUBLE PRECISION (A-H,O-Z)
 C
@@ -67,7 +67,7 @@ C
         IF (IDIR.EQ.1 .OR. ISTEP.NE.1) WRITE(IPSISC,REC=IPREC) R,PSIA
 C
         R=R-H
-C  READS IN R(A,B) FROM WAVESCRATCH
+C  READ IN R(A,B) FROM WAVESCRATCH
         IF (ISTEP.EQ.NSTEP+1) GOTO 105
         IWREC=IWREC-1
         READ(IWAVSC,REC=IWREC,ERR=900) RP,RAB
@@ -76,7 +76,7 @@ C  READS IN R(A,B) FROM WAVESCRATCH
           STOP
         ENDIF
         IPREC=IPREC-IDIR
-C  GENERATES PSI(B) FROM PSI(A) AND R(A,B)
+C  GENERATE PSI(B) FROM PSI(A) AND R(A,B)
         CALL DGEMUL(RAB,N,'N',PSIA,N,'N',PSIB,N,N,N,1)
 
  105    DO I=1,N

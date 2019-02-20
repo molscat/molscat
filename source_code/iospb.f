@@ -1,7 +1,7 @@
       SUBROUTINE IOSPB(ENERGY,QL,QLOLD,NL,LINE,
      1                 LTYPE,ITYPE,NVC,LM,IXQL,
      2                 LMAX,NIXQL,NQL)
-C  Copyright (C) 2018 J. M. Hutson & C. R. Le Sueur
+C  Copyright (C) 2019 J. M. Hutson & C. R. Le Sueur
 C  Distributed under the GNU General Public License, version 3
       USE basis_data, ONLY: JLEVEL, NLEVEL
 C
@@ -89,7 +89,7 @@ C  LOOP OVER LINES
         JA1=JLEVEL(LVA1)
         JB1=JLEVEL(LVB1)
         K=LTYPE(LN)
-        IF (K.LE.0) K=IABS(JA-JB)
+        IF (K.LE.0) K=ABS(JA-JB)
         WRITE(6,601) LN,JA,JB,JA1,JB1,K
   601   FORMAT(/' LINE',I3,'  FOR JA, JB; JA1, JB1 =  ',2I4,4X,2I4,
      &         '  PROCESSED FOR',I4,'-POLE RADIATION.')
@@ -99,7 +99,7 @@ C  LOOP OVER LINES
         WRITE(6,692) LTOP,LM1
   692   FORMAT(/' * * * WARNING.  POSSIBLE ERROR LTOP.GT.LMAX',2I6)
         LTOP=LM1
- 2002   LMIN=MAX(IABS(JA-JA1),IABS(JB-JB1))
+ 2002   LMIN=MAX(ABS(JA-JA1),ABS(JB-JB1))
         QTOT2=0.
         DO 2100 L=LMIN,LTOP
           FC=PARSGN(K)*FUNC(JA1)*DSQRT(FUNC(JB1)*FUNC(JB))*
@@ -152,7 +152,7 @@ C
         XKB=KB
         KB2=2*KB
         K=LTYPE(LN)
-        IF (K.LE.0) K=IABS(JA-JB)
+        IF (K.LE.0) K=ABS(JA-JB)
         WRITE(6,652) LN,LVA,LVB,JA,KA,EPSA,JB,KB,EPSB,K
   652   FORMAT(/' LINE',I3,' BETWEEN LEVEL',2I4,5X,'(J, K, EPS =',
      1         2I4,F5.1,'  TO',2I4,F5.1,')   PROCESSED FOR',

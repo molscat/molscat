@@ -1,7 +1,7 @@
       SUBROUTINE WKB(N,MXLAM,NPOTL,SREAL,SIMAG,VL,IV,EINT,CENT,P,
      1               DWVEC,L,W,DIAG,
      2               RSTART,TOLHI,ERED,RMLMDA,IPRINT)
-C  Copyright (C) 2018 J. M. Hutson & C. R. Le Sueur
+C  Copyright (C) 2019 J. M. Hutson & C. R. Le Sueur
 C  Distributed under the GNU General Public License, version 3
       IMPLICIT DOUBLE PRECISION (A-H,O-Z)
 C

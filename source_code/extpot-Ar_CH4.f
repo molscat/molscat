@@ -1,5 +1,5 @@
       DOUBLE PRECISION FUNCTION EXTPOT(RA,CTH,PHI)
-C  Copyright (C) 2018 J. M. Hutson & C. R. Le Sueur
+C  Copyright (C) 2019 J. M. Hutson & C. R. Le Sueur
 C  Distributed under the GNU General Public License, version 3
       USE physical_constants
       IMPLICIT DOUBLE PRECISION (A-H,O-Z)

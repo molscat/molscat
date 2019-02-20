@@ -1,5 +1,5 @@
       SUBROUTINE SGNCHK(A,B,N)
-C  Copyright (C) 2018 J. M. Hutson & C. R. Le Sueur
+C  Copyright (C) 2019 J. M. Hutson & C. R. Le Sueur
 C  Distributed under the GNU General Public License, version 3
 C
 C  ROUTINE TO CHANGE SIGN OF COLUMN OF B IF ELEMENT OF A, CORRESPONDING

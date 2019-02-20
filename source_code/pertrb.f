@@ -1,5 +1,5 @@
       SUBROUTINE PERTRB(R,P,NLEG,IDERIV)
-C  Copyright (C) 2018 J. M. Hutson & C. R. Le Sueur
+C  Copyright (C) 2019 J. M. Hutson & C. R. Le Sueur
 C  Distributed under the GNU General Public License, version 3
 C
 C  PERTRB IS USED BY BOUND BUT HAS NO SIGNIFICANT FUNCTION IN MOLSCAT

@@ -1,5 +1,5 @@
       SUBROUTINE POTENL(IC, MXLMB, LMB, RR, P, ITYP, IPRINT)
-C  Copyright (C) 2018 J. M. Hutson & C. R. Le Sueur
+C  Copyright (C) 2019 J. M. Hutson & C. R. Le Sueur
 C  Distributed under the GNU General Public License, version 3
       USE angles
       USE potential, ONLY: LAMBDA, MXLMDA, RUNAME, EPNAME
@@ -400,21 +400,22 @@ C     1          '-PT QUADRATURE'//(2(F25.20,F23.20)))
   432 FORMAT ('  DAMPING FUNCTION IS:  1 - ] SUM(K=0,N)',
      1        ' (BETA*R)**K/K! ( EXP(-BETA*R)')
   433 FORMAT (/16X,'LAMBDA   K   MM   BETA/A-1   EPS/CM-1   REQ/A',
-     1        5X,'C6(L,K)      C8(L,K)     A(L,K)'/17X,80('-'))
-  440 FORMAT (15X,2I6,I5,F10.4,F11.4,F10.6,2F12.2,F13.2)
-  450 FORMAT (15X,I6,'     3 ',35X,F12.2)
-  460 FORMAT (/3X,'V =',I2,'  J =',I2,'   VIBRATIONALLY AVERAGED ',
+     1        5X,'C6(L,K)      C8(L,K)     A(L,K)'/16X,84('-'))
+  440 FORMAT (14X,2I6,I5,F10.4,F11.4,F10.6,2F12.2,F13.2)
+  450 FORMAT (14X,I6,'     3 ',35X,F12.2)
+  460 FORMAT (/3X,'V =',I2,', J =',I2,'   VIBRATIONALLY AVERAGED ',
      1        'POTENTIAL:  LAMBDA =',I2,2F12.2,F13.2/61X,I2,2F12.2,
      2        F13.2)
-  470 FORMAT (17X,80('-'))
-  480 FORMAT (/9X,'(V=',I2,',J=',I2,': V''=',I2,',J''=',I2,') POTENTIAL'
-     1        ,' MATRIX:  LAMBDA =',I2,2F12.2,F13.2/61X,I2,2F12.2,F13.2)
+  470 FORMAT (16X,84('-'))
+  480 FORMAT (/9X,'(V =',I2,', J =',I2,': V'' =',I2,', J'' =',I2,')',
+     1        ' POTENTIAL MATRIX:  LAMBDA =',I2,2F12.2,F13.2/
+     2        67X,I2,2F12.2,F13.2)
   490 FORMAT ('  LEGENDRE EXPANSION TRANSFORMATION BASED ON CENTRE ',
      1        'OF MASS SHIFT OF',F14.10,' TIMES THE BOND LENGTH')
-  500 FORMAT (9X,'V =',I2,',  J =',I2,'  DIAGONAL EXPECTATION VALUES',
-     1        6F12.8/(29X,8F12.8))
-  510 FORMAT (10X,'(V=',I2,',J=',I2,': V''=',I2,',J''=',I2,')  MATRIX ',
-     1        'ELEMENTS',6F12.8/(29X,8F12.8))
+  500 FORMAT (3X,'V =',I2,', J =',I2,'   DIAGONAL EXPECTATION VALUES',
+     1        6X,5F12.8/(51X,5F12.8))
+  510 FORMAT (9X,'(V =',I2,', J =',I2,': V'' =',I2,', J'' =',I2,')',
+     1        ' MATRIX ELEMENTS  ',5F12.8/(57X,5F12.8))
   520 FORMAT (/10X,'YIELDS   DEL(J) =',5F13.8)
 C+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 C  OPTION TO CALCULATE POTENTIAL. ON ENTRY, MXLMB AND NPOTL HAVE

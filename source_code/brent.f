@@ -1,6 +1,6 @@
       DOUBLE PRECISION FUNCTION BRENT(XA,XB,XC,FA,FB,FC,ZFIRST,DTOL,
      1                                CONVGE,METHOD)
-C  Copyright (C) 2018 J. M. Hutson & C. R. Le Sueur
+C  Copyright (C) 2019 J. M. Hutson & C. R. Le Sueur
 C  Distributed under the GNU General Public License, version 3
 C
 C  WRITTEN 27-11-15 BY CR Le Sueur

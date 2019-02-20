@@ -1,6 +1,6 @@
       SUBROUTINE STABIL(N,NB,Y,YP,F1,F2,
      1                  SCR,YN,YPN,F1N,F2N)
-C  Copyright (C) 2018 J. M. Hutson & C. R. Le Sueur
+C  Copyright (C) 2019 J. M. Hutson & C. R. Le Sueur
 C  Distributed under the GNU General Public License, version 3
       IMPLICIT DOUBLE PRECISION (A-H,O-Z)
 C

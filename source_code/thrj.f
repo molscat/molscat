@@ -1,5 +1,5 @@
       FUNCTION THRJ(F1,F2,F3,G1,G2,G3)
-C  Copyright (C) 2018 J. M. Hutson & C. R. Le Sueur
+C  Copyright (C) 2019 J. M. Hutson & C. R. Le Sueur
 C  Distributed under the GNU General Public License, version 3
 C
 C  THIS FUNCTION CALCULATES THE 3J SYMBOL (F1 F2 F3)

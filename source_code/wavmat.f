@@ -1,6 +1,6 @@
       SUBROUTINE WAVMAT(W,N,R,P,VL,IV,ERED,EINT,CENT,RMLMDA,DIAG,
      1                  MXLAM,NPOTL,IPRINT)
-C  Copyright (C) 2018 J. M. Hutson & C. R. Le Sueur
+C  Copyright (C) 2019 J. M. Hutson & C. R. Le Sueur
 C  Distributed under the GNU General Public License, version 3
       USE potential
 C

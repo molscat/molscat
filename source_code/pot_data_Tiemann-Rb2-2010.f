@@ -1,5 +1,5 @@
       module pot_data_Tiemann
-C  Copyright (C) 2018 J. M. Hutson & C. R. Le Sueur
+C  Copyright (C) 2019 J. M. Hutson & C. R. Le Sueur
 C  Distributed under the GNU General Public License, version 3
 C
 C  MODULE CONTAINING PARAMETERS OF A PAIR OF TIEMANN-STYLE

@@ -1,6 +1,6 @@
       SUBROUTINE SCPSET(IPRSEG,RBSEG,RESEG,DRSEG,STPSEG,
      1                  TOLSEG,CAYSEG,POWSEG)
-C  Copyright (C) 2018 J. M. Hutson & C. R. Le Sueur
+C  Copyright (C) 2019 J. M. Hutson & C. R. Le Sueur
 C  Distributed under the GNU General Public License, version 3
 
 C  CR Le Sueur Dec 2018

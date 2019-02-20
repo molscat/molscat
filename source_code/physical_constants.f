@@ -1,9 +1,9 @@
       module physical_constants
-C  Copyright (C) 2018 J. M. Hutson & C. R. Le Sueur
+C  Copyright (C) 2019 J. M. Hutson & C. R. Le Sueur
 C  Distributed under the GNU General Public License, version 3
       implicit none
 
-c  These values are from the NIST CODATA 2014 tables.  Values inserted 13-10-16
+c  These are the CODATA 2014 recommended values, inserted 13-10-16
       integer,parameter:: NIST_year=2014
       double precision,parameter::
      &bohr_in_SI                       = 0.52917721067d-10,

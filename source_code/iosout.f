@@ -1,6 +1,6 @@
       SUBROUTINE IOSOUT(ENERGY,QL,QLOLD,NVC,ITYPE,ATAU,LM,IXQL,
      1                  LMAX,NIXQL,NQL,JTSTEP)
-C  Copyright (C) 2018 J. M. Hutson & C. R. Le Sueur
+C  Copyright (C) 2019 J. M. Hutson & C. R. Le Sueur
 C  Distributed under the GNU General Public License, version 3
       USE sizes, ONLY: MXJLVL
       USE angles
@@ -130,7 +130,7 @@ C
           DO 1100 JF=IZERO,JTMAX
             IIF=JF+1
             S(IIF)=SPACE
-            LLOW=IABS(JF-JI)
+            LLOW=ABS(JF-JI)
             LTOP=JF+JI
             IF (LTOP.LE.LMAX-1) GOTO 1101
 
@@ -306,11 +306,11 @@ C  >>SG (FEB 92) N.B. CODE *ASSUMES* NVC=1 (ONE VIB CHANNEL).
           EPSF=PARSGN(JLEVEL(3*IIF))
           IF (KF.EQ.0) EPSF=0.D0
           XNF=XNORM(EPSF)
-          LLO=IABS(JI-JF)
+          LLO=ABS(JI-JF)
           LHI=JI+JF
           PJK=PARSGN(JI+JF+KI+KF)
           MPLS=KI+KF
-          MMIN=IABS(KI-KF)
+          MMIN=ABS(KI-KF)
           P2=1.D0
           IF (KI-KF.LT.0) P2=PARSGN(MMIN)
           SIG(IIF)=0.D0

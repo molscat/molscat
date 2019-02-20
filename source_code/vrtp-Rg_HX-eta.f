@@ -1,5 +1,5 @@
       SUBROUTINE VRTP(IDERIV,R,V)
-C  Copyright (C) 2018 J. M. Hutson & C. R. Le Sueur
+C  Copyright (C) 2019 J. M. Hutson & C. R. Le Sueur
 C  Distributed under the GNU General Public License, version 3
       USE angles
 C  THIS VERSION OF VRTP SUBROUTINE DESIGNED SPECIFICALLY FOR H6(4,3,X)
@@ -11,8 +11,8 @@ C  RARE GASES
       SAVE
 C  CHANGED TO USE ANGLES MODULE ON 16-08-2018
 C     COMMON/ANGLES/COSANG(MXANG),FACTOR,IHOMO,ICNSYM,IHOMO2,ICNSY2
-      COMMON/POTL/POT(100)
-      COMMON/VIB/ETA
+      COMMON /POTL  / POT(100)
+      COMMON /VIB   / ETA
 
       IF (IDERIV.NE.0) GOTO 100
       V=EXTPOT(R,COSANG(1))

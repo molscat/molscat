@@ -1,5 +1,5 @@
       SUBROUTINE DIAGVC(A, LD, N, EVAL, EVEC)
-C  Copyright (C) 2018 J. M. Hutson & C. R. Le Sueur
+C  Copyright (C) 2019 J. M. Hutson & C. R. Le Sueur
 C  Distributed under the GNU General Public License, version 3
 C
 C  THIS SUBROUTINE DIAGONALISES THE N X N MATRIX A WITH LAPACK

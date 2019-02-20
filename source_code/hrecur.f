@@ -1,5 +1,5 @@
       SUBROUTINE HRECUR(PN,DPN,PN1,X,NN)
-C  Copyright (C) 2018 J. M. Hutson & C. R. Le Sueur
+C  Copyright (C) 2019 J. M. Hutson & C. R. Le Sueur
 C  Distributed under the GNU General Public License, version 3
 C
 C  S Green: ADAPTED FROM STROUD AND SECREST, GAUSSIAN QUADRATURE FORMULAS.

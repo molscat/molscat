@@ -1,5 +1,5 @@
       module angles
-C  Copyright (C) 2018 J. M. Hutson & C. R. Le Sueur
+C  Copyright (C) 2019 J. M. Hutson & C. R. Le Sueur
 C  Distributed under the GNU General Public License, version 3
       USE sizes, ONLY: MXANG
       IMPLICIT NONE

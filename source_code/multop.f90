@@ -1,5 +1,5 @@
 recursive subroutine multop(i_op,n_ops,eval,evec,degtol,nn,ncurr,ibeg,iprint)
-!  Copyright (C) 2018 J. M. Hutson & C. R. Le Sueur
+!  Copyright (C) 2019 J. M. Hutson & C. R. Le Sueur
 !  Distributed under the GNU General Public License, version 3
 USE potential, only: nconst,nrsq
 ! This subroutine diagonalises the (long-range) Hamiltonian matrix in order to

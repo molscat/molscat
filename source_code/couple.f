@@ -1,6 +1,6 @@
       SUBROUTINE COUPLE(N,ITYPE,MXLAM,NPOTL,LAM,NSTATE,JSTATE,JSINDX,L,
      1                  JTOT,VL,IV,IEX,IPRINT,ATAU)
-C  Copyright (C) 2018 J. M. Hutson & C. R. Le Sueur
+C  Copyright (C) 2019 J. M. Hutson & C. R. Le Sueur
 C  Distributed under the GNU General Public License, version 3
 C
 C  THIS SUBROUTINE CALCULATES COUPLING COEFFICIENTS FOR DIFFERENT ITYPES
@@ -70,7 +70,7 @@ C  GET ALL ZERO-PROJECTION 3J SYMBOLS FOR THIS JCOL, LAMBDA
 C
           IF (JCOL.NE.JSAV) THEN
             CALL J3J000(DBLE(JCOL),DBLE(LAM(LL)),IVALJ,X(ITJ),XJMIN)
-            JMIN=IABS(JCOL-LAM(LL))
+            JMIN=ABS(JCOL-LAM(LL))
             JMAX=JCOL+LAM(LL)
             JSAV=JCOL
           ENDIF
@@ -79,7 +79,7 @@ C  GET ALL ZERO-PROJECTION 3J SYMBOLS FOR THIS LCOL, LAMBDA
 C
           IF (L(ICOL).NE.LSAV) THEN
             CALL J3J000(DBLE(L(ICOL)),DBLE(LAM(LL)),IVALL,X(ITL),XLMIN)
-            LMIN=IABS(L(ICOL)-LAM(LL))
+            LMIN=ABS(L(ICOL)-LAM(LL))
             LMAX=L(ICOL)+LAM(LL)
             LSAV=L(ICOL)
           ENDIF
@@ -174,7 +174,7 @@ C  GET ALL ZERO-PROJECTION 3J SYMBOLS FOR THIS JCOL, LAMBDA
 C
           IF (JCOL.NE.JSAV) THEN
             CALL J3J000(DBLE(JCOL),DBLE(LLL),IVALJ,X(ITJ),XJMIN)
-            JMIN=IABS(JCOL-LLL)
+            JMIN=ABS(JCOL-LLL)
             JMAX=JCOL+LLL
             JSAV=JCOL
           ENDIF
@@ -183,7 +183,7 @@ C  GET ALL ZERO-PROJECTION 3J SYMBOLS FOR THIS LCOL, LAMBDA
 C
           IF (L(ICOL).NE.LSAV) THEN
             CALL J3J000(DBLE(L(ICOL)),DBLE(LLL),IVALL,X(ITL),XLMIN)
-            LMIN=IABS(L(ICOL)-LLL)
+            LMIN=ABS(L(ICOL)-LLL)
             LMAX=L(ICOL)+LLL
             LSAV=L(ICOL)
           ENDIF
@@ -289,7 +289,7 @@ C  SPECIAL NORMALIZATION FOR K1 AND/OR K2 =0.
           IF (K1.EQ.0) PARFCT=PARFCT*SQRTHF
           IF (K2.EQ.0) PARFCT=PARFCT*SQRTHF
           KDIF=K2-K1
-          IF (IABS(KDIF).NE.MU) GOTO 1505
+          IF (ABS(KDIF).NE.MU) GOTO 1505
 
           WPAR=1.D0
           IF (KDIF.LT.0) WPAR=PARSGN(MU)
@@ -297,7 +297,7 @@ C  CONTRIBUTION FROM (J1,K1,L1/Y(LM,MU)/J2,K2,L2).
           VL(I)=VL(I)+WPAR*PARFCT*
      &                  FSYMTP(J1,K1,L(ICOL),J2,K2,L(IROW),JTOT,LM,KDIF)
  1505     KSUM=K2+K1
-          IF (IABS(KSUM).NE.MU) GOTO 1515
+          IF (ABS(KSUM).NE.MU) GOTO 1515
 
 C  CONTRIBUTION FROM (J1,-K1,L1/ Y(LM,MU) / J2,K2,L2)
 C  N.B. FOR K1=0 AND/OR K2=0, WE RECOMPUTE SAME FSYMTP.
@@ -361,7 +361,7 @@ C  GET ALL ZERO-PROJECTION 3J SYMBOLS FOR THIS JCOL, LAMBDA
 C
           IF (JCOL.NE.JSAV) THEN
             CALL J3J000(DBLE(JCOL),DBLE(LLL),IVALJ,X(ITJ),XJMIN)
-            JMIN=IABS(JCOL-LLL)
+            JMIN=ABS(JCOL-LLL)
             JMAX=JCOL+LLL
             JSAV=JCOL
           ENDIF
@@ -370,7 +370,7 @@ C  GET ALL ZERO-PROJECTION 3J SYMBOLS FOR THIS LCOL, LAMBDA
 C
           IF (L(ICOL).NE.LSAV) THEN
             CALL J3J000(DBLE(L(ICOL)),DBLE(LLL),IVALL,X(ITL),XLMIN)
-            LMIN=IABS(L(ICOL)-LLL)
+            LMIN=ABS(L(ICOL)-LLL)
             LMAX=L(ICOL)+LLL
             LSAV=L(ICOL)
           ENDIF
@@ -449,7 +449,7 @@ C
           J1P=JSTATE(JSINDX(ICOL),1)
         DO 6200 IROW=1,ICOL
           J1 =JSTATE(JSINDX(IROW),1)
-          VL(I)=PARSGN((IABS(J1P-J1)+J1P+J1)/2) *
+          VL(I)=PARSGN((ABS(J1P-J1)+J1P+J1)/2) *
      1          SQRT(SQRT(Z(J1P)*Z(J1))/Z(LAM(LL))) *
      2          THREEJ(J1P,LAM(LL),J1)
           IF (VL(I).NE.0.D0) NNZ=NNZ+1
@@ -481,7 +481,7 @@ C
           IF ((NV.EQ.NVC .AND. NV1.EQ.NVR) .OR.
      1        (NV.EQ.NVR .AND. NV1.EQ.NVC)) THEN
             I=(II-1)*NPOTL+LLL+1
-            VL(I)=PARSGN((IABS(NJC-NJR)+NJC+NJR)/2) *
+            VL(I)=PARSGN((ABS(NJC-NJR)+NJC+NJR)/2) *
      1            SQRT(SQRT(Z(NJC)*Z(NJR))/Z(LLL))*THREEJ(NJC,LLL,NJR)
             IV(I)=LL
             IF (VL(I).NE.0.D0) NNZ=NNZ+1
@@ -511,7 +511,7 @@ C
         DO 6400 IROW=1,ICOL
           J1=JSTATE(JSINDX(IROW),1)
           J2=JSTATE(JSINDX(IROW),2)
-          PARFCT=PARSGN((IABS(J1+J2-J1P-J2P)+J1+J2+J1P+J2P)/2)
+          PARFCT=PARSGN((ABS(J1+J2-J1P-J2P)+J1+J2+J1P+J2P)/2)
      1           *PI32*SQRT(Z(LM)*SQRT(Z(J1)*Z(J2)*Z(J1P)*Z(J2P)))
           VL(I) = PARFCT*THREEJ(J1,LM1,J1P)*THREEJ(J2,LM2,J2P)
           IF (IEX.EQ.0) GOTO 6093
@@ -556,13 +556,13 @@ C ***   BE PRESENT IN INTERACTION POTENTIAL.
           IF (K1.EQ.0) PARFCT=PARFCT*SQRTHF
           IF (K2.EQ.0) PARFCT=PARFCT*SQRTHF
           KDIF=K2-K1
-          IF (IABS(KDIF).NE.MU) GOTO 6505
+          IF (ABS(KDIF).NE.MU) GOTO 6505
 
           WPAR=1.D0
           IF (KDIF.LT.0) WPAR=PARSGN(MU)
           VL(I)=VL(I)+WPAR*PARFCT*ESYMTP(J1,K1,J2,K2,LM,KDIF)
  6505     KSUM=K2+K1
-          IF (IABS(KSUM).NE.MU) GOTO 6515
+          IF (ABS(KSUM).NE.MU) GOTO 6515
 C (J1, -K1 / Y(LM,MU) / J2, K2) - - - - -
           VL(I)=VL(I)+PARFCT*PARSGN(IS1)*ESYMTP(J1,-K1,J2,K2,LM,KSUM)
  6515     IF (VL(I).NE.0.D0) NNZ=NNZ+1
@@ -606,7 +606,7 @@ C
      2              (NV.EQ.NVR .AND. NJ.EQ.NJR .AND.
      3               NV1.EQ.NVC .AND. NJ1.EQ.NJC))) GOTO 6057
           I=(II-1)*NPOTL+LLL+1
-          VL(I)=PARSGN((IABS(NJC-NJR)+NJC+NJR)/2) *
+          VL(I)=PARSGN((ABS(NJC-NJR)+NJC+NJR)/2) *
      1          SQRT(SQRT(Z(NJC)*Z(NJR))/Z(LLL))*THREEJ(NJC,LLL,NJR)
           IV(I)=LL
           NNZ=NNZ+1

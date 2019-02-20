@@ -1,5 +1,5 @@
       FUNCTION EXTPOT(R,COSTH)
-C  Copyright (C) 2018 J. M. Hutson & C. R. Le Sueur
+C  Copyright (C) 2019 J. M. Hutson & C. R. Le Sueur
 C  Distributed under the GNU General Public License, version 3
       USE physical_constants
 C
@@ -53,10 +53,10 @@ C
       DIMENSION POT(16),DIPV(3),QUADV(3),C6V(3),ALAVV(3),DALPV(3),
      1          APARV(3),APERPV(3)
 C
-      COMMON /POTL/ VPRM(100)
-      COMMON /POL/  ALPRG,DIP,QUAD,RHX,RCM
-      COMMON /DISP/ C6,DA,F1,F3
-      COMMON /VIB/  ETA
+      COMMON /POTL / VPRM(100)
+      COMMON /POL  / ALPRG,DIP,QUAD,RHX,RCM
+      COMMON /DISP / C6,DA,F1,F3
+      COMMON /VIB  / ETA
 C
       DATA IPOT   /6/
       DATA ETLAST /-999.D0/
@@ -257,7 +257,7 @@ C==========================================================================
       FUNCTION VIND(R,COSTH)
       IMPLICIT DOUBLE PRECISION (A-H,O-Z)
       DIMENSION Q(2),RQ(2)
-      COMMON /POL/ ALPRG,DIP,QUAD,RHX,RCM
+      COMMON /POL   / ALPRG,DIP,QUAD,RHX,RCM
 C
 C  THIS ROUTINE WORKS ENTIRELY IN ATOMIC UNITS.
 C

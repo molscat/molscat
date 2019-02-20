@@ -1,6 +1,6 @@
       FUNCTION RSYMTP(J1,K1,J2,J1P,K1P,J2P,
      1                JJ,JJP,MU,P1,Q1,P2,PP)
-C  Copyright (C) 2018 J. M. Hutson & C. R. Le Sueur
+C  Copyright (C) 2019 J. M. Hutson & C. R. Le Sueur
 C  Distributed under the GNU General Public License, version 3
 C
 C  THIS FUNCTION CALCULATES

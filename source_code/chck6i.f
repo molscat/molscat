@@ -1,5 +1,5 @@
       SUBROUTINE CHCK6I(N,JL,A)
-C  Copyright (C) 2018 J. M. Hutson & C. R. Le Sueur
+C  Copyright (C) 2019 J. M. Hutson & C. R. Le Sueur
 C  Distributed under the GNU General Public License, version 3
       IMPLICIT DOUBLE PRECISION (A-H,O-Z)
 C  THIS SUBROUTINE CHECKS THAT FOR ASYMMETRIC TOP FUNCTIONS, THE A

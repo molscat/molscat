@@ -1,5 +1,5 @@
       FUNCTION ESYMTP(J1,K1,J2,K2,LM,MU)
-C  Copyright (C) 2018 J. M. Hutson & C. R. Le Sueur
+C  Copyright (C) 2019 J. M. Hutson & C. R. Le Sueur
 C  Distributed under the GNU General Public License, version 3
 C
 C  THIS FUNCTION CALCULATES THE COUPLING COEFFICIENT FOR THE
@@ -20,7 +20,7 @@ C  THIS IS 1/SQRT(4PI)
       XMU=MU
       E=THRJ(XJ1,XLM,XJ2,-XK1,-XMU,XK2)
       IF (ABS(E).LE.1.D-8) RETURN
-      ESYMTP=E*PARSGN((IABS(J2-J1)+J2+J1)/2-MU-K1)*
+      ESYMTP=E*PARSGN((ABS(J2-J1)+J2+J1)/2-MU-K1)*
      &               CON15*SQRT(SQRT(Z(XJ1)*Z(XJ2)))
       RETURN
       END

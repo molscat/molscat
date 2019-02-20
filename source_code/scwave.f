@@ -1,7 +1,7 @@
       SUBROUTINE SCWAVE(RBEGIN,REND,WVEC,PSIAR,PSIAI,PSIB,WORK,
      1                  W,SR,SI,EVEC,U,L,N,NSQ,NOPEN,NB,NSTEPS,
      2                  ICHAN,IREC,IPRINT)
-C  Copyright (C) 2018 J. M. Hutson & C. R. Le Sueur
+C  Copyright (C) 2019 J. M. Hutson & C. R. Le Sueur
 C  Distributed under the GNU General Public License, version 3
 
 C  CODE WRITTEN BY GC McBane AND ADAPTED FOR USE IN MOLSCAT BY CR Le Sueur

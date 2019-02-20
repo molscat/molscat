@@ -1,7 +1,7 @@
       SUBROUTINE POTIN9(ITYPP, LAM, MXLAM, NPTS, NDIM, XPT, XWT,
      1                  MXPT, IVMIN, IVMAX, L1MAX, L2MAX,
      2                  MXLMB, X, MX, IXFAC)
-C  Copyright (C) 2018 J. M. Hutson & C. R. Le Sueur
+C  Copyright (C) 2019 J. M. Hutson & C. R. Le Sueur
 C  Distributed under the GNU General Public License, version 3
 C
       IMPLICIT DOUBLE PRECISION (A-H,O-Z)

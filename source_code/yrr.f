@@ -1,5 +1,5 @@
       FUNCTION YRR(L1,L2,L,CT1,CT2,DP)
-C  Copyright (C) 2018 J. M. Hutson & C. R. Le Sueur
+C  Copyright (C) 2019 J. M. Hutson & C. R. Le Sueur
 C  Distributed under the GNU General Public License, version 3
 C
 C  BISPHERICAL HARMONIC ANGULAR FUNCTIONS FOR TWO DIATOMS

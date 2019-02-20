@@ -1,5 +1,5 @@
       FUNCTION SIXJ(J1,J2,J5,J4,J3,J6)
-C  Copyright (C) 2018 J. M. Hutson & C. R. Le Sueur
+C  Copyright (C) 2019 J. M. Hutson & C. R. Le Sueur
 C  Distributed under the GNU General Public License, version 3
 C
 C  CALCULATES 6-J SYMBOL:   _(J1 J2 J3 )_

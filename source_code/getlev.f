@@ -1,7 +1,7 @@
       SUBROUTINE GETLEV(N,EINT,INDLEV,L,CINT,
      1                  EREF,ENERGY,NNRG,DEGTOL,MXSIG,IPRINT,
      2                  LNEVER,IBOUND,EFACT,UNAME)
-C  Copyright (C) 2018 J. M. Hutson & C. R. Le Sueur
+C  Copyright (C) 2019 J. M. Hutson & C. R. Le Sueur
 C  Distributed under the GNU General Public License, version 3
       USE potential
       USE basis_data, ONLY: NLEVEL, ELEVEL, MXELVL

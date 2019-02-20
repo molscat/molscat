@@ -1,5 +1,5 @@
       FUNCTION EXTPOT(R,COSTH)
-C  Copyright (C) 2018 J. M. Hutson & C. R. Le Sueur
+C  Copyright (C) 2019 J. M. Hutson & C. R. Le Sueur
 C  Distributed under the GNU General Public License, version 3
       USE physical_constants
 C
@@ -213,7 +213,7 @@ C
       C82=C8C+C8O+C8O+SITE**2*(32.D0*C6O+(86.D0/7.D0)*C6O2)
       WRITE(6,601) ' CENTRAL     C_N(0)',C6,C8,C8/C6
       WRITE(6,601) ' CENTRAL     C_N(2)',C62,C82,C82/C8
-  601 FORMAT(1X,A18,F8.3,F10.1,F12.0)
+  601 FORMAT(1X,A,1X,F8.3,F10.1,F12.0)
 C
       WRITE(6,602) SITE
   602 FORMAT(/'  DISPERSION SITES AT',F8.3,' A0 FROM CENTRE')

@@ -1,5 +1,5 @@
       SUBROUTINE GDATE(DATE)
-C  Copyright (C) 2018 J. M. Hutson & C. R. Le Sueur
+C  Copyright (C) 2019 J. M. Hutson & C. R. Le Sueur
 C  Distributed under the GNU General Public License, version 3
 C
 C  THESE ROUTINES ARE MACHINE-DEPENDENT, AND MUST BE SIMULATED.
@@ -20,7 +20,7 @@ C
       END
 C========================================================================
       SUBROUTINE GTIME(TIME)
-C  Copyright (C) 2018 J. M. Hutson & C. R. Le Sueur
+C  Copyright (C) 2019 J. M. Hutson & C. R. Le Sueur
 C  Distributed under the GNU General Public License, version 3
       CHARACTER TIME*9
       CHARACTER CDATE*8, CTIME*10, CZONE*5

@@ -2,7 +2,7 @@
      1                  Z,U,VL,IV,EINT,CENT,P,DIAG,
      2                  RSTART,RSTOP,NSTEP,DR,NODES,
      3                  ERED,RMLMDA,IPRINT)
-C  Copyright (C) 2018 J. M. Hutson & C. R. Le Sueur
+C  Copyright (C) 2019 J. M. Hutson & C. R. Le Sueur
 C  Distributed under the GNU General Public License, version 3
 C
 C  SUBROUTINE FOR JOHNSON'S LOG-DERIVATIVE PROPAGATOR

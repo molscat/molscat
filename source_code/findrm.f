@@ -2,7 +2,7 @@
      1                  IV,ERED,EINT,CENT,RMLMDA,
      2                  DIAG,DIAG2,XK,PHASE,MXLAM,NPOTL,
      3                  IRMSET,ITYPE,IPRINT)
-C  Copyright (C) 2018 J. M. Hutson & C. R. Le Sueur
+C  Copyright (C) 2019 J. M. Hutson & C. R. Le Sueur
 C  Distributed under the GNU General Public License, version 3
       IMPLICIT DOUBLE PRECISION (A-H,O-Z)
       COMMON /CNTROL/ CDRIVE
@@ -37,7 +37,6 @@ C  FOR BOUND STATES ALSO
       IF (ITYPE.EQ.8 .OR. CDRIVE.NE.'M') RTURN=RMIN
 C
       IF (NOPEN.LE.0 .AND. CDRIVE.EQ.'M') THEN
-        IF (IPRINT.GE.3) WRITE(6,*) ' *** FINDRM. NO OPEN CHANNELS'
         GOTO 300
       ENDIF
 C
@@ -236,8 +235,9 @@ C
 C
   300 RSTART=RMIN
       RTURN=2.D0*RMIN
-      IF (IPRINT.GE.3) WRITE(6,608)
-  608 FORMAT(14X,'RSTART SET TO RMIN'/14X,'RTURN  SET TO 2*RMIN')
+      IF (IPRINT.GE.3) WRITE(6,608) ERED
+  608 FORMAT(2X,'*** FINDRM. NO OPEN CHANNELS AT ENERGY = ',1PG17.10,1X,
+     1       'CM-1'/14X,'RSTART SET TO RMIN AND RTURN  SET TO 2*RMIN')
       RETURN
 C
       END

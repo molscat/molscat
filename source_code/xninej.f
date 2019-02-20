@@ -1,5 +1,5 @@
       FUNCTION XNINEJ(IX1,IY1,IZ1,IX2,IY2,IZ2,IX3,IY3,IZ3)
-C  Copyright (C) 2018 J. M. Hutson & C. R. Le Sueur
+C  Copyright (C) 2019 J. M. Hutson & C. R. Le Sueur
 C  Distributed under the GNU General Public License, version 3
 C
 C  FUNCTION TO CALCULATE 9J (IX1 IY1 IZ1)

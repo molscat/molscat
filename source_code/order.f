@@ -1,5 +1,5 @@
       SUBROUTINE ORDER(I,J)
-C  Copyright (C) 2018 J. M. Hutson & C. R. Le Sueur
+C  Copyright (C) 2019 J. M. Hutson & C. R. Le Sueur
 C  Distributed under the GNU General Public License, version 3
 C
 C  SUBROUTINE TO REARRANGE TWO FOURIER COMPONENTS INTO
@@ -13,7 +13,7 @@ C
       LOGICAL HEX, ORTHOG, EQUIV
       COMMON /LATSYM/ HEX,ORTHOG,EQUIV
 C
-    5 IF (.NOT.EQUIV .OR. IABS(I).GE.IABS(J)) GOTO 10
+    5 IF (.NOT.EQUIV .OR. ABS(I).GE.ABS(J)) GOTO 10
 
       K=I
       I=J
@@ -23,7 +23,7 @@ C
       I=-I
       J=-J
    20 CONTINUE
-      IF (ORTHOG) J=IABS(J)
+      IF (ORTHOG) J=ABS(J)
       IF (.NOT.HEX .OR. J.LE.0) RETURN
 
       K=I

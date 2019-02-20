@@ -1,5 +1,5 @@
       SUBROUTINE SET6C(JSTATE,ATAU,NSTATE,EIN,IPRINT)
-C  Copyright (C) 2018 J. M. Hutson & C. R. Le Sueur
+C  Copyright (C) 2019 J. M. Hutson & C. R. Le Sueur
 C  Distributed under the GNU General Public License, version 3
       USE basis_data
       IMPLICIT DOUBLE PRECISION (A-H,O-Z)
@@ -19,7 +19,7 @@ C
       DATA TOL/1.D-8/
 
       IF (EIN .AND. IPRINT.GE.1) WRITE(6,601)
-  601 FORMAT(/'  TARGET ENERGY LEVELS TAKEN FROM &BASIS (ELEVEL)'/
+  601 FORMAT(/'  ASYMMETRIC TOP ENERGY LEVELS TAKEN FROM ELEVEL'/
      1       '  WILL OVERRIDE THOSE CALCULATED FROM ROTATIONAL ',
      2       'CONSTANTS')
       IF (ROTI(1).EQ.ROTI(3) .AND. ROTI(3).EQ.ROTI(5)) THEN

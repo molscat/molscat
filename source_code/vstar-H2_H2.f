@@ -1,5 +1,5 @@
       SUBROUTINE H2H2
-C  Copyright (C) 2018 J. M. Hutson & C. R. Le Sueur
+C  Copyright (C) 2019 J. M. Hutson & C. R. Le Sueur
 C  Distributed under the GNU General Public License, version 3
 C
 C  FARRAR-LEE H2-H2 MSV POTENTIAL PLUS ANISOTROPIC TERMS USED BY ZARUR AND

@@ -5,7 +5,7 @@
      4                  IPRINT,NVC,ISAVEU,TITIME,RM,EPSIL,RMIN,
      5                  RMAX,MONQN,IBOUND,WAVE,ERED,RMLMDA,DRMAX,NSTAB,
      6                  ILDSVU)
-C  Copyright (C) 2018 J. M. Hutson & C. R. Le Sueur
+C  Copyright (C) 2019 J. M. Hutson & C. R. Le Sueur
 C  Distributed under the GNU General Public License, version 3
       IMPLICIT DOUBLE PRECISION (A-H,O-Z)
 C

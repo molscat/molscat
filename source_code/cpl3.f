@@ -1,6 +1,6 @@
       SUBROUTINE CPL3(N,MXLAM,LAM,NSTATE,JSTATE,JSINDX,L,JTOT,IEX,
      1                VL,IPRINT,LFIRST)
-C  Copyright (C) 2018 J. M. Hutson & C. R. Le Sueur
+C  Copyright (C) 2019 J. M. Hutson & C. R. Le Sueur
 C  Distributed under the GNU General Public License, version 3
 C
 C  COUPLING MATRIX ELEMENTS FOR LINEAR ROTOR-LINEAR ROTOR (ITYPE=3)

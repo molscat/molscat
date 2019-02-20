@@ -1,5 +1,5 @@
       SUBROUTINE SET6(LEVIN,EIN,NSTATE,JSTATE,ATAU,EFACT,IUNIT,IPRINT)
-C  Copyright (C) 2018 J. M. Hutson & C. R. Le Sueur
+C  Copyright (C) 2019 J. M. Hutson & C. R. Le Sueur
 C  Distributed under the GNU General Public License, version 3
       USE basis_data
       IMPLICIT DOUBLE PRECISION (A-H,O-Z)
@@ -136,7 +136,7 @@ c       READ(IUNIT,500,END=9000) JI,ITAU,EINP
           WRITE(6,*) '  *** SET6. DIMENSION OF ELEVEL EXCEEDED',NSTATE
           STOP
         ENDIF
-        JI=IABS(JI)
+        JI=ABS(JI)
         NK=2*JI+1
         IF (LIN) THEN
 C  CODE BELOW FILTERS IASYMU INPUT ON JLEVEL
@@ -439,7 +439,7 @@ C
           LC=L(IC)
           IF (LC.NE.LSAV) THEN
             CALL J3J000(DBLE(LC),DBLE(LM),IVALL,X(ITL),XLMIN)
-            LMIN=IABS(LC-LM)
+            LMIN=ABS(LC-LM)
             LMAX=LC+LM
             LSAV=LC
           ENDIF
@@ -514,7 +514,7 @@ C  FIRST TIME THROUGH SET UP SOME STORAGE POINTERS
       IXMX=NL12*MXLAM
       ISTART=MX+1
 C
- 4500 MVABS=IABS(MVAL)
+ 4500 MVABS=ABS(MVAL)
 C  SEE IF VALUES ARE STORED FOR THIS HIGH AN MVALUE
 C  IF NOT, TRY TO STORE THEM IN XCPL().
       IF (MVABS.LE.IFIRST .OR. NOMEM) GOTO 4900

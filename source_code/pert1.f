@@ -1,6 +1,6 @@
       SUBROUTINE PERT1(N,CX,SX,XSQ,X,H,V0,V1,V2,EYE11,
      1                 EYE12,EYE22,A1,A2,A1P,A2P)
-C  Copyright (C) 2018 J. M. Hutson & C. R. Le Sueur
+C  Copyright (C) 2019 J. M. Hutson & C. R. Le Sueur
 C  Distributed under the GNU General Public License, version 3
       IMPLICIT DOUBLE PRECISION (A-H,O-Z)
 C-------------------------------------------------------------------

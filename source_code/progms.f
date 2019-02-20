@@ -1,4 +1,4 @@
-C  Copyright (C) 2018 J. M. Hutson & C. R. Le Sueur
+C  Copyright (C) 2019 J. M. Hutson & C. R. Le Sueur
 C  Distributed under the GNU General Public License, version 3
 
 C  This set of subroutines used to print out common information in header
@@ -13,7 +13,7 @@ C  PRINT VERSION NUMBER AND COPYRIGHT STATEMENT
       WRITE(6,10) PDATE
 
    10 FORMAT(' |',76X,'|'/' |',14X,
-     4       'Copyright (C) 2018 J. M. Hutson & C. R. Le Sueur',14X,'|'/
+     4       'Copyright (C) 2019 J. M. Hutson & C. R. Le Sueur',14X,'|'/
      4       ' |',76X,'|'/
      5       ' |',31X,'Version ',A20,17X,'|'/
      6       ' |',76X,'|')

@@ -1,6 +1,6 @@
       SUBROUTINE CONVRG(J,SR,SI,SROLD,SIOLD,ICON,DRCON,ICONVU,NOPSQ,
      1                  IPRINT)
-C  Copyright (C) 2018 J. M. Hutson & C. R. Le Sueur
+C  Copyright (C) 2019 J. M. Hutson & C. R. Le Sueur
 C  Distributed under the GNU General Public License, version 3
 C
 C  SUBROUTINE TO ASSIST IN THE ESTIMATION OF CONVERGENCE ERRORS
@@ -63,7 +63,7 @@ C  COMMON BLOCK FOR CONTROL OF PROPAGATION SEGMENTS
       WRITE(ICONVU) (SIOLD(I),I=1,NOPSQ)
       GOTO 300
 C
-  200 JCONVU=IABS(ICONVU)
+  200 JCONVU=ABS(ICONVU)
       IF (ICONVU.EQ.0) GOTO 300
 
       REWIND(JCONVU)
@@ -103,16 +103,16 @@ C
 C  THIS DOES NOT COVER THE FULL SET OF POSSIBILITIES, BUT IS GOOD ENOUGH
           IF (STEPS.LT.0.D0 .AND. STEPL.LT.0.D0) THEN
             IF (DRL.NE.UNSET) THEN
-              WRITE(6,603) RMIN,DRS,RMID,DRL,RMAX
+              WRITE(6,603) RMNINT,DRS,RMID,DRL,RMXINT
   603         FORMAT(/'  FOR RMIN =',F7.2,' DRS =',F8.4,' RMID =',F7.2,
      1                ' DRL =',F8.4,' RMAX =',F11.2)
             ELSE
-              WRITE(6,604) RMIN,RMID,RMAX,DRS
+              WRITE(6,604) RMNINT,RMID,RMXINT,DRS
   604         FORMAT(/'  FOR RMIN =',F7.2,' RMID =',F7.2,
      1                ' RMAX =',F11.2,' DR =',F8.4)
             ENDIF
           ELSEIF (STEPS.GT.0.D0 .AND. STEPL.GT.0.D0) THEN
-            WRITE(6,605) RMIN,STEPS,RMID,STEPS,RMAX
+            WRITE(6,605) RMNINT,STEPS,RMID,STEPS,RMXINT
   605       FORMAT(/'  FOR RMIN =',F7.2,' STEPS =',F7.2,' RMID =',F7.2,
      1              ' STEPL =',F7.2,' RMAX =',F11.2)
           ENDIF

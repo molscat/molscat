@@ -1,7 +1,7 @@
       SUBROUTINE HEADER(W,WX,N,NSQ,P,VL,IV,
      1                  EINT,CENT,DIAG,MXLAM,NPOTL,ICODE,ISAV,
      2                  ERED,EFIRST,RMLMDA,IPRINT)
-C  Copyright (C) 2018 J. M. Hutson & C. R. Le Sueur
+C  Copyright (C) 2019 J. M. Hutson & C. R. Le Sueur
 C  Distributed under the GNU General Public License, version 3
       USE efvs
       IMPLICIT DOUBLE PRECISION (A-H,O-Z)

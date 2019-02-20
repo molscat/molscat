@@ -1,5 +1,5 @@
       module efvs
-C  Copyright (C) 2018 J. M. Hutson & C. R. Le Sueur
+C  Copyright (C) 2019 J. M. Hutson & C. R. Le Sueur
 C  Distributed under the GNU General Public License, version 3
       IMPLICIT NONE
       INTEGER, PARAMETER :: MAXEFV=10, LEFVN=20, LEFVU=6
@@ -16,4 +16,11 @@ C  REPLACES THIS COMMON BLOCK
 C     COMMON /EXTNL / NEFV,ISVEFV,EFV,MAPEFV,
 C    1                LISTFV,NNZRO,IEFVST,IEFVFN,
 C    2                EFVNAM,EFVUNT
+
+C  SCALING FACTOR FOR POTENTIAL
+      DOUBLE PRECISION :: SCALAM
+
+C  VARIABLE FOR COMMUNICATING INFORMATION IN ISAVEU FILE (FOR FUTURE
+C  EXPANSION)
+      INTEGER          :: ITPSUB
       end module efvs

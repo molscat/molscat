@@ -1,6 +1,6 @@
       SUBROUTINE SIG6(NSTATE,JSTATE,A,LI,LF,SIG,S,IMSG,QL,IXQL,
      2                NIXQL,NQL,LM,LMAX)
-C  Copyright (C) 2018 J. M. Hutson & C. R. Le Sueur
+C  Copyright (C) 2019 J. M. Hutson & C. R. Le Sueur
 C  Distributed under the GNU General Public License, version 3
 C
 C  ROUTINE TO EVALUATE SIG(J,TAU->J',TAU') FROM IOS Q(L,M1,M2)
@@ -31,7 +31,7 @@ C
       XJF=JF
       NKF=2*JF+1
       ISTAF=JSTATE(4,LF)
-      LMN=IABS(JI-JF)
+      LMN=ABS(JI-JF)
       LMX=JI+JF
 
       DO 1100 L=LMN,LMX
@@ -80,7 +80,7 @@ C  -------------LOOP OVER IPI,IPF  IQI,IQF -----------
             IF (ABS(APF).LE.EPS) GOTO 1200
 
             PF=IPF
-            IF (IABS(IPI-IPF).GT.MMAX) GOTO 1200
+            IF (ABS(IPI-IPF).GT.MMAX) GOTO 1200
 
             IQI=-JI-1
             DO 1301 IIQI=1,NKI
@@ -96,7 +96,7 @@ C  -------------LOOP OVER IPI,IPF  IQI,IQF -----------
                 IF (ABS(AQF).LE.EPS) GOTO 1300
 
                 QF=IQF
-                IF (IABS(IQI-IQF).GT.MMAX) GOTO 1300
+                IF (ABS(IQI-IQF).GT.MMAX) GOTO 1300
 
 C  CALCULATE FACTOR
                 TJ1 = THRJ(XJI,XL,XJF,-PI,PI-PF,PF)
@@ -116,13 +116,13 @@ C  RECALCULATE MP,MQ AS THEY MIGHT HAVE BEEN SWAPPED IN LAST LOOP.
                 P=PARSGN(MP)
                 SIGNR=P*SIGNR
                 SIGNI=P*SIGNI
-                MP=IABS(MP)
+                MP=ABS(MP)
  1401           IF (MQ.GE.0) GOTO 1402
 
                 P=PARSGN(MQ)
                 SIGNR=P*SIGNR
                 SIGNI=P*SIGNI
-                MQ=IABS(MQ)
+                MQ=ABS(MQ)
  1402           IF (MP.GE.MQ) GOTO 1403
 
                 SIGNI=-SIGNI

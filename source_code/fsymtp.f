@@ -1,5 +1,5 @@
       FUNCTION FSYMTP(J1,K1,L1,J2,K2,L2,JT,LAM,MU)
-C  Copyright (C) 2018 J. M. Hutson & C. R. Le Sueur
+C  Copyright (C) 2019 J. M. Hutson & C. R. Le Sueur
 C  Distributed under the GNU General Public License, version 3
       IMPLICIT DOUBLE PRECISION (A-H,O-Z)
 C

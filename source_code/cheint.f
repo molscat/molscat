@@ -1,5 +1,5 @@
       SUBROUTINE CHEINT(EINT,DGVL,N,OLDFAC,CINT)
-C  Copyright (C) 2018 J. M. Hutson & C. R. Le Sueur
+C  Copyright (C) 2019 J. M. Hutson & C. R. Le Sueur
 C  Distributed under the GNU General Public License, version 3
 C
 C  Written by C R Le Sueur Sep 2018

@@ -4,7 +4,7 @@
      3                  L,NB,P,ERED,RMLMDA,DEGTOL,
      4                  DRMAX,NSTAB,NOPEN,IPRINT,IBOUND,ICHAN,
      5                  WAVE,ILDSVU)
-C  Copyright (C) 2018 J. M. Hutson & C. R. Le Sueur
+C  Copyright (C) 2019 J. M. Hutson & C. R. Le Sueur
 C  Distributed under the GNU General Public License, version 3
       USE potential
 C
@@ -125,7 +125,7 @@ C
         ENDIF
 C
         IF (IPROP.EQ.2) THEN
-C  SOLVE COUPLED EQUATIONS BY PROPAGATOR OF DEVOGELAERE
+C  SOLVE COUPLED EQUATIONS BY PROPAGATOR OF DE VOGELAERE
 C
           IT1=IC2        ! Y  (WAVEFUNCTION MATRIX)
           IT2=IT1+4*NSQ  ! YP (WAVEFUNCTION DERIVATIVE)

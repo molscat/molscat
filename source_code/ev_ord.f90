@@ -1,5 +1,5 @@
 subroutine ev_ord(evec,ibeg,ncurr,nn,nnctot,iconst,iprint)
-!  Copyright (C) 2018 J. M. Hutson & C. R. Le Sueur
+!  Copyright (C) 2019 J. M. Hutson & C. R. Le Sueur
 !  Distributed under the GNU General Public License, version 3
 USE potential
 ! written by CRLS 26-03-16
@@ -117,10 +117,11 @@ outer: do i=1,ncurr-1
            zmaskc(jcmp)=.true.
            jpoint(mvec,iconst)=jcmp
            write(6,*) ' *** Warning ***'
-           write(6,100) ' Eigenvector ',mvec,' assigned to position',jcmp
+           write(6,100) '  Eigenvector ',mvec,' assigned to position',jcmp
 100        format(a,i4,a,i4)
            write(6,*) ' but other eigenvectors also have their maximum',&
                       ' component in that position'
+           write(6,*)
            cycle outer
          endif
 

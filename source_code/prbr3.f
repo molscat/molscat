@@ -1,7 +1,7 @@
       SUBROUTINE PRBR3(N,SREAL,SIMAG,JTOT,NSTATE,NQN,JSTATE,NBASIS,
      1                 JSINDX,L,NPACK,LINE,NLVAL,IC,IL,SR,SI,
      2                 TR,JBAR,ISTB,NBLK,LVAL)
-C  Copyright (C) 2018 J. M. Hutson & C. R. Le Sueur
+C  Copyright (C) 2019 J. M. Hutson & C. R. Le Sueur
 C  Distributed under the GNU General Public License, version 3
 C
 C  PRBR3 IS AN INTERFACE ROUTINE WHICH TRANSFORMS ITYPE=3 S-MATRICES
@@ -76,12 +76,12 @@ C  GET JA, J2 FROM 1ST MEMBER - SHOULD BE SAME FOR ALL.
       JJ=JSINDX(NBASIS(IC(1)))
       JA=JSTATE(JJ,1)
       J2=JSTATE(JJ,2)
-      JLOW=IABS(JTOT-JA)
+      JLOW=ABS(JTOT-JA)
       JTOP=JTOT+JA
       DO 3000 II=1,NB
         LLL=LVAL(II)
         NJB=0
-        JMIN=IABS(J2-LLL)
+        JMIN=ABS(J2-LLL)
         JMAX=J2+LLL
         DO 3100 II2=JLOW,JTOP
           IF (II2.LT.JMIN) GOTO 3100

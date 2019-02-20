@@ -8,7 +8,7 @@
      7                  IXCENT,IXWV,IXJIND,IXLORB,IXNB,WVEC,NB,IREF,
      8                  IFLS,LINE,LTYPE,IPOT,MONQN,IBOUND,WAVE,
      9                  ERED,RMLMDA,DRMAX,NSTAB,ILDSVU)
-C  Copyright (C) 2018 J. M. Hutson & C. R. Le Sueur
+C  Copyright (C) 2019 J. M. Hutson & C. R. Le Sueur
 C  Distributed under the GNU General Public License, version 3
 C
       IMPLICIT DOUBLE PRECISION (A-H,O-Z)

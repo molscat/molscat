@@ -1,5 +1,5 @@
       SUBROUTINE SREAD(IU,N,S,IEND)
-C  Copyright (C) 2018 J. M. Hutson & C. R. Le Sueur
+C  Copyright (C) 2019 J. M. Hutson & C. R. Le Sueur
 C  Distributed under the GNU General Public License, version 3
 C
 C  ON ENTRY: IU IS NUMBER LABEL OF (UNFORMATTED) INPUT STREAM;
@@ -20,7 +20,7 @@ C
       END
 C=======================================================================
       SUBROUTINE SKREAD
-C  Copyright (C) 2018 J. M. Hutson & C. R. Le Sueur
+C  Copyright (C) 2019 J. M. Hutson & C. R. Le Sueur
 C  Distributed under the GNU General Public License, version 3
 C
 C  WRITTEN BY CR Le Sueur Aug 2018
@@ -28,15 +28,15 @@ C  WRITTEN BY CR Le Sueur Aug 2018
       SAVE
 C  THE FOLLOWING VARIABLES ARE IN THE MODULE EFVS.
       INTEGER, PARAMETER            :: MAXEFV=10,LEFVN=20,LEFVU=6
+      INTEGER, INTENT(OUT)          :: NEFV, ISVEFV, ITPSUB
+
+      CHARACTER(LEFVN), INTENT(OUT) :: EFVNAM(0:MAXEFV)
+      CHARACTER(LEFVU), INTENT(OUT) :: EFVUNT(0:MAXEFV)
 C
 C  PASSED VARIABLES FOR HEADER
       INTEGER, INTENT(IN)           :: IRDUNT,NSTATE,NQN,IPROGM
       INTEGER, INTENT(OUT)          :: JSTATE(NSTATE*NQN),NLVL,NNRG,
      1                                 NFIELD,NDGVL,NCONST,NRSQ,IBOUND
-      INTEGER, INTENT(OUT)          :: NEFV, ISVEFV
-
-      CHARACTER(LEFVN), INTENT(OUT) :: EFVNAM(0:MAXEFV)
-      CHARACTER(LEFVU), INTENT(OUT) :: EFVUNT(0:MAXEFV)
 
       DOUBLE PRECISION, INTENT(OUT) :: ELEVEL(1),ENERGY(1)
 
@@ -66,7 +66,7 @@ C  ENTRY POINT FOR READING HEADER FOR S MATRIX FILE (SBE, DCS, RESTART)
 C                                  OR K MATRIX FILE (RESFIT/SAVER)
       ENTRY HDREAD(IRDUNT,LFIN,NSTATE,NQN,IPROGM,
      1            JSTATE,NLVL,ELEVEL,NDGVL,NCONST,NRSQ,IBOUND,
-     2            NEFV,ISVEFV,EFVNAM,EFVUNT,NFIELD,NNRG,ENERGY)
+     2            ITPSUB,NEFV,ISVEFV,EFVNAM,EFVUNT,NFIELD,NNRG,ENERGY)
 C=======================================================================
       LFMT=LFIN
       IF (IPROGM.GE.17) LFMT=.FALSE.
@@ -83,7 +83,7 @@ C       IF (IPROGM.GE.3) READ(IRDUNT,102) NLVL,(ELEVEL(I),I=1,NLVL)
         READ(IRDUNT) (JSTATE(I),I=1,NSTATE*NQN)
         IF (IPROGM.GE.3) READ(IRDUNT) NLVL,(ELEVEL(I),I=1,NLVL)
         IF (IPROGM.GE.17) THEN
-          READ(IRDUNT) NDGVL,NCONST,NRSQ,IBOUND
+          READ(IRDUNT) NDGVL,NCONST,NRSQ,IBOUND,ITPSUB
           READ(IRDUNT) NEFV,ISVEFV,(EFVNAM(IEFV),EFVUNT(IEFV),
      2                              IEFV=1,NEFV)
           NEFVP=0
@@ -111,14 +111,14 @@ C=======================================================================
 C  ENTRY POINT FOR READING K MATRIX FILE (RESFIT/SAVER)
       ENTRY KLPRD(IRDUNT,JTOT,INRG,ENERGN,EFV,EREF,IEXCH,WT,M,NOPEN,
      1            IFIELD,INDLEV,L,CENT,WVEC,SREAL,SIMAG,AKMAT,
-     2            IPROGM,IBOUND,IREAD,IFAIL)
+     2            IPROGM,IBOUND,ITPSUB,IREAD,IFAIL)
       KMAT=.TRUE.
       GOTO 20
 C=======================================================================
 C  ENTRY POINT FOR READING S MATRIX FILE (SBE, DCS, RESTART)
       ENTRY SLPRD(IRDUNT,JTOT,INRG,ENERGN,EFV,EREF,IEXCH,WT,M,NOPEN,
      1            IFIELD,INDLEV,L,CENT,WVEC,SREAL,SIMAG,
-     2            IPROGM,IBOUND,IREAD,IFAIL)
+     2            IPROGM,IBOUND,ITPSUB,IREAD,IFAIL)
       KMAT=.FALSE.
 C=======================================================================
 
