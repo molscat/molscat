@@ -16,6 +16,7 @@ EXECDIR = .
 # 1) gfortran
 Compiler = gfortran
 LIBS     = -llapack -lblas
+#
 # 2) ifort
 #Compiler = ifort
 #LIBS     =
@@ -28,7 +29,7 @@ LIBS     = -llapack -lblas
 #
 # set up recipe rules ========================================================
 #
-# set flags for compilation 
+# set flags for compilation
 COMPILE.f = $(Compiler) -c  -O0 -g
 LINK.f    = $(Compiler)
 #
@@ -93,8 +94,8 @@ ANGLES_DEPS =     iosbin.o iosout.o potenl.o vrtp-He_H2O.o vrtp-Rg_HX-eta.o \
 #
 EFVS_DEPS =       base.o base9-1S_3Sigma_cpld.o base9-alk_alk.o \
                   bd.driver.o efv9-dummy.o fld.driver.o header.o ldrdwt.o \
-                  locpol.o mol.driver.o output.o prnsum.o rdpch.o setefv.o \
-                  sread.o wvhead.o cheint.o
+                  locpol.o mol.driver.o output.o prnsum.o rdsigu.o \
+                  scalam-default.o setefv.o sread.o wvhead.o cheint.o
 
 (addprefix $(OBJDIR)/,$(EFVS_DEPS)): efvs.mod
 #
@@ -122,7 +123,7 @@ BASIS_DEPS =      asrot.o base.o base9-1S_3Sigma_cpld.o base9-alk_alk.o \
 #
 MODULES =   physical_constants.o efvs_module.o sizes_module.o potential_module.o \
             basis_module.o angles_module.o
-CLOCK =     gclock.o gdate.o 
+CLOCK =     gclock.o gdate.o
 DIAG =      diagvc.o diagvl.o
 LA_UTILS =  dgemul.o syminl-alloc.o dsyneg.o syminv.o
 #
@@ -157,7 +158,7 @@ YTOS =      ytok.o rbesjy.o rbessk.o ytokg.o ksym.o ktos.o
 FLD = bdctrl.o bdpset.o bd.iosbin.o bd.prpini.o evmtch.o prnsum.o $(ALLDRV)
 BD =  cntrct.o $(FLD)
 MOL = calca.o convrg.o eavg.o findrx.o getlev.o header.o iosbin.o iosdrv.o \
-      ldrdwt.o locpol.o mol.prpini.o nexte.o output.o rdpch.o psiasy.o \
+      ldrdwt.o locpol.o mol.prpini.o nexte.o output.o rdsigu.o psiasy.o \
       scctrl.o scpset.o scwave.o \
       $(ALLDRV) $(IOSBIN) $(PRBR) $(RESTRT) $(PROPS) $(YTOS)
 #
@@ -170,9 +171,8 @@ RGH2-POTENL = potenl-Rg_H2.o $(POTUTILS)
 # dependencies needed for system-specific potentials ========================
 #
 BASIC-POTENL   = $(GP-POTENL) vstar-dummy.o       vrtp-dummy.o
-HEH2O-POTENL   = $(GP-POTENL) vstar-dummy.o       vrtp-He_H2O.o
 H2H2-POTENL    = $(GP-POTENL) vstar-H2_H2.o       vrtp-H2_H2.o
-ARHF-POTENL    = $(GP-POTENL) vstar-dummy.o       vrtp-Rg_HX-eta.o   extpot-Rg_HX.o \
+ARHX-POTENL    = $(GP-POTENL) vstar-dummy.o       vrtp-Rg_HX-eta.o   extpot-Rg_HX.o \
                               sumleg.o pleg.o pasleg.o assleg.o
 ARCH4-POTENL   = $(GP-POTENL) vstar-Rg_CH4_Buck.o vrtp-extpot_2ang.o extpot-Ar_CH4.o
 ARCO2-POTENL   = $(GP-POTENL) vstar-dummy.o       vrtp-extpot_1ang.o extpot-Ar_CO2.o \
@@ -191,8 +191,6 @@ ALK2-BASE9   = base9-alk_alk.o \
                efv9-dummy.o degen9-nondegenerate.o
 MGNH-BASE9   = base9-1S_3Sigma_cpld.o \
                efv9-dummy.o degen9-nondegenerate.o potin9-example.o
-TETQ-BASE9   = base9-tetraquark-centrifugal.o \
-               efv9-dummy.o degen9-nondegenerate.o thrsh9-dummy.o
 # definitions for MOLSCAT post-processors
 #
 # set up 'normal' set of object files dependencies ==========================
@@ -211,7 +209,7 @@ PROGS =     molscat-basic \
             bound-basic \
             bound-Rg_HX   bound-Rb2      bound-Ar_CH4 \
             bound-H2_H2   bound-Rg_H2    bound-Mg_NH \
-            bound-Rg_CO2  bound-tetraquark \
+            bound-Rg_CO2  \
             field-basic \
             field-Mg_NH   field-Rb2
 ##############################################################################
@@ -231,7 +229,7 @@ $(EXECDIR)/molscat-H2_H2     : $(addprefix $(OBJDIR)/,$(BASIC_MOL) \
 	$(LINK.f) $^ $(LIBS) -o $@
 $(EXECDIR)/molscat-Rg_HX     : $(addprefix $(OBJDIR)/,$(BASIC_MOL) \
                                                       $(UNUSED-BASE9) \
-                                                      $(ARHF-POTENL))
+                                                      $(ARHX-POTENL))
 	$(LINK.f) $^ $(LIBS) -o $@
 $(EXECDIR)/molscat-Rg_CO2    : $(addprefix $(OBJDIR)/,$(BASIC_MOL) \
                                                       $(UNUSED-BASE9) \
@@ -259,10 +257,10 @@ $(EXECDIR)/bound-basic       : $(addprefix $(OBJDIR)/,$(BASIC_BND) \
 	$(LINK.f) $^ $(LIBS) -o $@
 $(EXECDIR)/bound-Rg_HX       : $(addprefix $(OBJDIR)/,$(BASIC_BND) \
                                                       $(UNUSED-BASE9) \
-                                                      $(ARHF-POTENL))
+                                                      $(ARHX-POTENL))
 	$(LINK.f) $^ $(LIBS) -o $@
 $(EXECDIR)/bound-Rb2         : $(addprefix $(OBJDIR)/,$(BASIC_BND)  \
-                                                      $(UNUSED-BASE9) \
+                                                      $(ALK2-BASE9) \
                                                       $(RB2-POTENL))
 	$(LINK.f) $^ $(LIBS) -o $@
 $(EXECDIR)/bound-H2_H2       : $(addprefix $(OBJDIR)/,$(BASIC_BND) \
@@ -284,10 +282,6 @@ $(EXECDIR)/bound-Rg_CO2      : $(addprefix $(OBJDIR)/,$(BASIC_BND) \
 $(EXECDIR)/bound-Mg_NH       : $(addprefix $(OBJDIR)/,$(BASIC_BND) \
                                                       $(MGNH-BASE9) \
                                                       $(MGNH-POTENL))
-	$(LINK.f) $^ $(LIBS) -o $@
-$(EXECDIR)/bound-tetraquark  : $(addprefix $(OBJDIR)/,$(BASIC_BND) \
-                                                      $(TETQ-BASE9) \
-                                                      $(BASIC-POTENL))
 	$(LINK.f) $^ $(LIBS) -o $@
 $(EXECDIR)/field-basic       : $(addprefix $(OBJDIR)/,$(BASIC_FLD) \
                                                       $(UNUSED-BASE9) \
