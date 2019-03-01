@@ -88,6 +88,7 @@ C============================================================== EABSMS
       ENTRY EABSMS(EABS,EFACT,UNAME)
 C  PRINT ABSOLUTE ENERGY
 
+      IF (EABS.EQ.0.D0) RETURN
       IF (EFACT.NE.1.D0) THEN
         WRITE(6,300) EABS/EFACT,TRIM(UNAME),EABS
       ELSE

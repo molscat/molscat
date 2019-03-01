@@ -226,13 +226,13 @@ C  FOR BOUND/FIELD, ALL PROPAGATIONS ARE TOWARDS RMATCH
      1                   'VARIABLES RMIN, RMATCH AND RMAX, WITH '//
      2                   'INPUT VALUES'
           WRITE(6,1010) ' RMIN = ',RMIN,' RMATCH = ',RMATCH,
-     1                 ' RMAX = ',RMAX
+     1                  ' RMAX = ',RMAX
         ELSE
-          WRITE(6,*) ' PROPAGATION RANGES ARE CONTROLLED BY '//
-     1               'VARIABLES RMIN, RMID, RMATCH AND RMAX, WITH '//
-     2               'INPUT VALUES'
+          WRITE(6,'(A)') '  PROPAGATION RANGES ARE CONTROLLED BY '//
+     1                   'VARIABLES RMIN, RMID, RMATCH AND RMAX, '//
+     2                   'WITH INPUT VALUES'
           WRITE(6,1010) ' RMIN = ',RMIN,'RMID = ',RMID,
-     1                 ' RMATCH = ',RMATCH,' RMAX = ',RMAX
+     1                  ' RMATCH = ',RMATCH,' RMAX = ',RMAX
         ENDIF
       ENDIF
  1000 FORMAT(/2X,A,A,1X,I1,1X,A:,A)

@@ -1122,7 +1122,7 @@ C
                 IF (IPRINT.GE.7) CALL EREFMS(EREF,EUNIT,EUNAME,MONQN,
      1                                       NQN)
                 IF (IPRINT.GE.8) CALL EABSMS(ERED,EUNIT,EUNAME)
-                IF (CONVGE .AND. .NOT.WAVE) EXIT
+                IF (CONVGE) EXIT
 C
                 ERED=ERED*CINT
 
@@ -1217,7 +1217,7 @@ C
               IF (WAVE) THEN
                 CALL WVINFO(JTOT,IB,NSEEK,N,NQN,NSTATE,X(IXJSTT),
      1                      X(ISJIND),X(ISL),ERED/CINT,EREF,EUNIT,
-     2                      EUNAME)
+     2                      EUNAME,IPRINT)
               ENDIF
               IF (IPRINT.GE.5 .OR. WAVE) THEN
 
@@ -1228,17 +1228,17 @@ C
 C  END OF BOUND-STATE LOCATION SECTION
 C ===========================================================================
 C
-C  IF WAVEFUNCTIONS REQUIRED REPEAT FINAL PROPAGATION TO SAVE
-C  NECESSARY INFORMATION
+C  IF WAVEFUNCTIONS REQUIRED DO A  FINAL PROPAGATION TO SAVE
+C  NECESSARY INFORMATION FOR BACK-PROPAGATION
 C
               IF (WAVE) THEN
 C
 C  WRITE OUT HEADER FOR THIS WAVEFN
 C
                 IF (IPRINT.GE.11) WRITE(6,2580) IPSISC
- 2580           FORMAT(' WAVEFUNCTIONS REQUESTED, REPEAT LAST ',
-     1                 'PROPAGATION LOOP WRITING OUT NECESSARY ',
-     2                 'INFORMATION ON CHANNEL ',I2)
+ 2580           FORMAT('  WAVEFUNCTIONS REQUESTED, FINAL PROPAGATION ',
+     1                 'WRITES OUT NECESSARY INFORMATION ON CHANNEL ',
+     2                 I2)
                 IREAD=IWRITE
                 IWRITE=.FALSE.
 C
