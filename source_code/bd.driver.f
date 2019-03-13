@@ -55,7 +55,7 @@ C  ARRAY TO HOLD TIME AND DATE
       CHARACTER METHOD*12
 C
       LOGICAL LFSCAN,LFSRCH,NOBIS,REBIS,LESCAN
-      LOGICAL CONVGE,ZBRENT,LSKIP
+      LOGICAL CONVGE,ENOISE,ZBRENT,LSKIP
 C
       CHARACTER(80)  LABEL
       CHARACTER(122) LABL
@@ -63,6 +63,7 @@ C
       CHARACTER(40)  FTITLE
       CHARACTER(8)   EUNAME
       CHARACTER(20)  PDATE
+      CHARACTER(10)  RUNAME
 C
 C  FOLLOWING ARRAYS ALL HAVE DIMENSION MXNODE. MXNODE IS THE MAXIMUM
 C  NUMBER OF NODES THAT CAN BE SOUGHT IN A SINGLE RUN.
@@ -102,9 +103,9 @@ C  COMMON BLOCK FOR CONTROL OF USE OF PROPAGATION SCRATCH FILE
 C
 C  COMMON BLOCK FOR CONTROL OF PROPAGATION SEGMENTS
       COMMON /RADIAL/ RMNINT,RMXINT,RMID,RMATCH,DRS,DRL,STEPS,STEPL,
-     1                POWRS,POWRL,TOLHIS,TOLHIL,CAYS,CAYL,UNSET,
+     1                POWRS,POWRL,TOLHIS,TOLHIL,CAYS,CAYL,unset,
      2                IPROPS,IPROPL,NSEG
-      PARAMETER (PUNSET=-1D30)
+      PARAMETER (PUNSET=-237540475023D30)
 C
       COMMON /VLSAVE/ IVLU
 C
@@ -166,7 +167,7 @@ C  LEVEL CONTAINED IN JLEVEL. (VALUE FOR ITYP=9 IS A DUMMY VALUE)
       DATA NJLQN/1,2,2,3,3,2,2,2,1/
 C
       DATA LABEL /'        '/
-      DATA IPROGM /16/, PDATE /'2019.0'/
+      DATA IPROGM /17/, PDATE /'2019.0'/
       DATA CDRIVE /'B'/
 C
 C  THE PHYSICAL CONSTANTS USED ARE COMBINED IN THE SINGLE NUMBER BFCT.
@@ -206,7 +207,7 @@ C
       ADIAMX=.TRUE.
       BCYCMN=-1.0D0
       BCYCMX=-1.0D0
-      BCYOMN=1.0D8
+      BCYOMN=unset
       BCYOMX=0.0D0
       DEGTOL=1.0D-10
       DELTA=0.0D0
@@ -456,7 +457,7 @@ C  INITIALISE ALL EXTERNAL VARIABLE QUANTITIES
 C
 C--------------------------------------------------------------------
 C  INITIALIZE POTENTIAL.
-C   EPSIL  (POTENTIAL ENERGY UNIT) MUST BE SET IN POTENL
+C   EP2CM  (POTENTIAL ENERGY UNIT) MUST BE SET IN POTENL
 C   RPUNIT (POTENTIAL LENGTH UNIT) MAY OPTIONALLY BE SET IN POTENTIAL
 C     IF RPUNIT IS SET AND RUNIT IS UNSET, RUNIT IS TAKEN FROM RPUNIT,
 C     AND VICE VERSA. IF BOTH ARE SET, POTENL USES SEPARATE LENGTH UNITS.
@@ -467,17 +468,17 @@ C
       MXLAM=NIPR*(MX-ILAM+1)
 C
       RPUNIT=unset
-      CALL POTENL(-1,MXLAM,X(ILAM),RPUNIT,EPSIL,ITYPE,IPRINT)
+      CALL POTENL(-1,MXLAM,X(ILAM),RPUNIT,EP2CM,ITYPE,IPRINT)
 C
-      CALL CHCKRU(RUNIT,RPUNIT,RSCALE,unset,IPRINT)
+      CALL CHCKRU(RUNIT,RUNAME,RPUNIT,RSCALE,unset,IPRINT)
 C
 C  THE PROGRAM WORKS WITH REDUCED ENERGIES IN UNITS OF 1/RUNIT**2
 C  ALL DISTANCES ARE IN THESE R UNITS.
-C  CINT CONVERTS ENERGIES IN CM-1 INTO UNITS OF 1/RUNIT**2
-C  RMLMDA CONVERT THE INTERACTION POTENTIAL INTO UNITS OF 1/RUNIT**2
+C  CM2RU CONVERTS ENERGIES IN CM-1 INTO UNITS OF 1/RUNIT**2
+C  EP2RU CONVERT THE INTERACTION POTENTIAL INTO UNITS OF 1/RUNIT**2
 C
-      CINT=URED*MUNIT*RUNIT*RUNIT/BFCT
-      RMLMDA=CINT*EPSIL
+      CM2RU=URED*MUNIT*RUNIT*RUNIT/BFCT
+      EP2RU=EP2CM*CM2RU
 C
       ITYP=MOD(ITYPE,10)
       IXNEXT=IXNEXT+(MXLAM*NLABV(ITYP)+NIPR-1)/NIPR
@@ -509,7 +510,8 @@ C
 C
 C  WRITE HEADER ON WAVEFUNCTION FILE
 C
-      IF (WAVE) CALL WVHEAD(IPROGM,LABEL,ITYPE,URED,IPRINT)
+      IF (WAVE) CALL WVHEAD(IPROGM,LABEL,ITYPE,IBOUND,URED,MUNIT,RUNIT,
+     1                      EUNIT,IPRINT)
 C
       IF (RCTRCT.GT.0.D0 .AND. (IPROPS.EQ.6 .OR. IPROPL.EQ.6)) THEN
         WRITE(6,*) ' CURRENT IMPLEMENTATION OF LDMD PROPAGATOR'//
@@ -519,13 +521,13 @@ C
       ENDIF
       IF (IPRINT.GE.1) WRITE(6,1060)
 C
-      EFIRST=EMIN*CINT
+      EFIRST=EMIN*CM2RU
       EBAS=EFIRST
 C
       IF (ITYPE.EQ.8) EBAS=100.0D0
 
       EREF=EREF*EUNIT
-      IF (NCONST.EQ.0) CALL THRESH(X(ISEINT),N,CINT,ITYPE,MONQN,NQN,
+      IF (NCONST.EQ.0) CALL THRESH(X(ISEINT),N,CM2RU,ITYPE,MONQN,NQN,
      1                             NJLQN(ITYP),EREF,X(ISJIND),0)
 
       IF (IPRINT.GE.1) THEN
@@ -648,10 +650,11 @@ C
 C
 C  CHOOSE BASIS FUNCTIONS
 C
-          CALL BASE(JTOT,X(IXJSTT),N,X,X,CINT,
+          CALL BASE(JTOT,X(IXJSTT),N,X,X,CM2RU,
      1              X,X,X,X,MXLAM,NPOTL,
-     2              X(ILAM),X,WGHT,IEXCH,THETA,PHI,IB,.TRUE.,
-     3              EBAS,NSTATE,IPRINT,IBOUND,X(ISJSTT),X)
+     2              X(ILAM),X,WGHT,IEXCH,THETA,PHI,IB,
+     3              .TRUE.,EBAS,NSTATE,IPRINT,IBOUND,X(ISJSTT),
+     4              X)
 C
 C  N IS THE NUMBER OF BASIS FUNCTIONS
 C  SKIP THIS JTOT,IB IF NO CHANNELS
@@ -685,10 +688,11 @@ C  ALLOCATE STORAGE COMMON TO ALL PROPAGATORS. . .
 C
 C  SET UP BASIS FUNCTIONS IN ALLOCATED STORAGE
 C
-          CALL BASE(JTOT,X(IXJSTT),N,X(ISJIND),X(ISL),CINT,
+          CALL BASE(JTOT,X(IXJSTT),N,X(ISJIND),X(ISL),CM2RU,
      1              X(ISEINT),X(ISCENT),X(ISVL),X(ISIV),MXLAM,NPOTL,
-     2              X(ILAM),X(ISWVEC),WGHT,IEXCH,THETA,PHI,IB,.FALSE.,
-     3              EBAS,NSTATE,IPRINT,IBOUND,X(ISJSTT),X(ISDGVL))
+     2              X(ILAM),X(ISWVEC),WGHT,IEXCH,THETA,PHI,IB,
+     3              .FALSE.,EBAS,NSTATE,IPRINT,IBOUND,X(ISJSTT),
+     4              X(ISDGVL))
 C
 C  LOOP OVER EXTERNAL FIELDS (NOT USED BY DEFAULT)
 C
@@ -710,10 +714,10 @@ C  CHECK THAT RMAX IS BEYOND CENTRIFUGAL BARRIER
               ITT=ITW+NSQ    ! T
               IXNEXT=ITT+NSQ
               CALL CHKSTR(NUSED)
-              ECTRED=ECTRCT*CINT
+              ECTRED=ECTRCT*CM2RU
               CALL CNTRCT(N,MCTRCT,RCTRCT,ECTRED,X(ITW),X(ITT),
      1                    X(ISVL),X(ISIV),X(ISEINT),X(ISCENT),
-     2                    X(ISP),RMLMDA,MXLAM,NPOTL,IPRINT)
+     2                    X(ISP),EP2RU,CM2RU,RSCALE,MXLAM,NPOTL,IPRINT)
               N=MCTRCT
             ENDIF
 C
@@ -730,8 +734,8 @@ C  FOR CASES WHERE THE HAMILTONIAN IS DIAGONAL AT INFINITY, BUT THE INTERACTION
 C  ENERGY IS DEPENDENT ON EFVS, CHEINT WILL SHIFT THE VALUES IN EINT
 C
             IF (NCONST.EQ.0 .AND. NDGVL.GT.0) THEN
-              CALL CHEINT(X(ISEINT),X(ISDGVL),N,OLDFAC,CINT)
-              IF (IPRINT.GE.6) CALL THRLST(N,X(ISEINT),X(ISCENT),CINT,
+              CALL CHEINT(X(ISEINT),X(ISDGVL),N,OLDFAC,CM2RU)
+              IF (IPRINT.GE.6) CALL THRLST(N,X(ISEINT),X(ISCENT),CM2RU,
      1                                     X(ISL),IBOUND,EUNIT,EUNAME)
             ENDIF
 C
@@ -741,10 +745,10 @@ C
             IF (NCONST.GT.0 .OR. NRSQ.GT.0) THEN
               CALL YTRANS(X(ISYOUT),X(ISU),X(ISEINT),X(ISWVEC),
      1                    X(ISJIND),X(ISL),N,X(ISP),X(ISVL),X(ISIV),
-     2                    MXLAM,NPOTL,ERED,RMLMDA,DEGTOL,NOPEN,
-     3                    IBOUND,X(ISCENT),IPRINT,.FALSE.)
+     2                    MXLAM,NPOTL,ERED,EP2RU,CM2RU,DEGTOL,
+     3                    NOPEN,IBOUND,X(ISCENT),IPRINT,.FALSE.)
 C
-              IF (IPRINT.GE.6) CALL THRLST(N,X(ISEINT),X(ISCENT),CINT,
+              IF (IPRINT.GE.6) CALL THRLST(N,X(ISEINT),X(ISCENT),CM2RU,
      1                                     X(ISL),IBOUND,EUNIT,EUNAME)
             ENDIF
 C
@@ -760,7 +764,7 @@ C
 C  CALCULATE EREF
 C
             IF (IREF.NE.0 .OR. MONQN(1).NE.-99999) THEN
-              CALL THRESH(X(ISEINT),N,CINT,ITYPE,MONQN,NQN,
+              CALL THRESH(X(ISEINT),N,CM2RU,ITYPE,MONQN,NQN,
      1                    NJLQN(ITYP),EREF,X(ISJIND),IPRINT)
             ENDIF
             IF (IPRINT.GE.3) CALL EREFMS(EREF,EUNIT,EUNAME,MONQN,NQN)
@@ -768,15 +772,15 @@ C
             EMINB=EMIN+EREF
             EMAXB=EMAX+EREF
 
-            ERED=EMAXB*CINT
+            ERED=EMAXB*CM2RU
             EREDMX=ERED
 
-            CAYS=CALCK(EPS*CINT,EMAXB,X(ISEINT),N)
+            CAYS=CALCK(EPS*CM2RU,EMAXB,X(ISEINT),N)
             IF (STEPS.GT.0.D0 .AND. CAYS.EQ.0.D0) THEN
               WRITE(6,*) ' *** ERROR: EKIN+EPS IS NOT +VE'
               STOP
             ENDIF
-            CAYL=CALCK(EPL*CINT,EMAXB,X(ISEINT),N)
+            CAYL=CALCK(EPL*CM2RU,EMAXB,X(ISEINT),N)
             IF (STEPL.GT.0.D0 .AND. CAYL.EQ.0.D0) THEN
               WRITE(6,*) ' *** ERROR: EKIN+EPL IS NOT +VE'
               STOP
@@ -792,9 +796,9 @@ C
               IXNEXT=IT4+N
               CALL CHKSTR(NUSED)
               CALL FINDRM(X(ITW),N,RMNINT,RTURN,X(ISP),X(ISVL),
-     1                    X(ISIV),ERED,X(ISEINT),X(ISCENT),RMLMDA,
+     1                    X(ISIV),ERED,X(ISEINT),X(ISCENT),
      2                    X(IT1),X(IT2),X(IT3),X(IT4),MXLAM,NPOTL,
-     3                    IRMSET,ITYPE,IPRINT)
+     3                    EP2RU,CM2RU,RSCALE,IRMSET,ITYPE,IPRINT)
               IXNEXT=ITW
             ENDIF
 C
@@ -822,7 +826,7 @@ C  EIGENVALUE FOR THE CURRENT CALCULATION IS STORED
                 ENERGY=EMIN+DNRG*DBLE(INRG-1)
               ENDIF
               ENERB=ENERGY+EREF
-              ERED=ENERB*CINT
+              ERED=ENERB*CM2RU
               SVVAL=ENERGY/EUNIT
 
               IF (.NOT.LESCAN) THEN
@@ -835,7 +839,8 @@ C  EIGENVALUE FOR THE CURRENT CALCULATION IS STORED
               CALL BDCTRL(N, MXLAM, NPOTL, X(ISYOUT), X(ISYIN),
      1                    X(ISU), X(ISEVEC), X(IDUM), X(ISVL), X(ISIV),
      2                    X(ISEINT), X(ISCENT), X(ISP), NODE, ERED,
-     3                    RMLMDA, EIGMIN, .FALSE., IMIN, IPRINT)
+     3                    EP2RU, CM2RU, RSCALE, EIGMIN, .FALSE.,
+     4                    IMIN, IPRINT)
               IF (LESCAN .AND. IPRINT.GE.1) CALL PREVAL(NODE,EIGMIN)
 C
               CALL GCLOCK(TITIME)
@@ -945,12 +950,13 @@ C
               IF (IPRINT.GE.7) CALL PRBIS(SVMIN,SVMAX,SVVAL,SVUNIT,
      1                                    'BISECTION')
               IF (IPRINT.GE.8) CALL PRABSE(EHALF,EREF,EUNIT,SVUNIT)
-              ERED=EHALF*CINT
+              ERED=EHALF*CM2RU
 
               CALL BDCTRL(N, MXLAM, NPOTL, X(ISYOUT), X(ISYIN),
      1                    X(ISU), X(ISEVEC), X(IDUM), X(ISVL), X(ISIV),
      2                    X(ISEINT), X(ISCENT), X(ISP), NODE, ERED,
-     3                    RMLMDA, EIGMIN, .FALSE., IMIN, IPRINT)
+     3                    EP2RU, CM2RU, RSCALE, EIGMIN, .FALSE.,
+     4                    IMIN, IPRINT)
               IF (IPRINT.GE.6) CALL PRPRCT(NPROP,SVNAME,SVVAL,SVUNIT)
               IF (IPRINT.GE.7) CALL PREVAL(NODE,EIGMIN)
               NPROP=NPROP+1
@@ -1066,6 +1072,7 @@ C
               IF (IPRINT.GE.7) CALL PRVWST(SV1,SV2,FA,FB,SVUNIT)
 
               CONVGE=.FALSE.
+              ENOISE=.FALSE.
               DO 600 ITER=1,NITER
 C
 C  CALCULATE THE NEXT ENERGY USING THE VWDB ALGORITHM
@@ -1086,14 +1093,15 @@ C
                   GOTO 390
                 ENDIF
 
-                ERED=ENEW*CINT
+                ERED=ENEW*CM2RU
                 IF (IPRINT.GE.8) CALL PRABSE(ENEW,EREF,EUNIT,SVUNIT)
                 IF (CONVGE) EXIT
 
                 CALL BDCTRL(N, MXLAM, NPOTL, X(ISYOUT), X(ISYIN),
      1                      X(ISU), X(ISEVEC),X(IDUM), X(ISVL), X(ISIV),
      2                      X(ISEINT), X(ISCENT), X(ISP), NODE, ERED,
-     3                      RMLMDA, EIGMIN, .FALSE., IMIN, IPRINT)
+     3                      EP2RU, CM2RU, RSCALE, EIGMIN, .FALSE.,
+     4                      IMIN, IPRINT)
 
                 IF (ABS(EIGMIN).LT.ABS(ESMALL)) THEN
 C  UPDATE SMALLEST EIGENVALUE, EIGENVECTOR OF SMALLEST EIGENVALUE AND
@@ -1119,6 +1127,7 @@ C
                   FCOMP=FB
                 ENDIF
                 IF (ABS(EIGMIN).GT.ABS(FCOMP)) THEN
+                  ENOISE=.TRUE.
                   IF (ABS(FA).LT.ABS(FB)) THEN
                     FSMALL=FA
                     XSMALL=(XA-EREF)/EUNIT
@@ -1126,9 +1135,7 @@ C
                     FSMALL=FB
                     XSMALL=(XB-EREF)/EUNIT
                   ENDIF
-                  CALL PRINCR(SVVAL,SVUNIT,METHOD,EIGMIN,NSEEK,
-     1                        FSMALL,XSMALL,CONVGE)
-                  GOTO 500
+                  EXIT
                 ENDIF
 C
 C  SET UP FOR NEXT CYCLE OF BRENT ALGORITHM
@@ -1151,11 +1158,18 @@ C
               ZCNTN=(ENEW.LE.EHI(INODE) .AND. ENEW.GE.ELO(INODE))
               ECM=ENEW-EREF
 
-              IF (IBDSUM.GT.0 .AND. CONVGE)
-     1          CALL OUTEFV(NSEEK,ECM,EUNIT,EUNAME,NODE,ZCNTN,IBDSUM)
-              IF (IPRINT.GE.1)
-     1          CALL PRCONV(NSEEK,SVNAME,SVVAL,SVUNIT,NODE,ZCNTN,
-     2                      CONVGE,METHOD)
+              IF (IBDSUM.GT.0)
+     1          CALL OUTEFV(NSEEK,ECM,EUNIT,EUNAME,NODE,ZCNTN,CONVGE,
+     2                      ENOISE,IBDSUM)
+              IF (IPRINT.GE.1) THEN
+                IF (ENOISE) THEN
+                  CALL PRINCR(SVVAL,SVUNIT,METHOD,EIGMIN,NSEEK,
+     1                        FSMALL,XSMALL,CONVGE)
+                ELSE
+                  CALL PRCONV(NSEEK,SVNAME,SVVAL,SVUNIT,NODE,ZCNTN,
+     1                        CONVGE,METHOD)
+                ENDIF
+              ENDIF
               IF (IPRINT.GE.6) CALL PRLAST(DE/EUNIT,SVUNIT)
               IF (IPRINT.GE.8) CALL PRLOC(TITIME-TNTIME)
 C
@@ -1167,8 +1181,8 @@ C
 C
               IF (WAVE) THEN
                 CALL WVINFO(JTOT,IB,NSEEK,N,NQN,NSTATE,X(IXJSTT),
-     1                      X(ISJIND),X(ISL),ENEW,EREF,EUNIT,EUNAME,
-     2                      IPRINT)
+     1                      X(ISJIND),X(ISL),X(ISCENT),ENEW,EREF,
+     2                      EUNIT,EUNAME,IBOUND,IPRINT)
               ENDIF
               IF (IPRINT.GE.5 .OR. WAVE) THEN
                 CALL EVMTCH(X(IVSMLL),ESMALL,ISMALL,X(IXJSTT),X(ISL),
@@ -1199,7 +1213,8 @@ C  ALLOCATE STORAGE FOR SUMPSI
                 CALL BDCTRL(N, MXLAM, NPOTL, X(ISYOUT), X(ISYIN),
      1                      X(ISU),X(ISEVEC),X(ITSUMP),X(ISVL),X(ISIV),
      2                      X(ISEINT), X(ISCENT), X(ISP), NODE, ERED,
-     3                      RMLMDA, EIGMIN, .TRUE., IMIN, IPRINT)
+     3                      EP2RU, CM2RU, RSCALE, EIGMIN, .TRUE.,
+     4                      IMIN, IPRINT)
 C
                 CALL GCLOCK(TITIME)
                 TTIME=TITIME-TIMLST
@@ -1235,7 +1250,7 @@ C
               ELSE
                 IPERTN=IPPERT(IPERT)
                 NPOWN=NPOW(IPERT)
-                DELTAN=DELTA(IPERT)*EUNIT/EPSIL
+                DELTAN=DELTA(IPERT)*EUNIT/EP2CM
                 IF (IPRINT.GE.1) WRITE(6,6100) IPERTN,NPOWN,DELTA(IPERT)
  6100           FORMAT(/2X,59('==')/'  CALCULATE EXPECTATION VALUES ',
      1                 'OF POTENTIAL(',I2,')/R**',I2,' WITH DELTA = ',
@@ -1257,7 +1272,7 @@ C
                   IF (ICON.EQ.1) THEN
                     FAC=2D0
                     DRS=DRS*FAC
-                    IF (DRL.NE.UNSET) THEN
+                    IF (DRL.NE.unset) THEN
                       DRL=DRL*FAC
                       IF (IPRINT.GE.1) WRITE(6,6200) 'DR',DRS,DRL
                     ELSE
@@ -1299,12 +1314,13 @@ C                 IF (IWRITE) REWIND ISCRU
                   ENOW=EVAL(INODE,1)-DE
                   SVVAL=(ENOW-EREF)/EUNIT
                   IF (IPRINT.GE.8) CALL PRABSE(ENOW,EREF,EUNIT,SVUNIT)
-                  ERED=ENOW*CINT
+                  ERED=ENOW*CM2RU
 
                   CALL BDCTRL(N, MXLAM, NPOTL, X(ISYOUT), X(ISYIN),
      1                        X(ISU),X(ISEVEC),X(IDUM),X(ISVL), X(ISIV),
-     2                        X(ISEINT),X(ISCENT),X(ISP), NODE, ERED,
-     3                        RMLMDA,EIGMIN,.FALSE., IMIN, IPRINT)
+     2                        X(ISEINT), X(ISCENT), X(ISP), NODE, ERED,
+     3                        EP2RU, CM2RU, RSCALE, EIGMIN, .FALSE.,
+     4                        IMIN, IPRINT)
                   IF (IPRINT.GE.6)
      1              CALL PRPRCT(NPROP,'STARTING VALUE OF E',SVVAL,
      1                          SVUNIT)
@@ -1365,7 +1381,7 @@ C
                       IF (ABS(ENEW-ENOW).LE.DTOL) CONVGE=.TRUE.
                     ENDIF
 C
-                    ERED=ENEW*CINT
+                    ERED=ENEW*CM2RU
                     SVVAL=(ENEW-EREF)/EUNIT
                     IF (IPRINT.GE.8) CALL PRABSE(ENEW,EREF,EUNIT,SVUNIT)
 
@@ -1373,7 +1389,8 @@ C
      1                          X(ISU),X(ISEVEC),X(IDUM),X(ISVL),
      2                          X(ISIV),
      2                          X(ISEINT),X(ISCENT),X(ISP),NODE,ERED,
-     3                          RMLMDA,EIGMIN,.FALSE., IMIN, IPRINT)
+     3                          EP2RU, CM2RU, RSCALE, EIGMIN,.FALSE.,
+     4                          IMIN, IPRINT)
                     IF (IPRINT.GE.6) CALL PRPRCT(NPROP,SVNAME,SVVAL,
      1                                           SVUNIT)
                     IF (IPRINT.GE.7) CALL PREVAL(NODE,EIGMIN)
@@ -1436,7 +1453,7 @@ C
 C
 C  CALCULATE EXPECTATION VALUE
 C
-                    EXPV=(ENEW-EVAL(INODE,1))/(DELTAN*EPSIL)
+                    EXPV=(ENEW-EVAL(INODE,1))/(DELTAN*EP2CM)
 C
 cINOLLS   include 'bound/pvmdat9.f'
 C
@@ -1473,7 +1490,7 @@ C
                       EXTRA=EVAL(INODE,1)-RDELTA/RFAC
                       SVEXT=(EXTRA-EREF)/EUNIT
                       IF (IPRINT.GE.1) THEN
-                        IF (DRL.NE.UNSET) THEN
+                        IF (DRL.NE.unset) THEN
                           WRITE(6,8010) SVVAL,TRIM(SVUNIT),DRS,DRL
                         ELSE
                           WRITE(6,8010) SVVAL,TRIM(SVUNIT),DRS
@@ -1511,17 +1528,17 @@ C  ARRIVE HERE IF ICON=1 AND IPERT>0:
 C  RICHARDSON EXTRAPOLATION FOR EXPECTATION VALUES
 C
                       EXPV=(ENEW-EVAL(INODE,ICONV+1))/
-     1                     (DELTAN*EUNIT*EPSIL)
+     1                     (DELTAN*EUNIT*EP2CM)
                       JREF=1+IPERT*(NCONV+1)
                       EXP0=(EVAL(INODE,JREF)-EVAL(INODE,1))/
-     1                     (DELTAN*EUNIT*EPSIL)
+     1                     (DELTAN*EUNIT*EP2CM)
                       IRICH=IMGSEL !4
                       RDELTA=EXPV-EXP0
                       RFAC=FAC**IRICH-1.0D0
                       EXTRA=EXP0-RDELTA/RFAC
                       IF (IPRINT.GE.1) THEN
                         WRITE(6,8110) INODE,IRICH,IPROPS
-                        IF (DRL.NE.UNSET) THEN
+                        IF (DRL.NE.unset) THEN
                           WRITE(6,8120) IPERTN,EXPV,DRS,DRL,EXTRA
                         ELSE
                           WRITE(6,8130) IPERTN,EXPV,DRS,EXTRA
@@ -1568,10 +1585,10 @@ C
      4                       43X,G17.10,1X,A)
                     ELSE
                       EXPV=(ENEW-EVAL(INODE,ICONV+1))/
-     1                     (DELTAN*EUNIT*EPSIL)
+     1                     (DELTAN*EUNIT*EP2CM)
                       JREF=1+IPERT*(NCONV+1)
                       EXP0=(EVAL(INODE,JREF)-EVAL(INODE,1))/
-     1                     (DELTAN*EUNIT*EPSIL)
+     1                     (DELTAN*EUNIT*EP2CM)
                       IF (IPRINT.GE.1) THEN
                         WRITE(6,9020) INODE,RMNINT,RMXINT,IPERTN,
      1                                EXPV

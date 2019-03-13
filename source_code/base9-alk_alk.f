@@ -404,7 +404,7 @@ C  VALUES FOR BRA IDENTICAL TO (UNEXCHANGED) KET VALUES
               IF (MOD(IBOSFR+LR,2).NE.0) FAC2=-FAC2
               VL(I)=VL(I)+FAC2
             ENDIF
-            VL(I)=VL(I)*AUCM/ALPINV**2/EPSIL
+            VL(I)=VL(I)*AUCM/ALPINV**2
           ELSEIF (LL.EQ.MXLAM+1 .AND. LR.EQ.LC .AND. MLR.EQ.MLC) THEN
 C  HYPERFINE  ==========================================================
             FACA=ANSA*SDOTI2(ISA,MSAR,MSAC,INUCA,MIAR,MIAC)

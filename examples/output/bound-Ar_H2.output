@@ -6,7 +6,7 @@
  |                                                                            |
  |                               Version 2019.0                               |
  |                                                                            |
- |                       Run on 18 Feb 2019   at 22:37:51                     |
+ |                       Run on 11 Mar 2019   at 17:11:14                     |
  |                                                                            |
   -- BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND --
 
@@ -122,7 +122,6 @@
 
   LOG-DERIVATIVE MATRIX INITIALISED IN THE LOCAL EIGENBASIS AT RMIN IN THE OUTWARD PROPAGATION PART
   LOCALLY CLOSED CHANNELS INITIALISED WITH A WKB BOUNDARY CONDITION
-  LOCALLY  OPEN  CHANNELS INITIALISED WITH THE VALUE  1.000E+08
   ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
   SEGMENT 2 WILL BE PROPAGATED  INWARDS
 

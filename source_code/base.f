@@ -1,7 +1,8 @@
-      SUBROUTINE BASE(JTOT, JSTATE, N, JSINDX, L, CINT,
+      SUBROUTINE BASE(JTOT, JSTATE, N, JSINDX, L, CM2RU,
      1                EINT, CENT, VL, IV, MXLAM, NPOTL,
-     2                LAM, WVEC, WGHT, IEXCH, THETA, PHI, ICODE, LCOUNT,
-     3                ERED, NLEVV, IPRINT, IBOUND, ATAU, DGVL)
+     2                LAM, WVEC, WGHT, IEXCH, THETA, PHI, ICODE,
+     3                LCOUNT, ERED, NLEVV, IPRINT, IBOUND, ATAU,
+     4                DGVL)
 C  Copyright (C) 2019 J. M. Hutson & C. R. Le Sueur
 C  Distributed under the GNU General Public License, version 3
       USE efvs, ONLY: NEFV, MAPEFV
@@ -378,7 +379,7 @@ C
 C  FIRST THE INTERNAL ROTATIONAL ENERGY FROM ENERGY('SIG-INDEX')
 C  APR 94, ALLOW FOR NEGATIVE SIG-INDEX
       DO 8900 I=1,N
-        EINT(I)=CINT * ELEVEL(ABS(JSTATE(NSTATE*(NQN-1)+JSINDX(I))))
+        EINT(I)=CM2RU * ELEVEL(ABS(JSTATE(NSTATE*(NQN-1)+JSINDX(I))))
  8900 CONTINUE
       DO 8950 I=1,N
 C  NOW THE CENTRIFUGAL POTENTIAL
@@ -450,11 +451,11 @@ C  BUILD FORMAT STATEMENTS
           IF (IBOUND.EQ.0) THEN
             WRITE(6,FMT=F660) I,IPS,
      1                        (JSTATE(IPS+(IQN-1)*NSTATE),IQN=1,NQN-1),
-     2                        L(I),IPL,EINT(I)/CINT
+     2                        L(I),IPL,EINT(I)/CM2RU
           ELSE
             WRITE(6,FMT=F660) I,IPS,
      1                        (JSTATE(IPS+(IQN-1)*NSTATE),IQN=1,NQN-1),
-     2                        CENT(I),IPL,EINT(I)/CINT
+     2                        CENT(I),IPL,EINT(I)/CM2RU
           ENDIF
         ELSE
           IF (IBOUND.EQ.0) THEN

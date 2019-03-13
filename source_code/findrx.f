@@ -1,4 +1,4 @@
-      SUBROUTINE FINDRX(ENERGY,EINT,CENT,NNRG,N,CINT,
+      SUBROUTINE FINDRX(ENERGY,EINT,CENT,NNRG,N,CM2RU,
      1                  RMAX,RSTOP,EREF,IRXSET,IPRINT)
 C  Copyright (C) 2019 J. M. Hutson & C. R. Le Sueur
 C  Distributed under the GNU General Public License, version 3
@@ -20,7 +20,7 @@ C
 C
       RSTOP=RMAX
       DO 200 J=1,NNRG
-        ERED=(ENERGY(J)+EREF)*CINT
+        ERED=(ENERGY(J)+EREF)*CM2RU
         DO 100 I=1,N
           DIF=ERED-EINT(I)
           IF (DIF.LT.0.D0) GOTO 100

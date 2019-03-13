@@ -7,7 +7,7 @@
  |                                                                            |
  |                               Version 2019.0                               |
  |                                                                            |
- |                       Run on 18 Feb 2019   at 22:27:12                     |
+ |                       Run on 11 Mar 2019   at 17:00:25                     |
  |                                                                            |
   ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
 
@@ -173,7 +173,7 @@
   COUPLED EQUATIONS WILL BE PROPAGATED OUTWARDS IN 2 SEGMENTS
 
   PROPAGATION RANGES ARE CONTROLLED BY VARIABLES RMIN, RMID AND RMAX, WITH INPUT VALUES
-  RMIN =  0.7300     RMID = -1.0000E+30 RMAX =   6.000    
+  RMIN =  0.7300     RMID = unset   RMAX =   6.000    
   ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
   SEGMENT 1 WILL BE PROPAGATED OUTWARDS
 
@@ -187,7 +187,6 @@
 
   LOG-DERIVATIVE MATRIX INITIALISED IN THE LOCAL EIGENBASIS AT RMIN
   LOCALLY CLOSED CHANNELS INITIALISED WITH A WKB BOUNDARY CONDITION
-  LOCALLY  OPEN  CHANNELS INITIALISED WITH THE VALUE  1.000E+08
   ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
   SEGMENT 2 WILL BE PROPAGATED OUTWARDS
 
@@ -205,8 +204,8 @@
 
   INPUT ENERGY VALUES ASSUMED TO BE IN UNITS OF CM-1 BY DEFAULT.
 
-  CONTROL DATA FOR TOTAL ENERGIES.  CALCULATIONS WILL BE PERFORMED FOR   1 VALUE 
-       ENERGY NO.   1 =   300.00000000     CM-1
+  CONTROL DATA FOR TOTAL ENERGIES.  CALCULATIONS WILL BE PERFORMED FOR    1 VALUE 
+       ENERGY NO.    1 =   300.00000000     CM-1
 
   ======================================================================================================================
 
@@ -221,7 +220,7 @@
 
   ======================================================================================================================
 
-  INITIALIZATION DONE.  TIME WAS   0.01 CPU SECS.      1416 WORDS OF STORAGE USED.
+  INITIALIZATION DONE.  TIME WAS   0.00 CPU SECS.      1416 WORDS OF STORAGE USED.
 
   ================================== Ar-CH4 (A) on MSV potential of Buck et al (1983) ==================================
 
@@ -3153,7 +3152,7 @@
  |                                                                            |
  |                               Version 2019.0                               |
  |                                                                            |
- |                    This run used      85.08 cpu secs and                   |
+ |                    This run used      88.19 cpu secs and                   |
  |              22338 of the allocated   1000000 words of storage             |
  |                                                                            |
   ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---

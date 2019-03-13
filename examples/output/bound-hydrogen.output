@@ -6,7 +6,7 @@
  |                                                                            |
  |                               Version 2019.0                               |
  |                                                                            |
- |                       Run on 18 Feb 2019   at 22:43:20                     |
+ |                       Run on 11 Mar 2019   at 17:16:39                     |
  |                                                                            |
   -- BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND --
 
@@ -73,7 +73,7 @@
   COUPLED EQUATIONS WILL BE PROPAGATED TOWARDS RMATCH IN 3 SEGMENTS
 
   PROPAGATION RANGES ARE CONTROLLED BY VARIABLES RMIN, RMID, RMATCH AND RMAX, WITH INPUT VALUES
-  RMIN =   0.000    RMID =   3.000     RMATCH =   1.000     RMAX =   100.0    
+  RMIN =   0.000     RMID =   3.000     RMATCH =   1.000     RMAX =   100.0    
   ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
   SEGMENT 1 WILL BE PROPAGATED OUTWARDS
 
@@ -152,8 +152,6 @@
   CHANNEL  PAIR STATE    PAIR STATE QUANTUM NUMBERS            L        PAIR LEVEL   PAIR ENERGY (CM-1)
                          ---------      J   ---------
         1           1                   0                      0             1         0.0000000
-  **** WARNING:    1 OPEN CHANNEL  DETECTED AT RMIN
-  **** WARNING:    1 OPEN CHANNEL  DETECTED AT RMIN
 
   NODE COUNT =    0 AT MINIMUM ENERGY =  -1.000000000     AU    
   NODE COUNT =    9 AT MAXIMUM ENERGY =   0.000000000     AU    
@@ -161,8 +159,6 @@
   - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
   SEARCHING FOR INODE =    1 CORRESPONDING TO NODE COUNT =    1
-  **** WARNING:    1 OPEN CHANNEL  DETECTED AT RMIN
-  **** WARNING:    1 OPEN CHANNEL  DETECTED AT RMIN
 
   CONVERGED ON NODE NUMBER     1 AT                               ENERGY = -0.4999999980     AU    
 
@@ -176,9 +172,6 @@
   - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
   SEARCHING FOR INODE =    2 CORRESPONDING TO NODE COUNT =    2
-  **** WARNING:    1 OPEN CHANNEL  DETECTED AT RMIN
-  **** WARNING:    1 OPEN CHANNEL  DETECTED AT RMIN
-  **** WARNING:    1 OPEN CHANNEL  DETECTED AT RMIN
 
   CONVERGED ON NODE NUMBER     2 AT                               ENERGY = -0.1249999950     AU    
 
@@ -192,12 +185,6 @@
   - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
   SEARCHING FOR INODE =    3 CORRESPONDING TO NODE COUNT =    3
-  **** WARNING:    1 OPEN CHANNEL  DETECTED AT RMIN
-  **** WARNING:    1 OPEN CHANNEL  DETECTED AT RMIN
-  **** WARNING:    1 OPEN CHANNEL  DETECTED AT RMIN
-  **** WARNING:    1 OPEN CHANNEL  DETECTED AT RMIN
-  **** WARNING:    1 OPEN CHANNEL  DETECTED AT RMIN
-  **** WARNING:    1 OPEN CHANNEL  DETECTED AT RMIN
 
   CONVERGED ON NODE NUMBER     3 AT                               ENERGY = -5.5555550918E-02 AU    
 
@@ -211,8 +198,6 @@
   - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
   SEARCHING FOR INODE =    4 CORRESPONDING TO NODE COUNT =    4
-  **** WARNING:    1 OPEN CHANNEL  DETECTED AT RMIN
-  **** WARNING:    1 OPEN CHANNEL  DETECTED AT RMIN
 
   CONVERGED ON NODE NUMBER     4 AT                               ENERGY = -3.1249998644E-02 AU    
 
@@ -226,12 +211,6 @@
   - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
   SEARCHING FOR INODE =    5 CORRESPONDING TO NODE COUNT =    5
-  **** WARNING:    1 OPEN CHANNEL  DETECTED AT RMIN
-  **** WARNING:    1 OPEN CHANNEL  DETECTED AT RMIN
-  **** WARNING:    1 OPEN CHANNEL  DETECTED AT RMIN
-  **** WARNING:    1 OPEN CHANNEL  DETECTED AT RMIN
-  **** WARNING:    1 OPEN CHANNEL  DETECTED AT RMIN
-  **** WARNING:    1 OPEN CHANNEL  DETECTED AT RMIN
 
   CONVERGED ON NODE NUMBER     5 AT                               ENERGY = -1.9999998024E-02 AU    
 
@@ -245,13 +224,6 @@
   - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
   SEARCHING FOR INODE =    6 CORRESPONDING TO NODE COUNT =    6
-  **** WARNING:    1 OPEN CHANNEL  DETECTED AT RMIN
-  **** WARNING:    1 OPEN CHANNEL  DETECTED AT RMIN
-  **** WARNING:    1 OPEN CHANNEL  DETECTED AT RMIN
-  **** WARNING:    1 OPEN CHANNEL  DETECTED AT RMIN
-  **** WARNING:    1 OPEN CHANNEL  DETECTED AT RMIN
-  **** WARNING:    1 OPEN CHANNEL  DETECTED AT RMIN
-  **** WARNING:    1 OPEN CHANNEL  DETECTED AT RMIN
 
   CONVERGED ON NODE NUMBER     6 AT                               ENERGY = -1.3889504331E-02 AU    
 
@@ -265,12 +237,6 @@
   - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
   SEARCHING FOR INODE =    7 CORRESPONDING TO NODE COUNT =    7
-  **** WARNING:    1 OPEN CHANNEL  DETECTED AT RMIN
-  **** WARNING:    1 OPEN CHANNEL  DETECTED AT RMIN
-  **** WARNING:    1 OPEN CHANNEL  DETECTED AT RMIN
-  **** WARNING:    1 OPEN CHANNEL  DETECTED AT RMIN
-  **** WARNING:    1 OPEN CHANNEL  DETECTED AT RMIN
-  **** WARNING:    1 OPEN CHANNEL  DETECTED AT RMIN
 
   CONVERGED ON NODE NUMBER     7 AT                               ENERGY = -1.0332270779E-02 AU    
 
@@ -284,11 +250,6 @@
   - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
   SEARCHING FOR INODE =    8 CORRESPONDING TO NODE COUNT =    8
-  **** WARNING:    1 OPEN CHANNEL  DETECTED AT RMIN
-  **** WARNING:    1 OPEN CHANNEL  DETECTED AT RMIN
-  **** WARNING:    1 OPEN CHANNEL  DETECTED AT RMIN
-  **** WARNING:    1 OPEN CHANNEL  DETECTED AT RMIN
-  **** WARNING:    1 OPEN CHANNEL  DETECTED AT RMIN
 
   CONVERGED ON NODE NUMBER     8 AT                               ENERGY = -7.1321668680E-03 AU    
 
@@ -302,12 +263,6 @@
   - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
   SEARCHING FOR INODE =    9 CORRESPONDING TO NODE COUNT =    9
-  **** WARNING:    1 OPEN CHANNEL  DETECTED AT RMIN
-  **** WARNING:    1 OPEN CHANNEL  DETECTED AT RMIN
-  **** WARNING:    1 OPEN CHANNEL  DETECTED AT RMIN
-  **** WARNING:    1 OPEN CHANNEL  DETECTED AT RMIN
-  **** WARNING:    1 OPEN CHANNEL  DETECTED AT RMIN
-  **** WARNING:    1 OPEN CHANNEL  DETECTED AT RMIN
 
   CONVERGED ON NODE NUMBER     9 AT                               ENERGY = -1.6256807716E-03 AU    
 
@@ -444,7 +399,7 @@
  |                                                                            |
  |                               Version 2019.0                               |
  |                                                                            |
- |                    This run used       2.65 cpu secs and                   |
+ |                    This run used       2.47 cpu secs and                   |
  |                 43 of the allocated   1000000 words of storage             |
  |                                                                            |
   -- BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND --

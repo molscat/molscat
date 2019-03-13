@@ -1,8 +1,8 @@
 subroutine ev_ord(evec,ibeg,ncurr,nn,nnctot,iconst,iprint)
 !  Copyright (C) 2019 J. M. Hutson & C. R. Le Sueur
 !  Distributed under the GNU General Public License, version 3
-USE potential
-! written by CRLS 26-03-16
+!
+!  Written by CRLS 26-03-16
 ! This subroutine reorders eigenvectors and values for operators subsequent to
 ! those included in the Hamiltonian to match the original order.
 implicit none

@@ -7,7 +7,7 @@
  |                                                                            |
  |                               Version 2019.0                               |
  |                                                                            |
- |                       Run on 18 Feb 2019   at 22:19:39                     |
+ |                       Run on 11 Mar 2019   at 16:52:28                     |
  |                                                                            |
   ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
 
@@ -111,7 +111,7 @@
   COUPLED EQUATIONS WILL BE PROPAGATED OUTWARDS IN 2 SEGMENTS
 
   PROPAGATION RANGES ARE CONTROLLED BY VARIABLES RMIN, RMID AND RMAX, WITH INPUT VALUES
-  RMIN =  0.5000     RMID = -1.0000E+30 RMAX =   10.00    
+  RMIN =  0.5000     RMID = unset   RMAX =   10.00    
   ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
   SEGMENT 1 WILL BE PROPAGATED OUTWARDS
 
@@ -125,7 +125,6 @@
 
   LOG-DERIVATIVE MATRIX INITIALISED IN THE LOCAL EIGENBASIS AT RMIN
   LOCALLY CLOSED CHANNELS INITIALISED WITH A WKB BOUNDARY CONDITION
-  LOCALLY  OPEN  CHANNELS INITIALISED WITH THE VALUE  1.000E+08
   ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
   SEGMENT 2 WILL BE PROPAGATED OUTWARDS
 
@@ -144,9 +143,9 @@
 
   INPUT ENERGY VALUES ASSUMED TO BE IN UNITS OF CM-1 BY DEFAULT.
 
-  CONTROL DATA FOR TOTAL ENERGIES.  CALCULATIONS WILL BE PERFORMED FOR   2 VALUES
-       ENERGY NO.   1 =   1250.0000000     CM-1
-       ENERGY NO.   2 =   1000.0000000     CM-1
+  CONTROL DATA FOR TOTAL ENERGIES.  CALCULATIONS WILL BE PERFORMED FOR    2 VALUES
+       ENERGY NO.    1 =   1250.0000000     CM-1
+       ENERGY NO.    2 =   1000.0000000     CM-1
 
   ======================================================================================================================
 
@@ -406,7 +405,7 @@
  |                                                                            |
  |                               Version 2019.0                               |
  |                                                                            |
- |                    This run used       1.14 cpu secs and                   |
+ |                    This run used       1.49 cpu secs and                   |
  |               3408 of the allocated   1000000 words of storage             |
  |                                                                            |
   ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
@@ -419,7 +418,7 @@
  |                                                                            |
  |                               Version 2019.0                               |
  |                                                                            |
- |                       Run on 18 Feb 2019   at 22:19:41                     |
+ |                       Run on 11 Mar 2019   at 16:52:29                     |
  |                                                                            |
   ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
 
@@ -527,7 +526,7 @@
   COUPLED EQUATIONS WILL BE PROPAGATED OUTWARDS IN 2 SEGMENTS
 
   PROPAGATION RANGES ARE CONTROLLED BY VARIABLES RMIN, RMID AND RMAX, WITH INPUT VALUES
-  RMIN =  0.5000     RMID = -1.0000E+30 RMAX =   10.00    
+  RMIN =  0.5000     RMID = unset   RMAX =   10.00    
   ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
   SEGMENT 1 WILL BE PROPAGATED OUTWARDS
 
@@ -541,7 +540,6 @@
 
   LOG-DERIVATIVE MATRIX INITIALISED IN THE LOCAL EIGENBASIS AT RMIN
   LOCALLY CLOSED CHANNELS INITIALISED WITH A WKB BOUNDARY CONDITION
-  LOCALLY  OPEN  CHANNELS INITIALISED WITH THE VALUE  1.000E+08
   ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
   SEGMENT 2 WILL BE PROPAGATED OUTWARDS
 
@@ -560,9 +558,9 @@
 
   INPUT ENERGY VALUES ASSUMED TO BE IN UNITS OF CM-1 BY DEFAULT.
 
-  CONTROL DATA FOR TOTAL ENERGIES.  CALCULATIONS WILL BE PERFORMED FOR   2 VALUES
-       ENERGY NO.   1 =   1250.0000000     CM-1
-       ENERGY NO.   2 =   1000.0000000     CM-1
+  CONTROL DATA FOR TOTAL ENERGIES.  CALCULATIONS WILL BE PERFORMED FOR    2 VALUES
+       ENERGY NO.    1 =   1250.0000000     CM-1
+       ENERGY NO.    2 =   1000.0000000     CM-1
 
   ======================================================================================================================
 
@@ -740,7 +738,7 @@
  |                                                                            |
  |                               Version 2019.0                               |
  |                                                                            |
- |                    This run used       0.15 cpu secs and                   |
+ |                    This run used       0.16 cpu secs and                   |
  |                542 of the allocated   1000000 words of storage             |
  |                                                                            |
   ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
@@ -753,7 +751,7 @@
  |                                                                            |
  |                               Version 2019.0                               |
  |                                                                            |
- |                       Run on 18 Feb 2019   at 22:19:41                     |
+ |                       Run on 11 Mar 2019   at 16:52:29                     |
  |                                                                            |
   ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
 
@@ -870,7 +868,7 @@
   COUPLED EQUATIONS WILL BE PROPAGATED OUTWARDS IN 2 SEGMENTS
 
   PROPAGATION RANGES ARE CONTROLLED BY VARIABLES RMIN, RMID AND RMAX, WITH INPUT VALUES
-  RMIN =  0.5000     RMID = -1.0000E+30 RMAX =   10.00    
+  RMIN =  0.5000     RMID = unset   RMAX =   10.00    
   ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
   SEGMENT 1 WILL BE PROPAGATED OUTWARDS
 
@@ -884,7 +882,6 @@
 
   LOG-DERIVATIVE MATRIX INITIALISED IN THE LOCAL EIGENBASIS AT RMIN
   LOCALLY CLOSED CHANNELS INITIALISED WITH A WKB BOUNDARY CONDITION
-  LOCALLY  OPEN  CHANNELS INITIALISED WITH THE VALUE  1.000E+08
   ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
   SEGMENT 2 WILL BE PROPAGATED OUTWARDS
 
@@ -903,9 +900,9 @@
 
   INPUT ENERGY VALUES ASSUMED TO BE IN UNITS OF CM-1 BY DEFAULT.
 
-  CONTROL DATA FOR TOTAL ENERGIES.  CALCULATIONS WILL BE PERFORMED FOR   2 VALUES
-       ENERGY NO.   1 =   1250.0000000     CM-1
-       ENERGY NO.   2 =   1000.0000000     CM-1
+  CONTROL DATA FOR TOTAL ENERGIES.  CALCULATIONS WILL BE PERFORMED FOR    2 VALUES
+       ENERGY NO.    1 =   1250.0000000     CM-1
+       ENERGY NO.    2 =   1000.0000000     CM-1
 
   ======================================================================================================================
 
@@ -1243,7 +1240,7 @@
  |                                                                            |
  |                               Version 2019.0                               |
  |                                                                            |
- |                    This run used       0.34 cpu secs and                   |
+ |                    This run used       0.37 cpu secs and                   |
  |                731 of the allocated   1000000 words of storage             |
  |                                                                            |
   ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
@@ -1256,7 +1253,7 @@
  |                                                                            |
  |                               Version 2019.0                               |
  |                                                                            |
- |                       Run on 18 Feb 2019   at 22:19:41                     |
+ |                       Run on 11 Mar 2019   at 16:52:30                     |
  |                                                                            |
   ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
 
@@ -1375,7 +1372,7 @@
   COUPLED EQUATIONS WILL BE PROPAGATED OUTWARDS IN 2 SEGMENTS
 
   PROPAGATION RANGES ARE CONTROLLED BY VARIABLES RMIN, RMID AND RMAX, WITH INPUT VALUES
-  RMIN =  0.5000     RMID = -1.0000E+30 RMAX =   10.00    
+  RMIN =  0.5000     RMID = unset   RMAX =   10.00    
   ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
   SEGMENT 1 WILL BE PROPAGATED OUTWARDS
 
@@ -1389,7 +1386,6 @@
 
   LOG-DERIVATIVE MATRIX INITIALISED IN THE LOCAL EIGENBASIS AT RMIN
   LOCALLY CLOSED CHANNELS INITIALISED WITH A WKB BOUNDARY CONDITION
-  LOCALLY  OPEN  CHANNELS INITIALISED WITH THE VALUE  1.000E+08
   ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
   SEGMENT 2 WILL BE PROPAGATED OUTWARDS
 
@@ -1408,9 +1404,9 @@
 
   INPUT ENERGY VALUES ASSUMED TO BE IN UNITS OF CM-1 BY DEFAULT.
 
-  CONTROL DATA FOR TOTAL ENERGIES.  CALCULATIONS WILL BE PERFORMED FOR   2 VALUES
-       ENERGY NO.   1 =   1250.0000000     CM-1
-       ENERGY NO.   2 =   1000.0000000     CM-1
+  CONTROL DATA FOR TOTAL ENERGIES.  CALCULATIONS WILL BE PERFORMED FOR    2 VALUES
+       ENERGY NO.    1 =   1250.0000000     CM-1
+       ENERGY NO.    2 =   1000.0000000     CM-1
 
   ======================================================================================================================
 
@@ -1748,7 +1744,7 @@
  |                                                                            |
  |                               Version 2019.0                               |
  |                                                                            |
- |                    This run used       0.34 cpu secs and                   |
+ |                    This run used       0.37 cpu secs and                   |
  |                731 of the allocated   1000000 words of storage             |
  |                                                                            |
   ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
@@ -1761,7 +1757,7 @@
  |                                                                            |
  |                               Version 2019.0                               |
  |                                                                            |
- |                       Run on 18 Feb 2019   at 22:19:41                     |
+ |                       Run on 11 Mar 2019   at 16:52:30                     |
  |                                                                            |
   ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
 
@@ -1873,7 +1869,7 @@
   COUPLED EQUATIONS WILL BE PROPAGATED OUTWARDS IN 2 SEGMENTS
 
   PROPAGATION RANGES ARE CONTROLLED BY VARIABLES RMIN, RMID AND RMAX, WITH INPUT VALUES
-  RMIN =  0.5000     RMID = -1.0000E+30 RMAX =   10.00    
+  RMIN =  0.5000     RMID = unset   RMAX =   10.00    
   ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
   SEGMENT 1 WILL BE PROPAGATED OUTWARDS
 
@@ -1887,7 +1883,6 @@
 
   LOG-DERIVATIVE MATRIX INITIALISED IN THE LOCAL EIGENBASIS AT RMIN
   LOCALLY CLOSED CHANNELS INITIALISED WITH A WKB BOUNDARY CONDITION
-  LOCALLY  OPEN  CHANNELS INITIALISED WITH THE VALUE  1.000E+08
   ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
   SEGMENT 2 WILL BE PROPAGATED OUTWARDS
 
@@ -1906,9 +1901,9 @@
 
   INPUT ENERGY VALUES ASSUMED TO BE IN UNITS OF CM-1 BY DEFAULT.
 
-  CONTROL DATA FOR TOTAL ENERGIES.  CALCULATIONS WILL BE PERFORMED FOR   2 VALUES
-       ENERGY NO.   1 =   1250.0000000     CM-1
-       ENERGY NO.   2 =   1000.0000000     CM-1
+  CONTROL DATA FOR TOTAL ENERGIES.  CALCULATIONS WILL BE PERFORMED FOR    2 VALUES
+       ENERGY NO.    1 =   1250.0000000     CM-1
+       ENERGY NO.    2 =   1000.0000000     CM-1
 
   ======================================================================================================================
 
@@ -2406,7 +2401,7 @@
  |                                                                            |
  |                               Version 2019.0                               |
  |                                                                            |
- |                    This run used       0.48 cpu secs and                   |
+ |                    This run used       0.54 cpu secs and                   |
  |                542 of the allocated   1000000 words of storage             |
  |                                                                            |
   ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
@@ -2419,7 +2414,7 @@
  |                                                                            |
  |                               Version 2019.0                               |
  |                                                                            |
- |                       Run on 18 Feb 2019   at 22:19:42                     |
+ |                       Run on 11 Mar 2019   at 16:52:31                     |
  |                                                                            |
   ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
 
@@ -2527,7 +2522,7 @@
   COUPLED EQUATIONS WILL BE PROPAGATED OUTWARDS IN 2 SEGMENTS
 
   PROPAGATION RANGES ARE CONTROLLED BY VARIABLES RMIN, RMID AND RMAX, WITH INPUT VALUES
-  RMIN =  0.5000     RMID = -1.0000E+30 RMAX =   10.00    
+  RMIN =  0.5000     RMID = unset   RMAX =   10.00    
   ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
   SEGMENT 1 WILL BE PROPAGATED OUTWARDS
 
@@ -2541,7 +2536,6 @@
 
   LOG-DERIVATIVE MATRIX INITIALISED IN THE LOCAL EIGENBASIS AT RMIN
   LOCALLY CLOSED CHANNELS INITIALISED WITH A WKB BOUNDARY CONDITION
-  LOCALLY  OPEN  CHANNELS INITIALISED WITH THE VALUE  1.000E+08
   ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
   SEGMENT 2 WILL BE PROPAGATED OUTWARDS
 
@@ -2560,9 +2554,9 @@
 
   INPUT ENERGY VALUES ASSUMED TO BE IN UNITS OF CM-1 BY DEFAULT.
 
-  CONTROL DATA FOR TOTAL ENERGIES.  CALCULATIONS WILL BE PERFORMED FOR   2 VALUES
-       ENERGY NO.   1 =   1250.0000000     CM-1
-       ENERGY NO.   2 =   1000.0000000     CM-1
+  CONTROL DATA FOR TOTAL ENERGIES.  CALCULATIONS WILL BE PERFORMED FOR    2 VALUES
+       ENERGY NO.    1 =   1250.0000000     CM-1
+       ENERGY NO.    2 =   1000.0000000     CM-1
 
   ======================================================================================================================
 
@@ -2922,7 +2916,7 @@
  |                                                                            |
  |                               Version 2019.0                               |
  |                                                                            |
- |                    This run used       0.27 cpu secs and                   |
+ |                    This run used       0.28 cpu secs and                   |
  |                563 of the allocated   1000000 words of storage             |
  |                                                                            |
   ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---

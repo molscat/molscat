@@ -2,7 +2,7 @@
      1                  SR,A,VL,IV,EINT,CENT,L,NB,P,
      2                  Y,YP,F,DIAG,
      3                  RSTART,RSTOP,NSTEP,HH,NSTAB,
-     4                  ERED,RMLMDA,IPRINT)
+     4                  ERED,EP2RU,CM2RU,RSCALE,IPRINT)
 C  Copyright (C) 2019 J. M. Hutson & C. R. Le Sueur
 C  Distributed under the GNU General Public License, version 3
 C
@@ -70,8 +70,8 @@ C
           A(IJ)=A(IJ)-ESHIFT
         ENDDO
       ELSE
-        CALL WAVMAT(A,N,R4,P,VL,IV,ERED,EINT,CENT,RMLMDA,DIAG,
-     1            MXLAM,NPOTL,IPRINT)
+        CALL WAVMAT(A,N,R4,P,VL,IV,ERED,EINT,CENT,EP2RU,CM2RU,
+     1              RSCALE,DIAG,MXLAM,NPOTL,IPRINT)
         IF (IWRITE) WRITE(ISCRU) A
       ENDIF
 C
@@ -89,8 +89,8 @@ C
           A(IJ)=A(IJ)-ESHIFT
         ENDDO
       ELSE
-        CALL WAVMAT(A,N,R4,P,VL,IV,ERED,EINT,CENT,RMLMDA,DIAG,
-     1            MXLAM,NPOTL,IPRINT)
+        CALL WAVMAT(A,N,R4,P,VL,IV,ERED,EINT,CENT,EP2RU,CM2RU,
+     1              RSCALE,DIAG,MXLAM,NPOTL,IPRINT)
         IF (IWRITE) WRITE(ISCRU) A
       ENDIF
 C
@@ -112,8 +112,8 @@ C
           A(IJ)=A(IJ)-ESHIFT
         ENDDO
       ELSE
-        CALL WAVMAT(A,N,R4,P,VL,IV,ERED,EINT,CENT,RMLMDA,DIAG,
-     1            MXLAM,NPOTL,IPRINT)
+        CALL WAVMAT(A,N,R4,P,VL,IV,ERED,EINT,CENT,EP2RU,CM2RU,
+     1              RSCALE,DIAG,MXLAM,NPOTL,IPRINT)
         IF (IWRITE) WRITE(ISCRU) A
       ENDIF
 C
@@ -131,8 +131,8 @@ C
           A(IJ)=A(IJ)-ESHIFT
         ENDDO
       ELSE
-        CALL WAVMAT(A,N,R4,P,VL,IV,ERED,EINT,CENT,RMLMDA,DIAG,
-     1            MXLAM,NPOTL,IPRINT)
+        CALL WAVMAT(A,N,R4,P,VL,IV,ERED,EINT,CENT,EP2RU,CM2RU,
+     1              RSCALE,DIAG,MXLAM,NPOTL,IPRINT)
         IF (IWRITE) WRITE(ISCRU) A
       ENDIF
 C

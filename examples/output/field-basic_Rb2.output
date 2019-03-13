@@ -7,7 +7,7 @@
  |                                                                            |
  |                               Version 2019.0                               |
  |                                                                            |
- |                       Run on 18 Feb 2019   at 22:19:12                     |
+ |                       Run on 11 Mar 2019   at 16:51:58                     |
  |                                                                            |
   -- FIELD ------ FIELD ------ FIELD ------ FIELD ------ FIELD ------ FIELD --
 
@@ -211,7 +211,6 @@
 
   LOG-DERIVATIVE MATRIX INITIALISED IN THE LOCAL EIGENBASIS AT RMIN IN THE OUTWARD PROPAGATION PART
   LOCALLY CLOSED CHANNELS INITIALISED WITH A WKB BOUNDARY CONDITION
-  LOCALLY  OPEN  CHANNELS INITIALISED WITH THE VALUE  1.000E+08
   ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
   SEGMENT 2 WILL BE PROPAGATED  INWARDS
 
@@ -398,7 +397,7 @@
  |                                                                            |
  |                               Version 2019.0                               |
  |                                                                            |
- |                    This run used      24.50 cpu secs and                   |
- |               7523 of the allocated   1000000 words of storage             |
+ |                    This run used      26.13 cpu secs and                   |
+ |               7691 of the allocated   1000000 words of storage             |
  |                                                                            |
   -- FIELD ------ FIELD ------ FIELD ------ FIELD ------ FIELD ------ FIELD --

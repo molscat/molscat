@@ -7,7 +7,7 @@
  |                                                                            |
  |                               Version 2019.0                               |
  |                                                                            |
- |                       Run on 18 Feb 2019   at 22:16:25                     |
+ |                       Run on 11 Mar 2019   at 16:48:57                     |
  |                                                                            |
   ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
 
@@ -212,7 +212,6 @@
 
   LOG-DERIVATIVE MATRIX INITIALISED IN THE LOCAL EIGENBASIS AT RMIN
   LOCALLY CLOSED CHANNELS INITIALISED WITH A WKB BOUNDARY CONDITION
-  LOCALLY  OPEN  CHANNELS INITIALISED WITH THE VALUE  1.000E+08
   ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
   SEGMENT 2 WILL BE PROPAGATED OUTWARDS
 
@@ -234,8 +233,8 @@
   INPUT ENERGY LIST IS
                     6.950346E-08
 
-  CONTROL DATA FOR TOTAL ENERGIES.  CALCULATIONS WILL BE PERFORMED FOR   1 VALUE 
-       ENERGY NO.   1 =  6.95034570000E-08 CM-1 =  1.00000000000E-07 K       
+  CONTROL DATA FOR TOTAL ENERGIES.  CALCULATIONS WILL BE PERFORMED FOR    1 VALUE 
+       ENERGY NO.    1 =  6.95034570000E-08 CM-1 =  1.00000000000E-07 K       
 
   ======================================================================================================================
 
@@ -4751,7 +4750,7 @@
  |                                                                            |
  |                               Version 2019.0                               |
  |                                                                            |
- |                    This run used     164.15 cpu secs and                   |
+ |                    This run used     178.60 cpu secs and                   |
  |               6817 of the allocated   1000000 words of storage             |
  |                                                                            |
   ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---

@@ -1,6 +1,6 @@
       SUBROUTINE CNTRCT(N, M, R, EMAX, W, T,
      1                  VL, IV, EINT, CENT,
-     2                  P, RMLMDA, MXLAM, NPOTL, IPRINT)
+     2                  P, EP2RU, CM2RU, RSCALE, MXLAM, NPOTL, IPRINT)
 C  Copyright (C) 2019 J. M. Hutson & C. R. Le Sueur
 C  Distributed under the GNU General Public License, version 3
       USE potential
@@ -49,8 +49,8 @@ C
       CALL CHKSTR(NUSED)
       ERED=0.D0
       NPOTL=MXLAM
-      CALL WAVMAT(W,N,R,P,VL,IV,ERED,EINT,CENT,RMLMDA,X(ISD),
-     1            MXLAM,NPOTL,IPRINT)
+      CALL WAVMAT(W,N,R,P,VL,IV,ERED,EINT,CENT,EP2RU,CM2RU,
+     1            RSCALE,X(ISD),MXLAM,NPOTL,IPRINT)
 C
       IFAIL=0
       CALL DIAGVC(W,N,N,X(ISE),T)
@@ -109,7 +109,7 @@ C
       DO 600 J=1,I
         X(IX)=0.D0
         DO 500 K=1,N
-  500     X(IX)=X(IX)+EINT(K)/RMLMDA*T(K,I)*T(K,J)
+  500     X(IX)=X(IX)+EINT(K)/EP2RU*T(K,I)*T(K,J)
         W(I,J)=X(IX)
   600   IX=IX+NPOTLC
 C

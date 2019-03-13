@@ -48,7 +48,7 @@ C  ARRAY TO HOLD TIME AND DATE
       CHARACTER METHOD*12
 C
       LOGICAL LFSCAN,LFSRCH,NOBIS,UPWARD
-      LOGICAL CONVGE
+      LOGICAL CONVGE,ENOISE
 C
       CHARACTER(80)  LABEL
       CHARACTER(120) LABL
@@ -56,6 +56,7 @@ C
       CHARACTER(40)  FTITLE
       CHARACTER(8)   EUNAME
       CHARACTER(20)  PDATE
+      CHARACTER(10)  RUNAME
 C
 C  FOLLOWING ARRAYS ALL HAVE DIMENSION MXNODE. MXNODE IS THE MAXIMUM
 C  NUMBER OF NODES THAT CAN BE SOUGHT IN A SINGLE RUN.
@@ -93,9 +94,9 @@ C  COMMON BLOCK FOR CONTROL OF USE OF PROPAGATION SCRATCH FILE
 C
 C  COMMON BLOCK FOR CONTROL OF PROPAGATION SEGMENTS
       COMMON /RADIAL/ RMNINT,RMXINT,RMID,RMATCH,DRS,DRL,STEPS,STEPL,
-     1                POWRS,POWRL,TOLHIS,TOLHIL,CAYS,CAYL,UNSET,
+     1                POWRS,POWRL,TOLHIS,TOLHIL,CAYS,CAYL,unset,
      2                IPROPS,IPROPL,NSEG
-      PARAMETER (PUNSET=-1D30)
+      PARAMETER (PUNSET=-237540475023D30)
 C
       COMMON /VLSAVE/ IVLU
 C
@@ -157,7 +158,7 @@ C  LEVEL CONTAINED IN JLEVEL. (VALUE FOR ITYP=9 IS A DUMMY VALUE)
       DATA NJLQN/1,2,2,3,3,2,2,2,1/
 C
       DATA LABEL /'        '/
-      DATA IPROGM /1/, PDATE /'2019.0'/
+      DATA IPROGM /17/, PDATE /'2019.0'/
       DATA PLUR/'S',' ','S'/
       DATA CDRIVE /'F'/
 C
@@ -198,7 +199,7 @@ C
       ADIAMX=.TRUE.
       BCYCMN=-1.0D0
       BCYCMX=-1.0D0
-      BCYOMN=1.0D8
+      BCYOMN=unset
       BCYOMX=0.0D0
       DEGTOL=1.0D-10
       DFIELD=1.0D30
@@ -429,7 +430,7 @@ C  BASE ROUTINE INCREMENTS IXNEXT BY AMOUNT OF STORAGE IN JSTATE.
 C
 C--------------------------------------------------------------------
 C  INITIALIZE POTENTIAL.
-C   EPSIL  (POTENTIAL ENERGY UNIT) MUST BE SET IN POTENL
+C   EP2CM  (POTENTIAL ENERGY UNIT) MUST BE SET IN POTENL
 C   RPUNIT (POTENTIAL LENGTH UNIT) MAY OPTIONALLY BE SET IN POTENTIAL
 C     IF RPUNIT IS SET AND RUNIT IS UNSET, RUNIT IS TAKEN FROM RPUNIT,
 C     AND VICE VERSA. IF BOTH ARE SET, POTENL USES SEPARATE LENGTH UNITS.
@@ -440,17 +441,17 @@ C
       MXLAM=NIPR*(MX-ILAM+1)
 C
       RPUNIT=unset
-      CALL POTENL(-1,MXLAM,X(ILAM),RPUNIT,EPSIL,ITYPE,IPRINT)
+      CALL POTENL(-1,MXLAM,X(ILAM),RPUNIT,EP2CM,ITYPE,IPRINT)
 C
-      CALL CHCKRU(RUNIT,RPUNIT,RSCALE,unset,IPRINT)
+      CALL CHCKRU(RUNIT,RUNAME,RPUNIT,RSCALE,unset,IPRINT)
 C
 C  THE PROGRAM WORKS WITH REDUCED ENERGIES IN UNITS OF 1/RUNIT**2
 C  ALL DISTANCES ARE IN THESE R UNITS.
-C  CINT CONVERTS ENERGIES IN CM-1 INTO UNITS OF 1/RUNIT**2
-C  RMLMDA CONVERT THE INTERACTION POTENTIAL INTO UNITS OF 1/RUNIT**2
+C  CM2RU CONVERTS ENERGIES IN CM-1 INTO UNITS OF 1/RUNIT**2
+C  EP2RU CONVERT THE INTERACTION POTENTIAL INTO UNITS OF 1/RUNIT**2
 C
-      CINT=URED*MUNIT*RUNIT*RUNIT/BFCT
-      RMLMDA=CINT*EPSIL
+      CM2RU=URED*MUNIT*RUNIT*RUNIT/BFCT
+      EP2RU=EP2CM*CM2RU
 C
       ITYP=MOD(ITYPE,10)
       IXNEXT=IXNEXT+(MXLAM*NLABV(ITYP)+NIPR-1)/NIPR
@@ -482,13 +483,14 @@ C
 C
 C  WRITE HEADER ON WAVEFUNCTION FILE
 C
-      IF (WAVE) CALL WVHEAD(IPROGM,LABEL,ITYPE,URED,IPRINT)
+      IF (WAVE) CALL WVHEAD(IPROGM,LABEL,ITYPE,IBOUND,URED,MUNIT,RUNIT,
+     1                      EUNIT,IPRINT)
 
       IF (IPRINT.GE.1) WRITE(6,1060)
 C
       IF (ITYPE.EQ.8) EBAS=100.0D0
 
-      IF (NCONST.EQ.0) CALL THRESH(X(ISEINT),N,CINT,ITYPE,MONQN,NQN,
+      IF (NCONST.EQ.0) CALL THRESH(X(ISEINT),N,CM2RU,ITYPE,MONQN,NQN,
      1                             NJLQN(ITYP),EREF,X(ISJIND),0)
       IF (IPRINT.GE.1) THEN
         IF (LFSCAN) THEN
@@ -626,10 +628,11 @@ C
 C
 C  CHOOSE BASIS FUNCTIONS
 C
-          CALL BASE(JTOT,X(IXJSTT),N,X,X,CINT,
+          CALL BASE(JTOT,X(IXJSTT),N,X,X,CM2RU,
      1              X,X,X,X,MXLAM,NPOTL,
-     2              X(ILAM),X,WGHT,IEXCH,THETA,PHI,IB,.TRUE.,
-     3              EBAS,NSTATE,IPRINT,IBOUND,X(ISJSTT),X)
+     2              X(ILAM),X,WGHT,IEXCH,THETA,PHI,IB,
+     3              .TRUE.,EBAS,NSTATE,IPRINT,IBOUND,X(ISJSTT),
+     4              X)
 C
 C  N IS THE NUMBER OF BASIS FUNCTIONS
 C  SKIP THIS JTOT,IB IF NO CHANNELS
@@ -662,10 +665,11 @@ C  ALLOCATE STORAGE COMMON TO ALL PROPAGATORS. . .
 C
 C  SET UP BASIS FUNCTIONS IN ALLOCATED STORAGE
 C
-          CALL BASE(JTOT,X(IXJSTT),N,X(ISJIND),X(ISL),CINT,
+          CALL BASE(JTOT,X(IXJSTT),N,X(ISJIND),X(ISL),CM2RU,
      1              X(ISEINT),X(ISCENT),X(ISVL),X(ISIV),MXLAM,NPOTL,
-     2              X(ILAM),X(ISWVEC),WGHT,IEXCH,THETA,PHI,IB,.FALSE.,
-     3              EBAS,NSTATE,IPRINT,IBOUND,X(ISJSTT),X(ISDGVL))
+     2              X(ILAM),X(ISWVEC),WGHT,IEXCH,THETA,PHI,IB,
+     3              .FALSE.,EBAS,NSTATE,IPRINT,IBOUND,X(ISJSTT),
+     4              X(ISDGVL))
 C
 C  CALCULATE STORAGE ALLOCATIONS FOR Y(OUT), Y(IN) AND U
 C
@@ -725,20 +729,20 @@ C
 C  CALL CHEINT OR YTRANS TO GET EINT FOR THIS FIELD
 C
               IF (NCONST.EQ.0 .AND. NDGVL.GT.0) THEN
-                CALL CHEINT((ISEINT),X(ISDGVL),N,OLDFAC,CINT)
+                CALL CHEINT((ISEINT),X(ISDGVL),N,OLDFAC,CM2RU)
                 IF (IPRINT.GE.10)
-     1            CALL THRLST(N,X(ISEINT),X(ISCENT),CINT,X(ISL),
+     1            CALL THRLST(N,X(ISEINT),X(ISCENT),CM2RU,X(ISL),
      2                        IBOUND,EUNIT,EUNAME)
               ENDIF
 
               IF (NCONST.GT.0 .OR. NRSQ.GT.0) THEN
                 CALL YTRANS(X(ISYOUT),X(ISU),X(ISEINT),X(ISWVEC),
      1                      X(ISJIND),X(ISL),N,X(ISP),X(ISVL),X(ISIV),
-     2                      MXLAM,NPOTL,ERED,RMLMDA,DEGTOL,NOPEN,
-     3                      IBOUND,X(ISCENT),IPRINT,.FALSE.)
+     2                      MXLAM,NPOTL,ERED,EP2RU,CM2RU,DEGTOL,
+     3                      NOPEN,IBOUND,X(ISCENT),IPRINT,.FALSE.)
 C
                 IF (IPRINT.GE.10)
-     1            CALL THRLST(N,X(ISEINT),X(ISCENT),CINT,X(ISL),
+     1            CALL THRLST(N,X(ISEINT),X(ISCENT),CM2RU,X(ISL),
      2                        IBOUND,EUNIT,EUNAME)
               ENDIF
 C
@@ -746,15 +750,15 @@ C  CALCULATE EREF
 C
               ETEMP=ENERGY(INRG)*EUNIT
               IF (IREF.NE.0 .OR. MONQN(1).NE.-99999)
-     1          CALL THRESH(X(ISEINT),N,CINT,ITYPE,MONQN,NQN,
+     1          CALL THRESH(X(ISEINT),N,CM2RU,ITYPE,MONQN,NQN,
      2                      NJLQN(ITYP),EREF,X(ISJIND),IPRINT)
               ERED=ETEMP+EREF
               IF (IPRINT.GE.7) CALL EREFMS(EREF,EUNIT,EUNAME,MONQN,NQN)
               IF (IPRINT.GE.8) CALL EABSMS(ERED,EUNIT,EUNAME)
 C
-              ERED=ERED*CINT
+              ERED=ERED*CM2RU
               EREDMX=ERED
-              IF (ITYPE.NE.8 .AND. ISCRU.NE.0) EREDMX=EMX+EREF*CINT
+              IF (ITYPE.NE.8 .AND. ISCRU.NE.0) EREDMX=EMX+EREF*CM2RU
               IF (IRMSET.GT.0 .AND. IFLD.EQ.1 .AND. INRG.EQ.1) THEN
                 RMNINT=RMIN
                 ITW=IXNEXT
@@ -765,14 +769,14 @@ C
                 IXNEXT=IT4+N
                 CALL CHKSTR(NUSED)
                 CALL FINDRM(X(ITW),N,RMNINT,RTURN,X(ISP),X(ISVL),
-     1                      X(ISIV),EREDMX,X(ISEINT),X(ISCENT),RMLMDA,
+     1                      X(ISIV),EREDMX,X(ISEINT),X(ISCENT),
      2                      X(IT1),X(IT2),X(IT3),X(IT4),MXLAM,NPOTL,
-     3                      IRMSET,ITYPE,IPRINT)
+     3                      EP2RU,CM2RU,RSCALE,IRMSET,ITYPE,IPRINT)
                 IXNEXT=ITW
               ENDIF
 
-              CAYS=CALCK(EPS*CINT,EREDMX,X(ISEINT),N)
-              CAYL=CALCK(EPL*CINT,EREDMX,X(ISEINT),N)
+              CAYS=CALCK(EPS*CM2RU,EREDMX,X(ISEINT),N)
+              CAYL=CALCK(EPL*CM2RU,EREDMX,X(ISEINT),N)
               IF (STEPS.GT.0.D0 .AND. CAYS.EQ.0.D0) THEN
                 WRITE(6,*) ' *** ERROR: EKIN+EPS IS NOT +VE'
                 STOP
@@ -785,7 +789,8 @@ C
               CALL BDCTRL(N,MXLAM,NPOTL,X(ISYOUT),X(ISYIN),
      1                    X(ISU),X(ISEVEC),X(IDUM),X(ISVL),X(ISIV),
      2                    X(ISEINT), X(ISCENT), X(ISP), NODE, ERED,
-     3                    RMLMDA, EIGMIN, .FALSE., IMIN, IPRINT)
+     3                    EP2RU, CM2RU, RSCALE, EIGMIN, .FALSE.,
+     4                    IMIN, IPRINT)
               IF (LFSCAN .AND. IPRINT.GE.1) THEN
                 CALL PRPRCT(IFLD,SVNAME,FLD,SVUNIT)
                 CALL PREVAL(NODE,EIGMIN)
@@ -904,19 +909,19 @@ C
 C  CALL CHEINT OR YTRANS TO GET EINT FOR THIS FIELD
 C
               IF (NCONST.EQ.0 .AND. NDGVL.GT.0) THEN
-                CALL CHEINT(X(ISEINT),X(ISDGVL),N,OLDFAC,CINT)
+                CALL CHEINT(X(ISEINT),X(ISDGVL),N,OLDFAC,CM2RU)
                 IF (IPRINT.GE.10)
-     1            CALL THRLST(N,X(ISEINT),X(ISCENT),CINT,X(ISL),
+     1            CALL THRLST(N,X(ISEINT),X(ISCENT),CM2RU,X(ISL),
      2                        IBOUND,EUNIT,EUNAME)
               ENDIF
 
               IF (NCONST.GT.0 .OR. NRSQ.GT.0) THEN
                 CALL YTRANS(X(ISYOUT),X(ISU),X(ISEINT),X(ISWVEC),
      1                      X(ISJIND),X(ISL),N,X(ISP),X(ISVL),X(ISIV),
-     2                      MXLAM,NPOTL,ERED,RMLMDA,DEGTOL,NOPEN,
-     3                      IBOUND,X(ISCENT),IPRINT,.FALSE.)
+     2                      MXLAM,NPOTL,ERED,EP2RU,CM2RU,DEGTOL,
+     3                      NOPEN,IBOUND,X(ISCENT),IPRINT,.FALSE.)
                 IF (IPRINT.GE.10)
-     1            CALL THRLST(N,X(ISEINT),X(ISCENT),CINT,X(ISL),
+     1            CALL THRLST(N,X(ISEINT),X(ISCENT),CM2RU,X(ISL),
      2                        IBOUND,EUNIT,EUNAME)
               ENDIF
               IXNEXT=IC3
@@ -925,16 +930,16 @@ C  ADD EREF IF ENERGIES ARE TO BE TREATED AS KINETIC: DEFAULTS TO 0
 C
               ETEMP=ENERGY(INRG)*EUNIT
               IF (IREF.NE.0 .OR. MONQN(1).NE.-99999)
-     1          CALL THRESH(X(ISEINT),N,CINT,ITYPE,MONQN,NQN,
+     1          CALL THRESH(X(ISEINT),N,CM2RU,ITYPE,MONQN,NQN,
      2                      NJLQN(ITYP),EREF,X(ISJIND),IPRINT)
               ERED=ETEMP+EREF
               IF (IPRINT.GE.7) CALL EREFMS(EREF,EUNIT,EUNAME,MONQN,NQN)
               IF (IPRINT.GE.8) CALL EABSMS(ERED,EUNIT,EUNAME)
 C
-              ERED=ERED*CINT
+              ERED=ERED*CM2RU
 
-              CAYS=CALCK(EPS*CINT,EREDMX,X(ISEINT),N)
-              CAYL=CALCK(EPL*CINT,EREDMX,X(ISEINT),N)
+              CAYS=CALCK(EPS*CM2RU,EREDMX,X(ISEINT),N)
+              CAYL=CALCK(EPL*CM2RU,EREDMX,X(ISEINT),N)
               IF (STEPS.GT.0.D0 .AND. CAYS.EQ.0.D0) THEN
                 WRITE(6,*) ' *** ERROR: EKIN+EPS IS NOT +VE'
                 STOP
@@ -947,7 +952,8 @@ C
               CALL BDCTRL(N,MXLAM,NPOTL,X(ISYOUT),X(ISYIN),
      1                    X(ISU),X(ISEVEC),X(IDUM),X(ISVL),X(ISIV),
      2                    X(ISEINT), X(ISCENT), X(ISP), NODE, ERED,
-     3                    RMLMDA, EIGMIN, .FALSE., IMIN, IPRINT)
+     3                    EP2RU, CM2RU, RSCALE, EIGMIN, .FALSE.,
+     4                    IMIN, IPRINT)
               IF (IPRINT.GE.6) CALL PRPRCT(NPROP,SVNAME,FLDHLF,SVUNIT)
               IF (IPRINT.GE.7) CALL PREVAL(NODE,EIGMIN)
               NPROP=NPROP+1
@@ -1070,7 +1076,9 @@ C
               FC=FA
               XC=XA
               IF (IPRINT.GE.7) CALL PRVWST(XA,XB,FA,FB,SVUNIT)
+
               CONVGE=.FALSE.
+              ENOISE=.FALSE.
               DO 600 ITER=1,NITER
 C
 C  CALCULATE THE NEXT FIELD USING THE VWDB ALGORITHM
@@ -1095,19 +1103,19 @@ C
 C  CALL CHEINT OR YTRANS TO GET EINT FOR THIS FIELD
 C
                 IF (NCONST.EQ.0 .AND. NDGVL.GT.0) THEN
-                  CALL CHEINT((ISEINT),X(ISDGVL),N,OLDFAC,CINT)
+                  CALL CHEINT((ISEINT),X(ISDGVL),N,OLDFAC,CM2RU)
                   IF (IPRINT.GE.10)
-     1              CALL THRLST(N,X(ISEINT),X(ISCENT),CINT,X(ISL),
+     1              CALL THRLST(N,X(ISEINT),X(ISCENT),CM2RU,X(ISL),
      2                          IBOUND,EUNIT,EUNAME)
                 ENDIF
 
                 IF (NCONST.GT.0 .OR. NRSQ.GT.0) THEN
                   CALL YTRANS(X(ISYOUT),X(ISU),X(ISEINT),X(ISWVEC),
      1                        X(ISJIND),X(ISL),N,X(ISP),X(ISVL),X(ISIV),
-     2                        MXLAM,NPOTL,ERED,RMLMDA,DEGTOL,NOPEN,
-     3                        IBOUND,X(ISCENT),IPRINT,.FALSE.)
+     2                        MXLAM,NPOTL,ERED,EP2RU,CM2RU,DEGTOL,
+     3                        NOPEN,IBOUND,X(ISCENT),IPRINT,.FALSE.)
                   IF (IPRINT.GE.10)
-     1              CALL THRLST(N,X(ISEINT),X(ISCENT),CINT,X(ISL),
+     1              CALL THRLST(N,X(ISEINT),X(ISCENT),CM2RU,X(ISL),
      2                          IBOUND,EUNIT,EUNAME)
                   IXNEXT=IC3
                 ENDIF
@@ -1116,7 +1124,7 @@ C  ADD EREF IF ENERGIES ARE TO BE TREATED AS KINETIC: DEFAULTS TO 0
 C
                 ETEMP=ENERGY(INRG)*EUNIT
                 IF (IREF.NE.0 .OR. MONQN(1).NE.-99999)
-     1            CALL THRESH(X(ISEINT),N,CINT,ITYPE,MONQN,NQN,
+     1            CALL THRESH(X(ISEINT),N,CM2RU,ITYPE,MONQN,NQN,
      2                        NJLQN(ITYP),EREF,X(ISJIND),IPRINT)
                 ERED=ETEMP+EREF
                 IF (IPRINT.GE.7) CALL EREFMS(EREF,EUNIT,EUNAME,MONQN,
@@ -1124,10 +1132,10 @@ C
                 IF (IPRINT.GE.8) CALL EABSMS(ERED,EUNIT,EUNAME)
                 IF (CONVGE) EXIT
 C
-                ERED=ERED*CINT
+                ERED=ERED*CM2RU
 
-                CAYS=CALCK(EPS*CINT,ERED,X(ISEINT),N)
-                CAYL=CALCK(EPL*CINT,ERED,X(ISEINT),N)
+                CAYS=CALCK(EPS*CM2RU,ERED,X(ISEINT),N)
+                CAYL=CALCK(EPL*CM2RU,ERED,X(ISEINT),N)
                 IF (STEPS.GT.0.D0 .AND. CAYS.EQ.0.D0) THEN
                   WRITE(6,*) ' *** ERROR: EKIN+EPS IS NOT +VE'
                   STOP
@@ -1140,7 +1148,8 @@ C
                 CALL BDCTRL(N,MXLAM,NPOTL,X(ISYOUT),X(ISYIN),
      1                      X(ISU),X(ISEVEC),X(IDUM),X(ISVL),X(ISIV),
      2                      X(ISEINT), X(ISCENT), X(ISP), NODE, ERED,
-     3                      RMLMDA, EIGMIN, .FALSE., IMIN, IPRINT)
+     3                      EP2RU, CM2RU, RSCALE, EIGMIN, .FALSE.,
+     4                      IMIN, IPRINT)
 
                 IF (ABS(EIGMIN).LT.ABS(ESMALL)) THEN
 C  UPDATE SMALLEST EIGENVALUE, EIGENVECTOR OF SMALLEST EIGENVALUE AND
@@ -1167,6 +1176,7 @@ C
                   FCOMP=FB
                 ENDIF
                 IF (ABS(EIGMIN).GT.ABS(FCOMP)) THEN
+                  ENOISE=.TRUE.
                   IF (ABS(FA).LT.ABS(FB)) THEN
                     FSMALL=FA
                     XSMALL=XA
@@ -1174,9 +1184,7 @@ C
                     FSMALL=FB
                     XSMALL=XB
                   ENDIF
-                  CALL PRINCR(FLDNEW,SVUNIT,METHOD,EIGMIN,NSEEK,
-     1                        FSMALL,XSMALL,CONVGE)
-                  GOTO 500
+                  EXIT
                 ENDIF
 C
 C  SET UP FOR NEXT CYCLE OF BRENT ALGORITHM
@@ -1198,13 +1206,20 @@ C
 C
               CALL SETEFV(FIELD,FLDNEW)
               ZCNTN=FLDNEW.LE.FLDHI(INODE) .AND. FLDNEW.GE.FLDLO(INODE)
-              ECM=ERED/CINT-EREF
+              ECM=ERED/CM2RU-EREF
 
-              IF (IBDSUM.GT.0 .AND. CONVGE)
-     1          CALL OUTEFV(NSEEK,ECM,EUNIT,EUNAME,NODE,ZCNTN,IBDSUM)
-              IF (IPRINT.GE.1)
-     1          CALL PRCONV(NSEEK,SVNAME,FLDNEW,SVUNIT,NODE,ZCNTN,
-     2                      CONVGE,METHOD)
+              IF (IBDSUM.GT.0)
+     1          CALL OUTEFV(NSEEK,ECM,EUNIT,EUNAME,NODE,ZCNTN,CONVGE,
+     2                      ENOISE,IBDSUM)
+              IF (IPRINT.GE.1) THEN
+                IF (ENOISE) THEN
+                  CALL PRINCR(FLDNEW,SVUNIT,METHOD,EIGMIN,NSEEK,
+     1                        FSMALL,XSMALL,CONVGE)
+                ELSE
+                  CALL PRCONV(NSEEK,SVNAME,FLDNEW,SVUNIT,NODE,ZCNTN,
+     1                        CONVGE,METHOD)
+                ENDIF
+              ENDIF
               IF (IPRINT.GE.6) CALL PRLAST(DE,SVUNIT)
               IF (IPRINT.GE.8) CALL PRLOC(TITIME-TNTIME)
 
@@ -1216,8 +1231,8 @@ C
 C
               IF (WAVE) THEN
                 CALL WVINFO(JTOT,IB,NSEEK,N,NQN,NSTATE,X(IXJSTT),
-     1                      X(ISJIND),X(ISL),ERED/CINT,EREF,EUNIT,
-     2                      EUNAME,IPRINT)
+     1                      X(ISJIND),X(ISL),X(ISCENT),ERED/CM2RU,EREF,
+     2                      EUNIT,EUNAME,IBOUND,IPRINT)
               ENDIF
               IF (IPRINT.GE.5 .OR. WAVE) THEN
 
@@ -1250,7 +1265,8 @@ C  ALLOCATE STORAGE FOR SUMPSI
                 CALL BDCTRL(N,MXLAM,NPOTL,X(ISYOUT),X(ISYIN),
      1                      X(ISU),X(ISEVEC),X(ITSUMP),X(ISVL),X(ISIV),
      2                      X(ISEINT), X(ISCENT), X(ISP), NODE, ERED,
-     3                      RMLMDA, EIGMIN, .TRUE., IMIN, IPRINT)
+     3                      EP2RU, CM2RU, RSCALE, EIGMIN, .TRUE.,
+     4                      IMIN, IPRINT)
 C
                 CALL GCLOCK(TITIME)
                 TTIME=TITIME-TIMLST

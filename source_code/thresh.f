@@ -1,4 +1,4 @@
-      SUBROUTINE THRESH(EINT,N,CINT,ITYPE,MONQN,NQN,NJLQN,
+      SUBROUTINE THRESH(EINT,N,CM2RU,ITYPE,MONQN,NQN,NJLQN,
      1                  EREF,JSINDX,IPRINT)
 C  Copyright (C) 2019 J. M. Hutson & C. R. Le Sueur
 C  Distributed under the GNU General Public License, version 3
@@ -46,7 +46,7 @@ C  ALTERED TO USE ARRAY SIZES FROM MODULE sizes ON 23-06-17 BY CRLS
                   WRITE(6,100) (MONQN(IQN),IQN=1,NJLQN)
                   STOP
                 ENDIF
-                EREF=EINT(JREF)/CINT
+                EREF=EINT(JREF)/CM2RU
               ENDIF
               RETURN
             ENDIF
@@ -59,7 +59,7 @@ C  ALTERED TO USE ARRAY SIZES FROM MODULE sizes ON 23-06-17 BY CRLS
 C
       ELSEIF (IREF.GT.0) THEN
         IF (NCONST.NE.0 .OR. NDGVL.GT.0) THEN
-          EREF=EINT(IREF)/CINT
+          EREF=EINT(IREF)/CM2RU
         ELSE
           EREF=ELEVEL(IREF)
         ENDIF

@@ -1,7 +1,7 @@
       SUBROUTINE WAVVEC(VL,P,IV,W,N,NPOTL)
 C  Copyright (C) 2019 J. M. Hutson & C. R. Le Sueur
 C  Distributed under the GNU General Public License, version 3
-      USE potential
+      USE potential, ONLY: NVLBLK
 C
 C  THIS SUBROUTINE CALCULATES THE W MATRIX FROM THE POTENTIAL ARRAY AND P
 C  W(I,J)=SUM_{IPOTL} POTENTIAL(IPOTL,I,J)*P(IPOTL)

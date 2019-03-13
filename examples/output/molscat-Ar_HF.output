@@ -7,7 +7,7 @@
  |                                                                            |
  |                               Version 2019.0                               |
  |                                                                            |
- |                       Run on 18 Feb 2019   at 22:19:42                     |
+ |                       Run on 11 Mar 2019   at 16:52:31                     |
  |                                                                            |
   ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
 
@@ -146,18 +146,17 @@
 
   LOG-DERIVATIVE MATRIX INITIALISED IN THE LOCAL EIGENBASIS AT RMIN
   LOCALLY CLOSED CHANNELS INITIALISED WITH A WKB BOUNDARY CONDITION
-  LOCALLY  OPEN  CHANNELS INITIALISED WITH THE VALUE  1.000E+08
 
   ======================================================================================================================
 
   INPUT ENERGY VALUES ASSUMED TO BE IN UNITS OF CM-1 BY DEFAULT.
 
-  CONTROL DATA FOR TOTAL ENERGIES.  CALCULATIONS WILL BE PERFORMED FOR  10 VALUES
-       ENERGY NO.   1 =   16.930000000     CM-1
-       ENERGY NO.   2 =   16.930100000     CM-1
-       ENERGY NO.   3 =   16.930200000     CM-1
-       ENERGY NO.   4 =   16.930300000     CM-1
-       ENERGY NO.   5 =   16.930400000     CM-1
+  CONTROL DATA FOR TOTAL ENERGIES.  CALCULATIONS WILL BE PERFORMED FOR   10 VALUES
+       ENERGY NO.    1 =   16.930000000     CM-1
+       ENERGY NO.    2 =   16.930100000     CM-1
+       ENERGY NO.    3 =   16.930200000     CM-1
+       ENERGY NO.    4 =   16.930300000     CM-1
+       ENERGY NO.    5 =   16.930400000     CM-1
 
   RESONANCE SEARCH OPTION. ONLY FIRST 5 ENERGIES GIVEN. OTHERS WILL BE DETERMINED INTERACTIVELY.
 
@@ -241,12 +240,12 @@
 
   - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
-  CONTROL DATA FOR TOTAL ENERGIES.  CALCULATIONS WILL BE PERFORMED FOR   5 VALUES
-       ENERGY NO.   6 =   16.942932300     CM-1
-       ENERGY NO.   7 =   16.943197556     CM-1
-       ENERGY NO.   8 =   16.943462812     CM-1
-       ENERGY NO.   9 =   16.943728069     CM-1
-       ENERGY NO.  10 =   16.943993325     CM-1
+  CONTROL DATA FOR TOTAL ENERGIES.  CALCULATIONS WILL BE PERFORMED FOR    5 VALUES
+       ENERGY NO.    6 =   16.942932300     CM-1
+       ENERGY NO.    7 =   16.943197556     CM-1
+       ENERGY NO.    8 =   16.943462812     CM-1
+       ENERGY NO.    9 =   16.943728069     CM-1
+       ENERGY NO.   10 =   16.943993325     CM-1
 
   S-MATRIX EIGENPHASE SUM, EPSUM/PI = 10.24343
 
@@ -293,7 +292,7 @@
  |                                                                            |
  |                               Version 2019.0                               |
  |                                                                            |
- |                    This run used       0.11 cpu secs and                   |
+ |                    This run used       0.16 cpu secs and                   |
  |               3525 of the allocated   1000000 words of storage             |
  |                                                                            |
   ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---

@@ -1,7 +1,7 @@
 SUBROUTINE YTRANS(Y,EVEC,EINT,WVEC,                      &
                   JSINDX,L,N,P,VL,IV,                    &
-                  MXLAM,NPOTL,ERED,RMLMDA,DEGTOL,NOPEN,  &
-                  IBOUND,CENT,IPRINT,LQUIET)
+                  MXLAM,NPOTL,ERED,EP2RU,CM2RU,DEGTOL,  &
+                  NOPEN,IBOUND,CENT,IPRINT,LQUIET)
 !  Copyright (C) 2019 J. M. Hutson & C. R. Le Sueur
 !  Distributed under the GNU General Public License, version 3
 USE potential
@@ -44,7 +44,7 @@ implicit none
 integer, intent(in)            ::N,IV(1),JSINDX(N),IBOUND,IPRINT,MXLAM,NPOTL
 integer, intent(inout)         ::L(N)
 integer, intent(out)           ::NOPEN
-double precision, intent(in)   ::VL(1),DEGTOL,RMLMDA,ERED
+double precision, intent(in)   ::VL(1),DEGTOL,EP2RU,CM2RU,ERED
 double precision, intent(inout)::Y(N,N),CENT(N)
 double precision, intent(out)  ::EVEC(N,N),EINT(N),WVEC(N)
 logical                          LQUIET
@@ -72,7 +72,7 @@ integer                           jprint,Lmin,Lmax,LL,nn,icol,irow,i,j,imax, &
                                   it,i_op,n_ops,irsq,i_dim,iextra,ibeg,      &
                                   NEXTRA_local,index_CENT
 integer, external              :: IDAMAX
-double precision                  realL,tol_L,wmax,CINT,CENTcur,CENTmax
+double precision                  realL,tol_L,wmax,CENTcur,CENTmax
 logical                           no37,nowarn,zdegen
 character(6)                   :: l_one
 character(19)                  :: string
@@ -121,17 +121,16 @@ endif
 
 allocate(wks(N,N,n_ops))
 ibeg=1
-CINT=RMLMDA/EPSIL
 do i_op=1,n_ops
   i=ibeg+MXLAM
   i_dim=mconst(i_op)
   if (nconst.gt.0 .and. i_op.eq.1) then
-    P(1:i_dim)=VCONST(ibeg:ibeg+i_dim-1)*CINT
+    P(1:i_dim)=VCONST(ibeg:ibeg+i_dim-1)*CM2RU
   else
     P(1:i_dim)=1.d0
   endif
   if ((jprint.ge.6 .and. n_ops.gt.1 .and. CDRIVE.eq.'M') .or. jprint.ge.10) then
-    write(6,900) 'operator #',i_op,P(1:i_dim)/CINT
+    write(6,900) 'operator #',i_op,P(1:i_dim)/CM2RU
   endif
 900  format(3x,a,i2,1p,10(g17.10,1x))
 ! note that this code is analogous to that in WAVVEC
@@ -377,7 +376,7 @@ if (jprint.ge.15 .and. NRSQ.gt.0 .and. NCONST.gt.0) then
   write(6,*) ' Index      Asymp channel no.     L       Energy'
   do i=1,N
     write(6,'(i5,i16,i15,E28.15)') &
-               i,nchan(i),nint(sqrt(r_L(i)+0.25d0)-0.5d0),EINT(nchan(i))/CINT
+               i,nchan(i),nint(sqrt(r_L(i)+0.25d0)-0.5d0),EINT(nchan(i))/CM2RU
   enddo
   write(6,*)
   deallocate(nchan)

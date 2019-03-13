@@ -1,12 +1,11 @@
       SUBROUTINE SCCTRL(N,MXLAM,NPOTL,
      1                  JSINDX,SR,SI,U,VL,
      2                  IV,EINT,CENT,WVEC,
-     3                  L,NB,P,ERED,RMLMDA,DEGTOL,
-     4                  DRMAX,NSTAB,NOPEN,IPRINT,IBOUND,ICHAN,
-     5                  WAVE,ILDSVU)
+     3                  L,NB,P,ERED,EP2RU,CM2RU,
+     4                  RSCALE,DEGTOL,DRMAX,NSTAB,NOPEN,IPRINT,
+     5                  IBOUND,ICHAN,WAVE,ILDSVU)
 C  Copyright (C) 2019 J. M. Hutson & C. R. Le Sueur
 C  Distributed under the GNU General Public License, version 3
-      USE potential
 C
 C  THIS SUBROUTINE SETS UP THE STORAGE REQUIREMENTS FOR ALL THE
 C  DIFFERENT PROPAGATORS IMPLEMENTED
@@ -28,7 +27,7 @@ C  COMMON BLOCK FOR CONTROL OF USE OF PROPAGATION SCRATCH FILE
 C
 C  COMMON BLOCK FOR CONTROL OF PROPAGATION SEGMENTS
       COMMON /RADIAL/ RMNINT,RMXINT,RMID,RMATCH,DRS,DRL,STEPS,STEPL,
-     1                POWRS,POWRL,TOLHIS,TOLHIL,CAYS,CAYL,UNSET,
+     1                POWRS,POWRL,TOLHIS,TOLHIL,CAYS,CAYL,unset,
      2                IPROPS,IPROPL,NSEG
 C
       DIMENSION STPSEG(2),CAYSEG(2),TOLSEG(2),DRSEG(2),IPRSEG(2),
@@ -105,7 +104,7 @@ C     ---------------------------------------------------------------
 
           ELSE
             CALL DRSET(RSTART,RSTOP,STEP,TOLHIT,CAY,DRT,NSTEP,DR,
-     1                 UNSET,IPROP,POW)
+     1                 unset,IPROP,POW)
             IF (IWRITE) WRITE(ISCRU) RSTART,RSTOP,DR,ERED,NSTEP
           ENDIF
         ENDIF
@@ -121,8 +120,8 @@ C
           IF (ISTART.EQ.0)
      1      CALL YINIT(SR,U,VL,IV,P,CENT,EINT,X(IT1),
      2                 X(IT2),SI,N,MXLAM,NPOTL,
-     3                 ERED,RSTART,RMLMDA,.TRUE.,
-     4                 IPRINT)
+     3                 ERED,RSTART,EP2RU,CM2RU,RSCALE,
+     4                 .TRUE.,IPRINT)
           IXNEXT=IT1
           IC2=IT1
         ENDIF
@@ -140,7 +139,7 @@ C
      1                SR,U,VL,IV,EINT,CENT,L,NB,P,
      2                X(IT1),X(IT2),X(IT3),X(IT4),
      3                RSTART,RSTOP,NSTEP,DR,NSTAB,
-     4                ERED,RMLMDA,IPRINT)
+     4                ERED,EP2RU,CM2RU,RSCALE,IPRINT)
           IF (IPRINT.GE.8) WRITE(6,1800) 'DVPROP',RSTART,RSTOP,NSTEP
  1800     FORMAT(/2X,A,'. PSI AND PSI'' PROPAGATED FROM ',
      &           F12.4,'  TO',1PG12.5,'  IN ',I6,'  STEPS.')
@@ -164,7 +163,7 @@ C
      2                X(IT1),X(IT2),X(IT3),X(IT4),X(IT5),X(IT6),X(IT7),
      3                X(IT8),X(IT9),X(IT6),X(IT7),
      4                RSTART,RSTOP,NSTEP,DR,POW,
-     5                ERED,RMLMDA,IPRINT)
+     5                ERED,EP2RU,CM2RU,RSCALE,IPRINT)
           IF (IPRINT.GE.8) WRITE(6,1900) 'RMPROP',RSTART,RSTOP,NSTEP
  1900     FORMAT(/2X,A,'. R MATRIX PROPAGATED FROM ',
      &           F12.4,'  TO',1PG12.5,'  IN ',I6,'  STEPS.')
@@ -215,7 +214,7 @@ C
      4               X(IT12),X(IT13),X(IT14),X(IT15),X(IT16),X(IT17),
      5               X(IT18),X(IT19),X(IT20),X(IT21),X(IT22),X(IT23),
      6               RSTART,RSTOP,NSTEP,DR,DRMAX,TLDIAG,TOFF,
-     7               ERED,RMLMDA,IPRINT)
+     7               ERED,EP2RU,CM2RU,RSCALE,IPRINT)
 C
 C  INVERT R TO GET Y
 C
@@ -231,7 +230,7 @@ C
           CALL LDPROP(N,MXLAM,NPOTL,
      1                SR,U,VL,IV,EINT,CENT,P,X(IT1),
      2                RSTART,RSTOP,NSTEP,DR,NODES,
-     3                ERED,RMLMDA,IPRINT)
+     3                ERED,EP2RU,CM2RU,RSCALE,IPRINT)
           IF (IPRINT.GE.8) WRITE(6,2000) 'LDPROP',RSTART,RSTOP,NSTEP
 C
         ELSEIF (IPROP.EQ.6) THEN
@@ -252,7 +251,7 @@ C
      1                  SR,U,VL,IV,EINT,CENT,P,
      2                  X(IT1),X(IT2),X(IT3),X(IT4),X(IT5),X(IT6),
      3                  RSTART,RSTOP,NSTEP,DR,NODES,IREC,WAVE,
-     4                  ERED,RMLMDA,IPRINT)
+     4                  ERED,EP2RU,CM2RU,RSCALE,IPRINT)
             IF (IPRINT.GE.8) WRITE(6,2000) 'MDPROP',RSTART,RSTOP,NSTEP
           ELSEIF (N.EQ.1) THEN
             NPT=NSTEP+1
@@ -271,7 +270,7 @@ C
      1                  SR(1),VL,IV,EINT,CENT,X(ITP),
      3                  X(IT1),X(IT2),X(IT3),X(IT4),X(IT5),
      4                  RSTART,RSTOP,NSTEP,DR,NODES,
-     5                  ERED,RMLMDA,IPRINT)
+     5                  ERED,EP2RU,CM2RU,RSCALE,IPRINT)
             IF (IPRINT.GE.8) WRITE(6,2000) 'ODPROP',RSTART,RSTOP,NSTEP
           ENDIF
 C
@@ -294,7 +293,7 @@ C
      2                X(IT2),X(IT3),X(IT4),X(IT5),X(IT6),X(IT7),X(IT8),
      3                X(IT9),
      4                RSTART,RSTOP,NSTEP,DR,NODES,
-     4                ERED,RMLMDA,IPRINT)
+     4                ERED,EP2RU,CM2RU,RSCALE,IPRINT)
           IF (IPRINT.GE.8) WRITE(6,2000) 'MAPROP',RSTART,RSTOP,NSTEP
  2000     FORMAT(/2X,A,'. LOG-DERIVATIVE MATRIX PROPAGATED FROM ',
      &           F12.4,'  TO',1PG12.5,'  IN ',I6,'  STEPS.')
@@ -310,7 +309,7 @@ C
           CALL MGPROP(N,MXLAM,NPOTL,
      1                SR,U,VL,IV,EINT,CENT,P,X(IT1),
      3                RSTART,RSTOP,NSTEP,DR,NODES,
-     4                ERED,RMLMDA,IPRINT)
+     4                ERED,EP2RU,CM2RU,RSCALE,IPRINT)
           IF (IPRINT.GE.8) WRITE(6,2000) 'MGPROP',RSTART,RSTOP,NSTEP
 C
         ELSEIF (IPROP.EQ.9) THEN
@@ -334,7 +333,7 @@ C
      3                  X(IT1),X(IT2),X(IT3),X(IT4),X(IT5),X(IT6),
      4                  X(IT7),X(IT8),X(IT9),
      5                  RSTART,RSTOP,NSTEP,DR,POW,TOLHIT,NODES,
-     6                  ERED,RMLMDA,IPRINT)
+     6                  ERED,EP2RU,CM2RU,RSCALE,IPRINT)
             IF (IPRINT.GE.8) WRITE(6,2000) 'AIPROP',RSTART,RSTOP,NSTEP
           ENDIF
 C
@@ -357,7 +356,7 @@ C
           CALL WKB(N,MXLAM,NPOTL,
      1             SR,SI,VL,IV,EINT,CENT,P,
      2             DWVEC,L,X(IT1),X(IT2),
-     3             RSTART,TOLHIT,ERED,RMLMDA,IPRINT)
+     3             RSTART,TOLHIT,ERED,EP2RU,CM2RU,RSCALE,IPRINT)
 C
         ELSE
           WRITE(6,699) IPROP
@@ -374,8 +373,8 @@ C
       IF (IPRSEG(NSEG).GE.0) THEN
         CALL YTRANS(SR,SI,EINT,WVEC,
      1              JSINDX,L,N,P,VL,IV,
-     2              MXLAM,NPOTL,ERED,RMLMDA,DEGTOL,NOPEN,
-     3              IBOUND,CENT,IPRINT,.TRUE.)
+     2              MXLAM,NPOTL,ERED,EP2RU,CM2RU,DEGTOL,
+     3              NOPEN,IBOUND,CENT,IPRINT,.TRUE.)
 C  IF OUTPUT OF LOG-DERIVATIVE MATRIX REQUESTED,
 C  WRITE PROPAGATION VECTORS (LDRWPV) AND MATRIX (LDRWMD)
         IF (ILDSVU.GT.0) THEN
@@ -410,8 +409,9 @@ C  CALCULATE SCATTERING WAVEFUNCTION
         CALL CHKSTR(NUSED)
         NTSTPS=SUM(NSTEPS(1:NSEG))
         CALL WVSTPS(NTSTPS+1)
-        CALL SCWAVE(RSTART,RSTOP,WVEC,X(IT1),X(IT2),X(IT3),X(IT4),
-     1              X(IT6),SR,SI,X(IT5),U,L,N,NSQ,NOPEN,NB,NTSTPS,
+        CALL SCWAVE(RBSEG,RESEG,DRSEG,NSTEPS,NSEG,
+     1              WVEC,X(IT1),X(IT2),X(IT3),X(IT4),
+     1              X(IT6),SR,SI,X(IT5),U,L,N,NSQ,NOPEN,NB,
      2              ICHAN,IREC,IPRINT)
       ENDIF
 C

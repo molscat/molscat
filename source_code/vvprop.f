@@ -5,7 +5,7 @@
      4                  SINE,DIAG,XK,XSQ,TSTORE,W0,
      5                  W1,W2,EYE11,EYE12,EYE22,VECOLD,
      6                  RSTART,RSTOP,NSTEP,DRNOW,DRMAX,TLDIAG,TOFF,
-     7                  ERED,RMLMDA,IPRINT)
+     7                  ERED,EP2RU,CM2RU,RSCALE,IPRINT)
 C  This subroutine is part of the MOLSCAT, BOUND and FIELD suite of programs
       IMPLICIT DOUBLE PRECISION (A-H,O-Z)
 C------------------------------------------------------------------
@@ -221,8 +221,8 @@ C-------------------------------------------------------------------
 C-------------------------------------------------------------------
 C  EVALUATE THE POTENTIAL AND ITS DERIVATIVES.
 C-------------------------------------------------------------------
-      CALL WAVMAT(W,N,RCENT,P,VL,IVL,ERED,EINT,CENT,RMLMDA,WKS,
-     1            MXLAM,NPOTL,IPRINT)
+      CALL WAVMAT(W,N,RCENT,P,VL,IVL,ERED,EINT,CENT,EP2RU,CM2RU,
+     1            RSCALE,WKS,MXLAM,NPOTL,IPRINT)
       DO 165 I = 1, NSQ
   165   W0(I) = W(I)
       IF (IVPD .AND. IVPPD) GOTO 200
@@ -231,9 +231,10 @@ C-------------------------------------------------------------------
         W1(I) = 0.D0
   170   W2(I) = 0.D0
   200 IF (IVPPD .OR. ISHIFT) CALL DERMAT(2,W2,N,RCENT,P,VL,IVL,CENT,
-     1                                   RMLMDA,MXLAM,NPOTL,IPRINT)
+     1                                   EP2RU,RSCALE,MXLAM,NPOTL,
+     2                                   IPRINT)
       IF (IVPD) CALL DERMAT(1,W1,N,RCENT,P,VL,IVL,CENT,
-     1                      RMLMDA,MXLAM,NPOTL,IPRINT)
+     1                      EP2RU,RSCALE,MXLAM,NPOTL,IPRINT)
       FACTOR = DRNOW*DRNOW/24.D0
       IF (.NOT.ISHIFT) FACTOR = 0.D0
       IF (.NOT.ICRMAT) GOTO 270
@@ -244,8 +245,8 @@ C  EVALUATE THE POTENTIAL AT THE RMIDI WHERE THE INTERACTION IS TO
 C  BE DIAGONALIZED AND SAVE THE OLD EIGENVECTORS.
 C-------------------------------------------------------------------
       IF (RMIDI.NE.RCENT)
-     1  CALL WAVMAT(W,N,RMIDI,P,VL,IVL,ERED,EINT,CENT,RMLMDA,WKS,
-     2              MXLAM,NPOTL,IPRINT)
+     1  CALL WAVMAT(W,N,RMIDI,P,VL,IVL,ERED,EINT,CENT,EP2RU,CM2RU,
+     2              RSCALE,WKS,MXLAM,NPOTL,IPRINT)
       DO 240 I = 1,NSQ
   240   VECOLD(I) = VECNEW(I)
       ITRANS = ITRANS+1

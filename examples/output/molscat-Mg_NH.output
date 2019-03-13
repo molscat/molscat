@@ -7,7 +7,7 @@
  |                                                                            |
  |                               Version 2019.0                               |
  |                                                                            |
- |                       Run on 18 Feb 2019   at 22:28:37                     |
+ |                       Run on 11 Mar 2019   at 17:01:53                     |
  |                                                                            |
   ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
 
@@ -147,7 +147,6 @@
 
   LOG-DERIVATIVE MATRIX INITIALISED IN THE LOCAL EIGENBASIS AT RMIN
   LOCALLY CLOSED CHANNELS INITIALISED WITH A WKB BOUNDARY CONDITION
-  LOCALLY  OPEN  CHANNELS INITIALISED WITH THE VALUE  1.000E+08
   ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
   SEGMENT 2 WILL BE PROPAGATED OUTWARDS
 
@@ -166,10 +165,10 @@
   INPUT ENERGY VALUES CONVERTED FROM K
   TO INTERNAL WORKING UNITS OF CM-1 DUE TO INTEGER INPUT =   2
 
-  CONTROL DATA FOR TOTAL ENERGIES.  CALCULATIONS WILL BE PERFORMED FOR   3 VALUES
-       ENERGY NO.   1 =  6.95034570000E-04 CM-1 =  1.00000000000E-03 K       
-       ENERGY NO.   2 =  6.95034570000E-03 CM-1 =  1.00000000000E-02 K       
-       ENERGY NO.   3 =  6.95034570000E-02 CM-1 =  0.10000000000     K       
+  CONTROL DATA FOR TOTAL ENERGIES.  CALCULATIONS WILL BE PERFORMED FOR    3 VALUES
+       ENERGY NO.    1 =  6.95034570000E-04 CM-1 =  1.00000000000E-03 K       
+       ENERGY NO.    2 =  6.95034570000E-03 CM-1 =  1.00000000000E-02 K       
+       ENERGY NO.    3 =  6.95034570000E-02 CM-1 =  0.10000000000     K       
 
   ======================================================================================================================
 
@@ -193,7 +192,7 @@
   THESE ENERGY VALUES ARE RELATIVE TO THE REFERENCE ENERGY SPECIFIED BY MONOMER QUANTUM NUMBERS   0   1   1
   THE REFERENCE ENERGY WILL BE CALCULATED FOR EVERY EFV SET
 
-  INITIALIZATION DONE.  TIME WAS   0.01 CPU SECS.       237 WORDS OF STORAGE USED.
+  INITIALIZATION DONE.  TIME WAS   0.00 CPU SECS.       237 WORDS OF STORAGE USED.
 
   ====================== ITYP = 9: Mg + NH in magnetic field; cross sections, non-diagonal H_intl ======================
 
@@ -375,8 +374,6 @@
   EFFECTIVE RANGE AT EFV SET   1 FOR CHANNEL   1:
   FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS  -12.564     ANGSTROM WITH 1/A(K=0) =  -0.4770214856E-01 ANGSTROM^-1
   FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS  -29.575     ANGSTROM WITH   A(K=0) =   -19.85142070     ANGSTROM
-
-  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
   - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
@@ -576,8 +573,6 @@
   EFFECTIVE RANGE AT EFV SET   1 FOR CHANNEL   1:
   FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS -0.37435     ANGSTROM WITH 1/A(K=0) =   0.2608049213E-02 ANGSTROM^-1
   FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS -0.28950     ANGSTROM WITH   A(K=0) =    381.2404710     ANGSTROM
-
-  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
   - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
@@ -799,8 +794,6 @@
 
   - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
-  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
-
   REFERENCE ENERGY EREF = -9.7441023625E-03 K = -6.7724879956E-03 CM-1
 
   K-DEPENDENT SCATTERING LENGTHS/VOLUMES/HYPERVOLUMES FOR CHANNELS WITH LOW KINETIC ENERGY
@@ -1009,8 +1002,6 @@
   EFFECTIVE RANGE AT EFV SET   1 FOR CHANNEL   1:
   FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS -0.39187     ANGSTROM WITH 1/A(K=0) =   0.1711371864E-02 ANGSTROM^-1
   FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS -0.26828     ANGSTROM WITH   A(K=0) =    576.9196836     ANGSTROM
-
-  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
   - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
@@ -1235,8 +1226,6 @@
 
   - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
-  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
-
   REFERENCE ENERGY EREF = -9.7441023625E-03 K = -6.7724879956E-03 CM-1
 
   K-DEPENDENT SCATTERING LENGTHS/VOLUMES/HYPERVOLUMES FOR CHANNELS WITH LOW KINETIC ENERGY
@@ -1452,8 +1441,6 @@
   EFFECTIVE RANGE AT EFV SET   1 FOR CHANNEL   1:
   FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS -0.41839     ANGSTROM WITH 1/A(K=0) =   0.1796514637E-02 ANGSTROM^-1
   FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS -0.28497     ANGSTROM WITH   A(K=0) =    549.3773247     ANGSTROM
-
-  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
   - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
@@ -1677,8 +1664,6 @@
 
   - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
-  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
-
   REFERENCE ENERGY EREF = -9.7441023625E-03 K = -6.7724879956E-03 CM-1
 
   K-DEPENDENT SCATTERING LENGTHS/VOLUMES/HYPERVOLUMES FOR CHANNELS WITH LOW KINETIC ENERGY
@@ -1890,8 +1875,6 @@
 
   - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
-  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
-
   REFERENCE ENERGY EREF = -9.7441023625E-03 K = -6.7724879956E-03 CM-1
 
   K-DEPENDENT SCATTERING LENGTHS/VOLUMES/HYPERVOLUMES FOR CHANNELS WITH LOW KINETIC ENERGY
@@ -2096,8 +2079,6 @@
 
   - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
-  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
-
   REFERENCE ENERGY EREF = -9.7441023625E-03 K = -6.7724879956E-03 CM-1
 
   K-DEPENDENT SCATTERING LENGTHS/VOLUMES/HYPERVOLUMES FOR CHANNELS WITH LOW KINETIC ENERGY
@@ -2297,8 +2278,6 @@
 
   - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
-  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
-
   REFERENCE ENERGY EREF = -9.7441023625E-03 K = -6.7724879956E-03 CM-1
 
   K-DEPENDENT SCATTERING LENGTHS/VOLUMES/HYPERVOLUMES FOR CHANNELS WITH LOW KINETIC ENERGY
@@ -2489,8 +2468,6 @@
 
   - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
-  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
-
   REFERENCE ENERGY EREF = -9.7441023625E-03 K = -6.7724879956E-03 CM-1
 
   K-DEPENDENT SCATTERING LENGTHS/VOLUMES/HYPERVOLUMES FOR CHANNELS WITH LOW KINETIC ENERGY
@@ -2671,8 +2648,6 @@
 
   - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
-  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
-
   REFERENCE ENERGY EREF = -9.7441023625E-03 K = -6.7724879956E-03 CM-1
 
   K-DEPENDENT SCATTERING LENGTHS/VOLUMES/HYPERVOLUMES FOR CHANNELS WITH LOW KINETIC ENERGY
@@ -2842,8 +2817,6 @@
 
   - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
-  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
-
   REFERENCE ENERGY EREF = -9.7441023625E-03 K = -6.7724879956E-03 CM-1
 
   K-DEPENDENT SCATTERING LENGTHS/VOLUMES/HYPERVOLUMES FOR CHANNELS WITH LOW KINETIC ENERGY
@@ -3008,8 +2981,6 @@
 
   - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
-  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
-
   REFERENCE ENERGY EREF = -9.7441023625E-03 K = -6.7724879956E-03 CM-1
 
   K-DEPENDENT SCATTERING LENGTHS/VOLUMES/HYPERVOLUMES FOR CHANNELS WITH LOW KINETIC ENERGY
@@ -3113,7 +3084,7 @@
  |                                                                            |
  |                               Version 2019.0                               |
  |                                                                            |
- |                    This run used      27.28 cpu secs and                   |
+ |                    This run used      28.86 cpu secs and                   |
  |             124853 of the allocated   1000000 words of storage             |
  |                                                                            |
   ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
@@ -3126,7 +3097,7 @@
  |                                                                            |
  |                               Version 2019.0                               |
  |                                                                            |
- |                       Run on 18 Feb 2019   at 22:29:04                     |
+ |                       Run on 11 Mar 2019   at 17:02:22                     |
  |                                                                            |
   ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
 
@@ -3261,7 +3232,6 @@
 
   LOG-DERIVATIVE MATRIX INITIALISED IN THE LOCAL EIGENBASIS AT RMIN
   LOCALLY CLOSED CHANNELS INITIALISED WITH A WKB BOUNDARY CONDITION
-  LOCALLY  OPEN  CHANNELS INITIALISED WITH THE VALUE  1.000E+08
   ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
   SEGMENT 2 WILL BE PROPAGATED OUTWARDS
 
@@ -3280,10 +3250,10 @@
   INPUT ENERGY VALUES CONVERTED FROM K
   TO INTERNAL WORKING UNITS OF CM-1 DUE TO INTEGER INPUT =   2
 
-  CONTROL DATA FOR TOTAL ENERGIES.  CALCULATIONS WILL BE PERFORMED FOR   3 VALUES
-       ENERGY NO.   1 =  6.95034570000E-04 CM-1 =  1.00000000000E-03 K       
-       ENERGY NO.   2 =  6.95034570000E-03 CM-1 =  1.00000000000E-02 K       
-       ENERGY NO.   3 =  6.95034570000E-02 CM-1 =  0.10000000000     K       
+  CONTROL DATA FOR TOTAL ENERGIES.  CALCULATIONS WILL BE PERFORMED FOR    3 VALUES
+       ENERGY NO.    1 =  6.95034570000E-04 CM-1 =  1.00000000000E-03 K       
+       ENERGY NO.    2 =  6.95034570000E-03 CM-1 =  1.00000000000E-02 K       
+       ENERGY NO.    3 =  6.95034570000E-02 CM-1 =  0.10000000000     K       
 
   ======================================================================================================================
 
@@ -3510,8 +3480,6 @@
   EFFECTIVE RANGE AT EFV SET   1 FOR CHANNEL   1:
   FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS  -12.852     ANGSTROM WITH 1/A(K=0) =  -0.4882623704E-01 ANGSTROM^-1
   FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS  -30.230     ANGSTROM WITH   A(K=0) =   -19.39631290     ANGSTROM
-
-  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
   - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
@@ -3754,8 +3722,6 @@
   EFFECTIVE RANGE AT EFV SET   1 FOR CHANNEL   1:
   FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS -0.37387     ANGSTROM WITH 1/A(K=0) =   0.2580576130E-02 ANGSTROM^-1
   FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS -0.28853     ANGSTROM WITH   A(K=0) =    385.2627304     ANGSTROM
-
-  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
   - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
@@ -4025,8 +3991,6 @@
 
   - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
-  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
-
   REFERENCE ENERGY EREF =  1.3449859963E-03 K =  9.3481176363E-04 CM-1
 
   MDPROP. LOG-DERIVATIVE MATRIX PROPAGATED FROM       2.3000  TO  5.0000      IN     68  STEPS.
@@ -4282,8 +4246,6 @@
   EFFECTIVE RANGE AT EFV SET   1 FOR CHANNEL   1:
   FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS -0.39159     ANGSTROM WITH 1/A(K=0) =   0.1698312025E-02 ANGSTROM^-1
   FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS -0.26753     ANGSTROM WITH   A(K=0) =    581.2696574     ANGSTROM
-
-  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
   - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
@@ -4557,8 +4519,6 @@
 
   - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
-  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
-
   REFERENCE ENERGY EREF =  1.3449859963E-03 K =  9.3481176363E-04 CM-1
 
   MDPROP. LOG-DERIVATIVE MATRIX PROPAGATED FROM       2.3000  TO  5.0000      IN     68  STEPS.
@@ -4823,8 +4783,6 @@
   EFFECTIVE RANGE AT EFV SET   1 FOR CHANNEL   1:
   FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS -0.41792     ANGSTROM WITH 1/A(K=0) =   0.1784383466E-02 ANGSTROM^-1
   FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS -0.28416     ANGSTROM WITH   A(K=0) =    553.0437517     ANGSTROM
-
-  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
   - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
@@ -5098,8 +5056,6 @@
 
   - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
-  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
-
   REFERENCE ENERGY EREF =  1.3449859963E-03 K =  9.3481176363E-04 CM-1
 
   MDPROP. LOG-DERIVATIVE MATRIX PROPAGATED FROM       2.3000  TO  5.0000      IN     68  STEPS.
@@ -5358,8 +5314,6 @@
 
   - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
-  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
-
   REFERENCE ENERGY EREF =  1.3449859963E-03 K =  9.3481176363E-04 CM-1
 
   MDPROP. LOG-DERIVATIVE MATRIX PROPAGATED FROM       2.3000  TO  5.0000      IN     68  STEPS.
@@ -5609,8 +5563,6 @@
 
   - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
-  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
-
   REFERENCE ENERGY EREF =  1.3449859963E-03 K =  9.3481176363E-04 CM-1
 
   MDPROP. LOG-DERIVATIVE MATRIX PROPAGATED FROM       2.3000  TO  5.0000      IN     68  STEPS.
@@ -5853,8 +5805,6 @@
 
   - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
-  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
-
   REFERENCE ENERGY EREF =  1.3449859963E-03 K =  9.3481176363E-04 CM-1
 
   MDPROP. LOG-DERIVATIVE MATRIX PROPAGATED FROM       2.3000  TO  5.0000      IN     68  STEPS.
@@ -6087,8 +6037,6 @@
 
   - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
-  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
-
   REFERENCE ENERGY EREF =  1.3449859963E-03 K =  9.3481176363E-04 CM-1
 
   MDPROP. LOG-DERIVATIVE MATRIX PROPAGATED FROM       2.3000  TO  5.0000      IN     68  STEPS.
@@ -6307,8 +6255,6 @@
 
   - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
-  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
-
   REFERENCE ENERGY EREF =  1.3449859963E-03 K =  9.3481176363E-04 CM-1
 
   MDPROP. LOG-DERIVATIVE MATRIX PROPAGATED FROM       2.3000  TO  5.0000      IN     68  STEPS.
@@ -6514,8 +6460,6 @@
 
   - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
-  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
-
   REFERENCE ENERGY EREF =  1.3449859963E-03 K =  9.3481176363E-04 CM-1
 
   MDPROP. LOG-DERIVATIVE MATRIX PROPAGATED FROM       2.3000  TO  5.0000      IN     68  STEPS.
@@ -6714,8 +6658,6 @@
 
   - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
-  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
-
   REFERENCE ENERGY EREF =  1.3449859963E-03 K =  9.3481176363E-04 CM-1
 
   MDPROP. LOG-DERIVATIVE MATRIX PROPAGATED FROM       2.3000  TO  5.0000      IN     68  STEPS.
@@ -6763,7 +6705,7 @@
  |                                                                            |
  |                               Version 2019.0                               |
  |                                                                            |
- |                    This run used      26.79 cpu secs and                   |
+ |                    This run used      28.68 cpu secs and                   |
  |             101338 of the allocated   1000000 words of storage             |
  |                                                                            |
   ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---

@@ -1,4 +1,5 @@
-      SUBROUTINE WVHEAD(IPROGM,LABEL,ITYPE,URED,IPRINT)
+      SUBROUTINE WVHEAD(IPROGM,LABEL,ITYPE,IBOUND,URED,MUNIT,RUNIT,
+     1                  EUNIT,IPRINT)
 C  Copyright (C) 2019 J. M. Hutson & C. R. Le Sueur
 C  Distributed under the GNU General Public License, version 3
       USE efvs
@@ -10,15 +11,17 @@ C
 C  WRITTEN BY CRLS 11-11-2016
 
 C  INPUTS FOR WVHEAD
-      INTEGER, INTENT(IN)::IPROGM,ITYPE,IPRINT
-      CHARACTER(80), INTENT(IN):: LABEL
-      DOUBLE PRECISION, INTENT(IN):: URED
+      INTEGER,          INTENT(IN) :: IPROGM,ITYPE,IBOUND,IPRINT
+      CHARACTER(80),    INTENT(IN) :: LABEL
+      DOUBLE PRECISION, INTENT(IN) :: URED,MUNIT,RUNIT
 
 C  INPUTS FOR WVINFO
-      INTEGER, INTENT(IN):: JTOT,M,ICHND,N,NQN,NSTATE,JSTATE,JSINDX,L
-      DOUBLE PRECISION, INTENT(IN):: ENERGY,EREF,EFACT
-      CHARACTER(8), INTENT(IN):: UNAME
-      DIMENSION JSTATE(NSTATE,NQN),JSINDX(N),L(N)
+      INTEGER,          INTENT(IN) :: JTOT,IBLOCK,ICHND,N,NQN,NSTATE,
+     1                                JSTATE,JSINDX,L
+      DOUBLE PRECISION, INTENT(IN) :: ENERGY,EREF,EUNIT,CENT
+      CHARACTER(8),     INTENT(IN) :: EUNAME
+      DIMENSION                    :: JSTATE(NSTATE,NQN),JSINDX(N),L(N),
+     1                                CENT(N)
 
 C  INPUTS FOR WVPROP
       DOUBLE PRECISION DRSEG(3),RBSEG(3),RESEG(3)
@@ -38,7 +41,7 @@ C  COMMON BLOCK TO DESCRIBE WHICH DRIVER IS USED
 
 C  INTERNAL VARIABLES
       CHARACTER(2) NCOL
-      CHARACTER(40) F100,F101
+      CHARACTER(70) F100,F101
       CHARACTER(7) NPROGM
 
       INTEGER JQN,ILEV,ISEG,IEFV,LENEFV
@@ -47,13 +50,13 @@ C  SCATTERING WAVEFUNCTIONS ARE COMPLEX, SO HALVE THE NUMBER OF COLUMNS
 C  IN THE WAVEFUNCTION FILE
       IF (CDRIVE.EQ.'M') THEN
         NPROGM='MOLSCAT'
-        NWVCOL=10
+        NWVCOL=4
       ELSEIF (CDRIVE.EQ.'F') THEN
         NPROGM='FIELD'
-        NWVCOL=20
+        NWVCOL=8
       ELSEIF (CDRIVE.EQ.'B') THEN
         NPROGM='BOUND'
-        NWVCOL=20
+        NWVCOL=8
       ENDIF
 
 C  OPEN UNIT FOR STORING WAVEFUNCTIONS
@@ -73,84 +76,120 @@ C  WRITE HEADER WHICH GOES ONCE AT THE TOP OF THE WAVEFUNCTION FILE
       IF (PSIFMT) THEN
         WRITE(IPSI,'(A,A,A,I3)') '# CALCULATION FROM ',NPROGM,
      1                           ' OUTPUT FORMAT ',IPROGM
-        WRITE(IPSI,1010) ' # LABEL ON CALCULATION WAS: ',TRIM(LABEL)
+        WRITE(IPSI,1010) '# RUN LABEL: ',TRIM(LABEL)
  1010   FORMAT(A,A)
-        WRITE(IPSI,*) '# ITYPE AND REDUCED MASS ARE ',ITYPE,URED
+        WRITE(IPSI,'(A,I2,1X,1P,G20.13)') '# ITYPE, REDUCED MASS: ',
+     1                                    ITYPE,URED
+        IF (ITYPE.EQ.9) WRITE(IPSI,'(A,I5)') '# ITYPE SUBTYPE: ',
+     1                                       ITPSUB
+ 1020   FORMAT(A,1P,G20.13,A)
+        WRITE(IPSI,1020) '# LENGTH UNIT: ',RUNIT,' ANGSTROM'
+        WRITE(IPSI,1020) '# ENERGY UNIT: ',EUNIT,' CM-1'
+        IF (MUNIT.NE.1.D0)
+     1    WRITE(IPSI,1020) '# REDUCED MASS UNIT: ',MUNIT,' DALTONS'
       ELSE
         WRITE(IPSI) IPROGM
         WRITE(IPSI) LABEL
         WRITE(IPSI) ITYPE,URED
+        IF (ITYPE.EQ.9) WRITE(IPSI) ITPSUB
+        WRITE(IPSI) RUNIT
+        WRITE(IPSI) EUNIT
+        IF (MUNIT.NE.1.D0) WRITE(IPSI) MUNIT
       ENDIF
 
       RETURN
 C =========================================================== END OF WVHEAD
-      ENTRY WVINFO(JTOT,M,ICHND,N,NQN,NSTATE,JSTATE,
-     1             JSINDX,L,ENERGY,EREF,EFACT,UNAME,IPRINT)
+      ENTRY WVINFO(JTOT,IBLOCK,ICHND,N,NQN,NSTATE,JSTATE,
+     1             JSINDX,L,CENT,ENERGY,EREF,
+     2             EUNIT,EUNAME,IBOUND,IPRINT)
 
       WRITE(NCOL,'(I2)') MIN(N,NWVCOL)
+      NCOL=ADJUSTR(NCOL)
       IF (CDRIVE.NE.'M') THEN
-        F100='(" # QNUM ",I2,":",14X,'//NCOL//'(I3,12X))'
-        F101='(" # L    ",17X,'//NCOL//'(I3,12X))'
+        F100='("# QNUM ",I2,":",10X,'//NCOL//'(I3:,13X),'//
+     1                   '/("#",19X,'//NCOL//'(I3:,13X)))'
+        IF (IBOUND.EQ.0) THEN
+          F101='("# L: ",15X,'//NCOL//'(I3:,13X),'//
+     1            '/("#",19X,'//NCOL//'(I3:,13X)))'
+        ELSE
+          F101='("# <L**2>: ",1P,10X,'//NCOL//'(G13.6:,3X),'//
+     1                    '/("#",19X,'//NCOL//'(G13.6:,3X)))'
+        ENDIF
       ELSE
-        F100='(" # QNUM ",I2,":",14X,'//NCOL//'(I3,27X))'
-        F101='(" # L    ",17X,'//NCOL//'(I3,27X))'
+        F100='("# QNUM ",I2,":",10X,'//NCOL//'(I3:,29X),'//
+     1                   '/("#",19X,'//NCOL//'(I3:,29X)))'
+        IF (IBOUND.EQ.0) THEN
+          F101='("# L: ",15X,'//NCOL//'(I3:,29X),'//
+     1            '/("#",19X,'//NCOL//'(I3:,29X)))'
+        ELSE
+          F101='("# <L**2>: ",1P,10X,'//NCOL//'(G13.6:,19X),'//
+     1                    '/("#",19X,'//NCOL//'(G13.6:,19X)))'
+        ENDIF
       ENDIF
 
       LENEFV=MAX(NEFVP-IEFVST+1,0)
       IF (IPRINT.GE.1 .AND. LENEFV.GT.0)
-     1  WRITE(6,1020) 'HEADER ON WAVEFUNCTION FILE CONTAINS ',
+     1  WRITE(6,1030) 'HEADER ON WAVEFUNCTION FILE CONTAINS ',
      2                'THE FOLLOWING VARIABLES: ',
      3                (TRIM(EFVNAM(IEFV)),IEFV=IEFVST,NEFVP)
- 1020   FORMAT(2X,A,A,(A:,', '))
+ 1030   FORMAT(2X,A,A,(A:,', '))
 
 C  WRITE A HEADER FOR THIS PARTICULAR WAVEFUNCTION (QUANTUM NUMBERS,
 C  EXTERNAL FIELDS)
       IF (PSIFMT) THEN
-        WRITE(IPSI,1030) JTOT,M,(TRIM(EFVNAM(IEFV)),EFV(IEFV),
+        WRITE(IPSI,1040) JTOT,IBLOCK,(TRIM(EFVNAM(IEFV)),EFV(IEFV),
      2                           IEFV=IEFVST,NEFVP)
- 1030   FORMAT(' # JTOT AND M ARE ',2I4:/ ' # EXTERNAL VARIABLES ARE: ',
+ 1040   FORMAT('# JTOT, IBLOCK: ',2I4:/ '# EXTERNAL VARIABLES ARE: ',
      3         10(A,' = ',G20.13))
 
         IF (N.GT.NWVCOL) THEN
-          WRITE(6,*) ' **** WAVEFUNCTION COLUMNS ARE SPLIT OVER MORE ',
-     1               'THAN ONE ROW'
-          WRITE(IPSI,*) '# WAVEFUNCTIONS ARE SPLIT OVER MORE THAN ONE ',
-     1                  'ROW - BEWARE!'
+          WRITE(6,1050) ' **** AT EACH R, COMPONENTS OF WAVEFUNCTION ',
+     1                  'VECTOR OCCUPY ',(N-1)/NWVCOL+1,' LINES'
+          WRITE(IPSI,1050) '# AT EACH R, COMPONENTS OF WAVEFUNCTION ',
+     1                     'VECTOR OCCUPY ',(N-1)/NWVCOL+1,' LINES'
+ 1050     FORMAT(A,A,I3,A)
         ENDIF
-        WRITE(IPSI,*) '# NUMBER OF QUANTUM NUMBERS, SIZE OF BASIS,',
-     1                ' AND TOTAL SIZE OF PRIMITIVE BASIS'
-        WRITE(IPSI,*) '# ',NQN-1,N,NSTATE
+        WRITE(IPSI,'(A,A)') '# NUMBER OF QUANTUM NUMBERS, NUMBER OF ',
+     1                      'PAIR STATES, NUMBER OF BASIS FUNCTIONS:'
+        WRITE(IPSI,'(A,3I5)') '# ',NQN-1,NSTATE,N
 
 C  WRITE THE BASIS FUNCTION QUANTUM NUMBERS
         DO JQN=1,NQN-1
           WRITE(IPSI,FMT=F100) JQN,(JSTATE(JSINDX(ILEV),JQN),ILEV=1,N)
         ENDDO
-        WRITE(IPSI,FMT=F101) (L(ILEV),ILEV=1,N)
-
+        IF (IBOUND.EQ.0) THEN
+          WRITE(IPSI,FMT=F101) (L(ILEV),ILEV=1,N)
+        ELSE
+          WRITE(IPSI,FMT=F101) (CENT(ILEV),ILEV=1,N)
+        ENDIF
 C  INFORMATION ABOUT THE PARTICULAR WAVEFUNCTION (ENERGY AND EITHER
 C  INCOMING CHANNEL, OR NODE NUMBER)
         IF (CDRIVE.EQ.'M') THEN
-          WRITE(IPSI,1040) ' # SCATTERING CHANNEL IS ',ICHND,
-     1                     ' AT ENERGY ',(ENERGY-EREF)/EFACT,UNAME,
-     2                     ' REFERRED TO REFERENCE ENERGY = ',
-     3                     EREF/EFACT,UNAME
+          WRITE(IPSI,1060) '# SCATTERING CHANNEL IS ',ICHND,
+     1                     ' AT ENERGY ',(ENERGY-EREF)/EUNIT,EUNAME,
+     2                     ' REFERRED TO REFERENCE ENERGY ',
+     3                     EREF/EUNIT,EUNAME
         ELSE
-          WRITE(IPSI,1040) ' # WAVEFUNCTION FOR NODE ',ICHND,
-     1                     ' WITH BINDING ENERGY ',(ENERGY-EREF)/EFACT,
-     2                     UNAME,' REFERRED TO REFERENCE ENERGY = ',
-     3                     EREF/EFACT,UNAME
- 1040     FORMAT(A,I6,A,G20.13,1X,A,A,G20.13,1X,A)
+          WRITE(IPSI,1060) '# WAVEFUNCTION FOR NODE ',ICHND,
+     1                     ' WITH BINDING ENERGY ',(ENERGY-EREF)/EUNIT,
+     2                     EUNAME,' REFERRED TO REFERENCE ENERGY ',
+     3                     EREF/EUNIT,EUNAME
+ 1060     FORMAT(A,I6,A,1P,G20.13,1X,A,A,G20.13,1X,A)
         ENDIF
 
       ELSE
-         WRITE(IPSI) JTOT,M,ENERGY,EREF,EFACT,
+         WRITE(IPSI) JTOT,IBLOCK,ENERGY,EREF,EUNIT,
      1               (EFV(IEFV),IEFV=IEFVST,NEFVP)
 
         WRITE(IPSI) NQN-1,NSTATE,N
         DO JQN=1,NQN-1
           WRITE(IPSI) (JSTATE(JSINDX(ILEV),JQN),ILEV=1,N)
         ENDDO
-        WRITE(IPSI) (L(ILEV),ILEV=1,N)
+        IF (IBOUND.EQ.0) THEN
+          WRITE(IPSI) (L(ILEV),ILEV=1,N)
+        ELSE
+          WRITE(IPSI) (CENT(ILEV),ILEV=1,N)
+        ENDIF
         WRITE(IPSI) ICHND
       ENDIF
 
@@ -171,12 +210,12 @@ C =========================================================== END OF WVOPEN
 
 C  INFORMATION ABOUT THE PROPAGATION
       IF (PSIFMT) THEN
-        WRITE(IPSI,*) '# NUMBER OF PROPAGATIONS IS ',NSEG
-        WRITE(IPSI,1050)
- 1050   FORMAT(' #',10X,'RST',17X,'REND',16X,'DRPR',9X,'IPROP')
-        WRITE(IPSI,1060) (RBSEG(ISEG),RESEG(ISEG),DRSEG(ISEG),
+        WRITE(IPSI,'(A,I3)') '# NUMBER OF PROPAGATION SEGMENTS: ',NSEG
+        WRITE(IPSI,1070)
+ 1070   FORMAT('#',10X,'RST',17X,'REND',16X,'DR',11X,'IPROP')
+        WRITE(IPSI,1080) (RBSEG(ISEG),RESEG(ISEG),DRSEG(ISEG),
      1                    IPRSEG(ISEG),ISEG=1,NSEG)
- 1060   FORMAT((' #',3(G20.13,1X),I3))
+ 1080   FORMAT(('#',1P,3(G20.13,1X),0P,I3))
       ELSE
         WRITE(IPSI) NSEG
         WRITE(IPSI) (RBSEG(ISEG),RESEG(ISEG),DRSEG(ISEG),
@@ -189,7 +228,7 @@ C =========================================================== END OF WVPROP
 C  INFORMATION ABOUT THE TOTAL NUMBER OF STEPS
 
       IF (PSIFMT) THEN
-        WRITE(IPSI,*) '# TOTAL NUMBER OF STEPS IS ',NTSTPS
+        WRITE(IPSI,'(A,I10)') '# TOTAL NUMBER OF STEPS IS ',NTSTPS
       ELSE
         WRITE(IPSI) NTSTPS
       ENDIF

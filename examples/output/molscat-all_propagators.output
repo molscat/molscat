@@ -7,7 +7,7 @@
  |                                                                            |
  |                               Version 2019.0                               |
  |                                                                            |
- |                       Run on 18 Feb 2019   at 22:19:37                     |
+ |                       Run on 11 Mar 2019   at 17:27:06                     |
  |                                                                            |
   ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
 
@@ -102,15 +102,14 @@
 
   LOG-DERIVATIVE MATRIX INITIALISED IN THE LOCAL EIGENBASIS AT RMIN
   LOCALLY CLOSED CHANNELS INITIALISED WITH A WKB BOUNDARY CONDITION
-  LOCALLY  OPEN  CHANNELS INITIALISED WITH THE VALUE  1.000E+08
 
   ======================================================================================================================
 
   INPUT ENERGY VALUES ASSUMED TO BE IN UNITS OF CM-1 BY DEFAULT.
 
-  CONTROL DATA FOR TOTAL ENERGIES.  CALCULATIONS WILL BE PERFORMED FOR   2 VALUES
-       ENERGY NO.   1 =   1000.0000000     CM-1
-       ENERGY NO.   2 =   900.00000000     CM-1
+  CONTROL DATA FOR TOTAL ENERGIES.  CALCULATIONS WILL BE PERFORMED FOR    2 VALUES
+       ENERGY NO.    1 =   1000.0000000     CM-1
+       ENERGY NO.    2 =   900.00000000     CM-1
 
   ======================================================================================================================
 
@@ -267,7 +266,7 @@
  |                                                                            |
  |                               Version 2019.0                               |
  |                                                                            |
- |                    This run used       0.46 cpu secs and                   |
+ |                    This run used       0.47 cpu secs and                   |
  |               2203 of the allocated   1000000 words of storage             |
  |                                                                            |
   ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
@@ -280,7 +279,7 @@
  |                                                                            |
  |                               Version 2019.0                               |
  |                                                                            |
- |                       Run on 18 Feb 2019   at 22:19:37                     |
+ |                       Run on 11 Mar 2019   at 17:27:07                     |
  |                                                                            |
   ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
 
@@ -372,15 +371,14 @@
 
   LOG-DERIVATIVE MATRIX INITIALISED IN THE LOCAL EIGENBASIS AT RMIN
   LOCALLY CLOSED CHANNELS INITIALISED WITH A WKB BOUNDARY CONDITION
-  LOCALLY  OPEN  CHANNELS INITIALISED WITH THE VALUE  1.000E+08
 
   ======================================================================================================================
 
   INPUT ENERGY VALUES ASSUMED TO BE IN UNITS OF CM-1 BY DEFAULT.
 
-  CONTROL DATA FOR TOTAL ENERGIES.  CALCULATIONS WILL BE PERFORMED FOR   2 VALUES
-       ENERGY NO.   1 =   1000.0000000     CM-1
-       ENERGY NO.   2 =   900.00000000     CM-1
+  CONTROL DATA FOR TOTAL ENERGIES.  CALCULATIONS WILL BE PERFORMED FOR    2 VALUES
+       ENERGY NO.    1 =   1000.0000000     CM-1
+       ENERGY NO.    2 =   900.00000000     CM-1
 
   ======================================================================================================================
 
@@ -535,7 +533,7 @@
  |                                                                            |
  |                               Version 2019.0                               |
  |                                                                            |
- |                    This run used       0.28 cpu secs and                   |
+ |                    This run used       0.30 cpu secs and                   |
  |                799 of the allocated   1000000 words of storage             |
  |                                                                            |
   ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
@@ -548,7 +546,7 @@
  |                                                                            |
  |                               Version 2019.0                               |
  |                                                                            |
- |                       Run on 18 Feb 2019   at 22:19:37                     |
+ |                       Run on 11 Mar 2019   at 17:27:07                     |
  |                                                                            |
   ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
 
@@ -640,15 +638,14 @@
 
   LOG-DERIVATIVE MATRIX INITIALISED IN THE LOCAL EIGENBASIS AT RMIN
   LOCALLY CLOSED CHANNELS INITIALISED WITH A WKB BOUNDARY CONDITION
-  LOCALLY  OPEN  CHANNELS INITIALISED WITH THE VALUE  1.000E+08
 
   ======================================================================================================================
 
   INPUT ENERGY VALUES ASSUMED TO BE IN UNITS OF CM-1 BY DEFAULT.
 
-  CONTROL DATA FOR TOTAL ENERGIES.  CALCULATIONS WILL BE PERFORMED FOR   2 VALUES
-       ENERGY NO.   1 =   1000.0000000     CM-1
-       ENERGY NO.   2 =   900.00000000     CM-1
+  CONTROL DATA FOR TOTAL ENERGIES.  CALCULATIONS WILL BE PERFORMED FOR    2 VALUES
+       ENERGY NO.    1 =   1000.0000000     CM-1
+       ENERGY NO.    2 =   900.00000000     CM-1
 
   ======================================================================================================================
 
@@ -803,7 +800,7 @@
  |                                                                            |
  |                               Version 2019.0                               |
  |                                                                            |
- |                    This run used       0.22 cpu secs and                   |
+ |                    This run used       0.25 cpu secs and                   |
  |                799 of the allocated   1000000 words of storage             |
  |                                                                            |
   ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
@@ -816,7 +813,7 @@
  |                                                                            |
  |                               Version 2019.0                               |
  |                                                                            |
- |                       Run on 18 Feb 2019   at 22:19:38                     |
+ |                       Run on 11 Mar 2019   at 17:27:07                     |
  |                                                                            |
   ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
 
@@ -908,15 +905,14 @@
 
   LOG-DERIVATIVE MATRIX INITIALISED IN THE LOCAL EIGENBASIS AT RMIN
   LOCALLY CLOSED CHANNELS INITIALISED WITH A WKB BOUNDARY CONDITION
-  LOCALLY  OPEN  CHANNELS INITIALISED WITH THE VALUE  1.000E+08
 
   ======================================================================================================================
 
   INPUT ENERGY VALUES ASSUMED TO BE IN UNITS OF CM-1 BY DEFAULT.
 
-  CONTROL DATA FOR TOTAL ENERGIES.  CALCULATIONS WILL BE PERFORMED FOR   2 VALUES
-       ENERGY NO.   1 =   1000.0000000     CM-1
-       ENERGY NO.   2 =   900.00000000     CM-1
+  CONTROL DATA FOR TOTAL ENERGIES.  CALCULATIONS WILL BE PERFORMED FOR    2 VALUES
+       ENERGY NO.    1 =   1000.0000000     CM-1
+       ENERGY NO.    2 =   900.00000000     CM-1
 
   ======================================================================================================================
 
@@ -1071,7 +1067,7 @@
  |                                                                            |
  |                               Version 2019.0                               |
  |                                                                            |
- |                    This run used       0.44 cpu secs and                   |
+ |                    This run used       0.49 cpu secs and                   |
  |               1111 of the allocated   1000000 words of storage             |
  |                                                                            |
   ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
@@ -1084,7 +1080,7 @@
  |                                                                            |
  |                               Version 2019.0                               |
  |                                                                            |
- |                       Run on 18 Feb 2019   at 22:19:38                     |
+ |                       Run on 11 Mar 2019   at 17:27:08                     |
  |                                                                            |
   ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
 
@@ -1177,15 +1173,14 @@
 
   LOG-DERIVATIVE MATRIX INITIALISED IN THE LOCAL EIGENBASIS AT RMIN
   LOCALLY CLOSED CHANNELS INITIALISED WITH A WKB BOUNDARY CONDITION
-  LOCALLY  OPEN  CHANNELS INITIALISED WITH THE VALUE  1.000E+08
 
   ======================================================================================================================
 
   INPUT ENERGY VALUES ASSUMED TO BE IN UNITS OF CM-1 BY DEFAULT.
 
-  CONTROL DATA FOR TOTAL ENERGIES.  CALCULATIONS WILL BE PERFORMED FOR   2 VALUES
-       ENERGY NO.   1 =   1000.0000000     CM-1
-       ENERGY NO.   2 =   900.00000000     CM-1
+  CONTROL DATA FOR TOTAL ENERGIES.  CALCULATIONS WILL BE PERFORMED FOR    2 VALUES
+       ENERGY NO.    1 =   1000.0000000     CM-1
+       ENERGY NO.    2 =   900.00000000     CM-1
 
   ======================================================================================================================
 
@@ -1340,7 +1335,7 @@
  |                                                                            |
  |                               Version 2019.0                               |
  |                                                                            |
- |                    This run used       0.55 cpu secs and                   |
+ |                    This run used       0.80 cpu secs and                   |
  |                799 of the allocated   1000000 words of storage             |
  |                                                                            |
   ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
@@ -1353,7 +1348,7 @@
  |                                                                            |
  |                               Version 2019.0                               |
  |                                                                            |
- |                       Run on 18 Feb 2019   at 22:19:39                     |
+ |                       Run on 11 Mar 2019   at 17:27:09                     |
  |                                                                            |
   ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
 
@@ -1446,15 +1441,14 @@
 
   LOG-DERIVATIVE MATRIX INITIALISED IN THE LOCAL EIGENBASIS AT RMIN
   LOCALLY CLOSED CHANNELS INITIALISED WITH A WKB BOUNDARY CONDITION
-  LOCALLY  OPEN  CHANNELS INITIALISED WITH THE VALUE  1.000E+08
 
   ======================================================================================================================
 
   INPUT ENERGY VALUES ASSUMED TO BE IN UNITS OF CM-1 BY DEFAULT.
 
-  CONTROL DATA FOR TOTAL ENERGIES.  CALCULATIONS WILL BE PERFORMED FOR   2 VALUES
-       ENERGY NO.   1 =   1000.0000000     CM-1
-       ENERGY NO.   2 =   900.00000000     CM-1
+  CONTROL DATA FOR TOTAL ENERGIES.  CALCULATIONS WILL BE PERFORMED FOR    2 VALUES
+       ENERGY NO.    1 =   1000.0000000     CM-1
+       ENERGY NO.    2 =   900.00000000     CM-1
 
   ======================================================================================================================
 
@@ -1671,7 +1665,7 @@
  |                                                                            |
  |                               Version 2019.0                               |
  |                                                                            |
- |                    This run used       0.39 cpu secs and                   |
+ |                    This run used       0.53 cpu secs and                   |
  |               1123 of the allocated   1000000 words of storage             |
  |                                                                            |
   ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
@@ -1684,7 +1678,7 @@
  |                                                                            |
  |                               Version 2019.0                               |
  |                                                                            |
- |                       Run on 18 Feb 2019   at 22:19:39                     |
+ |                       Run on 11 Mar 2019   at 17:27:09                     |
  |                                                                            |
   ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
 
@@ -1778,7 +1772,6 @@
 
   LOG-DERIVATIVE MATRIX INITIALISED IN THE LOCAL EIGENBASIS AT RMIN
   LOCALLY CLOSED CHANNELS INITIALISED WITH A WKB BOUNDARY CONDITION
-  LOCALLY  OPEN  CHANNELS INITIALISED WITH THE VALUE  1.000E+08
   ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
   SEGMENT 2 WILL BE PROPAGATED OUTWARDS
 
@@ -1796,9 +1789,9 @@
 
   INPUT ENERGY VALUES ASSUMED TO BE IN UNITS OF CM-1 BY DEFAULT.
 
-  CONTROL DATA FOR TOTAL ENERGIES.  CALCULATIONS WILL BE PERFORMED FOR   2 VALUES
-       ENERGY NO.   1 =   1000.0000000     CM-1
-       ENERGY NO.   2 =   900.00000000     CM-1
+  CONTROL DATA FOR TOTAL ENERGIES.  CALCULATIONS WILL BE PERFORMED FOR    2 VALUES
+       ENERGY NO.    1 =   1000.0000000     CM-1
+       ENERGY NO.    2 =   900.00000000     CM-1
 
   ======================================================================================================================
 
@@ -1957,7 +1950,7 @@
  |                                                                            |
  |                               Version 2019.0                               |
  |                                                                            |
- |                    This run used       0.23 cpu secs and                   |
+ |                    This run used       0.25 cpu secs and                   |
  |               1123 of the allocated   1000000 words of storage             |
  |                                                                            |
   ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
@@ -1970,7 +1963,7 @@
  |                                                                            |
  |                               Version 2019.0                               |
  |                                                                            |
- |                       Run on 18 Feb 2019   at 22:19:39                     |
+ |                       Run on 11 Mar 2019   at 17:27:10                     |
  |                                                                            |
   ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
 
@@ -2048,7 +2041,7 @@
   COUPLED EQUATIONS WILL BE PROPAGATED OUTWARDS IN 2 SEGMENTS
 
   PROPAGATION RANGES ARE CONTROLLED BY VARIABLES RMIN, RMID AND RMAX, WITH INPUT VALUES
-  RMIN =  0.5000     RMID = -1.0000E+30 RMAX =   20.00    
+  RMIN =  0.5000     RMID = unset   RMAX =   20.00    
   ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
   SEGMENT 1 WILL BE PROPAGATED OUTWARDS
 
@@ -2062,7 +2055,6 @@
 
   LOG-DERIVATIVE MATRIX INITIALISED IN THE LOCAL EIGENBASIS AT RMIN
   LOCALLY CLOSED CHANNELS INITIALISED WITH A WKB BOUNDARY CONDITION
-  LOCALLY  OPEN  CHANNELS INITIALISED WITH THE VALUE  1.000E+08
   ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
   SEGMENT 2 WILL BE PROPAGATED OUTWARDS
 
@@ -2080,9 +2072,9 @@
 
   INPUT ENERGY VALUES ASSUMED TO BE IN UNITS OF CM-1 BY DEFAULT.
 
-  CONTROL DATA FOR TOTAL ENERGIES.  CALCULATIONS WILL BE PERFORMED FOR   2 VALUES
-       ENERGY NO.   1 =   1000.0000000     CM-1
-       ENERGY NO.   2 =   900.00000000     CM-1
+  CONTROL DATA FOR TOTAL ENERGIES.  CALCULATIONS WILL BE PERFORMED FOR    2 VALUES
+       ENERGY NO.    1 =   1000.0000000     CM-1
+       ENERGY NO.    2 =   900.00000000     CM-1
 
   ======================================================================================================================
 
@@ -2258,7 +2250,7 @@
  |                                                                            |
  |                               Version 2019.0                               |
  |                                                                            |
- |                       Run on 18 Feb 2019   at 22:19:39                     |
+ |                       Run on 11 Mar 2019   at 17:27:10                     |
  |                                                                            |
   ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
 
@@ -2336,7 +2328,7 @@
   COUPLED EQUATIONS WILL BE PROPAGATED OUTWARDS IN 2 SEGMENTS
 
   PROPAGATION RANGES ARE CONTROLLED BY VARIABLES RMIN, RMID AND RMAX, WITH INPUT VALUES
-  RMIN =  0.5000     RMID = -1.0000E+30 RMAX =   20.00    
+  RMIN =  0.5000     RMID = unset   RMAX =   20.00    
   ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
   SEGMENT 1 WILL BE PROPAGATED OUTWARDS
 
@@ -2350,7 +2342,6 @@
 
   LOG-DERIVATIVE MATRIX INITIALISED IN THE LOCAL EIGENBASIS AT RMIN
   LOCALLY CLOSED CHANNELS INITIALISED WITH A WKB BOUNDARY CONDITION
-  LOCALLY  OPEN  CHANNELS INITIALISED WITH THE VALUE  1.000E+08
   ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
   SEGMENT 2 WILL BE PROPAGATED OUTWARDS
 
@@ -2374,9 +2365,9 @@
 
   INPUT ENERGY VALUES ASSUMED TO BE IN UNITS OF CM-1 BY DEFAULT.
 
-  CONTROL DATA FOR TOTAL ENERGIES.  CALCULATIONS WILL BE PERFORMED FOR   2 VALUES
-       ENERGY NO.   1 =   1000.0000000     CM-1
-       ENERGY NO.   2 =   900.00000000     CM-1
+  CONTROL DATA FOR TOTAL ENERGIES.  CALCULATIONS WILL BE PERFORMED FOR    2 VALUES
+       ENERGY NO.    1 =   1000.0000000     CM-1
+       ENERGY NO.    2 =   900.00000000     CM-1
 
   ======================================================================================================================
 
@@ -2539,7 +2530,7 @@
  |                                                                            |
  |                               Version 2019.0                               |
  |                                                                            |
- |                    This run used       0.09 cpu secs and                   |
+ |                    This run used       0.10 cpu secs and                   |
  |               2083 of the allocated   1000000 words of storage             |
  |                                                                            |
   ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
@@ -2552,7 +2543,7 @@
  |                                                                            |
  |                               Version 2019.0                               |
  |                                                                            |
- |                       Run on 18 Feb 2019   at 22:19:39                     |
+ |                       Run on 11 Mar 2019   at 17:27:10                     |
  |                                                                            |
   ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
 
@@ -2639,9 +2630,9 @@
 
   INPUT ENERGY VALUES ASSUMED TO BE IN UNITS OF CM-1 BY DEFAULT.
 
-  CONTROL DATA FOR TOTAL ENERGIES.  CALCULATIONS WILL BE PERFORMED FOR   2 VALUES
-       ENERGY NO.   1 =   1000.0000000     CM-1
-       ENERGY NO.   2 =   900.00000000     CM-1
+  CONTROL DATA FOR TOTAL ENERGIES.  CALCULATIONS WILL BE PERFORMED FOR    2 VALUES
+       ENERGY NO.    1 =   1000.0000000     CM-1
+       ENERGY NO.    2 =   900.00000000     CM-1
 
   ======================================================================================================================
 
@@ -2901,7 +2892,7 @@
  |                                                                            |
  |                               Version 2019.0                               |
  |                                                                            |
- |                       Run on 18 Feb 2019   at 22:19:39                     |
+ |                       Run on 11 Mar 2019   at 17:27:10                     |
  |                                                                            |
   ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
 
@@ -2986,15 +2977,14 @@
 
   LOG-DERIVATIVE MATRIX INITIALISED IN THE LOCAL EIGENBASIS AT RMIN
   LOCALLY CLOSED CHANNELS INITIALISED WITH A WKB BOUNDARY CONDITION
-  LOCALLY  OPEN  CHANNELS INITIALISED WITH THE VALUE  1.000E+08
 
   ======================================================================================================================
 
   INPUT ENERGY VALUES ASSUMED TO BE IN UNITS OF CM-1 BY DEFAULT.
 
-  CONTROL DATA FOR TOTAL ENERGIES.  CALCULATIONS WILL BE PERFORMED FOR   2 VALUES
-       ENERGY NO.   1 =   1000.0000000     CM-1
-       ENERGY NO.   2 =   900.00000000     CM-1
+  CONTROL DATA FOR TOTAL ENERGIES.  CALCULATIONS WILL BE PERFORMED FOR    2 VALUES
+       ENERGY NO.    1 =   1000.0000000     CM-1
+       ENERGY NO.    2 =   900.00000000     CM-1
 
   ======================================================================================================================
 

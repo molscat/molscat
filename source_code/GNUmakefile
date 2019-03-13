@@ -16,7 +16,6 @@ EXECDIR = .
 # 1) gfortran
 Compiler = gfortran
 LIBS     = -llapack -lblas
-#
 # 2) ifort
 #Compiler = ifort
 #LIBS     =
@@ -69,50 +68,53 @@ base9_suite.mod:        base9-skeleton.f     $(OBJDIR)/base9-skeleton.o
 # physical constants module =================================================
 #
 PHYS_CONST_DEPS = base9-1S_3Sigma_cpld.o base9-alk_alk.o \
-                  bd.driver.o chckru.o eavg.o ecnv.o extpot-Rg_HX.o \
-                  fld.driver.o mol.driver.o pot_data_Tiemann-Rb2-2010.o \
-                  surbas.o
+                  bd.driver.o chckru.o eavg.o ecnv.o extpot-Ar_CH4.o \
+                  extpot-Ar_CO2.o extpot-Rg_HX.o fld.driver.o mol.driver.o \
+                  pot_data_Tiemann-Rb2-2010.o surbas.o \
 
 (addprefix $(OBJDIR)/,$(PHYS_CONST_DEPS)): physical_constants.mod
 #
 # sizes module ==============================================================
 #
-SIZES_DEPS =      angles_module.o bd.driver.o basis_module.o eavg.o \
+SIZES_DEPS =      angles_module.o basis_module.o bd.driver.o eavg.o \
                   fld.driver.o iosbin.o iosout.o j6to4.o locpol.o \
-                  mol.driver.o prbr.o restrt.o setefv.o potential_module.o
+                  mol.driver.o potential_module.o prbr.o restrt.o setefv.o
 
 (addprefix $(OBJDIR)/,$(SIZES_DEPS)): sizes.mod
 #
 # angles module =============================================================
 #
-ANGLES_DEPS =     iosbin.o iosout.o potenl.o vrtp-He_H2O.o vrtp-Rg_HX-eta.o \
-                  vrtp-H2_H2.o
+ANGLES_DEPS =     iosbin.o iosout.o potenl-Rg_H2.o potenl.o vrtp-He_H2O.o \
+                  vrtp-Rg_HX-eta.o vrtp-H2_H2.o vrtp-extpot_1ang.o \
+                  vrtp-extpot_2ang.o \
 
 (addprefix $(OBJDIR)/,$(ANGLES_DEPS)): angles.mod
 #
 # efvs module ===============================================================
 #
 EFVS_DEPS =       base.o base9-1S_3Sigma_cpld.o base9-alk_alk.o \
-                  bd.driver.o efv9-dummy.o fld.driver.o header.o ldrdwt.o \
-                  locpol.o mol.driver.o output.o prnsum.o rdsigu.o \
-                  scalam-default.o setefv.o sread.o wvhead.o cheint.o
+                  base9-skeleton.o bd.driver.o cheint.o efv9-dummy.o \
+                  fld.driver.o header.o ldrdwt.o locpol.o mol.driver.o \
+                  output.o prnsum.o rdsigu.o restrt.o scapot-default.o \
+                  setefv.o wvhead.o \
 
 (addprefix $(OBJDIR)/,$(EFVS_DEPS)): efvs.mod
 #
 # potential module ==========================================================
 #
-POTL_DEPS =       base.o base9-1S_3Sigma_cpld.o base9-alk_alk.o bd.driver.o \
-                  calca.o chckru.o cheint.o cntrct.o dermat.o ev_ord.o \
-                  fld.driver.o getlev.o mol.driver.o odprop.o output.o \
-                  potenl.o restrt.o rmprop.o scctrl.o scwave.o setefv.o \
-                  thresh.o vlchk.o vstar-Tiemann.o wavmat.o wavvec.o ytrans.o
+POTL_DEPS =       base.o base9-1S_3Sigma_cpld.o base9-alk_alk.o \
+                  base-skeleton.o bd.driver.o chckru.o cheint.o cntrct.o \
+                  dermat.o fld.driver.o getlev.o mol.driver.o multop.o \
+                  odprop.o output.o potenl-Rg_H2.o potenl.o restrt.o \
+                  scwave.o setefv.o thresh.o vlchk.o vstar-Tiemann.o \
+                  wavmat.o wavvec.o ytrans.o \
 
 (addprefix $(OBJDIR)/,$(POTL_DEPS)): potential.mod
 #
 # basis_data module =========================================================
 #
 BASIS_DEPS =      asrot.o base.o base9-1S_3Sigma_cpld.o base9-alk_alk.o \
-                  getlev.o iosbin.o iosout.o iospb.o \
+                  base-skeleton.o getlev.o iosbin.o iosout.o iospb.o \
                   j6to4.o mol.driver.o output.o prbr.o restrt.o set4.o set6.o \
                   set6c.o setbas.o surbas.o thresh.o \
 
@@ -131,7 +133,7 @@ LA_UTILS =  dgemul.o syminl-alloc.o dsyneg.o syminv.o
 #
 TRANS =     ytrans.o multop.o ev_ord.o chnsrt.o wvcalc.o
 LDPROPS =   ldprop.o mdprop.o mgprop.o maprop.o trnsfm.o trnsp.o \
-            aiprop.o potent.o corr.o maxmgv.o outmat.o spropn.o waveig.o \
+            aiprop.o waveig.o potent.o corr.o maxmgv.o outmat.o spropn.o \
             airymp.o scairy.o yinit.o dermat.o
 BASE =      mcgcpl.o cpl21.o cpl22.o cpl23.o cpl4.o qsymtp.o rsymtp.o cpl25.o \
             gsymtp.o set6.o ipasym.o esymtp.o fsymtp.o couple.o cpl3.o \
@@ -166,7 +168,6 @@ MOL = calca.o convrg.o eavg.o findrx.o getlev.o header.o iosbin.o iosdrv.o \
 #
 POTUTILS    = gaussp.o gasleg.o zbes.o gaushp.o herm.o hrecur.o yrr.o plm.o
 GP-POTENL   = potenl.o       $(POTUTILS)
-RGH2-POTENL = potenl-Rg_H2.o $(POTUTILS)
 #
 # dependencies needed for system-specific potentials ========================
 #
@@ -178,6 +179,7 @@ ARCH4-POTENL   = $(GP-POTENL) vstar-Rg_CH4_Buck.o vrtp-extpot_2ang.o extpot-Ar_C
 ARCO2-POTENL   = $(GP-POTENL) vstar-dummy.o       vrtp-extpot_1ang.o extpot-Ar_CO2.o \
                               sumleg.o
 MGNH-POTENL    = $(GP-POTENL) vstar-Mg_NH.o       vrtp-dummy.o
+RGH2-POTENL    = potenl-Rg_H2.o $(POTUTILS)
 #
 # note that modules must come before object codes that use them
 RB2-POTENL     = pot_data_Tiemann-Rb2-2010.o \
@@ -191,7 +193,6 @@ ALK2-BASE9   = base9-alk_alk.o \
                efv9-dummy.o degen9-nondegenerate.o
 MGNH-BASE9   = base9-1S_3Sigma_cpld.o \
                efv9-dummy.o degen9-nondegenerate.o potin9-example.o
-# definitions for MOLSCAT post-processors
 #
 # set up 'normal' set of object files dependencies ==========================
 #
@@ -216,7 +217,7 @@ PROGS =     molscat-basic \
 #
 # rules for making executables ===============================================
 #
-.PHONY: $(PROGS) # $(TESTPROGS)
+.PHONY: $(PROGS)
 #$(PROGS) : %: $(EXECDIR)/%
 
 $(EXECDIR)/molscat-basic     : $(addprefix $(OBJDIR)/,$(BASIC_MOL) \

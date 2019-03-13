@@ -7,7 +7,7 @@
  |                                                                            |
  |                               Version 2019.0                               |
  |                                                                            |
- |                       Run on 18 Feb 2019   at 22:28:37                     |
+ |                       Run on 11 Mar 2019   at 17:01:53                     |
  |                                                                            |
   ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
 
@@ -131,7 +131,6 @@
 
   LOG-DERIVATIVE MATRIX INITIALISED IN THE LOCAL EIGENBASIS AT RMIN
   LOCALLY CLOSED CHANNELS INITIALISED WITH A WKB BOUNDARY CONDITION
-  LOCALLY  OPEN  CHANNELS INITIALISED WITH THE VALUE  1.000E+08
 
   ======================================================================================================================
 
@@ -141,9 +140,9 @@
   INPUT ENERGY LIST IS
                      161.311         177.442    
 
-  CONTROL DATA FOR TOTAL ENERGIES.  CALCULATIONS WILL BE PERFORMED FOR   2 VALUES
-       ENERGY NO.   1 =   161.31088010     CM-1 =  2.00000000000E-02 EV      
-       ENERGY NO.   2 =   177.44196811     CM-1 =  2.20000000000E-02 EV      
+  CONTROL DATA FOR TOTAL ENERGIES.  CALCULATIONS WILL BE PERFORMED FOR    2 VALUES
+       ENERGY NO.    1 =   161.31088010     CM-1 =  2.00000000000E-02 EV      
+       ENERGY NO.    2 =   177.44196811     CM-1 =  2.20000000000E-02 EV      
 
   ======================================================================================================================
 
@@ -408,7 +407,7 @@
  |                                                                            |
  |                               Version 2019.0                               |
  |                                                                            |
- |                    This run used       0.13 cpu secs and                   |
+ |                    This run used       0.11 cpu secs and                   |
  |               4271 of the allocated   1000000 words of storage             |
  |                                                                            |
   ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---

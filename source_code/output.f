@@ -7,8 +7,8 @@
      6                  NQN, OTOL, DTOL, IPHSUM, ISIGU, IPARTU, ISAVEU,
      7                  ISIGPR, IRSTRT, ICHAN, TEMP1, CENT,
      8                  EINT, IBOUND, INDUSE, INDACC, LNEVER,
-     9                  CINT, JFIELD, IPRINT, LRESRT, PTIME,
-     A                  AWVMAX)
+     9                  CM2RU, JFIELD, IPRINT, LRESRT, PTIME,
+     A                  AWVMAX,RUNAME)
 C  Copyright (C) 2019 J. M. Hutson & C. R. Le Sueur
 C  Distributed under the GNU General Public License, version 3
       USE efvs
@@ -69,7 +69,7 @@ C
       CHARACTER(4)   C3
       CHARACTER(6)   NAMEL
       CHARACTER(8)   UNAME
-      CHARACTER(10)  UTNAME
+      CHARACTER(10)  RUNAME,UTNAME
       CHARACTER(50)  F931,F932,F941,F942
       CHARACTER(50)  F191,F200,F933,F943
       CHARACTER(130) F710,F945
@@ -170,18 +170,18 @@ C  IF INDLEV HASN'T BEEN USED, HIJACK IT TO PROVIDE INDEX TO SIGMA
           IF (LCURXS) THEN
             IF (IBOUND.EQ.0) THEN
               WRITE(6,110) I,WVEC(NB),NB,L(NB),INDLEV(NB),
-     1                     EINT(NB)/CINT
+     1                     EINT(NB)/CM2RU
             ELSE
               WRITE(6,115) I,WVEC(NB),NB,CENT(NB),INDLEV(NB),
-     1                     EINT(NB)/CINT
+     1                     EINT(NB)/CM2RU
             ENDIF
   110       FORMAT(I12,1P,E18.8,0P,6X,I4,3X,I10,  6X,I4,9X,F19.12)
   115       FORMAT(I12,1P,F18.8,0P,6X,I4,3X,F10.2,6X,I4,9X,F19.12)
           ELSE
             IF (IBOUND.EQ.0) THEN
-              WRITE(6,111) I,WVEC(NB),NB,L(NB),EINT(NB)/CINT
+              WRITE(6,111) I,WVEC(NB),NB,L(NB),EINT(NB)/CM2RU
             ELSE
-              WRITE(6,116) I,WVEC(NB),NB,CENT(NB),EINT(NB)/CINT
+              WRITE(6,116) I,WVEC(NB),NB,CENT(NB),EINT(NB)/CM2RU
             ENDIF
   111       FORMAT(I12,1P,E18.8,0P,6X,I4,3X,I10,  6X,F19.12)
   116       FORMAT(I12,1P,F18.8,0P,6X,I4,3X,F10.2,6X,F19.12)
@@ -264,7 +264,7 @@ C
 C  CODE MOVED INTO SUBROUTINE DECEMBER 2017
 C
       CALL CALCA(NOPEN,NBASIS,L,WVEC,SREAL,SIMAG,AWVMAX,
-     1           SCLEN,ICHAN,IPRINT)
+     1           SCLEN,ICHAN,RUNAME,IPRINT)
 
       IF (IPHSUM.GT.0) THEN
         ESUM=EPSUM(AKMAT,NOPEN,TEMP1)
@@ -628,7 +628,7 @@ C
      1             SIG,IECONV,URED,ITYP,IPHSUM,ISST,MINJT,MAXJT,
      2             ISIGU,IPARTU,ISAVEU,IPROGM,MXSIG,ISIGPR,JST,IRSTRT,
      3             ILDSVU,LCURPS,LACCPS,NLEVS,ICHAN,IFCNPS,IBOUND,
-     4             IPRINT)
+     4             RUNAME,IPRINT)
 C
       EF=EFACT
       LCURXS=LCURPS ! VARIABLES COPIED SO THEY CAN BE SAVED
@@ -1086,11 +1086,20 @@ C  NAME HAS BEEN USED BECAUSE IT PERFORMS BROADLY THE SAME FUNCTION
             ENDIF
  9002     CONTINUE
 
-          WRITE(6,925) IOPEN,(INDLEV(IL),ELEVEL(INDLEV(IL)),IL=1,IOPEN)
+          IF (IOPEN.GT.1) THEN
+            WRITE(6,925) IOPEN
+          ELSE
+            WRITE(6,926)
+          ENDIF
   925     FORMAT(/'  STATE-TO-STATE INTEGRAL CROSS SECTIONS IN ',
      1           'ANGSTROM**2 BETWEEN',I5,
-     1           ' LEVELS WITH THRESHOLD ENERGIES (IN CM-1):',//
-     2           (I5,F19.12))
+     2           ' LEVELS WITH THRESHOLD ENERGIES (IN CM-1):'/)
+  926     FORMAT(/'  STATE-TO-STATE INTEGRAL CROSS SECTIONS IN ',
+     1           'ANGSTROM**2 FOR'
+     2           ' LEVEL WITH THRESHOLD ENERGY (IN CM-1):'/)
+
+          WRITE(6,927) (INDLEV(IL),ELEVEL(INDLEV(IL)),IL=1,IOPEN)
+  927     FORMAT((I5,F19.12))
         ENDIF
 C
         IF (JHALF.EQ.0) THEN

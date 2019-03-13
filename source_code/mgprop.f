@@ -1,7 +1,7 @@
       SUBROUTINE MGPROP(N,MXLAM,NPOTL,
      1                  Y,U,VL,IV,EINT,CENT,P,DG,
      2                  RSTART,RSTOP,NSTEP,DR,NODES,
-     3                  ERED,RMLMDA,IPRINT)
+     3                  ERED,EP2RU,CM2RU,RSCALE,IPRINT)
 C  This subroutine is part of the MOLSCAT, BOUND and FIELD suite of programs
 C
 C  31 AUG 2012 G. MCBANE.
@@ -80,8 +80,8 @@ C  SECTOR, AND W CAN BE REUSED.
                      U(I,I)=U(I,I)-ESHIFT
                   ENDDO
                ELSE
-                  CALL WAVMAT(U,N,R,P,VL,IV,ERED,EINT,CENT,
-     1                        RMLMDA,DG,MXLAM,NPOTL,IPRINT)
+                  CALL WAVMAT(U,N,R,P,VL,IV,ERED,EINT,CENT,EP2RU,CM2RU,
+     1                        RSCALE,DG,MXLAM,NPOTL,IPRINT)
                ENDIF
                IF (IWRITE) WRITE(ISCRU) U
             ENDIF

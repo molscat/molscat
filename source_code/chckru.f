@@ -1,13 +1,14 @@
-      SUBROUTINE CHCKRU(RUNIT,RPUNIT,RSCALE,unset,IPRINT)
+      SUBROUTINE CHCKRU(RUNIT,RUNAME,RPUNIT,RSCALE,unset,IPRINT)
 C  Copyright (C) 2019 J. M. Hutson & C. R. Le Sueur
 C  Distributed under the GNU General Public License, version 3
-      USE potential, ONLY: runame, rmname
+      USE potential, ONLY: RMNAME
       USE physical_constants, ONLY: bohr_in_SI
       IMPLICIT NONE
 
       DOUBLE PRECISION, INTENT(INOUT) :: RUNIT,RPUNIT,RSCALE
       DOUBLE PRECISION, INTENT(IN)    :: unset
       INTEGER,          INTENT(IN)    :: IPRINT
+      CHARACTER(10),    INTENT(INOUT) :: RUNAME
 
       IF (RUNIT.EQ.unset) THEN
         IF (RPUNIT.EQ.unset) THEN

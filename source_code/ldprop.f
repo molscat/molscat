@@ -1,7 +1,7 @@
       SUBROUTINE LDPROP(N,MXLAM,NPOTL,
      1                  Z,U,VL,IV,EINT,CENT,P,DIAG,
      2                  RSTART,RSTOP,NSTEP,DR,NODES,
-     3                  ERED,RMLMDA,IPRINT)
+     3                  ERED,EP2RU,CM2RU,RSCALE,IPRINT)
 C  Copyright (C) 2019 J. M. Hutson & C. R. Le Sueur
 C  Distributed under the GNU General Public License, version 3
 C
@@ -35,8 +35,8 @@ C  26-12-18 ADDED THIS CODE BECAUSE U NO LONGER PRESERVED BY YINIT
         DO 130 I=1,N
   130     U(I,I)=U(I,I)-ESHIFT
       ELSE
-        CALL WAVMAT(U,N,R,P,VL,IV,ERED,EINT,CENT,RMLMDA,DIAG,
-     1              MXLAM,NPOTL,IPRINT)
+        CALL WAVMAT(U,N,R,P,VL,IV,ERED,EINT,CENT,EP2RU,CM2RU,
+     1              RSCALE,DIAG,MXLAM,NPOTL,IPRINT)
         IF (IWRITE) WRITE(ISCRU) U
       ENDIF
 
@@ -55,8 +55,8 @@ C
           DO 160 I=1,N
   160       U(I,I)=U(I,I)+ESH
         ELSE
-          CALL WAVMAT(U,N,R,P,VL,IV,ERED,EINT,CENT,RMLMDA,DIAG,
-     1                MXLAM,NPOTL,IPRINT)
+          CALL WAVMAT(U,N,R,P,VL,IV,ERED,EINT,CENT,EP2RU,CM2RU,
+     1                RSCALE,DIAG,MXLAM,NPOTL,IPRINT)
           DO 180 J = 1,N
             DO 170 I = J,N
   170         U(I,J) = D4*U(I,J)
@@ -99,8 +99,8 @@ C
           DO 220 I=1,N
   220       U(I,I)=U(I,I)+ESH
         ELSE
-          CALL WAVMAT(U,N,R,P,VL,IV,ERED,EINT,CENT,RMLMDA,DIAG,
-     1                MXLAM,NPOTL,IPRINT)
+          CALL WAVMAT(U,N,R,P,VL,IV,ERED,EINT,CENT,EP2RU,CM2RU,
+     1                RSCALE,DIAG,MXLAM,NPOTL,IPRINT)
           DO 240 J=1,N
             DO 230 I=J,N
   230         U(I,J)=D2*U(I,J)

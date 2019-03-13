@@ -1,25 +1,26 @@
  &INPUT
     LABEL  = 'Hydrogen: ITYPE=1; IPROPS=8, IPROPL=9',
-    URED   =   1.0,
+    URED   =   1.D0,
     IPRINT =   5,     IBDSUM = 4,
-    EUNITS =   7,     MUNIT  = 5.48579909070E-4,     RUNIT  =   0.52917721067E0,
+    EUNITS =   7,     MUNIT  = 5.48579909070D-4,     RUNIT  =   0.52917721067D0,
     RMIN   =   0.0,   RMATCH = 1.0,    RMID   = 3.0, RMAX   = 100.0,
+    BCYOMN =   1.D8,
     IPROPS =   8,     DR     = 0.0001,
     IPROPL =   9,     DRL    = 0.001,
     JTOTL  =   0,     JTOTU  = 1,      IBFIX  = 2,
     EMIN   =  -1.0,   EMAX   = 0.0,
     LASTIN =   0,
  /
-
  &BASIS
     ITYPE  = 1, BE     = 1.0,
     NLEVEL = 1, JLEVEL = 0,
  /
-
  &POTL
     MXLAM  = 1, LAMBDA =  0,
                 NTERM  =  1,
                 NPOWER = -1,
                 A      = -1.0,
-                EPSIL  =  2.194746313708E5
+                EPSIL  =  2.194746313708D5 
  /
+
+ 

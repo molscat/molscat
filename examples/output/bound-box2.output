@@ -6,7 +6,7 @@
  |                                                                            |
  |                               Version 2019.0                               |
  |                                                                            |
- |                       Run on 18 Feb 2019   at 22:43:22                     |
+ |                       Run on 11 Mar 2019   at 17:16:42                     |
  |                                                                            |
   -- BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND --
 
@@ -138,7 +138,6 @@
   ============================ Testing BOUND for 2-channel particle in an infinite-wall box ============================
 
   *****************************  ANGULAR MOMENTUM JTOT  =   0   AND SYMMETRY BLOCK  =    2  ****************************
-  **** WARNING:    2 OPEN CHANNELS DETECTED AT RMIN
 
   NODE COUNT =    0 AT MINIMUM ENERGY =  -1.000000000     CM-1  
   NODE COUNT =    3 AT MAXIMUM ENERGY =   8.000000000     CM-1  
@@ -146,37 +145,18 @@
   - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
   SEARCHING FOR INODE =    1 CORRESPONDING TO NODE COUNT =    1
-  **** WARNING:    1 OPEN CHANNEL  DETECTED AT RMIN
-  **** WARNING:    1 OPEN CHANNEL  DETECTED AT RMIN
-  **** WARNING:    1 OPEN CHANNEL  DETECTED AT RMIN
-  **** WARNING:    1 OPEN CHANNEL  DETECTED AT RMIN
-  **** WARNING:    1 OPEN CHANNEL  DETECTED AT RMIN
-  **** WARNING:    1 OPEN CHANNEL  DETECTED AT RMIN
-  **** WARNING:    1 OPEN CHANNEL  DETECTED AT RMIN
 
   CONVERGED ON NODE NUMBER     1 AT                               ENERGY =  0.9999999951     CM-1  
 
   - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
   SEARCHING FOR INODE =    2 CORRESPONDING TO NODE COUNT =    2
-  **** WARNING:    2 OPEN CHANNELS DETECTED AT RMIN
-  **** WARNING:    1 OPEN CHANNEL  DETECTED AT RMIN
-  **** WARNING:    1 OPEN CHANNEL  DETECTED AT RMIN
-  **** WARNING:    1 OPEN CHANNEL  DETECTED AT RMIN
-  **** WARNING:    1 OPEN CHANNEL  DETECTED AT RMIN
-  **** WARNING:    1 OPEN CHANNEL  DETECTED AT RMIN
 
   CONVERGED ON NODE NUMBER     2 AT                               ENERGY =   3.999999983     CM-1  
 
   - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
   SEARCHING FOR INODE =    3 CORRESPONDING TO NODE COUNT =    3
-  **** WARNING:    2 OPEN CHANNELS DETECTED AT RMIN
-  **** WARNING:    2 OPEN CHANNELS DETECTED AT RMIN
-  **** WARNING:    2 OPEN CHANNELS DETECTED AT RMIN
-  **** WARNING:    2 OPEN CHANNELS DETECTED AT RMIN
-  **** WARNING:    2 OPEN CHANNELS DETECTED AT RMIN
-  **** WARNING:    2 OPEN CHANNELS DETECTED AT RMIN
 
   CONVERGED ON NODE NUMBER     3 AT                               ENERGY =   5.999999997     CM-1  
 
@@ -189,7 +169,7 @@
  |                                                                            |
  |                               Version 2019.0                               |
  |                                                                            |
- |                    This run used       0.05 cpu secs and                   |
+ |                    This run used       0.04 cpu secs and                   |
  |                 62 of the allocated   1000000 words of storage             |
  |                                                                            |
   -- BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND --
@@ -201,7 +181,7 @@
  |                                                                            |
  |                               Version 2019.0                               |
  |                                                                            |
- |                       Run on 18 Feb 2019   at 22:43:22                     |
+ |                       Run on 11 Mar 2019   at 17:16:42                     |
  |                                                                            |
   -- BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND --
 
@@ -333,7 +313,6 @@
   =================== Testing BOUND 2-channel particle in a box with finite boundary conditions: LDJ ===================
 
   *****************************  ANGULAR MOMENTUM JTOT  =   0   AND SYMMETRY BLOCK  =    2  ****************************
-  **** WARNING:    2 OPEN CHANNELS DETECTED AT RMIN
 
   NODE COUNT =    0 AT MINIMUM ENERGY =  -1.000000000     CM-1  
   NODE COUNT =    5 AT MAXIMUM ENERGY =   8.000000000     CM-1  
@@ -341,61 +320,30 @@
   - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
   SEARCHING FOR INODE =    1 CORRESPONDING TO NODE COUNT =    1
-  **** WARNING:    1 OPEN CHANNEL  DETECTED AT RMIN
-  **** WARNING:    1 OPEN CHANNEL  DETECTED AT RMIN
-  **** WARNING:    1 OPEN CHANNEL  DETECTED AT RMIN
-  **** WARNING:    1 OPEN CHANNEL  DETECTED AT RMIN
-  **** WARNING:    1 OPEN CHANNEL  DETECTED AT RMIN
-  **** WARNING:    1 OPEN CHANNEL  DETECTED AT RMIN
-  **** WARNING:    1 OPEN CHANNEL  DETECTED AT RMIN
 
   CONVERGED ON NODE NUMBER     1 AT                               ENERGY =  6.0464139434E-02 CM-1  
 
   - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
   SEARCHING FOR INODE =    2 CORRESPONDING TO NODE COUNT =    2
-  **** WARNING:    1 OPEN CHANNEL  DETECTED AT RMIN
-  **** WARNING:    1 OPEN CHANNEL  DETECTED AT RMIN
-  **** WARNING:    1 OPEN CHANNEL  DETECTED AT RMIN
-  **** WARNING:    1 OPEN CHANNEL  DETECTED AT RMIN
-  **** WARNING:    1 OPEN CHANNEL  DETECTED AT RMIN
 
   CONVERGED ON NODE NUMBER     2 AT                               ENERGY =   1.123361643     CM-1  
 
   - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
   SEARCHING FOR INODE =    3 CORRESPONDING TO NODE COUNT =    3
-  **** WARNING:    2 OPEN CHANNELS DETECTED AT RMIN
-  **** WARNING:    1 OPEN CHANNEL  DETECTED AT RMIN
-  **** WARNING:    1 OPEN CHANNEL  DETECTED AT RMIN
-  **** WARNING:    1 OPEN CHANNEL  DETECTED AT RMIN
-  **** WARNING:    1 OPEN CHANNEL  DETECTED AT RMIN
-  **** WARNING:    1 OPEN CHANNEL  DETECTED AT RMIN
-  **** WARNING:    1 OPEN CHANNEL  DETECTED AT RMIN
 
   CONVERGED ON NODE NUMBER     3 AT                               ENERGY =   4.126240653     CM-1  
 
   - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
   SEARCHING FOR INODE =    4 CORRESPONDING TO NODE COUNT =    4
-  **** WARNING:    2 OPEN CHANNELS DETECTED AT RMIN
-  **** WARNING:    2 OPEN CHANNELS DETECTED AT RMIN
-  **** WARNING:    2 OPEN CHANNELS DETECTED AT RMIN
-  **** WARNING:    2 OPEN CHANNELS DETECTED AT RMIN
-  **** WARNING:    2 OPEN CHANNELS DETECTED AT RMIN
 
   CONVERGED ON NODE NUMBER     4 AT                               ENERGY =   5.060464140     CM-1  
 
   - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
   SEARCHING FOR INODE =    5 CORRESPONDING TO NODE COUNT =    5
-  **** WARNING:    2 OPEN CHANNELS DETECTED AT RMIN
-  **** WARNING:    2 OPEN CHANNELS DETECTED AT RMIN
-  **** WARNING:    2 OPEN CHANNELS DETECTED AT RMIN
-  **** WARNING:    2 OPEN CHANNELS DETECTED AT RMIN
-  **** WARNING:    2 OPEN CHANNELS DETECTED AT RMIN
-  **** WARNING:    2 OPEN CHANNELS DETECTED AT RMIN
-  **** WARNING:    2 OPEN CHANNELS DETECTED AT RMIN
 
   CONVERGED ON NODE NUMBER     5 AT                               ENERGY =   6.123361643     CM-1  
 
@@ -408,7 +356,7 @@
  |                                                                            |
  |                               Version 2019.0                               |
  |                                                                            |
- |                    This run used       0.06 cpu secs and                   |
+ |                    This run used       0.05 cpu secs and                   |
  |                 70 of the allocated   1000000 words of storage             |
  |                                                                            |
   -- BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND --
@@ -420,7 +368,7 @@
  |                                                                            |
  |                               Version 2019.0                               |
  |                                                                            |
- |                       Run on 18 Feb 2019   at 22:43:22                     |
+ |                       Run on 11 Mar 2019   at 17:16:42                     |
  |                                                                            |
   -- BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND --
 
@@ -552,7 +500,6 @@
   ================== Testing BOUND 2-channel particle in a box with finite boundary conditions: LDMD ===================
 
   *****************************  ANGULAR MOMENTUM JTOT  =   0   AND SYMMETRY BLOCK  =    2  ****************************
-  **** WARNING:    2 OPEN CHANNELS DETECTED AT RMIN
 
   NODE COUNT =    0 AT MINIMUM ENERGY =  -1.000000000     CM-1  
   NODE COUNT =    5 AT MAXIMUM ENERGY =   8.000000000     CM-1  
@@ -560,61 +507,30 @@
   - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
   SEARCHING FOR INODE =    1 CORRESPONDING TO NODE COUNT =    1
-  **** WARNING:    1 OPEN CHANNEL  DETECTED AT RMIN
-  **** WARNING:    1 OPEN CHANNEL  DETECTED AT RMIN
-  **** WARNING:    1 OPEN CHANNEL  DETECTED AT RMIN
-  **** WARNING:    1 OPEN CHANNEL  DETECTED AT RMIN
-  **** WARNING:    1 OPEN CHANNEL  DETECTED AT RMIN
-  **** WARNING:    1 OPEN CHANNEL  DETECTED AT RMIN
-  **** WARNING:    1 OPEN CHANNEL  DETECTED AT RMIN
 
   CONVERGED ON NODE NUMBER     1 AT                               ENERGY =  6.0464139690E-02 CM-1  
 
   - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
   SEARCHING FOR INODE =    2 CORRESPONDING TO NODE COUNT =    2
-  **** WARNING:    1 OPEN CHANNEL  DETECTED AT RMIN
-  **** WARNING:    1 OPEN CHANNEL  DETECTED AT RMIN
-  **** WARNING:    1 OPEN CHANNEL  DETECTED AT RMIN
-  **** WARNING:    1 OPEN CHANNEL  DETECTED AT RMIN
-  **** WARNING:    1 OPEN CHANNEL  DETECTED AT RMIN
 
   CONVERGED ON NODE NUMBER     2 AT                               ENERGY =   1.123361643     CM-1  
 
   - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
   SEARCHING FOR INODE =    3 CORRESPONDING TO NODE COUNT =    3
-  **** WARNING:    2 OPEN CHANNELS DETECTED AT RMIN
-  **** WARNING:    1 OPEN CHANNEL  DETECTED AT RMIN
-  **** WARNING:    1 OPEN CHANNEL  DETECTED AT RMIN
-  **** WARNING:    1 OPEN CHANNEL  DETECTED AT RMIN
-  **** WARNING:    1 OPEN CHANNEL  DETECTED AT RMIN
-  **** WARNING:    1 OPEN CHANNEL  DETECTED AT RMIN
-  **** WARNING:    1 OPEN CHANNEL  DETECTED AT RMIN
 
   CONVERGED ON NODE NUMBER     3 AT                               ENERGY =   4.126240653     CM-1  
 
   - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
   SEARCHING FOR INODE =    4 CORRESPONDING TO NODE COUNT =    4
-  **** WARNING:    2 OPEN CHANNELS DETECTED AT RMIN
-  **** WARNING:    2 OPEN CHANNELS DETECTED AT RMIN
-  **** WARNING:    2 OPEN CHANNELS DETECTED AT RMIN
-  **** WARNING:    2 OPEN CHANNELS DETECTED AT RMIN
-  **** WARNING:    2 OPEN CHANNELS DETECTED AT RMIN
 
   CONVERGED ON NODE NUMBER     4 AT                               ENERGY =   5.060464142     CM-1  
 
   - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
   SEARCHING FOR INODE =    5 CORRESPONDING TO NODE COUNT =    5
-  **** WARNING:    2 OPEN CHANNELS DETECTED AT RMIN
-  **** WARNING:    2 OPEN CHANNELS DETECTED AT RMIN
-  **** WARNING:    2 OPEN CHANNELS DETECTED AT RMIN
-  **** WARNING:    2 OPEN CHANNELS DETECTED AT RMIN
-  **** WARNING:    2 OPEN CHANNELS DETECTED AT RMIN
-  **** WARNING:    2 OPEN CHANNELS DETECTED AT RMIN
-  **** WARNING:    2 OPEN CHANNELS DETECTED AT RMIN
 
   CONVERGED ON NODE NUMBER     5 AT                               ENERGY =   6.123361643     CM-1  
 
@@ -627,7 +543,7 @@
  |                                                                            |
  |                               Version 2019.0                               |
  |                                                                            |
- |                    This run used       0.08 cpu secs and                   |
+ |                    This run used       0.06 cpu secs and                   |
  |                 70 of the allocated   1000000 words of storage             |
  |                                                                            |
   -- BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND --
@@ -639,7 +555,7 @@
  |                                                                            |
  |                               Version 2019.0                               |
  |                                                                            |
- |                       Run on 18 Feb 2019   at 22:43:23                     |
+ |                       Run on 11 Mar 2019   at 17:16:42                     |
  |                                                                            |
   -- BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND --
 
@@ -771,7 +687,6 @@
   ================== Testing BOUND 2-channel particle in a box with finite boundary conditions: LDMA ===================
 
   *****************************  ANGULAR MOMENTUM JTOT  =   0   AND SYMMETRY BLOCK  =    2  ****************************
-  **** WARNING:    2 OPEN CHANNELS DETECTED AT RMIN
 
   NODE COUNT =    0 AT MINIMUM ENERGY =  -1.000000000     CM-1  
   NODE COUNT =    5 AT MAXIMUM ENERGY =   8.000000000     CM-1  
@@ -779,61 +694,30 @@
   - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
   SEARCHING FOR INODE =    1 CORRESPONDING TO NODE COUNT =    1
-  **** WARNING:    1 OPEN CHANNEL  DETECTED AT RMIN
-  **** WARNING:    1 OPEN CHANNEL  DETECTED AT RMIN
-  **** WARNING:    1 OPEN CHANNEL  DETECTED AT RMIN
-  **** WARNING:    1 OPEN CHANNEL  DETECTED AT RMIN
-  **** WARNING:    1 OPEN CHANNEL  DETECTED AT RMIN
-  **** WARNING:    1 OPEN CHANNEL  DETECTED AT RMIN
-  **** WARNING:    1 OPEN CHANNEL  DETECTED AT RMIN
 
   CONVERGED ON NODE NUMBER     1 AT                               ENERGY =  6.0458358047E-02 CM-1  
 
   - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
   SEARCHING FOR INODE =    2 CORRESPONDING TO NODE COUNT =    2
-  **** WARNING:    1 OPEN CHANNEL  DETECTED AT RMIN
-  **** WARNING:    1 OPEN CHANNEL  DETECTED AT RMIN
-  **** WARNING:    1 OPEN CHANNEL  DETECTED AT RMIN
-  **** WARNING:    1 OPEN CHANNEL  DETECTED AT RMIN
-  **** WARNING:    1 OPEN CHANNEL  DETECTED AT RMIN
 
   CONVERGED ON NODE NUMBER     2 AT                               ENERGY =   1.123137999     CM-1  
 
   - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
   SEARCHING FOR INODE =    3 CORRESPONDING TO NODE COUNT =    3
-  **** WARNING:    2 OPEN CHANNELS DETECTED AT RMIN
-  **** WARNING:    1 OPEN CHANNEL  DETECTED AT RMIN
-  **** WARNING:    1 OPEN CHANNEL  DETECTED AT RMIN
-  **** WARNING:    1 OPEN CHANNEL  DETECTED AT RMIN
-  **** WARNING:    1 OPEN CHANNEL  DETECTED AT RMIN
-  **** WARNING:    1 OPEN CHANNEL  DETECTED AT RMIN
-  **** WARNING:    1 OPEN CHANNEL  DETECTED AT RMIN
 
   CONVERGED ON NODE NUMBER     3 AT                               ENERGY =   4.125380670     CM-1  
 
   - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
   SEARCHING FOR INODE =    4 CORRESPONDING TO NODE COUNT =    4
-  **** WARNING:    2 OPEN CHANNELS DETECTED AT RMIN
-  **** WARNING:    2 OPEN CHANNELS DETECTED AT RMIN
-  **** WARNING:    2 OPEN CHANNELS DETECTED AT RMIN
-  **** WARNING:    2 OPEN CHANNELS DETECTED AT RMIN
-  **** WARNING:    2 OPEN CHANNELS DETECTED AT RMIN
 
   CONVERGED ON NODE NUMBER     4 AT                               ENERGY =   5.059979966     CM-1  
 
   - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
   SEARCHING FOR INODE =    5 CORRESPONDING TO NODE COUNT =    5
-  **** WARNING:    2 OPEN CHANNELS DETECTED AT RMIN
-  **** WARNING:    2 OPEN CHANNELS DETECTED AT RMIN
-  **** WARNING:    2 OPEN CHANNELS DETECTED AT RMIN
-  **** WARNING:    2 OPEN CHANNELS DETECTED AT RMIN
-  **** WARNING:    2 OPEN CHANNELS DETECTED AT RMIN
-  **** WARNING:    2 OPEN CHANNELS DETECTED AT RMIN
-  **** WARNING:    2 OPEN CHANNELS DETECTED AT RMIN
 
   CONVERGED ON NODE NUMBER     5 AT                               ENERGY =   6.122142255     CM-1  
 
@@ -846,7 +730,7 @@
  |                                                                            |
  |                               Version 2019.0                               |
  |                                                                            |
- |                    This run used       0.23 cpu secs and                   |
+ |                    This run used       0.19 cpu secs and                   |
  |                 86 of the allocated   1000000 words of storage             |
  |                                                                            |
   -- BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND --
@@ -858,7 +742,7 @@
  |                                                                            |
  |                               Version 2019.0                               |
  |                                                                            |
- |                       Run on 18 Feb 2019   at 22:43:23                     |
+ |                       Run on 11 Mar 2019   at 17:16:42                     |
  |                                                                            |
   -- BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND --
 
@@ -992,7 +876,6 @@
   ================== Testing BOUND 2-channel particle in a box with finite boundary conditions: LDMG ===================
 
   *****************************  ANGULAR MOMENTUM JTOT  =   0   AND SYMMETRY BLOCK  =    2  ****************************
-  **** WARNING:    2 OPEN CHANNELS DETECTED AT RMIN
 
   NODE COUNT =    0 AT MINIMUM ENERGY =  -1.000000000     CM-1  
   NODE COUNT =    5 AT MAXIMUM ENERGY =   8.000000000     CM-1  
@@ -1000,61 +883,30 @@
   - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
   SEARCHING FOR INODE =    1 CORRESPONDING TO NODE COUNT =    1
-  **** WARNING:    1 OPEN CHANNEL  DETECTED AT RMIN
-  **** WARNING:    1 OPEN CHANNEL  DETECTED AT RMIN
-  **** WARNING:    1 OPEN CHANNEL  DETECTED AT RMIN
-  **** WARNING:    1 OPEN CHANNEL  DETECTED AT RMIN
-  **** WARNING:    1 OPEN CHANNEL  DETECTED AT RMIN
-  **** WARNING:    1 OPEN CHANNEL  DETECTED AT RMIN
-  **** WARNING:    1 OPEN CHANNEL  DETECTED AT RMIN
 
   CONVERGED ON NODE NUMBER     1 AT                               ENERGY =  6.0464140543E-02 CM-1  
 
   - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
   SEARCHING FOR INODE =    2 CORRESPONDING TO NODE COUNT =    2
-  **** WARNING:    1 OPEN CHANNEL  DETECTED AT RMIN
-  **** WARNING:    1 OPEN CHANNEL  DETECTED AT RMIN
-  **** WARNING:    1 OPEN CHANNEL  DETECTED AT RMIN
-  **** WARNING:    1 OPEN CHANNEL  DETECTED AT RMIN
-  **** WARNING:    1 OPEN CHANNEL  DETECTED AT RMIN
 
   CONVERGED ON NODE NUMBER     2 AT                               ENERGY =   1.123361643     CM-1  
 
   - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
   SEARCHING FOR INODE =    3 CORRESPONDING TO NODE COUNT =    3
-  **** WARNING:    2 OPEN CHANNELS DETECTED AT RMIN
-  **** WARNING:    1 OPEN CHANNEL  DETECTED AT RMIN
-  **** WARNING:    1 OPEN CHANNEL  DETECTED AT RMIN
-  **** WARNING:    1 OPEN CHANNEL  DETECTED AT RMIN
-  **** WARNING:    1 OPEN CHANNEL  DETECTED AT RMIN
-  **** WARNING:    1 OPEN CHANNEL  DETECTED AT RMIN
-  **** WARNING:    1 OPEN CHANNEL  DETECTED AT RMIN
 
   CONVERGED ON NODE NUMBER     3 AT                               ENERGY =   4.126240653     CM-1  
 
   - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
   SEARCHING FOR INODE =    4 CORRESPONDING TO NODE COUNT =    4
-  **** WARNING:    2 OPEN CHANNELS DETECTED AT RMIN
-  **** WARNING:    2 OPEN CHANNELS DETECTED AT RMIN
-  **** WARNING:    2 OPEN CHANNELS DETECTED AT RMIN
-  **** WARNING:    2 OPEN CHANNELS DETECTED AT RMIN
-  **** WARNING:    2 OPEN CHANNELS DETECTED AT RMIN
 
   CONVERGED ON NODE NUMBER     4 AT                               ENERGY =   5.060464141     CM-1  
 
   - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
   SEARCHING FOR INODE =    5 CORRESPONDING TO NODE COUNT =    5
-  **** WARNING:    2 OPEN CHANNELS DETECTED AT RMIN
-  **** WARNING:    2 OPEN CHANNELS DETECTED AT RMIN
-  **** WARNING:    2 OPEN CHANNELS DETECTED AT RMIN
-  **** WARNING:    2 OPEN CHANNELS DETECTED AT RMIN
-  **** WARNING:    2 OPEN CHANNELS DETECTED AT RMIN
-  **** WARNING:    2 OPEN CHANNELS DETECTED AT RMIN
-  **** WARNING:    2 OPEN CHANNELS DETECTED AT RMIN
 
   CONVERGED ON NODE NUMBER     5 AT                               ENERGY =   6.123361643     CM-1  
 
@@ -1067,7 +919,7 @@
  |                                                                            |
  |                               Version 2019.0                               |
  |                                                                            |
- |                    This run used       0.15 cpu secs and                   |
+ |                    This run used       0.12 cpu secs and                   |
  |                 70 of the allocated   1000000 words of storage             |
  |                                                                            |
   -- BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND --
@@ -1079,7 +931,7 @@
  |                                                                            |
  |                               Version 2019.0                               |
  |                                                                            |
- |                       Run on 18 Feb 2019   at 22:43:23                     |
+ |                       Run on 11 Mar 2019   at 17:16:42                     |
  |                                                                            |
   -- BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND --
 
@@ -1213,7 +1065,6 @@
   =================== Testing BOUND 2-channel particle in box, finite boundary conditions: LDMD+AIRY ===================
 
   *****************************  ANGULAR MOMENTUM JTOT  =   0   AND SYMMETRY BLOCK  =    2  ****************************
-  **** WARNING:    2 OPEN CHANNELS DETECTED AT RMIN
 
   NODE COUNT =    0 AT MINIMUM ENERGY =  -1.000000000     CM-1  
   NODE COUNT =    5 AT MAXIMUM ENERGY =   8.000000000     CM-1  
@@ -1221,61 +1072,30 @@
   - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
   SEARCHING FOR INODE =    1 CORRESPONDING TO NODE COUNT =    1
-  **** WARNING:    1 OPEN CHANNEL  DETECTED AT RMIN
-  **** WARNING:    1 OPEN CHANNEL  DETECTED AT RMIN
-  **** WARNING:    1 OPEN CHANNEL  DETECTED AT RMIN
-  **** WARNING:    1 OPEN CHANNEL  DETECTED AT RMIN
-  **** WARNING:    1 OPEN CHANNEL  DETECTED AT RMIN
-  **** WARNING:    1 OPEN CHANNEL  DETECTED AT RMIN
-  **** WARNING:    1 OPEN CHANNEL  DETECTED AT RMIN
 
   CONVERGED ON NODE NUMBER     1 AT                               ENERGY =  6.0464140374E-02 CM-1  
 
   - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
   SEARCHING FOR INODE =    2 CORRESPONDING TO NODE COUNT =    2
-  **** WARNING:    1 OPEN CHANNEL  DETECTED AT RMIN
-  **** WARNING:    1 OPEN CHANNEL  DETECTED AT RMIN
-  **** WARNING:    1 OPEN CHANNEL  DETECTED AT RMIN
-  **** WARNING:    1 OPEN CHANNEL  DETECTED AT RMIN
-  **** WARNING:    1 OPEN CHANNEL  DETECTED AT RMIN
 
   CONVERGED ON NODE NUMBER     2 AT                               ENERGY =   1.123361643     CM-1  
 
   - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
   SEARCHING FOR INODE =    3 CORRESPONDING TO NODE COUNT =    3
-  **** WARNING:    2 OPEN CHANNELS DETECTED AT RMIN
-  **** WARNING:    1 OPEN CHANNEL  DETECTED AT RMIN
-  **** WARNING:    1 OPEN CHANNEL  DETECTED AT RMIN
-  **** WARNING:    1 OPEN CHANNEL  DETECTED AT RMIN
-  **** WARNING:    1 OPEN CHANNEL  DETECTED AT RMIN
-  **** WARNING:    1 OPEN CHANNEL  DETECTED AT RMIN
-  **** WARNING:    1 OPEN CHANNEL  DETECTED AT RMIN
 
   CONVERGED ON NODE NUMBER     3 AT                               ENERGY =   4.126240653     CM-1  
 
   - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
   SEARCHING FOR INODE =    4 CORRESPONDING TO NODE COUNT =    4
-  **** WARNING:    2 OPEN CHANNELS DETECTED AT RMIN
-  **** WARNING:    2 OPEN CHANNELS DETECTED AT RMIN
-  **** WARNING:    2 OPEN CHANNELS DETECTED AT RMIN
-  **** WARNING:    2 OPEN CHANNELS DETECTED AT RMIN
-  **** WARNING:    2 OPEN CHANNELS DETECTED AT RMIN
 
   CONVERGED ON NODE NUMBER     4 AT                               ENERGY =   5.060464142     CM-1  
 
   - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
   SEARCHING FOR INODE =    5 CORRESPONDING TO NODE COUNT =    5
-  **** WARNING:    2 OPEN CHANNELS DETECTED AT RMIN
-  **** WARNING:    2 OPEN CHANNELS DETECTED AT RMIN
-  **** WARNING:    2 OPEN CHANNELS DETECTED AT RMIN
-  **** WARNING:    2 OPEN CHANNELS DETECTED AT RMIN
-  **** WARNING:    2 OPEN CHANNELS DETECTED AT RMIN
-  **** WARNING:    2 OPEN CHANNELS DETECTED AT RMIN
-  **** WARNING:    2 OPEN CHANNELS DETECTED AT RMIN
 
   CONVERGED ON NODE NUMBER     5 AT                               ENERGY =   6.123361644     CM-1  
 
