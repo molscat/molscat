@@ -158,7 +158,7 @@ C  LEVEL CONTAINED IN JLEVEL. (VALUE FOR ITYP=9 IS A DUMMY VALUE)
       DATA NJLQN/1,2,2,3,3,2,2,2,1/
 C
       DATA LABEL /'        '/
-      DATA IPROGM /17/, PDATE /'2019.01'/
+      DATA IPROGM /19/, PDATE /'2019.1'/
       DATA PLUR/'S',' ','S'/
       DATA CDRIVE /'F'/
 C
@@ -525,8 +525,8 @@ C
      2         'CONVERGENCE')
  1340   FORMAT(/'  VWDB CONVERGENCE WILL TERMINATE WHEN THE STEP SIZE ',
      1          'IS LESS THAN',1PG12.5,1X,A)
- 1350   FORMAT(/'  PROGRAM WILL SEEK EIGENVALUES WITH GENERALISED',
-     1         ' NODE COUNTS FROM',I5,' TO',I7/'  LYING IN ')
+ 1350   FORMAT(/'  PROGRAM WILL SEEK STATES WITH NODE COUNTS FROM',
+     1          I5,' TO',I7/'  LYING IN ')
 
         CALL MSGEFV(0,NFIELD)
 
@@ -564,7 +564,7 @@ C  RESET VALUES READY FOR LOOP LATER ON
      1          '  TO INTERNAL WORKING UNITS OF CM-1 DUE TO ',
      2          'ALPHANUMERIC INPUT =',A4)
         WRITE(6,1360) TRIM(EUNAME),(ENERGY(I),I=1,NNRG)
- 1360   FORMAT(/'  PROGRAM WILL SEEK EIGENVALUES AT ENERGIES (IN ',A,
+ 1360   FORMAT(/'  PROGRAM WILL SEEK STATES AT ENERGIES (IN ',A,
      1         ')'/1P,(16X,7G16.6))
         NJLQN(9)=NQN-1
         CALL EREFIN(MONQN,NQN,NJLQN(ITYP),EUNAME,EREF,EUNIT)
@@ -823,7 +823,7 @@ C
 C
             IF (LFSCAN) GOTO 330
 C
-            NNODES=NODHI-NODLO
+            NBDST=NODHI-NODLO
             IF (NODHI.EQ.NODLO) THEN
               IF (IPRINT.GE.3)
      1          WRITE(6,2410)
@@ -832,34 +832,34 @@ C
      2               'SYMMETRY BLOCK.')
             ELSEIF (NODHI.GT.NODLO) THEN
               UPWARD=.FALSE.
-              NNODES=MIN(NNODES,MXNODE)
+              NBDST=MIN(NBDST,MXNODE)
               IF (IPRINT.GE.3)
-     1          WRITE(6,2420) 'IN',NNODES,PLUR(MIN(2,NNODES))
+     1          WRITE(6,2420) 'IN',NBDST,PLUR(MIN(2,NBDST))
  2420         FORMAT(/'  NODE COUNT ',A2,'CREASES BETWEEN FLDMIN ',
      1               'AND FLDMAX'/'  PROGRAM WILL ASSUME MONOTONIC ',
-     2               'BEHAVIOUR AND SEEK',I4,' NODE',A,
+     2               'BEHAVIOUR AND SEEK',I4,' STATE',A,
      3               ' IN THIS INTERVAL')
             ELSEIF (NODHI.LT.NODLO) THEN
               UPWARD=.TRUE.
-              NNODES=-NNODES
-              NNODES=MIN(NNODES,MXNODE)
+              NBDST=-NBDST
+              NBDST=MIN(NBDST,MXNODE)
               IF (IPRINT.GE.3)
-     1          WRITE(6,2420) 'DE',NNODES,PLUR(MIN(2,NNODES))
+     1          WRITE(6,2420) 'DE',NBDST,PLUR(MIN(2,NBDST))
             ENDIF
 
 C
 C  ALLOCATE STORAGE FOR EIGENVECTORS OF SMALLEST EIGENVALUE AT RANGE
 C  ENDPOINTS FOR EACH NODE
-            ISVLO=IC2             ! EVEC AT FLDLO
-            ISVHI=ISVLO+NNODES*N  ! EVEC AT FLDHI
-            IXNEXT=ISVHI+NNODES*N
+            ISVLO=IC2            ! EVEC AT FLDLO
+            ISVHI=ISVLO+NBDST*N  ! EVEC AT FLDHI
+            IXNEXT=ISVHI+NBDST*N
             IC3=IXNEXT
             CALL CHKSTR(NUSED)
 
 C
 C  LOOP OVER ALL NODES, SETTING UP INITIAL VALUES FOR RANGE ENDPOINTS
 C
-            DO I=1,NNODES
+            DO I=1,NBDST
 C
 C  IVLO AND IVHI ARE ADDRESSES FOR EVEC AT FLDLO AND FLDHI FOR CURRENT NODE
 C
@@ -884,25 +884,25 @@ C  NODE WILL BE STORED IN FLDLO(NODE-NODHI) AND FLDHI(NODE-NODHI).
 C
 cINOLLS include 'field/pvmdat7.f'
 C
-            DO 500 INODE=1,NNODES
+            DO 500 IBDST=1,NBDST
               NPROP=1
               TNTIME=TITIME
-              NSEEK=INODE+NODHI
-              IF (.NOT.UPWARD) NSEEK=INODE+NODLO
+              NSEEK=IBDST+NODHI
+              IF (.NOT.UPWARD) NSEEK=IBDST+NODLO
               IF (NSEEK.LT.NODMIN .OR. NSEEK.GT.NODMAX) GOTO 500
-              IF (IPRINT.GE.2) CALL PRNDCT(INODE,NSEEK)
+              IF (IPRINT.GE.2) CALL PRNDCT(NSEEK)
 C
 cINOLLS include 'all/pvmdat5.f'
 C
 C  START BISECTION TO FIND THIS NODE
 C
-  510         FLDHLF=0.5D0*(FLDLO(INODE)+FLDHI(INODE))
+  510         FLDHLF=0.5D0*(FLDLO(IBDST)+FLDHI(IBDST))
               NCALC=NCALC+1
               IF (NCALC.GT.MXCALC) THEN
-                NFOUND=INODE-1
+                NFOUND=IBDST-1
                 GOTO 390
               ENDIF
-              IF (IPRINT.GE.7) CALL PRBIS(FLDLO(INODE),FLDHI(INODE),
+              IF (IPRINT.GE.7) CALL PRBIS(FLDLO(IBDST),FLDHI(IBDST),
      1                                    FLDHLF,SVUNIT,'BISECTION')
               CALL SETEFV(FIELD,FLDHLF)
 C
@@ -966,7 +966,7 @@ C
 C
 C  LOOP OVER THIS NODE AND THE REST, UPDATING INITIAL VALUES FOR RANGE
 C  ENDPOINTS
-              DO I=INODE,NNODES
+              DO I=IBDST,NBDST
                 IVLO=ISVLO+(I-1)*N
                 IVHI=ISVHI+(I-1)*N
                 IF ((UPWARD .AND. (NODE.GE.NODHI+I)) .OR.
@@ -990,14 +990,14 @@ C  ENDPOINTS
               ENDDO
 C
 C
-              IF (UPWARD .AND. (NLO(INODE)-NHI(INODE).GT.1)) GOTO 510
-              IF (.NOT.UPWARD .AND. (NHI(INODE)-NLO(INODE).GT.1))
+              IF (UPWARD .AND. (NLO(IBDST)-NHI(IBDST).GT.1)) GOTO 510
+              IF (.NOT.UPWARD .AND. (NHI(IBDST)-NLO(IBDST).GT.1))
      1          GOTO 510
 C
-              IF ((UPWARD .AND. (NHI(INODE).GE.NLO(INODE))) .OR.
-     2            (.NOT.UPWARD .AND. (NLO(INODE).GE.NHI(INODE)))) THEN
-                WRITE(6,2500) NSEEK,INODE,
-     1                      (NLO(I),FLDLO(I),NHI(I),FLDHI(I),I=1,NNODES)
+              IF ((UPWARD .AND. (NHI(IBDST).GE.NLO(IBDST))) .OR.
+     2            (.NOT.UPWARD .AND. (NLO(IBDST).GE.NHI(IBDST)))) THEN
+                WRITE(6,2500) NSEEK,IBDST,
+     1                      (NLO(I),FLDLO(I),NHI(I),FLDHI(I),I=1,NBDST)
  2500           FORMAT(/'  ERROR IN NODE COUNT LOGIC.'/
      1                 '  CURRENTLY SEARCHING FOR NODE',I4,
      2                 ' (INDEX NUMBER',I3,')'/
@@ -1018,26 +1018,27 @@ C  PROBLEMS SOMETIMES ARISE BECAUSE THE NODE COUNT CHANGES AT
 C  AN ENERGY SLIGHTLY AWAY FROM THE ZERO IN THE EIGENVALUE.
 C  AVOID FURTHER BISECTION IF FLDLO AND FLDHI ARE TOO CLOSE
 C
-              IF (FLDHI(INODE)-FLDLO(INODE).GT.100.0D0*DTOL) THEN
+              IF (FLDHI(IBDST)-FLDLO(IBDST).GT.100.0D0*DTOL) THEN
                 IF (UPWARD .AND.
-     1              (EIGHI(INODE).LT.0.0D0 .OR. EIGLO(INODE).GT.0.0D0))
+     1              (EIGHI(IBDST).LT.0.0D0 .OR. EIGLO(IBDST).GT.0.0D0))
      2            GOTO 510
                 IF (.NOT.UPWARD .AND.
-     1              (EIGHI(INODE).GT.0.0D0 .OR. EIGLO(INODE).LT.0.0D0))
+     1              (EIGHI(IBDST).GT.0.0D0 .OR. EIGLO(IBDST).LT.0.0D0))
      2            GOTO 510
               ENDIF
 C
 C  START THE VWDB METHOD WITH A POINT EITHER SIDE
 C
-              IF (EIGHI(INODE)*EIGLO(INODE).GE.0.0D0) THEN
-                IF (FLDHI(INODE)-FLDLO(INODE).GT.100.0D0*DTOL) GOTO 510
-                WRITE(6,*) ' *** BISECTION TO FIND ZERO-CROSSING FOR ',
-     1                     'NODE',INODE,'HAS FAILED'
+              IF (EIGHI(IBDST)*EIGLO(IBDST).GE.0.0D0) THEN
+                IF (FLDHI(IBDST)-FLDLO(IBDST).GT.100.0D0*DTOL) GOTO 510
+                WRITE(6,*) ' *** BISECTION TO FIND EIGENVALUE '//
+     1                     'CROSSING ZERO IN MATCHING MATRIX FOR '//
+     2                     'BOUND STATE',IBDST,'HAS FAILED'
                 IF (IPRINT.GE.8) THEN
                   WRITE(6,*) ' LATEST VALUES FOR FIELDS AND',
      1                       ' EIGENVALUES ARE',
-     2                       FLDLO(INODE),EIGLO(INODE),
-     3                       FLDHI(INODE),EIGHI(INODE)
+     2                       FLDLO(IBDST),EIGLO(IBDST),
+     3                       FLDHI(IBDST),EIGHI(IBDST)
                 ENDIF
                 GOTO 500
               ENDIF
@@ -1046,23 +1047,23 @@ C  EIGENVECTOR FOR SMALLEST EIGENVALUE IN CURRENT SEARCH IS STORED AT
 C  POSITION IVSMLL (WHICH IS THE SAME AS IVLO - EVECS AT RANGE ENDPOINTS
 C  ARE NO LONGER NEEDED FOR THE CURRENT NODE)
 C
-              IVSMLL=ISVLO+(INODE-1)*N
-              IF (ABS(EIGHI(INODE)).LT.ABS(EIGLO(INODE))) THEN
-                FLDNOW=FLDHI(INODE)
-                EIGNOW=EIGHI(INODE)
+              IVSMLL=ISVLO+(IBDST-1)*N
+              IF (ABS(EIGHI(IBDST)).LT.ABS(EIGLO(IBDST))) THEN
+                FLDNOW=FLDHI(IBDST)
+                EIGNOW=EIGHI(IBDST)
                 ESMALL=EIGNOW
-                ISMALL=IHI(INODE)
-                IVHI=ISVHI+(INODE-1)*N
+                ISMALL=IHI(IBDST)
+                IVHI=ISVHI+(IBDST-1)*N
                 CALL DCOPY(N,X(IVHI),1,X(IVSMLL),1)
-                FLDLST=FLDLO(INODE)
-                EIGLST=EIGLO(INODE)
+                FLDLST=FLDLO(IBDST)
+                EIGLST=EIGLO(IBDST)
               ELSE
-                FLDNOW=FLDLO(INODE)
-                EIGNOW=EIGLO(INODE)
+                FLDNOW=FLDLO(IBDST)
+                EIGNOW=EIGLO(IBDST)
                 ESMALL=EIGNOW
-                ISMALL=ILO(INODE)
-                FLDLST=FLDHI(INODE)
-                EIGLST=EIGHI(INODE)
+                ISMALL=ILO(IBDST)
+                FLDLST=FLDHI(IBDST)
+                EIGLST=EIGHI(IBDST)
               ENDIF
 
               IF (IPRINT.GE.7) CALL PRBEND('VWDB METHOD')
@@ -1094,7 +1095,7 @@ C
 
                 NCALC=NCALC+1
                 IF (NCALC.GT.MXCALC) THEN
-                  NFOUND=INODE-1
+                  NFOUND=IBDST-1
                   GOTO 390
                 ENDIF
 
@@ -1200,12 +1201,12 @@ C
   600         CONTINUE
 
               IF (.NOT.CONVGE) THEN
-                WRITE(6,*) ' NODE',INODE,'NOT CONVERGED IN',NITER,
-     1                     'ITERATIONS'
+                WRITE(6,*) ' BOUND STATE',IBDST,'NOT CONVERGED IN',
+     1                     NITER,'ITERATIONS'
               ENDIF
 C
               CALL SETEFV(FIELD,FLDNEW)
-              ZCNTN=FLDNEW.LE.FLDHI(INODE) .AND. FLDNEW.GE.FLDLO(INODE)
+              ZCNTN=FLDNEW.LE.FLDHI(IBDST) .AND. FLDNEW.GE.FLDLO(IBDST)
               ECM=ERED/CM2RU-EREF
 
               IF (IBDSUM.GT.0)
@@ -1223,11 +1224,11 @@ C
               IF (IPRINT.GE.6) CALL PRLAST(DE,SVUNIT)
               IF (IPRINT.GE.8) CALL PRLOC(TITIME-TNTIME)
 
-              EVAL(INODE,1)=FLDNEW
+              EVAL(IBDST,1)=FLDNEW
 C
 cINOLLS include 'field/pvmdat8.f'
 C
-              NCHECK(INODE)=NSEEK
+              NCHECK(IBDST)=NSEEK
 C
               IF (WAVE) THEN
                 CALL WVINFO(JTOT,IB,NSEEK,N,NQN,NSTATE,X(IXJSTT),
@@ -1280,7 +1281,7 @@ C  RELEASE STORAGE USED FOR STORING EIGENVECTORS OF SMALLEST EIGENVALUES
             IXNEXT=IC2
 C
   390       IF (NCALC.GE.MXCALC) THEN
-              NNODES=NFOUND
+              NBDST=NFOUND
               IF (IPRINT.GE.1) WRITE(6,2390) MXCALC,NFOUND
  2390         FORMAT(/'  *** WARNING. MXCALC =',I5,' REACHED AFTER ONLY'
      1               ,I5,' NODES FOUND.')

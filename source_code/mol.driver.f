@@ -223,7 +223,7 @@ C  RMAX IS THE OUTER RADIUS TO WHICH THE PROPAGATION MUST EXTEND
 C
       DATA CURRWD /'       ','(8-BYTE)'/
       DATA CTIME /'         '/,CDATE /'           '/
-      DATA IPROGM /17/, PDATE /'2019.01'/
+      DATA IPROGM /19/, PDATE /'2019.1'/
       DATA PLUR /' ','S'/
       DATA CDRIVE /'M'/
       DATA PTIME  /.FALSE./
@@ -1408,7 +1408,7 @@ C
                 CALL HEADER(X(ISSI),X(ISK),N,NSQ,X(ISP),X(ISVL),X(ISIV),
      1                      X(ISEINT),X(ISCENT),X(IT1),MXLAM,NPOTL,
      2                      ICODE,ISAV,ERED,EFIRST,EP2RU,CM2RU,RSCALE,
-     3                      IPRINT)
+     3                      RMIN,IPRINT)
 C
                 EREDMX=ERED
                 IF (ITYPE.NE.8 .AND. ISCRU.NE.0) EREDMX=EMX+EREF*CM2RU
@@ -1631,37 +1631,8 @@ C
 C  LOW-ENERGY CRITERION USED HERE SHOULD CORRESPOND TO CRITERION
 C  USED IN OUTPUT TO DECIDE WHETHER TO CALCULATE SCATTERING LENGTH
 C
-                IF (INRG.EQ.1) THEN
-                  XK2REF=CM2RU*ENERGY(INRG)
-                  SCLREF=DBLE(SCLEN)
-                ELSE
-                  XK2NOW=CM2RU*ENERGY(INRG)
-                  SCLNOW=DBLE(SCLEN)
-                  IF (IPRINT.GE.1  .AND. XK2NOW.LT.AWVMAX**2 .AND.
-     1                                   XK2REF.LT.AWVMAX**2) THEN
-                    RNGEFF=2.D0*(1.D0/SCLREF-1.D0/SCLNOW)/
-     1                     (XK2NOW-XK2REF)
-                    SCLZER=1.D0/SCLREF+0.5D0*XK2REF*RNGEFF
-                    IF (LENEFV.GT.0) THEN
-                      WRITE(6,2700) JFIELD,ICHAN
-                    ELSE
-                      WRITE(6,2701) ICHAN
-                    ENDIF
-                    WRITE(6,2710) '1/A',INRG,RNGEFF,TRIM(RUNAME),
-     1                            '1/A',SCLZER,TRIM(RUNAME)//'^-1'
-                    RNGEFF=2.D0*(SCLNOW-SCLREF)/(XK2NOW-XK2REF)
-                    SCLZER=SCLREF-0.5D0*XK2REF*RNGEFF
-                    RNGEFF=RNGEFF/SCLZER**2
-                    WRITE(6,2710) ' A ',INRG,RNGEFF,TRIM(RUNAME),
-     1                            '  A',SCLZER,TRIM(RUNAME)
- 2700               FORMAT(/'  EFFECTIVE RANGE AT EFV SET ',I3,
-     1                      ' FOR CHANNEL',I4,':')
- 2701               FORMAT(/'  EFFECTIVE RANGE  FOR CHANNEL',I4,':')
- 2710               FORMAT('  FROM EXPANSION OF ',A3,
-     2                     ' AT ENERGIES 1 AND',I4,' IS',G13.5,1X,A,
-     3                     ' WITH ',A3,'(K=0) =',G19.10,1X,A)
-                  ENDIF
-                ENDIF
+                CALL ERANGE(INRG,ICHAN,JFIELD,LENEFV,X(ISNB),
+     1                      X(ISWVEC),SCLEN,AWVMAX,RUNAME,IPRINT)
 C
                 IF (IECONV(IFXE).GE.0 .AND. NLPRBR.GT.0) THEN
 C

@@ -370,11 +370,11 @@ C  SET UP CHARACTER VARIABLES FOR CONSTRUCTING FORMAT STATEMENTS
      1     "X,1P,"//CNUM//",0P,"//TRIM(C2)//"X))"
       F401="(/2X,'EFV SET ',I5,':',2X,"//TRIM(CNNZRO)//
      1     "(A,1X,A1,1X,1P,"//CNUM//",0P,A1,A:,';',2X))"
-      FINI="('  NODE',I6,1P,', ',"//TRIM(CLEN)//"(A"//
+      FINI="('  STATE',I6,1P,', ',"//TRIM(CLEN)//"(A"//
      1     ",1X,"//CNUM//",1X),': BINDING ENERGY ',"//CNUM//
      2     ",' CM-1 = ',G20.13,1X,A8"
       IF (LENVAR.EQ.0) THEN
-        FINI="('  NODE',I6,1P,', : BINDING ENERGY ',"//CNUM//
+        FINI="('  STATE',I6,1P,', : BINDING ENERGY ',"//CNUM//
      1       ",' CM-1 = ',G20.13,1X,A8"
       ENDIF
       F500=TRIM(FINI)//")"

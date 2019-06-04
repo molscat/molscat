@@ -1,0 +1,217 @@
+  -- BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND --
+ |                                                                            |
+ |          Bound states of interacting pairs of atoms and molecules          |
+ |                                                                            |
+ |              Copyright (C) 2019 J. M. Hutson & C. R. Le Sueur              |
+ |                                                                            |
+ |                               Version 2019.1                               |
+ |                                                                            |
+ |                       Run on 30 May 2019   at 11:52:21                     |
+ |                                                                            |
+  -- BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND --
+
+
+  This program is free software: you can redistribute it and/or modify it under
+  the terms of the GNU General Public License, version 3, as published by
+  the Free Software Foundation.
+
+  Publications resulting from the use of this program should refer to
+  J. M. Hutson & C. R. Le Sueur, BOUND computer code 2019.1              
+  or to the published paper in Computer Physics Communications when available.
+
+
+  USING CODATA 2018 RECOMMENDED VALUES OF FUNDAMENTAL PHYSICAL CONSTANTS
+
+  MEMORY ALLOCATED TO MAIN WORKING ARRAY IS   1000000 (8-BYTE) WORDS (    7.63 MB)
+
+  PRINT LEVEL (IPRINT) =  2
+
+  REDUCED MASS FOR INTERACTION =   1.000000000 ATOMIC MASS UNITS (DALTONS)
+
+  NO SCRATCH FILE SPECIFIED BY ISCRU PARAMETER: FULL CALCULATION WILL BE DONE AT EACH ENERGY
+
+  ======================================================================================================================
+
+  INTERACTION TYPE IS    LINEAR ROTOR - LINEAR ROTOR.  
+
+  PAIR LEVEL QUANTUM NUMBERS TAKEN FROM JLEVEL INPUT.  NLEVEL =  3
+
+  ENERGY LEVELS OF ROTOR 1 OBTAINED FROM B(E) =   60.800000
+
+  ENERGY LEVELS OF ROTOR 2 OBTAINED FROM B(E) =   60.800000
+
+  QUANTUM NUMBERS FOR INTERACTING PAIR:
+  EACH PAIR STATE IS LABELLED BY  3 QUANTUM NUMBERS
+  EACH CHANNEL FUNCTION IS FORMED BY COMBINING A PAIR STATE WITH A VALUE OF L.
+  THE RESULTING BASIS SET IS ASYMPTOTICALLY DIAGONAL.
+
+  PAIR STATE    - PAIR STATE QUANTUM NUMBERS -   PAIR LEVEL     PAIR ENERGY (CM-1)
+                       J1        J2       J12
+        1               0         1         1       1           121.6000000
+        2               0         3         3       2           729.6000000
+        3               2         1         1       3           486.4000000
+        4               2         1         2       3           486.4000000
+        5               2         1         3       3           486.4000000
+
+  ======================================================================================================================
+  GENERAL-PURPOSE POTENL ROUTINE (MAY 18)
+
+  ANGULAR DEPENDENCE OF POTENTIAL EXPANDED IN TERMS OF
+  CONTRACTED NORMALISED SPHERICAL HARMONICS,
+  SUM(M1,M2,M) C(L1,M1,L2,M2,L,M) Y(L1,M1) Y(L2,M2) Y(L,M)
+  SEE GREEN, J. CHEM. PHYS. 62, 2271 (1975)
+
+  INTERACTION POTENTIAL FOR EXPANSION TERM NUMBER   1
+  WHICH HAS LAM1 =   0,  LAM2 =   0,  LAM =   0
+
+           FARRAR-LEE MSV H2-H2 POTENTIAL /     RM=3.49, EPSIL=24.17   SET INTERNALLY.
+                    FOR R LESS THAN  1.0754, MORSE BETA =   6.5000
+                    FOR R GREATER THAN  1.4000, VAN DER WAALS C6, C8 =   1.32601   0.29375 (EPSIL/RM**N).
+                    CUBIC SPLINE COEFFICIENTS, TO INCREASING POWERS OF R, ARE AS FOLLOWS
+                          -0.68294444E+01  0.72113010E+01 -0.76899426E+00 -0.71252210E+00
+
+  INTERACTION POTENTIAL FOR EXPANSION TERM NUMBER   2
+  WHICH HAS LAM1 =   2,  LAM2 =   0,  LAM =   2
+
+           FARRAR-LEE MSV H2-H2 POTENTIAL /     RM=3.49, EPSIL=24.17   SET INTERNALLY.
+                ANISOTROPIC TERM IS .14/5.0 TIMES ISOTROPIC TERM
+                    FOR R LESS THAN  1.0754, MORSE BETA =   6.5000
+                    FOR R GREATER THAN  1.4000, VAN DER WAALS C6, C8 =   1.32601   0.29375 (EPSIL/RM**N).
+                    CUBIC SPLINE COEFFICIENTS, TO INCREASING POWERS OF R, ARE AS FOLLOWS
+                          -0.68294444E+01  0.72113010E+01 -0.76899426E+00 -0.71252210E+00
+
+  INTERACTION POTENTIAL FOR EXPANSION TERM NUMBER   3
+  WHICH HAS LAM1 =   0,  LAM2 =   2,  LAM =   2
+
+           FARRAR-LEE MSV H2-H2 POTENTIAL /     RM=3.49, EPSIL=24.17   SET INTERNALLY.
+                ANISOTROPIC TERM IS .14/5.0 TIMES ISOTROPIC TERM
+                    FOR R LESS THAN  1.0754, MORSE BETA =   6.5000
+                    FOR R GREATER THAN  1.4000, VAN DER WAALS C6, C8 =   1.32601   0.29375 (EPSIL/RM**N).
+                    CUBIC SPLINE COEFFICIENTS, TO INCREASING POWERS OF R, ARE AS FOLLOWS
+                          -0.68294444E+01  0.72113010E+01 -0.76899426E+00 -0.71252210E+00
+
+  INTERACTION POTENTIAL FOR EXPANSION TERM NUMBER   4
+  WHICH HAS LAM1 =   2,  LAM2 =   2,  LAM =   4
+
+           QUADRUPOLE-QUADRUPOLE LONG-RANGE W/ Q=.662 BUCKINGHAM.
+
+  POTENL PROCESSING FINISHED.
+
+  POTENTIAL RETURNED IN UNITS OF EPSIL  =  24.170000     CM-1
+        CODED WITH R IN UNITS OF RM     =  3.4900000     ANGSTROM
+
+  ALL LENGTHS ARE IN UNITS OF RM (  3.49000000 ANGSTROM ) UNLESS OTHERWISE STATED
+
+  INTERACTION MATRIX USES   4 BLOCKS OF VL ARRAY FOR R-DEPENDENT TERMS IN POTENTIAL
+
+  ======================================================================================================================
+
+  PROPAGATION METHODS FOR COUPLED EQUATIONS SPECIFIED BY IPROPS =  6 AND IPROPL =  9
+
+  COUPLED EQUATIONS WILL BE PROPAGATED TOWARDS RMATCH IN 2 SEGMENTS
+
+  PROPAGATION RANGES ARE CONTROLLED BY VARIABLES RMIN, RMATCH AND RMAX, WITH INPUT VALUES
+  RMIN =  0.4300     RMATCH =   5.000     RMAX =   12.00    
+  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+  SEGMENT 1 WILL BE PROPAGATED OUTWARDS
+
+  FROM RMIN =      0.43 TO RMATCH =      5.00
+
+  COUPLED EQUATIONS SOLVED BY DIABATIC MODIFIED LOG-DERIVATIVE PROPAGATOR OF MANOLOPOULOS
+
+  PROPAGATION STEP SIZE DETERMINED USING DR =  4.000E-02
+  STEP SIZE CONSTANT THROUGHOUT RANGE
+  STEP SIZE MAY BE ADJUSTED SLIGHTLY SO THAT RANGE IS A WHOLE NUMBER OF STEPS
+
+  LOG-DERIVATIVE MATRIX INITIALISED IN THE LOCAL EIGENBASIS AT RMIN IN THE OUTWARD PROPAGATION PART
+  LOCALLY CLOSED CHANNELS INITIALISED WITH A WKB BOUNDARY CONDITION
+  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+  SEGMENT 2 WILL BE PROPAGATED  INWARDS
+
+  TO RMATCH =      5.00 FROM RMAX =     12.00
+
+  COUPLED EQUATIONS SOLVED BY VARIABLE-STEP AIRY PROPAGATOR.
+  PUBLICATIONS RESULTING FROM THE USE OF THIS PROPAGATOR SHOULD REFERENCE
+  M. H. ALEXANDER AND D. E. MANOLOPOULOS,  J. CHEM. PHYS. 86, 2044 (1987).
+
+  INITIAL STEP SIZE TAKEN FROM SIZE OF FINAL STEP OF SHORT-RANGE PROPAGATION
+  STEP SIZES ADJUSTED TO MAINTAIN APPROXIMATE ACCURACY VIA PERTURBATION THEORY
+  WITH TOLHI =  1.00E-04 AND POWR =   3.0    
+
+  LOG-DERIVATIVE MATRIX INITIALISED IN THE LOCAL EIGENBASIS AT RMAX IN THE INWARD PROPAGATION PART
+  LOCALLY CLOSED CHANNELS INITIALISED WITH A WKB BOUNDARY CONDITION
+  LOCALLY  OPEN  CHANNELS INITIALISED WITH THE VALUE  0.000E+00
+
+  ======================================================================================================================
+
+  PROGRAM WILL ATTEMPT TO CONVERGE ON BOUND STATES AS A FUNCTION OF ENERGY
+
+  FOR EACH LEVEL, THE BISECTION METHOD WILL BE USED UNTIL THE VWDB METHOD OFFERS RELIABLE CONVERGENCE.
+
+  VWDB CONVERGENCE WILL TERMINATE WHEN THE STEP SIZE IS LESS THAN 1.00000E-07 CM-1    
+
+  INPUT ENERGY VALUES ASSUMED TO BE IN UNITS OF CM-1 BY DEFAULT.
+
+  PROGRAM WILL SEEK EIGENVALUES WITH GENERALISED NODE COUNTS FROM    0 TO  99999
+  LYING IN ENERGY RANGE   100.00     TO   121.59     CM-1    
+
+  ======================================================================================================================
+
+  TOTAL ANGULAR MOMENTUM JTOT RUNS FROM   0  TO     1  IN STEPS OF   1
+
+  EACH JTOT IS SPLIT INTO A MAXIMUM OF   2 SYMMETRY BLOCKS
+
+  INITIALIZATION DONE.  TIME WAS   0.00 CPU SECS.        26 WORDS OF STORAGE USED.
+
+  ======================== p-H2 + o-H2: potential of Zarur and Rabitz; coefficients from VSTAR =========================
+
+  *****************************  ANGULAR MOMENTUM JTOT  =   0   AND SYMMETRY BLOCK  =    1  ****************************
+
+  NO NODES FOUND AT EMAX =   121.5900000     CM-1. END SEARCH.
+
+  *****************************  ANGULAR MOMENTUM JTOT  =   0   AND SYMMETRY BLOCK  =    2  ****************************
+
+  NODE COUNT IMPLIES     0 STATES BELOW MINIMUM ENERGY =   100.0000000     CM-1  
+  NODE COUNT IMPLIES     1 STATES BELOW MAXIMUM ENERGY =   121.5900000     CM-1  
+
+  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+  SEARCHING FOR BOUND STATE NUMBER     1
+
+  CONVERGED ON STATE NUMBER     1 AT                              ENERGY =   120.7043669     CM-1  
+
+  *****************************  ANGULAR MOMENTUM JTOT  =   1   AND SYMMETRY BLOCK  =    1  ****************************
+
+  NODE COUNT IMPLIES     0 STATES BELOW MINIMUM ENERGY =   100.0000000     CM-1  
+  NODE COUNT IMPLIES     1 STATES BELOW MAXIMUM ENERGY =   121.5900000     CM-1  
+
+  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+  SEARCHING FOR BOUND STATE NUMBER     1
+
+  CONVERGED ON STATE NUMBER     1 AT                              ENERGY =   121.1536791     CM-1  
+
+  *****************************  ANGULAR MOMENTUM JTOT  =   1   AND SYMMETRY BLOCK  =    2  ****************************
+
+  NODE COUNT IMPLIES     0 STATES BELOW MINIMUM ENERGY =   100.0000000     CM-1  
+  NODE COUNT IMPLIES     1 STATES BELOW MAXIMUM ENERGY =   121.5900000     CM-1  
+
+  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+  SEARCHING FOR BOUND STATE NUMBER     1
+
+  CONVERGED ON STATE NUMBER     1 AT                              ENERGY =   119.6219102     CM-1  
+
+
+  -- BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND --
+ |                                                                            |
+ |          Bound states of interacting pairs of atoms and molecules          |
+ |                                                                            |
+ |              Copyright (C) 2019 J. M. Hutson & C. R. Le Sueur              |
+ |                                                                            |
+ |                               Version 2019.1                               |
+ |                                                                            |
+ |                    This run used       0.09 cpu secs and                   |
+ |                900 of the allocated   1000000 words of storage             |
+ |                                                                            |
+  -- BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND --

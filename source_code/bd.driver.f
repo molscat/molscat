@@ -167,7 +167,7 @@ C  LEVEL CONTAINED IN JLEVEL. (VALUE FOR ITYP=9 IS A DUMMY VALUE)
       DATA NJLQN/1,2,2,3,3,2,2,2,1/
 C
       DATA LABEL /'        '/
-      DATA IPROGM /17/, PDATE /'2019.01'/
+      DATA IPROGM /19/, PDATE /'2019.1'/
       DATA CDRIVE /'B'/
 C
 C  THE PHYSICAL CONSTANTS USED ARE COMBINED IN THE SINGLE NUMBER BFCT.
@@ -581,9 +581,9 @@ C  RESET VALUES READY FOR LOOP LATER ON
      2            '  CONVERGENCE WILL NOT BE ATTEMPTED')
         ELSE
           WRITE(6,1350) NODMIN,NODMAX,EMIN/EUNIT,EMAX/EUNIT,EUNAME
- 1350     FORMAT(/'  PROGRAM WILL SEEK EIGENVALUES WITH GENERALISED',
-     1            ' NODE COUNTS FROM',I5,' TO',I7/'  LYING IN ENERGY ',
-     2            'RANGE ',1PG12.5,' TO ',G12.5,1X,A)
+ 1350     FORMAT(/'  PROGRAM WILL SEEK STATES WITH NODE COUNTS FROM',
+     1            I5,' TO',I7/'  LYING IN ENERGY RANGE ',1PG12.5,
+     2            ' TO ',G12.5,1X,A)
         ENDIF
 
         NJLQN(9)=NQN-1
@@ -879,7 +879,7 @@ C
             IREAD=IWRITE
             IWRITE=.FALSE.
 
-            NNODES=MIN(NODHI-NODLO,MXNODE)
+            NBDST=MIN(NODHI-NODLO,MXNODE)
             IF (NODHI.EQ.NODLO) THEN
               IF (IPRINT.GE.3)
      1          WRITE(6,2410)
@@ -892,15 +892,15 @@ C  ALLOCATE STORAGE FOR EIGENVECTORS OF SMALLEST EIGENVALUE AT RANGE
 C  ENDPOINTS FOR EACH NODE
 C
             ISVLO=IC2             ! EVEC AT ELO
-            ISVHI=ISVLO+NNODES*N  ! EVEC AT EHI
-            IXNEXT=ISVHI+NNODES*N
+            ISVHI=ISVLO+NBDST*N  ! EVEC AT EHI
+            IXNEXT=ISVHI+NBDST*N
             IC3=IXNEXT
             CALL CHKSTR(NUSED)
 
 C
 C  LOOP OVER ALL NODES, SETTING UP INITIAL VALUES FOR RANGE ENDPOINTS
 C
-            DO I=1,NNODES
+            DO I=1,NBDST
 C
 C  IVLO AND IVHI ARE ADDRESSES FOR EVEC AT ELO AND EHI FOR CURRENT NODE
 C
@@ -926,25 +926,25 @@ C  NUMBER NODE WILL BE STORED IN EHI(NODE-NODLO) AND ELO(NODE-NODLO).
 C
 cINOLLS include 'bound/pvmdat7.f'
 C
-            DO 500 INODE=1,NNODES
+            DO 500 IBDST=1,NBDST
               NPROP=1
               TNTIME=TITIME
-              NSEEK=INODE+NODLO
+              NSEEK=IBDST+NODLO
               IF (NSEEK.LT.NODMIN .OR. NSEEK.GT.NODMAX) GOTO 500
-              IF (IPRINT.GE.2) CALL PRNDCT(INODE,NSEEK)
+              IF (IPRINT.GE.2) CALL PRNDCT(NSEEK)
 C
 cINOLLS include 'all/pvmdat5.f'
 C
 C  START BISECTION TO FIND THIS NODE
 C
-  510         EHALF=0.5D0*(ELO(INODE)+EHI(INODE))
+  510         EHALF=0.5D0*(ELO(IBDST)+EHI(IBDST))
               NCALC=NCALC+1
               IF (NCALC.GT.MXCALC) THEN
-                NFOUND=INODE-1
+                NFOUND=IBDST-1
                 GOTO 390
               ENDIF
-              SVMIN=(ELO(INODE)-EREF)/EUNIT
-              SVMAX=(EHI(INODE)-EREF)/EUNIT
+              SVMIN=(ELO(IBDST)-EREF)/EUNIT
+              SVMAX=(EHI(IBDST)-EREF)/EUNIT
               SVVAL=(EHALF-EREF)/EUNIT
 
               IF (IPRINT.GE.7) CALL PRBIS(SVMIN,SVMAX,SVVAL,SVUNIT,
@@ -969,7 +969,7 @@ C
 C
 C  LOOP OVER THIS NODE AND THE REST, UPDATING INITIAL VALUES FOR RANGE
 C  ENDPOINTS
-              DO I=INODE,NNODES
+              DO I=IBDST,NBDST
                 IVLO=ISVLO+(I-1)*N
                 IVHI=ISVHI+(I-1)*N
                 IF (NODE.GE.NODLO+I) THEN
@@ -991,13 +991,13 @@ C  ENDPOINTS
                 ENDIF
               ENDDO
 C
-              IF (NHI(INODE)-NLO(INODE).GT.1) GOTO 510
+              IF (NHI(IBDST)-NLO(IBDST).GT.1) GOTO 510
 C
-              IF (NHI(INODE).LE.NLO(INODE)) THEN
-                WRITE(6,2500) NSEEK,INODE,
-     1                       (NLO(I),ELO(I),NHI(I),EHI(I),I=1,NNODES)
+              IF (NHI(IBDST).LE.NLO(IBDST)) THEN
+                WRITE(6,2500) NSEEK,IBDST,
+     1                       (NLO(I),ELO(I),NHI(I),EHI(I),I=1,NBDST)
  2500           FORMAT(/'  ERROR IN NODE COUNT LOGIC.'/
-     1                 '  CURRENTLY SEARCHING FOR NODE',I4,
+     1                 '  CURRENTLY SEARCHING FOR BOUND STATE',I4,
      2                 ' (INDEX NUMBER',I3,')'/
      3                 '  NLO       ELO         NHI      EHI'/
      4                 (2(I5,F16.5)))
@@ -1016,20 +1016,21 @@ C  PROBLEMS SOMETIMES ARISE BECAUSE THE NODE COUNT CHANGES AT
 C  AN ENERGY SLIGHTLY AWAY FROM THE ZERO IN THE EIGENVALUE.
 C  AVOID FURTHER BISECTION IF EHI AND ELO ARE TOO CLOSE
 C
-              IF ((EIGHI(INODE).GT.0.0D0 .OR. EIGLO(INODE).LT.0.0D0)
+              IF ((EIGHI(IBDST).GT.0.0D0 .OR. EIGLO(IBDST).LT.0.0D0)
      1            .AND.
-     2            EHI(INODE)-ELO(INODE).GT.100.0D0*DTOL) GOTO 510
+     2            EHI(IBDST)-ELO(IBDST).GT.100.0D0*DTOL) GOTO 510
 C
 C  START THE VWDB METHOD WITH A POINT EITHER SIDE
 C
-              IF (EIGHI(INODE)*EIGLO(INODE).GE.0.0D0) THEN
-                IF (EHI(INODE)-ELO(INODE).GT.100.0D0*DTOL) GOTO 510
-                WRITE(6,*) ' *** BISECTION TO FIND ZERO-CROSSING FOR ',
-     1                     'NODE',INODE,'HAS FAILED'
+              IF (EIGHI(IBDST)*EIGLO(IBDST).GE.0.0D0) THEN
+                IF (EHI(IBDST)-ELO(IBDST).GT.100.0D0*DTOL) GOTO 510
+                WRITE(6,*) ' *** BISECTION TO FIND EIGENVALUE '//
+     1                     'CROSSING ZERO IN MATCHING MATRIX FOR '//
+     2                     'BOUND STATE',IBDST,'HAS FAILED'
                 IF (IPRINT.GE.8) THEN
                   WRITE(6,*) ' LATEST VALUES FOR ENERGIES AND ',
-     1                       'EIGENVALUES ARE',ELO(INODE),EIGLO(INODE),
-     2                                         EHI(INODE),EIGHI(INODE)
+     1                       'EIGENVALUES ARE',ELO(IBDST),EIGLO(IBDST),
+     2                                         EHI(IBDST),EIGHI(IBDST)
                 ENDIF
                 GOTO 500
               ENDIF
@@ -1038,23 +1039,23 @@ C  EIGENVECTOR FOR SMALLEST EIGENVALUE IN CURRENT SEARCH IS STORED AT
 C  POSITION IVSMLL (WHICH IS THE SAME AS IVLO - EVECS AT RANGE ENDPOINTS
 C  NO LONGER NEEDED FOR THE CURRENT NODE)
 C
-              IVSMLL=ISVLO+(INODE-1)*N
-              IF (ABS(EIGHI(INODE)).LT.ABS(EIGLO(INODE))) THEN
-                ENOW=EHI(INODE)
-                EIGNOW=EIGHI(INODE)
+              IVSMLL=ISVLO+(IBDST-1)*N
+              IF (ABS(EIGHI(IBDST)).LT.ABS(EIGLO(IBDST))) THEN
+                ENOW=EHI(IBDST)
+                EIGNOW=EIGHI(IBDST)
                 ESMALL=EIGNOW
-                ISMALL=IHI(INODE)
-                IVHI=ISVHI+(INODE-1)*N
+                ISMALL=IHI(IBDST)
+                IVHI=ISVHI+(IBDST-1)*N
                 CALL DCOPY(N,X(IVHI),1,X(IVSMLL),1)
-                ELST=ELO(INODE)
-                EIGLST=EIGLO(INODE)
+                ELST=ELO(IBDST)
+                EIGLST=EIGLO(IBDST)
               ELSE
-                ENOW=ELO(INODE)
-                EIGNOW=EIGLO(INODE)
+                ENOW=ELO(IBDST)
+                EIGNOW=EIGLO(IBDST)
                 ESMALL=EIGNOW
-                ISMALL=ILO(INODE)
-                ELST=EHI(INODE)
-                EIGLST=EIGHI(INODE)
+                ISMALL=ILO(IBDST)
+                ELST=EHI(IBDST)
+                EIGLST=EIGHI(IBDST)
               ENDIF
 
               IF (IPRINT.GE.7) CALL PRBEND('VWDB METHOD')
@@ -1089,7 +1090,7 @@ C
 C
                 NCALC=NCALC+1
                 IF (NCALC.GT.MXCALC) THEN
-                  NFOUND=INODE-1
+                  NFOUND=IBDST-1
                   GOTO 390
                 ENDIF
 
@@ -1151,11 +1152,11 @@ C
   600         CONTINUE
 
               IF (.NOT.CONVGE) THEN
-                WRITE(6,*) ' NODE',INODE,'NOT CONVERGED IN',NITER,
-     1                     'ITERATIONS'
+                WRITE(6,*) ' BOUND STATE',IBDST,'NOT CONVERGED IN',
+     1                     NITER,'ITERATIONS'
               ENDIF
 C
-              ZCNTN=(ENEW.LE.EHI(INODE) .AND. ENEW.GE.ELO(INODE))
+              ZCNTN=(ENEW.LE.EHI(IBDST) .AND. ENEW.GE.ELO(IBDST))
               ECM=ENEW-EREF
 
               IF (IBDSUM.GT.0)
@@ -1173,11 +1174,11 @@ C
               IF (IPRINT.GE.6) CALL PRLAST(DE/EUNIT,SVUNIT)
               IF (IPRINT.GE.8) CALL PRLOC(TITIME-TNTIME)
 C
-              EVAL(INODE,1)=ENEW
+              EVAL(IBDST,1)=ENEW
 C
 cINOLLS include 'bound/pvmdat8-v15.f'
 C
-              NCHECK(INODE)=NSEEK
+              NCHECK(IBDST)=NSEEK
 C
               IF (WAVE) THEN
                 CALL WVINFO(JTOT,IB,NSEEK,N,NQN,NSTATE,X(IXJSTT),
@@ -1228,7 +1229,7 @@ C  RELEASE STORAGE USED FOR STORING EIGENVECTORS OF SMALLEST EIGENVALUES
             IXNEXT=IC2
 C
   390       IF (NCALC.GE.MXCALC) THEN
-              NNODES=NFOUND
+              NBDST=NFOUND
               IF (IPRINT.GE.1) WRITE(6,2390) MXCALC,NFOUND
  2390         FORMAT(/'  *** WARNING. MXCALC =',I5,' REACHED AFTER ONLY'
      1               ,I5,' NODES FOUND.')
@@ -1268,7 +1269,7 @@ C  CALCULATIONS)
                 IF (IPERT.EQ.0 .AND. ICONV.EQ.0) GOTO 5200
                 ISTOR=ISTOR+1
 C
-                IF (ICONV.GT.0 .AND. NNODES.GT.0) THEN
+                IF (ICONV.GT.0 .AND. NBDST.GT.0) THEN
                   IF (ICON.EQ.1) THEN
                     FAC=2D0
                     DRS=DRS*FAC
@@ -1298,9 +1299,9 @@ C
 cINOLLS include 'bound/pvmdat10.f'
 C
 C  BEGINNING OF LOOP FOR PERTURBATION CALCULATIONS / CONVERGENCE TESTING
-                DO 5500 INODE=1,NNODES
+                DO 5500 IBDST=1,NBDST
                   NPROP=1
-                  NSEEK=INODE+NODLO
+                  NSEEK=IBDST+NODLO
                   IF (NSEEK.LT.NODMIN .OR. NSEEK.GT.NODMAX) GOTO 5500
 C
 cINOLLS include 'bound/pvmdat6.f'
@@ -1311,7 +1312,7 @@ C
                   IWRITE=ISCRU.GT.0
 C                 IF (IWRITE) REWIND ISCRU
                   DE=100.0D0*DTOL
-                  ENOW=EVAL(INODE,1)-DE
+                  ENOW=EVAL(IBDST,1)-DE
                   SVVAL=(ENOW-EREF)/EUNIT
                   IF (IPRINT.GE.8) CALL PRABSE(ENOW,EREF,EUNIT,SVUNIT)
                   ERED=ENOW*CM2RU
@@ -1438,8 +1439,8 @@ C
                     NSEEK=NODLST+1
                   ENDIF
 C
-                  IF (NSEEK.NE.NCHECK(INODE))
-     1              WRITE(6,6510) NSEEK,NCHECK(INODE)
+                  IF (NSEEK.NE.NCHECK(IBDST))
+     1              WRITE(6,6510) NSEEK,NCHECK(IBDST)
  6510             FORMAT(/'  *** WARNING. THE FOLLOWING EIGENVALUE ',
      1                   'DOES NOT HAVE THE SAME NODE COUNT (',I5,')'/
      2                   6X,'AS THE REFERENCE CALCULATION',' (',I5,')'/
@@ -1448,12 +1449,12 @@ C
      5                   'VALUE OF RMATCH OR A SMALLER DR MAY GIVE ',
      6                   'BETTER RESULTS.')
 C
-                  EVAL(INODE,ISTOR)=ENEW
+                  EVAL(IBDST,ISTOR)=ENEW
                   IF (ICONV.EQ.0) THEN
 C
 C  CALCULATE EXPECTATION VALUE
 C
-                    EXPV=(ENEW-EVAL(INODE,1))/(DELTAN*EP2CM)
+                    EXPV=(ENEW-EVAL(IBDST,1))/(DELTAN*EP2CM)
 C
 cINOLLS   include 'bound/pvmdat9.f'
 C
@@ -1485,9 +1486,9 @@ C
                       ELSE
                         IRICH=4
                       ENDIF
-                      RDELTA=ENEW-EVAL(INODE,1)
+                      RDELTA=ENEW-EVAL(IBDST,1)
                       RFAC=FAC**IRICH-1.0D0
-                      EXTRA=EVAL(INODE,1)-RDELTA/RFAC
+                      EXTRA=EVAL(IBDST,1)-RDELTA/RFAC
                       SVEXT=(EXTRA-EREF)/EUNIT
                       IF (IPRINT.GE.1) THEN
                         IF (DRL.NE.unset) THEN
@@ -1495,11 +1496,11 @@ C
                         ELSE
                           WRITE(6,8010) SVVAL,TRIM(SVUNIT),DRS
                         ENDIF
-                        WRITE(6,8020) INODE,IRICH,IPROPS,SVEXT,
+                        WRITE(6,8020) IBDST,IRICH,IPROPS,SVEXT,
      1                                TRIM(SVUNIT)
  8010                   FORMAT(/'  ENERGY CONVERGED: E = ',1PG17.10,1X,
      1                         A,' FOR DR = ',G10.3:,' AND ',G10.3)
- 8020                   FORMAT(/'  FOR INODE =',I5,', RICHARDSON',
+ 8020                   FORMAT(/'  FOR BOUND STATE',I4,', RICHARDSON',
      1                         ' EXTRAPOLATION BASED ON ERROR ',
      2                         'PROPORTIONAL TO DR**',I1,
      3                         ' FOR IPROPS = ',I2/
@@ -1509,13 +1510,13 @@ C
 
                       ENDIF
                       IF (ICONV.EQ.1) THEN
-                        EXTRAP(INODE)=EXTRA
+                        EXTRAP(IBDST)=EXTRA
                         IF (IPRINT.GE.1) WRITE(6,8030)
  8030                   FORMAT('  THIS IS THE BEST AVAILABLE ',
      1                         'EXTRAPOLATED VALUE FROM THIS SET OF ',
      2                         'CALCULATIONS.')
                       ELSE
-                        DIF=EXTRA-EXTRAP(INODE)
+                        DIF=EXTRA-EXTRAP(IBDST)
                         IF (IPRINT.GE.1) WRITE(6,8040) DIF
  8040                   FORMAT('  THIS DIFFERS FROM FIRST EXTRAPOLATED',
      1                         ' VALUE BY ',1PG12.4/'  SUGGESTING ',
@@ -1527,25 +1528,25 @@ C
 C  ARRIVE HERE IF ICON=1 AND IPERT>0:
 C  RICHARDSON EXTRAPOLATION FOR EXPECTATION VALUES
 C
-                      EXPV=(ENEW-EVAL(INODE,ICONV+1))/
+                      EXPV=(ENEW-EVAL(IBDST,ICONV+1))/
      1                     (DELTAN*EUNIT*EP2CM)
                       JREF=1+IPERT*(NCONV+1)
-                      EXP0=(EVAL(INODE,JREF)-EVAL(INODE,1))/
+                      EXP0=(EVAL(IBDST,JREF)-EVAL(IBDST,1))/
      1                     (DELTAN*EUNIT*EP2CM)
                       IRICH=IMGSEL !4
                       RDELTA=EXPV-EXP0
                       RFAC=FAC**IRICH-1.0D0
                       EXTRA=EXP0-RDELTA/RFAC
                       IF (IPRINT.GE.1) THEN
-                        WRITE(6,8110) INODE,IRICH,IPROPS
+                        WRITE(6,8110) IBDST,IRICH,IPROPS
                         IF (DRL.NE.unset) THEN
                           WRITE(6,8120) IPERTN,EXPV,DRS,DRL,EXTRA
                         ELSE
                           WRITE(6,8130) IPERTN,EXPV,DRS,EXTRA
                         ENDIF
- 8110                   FORMAT(/'  FOR INODE = ',I5,', RICHARDSON ',
-     1                         'EXTRAPOLATION BASED ON ERROR ',
-     2                         'PROPORTIONAL TO DR**',I1,
+ 8110                   FORMAT(/'  FOR BOUND STATE ',I4,
+     1                         ', RICHARDSON EXTRAPOLATION BASED ON ',
+     2                         'ERROR PROPORTIONAL TO DR**',I1,
      3                         ' FOR IPROPS = ',I2)
  8120                   FORMAT('  AND <POT(',I2,')> = ',1PG13.6,
      1                         ' FOR DR = ',G10.3,' AND ',G10.3,
@@ -1559,10 +1560,10 @@ C
                         ENDIF
                       ENDIF
                       IF (ICONV.EQ.1) THEN
-                        EXTRAV(INODE,IPERT)=EXTRA
+                        EXTRAV(IBDST,IPERT)=EXTRA
                         IF (IPRINT.GE.1) WRITE(6,8030)
                       ELSE
-                        DIF=EXTRA-EXTRAV(INODE,IPERT)
+                        DIF=EXTRA-EXTRAV(IBDST,IPERT)
                         IF (IPRINT.GE.1) WRITE(6,8040) DIF
                       ENDIF
                     ENDIF
@@ -1573,26 +1574,26 @@ C  NO SENSIBLE EXTRAPOLATION IS POSSIBLE:
 C  JUST CALCULATE DIFFERENCES
 C
                     IF (IPERT.EQ.0) THEN
-                      RDELTA=ENEW-EVAL(INODE,1)
+                      RDELTA=ENEW-EVAL(IBDST,1)
                       IF (IPRINT.GE.1)
-     1                  WRITE(6,9010) INODE,RMNINT,RMXINT,
+     1                  WRITE(6,9010) IBDST,RMNINT,RMXINT,
      2                                (ENEW-EREF)/EUNIT,
      3                                EUNAME,RDELTA/EUNIT,EUNAME
- 9010                 FORMAT('  FOR INODE =',I4,', CALCULATION WITH ',
-     1                       'RMIN = ',F6.3,' AND RMAX = ',1PG10.3,
+ 9010                 FORMAT('  FOR BOUND STATE',I4,', CALCULATION ',
+     1                       'WITH RMIN = ',F6.3,' AND RMAX = ',1PG10.3,
      2                       ' GIVES E = ',G17.10,1X,A/'  THIS ',
      3                       'DIFFERS FROM REFERENCE VALUE BY ',
      4                       43X,G17.10,1X,A)
                     ELSE
-                      EXPV=(ENEW-EVAL(INODE,ICONV+1))/
+                      EXPV=(ENEW-EVAL(IBDST,ICONV+1))/
      1                     (DELTAN*EUNIT*EP2CM)
                       JREF=1+IPERT*(NCONV+1)
-                      EXP0=(EVAL(INODE,JREF)-EVAL(INODE,1))/
+                      EXP0=(EVAL(IBDST,JREF)-EVAL(IBDST,1))/
      1                     (DELTAN*EUNIT*EP2CM)
                       IF (IPRINT.GE.1) THEN
-                        WRITE(6,9020) INODE,RMNINT,RMXINT,IPERTN,
+                        WRITE(6,9020) IBDST,RMNINT,RMXINT,IPERTN,
      1                                EXPV
- 9020                   FORMAT('  FOR INODE = ',I5,', FINITE ',
+ 9020                   FORMAT('  FOR BOUND STATE',I4,', FINITE ',
      1                         'DIFFERENCE CALCULATION WITH RMIN = ',
      2                         F6.3,' AND RMAX = ',F6.3/
      3                         '  GIVES <POT(',I2,')> = ',43X,1PG13.6)

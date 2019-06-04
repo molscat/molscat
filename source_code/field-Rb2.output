@@ -1,0 +1,553 @@
+  -- FIELD ------ FIELD ------ FIELD ------ FIELD ------ FIELD ------ FIELD --
+ |                                                                            |
+ |          Bound states of interacting pairs of atoms and molecules          |
+ |                      as a function of external field                       |
+ |                                                                            |
+ |              Copyright (C) 2019 J. M. Hutson & C. R. Le Sueur              |
+ |                                                                            |
+ |                               Version 2019.1                               |
+ |                                                                            |
+ |                       Run on 30 May 2019   at 11:55:24                     |
+ |                                                                            |
+  -- FIELD ------ FIELD ------ FIELD ------ FIELD ------ FIELD ------ FIELD --
+
+
+  This program is free software: you can redistribute it and/or modify it under
+  the terms of the GNU General Public License, version 3, as published by
+  the Free Software Foundation.
+
+  Publications resulting from the use of this program should refer to
+  J. M. Hutson & C. R. Le Sueur, FIELD computer code 2019.1              
+  or to the published paper in Computer Physics Communications when available.
+
+
+  USING CODATA 2018 RECOMMENDED VALUES OF FUNDAMENTAL PHYSICAL CONSTANTS
+
+  MEMORY ALLOCATED TO MAIN WORKING ARRAY IS   1000000 (8-BYTE) WORDS (    7.63 MB)
+
+  PRINT LEVEL (IPRINT) =  5
+
+  REDUCED MASS FOR INTERACTION =  42.455894869 ATOMIC MASS UNITS (DALTONS)
+
+  ======================================================================================================================
+  ATOM - ATOM WITH NUC SP + MAG FL
+
+
+  ATOMS  WITH S = 1/2,  MU_S   =    2.002319 MU_B
+              I = 5/2,  MU_NUC =   -0.000294 MU_B
+         HYPERFINE SPLITTING =    3.035732, COUPLING CONST =    1.011911 GHZ
+
+  L UP TO    2
+  SPIN-SPIN TERM INCLUDED
+
+  INTERACTION TYPE IS  ATOM - ATOM WITH NUC SP + MAG FL
+
+  QUANTUM NUMBERS FOR INTERACTING PAIR:
+  THE BASIS FUNCTIONS ARE LABELLED BY A SET OF   4 PAIR STATE QUANTUM NUMBERS AND A VALUE OF L.
+  THE RESULTING BASIS SET IS ASYMPTOTICALLY NON-DIAGONAL.
+
+  THE SETS OF PAIR STATE QUANTUM NUMBERS ARE:
+
+      SET       ------ PAIR STATE QUANTUM NUMBERS ------
+                    2*MSA     2*MIA     2*MSB     2*MIB
+        1              -1        -5        -1        -5
+        2              -1        -3        -1        -5
+        3              -1        -3        -1        -3
+        4              -1        -1        -1        -5
+        5              -1        -1        -1        -3
+        6              -1        -1        -1        -1
+        7              -1         1        -1        -5
+        8              -1         1        -1        -3
+        9              -1         1        -1        -1
+       10              -1         1        -1         1
+       11              -1         3        -1        -5
+       12              -1         3        -1        -3
+       13              -1         3        -1        -1
+       14              -1         3        -1         1
+       15              -1         3        -1         3
+       16              -1         5        -1        -5
+       17              -1         5        -1        -3
+       18              -1         5        -1        -1
+       19              -1         5        -1         1
+       20              -1         5        -1         3
+       21              -1         5        -1         5
+       22               1        -5        -1        -5
+       23               1        -5        -1        -3
+       24               1        -5        -1        -1
+       25               1        -5        -1         1
+       26               1        -5        -1         3
+       27               1        -5        -1         5
+       28               1        -5         1        -5
+       29               1        -3        -1        -5
+       30               1        -3        -1        -3
+       31               1        -3        -1        -1
+       32               1        -3        -1         1
+       33               1        -3        -1         3
+       34               1        -3        -1         5
+       35               1        -3         1        -5
+       36               1        -3         1        -3
+       37               1        -1        -1        -5
+       38               1        -1        -1        -3
+       39               1        -1        -1        -1
+       40               1        -1        -1         1
+       41               1        -1        -1         3
+       42               1        -1        -1         5
+       43               1        -1         1        -5
+       44               1        -1         1        -3
+       45               1        -1         1        -1
+       46               1         1        -1        -5
+       47               1         1        -1        -3
+       48               1         1        -1        -1
+       49               1         1        -1         1
+       50               1         1        -1         3
+       51               1         1        -1         5
+       52               1         1         1        -5
+       53               1         1         1        -3
+       54               1         1         1        -1
+       55               1         1         1         1
+       56               1         3        -1        -5
+       57               1         3        -1        -3
+       58               1         3        -1        -1
+       59               1         3        -1         1
+       60               1         3        -1         3
+       61               1         3        -1         5
+       62               1         3         1        -5
+       63               1         3         1        -3
+       64               1         3         1        -1
+       65               1         3         1         1
+       66               1         3         1         3
+       67               1         5        -1        -5
+       68               1         5        -1        -3
+       69               1         5        -1        -1
+       70               1         5        -1         1
+       71               1         5        -1         3
+       72               1         5        -1         5
+       73               1         5         1        -5
+       74               1         5         1        -3
+       75               1         5         1        -1
+       76               1         5         1         1
+       77               1         5         1         3
+       78               1         5         1         5
+
+  THIS CALCULATION USES  1 EXTERNAL FIELD VARIABLE 
+
+  OFFSET BETWEEN EFV INDICES AND COUPLING MATRIX COEFFICIENT INDICES IS  1
+
+  ======================================================================================================================
+  GENERAL-PURPOSE POTENL ROUTINE (MAY 18)
+
+  *** POTENL. ITYPE =   9 CANNOT BE PROCESSED TO DETERMINE THE POTENTIAL EXPANSION LABELS
+
+  INTERACTION POTENTIAL FOR EXPANSION TERM NUMBER   1
+
+  JMH routine for Tiemann-style alkali dimer potentials
+  Rb2 potential from Strauss et al., PRA 82, 052514 (2010)               
+  For potential  1 at RLR =  11.00000000000    
+  gamma shifted from   5.317689000000    
+                  to   5.317691178394    
+  V =  -18.02577440996    
+  A(0)  shifted from  -3993.592873000     cm-1
+                  to  -3993.593189147     cm-1
+  For potential   1 at RSR =  3.126000000000     A
+  V =  -6.255737835919    cm-1, dV/dR =  -9257.490374248    cm-1/A and n =   4.533895000000    
+  B(SR) shifted from   1120053.610000     cm-1 A^n
+                  to   1120053.629089     cm-1 A^n
+  A(SR) shifted from  -6389.048800000     cm-1
+                  to  -6389.049099813     cm-1
+
+  INTERACTION POTENTIAL FOR EXPANSION TERM NUMBER   2
+
+  JMH routine for Tiemann-style alkali dimer potentials
+  Rb2 potential from Strauss et al., PRA 82, 052514 (2010)               
+  For potential  2 at RLR =  11.00000000000    
+  gamma shifted from   5.317691178394    
+                  to   5.317691178394    
+  V =  -17.12208948080    
+  A(0)  shifted from  -241.5033520000     cm-1
+                  to  -241.5036630359     cm-1
+  For potential   2 at RSR =  5.070000000000     A
+  V =  -10.77028535667    cm-1, dV/dR =  -543.9945779764    cm-1/A and n =   4.533895000000    
+  B(SR) shifted from   956231.6770000     cm-1 A^n
+                  to   956231.6938206     cm-1 A^n
+  A(SR) shifted from  -619.0885430000     cm-1
+                  to  -619.0888525798     cm-1
+
+  INTERACTION POTENTIAL FOR EXPANSION TERM NUMBER   3
+
+                -1.00232065E+00 * R ** -3
+                 9.18291680E+00 * EXP(   -0.7196 * R )
+
+  POTENL PROCESSING FINISHED.
+
+  POTENTIAL RETURNED IN UNITS OF EPSIL  =  1.0000000     CM-1
+        CODED WITH R IN UNITS OF RM     = 0.52917721     ANGSTROM
+
+  ALL LENGTHS ARE IN UNITS OF BOHR (  0.52917721 ANGSTROM ) UNLESS OTHERWISE STATED
+
+  INTERACTION MATRIX USES   3 BLOCKS OF VL ARRAY FOR R-DEPENDENT TERMS IN POTENTIAL
+                            2                    FOR CONSTANT    TERMS IN POTENTIAL
+
+  IN TOTAL:  5 BLOCKS OF VL ARRAY ARE USED
+
+
+  ======================================================================================================================
+
+  PROPAGATION METHODS FOR COUPLED EQUATIONS SPECIFIED BY IPROPS =  6 AND IPROPL =  9
+
+  COUPLED EQUATIONS WILL BE PROPAGATED TOWARDS RMATCH IN 2 SEGMENTS
+
+  PROPAGATION RANGES ARE CONTROLLED BY VARIABLES RMIN, RMATCH AND RMAX, WITH INPUT VALUES
+  RMIN =   3.000     RMATCH =   21.00     RMAX =  1.5000E+04
+  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+  SEGMENT 1 WILL BE PROPAGATED OUTWARDS
+
+  FROM RMIN =      3.00 TO RMATCH =     21.00
+
+  COUPLED EQUATIONS SOLVED BY DIABATIC MODIFIED LOG-DERIVATIVE PROPAGATOR OF MANOLOPOULOS
+
+  PROPAGATION STEP SIZE DETERMINED USING DR =  2.000E-03
+  STEP SIZE CONSTANT THROUGHOUT RANGE
+  STEP SIZE MAY BE ADJUSTED SLIGHTLY SO THAT RANGE IS A WHOLE NUMBER OF STEPS
+
+  LOG-DERIVATIVE MATRIX INITIALISED IN THE LOCAL EIGENBASIS AT RMIN IN THE OUTWARD PROPAGATION PART
+  LOCALLY CLOSED CHANNELS INITIALISED WITH A WKB BOUNDARY CONDITION
+  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+  SEGMENT 2 WILL BE PROPAGATED  INWARDS
+
+  TO RMATCH =     21.00 FROM RMAX =  15000.00
+
+  COUPLED EQUATIONS SOLVED BY VARIABLE-STEP AIRY PROPAGATOR.
+  PUBLICATIONS RESULTING FROM THE USE OF THIS PROPAGATOR SHOULD REFERENCE
+  M. H. ALEXANDER AND D. E. MANOLOPOULOS,  J. CHEM. PHYS. 86, 2044 (1987).
+
+  INITIAL STEP SIZE TAKEN FROM SIZE OF FINAL STEP OF SHORT-RANGE PROPAGATION
+  STEP SIZES ADJUSTED TO MAINTAIN APPROXIMATE ACCURACY VIA PERTURBATION THEORY
+  WITH TOLHI =  1.00E-07 AND POWR =   3.0    
+
+  LOG-DERIVATIVE MATRIX INITIALISED IN THE LOCAL EIGENBASIS AT RMAX IN THE INWARD PROPAGATION PART
+  LOCALLY CLOSED CHANNELS INITIALISED WITH A WKB BOUNDARY CONDITION
+  LOCALLY  OPEN  CHANNELS INITIALISED WITH THE VALUE  0.000E+00
+
+  ======================================================================================================================
+
+  PROGRAM WILL ATTEMPT TO CONVERGE ON BOUND STATES AS A FUNCTION OF MAGNETIC Z FIELD
+
+  FOR EACH LEVEL, THE BISECTION METHOD WILL BE USED UNTIL THE VWDB METHOD OFFERS RELIABLE CONVERGENCE
+
+  VWDB CONVERGENCE WILL TERMINATE WHEN THE STEP SIZE IS LESS THAN 1.00000E-06 GAUSS 
+
+  PROGRAM WILL SEEK EIGENVALUES WITH GENERALISED NODE COUNTS FROM    0 TO  99999
+  LYING IN 
+
+                  MAGNETIC Z FIELD (GAUSS )
+  FLDMIN:             750.0000000    
+  FLDMAX:             850.0000000    
+
+  INPUT ENERGY VALUES CONVERTED FROM MHZ
+  TO INTERNAL WORKING UNITS OF CM-1 DUE TO INTEGER INPUT =   3
+
+  PROGRAM WILL SEEK EIGENVALUES AT ENERGIES (IN MHZ)
+                    -225.000        -175.000        -125.000        -75.0000        -25.0000    
+
+  THESE ENERGY VALUES ARE RELATIVE TO THE REFERENCE ENERGY SPECIFIED BY MONOMER QUANTUM NUMBERS   4   4   4   4
+  THE REFERENCE ENERGY WILL BE CALCULATED FOR EVERY EFV SET
+
+  ======================================================================================================================
+
+  TOTAL ANGULAR MOMENTUM JTOT =   8
+
+  EACH JTOT IS SPLIT INTO A MAXIMUM OF   2 SYMMETRY BLOCKS
+
+  CALCULATIONS WILL BE FOR SYMMETRY BLOCK   2  ONLY
+
+  INITIALIZATION DONE.  TIME WAS   0.00 CPU SECS.       392 WORDS OF STORAGE USED.
+
+  ============================== 85Rb-85Rb: positions of bound states below aa threshold ===============================
+
+  *****************************  ANGULAR MOMENTUM JTOT  =   8   AND SYMMETRY BLOCK  =    2  ****************************
+  SYMMETRY BLOCK =   2 SELECTS PARITY  1
+  MTOT =  8/2
+  BASIS SET GENERATED FOR TWO IDENTICAL BOSONS
+
+  BASIS FUNCTION LIST:
+  BASIS FN        SET   ------ PAIR STATE QUANTUM NUMBERS ------           L 
+                            2*MSA     2*MIA     2*MSB     2*MIB 
+        1          21         -1         5        -1         5             0
+        2          61          1         3        -1         5             0
+        3          66          1         3         1         3             0
+        4          71          1         5        -1         3             0
+        5          76          1         5         1         1             0
+        6          42          1        -1        -1         5             2
+        7          50          1         1        -1         3             2
+        8          51          1         1        -1         5             2
+        9          55          1         1         1         1             2
+       10          59          1         3        -1         1             2
+       11          60          1         3        -1         3             2
+       12          19         -1         5        -1         1             2
+       13          61          1         3        -1         5             2
+       14          64          1         3         1        -1             2
+       15          65          1         3         1         1             2
+       16          20         -1         5        -1         3             2
+       17          66          1         3         1         3             2
+       18          69          1         5        -1        -1             2
+       19          70          1         5        -1         1             2
+       20          15         -1         3        -1         3             2
+       21          71          1         5        -1         3             2
+       22          72          1         5        -1         5             2
+       23          74          1         5         1        -3             2
+       24          75          1         5         1        -1             2
+       25          21         -1         5        -1         5             2
+       26          76          1         5         1         1             2
+       27          77          1         5         1         3             2
+       28          78          1         5         1         5             2
+  = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = 
+
+  ENERGY #    1 =  -225.0000000     MHZ     
+
+  NODE COUNT IMPLIES  1467 STATES BELOW SPECIFIED ENERGY AT MAGNETIC Z FIELD =   750.0000000     GAUSS 
+  NODE COUNT IMPLIES  1466 STATES BELOW SPECIFIED ENERGY AT MAGNETIC Z FIELD =   850.0000000     GAUSS 
+
+  NODE COUNT DECREASES BETWEEN FLDMIN AND FLDMAX
+  PROGRAM WILL ASSUME MONOTONIC BEHAVIOUR AND SEEK   1 STATE  IN THIS INTERVAL
+
+  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+  SEARCHING FOR BOUND STATE NUMBER  1467
+
+  CONVERGED ON STATE NUMBER  1467 AT                    MAGNETIC Z FIELD =   774.7974784     GAUSS 
+
+  SMALLEST EIGENVALUE OF MATCHING MATRIX IS NUMBER  8 =  6.58673E-12
+
+  WITH PRINCIPAL EIGENVECTOR COMPONENTS
+  CHAN     VEC    VEC**2   L   QUANTUM NUMBERS
+
+   1   -0.4977    0.2477   0  -1   5  -1   5   0
+   4   -0.8036    0.6458   0   1   5  -1   3   0
+   5    0.3091    0.0955   0   1   5   1   1   0
+  = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = 
+
+  ENERGY #    2 =  -175.0000000     MHZ     
+
+  NODE COUNT IMPLIES  1469 STATES BELOW SPECIFIED ENERGY AT MAGNETIC Z FIELD =   750.0000000     GAUSS 
+  NODE COUNT IMPLIES  1467 STATES BELOW SPECIFIED ENERGY AT MAGNETIC Z FIELD =   850.0000000     GAUSS 
+
+  NODE COUNT DECREASES BETWEEN FLDMIN AND FLDMAX
+  PROGRAM WILL ASSUME MONOTONIC BEHAVIOUR AND SEEK   2 STATES IN THIS INTERVAL
+
+  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+  SEARCHING FOR BOUND STATE NUMBER  1468
+
+  CONVERGED ON STATE NUMBER  1468 AT                    MAGNETIC Z FIELD =   787.3486984     GAUSS 
+
+  SMALLEST EIGENVALUE OF MATCHING MATRIX IS NUMBER  9 =  1.39472E-10
+
+  WITH PRINCIPAL EIGENVECTOR COMPONENTS
+  CHAN     VEC    VEC**2   L   QUANTUM NUMBERS
+
+   2   -0.2410    0.0581   0   1   3  -1   5   0
+   4   -0.9033    0.8159   0   1   5  -1   3   0
+   5    0.3443    0.1185   0   1   5   1   1   0
+
+  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+  SEARCHING FOR BOUND STATE NUMBER  1469
+
+  CONVERGED ON STATE NUMBER  1469 AT                    MAGNETIC Z FIELD =   753.1871575     GAUSS 
+
+  SMALLEST EIGENVALUE OF MATCHING MATRIX IS NUMBER  9 = -1.24416E-11
+
+  WITH PRINCIPAL EIGENVECTOR COMPONENTS
+  CHAN     VEC    VEC**2   L   QUANTUM NUMBERS
+
+  22   -0.9688    0.9386   2   1   5  -1   5   0
+  27    0.2477    0.0614   2   1   5   1   3   0
+  = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = 
+
+  ENERGY #    3 =  -125.0000000     MHZ     
+
+  NODE COUNT IMPLIES  1471 STATES BELOW SPECIFIED ENERGY AT MAGNETIC Z FIELD =   750.0000000     GAUSS 
+  NODE COUNT IMPLIES  1468 STATES BELOW SPECIFIED ENERGY AT MAGNETIC Z FIELD =   850.0000000     GAUSS 
+
+  NODE COUNT DECREASES BETWEEN FLDMIN AND FLDMAX
+  PROGRAM WILL ASSUME MONOTONIC BEHAVIOUR AND SEEK   3 STATES IN THIS INTERVAL
+
+  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+  SEARCHING FOR BOUND STATE NUMBER  1469
+
+  CONVERGED ON STATE NUMBER  1469 AT                    MAGNETIC Z FIELD =   805.7568981     GAUSS 
+
+  SMALLEST EIGENVALUE OF MATCHING MATRIX IS NUMBER 10 = -1.17879E-11
+
+  WITH PRINCIPAL EIGENVECTOR COMPONENTS
+  CHAN     VEC    VEC**2   L   QUANTUM NUMBERS
+
+   2   -0.2274    0.0517   0   1   3  -1   5   0
+   4   -0.9063    0.8214   0   1   5  -1   3   0
+   5    0.3420    0.1170   0   1   5   1   1   0
+
+  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+  SEARCHING FOR BOUND STATE NUMBER  1470
+
+  CONVERGED ON STATE NUMBER  1470 AT                    MAGNETIC Z FIELD =   772.1830844     GAUSS 
+
+  SMALLEST EIGENVALUE OF MATCHING MATRIX IS NUMBER 10 = -9.40289E-10
+
+  WITH PRINCIPAL EIGENVECTOR COMPONENTS
+  CHAN     VEC    VEC**2   L   QUANTUM NUMBERS
+
+  22    0.9695    0.9399   2   1   5  -1   5   0
+  27   -0.2452    0.0601   2   1   5   1   3   0
+
+  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+  SEARCHING FOR BOUND STATE NUMBER  1471
+
+  CONVERGED ON STATE NUMBER  1471 AT                    MAGNETIC Z FIELD =   764.0184375     GAUSS 
+
+  SMALLEST EIGENVALUE OF MATCHING MATRIX IS NUMBER 11 =  8.42704E-12
+
+  WITH PRINCIPAL EIGENVECTOR COMPONENTS
+  CHAN     VEC    VEC**2   L   QUANTUM NUMBERS
+
+  11   -0.9007    0.8112   2   1   3  -1   3   0
+  15    0.3543    0.1256   2   1   3   1   1   0
+  16   -0.2399    0.0576   2  -1   5  -1   3   0
+  = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = 
+
+  ENERGY #    4 =  -75.00000000     MHZ     
+
+  NODE COUNT IMPLIES  1471 STATES BELOW SPECIFIED ENERGY AT MAGNETIC Z FIELD =   750.0000000     GAUSS 
+  NODE COUNT IMPLIES  1468 STATES BELOW SPECIFIED ENERGY AT MAGNETIC Z FIELD =   850.0000000     GAUSS 
+
+  NODE COUNT DECREASES BETWEEN FLDMIN AND FLDMAX
+  PROGRAM WILL ASSUME MONOTONIC BEHAVIOUR AND SEEK   3 STATES IN THIS INTERVAL
+
+  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+  SEARCHING FOR BOUND STATE NUMBER  1469
+
+  CONVERGED ON STATE NUMBER  1469 AT                    MAGNETIC Z FIELD =   823.8672927     GAUSS 
+
+  SMALLEST EIGENVALUE OF MATCHING MATRIX IS NUMBER 10 = -1.49264E-09
+
+  WITH PRINCIPAL EIGENVECTOR COMPONENTS
+  CHAN     VEC    VEC**2   L   QUANTUM NUMBERS
+
+   2    0.2215    0.0491   0   1   3  -1   5   0
+   4    0.9080    0.8245   0   1   5  -1   3   0
+   5   -0.3393    0.1152   0   1   5   1   1   0
+
+  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+  SEARCHING FOR BOUND STATE NUMBER  1470
+
+  CONVERGED ON STATE NUMBER  1470 AT                    MAGNETIC Z FIELD =   791.1538853     GAUSS 
+
+  SMALLEST EIGENVALUE OF MATCHING MATRIX IS NUMBER 10 =  2.86014E-11
+
+  WITH PRINCIPAL EIGENVECTOR COMPONENTS
+  CHAN     VEC    VEC**2   L   QUANTUM NUMBERS
+
+  22    0.9701    0.9411   2   1   5  -1   5   0
+  27   -0.2426    0.0589   2   1   5   1   3   0
+
+  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+  SEARCHING FOR BOUND STATE NUMBER  1471
+
+  CONVERGED ON STATE NUMBER  1471 AT                    MAGNETIC Z FIELD =   782.8050331     GAUSS 
+
+  SMALLEST EIGENVALUE OF MATCHING MATRIX IS NUMBER 11 =  2.08121E-11
+
+  WITH PRINCIPAL EIGENVECTOR COMPONENTS
+  CHAN     VEC    VEC**2   L   QUANTUM NUMBERS
+
+  11    0.9028    0.8150   2   1   3  -1   3   0
+  15   -0.3505    0.1229   2   1   3   1   1   0
+  16    0.2381    0.0567   2  -1   5  -1   3   0
+  = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = 
+
+  ENERGY #    5 =  -25.00000000     MHZ     
+
+  NODE COUNT IMPLIES  1472 STATES BELOW SPECIFIED ENERGY AT MAGNETIC Z FIELD =   750.0000000     GAUSS 
+  NODE COUNT IMPLIES  1468 STATES BELOW SPECIFIED ENERGY AT MAGNETIC Z FIELD =   850.0000000     GAUSS 
+
+  NODE COUNT DECREASES BETWEEN FLDMIN AND FLDMAX
+  PROGRAM WILL ASSUME MONOTONIC BEHAVIOUR AND SEEK   4 STATES IN THIS INTERVAL
+
+  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+  SEARCHING FOR BOUND STATE NUMBER  1469
+
+  CONVERGED ON STATE NUMBER  1469 AT                    MAGNETIC Z FIELD =   841.9413219     GAUSS 
+
+  SMALLEST EIGENVALUE OF MATCHING MATRIX IS NUMBER  9 = -4.21750E-10
+
+  WITH PRINCIPAL EIGENVECTOR COMPONENTS
+  CHAN     VEC    VEC**2   L   QUANTUM NUMBERS
+
+   2    0.2165    0.0469   0   1   3  -1   5   0
+   4    0.9094    0.8271   0   1   5  -1   3   0
+   5   -0.3366    0.1133   0   1   5   1   1   0
+
+  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+  SEARCHING FOR BOUND STATE NUMBER  1470
+
+  CONVERGED ON STATE NUMBER  1470 AT                    MAGNETIC Z FIELD =   810.0994520     GAUSS 
+
+  SMALLEST EIGENVALUE OF MATCHING MATRIX IS NUMBER  9 = -8.90960E-10
+
+  WITH PRINCIPAL EIGENVECTOR COMPONENTS
+  CHAN     VEC    VEC**2   L   QUANTUM NUMBERS
+
+  22   -0.9707    0.9423   2   1   5  -1   5   0
+  27    0.2401    0.0577   2   1   5   1   3   0
+
+  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+  SEARCHING FOR BOUND STATE NUMBER  1471
+
+  CONVERGED ON STATE NUMBER  1471 AT                    MAGNETIC Z FIELD =   801.5738017     GAUSS 
+
+  SMALLEST EIGENVALUE OF MATCHING MATRIX IS NUMBER 10 = -3.53728E-11
+
+  WITH PRINCIPAL EIGENVECTOR COMPONENTS
+  CHAN     VEC    VEC**2   L   QUANTUM NUMBERS
+
+  11    0.9047    0.8185   2   1   3  -1   3   0
+  15   -0.3468    0.1203   2   1   3   1   1   0
+  16    0.2366    0.0560   2  -1   5  -1   3   0
+
+  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+  SEARCHING FOR BOUND STATE NUMBER  1472
+
+  CONVERGED ON STATE NUMBER  1472 AT                    MAGNETIC Z FIELD =   762.1330972     GAUSS 
+
+  SMALLEST EIGENVALUE OF MATCHING MATRIX IS NUMBER 10 =  7.09122E-12
+
+  WITH PRINCIPAL EIGENVECTOR COMPONENTS
+  CHAN     VEC    VEC**2   L   QUANTUM NUMBERS
+
+  13    0.2251    0.0507   2   1   3  -1   5   0
+  21    0.9025    0.8145   2   1   5  -1   3   0
+  26   -0.3490    0.1218   2   1   5   1   1   0
+
+
+  -- FIELD ------ FIELD ------ FIELD ------ FIELD ------ FIELD ------ FIELD --
+ |                                                                            |
+ |          Bound states of interacting pairs of atoms and molecules          |
+ |                      as a function of external field                       |
+ |                                                                            |
+ |              Copyright (C) 2019 J. M. Hutson & C. R. Le Sueur              |
+ |                                                                            |
+ |                               Version 2019.1                               |
+ |                                                                            |
+ |                    This run used     112.41 cpu secs and                   |
+ |               7971 of the allocated   1000000 words of storage             |
+ |                                                                            |
+  -- FIELD ------ FIELD ------ FIELD ------ FIELD ------ FIELD ------ FIELD --

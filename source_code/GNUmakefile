@@ -94,9 +94,9 @@ ANGLES_DEPS =     iosbin.o iosout.o potenl-Rg_H2.o potenl.o vrtp-He_H2O.o \
 #
 EFVS_DEPS =       base.o base9-1S_3Sigma_cpld.o base9-alk_alk.o \
                   base9-skeleton.o bd.driver.o cheint.o efv9-dummy.o \
-                  fld.driver.o header.o ldrdwt.o locpol.o mol.driver.o \
-                  output.o prnsum.o rdsigu.o restrt.o scapot-default.o \
-                  setefv.o wvhead.o \
+                  fld.driver.o header.o ldrdwt.o locpol.o \
+                  mol.driver.o output.o prnsum.o rdsigu.o restrt.o \
+                  scapot-default.o setefv.o wvhead.o \
 
 (addprefix $(OBJDIR)/,$(EFVS_DEPS)): efvs.mod
 #
@@ -159,9 +159,9 @@ YTOS =      ytok.o rbesjy.o rbessk.o ytokg.o ksym.o ktos.o
 #
 FLD = bdctrl.o bdpset.o bd.iosbin.o bd.prpini.o evmtch.o prnsum.o $(ALLDRV)
 BD =  cntrct.o $(FLD)
-MOL = calca.o convrg.o eavg.o findrx.o getlev.o header.o iosbin.o iosdrv.o \
-      ldrdwt.o locpol.o mol.prpini.o nexte.o output.o rdsigu.o psiasy.o \
-      scctrl.o scpset.o scwave.o \
+MOL = calca.o convrg.o eavg.o erange.o findrx.o getlev.o header.o iosbin.o \
+      iosdrv.o ldrdwt.o locpol.o mol.prpini.o nexte.o output.o rdsigu.o \
+      psiasy.o scctrl.o scpset.o scwave.o \
       $(ALLDRV) $(IOSBIN) $(PRBR) $(RESTRT) $(PROPS) $(YTOS)
 #
 # set up sets of dependencies needed for POTENL ============================

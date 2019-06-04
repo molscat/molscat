@@ -1,0 +1,307 @@
+  -- BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND --
+ |                                                                            |
+ |          Bound states of interacting pairs of atoms and molecules          |
+ |                                                                            |
+ |              Copyright (C) 2019 J. M. Hutson & C. R. Le Sueur              |
+ |                                                                            |
+ |                               Version 2019.1                               |
+ |                                                                            |
+ |                       Run on 30 May 2019   at 11:52:21                     |
+ |                                                                            |
+  -- BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND --
+
+
+  This program is free software: you can redistribute it and/or modify it under
+  the terms of the GNU General Public License, version 3, as published by
+  the Free Software Foundation.
+
+  Publications resulting from the use of this program should refer to
+  J. M. Hutson & C. R. Le Sueur, BOUND computer code 2019.1              
+  or to the published paper in Computer Physics Communications when available.
+
+
+  USING CODATA 2018 RECOMMENDED VALUES OF FUNDAMENTAL PHYSICAL CONSTANTS
+
+  MEMORY ALLOCATED TO MAIN WORKING ARRAY IS   1000000 (8-BYTE) WORDS (    7.63 MB)
+
+  PRINT LEVEL (IPRINT) =  5
+
+  REDUCED MASS FOR INTERACTION =  20.939751000 ATOMIC MASS UNITS (DALTONS)
+
+  ENERGY-INDEPENDENT MATRICES WILL BE SAVED TEMPORARILY ON UNIT 30
+
+  ======================================================================================================================
+
+  INTERACTION TYPE IS    LINEAR RIGID ROTOR  -  ATOM.  
+
+  MOLECULAR QUANTUM NUMBERS OBTAINED FROM JMIN =  0,  JMAX = 26,  AND JSTEP = 2
+
+  ENERGY LEVELS OBTAINED FROM B(E) =    0.387141
+
+  QUANTUM NUMBERS FOR INTERACTING PAIR:
+  EACH PAIR STATE IS LABELLED BY  1 QUANTUM NUMBER 
+  EACH CHANNEL FUNCTION IS FORMED BY COMBINING A PAIR STATE WITH A VALUE OF L.
+  THE RESULTING BASIS SET IS ASYMPTOTICALLY DIAGONAL.
+
+  PAIR STATE     PAIR STATE QUANTUM NUMBERS    PAIR LEVEL     PAIR ENERGY (CM-1)
+                ---------        J ---------
+        1                        0                1             0.0000000
+        2                        2                2             2.3228483
+        3                        4                3             7.7428278
+        4                        6                4            16.2599384
+        5                        8                5            27.8741801
+        6                       10                6            42.5855529
+        7                       12                7            60.3940568
+        8                       14                8            81.2996919
+        9                       16                9           105.3024581
+       10                       18               10           132.4023554
+       11                       20               11           162.5993838
+       12                       22               12           195.8935433
+       13                       24               13           232.2848340
+       14                       26               14           271.7732558
+
+  ======================================================================================================================
+  GENERAL-PURPOSE POTENL ROUTINE (MAY 18)
+
+  UNEXPANDED POTENTIAL IS OBTAINED FROM VRTP ROUTINE.
+
+  A SUITABLE VRTP ROUTINE MUST BE SUPPLIED.
+  CARBON ATOM C_N(0)    0.000       0.0          0.
+  CARBON ATOM C_N(2)    0.000       0.0          0.
+  OXYGEN ATOM C_N(0)   50.500    1475.1      52783.
+  OXYGEN ATOM C_N(2)   13.635     398.3      14251.
+  CENTRAL     C_N(0)  101.000    4293.4         43.
+  CENTRAL     C_N(2)   27.270    7444.4          2.
+
+  DISPERSION SITES AT   1.587 A0 FROM CENTRE
+
+  SITE-SITE MODEL USED FOR OVERLAP WITH RREF =   7.000, BOND LENGTH =   2.196
+   1  A =  32.276  BETA =  2.0317
+   2  A =   0.000  BETA =  0.0000
+   3  A =  11.858  BETA =  1.7957
+   4  A =   0.000  BETA =  0.0000
+   5  A =  -9.414  BETA =  2.0953
+   6  A =  32.369  BETA =  2.1226
+   7  A =  -3.403  BETA =  1.8729
+   8  A =  -1.687  BETA =  2.1892
+   9  A =  -1.912  BETA =  1.9620
+  10  A =   1.101  BETA =  1.9853
+
+  REPULSION ENERGY FACTOR ON C ATOM:   4.9598
+  REPULSION ENERGY FACTOR ON O ATOMS:  4.3310
+  IHOMO = 2 SPECIFIES HOMONUCLEAR SYMMETRY.
+  USING  23-POINT QUADRATURE FOR THETA-1
+  HOMONUCLEAR SYMMETRY: ONLY HALF OF THE THETA-1 POINTS WILL BE USED
+
+  ANGULAR DEPENDENCE OF POTENTIAL EXPANDED IN TERMS OF
+  LEGENDRE POLYNOMIALS, P(LAMBDA).
+  POTENTIAL TERMS GENERATED FROM LMAX = 22 AND IHOMO = 2
+
+  INTERACTION POTENTIAL FOR EXPANSION TERM NUMBER   1
+  WHICH HAS LAMBDA =   0
+
+
+  INTERACTION POTENTIAL FOR EXPANSION TERM NUMBER   2
+  WHICH HAS LAMBDA =   2
+
+
+  INTERACTION POTENTIAL FOR EXPANSION TERM NUMBER   3
+  WHICH HAS LAMBDA =   4
+
+
+  INTERACTION POTENTIAL FOR EXPANSION TERM NUMBER   4
+  WHICH HAS LAMBDA =   6
+
+
+  INTERACTION POTENTIAL FOR EXPANSION TERM NUMBER   5
+  WHICH HAS LAMBDA =   8
+
+
+  INTERACTION POTENTIAL FOR EXPANSION TERM NUMBER   6
+  WHICH HAS LAMBDA =  10
+
+
+  INTERACTION POTENTIAL FOR EXPANSION TERM NUMBER   7
+  WHICH HAS LAMBDA =  12
+
+
+  INTERACTION POTENTIAL FOR EXPANSION TERM NUMBER   8
+  WHICH HAS LAMBDA =  14
+
+
+  INTERACTION POTENTIAL FOR EXPANSION TERM NUMBER   9
+  WHICH HAS LAMBDA =  16
+
+
+  INTERACTION POTENTIAL FOR EXPANSION TERM NUMBER  10
+  WHICH HAS LAMBDA =  18
+
+
+  INTERACTION POTENTIAL FOR EXPANSION TERM NUMBER  11
+  WHICH HAS LAMBDA =  20
+
+
+  INTERACTION POTENTIAL FOR EXPANSION TERM NUMBER  12
+  WHICH HAS LAMBDA =  22
+
+
+  POTENL PROCESSING FINISHED.
+
+  POTENTIAL RETURNED IN UNITS OF EPSIL  =  1.0000000     CM-1
+        CODED WITH R IN UNITS OF RM     =  1.0000000     ANGSTROM
+
+  ALL LENGTHS ARE IN UNITS OF ANGSTROM UNLESS OTHERWISE STATED
+
+  INTERACTION MATRIX USES  12 BLOCKS OF VL ARRAY FOR R-DEPENDENT TERMS IN POTENTIAL
+
+  ======================================================================================================================
+
+  PROPAGATION METHODS FOR COUPLED EQUATIONS SPECIFIED BY IPROPS =  5 AND IPROPL =  5
+
+  COUPLED EQUATIONS WILL BE PROPAGATED TOWARDS RMATCH IN 2 SEGMENTS
+
+  PROPAGATION RANGES ARE CONTROLLED BY VARIABLES RMIN, RMATCH AND RMAX, WITH INPUT VALUES
+  RMIN =   2.400     RMATCH =   3.600     RMAX =   6.000    
+  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+  SEGMENT 1 WILL BE PROPAGATED OUTWARDS
+
+  FROM RMIN =      2.40 TO RMATCH =      3.60
+
+  COUPLED EQUATIONS SOLVED BY LOG-DERIVATIVE PROPAGATOR OF JOHNSON
+
+  PROPAGATION STEP SIZE DETERMINED USING DR =  3.000E-02
+  STEP SIZE CONSTANT THROUGHOUT RANGE
+  STEP SIZE MAY BE ADJUSTED SLIGHTLY SO THAT RANGE IS A WHOLE NUMBER OF STEPS
+
+  LOG-DERIVATIVE MATRIX INITIALISED IN THE LOCAL EIGENBASIS AT RMIN IN THE OUTWARD PROPAGATION PART
+  LOCALLY CLOSED CHANNELS INITIALISED WITH A WKB BOUNDARY CONDITION
+  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+  SEGMENT 2 WILL BE PROPAGATED  INWARDS
+
+  TO RMATCH =      3.60 FROM RMAX =      6.00
+
+  COUPLED EQUATIONS SOLVED BY LOG-DERIVATIVE PROPAGATOR OF JOHNSON
+
+  INITIAL STEP SIZE TAKEN FROM SIZE OF FINAL STEP OF SHORT-RANGE PROPAGATION
+  STEP SIZE CONSTANT THROUGHOUT RANGE
+  STEP SIZE MAY BE ADJUSTED SLIGHTLY SO THAT RANGE IS A WHOLE NUMBER OF STEPS
+
+  LOG-DERIVATIVE MATRIX INITIALISED IN THE LOCAL EIGENBASIS AT RMAX IN THE INWARD PROPAGATION PART
+  LOCALLY CLOSED CHANNELS INITIALISED WITH A WKB BOUNDARY CONDITION
+  LOCALLY  OPEN  CHANNELS INITIALISED WITH THE VALUE  0.000E+00
+
+  ======================================================================================================================
+
+  PROGRAM WILL ATTEMPT TO CONVERGE ON BOUND STATES AS A FUNCTION OF ENERGY
+
+  FOR EACH LEVEL, THE BISECTION METHOD WILL BE USED UNTIL THE VWDB METHOD OFFERS RELIABLE CONVERGENCE.
+
+  VWDB CONVERGENCE WILL TERMINATE WHEN THE STEP SIZE IS LESS THAN 1.00000E-08 CM-1    
+
+  INPUT ENERGY VALUES ASSUMED TO BE IN UNITS OF CM-1 BY DEFAULT.
+
+  PROGRAM WILL SEEK EIGENVALUES WITH GENERALISED NODE COUNTS FROM    0 TO  99999
+  LYING IN ENERGY RANGE  -180.00     TO  -130.00     CM-1    
+
+  ======================================================================================================================
+
+  TOTAL ANGULAR MOMENTUM JTOT =   0
+
+  EACH JTOT IS SPLIT INTO A MAXIMUM OF   2 SYMMETRY BLOCKS
+
+  CALCULATIONS WILL BE FOR SYMMETRY BLOCK   2  ONLY
+
+  INITIALIZATION DONE.  TIME WAS   0.00 CPU SECS.       178 WORDS OF STORAGE USED.
+
+  ============================ Ar-CO2 on split repulsion potential of JCP 105, 9130 (1996) =============================
+
+  *****************************  ANGULAR MOMENTUM JTOT  =   0   AND SYMMETRY BLOCK  =    2  ****************************
+
+  CHANNEL FUNCTION LIST:
+
+  EACH CHANNEL FUNCTION IS FORMED BY COMBINING A PAIR STATE WITH A VALUE OF L.
+
+  CHANNEL  PAIR STATE    PAIR STATE QUANTUM NUMBERS            L        PAIR LEVEL   PAIR ENERGY (CM-1)
+                         ---------      J   ---------
+        1           1                   0                      0             1         0.0000000
+        2           2                   2                      2             2         2.3228483
+        3           3                   4                      4             3         7.7428278
+        4           4                   6                      6             4        16.2599384
+        5           5                   8                      8             5        27.8741801
+        6           6                  10                     10             6        42.5855529
+        7           7                  12                     12             7        60.3940568
+        8           8                  14                     14             8        81.2996919
+        9           9                  16                     16             9       105.3024581
+       10          10                  18                     18            10       132.4023554
+       11          11                  20                     20            11       162.5993838
+       12          12                  22                     22            12       195.8935433
+       13          13                  24                     24            13       232.2848340
+       14          14                  26                     26            14       271.7732558
+  SCRATCH FILE OPENED ON UNIT           30
+
+  NODE COUNT IMPLIES     0 STATES BELOW MINIMUM ENERGY =  -180.0000000     CM-1  
+  NODE COUNT IMPLIES     2 STATES BELOW MAXIMUM ENERGY =  -130.0000000     CM-1  
+
+  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+  SEARCHING FOR BOUND STATE NUMBER     1
+
+  CONVERGED ON STATE NUMBER     1 AT                              ENERGY =  -165.6289795     CM-1  
+
+  SMALLEST EIGENVALUE OF MATCHING MATRIX IS NUMBER  1 =  5.68434E-14
+
+  WITH PRINCIPAL EIGENVECTOR COMPONENTS
+  CHAN     VEC    VEC**2   L   QUANTUM NUMBERS
+
+   1    0.5682    0.3228   0   0   1
+   2   -0.5737    0.3291   2   2   2
+   3    0.4544    0.2065   4   4   3
+   4   -0.3114    0.0970   6   6   4
+
+  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+  SEARCHING FOR BOUND STATE NUMBER     2
+
+  CONVERGED ON STATE NUMBER     2 AT                              ENERGY =  -131.1638128     CM-1  
+
+  SMALLEST EIGENVALUE OF MATCHING MATRIX IS NUMBER  1 = -1.83627E-12
+
+  WITH PRINCIPAL EIGENVECTOR COMPONENTS
+  CHAN     VEC    VEC**2   L   QUANTUM NUMBERS
+
+   1    0.6861    0.4707   0   0   1
+   2   -0.5990    0.3588   2   2   2
+   3    0.2999    0.0900   4   4   3
+
+  ----------------------------------------------------------------------------------------------------------------------
+  TESTING CONVERGENCE OF PROPAGATION PARAMETERS: DRS CHANGED TO   6.00000E-02
+
+  ENERGY CONVERGED: E =  -165.6292008     CM-1 FOR DR =  6.000E-02
+
+  FOR BOUND STATE   1, RICHARDSON EXTRAPOLATION BASED ON ERROR PROPORTIONAL TO DR**4 FOR IPROPS =  5
+  GIVES EXTRAPOLATED ENERGY =                                               -165.6289648     CM-1
+  THIS IS THE BEST AVAILABLE EXTRAPOLATED VALUE FROM THIS SET OF CALCULATIONS.
+
+  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+  ENERGY CONVERGED: E =  -131.1647456     CM-1 FOR DR =  6.000E-02
+
+  FOR BOUND STATE   2, RICHARDSON EXTRAPOLATION BASED ON ERROR PROPORTIONAL TO DR**4 FOR IPROPS =  5
+  GIVES EXTRAPOLATED ENERGY =                                               -131.1637506     CM-1
+  THIS IS THE BEST AVAILABLE EXTRAPOLATED VALUE FROM THIS SET OF CALCULATIONS.
+
+  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+
+  -- BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND --
+ |                                                                            |
+ |          Bound states of interacting pairs of atoms and molecules          |
+ |                                                                            |
+ |              Copyright (C) 2019 J. M. Hutson & C. R. Le Sueur              |
+ |                                                                            |
+ |                               Version 2019.1                               |
+ |                                                                            |
+ |                    This run used       0.06 cpu secs and                   |
+ |               2416 of the allocated   1000000 words of storage             |
+ |                                                                            |
+  -- BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND --
