@@ -5,9 +5,9 @@
  |                                                                            |
  |              Copyright (C) 2019 J. M. Hutson & C. R. Le Sueur              |
  |                                                                            |
- |                               Version 2019.0                               |
+ |                               Version 2019.1                               |
  |                                                                            |
- |                       Run on 11 Mar 2019   at 16:52:28                     |
+ |                       Run on 30 May 2019   at 11:34:27                     |
  |                                                                            |
   ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
 
@@ -17,11 +17,11 @@
   the Free Software Foundation.
 
   Publications resulting from the use of this program should refer to
-  J. M. Hutson & C. R. Le Sueur, MOLSCAT computer code 2019.0              
+  J. M. Hutson & C. R. Le Sueur, MOLSCAT computer code 2019.1              
   or to the published paper in Computer Physics Communications when available.
 
 
-  USING CODATA 2014 RECOMMENDED VALUES OF FUNDAMENTAL PHYSICAL CONSTANTS
+  USING CODATA 2018 RECOMMENDED VALUES OF FUNDAMENTAL PHYSICAL CONSTANTS
 
   MEMORY ALLOCATED TO MAIN WORKING ARRAY IS   1000000 (8-BYTE) WORDS (    7.63 MB)
   2 INTEGERS CAN BE STORED IN EACH WORD.
@@ -168,7 +168,7 @@
 
     F  I =      2              3
     2       2.74032E-02    6.93518E-07
-    3       7.58333E-07    9.87492E-02
+    3       7.58333E-07    9.87493E-02
 
   FOR JTOT =   10, SYMMETRY BLOCK =  1, ENERGY(  1) =  1250.000    : MAX DIAG & OFF-DIAG =  9.87E-02 &   7.58E-07
 
@@ -230,7 +230,7 @@
                        FOR JTOT =  20 AND SYMMETRY BLOCK =   2 AT ENERGY(  1) =  1250.000     CM-1
 
     F  I =      1              2              3              5
-    1       1.61800E-04    7.09661E-04    8.65129E-09    9.51542E-12
+    1       1.61799E-04    7.09661E-04    8.65129E-09    9.51542E-12
     2       3.03735E-03    6.44588E-02    1.89657E-06    3.05296E-13
     3       4.04880E-08    2.07382E-06    1.67716E-01    7.11458E-12
     5       3.80617E-13    2.85324E-15    6.08084E-14    7.49172E+00
@@ -403,9 +403,9 @@
  |                                                                            |
  |              Copyright (C) 2019 J. M. Hutson & C. R. Le Sueur              |
  |                                                                            |
- |                               Version 2019.0                               |
+ |                               Version 2019.1                               |
  |                                                                            |
- |                    This run used       1.49 cpu secs and                   |
+ |                    This run used       1.05 cpu secs and                   |
  |               3408 of the allocated   1000000 words of storage             |
  |                                                                            |
   ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
@@ -416,9 +416,9 @@
  |                                                                            |
  |              Copyright (C) 2019 J. M. Hutson & C. R. Le Sueur              |
  |                                                                            |
- |                               Version 2019.0                               |
+ |                               Version 2019.1                               |
  |                                                                            |
- |                       Run on 11 Mar 2019   at 16:52:29                     |
+ |                       Run on 30 May 2019   at 11:34:28                     |
  |                                                                            |
   ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
 
@@ -428,11 +428,11 @@
   the Free Software Foundation.
 
   Publications resulting from the use of this program should refer to
-  J. M. Hutson & C. R. Le Sueur, MOLSCAT computer code 2019.0              
+  J. M. Hutson & C. R. Le Sueur, MOLSCAT computer code 2019.1              
   or to the published paper in Computer Physics Communications when available.
 
 
-  USING CODATA 2014 RECOMMENDED VALUES OF FUNDAMENTAL PHYSICAL CONSTANTS
+  USING CODATA 2018 RECOMMENDED VALUES OF FUNDAMENTAL PHYSICAL CONSTANTS
 
   MEMORY ALLOCATED TO MAIN WORKING ARRAY IS   1000000 (8-BYTE) WORDS (    7.63 MB)
   2 INTEGERS CAN BE STORED IN EACH WORD.
@@ -603,7 +603,7 @@
                        FOR JTOT =  20 AND SYMMETRY BLOCK =   1 AT ENERGY(  1) =  1250.000     CM-1
 
     F  I =      1              2              3              5
-    1       6.05368E-04    4.21611E-04    3.15196E-09    8.69239E-12
+    1       6.05367E-04    4.21611E-04    3.15196E-09    8.69239E-12
     2       1.80449E-03    2.32160E-02    2.54305E-06    2.60014E-13
     3       1.47512E-08    2.78072E-06    3.55571E-02    3.96857E-12
     5       3.47695E-13    2.43004E-15    3.39194E-14    7.68424E+00
@@ -637,7 +637,7 @@
                        FOR JTOT =  30 AND SYMMETRY BLOCK =   1 AT ENERGY(  2) =  1000.000     CM-1
 
     F  I =      1              2              3
-    1       2.00524E-02    4.61720E-04    5.28038E-10
+    1       2.00525E-02    4.61720E-04    5.28038E-10
     2       1.89305E-03    6.86494E-01    7.81844E-07
     3       1.90094E-09    6.86497E-07    1.36089E+00
 
@@ -650,9 +650,9 @@
 
     F  I =      1              2              3              5
     1       1.28592E-01    6.67435E-04    2.43738E-09    1.36301E-13
-    2       2.85662E-03    2.69702E-01    2.49235E-06    8.57068E-15
+    2       2.85662E-03    2.69702E-01    2.49235E-06    8.57067E-15
     3       1.14069E-08    2.72528E-06    7.00619E-01    1.66693E-15
-    5       5.45203E-15    8.00999E-17    1.42472E-17    1.61411E+01
+    5       5.45203E-15    8.00997E-17    1.42473E-17    1.61411E+01
 
   FOR JTOT =   40, SYMMETRY BLOCK =  1, ENERGY(  1) =  1250.000    : MAX DIAG & OFF-DIAG =  1.61E+01 &   2.86E-03
 
@@ -689,7 +689,7 @@
    1250.000000         10     10     40      1    2         1.890309E-02  
    1250.000000         10     10     40      2    2          5.52530      
    1250.000000         10     10     40      3    2         1.031473E-04  
-   1250.000000         10     10     40      5    2         6.971071E-14  
+   1250.000000         10     10     40      5    2         6.971070E-14  
 
    1250.000000         10     10     40      1    3         1.082307E-07  
    1250.000000         10     10     40      2    3         9.433132E-05  
@@ -697,7 +697,7 @@
    1250.000000         10     10     40      5    3         8.768155E-13  
 
    1250.000000         10     10     40      1    5         2.287017E-10  
-   1250.000000         10     10     40      2    5         7.459046E-12  
+   1250.000000         10     10     40      2    5         7.459045E-12  
    1250.000000         10     10     40      3    5         1.025874E-10  
    1250.000000         10     10     40      5    5          275.281      
 
@@ -736,9 +736,9 @@
  |                                                                            |
  |              Copyright (C) 2019 J. M. Hutson & C. R. Le Sueur              |
  |                                                                            |
- |                               Version 2019.0                               |
+ |                               Version 2019.1                               |
  |                                                                            |
- |                    This run used       0.16 cpu secs and                   |
+ |                    This run used       0.15 cpu secs and                   |
  |                542 of the allocated   1000000 words of storage             |
  |                                                                            |
   ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
@@ -749,9 +749,9 @@
  |                                                                            |
  |              Copyright (C) 2019 J. M. Hutson & C. R. Le Sueur              |
  |                                                                            |
- |                               Version 2019.0                               |
+ |                               Version 2019.1                               |
  |                                                                            |
- |                       Run on 11 Mar 2019   at 16:52:29                     |
+ |                       Run on 30 May 2019   at 11:34:28                     |
  |                                                                            |
   ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
 
@@ -761,11 +761,11 @@
   the Free Software Foundation.
 
   Publications resulting from the use of this program should refer to
-  J. M. Hutson & C. R. Le Sueur, MOLSCAT computer code 2019.0              
+  J. M. Hutson & C. R. Le Sueur, MOLSCAT computer code 2019.1              
   or to the published paper in Computer Physics Communications when available.
 
 
-  USING CODATA 2014 RECOMMENDED VALUES OF FUNDAMENTAL PHYSICAL CONSTANTS
+  USING CODATA 2018 RECOMMENDED VALUES OF FUNDAMENTAL PHYSICAL CONSTANTS
 
   MEMORY ALLOCATED TO MAIN WORKING ARRAY IS   1000000 (8-BYTE) WORDS (    7.63 MB)
   2 INTEGERS CAN BE STORED IN EACH WORD.
@@ -1074,7 +1074,7 @@
 
     F  I =      2              3
     2       9.92413E-02    1.46701E-06
-    3       1.60411E-06    2.10478E-04
+    3       1.60411E-06    2.10479E-04
 
   FOR JTOT =   30, SYMMETRY BLOCK =  2, ENERGY(  1) =  1250.000    : MAX DIAG & OFF-DIAG =  9.92E-02 &   1.60E-06
 
@@ -1094,7 +1094,7 @@
 
     F  I =      2              3
     2       3.46873E-02    1.28219E-06
-    3       1.40202E-06    6.13150E-04
+    3       1.40202E-06    6.13149E-04
 
   FOR JTOT =   30, SYMMETRY BLOCK =  3, ENERGY(  1) =  1250.000    : MAX DIAG & OFF-DIAG =  3.47E-02 &   1.40E-06
 
@@ -1125,7 +1125,7 @@
 
     F  I =      1              2              3
     1       5.69330E-01    9.29030E-04    8.65992E-10
-    2       3.80902E-03    2.91597E-04    1.50074E-07
+    2       3.80902E-03    2.91598E-04    1.50074E-07
     3       3.11757E-09    1.31772E-07    2.32665E-01
 
   FOR JTOT =   40, SYMMETRY BLOCK =  1, ENERGY(  2) =  1000.000    : MAX DIAG & OFF-DIAG =  5.69E-01 &   3.81E-03
@@ -1145,7 +1145,7 @@
                        FOR JTOT =  40 AND SYMMETRY BLOCK =   2 AT ENERGY(  2) =  1000.000     CM-1
 
     F  I =      2              3
-    2       6.57485E-04    2.76367E-07
+    2       6.57484E-04    2.76367E-07
     3       2.42663E-07    4.60561E-01
 
   FOR JTOT =   40, SYMMETRY BLOCK =  2, ENERGY(  2) =  1000.000    : MAX DIAG & OFF-DIAG =  4.61E-01 &   2.76E-07
@@ -1238,9 +1238,9 @@
  |                                                                            |
  |              Copyright (C) 2019 J. M. Hutson & C. R. Le Sueur              |
  |                                                                            |
- |                               Version 2019.0                               |
+ |                               Version 2019.1                               |
  |                                                                            |
- |                    This run used       0.37 cpu secs and                   |
+ |                    This run used       0.34 cpu secs and                   |
  |                731 of the allocated   1000000 words of storage             |
  |                                                                            |
   ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
@@ -1251,9 +1251,9 @@
  |                                                                            |
  |              Copyright (C) 2019 J. M. Hutson & C. R. Le Sueur              |
  |                                                                            |
- |                               Version 2019.0                               |
+ |                               Version 2019.1                               |
  |                                                                            |
- |                       Run on 11 Mar 2019   at 16:52:30                     |
+ |                       Run on 30 May 2019   at 11:34:28                     |
  |                                                                            |
   ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
 
@@ -1263,11 +1263,11 @@
   the Free Software Foundation.
 
   Publications resulting from the use of this program should refer to
-  J. M. Hutson & C. R. Le Sueur, MOLSCAT computer code 2019.0              
+  J. M. Hutson & C. R. Le Sueur, MOLSCAT computer code 2019.1              
   or to the published paper in Computer Physics Communications when available.
 
 
-  USING CODATA 2014 RECOMMENDED VALUES OF FUNDAMENTAL PHYSICAL CONSTANTS
+  USING CODATA 2018 RECOMMENDED VALUES OF FUNDAMENTAL PHYSICAL CONSTANTS
 
   MEMORY ALLOCATED TO MAIN WORKING ARRAY IS   1000000 (8-BYTE) WORDS (    7.63 MB)
   2 INTEGERS CAN BE STORED IN EACH WORD.
@@ -1481,7 +1481,7 @@
 
     F  I =      2              3
     2       1.19647E-03    2.44700E-07
-    3       2.14858E-07    6.54370E-06
+    3       2.14858E-07    6.54374E-06
 
   FOR JTOT =   10, SYMMETRY BLOCK =  3, ENERGY(  2) =  1000.000    : MAX DIAG & OFF-DIAG =  1.20E-03 &   2.45E-07
 
@@ -1491,7 +1491,7 @@
                        FOR JTOT =  20 AND SYMMETRY BLOCK =   1 AT ENERGY(  1) =  1250.000     CM-1
 
     F  I =      1              2              3              5
-    1       1.61455E-04    7.02721E-04    8.05793E-09    6.33432E-12
+    1       1.61454E-04    7.02721E-04    8.05793E-09    6.33432E-12
     2       3.00765E-03    4.05387E-02    6.69345E-07    4.58156E-13
     3       3.77111E-08    7.31901E-07    6.45881E-02    6.98696E-12
     5       2.53373E-13    4.28183E-15    5.97176E-14    7.49211E+00
@@ -1502,7 +1502,7 @@
                        FOR JTOT =  20 AND SYMMETRY BLOCK =   1 AT ENERGY(  2) =  1000.000     CM-1
 
     F  I =      1              2              3
-    1       5.92540E-03    6.13094E-04    1.76930E-09
+    1       5.92541E-03    6.13094E-04    1.76930E-09
     2       2.51369E-03    9.01017E-02    2.29205E-07
     3       6.36948E-09    2.01253E-07    1.52800E-02
 
@@ -1534,7 +1534,7 @@
                        FOR JTOT =  20 AND SYMMETRY BLOCK =   3 AT ENERGY(  1) =  1250.000     CM-1
 
     F  I =      2              3
-    2       3.94462E-03    1.08092E-06
+    2       3.94463E-03    1.08092E-06
     3       1.18194E-06    8.34019E-02
 
   FOR JTOT =   20, SYMMETRY BLOCK =  3, ENERGY(  1) =  1250.000    : MAX DIAG & OFF-DIAG =  8.34E-02 &   1.18E-06
@@ -1544,7 +1544,7 @@
 
     F  I =      2              3
     2       1.97627E-01    3.71523E-07
-    3       3.26216E-07    4.53155E-05
+    3       3.26216E-07    4.53156E-05
 
   FOR JTOT =   20, SYMMETRY BLOCK =  3, ENERGY(  2) =  1000.000    : MAX DIAG & OFF-DIAG =  1.98E-01 &   3.72E-07
 
@@ -1598,7 +1598,7 @@
 
     F  I =      2              3
     2       2.82178E-02    1.22488E-06
-    3       1.33935E-06    6.21303E-03
+    3       1.33935E-06    6.21304E-03
 
   FOR JTOT =   30, SYMMETRY BLOCK =  3, ENERGY(  1) =  1250.000    : MAX DIAG & OFF-DIAG =  2.82E-02 &   1.34E-06
 
@@ -1619,8 +1619,8 @@
     F  I =      1              2              3              5
     1       1.16580E-01    1.13317E-03    6.40750E-09    1.05043E-14
     2       4.84998E-03    5.27809E-03    6.67185E-07    2.31949E-15
-    3       2.99871E-08    7.29538E-07    1.42955E-01    3.00992E-15
-    5       4.20172E-16    2.16775E-17    2.57258E-17    1.62820E+01
+    3       2.99871E-08    7.29538E-07    1.42955E-01    3.00993E-15
+    5       4.20172E-16    2.16775E-17    2.57259E-17    1.62820E+01
 
   FOR JTOT =   40, SYMMETRY BLOCK =  1, ENERGY(  1) =  1250.000    : MAX DIAG & OFF-DIAG =  1.63E+01 &   4.85E-03
 
@@ -1649,7 +1649,7 @@
                        FOR JTOT =  40 AND SYMMETRY BLOCK =   2 AT ENERGY(  2) =  1000.000     CM-1
 
     F  I =      2              3
-    2       5.38438E-05    2.58924E-07
+    2       5.38440E-05    2.58924E-07
     3       2.27348E-07    4.76637E-01
 
   FOR JTOT =   40, SYMMETRY BLOCK =  2, ENERGY(  2) =  1000.000    : MAX DIAG & OFF-DIAG =  4.77E-01 &   2.59E-07
@@ -1742,9 +1742,9 @@
  |                                                                            |
  |              Copyright (C) 2019 J. M. Hutson & C. R. Le Sueur              |
  |                                                                            |
- |                               Version 2019.0                               |
+ |                               Version 2019.1                               |
  |                                                                            |
- |                    This run used       0.37 cpu secs and                   |
+ |                    This run used       0.33 cpu secs and                   |
  |                731 of the allocated   1000000 words of storage             |
  |                                                                            |
   ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
@@ -1755,9 +1755,9 @@
  |                                                                            |
  |              Copyright (C) 2019 J. M. Hutson & C. R. Le Sueur              |
  |                                                                            |
- |                               Version 2019.0                               |
+ |                               Version 2019.1                               |
  |                                                                            |
- |                       Run on 11 Mar 2019   at 16:52:30                     |
+ |                       Run on 30 May 2019   at 11:34:29                     |
  |                                                                            |
   ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
 
@@ -1767,11 +1767,11 @@
   the Free Software Foundation.
 
   Publications resulting from the use of this program should refer to
-  J. M. Hutson & C. R. Le Sueur, MOLSCAT computer code 2019.0              
+  J. M. Hutson & C. R. Le Sueur, MOLSCAT computer code 2019.1              
   or to the published paper in Computer Physics Communications when available.
 
 
-  USING CODATA 2014 RECOMMENDED VALUES OF FUNDAMENTAL PHYSICAL CONSTANTS
+  USING CODATA 2018 RECOMMENDED VALUES OF FUNDAMENTAL PHYSICAL CONSTANTS
 
   MEMORY ALLOCATED TO MAIN WORKING ARRAY IS   1000000 (8-BYTE) WORDS (    7.63 MB)
   2 INTEGERS CAN BE STORED IN EACH WORD.
@@ -2028,7 +2028,7 @@
                        FOR JTOT =  20 AND SYMMETRY BLOCK =   1 AT ENERGY(  1) =  1250.000     CM-1
 
     F  I =      1              2              3              5
-    1       6.44876E-04    2.71745E-04    3.01869E-09    1.09142E-11
+    1       6.44875E-04    2.71745E-04    3.01869E-09    1.09142E-11
     2       1.16307E-03    5.42643E-02    6.78624E-07    1.28006E-13
     3       1.41275E-08    7.42047E-07    7.42273E-02    1.12783E-12
     5       4.36568E-13    1.19632E-15    9.63955E-15    7.69957E+00
@@ -2111,7 +2111,7 @@
                        FOR JTOT =  20 AND SYMMETRY BLOCK =   5 AT ENERGY(  1) =  1250.000     CM-1
 
     F  I =      2              3
-    2       7.05686E-05    3.55383E-09
+    2       7.05687E-05    3.55383E-09
     3       3.88596E-09    6.86879E-03
 
   FOR JTOT =   20, SYMMETRY BLOCK =  5, ENERGY(  1) =  1250.000    : MAX DIAG & OFF-DIAG =  6.87E-03 &   3.89E-09
@@ -2214,7 +2214,7 @@
                        FOR JTOT =  30 AND SYMMETRY BLOCK =   5 AT ENERGY(  1) =  1250.000     CM-1
 
     F  I =      2              3
-    2       2.33345E-04    5.28479E-09
+    2       2.33344E-04    5.28479E-09
     3       5.77870E-09    5.35634E-03
 
   FOR JTOT =   30, SYMMETRY BLOCK =  5, ENERGY(  1) =  1250.000    : MAX DIAG & OFF-DIAG =  5.36E-03 &   5.78E-09
@@ -2235,8 +2235,8 @@
 
     F  I =      1              2              3              5
     1       1.28342E-01    5.43992E-04    4.40612E-09    7.81814E-13
-    2       2.32829E-03    4.77328E-02    9.97274E-07    2.96973E-15
-    3       2.06207E-08    1.09048E-06    6.98507E-03    3.84431E-16
+    2       2.32829E-03    4.77329E-02    9.97274E-07    2.96973E-15
+    3       2.06207E-08    1.09048E-06    6.98507E-03    3.84430E-16
     5       3.12725E-14    2.77544E-17    3.28573E-18    1.61273E+01
 
   FOR JTOT =   40, SYMMETRY BLOCK =  1, ENERGY(  1) =  1250.000    : MAX DIAG & OFF-DIAG =  1.61E+01 &   2.33E-03
@@ -2361,7 +2361,7 @@
    1250.000000         10     10     40      5    3         2.488463E-13  
 
    1250.000000         10     10     40      1    5         2.367640E-10  
-   1250.000000         10     10     40      2    5         3.366361E-12  
+   1250.000000         10     10     40      2    5         3.366360E-12  
    1250.000000         10     10     40      3    5         2.911502E-11  
    1250.000000         10     10     40      5    5          275.547      
 
@@ -2399,9 +2399,9 @@
  |                                                                            |
  |              Copyright (C) 2019 J. M. Hutson & C. R. Le Sueur              |
  |                                                                            |
- |                               Version 2019.0                               |
+ |                               Version 2019.1                               |
  |                                                                            |
- |                    This run used       0.54 cpu secs and                   |
+ |                    This run used       0.51 cpu secs and                   |
  |                542 of the allocated   1000000 words of storage             |
  |                                                                            |
   ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
@@ -2412,9 +2412,9 @@
  |                                                                            |
  |              Copyright (C) 2019 J. M. Hutson & C. R. Le Sueur              |
  |                                                                            |
- |                               Version 2019.0                               |
+ |                               Version 2019.1                               |
  |                                                                            |
- |                       Run on 11 Mar 2019   at 16:52:31                     |
+ |                       Run on 30 May 2019   at 11:34:29                     |
  |                                                                            |
   ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
 
@@ -2424,11 +2424,11 @@
   the Free Software Foundation.
 
   Publications resulting from the use of this program should refer to
-  J. M. Hutson & C. R. Le Sueur, MOLSCAT computer code 2019.0              
+  J. M. Hutson & C. R. Le Sueur, MOLSCAT computer code 2019.1              
   or to the published paper in Computer Physics Communications when available.
 
 
-  USING CODATA 2014 RECOMMENDED VALUES OF FUNDAMENTAL PHYSICAL CONSTANTS
+  USING CODATA 2018 RECOMMENDED VALUES OF FUNDAMENTAL PHYSICAL CONSTANTS
 
   MEMORY ALLOCATED TO MAIN WORKING ARRAY IS   1000000 (8-BYTE) WORDS (    7.63 MB)
   2 INTEGERS CAN BE STORED IN EACH WORD.
@@ -2604,7 +2604,7 @@
 
                       PARTIAL WAVES FROM   10 TO    40 (IN STEPS OF   10)
 
-  ***** ***** ***** TIME WAS     0.11  SEC.
+  ***** ***** ***** TIME WAS     0.14  SEC.
  
 
   ***** ***** STORAGE SO FAR USED       563  OF THE   1000000  AVAILABLE WORDS.
@@ -2613,7 +2613,7 @@
                             SIG( 2, 1) =  1.4541E-11     SIG( 2, 2) =  2.0471E+01
 
   FOR ORIENTATION     2     SIG( 1, 1) =  5.6884E-01     SIG( 1, 2) =  3.8939E-13
-                            SIG( 2, 1) =  9.7346E-12     SIG( 2, 2) =  2.0772E+01
+                            SIG( 2, 1) =  9.7347E-12     SIG( 2, 2) =  2.0772E+01
 
   FOR ORIENTATION     3     SIG( 1, 1) =  5.2832E-01     SIG( 1, 2) =  6.4767E-13
                             SIG( 2, 1) =  1.6192E-11     SIG( 2, 2) =  2.2004E+01
@@ -2802,7 +2802,7 @@
 
                       PARTIAL WAVES FROM   10 TO    40 (IN STEPS OF   10)
 
-  ***** ***** ***** TIME WAS     0.16  SEC.
+  ***** ***** ***** TIME WAS     0.20  SEC.
  
 
   ***** ***** STORAGE SO FAR USED       563  OF THE   1000000  AVAILABLE WORDS.
@@ -2914,9 +2914,9 @@
  |                                                                            |
  |              Copyright (C) 2019 J. M. Hutson & C. R. Le Sueur              |
  |                                                                            |
- |                               Version 2019.0                               |
+ |                               Version 2019.1                               |
  |                                                                            |
- |                    This run used       0.28 cpu secs and                   |
+ |                    This run used       0.34 cpu secs and                   |
  |                563 of the allocated   1000000 words of storage             |
  |                                                                            |
   ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---

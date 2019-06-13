@@ -4,9 +4,9 @@
  |                                                                            |
  |              Copyright (C) 2019 J. M. Hutson & C. R. Le Sueur              |
  |                                                                            |
- |                               Version 2019.0                               |
+ |                               Version 2019.1                               |
  |                                                                            |
- |                       Run on 11 Mar 2019   at 17:11:13                     |
+ |                       Run on 30 May 2019   at 11:52:21                     |
  |                                                                            |
   -- BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND --
 
@@ -16,11 +16,11 @@
   the Free Software Foundation.
 
   Publications resulting from the use of this program should refer to
-  J. M. Hutson & C. R. Le Sueur, BOUND computer code 2019.0              
+  J. M. Hutson & C. R. Le Sueur, BOUND computer code 2019.1              
   or to the published paper in Computer Physics Communications when available.
 
 
-  USING CODATA 2014 RECOMMENDED VALUES OF FUNDAMENTAL PHYSICAL CONSTANTS
+  USING CODATA 2018 RECOMMENDED VALUES OF FUNDAMENTAL PHYSICAL CONSTANTS
 
   MEMORY ALLOCATED TO MAIN WORKING ARRAY IS   1000000 (8-BYTE) WORDS (    7.63 MB)
 
@@ -239,16 +239,16 @@
        14          14                  26                     26            14       271.7732558
   SCRATCH FILE OPENED ON UNIT           30
 
-  NODE COUNT =    0 AT MINIMUM ENERGY =  -180.0000000     CM-1  
-  NODE COUNT =    2 AT MAXIMUM ENERGY =  -130.0000000     CM-1  
+  NODE COUNT IMPLIES     0 STATES BELOW MINIMUM ENERGY =  -180.0000000     CM-1  
+  NODE COUNT IMPLIES     2 STATES BELOW MAXIMUM ENERGY =  -130.0000000     CM-1  
 
   - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
-  SEARCHING FOR INODE =    1 CORRESPONDING TO NODE COUNT =    1
+  SEARCHING FOR BOUND STATE NUMBER     1
 
-  CONVERGED ON NODE NUMBER     1 AT                               ENERGY =  -165.6289795     CM-1  
+  CONVERGED ON STATE NUMBER     1 AT                              ENERGY =  -165.6289795     CM-1  
 
-  SMALLEST EIGENVALUE OF MATCHING MATRIX IS NUMBER  1 = -8.52651E-13
+  SMALLEST EIGENVALUE OF MATCHING MATRIX IS NUMBER  1 =  5.68434E-14
 
   WITH PRINCIPAL EIGENVECTOR COMPONENTS
   CHAN     VEC    VEC**2   L   QUANTUM NUMBERS
@@ -260,11 +260,11 @@
 
   - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
-  SEARCHING FOR INODE =    2 CORRESPONDING TO NODE COUNT =    2
+  SEARCHING FOR BOUND STATE NUMBER     2
 
-  CONVERGED ON NODE NUMBER     2 AT                               ENERGY =  -131.1638128     CM-1  
+  CONVERGED ON STATE NUMBER     2 AT                              ENERGY =  -131.1638128     CM-1  
 
-  SMALLEST EIGENVALUE OF MATCHING MATRIX IS NUMBER  1 =  1.68499E-12
+  SMALLEST EIGENVALUE OF MATCHING MATRIX IS NUMBER  1 = -1.83627E-12
 
   WITH PRINCIPAL EIGENVECTOR COMPONENTS
   CHAN     VEC    VEC**2   L   QUANTUM NUMBERS
@@ -278,7 +278,7 @@
 
   ENERGY CONVERGED: E =  -165.6292008     CM-1 FOR DR =  6.000E-02
 
-  FOR INODE =    1, RICHARDSON EXTRAPOLATION BASED ON ERROR PROPORTIONAL TO DR**4 FOR IPROPS =  5
+  FOR BOUND STATE   1, RICHARDSON EXTRAPOLATION BASED ON ERROR PROPORTIONAL TO DR**4 FOR IPROPS =  5
   GIVES EXTRAPOLATED ENERGY =                                               -165.6289648     CM-1
   THIS IS THE BEST AVAILABLE EXTRAPOLATED VALUE FROM THIS SET OF CALCULATIONS.
 
@@ -286,7 +286,7 @@
 
   ENERGY CONVERGED: E =  -131.1647456     CM-1 FOR DR =  6.000E-02
 
-  FOR INODE =    2, RICHARDSON EXTRAPOLATION BASED ON ERROR PROPORTIONAL TO DR**4 FOR IPROPS =  5
+  FOR BOUND STATE   2, RICHARDSON EXTRAPOLATION BASED ON ERROR PROPORTIONAL TO DR**4 FOR IPROPS =  5
   GIVES EXTRAPOLATED ENERGY =                                               -131.1637506     CM-1
   THIS IS THE BEST AVAILABLE EXTRAPOLATED VALUE FROM THIS SET OF CALCULATIONS.
 
@@ -299,9 +299,9 @@
  |                                                                            |
  |              Copyright (C) 2019 J. M. Hutson & C. R. Le Sueur              |
  |                                                                            |
- |                               Version 2019.0                               |
+ |                               Version 2019.1                               |
  |                                                                            |
- |                    This run used       0.12 cpu secs and                   |
+ |                    This run used       0.06 cpu secs and                   |
  |               2416 of the allocated   1000000 words of storage             |
  |                                                                            |
   -- BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND --

@@ -4,9 +4,9 @@
  |                                                                            |
  |              Copyright (C) 2019 J. M. Hutson & C. R. Le Sueur              |
  |                                                                            |
- |                               Version 2019.0                               |
+ |                               Version 2019.1                               |
  |                                                                            |
- |                       Run on 11 Mar 2019   at 17:11:13                     |
+ |                       Run on 30 May 2019   at 11:52:20                     |
  |                                                                            |
   -- BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND --
 
@@ -16,11 +16,11 @@
   the Free Software Foundation.
 
   Publications resulting from the use of this program should refer to
-  J. M. Hutson & C. R. Le Sueur, BOUND computer code 2019.0              
+  J. M. Hutson & C. R. Le Sueur, BOUND computer code 2019.1              
   or to the published paper in Computer Physics Communications when available.
 
 
-  USING CODATA 2014 RECOMMENDED VALUES OF FUNDAMENTAL PHYSICAL CONSTANTS
+  USING CODATA 2018 RECOMMENDED VALUES OF FUNDAMENTAL PHYSICAL CONSTANTS
 
   MEMORY ALLOCATED TO MAIN WORKING ARRAY IS   1000000 (8-BYTE) WORDS (    7.63 MB)
 
@@ -185,66 +185,66 @@
 
   *****************************  ANGULAR MOMENTUM JTOT  =   0   AND SYMMETRY BLOCK  =    2  ****************************
 
-  NODE COUNT =    0 AT MINIMUM ENERGY =  -120.0000000     CM-1  
-  NODE COUNT =    3 AT MAXIMUM ENERGY =  -80.00000000     CM-1  
+  NODE COUNT IMPLIES     0 STATES BELOW MINIMUM ENERGY =  -120.0000000     CM-1  
+  NODE COUNT IMPLIES     3 STATES BELOW MAXIMUM ENERGY =  -80.00000000     CM-1  
 
   - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
-  SEARCHING FOR INODE =    1 CORRESPONDING TO NODE COUNT =    1
+  SEARCHING FOR BOUND STATE NUMBER     1
 
-  CONVERGED ON NODE NUMBER     1 AT                               ENERGY =  -115.1516338     CM-1  
-
-  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
-
-  SEARCHING FOR INODE =    2 CORRESPONDING TO NODE COUNT =    2
-
-  CONVERGED ON NODE NUMBER     2 AT                               ENERGY =  -91.48541596     CM-1  
+  CONVERGED ON STATE NUMBER     1 AT                              ENERGY =  -115.1516338     CM-1  
 
   - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
-  SEARCHING FOR INODE =    3 CORRESPONDING TO NODE COUNT =    3
+  SEARCHING FOR BOUND STATE NUMBER     2
 
-  CONVERGED ON NODE NUMBER     3 AT                               ENERGY =  -82.71731237     CM-1  
+  CONVERGED ON STATE NUMBER     2 AT                              ENERGY =  -91.48541596     CM-1  
+
+  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+  SEARCHING FOR BOUND STATE NUMBER     3
+
+  CONVERGED ON STATE NUMBER     3 AT                              ENERGY =  -82.71731237     CM-1  
 
   *****************************  ANGULAR MOMENTUM JTOT  =   1   AND SYMMETRY BLOCK  =    1  ****************************
 
-  NODE COUNT =    0 AT MINIMUM ENERGY =  -120.0000000     CM-1  
-  NODE COUNT =    1 AT MAXIMUM ENERGY =  -80.00000000     CM-1  
+  NODE COUNT IMPLIES     0 STATES BELOW MINIMUM ENERGY =  -120.0000000     CM-1  
+  NODE COUNT IMPLIES     1 STATES BELOW MAXIMUM ENERGY =  -80.00000000     CM-1  
 
   - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
-  SEARCHING FOR INODE =    1 CORRESPONDING TO NODE COUNT =    1
+  SEARCHING FOR BOUND STATE NUMBER     1
 
-  CONVERGED ON NODE NUMBER     1 AT                               ENERGY =  -81.11694089     CM-1  
+  CONVERGED ON STATE NUMBER     1 AT                              ENERGY =  -81.11694089     CM-1  
 
   *****************************  ANGULAR MOMENTUM JTOT  =   1   AND SYMMETRY BLOCK  =    2  ****************************
 
-  NODE COUNT =    0 AT MINIMUM ENERGY =  -120.0000000     CM-1  
-  NODE COUNT =    4 AT MAXIMUM ENERGY =  -80.00000000     CM-1  
+  NODE COUNT IMPLIES     0 STATES BELOW MINIMUM ENERGY =  -120.0000000     CM-1  
+  NODE COUNT IMPLIES     4 STATES BELOW MAXIMUM ENERGY =  -80.00000000     CM-1  
 
   - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
-  SEARCHING FOR INODE =    1 CORRESPONDING TO NODE COUNT =    1
+  SEARCHING FOR BOUND STATE NUMBER     1
 
-  CONVERGED ON NODE NUMBER     1 AT                               ENERGY =  -115.0395618     CM-1  
-
-  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
-
-  SEARCHING FOR INODE =    2 CORRESPONDING TO NODE COUNT =    2
-
-  CONVERGED ON NODE NUMBER     2 AT                               ENERGY =  -91.36737523     CM-1  
+  CONVERGED ON STATE NUMBER     1 AT                              ENERGY =  -115.0395618     CM-1  
 
   - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
-  SEARCHING FOR INODE =    3 CORRESPONDING TO NODE COUNT =    3
+  SEARCHING FOR BOUND STATE NUMBER     2
 
-  CONVERGED ON NODE NUMBER     3 AT                               ENERGY =  -82.61337367     CM-1  
+  CONVERGED ON STATE NUMBER     2 AT                              ENERGY =  -91.36737523     CM-1  
 
   - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
-  SEARCHING FOR INODE =    4 CORRESPONDING TO NODE COUNT =    4
+  SEARCHING FOR BOUND STATE NUMBER     3
 
-  CONVERGED ON NODE NUMBER     4 AT                               ENERGY =  -81.11358888     CM-1  
+  CONVERGED ON STATE NUMBER     3 AT                              ENERGY =  -82.61337366     CM-1  
+
+  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+  SEARCHING FOR BOUND STATE NUMBER     4
+
+  CONVERGED ON STATE NUMBER     4 AT                              ENERGY =  -81.11358888     CM-1  
 
 
   -- BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND --
@@ -253,9 +253,9 @@
  |                                                                            |
  |              Copyright (C) 2019 J. M. Hutson & C. R. Le Sueur              |
  |                                                                            |
- |                               Version 2019.0                               |
+ |                               Version 2019.1                               |
  |                                                                            |
- |                    This run used       0.34 cpu secs and                   |
+ |                    This run used       0.33 cpu secs and                   |
  |               2373 of the allocated   1000000 words of storage             |
  |                                                                            |
   -- BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND --
@@ -265,9 +265,9 @@
  |                                                                            |
  |              Copyright (C) 2019 J. M. Hutson & C. R. Le Sueur              |
  |                                                                            |
- |                               Version 2019.0                               |
+ |                               Version 2019.1                               |
  |                                                                            |
- |                       Run on 11 Mar 2019   at 17:11:13                     |
+ |                       Run on 30 May 2019   at 11:52:20                     |
  |                                                                            |
   -- BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND --
 
@@ -277,11 +277,11 @@
   the Free Software Foundation.
 
   Publications resulting from the use of this program should refer to
-  J. M. Hutson & C. R. Le Sueur, BOUND computer code 2019.0              
+  J. M. Hutson & C. R. Le Sueur, BOUND computer code 2019.1              
   or to the published paper in Computer Physics Communications when available.
 
 
-  USING CODATA 2014 RECOMMENDED VALUES OF FUNDAMENTAL PHYSICAL CONSTANTS
+  USING CODATA 2018 RECOMMENDED VALUES OF FUNDAMENTAL PHYSICAL CONSTANTS
 
   MEMORY ALLOCATED TO MAIN WORKING ARRAY IS   1000000 (8-BYTE) WORDS (    7.63 MB)
 
@@ -455,26 +455,26 @@
 
   *****************************  ANGULAR MOMENTUM JTOT  =   0   AND SYMMETRY BLOCK  =    1  ****************************
 
-  NODE COUNT =    0 AT MINIMUM ENERGY =  -120.0000000     CM-1  
-  NODE COUNT =    3 AT MAXIMUM ENERGY =  -80.00000000     CM-1  
+  NODE COUNT IMPLIES     0 STATES BELOW MINIMUM ENERGY =  -120.0000000     CM-1  
+  NODE COUNT IMPLIES     3 STATES BELOW MAXIMUM ENERGY =  -80.00000000     CM-1  
 
   - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
-  SEARCHING FOR INODE =    1 CORRESPONDING TO NODE COUNT =    1
+  SEARCHING FOR BOUND STATE NUMBER     1
 
-  CONVERGED ON NODE NUMBER     1 AT                               ENERGY =  -115.1516338     CM-1  
-
-  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
-
-  SEARCHING FOR INODE =    2 CORRESPONDING TO NODE COUNT =    2
-
-  CONVERGED ON NODE NUMBER     2 AT                               ENERGY =  -91.48541596     CM-1  
+  CONVERGED ON STATE NUMBER     1 AT                              ENERGY =  -115.1516338     CM-1  
 
   - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
-  SEARCHING FOR INODE =    3 CORRESPONDING TO NODE COUNT =    3
+  SEARCHING FOR BOUND STATE NUMBER     2
 
-  CONVERGED ON NODE NUMBER     3 AT                               ENERGY =  -82.71731237     CM-1  
+  CONVERGED ON STATE NUMBER     2 AT                              ENERGY =  -91.48541596     CM-1  
+
+  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+  SEARCHING FOR BOUND STATE NUMBER     3
+
+  CONVERGED ON STATE NUMBER     3 AT                              ENERGY =  -82.71731237     CM-1  
 
   ======================================================================================================================
   CALCULATE EXPECTATION VALUES OF POTENTIAL( 3)/R** 0 WITH DELTA =  1.000E-03
@@ -489,7 +489,7 @@
 
   - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
-  FINITE DIFFERENCE CALCULATION CONVERGED AT                      ENERGY =  -82.71700600     CM-1  
+  FINITE DIFFERENCE CALCULATION CONVERGED AT                      ENERGY =  -82.71700599     CM-1  
   CALCULATED EXPECTATION VALUE <POT( 3)/R** 0> FOR NODE    3 IS  0.306376    
 
   - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
@@ -516,26 +516,26 @@
 
   *****************************  ANGULAR MOMENTUM JTOT  =   1   AND SYMMETRY BLOCK  =    1  ****************************
 
-  NODE COUNT =    0 AT MINIMUM ENERGY =  -120.0000000     CM-1  
-  NODE COUNT =    3 AT MAXIMUM ENERGY =  -80.00000000     CM-1  
+  NODE COUNT IMPLIES     0 STATES BELOW MINIMUM ENERGY =  -120.0000000     CM-1  
+  NODE COUNT IMPLIES     3 STATES BELOW MAXIMUM ENERGY =  -80.00000000     CM-1  
 
   - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
-  SEARCHING FOR INODE =    1 CORRESPONDING TO NODE COUNT =    1
+  SEARCHING FOR BOUND STATE NUMBER     1
 
-  CONVERGED ON NODE NUMBER     1 AT                               ENERGY =  -115.0392294     CM-1  
-
-  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
-
-  SEARCHING FOR INODE =    2 CORRESPONDING TO NODE COUNT =    2
-
-  CONVERGED ON NODE NUMBER     2 AT                               ENERGY =  -91.36585634     CM-1  
+  CONVERGED ON STATE NUMBER     1 AT                              ENERGY =  -115.0392294     CM-1  
 
   - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
-  SEARCHING FOR INODE =    3 CORRESPONDING TO NODE COUNT =    3
+  SEARCHING FOR BOUND STATE NUMBER     2
 
-  CONVERGED ON NODE NUMBER     3 AT                               ENERGY =  -82.61137345     CM-1  
+  CONVERGED ON STATE NUMBER     2 AT                              ENERGY =  -91.36585634     CM-1  
+
+  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+  SEARCHING FOR BOUND STATE NUMBER     3
+
+  CONVERGED ON STATE NUMBER     3 AT                              ENERGY =  -82.61137345     CM-1  
 
   ======================================================================================================================
   CALCULATE EXPECTATION VALUES OF POTENTIAL( 3)/R** 0 WITH DELTA =  1.000E-03
@@ -550,7 +550,7 @@
 
   - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
-  FINITE DIFFERENCE CALCULATION CONVERGED AT                      ENERGY =  -82.61106707     CM-1  
+  FINITE DIFFERENCE CALCULATION CONVERGED AT                      ENERGY =  -82.61106706     CM-1  
   CALCULATED EXPECTATION VALUE <POT( 3)/R** 0> FOR NODE    3 IS  0.306385    
 
   - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
@@ -568,21 +568,21 @@
 
   - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
-  FINITE DIFFERENCE CALCULATION CONVERGED AT                      ENERGY =  -82.61131397     CM-1  
+  FINITE DIFFERENCE CALCULATION CONVERGED AT                      ENERGY =  -82.61131396     CM-1  
   CALCULATED EXPECTATION VALUE <POT( 1)/R** 2> FOR NODE    3 IS  5.948706E-02
 
   - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
   *****************************  ANGULAR MOMENTUM JTOT  =   1   AND SYMMETRY BLOCK  =    2  ****************************
 
-  NODE COUNT =    0 AT MINIMUM ENERGY =  -120.0000000     CM-1  
-  NODE COUNT =    1 AT MAXIMUM ENERGY =  -80.00000000     CM-1  
+  NODE COUNT IMPLIES     0 STATES BELOW MINIMUM ENERGY =  -120.0000000     CM-1  
+  NODE COUNT IMPLIES     1 STATES BELOW MAXIMUM ENERGY =  -80.00000000     CM-1  
 
   - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
-  SEARCHING FOR INODE =    1 CORRESPONDING TO NODE COUNT =    1
+  SEARCHING FOR BOUND STATE NUMBER     1
 
-  CONVERGED ON NODE NUMBER     1 AT                               ENERGY =  -81.11694089     CM-1  
+  CONVERGED ON STATE NUMBER     1 AT                              ENERGY =  -81.11694089     CM-1  
 
   ======================================================================================================================
   CALCULATE EXPECTATION VALUES OF POTENTIAL( 3)/R** 0 WITH DELTA =  1.000E-03
@@ -607,9 +607,9 @@
  |                                                                            |
  |              Copyright (C) 2019 J. M. Hutson & C. R. Le Sueur              |
  |                                                                            |
- |                               Version 2019.0                               |
+ |                               Version 2019.1                               |
  |                                                                            |
- |                    This run used       0.40 cpu secs and                   |
+ |                    This run used       0.39 cpu secs and                   |
  |               1311 of the allocated   1000000 words of storage             |
  |                                                                            |
   -- BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND --
@@ -619,9 +619,9 @@
  |                                                                            |
  |              Copyright (C) 2019 J. M. Hutson & C. R. Le Sueur              |
  |                                                                            |
- |                               Version 2019.0                               |
+ |                               Version 2019.1                               |
  |                                                                            |
- |                       Run on 11 Mar 2019   at 17:11:13                     |
+ |                       Run on 30 May 2019   at 11:52:21                     |
  |                                                                            |
   -- BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND --
 
@@ -631,11 +631,11 @@
   the Free Software Foundation.
 
   Publications resulting from the use of this program should refer to
-  J. M. Hutson & C. R. Le Sueur, BOUND computer code 2019.0              
+  J. M. Hutson & C. R. Le Sueur, BOUND computer code 2019.1              
   or to the published paper in Computer Physics Communications when available.
 
 
-  USING CODATA 2014 RECOMMENDED VALUES OF FUNDAMENTAL PHYSICAL CONSTANTS
+  USING CODATA 2018 RECOMMENDED VALUES OF FUNDAMENTAL PHYSICAL CONSTANTS
 
   MEMORY ALLOCATED TO MAIN WORKING ARRAY IS   1000000 (8-BYTE) WORDS (    7.63 MB)
 
@@ -802,14 +802,14 @@
 
   *****************************  ANGULAR MOMENTUM JTOT  =   0   AND SYMMETRY BLOCK  =    2  ****************************
 
-  NODE COUNT =    0 AT MINIMUM ENERGY =  -120.0000000     CM-1  
-  NODE COUNT =    1 AT MAXIMUM ENERGY =  -100.0000000     CM-1  
+  NODE COUNT IMPLIES     0 STATES BELOW MINIMUM ENERGY =  -120.0000000     CM-1  
+  NODE COUNT IMPLIES     1 STATES BELOW MAXIMUM ENERGY =  -100.0000000     CM-1  
 
   - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
-  SEARCHING FOR INODE =    1 CORRESPONDING TO NODE COUNT =    1
+  SEARCHING FOR BOUND STATE NUMBER     1
 
-  CONVERGED ON NODE NUMBER     1 AT                               ENERGY =  -115.1516338     CM-1  
+  CONVERGED ON STATE NUMBER     1 AT                              ENERGY =  -115.1516338     CM-1  
    1    0.7865    0.6186   0   0   1
    2   -0.5564    0.3096   1   1   2
    3    0.2529    0.0640   2   2   3
@@ -821,7 +821,7 @@
  |                                                                            |
  |              Copyright (C) 2019 J. M. Hutson & C. R. Le Sueur              |
  |                                                                            |
- |                               Version 2019.0                               |
+ |                               Version 2019.1                               |
  |                                                                            |
  |                    This run used       0.03 cpu secs and                   |
  |                950 of the allocated   1000000 words of storage             |

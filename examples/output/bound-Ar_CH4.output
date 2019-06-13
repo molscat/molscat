@@ -4,9 +4,9 @@
  |                                                                            |
  |              Copyright (C) 2019 J. M. Hutson & C. R. Le Sueur              |
  |                                                                            |
- |                               Version 2019.0                               |
+ |                               Version 2019.1                               |
  |                                                                            |
- |                       Run on 11 Mar 2019   at 17:11:16                     |
+ |                       Run on 30 May 2019   at 11:52:23                     |
  |                                                                            |
   -- BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND --
 
@@ -16,11 +16,11 @@
   the Free Software Foundation.
 
   Publications resulting from the use of this program should refer to
-  J. M. Hutson & C. R. Le Sueur, BOUND computer code 2019.0              
+  J. M. Hutson & C. R. Le Sueur, BOUND computer code 2019.1              
   or to the published paper in Computer Physics Communications when available.
 
 
-  USING CODATA 2014 RECOMMENDED VALUES OF FUNDAMENTAL PHYSICAL CONSTANTS
+  USING CODATA 2018 RECOMMENDED VALUES OF FUNDAMENTAL PHYSICAL CONSTANTS
 
   MEMORY ALLOCATED TO MAIN WORKING ARRAY IS   1000000 (8-BYTE) WORDS (    7.63 MB)
 
@@ -248,16 +248,16 @@
        25          13          7        -5         0       208        15             8            13       293.1216566
        26          16          7         6         0       253        15             8            16       293.1776110
 
-  NODE COUNT =    0 AT MINIMUM ENERGY =  -100.0000000     CM-1  
-  NODE COUNT =    4 AT MAXIMUM ENERGY =  -60.00000000     CM-1  
+  NODE COUNT IMPLIES     0 STATES BELOW MINIMUM ENERGY =  -100.0000000     CM-1  
+  NODE COUNT IMPLIES     4 STATES BELOW MAXIMUM ENERGY =  -60.00000000     CM-1  
 
   - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
-  SEARCHING FOR INODE =    1 CORRESPONDING TO NODE COUNT =    1
+  SEARCHING FOR BOUND STATE NUMBER     1
 
-  CONVERGED ON NODE NUMBER     1 AT                               ENERGY =  -85.31575232     CM-1  
+  CONVERGED ON STATE NUMBER     1 AT                              ENERGY =  -85.31575231     CM-1  
 
-  SMALLEST EIGENVALUE OF MATCHING MATRIX IS NUMBER  1 =  1.69985E-06
+  SMALLEST EIGENVALUE OF MATCHING MATRIX IS NUMBER  1 =  1.69983E-06
 
   WITH PRINCIPAL EIGENVECTOR COMPONENTS
   CHAN     VEC    VEC**2   L   QUANTUM NUMBERS
@@ -267,11 +267,11 @@
 
   - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
-  SEARCHING FOR INODE =    2 CORRESPONDING TO NODE COUNT =    2
+  SEARCHING FOR BOUND STATE NUMBER     2
 
-  CONVERGED ON NODE NUMBER     2 AT                               ENERGY =  -84.80170350     CM-1  
+  CONVERGED ON STATE NUMBER     2 AT                              ENERGY =  -84.80170349     CM-1  
 
-  SMALLEST EIGENVALUE OF MATCHING MATRIX IS NUMBER  1 =  3.63222E-06
+  SMALLEST EIGENVALUE OF MATCHING MATRIX IS NUMBER  1 =  3.63220E-06
 
   WITH PRINCIPAL EIGENVECTOR COMPONENTS
   CHAN     VEC    VEC**2   L   QUANTUM NUMBERS
@@ -281,11 +281,11 @@
 
   - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
-  SEARCHING FOR INODE =    3 CORRESPONDING TO NODE COUNT =    3
+  SEARCHING FOR BOUND STATE NUMBER     3
 
-  CONVERGED ON NODE NUMBER     3 AT                               ENERGY =  -66.21480909     CM-1  
+  CONVERGED ON STATE NUMBER     3 AT                              ENERGY =  -66.21480908     CM-1  
 
-  SMALLEST EIGENVALUE OF MATCHING MATRIX IS NUMBER  1 =  7.45881E-08
+  SMALLEST EIGENVALUE OF MATCHING MATRIX IS NUMBER  1 =  7.45640E-08
 
   WITH PRINCIPAL EIGENVECTOR COMPONENTS
   CHAN     VEC    VEC**2   L   QUANTUM NUMBERS
@@ -297,11 +297,11 @@
 
   - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
-  SEARCHING FOR INODE =    4 CORRESPONDING TO NODE COUNT =    4
+  SEARCHING FOR BOUND STATE NUMBER     4
 
-  CONVERGED ON NODE NUMBER     4 AT                               ENERGY =  -63.81704075     CM-1  
+  CONVERGED ON STATE NUMBER     4 AT                              ENERGY =  -63.81704074     CM-1  
 
-  SMALLEST EIGENVALUE OF MATCHING MATRIX IS NUMBER  1 = -6.89009E-07
+  SMALLEST EIGENVALUE OF MATCHING MATRIX IS NUMBER  1 = -6.89006E-07
 
   WITH PRINCIPAL EIGENVECTOR COMPONENTS
   CHAN     VEC    VEC**2   L   QUANTUM NUMBERS
@@ -318,9 +318,9 @@
  |                                                                            |
  |              Copyright (C) 2019 J. M. Hutson & C. R. Le Sueur              |
  |                                                                            |
- |                               Version 2019.0                               |
+ |                               Version 2019.1                               |
  |                                                                            |
- |                    This run used       1.79 cpu secs and                   |
+ |                    This run used       1.57 cpu secs and                   |
  |               4488 of the allocated   1000000 words of storage             |
  |                                                                            |
   -- BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND --

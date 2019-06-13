@@ -5,9 +5,9 @@
  |                                                                            |
  |              Copyright (C) 2019 J. M. Hutson & C. R. Le Sueur              |
  |                                                                            |
- |                               Version 2019.0                               |
+ |                               Version 2019.1                               |
  |                                                                            |
- |                       Run on 11 Mar 2019   at 16:52:31                     |
+ |                       Run on 30 May 2019   at 11:34:30                     |
  |                                                                            |
   ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
 
@@ -17,11 +17,11 @@
   the Free Software Foundation.
 
   Publications resulting from the use of this program should refer to
-  J. M. Hutson & C. R. Le Sueur, MOLSCAT computer code 2019.0              
+  J. M. Hutson & C. R. Le Sueur, MOLSCAT computer code 2019.1              
   or to the published paper in Computer Physics Communications when available.
 
 
-  USING CODATA 2014 RECOMMENDED VALUES OF FUNDAMENTAL PHYSICAL CONSTANTS
+  USING CODATA 2018 RECOMMENDED VALUES OF FUNDAMENTAL PHYSICAL CONSTANTS
 
   MEMORY ALLOCATED TO MAIN WORKING ARRAY IS   1000000 (8-BYTE) WORDS (    7.63 MB)
   2 INTEGERS CAN BE STORED IN EACH WORD.
@@ -4995,7 +4995,7 @@
   ACCUMULATED PRESSURE-BROADENING CROSS SECTIONS (IN ANG**2) FOR JTOT =   44
 
   LINE LEV(A) LEV(B) LEV(A1) LEV(B1)   TYPE          EREL (CM-1)     RE(S)            IM(S)
-    1    6      7      6       7       RAMAN       200.000000000     2.407295E+01    -9.367471E-01
+    1    6      7      6       7       RAMAN       200.000000000     2.407295E+01    -9.367472E-01
 
   FOR JTOT =   45, SYMMETRY BLOCK =  1, ENERGY(  1) =  260.3941    : MAX DIAG & OFF-DIAG =  9.34E-01 &   2.38E-01
 
@@ -14828,7 +14828,7 @@
   ACCUMULATED PRESSURE-BROADENING CROSS SECTIONS (IN ANG**2) FOR JTOT =  141
 
   LINE LEV(A) LEV(B) LEV(A1) LEV(B1)   TYPE          EREL (CM-1)     RE(S)            IM(S)
-    1    6      7      6       7       RAMAN       200.000000000     9.072422E+01    -3.017790E+00
+    1    6      7      6       7       RAMAN       200.000000000     9.072422E+01    -3.017791E+00
 
   FOR JTOT =  142, SYMMETRY BLOCK =  1, ENERGY(  1) =  260.3941    : MAX DIAG & OFF-DIAG =  1.46E+00 &   6.20E-02
 
@@ -19192,7 +19192,7 @@
   ACCUMULATED PRESSURE-BROADENING CROSS SECTIONS (IN ANG**2) FOR JTOT =  193
 
   LINE LEV(A) LEV(B) LEV(A1) LEV(B1)   TYPE          EREL (CM-1)     RE(S)            IM(S)
-    1    6      7      6       7       RAMAN       200.000000000     9.072655E+01    -3.016722E+00
+    1    6      7      6       7       RAMAN       200.000000000     9.072656E+01    -3.016722E+00
 
   FOR JTOT =  194, SYMMETRY BLOCK =  1, ENERGY(  1) =  260.3941    : MAX DIAG & OFF-DIAG =  3.66E-02 &   9.61E-04
 
@@ -20393,9 +20393,9 @@
  |                                                                            |
  |              Copyright (C) 2019 J. M. Hutson & C. R. Le Sueur              |
  |                                                                            |
- |                               Version 2019.0                               |
+ |                               Version 2019.1                               |
  |                                                                            |
- |                    This run used     308.39 cpu secs and                   |
+ |                    This run used     285.88 cpu secs and                   |
  |             147055 of the allocated   1000000 words of storage             |
  |                                                                            |
   ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---

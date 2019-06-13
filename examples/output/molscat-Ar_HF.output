@@ -5,9 +5,9 @@
  |                                                                            |
  |              Copyright (C) 2019 J. M. Hutson & C. R. Le Sueur              |
  |                                                                            |
- |                               Version 2019.0                               |
+ |                               Version 2019.1                               |
  |                                                                            |
- |                       Run on 11 Mar 2019   at 16:52:31                     |
+ |                       Run on 30 May 2019   at 11:34:29                     |
  |                                                                            |
   ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
 
@@ -17,11 +17,11 @@
   the Free Software Foundation.
 
   Publications resulting from the use of this program should refer to
-  J. M. Hutson & C. R. Le Sueur, MOLSCAT computer code 2019.0              
+  J. M. Hutson & C. R. Le Sueur, MOLSCAT computer code 2019.1              
   or to the published paper in Computer Physics Communications when available.
 
 
-  USING CODATA 2014 RECOMMENDED VALUES OF FUNDAMENTAL PHYSICAL CONSTANTS
+  USING CODATA 2018 RECOMMENDED VALUES OF FUNDAMENTAL PHYSICAL CONSTANTS
 
   MEMORY ALLOCATED TO MAIN WORKING ARRAY IS   1000000 (8-BYTE) WORDS (    7.63 MB)
   2 INTEGERS CAN BE STORED IN EACH WORD.
@@ -228,34 +228,34 @@
 
   ESTIMATE PARAMETERS OF DISTANT RESONANCE USING 5 ENERGIES
 
-  ENERGY(1) =   16.930000000000     CM-1 EPSUM/PI = 10.242726690744410
-  ENERGY(2) =   16.930100000000     CM-1 EPSUM/PI = 10.242712520075303
-  ENERGY(3) =   16.930200000000     CM-1 EPSUM/PI = 10.242698359933589
-  ENERGY(4) =   16.930300000000     CM-1 EPSUM/PI = 10.242684210559217
-  ENERGY(5) =   16.930400000000     CM-1 EPSUM/PI = 10.242670072199436
+  ENERGY(1) =   16.930000000000     CM-1 EPSUM/PI = 10.242726692024334
+  ENERGY(2) =   16.930100000000     CM-1 EPSUM/PI = 10.242712521354910
+  ENERGY(3) =   16.930200000000     CM-1 EPSUM/PI = 10.242698361212895
+  ENERGY(4) =   16.930300000000     CM-1 EPSUM/PI = 10.242684211838204
+  ENERGY(5) =   16.930400000000     CM-1 EPSUM/PI = 10.242670073478127
 
   ESTIMATED EIGENPHASE CURVATURES ARE   1.05274       1.07673       1.10146    
 
-  ESTIMATE RESONANCE ENERGY =   16.943462812271     CM-1       WIDTH = 0.2512E-05 CM-1    
+  ESTIMATE RESONANCE ENERGY =   16.943462649835     CM-1       WIDTH = 0.2512E-05 CM-1    
 
   - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
   CONTROL DATA FOR TOTAL ENERGIES.  CALCULATIONS WILL BE PERFORMED FOR    5 VALUES
-       ENERGY NO.    6 =   16.942932300     CM-1
-       ENERGY NO.    7 =   16.943197556     CM-1
-       ENERGY NO.    8 =   16.943462812     CM-1
-       ENERGY NO.    9 =   16.943728069     CM-1
-       ENERGY NO.   10 =   16.943993325     CM-1
+       ENERGY NO.    6 =   16.942932144     CM-1
+       ENERGY NO.    7 =   16.943197397     CM-1
+       ENERGY NO.    8 =   16.943462650     CM-1
+       ENERGY NO.    9 =   16.943727903     CM-1
+       ENERGY NO.   10 =   16.943993156     CM-1
 
   S-MATRIX EIGENPHASE SUM, EPSUM/PI = 10.24343
 
   FOR JTOT =    1, SYMMETRY BLOCK =  2, ENERGY(  6) =  16.94293    : MAX DIAG & OFF-DIAG =  1.35E+00 &   0.00E+00
 
-  S-MATRIX EIGENPHASE SUM, EPSUM/PI = 10.24728
+  S-MATRIX EIGENPHASE SUM, EPSUM/PI = 10.24727
 
   FOR JTOT =    1, SYMMETRY BLOCK =  2, ENERGY(  7) =  16.94320    : MAX DIAG & OFF-DIAG =  1.38E+00 &   0.00E+00
 
-  S-MATRIX EIGENPHASE SUM, EPSUM/PI = 10.22523
+  S-MATRIX EIGENPHASE SUM, EPSUM/PI = 10.22520
 
   FOR JTOT =    1, SYMMETRY BLOCK =  2, ENERGY(  8) =  16.94346    : MAX DIAG & OFF-DIAG =  1.19E+00 &   0.00E+00
 
@@ -269,16 +269,16 @@
 
   ESTIMATE PARAMETERS OF DISTANT RESONANCE USING 5 ENERGIES
 
-  ENERGY(1) =   16.942932299780     CM-1 EPSUM/PI = 10.243432816539869
-  ENERGY(2) =   16.943197556026     CM-1 EPSUM/PI = 10.247276309113376
-  ENERGY(3) =   16.943462812271     CM-1 EPSUM/PI = 10.225231901434512
-  ENERGY(4) =   16.943728068516     CM-1 EPSUM/PI = 10.237039469426003
-  ENERGY(5) =   16.943993324762     CM-1 EPSUM/PI = 10.238546242078719
+  ENERGY(1) =   16.942932143841     CM-1 EPSUM/PI = 10.243431883846180
+  ENERGY(2) =   16.943197396838     CM-1 EPSUM/PI = 10.247270579480352
+  ENERGY(3) =   16.943462649835     CM-1 EPSUM/PI = 10.225199900271063
+  ENERGY(4) =   16.943727902831     CM-1 EPSUM/PI = 10.237037756193745
+  ENERGY(5) =   16.943993155828     CM-1 EPSUM/PI = 10.238545702268434
 
-  ESTIMATED EIGENPHASE CURVATURES ARE  -367930.       481119.      -146399.    
+  ESTIMATED EIGENPHASE CURVATURES ARE  -368245.       481935.      -146817.    
 
   *** NEXTE: EIGENPHASE CURVATURES AMBIGUOUS: EITHER ENERGIES SPAN RESONANCE OR PHASES AFFECTED BY NUMERICAL NOISE:
-             UNSAFE TO ESTIMATE RESONANCE ENERGY. DNRG INCREASED TO 0.26526E-02 CM-1    
+             UNSAFE TO ESTIMATE RESONANCE ENERGY. DNRG INCREASED TO 0.26525E-02 CM-1    
 
   SIGMA NOT PRINTED BECAUSE ISIGPR = 0
 
@@ -290,9 +290,9 @@
  |                                                                            |
  |              Copyright (C) 2019 J. M. Hutson & C. R. Le Sueur              |
  |                                                                            |
- |                               Version 2019.0                               |
+ |                               Version 2019.1                               |
  |                                                                            |
- |                    This run used       0.16 cpu secs and                   |
+ |                    This run used       0.21 cpu secs and                   |
  |               3525 of the allocated   1000000 words of storage             |
  |                                                                            |
   ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---

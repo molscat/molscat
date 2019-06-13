@@ -4,9 +4,9 @@
  |                                                                            |
  |              Copyright (C) 2019 J. M. Hutson & C. R. Le Sueur              |
  |                                                                            |
- |                               Version 2019.0                               |
+ |                               Version 2019.1                               |
  |                                                                            |
- |                       Run on 11 Mar 2019   at 16:51:55                     |
+ |                       Run on 30 May 2019   at 11:33:58                     |
  |                                                                            |
   -- BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND --
 
@@ -16,11 +16,11 @@
   the Free Software Foundation.
 
   Publications resulting from the use of this program should refer to
-  J. M. Hutson & C. R. Le Sueur, BOUND computer code 2019.0              
+  J. M. Hutson & C. R. Le Sueur, BOUND computer code 2019.1              
   or to the published paper in Computer Physics Communications when available.
 
 
-  USING CODATA 2014 RECOMMENDED VALUES OF FUNDAMENTAL PHYSICAL CONSTANTS
+  USING CODATA 2018 RECOMMENDED VALUES OF FUNDAMENTAL PHYSICAL CONSTANTS
 
   MEMORY ALLOCATED TO MAIN WORKING ARRAY IS   1000000 (8-BYTE) WORDS (    7.63 MB)
 
@@ -139,9 +139,9 @@
 
   *****************************  ANGULAR MOMENTUM JTOT  =   1   AND SYMMETRY BLOCK  =    2  ****************************
 
-  CONVERGED ON NODE NUMBER     4 AT                               ENERGY =  -4.992074666     CM-1  
+  CONVERGED ON STATE NUMBER     4 AT                              ENERGY =  -4.992074660     CM-1  
 
-  CONVERGED ON NODE NUMBER     5 AT                               ENERGY =  -1.413103889     CM-1  
+  CONVERGED ON STATE NUMBER     5 AT                              ENERGY =  -1.413103885     CM-1  
 
 
   -- BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND --
@@ -150,9 +150,9 @@
  |                                                                            |
  |              Copyright (C) 2019 J. M. Hutson & C. R. Le Sueur              |
  |                                                                            |
- |                               Version 2019.0                               |
+ |                               Version 2019.1                               |
  |                                                                            |
- |                    This run used       2.87 cpu secs and                   |
+ |                    This run used       2.94 cpu secs and                   |
  |                354 of the allocated   1000000 words of storage             |
  |                                                                            |
   -- BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND --

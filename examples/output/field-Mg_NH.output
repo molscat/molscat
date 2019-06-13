@@ -5,9 +5,9 @@
  |                                                                            |
  |              Copyright (C) 2019 J. M. Hutson & C. R. Le Sueur              |
  |                                                                            |
- |                               Version 2019.0                               |
+ |                               Version 2019.1                               |
  |                                                                            |
- |                       Run on 11 Mar 2019   at 17:12:06                     |
+ |                       Run on 30 May 2019   at 11:53:07                     |
  |                                                                            |
   -- FIELD ------ FIELD ------ FIELD ------ FIELD ------ FIELD ------ FIELD --
 
@@ -17,11 +17,11 @@
   the Free Software Foundation.
 
   Publications resulting from the use of this program should refer to
-  J. M. Hutson & C. R. Le Sueur, FIELD computer code 2019.0              
+  J. M. Hutson & C. R. Le Sueur, FIELD computer code 2019.1              
   or to the published paper in Computer Physics Communications when available.
 
 
-  USING CODATA 2014 RECOMMENDED VALUES OF FUNDAMENTAL PHYSICAL CONSTANTS
+  USING CODATA 2018 RECOMMENDED VALUES OF FUNDAMENTAL PHYSICAL CONSTANTS
 
   MEMORY ALLOCATED TO MAIN WORKING ARRAY IS   1000000 (8-BYTE) WORDS (    7.63 MB)
 
@@ -206,47 +206,47 @@
 
   ENERGY #    1 =   0.000000000     MHZ     
 
-  NODE COUNT =  170 AT MINIMUM MAGNETIC Z FIELD =   1.000000000     GAUSS 
-  NODE COUNT =  169 AT MAXIMUM MAGNETIC Z FIELD =   400.0000000     GAUSS 
+  NODE COUNT IMPLIES   170 STATES BELOW SPECIFIED ENERGY AT MAGNETIC Z FIELD =   1.000000000     GAUSS 
+  NODE COUNT IMPLIES   169 STATES BELOW SPECIFIED ENERGY AT MAGNETIC Z FIELD =   400.0000000     GAUSS 
 
   NODE COUNT DECREASES BETWEEN FLDMIN AND FLDMAX
-  PROGRAM WILL ASSUME MONOTONIC BEHAVIOUR AND SEEK   1 NODE  IN THIS INTERVAL
+  PROGRAM WILL ASSUME MONOTONIC BEHAVIOUR AND SEEK   1 STATE  IN THIS INTERVAL
 
   - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
-  SEARCHING FOR INODE =    1 CORRESPONDING TO NODE COUNT =  170
+  SEARCHING FOR BOUND STATE NUMBER   170
 
-  CONVERGED ON NODE NUMBER   170 AT                     MAGNETIC Z FIELD =   387.2558555     GAUSS 
+  CONVERGED ON STATE NUMBER   170 AT                    MAGNETIC Z FIELD =   387.2557999     GAUSS 
   = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = 
 
   ENERGY #    2 =  -20.00000000     MHZ     
 
-  NODE COUNT =  170 AT MINIMUM MAGNETIC Z FIELD =   1.000000000     GAUSS 
-  NODE COUNT =  169 AT MAXIMUM MAGNETIC Z FIELD =   400.0000000     GAUSS 
+  NODE COUNT IMPLIES   170 STATES BELOW SPECIFIED ENERGY AT MAGNETIC Z FIELD =   1.000000000     GAUSS 
+  NODE COUNT IMPLIES   169 STATES BELOW SPECIFIED ENERGY AT MAGNETIC Z FIELD =   400.0000000     GAUSS 
 
   NODE COUNT DECREASES BETWEEN FLDMIN AND FLDMAX
-  PROGRAM WILL ASSUME MONOTONIC BEHAVIOUR AND SEEK   1 NODE  IN THIS INTERVAL
+  PROGRAM WILL ASSUME MONOTONIC BEHAVIOUR AND SEEK   1 STATE  IN THIS INTERVAL
 
   - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
-  SEARCHING FOR INODE =    1 CORRESPONDING TO NODE COUNT =  170
+  SEARCHING FOR BOUND STATE NUMBER   170
 
-  CONVERGED ON NODE NUMBER   170 AT                     MAGNETIC Z FIELD =   379.2507306     GAUSS 
+  CONVERGED ON STATE NUMBER   170 AT                    MAGNETIC Z FIELD =   379.2506740     GAUSS 
   = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = 
 
   ENERGY #    3 =  -40.00000000     MHZ     
 
-  NODE COUNT =  170 AT MINIMUM MAGNETIC Z FIELD =   1.000000000     GAUSS 
-  NODE COUNT =  169 AT MAXIMUM MAGNETIC Z FIELD =   400.0000000     GAUSS 
+  NODE COUNT IMPLIES   170 STATES BELOW SPECIFIED ENERGY AT MAGNETIC Z FIELD =   1.000000000     GAUSS 
+  NODE COUNT IMPLIES   169 STATES BELOW SPECIFIED ENERGY AT MAGNETIC Z FIELD =   400.0000000     GAUSS 
 
   NODE COUNT DECREASES BETWEEN FLDMIN AND FLDMAX
-  PROGRAM WILL ASSUME MONOTONIC BEHAVIOUR AND SEEK   1 NODE  IN THIS INTERVAL
+  PROGRAM WILL ASSUME MONOTONIC BEHAVIOUR AND SEEK   1 STATE  IN THIS INTERVAL
 
   - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
-  SEARCHING FOR INODE =    1 CORRESPONDING TO NODE COUNT =  170
+  SEARCHING FOR BOUND STATE NUMBER   170
 
-  CONVERGED ON NODE NUMBER   170 AT                     MAGNETIC Z FIELD =   371.1508192     GAUSS 
+  CONVERGED ON STATE NUMBER   170 AT                    MAGNETIC Z FIELD =   371.1507616     GAUSS 
 
 
   -- FIELD ------ FIELD ------ FIELD ------ FIELD ------ FIELD ------ FIELD --
@@ -256,9 +256,9 @@
  |                                                                            |
  |              Copyright (C) 2019 J. M. Hutson & C. R. Le Sueur              |
  |                                                                            |
- |                               Version 2019.0                               |
+ |                               Version 2019.1                               |
  |                                                                            |
- |                    This run used     150.39 cpu secs and                   |
+ |                    This run used     136.87 cpu secs and                   |
  |             117673 of the allocated   1000000 words of storage             |
  |                                                                            |
   -- FIELD ------ FIELD ------ FIELD ------ FIELD ------ FIELD ------ FIELD --

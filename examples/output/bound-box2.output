@@ -4,9 +4,9 @@
  |                                                                            |
  |              Copyright (C) 2019 J. M. Hutson & C. R. Le Sueur              |
  |                                                                            |
- |                               Version 2019.0                               |
+ |                               Version 2019.1                               |
  |                                                                            |
- |                       Run on 11 Mar 2019   at 17:16:42                     |
+ |                       Run on 06 Jun 2019   at 12:03:33                     |
  |                                                                            |
   -- BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND --
 
@@ -16,11 +16,11 @@
   the Free Software Foundation.
 
   Publications resulting from the use of this program should refer to
-  J. M. Hutson & C. R. Le Sueur, BOUND computer code 2019.0              
+  J. M. Hutson & C. R. Le Sueur, BOUND computer code 2019.1              
   or to the published paper in Computer Physics Communications when available.
 
 
-  USING CODATA 2014 RECOMMENDED VALUES OF FUNDAMENTAL PHYSICAL CONSTANTS
+  USING CODATA 2018 RECOMMENDED VALUES OF FUNDAMENTAL PHYSICAL CONSTANTS
 
   MEMORY ALLOCATED TO MAIN WORKING ARRAY IS   1000000 (8-BYTE) WORDS (    7.63 MB)
 
@@ -122,7 +122,7 @@
 
   INPUT ENERGY VALUES ASSUMED TO BE IN UNITS OF CM-1 BY DEFAULT.
 
-  PROGRAM WILL SEEK EIGENVALUES WITH GENERALISED NODE COUNTS FROM    0 TO  99999
+  PROGRAM WILL SEEK STATES WITH NODE COUNTS FROM    0 TO  99999
   LYING IN ENERGY RANGE  -1.0000     TO   8.0000     CM-1    
 
   ======================================================================================================================
@@ -133,32 +133,32 @@
 
   CALCULATIONS WILL BE FOR SYMMETRY BLOCK   2  ONLY
 
-  INITIALIZATION DONE.  TIME WAS   0.00 CPU SECS.         9 WORDS OF STORAGE USED.
+  INITIALIZATION DONE.  TIME WAS   0.68 CPU SECS.         9 WORDS OF STORAGE USED.
 
   ============================ Testing BOUND for 2-channel particle in an infinite-wall box ============================
 
   *****************************  ANGULAR MOMENTUM JTOT  =   0   AND SYMMETRY BLOCK  =    2  ****************************
 
-  NODE COUNT =    0 AT MINIMUM ENERGY =  -1.000000000     CM-1  
-  NODE COUNT =    3 AT MAXIMUM ENERGY =   8.000000000     CM-1  
+  NODE COUNT IMPLIES     0 STATES BELOW MINIMUM ENERGY =  -1.000000000     CM-1  
+  NODE COUNT IMPLIES     3 STATES BELOW MAXIMUM ENERGY =   8.000000000     CM-1  
 
   - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
-  SEARCHING FOR INODE =    1 CORRESPONDING TO NODE COUNT =    1
+  SEARCHING FOR BOUND STATE NUMBER     1
 
-  CONVERGED ON NODE NUMBER     1 AT                               ENERGY =  0.9999999951     CM-1  
-
-  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
-
-  SEARCHING FOR INODE =    2 CORRESPONDING TO NODE COUNT =    2
-
-  CONVERGED ON NODE NUMBER     2 AT                               ENERGY =   3.999999983     CM-1  
+  CONVERGED ON STATE NUMBER     1 AT                              ENERGY =  0.9999999963     CM-1  
 
   - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
-  SEARCHING FOR INODE =    3 CORRESPONDING TO NODE COUNT =    3
+  SEARCHING FOR BOUND STATE NUMBER     2
 
-  CONVERGED ON NODE NUMBER     3 AT                               ENERGY =   5.999999997     CM-1  
+  CONVERGED ON STATE NUMBER     2 AT                              ENERGY =   3.999999986     CM-1  
+
+  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+  SEARCHING FOR BOUND STATE NUMBER     3
+
+  CONVERGED ON STATE NUMBER     3 AT                              ENERGY =   5.999999998     CM-1  
 
 
   -- BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND --
@@ -167,9 +167,9 @@
  |                                                                            |
  |              Copyright (C) 2019 J. M. Hutson & C. R. Le Sueur              |
  |                                                                            |
- |                               Version 2019.0                               |
+ |                               Version 2019.1                               |
  |                                                                            |
- |                    This run used       0.04 cpu secs and                   |
+ |                    This run used       4.06 cpu secs and                   |
  |                 62 of the allocated   1000000 words of storage             |
  |                                                                            |
   -- BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND --
@@ -179,9 +179,9 @@
  |                                                                            |
  |              Copyright (C) 2019 J. M. Hutson & C. R. Le Sueur              |
  |                                                                            |
- |                               Version 2019.0                               |
+ |                               Version 2019.1                               |
  |                                                                            |
- |                       Run on 11 Mar 2019   at 17:16:42                     |
+ |                       Run on 06 Jun 2019   at 12:03:33                     |
  |                                                                            |
   -- BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND --
 
@@ -191,11 +191,11 @@
   the Free Software Foundation.
 
   Publications resulting from the use of this program should refer to
-  J. M. Hutson & C. R. Le Sueur, BOUND computer code 2019.0              
+  J. M. Hutson & C. R. Le Sueur, BOUND computer code 2019.1              
   or to the published paper in Computer Physics Communications when available.
 
 
-  USING CODATA 2014 RECOMMENDED VALUES OF FUNDAMENTAL PHYSICAL CONSTANTS
+  USING CODATA 2018 RECOMMENDED VALUES OF FUNDAMENTAL PHYSICAL CONSTANTS
 
   MEMORY ALLOCATED TO MAIN WORKING ARRAY IS   1000000 (8-BYTE) WORDS (    7.63 MB)
 
@@ -297,7 +297,7 @@
 
   INPUT ENERGY VALUES ASSUMED TO BE IN UNITS OF CM-1 BY DEFAULT.
 
-  PROGRAM WILL SEEK EIGENVALUES WITH GENERALISED NODE COUNTS FROM    0 TO  99999
+  PROGRAM WILL SEEK STATES WITH NODE COUNTS FROM    0 TO  99999
   LYING IN ENERGY RANGE  -1.0000     TO   8.0000     CM-1    
 
   ======================================================================================================================
@@ -314,38 +314,38 @@
 
   *****************************  ANGULAR MOMENTUM JTOT  =   0   AND SYMMETRY BLOCK  =    2  ****************************
 
-  NODE COUNT =    0 AT MINIMUM ENERGY =  -1.000000000     CM-1  
-  NODE COUNT =    5 AT MAXIMUM ENERGY =   8.000000000     CM-1  
+  NODE COUNT IMPLIES     0 STATES BELOW MINIMUM ENERGY =  -1.000000000     CM-1  
+  NODE COUNT IMPLIES     5 STATES BELOW MAXIMUM ENERGY =   8.000000000     CM-1  
 
   - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
-  SEARCHING FOR INODE =    1 CORRESPONDING TO NODE COUNT =    1
+  SEARCHING FOR BOUND STATE NUMBER     1
 
-  CONVERGED ON NODE NUMBER     1 AT                               ENERGY =  6.0464139434E-02 CM-1  
-
-  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
-
-  SEARCHING FOR INODE =    2 CORRESPONDING TO NODE COUNT =    2
-
-  CONVERGED ON NODE NUMBER     2 AT                               ENERGY =   1.123361643     CM-1  
+  CONVERGED ON STATE NUMBER     1 AT                              ENERGY =  6.0464138422E-02 CM-1  
 
   - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
-  SEARCHING FOR INODE =    3 CORRESPONDING TO NODE COUNT =    3
+  SEARCHING FOR BOUND STATE NUMBER     2
 
-  CONVERGED ON NODE NUMBER     3 AT                               ENERGY =   4.126240653     CM-1  
-
-  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
-
-  SEARCHING FOR INODE =    4 CORRESPONDING TO NODE COUNT =    4
-
-  CONVERGED ON NODE NUMBER     4 AT                               ENERGY =   5.060464140     CM-1  
+  CONVERGED ON STATE NUMBER     2 AT                              ENERGY =   1.123361644     CM-1  
 
   - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
-  SEARCHING FOR INODE =    5 CORRESPONDING TO NODE COUNT =    5
+  SEARCHING FOR BOUND STATE NUMBER     3
 
-  CONVERGED ON NODE NUMBER     5 AT                               ENERGY =   6.123361643     CM-1  
+  CONVERGED ON STATE NUMBER     3 AT                              ENERGY =   4.126240656     CM-1  
+
+  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+  SEARCHING FOR BOUND STATE NUMBER     4
+
+  CONVERGED ON STATE NUMBER     4 AT                              ENERGY =   5.060464140     CM-1  
+
+  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+  SEARCHING FOR BOUND STATE NUMBER     5
+
+  CONVERGED ON STATE NUMBER     5 AT                              ENERGY =   6.123361643     CM-1  
 
 
   -- BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND --
@@ -354,7 +354,7 @@
  |                                                                            |
  |              Copyright (C) 2019 J. M. Hutson & C. R. Le Sueur              |
  |                                                                            |
- |                               Version 2019.0                               |
+ |                               Version 2019.1                               |
  |                                                                            |
  |                    This run used       0.05 cpu secs and                   |
  |                 70 of the allocated   1000000 words of storage             |
@@ -366,9 +366,9 @@
  |                                                                            |
  |              Copyright (C) 2019 J. M. Hutson & C. R. Le Sueur              |
  |                                                                            |
- |                               Version 2019.0                               |
+ |                               Version 2019.1                               |
  |                                                                            |
- |                       Run on 11 Mar 2019   at 17:16:42                     |
+ |                       Run on 06 Jun 2019   at 12:03:33                     |
  |                                                                            |
   -- BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND --
 
@@ -378,11 +378,11 @@
   the Free Software Foundation.
 
   Publications resulting from the use of this program should refer to
-  J. M. Hutson & C. R. Le Sueur, BOUND computer code 2019.0              
+  J. M. Hutson & C. R. Le Sueur, BOUND computer code 2019.1              
   or to the published paper in Computer Physics Communications when available.
 
 
-  USING CODATA 2014 RECOMMENDED VALUES OF FUNDAMENTAL PHYSICAL CONSTANTS
+  USING CODATA 2018 RECOMMENDED VALUES OF FUNDAMENTAL PHYSICAL CONSTANTS
 
   MEMORY ALLOCATED TO MAIN WORKING ARRAY IS   1000000 (8-BYTE) WORDS (    7.63 MB)
 
@@ -484,7 +484,7 @@
 
   INPUT ENERGY VALUES ASSUMED TO BE IN UNITS OF CM-1 BY DEFAULT.
 
-  PROGRAM WILL SEEK EIGENVALUES WITH GENERALISED NODE COUNTS FROM    0 TO  99999
+  PROGRAM WILL SEEK STATES WITH NODE COUNTS FROM    0 TO  99999
   LYING IN ENERGY RANGE  -1.0000     TO   8.0000     CM-1    
 
   ======================================================================================================================
@@ -501,38 +501,38 @@
 
   *****************************  ANGULAR MOMENTUM JTOT  =   0   AND SYMMETRY BLOCK  =    2  ****************************
 
-  NODE COUNT =    0 AT MINIMUM ENERGY =  -1.000000000     CM-1  
-  NODE COUNT =    5 AT MAXIMUM ENERGY =   8.000000000     CM-1  
+  NODE COUNT IMPLIES     0 STATES BELOW MINIMUM ENERGY =  -1.000000000     CM-1  
+  NODE COUNT IMPLIES     5 STATES BELOW MAXIMUM ENERGY =   8.000000000     CM-1  
 
   - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
-  SEARCHING FOR INODE =    1 CORRESPONDING TO NODE COUNT =    1
+  SEARCHING FOR BOUND STATE NUMBER     1
 
-  CONVERGED ON NODE NUMBER     1 AT                               ENERGY =  6.0464139690E-02 CM-1  
-
-  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
-
-  SEARCHING FOR INODE =    2 CORRESPONDING TO NODE COUNT =    2
-
-  CONVERGED ON NODE NUMBER     2 AT                               ENERGY =   1.123361643     CM-1  
+  CONVERGED ON STATE NUMBER     1 AT                              ENERGY =  6.0464140627E-02 CM-1  
 
   - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
-  SEARCHING FOR INODE =    3 CORRESPONDING TO NODE COUNT =    3
+  SEARCHING FOR BOUND STATE NUMBER     2
 
-  CONVERGED ON NODE NUMBER     3 AT                               ENERGY =   4.126240653     CM-1  
-
-  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
-
-  SEARCHING FOR INODE =    4 CORRESPONDING TO NODE COUNT =    4
-
-  CONVERGED ON NODE NUMBER     4 AT                               ENERGY =   5.060464142     CM-1  
+  CONVERGED ON STATE NUMBER     2 AT                              ENERGY =   1.123361644     CM-1  
 
   - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
-  SEARCHING FOR INODE =    5 CORRESPONDING TO NODE COUNT =    5
+  SEARCHING FOR BOUND STATE NUMBER     3
 
-  CONVERGED ON NODE NUMBER     5 AT                               ENERGY =   6.123361643     CM-1  
+  CONVERGED ON STATE NUMBER     3 AT                              ENERGY =   4.126240656     CM-1  
+
+  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+  SEARCHING FOR BOUND STATE NUMBER     4
+
+  CONVERGED ON STATE NUMBER     4 AT                              ENERGY =   5.060464142     CM-1  
+
+  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+  SEARCHING FOR BOUND STATE NUMBER     5
+
+  CONVERGED ON STATE NUMBER     5 AT                              ENERGY =   6.123361644     CM-1  
 
 
   -- BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND --
@@ -541,7 +541,7 @@
  |                                                                            |
  |              Copyright (C) 2019 J. M. Hutson & C. R. Le Sueur              |
  |                                                                            |
- |                               Version 2019.0                               |
+ |                               Version 2019.1                               |
  |                                                                            |
  |                    This run used       0.06 cpu secs and                   |
  |                 70 of the allocated   1000000 words of storage             |
@@ -553,9 +553,9 @@
  |                                                                            |
  |              Copyright (C) 2019 J. M. Hutson & C. R. Le Sueur              |
  |                                                                            |
- |                               Version 2019.0                               |
+ |                               Version 2019.1                               |
  |                                                                            |
- |                       Run on 11 Mar 2019   at 17:16:42                     |
+ |                       Run on 06 Jun 2019   at 12:03:33                     |
  |                                                                            |
   -- BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND --
 
@@ -565,11 +565,11 @@
   the Free Software Foundation.
 
   Publications resulting from the use of this program should refer to
-  J. M. Hutson & C. R. Le Sueur, BOUND computer code 2019.0              
+  J. M. Hutson & C. R. Le Sueur, BOUND computer code 2019.1              
   or to the published paper in Computer Physics Communications when available.
 
 
-  USING CODATA 2014 RECOMMENDED VALUES OF FUNDAMENTAL PHYSICAL CONSTANTS
+  USING CODATA 2018 RECOMMENDED VALUES OF FUNDAMENTAL PHYSICAL CONSTANTS
 
   MEMORY ALLOCATED TO MAIN WORKING ARRAY IS   1000000 (8-BYTE) WORDS (    7.63 MB)
 
@@ -671,7 +671,7 @@
 
   INPUT ENERGY VALUES ASSUMED TO BE IN UNITS OF CM-1 BY DEFAULT.
 
-  PROGRAM WILL SEEK EIGENVALUES WITH GENERALISED NODE COUNTS FROM    0 TO  99999
+  PROGRAM WILL SEEK STATES WITH NODE COUNTS FROM    0 TO  99999
   LYING IN ENERGY RANGE  -1.0000     TO   8.0000     CM-1    
 
   ======================================================================================================================
@@ -688,38 +688,38 @@
 
   *****************************  ANGULAR MOMENTUM JTOT  =   0   AND SYMMETRY BLOCK  =    2  ****************************
 
-  NODE COUNT =    0 AT MINIMUM ENERGY =  -1.000000000     CM-1  
-  NODE COUNT =    5 AT MAXIMUM ENERGY =   8.000000000     CM-1  
+  NODE COUNT IMPLIES     0 STATES BELOW MINIMUM ENERGY =  -1.000000000     CM-1  
+  NODE COUNT IMPLIES     5 STATES BELOW MAXIMUM ENERGY =   8.000000000     CM-1  
 
   - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
-  SEARCHING FOR INODE =    1 CORRESPONDING TO NODE COUNT =    1
+  SEARCHING FOR BOUND STATE NUMBER     1
 
-  CONVERGED ON NODE NUMBER     1 AT                               ENERGY =  6.0458358047E-02 CM-1  
-
-  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
-
-  SEARCHING FOR INODE =    2 CORRESPONDING TO NODE COUNT =    2
-
-  CONVERGED ON NODE NUMBER     2 AT                               ENERGY =   1.123137999     CM-1  
+  CONVERGED ON STATE NUMBER     1 AT                              ENERGY =  6.0464140629E-02 CM-1  
 
   - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
-  SEARCHING FOR INODE =    3 CORRESPONDING TO NODE COUNT =    3
+  SEARCHING FOR BOUND STATE NUMBER     2
 
-  CONVERGED ON NODE NUMBER     3 AT                               ENERGY =   4.125380670     CM-1  
-
-  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
-
-  SEARCHING FOR INODE =    4 CORRESPONDING TO NODE COUNT =    4
-
-  CONVERGED ON NODE NUMBER     4 AT                               ENERGY =   5.059979966     CM-1  
+  CONVERGED ON STATE NUMBER     2 AT                              ENERGY =   1.123361644     CM-1  
 
   - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
-  SEARCHING FOR INODE =    5 CORRESPONDING TO NODE COUNT =    5
+  SEARCHING FOR BOUND STATE NUMBER     3
 
-  CONVERGED ON NODE NUMBER     5 AT                               ENERGY =   6.122142255     CM-1  
+  CONVERGED ON STATE NUMBER     3 AT                              ENERGY =   4.126240656     CM-1  
+
+  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+  SEARCHING FOR BOUND STATE NUMBER     4
+
+  CONVERGED ON STATE NUMBER     4 AT                              ENERGY =   5.060464141     CM-1  
+
+  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+  SEARCHING FOR BOUND STATE NUMBER     5
+
+  CONVERGED ON STATE NUMBER     5 AT                              ENERGY =   6.123361644     CM-1  
 
 
   -- BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND --
@@ -728,9 +728,9 @@
  |                                                                            |
  |              Copyright (C) 2019 J. M. Hutson & C. R. Le Sueur              |
  |                                                                            |
- |                               Version 2019.0                               |
+ |                               Version 2019.1                               |
  |                                                                            |
- |                    This run used       0.19 cpu secs and                   |
+ |                    This run used       0.34 cpu secs and                   |
  |                 86 of the allocated   1000000 words of storage             |
  |                                                                            |
   -- BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND --
@@ -740,9 +740,9 @@
  |                                                                            |
  |              Copyright (C) 2019 J. M. Hutson & C. R. Le Sueur              |
  |                                                                            |
- |                               Version 2019.0                               |
+ |                               Version 2019.1                               |
  |                                                                            |
- |                       Run on 11 Mar 2019   at 17:16:42                     |
+ |                       Run on 06 Jun 2019   at 12:03:33                     |
  |                                                                            |
   -- BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND --
 
@@ -752,11 +752,11 @@
   the Free Software Foundation.
 
   Publications resulting from the use of this program should refer to
-  J. M. Hutson & C. R. Le Sueur, BOUND computer code 2019.0              
+  J. M. Hutson & C. R. Le Sueur, BOUND computer code 2019.1              
   or to the published paper in Computer Physics Communications when available.
 
 
-  USING CODATA 2014 RECOMMENDED VALUES OF FUNDAMENTAL PHYSICAL CONSTANTS
+  USING CODATA 2018 RECOMMENDED VALUES OF FUNDAMENTAL PHYSICAL CONSTANTS
 
   MEMORY ALLOCATED TO MAIN WORKING ARRAY IS   1000000 (8-BYTE) WORDS (    7.63 MB)
 
@@ -860,7 +860,7 @@
 
   INPUT ENERGY VALUES ASSUMED TO BE IN UNITS OF CM-1 BY DEFAULT.
 
-  PROGRAM WILL SEEK EIGENVALUES WITH GENERALISED NODE COUNTS FROM    0 TO  99999
+  PROGRAM WILL SEEK STATES WITH NODE COUNTS FROM    0 TO  99999
   LYING IN ENERGY RANGE  -1.0000     TO   8.0000     CM-1    
 
   ======================================================================================================================
@@ -877,38 +877,38 @@
 
   *****************************  ANGULAR MOMENTUM JTOT  =   0   AND SYMMETRY BLOCK  =    2  ****************************
 
-  NODE COUNT =    0 AT MINIMUM ENERGY =  -1.000000000     CM-1  
-  NODE COUNT =    5 AT MAXIMUM ENERGY =   8.000000000     CM-1  
+  NODE COUNT IMPLIES     0 STATES BELOW MINIMUM ENERGY =  -1.000000000     CM-1  
+  NODE COUNT IMPLIES     5 STATES BELOW MAXIMUM ENERGY =   8.000000000     CM-1  
 
   - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
-  SEARCHING FOR INODE =    1 CORRESPONDING TO NODE COUNT =    1
+  SEARCHING FOR BOUND STATE NUMBER     1
 
-  CONVERGED ON NODE NUMBER     1 AT                               ENERGY =  6.0464140543E-02 CM-1  
-
-  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
-
-  SEARCHING FOR INODE =    2 CORRESPONDING TO NODE COUNT =    2
-
-  CONVERGED ON NODE NUMBER     2 AT                               ENERGY =   1.123361643     CM-1  
+  CONVERGED ON STATE NUMBER     1 AT                              ENERGY =  6.0464140555E-02 CM-1  
 
   - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
-  SEARCHING FOR INODE =    3 CORRESPONDING TO NODE COUNT =    3
+  SEARCHING FOR BOUND STATE NUMBER     2
 
-  CONVERGED ON NODE NUMBER     3 AT                               ENERGY =   4.126240653     CM-1  
-
-  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
-
-  SEARCHING FOR INODE =    4 CORRESPONDING TO NODE COUNT =    4
-
-  CONVERGED ON NODE NUMBER     4 AT                               ENERGY =   5.060464141     CM-1  
+  CONVERGED ON STATE NUMBER     2 AT                              ENERGY =   1.123361644     CM-1  
 
   - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
-  SEARCHING FOR INODE =    5 CORRESPONDING TO NODE COUNT =    5
+  SEARCHING FOR BOUND STATE NUMBER     3
 
-  CONVERGED ON NODE NUMBER     5 AT                               ENERGY =   6.123361643     CM-1  
+  CONVERGED ON STATE NUMBER     3 AT                              ENERGY =   4.126240656     CM-1  
+
+  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+  SEARCHING FOR BOUND STATE NUMBER     4
+
+  CONVERGED ON STATE NUMBER     4 AT                              ENERGY =   5.060464141     CM-1  
+
+  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+  SEARCHING FOR BOUND STATE NUMBER     5
+
+  CONVERGED ON STATE NUMBER     5 AT                              ENERGY =   6.123361644     CM-1  
 
 
   -- BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND --
@@ -917,9 +917,9 @@
  |                                                                            |
  |              Copyright (C) 2019 J. M. Hutson & C. R. Le Sueur              |
  |                                                                            |
- |                               Version 2019.0                               |
+ |                               Version 2019.1                               |
  |                                                                            |
- |                    This run used       0.12 cpu secs and                   |
+ |                    This run used       0.14 cpu secs and                   |
  |                 70 of the allocated   1000000 words of storage             |
  |                                                                            |
   -- BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND --
@@ -929,9 +929,9 @@
  |                                                                            |
  |              Copyright (C) 2019 J. M. Hutson & C. R. Le Sueur              |
  |                                                                            |
- |                               Version 2019.0                               |
+ |                               Version 2019.1                               |
  |                                                                            |
- |                       Run on 11 Mar 2019   at 17:16:42                     |
+ |                       Run on 06 Jun 2019   at 12:03:33                     |
  |                                                                            |
   -- BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND --
 
@@ -941,11 +941,11 @@
   the Free Software Foundation.
 
   Publications resulting from the use of this program should refer to
-  J. M. Hutson & C. R. Le Sueur, BOUND computer code 2019.0              
+  J. M. Hutson & C. R. Le Sueur, BOUND computer code 2019.1              
   or to the published paper in Computer Physics Communications when available.
 
 
-  USING CODATA 2014 RECOMMENDED VALUES OF FUNDAMENTAL PHYSICAL CONSTANTS
+  USING CODATA 2018 RECOMMENDED VALUES OF FUNDAMENTAL PHYSICAL CONSTANTS
 
   MEMORY ALLOCATED TO MAIN WORKING ARRAY IS   1000000 (8-BYTE) WORDS (    7.63 MB)
 
@@ -1049,7 +1049,7 @@
 
   INPUT ENERGY VALUES ASSUMED TO BE IN UNITS OF CM-1 BY DEFAULT.
 
-  PROGRAM WILL SEEK EIGENVALUES WITH GENERALISED NODE COUNTS FROM    0 TO  99999
+  PROGRAM WILL SEEK STATES WITH NODE COUNTS FROM    0 TO  99999
   LYING IN ENERGY RANGE  -1.0000     TO   8.0000     CM-1    
 
   ======================================================================================================================
@@ -1066,38 +1066,38 @@
 
   *****************************  ANGULAR MOMENTUM JTOT  =   0   AND SYMMETRY BLOCK  =    2  ****************************
 
-  NODE COUNT =    0 AT MINIMUM ENERGY =  -1.000000000     CM-1  
-  NODE COUNT =    5 AT MAXIMUM ENERGY =   8.000000000     CM-1  
+  NODE COUNT IMPLIES     0 STATES BELOW MINIMUM ENERGY =  -1.000000000     CM-1  
+  NODE COUNT IMPLIES     5 STATES BELOW MAXIMUM ENERGY =   8.000000000     CM-1  
 
   - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
-  SEARCHING FOR INODE =    1 CORRESPONDING TO NODE COUNT =    1
+  SEARCHING FOR BOUND STATE NUMBER     1
 
-  CONVERGED ON NODE NUMBER     1 AT                               ENERGY =  6.0464140374E-02 CM-1  
-
-  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
-
-  SEARCHING FOR INODE =    2 CORRESPONDING TO NODE COUNT =    2
-
-  CONVERGED ON NODE NUMBER     2 AT                               ENERGY =   1.123361643     CM-1  
+  CONVERGED ON STATE NUMBER     1 AT                              ENERGY =  6.0464140497E-02 CM-1  
 
   - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
-  SEARCHING FOR INODE =    3 CORRESPONDING TO NODE COUNT =    3
+  SEARCHING FOR BOUND STATE NUMBER     2
 
-  CONVERGED ON NODE NUMBER     3 AT                               ENERGY =   4.126240653     CM-1  
-
-  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
-
-  SEARCHING FOR INODE =    4 CORRESPONDING TO NODE COUNT =    4
-
-  CONVERGED ON NODE NUMBER     4 AT                               ENERGY =   5.060464142     CM-1  
+  CONVERGED ON STATE NUMBER     2 AT                              ENERGY =   1.123361643     CM-1  
 
   - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
-  SEARCHING FOR INODE =    5 CORRESPONDING TO NODE COUNT =    5
+  SEARCHING FOR BOUND STATE NUMBER     3
 
-  CONVERGED ON NODE NUMBER     5 AT                               ENERGY =   6.123361644     CM-1  
+  CONVERGED ON STATE NUMBER     3 AT                              ENERGY =   4.126240656     CM-1  
+
+  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+  SEARCHING FOR BOUND STATE NUMBER     4
+
+  CONVERGED ON STATE NUMBER     4 AT                              ENERGY =   5.060464142     CM-1  
+
+  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+  SEARCHING FOR BOUND STATE NUMBER     5
+
+  CONVERGED ON STATE NUMBER     5 AT                              ENERGY =   6.123361645     CM-1  
 
 
   -- BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND --
@@ -1106,7 +1106,7 @@
  |                                                                            |
  |              Copyright (C) 2019 J. M. Hutson & C. R. Le Sueur              |
  |                                                                            |
- |                               Version 2019.0                               |
+ |                               Version 2019.1                               |
  |                                                                            |
  |                    This run used       0.04 cpu secs and                   |
  |                 88 of the allocated   1000000 words of storage             |
