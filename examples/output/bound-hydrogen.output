@@ -4,9 +4,9 @@
  |                                                                            |
  |              Copyright (C) 2019 J. M. Hutson & C. R. Le Sueur              |
  |                                                                            |
- |                               Version 2019.0                               |
+ |                               Version 2019.1                               |
  |                                                                            |
- |                       Run on 11 Mar 2019   at 17:16:39                     |
+ |                       Run on 13 Jun 2019   at 08:53:03                     |
  |                                                                            |
   -- BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND --
 
@@ -16,11 +16,11 @@
   the Free Software Foundation.
 
   Publications resulting from the use of this program should refer to
-  J. M. Hutson & C. R. Le Sueur, BOUND computer code 2019.0              
+  J. M. Hutson & C. R. Le Sueur, BOUND computer code 2019.1              
   or to the published paper in Computer Physics Communications when available.
 
 
-  USING CODATA 2014 RECOMMENDED VALUES OF FUNDAMENTAL PHYSICAL CONSTANTS
+  USING CODATA 2018 RECOMMENDED VALUES OF FUNDAMENTAL PHYSICAL CONSTANTS
 
   MEMORY ALLOCATED TO MAIN WORKING ARRAY IS   1000000 (8-BYTE) WORDS (    7.63 MB)
 
@@ -128,7 +128,7 @@
   INPUT ENERGY VALUES CONVERTED FROM AU
   TO INTERNAL WORKING UNITS OF CM-1 DUE TO INTEGER INPUT =   7
 
-  PROGRAM WILL SEEK EIGENVALUES WITH GENERALISED NODE COUNTS FROM    0 TO  99999
+  PROGRAM WILL SEEK STATES WITH NODE COUNTS FROM    0 TO  99999
   LYING IN ENERGY RANGE  -1.0000     TO   0.0000     AU      
 
   ======================================================================================================================
@@ -139,7 +139,7 @@
 
   CALCULATIONS WILL BE FOR SYMMETRY BLOCK   2  ONLY
 
-  INITIALIZATION DONE.  TIME WAS   0.00 CPU SECS.         3 WORDS OF STORAGE USED.
+  INITIALIZATION DONE.  TIME WAS   0.16 CPU SECS.         3 WORDS OF STORAGE USED.
 
   ======================================= Hydrogen: ITYPE=1; IPROPS=8, IPROPL=9 ========================================
 
@@ -153,16 +153,16 @@
                          ---------      J   ---------
         1           1                   0                      0             1         0.0000000
 
-  NODE COUNT =    0 AT MINIMUM ENERGY =  -1.000000000     AU    
-  NODE COUNT =    9 AT MAXIMUM ENERGY =   0.000000000     AU    
+  NODE COUNT IMPLIES     0 STATES BELOW MINIMUM ENERGY =  -1.000000000     AU    
+  NODE COUNT IMPLIES     9 STATES BELOW MAXIMUM ENERGY =   0.000000000     AU    
 
   - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
-  SEARCHING FOR INODE =    1 CORRESPONDING TO NODE COUNT =    1
+  SEARCHING FOR BOUND STATE NUMBER     1
 
-  CONVERGED ON NODE NUMBER     1 AT                               ENERGY = -0.4999999980     AU    
+  CONVERGED ON STATE NUMBER     1 AT                              ENERGY = -0.4999999980     AU    
 
-  SMALLEST EIGENVALUE OF MATCHING MATRIX IS NUMBER  1 =  1.50136E-08
+  SMALLEST EIGENVALUE OF MATCHING MATRIX IS NUMBER  1 =  1.49053E-08
 
   WITH PRINCIPAL EIGENVECTOR COMPONENTS
   CHAN     VEC    VEC**2   L   QUANTUM NUMBERS
@@ -171,9 +171,9 @@
 
   - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
-  SEARCHING FOR INODE =    2 CORRESPONDING TO NODE COUNT =    2
+  SEARCHING FOR BOUND STATE NUMBER     2
 
-  CONVERGED ON NODE NUMBER     2 AT                               ENERGY = -0.1249999950     AU    
+  CONVERGED ON STATE NUMBER     2 AT                              ENERGY = -0.1249999950     AU    
 
   SMALLEST EIGENVALUE OF MATCHING MATRIX IS NUMBER  1 =  2.19118E-07
 
@@ -184,24 +184,11 @@
 
   - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
-  SEARCHING FOR INODE =    3 CORRESPONDING TO NODE COUNT =    3
+  SEARCHING FOR BOUND STATE NUMBER     3
 
-  CONVERGED ON NODE NUMBER     3 AT                               ENERGY = -5.5555550918E-02 AU    
+  CONVERGED ON STATE NUMBER     3 AT                              ENERGY = -5.5555550931E-02 AU    
 
-  SMALLEST EIGENVALUE OF MATCHING MATRIX IS NUMBER  1 = -1.72083E-06
-
-  WITH PRINCIPAL EIGENVECTOR COMPONENTS
-  CHAN     VEC    VEC**2   L   QUANTUM NUMBERS
-
-   1    1.0000    1.0000   0   0   1
-
-  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
-
-  SEARCHING FOR INODE =    4 CORRESPONDING TO NODE COUNT =    4
-
-  CONVERGED ON NODE NUMBER     4 AT                               ENERGY = -3.1249998644E-02 AU    
-
-  SMALLEST EIGENVALUE OF MATCHING MATRIX IS NUMBER  1 =  1.21966E-06
+  SMALLEST EIGENVALUE OF MATCHING MATRIX IS NUMBER  1 = -1.72294E-06
 
   WITH PRINCIPAL EIGENVECTOR COMPONENTS
   CHAN     VEC    VEC**2   L   QUANTUM NUMBERS
@@ -210,24 +197,11 @@
 
   - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
-  SEARCHING FOR INODE =    5 CORRESPONDING TO NODE COUNT =    5
+  SEARCHING FOR BOUND STATE NUMBER     4
 
-  CONVERGED ON NODE NUMBER     5 AT                               ENERGY = -1.9999998024E-02 AU    
+  CONVERGED ON STATE NUMBER     4 AT                              ENERGY = -3.1249998650E-02 AU    
 
-  SMALLEST EIGENVALUE OF MATCHING MATRIX IS NUMBER  1 = -7.08824E-08
-
-  WITH PRINCIPAL EIGENVECTOR COMPONENTS
-  CHAN     VEC    VEC**2   L   QUANTUM NUMBERS
-
-   1    1.0000    1.0000   0   0   1
-
-  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
-
-  SEARCHING FOR INODE =    6 CORRESPONDING TO NODE COUNT =    6
-
-  CONVERGED ON NODE NUMBER     6 AT                               ENERGY = -1.3889504331E-02 AU    
-
-  SMALLEST EIGENVALUE OF MATCHING MATRIX IS NUMBER  1 = -4.35841E-05
+  SMALLEST EIGENVALUE OF MATCHING MATRIX IS NUMBER  1 =  1.21456E-06
 
   WITH PRINCIPAL EIGENVECTOR COMPONENTS
   CHAN     VEC    VEC**2   L   QUANTUM NUMBERS
@@ -236,9 +210,35 @@
 
   - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
-  SEARCHING FOR INODE =    7 CORRESPONDING TO NODE COUNT =    7
+  SEARCHING FOR BOUND STATE NUMBER     5
 
-  CONVERGED ON NODE NUMBER     7 AT                               ENERGY = -1.0332270779E-02 AU    
+  CONVERGED ON STATE NUMBER     5 AT                              ENERGY = -1.9999998026E-02 AU    
+
+  SMALLEST EIGENVALUE OF MATCHING MATRIX IS NUMBER  1 = -6.94165E-08
+
+  WITH PRINCIPAL EIGENVECTOR COMPONENTS
+  CHAN     VEC    VEC**2   L   QUANTUM NUMBERS
+
+   1    1.0000    1.0000   0   0   1
+
+  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+  SEARCHING FOR BOUND STATE NUMBER     6
+
+  CONVERGED ON STATE NUMBER     6 AT                              ENERGY = -1.3889504332E-02 AU    
+
+  SMALLEST EIGENVALUE OF MATCHING MATRIX IS NUMBER  1 = -4.35826E-05
+
+  WITH PRINCIPAL EIGENVECTOR COMPONENTS
+  CHAN     VEC    VEC**2   L   QUANTUM NUMBERS
+
+   1    1.0000    1.0000   0   0   1
+
+  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+  SEARCHING FOR BOUND STATE NUMBER     7
+
+  CONVERGED ON STATE NUMBER     7 AT                              ENERGY = -1.0332270780E-02 AU    
 
   SMALLEST EIGENVALUE OF MATCHING MATRIX IS NUMBER  1 = -7.32162E-07
 
@@ -249,11 +249,11 @@
 
   - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
-  SEARCHING FOR INODE =    8 CORRESPONDING TO NODE COUNT =    8
+  SEARCHING FOR BOUND STATE NUMBER     8
 
-  CONVERGED ON NODE NUMBER     8 AT                               ENERGY = -7.1321668680E-03 AU    
+  CONVERGED ON STATE NUMBER     8 AT                              ENERGY = -7.1321668699E-03 AU    
 
-  SMALLEST EIGENVALUE OF MATCHING MATRIX IS NUMBER  1 = -1.18552E-06
+  SMALLEST EIGENVALUE OF MATCHING MATRIX IS NUMBER  1 = -1.18326E-06
 
   WITH PRINCIPAL EIGENVECTOR COMPONENTS
   CHAN     VEC    VEC**2   L   QUANTUM NUMBERS
@@ -262,11 +262,11 @@
 
   - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
-  SEARCHING FOR INODE =    9 CORRESPONDING TO NODE COUNT =    9
+  SEARCHING FOR BOUND STATE NUMBER     9
 
-  CONVERGED ON NODE NUMBER     9 AT                               ENERGY = -1.6256807716E-03 AU    
+  CONVERGED ON STATE NUMBER     9 AT                              ENERGY = -1.6256807753E-03 AU    
 
-  SMALLEST EIGENVALUE OF MATCHING MATRIX IS NUMBER  1 =  4.29729E-09
+  SMALLEST EIGENVALUE OF MATCHING MATRIX IS NUMBER  1 =  2.51736E-09
 
   WITH PRINCIPAL EIGENVECTOR COMPONENTS
   CHAN     VEC    VEC**2   L   QUANTUM NUMBERS
@@ -283,16 +283,16 @@
                          ---------      J   ---------
         1           1                   0                      1             1         0.0000000
 
-  NODE COUNT =    0 AT MINIMUM ENERGY =  -1.000000000     AU    
-  NODE COUNT =    8 AT MAXIMUM ENERGY =   0.000000000     AU    
+  NODE COUNT IMPLIES     0 STATES BELOW MINIMUM ENERGY =  -1.000000000     AU    
+  NODE COUNT IMPLIES     8 STATES BELOW MAXIMUM ENERGY =   0.000000000     AU    
 
   - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
-  SEARCHING FOR INODE =    1 CORRESPONDING TO NODE COUNT =    1
+  SEARCHING FOR BOUND STATE NUMBER     1
 
-  CONVERGED ON NODE NUMBER     1 AT                               ENERGY = -0.1249999971     AU    
+  CONVERGED ON STATE NUMBER     1 AT                              ENERGY = -0.1249999971     AU    
 
-  SMALLEST EIGENVALUE OF MATCHING MATRIX IS NUMBER  1 =  9.58076E-07
+  SMALLEST EIGENVALUE OF MATCHING MATRIX IS NUMBER  1 =  9.57712E-07
 
   WITH PRINCIPAL EIGENVECTOR COMPONENTS
   CHAN     VEC    VEC**2   L   QUANTUM NUMBERS
@@ -301,24 +301,11 @@
 
   - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
-  SEARCHING FOR INODE =    2 CORRESPONDING TO NODE COUNT =    2
+  SEARCHING FOR BOUND STATE NUMBER     2
 
-  CONVERGED ON NODE NUMBER     2 AT                               ENERGY = -5.5555549771E-02 AU    
+  CONVERGED ON STATE NUMBER     2 AT                              ENERGY = -5.5555549764E-02 AU    
 
-  SMALLEST EIGENVALUE OF MATCHING MATRIX IS NUMBER  1 =  5.71229E-07
-
-  WITH PRINCIPAL EIGENVECTOR COMPONENTS
-  CHAN     VEC    VEC**2   L   QUANTUM NUMBERS
-
-   1    1.0000    1.0000   1   0   1
-
-  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
-
-  SEARCHING FOR INODE =    3 CORRESPONDING TO NODE COUNT =    3
-
-  CONVERGED ON NODE NUMBER     3 AT                               ENERGY = -3.1249998128E-02 AU    
-
-  SMALLEST EIGENVALUE OF MATCHING MATRIX IS NUMBER  1 =  3.19638E-06
+  SMALLEST EIGENVALUE OF MATCHING MATRIX IS NUMBER  1 =  5.79462E-07
 
   WITH PRINCIPAL EIGENVECTOR COMPONENTS
   CHAN     VEC    VEC**2   L   QUANTUM NUMBERS
@@ -327,9 +314,22 @@
 
   - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
-  SEARCHING FOR INODE =    4 CORRESPONDING TO NODE COUNT =    4
+  SEARCHING FOR BOUND STATE NUMBER     3
 
-  CONVERGED ON NODE NUMBER     4 AT                               ENERGY = -1.9999997697E-02 AU    
+  CONVERGED ON STATE NUMBER     3 AT                              ENERGY = -3.1249998128E-02 AU    
+
+  SMALLEST EIGENVALUE OF MATCHING MATRIX IS NUMBER  1 =  3.19581E-06
+
+  WITH PRINCIPAL EIGENVECTOR COMPONENTS
+  CHAN     VEC    VEC**2   L   QUANTUM NUMBERS
+
+   1    1.0000    1.0000   1   0   1
+
+  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+  SEARCHING FOR BOUND STATE NUMBER     4
+
+  CONVERGED ON STATE NUMBER     4 AT                              ENERGY = -1.9999997698E-02 AU    
 
   SMALLEST EIGENVALUE OF MATCHING MATRIX IS NUMBER  1 =  1.20402E-05
 
@@ -340,11 +340,11 @@
 
   - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
-  SEARCHING FOR INODE =    5 CORRESPONDING TO NODE COUNT =    5
+  SEARCHING FOR BOUND STATE NUMBER     5
 
-  CONVERGED ON NODE NUMBER     5 AT                               ENERGY = -1.3889377565E-02 AU    
+  CONVERGED ON STATE NUMBER     5 AT                              ENERGY = -1.3889377566E-02 AU    
 
-  SMALLEST EIGENVALUE OF MATCHING MATRIX IS NUMBER  1 = -3.38157E-06
+  SMALLEST EIGENVALUE OF MATCHING MATRIX IS NUMBER  1 = -3.38179E-06
 
   WITH PRINCIPAL EIGENVECTOR COMPONENTS
   CHAN     VEC    VEC**2   L   QUANTUM NUMBERS
@@ -353,9 +353,9 @@
 
   - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
-  SEARCHING FOR INODE =    6 CORRESPONDING TO NODE COUNT =    6
+  SEARCHING FOR BOUND STATE NUMBER     6
 
-  CONVERGED ON NODE NUMBER     6 AT                               ENERGY = -1.0310452689E-02 AU    
+  CONVERGED ON STATE NUMBER     6 AT                              ENERGY = -1.0310452689E-02 AU    
 
   SMALLEST EIGENVALUE OF MATCHING MATRIX IS NUMBER  1 =  1.28426E-04
 
@@ -366,11 +366,11 @@
 
   - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
-  SEARCHING FOR INODE =    7 CORRESPONDING TO NODE COUNT =    7
+  SEARCHING FOR BOUND STATE NUMBER     7
 
-  CONVERGED ON NODE NUMBER     7 AT                               ENERGY = -7.2376953121E-03 AU    
+  CONVERGED ON STATE NUMBER     7 AT                              ENERGY = -7.2376953139E-03 AU    
 
-  SMALLEST EIGENVALUE OF MATCHING MATRIX IS NUMBER  1 = -8.68287E-07
+  SMALLEST EIGENVALUE OF MATCHING MATRIX IS NUMBER  1 = -8.69244E-07
 
   WITH PRINCIPAL EIGENVECTOR COMPONENTS
   CHAN     VEC    VEC**2   L   QUANTUM NUMBERS
@@ -379,11 +379,11 @@
 
   - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
-  SEARCHING FOR INODE =    8 CORRESPONDING TO NODE COUNT =    8
+  SEARCHING FOR BOUND STATE NUMBER     8
 
-  CONVERGED ON NODE NUMBER     8 AT                               ENERGY = -1.8797040553E-03 AU    
+  CONVERGED ON STATE NUMBER     8 AT                              ENERGY = -1.8797040599E-03 AU    
 
-  SMALLEST EIGENVALUE OF MATCHING MATRIX IS NUMBER  1 =  1.00351E-04
+  SMALLEST EIGENVALUE OF MATCHING MATRIX IS NUMBER  1 =  1.00345E-04
 
   WITH PRINCIPAL EIGENVECTOR COMPONENTS
   CHAN     VEC    VEC**2   L   QUANTUM NUMBERS
@@ -397,9 +397,9 @@
  |                                                                            |
  |              Copyright (C) 2019 J. M. Hutson & C. R. Le Sueur              |
  |                                                                            |
- |                               Version 2019.0                               |
+ |                               Version 2019.1                               |
  |                                                                            |
- |                    This run used       2.47 cpu secs and                   |
+ |                    This run used       5.45 cpu secs and                   |
  |                 43 of the allocated   1000000 words of storage             |
  |                                                                            |
   -- BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND --
