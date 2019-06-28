@@ -42,7 +42,7 @@ $(OBJDIR)/%.o: %.f90
 # specific recipe for object files that have other dependencies ==============
 #
 $(OBJDIR)/pot_data_Tiemann-%.o: pot_data_Tiemann-%.f pot_data_tiemann.mod
-	$(COMPILE.f) $< -o $@
+	rm $(OBJDIR)/vstar-Tiemann*.o ; $(COMPILE.f) $< -o $@
 ##############################################################################
 #
 # recipe rules for module files (to ensure they are remade when necessary) ===
