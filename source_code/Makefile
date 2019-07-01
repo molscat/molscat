@@ -47,40 +47,23 @@ $(OBJDIR)/pot_data_Tiemann-%.o: pot_data_Tiemann-%.f pot_data_tiemann.mod
 #
 # recipe rules for module files (to ensure they are remade when necessary) ===
 #
-physical_constants.mod: physical_constants.f $(OBJDIR)/physical_constants.o
-	@true
-sizes.mod:              sizes_module.f       $(OBJDIR)/sizes_module.o
-	@true
 angles.mod:             angles_module.f      $(OBJDIR)/angles_module.o
 	@true
-efvs.mod:               efvs_module.f        $(OBJDIR)/efvs_module.o
-	@true
-potential.mod:          potential_module.f   $(OBJDIR)/potential_module.o
+base9_suite.mod:        base9-skeleton.f     $(OBJDIR)/base9-skeleton.o
 	@true
 basis_data.mod:         basis_module.f       $(OBJDIR)/basis_module.o
 	@true
-base9_suite.mod:        base9-skeleton.f     $(OBJDIR)/base9-skeleton.o
+efvs.mod:               efvs_module.f        $(OBJDIR)/efvs_module.o
+	@true
+physical_constants.mod: physical_constants.f $(OBJDIR)/physical_constants.o
+	@true
+potential.mod:          potential_module.f   $(OBJDIR)/potential_module.o
+	@true
+sizes.mod:              sizes_module.f       $(OBJDIR)/sizes_module.o
 	@true
 ##############################################################################
 #
 # lists of object codes that have a dependency on a particular module =======
-#
-# physical constants module =================================================
-#
-PHYS_CONST_DEPS = base9-1S_3Sigma_cpld.o base9-alk_alk.o \
-                  bd.driver.o chckru.o eavg.o ecnv.o extpot-Ar_CH4.o \
-                  extpot-Ar_CO2.o extpot-Rg_HX.o fld.driver.o mol.driver.o \
-                  pot_data_Tiemann-Rb2-2010.o surbas.o \
-
-(addprefix $(OBJDIR)/,$(PHYS_CONST_DEPS)): physical_constants.mod
-#
-# sizes module ==============================================================
-#
-SIZES_DEPS =      angles_module.o basis_module.o bd.driver.o eavg.o \
-                  fld.driver.o iosbin.o iosout.o j6to4.o locpol.o \
-                  mol.driver.o potential_module.o prbr.o restrt.o setefv.o
-
-(addprefix $(OBJDIR)/,$(SIZES_DEPS)): sizes.mod
 #
 # angles module =============================================================
 #
@@ -89,6 +72,15 @@ ANGLES_DEPS =     iosbin.o iosout.o potenl-Rg_H2.o potenl.o vrtp-He_H2O.o \
                   vrtp-extpot_2ang.o \
 
 (addprefix $(OBJDIR)/,$(ANGLES_DEPS)): angles.mod
+#
+# basis_data module =========================================================
+#
+BASIS_DEPS =      asrot.o base.o base9-1S_3Sigma_cpld.o base9-alk_alk.o \
+                  base-skeleton.o getlev.o iosbin.o iosout.o iospb.o \
+                  j6to4.o mol.driver.o output.o prbr.o restrt.o set4.o set6.o \
+                  set6c.o setbas.o surbas.o thresh.o \
+
+(addprefix $(OBJDIR)/,$(BASIS_DEPS)): basis_data.mod
 #
 # efvs module ===============================================================
 #
@@ -99,6 +91,15 @@ EFVS_DEPS =       base.o base9-1S_3Sigma_cpld.o base9-alk_alk.o \
                   scapot-default.o setefv.o wvhead.o \
 
 (addprefix $(OBJDIR)/,$(EFVS_DEPS)): efvs.mod
+#
+# physical constants module =================================================
+#
+PHYS_CONST_DEPS = base9-1S_3Sigma_cpld.o base9-alk_alk.o \
+                  bd.driver.o chckru.o eavg.o ecnv.o extpot-Ar_CH4.o \
+                  extpot-Ar_CO2.o extpot-Rg_HX.o fld.driver.o mol.driver.o \
+                  pot_data_Tiemann-Rb2-2010.o surbas.o \
+
+(addprefix $(OBJDIR)/,$(PHYS_CONST_DEPS)): physical_constants.mod
 #
 # potential module ==========================================================
 #
@@ -111,14 +112,13 @@ POTL_DEPS =       base.o base9-1S_3Sigma_cpld.o base9-alk_alk.o \
 
 (addprefix $(OBJDIR)/,$(POTL_DEPS)): potential.mod
 #
-# basis_data module =========================================================
+# sizes module ==============================================================
 #
-BASIS_DEPS =      asrot.o base.o base9-1S_3Sigma_cpld.o base9-alk_alk.o \
-                  base-skeleton.o getlev.o iosbin.o iosout.o iospb.o \
-                  j6to4.o mol.driver.o output.o prbr.o restrt.o set4.o set6.o \
-                  set6c.o setbas.o surbas.o thresh.o \
+SIZES_DEPS =      angles_module.o basis_module.o bd.driver.o eavg.o \
+                  fld.driver.o iosbin.o iosout.o j6to4.o locpol.o \
+                  mol.driver.o potential_module.o prbr.o restrt.o setefv.o
 
-(addprefix $(OBJDIR)/,$(BASIS_DEPS)): basis_data.mod
+(addprefix $(OBJDIR)/,$(SIZES_DEPS)): sizes.mod
 ##############################################################################
 #
 # Now set aliases to shorten lists of dependencies ===========================
@@ -213,11 +213,12 @@ PROGS =     molscat-basic \
             bound-Rg_CO2  \
             field-basic \
             field-Mg_NH   field-Rb2
+USER-PROGS = 
 ##############################################################################
 #
 # rules for making executables ===============================================
 #
-.PHONY: $(PROGS)
+.PHONY: $(PROGS) $(USER-PROGS)
 #$(PROGS) : %: $(EXECDIR)/%
 
 $(EXECDIR)/molscat-basic     : $(addprefix $(OBJDIR)/,$(BASIC_MOL) \
