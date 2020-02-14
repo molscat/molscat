@@ -1,6 +1,6 @@
-      SUBROUTINE MCGCPL(N,MXLAM,NPOTL,LAM,NSTATE,JSTATE,JSINDX,L,MVALUE,
+      SUBROUTINE MCGCPL(N,MXLAM,NHAM,LAM,NSTATE,JSTATE,JSINDX,L,MVALUE,
      1                  ITYPE,IEX,VL,IV,IPRINT,ATAU)
-C  Copyright (C) 2019 J. M. Hutson & C. R. Le Sueur
+C  Copyright (C) 2020 J. M. Hutson & C. R. Le Sueur
 C  Distributed under the GNU General Public License, version 3
 C
 C  THIS SUBROUTINE CALLS VARIOUS COUPLING SUBROUTINES TO WORK OUT
@@ -36,7 +36,7 @@ C
       RETURN
 C
  2000 IF (IVLFL.LE.0) GOTO 9999
-      CALL CPL22(N,MXLAM,NPOTL,LAM,NSTATE,JSTATE,JSINDX,MVALUE,IV,
+      CALL CPL22(N,MXLAM,NHAM,LAM,NSTATE,JSTATE,JSINDX,MVALUE,IV,
      1           VL,IPRINT,LFIRST)
       RETURN
 C
@@ -60,7 +60,7 @@ C
 C
  7000 IF (IVLFL.LE.0) GOTO 9999
       XM=DBLE(MVALUE)
-      NZERO=NPOTL*N*(N+1)/2
+      NZERO=NHAM*N*(N+1)/2
       DO 1547 I=1,NZERO
         IV(I)=0
  1547   VL(I)=0.D0
@@ -84,7 +84,7 @@ C
      1               NV1.EQ.NVR .AND. NJ1.EQ.NJR) .OR.
      2              (NV.EQ.NVR .AND. NJ.EQ.NJR .AND.
      3               NV1.EQ.NVC .AND. NJ1.EQ.NJC))) GOTO 1507
-          I=(II-1)*NPOTL+LLL+1
+          I=(II-1)*NHAM+LLL+1
           VL(I)=PARSGN(MVALUE)*SQRT(Z(NJR)*Z(NJC))*
      1          THREEJ(NJR,LLL,NJC)*
      2          THRJ(DBLE(NJR),DBLE(LLL),DBLE(NJC),-XM,Z0,XM)

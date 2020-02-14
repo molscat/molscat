@@ -1,14 +1,14 @@
       SUBROUTINE IOSCLC(NNRG,ENERGY,JTOTL,JTOTU,JSTEP,IPRINT,ISU,
      1                  ITYPX,RMIN,RMAX,IRMSET,IRXSET,RVFAC,
      2                  NCAC,TEST,RUNIT,NVC,LMAX,NGPT,NQL,
-     3                  NIXQL,MXXXXL,LAMBDA,MXLAM,NPOTL,VLI,
+     3                  NIXQL,MXXXXL,LAMBDA,MXLAM,NHAM,VLI,
      4                  PWGHT,SLR,SLI,QLT,QLS,
      5                  SLLR,SLLI,IXQL,SIGTH,SIGAV,
      6                  IEC,LM,IXSR,IXSI,IXKMAT,IXVL,IXIV,IXEINT,
      7                  IXCENT,IXWV,IXJIND,IXLORB,IXNB,WVEC,NB,IREF,
      8                  IFLS,LINE,LTYPE,IPOT,MONQN,IBOUND,WAVE,
      9                  ERED,EP2RU,CM2RU,RSCALE,DRMAX,NSTAB,ILDSVU)
-C  Copyright (C) 2019 J. M. Hutson & C. R. Le Sueur
+C  Copyright (C) 2020 J. M. Hutson & C. R. Le Sueur
 C  Distributed under the GNU General Public License, version 3
 C
       IMPLICIT DOUBLE PRECISION (A-H,O-Z)
@@ -172,7 +172,7 @@ C  GET ANGLE-DEPENDENT SCATTERING / LOOP OVER GAUSS POINTS.
           DO 3100 IP=1,NGPT
 C
 C  INITIALIZE SCAT VARIABLES VL, LORB, EINT, ETC.
-            CALL IOSB2(WVEC,X(IXVL),X(IXIV),IP,NVC,NPOTL,MXLAM,LAMBDA,
+            CALL IOSB2(WVEC,X(IXVL),X(IXIV),IP,NVC,NHAM,MXLAM,LAMBDA,
      1                 VLI,NGPT,MXXXXL)
 C
             CONV=0.D0
@@ -195,7 +195,7 @@ C  GET TEMPORARY STORAGE FOR FINDRM; MODIFED 23 AUG FOR NEW FINDRM (SG)
             IF (ISCRU.EQ.0) E4RMIN=ERED
             CALL FINDRM(X(IXSR),NVC,RMNINT,RTURN,X(IT1),X(IXVL),
      1                  X(IXIV),E4RMIN,X(IXEINT),X(IXCENT),
-     2                  X(IXSI),X(IT2),X(IT3),X(IT4),MXLAM,NPOTL,
+     2                  X(IXSI),X(IT2),X(IT3),X(IT4),MXLAM,NHAM,
      3                  EP2RU,CM2RU,RSCALE,IRMSET,ITYPE,IOSPR)
 C  RELEASE TEMPORARY STORAGE
             IXNEXT=IT2
@@ -221,7 +221,7 @@ C
               CAYS=CALCK(EPS*CM2RU,E4RMIN,X(IXEINT),NVC)
               CAYL=CALCK(EPL*CM2RU,E4RMIN,X(IXEINT),NVC)
             ENDIF
-            CALL SCCTRL(NVC,MXLAM,NPOTL,
+            CALL SCCTRL(NVC,MXLAM,NHAM,
      1                  X(IXJIND),X(IXSR),X(IXSI),X(IXKMAT),X(IXVL),
      2                  X(IXIV),X(IXEINT),X(IXCENT),X(IXWV),
      3                  X(IXLORB),X(IXNB),X(ICX),ERED,EP2RU,CM2RU,

@@ -3,11 +3,11 @@
  |          Bound states of interacting pairs of atoms and molecules          |
  |                      as a function of external field                       |
  |                                                                            |
- |              Copyright (C) 2019 J. M. Hutson & C. R. Le Sueur              |
+ |              Copyright (C) 2020 J. M. Hutson & C. R. Le Sueur              |
  |                                                                            |
- |                               Version 2019.1                               |
+ |                               Version 2020.0                               |
  |                                                                            |
- |                       Run on 30 May 2019   at 11:53:07                     |
+ |                       Run on 14 Feb 2020   at 20:29:58                     |
  |                                                                            |
   -- FIELD ------ FIELD ------ FIELD ------ FIELD ------ FIELD ------ FIELD --
 
@@ -16,9 +16,11 @@
   the terms of the GNU General Public License, version 3, as published by
   the Free Software Foundation.
 
-  Publications resulting from the use of this program should refer to
-  J. M. Hutson & C. R. Le Sueur, FIELD computer code 2019.1              
-  or to the published paper in Computer Physics Communications when available.
+  Publications resulting from the use of this program should cite both
+  the version of the program used:
+  J. M. Hutson & C. R. Le Sueur, FIELD computer code 2020.0              
+  and the published paper:
+  J. M. Hutson & C. R. Le Sueur, Comput. Phys. Commun. 241, pp 1-8 (2019).
 
 
   USING CODATA 2018 RECOMMENDED VALUES OF FUNDAMENTAL PHYSICAL CONSTANTS
@@ -31,7 +33,7 @@
 
   ======================================================================================================================
 
-  BASIS SETS USE DIATOM SPIN = 1
+  BASIS SETS USE DIATOM SPIN =  1
                         NMAX =  2
                         LMAX =  8
 
@@ -169,17 +171,17 @@
 
   VWDB CONVERGENCE WILL TERMINATE WHEN THE STEP SIZE IS LESS THAN 1.00000E-04 GAUSS 
 
-  PROGRAM WILL SEEK EIGENVALUES WITH GENERALISED NODE COUNTS FROM    0 TO  99999
+  PROGRAM WILL SEEK STATES WITH NODE COUNTS FROM    0 TO  99999
   LYING IN 
 
                   MAGNETIC Z FIELD (GAUSS )
   FLDMIN:             1.000000000    
   FLDMAX:             400.0000000    
 
-  INPUT ENERGY VALUES CONVERTED FROM MHZ
-  TO INTERNAL WORKING UNITS OF CM-1 DUE TO INTEGER INPUT =   3
+  INPUT ENERGIES CONVERTED FROM MHZ
+  TO INTERNAL WORKING UNITS OF CM-1 DUE TO INTEGER INPUT EUNITS =   3
 
-  PROGRAM WILL SEEK EIGENVALUES AT ENERGIES (IN MHZ)
+  PROGRAM WILL SEEK STATES AT ENERGIES (IN MHZ)
                      0.00000        -20.0000        -40.0000    
 
   THESE ENERGY VALUES ARE RELATIVE TO THE REFERENCE ENERGY SPECIFIED BY MONOMER QUANTUM NUMBERS   0   1  -1
@@ -204,7 +206,7 @@
   * * * NOTE.  FOR JTOT =  -1,  ALL COUPLING COEFFICIENTS ARE 0.0 FOR POTENTIAL SYMMETRY   7
   = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = 
 
-  ENERGY #    1 =   0.000000000     MHZ     
+  ENERGY      1 =   0.000000000     MHZ     
 
   NODE COUNT IMPLIES   170 STATES BELOW SPECIFIED ENERGY AT MAGNETIC Z FIELD =   1.000000000     GAUSS 
   NODE COUNT IMPLIES   169 STATES BELOW SPECIFIED ENERGY AT MAGNETIC Z FIELD =   400.0000000     GAUSS 
@@ -219,7 +221,7 @@
   CONVERGED ON STATE NUMBER   170 AT                    MAGNETIC Z FIELD =   387.2557999     GAUSS 
   = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = 
 
-  ENERGY #    2 =  -20.00000000     MHZ     
+  ENERGY      2 =  -20.00000000     MHZ     
 
   NODE COUNT IMPLIES   170 STATES BELOW SPECIFIED ENERGY AT MAGNETIC Z FIELD =   1.000000000     GAUSS 
   NODE COUNT IMPLIES   169 STATES BELOW SPECIFIED ENERGY AT MAGNETIC Z FIELD =   400.0000000     GAUSS 
@@ -234,7 +236,7 @@
   CONVERGED ON STATE NUMBER   170 AT                    MAGNETIC Z FIELD =   379.2506740     GAUSS 
   = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = 
 
-  ENERGY #    3 =  -40.00000000     MHZ     
+  ENERGY      3 =  -40.00000000     MHZ     
 
   NODE COUNT IMPLIES   170 STATES BELOW SPECIFIED ENERGY AT MAGNETIC Z FIELD =   1.000000000     GAUSS 
   NODE COUNT IMPLIES   169 STATES BELOW SPECIFIED ENERGY AT MAGNETIC Z FIELD =   400.0000000     GAUSS 
@@ -254,11 +256,11 @@
  |          Bound states of interacting pairs of atoms and molecules          |
  |                      as a function of external field                       |
  |                                                                            |
- |              Copyright (C) 2019 J. M. Hutson & C. R. Le Sueur              |
+ |              Copyright (C) 2020 J. M. Hutson & C. R. Le Sueur              |
  |                                                                            |
- |                               Version 2019.1                               |
+ |                               Version 2020.0                               |
  |                                                                            |
- |                    This run used     136.87 cpu secs and                   |
+ |                    This run used      62.65 cpu secs and                   |
  |             117673 of the allocated   1000000 words of storage             |
  |                                                                            |
   -- FIELD ------ FIELD ------ FIELD ------ FIELD ------ FIELD ------ FIELD --

@@ -2,11 +2,11 @@
  |                                                                            |
  |          Bound states of interacting pairs of atoms and molecules          |
  |                                                                            |
- |              Copyright (C) 2019 J. M. Hutson & C. R. Le Sueur              |
+ |              Copyright (C) 2020 J. M. Hutson & C. R. Le Sueur              |
  |                                                                            |
- |                               Version 2019.1                               |
+ |                               Version 2020.0                               |
  |                                                                            |
- |                       Run on 30 May 2019   at 11:52:21                     |
+ |                       Run on 14 Feb 2020   at 20:28:33                     |
  |                                                                            |
   -- BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND --
 
@@ -15,9 +15,11 @@
   the terms of the GNU General Public License, version 3, as published by
   the Free Software Foundation.
 
-  Publications resulting from the use of this program should refer to
-  J. M. Hutson & C. R. Le Sueur, BOUND computer code 2019.1              
-  or to the published paper in Computer Physics Communications when available.
+  Publications resulting from the use of this program should cite both
+  the version of the program used:
+  J. M. Hutson & C. R. Le Sueur, BOUND computer code 2020.0              
+  and the published paper:
+  J. M. Hutson & C. R. Le Sueur, Comput. Phys. Commun. 241, pp 1-8 (2019).
 
 
   USING CODATA 2018 RECOMMENDED VALUES OF FUNDAMENTAL PHYSICAL CONSTANTS
@@ -198,9 +200,9 @@
 
   VWDB CONVERGENCE WILL TERMINATE WHEN THE STEP SIZE IS LESS THAN 1.00000E-08 CM-1    
 
-  INPUT ENERGY VALUES ASSUMED TO BE IN UNITS OF CM-1 BY DEFAULT.
+  INPUT ENERGIES IN UNITS OF CM-1 BY DEFAULT.
 
-  PROGRAM WILL SEEK EIGENVALUES WITH GENERALISED NODE COUNTS FROM    0 TO  99999
+  PROGRAM WILL SEEK STATES WITH NODE COUNTS FROM    0 TO  99999
   LYING IN ENERGY RANGE  -180.00     TO  -130.00     CM-1    
 
   ======================================================================================================================
@@ -248,7 +250,7 @@
 
   CONVERGED ON STATE NUMBER     1 AT                              ENERGY =  -165.6289795     CM-1  
 
-  SMALLEST EIGENVALUE OF MATCHING MATRIX IS NUMBER  1 =  5.68434E-14
+  SMALLEST EIGENVALUE OF MATCHING MATRIX IS NUMBER  1 =  2.27374E-13
 
   WITH PRINCIPAL EIGENVECTOR COMPONENTS
   CHAN     VEC    VEC**2   L   QUANTUM NUMBERS
@@ -264,7 +266,7 @@
 
   CONVERGED ON STATE NUMBER     2 AT                              ENERGY =  -131.1638128     CM-1  
 
-  SMALLEST EIGENVALUE OF MATCHING MATRIX IS NUMBER  1 = -1.83627E-12
+  SMALLEST EIGENVALUE OF MATCHING MATRIX IS NUMBER  1 = -3.74344E-13
 
   WITH PRINCIPAL EIGENVECTOR COMPONENTS
   CHAN     VEC    VEC**2   L   QUANTUM NUMBERS
@@ -297,11 +299,11 @@
  |                                                                            |
  |          Bound states of interacting pairs of atoms and molecules          |
  |                                                                            |
- |              Copyright (C) 2019 J. M. Hutson & C. R. Le Sueur              |
+ |              Copyright (C) 2020 J. M. Hutson & C. R. Le Sueur              |
  |                                                                            |
- |                               Version 2019.1                               |
+ |                               Version 2020.0                               |
  |                                                                            |
- |                    This run used       0.06 cpu secs and                   |
+ |                    This run used       0.14 cpu secs and                   |
  |               2416 of the allocated   1000000 words of storage             |
  |                                                                            |
   -- BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND --

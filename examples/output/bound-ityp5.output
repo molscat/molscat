@@ -2,11 +2,11 @@
  |                                                                            |
  |          Bound states of interacting pairs of atoms and molecules          |
  |                                                                            |
- |              Copyright (C) 2019 J. M. Hutson & C. R. Le Sueur              |
+ |              Copyright (C) 2020 J. M. Hutson & C. R. Le Sueur              |
  |                                                                            |
- |                               Version 2019.1                               |
+ |                               Version 2020.0                               |
  |                                                                            |
- |                       Run on 13 Jun 2019   at 09:16:49                     |
+ |                       Run on 14 Feb 2020   at 20:28:34                     |
  |                                                                            |
   -- BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND --
 
@@ -15,9 +15,11 @@
   the terms of the GNU General Public License, version 3, as published by
   the Free Software Foundation.
 
-  Publications resulting from the use of this program should refer to
-  J. M. Hutson & C. R. Le Sueur, BOUND computer code 2019.1              
-  or to the published paper in Computer Physics Communications when available.
+  Publications resulting from the use of this program should cite both
+  the version of the program used:
+  J. M. Hutson & C. R. Le Sueur, BOUND computer code 2020.0              
+  and the published paper:
+  J. M. Hutson & C. R. Le Sueur, Comput. Phys. Commun. 241, pp 1-8 (2019).
 
 
   USING CODATA 2018 RECOMMENDED VALUES OF FUNDAMENTAL PHYSICAL CONSTANTS
@@ -156,7 +158,7 @@
 
   VWDB CONVERGENCE WILL TERMINATE WHEN THE STEP SIZE IS LESS THAN 1.00000E-07 CM-1    
 
-  INPUT ENERGY VALUES ASSUMED TO BE IN UNITS OF CM-1 BY DEFAULT.
+  INPUT ENERGIES IN UNITS OF CM-1 BY DEFAULT.
 
   PROGRAM WILL SEEK STATES WITH NODE COUNTS FROM    0 TO  99999
   LYING IN ENERGY RANGE  -20.000     TO   15.300     CM-1    
@@ -167,7 +169,7 @@
 
   EACH JTOT IS SPLIT INTO A MAXIMUM OF   2 SYMMETRY BLOCKS
 
-  INITIALIZATION DONE.  TIME WAS   0.03 CPU SECS.        69 WORDS OF STORAGE USED.
+  INITIALIZATION DONE.  TIME WAS   0.00 CPU SECS.        69 WORDS OF STORAGE USED.
 
   ================================ NH3-He k=1 bound states on simple analytic potential ================================
 
@@ -213,7 +215,7 @@
 
   CONVERGED ON STATE NUMBER     1 AT                              ENERGY =   8.166238643     CM-1  
 
-  SMALLEST EIGENVALUE OF MATCHING MATRIX IS NUMBER  1 = -3.40972E-12
+  SMALLEST EIGENVALUE OF MATCHING MATRIX IS NUMBER  1 = -3.60778E-12
 
   WITH PRINCIPAL EIGENVECTOR COMPONENTS
   CHAN     VEC    VEC**2   L   QUANTUM NUMBERS
@@ -227,7 +229,7 @@
 
   CONVERGED ON STATE NUMBER     2 AT                              ENERGY =   10.17329825     CM-1  
 
-  SMALLEST EIGENVALUE OF MATCHING MATRIX IS NUMBER  1 =  1.05733E-09
+  SMALLEST EIGENVALUE OF MATCHING MATRIX IS NUMBER  1 =  1.05729E-09
 
   WITH PRINCIPAL EIGENVECTOR COMPONENTS
   CHAN     VEC    VEC**2   L   QUANTUM NUMBERS
@@ -242,7 +244,7 @@
 
   CONVERGED ON STATE NUMBER     3 AT                              ENERGY =   10.98420211     CM-1  
 
-  SMALLEST EIGENVALUE OF MATCHING MATRIX IS NUMBER  2 =  6.25457E-10
+  SMALLEST EIGENVALUE OF MATCHING MATRIX IS NUMBER  2 =  6.25558E-10
 
   WITH PRINCIPAL EIGENVECTOR COMPONENTS
   CHAN     VEC    VEC**2   L   QUANTUM NUMBERS
@@ -293,7 +295,7 @@
 
   CONVERGED ON STATE NUMBER     1 AT                              ENERGY =   8.940332185     CM-1  
 
-  SMALLEST EIGENVALUE OF MATCHING MATRIX IS NUMBER  1 =  7.93344E-09
+  SMALLEST EIGENVALUE OF MATCHING MATRIX IS NUMBER  1 =  7.93347E-09
 
   WITH PRINCIPAL EIGENVECTOR COMPONENTS
   CHAN     VEC    VEC**2   L   QUANTUM NUMBERS
@@ -308,7 +310,7 @@
 
   CONVERGED ON STATE NUMBER     2 AT                              ENERGY =   9.917440171     CM-1  
 
-  SMALLEST EIGENVALUE OF MATCHING MATRIX IS NUMBER  2 =  1.56551E-10
+  SMALLEST EIGENVALUE OF MATCHING MATRIX IS NUMBER  2 =  1.56448E-10
 
   WITH PRINCIPAL EIGENVECTOR COMPONENTS
   CHAN     VEC    VEC**2   L   QUANTUM NUMBERS
@@ -322,7 +324,7 @@
 
   CONVERGED ON STATE NUMBER     3 AT                              ENERGY =   11.25851520     CM-1  
 
-  SMALLEST EIGENVALUE OF MATCHING MATRIX IS NUMBER  2 =  7.51399E-13
+  SMALLEST EIGENVALUE OF MATCHING MATRIX IS NUMBER  2 =  7.15872E-13
 
   WITH PRINCIPAL EIGENVECTOR COMPONENTS
   CHAN     VEC    VEC**2   L   QUANTUM NUMBERS
@@ -336,11 +338,11 @@
  |                                                                            |
  |          Bound states of interacting pairs of atoms and molecules          |
  |                                                                            |
- |              Copyright (C) 2019 J. M. Hutson & C. R. Le Sueur              |
+ |              Copyright (C) 2020 J. M. Hutson & C. R. Le Sueur              |
  |                                                                            |
- |                               Version 2019.1                               |
+ |                               Version 2020.0                               |
  |                                                                            |
- |                    This run used      18.53 cpu secs and                   |
+ |                    This run used       3.60 cpu secs and                   |
  |               4238 of the allocated   1000000 words of storage             |
  |                                                                            |
   -- BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND --

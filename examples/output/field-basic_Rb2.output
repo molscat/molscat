@@ -3,11 +3,11 @@
  |          Bound states of interacting pairs of atoms and molecules          |
  |                      as a function of external field                       |
  |                                                                            |
- |              Copyright (C) 2019 J. M. Hutson & C. R. Le Sueur              |
+ |              Copyright (C) 2020 J. M. Hutson & C. R. Le Sueur              |
  |                                                                            |
- |                               Version 2019.1                               |
+ |                               Version 2020.0                               |
  |                                                                            |
- |                       Run on 30 May 2019   at 11:34:01                     |
+ |                       Run on 14 Feb 2020   at 20:12:29                     |
  |                                                                            |
   -- FIELD ------ FIELD ------ FIELD ------ FIELD ------ FIELD ------ FIELD --
 
@@ -16,9 +16,11 @@
   the terms of the GNU General Public License, version 3, as published by
   the Free Software Foundation.
 
-  Publications resulting from the use of this program should refer to
-  J. M. Hutson & C. R. Le Sueur, FIELD computer code 2019.1              
-  or to the published paper in Computer Physics Communications when available.
+  Publications resulting from the use of this program should cite both
+  the version of the program used:
+  J. M. Hutson & C. R. Le Sueur, FIELD computer code 2020.0              
+  and the published paper:
+  J. M. Hutson & C. R. Le Sueur, Comput. Phys. Commun. 241, pp 1-8 (2019).
 
 
   USING CODATA 2018 RECOMMENDED VALUES OF FUNDAMENTAL PHYSICAL CONSTANTS
@@ -30,17 +32,17 @@
   REDUCED MASS FOR INTERACTION =  42.455894869 ATOMIC MASS UNITS (DALTONS)
 
   ======================================================================================================================
-  ATOM - ATOM WITH NUC SP + MAG FL
+  ATOM - ATOM IN UNCOUPLED BASIS  
 
 
-  ATOMS  WITH S = 1/2,  MU_S   =    2.002319 MU_B
-              I = 5/2,  MU_NUC =   -0.000294 MU_B
-         HYPERFINE SPLITTING =    3.035732, COUPLING CONST =    1.011911 GHZ
+  ATOMS  WITH S = 1/2,     MU_S   =    2.002319 MU_B
+              I = 5/2,     MU_NUC =   -0.000294 MU_B
+              HYPERFINE SPLITTING =    3.035732, COUPLING CONST =    1.011911 GHZ
 
   L UP TO    2
   SPIN-SPIN TERM INCLUDED
 
-  INTERACTION TYPE IS  ATOM - ATOM WITH NUC SP + MAG FL
+  INTERACTION TYPE IS  ATOM - ATOM IN UNCOUPLED BASIS  
 
   QUANTUM NUMBERS FOR INTERACTING PAIR:
   THE BASIS FUNCTIONS ARE LABELLED BY A SET OF   4 PAIR STATE QUANTUM NUMBERS AND A VALUE OF L.
@@ -142,14 +144,21 @@
 
   JMH routine for Tiemann-style alkali dimer potentials
   Rb2 potential from Strauss et al., PRA 82, 052514 (2010)               
-  For potential  1 at RLR =  11.00000000000    
+
   gamma shifted from   5.317689000000    
                   to   5.317691178394    
-  V =  -18.02577440996    
-  A(0)  shifted from  -3993.592873000     cm-1
-                  to  -3993.593189147     cm-1
-  For potential   1 at RSR =  3.126000000000     A
-  V =  -6.255737835919    cm-1, dV/dR =  -9257.490374248    cm-1/A and n =   4.533895000000    
+
+  For potential  1 at RLR =  11.00000000000     A
+                  with C6 =  22700320.00000     and C8 =  778288600.0000    
+  V_LR  =  -18.02609055718    cm-1
+  V_mid =  -18.02577440996    cm-1, dV/dR =   11.44316013529    cm-1/A
+  A(0) shifted from  -3993.592873000     cm-1
+                 to  -3993.593189147     cm-1 to match value of V(R) at RLR
+  Derivative discontinuity at RLR (intrinsic to functional form) is  0.1531623206460     cm-1/A
+  Discontinuity / value is  1.3207835607195E-02
+
+  For potential  1 at RSR =  3.126000000000     A
+  V     =  -6.255737835919    cm-1, dV/dR =  -9257.490374248    cm-1/A and n =   4.533895000000    
   B(SR) shifted from   1120053.610000     cm-1 A^n
                   to   1120053.629089     cm-1 A^n
   A(SR) shifted from  -6389.048800000     cm-1
@@ -159,14 +168,21 @@
 
   JMH routine for Tiemann-style alkali dimer potentials
   Rb2 potential from Strauss et al., PRA 82, 052514 (2010)               
-  For potential  2 at RLR =  11.00000000000    
+
   gamma shifted from   5.317691178394    
                   to   5.317691178394    
-  V =  -17.12208948080    
-  A(0)  shifted from  -241.5033520000     cm-1
-                  to  -241.5036630359     cm-1
-  For potential   2 at RSR =  5.070000000000     A
-  V =  -10.77028535667    cm-1, dV/dR =  -543.9945779764    cm-1/A and n =   4.533895000000    
+
+  For potential  2 at RLR =  11.00000000000     A
+                  with C6 =  22700320.00000     and C8 =  778288600.0000    
+  V_LR  =  -17.12240051666    cm-1
+  V_mid =  -17.12208948080    cm-1, dV/dR =   9.935247938667    cm-1/A
+  A(0) shifted from  -241.5033520000     cm-1
+                 to  -241.5036630359     cm-1 to match value of V(R) at RLR
+  Derivative discontinuity at RLR (intrinsic to functional form) is -0.1489325085633     cm-1/A
+  Discontinuity / value is -1.5218445555638E-02
+
+  For potential  2 at RSR =  5.070000000000     A
+  V     =  -10.77028535667    cm-1, dV/dR =  -543.9945779764    cm-1/A and n =   4.533895000000    
   B(SR) shifted from   956231.6770000     cm-1 A^n
                   to   956231.6938206     cm-1 A^n
   A(SR) shifted from  -619.0885430000     cm-1
@@ -236,17 +252,17 @@
 
   VWDB CONVERGENCE WILL TERMINATE WHEN THE STEP SIZE IS LESS THAN 1.00000E-06 GAUSS 
 
-  PROGRAM WILL SEEK EIGENVALUES WITH GENERALISED NODE COUNTS FROM    0 TO  99999
+  PROGRAM WILL SEEK STATES WITH NODE COUNTS FROM    0 TO  99999
   LYING IN 
 
                   MAGNETIC Z FIELD (GAUSS )
   FLDMIN:             800.0000000    
   FLDMAX:             900.0000000    
 
-  INPUT ENERGY VALUES CONVERTED FROM MHZ
-  TO INTERNAL WORKING UNITS OF CM-1 DUE TO INTEGER INPUT =   3
+  INPUT ENERGIES CONVERTED FROM MHZ
+  TO INTERNAL WORKING UNITS OF CM-1 DUE TO INTEGER INPUT EUNITS =   3
 
-  PROGRAM WILL SEEK EIGENVALUES AT ENERGIES (IN MHZ)
+  PROGRAM WILL SEEK STATES AT ENERGIES (IN MHZ)
                      0.00000    
 
   THESE ENERGY VALUES ARE RELATIVE TO THE REFERENCE ENERGY SPECIFIED BY MONOMER QUANTUM NUMBERS   4   4   4   4
@@ -302,7 +318,7 @@
        28          78          1         5         1         5             2
   = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = 
 
-  ENERGY #    1 =   0.000000000     MHZ     
+  ENERGY      1 =   0.000000000     MHZ     
 
   NODE COUNT IMPLIES  1471 STATES BELOW SPECIFIED ENERGY AT MAGNETIC Z FIELD =   800.0000000     GAUSS 
   NODE COUNT IMPLIES  1468 STATES BELOW SPECIFIED ENERGY AT MAGNETIC Z FIELD =   900.0000000     GAUSS 
@@ -316,17 +332,19 @@
 
   PROPAGATION   1: - - - - - - - - - - - - - - - - - -  MAGNETIC Z FIELD =   850.0000000     GAUSS 
 
-  PROPAGATION   2: - - - - - - - - - - - - - - - - - -  MAGNETIC Z FIELD =   852.0133967     GAUSS 
+  PROPAGATION   2: - - - - - - - - - - - - - - - - - -  MAGNETIC Z FIELD =   852.0133965     GAUSS 
 
-  PROPAGATION   3: - - - - - - - - - - - - - - - - - -  MAGNETIC Z FIELD =   851.8814788     GAUSS 
+  PROPAGATION   3: - - - - - - - - - - - - - - - - - -  MAGNETIC Z FIELD =   851.8814791     GAUSS 
 
-  PROPAGATION   4: - - - - - - - - - - - - - - - - - -  MAGNETIC Z FIELD =   851.8811345     GAUSS 
+  PROPAGATION   4: - - - - - - - - - - - - - - - - - -  MAGNETIC Z FIELD =   851.8811344     GAUSS 
 
-  CONVERGED ON STATE NUMBER  1469 AT                    MAGNETIC Z FIELD =   851.8811353     GAUSS 
+  PROPAGATION   5: - - - - - - - - - - - - - - - - - -  MAGNETIC Z FIELD =   851.8811357     GAUSS 
 
-  LAST STEP WAS                                                             8.2082681274E-07 GAUSS 
+  CONVERGED ON STATE NUMBER  1469 AT                    MAGNETIC Z FIELD =   851.8811351     GAUSS 
 
-  SMALLEST EIGENVALUE OF MATCHING MATRIX IS NUMBER  8 = -6.89520E-09
+  LAST STEP WAS                                                            -5.3324549754E-07 GAUSS 
+
+  SMALLEST EIGENVALUE OF MATCHING MATRIX IS NUMBER  8 =  7.99336E-09
 
   WITH PRINCIPAL EIGENVECTOR COMPONENTS
   CHAN     VEC    VEC**2   L   QUANTUM NUMBERS
@@ -354,15 +372,15 @@
 
   CONVERGED ON STATE NUMBER  1470 AT                    MAGNETIC Z FIELD =   819.5673857     GAUSS 
 
-  LAST STEP WAS                                                             2.8251179174E-09 GAUSS 
+  LAST STEP WAS                                                            -3.1877789297E-09 GAUSS 
 
-  SMALLEST EIGENVALUE OF MATCHING MATRIX IS NUMBER  9 = -2.45635E-11
+  SMALLEST EIGENVALUE OF MATCHING MATRIX IS NUMBER  9 =  2.76899E-11
 
   WITH PRINCIPAL EIGENVECTOR COMPONENTS
   CHAN     VEC    VEC**2   L   QUANTUM NUMBERS
 
-  22    0.9710    0.9429   2   1   5  -1   5   0
-  27   -0.2389    0.0571   2   1   5   1   3   0
+  22   -0.9710    0.9429   2   1   5  -1   5   0
+  27    0.2389    0.0571   2   1   5   1   3   0
 
   - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
@@ -376,9 +394,9 @@
 
   CONVERGED ON STATE NUMBER  1471 AT                    MAGNETIC Z FIELD =   810.9519209     GAUSS 
 
-  LAST STEP WAS                                                             6.8185158852E-08 GAUSS 
+  LAST STEP WAS                                                             6.7920950642E-08 GAUSS 
 
-  SMALLEST EIGENVALUE OF MATCHING MATRIX IS NUMBER  9 = -5.97723E-10
+  SMALLEST EIGENVALUE OF MATCHING MATRIX IS NUMBER  9 = -5.95406E-10
 
   WITH PRINCIPAL EIGENVECTOR COMPONENTS
   CHAN     VEC    VEC**2   L   QUANTUM NUMBERS
@@ -393,11 +411,11 @@
  |          Bound states of interacting pairs of atoms and molecules          |
  |                      as a function of external field                       |
  |                                                                            |
- |              Copyright (C) 2019 J. M. Hutson & C. R. Le Sueur              |
+ |              Copyright (C) 2020 J. M. Hutson & C. R. Le Sueur              |
  |                                                                            |
- |                               Version 2019.1                               |
+ |                               Version 2020.0                               |
  |                                                                            |
- |                    This run used      23.19 cpu secs and                   |
+ |                    This run used      28.91 cpu secs and                   |
  |               7691 of the allocated   1000000 words of storage             |
  |                                                                            |
   -- FIELD ------ FIELD ------ FIELD ------ FIELD ------ FIELD ------ FIELD --

@@ -1,5 +1,5 @@
       module BASE9_SUITE
-C  Copyright (C) 2019 J. M. Hutson & C. R. Le Sueur
+C  Copyright (C) 2020 J. M. Hutson & C. R. Le Sueur
 C  Distributed under the GNU General Public License, version 3
 C
 C  CR Le Sueur Oct 2018
@@ -352,7 +352,7 @@ c       deallocate (fn2) ! etc
       RETURN
       END SUBROUTINE POTIN9
 C=========================================================================
-      SUBROUTINE CPL9(N, IBLOCK, NPOTL, LAM, MXLAM, NSTATE, JSTATE,
+      SUBROUTINE CPL9(N, IBLOCK, NHAM, LAM, MXLAM, NSTATE, JSTATE,
      1                JSINDX, L, JTOT, VL, IV, CENT, DGVL, IBOUND,
      2                IEXCH, IPRINT)
       USE base9_suite
@@ -364,12 +364,12 @@ C=========================================================================
 
       INTEGER, INTENT(OUT)          :: IV(NVLBLK,N*(N+1)/2)
 
-      INTEGER, INTENT(IN)           :: N, IBLOCK, NPOTL, MXLAM,
+      INTEGER, INTENT(IN)           :: N, IBLOCK, NHAM, MXLAM,
      1                                 NSTATE, JSTATE(NSTATE,NQNS),
      2                                 JSINDX(N), L(N), JTOT, IBOUND,
      3                                 IEXCH, IPRINT, LAM(*)
 
-      integer :: irc,icol,irow,i1col,i1row,lcol,lrow,ipotl,idgvl
+      integer :: irc,icol,irow,i1col,i1row,lcol,lrow,iham,idgvl
       logical livuse
       data livuse/.false./
 
@@ -410,18 +410,18 @@ c  calculate the coupling matrices and store them in the VL array
           i1row=jstate(jsindx(irow),1) ! other quantum labels may also be needed
           lrow=l(irow)
           IRC = IRC + 1
-          DO IPOTL = 1, NVLBLK
+          DO IHAM = 1, NVLBLK
 
 c  the following will usually involve calculations that depend on the quantum labels
 c  of the row and column and of the potential (or H_intl) expansion term
-            if (ipotl.le.mxlam) then
-              VL(IPOTL, IRC) = 0.D0 ! the ipotl-th term in the potential
-            elseif (ipotl.le.mxlam+nconst) then
-              vl(ipotl, irc) = 0.D0 ! the ipotl-mxlam-th term in H_intl
-            elseif (ipotl.le.mxlam+nconst+nrsq) then
-              vl(ipotl, irc) = 0.D0 ! the ipotl-mxlam-nconst-th term in L^2
+            if (iham.le.mxlam) then
+              VL(IHAM, IRC) = 0.D0 ! the iham-th term in the potential
+            elseif (iham.le.mxlam+nconst) then
+              vl(iham, irc) = 0.D0 ! the iham-mxlam-th term in H_intl
+            elseif (iham.le.mxlam+nconst+nrsq) then
+              vl(iham, irc) = 0.D0 ! the iham-mxlam-nconst-th term in L^2
             else
-              vl(ipotl, irc) = 0.D0 ! the ipotl-mxlam-nconst-nrsq-th
+              vl(iham, irc) = 0.D0 ! the iham-mxlam-nconst-nrsq-th
                                     ! term used for extra operators
             endif
           ENDDO

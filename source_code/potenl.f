@@ -1,5 +1,5 @@
       SUBROUTINE POTENL(ICNTRL, MXLMB, LAM, R, P, ITYPE, IPRINT)
-C  Copyright (C) 2019 J. M. Hutson & C. R. Le Sueur
+C  Copyright (C) 2020 J. M. Hutson & C. R. Le Sueur
 C  Distributed under the GNU General Public License, version 3
       USE angles
       USE potential, ONLY: LAMBDA, MXLMDA, EPNAME, RMNAME
@@ -30,8 +30,8 @@ C  ----------------------------------------------------------------------
 C  * NOTES ON HISTORY OF ROUTINE:
 C  ----------------------------------------------------------------------
 C  AUG 2018 CR Le Sueur: SUBSTANTIALLY REARRANGED
-C                        CODE RELATING TO NPOTL MOVED INTO VLCHK ROUTINE
-C                        AND NPOTL REMOVED FROM ARGUMENT LIST.
+C                        CODE RELATING TO NHAM MOVED TO ROUTINE GNPOTL
+C                        AND NHAM REMOVED FROM ARGUMENT LIST.
 C                        IPRINT ADDED TO ARGUMENT LIST
 C
 C  *INTRODUCES XPT(MXPT,MXDIM), XWT(MXPT,MXDIM), INX(MXDIM),*
@@ -88,7 +88,7 @@ C
       EQUIVALENCE (MXLAM,MXSYM),(LMAX,L1MAX)
 
 C  COMMON BLOCK FOR COMMUNICATING WITH SURBAS
-C     COMMON /NPOT  / NPTL
+C     COMMON /NPOT  / NVLP
 
 C  COMMON BLOCK FOR COMMUNICATING WITH POTENTIAL ROUTINES
 C  CHANGED TO USE ANGLES MODULE ON 16-08-2018
@@ -106,7 +106,7 @@ C  -----------------------------------------------------------------
       NAMELIST/POTL/ A,      CFLAG,  E,     EPNAME, EPSIL,
      1               ICNSYM, ICNSY2, IHOMO, IHOMO2, IVMIN,
      2               IVMAX,  LAMBDA, LMAX,   L1MAX, L2MAX,
-     3               LVRTP,  MMAX,   MXLAM,  MXSYM, NPOTL,
+     3               LVRTP,  MMAX,   MXLAM,  MXSYM, NHAM,
      4               NPOWER, NPS,    NPTS,   NPT,   NTERM,
      5               RM,     RMNAME
 C
@@ -115,7 +115,7 @@ C  EPSIL  - ENERGY SCALING FACTOR; VALUE IN WAVENUMBERS (CM-1)
 C  MXLAM  - NUMBER OF POTENTIAL TERMS RETURNED
 C  MXSYM  - A SYNONYM FOR MXLAM, RETAINED FOR COMPATIBILITY
 C  LAMBDA - SYMMETRY INDICES FOR POTENTIAL
-C  NPOTL  - NO LONGER A RELEVANT INPUT PARAMETER
+C  NHAM   - NO LONGER A RELEVANT INPUT PARAMETER
 C  -------- BELOW DESCRIBE TERMS AS EXPONENTIALS OR POWERS OF R
 C  NTERM  - ARRAY: NTERM(I) IS NUMBER OF TERMS CONTRIBUTING TO P(I)
 C           NTERM(I) .LT. 0 CALLS VINIT/VSTAR FOR POTENTIAL TERM I
@@ -300,7 +300,7 @@ C  INITIALIZE NAMELIST VARIABLES BEFORE READ
       DO ID=1,MXDIM
         NPTS(ID)=0
       ENDDO
-      NPOTL=-1
+      NHAM=-1
       RM=-1.D0
       QOUT=(MOD(ITYPE,10).NE.9)
       if (.not.inolls) READ(5,POTL)
@@ -308,8 +308,8 @@ C
 cINOLLS include 'all/rpotl-v15.f'
 C
 C
-      IF (NPOTL.NE.-1) WRITE(6,9020) NPOTL
- 9020 FORMAT(/'  *** POTENL.  CURRENT CODE IGNORES INPUT &POTL NPOTL =',
+      IF (NHAM.NE.-1) WRITE(6,9020) NHAM
+ 9020 FORMAT(/'  *** POTENL.  CURRENT CODE IGNORES INPUT &POTL NHAM =',
      1        I6)
       ITYP=MOD(ITYPE,10)
       IADD=ITYPE-ITYP

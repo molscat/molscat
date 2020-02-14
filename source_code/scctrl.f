@@ -1,10 +1,10 @@
-      SUBROUTINE SCCTRL(N,MXLAM,NPOTL,
+      SUBROUTINE SCCTRL(N,MXLAM,NHAM,
      1                  JSINDX,SR,SI,U,VL,
      2                  IV,EINT,CENT,WVEC,
      3                  L,NB,P,ERED,EP2RU,CM2RU,
      4                  RSCALE,DEGTOL,DRMAX,NSTAB,NOPEN,IPRINT,
      5                  IBOUND,ICHAN,WAVE,ILDSVU)
-C  Copyright (C) 2019 J. M. Hutson & C. R. Le Sueur
+C  Copyright (C) 2020 J. M. Hutson & C. R. Le Sueur
 C  Distributed under the GNU General Public License, version 3
 C
 C  THIS SUBROUTINE SETS UP THE STORAGE REQUIREMENTS FOR ALL THE
@@ -119,7 +119,7 @@ C
           CALL CHKSTR(NUSED)
           IF (ISTART.EQ.0)
      1      CALL YINIT(SR,U,VL,IV,P,CENT,EINT,X(IT1),
-     2                 X(IT2),SI,N,MXLAM,NPOTL,
+     2                 X(IT2),SI,N,MXLAM,NHAM,
      3                 ERED,RSTART,EP2RU,CM2RU,RSCALE,
      4                 .TRUE.,IPRINT)
           IXNEXT=IT1
@@ -135,7 +135,7 @@ C
           IT4=IT3+4*NSQ  ! DIAG
           IXNEXT=IT4+N
           CALL CHKSTR(NUSED)
-          CALL DVPROP(N,NSQ,MXLAM,NPOTL,
+          CALL DVPROP(N,NSQ,MXLAM,NHAM,
      1                SR,U,VL,IV,EINT,CENT,L,NB,P,
      2                X(IT1),X(IT2),X(IT3),X(IT4),
      3                RSTART,RSTOP,NSTEP,DR,NSTAB,
@@ -158,7 +158,7 @@ C
           IT9=IT8+N    ! R4
           IXNEXT=IT9+N
           CALL CHKSTR(NUSED)
-          CALL RMPROP(N,NSQ,MXLAM,NPOTL,
+          CALL RMPROP(N,NSQ,MXLAM,NHAM,
      1                SR,SI,U,VL,IV,EINT,CENT,P,
      2                X(IT1),X(IT2),X(IT3),X(IT4),X(IT5),X(IT6),X(IT7),
      3                X(IT8),X(IT9),X(IT6),X(IT7),
@@ -207,7 +207,7 @@ C
           IXNEXT=IT23+NSQ
           CALL CHKSTR(NUSED)
 C
-          CALL VVPROP(N,NSQ,MXLAM,NPOTL,
+          CALL VVPROP(N,NSQ,MXLAM,NHAM,
      1               SR,SI,U,VL,IV,EINT,CENT,P,
      2               X(IT1),X(IT2),X(IT3),X(IT4),X(IT5),
      3               X(IT6),X(IT7),X(IT8),X(IT9),X(IT10),X(IT11),
@@ -227,7 +227,7 @@ C
           IT1=IC2      ! DIAG
           IXNEXT=IT1+N
           CALL CHKSTR(NUSED)
-          CALL LDPROP(N,MXLAM,NPOTL,
+          CALL LDPROP(N,MXLAM,NHAM,
      1                SR,U,VL,IV,EINT,CENT,P,X(IT1),
      2                RSTART,RSTOP,NSTEP,DR,NODES,
      3                ERED,EP2RU,CM2RU,RSCALE,IPRINT)
@@ -247,7 +247,7 @@ C
             IT6=IT5+NSQ   ! W3
             IF (WAVE) IXNEXT=IT6+NSQ
             CALL CHKSTR(NUSED)
-            CALL MDPROP(N,MXLAM,NPOTL,
+            CALL MDPROP(N,MXLAM,NHAM,
      1                  SR,U,VL,IV,EINT,CENT,P,
      2                  X(IT1),X(IT2),X(IT3),X(IT4),X(IT5),X(IT6),
      3                  RSTART,RSTOP,NSTEP,DR,NODES,IREC,WAVE,
@@ -262,11 +262,11 @@ C
             IT5=IT4+NPT       ! Y2
             IF1=IT5+NPT
             ITP=IT3           ! P
-            IF2=ITP+NPT*MXLAM
+            IF2=ITP+NPT*NHAM
             IXNEXT=MAX(IF1,IF2)
             NUSED=0
             CALL CHKSTR(NUSED)
-            CALL ODPROP(MXLAM,NPOTL,
+            CALL ODPROP(MXLAM,NHAM,
      1                  SR(1),VL,IV,EINT,CENT,X(ITP),
      3                  X(IT1),X(IT2),X(IT3),X(IT4),X(IT5),
      4                  RSTART,RSTOP,NSTEP,DR,NODES,
@@ -288,7 +288,7 @@ C
           IT9=IT8+N    ! DIAG
           IXNEXT=IT9+N
           CALL CHKSTR(NUSED)
-          CALL MAPROP(N,NSQ,MXLAM,NPOTL,
+          CALL MAPROP(N,NSQ,MXLAM,NHAM,
      1                SR,SI,U,VL,IV,EINT,CENT,P,
      2                X(IT2),X(IT3),X(IT4),X(IT5),X(IT6),X(IT7),X(IT8),
      3                X(IT9),
@@ -306,7 +306,7 @@ C
           IT1=IC2      ! DIAG
           IXNEXT=IT1+N
           CALL CHKSTR(NUSED)
-          CALL MGPROP(N,MXLAM,NPOTL,
+          CALL MGPROP(N,MXLAM,NHAM,
      1                SR,U,VL,IV,EINT,CENT,P,X(IT1),
      3                RSTART,RSTOP,NSTEP,DR,NODES,
      4                ERED,EP2RU,CM2RU,RSCALE,IPRINT)
@@ -328,7 +328,7 @@ C
             IT9=IT8+N   ! HP
             IXNEXT=IT9+N
             CALL CHKSTR(NUSED)
-            CALL AIPROP(N,MXLAM,NPOTL,
+            CALL AIPROP(N,MXLAM,NHAM,
      1                  SR,SI,U,VL,IV,EINT,CENT,P,
      3                  X(IT1),X(IT2),X(IT3),X(IT4),X(IT5),X(IT6),
      4                  X(IT7),X(IT8),X(IT9),
@@ -353,7 +353,7 @@ C
           CALL CHKSTR(NUSED)
 C
           DWVEC=SQRT(ERED-EINT(1))
-          CALL WKB(N,MXLAM,NPOTL,
+          CALL WKB(N,MXLAM,NHAM,
      1             SR,SI,VL,IV,EINT,CENT,P,
      2             DWVEC,L,X(IT1),X(IT2),
      3             RSTART,TOLHIT,ERED,EP2RU,CM2RU,RSCALE,IPRINT)
@@ -373,7 +373,7 @@ C
       IF (IPRSEG(NSEG).GE.0) THEN
         CALL YTRANS(SR,SI,EINT,WVEC,
      1              JSINDX,L,N,P,VL,IV,
-     2              MXLAM,NPOTL,ERED,EP2RU,CM2RU,DEGTOL,
+     2              MXLAM,NHAM,ERED,EP2RU,CM2RU,DEGTOL,
      3              NOPEN,IBOUND,CENT,IPRINT,.TRUE.)
 C  IF OUTPUT OF LOG-DERIVATIVE MATRIX REQUESTED,
 C  WRITE PROPAGATION VECTORS (LDRWPV) AND MATRIX (LDRWMD)

@@ -3,11 +3,11 @@
  |                Non-reactive quantum scattering calculations                |
  |                     on atomic and molecular collisions                     |
  |                                                                            |
- |              Copyright (C) 2019 J. M. Hutson & C. R. Le Sueur              |
+ |              Copyright (C) 2020 J. M. Hutson & C. R. Le Sueur              |
  |                                                                            |
- |                               Version 2019.1                               |
+ |                               Version 2020.0                               |
  |                                                                            |
- |                       Run on 13 Jun 2019   at 09:07:26                     |
+ |                       Run on 14 Feb 2020   at 20:16:40                     |
  |                                                                            |
   ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
 
@@ -16,9 +16,11 @@
   the terms of the GNU General Public License, version 3, as published by
   the Free Software Foundation.
 
-  Publications resulting from the use of this program should refer to
-  J. M. Hutson & C. R. Le Sueur, MOLSCAT computer code 2019.1              
-  or to the published paper in Computer Physics Communications when available.
+  Publications resulting from the use of this program should cite both
+  the version of the program used:
+  J. M. Hutson & C. R. Le Sueur, MOLSCAT computer code 2020.0              
+  and the published paper:
+  J. M. Hutson & C. R. Le Sueur, Comput. Phys. Commun. 241, pp 9-18 (2019).
 
 
   USING CODATA 2018 RECOMMENDED VALUES OF FUNDAMENTAL PHYSICAL CONSTANTS
@@ -171,10 +173,9 @@
 
   ======================================================================================================================
 
-  INPUT ENERGY VALUES ASSUMED TO BE IN UNITS OF CM-1 BY DEFAULT.
-  USING JUST THE FIRST ENERGY FOR CONVERGENCE TESTING
+  INPUT ENERGIES IN UNITS OF CM-1 BY DEFAULT.
 
-  CONTROL DATA FOR CONVERGENCE TESTS.  CALCULATIONS WILL BE PERFORMED    3 TIMES
+  CONTROL DATA FOR CONVERGENCE TESTS.  CALCULATIONS WILL BE PERFORMED    4 TIMES
        ENERGY =   110.00000000     CM-1
 
   ======================================================================================================================
@@ -189,7 +190,7 @@
 
   ======================================================================================================================
 
-  INITIALIZATION DONE.  TIME WAS   0.31 CPU SECS.      5253 WORDS OF STORAGE USED.
+  INITIALIZATION DONE.  TIME WAS   0.00 CPU SECS.      6277 WORDS OF STORAGE USED.
 
   =============================== NH3-He on simple analytic potential; STEPS convergence ===============================
 
@@ -286,18 +287,49 @@
 
   FOR JTOT =    5, SYMMETRY BLOCK =  2, ENERGY(  3) =  110.0000    : MAX DIAG & OFF-DIAG =  2.13E+01 &   5.95E-01
 
+  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+  FOR RMIN =   3.00 STEPS =  10.00 RMID =   8.00 STEPL =  10.00 RMAX =      30.00
+  RMS CHANGE IN S-MATRIX ELEMENTS IS         2.00291E-05     LOG IS  -4.698
+  RMS CHANGE IN TRANSITION PROBABILITIES IS  8.16388E-06     LOG IS  -5.088
+
+  * * * * * * * * * *  STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FROM LEVEL I TO LEVEL F  * * * * * * * * * *
+                       FOR JTOT =   5 AND SYMMETRY BLOCK =   2 AT ENERGY(  4) =  110.0000     CM-1
+
+    F  I =      1              2              3              4              5              6
+    1       1.66963E+00    2.94605E-02    9.16563E-03    9.61699E-02    7.97661E-05    8.21219E-02
+    2       2.92135E-02    1.14517E+00    9.18463E-02    3.97264E-02    2.50280E-01    7.04060E-05
+    3       8.72620E-03    8.81823E-02    2.31465E+00    1.58551E-02    1.17795E-01    3.42306E-03
+    4       9.29032E-02    3.87015E-02    1.60879E-02    4.59104E+00    7.21019E-03    1.11310E-01
+    5       9.15997E-05    2.89840E-01    1.42083E-01    8.57099E-03    2.86599E+00    4.11518E-02
+    6       9.54526E-02    8.25268E-05    4.17907E-03    1.33928E-01    4.16526E-02    2.77724E+00
+    9       1.32461E-02    4.66790E-03    1.58521E-03    9.60792E-02    1.73239E-02    6.17355E-02
+   10       1.57473E-03    1.33509E-02    3.78927E-02    1.11677E-03    3.67736E-02    5.54740E-03
+
+    F  I =      9             10
+    1       8.49512E-02    1.15483E-02
+    2       2.96857E-02    9.70878E-02
+    3       9.67905E-03    2.64564E-01
+    4       5.95255E-01    7.91165E-03
+    5       1.27586E-01    3.09688E-01
+    6       4.60199E-01    4.72857E-02
+    9       2.12739E+01    1.69744E-01
+   10       1.48445E-01    1.21598E+01
+
+  FOR JTOT =    5, SYMMETRY BLOCK =  2, ENERGY(  4) =  110.0000    : MAX DIAG & OFF-DIAG =  2.13E+01 &   5.95E-01
+
 
   ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
  |                                                                            |
  |                Non-reactive quantum scattering calculations                |
  |                     on atomic and molecular collisions                     |
  |                                                                            |
- |              Copyright (C) 2019 J. M. Hutson & C. R. Le Sueur              |
+ |              Copyright (C) 2020 J. M. Hutson & C. R. Le Sueur              |
  |                                                                            |
- |                               Version 2019.1                               |
+ |                               Version 2020.0                               |
  |                                                                            |
- |                    This run used     124.00 cpu secs and                   |
- |             199191 of the allocated   1000000 words of storage             |
+ |                    This run used       2.00 cpu secs and                   |
+ |             200215 of the allocated   1000000 words of storage             |
  |                                                                            |
   ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
   ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
@@ -305,11 +337,11 @@
  |                Non-reactive quantum scattering calculations                |
  |                     on atomic and molecular collisions                     |
  |                                                                            |
- |              Copyright (C) 2019 J. M. Hutson & C. R. Le Sueur              |
+ |              Copyright (C) 2020 J. M. Hutson & C. R. Le Sueur              |
  |                                                                            |
- |                               Version 2019.1                               |
+ |                               Version 2020.0                               |
  |                                                                            |
- |                       Run on 13 Jun 2019   at 09:07:29                     |
+ |                       Run on 14 Feb 2020   at 20:16:42                     |
  |                                                                            |
   ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
 
@@ -318,9 +350,11 @@
   the terms of the GNU General Public License, version 3, as published by
   the Free Software Foundation.
 
-  Publications resulting from the use of this program should refer to
-  J. M. Hutson & C. R. Le Sueur, MOLSCAT computer code 2019.1              
-  or to the published paper in Computer Physics Communications when available.
+  Publications resulting from the use of this program should cite both
+  the version of the program used:
+  J. M. Hutson & C. R. Le Sueur, MOLSCAT computer code 2020.0              
+  and the published paper:
+  J. M. Hutson & C. R. Le Sueur, Comput. Phys. Commun. 241, pp 9-18 (2019).
 
 
   USING CODATA 2018 RECOMMENDED VALUES OF FUNDAMENTAL PHYSICAL CONSTANTS
@@ -473,10 +507,9 @@
 
   ======================================================================================================================
 
-  INPUT ENERGY VALUES ASSUMED TO BE IN UNITS OF CM-1 BY DEFAULT.
-  USING JUST THE FIRST ENERGY FOR CONVERGENCE TESTING
+  INPUT ENERGIES IN UNITS OF CM-1 BY DEFAULT.
 
-  CONTROL DATA FOR CONVERGENCE TESTS.  CALCULATIONS WILL BE PERFORMED    3 TIMES
+  CONTROL DATA FOR CONVERGENCE TESTS.  CALCULATIONS WILL BE PERFORMED    4 TIMES
        ENERGY =   110.00000000     CM-1
 
   ======================================================================================================================
@@ -491,7 +524,7 @@
 
   ======================================================================================================================
 
-  INITIALIZATION DONE.  TIME WAS   0.04 CPU SECS.      5253 WORDS OF STORAGE USED.
+  INITIALIZATION DONE.  TIME WAS   0.00 CPU SECS.      6277 WORDS OF STORAGE USED.
 
   ================================ NH3-He on simple analytic potential: DR convergence =================================
 
@@ -588,18 +621,49 @@
 
   FOR JTOT =    5, SYMMETRY BLOCK =  2, ENERGY(  3) =  110.0000    : MAX DIAG & OFF-DIAG =  2.13E+01 &   5.95E-01
 
+  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+  FOR RMIN =   3.00 RMID =   8.00 RMAX =      30.00 DR =  0.1600
+  RMS CHANGE IN S-MATRIX ELEMENTS IS         2.59394E-05     LOG IS  -4.586
+  RMS CHANGE IN TRANSITION PROBABILITIES IS  1.11554E-05     LOG IS  -4.953
+
+  * * * * * * * * * *  STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FROM LEVEL I TO LEVEL F  * * * * * * * * * *
+                       FOR JTOT =   5 AND SYMMETRY BLOCK =   2 AT ENERGY(  4) =  110.0000     CM-1
+
+    F  I =      1              2              3              4              5              6
+    1       1.66965E+00    2.94637E-02    9.16643E-03    9.61708E-02    7.97752E-05    8.21297E-02
+    2       2.92167E-02    1.14510E+00    9.18480E-02    3.97290E-02    2.50301E-01    7.04187E-05
+    3       8.72696E-03    8.81839E-02    2.31460E+00    1.58566E-02    1.17807E-01    3.42372E-03
+    4       9.29041E-02    3.87040E-02    1.60893E-02    4.59102E+00    7.21140E-03    1.11320E-01
+    5       9.16101E-05    2.89865E-01    1.42096E-01    8.57242E-03    2.86597E+00    4.11552E-02
+    6       9.54616E-02    8.25417E-05    4.17988E-03    1.33940E-01    4.16560E-02    2.77720E+00
+    9       1.32474E-02    4.66874E-03    1.58540E-03    9.60878E-02    1.73249E-02    6.17354E-02
+   10       1.57507E-03    1.33527E-02    3.78962E-02    1.11692E-03    3.67682E-02    5.54764E-03
+
+    F  I =      9             10
+    1       8.49597E-02    1.15508E-02
+    2       2.96910E-02    9.71013E-02
+    3       9.68022E-03    2.64588E-01
+    4       5.95308E-01    7.91271E-03
+    5       1.27593E-01    3.09642E-01
+    6       4.60198E-01    4.72878E-02
+    9       2.12735E+01    1.69748E-01
+   10       1.48448E-01    1.21596E+01
+
+  FOR JTOT =    5, SYMMETRY BLOCK =  2, ENERGY(  4) =  110.0000    : MAX DIAG & OFF-DIAG =  2.13E+01 &   5.95E-01
+
 
   ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
  |                                                                            |
  |                Non-reactive quantum scattering calculations                |
  |                     on atomic and molecular collisions                     |
  |                                                                            |
- |              Copyright (C) 2019 J. M. Hutson & C. R. Le Sueur              |
+ |              Copyright (C) 2020 J. M. Hutson & C. R. Le Sueur              |
  |                                                                            |
- |                               Version 2019.1                               |
+ |                               Version 2020.0                               |
  |                                                                            |
- |                    This run used     121.84 cpu secs and                   |
- |             199191 of the allocated   1000000 words of storage             |
+ |                    This run used       1.94 cpu secs and                   |
+ |             200215 of the allocated   1000000 words of storage             |
  |                                                                            |
   ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
   ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
@@ -607,11 +671,11 @@
  |                Non-reactive quantum scattering calculations                |
  |                     on atomic and molecular collisions                     |
  |                                                                            |
- |              Copyright (C) 2019 J. M. Hutson & C. R. Le Sueur              |
+ |              Copyright (C) 2020 J. M. Hutson & C. R. Le Sueur              |
  |                                                                            |
- |                               Version 2019.1                               |
+ |                               Version 2020.0                               |
  |                                                                            |
- |                       Run on 13 Jun 2019   at 09:07:33                     |
+ |                       Run on 14 Feb 2020   at 20:16:44                     |
  |                                                                            |
   ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
 
@@ -620,9 +684,11 @@
   the terms of the GNU General Public License, version 3, as published by
   the Free Software Foundation.
 
-  Publications resulting from the use of this program should refer to
-  J. M. Hutson & C. R. Le Sueur, MOLSCAT computer code 2019.1              
-  or to the published paper in Computer Physics Communications when available.
+  Publications resulting from the use of this program should cite both
+  the version of the program used:
+  J. M. Hutson & C. R. Le Sueur, MOLSCAT computer code 2020.0              
+  and the published paper:
+  J. M. Hutson & C. R. Le Sueur, Comput. Phys. Commun. 241, pp 9-18 (2019).
 
 
   USING CODATA 2018 RECOMMENDED VALUES OF FUNDAMENTAL PHYSICAL CONSTANTS
@@ -775,10 +841,9 @@
 
   ======================================================================================================================
 
-  INPUT ENERGY VALUES ASSUMED TO BE IN UNITS OF CM-1 BY DEFAULT.
-  USING JUST THE FIRST ENERGY FOR CONVERGENCE TESTING
+  INPUT ENERGIES IN UNITS OF CM-1 BY DEFAULT.
 
-  CONTROL DATA FOR CONVERGENCE TESTS.  CALCULATIONS WILL BE PERFORMED    3 TIMES
+  CONTROL DATA FOR CONVERGENCE TESTS.  CALCULATIONS WILL BE PERFORMED    4 TIMES
        ENERGY =   110.00000000     CM-1
 
   ======================================================================================================================
@@ -793,7 +858,7 @@
 
   ======================================================================================================================
 
-  INITIALIZATION DONE.  TIME WAS   0.05 CPU SECS.      5253 WORDS OF STORAGE USED.
+  INITIALIZATION DONE.  TIME WAS   0.00 CPU SECS.      6277 WORDS OF STORAGE USED.
 
   =============================== NH3-He on simple analytic potential: RMIN convergence ================================
 
@@ -829,8 +894,8 @@
   - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
   FOR RMIN =   3.10 STEPS =  40.00 RMID =   8.00 STEPL =  40.00 RMAX =      30.00
-  RMS CHANGE IN S-MATRIX ELEMENTS IS         1.88799E-10     LOG IS  -9.724
-  RMS CHANGE IN TRANSITION PROBABILITIES IS  9.16351E-11     LOG IS -10.038
+  RMS CHANGE IN S-MATRIX ELEMENTS IS         1.88793E-10     LOG IS  -9.724
+  RMS CHANGE IN TRANSITION PROBABILITIES IS  9.16354E-11     LOG IS -10.038
 
   * * * * * * * * * *  STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FROM LEVEL I TO LEVEL F  * * * * * * * * * *
                        FOR JTOT =   5 AND SYMMETRY BLOCK =   2 AT ENERGY(  2) =  110.0000     CM-1
@@ -861,7 +926,7 @@
 
   FOR RMIN =   3.20 STEPS =  40.00 RMID =   8.00 STEPL =  40.00 RMAX =      30.00
   RMS CHANGE IN S-MATRIX ELEMENTS IS         3.86239E-10     LOG IS  -9.413
-  RMS CHANGE IN TRANSITION PROBABILITIES IS  1.87516E-10     LOG IS  -9.727
+  RMS CHANGE IN TRANSITION PROBABILITIES IS  1.87517E-10     LOG IS  -9.727
 
   * * * * * * * * * *  STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FROM LEVEL I TO LEVEL F  * * * * * * * * * *
                        FOR JTOT =   5 AND SYMMETRY BLOCK =   2 AT ENERGY(  3) =  110.0000     CM-1
@@ -888,18 +953,49 @@
 
   FOR JTOT =    5, SYMMETRY BLOCK =  2, ENERGY(  3) =  110.0000    : MAX DIAG & OFF-DIAG =  2.13E+01 &   5.95E-01
 
+  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+  FOR RMIN =   3.30 STEPS =  40.00 RMID =   8.00 STEPL =  40.00 RMAX =      30.00
+  RMS CHANGE IN S-MATRIX ELEMENTS IS         5.93009E-10     LOG IS  -9.227
+  RMS CHANGE IN TRANSITION PROBABILITIES IS  2.87907E-10     LOG IS  -9.541
+
+  * * * * * * * * * *  STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FROM LEVEL I TO LEVEL F  * * * * * * * * * *
+                       FOR JTOT =   5 AND SYMMETRY BLOCK =   2 AT ENERGY(  4) =  110.0000     CM-1
+
+    F  I =      1              2              3              4              5              6
+    1       1.66959E+00    2.94553E-02    9.16460E-03    9.61786E-02    7.97497E-05    8.21122E-02
+    2       2.92083E-02    1.14520E+00    9.18599E-02    3.97239E-02    2.50248E-01    7.04021E-05
+    3       8.72522E-03    8.81954E-02    2.31467E+00    1.58543E-02    1.17779E-01    3.42216E-03
+    4       9.29116E-02    3.86991E-02    1.60871E-02    4.59109E+00    7.20850E-03    1.11296E-01
+    5       9.15808E-05    2.89803E-01    1.42063E-01    8.56897E-03    2.86603E+00    4.11494E-02
+    6       9.54413E-02    8.25223E-05    4.17798E-03    1.33911E-01    4.16502E-02    2.77730E+00
+    9       1.32428E-02    4.66653E-03    1.58499E-03    9.60683E-02    1.73219E-02    6.17119E-02
+   10       1.57411E-03    1.33464E-02    3.78869E-02    1.11659E-03    3.67511E-02    5.54682E-03
+
+    F  I =      9             10
+    1       8.49303E-02    1.15438E-02
+    2       2.96770E-02    9.70554E-02
+    3       9.67768E-03    2.64524E-01
+    4       5.95188E-01    7.91037E-03
+    5       1.27572E-01    3.09498E-01
+    6       4.60023E-01    4.72808E-02
+    9       2.12746E+01    1.69743E-01
+   10       1.48444E-01    1.21603E+01
+
+  FOR JTOT =    5, SYMMETRY BLOCK =  2, ENERGY(  4) =  110.0000    : MAX DIAG & OFF-DIAG =  2.13E+01 &   5.95E-01
+
 
   ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
  |                                                                            |
  |                Non-reactive quantum scattering calculations                |
  |                     on atomic and molecular collisions                     |
  |                                                                            |
- |              Copyright (C) 2019 J. M. Hutson & C. R. Le Sueur              |
+ |              Copyright (C) 2020 J. M. Hutson & C. R. Le Sueur              |
  |                                                                            |
- |                               Version 2019.1                               |
+ |                               Version 2020.0                               |
  |                                                                            |
- |                    This run used     117.36 cpu secs and                   |
- |             199191 of the allocated   1000000 words of storage             |
+ |                    This run used       2.01 cpu secs and                   |
+ |             200215 of the allocated   1000000 words of storage             |
  |                                                                            |
   ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
   ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
@@ -907,11 +1003,11 @@
  |                Non-reactive quantum scattering calculations                |
  |                     on atomic and molecular collisions                     |
  |                                                                            |
- |              Copyright (C) 2019 J. M. Hutson & C. R. Le Sueur              |
+ |              Copyright (C) 2020 J. M. Hutson & C. R. Le Sueur              |
  |                                                                            |
- |                               Version 2019.1                               |
+ |                               Version 2020.0                               |
  |                                                                            |
- |                       Run on 13 Jun 2019   at 09:07:36                     |
+ |                       Run on 14 Feb 2020   at 20:16:46                     |
  |                                                                            |
   ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
 
@@ -920,9 +1016,11 @@
   the terms of the GNU General Public License, version 3, as published by
   the Free Software Foundation.
 
-  Publications resulting from the use of this program should refer to
-  J. M. Hutson & C. R. Le Sueur, MOLSCAT computer code 2019.1              
-  or to the published paper in Computer Physics Communications when available.
+  Publications resulting from the use of this program should cite both
+  the version of the program used:
+  J. M. Hutson & C. R. Le Sueur, MOLSCAT computer code 2020.0              
+  and the published paper:
+  J. M. Hutson & C. R. Le Sueur, Comput. Phys. Commun. 241, pp 9-18 (2019).
 
 
   USING CODATA 2018 RECOMMENDED VALUES OF FUNDAMENTAL PHYSICAL CONSTANTS
@@ -1075,10 +1173,9 @@
 
   ======================================================================================================================
 
-  INPUT ENERGY VALUES ASSUMED TO BE IN UNITS OF CM-1 BY DEFAULT.
-  USING JUST THE FIRST ENERGY FOR CONVERGENCE TESTING
+  INPUT ENERGIES IN UNITS OF CM-1 BY DEFAULT.
 
-  CONTROL DATA FOR CONVERGENCE TESTS.  CALCULATIONS WILL BE PERFORMED    3 TIMES
+  CONTROL DATA FOR CONVERGENCE TESTS.  CALCULATIONS WILL BE PERFORMED    4 TIMES
        ENERGY =   110.00000000     CM-1
 
   ======================================================================================================================
@@ -1093,7 +1190,7 @@
 
   ======================================================================================================================
 
-  INITIALIZATION DONE.  TIME WAS   0.04 CPU SECS.      5253 WORDS OF STORAGE USED.
+  INITIALIZATION DONE.  TIME WAS   0.00 CPU SECS.      6277 WORDS OF STORAGE USED.
 
   =============================== NH3-He on simple analytic potential: RMAX convergence ================================
 
@@ -1188,18 +1285,49 @@
 
   FOR JTOT =    5, SYMMETRY BLOCK =  2, ENERGY(  3) =  110.0000    : MAX DIAG & OFF-DIAG =  2.13E+01 &   5.95E-01
 
+  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+  FOR RMIN =   3.00 STEPS =  40.00 RMID =   8.00 STEPL =  40.00 RMAX =      27.00
+  RMS CHANGE IN S-MATRIX ELEMENTS IS         2.94485E-04     LOG IS  -3.531
+  RMS CHANGE IN TRANSITION PROBABILITIES IS  1.43658E-05     LOG IS  -4.843
+
+  * * * * * * * * * *  STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FROM LEVEL I TO LEVEL F  * * * * * * * * * *
+                       FOR JTOT =   5 AND SYMMETRY BLOCK =   2 AT ENERGY(  4) =  110.0000     CM-1
+
+    F  I =      1              2              3              4              5              6
+    1       1.66925E+00    2.94550E-02    9.16506E-03    9.61555E-02    7.97452E-05    8.21113E-02
+    2       2.92080E-02    1.14555E+00    9.18376E-02    3.97240E-02    2.50247E-01    7.03480E-05
+    3       8.72565E-03    8.81739E-02    2.31507E+00    1.58535E-02    1.17791E-01    3.42259E-03
+    4       9.28892E-02    3.86992E-02    1.60863E-02    4.59142E+00    7.20841E-03    1.11308E-01
+    5       9.15756E-05    2.89802E-01    1.42077E-01    8.56887E-03    2.86602E+00    4.11470E-02
+    6       9.54402E-02    8.24589E-05    4.17850E-03    1.33926E-01    4.16477E-02    2.77714E+00
+    9       1.32495E-02    4.66677E-03    1.58481E-03    9.60797E-02    1.73250E-02    6.17248E-02
+   10       1.57467E-03    1.33511E-02    3.78712E-02    1.11776E-03    3.67353E-02    5.54804E-03
+
+    F  I =      9             10
+    1       8.49734E-02    1.15479E-02
+    2       2.96785E-02    9.70891E-02
+    3       9.67658E-03    2.64414E-01
+    4       5.95258E-01    7.91866E-03
+    5       1.27594E-01    3.09365E-01
+    6       4.60120E-01    4.72912E-02
+    9       2.12958E+01    1.69678E-01
+   10       1.48387E-01    1.21812E+01
+
+  FOR JTOT =    5, SYMMETRY BLOCK =  2, ENERGY(  4) =  110.0000    : MAX DIAG & OFF-DIAG =  2.13E+01 &   5.95E-01
+
 
   ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
  |                                                                            |
  |                Non-reactive quantum scattering calculations                |
  |                     on atomic and molecular collisions                     |
  |                                                                            |
- |              Copyright (C) 2019 J. M. Hutson & C. R. Le Sueur              |
+ |              Copyright (C) 2020 J. M. Hutson & C. R. Le Sueur              |
  |                                                                            |
- |                               Version 2019.1                               |
+ |                               Version 2020.0                               |
  |                                                                            |
- |                    This run used     117.66 cpu secs and                   |
- |             199191 of the allocated   1000000 words of storage             |
+ |                    This run used       1.88 cpu secs and                   |
+ |             200215 of the allocated   1000000 words of storage             |
  |                                                                            |
   ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
   ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
@@ -1207,11 +1335,11 @@
  |                Non-reactive quantum scattering calculations                |
  |                     on atomic and molecular collisions                     |
  |                                                                            |
- |              Copyright (C) 2019 J. M. Hutson & C. R. Le Sueur              |
+ |              Copyright (C) 2020 J. M. Hutson & C. R. Le Sueur              |
  |                                                                            |
- |                               Version 2019.1                               |
+ |                               Version 2020.0                               |
  |                                                                            |
- |                       Run on 13 Jun 2019   at 09:07:39                     |
+ |                       Run on 14 Feb 2020   at 20:16:48                     |
  |                                                                            |
   ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
 
@@ -1220,9 +1348,11 @@
   the terms of the GNU General Public License, version 3, as published by
   the Free Software Foundation.
 
-  Publications resulting from the use of this program should refer to
-  J. M. Hutson & C. R. Le Sueur, MOLSCAT computer code 2019.1              
-  or to the published paper in Computer Physics Communications when available.
+  Publications resulting from the use of this program should cite both
+  the version of the program used:
+  J. M. Hutson & C. R. Le Sueur, MOLSCAT computer code 2020.0              
+  and the published paper:
+  J. M. Hutson & C. R. Le Sueur, Comput. Phys. Commun. 241, pp 9-18 (2019).
 
 
   USING CODATA 2018 RECOMMENDED VALUES OF FUNDAMENTAL PHYSICAL CONSTANTS
@@ -1370,10 +1500,10 @@
 
   ======================================================================================================================
 
-  INPUT ENERGY VALUES ASSUMED TO BE IN UNITS OF CM-1 BY DEFAULT.
+  INPUT ENERGIES IN UNITS OF CM-1 BY DEFAULT.
 
-  CONTROL DATA FOR TOTAL ENERGIES.  CALCULATIONS WILL BE PERFORMED FOR    1 VALUE 
-       ENERGY NO.    1 =   110.00000000     CM-1
+  CALCULATIONS WILL BE PERFORMED FOR    1 ENERGY  
+  ENERGY    1           =   110.0000000     CM-1
 
   ======================================================================================================================
 
@@ -1388,7 +1518,7 @@
 
   ======================================================================================================================
 
-  INITIALIZATION DONE.  TIME WAS   0.04 CPU SECS.      3205 WORDS OF STORAGE USED.
+  INITIALIZATION DONE.  TIME WAS   0.00 CPU SECS.      3205 WORDS OF STORAGE USED.
 
   =========================== NH3-He on simple analytic potential: close-coupling x-sections ===========================
 
@@ -1494,7 +1624,7 @@
 
   FOR JTOT =   25, SYMMETRY BLOCK =  1, ENERGY(  1) =  110.0000    : MAX DIAG & OFF-DIAG =  4.77E-01 &   2.32E-05
 
-  FOR JTOT =   25, SYMMETRY BLOCK =  2, ENERGY(  1) =  110.0000    : MAX DIAG & OFF-DIAG =  4.64E-01 &   2.63E-05
+  FOR JTOT =   25, SYMMETRY BLOCK =  2, ENERGY(  1) =  110.0000    : MAX DIAG & OFF-DIAG =  4.65E-01 &   2.63E-05
 
   FOR JTOT =   26, SYMMETRY BLOCK =  1, ENERGY(  1) =  110.0000    : MAX DIAG & OFF-DIAG =  3.30E-01 &   1.10E-05
 
@@ -1514,7 +1644,7 @@
 
   FOR JTOT =   30, SYMMETRY BLOCK =  1, ENERGY(  1) =  110.0000    : MAX DIAG & OFF-DIAG =  8.80E-02 &   6.23E-07
 
-  FOR JTOT =   30, SYMMETRY BLOCK =  2, ENERGY(  1) =  110.0000    : MAX DIAG & OFF-DIAG =  8.57E-02 &   7.23E-07
+  FOR JTOT =   30, SYMMETRY BLOCK =  2, ENERGY(  1) =  110.0000    : MAX DIAG & OFF-DIAG =  8.57E-02 &   7.24E-07
 
 
 
@@ -1650,11 +1780,11 @@
  |                Non-reactive quantum scattering calculations                |
  |                     on atomic and molecular collisions                     |
  |                                                                            |
- |              Copyright (C) 2019 J. M. Hutson & C. R. Le Sueur              |
+ |              Copyright (C) 2020 J. M. Hutson & C. R. Le Sueur              |
  |                                                                            |
- |                               Version 2019.1                               |
+ |                               Version 2020.0                               |
  |                                                                            |
- |                    This run used    3095.80 cpu secs and                   |
+ |                    This run used      53.28 cpu secs and                   |
  |             174467 of the allocated   1000000 words of storage             |
  |                                                                            |
   ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
@@ -1663,11 +1793,11 @@
  |                Non-reactive quantum scattering calculations                |
  |                     on atomic and molecular collisions                     |
  |                                                                            |
- |              Copyright (C) 2019 J. M. Hutson & C. R. Le Sueur              |
+ |              Copyright (C) 2020 J. M. Hutson & C. R. Le Sueur              |
  |                                                                            |
- |                               Version 2019.1                               |
+ |                               Version 2020.0                               |
  |                                                                            |
- |                       Run on 13 Jun 2019   at 09:09:10                     |
+ |                       Run on 14 Feb 2020   at 20:17:42                     |
  |                                                                            |
   ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
 
@@ -1676,9 +1806,11 @@
   the terms of the GNU General Public License, version 3, as published by
   the Free Software Foundation.
 
-  Publications resulting from the use of this program should refer to
-  J. M. Hutson & C. R. Le Sueur, MOLSCAT computer code 2019.1              
-  or to the published paper in Computer Physics Communications when available.
+  Publications resulting from the use of this program should cite both
+  the version of the program used:
+  J. M. Hutson & C. R. Le Sueur, MOLSCAT computer code 2020.0              
+  and the published paper:
+  J. M. Hutson & C. R. Le Sueur, Comput. Phys. Commun. 241, pp 9-18 (2019).
 
 
   USING CODATA 2018 RECOMMENDED VALUES OF FUNDAMENTAL PHYSICAL CONSTANTS
@@ -1833,10 +1965,10 @@
 
   ======================================================================================================================
 
-  INPUT ENERGY VALUES ASSUMED TO BE IN UNITS OF CM-1 BY DEFAULT.
+  INPUT ENERGIES IN UNITS OF CM-1 BY DEFAULT.
 
-  CONTROL DATA FOR TOTAL ENERGIES.  CALCULATIONS WILL BE PERFORMED FOR    1 VALUE 
-       ENERGY NO.    1 =   110.00000000     CM-1
+  CALCULATIONS WILL BE PERFORMED FOR    1 ENERGY  
+  ENERGY    1           =   110.0000000     CM-1
 
   ======================================================================================================================
 
@@ -1851,7 +1983,7 @@
 
   ======================================================================================================================
 
-  INITIALIZATION DONE.  TIME WAS   0.12 CPU SECS.      3205 WORDS OF STORAGE USED.
+  INITIALIZATION DONE.  TIME WAS   0.00 CPU SECS.      3205 WORDS OF STORAGE USED.
 
   ================================= NH3-He on simple analytic potential: CS x-sections =================================
 
@@ -1997,7 +2129,7 @@
 
   FOR JTOT =   17, SYMMETRY BLOCK =  3, ENERGY(  1) =  110.0000    : MAX DIAG & OFF-DIAG =  2.30E+00 &   1.18E-05
 
-  FOR JTOT =   17, SYMMETRY BLOCK =  4, ENERGY(  1) =  110.0000    : MAX DIAG & OFF-DIAG =  8.09E-05 &   5.01E-32
+  FOR JTOT =   17, SYMMETRY BLOCK =  4, ENERGY(  1) =  110.0000    : MAX DIAG & OFF-DIAG =  8.09E-05 &   5.00E-32
 
   FOR JTOT =   18, SYMMETRY BLOCK =  1, ENERGY(  1) =  110.0000    : MAX DIAG & OFF-DIAG =  4.68E+00 &   7.87E-05
 
@@ -2005,7 +2137,7 @@
 
   FOR JTOT =   18, SYMMETRY BLOCK =  3, ENERGY(  1) =  110.0000    : MAX DIAG & OFF-DIAG =  1.34E+00 &   7.79E-07
 
-  FOR JTOT =   18, SYMMETRY BLOCK =  4, ENERGY(  1) =  110.0000    : MAX DIAG & OFF-DIAG =  9.91E-06 &   1.38E-34
+  FOR JTOT =   18, SYMMETRY BLOCK =  4, ENERGY(  1) =  110.0000    : MAX DIAG & OFF-DIAG =  9.91E-06 &   1.33E-34
 
   FOR JTOT =   19, SYMMETRY BLOCK =  1, ENERGY(  1) =  110.0000    : MAX DIAG & OFF-DIAG =  3.12E+00 &   6.08E-06
 
@@ -2013,7 +2145,7 @@
 
   FOR JTOT =   19, SYMMETRY BLOCK =  3, ENERGY(  1) =  110.0000    : MAX DIAG & OFF-DIAG =  8.00E-01 &   5.36E-08
 
-  FOR JTOT =   19, SYMMETRY BLOCK =  4, ENERGY(  1) =  110.0000    : MAX DIAG & OFF-DIAG =  8.93E-07 &   3.59E-37
+  FOR JTOT =   19, SYMMETRY BLOCK =  4, ENERGY(  1) =  110.0000    : MAX DIAG & OFF-DIAG =  8.93E-07 &   3.45E-37
 
   FOR JTOT =   20, SYMMETRY BLOCK =  1, ENERGY(  1) =  110.0000    : MAX DIAG & OFF-DIAG =  1.98E+00 &   4.65E-07
 
@@ -2021,7 +2153,7 @@
 
   FOR JTOT =   20, SYMMETRY BLOCK =  3, ENERGY(  1) =  110.0000    : MAX DIAG & OFF-DIAG =  4.94E-01 &   3.95E-09
 
-  FOR JTOT =   20, SYMMETRY BLOCK =  4, ENERGY(  1) =  110.0000    : MAX DIAG & OFF-DIAG =  6.06E-08 &   1.38E-39
+  FOR JTOT =   20, SYMMETRY BLOCK =  4, ENERGY(  1) =  110.0000    : MAX DIAG & OFF-DIAG =  6.06E-08 &   3.92E-40
 
   FOR JTOT =   21, SYMMETRY BLOCK =  1, ENERGY(  1) =  110.0000    : MAX DIAG & OFF-DIAG =  1.25E+00 &   3.78E-08
 
@@ -2029,7 +2161,7 @@
 
   FOR JTOT =   21, SYMMETRY BLOCK =  3, ENERGY(  1) =  110.0000    : MAX DIAG & OFF-DIAG =  3.14E-01 &   6.65E-10
 
-  FOR JTOT =   21, SYMMETRY BLOCK =  4, ENERGY(  1) =  110.0000    : MAX DIAG & OFF-DIAG =  3.16E-09 &   1.39E-41
+  FOR JTOT =   21, SYMMETRY BLOCK =  4, ENERGY(  1) =  110.0000    : MAX DIAG & OFF-DIAG =  3.16E-09 &   1.60E-42
 
   FOR JTOT =   22, SYMMETRY BLOCK =  1, ENERGY(  1) =  110.0000    : MAX DIAG & OFF-DIAG =  8.07E-01 &   3.32E-09
 
@@ -2037,7 +2169,7 @@
 
   FOR JTOT =   22, SYMMETRY BLOCK =  3, ENERGY(  1) =  110.0000    : MAX DIAG & OFF-DIAG =  2.04E-01 &   2.58E-11
 
-  FOR JTOT =   22, SYMMETRY BLOCK =  4, ENERGY(  1) =  110.0000    : MAX DIAG & OFF-DIAG =  1.29E-10 &   4.74E-43
+  FOR JTOT =   22, SYMMETRY BLOCK =  4, ENERGY(  1) =  110.0000    : MAX DIAG & OFF-DIAG =  1.29E-10 &   2.84E-41
 
   FOR JTOT =   23, SYMMETRY BLOCK =  1, ENERGY(  1) =  110.0000    : MAX DIAG & OFF-DIAG =  5.32E-01 &   3.10E-10
 
@@ -2045,7 +2177,7 @@
 
   FOR JTOT =   23, SYMMETRY BLOCK =  3, ENERGY(  1) =  110.0000    : MAX DIAG & OFF-DIAG =  1.36E-01 &   2.60E-11
 
-  FOR JTOT =   23, SYMMETRY BLOCK =  4, ENERGY(  1) =  110.0000    : MAX DIAG & OFF-DIAG =  4.19E-12 &   1.58E-46
+  FOR JTOT =   23, SYMMETRY BLOCK =  4, ENERGY(  1) =  110.0000    : MAX DIAG & OFF-DIAG =  4.19E-12 &   5.17E-44
 
   FOR JTOT =   24, SYMMETRY BLOCK =  1, ENERGY(  1) =  110.0000    : MAX DIAG & OFF-DIAG =  3.58E-01 &   3.04E-11
 
@@ -2053,7 +2185,7 @@
 
   FOR JTOT =   24, SYMMETRY BLOCK =  3, ENERGY(  1) =  110.0000    : MAX DIAG & OFF-DIAG =  9.24E-02 &   4.39E-12
 
-  FOR JTOT =   24, SYMMETRY BLOCK =  4, ENERGY(  1) =  110.0000    : MAX DIAG & OFF-DIAG =  1.10E-13 &   1.56E-46
+  FOR JTOT =   24, SYMMETRY BLOCK =  4, ENERGY(  1) =  110.0000    : MAX DIAG & OFF-DIAG =  1.10E-13 &   6.89E-47
 
   FOR JTOT =   25, SYMMETRY BLOCK =  1, ENERGY(  1) =  110.0000    : MAX DIAG & OFF-DIAG =  2.45E-01 &   3.10E-12
 
@@ -2061,7 +2193,7 @@
 
   FOR JTOT =   25, SYMMETRY BLOCK =  3, ENERGY(  1) =  110.0000    : MAX DIAG & OFF-DIAG =  6.37E-02 &   1.79E-14
 
-  FOR JTOT =   25, SYMMETRY BLOCK =  4, ENERGY(  1) =  110.0000    : MAX DIAG & OFF-DIAG =  2.36E-15 &   5.37E-48
+  FOR JTOT =   25, SYMMETRY BLOCK =  4, ENERGY(  1) =  110.0000    : MAX DIAG & OFF-DIAG =  2.36E-15 &   8.47E-50
 
   FOR JTOT =   26, SYMMETRY BLOCK =  1, ENERGY(  1) =  110.0000    : MAX DIAG & OFF-DIAG =  1.71E-01 &   3.24E-13
 
@@ -2069,7 +2201,7 @@
 
   FOR JTOT =   26, SYMMETRY BLOCK =  3, ENERGY(  1) =  110.0000    : MAX DIAG & OFF-DIAG =  4.47E-02 &   1.34E-13
 
-  FOR JTOT =   26, SYMMETRY BLOCK =  4, ENERGY(  1) =  110.0000    : MAX DIAG & OFF-DIAG =  4.19E-17 &   5.07E-51
+  FOR JTOT =   26, SYMMETRY BLOCK =  4, ENERGY(  1) =  110.0000    : MAX DIAG & OFF-DIAG =  4.19E-17 &   2.65E-50
 
   FOR JTOT =   27, SYMMETRY BLOCK =  1, ENERGY(  1) =  110.0000    : MAX DIAG & OFF-DIAG =  1.21E-01 &   3.45E-14
 
@@ -2077,7 +2209,7 @@
 
   FOR JTOT =   27, SYMMETRY BLOCK =  3, ENERGY(  1) =  110.0000    : MAX DIAG & OFF-DIAG =  3.18E-02 &   1.26E-14
 
-  FOR JTOT =   27, SYMMETRY BLOCK =  4, ENERGY(  1) =  110.0000    : MAX DIAG & OFF-DIAG =  6.21E-19 &   2.11E-48
+  FOR JTOT =   27, SYMMETRY BLOCK =  4, ENERGY(  1) =  110.0000    : MAX DIAG & OFF-DIAG =  6.21E-19 &   3.41E-53
 
   FOR JTOT =   28, SYMMETRY BLOCK =  1, ENERGY(  1) =  110.0000    : MAX DIAG & OFF-DIAG =  8.71E-02 &   3.73E-15
 
@@ -2085,7 +2217,7 @@
 
   FOR JTOT =   28, SYMMETRY BLOCK =  3, ENERGY(  1) =  110.0000    : MAX DIAG & OFF-DIAG =  2.28E-02 &   5.26E-17
 
-  FOR JTOT =   28, SYMMETRY BLOCK =  4, ENERGY(  1) =  110.0000    : MAX DIAG & OFF-DIAG =  7.78E-21 &   7.51E-53
+  FOR JTOT =   28, SYMMETRY BLOCK =  4, ENERGY(  1) =  110.0000    : MAX DIAG & OFF-DIAG =  7.78E-21 &   2.11E-53
 
   FOR JTOT =   29, SYMMETRY BLOCK =  1, ENERGY(  1) =  110.0000    : MAX DIAG & OFF-DIAG =  6.33E-02 &   4.06E-16
 
@@ -2225,11 +2357,11 @@
  |                Non-reactive quantum scattering calculations                |
  |                     on atomic and molecular collisions                     |
  |                                                                            |
- |              Copyright (C) 2019 J. M. Hutson & C. R. Le Sueur              |
+ |              Copyright (C) 2020 J. M. Hutson & C. R. Le Sueur              |
  |                                                                            |
- |                               Version 2019.1                               |
+ |                               Version 2020.0                               |
  |                                                                            |
- |                    This run used     151.17 cpu secs and                   |
+ |                    This run used       4.65 cpu secs and                   |
  |              29930 of the allocated   1000000 words of storage             |
  |                                                                            |
   ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---

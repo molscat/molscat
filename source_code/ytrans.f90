@@ -1,8 +1,8 @@
 SUBROUTINE YTRANS(Y,EVEC,EINT,WVEC,                      &
                   JSINDX,L,N,P,VL,IV,                    &
-                  MXLAM,NPOTL,ERED,EP2RU,CM2RU,DEGTOL,  &
+                  MXLAM,NHAM,ERED,EP2RU,CM2RU,DEGTOL,    &
                   NOPEN,IBOUND,CENT,IPRINT,LQUIET)
-!  Copyright (C) 2019 J. M. Hutson & C. R. Le Sueur
+!  Copyright (C) 2020 J. M. Hutson & C. R. Le Sueur
 !  Distributed under the GNU General Public License, version 3
 USE potential
 !  Routine to transform the log derivative matrix (Y) with primitive
@@ -41,7 +41,7 @@ USE potential
 !
 implicit none
 
-integer, intent(in)            ::N,IV(1),JSINDX(N),IBOUND,IPRINT,MXLAM,NPOTL
+integer, intent(in)            ::N,IV(1),JSINDX(N),IBOUND,IPRINT,MXLAM,NHAM
 integer, intent(inout)         ::L(N)
 integer, intent(out)           ::NOPEN
 double precision, intent(in)   ::VL(1),DEGTOL,EP2RU,CM2RU,ERED
@@ -99,7 +99,7 @@ allocate (mconst(n_ops))
 i=0
 if (NCONST.ge.1) then
   i=1
-  mconst(1)=NCONST
+  mconst(1)=MXLAM+NCONST
 endif
 if (NRSQ.ge.1) then
   i=i+1
@@ -122,10 +122,13 @@ endif
 allocate(wks(N,N,n_ops))
 ibeg=1
 do i_op=1,n_ops
-  i=ibeg+MXLAM
+  i=ibeg
   i_dim=mconst(i_op)
   if (nconst.gt.0 .and. i_op.eq.1) then
-    P(1:i_dim)=VCONST(ibeg:ibeg+i_dim-1)*CM2RU
+    P(1:mxlam)=0.d0
+    P(mxlam+1:mxlam+nconst)=VCONST(1:nconst)*cm2ru/ep2ru
+    call PERTRB(1.d30,P,NHAM,0)
+    P(1:i_dim)=P(1:i_dim)*ep2ru
   else
     P(1:i_dim)=1.d0
   endif
@@ -133,7 +136,7 @@ do i_op=1,n_ops
     write(6,900) 'operator #',i_op,P(1:i_dim)/CM2RU
   endif
 900  format(3x,a,i2,1p,10(g17.10,1x))
-! note that this code is analogous to that in WAVVEC
+! next 7 lines are analogous to code in WAVVEC
   do j=1,N
     call dgemv('T',i_dim,j,1.0d0,VL(i),NVLBLK,P,1,0.0d0,wks(1,j,i_op),1)
     i=i+j*NVLBLK
@@ -398,13 +401,13 @@ if (lquiet) then
   if (iprint.ge.20) then
     call MATPRN(6,EVEC,N,N,N,3,EVEC,' Eigenvectors (last time):',1)
     call MATPRN(6,Y,N,N,N,3,Y,' transformed Y:',1)
-    do ll=1,NPOTL
+    do ll=1,NHAM
       it=ll
       do j=1,N
       do i=1,j
         wks(i,j,1)=vl(it)
         wks(j,i,1)=vl(it)
-        it=it+NPOTL
+        it=it+NHAM
       enddo
       enddo
       write (6,*) ' For potential term ',ll,':'

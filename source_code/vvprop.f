@@ -1,4 +1,4 @@
-      SUBROUTINE VVPROP(N,NSQ,MXLAM,NPOTL,
+      SUBROUTINE VVPROP(N,NSQ,MXLAM,NHAM,
      1                  RMAT,VECNEW,W,VL,IVL,EINT,CENT,P,
      2                  A1,A1P,B1,B1P,WKS,
      3                  G1,G1P,G2,G2P,COSX,SINX,
@@ -222,7 +222,7 @@ C-------------------------------------------------------------------
 C  EVALUATE THE POTENTIAL AND ITS DERIVATIVES.
 C-------------------------------------------------------------------
       CALL WAVMAT(W,N,RCENT,P,VL,IVL,ERED,EINT,CENT,EP2RU,CM2RU,
-     1            RSCALE,WKS,MXLAM,NPOTL,IPRINT)
+     1            RSCALE,WKS,MXLAM,NHAM,IPRINT)
       DO 165 I = 1, NSQ
   165   W0(I) = W(I)
       IF (IVPD .AND. IVPPD) GOTO 200
@@ -231,10 +231,10 @@ C-------------------------------------------------------------------
         W1(I) = 0.D0
   170   W2(I) = 0.D0
   200 IF (IVPPD .OR. ISHIFT) CALL DERMAT(2,W2,N,RCENT,P,VL,IVL,CENT,
-     1                                   EP2RU,RSCALE,MXLAM,NPOTL,
+     1                                   EP2RU,RSCALE,MXLAM,NHAM,
      2                                   IPRINT)
       IF (IVPD) CALL DERMAT(1,W1,N,RCENT,P,VL,IVL,CENT,
-     1                      EP2RU,RSCALE,MXLAM,NPOTL,IPRINT)
+     1                      EP2RU,RSCALE,MXLAM,NHAM,IPRINT)
       FACTOR = DRNOW*DRNOW/24.D0
       IF (.NOT.ISHIFT) FACTOR = 0.D0
       IF (.NOT.ICRMAT) GOTO 270
@@ -246,7 +246,7 @@ C  BE DIAGONALIZED AND SAVE THE OLD EIGENVECTORS.
 C-------------------------------------------------------------------
       IF (RMIDI.NE.RCENT)
      1  CALL WAVMAT(W,N,RMIDI,P,VL,IVL,ERED,EINT,CENT,EP2RU,CM2RU,
-     2              RSCALE,WKS,MXLAM,NPOTL,IPRINT)
+     2              RSCALE,WKS,MXLAM,NHAM,IPRINT)
       DO 240 I = 1,NSQ
   240   VECOLD(I) = VECNEW(I)
       ITRANS = ITRANS+1

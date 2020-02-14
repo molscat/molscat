@@ -320,28 +320,3 @@ C
 C
       RETURN
       END
-C===========================================================================
-      SUBROUTINE DAMP(KMIN,KMAX,BETA,R,P,DP)
-      IMPLICIT DOUBLE PRECISION (A-H,O-Z)
-C
-C  SUBROUTINE FOR THE EFFICIENT CALCULATION OF THE TANG-TOENNIES
-C  DAMPING FUNCTIONS AND THEIR FIRST DERIVATIVES
-C  SEE J. CHEM. PHYS. 80, 3726 (1984).
-C
-      DIMENSION P(KMAX),DP(KMAX)
-C
-      Y=1.D0
-      Z=1.D0
-      BR=BETA*R
-      DO 100 K=1,KMAX
-        Y=Y*BR/DBLE(K)
-        Z=Z+Y
-  100   P(K)=Z
-C
-      Z=EXP(-BR)
-      DO 200 K=KMIN,KMAX
-  200   DP(K)=(P(K)-P(K-1))*BETA*Z
-      DO 300 K=KMIN,KMAX
-  300   P(K)=1.D0-Z*P(K)
-      RETURN
-      END

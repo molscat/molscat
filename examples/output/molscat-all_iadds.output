@@ -3,11 +3,11 @@
  |                Non-reactive quantum scattering calculations                |
  |                     on atomic and molecular collisions                     |
  |                                                                            |
- |              Copyright (C) 2019 J. M. Hutson & C. R. Le Sueur              |
+ |              Copyright (C) 2020 J. M. Hutson & C. R. Le Sueur              |
  |                                                                            |
- |                               Version 2019.1                               |
+ |                               Version 2020.0                               |
  |                                                                            |
- |                       Run on 30 May 2019   at 11:34:27                     |
+ |                       Run on 14 Feb 2020   at 20:13:03                     |
  |                                                                            |
   ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
 
@@ -16,9 +16,11 @@
   the terms of the GNU General Public License, version 3, as published by
   the Free Software Foundation.
 
-  Publications resulting from the use of this program should refer to
-  J. M. Hutson & C. R. Le Sueur, MOLSCAT computer code 2019.1              
-  or to the published paper in Computer Physics Communications when available.
+  Publications resulting from the use of this program should cite both
+  the version of the program used:
+  J. M. Hutson & C. R. Le Sueur, MOLSCAT computer code 2020.0              
+  and the published paper:
+  J. M. Hutson & C. R. Le Sueur, Comput. Phys. Commun. 241, pp 9-18 (2019).
 
 
   USING CODATA 2018 RECOMMENDED VALUES OF FUNDAMENTAL PHYSICAL CONSTANTS
@@ -101,7 +103,7 @@
 
   ALL LENGTHS ARE IN UNITS OF RM (  3.50000000 ANGSTROM ) UNLESS OTHERWISE STATED
 
-  IVCHK.  COMPLETED SUCCESSFULLY.
+  NO DUPLICATED SETS OF INDICES IN LAMBDA ARRAY
   INTERACTION MATRIX USES   3 BLOCKS OF VL ARRAY FOR R-DEPENDENT TERMS IN POTENTIAL
 
   ======================================================================================================================
@@ -141,11 +143,11 @@
 
   ======================================================================================================================
 
-  INPUT ENERGY VALUES ASSUMED TO BE IN UNITS OF CM-1 BY DEFAULT.
+  INPUT ENERGIES IN UNITS OF CM-1 BY DEFAULT.
 
-  CONTROL DATA FOR TOTAL ENERGIES.  CALCULATIONS WILL BE PERFORMED FOR    2 VALUES
-       ENERGY NO.    1 =   1250.0000000     CM-1
-       ENERGY NO.    2 =   1000.0000000     CM-1
+  CALCULATIONS WILL BE PERFORMED FOR    2 ENERGIES
+  ENERGY    1           =   1250.000000     CM-1
+  ENERGY    2           =   1000.000000     CM-1
 
   ======================================================================================================================
 
@@ -317,9 +319,9 @@
 
     F  I =      1              2              3              5
     1       1.16470E-01    1.18368E-03    8.66889E-09    9.81561E-14
-    2       5.06614E-03    2.43420E-01    2.12585E-06    4.00421E-15
-    3       4.05704E-08    2.32453E-06    3.56981E-01    3.16728E-15
-    5       3.92624E-15    3.74225E-17    2.70708E-17    1.62824E+01
+    2       5.06614E-03    2.43420E-01    2.12585E-06    4.00422E-15
+    3       4.05704E-08    2.32453E-06    3.56981E-01    3.16727E-15
+    5       3.92624E-15    3.74226E-17    2.70707E-17    1.62824E+01
 
   FOR JTOT =   40, SYMMETRY BLOCK =  2, ENERGY(  1) =  1250.000    : MAX DIAG & OFF-DIAG =  1.63E+01 &   5.07E-03
 
@@ -401,11 +403,11 @@
  |                Non-reactive quantum scattering calculations                |
  |                     on atomic and molecular collisions                     |
  |                                                                            |
- |              Copyright (C) 2019 J. M. Hutson & C. R. Le Sueur              |
+ |              Copyright (C) 2020 J. M. Hutson & C. R. Le Sueur              |
  |                                                                            |
- |                               Version 2019.1                               |
+ |                               Version 2020.0                               |
  |                                                                            |
- |                    This run used       1.05 cpu secs and                   |
+ |                    This run used       0.86 cpu secs and                   |
  |               3408 of the allocated   1000000 words of storage             |
  |                                                                            |
   ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
@@ -414,11 +416,11 @@
  |                Non-reactive quantum scattering calculations                |
  |                     on atomic and molecular collisions                     |
  |                                                                            |
- |              Copyright (C) 2019 J. M. Hutson & C. R. Le Sueur              |
+ |              Copyright (C) 2020 J. M. Hutson & C. R. Le Sueur              |
  |                                                                            |
- |                               Version 2019.1                               |
+ |                               Version 2020.0                               |
  |                                                                            |
- |                       Run on 30 May 2019   at 11:34:28                     |
+ |                       Run on 14 Feb 2020   at 20:13:04                     |
  |                                                                            |
   ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
 
@@ -427,9 +429,11 @@
   the terms of the GNU General Public License, version 3, as published by
   the Free Software Foundation.
 
-  Publications resulting from the use of this program should refer to
-  J. M. Hutson & C. R. Le Sueur, MOLSCAT computer code 2019.1              
-  or to the published paper in Computer Physics Communications when available.
+  Publications resulting from the use of this program should cite both
+  the version of the program used:
+  J. M. Hutson & C. R. Le Sueur, MOLSCAT computer code 2020.0              
+  and the published paper:
+  J. M. Hutson & C. R. Le Sueur, Comput. Phys. Commun. 241, pp 9-18 (2019).
 
 
   USING CODATA 2018 RECOMMENDED VALUES OF FUNDAMENTAL PHYSICAL CONSTANTS
@@ -516,7 +520,7 @@
 
   ALL LENGTHS ARE IN UNITS OF RM (  3.50000000 ANGSTROM ) UNLESS OTHERWISE STATED
 
-  IVCHK.  COMPLETED SUCCESSFULLY.
+  NO DUPLICATED SETS OF INDICES IN LAMBDA ARRAY
   INTERACTION MATRIX USES   3 BLOCKS OF VL ARRAY FOR R-DEPENDENT TERMS IN POTENTIAL
 
   ======================================================================================================================
@@ -556,11 +560,11 @@
 
   ======================================================================================================================
 
-  INPUT ENERGY VALUES ASSUMED TO BE IN UNITS OF CM-1 BY DEFAULT.
+  INPUT ENERGIES IN UNITS OF CM-1 BY DEFAULT.
 
-  CONTROL DATA FOR TOTAL ENERGIES.  CALCULATIONS WILL BE PERFORMED FOR    2 VALUES
-       ENERGY NO.    1 =   1250.0000000     CM-1
-       ENERGY NO.    2 =   1000.0000000     CM-1
+  CALCULATIONS WILL BE PERFORMED FOR    2 ENERGIES
+  ENERGY    1           =   1250.000000     CM-1
+  ENERGY    2           =   1000.000000     CM-1
 
   ======================================================================================================================
 
@@ -651,8 +655,8 @@
     F  I =      1              2              3              5
     1       1.28592E-01    6.67435E-04    2.43738E-09    1.36301E-13
     2       2.85662E-03    2.69702E-01    2.49235E-06    8.57067E-15
-    3       1.14069E-08    2.72528E-06    7.00619E-01    1.66693E-15
-    5       5.45203E-15    8.00997E-17    1.42473E-17    1.61411E+01
+    3       1.14069E-08    2.72528E-06    7.00619E-01    1.66692E-15
+    5       5.45203E-15    8.00997E-17    1.42472E-17    1.61411E+01
 
   FOR JTOT =   40, SYMMETRY BLOCK =  1, ENERGY(  1) =  1250.000    : MAX DIAG & OFF-DIAG =  1.61E+01 &   2.86E-03
 
@@ -734,11 +738,11 @@
  |                Non-reactive quantum scattering calculations                |
  |                     on atomic and molecular collisions                     |
  |                                                                            |
- |              Copyright (C) 2019 J. M. Hutson & C. R. Le Sueur              |
+ |              Copyright (C) 2020 J. M. Hutson & C. R. Le Sueur              |
  |                                                                            |
- |                               Version 2019.1                               |
+ |                               Version 2020.0                               |
  |                                                                            |
- |                    This run used       0.15 cpu secs and                   |
+ |                    This run used       0.12 cpu secs and                   |
  |                542 of the allocated   1000000 words of storage             |
  |                                                                            |
   ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
@@ -747,11 +751,11 @@
  |                Non-reactive quantum scattering calculations                |
  |                     on atomic and molecular collisions                     |
  |                                                                            |
- |              Copyright (C) 2019 J. M. Hutson & C. R. Le Sueur              |
+ |              Copyright (C) 2020 J. M. Hutson & C. R. Le Sueur              |
  |                                                                            |
- |                               Version 2019.1                               |
+ |                               Version 2020.0                               |
  |                                                                            |
- |                       Run on 30 May 2019   at 11:34:28                     |
+ |                       Run on 14 Feb 2020   at 20:13:04                     |
  |                                                                            |
   ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
 
@@ -760,9 +764,11 @@
   the terms of the GNU General Public License, version 3, as published by
   the Free Software Foundation.
 
-  Publications resulting from the use of this program should refer to
-  J. M. Hutson & C. R. Le Sueur, MOLSCAT computer code 2019.1              
-  or to the published paper in Computer Physics Communications when available.
+  Publications resulting from the use of this program should cite both
+  the version of the program used:
+  J. M. Hutson & C. R. Le Sueur, MOLSCAT computer code 2020.0              
+  and the published paper:
+  J. M. Hutson & C. R. Le Sueur, Comput. Phys. Commun. 241, pp 9-18 (2019).
 
 
   USING CODATA 2018 RECOMMENDED VALUES OF FUNDAMENTAL PHYSICAL CONSTANTS
@@ -858,7 +864,7 @@
 
   ALL LENGTHS ARE IN UNITS OF RM (  3.50000000 ANGSTROM ) UNLESS OTHERWISE STATED
 
-  IVCHK.  COMPLETED SUCCESSFULLY.
+  NO DUPLICATED SETS OF INDICES IN LAMBDA ARRAY
   INTERACTION MATRIX USES   3 BLOCKS OF VL ARRAY FOR R-DEPENDENT TERMS IN POTENTIAL
 
   ======================================================================================================================
@@ -898,11 +904,11 @@
 
   ======================================================================================================================
 
-  INPUT ENERGY VALUES ASSUMED TO BE IN UNITS OF CM-1 BY DEFAULT.
+  INPUT ENERGIES IN UNITS OF CM-1 BY DEFAULT.
 
-  CONTROL DATA FOR TOTAL ENERGIES.  CALCULATIONS WILL BE PERFORMED FOR    2 VALUES
-       ENERGY NO.    1 =   1250.0000000     CM-1
-       ENERGY NO.    2 =   1000.0000000     CM-1
+  CALCULATIONS WILL BE PERFORMED FOR    2 ENERGIES
+  ENERGY    1           =   1250.000000     CM-1
+  ENERGY    2           =   1000.000000     CM-1
 
   ======================================================================================================================
 
@@ -1115,7 +1121,7 @@
     F  I =      1              2              3              5
     1       1.16497E-01    1.14861E-03    6.84004E-09    1.28817E-14
     2       4.91605E-03    1.08124E-02    7.04574E-07    2.35884E-15
-    3       3.20114E-08    7.70422E-07    1.24466E-01    2.90602E-15
+    3       3.20114E-08    7.70422E-07    1.24466E-01    2.90603E-15
     5       5.15268E-16    2.20452E-17    2.48378E-17    1.62824E+01
 
   FOR JTOT =   40, SYMMETRY BLOCK =  1, ENERGY(  1) =  1250.000    : MAX DIAG & OFF-DIAG =  1.63E+01 &   4.92E-03
@@ -1236,11 +1242,11 @@
  |                Non-reactive quantum scattering calculations                |
  |                     on atomic and molecular collisions                     |
  |                                                                            |
- |              Copyright (C) 2019 J. M. Hutson & C. R. Le Sueur              |
+ |              Copyright (C) 2020 J. M. Hutson & C. R. Le Sueur              |
  |                                                                            |
- |                               Version 2019.1                               |
+ |                               Version 2020.0                               |
  |                                                                            |
- |                    This run used       0.34 cpu secs and                   |
+ |                    This run used       0.26 cpu secs and                   |
  |                731 of the allocated   1000000 words of storage             |
  |                                                                            |
   ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
@@ -1249,11 +1255,11 @@
  |                Non-reactive quantum scattering calculations                |
  |                     on atomic and molecular collisions                     |
  |                                                                            |
- |              Copyright (C) 2019 J. M. Hutson & C. R. Le Sueur              |
+ |              Copyright (C) 2020 J. M. Hutson & C. R. Le Sueur              |
  |                                                                            |
- |                               Version 2019.1                               |
+ |                               Version 2020.0                               |
  |                                                                            |
- |                       Run on 30 May 2019   at 11:34:28                     |
+ |                       Run on 14 Feb 2020   at 20:13:04                     |
  |                                                                            |
   ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
 
@@ -1262,9 +1268,11 @@
   the terms of the GNU General Public License, version 3, as published by
   the Free Software Foundation.
 
-  Publications resulting from the use of this program should refer to
-  J. M. Hutson & C. R. Le Sueur, MOLSCAT computer code 2019.1              
-  or to the published paper in Computer Physics Communications when available.
+  Publications resulting from the use of this program should cite both
+  the version of the program used:
+  J. M. Hutson & C. R. Le Sueur, MOLSCAT computer code 2020.0              
+  and the published paper:
+  J. M. Hutson & C. R. Le Sueur, Comput. Phys. Commun. 241, pp 9-18 (2019).
 
 
   USING CODATA 2018 RECOMMENDED VALUES OF FUNDAMENTAL PHYSICAL CONSTANTS
@@ -1362,7 +1370,7 @@
 
   ALL LENGTHS ARE IN UNITS OF RM (  3.50000000 ANGSTROM ) UNLESS OTHERWISE STATED
 
-  IVCHK.  COMPLETED SUCCESSFULLY.
+  NO DUPLICATED SETS OF INDICES IN LAMBDA ARRAY
   INTERACTION MATRIX USES   3 BLOCKS OF VL ARRAY FOR R-DEPENDENT TERMS IN POTENTIAL
 
   ======================================================================================================================
@@ -1402,11 +1410,11 @@
 
   ======================================================================================================================
 
-  INPUT ENERGY VALUES ASSUMED TO BE IN UNITS OF CM-1 BY DEFAULT.
+  INPUT ENERGIES IN UNITS OF CM-1 BY DEFAULT.
 
-  CONTROL DATA FOR TOTAL ENERGIES.  CALCULATIONS WILL BE PERFORMED FOR    2 VALUES
-       ENERGY NO.    1 =   1250.0000000     CM-1
-       ENERGY NO.    2 =   1000.0000000     CM-1
+  CALCULATIONS WILL BE PERFORMED FOR    2 ENERGIES
+  ENERGY    1           =   1250.000000     CM-1
+  ENERGY    2           =   1000.000000     CM-1
 
   ======================================================================================================================
 
@@ -1431,7 +1439,7 @@
     1       1.73089E-01    3.77409E-04    5.07083E-09    1.10601E-11
     2       1.61531E-03    4.40003E-03    3.99475E-07    7.59260E-13
     3       2.37315E-08    4.36809E-07    2.52312E-02    9.91174E-12
-    5       4.42404E-13    7.09588E-15    8.47157E-14    3.22985E+00
+    5       4.42404E-13    7.09589E-15    8.47157E-14    3.22985E+00
 
   FOR JTOT =   10, SYMMETRY BLOCK =  1, ENERGY(  1) =  1250.000    : MAX DIAG & OFF-DIAG =  3.23E+00 &   1.62E-03
 
@@ -1619,8 +1627,8 @@
     F  I =      1              2              3              5
     1       1.16580E-01    1.13317E-03    6.40750E-09    1.05043E-14
     2       4.84998E-03    5.27809E-03    6.67185E-07    2.31949E-15
-    3       2.99871E-08    7.29538E-07    1.42955E-01    3.00993E-15
-    5       4.20172E-16    2.16775E-17    2.57259E-17    1.62820E+01
+    3       2.99871E-08    7.29538E-07    1.42955E-01    3.00992E-15
+    5       4.20172E-16    2.16775E-17    2.57258E-17    1.62820E+01
 
   FOR JTOT =   40, SYMMETRY BLOCK =  1, ENERGY(  1) =  1250.000    : MAX DIAG & OFF-DIAG =  1.63E+01 &   4.85E-03
 
@@ -1740,11 +1748,11 @@
  |                Non-reactive quantum scattering calculations                |
  |                     on atomic and molecular collisions                     |
  |                                                                            |
- |              Copyright (C) 2019 J. M. Hutson & C. R. Le Sueur              |
+ |              Copyright (C) 2020 J. M. Hutson & C. R. Le Sueur              |
  |                                                                            |
- |                               Version 2019.1                               |
+ |                               Version 2020.0                               |
  |                                                                            |
- |                    This run used       0.33 cpu secs and                   |
+ |                    This run used       0.27 cpu secs and                   |
  |                731 of the allocated   1000000 words of storage             |
  |                                                                            |
   ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
@@ -1753,11 +1761,11 @@
  |                Non-reactive quantum scattering calculations                |
  |                     on atomic and molecular collisions                     |
  |                                                                            |
- |              Copyright (C) 2019 J. M. Hutson & C. R. Le Sueur              |
+ |              Copyright (C) 2020 J. M. Hutson & C. R. Le Sueur              |
  |                                                                            |
- |                               Version 2019.1                               |
+ |                               Version 2020.0                               |
  |                                                                            |
- |                       Run on 30 May 2019   at 11:34:29                     |
+ |                       Run on 14 Feb 2020   at 20:13:04                     |
  |                                                                            |
   ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
 
@@ -1766,9 +1774,11 @@
   the terms of the GNU General Public License, version 3, as published by
   the Free Software Foundation.
 
-  Publications resulting from the use of this program should refer to
-  J. M. Hutson & C. R. Le Sueur, MOLSCAT computer code 2019.1              
-  or to the published paper in Computer Physics Communications when available.
+  Publications resulting from the use of this program should cite both
+  the version of the program used:
+  J. M. Hutson & C. R. Le Sueur, MOLSCAT computer code 2020.0              
+  and the published paper:
+  J. M. Hutson & C. R. Le Sueur, Comput. Phys. Commun. 241, pp 9-18 (2019).
 
 
   USING CODATA 2018 RECOMMENDED VALUES OF FUNDAMENTAL PHYSICAL CONSTANTS
@@ -1859,7 +1869,7 @@
 
   ALL LENGTHS ARE IN UNITS OF RM (  3.50000000 ANGSTROM ) UNLESS OTHERWISE STATED
 
-  IVCHK.  COMPLETED SUCCESSFULLY.
+  NO DUPLICATED SETS OF INDICES IN LAMBDA ARRAY
   INTERACTION MATRIX USES   3 BLOCKS OF VL ARRAY FOR R-DEPENDENT TERMS IN POTENTIAL
 
   ======================================================================================================================
@@ -1899,11 +1909,11 @@
 
   ======================================================================================================================
 
-  INPUT ENERGY VALUES ASSUMED TO BE IN UNITS OF CM-1 BY DEFAULT.
+  INPUT ENERGIES IN UNITS OF CM-1 BY DEFAULT.
 
-  CONTROL DATA FOR TOTAL ENERGIES.  CALCULATIONS WILL BE PERFORMED FOR    2 VALUES
-       ENERGY NO.    1 =   1250.0000000     CM-1
-       ENERGY NO.    2 =   1000.0000000     CM-1
+  CALCULATIONS WILL BE PERFORMED FOR    2 ENERGIES
+  ENERGY    1           =   1250.000000     CM-1
+  ENERGY    2           =   1000.000000     CM-1
 
   ======================================================================================================================
 
@@ -2235,9 +2245,9 @@
 
     F  I =      1              2              3              5
     1       1.28342E-01    5.43992E-04    4.40612E-09    7.81814E-13
-    2       2.32829E-03    4.77329E-02    9.97274E-07    2.96973E-15
-    3       2.06207E-08    1.09048E-06    6.98507E-03    3.84430E-16
-    5       3.12725E-14    2.77544E-17    3.28573E-18    1.61273E+01
+    2       2.32829E-03    4.77329E-02    9.97274E-07    2.96972E-15
+    3       2.06207E-08    1.09048E-06    6.98507E-03    3.84432E-16
+    5       3.12725E-14    2.77544E-17    3.28574E-18    1.61273E+01
 
   FOR JTOT =   40, SYMMETRY BLOCK =  1, ENERGY(  1) =  1250.000    : MAX DIAG & OFF-DIAG =  1.61E+01 &   2.33E-03
 
@@ -2397,11 +2407,11 @@
  |                Non-reactive quantum scattering calculations                |
  |                     on atomic and molecular collisions                     |
  |                                                                            |
- |              Copyright (C) 2019 J. M. Hutson & C. R. Le Sueur              |
+ |              Copyright (C) 2020 J. M. Hutson & C. R. Le Sueur              |
  |                                                                            |
- |                               Version 2019.1                               |
+ |                               Version 2020.0                               |
  |                                                                            |
- |                    This run used       0.51 cpu secs and                   |
+ |                    This run used       0.40 cpu secs and                   |
  |                542 of the allocated   1000000 words of storage             |
  |                                                                            |
   ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
@@ -2410,11 +2420,11 @@
  |                Non-reactive quantum scattering calculations                |
  |                     on atomic and molecular collisions                     |
  |                                                                            |
- |              Copyright (C) 2019 J. M. Hutson & C. R. Le Sueur              |
+ |              Copyright (C) 2020 J. M. Hutson & C. R. Le Sueur              |
  |                                                                            |
- |                               Version 2019.1                               |
+ |                               Version 2020.0                               |
  |                                                                            |
- |                       Run on 30 May 2019   at 11:34:29                     |
+ |                       Run on 14 Feb 2020   at 20:13:05                     |
  |                                                                            |
   ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
 
@@ -2423,9 +2433,11 @@
   the terms of the GNU General Public License, version 3, as published by
   the Free Software Foundation.
 
-  Publications resulting from the use of this program should refer to
-  J. M. Hutson & C. R. Le Sueur, MOLSCAT computer code 2019.1              
-  or to the published paper in Computer Physics Communications when available.
+  Publications resulting from the use of this program should cite both
+  the version of the program used:
+  J. M. Hutson & C. R. Le Sueur, MOLSCAT computer code 2020.0              
+  and the published paper:
+  J. M. Hutson & C. R. Le Sueur, Comput. Phys. Commun. 241, pp 9-18 (2019).
 
 
   USING CODATA 2018 RECOMMENDED VALUES OF FUNDAMENTAL PHYSICAL CONSTANTS
@@ -2512,7 +2524,7 @@
 
   ALL LENGTHS ARE IN UNITS OF RM (  3.50000000 ANGSTROM ) UNLESS OTHERWISE STATED
 
-  IVCHK.  COMPLETED SUCCESSFULLY.
+  NO DUPLICATED SETS OF INDICES IN LAMBDA ARRAY
   INTERACTION MATRIX USES   3 BLOCKS OF VL ARRAY FOR R-DEPENDENT TERMS IN POTENTIAL
 
   ======================================================================================================================
@@ -2552,11 +2564,11 @@
 
   ======================================================================================================================
 
-  INPUT ENERGY VALUES ASSUMED TO BE IN UNITS OF CM-1 BY DEFAULT.
+  INPUT ENERGIES IN UNITS OF CM-1 BY DEFAULT.
 
-  CONTROL DATA FOR TOTAL ENERGIES.  CALCULATIONS WILL BE PERFORMED FOR    2 VALUES
-       ENERGY NO.    1 =   1250.0000000     CM-1
-       ENERGY NO.    2 =   1000.0000000     CM-1
+  CALCULATIONS WILL BE PERFORMED FOR    2 ENERGIES
+  ENERGY    1           =   1250.000000     CM-1
+  ENERGY    2           =   1000.000000     CM-1
 
   ======================================================================================================================
 
@@ -2604,7 +2616,7 @@
 
                       PARTIAL WAVES FROM   10 TO    40 (IN STEPS OF   10)
 
-  ***** ***** ***** TIME WAS     0.14  SEC.
+  ***** ***** ***** TIME WAS     0.13  SEC.
  
 
   ***** ***** STORAGE SO FAR USED       563  OF THE   1000000  AVAILABLE WORDS.
@@ -2802,7 +2814,7 @@
 
                       PARTIAL WAVES FROM   10 TO    40 (IN STEPS OF   10)
 
-  ***** ***** ***** TIME WAS     0.20  SEC.
+  ***** ***** ***** TIME WAS     0.10  SEC.
  
 
   ***** ***** STORAGE SO FAR USED       563  OF THE   1000000  AVAILABLE WORDS.
@@ -2912,11 +2924,11 @@
  |                Non-reactive quantum scattering calculations                |
  |                     on atomic and molecular collisions                     |
  |                                                                            |
- |              Copyright (C) 2019 J. M. Hutson & C. R. Le Sueur              |
+ |              Copyright (C) 2020 J. M. Hutson & C. R. Le Sueur              |
  |                                                                            |
- |                               Version 2019.1                               |
+ |                               Version 2020.0                               |
  |                                                                            |
- |                    This run used       0.34 cpu secs and                   |
+ |                    This run used       0.23 cpu secs and                   |
  |                563 of the allocated   1000000 words of storage             |
  |                                                                            |
   ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---

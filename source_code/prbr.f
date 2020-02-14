@@ -2,7 +2,7 @@
      1                NBASIS,JSINDX,L,WVEC,
      2                SREAL,SIMAG,IC,IL,IC1,IL1,
      3                JSTATE,MXPAR,WGHT,IPRINT,ILSU)
-C  Copyright (C) 2019 J. M. Hutson & C. R. Le Sueur
+C  Copyright (C) 2020 J. M. Hutson & C. R. Le Sueur
 C  Distributed under the GNU General Public License, version 3
       USE basis_data, ONLY: NLEVEL, JLEVEL, ELEVEL, JHALF, IDENT
       USE sizes, ONLY: MXNRG => MXNRG_in_MOLSCAT, MXLN
@@ -612,7 +612,7 @@ C  GENERATE ENERGY VALUES IF NECESSARY TO LINE AT REQUESTED E'S.
 
  1202     WRITE(6,611) I,II
   611     FORMAT(/'  * * * WARNING.  CANNOT ADD ENERGY VALUE FOR LINE',
-     1           I4,'  RELATIVE ENERGY NO.',I4)
+     1           I4,' AT KINETIC ENERGY',I4,'. MXNRG TOO SMALL.')
           NEWE=NEWE-1
           GOTO 1401
 
@@ -709,7 +709,7 @@ C *** 2 SEPT. 86 TO PREVENT CHOOSING NEGATIVE ENERGIES
      1        WRITE(6,104) EREL(NLINE),
      2                     LN(NLINE,4),ORDNL(LN(NLINE,4)),
      3                     LN(NLINE,5),ORDNL(LN(NLINE,5))
-  104       FORMAT(12X,'AT RELATIVE K.E. =',F18.9,' CM-1  WITH',I4,
+  104       FORMAT(12X,'AT KINETIC ENERGY ',F18.9,' CM-1  WITH',I4,
      1             '-',A2,' AND',I4,'-',A2,
      2             ' ENERGY VALUES RESPECTIVELY')
  1500     CONTINUE

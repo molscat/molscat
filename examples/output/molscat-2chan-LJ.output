@@ -1,0 +1,503 @@
+  ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
+ |                                                                            |
+ |                Non-reactive quantum scattering calculations                |
+ |                     on atomic and molecular collisions                     |
+ |                                                                            |
+ |              Copyright (C) 2020 J. M. Hutson & C. R. Le Sueur              |
+ |                                                                            |
+ |                               Version 2020.0                               |
+ |                                                                            |
+ |                       Run on 14 Feb 2020   at 20:25:58                     |
+ |                                                                            |
+  ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
+
+
+  This program is free software: you can redistribute it and/or modify it under
+  the terms of the GNU General Public License, version 3, as published by
+  the Free Software Foundation.
+
+  Publications resulting from the use of this program should cite both
+  the version of the program used:
+  J. M. Hutson & C. R. Le Sueur, MOLSCAT computer code 2020.0              
+  and the published paper:
+  J. M. Hutson & C. R. Le Sueur, Comput. Phys. Commun. 241, pp 9-18 (2019).
+
+
+  USING CODATA 2018 RECOMMENDED VALUES OF FUNDAMENTAL PHYSICAL CONSTANTS
+
+  MEMORY ALLOCATED TO MAIN WORKING ARRAY IS   1000000 (8-BYTE) WORDS (    7.63 MB)
+  2 INTEGERS CAN BE STORED IN EACH WORD.
+
+  PRINT LEVEL (IPRINT) = 12     OTHER PRINT CONTROLS  ISIGPR = 0
+
+  REDUCED MASS FOR INTERACTION =  20.000000000 ATOMIC MASS UNITS (DALTONS)
+
+  ======================================================================================================================
+
+  INTERACTION TYPE IS    DIATOMIC VIB-ROTOR  -  ATOM.  
+
+  MOLECULAR QUANTUM NUMBERS TAKEN FROM JLEVEL INPUT.  NLEVEL =  2
+
+  ENERGY LEVELS TAKEN FROM ELEVEL INPUT
+
+  QUANTUM NUMBERS FOR INTERACTING PAIR:
+  EACH PAIR STATE IS LABELLED BY  2 QUANTUM NUMBERS
+  EACH CHANNEL FUNCTION IS FORMED BY COMBINING A PAIR STATE WITH A VALUE OF L.
+  THE RESULTING BASIS SET IS ASYMPTOTICALLY DIAGONAL.
+
+  PAIR STATE     PAIR STATE QUANTUM NUMBERS    PAIR LEVEL     PAIR ENERGY (CM-1)
+                ----        J         V ----
+        1                   0         1           1             0.0000000
+        2                   0         2           2           100.0000000
+
+  ======================================================================================================================
+  GENERAL-PURPOSE POTENL ROUTINE (MAY 18)
+
+  ANGULAR DEPENDENCE OF POTENTIAL EXPANDED IN TERMS OF
+  LEGENDRE POLYNOMIALS, P(LAMBDA).
+  INTEGRATED OVER DIATOM VIBRATIONAL FUNCTIONS
+
+  INTERACTION POTENTIAL FOR EXPANSION TERM NUMBER   1
+  WHICH HAS LAMBDA =   0,  V =   1,  V-PRIME =   1
+
+                 4.00000000E+02 * R **-12
+                -4.00000000E+02 * R ** -6
+
+  INTERACTION POTENTIAL FOR EXPANSION TERM NUMBER   2
+  WHICH HAS LAMBDA =   0,  V =   2,  V-PRIME =   2
+
+                 4.00000000E+02 * R **-12
+                -4.00000000E+02 * R ** -6
+
+  INTERACTION POTENTIAL FOR EXPANSION TERM NUMBER   3
+  WHICH HAS LAMBDA =   0,  V =   1,  V-PRIME =   2
+
+                 4.00000000E+01 * R **-12
+                -4.00000000E+01 * R ** -6
+
+  POTENL PROCESSING FINISHED.
+
+  POTENTIAL RETURNED IN UNITS OF EPSIL  =  1.0000000     CM-1
+        CODED WITH R IN UNITS OF RM     =  1.0000000     ANGSTROM
+
+  ALL LENGTHS ARE IN UNITS OF ANGSTROM UNLESS OTHERWISE STATED
+
+  NO DUPLICATED SETS OF INDICES IN LAMBDA ARRAY
+  INTERACTION MATRIX USES   2 BLOCKS OF VL ARRAY FOR R-DEPENDENT TERMS IN POTENTIAL
+
+  ======================================================================================================================
+
+  PROPAGATION METHODS FOR COUPLED EQUATIONS SPECIFIED BY IPROPS =  7 AND IPROPL =  9
+
+  COUPLED EQUATIONS WILL BE PROPAGATED OUTWARDS IN 2 SEGMENTS
+
+  PROPAGATION RANGES ARE CONTROLLED BY VARIABLES RMIN, RMID AND RMAX, WITH INPUT VALUES
+  RMIN =  0.8000     RMID =   1.500     RMAX =   6.000    
+  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+  SEGMENT 1 WILL BE PROPAGATED OUTWARDS
+
+  FROM RMIN CHOSEN USING IRMSET =  8 TO RMID =      1.50
+
+  COUPLED EQUATIONS SOLVED BY QUASIADIABATIC MODIFIED LOG-DERIVATIVE PROPAGATOR OF MANOLOPOULOS
+
+  PROPAGATION STEP SIZE DETERMINED USING DR =  1.000E-03
+  STEP SIZE CONSTANT THROUGHOUT RANGE
+  STEP SIZE MAY BE ADJUSTED SLIGHTLY SO THAT RANGE IS A WHOLE NUMBER OF STEPS
+
+  LOG-DERIVATIVE MATRIX INITIALISED IN THE LOCAL EIGENBASIS AT RMIN
+  LOCALLY CLOSED CHANNELS INITIALISED WITH A WKB BOUNDARY CONDITION
+  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+  SEGMENT 2 WILL BE PROPAGATED OUTWARDS
+
+  FROM RMID =      1.50 TO RMAX =      6.00
+
+  COUPLED EQUATIONS SOLVED BY VARIABLE-STEP AIRY PROPAGATOR.
+  PUBLICATIONS RESULTING FROM THE USE OF THIS PROPAGATOR SHOULD REFERENCE
+  M. H. ALEXANDER AND D. E. MANOLOPOULOS,  J. CHEM. PHYS. 86, 2044 (1987).
+
+  PROPAGATION STEP SIZE DETERMINED USING DR =  1.000E-03
+  STEP SIZES ADJUSTED TO MAINTAIN APPROXIMATE ACCURACY VIA PERTURBATION THEORY
+  WITH TOLHI =  1.00E-04 AND POWR =   3.0    
+
+  ======================================================================================================================
+
+  INPUT ENERGIES IN UNITS OF CM-1 BY DEFAULT.
+
+  CALCULATIONS WILL BE PERFORMED FOR    1 ENERGY  
+  ENERGY    1           =   200.0000000     CM-1
+
+  ======================================================================================================================
+
+  TOTAL ANGULAR MOMENTUM JTOT =   0
+
+  EACH JTOT IS SPLIT INTO A MAXIMUM OF   2 SYMMETRY BLOCKS
+
+  CALCULATION(S) WILL BE FOR SYMMETRY BLOCK   2
+
+  STATE-TO-STATE INTEGRAL CROSS-SECTIONS WILL BE COMPUTED BUT NOT STORED ON DISK
+
+  ======================================================================================================================
+
+  INITIALIZATION DONE.  TIME WAS   0.00 CPU SECS.        23 WORDS OF STORAGE USED.
+
+  =========================== 2-channel system with Lennard-Jones 12-6 potentials: S matrix ============================
+
+  *****************************  ANGULAR MOMENTUM JTOT  =   0   AND SYMMETRY BLOCK  =    2  ****************************
+
+  CHANNEL FUNCTION LIST:
+
+  EACH CHANNEL FUNCTION IS FORMED BY COMBINING A PAIR STATE WITH A VALUE OF L.
+
+  CHANNEL  PAIR STATE    PAIR STATE QUANTUM NUMBERS            L        PAIR LEVEL   PAIR ENERGY (CM-1)
+                         ----      J         V   ----
+        1           1              0         1                 0             1         0.0000000
+        2           2              0         2                 0             2       100.0000000
+
+  COUPLED EQUATIONS PROPAGATED AT                                 ENERGY =   200.0000000     CM-1    
+  INNER CLASSICAL TURNING POINT AT R =  0.9487
+  RADIAL PROPAGATION WILL START AT R =  0.6915
+
+  MAPROP. LOG-DERIVATIVE MATRIX PROPAGATED FROM       0.6915  TO  1.5000      IN    809  STEPS.
+
+  AIPROP. LOG-DERIVATIVE MATRIX PROPAGATED FROM       1.5000  TO  6.0000      IN     76  STEPS.
+
+  OPEN CHANNEL   WVEC (1/ANG.)    CHANNEL           L    PAIR LEVEL            PAIR ENERGY (CM-1)
+           1    1.54039375E+01         1            0         1              0.000000000000
+           2    1.08922287E+01         2            0         2            100.000000000000
+
+  ROW  COL       S**2                  PHASE/2PI              RE (S)                 IM (S)
+    1    1 9.9975957086441E-001   1.7448435629297E-002   9.9387695590410E-001   1.0939911968210E-001
+    2    1 2.4042913559031E-004  -4.8388056054868E-001  -1.5426316883254E-002  -1.5677636963942E-003
+    1    2 2.4042913559031E-004  -4.8388056054868E-001  -1.5426316883254E-002  -1.5677636963942E-003
+    2    2 9.9975957086441E-001  -4.8520955672665E-001  -9.9556530943398E-001  -9.2786235595743E-002
+
+  FOR JTOT =    0, SYMMETRY BLOCK =  2, ENERGY(  1) =  200.0000    : MAX DIAG & OFF-DIAG =  1.06E-01 &   6.37E-06
+
+  SIGMA NOT PRINTED BECAUSE ISIGPR = 0
+
+
+  ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
+ |                                                                            |
+ |                Non-reactive quantum scattering calculations                |
+ |                     on atomic and molecular collisions                     |
+ |                                                                            |
+ |              Copyright (C) 2020 J. M. Hutson & C. R. Le Sueur              |
+ |                                                                            |
+ |                               Version 2020.0                               |
+ |                                                                            |
+ |                    This run used       0.01 cpu secs and                   |
+ |                 85 of the allocated   1000000 words of storage             |
+ |                                                                            |
+  ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
+  ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
+ |                                                                            |
+ |                Non-reactive quantum scattering calculations                |
+ |                     on atomic and molecular collisions                     |
+ |                                                                            |
+ |              Copyright (C) 2020 J. M. Hutson & C. R. Le Sueur              |
+ |                                                                            |
+ |                               Version 2020.0                               |
+ |                                                                            |
+ |                       Run on 14 Feb 2020   at 20:25:58                     |
+ |                                                                            |
+  ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
+
+
+  This program is free software: you can redistribute it and/or modify it under
+  the terms of the GNU General Public License, version 3, as published by
+  the Free Software Foundation.
+
+  Publications resulting from the use of this program should cite both
+  the version of the program used:
+  J. M. Hutson & C. R. Le Sueur, MOLSCAT computer code 2020.0              
+  and the published paper:
+  J. M. Hutson & C. R. Le Sueur, Comput. Phys. Commun. 241, pp 9-18 (2019).
+
+
+  USING CODATA 2018 RECOMMENDED VALUES OF FUNDAMENTAL PHYSICAL CONSTANTS
+
+  MEMORY ALLOCATED TO MAIN WORKING ARRAY IS   1000000 (8-BYTE) WORDS (    7.63 MB)
+  2 INTEGERS CAN BE STORED IN EACH WORD.
+
+  PRINT LEVEL (IPRINT) =  6     OTHER PRINT CONTROLS  ISIGPR = 0
+
+  REDUCED MASS FOR INTERACTION =  20.000000000 ATOMIC MASS UNITS (DALTONS)
+
+  NO SCRATCH FILE SPECIFIED BY ISCRU PARAMETER: FULL CALCULATION WILL BE DONE AT EVERY ENERGY
+
+  ======================================================================================================================
+
+  INTERACTION TYPE IS    DIATOMIC VIB-ROTOR  -  ATOM.  
+
+  MOLECULAR QUANTUM NUMBERS TAKEN FROM JLEVEL INPUT.  NLEVEL =  2
+
+  ENERGY LEVELS TAKEN FROM ELEVEL INPUT
+
+  QUANTUM NUMBERS FOR INTERACTING PAIR:
+  EACH PAIR STATE IS LABELLED BY  2 QUANTUM NUMBERS
+  EACH CHANNEL FUNCTION IS FORMED BY COMBINING A PAIR STATE WITH A VALUE OF L.
+  THE RESULTING BASIS SET IS ASYMPTOTICALLY DIAGONAL.
+
+  PAIR STATE     PAIR STATE QUANTUM NUMBERS    PAIR LEVEL     PAIR ENERGY (CM-1)
+                ----        J         V ----
+        1                   0         1           1             0.0000000
+        2                   0         2           2           100.0000000
+
+  ======================================================================================================================
+  GENERAL-PURPOSE POTENL ROUTINE (MAY 18)
+
+  ANGULAR DEPENDENCE OF POTENTIAL EXPANDED IN TERMS OF
+  LEGENDRE POLYNOMIALS, P(LAMBDA).
+  INTEGRATED OVER DIATOM VIBRATIONAL FUNCTIONS
+
+  INTERACTION POTENTIAL FOR EXPANSION TERM NUMBER   1
+  WHICH HAS LAMBDA =   0,  V =   1,  V-PRIME =   1
+
+                 4.00000000E+02 * R **-12
+                -4.00000000E+02 * R ** -6
+
+  INTERACTION POTENTIAL FOR EXPANSION TERM NUMBER   2
+  WHICH HAS LAMBDA =   0,  V =   2,  V-PRIME =   2
+
+                 4.00000000E+02 * R **-12
+                -4.00000000E+02 * R ** -6
+
+  INTERACTION POTENTIAL FOR EXPANSION TERM NUMBER   3
+  WHICH HAS LAMBDA =   0,  V =   1,  V-PRIME =   2
+
+                 4.00000000E+01 * R **-12
+                -4.00000000E+01 * R ** -6
+
+  POTENL PROCESSING FINISHED.
+
+  POTENTIAL RETURNED IN UNITS OF EPSIL  =  1.0000000     CM-1
+        CODED WITH R IN UNITS OF RM     =  1.0000000     ANGSTROM
+
+  ALL LENGTHS ARE IN UNITS OF ANGSTROM UNLESS OTHERWISE STATED
+
+  NO DUPLICATED SETS OF INDICES IN LAMBDA ARRAY
+  INTERACTION MATRIX USES   2 BLOCKS OF VL ARRAY FOR R-DEPENDENT TERMS IN POTENTIAL
+
+  ======================================================================================================================
+
+  PROPAGATION METHODS FOR COUPLED EQUATIONS SPECIFIED BY IPROPS =  7 AND IPROPL =  9
+
+  COUPLED EQUATIONS WILL BE PROPAGATED OUTWARDS IN 2 SEGMENTS
+
+  PROPAGATION RANGES ARE CONTROLLED BY VARIABLES RMIN, RMID AND RMAX, WITH INPUT VALUES
+  RMIN =  0.8000     RMID =   1.500     RMAX =   6.000    
+  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+  SEGMENT 1 WILL BE PROPAGATED OUTWARDS
+
+  FROM RMIN CHOSEN USING IRMSET =  8 TO RMID =      1.50
+
+  COUPLED EQUATIONS SOLVED BY QUASIADIABATIC MODIFIED LOG-DERIVATIVE PROPAGATOR OF MANOLOPOULOS
+
+  PROPAGATION STEP SIZE DETERMINED USING DR =  1.000E-03
+  STEP SIZE CONSTANT THROUGHOUT RANGE
+  STEP SIZE MAY BE ADJUSTED SLIGHTLY SO THAT RANGE IS A WHOLE NUMBER OF STEPS
+
+  LOG-DERIVATIVE MATRIX INITIALISED IN THE LOCAL EIGENBASIS AT RMIN
+  LOCALLY CLOSED CHANNELS INITIALISED WITH A WKB BOUNDARY CONDITION
+  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+  SEGMENT 2 WILL BE PROPAGATED OUTWARDS
+
+  FROM RMID =      1.50 TO RMAX =      6.00
+
+  COUPLED EQUATIONS SOLVED BY VARIABLE-STEP AIRY PROPAGATOR.
+  PUBLICATIONS RESULTING FROM THE USE OF THIS PROPAGATOR SHOULD REFERENCE
+  M. H. ALEXANDER AND D. E. MANOLOPOULOS,  J. CHEM. PHYS. 86, 2044 (1987).
+
+  PROPAGATION STEP SIZE DETERMINED USING DR =  1.000E-03
+  STEP SIZES ADJUSTED TO MAINTAIN APPROXIMATE ACCURACY VIA PERTURBATION THEORY
+  WITH TOLHI =  1.00E-04 AND POWR =   3.0    
+
+  ======================================================================================================================
+
+  INPUT ENERGIES IN UNITS OF CM-1 BY DEFAULT.
+
+  CALCULATIONS WILL BE PERFORMED FOR   20 ENERGIES
+  ENERGY    1           =   42.83800000     CM-1
+  ENERGY    2           =   42.83810000     CM-1
+  ENERGY    3           =   42.83820000     CM-1
+  ENERGY    4           =   42.83830000     CM-1
+  ENERGY    5           =   42.83840000     CM-1
+  ENERGY    6           =   42.83850000     CM-1
+  ENERGY    7           =   42.83860000     CM-1
+  ENERGY    8           =   42.83870000     CM-1
+  ENERGY    9           =   42.83880000     CM-1
+  ENERGY   10           =   42.83890000     CM-1
+  ENERGY   11           =   42.83900000     CM-1
+  ENERGY   12           =   42.83910000     CM-1
+  ENERGY   13           =   42.83920000     CM-1
+  ENERGY   14           =   42.83930000     CM-1
+  ENERGY   15           =   42.83940000     CM-1
+  ENERGY   16           =   42.83950000     CM-1
+  ENERGY   17           =   42.83960000     CM-1
+  ENERGY   18           =   42.83970000     CM-1
+  ENERGY   19           =   42.83980000     CM-1
+  ENERGY   20           =   42.83990000     CM-1
+
+  ======================================================================================================================
+
+  TOTAL ANGULAR MOMENTUM JTOT =   0
+
+  EACH JTOT IS SPLIT INTO A MAXIMUM OF   2 SYMMETRY BLOCKS
+
+  CALCULATION(S) WILL BE FOR SYMMETRY BLOCK   2
+
+  EIGENPHASE SUMMARY WILL BE WRITTEN TO UNIT  1
+
+  STATE-TO-STATE INTEGRAL CROSS-SECTIONS WILL BE COMPUTED BUT NOT STORED ON DISK
+
+  ======================================================================================================================
+
+  INITIALIZATION DONE.  TIME WAS   0.00 CPU SECS.        99 WORDS OF STORAGE USED.
+
+  =========================== 2-channel system with Lennard-Jones 12-6 potentials: resonance ===========================
+
+  *****************************  ANGULAR MOMENTUM JTOT  =   0   AND SYMMETRY BLOCK  =    2  ****************************
+
+  CHANNEL FUNCTION LIST:
+
+  EACH CHANNEL FUNCTION IS FORMED BY COMBINING A PAIR STATE WITH A VALUE OF L.
+
+  CHANNEL  PAIR STATE    PAIR STATE QUANTUM NUMBERS            L        PAIR LEVEL   PAIR ENERGY (CM-1)
+                         ----      J         V   ----
+        1           1              0         1                 0             1         0.0000000
+        2           2              0         2                 0             2       100.0000000
+
+  S-MATRIX EIGENPHASE SUM, EPSUM/PI =  9.93409
+
+  FOR JTOT =    0, SYMMETRY BLOCK =  2, ENERGY(  1) =  42.83800    : MAX DIAG & OFF-DIAG =  1.04E-02 &   0.00E+00
+
+  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+  S-MATRIX EIGENPHASE SUM, EPSUM/PI =  9.93614
+
+  FOR JTOT =    0, SYMMETRY BLOCK =  2, ENERGY(  2) =  42.83810    : MAX DIAG & OFF-DIAG =  9.82E-03 &   0.00E+00
+
+  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+  S-MATRIX EIGENPHASE SUM, EPSUM/PI =  9.93863
+
+  FOR JTOT =    0, SYMMETRY BLOCK =  2, ENERGY(  3) =  42.83820    : MAX DIAG & OFF-DIAG =  9.08E-03 &   0.00E+00
+
+  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+  S-MATRIX EIGENPHASE SUM, EPSUM/PI =  9.94169
+
+  FOR JTOT =    0, SYMMETRY BLOCK =  2, ENERGY(  4) =  42.83830    : MAX DIAG & OFF-DIAG =  8.20E-03 &   0.00E+00
+
+  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+  S-MATRIX EIGENPHASE SUM, EPSUM/PI =  9.94557
+
+  FOR JTOT =    0, SYMMETRY BLOCK =  2, ENERGY(  5) =  42.83840    : MAX DIAG & OFF-DIAG =  7.16E-03 &   0.00E+00
+
+  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+  S-MATRIX EIGENPHASE SUM, EPSUM/PI =  9.95064
+
+  FOR JTOT =    0, SYMMETRY BLOCK =  2, ENERGY(  6) =  42.83850    : MAX DIAG & OFF-DIAG =  5.90E-03 &   0.00E+00
+
+  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+  S-MATRIX EIGENPHASE SUM, EPSUM/PI =  9.95754
+
+  FOR JTOT =    0, SYMMETRY BLOCK =  2, ENERGY(  7) =  42.83860    : MAX DIAG & OFF-DIAG =  4.37E-03 &   0.00E+00
+
+  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+  S-MATRIX EIGENPHASE SUM, EPSUM/PI =  9.96747
+
+  FOR JTOT =    0, SYMMETRY BLOCK =  2, ENERGY(  8) =  42.83870    : MAX DIAG & OFF-DIAG =  2.57E-03 &   0.00E+00
+
+  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+  S-MATRIX EIGENPHASE SUM, EPSUM/PI =  9.98291
+
+  FOR JTOT =    0, SYMMETRY BLOCK =  2, ENERGY(  9) =  42.83880    : MAX DIAG & OFF-DIAG =  7.12E-04 &   0.00E+00
+
+  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+  S-MATRIX EIGENPHASE SUM, EPSUM/PI = 10.01006
+
+  FOR JTOT =    0, SYMMETRY BLOCK =  2, ENERGY( 10) =  42.83890    : MAX DIAG & OFF-DIAG =  2.47E-04 &   0.00E+00
+
+  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+  S-MATRIX EIGENPHASE SUM, EPSUM/PI = 10.06862
+
+  FOR JTOT =    0, SYMMETRY BLOCK =  2, ENERGY( 11) =  42.83900    : MAX DIAG & OFF-DIAG =  1.13E-02 &   0.00E+00
+
+  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+  S-MATRIX EIGENPHASE SUM, EPSUM/PI = 10.24395
+
+  FOR JTOT =    0, SYMMETRY BLOCK =  2, ENERGY( 12) =  42.83910    : MAX DIAG & OFF-DIAG =  1.19E-01 &   0.00E+00
+
+  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+  S-MATRIX EIGENPHASE SUM, EPSUM/PI = 10.60736
+
+  FOR JTOT =    0, SYMMETRY BLOCK =  2, ENERGY( 13) =  42.83920    : MAX DIAG & OFF-DIAG =  2.20E-01 &   0.00E+00
+
+  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+  S-MATRIX EIGENPHASE SUM, EPSUM/PI = 10.76425
+
+  FOR JTOT =    0, SYMMETRY BLOCK =  2, ENERGY( 14) =  42.83930    : MAX DIAG & OFF-DIAG =  1.13E-01 &   0.00E+00
+
+  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+  S-MATRIX EIGENPHASE SUM, EPSUM/PI = 10.81822
+
+  FOR JTOT =    0, SYMMETRY BLOCK =  2, ENERGY( 15) =  42.83940    : MAX DIAG & OFF-DIAG =  7.22E-02 &   0.00E+00
+
+  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+  S-MATRIX EIGENPHASE SUM, EPSUM/PI = 10.84384
+
+  FOR JTOT =    0, SYMMETRY BLOCK =  2, ENERGY( 16) =  42.83950    : MAX DIAG & OFF-DIAG =  5.49E-02 &   0.00E+00
+
+  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+  S-MATRIX EIGENPHASE SUM, EPSUM/PI = 10.85862
+
+  FOR JTOT =    0, SYMMETRY BLOCK =  2, ENERGY( 17) =  42.83960    : MAX DIAG & OFF-DIAG =  4.57E-02 &   0.00E+00
+
+  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+  S-MATRIX EIGENPHASE SUM, EPSUM/PI = 10.86819
+
+  FOR JTOT =    0, SYMMETRY BLOCK =  2, ENERGY( 18) =  42.83970    : MAX DIAG & OFF-DIAG =  4.00E-02 &   0.00E+00
+
+  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+  S-MATRIX EIGENPHASE SUM, EPSUM/PI = 10.87488
+
+  FOR JTOT =    0, SYMMETRY BLOCK =  2, ENERGY( 19) =  42.83980    : MAX DIAG & OFF-DIAG =  3.63E-02 &   0.00E+00
+
+  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+  S-MATRIX EIGENPHASE SUM, EPSUM/PI = 10.87983
+
+  FOR JTOT =    0, SYMMETRY BLOCK =  2, ENERGY( 20) =  42.83990    : MAX DIAG & OFF-DIAG =  3.36E-02 &   0.00E+00
+
+  SIGMA NOT PRINTED BECAUSE ISIGPR = 0
+
+
+  ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
+ |                                                                            |
+ |                Non-reactive quantum scattering calculations                |
+ |                     on atomic and molecular collisions                     |
+ |                                                                            |
+ |              Copyright (C) 2020 J. M. Hutson & C. R. Le Sueur              |
+ |                                                                            |
+ |                               Version 2020.0                               |
+ |                                                                            |
+ |                    This run used       0.07 cpu secs and                   |
+ |                161 of the allocated   1000000 words of storage             |
+ |                                                                            |
+  ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---

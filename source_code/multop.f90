@@ -1,5 +1,5 @@
 recursive subroutine multop(i_op,n_ops,eval,evec,degtol,nn,ncurr,ibeg,iprint)
-!  Copyright (C) 2019 J. M. Hutson & C. R. Le Sueur
+!  Copyright (C) 2020 J. M. Hutson & C. R. Le Sueur
 !  Distributed under the GNU General Public License, version 3
 USE potential, only: nconst,nrsq
 ! This subroutine diagonalises the (long-range) Hamiltonian matrix in order to
@@ -42,7 +42,7 @@ double precision,intent(in)::degtol
 ! tested
 
 ! internal variables
-integer ifail,info,jbeg,jend,nnext,nsets,nHam
+integer ifail,info,jbeg,jend,nnext,nsets,nopinH
 integer i,j,ij,iset,j_op,ival,icol,irow,jval,ieval,jvec,jpoint,nbefore
 integer icount,iend,ivec
 logical zinc,zorder
@@ -73,15 +73,15 @@ endif
 
 ! diagonalise current W matrix
 ! on return evec contains current eigenvectors
-allocate (wks(ncurr,ncurr))
-wks=evec(ibeg:iend,ibeg:iend,i_op)
-call diagvc(wks,ncurr,ncurr,eval(ibeg,i_op),evec(ibeg,ibeg,i_op))
+allocate (wks(nn,ncurr))
+wks(1:ncurr,1:ncurr)=evec(ibeg:iend,ibeg:iend,i_op)
+call diagvc(wks,nn,ncurr,eval(ibeg,i_op),evec(ibeg,ibeg,i_op))
 deallocate (wks)
 
 ! check whether current operator is in Hamiltonian in order to know whether
 ! reordering might be necessary
-nHam=min(1,nconst)+min(1,nrsq)
-zorder=i_op.gt.nHam
+nopinH=min(1,nconst)+min(1,nrsq)
+zorder=i_op.gt.nopinH
 
 ! if current operator is not in Hamiltonian, construct pointer array for
 ! eigenvectors/values to match ordering within Hamiltonian

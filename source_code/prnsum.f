@@ -1,29 +1,11 @@
-C  Copyright (C) 2019 J. M. Hutson & C. R. Le Sueur
+C  Copyright (C) 2020 J. M. Hutson & C. R. Le Sueur
 C  Distributed under the GNU General Public License, version 3
 C
 C  This set of subroutines used to print out information relating to
 C  the progress of a bound-state location
-C================================================================ PRPROP
-      SUBROUTINE PRPROP(SVNAME,SVVAL,SVUNIT)
-C  PRINT PROPAGATION MESSAGE
-      IMPLICIT NONE
-
-      DOUBLE PRECISION, INTENT(IN) :: SVVAL
-      CHARACTER(*),     INTENT(IN) :: SVNAME,SVUNIT
-      CHARACTER(38) SVTEMP !73-35
-
-      SVTEMP=SVNAME
-      SVTEMP=ADJUSTR(SVTEMP)
-
-      WRITE(6,100) SVTEMP,SVVAL,SVUNIT
-  100 FORMAT(/2X,'COUPLED EQUATIONS PROPAGATED AT ',A,' = ',1PG17.10, !35+A1
-     1       1X,A)
-
-      RETURN
-      END
 C================================================================ PRPRCT
       SUBROUTINE PRPRCT(NPROP,SVNAME,SVVAL,SVUNIT)
-C  PRINT PROPAGATION MESSAGE
+C  PRINT PROPAGATION NUMBER
       IMPLICIT NONE
 
       DOUBLE PRECISION, INTENT(IN) :: SVVAL
@@ -125,26 +107,6 @@ C  PRINT NODE COUNT AND SMALLEST EIGENVALUE
       WRITE(6,100) NODE,EIGMIN
   100 FORMAT(2X,'NODE COUNT IS ',I5,' AND SMALLEST EIGENVALUE OF ',
      1       'MATCHING MATRIX IS ',1PG12.5)
-
-      RETURN
-      END
-C================================================================ PRABSE
-      SUBROUTINE PRABSE(E,EREF,EFACT,EUNIT)
-C  PRINT ABSOLUTE VALUE OF ENERGY
-      IMPLICIT NONE
-
-      DOUBLE PRECISION, INTENT(IN) :: E,EREF,EFACT
-      CHARACTER(*),     INTENT(IN) :: EUNIT
-
-      IF (EREF.NE.0.D0 .AND. EFACT.EQ.1.D0) THEN
-        WRITE(6,100) E
-      ELSEIF (EREF.NE.0.D0) THEN
-        WRITE(6,200) E,E/EFACT,EUNIT
-      ENDIF
-  100 FORMAT(2X,1P,'WHICH IS EQUIVALENT TO AN ABSOLUTE ENERGY OF ', !45+28
-     3                             28X,G17.10,1X,'CM-1')
-  200 FORMAT(2X,1P,'WHICH IS EQUIVALENT TO AN ABSOLUTE ENERGY OF ',
-     3       G17.10,1X,'CM-1',3X,' = ',G17.10,1X,A)
 
       RETURN
       END

@@ -1,4 +1,4 @@
-      SUBROUTINE MGPROP(N,MXLAM,NPOTL,
+      SUBROUTINE MGPROP(N,MXLAM,NHAM,
      1                  Y,U,VL,IV,EINT,CENT,P,DG,
      2                  RSTART,RSTOP,NSTEP,DR,NODES,
      3                  ERED,EP2RU,CM2RU,RSCALE,IPRINT)
@@ -81,7 +81,7 @@ C  SECTOR, AND W CAN BE REUSED.
                   ENDDO
                ELSE
                   CALL WAVMAT(U,N,R,P,VL,IV,ERED,EINT,CENT,EP2RU,CM2RU,
-     1                        RSCALE,DG,MXLAM,NPOTL,IPRINT)
+     1                        RSCALE,DG,MXLAM,NHAM,IPRINT)
                ENDIF
                IF (IWRITE) WRITE(ISCRU) U
             ENDIF

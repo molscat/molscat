@@ -1,6 +1,6 @@
       SUBROUTINE WAVEIG(W, EIGNOW, SCR1, RNOW, NCH, P, MXLAM, VL,
      1                  IV, EP2RU, CM2RU, RSCALE, ERED, EINT, CENT,
-     2                  NPOTL, IPRINT)
+     2                  NHAM, IPRINT)
 C  This subroutine is part of the MOLSCAT, BOUND and FIELD suite of programs
 *  THIS SUBROUTINE FIRST SETS UP THE WAVEVECTOR MATRIX AT RNOW
 *  THEN OBTAINS ITS EIGENVALUES
@@ -34,7 +34,7 @@ C  This subroutine is part of the MOLSCAT, BOUND and FIELD suite of programs
       NCHP1 = NCH + 1
       NCHM1 = NCH - 1
       CALL WAVMAT(W, NCH, RNOW, P, VL, IV, ERED, EINT, CENT, EP2RU,
-     1            CM2RU, RSCALE, SCR1, MXLAM, NPOTL, IPRINT)
+     1            CM2RU, RSCALE, SCR1, MXLAM, NHAM, IPRINT)
 C
 *  SINCE WAVMAT RETURNS NEGATIVE OF LOWER TRIANGLE OF W(R) MATRIX (EQ.(3
 *  M.H. ALEXANDER, "HYBRID QUANTUM SCATTERING ALGORITHMS ..."),

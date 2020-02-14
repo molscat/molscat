@@ -3,11 +3,11 @@
  |                Non-reactive quantum scattering calculations                |
  |                     on atomic and molecular collisions                     |
  |                                                                            |
- |              Copyright (C) 2019 J. M. Hutson & C. R. Le Sueur              |
+ |              Copyright (C) 2020 J. M. Hutson & C. R. Le Sueur              |
  |                                                                            |
- |                               Version 2019.1                               |
+ |                               Version 2020.0                               |
  |                                                                            |
- |                       Run on 30 May 2019   at 11:39:17                     |
+ |                       Run on 14 Feb 2020   at 20:16:16                     |
  |                                                                            |
   ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
 
@@ -16,9 +16,11 @@
   the terms of the GNU General Public License, version 3, as published by
   the Free Software Foundation.
 
-  Publications resulting from the use of this program should refer to
-  J. M. Hutson & C. R. Le Sueur, MOLSCAT computer code 2019.1              
-  or to the published paper in Computer Physics Communications when available.
+  Publications resulting from the use of this program should cite both
+  the version of the program used:
+  J. M. Hutson & C. R. Le Sueur, MOLSCAT computer code 2020.0              
+  and the published paper:
+  J. M. Hutson & C. R. Le Sueur, Comput. Phys. Commun. 241, pp 9-18 (2019).
 
 
   USING CODATA 2018 RECOMMENDED VALUES OF FUNDAMENTAL PHYSICAL CONSTANTS
@@ -139,20 +141,20 @@
 
   ======================================================================================================================
 
-  INPUT ENERGY VALUES ASSUMED TO BE IN UNITS OF CM-1 BY DEFAULT.
+  INPUT ENERGIES IN UNITS OF CM-1 BY DEFAULT.
 
-  CONTROL DATA FOR TOTAL ENERGIES.  CALCULATIONS WILL BE PERFORMED FOR    9 VALUES
-       ENERGY NO.    1 =   12.000000000     CM-1
-       ENERGY NO.    2 =   12.500000000     CM-1
-       ENERGY NO.    3 =   13.000000000     CM-1
-       ENERGY NO.    4 =   13.500000000     CM-1
-       ENERGY NO.    5 =   14.000000000     CM-1
-       ENERGY NO.    6 =   14.500000000     CM-1
-       ENERGY NO.    7 =   15.000000000     CM-1
-       ENERGY NO.    8 =   15.500000000     CM-1
-       ENERGY NO.    9 =   16.000000000     CM-1
+  CALCULATIONS WILL BE PERFORMED FOR    9 ENERGIES
+  ENERGY    1           =   12.00000000     CM-1
+  ENERGY    2           =   12.50000000     CM-1
+  ENERGY    3           =   13.00000000     CM-1
+  ENERGY    4           =   13.50000000     CM-1
+  ENERGY    5           =   14.00000000     CM-1
+  ENERGY    6           =   14.50000000     CM-1
+  ENERGY    7           =   15.00000000     CM-1
+  ENERGY    8           =   15.50000000     CM-1
+  ENERGY    9           =   16.00000000     CM-1
 
-  THESE ENERGY VALUES WILL BE USED AS KINETIC ENERGIES AND MODIFIED ACCORDINGLY.
+  THESE ENERGIES WILL BE USED AS KINETIC ENERGIES AND MODIFIED ACCORDINGLY.
 
   ======================================================================================================================
 
@@ -175,26 +177,26 @@
         2       2     3        2      3
 
   LEVELS  1 (JA =  0),   2 (JB =  2) **TO** LEVELS  1 (JA1 =  0),  2 (JB1 =  2) WILL BE PROCESSED FOR RAMAN RADIATION
-            AT RELATIVE K.E. =      12.000000000 CM-1  WITH   1-ST AND  10-TH ENERGY VALUES RESPECTIVELY
-            AT RELATIVE K.E. =      12.500000000 CM-1  WITH   2-ND AND  11-TH ENERGY VALUES RESPECTIVELY
-            AT RELATIVE K.E. =      13.000000000 CM-1  WITH   3-RD AND  12-TH ENERGY VALUES RESPECTIVELY
-            AT RELATIVE K.E. =      13.500000000 CM-1  WITH   4-TH AND  13-TH ENERGY VALUES RESPECTIVELY
-            AT RELATIVE K.E. =      14.000000000 CM-1  WITH   5-TH AND  14-TH ENERGY VALUES RESPECTIVELY
-            AT RELATIVE K.E. =      14.500000000 CM-1  WITH   6-TH AND  15-TH ENERGY VALUES RESPECTIVELY
-            AT RELATIVE K.E. =      15.000000000 CM-1  WITH   7-TH AND  16-TH ENERGY VALUES RESPECTIVELY
-            AT RELATIVE K.E. =      15.500000000 CM-1  WITH   8-TH AND  17-TH ENERGY VALUES RESPECTIVELY
-            AT RELATIVE K.E. =      16.000000000 CM-1  WITH   9-TH AND  18-TH ENERGY VALUES RESPECTIVELY
+            AT KINETIC ENERGY       12.000000000 CM-1  WITH   1-ST AND  10-TH ENERGY VALUES RESPECTIVELY
+            AT KINETIC ENERGY       12.500000000 CM-1  WITH   2-ND AND  11-TH ENERGY VALUES RESPECTIVELY
+            AT KINETIC ENERGY       13.000000000 CM-1  WITH   3-RD AND  12-TH ENERGY VALUES RESPECTIVELY
+            AT KINETIC ENERGY       13.500000000 CM-1  WITH   4-TH AND  13-TH ENERGY VALUES RESPECTIVELY
+            AT KINETIC ENERGY       14.000000000 CM-1  WITH   5-TH AND  14-TH ENERGY VALUES RESPECTIVELY
+            AT KINETIC ENERGY       14.500000000 CM-1  WITH   6-TH AND  15-TH ENERGY VALUES RESPECTIVELY
+            AT KINETIC ENERGY       15.000000000 CM-1  WITH   7-TH AND  16-TH ENERGY VALUES RESPECTIVELY
+            AT KINETIC ENERGY       15.500000000 CM-1  WITH   8-TH AND  17-TH ENERGY VALUES RESPECTIVELY
+            AT KINETIC ENERGY       16.000000000 CM-1  WITH   9-TH AND  18-TH ENERGY VALUES RESPECTIVELY
 
   LEVELS  2 (JA =  2),   3 (JB =  4) **TO** LEVELS  2 (JA1 =  2),  3 (JB1 =  4) WILL BE PROCESSED FOR RAMAN RADIATION
-            AT RELATIVE K.E. =      12.000000000 CM-1  WITH  10-TH AND  19-TH ENERGY VALUES RESPECTIVELY
-            AT RELATIVE K.E. =      12.500000000 CM-1  WITH  11-TH AND  20-TH ENERGY VALUES RESPECTIVELY
-            AT RELATIVE K.E. =      13.000000000 CM-1  WITH  12-TH AND  21-ST ENERGY VALUES RESPECTIVELY
-            AT RELATIVE K.E. =      13.500000000 CM-1  WITH  13-TH AND  22-ND ENERGY VALUES RESPECTIVELY
-            AT RELATIVE K.E. =      14.000000000 CM-1  WITH  14-TH AND  23-RD ENERGY VALUES RESPECTIVELY
-            AT RELATIVE K.E. =      14.500000000 CM-1  WITH  15-TH AND  24-TH ENERGY VALUES RESPECTIVELY
-            AT RELATIVE K.E. =      15.000000000 CM-1  WITH  16-TH AND  25-TH ENERGY VALUES RESPECTIVELY
-            AT RELATIVE K.E. =      15.500000000 CM-1  WITH  17-TH AND  26-TH ENERGY VALUES RESPECTIVELY
-            AT RELATIVE K.E. =      16.000000000 CM-1  WITH  18-TH AND  27-TH ENERGY VALUES RESPECTIVELY
+            AT KINETIC ENERGY       12.000000000 CM-1  WITH  10-TH AND  19-TH ENERGY VALUES RESPECTIVELY
+            AT KINETIC ENERGY       12.500000000 CM-1  WITH  11-TH AND  20-TH ENERGY VALUES RESPECTIVELY
+            AT KINETIC ENERGY       13.000000000 CM-1  WITH  12-TH AND  21-ST ENERGY VALUES RESPECTIVELY
+            AT KINETIC ENERGY       13.500000000 CM-1  WITH  13-TH AND  22-ND ENERGY VALUES RESPECTIVELY
+            AT KINETIC ENERGY       14.000000000 CM-1  WITH  14-TH AND  23-RD ENERGY VALUES RESPECTIVELY
+            AT KINETIC ENERGY       14.500000000 CM-1  WITH  15-TH AND  24-TH ENERGY VALUES RESPECTIVELY
+            AT KINETIC ENERGY       15.000000000 CM-1  WITH  16-TH AND  25-TH ENERGY VALUES RESPECTIVELY
+            AT KINETIC ENERGY       15.500000000 CM-1  WITH  17-TH AND  26-TH ENERGY VALUES RESPECTIVELY
+            AT KINETIC ENERGY       16.000000000 CM-1  WITH  18-TH AND  27-TH ENERGY VALUES RESPECTIVELY
 
 
   MODIFIED ENERGY LIST NOW CONTAINS  27  VALUES
@@ -2176,11 +2178,11 @@
  |                Non-reactive quantum scattering calculations                |
  |                     on atomic and molecular collisions                     |
  |                                                                            |
- |              Copyright (C) 2019 J. M. Hutson & C. R. Le Sueur              |
+ |              Copyright (C) 2020 J. M. Hutson & C. R. Le Sueur              |
  |                                                                            |
- |                               Version 2019.1                               |
+ |                               Version 2020.0                               |
  |                                                                            |
- |                    This run used       5.89 cpu secs and                   |
+ |                    This run used       7.00 cpu secs and                   |
  |               1049 of the allocated   1000000 words of storage             |
  |                                                                            |
   ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---

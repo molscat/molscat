@@ -77,7 +77,6 @@
     JTOTL  = 0,    JTOTU  =  99999,
     NNRG   = 2,    ENERGY =   2016.4, 1613.1,
     DTOL   = 0.1,  OTOL   =      0.01,
-    LASTIN = 0,
  /
 
  &BASIS
@@ -90,4 +89,28 @@
     MXLAM  = 4,      NTERM  = 4*-1,
                      LAMBDA = 0,0,0,  2,0,2,  0,2,2,  2,2,4,
     LVRTP  = .TRUE.,
+ /
+
+ &INPUT
+    LABEL  = 'p-H2 + p-H2: potential of Zarur and Rabitz; coefficients from VSTAR',
+    URED   = 1.0,
+    IPRINT = 3,    ISCRU  =     30,   ISIGPR =  1,
+    RMIN   = 0.43, RMAX   =     20.0, IRXSET =  1,
+    IPROPS = 6,    IPROPL =      9,   STEPS  = 12.0, RVFAC  = 1.3,
+    JTOTL  = 0,    JTOTU  =  99999,
+    NNRG   = 1,    ENERGY =    800.,
+    DTOL   = 0.1,  OTOL   =      0.01,
+    LASTIN = 0,
+ /
+
+ &BASIS
+    ITYPE  = 3,
+    BE     = 2*60.8,
+    NLEVEL = 3,   JLEVEL = 0,0,  0,2,  2,2,
+    IDENT  = 1,   WT     = 0.,   1.,
+ /
+
+ &POTL
+    MXLAM  = 4,   NTERM  = 4*-1,
+                  LAMBDA = 0,0,0,  2,0,2,  0,2,2,  2,2,4,
  /

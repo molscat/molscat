@@ -1,9 +1,9 @@
-      SUBROUTINE ODPROP(MXLAM,NPOTL,
+      SUBROUTINE ODPROP(MXLAM,NHAM,
      1                  Y,VL,IV,EINT,CENT,P,
      2                  U,W,Q,Y1,Y2,
      3                  RSTART,RSTOP,NSTEP,DR,NODES,
      4                  ERED,EP2RU,CM2RU,RSCALE,IPRINT)
-C  Copyright (C) 2019 J. M. Hutson & C. R. Le Sueur
+C  Copyright (C) 2020 J. M. Hutson & C. R. Le Sueur
 C  Distributed under the GNU General Public License, version 3
       USE potential
 C  VERSION (1/27/93) USES /MEMORY/ ..,IVLFL, ONLY TO CHECK USE OF
@@ -23,7 +23,7 @@ C  COMMON BLOCK FOR CONTROL OF USE OF PROPAGATION SCRATCH FILE
 
       DIMENSION U(NSTEP+1),W(NSTEP+1),Q(NSTEP+1),Y1(NSTEP+1),
      1          Y2(NSTEP+1),IDUM1(1),
-     1          P(MXLAM,NSTEP+1),VL(NPOTL),IV(NPOTL),EINT(1),CENT(1)
+     1          P(NHAM,NSTEP+1),VL(NHAM),IV(NHAM),EINT(1),CENT(1)
 C
       COMMON /VLFLAG/ IVLFL
 C
@@ -40,6 +40,7 @@ C  CHANGED (THOUGH VECTORISATION WOULD REQUIRE EXPLICIT R ARRAYS).
       NPT=NSTEP+1
       DR6=DR/6.D0
       H=DR/2.D0
+      EP2CM=EP2RU/CM2RU
 C
       IF (IREAD) GOTO 400
 C
@@ -48,19 +49,25 @@ C
       R=RSTART
       DO 100 I=1,NPT
         CALL POTENL(0,MXLAM,IDUM1,R*RSCALE,P(1,I),IDUM2,IPRINT)
-        CALL SCAPOT(P(1,I),MXLAM,EP2RU)
         DO J=1,NCONST
-          P(MXLAM+J,I)=VCONST(J)*CM2RU
+          P(MXLAM+J,I)=VCONST(J)/EP2CM
+        ENDDO
+        CALL SCAPOT(P(1,I),MXLAM)
+        CALL PERTRB(R*RSCALE,P(1,I),NHAM,0)
+        DO J=1,NHAM
+          P(J,I)=EP2RU*P(J,I)
         ENDDO
   100   R=R+DR
 
 C  COMPUTE THE RADIAL CONTRIBUTION TO W
 C
-      EINTEP=EINT(1)
+      EINTEP=0.D0
+      IF (NCONST.EQ.0) EINTEP=EINT(1)
+
       DO 110 I=1,NPT
   110   U(I)=EINTEP
 
-      DO 130 J=1,NPOTL
+      DO 130 J=1,NHAM
         V=VL(J)
         IF (V.EQ.0.D0) GOTO 130
         IF (IVLFL.NE.0) THEN
@@ -75,7 +82,7 @@ C
       IF (NRSQ.EQ.0) THEN
         R=RSTART
         DO 140 I=1,NPT
-          RSQ=MIN(1/(R*R),1.D16)
+          RSQ=MIN(1.D0/(R*R),1.D16)
           U(I)=U(I)+CENT(1)*RSQ
   140     R=R+DR
       ENDIF
@@ -86,14 +93,20 @@ C
       R=RSTART+H
       DO 200 I=1,NSTEP
         CALL POTENL(0,MXLAM,IDUM1,R*RSCALE,P(1,I),IDUM2,IPRINT)
-        CALL SCAPOT(P(1,I),MXLAM,EP2RU)
         DO J=1,NCONST
-          P(MXLAM+J,I)=VCONST(J)*CM2RU
+          P(MXLAM+J,I)=VCONST(J)/EP2CM
+        ENDDO
+        CALL SCAPOT(P(1,I),MXLAM)
+        CALL PERTRB(R*RSCALE,P(1,I),NHAM,0)
+        DO J=1,NHAM
+          P(J,I)=EP2RU*P(J,I)
         ENDDO
   200   R=R+DR
+
       DO 210 I=1,NSTEP
   210   W(I)=EINTEP
-      DO 230 J=1,NPOTL
+
+      DO 230 J=1,NHAM
         V=VL(J)
         IF (V.EQ.0.D0) GOTO 230
         IF (IVLFL.NE.0) THEN
@@ -108,7 +121,7 @@ C
       IF (NRSQ.EQ.0) THEN
         R=RSTART+H
         DO 240 I=1,NSTEP
-          RSQ=MIN(1/(R*R),1.D16)
+          RSQ=MIN(1.D0/(R*R),1.D16)
           W(I)=W(I)+CENT(1)*RSQ
   240     R=R+DR
       ENDIF

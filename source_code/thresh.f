@@ -1,6 +1,6 @@
       SUBROUTINE THRESH(EINT,N,CM2RU,ITYPE,MONQN,NQN,NJLQN,
      1                  EREF,JSINDX,IPRINT)
-C  Copyright (C) 2019 J. M. Hutson & C. R. Le Sueur
+C  Copyright (C) 2020 J. M. Hutson & C. R. Le Sueur
 C  Distributed under the GNU General Public License, version 3
       USE potential
       USE basis_data, ONLY: NLEVEL, JLEVEL, ELEVEL
@@ -69,33 +69,6 @@ C
         STOP
       ENDIF
 
-      RETURN
-C============================================================== EREFMS
-      ENTRY EREFMS(EREF,EFACT,UNAME,MONQN,NQN)
-C  PRINT REFERENCE ENERGY
-
-      IF (MONQN(1).EQ.-99999 .AND. IREF.EQ.0 .AND. NDGVL.EQ.0) RETURN
-      IF (EREF.EQ.0.D0) RETURN
-      IF (EFACT.NE.1.D0) THEN
-        WRITE(6,200) EREF/EFACT,TRIM(UNAME),EREF
-      ELSE
-        WRITE(6,200) EREF,TRIM(UNAME)
-      ENDIF
-  200 FORMAT(/2X,'REFERENCE ENERGY EREF = ',1P,G17.10,1X,A:,' = ',
-     1       G17.10,' CM-1')
-      RETURN
-C============================================================== EABSMS
-      ENTRY EABSMS(EABS,EFACT,UNAME)
-C  PRINT ABSOLUTE ENERGY
-
-      IF (EABS.EQ.0.D0) RETURN
-      IF (EFACT.NE.1.D0) THEN
-        WRITE(6,300) EABS/EFACT,TRIM(UNAME),EABS
-      ELSE
-        WRITE(6,300) EABS/EFACT,TRIM(UNAME)
-      ENDIF
-  300 FORMAT(2X,'ABSOLUTE  ENERGY IS',5X,1P,G17.10,1X,A:,' = ',G17.10,
-     1       ' CM-1')
       RETURN
 C============================================================== EREFIN
       ENTRY EREFIN(MONQN,NQN,NJLQN,UNAME,EREF,EFACT)

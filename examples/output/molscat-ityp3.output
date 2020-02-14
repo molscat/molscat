@@ -3,11 +3,11 @@
  |                Non-reactive quantum scattering calculations                |
  |                     on atomic and molecular collisions                     |
  |                                                                            |
- |              Copyright (C) 2019 J. M. Hutson & C. R. Le Sueur              |
+ |              Copyright (C) 2020 J. M. Hutson & C. R. Le Sueur              |
  |                                                                            |
- |                               Version 2019.1                               |
+ |                               Version 2020.0                               |
  |                                                                            |
- |                       Run on 30 May 2019   at 11:39:22                     |
+ |                       Run on 14 Feb 2020   at 20:16:25                     |
  |                                                                            |
   ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
 
@@ -16,9 +16,11 @@
   the terms of the GNU General Public License, version 3, as published by
   the Free Software Foundation.
 
-  Publications resulting from the use of this program should refer to
-  J. M. Hutson & C. R. Le Sueur, MOLSCAT computer code 2019.1              
-  or to the published paper in Computer Physics Communications when available.
+  Publications resulting from the use of this program should cite both
+  the version of the program used:
+  J. M. Hutson & C. R. Le Sueur, MOLSCAT computer code 2020.0              
+  and the published paper:
+  J. M. Hutson & C. R. Le Sueur, Comput. Phys. Commun. 241, pp 9-18 (2019).
 
 
   USING CODATA 2018 RECOMMENDED VALUES OF FUNDAMENTAL PHYSICAL CONSTANTS
@@ -143,11 +145,11 @@
 
   ======================================================================================================================
 
-  INPUT ENERGY VALUES ASSUMED TO BE IN UNITS OF CM-1 BY DEFAULT.
+  INPUT ENERGIES IN UNITS OF CM-1 BY DEFAULT.
 
-  CONTROL DATA FOR TOTAL ENERGIES.  CALCULATIONS WILL BE PERFORMED FOR    2 VALUES
-       ENERGY NO.    1 =   2016.4000000     CM-1
-       ENERGY NO.    2 =   1613.1000000     CM-1
+  CALCULATIONS WILL BE PERFORMED FOR    2 ENERGIES
+  ENERGY    1           =   2016.400000     CM-1
+  ENERGY    2           =   1613.100000     CM-1
 
   ======================================================================================================================
 
@@ -2143,11 +2145,11 @@
  |                Non-reactive quantum scattering calculations                |
  |                     on atomic and molecular collisions                     |
  |                                                                            |
- |              Copyright (C) 2019 J. M. Hutson & C. R. Le Sueur              |
+ |              Copyright (C) 2020 J. M. Hutson & C. R. Le Sueur              |
  |                                                                            |
- |                               Version 2019.1                               |
+ |                               Version 2020.0                               |
  |                                                                            |
- |                    This run used       3.46 cpu secs and                   |
+ |                    This run used       4.10 cpu secs and                   |
  |               1725 of the allocated   1000000 words of storage             |
  |                                                                            |
   ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
@@ -2156,11 +2158,11 @@
  |                Non-reactive quantum scattering calculations                |
  |                     on atomic and molecular collisions                     |
  |                                                                            |
- |              Copyright (C) 2019 J. M. Hutson & C. R. Le Sueur              |
+ |              Copyright (C) 2020 J. M. Hutson & C. R. Le Sueur              |
  |                                                                            |
- |                               Version 2019.1                               |
+ |                               Version 2020.0                               |
  |                                                                            |
- |                       Run on 30 May 2019   at 11:39:26                     |
+ |                       Run on 14 Feb 2020   at 20:16:29                     |
  |                                                                            |
   ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
 
@@ -2169,9 +2171,11 @@
   the terms of the GNU General Public License, version 3, as published by
   the Free Software Foundation.
 
-  Publications resulting from the use of this program should refer to
-  J. M. Hutson & C. R. Le Sueur, MOLSCAT computer code 2019.1              
-  or to the published paper in Computer Physics Communications when available.
+  Publications resulting from the use of this program should cite both
+  the version of the program used:
+  J. M. Hutson & C. R. Le Sueur, MOLSCAT computer code 2020.0              
+  and the published paper:
+  J. M. Hutson & C. R. Le Sueur, Comput. Phys. Commun. 241, pp 9-18 (2019).
 
 
   USING CODATA 2018 RECOMMENDED VALUES OF FUNDAMENTAL PHYSICAL CONSTANTS
@@ -2298,11 +2302,11 @@
 
   ======================================================================================================================
 
-  INPUT ENERGY VALUES ASSUMED TO BE IN UNITS OF CM-1 BY DEFAULT.
+  INPUT ENERGIES IN UNITS OF CM-1 BY DEFAULT.
 
-  CONTROL DATA FOR TOTAL ENERGIES.  CALCULATIONS WILL BE PERFORMED FOR    2 VALUES
-       ENERGY NO.    1 =   2016.4000000     CM-1
-       ENERGY NO.    2 =   1613.1000000     CM-1
+  CALCULATIONS WILL BE PERFORMED FOR    2 ENERGIES
+  ENERGY    1           =   2016.400000     CM-1
+  ENERGY    2           =   1613.100000     CM-1
 
   ======================================================================================================================
 
@@ -4298,11 +4302,11 @@
  |                Non-reactive quantum scattering calculations                |
  |                     on atomic and molecular collisions                     |
  |                                                                            |
- |              Copyright (C) 2019 J. M. Hutson & C. R. Le Sueur              |
+ |              Copyright (C) 2020 J. M. Hutson & C. R. Le Sueur              |
  |                                                                            |
- |                               Version 2019.1                               |
+ |                               Version 2020.0                               |
  |                                                                            |
- |                    This run used       4.22 cpu secs and                   |
+ |                    This run used       5.23 cpu secs and                   |
  |               1773 of the allocated   1000000 words of storage             |
  |                                                                            |
   ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
@@ -4311,11 +4315,11 @@
  |                Non-reactive quantum scattering calculations                |
  |                     on atomic and molecular collisions                     |
  |                                                                            |
- |              Copyright (C) 2019 J. M. Hutson & C. R. Le Sueur              |
+ |              Copyright (C) 2020 J. M. Hutson & C. R. Le Sueur              |
  |                                                                            |
- |                               Version 2019.1                               |
+ |                               Version 2020.0                               |
  |                                                                            |
- |                       Run on 30 May 2019   at 11:39:30                     |
+ |                       Run on 14 Feb 2020   at 20:16:34                     |
  |                                                                            |
   ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
 
@@ -4324,9 +4328,11 @@
   the terms of the GNU General Public License, version 3, as published by
   the Free Software Foundation.
 
-  Publications resulting from the use of this program should refer to
-  J. M. Hutson & C. R. Le Sueur, MOLSCAT computer code 2019.1              
-  or to the published paper in Computer Physics Communications when available.
+  Publications resulting from the use of this program should cite both
+  the version of the program used:
+  J. M. Hutson & C. R. Le Sueur, MOLSCAT computer code 2020.0              
+  and the published paper:
+  J. M. Hutson & C. R. Le Sueur, Comput. Phys. Commun. 241, pp 9-18 (2019).
 
 
   USING CODATA 2018 RECOMMENDED VALUES OF FUNDAMENTAL PHYSICAL CONSTANTS
@@ -4458,11 +4464,11 @@
 
   ======================================================================================================================
 
-  INPUT ENERGY VALUES ASSUMED TO BE IN UNITS OF CM-1 BY DEFAULT.
+  INPUT ENERGIES IN UNITS OF CM-1 BY DEFAULT.
 
-  CONTROL DATA FOR TOTAL ENERGIES.  CALCULATIONS WILL BE PERFORMED FOR    2 VALUES
-       ENERGY NO.    1 =   2016.4000000     CM-1
-       ENERGY NO.    2 =   1613.1000000     CM-1
+  CALCULATIONS WILL BE PERFORMED FOR    2 ENERGIES
+  ENERGY    1           =   2016.400000     CM-1
+  ENERGY    2           =   1613.100000     CM-1
 
   ======================================================================================================================
 
@@ -8084,11 +8090,11 @@
  |                Non-reactive quantum scattering calculations                |
  |                     on atomic and molecular collisions                     |
  |                                                                            |
- |              Copyright (C) 2019 J. M. Hutson & C. R. Le Sueur              |
+ |              Copyright (C) 2020 J. M. Hutson & C. R. Le Sueur              |
  |                                                                            |
- |                               Version 2019.1                               |
+ |                               Version 2020.0                               |
  |                                                                            |
- |                    This run used       1.49 cpu secs and                   |
+ |                    This run used       1.82 cpu secs and                   |
  |                504 of the allocated   1000000 words of storage             |
  |                                                                            |
   ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
@@ -8097,11 +8103,11 @@
  |                Non-reactive quantum scattering calculations                |
  |                     on atomic and molecular collisions                     |
  |                                                                            |
- |              Copyright (C) 2019 J. M. Hutson & C. R. Le Sueur              |
+ |              Copyright (C) 2020 J. M. Hutson & C. R. Le Sueur              |
  |                                                                            |
- |                               Version 2019.1                               |
+ |                               Version 2020.0                               |
  |                                                                            |
- |                       Run on 30 May 2019   at 11:39:32                     |
+ |                       Run on 14 Feb 2020   at 20:16:36                     |
  |                                                                            |
   ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
 
@@ -8110,9 +8116,11 @@
   the terms of the GNU General Public License, version 3, as published by
   the Free Software Foundation.
 
-  Publications resulting from the use of this program should refer to
-  J. M. Hutson & C. R. Le Sueur, MOLSCAT computer code 2019.1              
-  or to the published paper in Computer Physics Communications when available.
+  Publications resulting from the use of this program should cite both
+  the version of the program used:
+  J. M. Hutson & C. R. Le Sueur, MOLSCAT computer code 2020.0              
+  and the published paper:
+  J. M. Hutson & C. R. Le Sueur, Comput. Phys. Commun. 241, pp 9-18 (2019).
 
 
   USING CODATA 2018 RECOMMENDED VALUES OF FUNDAMENTAL PHYSICAL CONSTANTS
@@ -8246,11 +8254,11 @@
 
   ======================================================================================================================
 
-  INPUT ENERGY VALUES ASSUMED TO BE IN UNITS OF CM-1 BY DEFAULT.
+  INPUT ENERGIES IN UNITS OF CM-1 BY DEFAULT.
 
-  CONTROL DATA FOR TOTAL ENERGIES.  CALCULATIONS WILL BE PERFORMED FOR    2 VALUES
-       ENERGY NO.    1 =   2016.4000000     CM-1
-       ENERGY NO.    2 =   1613.1000000     CM-1
+  CALCULATIONS WILL BE PERFORMED FOR    2 ENERGIES
+  ENERGY    1           =   2016.400000     CM-1
+  ENERGY    2           =   1613.100000     CM-1
 
   ======================================================================================================================
 
@@ -11872,11 +11880,1506 @@
  |                Non-reactive quantum scattering calculations                |
  |                     on atomic and molecular collisions                     |
  |                                                                            |
- |              Copyright (C) 2019 J. M. Hutson & C. R. Le Sueur              |
+ |              Copyright (C) 2020 J. M. Hutson & C. R. Le Sueur              |
  |                                                                            |
- |                               Version 2019.1                               |
+ |                               Version 2020.0                               |
  |                                                                            |
- |                    This run used       2.82 cpu secs and                   |
+ |                    This run used       3.43 cpu secs and                   |
  |                552 of the allocated   1000000 words of storage             |
+ |                                                                            |
+  ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
+  ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
+ |                                                                            |
+ |                Non-reactive quantum scattering calculations                |
+ |                     on atomic and molecular collisions                     |
+ |                                                                            |
+ |              Copyright (C) 2020 J. M. Hutson & C. R. Le Sueur              |
+ |                                                                            |
+ |                               Version 2020.0                               |
+ |                                                                            |
+ |                       Run on 14 Feb 2020   at 20:16:39                     |
+ |                                                                            |
+  ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
+
+
+  This program is free software: you can redistribute it and/or modify it under
+  the terms of the GNU General Public License, version 3, as published by
+  the Free Software Foundation.
+
+  Publications resulting from the use of this program should cite both
+  the version of the program used:
+  J. M. Hutson & C. R. Le Sueur, MOLSCAT computer code 2020.0              
+  and the published paper:
+  J. M. Hutson & C. R. Le Sueur, Comput. Phys. Commun. 241, pp 9-18 (2019).
+
+
+  USING CODATA 2018 RECOMMENDED VALUES OF FUNDAMENTAL PHYSICAL CONSTANTS
+
+  MEMORY ALLOCATED TO MAIN WORKING ARRAY IS   1000000 (8-BYTE) WORDS (    7.63 MB)
+  2 INTEGERS CAN BE STORED IN EACH WORD.
+
+  PRINT LEVEL (IPRINT) =  3     OTHER PRINT CONTROLS  ISIGPR = 1
+
+  REDUCED MASS FOR INTERACTION =   1.000000000 ATOMIC MASS UNITS (DALTONS)
+
+  ENERGY-INDEPENDENT MATRICES WILL BE SAVED TEMPORARILY ON UNIT 30
+
+  ======================================================================================================================
+
+  INTERACTION TYPE IS    LINEAR ROTOR - LINEAR ROTOR.  
+
+  IDENT PARAMETER SPECIFIES THAT TWO PARTICLES ARE IDENTICAL.  PROPERLY SYMMETRIZED FUNCTIONS WILL BE CONSTRUCTED.
+  STATISTICAL WEIGHTS SPECIFIED AS WT IN &BASIS DATA.  SPNUC IGNORED.
+          ANTI-SYMMETRIC, WT(1) = 0.0000,  SYMMETRIC, WT(2) = 1.0000
+
+  PAIR LEVEL QUANTUM NUMBERS TAKEN FROM JLEVEL INPUT.  NLEVEL =  3
+
+  ENERGY LEVELS OF ROTOR 1 OBTAINED FROM B(E) =   60.800000
+
+  ENERGY LEVELS OF ROTOR 2 OBTAINED FROM B(E) =   60.800000
+
+  QUANTUM NUMBERS FOR INTERACTING PAIR:
+  EACH PAIR STATE IS LABELLED BY  3 QUANTUM NUMBERS
+  EACH CHANNEL FUNCTION IS FORMED BY COMBINING A PAIR STATE WITH A VALUE OF L.
+  THE RESULTING BASIS SET IS ASYMPTOTICALLY DIAGONAL.
+
+  PAIR STATE    - PAIR STATE QUANTUM NUMBERS -   PAIR LEVEL     PAIR ENERGY (CM-1)
+                       J1        J2       J12
+        1               0         0         0       1             0.0000000
+        2               0         2         2       2           364.8000000
+        3               2         2         0       3           729.6000000
+        4               2         2         1       3           729.6000000
+        5               2         2         2       3           729.6000000
+        6               2         2         3       3           729.6000000
+        7               2         2         4       3           729.6000000
+
+  ======================================================================================================================
+  GENERAL-PURPOSE POTENL ROUTINE (MAY 18)
+
+  ANGULAR DEPENDENCE OF POTENTIAL EXPANDED IN TERMS OF
+  CONTRACTED NORMALISED SPHERICAL HARMONICS,
+  SUM(M1,M2,M) C(L1,M1,L2,M2,L,M) Y(L1,M1) Y(L2,M2) Y(L,M)
+  SEE GREEN, J. CHEM. PHYS. 62, 2271 (1975)
+
+  INTERACTION POTENTIAL FOR EXPANSION TERM NUMBER   1
+  WHICH HAS LAM1 =   0,  LAM2 =   0,  LAM =   0
+
+           FARRAR-LEE MSV H2-H2 POTENTIAL /     RM=3.49, EPSIL=24.17   SET INTERNALLY.
+                    FOR R LESS THAN  1.0754, MORSE BETA =   6.5000
+                    FOR R GREATER THAN  1.4000, VAN DER WAALS C6, C8 =   1.32601   0.29375 (EPSIL/RM**N).
+                    CUBIC SPLINE COEFFICIENTS, TO INCREASING POWERS OF R, ARE AS FOLLOWS
+                          -0.68294444E+01  0.72113010E+01 -0.76899426E+00 -0.71252210E+00
+
+  INTERACTION POTENTIAL FOR EXPANSION TERM NUMBER   2
+  WHICH HAS LAM1 =   2,  LAM2 =   0,  LAM =   2
+
+           FARRAR-LEE MSV H2-H2 POTENTIAL /     RM=3.49, EPSIL=24.17   SET INTERNALLY.
+                ANISOTROPIC TERM IS .14/5.0 TIMES ISOTROPIC TERM
+                    FOR R LESS THAN  1.0754, MORSE BETA =   6.5000
+                    FOR R GREATER THAN  1.4000, VAN DER WAALS C6, C8 =   1.32601   0.29375 (EPSIL/RM**N).
+                    CUBIC SPLINE COEFFICIENTS, TO INCREASING POWERS OF R, ARE AS FOLLOWS
+                          -0.68294444E+01  0.72113010E+01 -0.76899426E+00 -0.71252210E+00
+
+  INTERACTION POTENTIAL FOR EXPANSION TERM NUMBER   3
+  WHICH HAS LAM1 =   0,  LAM2 =   2,  LAM =   2
+
+           FARRAR-LEE MSV H2-H2 POTENTIAL /     RM=3.49, EPSIL=24.17   SET INTERNALLY.
+                ANISOTROPIC TERM IS .14/5.0 TIMES ISOTROPIC TERM
+                    FOR R LESS THAN  1.0754, MORSE BETA =   6.5000
+                    FOR R GREATER THAN  1.4000, VAN DER WAALS C6, C8 =   1.32601   0.29375 (EPSIL/RM**N).
+                    CUBIC SPLINE COEFFICIENTS, TO INCREASING POWERS OF R, ARE AS FOLLOWS
+                          -0.68294444E+01  0.72113010E+01 -0.76899426E+00 -0.71252210E+00
+
+  INTERACTION POTENTIAL FOR EXPANSION TERM NUMBER   4
+  WHICH HAS LAM1 =   2,  LAM2 =   2,  LAM =   4
+
+           QUADRUPOLE-QUADRUPOLE LONG-RANGE W/ Q=.662 BUCKINGHAM.
+
+  POTENL PROCESSING FINISHED.
+
+  POTENTIAL RETURNED IN UNITS OF EPSIL  =  24.170000     CM-1
+        CODED WITH R IN UNITS OF RM     =  3.4900000     ANGSTROM
+
+  ALL LENGTHS ARE IN UNITS OF RM (  3.49000000 ANGSTROM ) UNLESS OTHERWISE STATED
+
+  INTERACTION MATRIX USES   4 BLOCKS OF VL ARRAY FOR R-DEPENDENT TERMS IN POTENTIAL
+
+  ======================================================================================================================
+
+  PROPAGATION METHODS FOR COUPLED EQUATIONS SPECIFIED BY IPROPS =  6 AND IPROPL =  9
+
+  COUPLED EQUATIONS WILL BE PROPAGATED OUTWARDS IN 2 SEGMENTS
+
+  PROPAGATION RANGES ARE CONTROLLED BY VARIABLES RMIN, RMID AND RMAX, WITH INPUT VALUES
+  RMIN =  0.4300     RMID = unset   RMAX =   20.00    
+  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+  SEGMENT 1 WILL BE PROPAGATED OUTWARDS
+
+  FROM RMIN CHOSEN USING IRMSET =  9 TO VALUE OF RMID CHOSEN USING RVFAC =    1.30
+
+  COUPLED EQUATIONS SOLVED BY DIABATIC MODIFIED LOG-DERIVATIVE PROPAGATOR OF MANOLOPOULOS
+
+  PROPAGATION STEP SIZE DETERMINED USING STEP =   12.0     (PER WAVELENGTH)
+  STEP SIZE CONSTANT THROUGHOUT RANGE
+  STEP SIZE MAY BE ADJUSTED SLIGHTLY SO THAT RANGE IS A WHOLE NUMBER OF STEPS
+
+  LOG-DERIVATIVE MATRIX INITIALISED IN THE LOCAL EIGENBASIS AT RMIN
+  LOCALLY CLOSED CHANNELS INITIALISED WITH A WKB BOUNDARY CONDITION
+  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+  SEGMENT 2 WILL BE PROPAGATED OUTWARDS
+
+  FROM VALUE OF RMID CHOSEN USING RVFAC =    1.30 TO WHICHEVER IS LARGER OF
+  OUTERMOST CENTRIFUGAL TURNING POINT IN OPEN CHANNELS, AND RMAX, WHICH =     20.00
+
+  COUPLED EQUATIONS SOLVED BY VARIABLE-STEP AIRY PROPAGATOR.
+  PUBLICATIONS RESULTING FROM THE USE OF THIS PROPAGATOR SHOULD REFERENCE
+  M. H. ALEXANDER AND D. E. MANOLOPOULOS,  J. CHEM. PHYS. 86, 2044 (1987).
+
+  PROPAGATION STEP SIZE DETERMINED USING STEP =   12.0     (PER WAVELENGTH)
+  STEP SIZES ADJUSTED TO MAINTAIN APPROXIMATE ACCURACY VIA PERTURBATION THEORY
+  WITH TOLHI =  1.00E-04 AND POWR =   3.0    
+
+  ======================================================================================================================
+
+  INPUT ENERGIES IN UNITS OF CM-1 BY DEFAULT.
+
+  CALCULATIONS WILL BE PERFORMED FOR    1 ENERGY  
+  ENERGY    1           =   800.0000000     CM-1
+
+  ======================================================================================================================
+
+  TOTAL ANGULAR MOMENTUM JTOT RUNS FROM   0  TO  99999  IN STEPS OF   1
+
+  JTOT SERIES WILL BE TERMINATED WHEN MAX CHANGE IN CROSS SECTIONS IS LESS THAN TOLERANCE FOR NCAC =  4 CONSECUTIVE JTOT
+  DIAGONAL (DTOL) AND OFF-DIAGONAL (OTOL) TOLERANCES ARE  0.10000 AND   0.01000
+
+  EACH JTOT IS SPLIT INTO A MAXIMUM OF   4 SYMMETRY BLOCKS
+
+  STATE-TO-STATE INTEGRAL CROSS-SECTIONS WILL BE COMPUTED BUT NOT STORED ON DISK
+
+  ======================================================================================================================
+
+  INITIALIZATION DONE.  TIME WAS   0.00 CPU SECS.        61 WORDS OF STORAGE USED.
+
+  ======================== p-H2 + p-H2: potential of Zarur and Rabitz; coefficients from VSTAR =========================
+
+  *****************************  ANGULAR MOMENTUM JTOT  =   0   AND SYMMETRY BLOCK  =    1  ****************************
+ ***
+ *** NOTE.  JTOT =   0.  BLOCK  1, (ODD  EXCHANGE) SKIPPED BECAUSE  WEIGHT = 0.0
+ ***
+
+  *****************************  ANGULAR MOMENTUM JTOT  =   0   AND SYMMETRY BLOCK  =    2  ****************************
+ ***
+ *** NOTE.  JTOT =   0.  BLOCK  2, (ODD  EXCHANGE) SKIPPED BECAUSE  WEIGHT = 0.0
+ ***
+
+  *****************************  ANGULAR MOMENTUM JTOT  =   0   AND SYMMETRY BLOCK  =    3  ****************************
+
+  * * * * * * * * * *  STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FROM LEVEL I TO LEVEL F  * * * * * * * * * *
+                       FOR JTOT =   0 AND SYMMETRY BLOCK =   3 AT ENERGY(  1) =  800.0000     CM-1
+
+    F  I =      3
+    3       1.29884E-01
+
+  FOR JTOT =    0, SYMMETRY BLOCK =  3, ENERGY(  1) =  800.0000    : MAX DIAG & OFF-DIAG =  1.30E-01 &   0.00E+00
+
+  *****************************  ANGULAR MOMENTUM JTOT  =   0   AND SYMMETRY BLOCK  =    4  ****************************
+
+  * * * * * * * * * *  STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FROM LEVEL I TO LEVEL F  * * * * * * * * * *
+                       FOR JTOT =   0 AND SYMMETRY BLOCK =   4 AT ENERGY(  1) =  800.0000     CM-1
+
+    F  I =      1              2              3
+    1       2.15141E-01    8.01116E-04    5.82151E-06
+    2       2.17904E-03    2.38609E-02    1.30416E-04
+    3       1.28073E-05    1.05484E-04    1.98638E-01
+
+  FOR JTOT =    0, SYMMETRY BLOCK =  4, ENERGY(  1) =  800.0000    : MAX DIAG & OFF-DIAG =  2.15E-01 &   2.18E-03
+
+  *****************************  ANGULAR MOMENTUM JTOT  =   1   AND SYMMETRY BLOCK  =    1  ****************************
+ ***
+ *** NOTE.  JTOT =   1.  BLOCK  1, (ODD  EXCHANGE) SKIPPED BECAUSE  WEIGHT = 0.0
+ ***
+
+  *****************************  ANGULAR MOMENTUM JTOT  =   1   AND SYMMETRY BLOCK  =    2  ****************************
+ ***
+ *** NOTE.  JTOT =   1.  BLOCK  2, (ODD  EXCHANGE) SKIPPED BECAUSE  WEIGHT = 0.0
+ ***
+
+  *****************************  ANGULAR MOMENTUM JTOT  =   1   AND SYMMETRY BLOCK  =    3  ****************************
+
+  * * * * * * * * * *  STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FROM LEVEL I TO LEVEL F  * * * * * * * * * *
+                       FOR JTOT =   1 AND SYMMETRY BLOCK =   3 AT ENERGY(  1) =  800.0000     CM-1
+
+    F  I =      2              3
+    2       4.94555E-02    2.44351E-04
+    3       1.97637E-04    2.77413E-01
+
+  FOR JTOT =    1, SYMMETRY BLOCK =  3, ENERGY(  1) =  800.0000    : MAX DIAG & OFF-DIAG =  2.77E-01 &   2.44E-04
+
+  *****************************  ANGULAR MOMENTUM JTOT  =   1   AND SYMMETRY BLOCK  =    4  ****************************
+
+  * * * * * * * * * *  STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FROM LEVEL I TO LEVEL F  * * * * * * * * * *
+                       FOR JTOT =   1 AND SYMMETRY BLOCK =   4 AT ENERGY(  1) =  800.0000     CM-1
+
+    F  I =      2              3
+    2       4.36533E-01    2.59114E-04
+    3       2.09577E-04    3.77353E-01
+
+  FOR JTOT =    1, SYMMETRY BLOCK =  4, ENERGY(  1) =  800.0000    : MAX DIAG & OFF-DIAG =  4.37E-01 &   2.59E-04
+
+  *****************************  ANGULAR MOMENTUM JTOT  =   2   AND SYMMETRY BLOCK  =    1  ****************************
+ ***
+ *** NOTE.  JTOT =   2.  BLOCK  1, (ODD  EXCHANGE) SKIPPED BECAUSE  WEIGHT = 0.0
+ ***
+
+  *****************************  ANGULAR MOMENTUM JTOT  =   2   AND SYMMETRY BLOCK  =    2  ****************************
+ ***
+ *** NOTE.  JTOT =   2.  BLOCK  2, (ODD  EXCHANGE) SKIPPED BECAUSE  WEIGHT = 0.0
+ ***
+
+  *****************************  ANGULAR MOMENTUM JTOT  =   2   AND SYMMETRY BLOCK  =    3  ****************************
+
+  * * * * * * * * * *  STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FROM LEVEL I TO LEVEL F  * * * * * * * * * *
+                       FOR JTOT =   2 AND SYMMETRY BLOCK =   3 AT ENERGY(  1) =  800.0000     CM-1
+
+    F  I =      2              3
+    2       7.25372E-01    1.17217E-03
+    3       9.48077E-04    1.27173E+00
+
+  FOR JTOT =    2, SYMMETRY BLOCK =  3, ENERGY(  1) =  800.0000    : MAX DIAG & OFF-DIAG =  1.27E+00 &   1.17E-03
+
+  *****************************  ANGULAR MOMENTUM JTOT  =   2   AND SYMMETRY BLOCK  =    4  ****************************
+
+  * * * * * * * * * *  STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FROM LEVEL I TO LEVEL F  * * * * * * * * * *
+                       FOR JTOT =   2 AND SYMMETRY BLOCK =   4 AT ENERGY(  1) =  800.0000     CM-1
+
+    F  I =      1              2              3
+    1       1.23328E+00    3.84589E-03    2.77202E-05
+    2       1.04608E-02    4.77124E-01    1.83794E-03
+    3       6.09843E-05    1.48657E-03    1.93818E+00
+
+  FOR JTOT =    2, SYMMETRY BLOCK =  4, ENERGY(  1) =  800.0000    : MAX DIAG & OFF-DIAG =  1.94E+00 &   1.05E-02
+
+  *****************************  ANGULAR MOMENTUM JTOT  =   3   AND SYMMETRY BLOCK  =    1  ****************************
+ ***
+ *** NOTE.  JTOT =   3.  BLOCK  1, (ODD  EXCHANGE) SKIPPED BECAUSE  WEIGHT = 0.0
+ ***
+
+  *****************************  ANGULAR MOMENTUM JTOT  =   3   AND SYMMETRY BLOCK  =    2  ****************************
+ ***
+ *** NOTE.  JTOT =   3.  BLOCK  2, (ODD  EXCHANGE) SKIPPED BECAUSE  WEIGHT = 0.0
+ ***
+
+  *****************************  ANGULAR MOMENTUM JTOT  =   3   AND SYMMETRY BLOCK  =    3  ****************************
+
+  * * * * * * * * * *  STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FROM LEVEL I TO LEVEL F  * * * * * * * * * *
+                       FOR JTOT =   3 AND SYMMETRY BLOCK =   3 AT ENERGY(  1) =  800.0000     CM-1
+
+    F  I =      2              3
+    2       6.01691E-01    1.53304E-03
+    3       1.23996E-03    1.50834E+00
+
+  FOR JTOT =    3, SYMMETRY BLOCK =  3, ENERGY(  1) =  800.0000    : MAX DIAG & OFF-DIAG =  1.51E+00 &   1.53E-03
+
+  *****************************  ANGULAR MOMENTUM JTOT  =   3   AND SYMMETRY BLOCK  =    4  ****************************
+
+  * * * * * * * * * *  STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FROM LEVEL I TO LEVEL F  * * * * * * * * * *
+                       FOR JTOT =   3 AND SYMMETRY BLOCK =   4 AT ENERGY(  1) =  800.0000     CM-1
+
+    F  I =      2              3
+    2       1.05581E+00    1.45578E-03
+    3       1.17747E-03    1.68514E+00
+
+  FOR JTOT =    3, SYMMETRY BLOCK =  4, ENERGY(  1) =  800.0000    : MAX DIAG & OFF-DIAG =  1.69E+00 &   1.46E-03
+
+  *****************************  ANGULAR MOMENTUM JTOT  =   4   AND SYMMETRY BLOCK  =    1  ****************************
+ ***
+ *** NOTE.  JTOT =   4.  BLOCK  1, (ODD  EXCHANGE) SKIPPED BECAUSE  WEIGHT = 0.0
+ ***
+
+  *****************************  ANGULAR MOMENTUM JTOT  =   4   AND SYMMETRY BLOCK  =    2  ****************************
+ ***
+ *** NOTE.  JTOT =   4.  BLOCK  2, (ODD  EXCHANGE) SKIPPED BECAUSE  WEIGHT = 0.0
+ ***
+
+  *****************************  ANGULAR MOMENTUM JTOT  =   4   AND SYMMETRY BLOCK  =    3  ****************************
+
+  * * * * * * * * * *  STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FROM LEVEL I TO LEVEL F  * * * * * * * * * *
+                       FOR JTOT =   4 AND SYMMETRY BLOCK =   3 AT ENERGY(  1) =  800.0000     CM-1
+
+    F  I =      2              3
+    2       5.33755E-01    1.61902E-03
+    3       1.30950E-03    2.66794E+00
+
+  FOR JTOT =    4, SYMMETRY BLOCK =  3, ENERGY(  1) =  800.0000    : MAX DIAG & OFF-DIAG =  2.67E+00 &   1.62E-03
+
+  *****************************  ANGULAR MOMENTUM JTOT  =   4   AND SYMMETRY BLOCK  =    4  ****************************
+
+  * * * * * * * * * *  STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FROM LEVEL I TO LEVEL F  * * * * * * * * * *
+                       FOR JTOT =   4 AND SYMMETRY BLOCK =   4 AT ENERGY(  1) =  800.0000     CM-1
+
+    F  I =      1              2              3
+    1       2.22961E+00    6.27451E-03    4.40930E-05
+    2       1.70667E-02    1.54145E+00    2.54064E-03
+    3       9.70046E-05    2.05493E-03    3.71927E+00
+
+  FOR JTOT =    4, SYMMETRY BLOCK =  4, ENERGY(  1) =  800.0000    : MAX DIAG & OFF-DIAG =  3.72E+00 &   1.71E-02
+
+  *****************************  ANGULAR MOMENTUM JTOT  =   5   AND SYMMETRY BLOCK  =    1  ****************************
+ ***
+ *** NOTE.  JTOT =   5.  BLOCK  1, (ODD  EXCHANGE) SKIPPED BECAUSE  WEIGHT = 0.0
+ ***
+
+  *****************************  ANGULAR MOMENTUM JTOT  =   5   AND SYMMETRY BLOCK  =    2  ****************************
+ ***
+ *** NOTE.  JTOT =   5.  BLOCK  2, (ODD  EXCHANGE) SKIPPED BECAUSE  WEIGHT = 0.0
+ ***
+
+  *****************************  ANGULAR MOMENTUM JTOT  =   5   AND SYMMETRY BLOCK  =    3  ****************************
+
+  * * * * * * * * * *  STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FROM LEVEL I TO LEVEL F  * * * * * * * * * *
+                       FOR JTOT =   5 AND SYMMETRY BLOCK =   3 AT ENERGY(  1) =  800.0000     CM-1
+
+    F  I =      2              3
+    2       1.70068E+00    1.56319E-03
+    3       1.26434E-03    2.49014E+00
+
+  FOR JTOT =    5, SYMMETRY BLOCK =  3, ENERGY(  1) =  800.0000    : MAX DIAG & OFF-DIAG =  2.49E+00 &   1.56E-03
+
+  *****************************  ANGULAR MOMENTUM JTOT  =   5   AND SYMMETRY BLOCK  =    4  ****************************
+
+  * * * * * * * * * *  STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FROM LEVEL I TO LEVEL F  * * * * * * * * * *
+                       FOR JTOT =   5 AND SYMMETRY BLOCK =   4 AT ENERGY(  1) =  800.0000     CM-1
+
+    F  I =      2              3
+    2       1.39263E+00    1.51862E-03
+    3       1.22829E-03    1.89516E+00
+
+  FOR JTOT =    5, SYMMETRY BLOCK =  4, ENERGY(  1) =  800.0000    : MAX DIAG & OFF-DIAG =  1.90E+00 &   1.52E-03
+
+  *****************************  ANGULAR MOMENTUM JTOT  =   6   AND SYMMETRY BLOCK  =    1  ****************************
+ ***
+ *** NOTE.  JTOT =   6.  BLOCK  1, (ODD  EXCHANGE) SKIPPED BECAUSE  WEIGHT = 0.0
+ ***
+
+  *****************************  ANGULAR MOMENTUM JTOT  =   6   AND SYMMETRY BLOCK  =    2  ****************************
+ ***
+ *** NOTE.  JTOT =   6.  BLOCK  2, (ODD  EXCHANGE) SKIPPED BECAUSE  WEIGHT = 0.0
+ ***
+
+  *****************************  ANGULAR MOMENTUM JTOT  =   6   AND SYMMETRY BLOCK  =    3  ****************************
+
+  * * * * * * * * * *  STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FROM LEVEL I TO LEVEL F  * * * * * * * * * *
+                       FOR JTOT =   6 AND SYMMETRY BLOCK =   3 AT ENERGY(  1) =  800.0000     CM-1
+
+    F  I =      2              3
+    2       9.15627E-01    1.39143E-03
+    3       1.12542E-03    2.97331E+00
+
+  FOR JTOT =    6, SYMMETRY BLOCK =  3, ENERGY(  1) =  800.0000    : MAX DIAG & OFF-DIAG =  2.97E+00 &   1.39E-03
+
+  *****************************  ANGULAR MOMENTUM JTOT  =   6   AND SYMMETRY BLOCK  =    4  ****************************
+
+  * * * * * * * * * *  STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FROM LEVEL I TO LEVEL F  * * * * * * * * * *
+                       FOR JTOT =   6 AND SYMMETRY BLOCK =   4 AT ENERGY(  1) =  800.0000     CM-1
+
+    F  I =      1              2              3
+    1       1.13812E+00    7.68810E-03    5.39325E-05
+    2       2.09116E-02    2.02339E+00    2.35928E-03
+    3       1.18651E-04    1.90824E-03    3.74776E+00
+
+  FOR JTOT =    6, SYMMETRY BLOCK =  4, ENERGY(  1) =  800.0000    : MAX DIAG & OFF-DIAG =  3.75E+00 &   2.09E-02
+
+  *****************************  ANGULAR MOMENTUM JTOT  =   7   AND SYMMETRY BLOCK  =    1  ****************************
+ ***
+ *** NOTE.  JTOT =   7.  BLOCK  1, (ODD  EXCHANGE) SKIPPED BECAUSE  WEIGHT = 0.0
+ ***
+
+  *****************************  ANGULAR MOMENTUM JTOT  =   7   AND SYMMETRY BLOCK  =    2  ****************************
+ ***
+ *** NOTE.  JTOT =   7.  BLOCK  2, (ODD  EXCHANGE) SKIPPED BECAUSE  WEIGHT = 0.0
+ ***
+
+  *****************************  ANGULAR MOMENTUM JTOT  =   7   AND SYMMETRY BLOCK  =    3  ****************************
+
+  * * * * * * * * * *  STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FROM LEVEL I TO LEVEL F  * * * * * * * * * *
+                       FOR JTOT =   7 AND SYMMETRY BLOCK =   3 AT ENERGY(  1) =  800.0000     CM-1
+
+    F  I =      2              3
+    2       1.27895E+00    1.08389E-03
+    3       8.76674E-04    2.39910E+00
+
+  FOR JTOT =    7, SYMMETRY BLOCK =  3, ENERGY(  1) =  800.0000    : MAX DIAG & OFF-DIAG =  2.40E+00 &   1.08E-03
+
+  *****************************  ANGULAR MOMENTUM JTOT  =   7   AND SYMMETRY BLOCK  =    4  ****************************
+
+  * * * * * * * * * *  STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FROM LEVEL I TO LEVEL F  * * * * * * * * * *
+                       FOR JTOT =   7 AND SYMMETRY BLOCK =   4 AT ENERGY(  1) =  800.0000     CM-1
+
+    F  I =      2              3
+    2       1.58438E+00    9.77232E-04
+    3       7.90408E-04    1.76340E+00
+
+  FOR JTOT =    7, SYMMETRY BLOCK =  4, ENERGY(  1) =  800.0000    : MAX DIAG & OFF-DIAG =  1.76E+00 &   9.77E-04
+
+  *****************************  ANGULAR MOMENTUM JTOT  =   8   AND SYMMETRY BLOCK  =    1  ****************************
+ ***
+ *** NOTE.  JTOT =   8.  BLOCK  1, (ODD  EXCHANGE) SKIPPED BECAUSE  WEIGHT = 0.0
+ ***
+
+  *****************************  ANGULAR MOMENTUM JTOT  =   8   AND SYMMETRY BLOCK  =    2  ****************************
+ ***
+ *** NOTE.  JTOT =   8.  BLOCK  2, (ODD  EXCHANGE) SKIPPED BECAUSE  WEIGHT = 0.0
+ ***
+
+  *****************************  ANGULAR MOMENTUM JTOT  =   8   AND SYMMETRY BLOCK  =    3  ****************************
+
+  * * * * * * * * * *  STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FROM LEVEL I TO LEVEL F  * * * * * * * * * *
+                       FOR JTOT =   8 AND SYMMETRY BLOCK =   3 AT ENERGY(  1) =  800.0000     CM-1
+
+    F  I =      2              3
+    2       1.79691E+00    7.91012E-04
+    3       6.39789E-04    2.11451E+00
+
+  FOR JTOT =    8, SYMMETRY BLOCK =  3, ENERGY(  1) =  800.0000    : MAX DIAG & OFF-DIAG =  2.11E+00 &   7.91E-04
+
+  *****************************  ANGULAR MOMENTUM JTOT  =   8   AND SYMMETRY BLOCK  =    4  ****************************
+
+  * * * * * * * * * *  STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FROM LEVEL I TO LEVEL F  * * * * * * * * * *
+                       FOR JTOT =   8 AND SYMMETRY BLOCK =   4 AT ENERGY(  1) =  800.0000     CM-1
+
+    F  I =      1              2              3
+    1       6.14989E-01    7.85340E-03    5.14241E-05
+    2       2.13613E-02    3.01406E+00    1.56635E-03
+    3       1.13133E-04    1.26690E-03    3.19591E+00
+
+  FOR JTOT =    8, SYMMETRY BLOCK =  4, ENERGY(  1) =  800.0000    : MAX DIAG & OFF-DIAG =  3.20E+00 &   2.14E-02
+
+  *****************************  ANGULAR MOMENTUM JTOT  =   9   AND SYMMETRY BLOCK  =    1  ****************************
+ ***
+ *** NOTE.  JTOT =   9.  BLOCK  1, (ODD  EXCHANGE) SKIPPED BECAUSE  WEIGHT = 0.0
+ ***
+
+  *****************************  ANGULAR MOMENTUM JTOT  =   9   AND SYMMETRY BLOCK  =    2  ****************************
+ ***
+ *** NOTE.  JTOT =   9.  BLOCK  2, (ODD  EXCHANGE) SKIPPED BECAUSE  WEIGHT = 0.0
+ ***
+
+  *****************************  ANGULAR MOMENTUM JTOT  =   9   AND SYMMETRY BLOCK  =    3  ****************************
+
+  * * * * * * * * * *  STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FROM LEVEL I TO LEVEL F  * * * * * * * * * *
+                       FOR JTOT =   9 AND SYMMETRY BLOCK =   3 AT ENERGY(  1) =  800.0000     CM-1
+
+    F  I =      2              3
+    2       1.81810E+00    4.33709E-04
+    3       3.50794E-04    2.06832E+00
+
+  FOR JTOT =    9, SYMMETRY BLOCK =  3, ENERGY(  1) =  800.0000    : MAX DIAG & OFF-DIAG =  2.07E+00 &   4.34E-04
+
+  *****************************  ANGULAR MOMENTUM JTOT  =   9   AND SYMMETRY BLOCK  =    4  ****************************
+
+  * * * * * * * * * *  STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FROM LEVEL I TO LEVEL F  * * * * * * * * * *
+                       FOR JTOT =   9 AND SYMMETRY BLOCK =   4 AT ENERGY(  1) =  800.0000     CM-1
+
+    F  I =      2              3
+    2       3.63573E+00    3.52247E-04
+    3       2.84906E-04    1.44005E+00
+
+  FOR JTOT =    9, SYMMETRY BLOCK =  4, ENERGY(  1) =  800.0000    : MAX DIAG & OFF-DIAG =  3.64E+00 &   3.52E-04
+
+  *****************************  ANGULAR MOMENTUM JTOT  =  10   AND SYMMETRY BLOCK  =    1  ****************************
+ ***
+ *** NOTE.  JTOT =  10.  BLOCK  1, (ODD  EXCHANGE) SKIPPED BECAUSE  WEIGHT = 0.0
+ ***
+
+  *****************************  ANGULAR MOMENTUM JTOT  =  10   AND SYMMETRY BLOCK  =    2  ****************************
+ ***
+ *** NOTE.  JTOT =  10.  BLOCK  2, (ODD  EXCHANGE) SKIPPED BECAUSE  WEIGHT = 0.0
+ ***
+
+  *****************************  ANGULAR MOMENTUM JTOT  =  10   AND SYMMETRY BLOCK  =    3  ****************************
+
+  * * * * * * * * * *  STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FROM LEVEL I TO LEVEL F  * * * * * * * * * *
+                       FOR JTOT =  10 AND SYMMETRY BLOCK =   3 AT ENERGY(  1) =  800.0000     CM-1
+
+    F  I =      2              3
+    2       2.55612E+00    3.03539E-04
+    3       2.45510E-04    1.55127E+00
+
+  FOR JTOT =   10, SYMMETRY BLOCK =  3, ENERGY(  1) =  800.0000    : MAX DIAG & OFF-DIAG =  2.56E+00 &   3.04E-04
+
+  *****************************  ANGULAR MOMENTUM JTOT  =  10   AND SYMMETRY BLOCK  =    4  ****************************
+
+  * * * * * * * * * *  STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FROM LEVEL I TO LEVEL F  * * * * * * * * * *
+                       FOR JTOT =  10 AND SYMMETRY BLOCK =   4 AT ENERGY(  1) =  800.0000     CM-1
+
+    F  I =      1              2              3
+    1       5.48489E+00    6.78610E-03    3.35285E-05
+    2       1.84582E-02    2.74074E+00    8.22477E-04
+    3       7.37627E-05    6.65239E-04    2.30435E+00
+
+  FOR JTOT =   10, SYMMETRY BLOCK =  4, ENERGY(  1) =  800.0000    : MAX DIAG & OFF-DIAG =  5.48E+00 &   1.85E-02
+
+  *****************************  ANGULAR MOMENTUM JTOT  =  11   AND SYMMETRY BLOCK  =    1  ****************************
+ ***
+ *** NOTE.  JTOT =  11.  BLOCK  1, (ODD  EXCHANGE) SKIPPED BECAUSE  WEIGHT = 0.0
+ ***
+
+  *****************************  ANGULAR MOMENTUM JTOT  =  11   AND SYMMETRY BLOCK  =    2  ****************************
+ ***
+ *** NOTE.  JTOT =  11.  BLOCK  2, (ODD  EXCHANGE) SKIPPED BECAUSE  WEIGHT = 0.0
+ ***
+
+  *****************************  ANGULAR MOMENTUM JTOT  =  11   AND SYMMETRY BLOCK  =    3  ****************************
+
+  * * * * * * * * * *  STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FROM LEVEL I TO LEVEL F  * * * * * * * * * *
+                       FOR JTOT =  11 AND SYMMETRY BLOCK =   3 AT ENERGY(  1) =  800.0000     CM-1
+
+    F  I =      2              3
+    2       2.94258E+00    7.96707E-05
+    3       6.44395E-05    9.60872E-01
+
+  FOR JTOT =   11, SYMMETRY BLOCK =  3, ENERGY(  1) =  800.0000    : MAX DIAG & OFF-DIAG =  2.94E+00 &   7.97E-05
+
+  *****************************  ANGULAR MOMENTUM JTOT  =  11   AND SYMMETRY BLOCK  =    4  ****************************
+
+  * * * * * * * * * *  STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FROM LEVEL I TO LEVEL F  * * * * * * * * * *
+                       FOR JTOT =  11 AND SYMMETRY BLOCK =   4 AT ENERGY(  1) =  800.0000     CM-1
+
+    F  I =      2              3
+    2       2.85093E+00    2.19233E-05
+    3       1.77321E-05    3.41013E-01
+
+  FOR JTOT =   11, SYMMETRY BLOCK =  4, ENERGY(  1) =  800.0000    : MAX DIAG & OFF-DIAG =  2.85E+00 &   2.19E-05
+
+  *****************************  ANGULAR MOMENTUM JTOT  =  12   AND SYMMETRY BLOCK  =    1  ****************************
+ ***
+ *** NOTE.  JTOT =  12.  BLOCK  1, (ODD  EXCHANGE) SKIPPED BECAUSE  WEIGHT = 0.0
+ ***
+
+  *****************************  ANGULAR MOMENTUM JTOT  =  12   AND SYMMETRY BLOCK  =    2  ****************************
+ ***
+ *** NOTE.  JTOT =  12.  BLOCK  2, (ODD  EXCHANGE) SKIPPED BECAUSE  WEIGHT = 0.0
+ ***
+
+  *****************************  ANGULAR MOMENTUM JTOT  =  12   AND SYMMETRY BLOCK  =    3  ****************************
+
+  * * * * * * * * * *  STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FROM LEVEL I TO LEVEL F  * * * * * * * * * *
+                       FOR JTOT =  12 AND SYMMETRY BLOCK =   3 AT ENERGY(  1) =  800.0000     CM-1
+
+    F  I =      2              3
+    2       2.21016E+00    2.75525E-05
+    3       2.22851E-05    3.55342E-01
+
+  FOR JTOT =   12, SYMMETRY BLOCK =  3, ENERGY(  1) =  800.0000    : MAX DIAG & OFF-DIAG =  2.21E+00 &   2.76E-05
+
+  *****************************  ANGULAR MOMENTUM JTOT  =  12   AND SYMMETRY BLOCK  =    4  ****************************
+
+  * * * * * * * * * *  STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FROM LEVEL I TO LEVEL F  * * * * * * * * * *
+                       FOR JTOT =  12 AND SYMMETRY BLOCK =   4 AT ENERGY(  1) =  800.0000     CM-1
+
+    F  I =      1              2              3
+    1       3.38947E-02    4.82886E-03    7.22679E-06
+    2       1.31345E-02    3.28969E+00    1.97135E-04
+    3       1.58989E-05    1.59448E-04    1.01291E+00
+
+  FOR JTOT =   12, SYMMETRY BLOCK =  4, ENERGY(  1) =  800.0000    : MAX DIAG & OFF-DIAG =  3.29E+00 &   1.31E-02
+
+  *****************************  ANGULAR MOMENTUM JTOT  =  13   AND SYMMETRY BLOCK  =    1  ****************************
+ ***
+ *** NOTE.  JTOT =  13.  BLOCK  1, (ODD  EXCHANGE) SKIPPED BECAUSE  WEIGHT = 0.0
+ ***
+
+  *****************************  ANGULAR MOMENTUM JTOT  =  13   AND SYMMETRY BLOCK  =    2  ****************************
+ ***
+ *** NOTE.  JTOT =  13.  BLOCK  2, (ODD  EXCHANGE) SKIPPED BECAUSE  WEIGHT = 0.0
+ ***
+
+  *****************************  ANGULAR MOMENTUM JTOT  =  13   AND SYMMETRY BLOCK  =    3  ****************************
+
+  * * * * * * * * * *  STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FROM LEVEL I TO LEVEL F  * * * * * * * * * *
+                       FOR JTOT =  13 AND SYMMETRY BLOCK =   3 AT ENERGY(  1) =  800.0000     CM-1
+
+    F  I =      2              3
+    2       9.20266E-01    3.01171E-06
+    3       2.43595E-06    1.44356E-01
+
+  FOR JTOT =   13, SYMMETRY BLOCK =  3, ENERGY(  1) =  800.0000    : MAX DIAG & OFF-DIAG =  9.20E-01 &   3.01E-06
+
+  *****************************  ANGULAR MOMENTUM JTOT  =  13   AND SYMMETRY BLOCK  =    4  ****************************
+
+  * * * * * * * * * *  STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FROM LEVEL I TO LEVEL F  * * * * * * * * * *
+                       FOR JTOT =  13 AND SYMMETRY BLOCK =   4 AT ENERGY(  1) =  800.0000     CM-1
+
+    F  I =      2              3
+    2       2.45833E+00    4.22879E-07
+    3       3.42035E-07    5.17889E-02
+
+  FOR JTOT =   13, SYMMETRY BLOCK =  4, ENERGY(  1) =  800.0000    : MAX DIAG & OFF-DIAG =  2.46E+00 &   4.23E-07
+
+  *****************************  ANGULAR MOMENTUM JTOT  =  14   AND SYMMETRY BLOCK  =    1  ****************************
+ ***
+ *** NOTE.  JTOT =  14.  BLOCK  1, (ODD  EXCHANGE) SKIPPED BECAUSE  WEIGHT = 0.0
+ ***
+
+  *****************************  ANGULAR MOMENTUM JTOT  =  14   AND SYMMETRY BLOCK  =    2  ****************************
+ ***
+ *** NOTE.  JTOT =  14.  BLOCK  2, (ODD  EXCHANGE) SKIPPED BECAUSE  WEIGHT = 0.0
+ ***
+
+  *****************************  ANGULAR MOMENTUM JTOT  =  14   AND SYMMETRY BLOCK  =    3  ****************************
+
+  * * * * * * * * * *  STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FROM LEVEL I TO LEVEL F  * * * * * * * * * *
+                       FOR JTOT =  14 AND SYMMETRY BLOCK =   3 AT ENERGY(  1) =  800.0000     CM-1
+
+    F  I =      2              3
+    2       3.14103E-01    8.08675E-07
+    3       6.54075E-07    5.35788E-02
+
+  FOR JTOT =   14, SYMMETRY BLOCK =  3, ENERGY(  1) =  800.0000    : MAX DIAG & OFF-DIAG =  3.14E-01 &   8.09E-07
+
+  *****************************  ANGULAR MOMENTUM JTOT  =  14   AND SYMMETRY BLOCK  =    4  ****************************
+
+  * * * * * * * * * *  STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FROM LEVEL I TO LEVEL F  * * * * * * * * * *
+                       FOR JTOT =  14 AND SYMMETRY BLOCK =   4 AT ENERGY(  1) =  800.0000     CM-1
+
+    F  I =      1              2              3
+    1       6.74722E+00    2.64477E-03    1.26834E-07
+    2       7.19377E-03    1.31631E+00    7.52475E-06
+    3       2.79034E-07    6.08619E-06    1.48554E-01
+
+  FOR JTOT =   14, SYMMETRY BLOCK =  4, ENERGY(  1) =  800.0000    : MAX DIAG & OFF-DIAG =  6.75E+00 &   7.19E-03
+
+  *****************************  ANGULAR MOMENTUM JTOT  =  15   AND SYMMETRY BLOCK  =    1  ****************************
+ ***
+ *** NOTE.  JTOT =  15.  BLOCK  1, (ODD  EXCHANGE) SKIPPED BECAUSE  WEIGHT = 0.0
+ ***
+
+  *****************************  ANGULAR MOMENTUM JTOT  =  15   AND SYMMETRY BLOCK  =    2  ****************************
+ ***
+ *** NOTE.  JTOT =  15.  BLOCK  2, (ODD  EXCHANGE) SKIPPED BECAUSE  WEIGHT = 0.0
+ ***
+
+  *****************************  ANGULAR MOMENTUM JTOT  =  15   AND SYMMETRY BLOCK  =    3  ****************************
+
+  * * * * * * * * * *  STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FROM LEVEL I TO LEVEL F  * * * * * * * * * *
+                       FOR JTOT =  15 AND SYMMETRY BLOCK =   3 AT ENERGY(  1) =  800.0000     CM-1
+
+    F  I =      2              3
+    2       3.64761E-01    9.38471E-08
+    3       7.59058E-08    2.70650E-02
+
+  FOR JTOT =   15, SYMMETRY BLOCK =  3, ENERGY(  1) =  800.0000    : MAX DIAG & OFF-DIAG =  3.65E-01 &   9.38E-08
+
+  *****************************  ANGULAR MOMENTUM JTOT  =  15   AND SYMMETRY BLOCK  =    4  ****************************
+
+  * * * * * * * * * *  STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FROM LEVEL I TO LEVEL F  * * * * * * * * * *
+                       FOR JTOT =  15 AND SYMMETRY BLOCK =   4 AT ENERGY(  1) =  800.0000     CM-1
+
+    F  I =      2              3
+    2       7.44655E-01    1.03219E-08
+    3       8.34862E-09    1.16062E-02
+
+  FOR JTOT =   15, SYMMETRY BLOCK =  4, ENERGY(  1) =  800.0000    : MAX DIAG & OFF-DIAG =  7.45E-01 &   1.03E-08
+
+  *****************************  ANGULAR MOMENTUM JTOT  =  16   AND SYMMETRY BLOCK  =    1  ****************************
+ ***
+ *** NOTE.  JTOT =  16.  BLOCK  1, (ODD  EXCHANGE) SKIPPED BECAUSE  WEIGHT = 0.0
+ ***
+
+  *****************************  ANGULAR MOMENTUM JTOT  =  16   AND SYMMETRY BLOCK  =    2  ****************************
+ ***
+ *** NOTE.  JTOT =  16.  BLOCK  2, (ODD  EXCHANGE) SKIPPED BECAUSE  WEIGHT = 0.0
+ ***
+
+  *****************************  ANGULAR MOMENTUM JTOT  =  16   AND SYMMETRY BLOCK  =    3  ****************************
+
+  * * * * * * * * * *  STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FROM LEVEL I TO LEVEL F  * * * * * * * * * *
+                       FOR JTOT =  16 AND SYMMETRY BLOCK =   3 AT ENERGY(  1) =  800.0000     CM-1
+
+    F  I =      2              3
+    2       4.72747E-01    2.08478E-08
+    3       1.68622E-08    1.19859E-02
+
+  FOR JTOT =   16, SYMMETRY BLOCK =  3, ENERGY(  1) =  800.0000    : MAX DIAG & OFF-DIAG =  4.73E-01 &   2.08E-08
+
+  *****************************  ANGULAR MOMENTUM JTOT  =  16   AND SYMMETRY BLOCK  =    4  ****************************
+
+  * * * * * * * * * *  STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FROM LEVEL I TO LEVEL F  * * * * * * * * * *
+                       FOR JTOT =  16 AND SYMMETRY BLOCK =   4 AT ENERGY(  1) =  800.0000     CM-1
+
+    F  I =      1              2              3
+    1       5.67907E+00    9.77695E-04    6.30836E-10
+    2       2.65933E-03    5.95550E-01    1.94919E-07
+    3       1.38784E-09    1.57655E-07    2.75309E-02
+
+  FOR JTOT =   16, SYMMETRY BLOCK =  4, ENERGY(  1) =  800.0000    : MAX DIAG & OFF-DIAG =  5.68E+00 &   2.66E-03
+
+  *****************************  ANGULAR MOMENTUM JTOT  =  17   AND SYMMETRY BLOCK  =    1  ****************************
+ ***
+ *** NOTE.  JTOT =  17.  BLOCK  1, (ODD  EXCHANGE) SKIPPED BECAUSE  WEIGHT = 0.0
+ ***
+
+  *****************************  ANGULAR MOMENTUM JTOT  =  17   AND SYMMETRY BLOCK  =    2  ****************************
+ ***
+ *** NOTE.  JTOT =  17.  BLOCK  2, (ODD  EXCHANGE) SKIPPED BECAUSE  WEIGHT = 0.0
+ ***
+
+  *****************************  ANGULAR MOMENTUM JTOT  =  17   AND SYMMETRY BLOCK  =    3  ****************************
+
+  * * * * * * * * * *  STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FROM LEVEL I TO LEVEL F  * * * * * * * * * *
+                       FOR JTOT =  17 AND SYMMETRY BLOCK =   3 AT ENERGY(  1) =  800.0000     CM-1
+
+    F  I =      2              3
+    2       7.50412E-01    2.69193E-09
+    3       2.17730E-09    7.11719E-03
+
+  FOR JTOT =   17, SYMMETRY BLOCK =  3, ENERGY(  1) =  800.0000    : MAX DIAG & OFF-DIAG =  7.50E-01 &   2.69E-09
+
+  *****************************  ANGULAR MOMENTUM JTOT  =  17   AND SYMMETRY BLOCK  =    4  ****************************
+
+  * * * * * * * * * *  STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FROM LEVEL I TO LEVEL F  * * * * * * * * * *
+                       FOR JTOT =  17 AND SYMMETRY BLOCK =   4 AT ENERGY(  1) =  800.0000     CM-1
+
+    F  I =      2              3
+    2       8.99412E-01    2.79161E-10
+    3       2.25792E-10    3.36951E-03
+
+  FOR JTOT =   17, SYMMETRY BLOCK =  4, ENERGY(  1) =  800.0000    : MAX DIAG & OFF-DIAG =  8.99E-01 &   2.79E-10
+
+  *****************************  ANGULAR MOMENTUM JTOT  =  18   AND SYMMETRY BLOCK  =    1  ****************************
+ ***
+ *** NOTE.  JTOT =  18.  BLOCK  1, (ODD  EXCHANGE) SKIPPED BECAUSE  WEIGHT = 0.0
+ ***
+
+  *****************************  ANGULAR MOMENTUM JTOT  =  18   AND SYMMETRY BLOCK  =    2  ****************************
+ ***
+ *** NOTE.  JTOT =  18.  BLOCK  2, (ODD  EXCHANGE) SKIPPED BECAUSE  WEIGHT = 0.0
+ ***
+
+  *****************************  ANGULAR MOMENTUM JTOT  =  18   AND SYMMETRY BLOCK  =    3  ****************************
+
+  * * * * * * * * * *  STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FROM LEVEL I TO LEVEL F  * * * * * * * * * *
+                       FOR JTOT =  18 AND SYMMETRY BLOCK =   3 AT ENERGY(  1) =  800.0000     CM-1
+
+    F  I =      2              3
+    2       6.00080E-01    5.08437E-10
+    3       4.11236E-10    3.48229E-03
+
+  FOR JTOT =   18, SYMMETRY BLOCK =  3, ENERGY(  1) =  800.0000    : MAX DIAG & OFF-DIAG =  6.00E-01 &   5.08E-10
+
+  *****************************  ANGULAR MOMENTUM JTOT  =  18   AND SYMMETRY BLOCK  =    4  ****************************
+
+  * * * * * * * * * *  STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FROM LEVEL I TO LEVEL F  * * * * * * * * * *
+                       FOR JTOT =  18 AND SYMMETRY BLOCK =   4 AT ENERGY(  1) =  800.0000     CM-1
+
+    F  I =      1              2              3
+    1       6.46209E-01    1.70805E-04    8.71055E-13
+    2       4.64589E-04    8.48999E-01    4.72053E-09
+    3       1.91632E-12    3.81808E-09    7.17936E-03
+
+  FOR JTOT =   18, SYMMETRY BLOCK =  4, ENERGY(  1) =  800.0000    : MAX DIAG & OFF-DIAG =  8.49E-01 &   4.65E-04
+
+  *****************************  ANGULAR MOMENTUM JTOT  =  19   AND SYMMETRY BLOCK  =    1  ****************************
+ ***
+ *** NOTE.  JTOT =  19.  BLOCK  1, (ODD  EXCHANGE) SKIPPED BECAUSE  WEIGHT = 0.0
+ ***
+
+  *****************************  ANGULAR MOMENTUM JTOT  =  19   AND SYMMETRY BLOCK  =    2  ****************************
+ ***
+ *** NOTE.  JTOT =  19.  BLOCK  2, (ODD  EXCHANGE) SKIPPED BECAUSE  WEIGHT = 0.0
+ ***
+
+  *****************************  ANGULAR MOMENTUM JTOT  =  19   AND SYMMETRY BLOCK  =    3  ****************************
+
+  * * * * * * * * * *  STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FROM LEVEL I TO LEVEL F  * * * * * * * * * *
+                       FOR JTOT =  19 AND SYMMETRY BLOCK =   3 AT ENERGY(  1) =  800.0000     CM-1
+
+    F  I =      2              3
+    2       5.94796E-01    7.23178E-11
+    3       5.84923E-11    2.29824E-03
+
+  FOR JTOT =   19, SYMMETRY BLOCK =  3, ENERGY(  1) =  800.0000    : MAX DIAG & OFF-DIAG =  5.95E-01 &   7.23E-11
+
+  *****************************  ANGULAR MOMENTUM JTOT  =  19   AND SYMMETRY BLOCK  =    4  ****************************
+
+  * * * * * * * * * *  STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FROM LEVEL I TO LEVEL F  * * * * * * * * * *
+                       FOR JTOT =  19 AND SYMMETRY BLOCK =   4 AT ENERGY(  1) =  800.0000     CM-1
+
+    F  I =      2              3
+    2       8.87411E-01    7.41310E-12
+    3       5.99589E-12    1.16093E-03
+
+  FOR JTOT =   19, SYMMETRY BLOCK =  4, ENERGY(  1) =  800.0000    : MAX DIAG & OFF-DIAG =  8.87E-01 &   7.41E-12
+
+  *****************************  ANGULAR MOMENTUM JTOT  =  20   AND SYMMETRY BLOCK  =    1  ****************************
+ ***
+ *** NOTE.  JTOT =  20.  BLOCK  1, (ODD  EXCHANGE) SKIPPED BECAUSE  WEIGHT = 0.0
+ ***
+
+  *****************************  ANGULAR MOMENTUM JTOT  =  20   AND SYMMETRY BLOCK  =    2  ****************************
+ ***
+ *** NOTE.  JTOT =  20.  BLOCK  2, (ODD  EXCHANGE) SKIPPED BECAUSE  WEIGHT = 0.0
+ ***
+
+  *****************************  ANGULAR MOMENTUM JTOT  =  20   AND SYMMETRY BLOCK  =    3  ****************************
+
+  * * * * * * * * * *  STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FROM LEVEL I TO LEVEL F  * * * * * * * * * *
+                       FOR JTOT =  20 AND SYMMETRY BLOCK =   3 AT ENERGY(  1) =  800.0000     CM-1
+
+    F  I =      2              3
+    2       3.61561E-01    1.26053E-11
+    3       1.01954E-11    1.20019E-03
+
+  FOR JTOT =   20, SYMMETRY BLOCK =  3, ENERGY(  1) =  800.0000    : MAX DIAG & OFF-DIAG =  3.62E-01 &   1.26E-11
+
+  *****************************  ANGULAR MOMENTUM JTOT  =  20   AND SYMMETRY BLOCK  =    4  ****************************
+
+  * * * * * * * * * *  STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FROM LEVEL I TO LEVEL F  * * * * * * * * * *
+                       FOR JTOT =  20 AND SYMMETRY BLOCK =   4 AT ENERGY(  1) =  800.0000     CM-1
+
+    F  I =      1              2              3
+    1       1.64135E-01    3.87775E-06    1.98981E-15
+    2       1.05475E-05    6.32896E-01    1.15568E-10
+    3       4.37759E-15    9.34742E-11    2.30628E-03
+
+  FOR JTOT =   20, SYMMETRY BLOCK =  4, ENERGY(  1) =  800.0000    : MAX DIAG & OFF-DIAG =  6.33E-01 &   1.05E-05
+
+  *****************************  ANGULAR MOMENTUM JTOT  =  21   AND SYMMETRY BLOCK  =    1  ****************************
+ ***
+ *** NOTE.  JTOT =  21.  BLOCK  1, (ODD  EXCHANGE) SKIPPED BECAUSE  WEIGHT = 0.0
+ ***
+
+  *****************************  ANGULAR MOMENTUM JTOT  =  21   AND SYMMETRY BLOCK  =    2  ****************************
+ ***
+ *** NOTE.  JTOT =  21.  BLOCK  2, (ODD  EXCHANGE) SKIPPED BECAUSE  WEIGHT = 0.0
+ ***
+
+  *****************************  ANGULAR MOMENTUM JTOT  =  21   AND SYMMETRY BLOCK  =    3  ****************************
+
+  * * * * * * * * * *  STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FROM LEVEL I TO LEVEL F  * * * * * * * * * *
+                       FOR JTOT =  21 AND SYMMETRY BLOCK =   3 AT ENERGY(  1) =  800.0000     CM-1
+
+    F  I =      2              3
+    2       2.98766E-01    1.83751E-12
+    3       1.48622E-12    8.57015E-04
+
+  FOR JTOT =   21, SYMMETRY BLOCK =  3, ENERGY(  1) =  800.0000    : MAX DIAG & OFF-DIAG =  2.99E-01 &   1.84E-12
+
+  *****************************  ANGULAR MOMENTUM JTOT  =  21   AND SYMMETRY BLOCK  =    4  ****************************
+
+  * * * * * * * * * *  STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FROM LEVEL I TO LEVEL F  * * * * * * * * * *
+                       FOR JTOT =  21 AND SYMMETRY BLOCK =   4 AT ENERGY(  1) =  800.0000     CM-1
+
+    F  I =      2              3
+    2       5.10827E-01    1.81833E-13
+    3       1.47071E-13    4.52161E-04
+
+  FOR JTOT =   21, SYMMETRY BLOCK =  4, ENERGY(  1) =  800.0000    : MAX DIAG & OFF-DIAG =  5.11E-01 &   1.82E-13
+
+  *****************************  ANGULAR MOMENTUM JTOT  =  22   AND SYMMETRY BLOCK  =    1  ****************************
+ ***
+ *** NOTE.  JTOT =  22.  BLOCK  1, (ODD  EXCHANGE) SKIPPED BECAUSE  WEIGHT = 0.0
+ ***
+
+  *****************************  ANGULAR MOMENTUM JTOT  =  22   AND SYMMETRY BLOCK  =    2  ****************************
+ ***
+ *** NOTE.  JTOT =  22.  BLOCK  2, (ODD  EXCHANGE) SKIPPED BECAUSE  WEIGHT = 0.0
+ ***
+
+  *****************************  ANGULAR MOMENTUM JTOT  =  22   AND SYMMETRY BLOCK  =    3  ****************************
+
+  * * * * * * * * * *  STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FROM LEVEL I TO LEVEL F  * * * * * * * * * *
+                       FOR JTOT =  22 AND SYMMETRY BLOCK =   3 AT ENERGY(  1) =  800.0000     CM-1
+
+    F  I =      2              3
+    2       1.62220E-01    3.20757E-13
+    3       2.59436E-13    4.68845E-04
+
+  FOR JTOT =   22, SYMMETRY BLOCK =  3, ENERGY(  1) =  800.0000    : MAX DIAG & OFF-DIAG =  1.62E-01 &   3.21E-13
+
+  *****************************  ANGULAR MOMENTUM JTOT  =  22   AND SYMMETRY BLOCK  =    4  ****************************
+
+  * * * * * * * * * *  STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FROM LEVEL I TO LEVEL F  * * * * * * * * * *
+                       FOR JTOT =  22 AND SYMMETRY BLOCK =   4 AT ENERGY(  1) =  800.0000     CM-1
+
+    F  I =      1              2              3
+    1       7.92661E-01    3.75634E-06    5.17660E-16
+    2       1.02172E-05    3.12685E-01    2.84737E-12
+    3       1.13885E-15    2.30302E-12    8.56497E-04
+
+  FOR JTOT =   22, SYMMETRY BLOCK =  4, ENERGY(  1) =  800.0000    : MAX DIAG & OFF-DIAG =  7.93E-01 &   1.02E-05
+
+  *****************************  ANGULAR MOMENTUM JTOT  =  23   AND SYMMETRY BLOCK  =    1  ****************************
+ ***
+ *** NOTE.  JTOT =  23.  BLOCK  1, (ODD  EXCHANGE) SKIPPED BECAUSE  WEIGHT = 0.0
+ ***
+
+  *****************************  ANGULAR MOMENTUM JTOT  =  23   AND SYMMETRY BLOCK  =    2  ****************************
+ ***
+ *** NOTE.  JTOT =  23.  BLOCK  2, (ODD  EXCHANGE) SKIPPED BECAUSE  WEIGHT = 0.0
+ ***
+
+  *****************************  ANGULAR MOMENTUM JTOT  =  23   AND SYMMETRY BLOCK  =    3  ****************************
+
+  * * * * * * * * * *  STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FROM LEVEL I TO LEVEL F  * * * * * * * * * *
+                       FOR JTOT =  23 AND SYMMETRY BLOCK =   3 AT ENERGY(  1) =  800.0000     CM-1
+
+    F  I =      2              3
+    2       1.30579E-01    4.52368E-14
+    3       3.65886E-14    3.56548E-04
+
+  FOR JTOT =   23, SYMMETRY BLOCK =  3, ENERGY(  1) =  800.0000    : MAX DIAG & OFF-DIAG =  1.31E-01 &   4.52E-14
+
+  *****************************  ANGULAR MOMENTUM JTOT  =  23   AND SYMMETRY BLOCK  =    4  ****************************
+
+  * * * * * * * * * *  STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FROM LEVEL I TO LEVEL F  * * * * * * * * * *
+                       FOR JTOT =  23 AND SYMMETRY BLOCK =   4 AT ENERGY(  1) =  800.0000     CM-1
+
+    F  I =      2              3
+    2       2.31249E-01    4.06019E-15
+    3       3.28398E-15    1.94172E-04
+
+  FOR JTOT =   23, SYMMETRY BLOCK =  4, ENERGY(  1) =  800.0000    : MAX DIAG & OFF-DIAG =  2.31E-01 &   4.06E-15
+
+  *****************************  ANGULAR MOMENTUM JTOT  =  24   AND SYMMETRY BLOCK  =    1  ****************************
+ ***
+ *** NOTE.  JTOT =  24.  BLOCK  1, (ODD  EXCHANGE) SKIPPED BECAUSE  WEIGHT = 0.0
+ ***
+
+  *****************************  ANGULAR MOMENTUM JTOT  =  24   AND SYMMETRY BLOCK  =    2  ****************************
+ ***
+ *** NOTE.  JTOT =  24.  BLOCK  2, (ODD  EXCHANGE) SKIPPED BECAUSE  WEIGHT = 0.0
+ ***
+
+  *****************************  ANGULAR MOMENTUM JTOT  =  24   AND SYMMETRY BLOCK  =    3  ****************************
+
+  * * * * * * * * * *  STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FROM LEVEL I TO LEVEL F  * * * * * * * * * *
+                       FOR JTOT =  24 AND SYMMETRY BLOCK =   3 AT ENERGY(  1) =  800.0000     CM-1
+
+    F  I =      2              3
+    2       6.95709E-02    6.79958E-15
+    3       5.49966E-15    2.01529E-04
+
+  FOR JTOT =   24, SYMMETRY BLOCK =  3, ENERGY(  1) =  800.0000    : MAX DIAG & OFF-DIAG =  6.96E-02 &   6.80E-15
+
+  *****************************  ANGULAR MOMENTUM JTOT  =  24   AND SYMMETRY BLOCK  =    4  ****************************
+
+  * * * * * * * * * *  STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FROM LEVEL I TO LEVEL F  * * * * * * * * * *
+                       FOR JTOT =  24 AND SYMMETRY BLOCK =   4 AT ENERGY(  1) =  800.0000     CM-1
+
+    F  I =      1              2              3
+    1       8.03638E-01    3.52677E-06    3.01598E-16
+    2       9.59281E-06    1.35438E-01    6.70735E-14
+    3       6.63516E-16    5.42506E-14    3.54940E-04
+
+  FOR JTOT =   24, SYMMETRY BLOCK =  4, ENERGY(  1) =  800.0000    : MAX DIAG & OFF-DIAG =  8.04E-01 &   9.59E-06
+
+  *****************************  ANGULAR MOMENTUM JTOT  =  25   AND SYMMETRY BLOCK  =    1  ****************************
+ ***
+ *** NOTE.  JTOT =  25.  BLOCK  1, (ODD  EXCHANGE) SKIPPED BECAUSE  WEIGHT = 0.0
+ ***
+
+  *****************************  ANGULAR MOMENTUM JTOT  =  25   AND SYMMETRY BLOCK  =    2  ****************************
+ ***
+ *** NOTE.  JTOT =  25.  BLOCK  2, (ODD  EXCHANGE) SKIPPED BECAUSE  WEIGHT = 0.0
+ ***
+
+  *****************************  ANGULAR MOMENTUM JTOT  =  25   AND SYMMETRY BLOCK  =    3  ****************************
+
+  * * * * * * * * * *  STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FROM LEVEL I TO LEVEL F  * * * * * * * * * *
+                       FOR JTOT =  25 AND SYMMETRY BLOCK =   3 AT ENERGY(  1) =  800.0000     CM-1
+
+    F  I =      2              3
+    2       5.87699E-02    8.82720E-16
+    3       7.13965E-16    1.61583E-04
+
+  FOR JTOT =   25, SYMMETRY BLOCK =  3, ENERGY(  1) =  800.0000    : MAX DIAG & OFF-DIAG =  5.88E-02 &   8.83E-16
+
+  *****************************  ANGULAR MOMENTUM JTOT  =  25   AND SYMMETRY BLOCK  =    4  ****************************
+
+  * * * * * * * * * *  STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FROM LEVEL I TO LEVEL F  * * * * * * * * * *
+                       FOR JTOT =  25 AND SYMMETRY BLOCK =   4 AT ENERGY(  1) =  800.0000     CM-1
+
+    F  I =      2              3
+    2       1.01954E-01    9.13183E-17
+    3       7.38604E-17    8.99424E-05
+
+  FOR JTOT =   25, SYMMETRY BLOCK =  4, ENERGY(  1) =  800.0000    : MAX DIAG & OFF-DIAG =  1.02E-01 &   9.13E-17
+
+  *****************************  ANGULAR MOMENTUM JTOT  =  26   AND SYMMETRY BLOCK  =    1  ****************************
+ ***
+ *** NOTE.  JTOT =  26.  BLOCK  1, (ODD  EXCHANGE) SKIPPED BECAUSE  WEIGHT = 0.0
+ ***
+
+  *****************************  ANGULAR MOMENTUM JTOT  =  26   AND SYMMETRY BLOCK  =    2  ****************************
+ ***
+ *** NOTE.  JTOT =  26.  BLOCK  2, (ODD  EXCHANGE) SKIPPED BECAUSE  WEIGHT = 0.0
+ ***
+
+  *****************************  ANGULAR MOMENTUM JTOT  =  26   AND SYMMETRY BLOCK  =    3  ****************************
+
+  * * * * * * * * * *  STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FROM LEVEL I TO LEVEL F  * * * * * * * * * *
+                       FOR JTOT =  26 AND SYMMETRY BLOCK =   3 AT ENERGY(  1) =  800.0000     CM-1
+
+    F  I =      2              3
+    2       3.17406E-02    9.73165E-17
+    3       7.87119E-17    9.36006E-05
+
+  FOR JTOT =   26, SYMMETRY BLOCK =  3, ENERGY(  1) =  800.0000    : MAX DIAG & OFF-DIAG =  3.17E-02 &   9.73E-17
+
+  *****************************  ANGULAR MOMENTUM JTOT  =  26   AND SYMMETRY BLOCK  =    4  ****************************
+
+  * * * * * * * * * *  STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FROM LEVEL I TO LEVEL F  * * * * * * * * * *
+                       FOR JTOT =  26 AND SYMMETRY BLOCK =   4 AT ENERGY(  1) =  800.0000     CM-1
+
+    F  I =      1              2              3
+    1       5.32470E-01    1.37946E-06    2.06191E-16
+    2       3.75214E-06    6.04472E-02    1.43850E-15
+    3       4.53620E-16    1.16349E-15    1.60274E-04
+
+  FOR JTOT =   26, SYMMETRY BLOCK =  4, ENERGY(  1) =  800.0000    : MAX DIAG & OFF-DIAG =  5.32E-01 &   3.75E-06
+
+  *****************************  ANGULAR MOMENTUM JTOT  =  27   AND SYMMETRY BLOCK  =    1  ****************************
+ ***
+ *** NOTE.  JTOT =  27.  BLOCK  1, (ODD  EXCHANGE) SKIPPED BECAUSE  WEIGHT = 0.0
+ ***
+
+  *****************************  ANGULAR MOMENTUM JTOT  =  27   AND SYMMETRY BLOCK  =    2  ****************************
+ ***
+ *** NOTE.  JTOT =  27.  BLOCK  2, (ODD  EXCHANGE) SKIPPED BECAUSE  WEIGHT = 0.0
+ ***
+
+  *****************************  ANGULAR MOMENTUM JTOT  =  27   AND SYMMETRY BLOCK  =    3  ****************************
+
+  * * * * * * * * * *  STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FROM LEVEL I TO LEVEL F  * * * * * * * * * *
+                       FOR JTOT =  27 AND SYMMETRY BLOCK =   3 AT ENERGY(  1) =  800.0000     CM-1
+
+    F  I =      2              3
+    2       2.84843E-02    1.32981E-16
+    3       1.07558E-16    7.85614E-05
+
+  FOR JTOT =   27, SYMMETRY BLOCK =  3, ENERGY(  1) =  800.0000    : MAX DIAG & OFF-DIAG =  2.85E-02 &   1.33E-16
+
+  *****************************  ANGULAR MOMENTUM JTOT  =  27   AND SYMMETRY BLOCK  =    4  ****************************
+
+  * * * * * * * * * *  STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FROM LEVEL I TO LEVEL F  * * * * * * * * * *
+                       FOR JTOT =  27 AND SYMMETRY BLOCK =   4 AT ENERGY(  1) =  800.0000     CM-1
+
+    F  I =      2              3
+    2       4.79677E-02    5.00424E-17
+    3       4.04754E-17    4.44966E-05
+
+  FOR JTOT =   27, SYMMETRY BLOCK =  4, ENERGY(  1) =  800.0000    : MAX DIAG & OFF-DIAG =  4.80E-02 &   5.00E-17
+
+  *****************************  ANGULAR MOMENTUM JTOT  =  28   AND SYMMETRY BLOCK  =    1  ****************************
+ ***
+ *** NOTE.  JTOT =  28.  BLOCK  1, (ODD  EXCHANGE) SKIPPED BECAUSE  WEIGHT = 0.0
+ ***
+
+  *****************************  ANGULAR MOMENTUM JTOT  =  28   AND SYMMETRY BLOCK  =    2  ****************************
+ ***
+ *** NOTE.  JTOT =  28.  BLOCK  2, (ODD  EXCHANGE) SKIPPED BECAUSE  WEIGHT = 0.0
+ ***
+
+  *****************************  ANGULAR MOMENTUM JTOT  =  28   AND SYMMETRY BLOCK  =    3  ****************************
+
+  * * * * * * * * * *  STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FROM LEVEL I TO LEVEL F  * * * * * * * * * *
+                       FOR JTOT =  28 AND SYMMETRY BLOCK =   3 AT ENERGY(  1) =  800.0000     CM-1
+
+    F  I =      2              3
+    2       1.55595E-02    5.16206E-17
+    3       4.17520E-17    4.63229E-05
+
+  FOR JTOT =   28, SYMMETRY BLOCK =  3, ENERGY(  1) =  800.0000    : MAX DIAG & OFF-DIAG =  1.56E-02 &   5.16E-17
+
+  *****************************  ANGULAR MOMENTUM JTOT  =  28   AND SYMMETRY BLOCK  =    4  ****************************
+
+  * * * * * * * * * *  STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FROM LEVEL I TO LEVEL F  * * * * * * * * * *
+                       FOR JTOT =  28 AND SYMMETRY BLOCK =   4 AT ENERGY(  1) =  800.0000     CM-1
+
+    F  I =      1              2              3
+    1       3.00718E-01    3.41152E-07    2.05451E-16
+    2       9.27934E-07    2.90404E-02    5.25470E-16
+    3       4.51992E-16    4.25013E-16    7.76036E-05
+
+  FOR JTOT =   28, SYMMETRY BLOCK =  4, ENERGY(  1) =  800.0000    : MAX DIAG & OFF-DIAG =  3.01E-01 &   9.28E-07
+
+  *****************************  ANGULAR MOMENTUM JTOT  =  29   AND SYMMETRY BLOCK  =    1  ****************************
+ ***
+ *** NOTE.  JTOT =  29.  BLOCK  1, (ODD  EXCHANGE) SKIPPED BECAUSE  WEIGHT = 0.0
+ ***
+
+  *****************************  ANGULAR MOMENTUM JTOT  =  29   AND SYMMETRY BLOCK  =    2  ****************************
+ ***
+ *** NOTE.  JTOT =  29.  BLOCK  2, (ODD  EXCHANGE) SKIPPED BECAUSE  WEIGHT = 0.0
+ ***
+
+  *****************************  ANGULAR MOMENTUM JTOT  =  29   AND SYMMETRY BLOCK  =    3  ****************************
+
+  * * * * * * * * * *  STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FROM LEVEL I TO LEVEL F  * * * * * * * * * *
+                       FOR JTOT =  29 AND SYMMETRY BLOCK =   3 AT ENERGY(  1) =  800.0000     CM-1
+
+    F  I =      2              3
+    2       1.47121E-02    2.11188E-16
+    3       1.70814E-16    4.04759E-05
+
+  FOR JTOT =   29, SYMMETRY BLOCK =  3, ENERGY(  1) =  800.0000    : MAX DIAG & OFF-DIAG =  1.47E-02 &   2.11E-16
+
+  *****************************  ANGULAR MOMENTUM JTOT  =  29   AND SYMMETRY BLOCK  =    4  ****************************
+
+  * * * * * * * * * *  STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FROM LEVEL I TO LEVEL F  * * * * * * * * * *
+                       FOR JTOT =  29 AND SYMMETRY BLOCK =   4 AT ENERGY(  1) =  800.0000     CM-1
+
+    F  I =      2              3
+    2       2.42139E-02    8.24904E-17
+    3       6.67202E-17    2.32495E-05
+
+  FOR JTOT =   29, SYMMETRY BLOCK =  4, ENERGY(  1) =  800.0000    : MAX DIAG & OFF-DIAG =  2.42E-02 &   8.25E-17
+
+  *****************************  ANGULAR MOMENTUM JTOT  =  30   AND SYMMETRY BLOCK  =    1  ****************************
+ ***
+ *** NOTE.  JTOT =  30.  BLOCK  1, (ODD  EXCHANGE) SKIPPED BECAUSE  WEIGHT = 0.0
+ ***
+
+  *****************************  ANGULAR MOMENTUM JTOT  =  30   AND SYMMETRY BLOCK  =    2  ****************************
+ ***
+ *** NOTE.  JTOT =  30.  BLOCK  2, (ODD  EXCHANGE) SKIPPED BECAUSE  WEIGHT = 0.0
+ ***
+
+  *****************************  ANGULAR MOMENTUM JTOT  =  30   AND SYMMETRY BLOCK  =    3  ****************************
+
+  * * * * * * * * * *  STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FROM LEVEL I TO LEVEL F  * * * * * * * * * *
+                       FOR JTOT =  30 AND SYMMETRY BLOCK =   3 AT ENERGY(  1) =  800.0000     CM-1
+
+    F  I =      2              3
+    2       8.06778E-03    1.30347E-16
+    3       1.05427E-16    2.42160E-05
+
+  FOR JTOT =   30, SYMMETRY BLOCK =  3, ENERGY(  1) =  800.0000    : MAX DIAG & OFF-DIAG =  8.07E-03 &   1.30E-16
+
+  *****************************  ANGULAR MOMENTUM JTOT  =  30   AND SYMMETRY BLOCK  =    4  ****************************
+
+  * * * * * * * * * *  STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FROM LEVEL I TO LEVEL F  * * * * * * * * * *
+                       FOR JTOT =  30 AND SYMMETRY BLOCK =   4 AT ENERGY(  1) =  800.0000     CM-1
+
+    F  I =      1              2              3
+    1       1.60003E-01    7.17294E-08    1.21861E-16
+    2       1.95104E-07    1.48536E-02    7.50200E-17
+    3       2.68094E-16    6.06779E-17    3.98547E-05
+
+  FOR JTOT =   30, SYMMETRY BLOCK =  4, ENERGY(  1) =  800.0000    : MAX DIAG & OFF-DIAG =  1.60E-01 &   1.95E-07
+
+  *****************************  ANGULAR MOMENTUM JTOT  =  31   AND SYMMETRY BLOCK  =    1  ****************************
+ ***
+ *** NOTE.  JTOT =  31.  BLOCK  1, (ODD  EXCHANGE) SKIPPED BECAUSE  WEIGHT = 0.0
+ ***
+
+  *****************************  ANGULAR MOMENTUM JTOT  =  31   AND SYMMETRY BLOCK  =    2  ****************************
+ ***
+ *** NOTE.  JTOT =  31.  BLOCK  2, (ODD  EXCHANGE) SKIPPED BECAUSE  WEIGHT = 0.0
+ ***
+
+  *****************************  ANGULAR MOMENTUM JTOT  =  31   AND SYMMETRY BLOCK  =    3  ****************************
+
+  * * * * * * * * * *  STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FROM LEVEL I TO LEVEL F  * * * * * * * * * *
+                       FOR JTOT =  31 AND SYMMETRY BLOCK =   3 AT ENERGY(  1) =  800.0000     CM-1
+
+    F  I =      2              3
+    2       7.99409E-03    2.85850E-17
+    3       2.31202E-17    2.18736E-05
+
+  FOR JTOT =   31, SYMMETRY BLOCK =  3, ENERGY(  1) =  800.0000    : MAX DIAG & OFF-DIAG =  7.99E-03 &   2.86E-17
+
+  *****************************  ANGULAR MOMENTUM JTOT  =  31   AND SYMMETRY BLOCK  =    4  ****************************
+
+  * * * * * * * * * *  STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FROM LEVEL I TO LEVEL F  * * * * * * * * * *
+                       FOR JTOT =  31 AND SYMMETRY BLOCK =   4 AT ENERGY(  1) =  800.0000     CM-1
+
+    F  I =      2              3
+    2       1.29176E-02    4.56105E-17
+    3       3.68909E-17    1.26797E-05
+
+  FOR JTOT =   31, SYMMETRY BLOCK =  4, ENERGY(  1) =  800.0000    : MAX DIAG & OFF-DIAG =  1.29E-02 &   4.56E-17
+
+  *****************************  ANGULAR MOMENTUM JTOT  =  32   AND SYMMETRY BLOCK  =    1  ****************************
+ ***
+ *** NOTE.  JTOT =  32.  BLOCK  1, (ODD  EXCHANGE) SKIPPED BECAUSE  WEIGHT = 0.0
+ ***
+
+  *****************************  ANGULAR MOMENTUM JTOT  =  32   AND SYMMETRY BLOCK  =    2  ****************************
+ ***
+ *** NOTE.  JTOT =  32.  BLOCK  2, (ODD  EXCHANGE) SKIPPED BECAUSE  WEIGHT = 0.0
+ ***
+
+  *****************************  ANGULAR MOMENTUM JTOT  =  32   AND SYMMETRY BLOCK  =    3  ****************************
+
+  * * * * * * * * * *  STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FROM LEVEL I TO LEVEL F  * * * * * * * * * *
+                       FOR JTOT =  32 AND SYMMETRY BLOCK =   3 AT ENERGY(  1) =  800.0000     CM-1
+
+    F  I =      2              3
+    2       4.38838E-03    8.36886E-17
+    3       6.76893E-17    1.32584E-05
+
+  FOR JTOT =   32, SYMMETRY BLOCK =  3, ENERGY(  1) =  800.0000    : MAX DIAG & OFF-DIAG =  4.39E-03 &   8.37E-17
+
+  *****************************  ANGULAR MOMENTUM JTOT  =  32   AND SYMMETRY BLOCK  =    4  ****************************
+
+  * * * * * * * * * *  STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FROM LEVEL I TO LEVEL F  * * * * * * * * * *
+                       FOR JTOT =  32 AND SYMMETRY BLOCK =   4 AT ENERGY(  1) =  800.0000     CM-1
+
+    F  I =      1              2              3
+    1       8.62472E-02    1.54411E-08    2.35448E-17
+    2       4.19999E-08    7.99862E-03    1.72600E-16
+    3       5.17986E-17    1.39603E-16    2.15065E-05
+
+  FOR JTOT =   32, SYMMETRY BLOCK =  4, ENERGY(  1) =  800.0000    : MAX DIAG & OFF-DIAG =  8.62E-02 &   4.20E-08
+
+  *****************************  ANGULAR MOMENTUM JTOT  =  33   AND SYMMETRY BLOCK  =    1  ****************************
+ ***
+ *** NOTE.  JTOT =  33.  BLOCK  1, (ODD  EXCHANGE) SKIPPED BECAUSE  WEIGHT = 0.0
+ ***
+
+  *****************************  ANGULAR MOMENTUM JTOT  =  33   AND SYMMETRY BLOCK  =    2  ****************************
+ ***
+ *** NOTE.  JTOT =  33.  BLOCK  2, (ODD  EXCHANGE) SKIPPED BECAUSE  WEIGHT = 0.0
+ ***
+
+  *****************************  ANGULAR MOMENTUM JTOT  =  33   AND SYMMETRY BLOCK  =    3  ****************************
+
+  * * * * * * * * * *  STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FROM LEVEL I TO LEVEL F  * * * * * * * * * *
+                       FOR JTOT =  33 AND SYMMETRY BLOCK =   3 AT ENERGY(  1) =  800.0000     CM-1
+
+    F  I =      2              3
+    2       4.53871E-03    1.77990E-16
+    3       1.43962E-16    1.23564E-05
+
+  FOR JTOT =   33, SYMMETRY BLOCK =  3, ENERGY(  1) =  800.0000    : MAX DIAG & OFF-DIAG =  4.54E-03 &   1.78E-16
+
+  *****************************  ANGULAR MOMENTUM JTOT  =  33   AND SYMMETRY BLOCK  =    4  ****************************
+
+  * * * * * * * * * *  STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FROM LEVEL I TO LEVEL F  * * * * * * * * * *
+                       FOR JTOT =  33 AND SYMMETRY BLOCK =   4 AT ENERGY(  1) =  800.0000     CM-1
+
+    F  I =      2              3
+    2       7.21519E-03    7.04666E-17
+    3       5.69950E-17    7.24055E-06
+
+  FOR JTOT =   33, SYMMETRY BLOCK =  4, ENERGY(  1) =  800.0000    : MAX DIAG & OFF-DIAG =  7.22E-03 &   7.05E-17
+
+  *****************************  ANGULAR MOMENTUM JTOT  =  34   AND SYMMETRY BLOCK  =    1  ****************************
+ ***
+ *** NOTE.  JTOT =  34.  BLOCK  1, (ODD  EXCHANGE) SKIPPED BECAUSE  WEIGHT = 0.0
+ ***
+
+  *****************************  ANGULAR MOMENTUM JTOT  =  34   AND SYMMETRY BLOCK  =    2  ****************************
+ ***
+ *** NOTE.  JTOT =  34.  BLOCK  2, (ODD  EXCHANGE) SKIPPED BECAUSE  WEIGHT = 0.0
+ ***
+
+  *****************************  ANGULAR MOMENTUM JTOT  =  34   AND SYMMETRY BLOCK  =    3  ****************************
+
+  * * * * * * * * * *  STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FROM LEVEL I TO LEVEL F  * * * * * * * * * *
+                       FOR JTOT =  34 AND SYMMETRY BLOCK =   3 AT ENERGY(  1) =  800.0000     CM-1
+
+    F  I =      2              3
+    2       2.48116E-03    3.33828E-16
+    3       2.70008E-16    7.52970E-06
+
+  FOR JTOT =   34, SYMMETRY BLOCK =  3, ENERGY(  1) =  800.0000    : MAX DIAG & OFF-DIAG =  2.48E-03 &   3.34E-16
+
+  *****************************  ANGULAR MOMENTUM JTOT  =  34   AND SYMMETRY BLOCK  =    4  ****************************
+
+  * * * * * * * * * *  STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FROM LEVEL I TO LEVEL F  * * * * * * * * * *
+                       FOR JTOT =  34 AND SYMMETRY BLOCK =   4 AT ENERGY(  1) =  800.0000     CM-1
+
+    F  I =      1              2              3
+    1       4.85781E-02    3.50080E-09    5.93859E-17
+    2       9.52219E-09    4.48835E-03    2.85819E-16
+    3       1.30649E-16    2.31177E-16    1.20548E-05
+
+  FOR JTOT =   34, SYMMETRY BLOCK =  4, ENERGY(  1) =  800.0000    : MAX DIAG & OFF-DIAG =  4.86E-02 &   9.52E-09
+
+  *****************************  ANGULAR MOMENTUM JTOT  =  35   AND SYMMETRY BLOCK  =    1  ****************************
+ ***
+ *** NOTE.  JTOT =  35.  BLOCK  1, (ODD  EXCHANGE) SKIPPED BECAUSE  WEIGHT = 0.0
+ ***
+
+  *****************************  ANGULAR MOMENTUM JTOT  =  35   AND SYMMETRY BLOCK  =    2  ****************************
+ ***
+ *** NOTE.  JTOT =  35.  BLOCK  2, (ODD  EXCHANGE) SKIPPED BECAUSE  WEIGHT = 0.0
+ ***
+
+  *****************************  ANGULAR MOMENTUM JTOT  =  35   AND SYMMETRY BLOCK  =    3  ****************************
+
+  * * * * * * * * * *  STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FROM LEVEL I TO LEVEL F  * * * * * * * * * *
+                       FOR JTOT =  35 AND SYMMETRY BLOCK =   3 AT ENERGY(  1) =  800.0000     CM-1
+
+    F  I =      2              3
+    2       2.66697E-03    6.19356E-17
+    3       5.00950E-17    7.23250E-06
+
+  FOR JTOT =   35, SYMMETRY BLOCK =  3, ENERGY(  1) =  800.0000    : MAX DIAG & OFF-DIAG =  2.67E-03 &   6.19E-17
+
+  *****************************  ANGULAR MOMENTUM JTOT  =  35   AND SYMMETRY BLOCK  =    4  ****************************
+
+  * * * * * * * * * *  STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FROM LEVEL I TO LEVEL F  * * * * * * * * * *
+                       FOR JTOT =  35 AND SYMMETRY BLOCK =   4 AT ENERGY(  1) =  800.0000     CM-1
+
+    F  I =      2              3
+    2       4.19305E-03    3.14251E-16
+    3       2.54173E-16    4.26255E-06
+
+  FOR JTOT =   35, SYMMETRY BLOCK =  4, ENERGY(  1) =  800.0000    : MAX DIAG & OFF-DIAG =  4.19E-03 &   3.14E-16
+
+  *****************************  ANGULAR MOMENTUM JTOT  =  36   AND SYMMETRY BLOCK  =    1  ****************************
+ ***
+ *** NOTE.  JTOT =  36.  BLOCK  1, (ODD  EXCHANGE) SKIPPED BECAUSE  WEIGHT = 0.0
+ ***
+
+  *****************************  ANGULAR MOMENTUM JTOT  =  36   AND SYMMETRY BLOCK  =    2  ****************************
+ ***
+ *** NOTE.  JTOT =  36.  BLOCK  2, (ODD  EXCHANGE) SKIPPED BECAUSE  WEIGHT = 0.0
+ ***
+
+  *****************************  ANGULAR MOMENTUM JTOT  =  36   AND SYMMETRY BLOCK  =    3  ****************************
+
+  * * * * * * * * * *  STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FROM LEVEL I TO LEVEL F  * * * * * * * * * *
+                       FOR JTOT =  36 AND SYMMETRY BLOCK =   3 AT ENERGY(  1) =  800.0000     CM-1
+
+    F  I =      2              3
+    2       1.45058E-03    1.67107E-16
+    3       1.35160E-16    4.45340E-06
+
+  FOR JTOT =   36, SYMMETRY BLOCK =  3, ENERGY(  1) =  800.0000    : MAX DIAG & OFF-DIAG =  1.45E-03 &   1.67E-16
+
+  *****************************  ANGULAR MOMENTUM JTOT  =  36   AND SYMMETRY BLOCK  =    4  ****************************
+
+  * * * * * * * * * *  STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FROM LEVEL I TO LEVEL F  * * * * * * * * * *
+                       FOR JTOT =  36 AND SYMMETRY BLOCK =   4 AT ENERGY(  1) =  800.0000     CM-1
+
+    F  I =      1              2              3
+    1       2.85136E-02    8.19226E-10    9.81882E-17
+    2       2.22829E-09    2.61469E-03    1.27655E-16
+    3       2.16014E-16    1.03250E-16    7.03770E-06
+
+  FOR JTOT =   36, SYMMETRY BLOCK =  4, ENERGY(  1) =  800.0000    : MAX DIAG & OFF-DIAG =  2.85E-02 &   2.23E-09
+
+  *****************************  ANGULAR MOMENTUM JTOT  =  37   AND SYMMETRY BLOCK  =    1  ****************************
+ ***
+ *** NOTE.  JTOT =  37.  BLOCK  1, (ODD  EXCHANGE) SKIPPED BECAUSE  WEIGHT = 0.0
+ ***
+
+  *****************************  ANGULAR MOMENTUM JTOT  =  37   AND SYMMETRY BLOCK  =    2  ****************************
+ ***
+ *** NOTE.  JTOT =  37.  BLOCK  2, (ODD  EXCHANGE) SKIPPED BECAUSE  WEIGHT = 0.0
+ ***
+
+  *****************************  ANGULAR MOMENTUM JTOT  =  37   AND SYMMETRY BLOCK  =    3  ****************************
+
+  * * * * * * * * * *  STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FROM LEVEL I TO LEVEL F  * * * * * * * * * *
+                       FOR JTOT =  37 AND SYMMETRY BLOCK =   3 AT ENERGY(  1) =  800.0000     CM-1
+
+    F  I =      2              3
+    2       1.62207E-03    1.60012E-17
+    3       1.29422E-17    4.37039E-06
+
+  FOR JTOT =   37, SYMMETRY BLOCK =  3, ENERGY(  1) =  800.0000    : MAX DIAG & OFF-DIAG =  1.62E-03 &   1.60E-17
+
+  *****************************  ANGULAR MOMENTUM JTOT  =  37   AND SYMMETRY BLOCK  =    4  ****************************
+
+  * * * * * * * * * *  STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FROM LEVEL I TO LEVEL F  * * * * * * * * * *
+                       FOR JTOT =  37 AND SYMMETRY BLOCK =   4 AT ENERGY(  1) =  800.0000     CM-1
+
+    F  I =      2              3
+    2       2.51427E-03    4.76316E-16
+    3       3.85256E-16    2.59006E-06
+
+  FOR JTOT =   37, SYMMETRY BLOCK =  4, ENERGY(  1) =  800.0000    : MAX DIAG & OFF-DIAG =  2.51E-03 &   4.76E-16
+
+  *****************************  ANGULAR MOMENTUM JTOT  =  38   AND SYMMETRY BLOCK  =    1  ****************************
+ ***
+ *** NOTE.  JTOT =  38.  BLOCK  1, (ODD  EXCHANGE) SKIPPED BECAUSE  WEIGHT = 0.0
+ ***
+
+  *****************************  ANGULAR MOMENTUM JTOT  =  38   AND SYMMETRY BLOCK  =    2  ****************************
+ ***
+ *** NOTE.  JTOT =  38.  BLOCK  2, (ODD  EXCHANGE) SKIPPED BECAUSE  WEIGHT = 0.0
+ ***
+
+  *****************************  ANGULAR MOMENTUM JTOT  =  38   AND SYMMETRY BLOCK  =    3  ****************************
+
+  * * * * * * * * * *  STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FROM LEVEL I TO LEVEL F  * * * * * * * * * *
+                       FOR JTOT =  38 AND SYMMETRY BLOCK =   3 AT ENERGY(  1) =  800.0000     CM-1
+
+    F  I =      2              3
+    2       8.76675E-04    2.43372E-16
+    3       1.96845E-16    2.69917E-06
+
+  FOR JTOT =   38, SYMMETRY BLOCK =  3, ENERGY(  1) =  800.0000    : MAX DIAG & OFF-DIAG =  8.77E-04 &   2.43E-16
+
+  *****************************  ANGULAR MOMENTUM JTOT  =  38   AND SYMMETRY BLOCK  =    4  ****************************
+
+  * * * * * * * * * *  STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FROM LEVEL I TO LEVEL F  * * * * * * * * * *
+                       FOR JTOT =  38 AND SYMMETRY BLOCK =   4 AT ENERGY(  1) =  800.0000     CM-1
+
+    F  I =      1              2              3
+    1       1.72948E-02    1.95225E-10    5.98140E-17
+    2       5.31013E-10    1.56892E-03    6.86719E-17
+    3       1.31591E-16    5.55435E-17    4.23847E-06
+
+  FOR JTOT =   38, SYMMETRY BLOCK =  4, ENERGY(  1) =  800.0000    : MAX DIAG & OFF-DIAG =  1.73E-02 &   5.31E-10
+
+  *****************************  ANGULAR MOMENTUM JTOT  =  39   AND SYMMETRY BLOCK  =    1  ****************************
+ ***
+ *** NOTE.  JTOT =  39.  BLOCK  1, (ODD  EXCHANGE) SKIPPED BECAUSE  WEIGHT = 0.0
+ ***
+
+
+
+  CALCULATION TERMINATED BY CONVERGENCE OF TOTAL CROSS SECTIONS.
+
+  DIAGONAL AND OFF-DIAGONAL TOLERANCES WERE   0.10000  0.01000   NCAC =  4
+
+  ======================== p-H2 + p-H2: potential of Zarur and Rabitz; coefficients from VSTAR =========================
+
+
+  STATE-TO-STATE INTEGRAL CROSS SECTIONS IN ANGSTROM**2 BETWEEN    3 LEVELS WITH THRESHOLD ENERGIES (IN CM-1):
+
+    1     0.000000000000
+    2   364.800000000000
+    3   729.600000000000
+
+   ENERGY (CM-1)    JTOTL  JSTEP  JTOTU      F    I         SIG(F,I)
+   800.0000000          0      1     38      1    1          26.9567      
+   800.0000000          0      1     38      2    1         0.113925      
+   800.0000000          0      1     38      3    1         4.925227E-04  
+
+   800.0000000          0      1     38      1    2         4.188421E-02  
+   800.0000000          0      1     38      2    2          56.3147      
+   800.0000000          0      1     38      3    2         1.964940E-02  
+
+   800.0000000          0      1     38      1    3         2.238740E-04  
+   800.0000000          0      1     38      2    3         2.429380E-02  
+   800.0000000          0      1     38      3    3          44.8967      
+
+  TOTAL INELASTIC INTEGRAL CROSS SECTIONS IN ANGSTROM**2 FROM LEVEL
+   1.14418E-01                                                 1
+   6.15336E-02                                                 2
+   2.45177E-02                                                 3
+
+
+
+  ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
+ |                                                                            |
+ |                Non-reactive quantum scattering calculations                |
+ |                     on atomic and molecular collisions                     |
+ |                                                                            |
+ |              Copyright (C) 2020 J. M. Hutson & C. R. Le Sueur              |
+ |                                                                            |
+ |                               Version 2020.0                               |
+ |                                                                            |
+ |                    This run used       1.17 cpu secs and                   |
+ |               1767 of the allocated   1000000 words of storage             |
  |                                                                            |
   ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---

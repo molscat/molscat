@@ -1,5 +1,5 @@
       module physical_constants
-C  Copyright (C) 2019 J. M. Hutson & C. R. Le Sueur
+C  Copyright (C) 2020 J. M. Hutson & C. R. Le Sueur
 C  Distributed under the GNU General Public License, version 3
       implicit none
 
@@ -21,7 +21,7 @@ c  These are the CODATA 2014 recommended values, inserted 13-10-16
      &hbar_in_SI                       = 1.054571800d-34,
      &speed_of_light_in_SI             = 2.99792458d8,
      &pi_value                         = 3.141592653589793d0,
-     &amu_in_SI                        = 1.660539040d-27,
+     &atomic_mass_constant             = 1.660539040d-27,
      &cal_in_SI                        = 4.184d0,
      &Joule_in_inv_cm                  = 5.034116651d22,
      &Avogadro_number                  = 6.022140857d23

@@ -27,7 +27,7 @@
 
  &POTL
     MXLAM  = 7,
-    LAMBDA = 0,1,2,3,4,5,6,
+    LAMBDA = 0, 1, 2, 3, 4, 5, 6,
     NTERM  = 7*-1,
  /
 

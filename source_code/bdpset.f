@@ -1,6 +1,6 @@
       SUBROUTINE BDPSET(IPRSEG,RBSEG,RESEG,DRSEG,
      1                  STPSEG,TOLSEG,CAYSEG,POWSEG,ICHNGE)
-C  Copyright (C) 2019 J. M. Hutson & C. R. Le Sueur
+C  Copyright (C) 2020 J. M. Hutson & C. R. Le Sueur
 C  Distributed under the GNU General Public License, version 3
 
 C  CR Le Sueur Dec 2018
@@ -37,6 +37,7 @@ C  COMMON BLOCK FOR CONTROL OF PROPAGATION SEGMENTS
       RESEG(2)=RMATCH
       TOLSEG(2)=TOLHIL
       DRSEG(2)=DRL
+      IF (DRL.EQ.unset) DRSEG(2)=DRS
       STPSEG(2)=STEPL
       CAYSEG(2)=CAYL
       POWSEG(2)=POWRL

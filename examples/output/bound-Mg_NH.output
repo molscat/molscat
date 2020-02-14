@@ -2,11 +2,11 @@
  |                                                                            |
  |          Bound states of interacting pairs of atoms and molecules          |
  |                                                                            |
- |              Copyright (C) 2019 J. M. Hutson & C. R. Le Sueur              |
+ |              Copyright (C) 2020 J. M. Hutson & C. R. Le Sueur              |
  |                                                                            |
- |                               Version 2019.1                               |
+ |                               Version 2020.0                               |
  |                                                                            |
- |                       Run on 30 May 2019   at 11:52:24                     |
+ |                       Run on 14 Feb 2020   at 20:28:59                     |
  |                                                                            |
   -- BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND --
 
@@ -15,9 +15,11 @@
   the terms of the GNU General Public License, version 3, as published by
   the Free Software Foundation.
 
-  Publications resulting from the use of this program should refer to
-  J. M. Hutson & C. R. Le Sueur, BOUND computer code 2019.1              
-  or to the published paper in Computer Physics Communications when available.
+  Publications resulting from the use of this program should cite both
+  the version of the program used:
+  J. M. Hutson & C. R. Le Sueur, BOUND computer code 2020.0              
+  and the published paper:
+  J. M. Hutson & C. R. Le Sueur, Comput. Phys. Commun. 241, pp 1-8 (2019).
 
 
   USING CODATA 2018 RECOMMENDED VALUES OF FUNDAMENTAL PHYSICAL CONSTANTS
@@ -32,7 +34,7 @@
 
   ======================================================================================================================
 
-  BASIS SETS USE DIATOM SPIN = 1
+  BASIS SETS USE DIATOM SPIN =  1
                         NMAX =  2
                         LMAX =  8
 
@@ -178,10 +180,10 @@
   SET     3:          380.0000000    
   SET     4:          385.0000000    
 
-  INPUT ENERGY VALUES CONVERTED FROM MHZ
-  TO INTERNAL WORKING UNITS OF CM-1 DUE TO INTEGER INPUT =   3
+  INPUT ENERGIES CONVERTED FROM MHZ
+  TO INTERNAL WORKING UNITS OF CM-1 DUE TO INTEGER INPUT EUNITS =   3
 
-  PROGRAM WILL SEEK EIGENVALUES WITH GENERALISED NODE COUNTS FROM    0 TO  99999
+  PROGRAM WILL SEEK STATES WITH NODE COUNTS FROM    0 TO  99999
   LYING IN ENERGY RANGE  -100.00     TO -1.00000E-02 MHZ     
 
   THESE ENERGY VALUES ARE RELATIVE TO THE REFERENCE ENERGY SPECIFIED BY MONOMER QUANTUM NUMBERS   0   1  -1
@@ -311,8 +313,7 @@
 
   EFV SET     1:  MAGNETIC Z FIELD =   370.0000000     GAUSS
   SCRATCH FILE OPENED ON UNIT           30
-
-  REFERENCE ENERGY EREF =  -1267.856191     MHZ = -4.2291130299E-02 CM-1
+  REFERENCE ENERGY IS                          -4.2291130299E-02 CM-1    =  -1267.856191     MHZ     
 
   NODE COUNT IMPLIES   169 STATES BELOW MINIMUM ENERGY =  -100.0000000     MHZ   
   NODE COUNT IMPLIES   170 STATES BELOW MAXIMUM ENERGY = -1.0000000000E-02 MHZ   
@@ -321,9 +322,9 @@
 
   SEARCHING FOR BOUND STATE NUMBER   170
 
-  CONVERGED ON STATE NUMBER   170 AT                              ENERGY =  -42.82351090     MHZ   
+  CONVERGED ON STATE NUMBER   170 AT                              ENERGY =  -42.82350672     MHZ   
 
-  SMALLEST EIGENVALUE OF MATCHING MATRIX IS NUMBER  7 =  3.32747E-11
+  SMALLEST EIGENVALUE OF MATCHING MATRIX IS NUMBER  7 =  2.94520E-11
 
   WITH PRINCIPAL EIGENVECTOR COMPONENTS
   CHAN     VEC    VEC**2   L   QUANTUM NUMBERS
@@ -337,8 +338,7 @@
 
   EFV SET     2:  MAGNETIC Z FIELD =   375.0000000     GAUSS
   SCRATCH FILE OPENED ON UNIT           30
-
-  REFERENCE ENERGY EREF =  -1281.867009     MHZ = -4.2758480887E-02 CM-1
+  REFERENCE ENERGY IS                          -4.2758480887E-02 CM-1    =  -1281.867009     MHZ     
 
   NODE COUNT IMPLIES   169 STATES BELOW MINIMUM ENERGY =  -100.0000000     MHZ   
   NODE COUNT IMPLIES   170 STATES BELOW MAXIMUM ENERGY = -1.0000000000E-02 MHZ   
@@ -347,9 +347,9 @@
 
   SEARCHING FOR BOUND STATE NUMBER   170
 
-  CONVERGED ON STATE NUMBER   170 AT                              ENERGY =  -30.52255621     MHZ   
+  CONVERGED ON STATE NUMBER   170 AT                              ENERGY =  -30.52255807     MHZ   
 
-  SMALLEST EIGENVALUE OF MATCHING MATRIX IS NUMBER  7 =  1.55175E-10
+  SMALLEST EIGENVALUE OF MATCHING MATRIX IS NUMBER  7 =  1.56263E-10
 
   WITH PRINCIPAL EIGENVECTOR COMPONENTS
   CHAN     VEC    VEC**2   L   QUANTUM NUMBERS
@@ -363,8 +363,7 @@
 
   EFV SET     3:  MAGNETIC Z FIELD =   380.0000000     GAUSS
   SCRATCH FILE OPENED ON UNIT           30
-
-  REFERENCE ENERGY EREF =  -1295.877827     MHZ = -4.3225831474E-02 CM-1
+  REFERENCE ENERGY IS                          -4.3225831474E-02 CM-1    =  -1295.877827     MHZ     
 
   NODE COUNT IMPLIES   169 STATES BELOW MINIMUM ENERGY =  -100.0000000     MHZ   
   NODE COUNT IMPLIES   170 STATES BELOW MAXIMUM ENERGY = -1.0000000000E-02 MHZ   
@@ -373,9 +372,9 @@
 
   SEARCHING FOR BOUND STATE NUMBER   170
 
-  CONVERGED ON STATE NUMBER   170 AT                              ENERGY =  -18.13769920     MHZ   
+  CONVERGED ON STATE NUMBER   170 AT                              ENERGY =  -18.13769930     MHZ   
 
-  SMALLEST EIGENVALUE OF MATCHING MATRIX IS NUMBER  7 =  8.60229E-09
+  SMALLEST EIGENVALUE OF MATCHING MATRIX IS NUMBER  7 =  8.59970E-09
 
   WITH PRINCIPAL EIGENVECTOR COMPONENTS
   CHAN     VEC    VEC**2   L   QUANTUM NUMBERS
@@ -389,8 +388,7 @@
 
   EFV SET     4:  MAGNETIC Z FIELD =   385.0000000     GAUSS
   SCRATCH FILE OPENED ON UNIT           30
-
-  REFERENCE ENERGY EREF =  -1309.888645     MHZ = -4.3693182063E-02 CM-1
+  REFERENCE ENERGY IS                          -4.3693182063E-02 CM-1    =  -1309.888645     MHZ     
 
   NODE COUNT IMPLIES   169 STATES BELOW MINIMUM ENERGY =  -100.0000000     MHZ   
   NODE COUNT IMPLIES   170 STATES BELOW MAXIMUM ENERGY = -1.0000000000E-02 MHZ   
@@ -399,9 +397,9 @@
 
   SEARCHING FOR BOUND STATE NUMBER   170
 
-  CONVERGED ON STATE NUMBER   170 AT                              ENERGY =  -5.660812971     MHZ   
+  CONVERGED ON STATE NUMBER   170 AT                              ENERGY =  -5.660812292     MHZ   
 
-  SMALLEST EIGENVALUE OF MATCHING MATRIX IS NUMBER  7 =  1.23224E-09
+  SMALLEST EIGENVALUE OF MATCHING MATRIX IS NUMBER  7 =  1.23297E-09
 
   WITH PRINCIPAL EIGENVECTOR COMPONENTS
   CHAN     VEC    VEC**2   L   QUANTUM NUMBERS
@@ -417,11 +415,11 @@
  |                                                                            |
  |          Bound states of interacting pairs of atoms and molecules          |
  |                                                                            |
- |              Copyright (C) 2019 J. M. Hutson & C. R. Le Sueur              |
+ |              Copyright (C) 2020 J. M. Hutson & C. R. Le Sueur              |
  |                                                                            |
- |                               Version 2019.1                               |
+ |                               Version 2020.0                               |
  |                                                                            |
- |                    This run used      42.73 cpu secs and                   |
+ |                    This run used      35.03 cpu secs and                   |
  |             207873 of the allocated   1000000 words of storage             |
  |                                                                            |
   -- BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND --

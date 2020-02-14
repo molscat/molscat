@@ -1,5 +1,5 @@
       SUBROUTINE IOSBIN(NVC,ITYPX,ATAU,MX,IASYMU,IPHIFX,IOSNG,IPRINT)
-C  Copyright (C) 2019 J. M. Hutson & C. R. Le Sueur
+C  Copyright (C) 2020 J. M. Hutson & C. R. Le Sueur
 C  Distributed under the GNU General Public License, version 3
       USE sizes, ONLY: MXELVL,MXJLVL
       USE angles
@@ -1139,7 +1139,7 @@ C
 
       RETURN
 C============================================================= END OF IOSB0
-      ENTRY IOSB2(WVEC,VL,IVIX,IP,NVC,NPOTL,MXLAM,LAM,VLI,NGPT,MXXXXL)
+      ENTRY IOSB2(WVEC,VL,IVIX,IP,NVC,NHAM,MXLAM,LAM,VLI,NGPT,MXXXXL)
 C
 C  CHECK FOR CONSISTENT IVLFL
       IF ((ITYP.EQ.2 .AND. IVLFL.LE.0) .OR.
@@ -1160,23 +1160,23 @@ C  SET COSANG, FACTOR FOR MXLAM.LE.0 CASE
         FACTOR=1.D0
 C
 C>>SG --------------          NEW CODE      --------------------->>
-C>>SG     CHECK FOR NPOTL=1 (LVRTP) OR NPOTL=MXLAM (EXPANDED)
+C>>SG     CHECK FOR NHAM=1 (LVRTP) OR NHAM=MXLAM (EXPANDED)
 C>>SG     LATTER CASE UNCHANGED FROM VERSION 10 CODE
-C>>SG JAN 94: *ALL* ITYPE=2 NOW HAVE IVLFL=1; NPOTL.LE.MXLAM
+C>>SG JAN 94: *ALL* ITYPE=2 NOW HAVE IVLFL=1; NHAM.LE.MXLAM
       ELSEIF (IGOTP.EQ.6200) THEN
 
 C  ZERO IVIX,VL STORAGE
-        ITOP=NVC*(NVC+1)*NPOTL/2
+        ITOP=NVC*(NVC+1)*NHAM/2
         DO 6202 IX=1,ITOP
           IVIX(IX)=0
  6202     VL(IX)=0.D0
         IF (LVRTP) THEN
 C
 C  UNEXPANDED 'LVRTP' POTENTIAL (BELOW HAS A LOT OF 'DEBUGGING' TEST)
-          IF (NPOTL.NE.1) THEN
-            WRITE(6,670) NPOTL,MXLAM
+          IF (NHAM.NE.1) THEN
+            WRITE(6,670) NHAM,MXLAM
   670       FORMAT(/'  IOSB2 (FEB 92) -- ERROR.  LVRTP INCONSISTENT ',
-     1             'WITH NPOTL, MXLAM',2I6)
+     1             'WITH NHAM, MXLAM',2I6)
             STOP
           ENDIF
           DO 6203 L=1,MXLAM
@@ -1198,8 +1198,8 @@ C  N.B. WE SHOULD HAVE LLL=0 AND IL=1    *** DEBUGGING ONLY ***
      1                  (NV.EQ.IVP .AND. NVP.EQ.IV))) GOTO 6204
 
 C  IF WE REACH BELOW, THIS ROW/COL CORRESPONDS TO CURRENT 'SYMMETRY'
-              IX=(IVVP-1)*NPOTL+LLL+1
-C  SINCE NPOTL=1 AND LLL=0, SHOULD HAVE IX=IVVP  *** DEBUGGING ***
+              IX=(IVVP-1)*NHAM+LLL+1
+C  SINCE NHAM=1 AND LLL=0, SHOULD HAVE IX=IVVP  *** DEBUGGING ***
               IF (IX.NE.IVVP) WRITE(6,673) IX,IVVP
   673         FORMAT(/'  IOSB2 (FEB 92) -- ERROR.  IX.NE.IVVP FOR ',
      1               'VL,IVIX',2I6)
@@ -1216,9 +1216,9 @@ C
 C  CODE BELOW FOR POTENTIAL EXPANDED IN LEGENDRE POLY'S
 C  MODIFIED TO USE IV() INDEXING
 C
-          IF (MXXXXL.GT.NPOTL) THEN
-            WRITE(6,*) '  IOSB2. MXXXXL.GT.NPOTL NOT ALLOWED',
-     1                 MXXXXL,NPOTL
+          IF (MXXXXL.GT.NHAM) THEN
+            WRITE(6,*) '  IOSB2. MXXXXL.GT.NHAM NOT ALLOWED',
+     1                 MXXXXL,NHAM
             STOP
           ENDIF
           DO 6251 L=1,MXLAM
@@ -1234,7 +1234,7 @@ C  DEBUGGING ...
               IVVP=IVVP+1
               IF ((LEVV(IV).EQ.LV1 .AND. LEVV(IVP).EQ.LV2) .OR.
      1            (LEVV(IV).EQ.LV2 .AND. LEVV(IVP).EQ.LV1)) THEN
-                IX=(IVVP-1)*NPOTL+IL
+                IX=(IVVP-1)*NHAM+IL
                 IVIX(IX)=L
                 VL(IX)=VLI(IP,IL)
               ENDIF
@@ -1301,7 +1301,7 @@ C  FOR MXLAM.LE.0 CASE, SET COSANG, FACTOR (SQRT(4*PI) FOR ITYPE=5,6)
       ENDIF
 C
 C  COMMON RETURN PT -- ALLOW FOR (DEBUGGING) OUTPUT OF COUPLING MATRIX
-      IF (LDEBUG) CALL CPLOUT(IVIX,VL,NVC,NPOTL)
+      IF (LDEBUG) CALL CPLOUT(IVIX,VL,NVC,NHAM)
       RETURN
 C
 C========================================================= END OF IOSB2

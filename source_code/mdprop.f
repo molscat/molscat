@@ -1,9 +1,9 @@
-      SUBROUTINE MDPROP(N,MXLAM,NPOTL,
+      SUBROUTINE MDPROP(N,MXLAM,NHAM,
      1                  Y,U,VL,IV,EINT,CENT,P,
      2                  Y14,Y23,DIAG,W,W2,W3,
      3                  RSTART,RSTOP,NSTEP,DR,NODES,IREC,WAVE,
      4                  ERED,EP2RU,CM2RU,RSCALE,IPRINT)
-C  Copyright (C) 2019 J. M. Hutson & C. R. Le Sueur
+C  Copyright (C) 2020 J. M. Hutson & C. R. Le Sueur
 C  Distributed under the GNU General Public License, version 3
 C
 C  ROUTINE ORIGINALLY BY DE Manolopoulos, 1986.
@@ -78,7 +78,7 @@ C
   130     U(I,I)=U(I,I)-ESHIFT
       ELSE
         CALL WAVMAT(U,N,R,P,VL,IV,ERED,EINT,CENT,EP2RU,CM2RU,
-     1              RSCALE,DIAG,MXLAM,NPOTL,IPRINT)
+     1              RSCALE,DIAG,MXLAM,NHAM,IPRINT)
         IF (IWRITE) WRITE(ISCRU) R,U
       ENDIF
 
@@ -107,7 +107,7 @@ C  HANDLED IN THE REFERENCE POTENTIAL AND DO NOT APPEAR IN 2HQ(C)
 C
           R=R+H
           CALL WAVMAT(U,N,R,P,VL,IV,ERED,EINT,CENT,EP2RU,CM2RU,
-     1                RSCALE,DIAG,MXLAM,NPOTL,IPRINT)
+     1                RSCALE,DIAG,MXLAM,NHAM,IPRINT)
 C  U HERE IS U(C)+W_{REF}
           DO 200 J=1,N
           DO 200 I=J,N
@@ -189,7 +189,7 @@ C  CONSTRUCTION OF SCATTERING WAVEFUNCTION IS SLIGHLY DIFFERENT...
         ELSE
           R=R+H
           CALL WAVMAT(U,N,R,P,VL,IV,ERED,EINT,CENT,EP2RU,CM2RU,
-     1                RSCALE,DIAG,MXLAM,NPOTL,IPRINT)
+     1                RSCALE,DIAG,MXLAM,NHAM,IPRINT)
           DO 380 J=1,N
           DO 380 I=J,N
             U(I,J)=D2*U(I,J)

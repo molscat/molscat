@@ -3,11 +3,11 @@
  |                Non-reactive quantum scattering calculations                |
  |                     on atomic and molecular collisions                     |
  |                                                                            |
- |              Copyright (C) 2019 J. M. Hutson & C. R. Le Sueur              |
+ |              Copyright (C) 2020 J. M. Hutson & C. R. Le Sueur              |
  |                                                                            |
- |                               Version 2019.1                               |
+ |                               Version 2020.0                               |
  |                                                                            |
- |                       Run on 30 May 2019   at 11:34:29                     |
+ |                       Run on 14 Feb 2020   at 20:13:05                     |
  |                                                                            |
   ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
 
@@ -16,9 +16,11 @@
   the terms of the GNU General Public License, version 3, as published by
   the Free Software Foundation.
 
-  Publications resulting from the use of this program should refer to
-  J. M. Hutson & C. R. Le Sueur, MOLSCAT computer code 2019.1              
-  or to the published paper in Computer Physics Communications when available.
+  Publications resulting from the use of this program should cite both
+  the version of the program used:
+  J. M. Hutson & C. R. Le Sueur, MOLSCAT computer code 2020.0              
+  and the published paper:
+  J. M. Hutson & C. R. Le Sueur, Comput. Phys. Commun. 241, pp 9-18 (2019).
 
 
   USING CODATA 2018 RECOMMENDED VALUES OF FUNDAMENTAL PHYSICAL CONSTANTS
@@ -149,14 +151,14 @@
 
   ======================================================================================================================
 
-  INPUT ENERGY VALUES ASSUMED TO BE IN UNITS OF CM-1 BY DEFAULT.
+  INPUT ENERGIES IN UNITS OF CM-1 BY DEFAULT.
 
-  CONTROL DATA FOR TOTAL ENERGIES.  CALCULATIONS WILL BE PERFORMED FOR   10 VALUES
-       ENERGY NO.    1 =   16.930000000     CM-1
-       ENERGY NO.    2 =   16.930100000     CM-1
-       ENERGY NO.    3 =   16.930200000     CM-1
-       ENERGY NO.    4 =   16.930300000     CM-1
-       ENERGY NO.    5 =   16.930400000     CM-1
+  CALCULATIONS WILL BE PERFORMED FOR   10 ENERGIES
+  ENERGY    1           =   16.93000000     CM-1
+  ENERGY    2           =   16.93010000     CM-1
+  ENERGY    3           =   16.93020000     CM-1
+  ENERGY    4           =   16.93030000     CM-1
+  ENERGY    5           =   16.93040000     CM-1
 
   RESONANCE SEARCH OPTION. ONLY FIRST 5 ENERGIES GIVEN. OTHERS WILL BE DETERMINED INTERACTIVELY.
 
@@ -168,7 +170,7 @@
 
   CALCULATION(S) WILL BE FOR SYMMETRY BLOCK   2
 
-  COMPUTED K-MATRICES WILL BE SAVED ON UNIT 12
+  COMPUTED K MATRICES WILL BE SAVED ON UNIT 12
 
   EIGENPHASE SUMMARY WILL BE WRITTEN TO UNIT  4
 
@@ -228,34 +230,36 @@
 
   ESTIMATE PARAMETERS OF DISTANT RESONANCE USING 5 ENERGIES
 
-  ENERGY(1) =   16.930000000000     CM-1 EPSUM/PI = 10.242726692024334
+  ENERGY(1) =   16.930000000000     CM-1 EPSUM/PI = 10.242726692024299
   ENERGY(2) =   16.930100000000     CM-1 EPSUM/PI = 10.242712521354910
-  ENERGY(3) =   16.930200000000     CM-1 EPSUM/PI = 10.242698361212895
-  ENERGY(4) =   16.930300000000     CM-1 EPSUM/PI = 10.242684211838204
-  ENERGY(5) =   16.930400000000     CM-1 EPSUM/PI = 10.242670073478127
+  ENERGY(3) =   16.930200000000     CM-1 EPSUM/PI = 10.242698361212922
+  ENERGY(4) =   16.930300000000     CM-1 EPSUM/PI = 10.242684211838228
+  ENERGY(5) =   16.930400000000     CM-1 EPSUM/PI = 10.242670073478129
 
   ESTIMATED EIGENPHASE CURVATURES ARE   1.05274       1.07673       1.10146    
 
-  ESTIMATE RESONANCE ENERGY =   16.943462649835     CM-1       WIDTH = 0.2512E-05 CM-1    
+  ESTIMATE RESONANCE ENERGY =   16.943462880043     CM-1       WIDTH = 0.2512E-05 CM-1    
 
   - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
-  CONTROL DATA FOR TOTAL ENERGIES.  CALCULATIONS WILL BE PERFORMED FOR    5 VALUES
-       ENERGY NO.    6 =   16.942932144     CM-1
-       ENERGY NO.    7 =   16.943197397     CM-1
-       ENERGY NO.    8 =   16.943462650     CM-1
-       ENERGY NO.    9 =   16.943727903     CM-1
-       ENERGY NO.   10 =   16.943993156     CM-1
+  CALCULATIONS WILL BE PERFORMED FOR    5 ENERGIES
+  ENERGY    6           =   16.94293236     CM-1
+  ENERGY    7           =   16.94319762     CM-1
+  ENERGY    8           =   16.94346288     CM-1
+  ENERGY    9           =   16.94372814     CM-1
+  ENERGY   10           =   16.94399340     CM-1
+
+  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
   S-MATRIX EIGENPHASE SUM, EPSUM/PI = 10.24343
 
   FOR JTOT =    1, SYMMETRY BLOCK =  2, ENERGY(  6) =  16.94293    : MAX DIAG & OFF-DIAG =  1.35E+00 &   0.00E+00
 
-  S-MATRIX EIGENPHASE SUM, EPSUM/PI = 10.24727
+  S-MATRIX EIGENPHASE SUM, EPSUM/PI = 10.24728
 
   FOR JTOT =    1, SYMMETRY BLOCK =  2, ENERGY(  7) =  16.94320    : MAX DIAG & OFF-DIAG =  1.38E+00 &   0.00E+00
 
-  S-MATRIX EIGENPHASE SUM, EPSUM/PI = 10.22520
+  S-MATRIX EIGENPHASE SUM, EPSUM/PI = 10.22524
 
   FOR JTOT =    1, SYMMETRY BLOCK =  2, ENERGY(  8) =  16.94346    : MAX DIAG & OFF-DIAG =  1.19E+00 &   0.00E+00
 
@@ -269,16 +273,16 @@
 
   ESTIMATE PARAMETERS OF DISTANT RESONANCE USING 5 ENERGIES
 
-  ENERGY(1) =   16.942932143841     CM-1 EPSUM/PI = 10.243431883846180
-  ENERGY(2) =   16.943197396838     CM-1 EPSUM/PI = 10.247270579480352
-  ENERGY(3) =   16.943462649835     CM-1 EPSUM/PI = 10.225199900271063
-  ENERGY(4) =   16.943727902831     CM-1 EPSUM/PI = 10.237037756193745
-  ENERGY(5) =   16.943993155828     CM-1 EPSUM/PI = 10.238545702268434
+  ENERGY(1) =   16.942932364841     CM-1 EPSUM/PI = 10.243433183155402
+  ENERGY(2) =   16.943197622442     CM-1 EPSUM/PI = 10.247278559556468
+  ENERGY(3) =   16.943462880043     CM-1 EPSUM/PI = 10.225244429689363
+  ENERGY(4) =   16.943728137644     CM-1 EPSUM/PI = 10.237040143588670
+  ENERGY(5) =   16.943993395245     CM-1 EPSUM/PI = 10.238546455636984
 
-  ESTIMATED EIGENPHASE CURVATURES ARE  -368245.       481935.      -146817.    
+  ESTIMATED EIGENPHASE CURVATURES ARE  -367807.       480800.      -146236.    
 
   *** NEXTE: EIGENPHASE CURVATURES AMBIGUOUS: EITHER ENERGIES SPAN RESONANCE OR PHASES AFFECTED BY NUMERICAL NOISE:
-             UNSAFE TO ESTIMATE RESONANCE ENERGY. DNRG INCREASED TO 0.26525E-02 CM-1    
+             UNSAFE TO ESTIMATE RESONANCE ENERGY. DNRG INCREASED TO 0.26526E-02 CM-1    
 
   SIGMA NOT PRINTED BECAUSE ISIGPR = 0
 
@@ -288,11 +292,304 @@
  |                Non-reactive quantum scattering calculations                |
  |                     on atomic and molecular collisions                     |
  |                                                                            |
- |              Copyright (C) 2019 J. M. Hutson & C. R. Le Sueur              |
+ |              Copyright (C) 2020 J. M. Hutson & C. R. Le Sueur              |
  |                                                                            |
- |                               Version 2019.1                               |
+ |                               Version 2020.0                               |
  |                                                                            |
- |                    This run used       0.21 cpu secs and                   |
+ |                    This run used       0.17 cpu secs and                   |
  |               3525 of the allocated   1000000 words of storage             |
+ |                                                                            |
+  ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
+  ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
+ |                                                                            |
+ |                Non-reactive quantum scattering calculations                |
+ |                     on atomic and molecular collisions                     |
+ |                                                                            |
+ |              Copyright (C) 2020 J. M. Hutson & C. R. Le Sueur              |
+ |                                                                            |
+ |                               Version 2020.0                               |
+ |                                                                            |
+ |                       Run on 14 Feb 2020   at 20:13:05                     |
+ |                                                                            |
+  ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
+
+
+  This program is free software: you can redistribute it and/or modify it under
+  the terms of the GNU General Public License, version 3, as published by
+  the Free Software Foundation.
+
+  Publications resulting from the use of this program should cite both
+  the version of the program used:
+  J. M. Hutson & C. R. Le Sueur, MOLSCAT computer code 2020.0              
+  and the published paper:
+  J. M. Hutson & C. R. Le Sueur, Comput. Phys. Commun. 241, pp 9-18 (2019).
+
+
+  USING CODATA 2018 RECOMMENDED VALUES OF FUNDAMENTAL PHYSICAL CONSTANTS
+
+  MEMORY ALLOCATED TO MAIN WORKING ARRAY IS   1000000 (8-BYTE) WORDS (    7.63 MB)
+  2 INTEGERS CAN BE STORED IN EACH WORD.
+
+  PRINT LEVEL (IPRINT) =  6     OTHER PRINT CONTROLS  ISIGPR = 0
+
+  REDUCED MASS FOR INTERACTION =  13.331917000 ATOMIC MASS UNITS (DALTONS)
+
+  ENERGY-INDEPENDENT MATRICES WILL BE SAVED TEMPORARILY ON UNIT 30
+
+  ======================================================================================================================
+
+  INTERACTION TYPE IS    LINEAR RIGID ROTOR  -  ATOM.  
+
+  MOLECULAR QUANTUM NUMBERS OBTAINED FROM JMIN =  0,  JMAX =  8,  AND JSTEP = 1
+
+  ENERGY LEVELS OBTAINED FROM B(E) =   20.559743
+
+  QUANTUM NUMBERS FOR INTERACTING PAIR:
+  EACH PAIR STATE IS LABELLED BY  1 QUANTUM NUMBER 
+  EACH CHANNEL FUNCTION IS FORMED BY COMBINING A PAIR STATE WITH A VALUE OF L.
+  THE RESULTING BASIS SET IS ASYMPTOTICALLY DIAGONAL.
+
+  PAIR STATE     PAIR STATE QUANTUM NUMBERS    PAIR LEVEL     PAIR ENERGY (CM-1)
+                ---------        J ---------
+        1                        0                1             0.0000000
+        2                        1                2            41.1194860
+        3                        2                3           123.3584580
+        4                        3                4           246.7169160
+        5                        4                5           411.1948600
+        6                        5                6           616.7922900
+        7                        6                7           863.5092060
+        8                        7                8          1151.3456080
+        9                        8                9          1480.3014960
+
+  ======================================================================================================================
+  GENERAL-PURPOSE POTENL ROUTINE (MAY 18)
+
+  UNEXPANDED POTENTIAL IS OBTAINED FROM VRTP ROUTINE.
+
+  A SUITABLE VRTP ROUTINE MUST BE SUPPLIED.
+  INDUCTION AND DISPERSION PARAMETERS (ATOMIC UNITS):
+  RARE GAS POLARIZABILITY                11.096
+  DIATOM DIPOLE MOMENT                   0.7069  0.0244 -0.0031
+  DIATOM QUADRUPOLE MOMENT                1.734   0.093   0.001
+  ISOTROPIC C6 COEFFICIENT               34.310   0.820   0.000
+  DIATOM ISOTROPIC POLARIZABILITY         5.511   0.174   0.003
+  DIATOM POLARIZABILITY ANISOTROPY        1.309   0.254   0.004
+  DIATOM PARALLEL A TENSOR                4.563   0.698   0.010
+  DIATOM PERPENDICULAR A TENSOR           0.907   0.101   0.001
+  DIATOM BOND LENGTH                        0.932600 A
+  DIATOM CENTRE OF MASS SHIFT               0.000000 A
+  DISTANCE FROM X ATOM TO QUADRUPOLE ORIGIN 0.046980 A
+  USING   9-POINT QUADRATURE FOR THETA-1
+
+  ANGULAR DEPENDENCE OF POTENTIAL EXPANDED IN TERMS OF
+  LEGENDRE POLYNOMIALS, P(LAMBDA).
+
+  INTERACTION POTENTIAL FOR EXPANSION TERM NUMBER   1
+  WHICH HAS LAMBDA =   0
+
+
+  INTERACTION POTENTIAL FOR EXPANSION TERM NUMBER   2
+  WHICH HAS LAMBDA =   1
+
+
+  INTERACTION POTENTIAL FOR EXPANSION TERM NUMBER   3
+  WHICH HAS LAMBDA =   2
+
+
+  INTERACTION POTENTIAL FOR EXPANSION TERM NUMBER   4
+  WHICH HAS LAMBDA =   3
+
+
+  INTERACTION POTENTIAL FOR EXPANSION TERM NUMBER   5
+  WHICH HAS LAMBDA =   4
+
+
+  INTERACTION POTENTIAL FOR EXPANSION TERM NUMBER   6
+  WHICH HAS LAMBDA =   5
+
+
+  INTERACTION POTENTIAL FOR EXPANSION TERM NUMBER   7
+  WHICH HAS LAMBDA =   6
+
+
+  INTERACTION POTENTIAL FOR EXPANSION TERM NUMBER   8
+  WHICH HAS LAMBDA =   7
+
+
+  INTERACTION POTENTIAL FOR EXPANSION TERM NUMBER   9
+  WHICH HAS LAMBDA =   8
+
+
+  POTENL PROCESSING FINISHED.
+
+  POTENTIAL RETURNED IN UNITS OF EPSIL  =  1.0000000     CM-1
+        CODED WITH R IN UNITS OF RM     =  1.0000000     ANGSTROM
+
+  ALL LENGTHS ARE IN UNITS OF ANGSTROM UNLESS OTHERWISE STATED
+
+  INTERACTION MATRIX USES   9 BLOCKS OF VL ARRAY FOR R-DEPENDENT TERMS IN POTENTIAL
+
+  ======================================================================================================================
+
+  PROPAGATION METHODS FOR COUPLED EQUATIONS SPECIFIED BY IPROPS =  6
+
+  COUPLED EQUATIONS WILL BE PROPAGATED OUTWARDS IN 1 SEGMENT 
+
+  PROPAGATION RANGE IS CONTROLLED BY VARIABLES RMIN AND RMAX, WITH INPUT VALUES
+  RMIN =   2.500     RMAX =   15.00    
+  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+  SEGMENT 1 WILL BE PROPAGATED OUTWARDS
+
+  FROM RMIN =      2.50 TO RMAX =     15.00
+
+  COUPLED EQUATIONS SOLVED BY DIABATIC MODIFIED LOG-DERIVATIVE PROPAGATOR OF MANOLOPOULOS
+
+  PROPAGATION STEP SIZE DETERMINED USING DR =  3.000E-02
+  STEP SIZE CONSTANT THROUGHOUT RANGE
+  STEP SIZE MAY BE ADJUSTED SLIGHTLY SO THAT RANGE IS A WHOLE NUMBER OF STEPS
+
+  LOG-DERIVATIVE MATRIX INITIALISED IN THE LOCAL EIGENBASIS AT RMIN
+  LOCALLY CLOSED CHANNELS INITIALISED WITH A WKB BOUNDARY CONDITION
+
+  ======================================================================================================================
+
+  INPUT ENERGIES IN UNITS OF CM-1 BY DEFAULT.
+
+  CALCULATIONS WILL BE PERFORMED FOR   20 ENERGIES
+  ENERGY    1           =   16.94346200     CM-1
+  ENERGY    2           =   16.94346300     CM-1
+  ENERGY    3           =   16.94346400     CM-1
+
+  RESONANCE CONVERGENCE OPTION. ONLY FIRST 3 ENERGIES GIVEN. OTHERS WILL BE DETERMINED INTERACTIVELY.
+
+  PROGRAM WILL ATTEMPT TO CHARACTERISE RESONANCE IN EIGENPHASE SUM TO ACCURACY  1.00E-08 CM-1
+
+  USING BREIT-WIGNER RESONANCE FORMULA 
+
+  THE CONVERGENCE PROCEDURE IS CONTROLLED BY PARAMETERS
+  TLO = -0.1000, THI =  1.0000 AND XI =  0.2500
+
+  ======================================================================================================================
+
+  TOTAL ANGULAR MOMENTUM JTOT =   1
+
+  EACH JTOT IS SPLIT INTO A MAXIMUM OF   2 SYMMETRY BLOCKS
+
+  CALCULATION(S) WILL BE FOR SYMMETRY BLOCK   2
+
+  COMPUTED K MATRICES WILL BE SAVED ON UNIT 12
+
+  EIGENPHASE SUMMARY WILL BE WRITTEN TO UNIT  4
+
+  STATE-TO-STATE INTEGRAL CROSS-SECTIONS WILL BE COMPUTED BUT NOT STORED ON DISK
+
+  ======================================================================================================================
+
+  INITIALIZATION DONE.  TIME WAS   0.00 CPU SECS.      1886 WORDS OF STORAGE USED.
+
+  ============================= Ar-HF v=0 on H6(4,3,2) potential: see JCP 96, 6752 (1992) ==============================
+
+  *****************************  ANGULAR MOMENTUM JTOT  =   1   AND SYMMETRY BLOCK  =    2  ****************************
+
+  CHANNEL FUNCTION LIST:
+
+  EACH CHANNEL FUNCTION IS FORMED BY COMBINING A PAIR STATE WITH A VALUE OF L.
+
+  CHANNEL  PAIR STATE    PAIR STATE QUANTUM NUMBERS            L        PAIR LEVEL   PAIR ENERGY (CM-1)
+                         ---------      J   ---------
+        1           2                   1                      0             2        41.1194860
+        2           1                   0                      1             1         0.0000000
+        3           3                   2                      1             3       123.3584580
+        4           2                   1                      2             2        41.1194860
+        5           4                   3                      2             4       246.7169160
+        6           3                   2                      3             3       123.3584580
+        7           5                   4                      3             5       411.1948600
+        8           4                   3                      4             4       246.7169160
+        9           6                   5                      4             6       616.7922900
+       10           5                   4                      5             5       411.1948600
+       11           7                   6                      5             7       863.5092060
+       12           6                   5                      6             6       616.7922900
+       13           8                   7                      6             8      1151.3456080
+       14           7                   6                      7             7       863.5092060
+       15           9                   8                      7             9      1480.3014960
+       16           8                   7                      8             8      1151.3456080
+       17           9                   8                      9             9      1480.3014960
+
+  S-MATRIX EIGENPHASE SUM, EPSUM/PI = 10.22507
+
+  FOR JTOT =    1, SYMMETRY BLOCK =  2, ENERGY(  1) =  16.94346    : MAX DIAG & OFF-DIAG =  1.19E+00 &   0.00E+00
+
+  S-MATRIX EIGENPHASE SUM, EPSUM/PI = 10.22527
+
+  FOR JTOT =    1, SYMMETRY BLOCK =  2, ENERGY(  2) =  16.94346    : MAX DIAG & OFF-DIAG =  1.19E+00 &   0.00E+00
+
+  S-MATRIX EIGENPHASE SUM, EPSUM/PI = 10.22546
+
+  FOR JTOT =    1, SYMMETRY BLOCK =  2, ENERGY(  3) =  16.94346    : MAX DIAG & OFF-DIAG =  1.19E+00 &   0.00E+00
+
+  3-POINT POLE FORMULA ESTIMATES            E_RES =   16.9433833     CM-1
+                                            GAMMA =  7.68668E-06     CM-1
+                                    EPSUM_BG / PI =  0.24061    
+
+  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+  ENERGY    4           =   16.94338333     CM-1
+
+  S-MATRIX EIGENPHASE SUM, EPSUM/PI =  9.74572
+
+  FOR JTOT =    1, SYMMETRY BLOCK =  2, ENERGY(  4) =  16.94338    : MAX DIAG & OFF-DIAG =  1.44E+00 &   0.00E+00
+
+  3-POINT POLE FORMULA ESTIMATES            E_RES =   16.9433833     CM-1
+                                            GAMMA =  7.69869E-06     CM-1
+                                    EPSUM_BG / PI =  0.24062    
+
+  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+  ENERGY    5           =   16.94338250     CM-1
+
+  S-MATRIX EIGENPHASE SUM, EPSUM/PI =  9.67784
+
+  FOR JTOT =    1, SYMMETRY BLOCK =  2, ENERGY(  5) =  16.94338    : MAX DIAG & OFF-DIAG =  2.02E+00 &   0.00E+00
+
+  3-POINT POLE FORMULA ESTIMATES            E_RES =   16.9433833     CM-1
+                                            GAMMA =  7.70461E-06     CM-1
+                                    EPSUM_BG / PI =  0.24064    
+
+  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+  ENERGY    6           =   16.94339097     CM-1
+
+  S-MATRIX EIGENPHASE SUM, EPSUM/PI = 10.09306
+
+  FOR JTOT =    1, SYMMETRY BLOCK =  2, ENERGY(  6) =  16.94339    : MAX DIAG & OFF-DIAG =  2.34E-01 &   0.00E+00
+
+  3-POINT POLE FORMULA ESTIMATES            E_RES =   16.9433833     CM-1
+                                            GAMMA =  7.70456E-06     CM-1
+                                    EPSUM_BG / PI =  0.24065    
+
+  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+  ENERGY    7           =   16.94338327     CM-1
+
+  S-MATRIX EIGENPHASE SUM, EPSUM/PI =  9.74065
+
+  FOR JTOT =    1, SYMMETRY BLOCK =  2, ENERGY(  7) =  16.94338    : MAX DIAG & OFF-DIAG =  1.49E+00 &   0.00E+00
+
+  3-POINT POLE FORMULA ESTIMATES            E_RES =   16.9433833     CM-1
+                                            GAMMA =  7.70457E-06     CM-1
+                                    EPSUM_BG / PI =  0.24065    
+
+  CONVERGED ON RESONANCE AT E_RES =   16.9433833     CM-1, WITH PREDICTED STEP =  1.80123E-12 CM-1
+
+  SIGMA NOT PRINTED BECAUSE ISIGPR = 0
+
+
+  ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
+ |                                                                            |
+ |                Non-reactive quantum scattering calculations                |
+ |                     on atomic and molecular collisions                     |
+ |                                                                            |
+ |              Copyright (C) 2020 J. M. Hutson & C. R. Le Sueur              |
+ |                                                                            |
+ |                               Version 2020.0                               |
+ |                                                                            |
+ |                    This run used       0.09 cpu secs and                   |
+ |               4335 of the allocated   1000000 words of storage             |
  |                                                                            |
   ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---

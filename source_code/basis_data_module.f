@@ -1,5 +1,5 @@
       module basis_data
-C  Copyright (C) 2019 J. M. Hutson & C. R. Le Sueur
+C  Copyright (C) 2020 J. M. Hutson & C. R. Le Sueur
 C  Distributed under the GNU General Public License, version 3
       USE sizes, ONLY: MXELVL, MXJLVL, MXROTS, MXSYMS
       IMPLICIT NONE
@@ -7,7 +7,7 @@ C  Distributed under the GNU General Public License, version 3
 C  DATA FOR BASIS SET-RELATED QUANTITIES
       INTEGER          :: IDENT, JHALF, ISYM(MXSYMS), ISYM2(MXSYMS),
      1                    JMIN, J2MIN, JMAX, J2MAX, JSTEP, J2STEP,
-     2                    JLEVEL(MXJLVL), NLEVEL
+     2                    JLEVEL(MXJLVL), NJLQN9, NLEVEL
 
       DOUBLE PRECISION :: ELEVEL(MXELVL), EMAX, ROTI(MXROTS), SPNUC,
      1                    WT(2)

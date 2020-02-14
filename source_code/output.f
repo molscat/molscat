@@ -1,6 +1,6 @@
       SUBROUTINE OUTPUT(JTOT, NBASIS, JSINDX, L, INDLEV,
      1                  WVEC, SREAL, SIMAG, AKMAT, RUNIT,
-     2                  SCLEN, NOPEN, IB, IBMAX, WGHT, IEXCH,
+     2                  SCLEN, ESUM, NOPEN, IB, IBMAX, WGHT, IEXCH,
      3                  INRG, TTIME, ENERGN, EREF, SIGCUR, SIGACC,
      4                  SIGDEG, JSTATE, ISST, JECONV,
      5                  MINJTN, MAXJTN, NSTATE,
@@ -9,7 +9,7 @@
      8                  EINT, IBOUND, INDUSE, INDACC, LNEVER,
      9                  CM2RU, JFIELD, IPRINT, LRESRT, PTIME,
      A                  AWVMAX,RUNAME)
-C  Copyright (C) 2019 J. M. Hutson & C. R. Le Sueur
+C  Copyright (C) 2020 J. M. Hutson & C. R. Le Sueur
 C  Distributed under the GNU General Public License, version 3
       USE efvs
       USE potential
@@ -54,7 +54,7 @@ C
      1          INDUSE(1),INDACC(1),SIGTOT(1)
       DIMENSION SREAL(NOPEN,NOPEN),SIMAG(NOPEN,NOPEN),AKMAT(NOPEN,NOPEN)
       DOUBLE COMPLEX SCATLN,SCLEN
-      INTEGER ISST(2),MAXJT(2),MINJT(2),IECONV(2)
+      INTEGER ISST(2),MAXJT(2),MINJT(2),ICAC(2)
       INTEGER NSTATE,JSTATE(1)
       DIMENSION SIGCUR(1),SIGACC(1),SIGDEG(1),ENERGY(1)
       DIMENSION FIELD(1)
@@ -280,7 +280,7 @@ C
         IS=INRG-5*((INRG-1)/5)
         EPSM(IS)=ESUM
 
-        IF (IPRINT.GE.1) WRITE(6,230) ESUM
+        IF (IPRINT.GE.6) WRITE(6,230) ESUM
   230   FORMAT(/'  S-MATRIX EIGENPHASE SUM, EPSUM/PI =',F9.5)
 
         IF (ICHAN.GT.0) THEN
@@ -518,7 +518,6 @@ C
      2        ': MAX DIAG & OFF-DIAG =',E10.2,' & ',E10.2)
  1710 FORMAT(/'  FOR EFV SET = ',I3,', ENERGY(',I3,') =',1P,G14.7,':',
      2        '  MAX DIAG & OFF-DIAG =',E10.2,' & ',E10.2)
-      IF (IPRINT.GE.3 .AND. PTIME) WRITE(6,180) TTIME
   180 FORMAT(2X,'TIME =',F8.2)
 C
 C  EXTRA RESTRICTIONS ON PRINTING SO THAT RUNNING TOTAL IS NOT PRINTED
@@ -634,7 +633,7 @@ C
 C  INITIALIZATION ENTRY.
 C
       ENTRY OUTINT(LABEL,ENERGY,EFACT,NNRG,NFIELD,NSTATE,NQN,JSTATE,
-     1             SIG,IECONV,URED,ITYP,IPHSUM,ISST,MINJT,MAXJT,
+     1             SIG,ICAC,URED,ITYP,IPHSUM,ISST,MINJT,MAXJT,
      2             ISIGU,IPARTU,ISAVEU,IPROGM,MXSIG,ISIGPR,JST,IRSTRT,
      3             ILDSVU,LCURPS,LACCPS,NLEVS,ICHAN,IFCNPS,IBOUND,
      4             RUNAME,IPRINT)
@@ -762,7 +761,7 @@ C  IPHSUM:
 
 C  FIRST (ALWAYS) PART OF HEADER (LENGTH 44)
           LH=44
-          F841="(/'  JTOT  IBLOCK  NOP   I',9X,'ENERGY(I)',3X,"
+          F841="(/'  JTOT  IBLOCK  NOP   I',4X,'ENERGY(I)/CM-1',3X,"
           F241="(I6,5X,I3,I5,I4,2X,G16.9,3X,"
           WRITE(CH,'(I2)') LH
 
@@ -1038,7 +1037,7 @@ C
 C  SET UP 'BOOKKEEPING' VARIABLES.
       DO I=1,NNRGF
         MINJT(I)=-99999
-        IECONV(I)=0
+        ICAC(I)=0
         MAXJT(I)=0
       ENDDO
 

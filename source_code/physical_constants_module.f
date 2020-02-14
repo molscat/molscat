@@ -1,5 +1,5 @@
       module physical_constants
-C  Copyright (C) 2019 J. M. Hutson & C. R. Le Sueur
+C  Copyright (C) 2020 J. M. Hutson & C. R. Le Sueur
 C  Distributed under the GNU General Public License, version 3
       implicit none
 
@@ -8,7 +8,7 @@ c  These values are from the BIPM draft brochure.  Values inserted 27-03-2019
       double precision, parameter ::
      & speed_of_light_in_SI                    = 2.99792458d8,     ! m s^-1
      & Planck_constant_in_SI                   = 6.62607015d-34,   ! J s
-     & Bolzmann_constant_in_SI                 = 1.380649d-23,     ! J K^-1
+     & Boltzmann_constant_in_SI                = 1.380649d-23,     ! J K^-1
      & Avogadro_constant_in_SI                 = 6.02214076d23,    ! mol^-1
      & Cs_hyperfine_transition_frequency_in_SI = 9.192631770d9,    ! Hz
      & elementary_charge_in_SI                 = 1.6021766340d-19, ! C
@@ -48,7 +48,7 @@ c  and these are energy equivalents (or prefactors for the magneton values) in i
      & hartree_in_inv_cm                = 2.1947463136320d5, ! hartree_in_SI*Joule_in_inv_cm
      & Hz_in_inv_cm                     = 3.335640951d-11,   ! 1d-2/speed_of_light_in_SI
      & eV_in_inv_cm                     = 8.065543937d3,     ! electronvolt_in_SI*Joule_in_inv_cm
-     & K_in_inv_cm                      = 0.6950348004d0,    ! Bolzmann_constant_in_SI*Joule_in_inv_cm
+     & K_in_inv_cm                      = 0.6950348004d0,    ! Boltzmann_constant_in_SI*Joule_in_inv_cm
      & bohr_magneton_in_inv_cm_per_T    = 0.46686447783d0,   ! bohr_magneton_in_SI*Joule_in_inv_cm
      & nuclear_magneton_in_inv_cm_per_T = 2.54262341353d-4   ! bohr_magneton_in_inv_cm_per_T*electron_mass/proton_mass
 

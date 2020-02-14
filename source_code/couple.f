@@ -1,6 +1,6 @@
-      SUBROUTINE COUPLE(N,ITYPE,MXLAM,NPOTL,LAM,NSTATE,JSTATE,JSINDX,L,
+      SUBROUTINE COUPLE(N,ITYPE,MXLAM,NHAM,LAM,NSTATE,JSTATE,JSINDX,L,
      1                  JTOT,VL,IV,IEX,IPRINT,ATAU)
-C  Copyright (C) 2019 J. M. Hutson & C. R. Le Sueur
+C  Copyright (C) 2020 J. M. Hutson & C. R. Le Sueur
 C  Distributed under the GNU General Public License, version 3
 C
 C  THIS SUBROUTINE CALCULATES COUPLING COEFFICIENTS FOR DIFFERENT ITYPES
@@ -123,7 +123,7 @@ C
               IF (VL(I).NE.0.D0) NNZ=NNZ+1
             ENDIF
           ENDIF
- 1501     I=I+NPOTL
+ 1501     I=I+NHAM
         IF (NNZ.LE.0) THEN
           NZERO=NZERO+1
           IF (IPRINT.GE.14) WRITE(6,612) JTOT,LL
@@ -140,7 +140,7 @@ C  COUPLING FOR VIBROTOR - ATOM MAKING USE OF IV() (S Green, JAN 94)
 C
  8002 IF (IVLFL.LE.0) GOTO 9999
 
-      II=NPOTL*N*(N+1)/2
+      II=NHAM*N*(N+1)/2
       DO 1542 I=1,II
         VL(I)=0.D0
  1542   IV(I)=0
@@ -193,7 +193,7 @@ C
             JVROW=JSTATE(JSINDX(IROW),2)
             JROW =JSTATE(JSINDX(IROW),1)
             II=II+1
-            I=(II-1)*NPOTL+LLL+1
+            I=(II-1)*NHAM+LLL+1
             IF (.NOT. (JROW.LT.JMIN .OR. JROW.GT.JMAX .OR.
      1                 L(IROW).LT.LMIN .OR. L(IROW).GT.LMAX .OR.
      2                 LODD(JROW+JMAX) .OR. LODD(L(IROW)+LMAX))
@@ -304,7 +304,7 @@ C  N.B. FOR K1=0 AND/OR K2=0, WE RECOMPUTE SAME FSYMTP.
           VL(I)=VL(I)+PARFCT*PARSGN(IS1)*
      2                 FSYMTP(J1,-K1,L(ICOL),J2,K2,L(IROW),JTOT,LM,KSUM)
  1515     IF (VL(I).NE.0.D0) NNZ=NNZ+1
- 1565     I=I+NPOTL
+ 1565     I=I+NHAM
         IF (NNZ.LE.0) THEN
           NZERO=NZERO+1
           IF (IPRINT.GE.14) WRITE(6,612) JTOT,LL
@@ -324,7 +324,7 @@ C *** ITYPE=7 MAKES NON-TRIVIAL USE OF THE IV ARRAY
 C
  8007 IF (IVLFL.LE.0) GOTO 9999
 
-      II=NPOTL*N*(N+1)/2
+      II=NHAM*N*(N+1)/2
       DO 1547 I=1,II
         VL(I)=0.D0
         IV(I)=0
@@ -380,7 +380,7 @@ C
             JVROW=JSTATE(JSINDX(IROW),2)
             JROW =JSTATE(JSINDX(IROW),1)
             II=II+1
-            I=(II-1)*NPOTL+LLL+1
+            I=(II-1)*NHAM+LLL+1
             IF (.NOT. (JROW.LT.JMIN .OR. JROW.GT.JMAX .OR.
      1                 L(IROW).LT.LMIN .OR. L(IROW).GT.LMAX .OR.
      2                 LODD(JROW+JMAX) .OR. LODD(L(IROW)+LMAX))
@@ -453,14 +453,14 @@ C
      1          SQRT(SQRT(Z(J1P)*Z(J1))/Z(LAM(LL))) *
      2          THREEJ(J1P,LAM(LL),J1)
           IF (VL(I).NE.0.D0) NNZ=NNZ+1
- 6200     I=I+NPOTL
+ 6200     I=I+NHAM
         IF (NNZ.EQ.0) WRITE(6,612) JTOT,LL
  6100 CONTINUE
       RETURN
 
  6002 IF (IVLFL.LE.0) GOTO 9999
 
-      NZERO=NPOTL*N*(N+1)/2
+      NZERO=NHAM*N*(N+1)/2
       DO 6042 I=1,NZERO
         VL(I)=0.D0
  6042   IV(I)=0
@@ -480,7 +480,7 @@ C
           II=II+1
           IF ((NV.EQ.NVC .AND. NV1.EQ.NVR) .OR.
      1        (NV.EQ.NVR .AND. NV1.EQ.NVC)) THEN
-            I=(II-1)*NPOTL+LLL+1
+            I=(II-1)*NHAM+LLL+1
             VL(I)=PARSGN((ABS(NJC-NJR)+NJC+NJR)/2) *
      1            SQRT(SQRT(Z(NJC)*Z(NJR))/Z(LLL))*THREEJ(NJC,LLL,NJR)
             IV(I)=LL
@@ -524,7 +524,7 @@ C ***   BE PRESENT IN INTERACTION POTENTIAL.
           IF (J1.EQ.J2)   VL(I)=VL(I)*SQRTHF
           IF (J1P.EQ.J2P) VL(I)=VL(I)*SQRTHF
  6093     IF (VL(I).NE.0.D0) NNZ=NNZ+1
- 6400     I=I+NPOTL
+ 6400     I=I+NHAM
         IF (NNZ.LE.0) THEN
           NZERO=NZERO+1
           IF (IPRINT.GE.14) WRITE(6,612) JTOT,LL
@@ -566,7 +566,7 @@ C ***   BE PRESENT IN INTERACTION POTENTIAL.
 C (J1, -K1 / Y(LM,MU) / J2, K2) - - - - -
           VL(I)=VL(I)+PARFCT*PARSGN(IS1)*ESYMTP(J1,-K1,J2,K2,LM,KSUM)
  6515     IF (VL(I).NE.0.D0) NNZ=NNZ+1
- 6565     I=I+NPOTL
+ 6565     I=I+NHAM
         IF (NNZ.LE.0) THEN
           NZERO=NZERO+1
           IF (IPRINT.GE.14) WRITE(6,612) JTOT,LL
@@ -581,7 +581,7 @@ C
 C
  6007 IF (IVLFL.LE.0) GOTO 9999
 
-      NZERO=NPOTL*N*(N+1)/2
+      NZERO=NHAM*N*(N+1)/2
       DO 6047 I=1,NZERO
         VL(I)=0.D0
  6047   IV(I)=0
@@ -605,7 +605,7 @@ C
      1               NV1.EQ.NVR .AND. NJ1.EQ.NJR) .OR.
      2              (NV.EQ.NVR .AND. NJ.EQ.NJR .AND.
      3               NV1.EQ.NVC .AND. NJ1.EQ.NJC))) GOTO 6057
-          I=(II-1)*NPOTL+LLL+1
+          I=(II-1)*NHAM+LLL+1
           VL(I)=PARSGN((ABS(NJC-NJR)+NJC+NJR)/2) *
      1          SQRT(SQRT(Z(NJC)*Z(NJR))/Z(LLL))*THREEJ(NJC,LLL,NJR)
           IV(I)=LL

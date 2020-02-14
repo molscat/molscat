@@ -1,5 +1,5 @@
       module sizes
-C  Copyright (C) 2019 J. M. Hutson & C. R. Le Sueur
+C  Copyright (C) 2020 J. M. Hutson & C. R. Le Sueur
 C  Distributed under the GNU General Public License, version 3
       IMPLICIT NONE
 C
@@ -21,7 +21,7 @@ C
 C  ANGLES
       INTEGER, PARAMETER :: MXANG=7
 C
-C  NUMBER OF FIELDS FOR RESONANCE SEARCHES (NOT IN MODULE)
-      INTEGER, PARAMETER :: MAXSCH=20
+C  NUMBER OF FIELDS FOR RESONANCE-LOCATION ITERATIONS (NOT IN MODULE)
+      INTEGER, PARAMETER :: MXLOC=20
 
       end module sizes

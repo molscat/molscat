@@ -1,11 +1,11 @@
       SUBROUTINE IOSDRV(NNRG,NPR,ENERGY,JTOTL,JTOTU,JSTEP,TEST,NCAC,
      1                  IFLS,LINE,LTYPE,ITYPE,LMAX,MMAX,
      2                  IPROGM,URED,LABEL,IREF,IPOT,
-     3                  LAMBDA,MXLAM,NPOTL,IRMSET,IRXSET,RVFAC,
+     3                  LAMBDA,MXLAM,NHAM,IRMSET,IRXSET,RVFAC,
      4                  IPRINT,NVC,ISAVEU,TITIME,RUNIT,RMIN,
      5                  RMAX,MONQN,IBOUND,WAVE,ERED,EP2RU,CM2RU,RSCALE,
      6                  DRMAX,NSTAB,ILDSVU)
-C  Copyright (C) 2019 J. M. Hutson & C. R. Le Sueur
+C  Copyright (C) 2020 J. M. Hutson & C. R. Le Sueur
 C  Distributed under the GNU General Public License, version 3
       IMPLICIT DOUBLE PRECISION (A-H,O-Z)
 C
@@ -67,7 +67,7 @@ C     V11 CODE EXPECTED IC TO BE STORAGE USED SO FAR
       IXEINT=IXWV+NVC        ! EINT
       IXCENT=IXEINT+NVC      ! CENT
       IXVL=IXCENT+NVC        ! VL
-      NV=NVC*(NVC+1)*NPOTL/2
+      NV=NVC*(NVC+1)*NHAM/2
       IXJIND=IXVL+NV         ! JSINDX
       IXLORB=IXJIND+NVC      ! L
       IXNB=IXLORB+NVC        ! NB
@@ -136,7 +136,7 @@ C
       CALL IOSCLC(NNRG,ENERGY,JTOTL,JTOTU,JSTEP,IPRINT,ISAVEU,
      1            ITYPE,RMIN,RMAX,IRMSET,IRXSET,RVFAC,
      2            NCAC,TEST,RUNIT,NVC,LMAX,NGPT,NQL,
-     3            NIXQL,MXXXXL,LAMBDA,MXLAM,NPOTL,X(IXVLI),
+     3            NIXQL,MXXXXL,LAMBDA,MXLAM,NHAM,X(IXVLI),
      4            X(IXPW),X(IXSLR),X(IXSLI),X(IXQLT),X(IXQLS),
      5            X(IXSLLR),X(IXSLLI),X(IXQL),X(IXSGTH),X(IXSGAV),
      6            X(IXIEC),X(IXLM),IXSR,IXSI,IXKMAT,IXVL,IXIV,IXEINT,

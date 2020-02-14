@@ -29,7 +29,7 @@
  /
 
  &POTL
-    MXLAM  = 3, LAMBDA =  1,  2,  3,
+    MXLAM  = 3, LAMBDA =  0,  1,  3,
                 NTERM  = -1, -1,  2,
                 NPOWER =         -3,               0,
                 E      =                          -0.7196,
@@ -67,7 +67,7 @@
  /
 
  &POTL
-    MXLAM  = 3, LAMBDA =  1,  2,  3,
+    MXLAM  = 3, LAMBDA =  0,  1,  3,
                 NTERM  = -1, -1,  2,
                 NPOWER =         -3,               0,
                 E      =                          -0.7196,
@@ -105,7 +105,7 @@
  /
 
  &POTL
-    MXLAM  = 3, LAMBDA =  1,  2,  3,
+    MXLAM  = 3, LAMBDA =  0,  1,  3,
                 NTERM  = -1, -1,  2,
                 NPOWER =         -3,               0,
                 E      =                          -0.7196,
@@ -143,7 +143,44 @@
  /
 
  &POTL
-    MXLAM  = 3, LAMBDA =  1,  2,  3,
+    MXLAM  = 3, LAMBDA =  0,  1,  3,
+                NTERM  = -1, -1,  2,
+                NPOWER =         -3,               0,
+                E      =                          -0.7196,
+                A      =         -1.002320649155,  9.182916799,
+ /
+
+ &INPUT
+    LABEL  =  '85Rb-85Rb quasibound state below the ee channel',
+    URED   =  42.455894869,
+    IPRINT =   5,    ISCRU  =  30,     IPHSUM = 3,
+    RMIN   =   3.0,  RMID   =  21.0,   RMAX   = 15.0E3, IRMSET = 0,
+    IPROPS =   6,    DR     =   0.002,
+    IPROPL =   9,    TOLHI  =   1.E-7,
+    JTOTL  =  -8,    JTOTU  =  -8,     IBFIX  =  2,     JSTEP  = 2,
+    EUNITS =   3,    NNRG   =   3,     ENERGY =  -2.E-3
+    DNRG   =  1.E-5, DTOL   =   1.E-8, MONQN  =  4, -4, 4, -4,
+    FLDMIN = 155.,   FLDMAX = 155.,
+    IECONV =   4,
+    LASTIN =   0,
+ /
+
+ &BASIS
+    ITYPE  = 9,
+ /
+
+ &BASIS9
+    ISA    =  1,    !85-Rb
+    GSA    =  2.00231930,
+    INUCA  =  5,
+    HFSPLA = +3.035732440300,
+    GA     = -2.936400E-4,
+    INUCB  = -1,
+    LMAX   =  2,
+ /
+
+ &POTL
+    MXLAM  = 3, LAMBDA =  0,  1,  3,
                 NTERM  = -1, -1,  2,
                 NPOWER =         -3,               0,
                 E      =                          -0.7196,
@@ -179,7 +216,7 @@
  /
 
  &POTL
-    MXLAM  = 3, LAMBDA =  1,  2,  3,
+    MXLAM  = 3, LAMBDA =  0,  1,  3,
                 NTERM  = -1, -1,  2,
                 NPOWER =         -3,               0,
                 E      =                          -0.7196,
