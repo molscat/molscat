@@ -1,4 +1,6 @@
       SUBROUTINE DAMP(KMIN,KMAX,BETA,R,P,DP)
+C  Copyright (C) 2020 J. M. Hutson & C. R. Le Sueur
+C  Distributed under the GNU General Public License, version 3
       IMPLICIT DOUBLE PRECISION (A-H,O-Z)
 C
 C  SUBROUTINE FOR THE EFFICIENT CALCULATION OF THE TANG-TOENNIES

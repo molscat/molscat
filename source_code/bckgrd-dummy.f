@@ -1,4 +1,6 @@
       SUBROUTINE BCKGRD(B,SCLNRE,SCLNIM)
+C  Copyright (C) 2020 J. M. Hutson & C. R. Le Sueur
+C  Distributed under the GNU General Public License, version 3
       USE efvs
       IMPLICIT DOUBLE PRECISION (A-H,O-Z)
       CHARACTER(10)  RUNAM
