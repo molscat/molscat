@@ -129,7 +129,7 @@ SIZES_DEPS =      angles_module.o basis_data_module.o bd.driver.o eavg.o \
 MODULES =   physical_constants_module.o sizes_module.o efvs_module.o \
             potential_module.o basis_data_module.o angles_module.o
 #MODULES =   physical_constants_2014.o sizes_module.o efvs_module.o \
-#            potential_module.o basis_module.o angles_module.o
+#            potential_module.o basis_data_module.o angles_module.o
 CLOCK =     gclock.o gdate.o
 DIAG =      diagvc.o diagvl.o
 LA_UTILS =  dgemul.o syminl-alloc.o dsyneg.o syminv.o
