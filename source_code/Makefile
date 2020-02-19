@@ -108,7 +108,7 @@ PHYS_CONST_DEPS = base9-1S_3Sigma_cpld.o base9-alk_alk_ucpld.o \
 #
 POTENTIAL_DEPS =  base.o base9-1S_3Sigma_cpld.o base9-alk_alk_ucpld.o \
                   base-skeleton.o bd.driver.o chckru.o cheint.o cntrct.o \
-                  dermat.o fld.driver.o getlev.o gnpotl.o mol.driver.o \
+                  dermat.o fld.driver.o getlev.o gnham.o mol.driver.o \
                   multop.o odprop.o output.o potenl-Rg_H2.o potenl.o restrt.o \
                   scwave.o setefv.o thresh.o vstar-Tiemann.o wavmat.o \
                   wavvec.o ytrans.o \
@@ -151,7 +151,7 @@ LIBUTILS    =
 ANG_MOM     = j3j000.o j6j.o j9j.o parsgn.o sixj.o threej.o thrj.o xninej.o
 W_MATRIX    = dermat.o wavmat.o wavvec.o
 CORE_ALL    = brent.o calck.o chckru.o cheint.o drcalc.o drset.o ecnv.o \
-              ecnvx.o efprop.o findrm.o gnpotl.o idpchk.o prprop.o progms.o \
+              ecnvx.o efprop.o findrm.o gnham.o idpchk.o prprop.o progms.o \
               propst.o setefv.o stsrch.o thresh.o thrlst.o wvhead.o \
               $(YTRANS) $(PROPS_LD) $(BASE) $(UTILITIES) $(LIBUTILS) \
               $(ANG_MOM) $(W_MATRIX)
