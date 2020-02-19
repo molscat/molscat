@@ -30,7 +30,7 @@ C  ----------------------------------------------------------------------
 C  * NOTES ON HISTORY OF ROUTINE:
 C  ----------------------------------------------------------------------
 C  AUG 2018 CR Le Sueur: SUBSTANTIALLY REARRANGED
-C                        CODE RELATING TO NHAM MOVED TO ROUTINE GNPOTL
+C                        CODE RELATING TO NHAM MOVED TO ROUTINE GNHAM
 C                        AND NHAM REMOVED FROM ARGUMENT LIST.
 C                        IPRINT ADDED TO ARGUMENT LIST
 C
