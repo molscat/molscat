@@ -443,6 +443,8 @@ C
 C  READ &INPUT  DATA.
       if (.not.inolls) READ(5,INPUT,END=9040)
 C
+
+Set the labels that will be included when a new repository is created in this
 C     INCLUDE STATEMENTS TO RECEIVE, UNPACK AND ALLOCATE DATA TO
 C     VARIABLES
 C
@@ -1679,7 +1681,7 @@ C  MAY 2017: POLE CONVERGENCE REPLACED WITH RESONANCE CHARACTERISATION
 C            ALGORITHM AND MOVED OUT TO LOCPOL ROUTINE
 C
                   IF (IFCONV.EQ.4) THEN
-                    CALL LOCPOL(JFIELD,FLDNOW,ESUM,0.0,FLDNEW,DTOL,
+                    CALL LOCPOL(JFIELD,FLDNOW,ESUM,0.D0,FLDNEW,DTOL,
      1                          TLO,THI,XI,IFCONV-1,IPRINT,
      2                          LCONT,RUNAME,SVNAME,SVUNIT,
      3                          NOPEN,X(ISSR),X(ISSI))
@@ -1699,7 +1701,7 @@ C
                   IF (.NOT.LCONT) GOTO 290
                 ELSEIF (ISRCH.EQ.2) THEN
                   IF (IECONV.EQ.4) THEN
-                    CALL LOCPOL(INRG,ENERGY(INRG)/EUNIT,ESUM,0.0,ENEW,
+                    CALL LOCPOL(INRG,ENERGY(INRG)/EUNIT,ESUM,0.D0,ENEW,
      1                          DTOL,TLO,THI,XI,IECONV-1,
      2                          IPRINT,LCONT,RUNAME,
      3                          "E                   ",
