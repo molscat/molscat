@@ -3,11 +3,11 @@
  |          Bound states of interacting pairs of atoms and molecules          |
  |                      as a function of external field                       |
  |                                                                            |
- |              Copyright (C) 2020 J. M. Hutson & C. R. Le Sueur              |
+ |              Copyright (C) 2022 J. M. Hutson & C. R. Le Sueur              |
  |                                                                            |
- |                               Version 2020.0                               |
+ |                               Version 2022.0                               |
  |                                                                            |
- |                       Run on 14 Feb 2020   at 20:31:05                     |
+ |                       Run on 31 May 2022   at 10:32:14                     |
  |                                                                            |
   -- FIELD ------ FIELD ------ FIELD ------ FIELD ------ FIELD ------ FIELD --
 
@@ -16,11 +16,16 @@
   the terms of the GNU General Public License, version 3, as published by
   the Free Software Foundation.
 
-  Publications resulting from the use of this program should cite both
-  the version of the program used:
-  J. M. Hutson & C. R. Le Sueur, FIELD computer code 2020.0              
+  Publications resulting from the use of this program should cite both the
+  version of the program used:
+
+  J. M. Hutson & C. R. Le Sueur, FIELD: a program for bound states of
+  interacting pairs of atoms and molecules as a function of external field,
+  Version 2022.0, https//github.com/molscat/molscat
+
   and the published paper:
-  J. M. Hutson & C. R. Le Sueur, Comput. Phys. Commun. 241, pp 1-8 (2019).
+
+  J. M. Hutson & C. R. Le Sueur, Comput. Phys. Commun., 241, 1-8 (2019).
 
 
   USING CODATA 2018 RECOMMENDED VALUES OF FUNDAMENTAL PHYSICAL CONSTANTS
@@ -143,7 +148,7 @@
   INTERACTION POTENTIAL FOR EXPANSION TERM NUMBER   1
 
   JMH routine for Tiemann-style alkali dimer potentials
-  Rb2 potential from Strauss et al., PRA 82, 052514 (2010)               
+  Rb2 potential from Strauss et al., PRA 82, 052514 (2010)
 
   gamma shifted from   5.317689000000    
                   to   5.317691178394    
@@ -167,7 +172,7 @@
   INTERACTION POTENTIAL FOR EXPANSION TERM NUMBER   2
 
   JMH routine for Tiemann-style alkali dimer potentials
-  Rb2 potential from Strauss et al., PRA 82, 052514 (2010)               
+  Rb2 potential from Strauss et al., PRA 82, 052514 (2010)
 
   gamma shifted from   5.317691178394    
                   to   5.317691178394    
@@ -332,7 +337,7 @@
 
   CONVERGED ON STATE NUMBER  1467 AT                    MAGNETIC Z FIELD =   774.7974784     GAUSS 
 
-  SMALLEST EIGENVALUE OF MATCHING MATRIX IS NUMBER  8 = -7.11964E-12
+  SMALLEST EIGENVALUE OF MATCHING MATRIX IS NUMBER  8 =  1.49001E-11
 
   WITH PRINCIPAL EIGENVECTOR COMPONENTS
   CHAN     VEC    VEC**2   L   QUANTUM NUMBERS
@@ -356,7 +361,7 @@
 
   CONVERGED ON STATE NUMBER  1468 AT                    MAGNETIC Z FIELD =   787.3486984     GAUSS 
 
-  SMALLEST EIGENVALUE OF MATCHING MATRIX IS NUMBER  9 =  1.01174E-10
+  SMALLEST EIGENVALUE OF MATCHING MATRIX IS NUMBER  9 =  8.22595E-11
 
   WITH PRINCIPAL EIGENVECTOR COMPONENTS
   CHAN     VEC    VEC**2   L   QUANTUM NUMBERS
@@ -371,7 +376,7 @@
 
   CONVERGED ON STATE NUMBER  1469 AT                    MAGNETIC Z FIELD =   753.1871575     GAUSS 
 
-  SMALLEST EIGENVALUE OF MATCHING MATRIX IS NUMBER  9 = -1.15890E-11
+  SMALLEST EIGENVALUE OF MATCHING MATRIX IS NUMBER  9 = -1.19300E-11
 
   WITH PRINCIPAL EIGENVECTOR COMPONENTS
   CHAN     VEC    VEC**2   L   QUANTUM NUMBERS
@@ -394,7 +399,7 @@
 
   CONVERGED ON STATE NUMBER  1469 AT                    MAGNETIC Z FIELD =   805.7568981     GAUSS 
 
-  SMALLEST EIGENVALUE OF MATCHING MATRIX IS NUMBER 10 =  2.05134E-11
+  SMALLEST EIGENVALUE OF MATCHING MATRIX IS NUMBER 10 =  3.06812E-11
 
   WITH PRINCIPAL EIGENVECTOR COMPONENTS
   CHAN     VEC    VEC**2   L   QUANTUM NUMBERS
@@ -409,7 +414,7 @@
 
   CONVERGED ON STATE NUMBER  1470 AT                    MAGNETIC Z FIELD =   772.1830844     GAUSS 
 
-  SMALLEST EIGENVALUE OF MATCHING MATRIX IS NUMBER 10 = -9.52288E-10
+  SMALLEST EIGENVALUE OF MATCHING MATRIX IS NUMBER 10 = -9.50246E-10
 
   WITH PRINCIPAL EIGENVECTOR COMPONENTS
   CHAN     VEC    VEC**2   L   QUANTUM NUMBERS
@@ -423,7 +428,7 @@
 
   CONVERGED ON STATE NUMBER  1471 AT                    MAGNETIC Z FIELD =   764.0184375     GAUSS 
 
-  SMALLEST EIGENVALUE OF MATCHING MATRIX IS NUMBER 11 =  5.86908E-12
+  SMALLEST EIGENVALUE OF MATCHING MATRIX IS NUMBER 11 =  9.84812E-12
 
   WITH PRINCIPAL EIGENVECTOR COMPONENTS
   CHAN     VEC    VEC**2   L   QUANTUM NUMBERS
@@ -447,7 +452,7 @@
 
   CONVERGED ON STATE NUMBER  1469 AT                    MAGNETIC Z FIELD =   823.8672927     GAUSS 
 
-  SMALLEST EIGENVALUE OF MATCHING MATRIX IS NUMBER 10 = -1.41070E-09
+  SMALLEST EIGENVALUE OF MATCHING MATRIX IS NUMBER 10 = -1.34160E-09
 
   WITH PRINCIPAL EIGENVECTOR COMPONENTS
   CHAN     VEC    VEC**2   L   QUANTUM NUMBERS
@@ -462,7 +467,7 @@
 
   CONVERGED ON STATE NUMBER  1470 AT                    MAGNETIC Z FIELD =   791.1538853     GAUSS 
 
-  SMALLEST EIGENVALUE OF MATCHING MATRIX IS NUMBER 10 =  3.23933E-11
+  SMALLEST EIGENVALUE OF MATCHING MATRIX IS NUMBER 10 =  1.98027E-11
 
   WITH PRINCIPAL EIGENVECTOR COMPONENTS
   CHAN     VEC    VEC**2   L   QUANTUM NUMBERS
@@ -476,7 +481,7 @@
 
   CONVERGED ON STATE NUMBER  1471 AT                    MAGNETIC Z FIELD =   782.8050331     GAUSS 
 
-  SMALLEST EIGENVALUE OF MATCHING MATRIX IS NUMBER 11 =  7.98124E-12
+  SMALLEST EIGENVALUE OF MATCHING MATRIX IS NUMBER 11 =  8.00608E-12
 
   WITH PRINCIPAL EIGENVECTOR COMPONENTS
   CHAN     VEC    VEC**2   L   QUANTUM NUMBERS
@@ -500,7 +505,7 @@
 
   CONVERGED ON STATE NUMBER  1469 AT                    MAGNETIC Z FIELD =   841.9413219     GAUSS 
 
-  SMALLEST EIGENVALUE OF MATCHING MATRIX IS NUMBER  9 =  1.11442E-10
+  SMALLEST EIGENVALUE OF MATCHING MATRIX IS NUMBER  9 = -7.82151E-10
 
   WITH PRINCIPAL EIGENVECTOR COMPONENTS
   CHAN     VEC    VEC**2   L   QUANTUM NUMBERS
@@ -515,7 +520,7 @@
 
   CONVERGED ON STATE NUMBER  1470 AT                    MAGNETIC Z FIELD =   810.0994520     GAUSS 
 
-  SMALLEST EIGENVALUE OF MATCHING MATRIX IS NUMBER  9 = -8.96404E-10
+  SMALLEST EIGENVALUE OF MATCHING MATRIX IS NUMBER  9 = -8.96985E-10
 
   WITH PRINCIPAL EIGENVECTOR COMPONENTS
   CHAN     VEC    VEC**2   L   QUANTUM NUMBERS
@@ -529,7 +534,7 @@
 
   CONVERGED ON STATE NUMBER  1471 AT                    MAGNETIC Z FIELD =   801.5738017     GAUSS 
 
-  SMALLEST EIGENVALUE OF MATCHING MATRIX IS NUMBER 10 = -4.38593E-11
+  SMALLEST EIGENVALUE OF MATCHING MATRIX IS NUMBER 10 = -2.95736E-11
 
   WITH PRINCIPAL EIGENVECTOR COMPONENTS
   CHAN     VEC    VEC**2   L   QUANTUM NUMBERS
@@ -542,16 +547,16 @@
 
   SEARCHING FOR BOUND STATE NUMBER  1472
 
-  CONVERGED ON STATE NUMBER  1472 AT                    MAGNETIC Z FIELD =   762.1330972     GAUSS 
+  CONVERGED ON STATE NUMBER  1472 AT                    MAGNETIC Z FIELD =   762.1330973     GAUSS 
 
-  SMALLEST EIGENVALUE OF MATCHING MATRIX IS NUMBER 10 = -1.19513E-11
+  SMALLEST EIGENVALUE OF MATCHING MATRIX IS NUMBER 10 = -5.27081E-11
 
   WITH PRINCIPAL EIGENVECTOR COMPONENTS
   CHAN     VEC    VEC**2   L   QUANTUM NUMBERS
 
-  13    0.2251    0.0507   2   1   3  -1   5   0
-  21    0.9025    0.8145   2   1   5  -1   3   0
-  26   -0.3490    0.1218   2   1   5   1   1   0
+  13   -0.2251    0.0507   2   1   3  -1   5   0
+  21   -0.9025    0.8145   2   1   5  -1   3   0
+  26    0.3490    0.1218   2   1   5   1   1   0
 
 
   -- FIELD ------ FIELD ------ FIELD ------ FIELD ------ FIELD ------ FIELD --
@@ -559,11 +564,11 @@
  |          Bound states of interacting pairs of atoms and molecules          |
  |                      as a function of external field                       |
  |                                                                            |
- |              Copyright (C) 2020 J. M. Hutson & C. R. Le Sueur              |
+ |              Copyright (C) 2022 J. M. Hutson & C. R. Le Sueur              |
  |                                                                            |
- |                               Version 2020.0                               |
+ |                               Version 2022.0                               |
  |                                                                            |
- |                    This run used     134.88 cpu secs and                   |
- |               7971 of the allocated   1000000 words of storage             |
+ |                    This run used      91.74 cpu secs and                   |
+ |               7943 of the allocated   1000000 words of storage             |
  |                                                                            |
   -- FIELD ------ FIELD ------ FIELD ------ FIELD ------ FIELD ------ FIELD --

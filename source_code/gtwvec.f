@@ -1,5 +1,5 @@
-      SUBROUTINE WVCALC(WVEC,WMAX,ERED,EINT,NOPEN,N)
-C  Copyright (C) 2019 J. M. Hutson & C. R. Le Sueur
+      SUBROUTINE GTWVEC(WVEC,WMAX,ERED,EINT,NOPEN,N)
+C  Copyright (C) 2022 J. M. Hutson & C. R. Le Sueur
 C  Distributed under the GNU General Public License, version 3
 C
 C  CR Le Sueur 2015
@@ -15,13 +15,13 @@ C  ROUTINES)
       DOUBLE PRECISION, INTENT(OUT)::WVEC(N),WMAX
       DOUBLE PRECISION DIF
 
-      WMAX=0.0D0
+      WMAX=0.D0
       NOPEN=0
 
       DO I=1,N
         DIF=ERED-EINT(I)
         WVEC(I)=SIGN(SQRT(ABS(DIF)),DIF)
-        IF (DIF.LE.0.0D0) CYCLE
+        IF (DIF.LE.0.D0) CYCLE
         WMAX=MAX(WMAX,SQRT(DIF))
         NOPEN=NOPEN+1
       ENDDO

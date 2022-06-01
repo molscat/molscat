@@ -29,7 +29,7 @@ LIBS     = -llapack -lblas
 # set up recipe rules =========================================================
 #
 # set flags for compilation
-COMPILE.f = $(Compiler) -c  -O0 -g
+COMPILE.f = $(Compiler) -std=legacy -c  -O0 -g
 LINK.f    = $(Compiler)
 #
 # pattern matching rules for generating object files from source code =========
@@ -47,81 +47,79 @@ $(OBJDIR)/pot_data_Tiemann-%.o: pot_data_Tiemann-%.f pot_data_tiemann.mod
 #
 # recipe rules for module files (to ensure they are remade when necessary) ====
 #
-angles.mod:             angles_module.f      $(OBJDIR)/angles_module.o
-	@true
-base9_suite.mod:        base9-skeleton.f     $(OBJDIR)/base9-skeleton.o
-	@true
-basis_data.mod:         basis_data_module.f  $(OBJDIR)/basis_data_module.o
-	@true
-efvs.mod:               efvs_module.f        $(OBJDIR)/efvs_module.o
-	@true
-physical_constants.mod: physical_constants_module.f \
-                        $(OBJDIR)/physical_constants_module.o
-	@true
-#physical_constants.mod: physical_constants_2014.f \
-#                        $(OBJDIR)/physical_constants_2014.o
-# 	@true
-potential.mod:          potential_module.f   $(OBJDIR)/potential_module.o
-	@true
-sizes.mod:              sizes_module.f       $(OBJDIR)/sizes_module.o
-	@true
 ###############################################################################
 #
 # lists of the object files that depend on a particular module ================
 #
 # angles module ===============================================================
 #
-ANGLES_DEPS =     iosbin.o iosout.o potenl-Rg_H2.o potenl.o vrtp-H2_H2.o \
-                  vrtp-extpot_1ang.o vrtp-extpot_2ang.o \
-
-(addprefix $(OBJDIR)/,$(ANGLES_DEPS)): angles.mod
+ANGLES_DEPS = iosbin.o iosout.o potenl.o vrtp-extpot_1ang.o \
+              vrtp-extpot_2ang.o vrtp-H2_H2.o vrtp-Rg_HX-eta.o  
+(addprefix \$(OBJDIR)/,$(ANGLES_DEPS)): angles.mod
+#
+angles.mod:         angles_module.f
+	@true
 #
 # basis_data module ===========================================================
 #
-BASIS_DATA_DEPS = asrot.o base.o base9-1S_3Sigma_cpld.o base9-alk_alk_ucpld.o \
-                  base-skeleton.o bd.driver.f fld.driver.f getlev.o iosbin.o \
-                  iosout.o iospb.o j6to4.o mol.driver.o output.o prbr.o \
-                  restrt.o set4.o set6.o set6c.o setbas.o surbas.o thresh.o \
-
-(addprefix $(OBJDIR)/,$(BASIS_DATA_DEPS)): basis_data.mod
+BASIS_DATA_DEPS = asrot.o base9-1S_3Sigma_cpld.o base9-alk_alk_ucpld.o base.o \
+                  bd.driver.o fld.driver.o getlev.o iosbin.o iosout.o \
+                  iospb.o j6to4.o mol.driver.o prbr.o restrt.o \
+                  set4.o set6c.o set6.o setbas.o sproc.o \
+                  surbas.o thresh.o   
+(addprefix \$(OBJDIR)/,$(BASIS_DATA_DEPS)): basis_data.mod
+#
+basis_data.mod:         basis_data_module.f
+	@true
 #
 # efvs module =================================================================
 #
-EFVS_DEPS =       base.o base9-1S_3Sigma_cpld.o base9-alk_alk_ucpld.o \
-                  base9-skeleton.o bckgrd-dummy.o bd.driver.o efv9-dummy.o \
-                  fld.driver.o header.o ldrdwt.o locpol.o \
-                  mol.driver.o output.o prnsum.o rdsigu.o restrt.o \
-                  scapot-default.o setefv.o wvhead.o \
-
-(addprefix $(OBJDIR)/,$(EFVS_DEPS)): efvs.mod
+EFVS_DEPS = base9-1S_3Sigma_cpld.o base9-alk_alk_ucpld.o base.o \
+            bckgrd-dummy.o bd.driver.o efv9-dummy.o fld.driver.o header.o \
+            ldrdwt.o locpol.o mol.driver.o prnsum.o rdsigu.o restrt.o \
+            scapot-default.o setefv.o sproc.o wvhead.o 
+(addprefix \$(OBJDIR)/,$(EFVS_DEPS)): efvs.mod
 #
-# physical constants module ===================================================
+efvs.mod:         efvs_module.f
+	@true
 #
-PHYS_CONST_DEPS = base9-1S_3Sigma_cpld.o base9-alk_alk_ucpld.o \
-                  bd.driver.o chckru.o eavg.o ecnv.o extpot-Ar_CH4.o \
-                  extpot-Ar_CO2.o extpot-Rg_HX.o fld.driver.o mol.driver.o \
-                  pot_data_Tiemann-Rb2-2010.o surbas.o \
-
-(addprefix $(OBJDIR)/,$(PHYS_CONST_DEPS)): physical_constants.mod
+# physical_constants module ===================================================
+#
+PHYSICAL_CONSTANTS_DEPS = base9-1S_3Sigma_cpld.o base9-alk_alk_ucpld.o \
+                          bd.driver.o chckru.o eavg.o ecnv.o extpot-Ar_CH4.o \
+                          extpot-Ar_CO2.o extpot-Rg_HX.o fld.driver.o \
+                          mol.driver.o pot_data_Tiemann-Rb2-2010.o surbas.o \
+                          vstar-Tiemann.o
+(addprefix \$(OBJDIR)/,$(PHYSICAL_CONSTANTS_DEPS)): physical_constants.mod
+#
+physical_constants.mod:         physical_constants_module.f
+	@true
 #
 # potential module ============================================================
 #
-POTENTIAL_DEPS =  base.o base9-1S_3Sigma_cpld.o base9-alk_alk_ucpld.o \
-                  base-skeleton.o bd.driver.o chckru.o cheint.o cntrct.o \
-                  dermat.o fld.driver.o getlev.o gnham.o mol.driver.o \
-                  multop.o odprop.o output.o potenl-Rg_H2.o potenl.o restrt.o \
-                  scwave.o setefv.o thresh.o vstar-Tiemann.o wavmat.o \
-                  wavvec.o ytrans.o \
-
-(addprefix $(OBJDIR)/,$(POTENTIAL_DEPS)): potential.mod
+POTENTIAL_DEPS = base9-1S_3Sigma_cpld.o base9-alk_alk_ucpld.o \
+                 base9-skeleton.o base.o bd.driver.o chckru.o cheint.o \
+                 cntrct.o dermat.o fld.driver.o getlev.o gnham.o hammat.o \
+                 mol.driver.o multop.o odprop.o potenl.o potenl-Rg_H2.o \
+                 restrt.o scwave.o setefv.o sproc.o sumlam.o thresh.o \
+                 vstar-Tiemann.o ytrans.o   
+(addprefix \$(OBJDIR)/,$(POTENTIAL_DEPS)): potential.mod
+#
+potential.mod:         potential_module.f
+	@true
 #
 # sizes module ================================================================
 #
-SIZES_DEPS =      angles_module.o basis_data_module.o bd.driver.o eavg.o \
-                  fld.driver.o iosbin.o iosout.o j6to4.o locpol.o \
-                  mol.driver.o potential_module.o prbr.o restrt.o setefv.o
-
-(addprefix $(OBJDIR)/,$(SIZES_DEPS)): sizes.mod
+SIZES_DEPS = angles_module.o basis_data_module.o bd.driver.o eavg.o \
+             fld.driver.o iosbin.o iosout.o j6to4.o locpol.o \
+             mol.driver.o potential_module.o prbr.o restrt.o setefv.o
+(addprefix \$(OBJDIR)/,$(SIZES_DEPS)): sizes.mod
+#
+sizes.mod:         sizes_module.f
+	@true
+###############################################################################
+#
+# Set aliases to shorten dependency lists =====================================
 ###############################################################################
 #
 # Set aliases to shorten dependency lists =====================================
@@ -136,7 +134,7 @@ LA_UTILS =  dgemul.o syminl-alloc.o dsyneg.o syminv.o
 #
 # set up dependencies =========================================================
 #
-YTRANS      = chnsrt.o ev_ord.o multop.o wvcalc.o ytrans.o
+YTRANS      = chnsrt.o ev_ord.o gtwvec.o multop.o ytrans.o
 PROPS_LD    = aiprop.o airymp.o corr.o ldprop.o maprop.o maxmgv.o mdprop.o \
               mgprop.o outmat.o potent.o scairy.o spropn.o trnsfm.o trnsp.o \
               waveig.o yinit.o
@@ -149,10 +147,10 @@ BASE        = asrot.o base.o check6.o couple.o cpl21.o cpl22.o cpl23.o \
 UTILITIES   = chkstr.o dsyfil.o matprn.o
 LIBUTILS    =
 ANG_MOM     = j3j000.o j6j.o j9j.o parsgn.o sixj.o threej.o thrj.o xninej.o
-W_MATRIX    = dermat.o wavmat.o wavvec.o
+W_MATRIX    = dermat.o hammat.o sumlam.o
 CORE_ALL    = brent.o calck.o chckru.o cheint.o drcalc.o drset.o ecnv.o \
-              ecnvx.o efprop.o findrm.o gnham.o idpchk.o prprop.o progms.o \
-              propst.o setefv.o stsrch.o thresh.o thrlst.o wvhead.o \
+              ecnvx.o findrm.o gnham.o idpchk.o prprop.o progms.o propst.o \
+              setefv.o stsrch.o thresh.o thrlst.o wvbksb.f wvhead.o \
               $(YTRANS) $(PROPS_LD) $(BASE) $(UTILITIES) $(LIBUTILS) \
               $(ANG_MOM) $(W_MATRIX)
 IOS         = chck6i.o dasize.o get102.o gaussp.o gasleg.o iosbin.o iosclc.o \
@@ -168,8 +166,8 @@ FLD_SUBS = bdctrl.o bdpset.o bd.prpini.o evmtch.o iosbin-dummy.o prnsum.o \
            $(CORE_ALL)
 BD_SUBS  = cntrct.o $(FLD_SUBS)
 MOL_SUBS = calca.o convrg.o eavg.o epsum.o erange.o findrx.o getlev.o \
-           header.o ldrdwt.o locpol.o mol.prpini.o nexte.o output.o \
-           psiasy.o rdsigu.o scctrl.o scpset.o scwave.o \
+           header.o ldrdwt.o locpol.o mol.prpini.o nexte.o \
+           psiasy.o rdsigu.o scctrl.o scpset.o scwave.o sproc.o \
            $(CORE_ALL) $(IOS) $(PRBR) $(RESTRT) $(PROPS_OTHER) $(YTOS)
 REPLACEABLE = bckgrd-dummy.o pertrb.o reiniv-dummy.o scapot-default.o
 #
@@ -177,6 +175,12 @@ REPLACEABLE = bckgrd-dummy.o pertrb.o reiniv-dummy.o scapot-default.o
 #
 POTUTILS    = gasleg.o gaushp.o gaussp.o herm.o hrecur.o plm.o yrr.o zbes.o
 POTENL-GP   = potenl.o $(POTUTILS)
+#
+# set up 'normal' set of object files dependencies ============================
+#
+CORE_MOL = $(MODULES) mol.driver.o $(CLOCK) $(DIAG) $(LA_UTILS) $(MOL_SUBS)
+CORE_BND = $(MODULES)  bd.driver.o $(CLOCK) $(DIAG) $(LA_UTILS) $(BD_SUBS)
+CORE_FLD = $(MODULES) fld.driver.o $(CLOCK) $(DIAG) $(LA_UTILS) $(FLD_SUBS)
 #
 # dependency lists for system-specific potentials =============================
 #
@@ -205,12 +209,6 @@ BASE9-ALK2   = base9-alk_alk_ucpld.o \
                efv9-dummy.o degen9-nondegenerate.o
 BASE9-MGNH   = base9-1S_3Sigma_cpld.o \
                efv9-dummy.o degen9-nondegenerate.o potin9-example.o
-#
-# set up 'normal' set of object files dependencies ============================
-#
-CORE_MOL = $(MODULES) mol.driver.o $(CLOCK) $(DIAG) $(LA_UTILS) $(MOL_SUBS)
-CORE_BND = $(MODULES)  bd.driver.o $(CLOCK) $(DIAG) $(LA_UTILS) $(BD_SUBS)
-CORE_FLD = $(MODULES) fld.driver.o $(CLOCK) $(DIAG) $(LA_UTILS) $(FLD_SUBS)
 ###############################################################################
 #
 # list of targets (which are all executables) =================================

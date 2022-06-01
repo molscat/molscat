@@ -1,5 +1,5 @@
-      SUBROUTINE WAVVEC(VL,P,IV,W,N,NHAM)
-C  Copyright (C) 2020 J. M. Hutson & C. R. Le Sueur
+      SUBROUTINE SUMLAM(VL,P,IV,W,N,NHAM)
+C  Copyright (C) 2022 J. M. Hutson & C. R. Le Sueur
 C  Distributed under the GNU General Public License, version 3
       USE potential, ONLY: NVLBLK
 C
@@ -67,7 +67,7 @@ C  THE MAPPING BETWEEN THE TWO.
 C
    10 IF (IVLU.NE.0) THEN
         WRITE(6,601)
-  601   FORMAT(' *** ERROR IN WAVVEC. IVLU =',I2,' AND IVLFL =',I2/
+  601   FORMAT(' *** ERROR IN SUMLAM. IVLU =',I2,' AND IVLFL =',I2/
      1    '     USE OF THE IV ARRAY IS NOT SUPPORTED FOR IVLU > 0.')
         STOP
       ENDIF

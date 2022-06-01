@@ -1,9 +1,9 @@
       SUBROUTINE CNTRCT(N, M, R, EMAX, W, T,
      1                  VL, IV, EINT, CENT,
      2                  P, EP2RU, CM2RU, RSCALE, MXLAM, NHAM, IPRINT)
-C  Copyright (C) 2020 J. M. Hutson & C. R. Le Sueur
+C  Copyright (C) 2022 J. M. Hutson & C. R. Le Sueur
 C  Distributed under the GNU General Public License, version 3
-      USE potential
+      USE potential, ONLY: NCONST, NRSQ, VCONST
       IMPLICIT DOUBLE PRECISION (A-H,O-Z)
 C
 C  ROUTINE TO CONTRACT THE ANGULAR BASIS SET BY TRANSFORMING
@@ -49,7 +49,7 @@ C
       CALL CHKSTR(NUSED)
       ERED=0.D0
       NHAM=MXLAM
-      CALL WAVMAT(W,N,R,P,VL,IV,ERED,EINT,CENT,EP2RU,CM2RU,
+      CALL HAMMAT(W,N,R,P,VL,IV,ERED,EINT,CENT,EP2RU,CM2RU,
      1            RSCALE,X(ISD),MXLAM,NHAM,IPRINT)
 C
       IFAIL=0

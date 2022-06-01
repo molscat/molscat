@@ -2,11 +2,11 @@
  |                                                                            |
  |          Bound states of interacting pairs of atoms and molecules          |
  |                                                                            |
- |              Copyright (C) 2020 J. M. Hutson & C. R. Le Sueur              |
+ |              Copyright (C) 2022 J. M. Hutson & C. R. Le Sueur              |
  |                                                                            |
- |                               Version 2020.0                               |
+ |                               Version 2022.0                               |
  |                                                                            |
- |                       Run on 14 Feb 2020   at 20:28:33                     |
+ |                       Run on 31 May 2022   at 10:31:18                     |
  |                                                                            |
   -- BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND --
 
@@ -15,11 +15,16 @@
   the terms of the GNU General Public License, version 3, as published by
   the Free Software Foundation.
 
-  Publications resulting from the use of this program should cite both
-  the version of the program used:
-  J. M. Hutson & C. R. Le Sueur, BOUND computer code 2020.0              
+  Publications resulting from the use of this program should cite both the
+  version of the program used:
+
+  J. M. Hutson & C. R. Le Sueur, BOUND: a program for bound states of
+  interacting pairs of atoms and molecules,
+  Version 2022.0, https//github.com/molscat/molscat
+
   and the published paper:
-  J. M. Hutson & C. R. Le Sueur, Comput. Phys. Commun. 241, pp 1-8 (2019).
+
+  J. M. Hutson & C. R. Le Sueur, Comput. Phys. Commun., 241, 1-8 (2019).
 
 
   USING CODATA 2018 RECOMMENDED VALUES OF FUNDAMENTAL PHYSICAL CONSTANTS
@@ -209,11 +214,11 @@
  |                                                                            |
  |          Bound states of interacting pairs of atoms and molecules          |
  |                                                                            |
- |              Copyright (C) 2020 J. M. Hutson & C. R. Le Sueur              |
+ |              Copyright (C) 2022 J. M. Hutson & C. R. Le Sueur              |
  |                                                                            |
- |                               Version 2020.0                               |
+ |                               Version 2022.0                               |
  |                                                                            |
- |                    This run used       0.17 cpu secs and                   |
- |                900 of the allocated   1000000 words of storage             |
+ |                    This run used       0.06 cpu secs and                   |
+ |                891 of the allocated   1000000 words of storage             |
  |                                                                            |
   -- BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND --

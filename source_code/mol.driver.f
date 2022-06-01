@@ -1,11 +1,14 @@
       SUBROUTINE DRIVER
-C  Copyright (C) 2020 J. M. Hutson & C. R. Le Sueur
+C  Copyright (C) 2022 J. M. Hutson & C. R. Le Sueur
 C  Distributed under the GNU General Public License, version 3
-      USE efvs
-      USE potential
-      USE basis_data, ONLY: JHALF, NJLQN9
-      USE physical_constants
-      USE sizes, MXFLD => MXFLD_in_MOLSCAT, MXNRG => MXNRG_in_MOLSCAT
+      USE efvs, ONLY: EFV, EFVNAM, EFVUNT, IEFVST, ISVEFV, ITPSUB,
+     e                MAPEFV, MXEFV, NEFV, NEFVP, SCALAM, SVNAME, SVUNIT
+      USE potential, ONLY: EPNAME, IREF, NCONST, NDGVL, NEXTRA,
+     p                     NRSQ, NVLBLK, RMNAME
+      USE basis_data, ONLY: JHALF, NJLQN9, NLEVEL, WT
+      USE physical_constants, ONLY: NIST_year, bfct
+      USE sizes, ONLY: MXFLD => MXFLD_in_MOLSCAT, MXLN, MXLOC,
+     s                 MXNRG => MXNRG_in_MOLSCAT, MXOMEG
 C***********************************************************************
 C
 C  ------  MOLSCAT - J.M. HUTSON & C.R. LE SUEUR -----------------------
@@ -31,7 +34,7 @@ C    7 : MANOLOPOULOS'S QUASIADIABATIC MODIFIED LOG-DERIVATIVE PROPAGATOR
 C    9 : SYMPLECTIC LOG-DERIVATIVE PROPAGATOR OF MANOLOPOULOS AND GRAY
 C   14 : VIVS (VIVAS) PROPAGATOR
 C
-C  CURRENT VERSION: 2020.0
+C  CURRENT VERSION: 2022.0
 C***********************************************************************
 C
 C  DEFAULT UNITS ARE
@@ -73,7 +76,7 @@ C
       CHARACTER(1)   PLUR(2)
       CHARACTER(2)   SFX,CLEN3,ORDNL
       CHARACTER(3)   YPLUR(2),CLEN1,CLEN2
-      CHARACTER(8)   EUNAME,CURRWD(2)
+      CHARACTER(8)   EUNAME,CURRWD(2),QNAME(10)
       CHARACTER(20)  PDATE
       CHARACTER(80)  LABEL
       CHARACTER(12)  METHOD
@@ -132,8 +135,9 @@ C  NRSQ = 1 IF THERE ARE OFF-DIAGONAL 1/R**2 TERMS, 0 OTHERWISE
 C  VCONST ARE THE COEFFICIENTS OF THE NCONST MONOMER TERMS
 C
 C  COMMON BLOCK FOR CONTROL OF USE OF PROPAGATION SCRATCH FILE
-      LOGICAL IREAD,IWRITE
-      COMMON /PRPSCR/ ESHIFT,ISCRU,IREAD,IWRITE
+      LOGICAL IREAD,IWRITE,IREADR,IWRITR
+      COMMON /PRPSCR/ ESHIFT,ISCRU,ISCRUR,IREAD,IWRITE,IREADR,IWRITR
+      LOGICAL LSCRU,LSCRUR
 C
 C  COMMON BLOCK FOR CONTROL OF PROPAGATION SEGMENTS
       COMMON /RADIAL/ RMNINT,RMXINT,RMID,RMATCH,DRS,DRL,STEPS,STEPL,
@@ -165,10 +169,9 @@ C  COMMON BLOCK TO DESCRIBE WHICH DRIVER IS USED
       CHARACTER(1) CDRIVE
 
 C  COMMON BLOCK FOR INPUT/OUTPUT CHANNEL NUMBERS
-      LOGICAL PSIFMT
-      COMMON /IOCHAN/ IPSISC,IWAVSC,IPSI,NWCOL,PSIFMT
-      DATA IPSISC,IPSI,IWAVSC/108,109,110/
-      DATA PSIFMT/.TRUE./
+      LOGICAL IWAVEF
+      COMMON /IOCHAN/ IPSISC,IWAVSC,IWAVE,NWVCOL,IWVSTP,IWAVEF
+      DATA IPSISC,IWAVSC/108,110/
 
 C  COMMON BLOCK FOR CONTROL OF PROPAGATION BOUNDARY CONDITIONS
       COMMON /BCCTRL/ BCYCMN,BCYCMX,BCYOMN,BCYOMX,ADIAMN,ADIAMX,
@@ -186,29 +189,30 @@ C
      1                 BCYCMN, BCYCMX, BCYOMN, BCYOMX, DEGTOL,
      2                 DFIELD, DNRG,   DR,     DRAIRY, DRCON,
      3                 DRL,    DRMAX,  DRNOW,  DRS,    DTOL,
-     4                 ENERGY, EPL,    EPS,    EREF,   EUNITS,
-     5                 EUNAME, EUNIT,  FIELD,  FIXFLD, FLDMAX,
+     4                 ENERGY, EPL,    EPS,    EREF,   EUNAME,
+     5                 EUNITS, EUNIT,  FIELD,  FIXFLD, FLDMAX,
      6                 FLDMIN, IABSDR, IALFP,  IALPHA, IBFIX,
      7                 IBHI,   ICHAN,  ICON,   ICONVU, IDIAG,
-     8                 IECONV, IFCONV, IFEGEN, IFIELD, IFLS,
-     9                 IFVARY, ILDSVU, IMGSEL, INTFLG, IPARTU,
-     A                 IPERT,  IPHSUM, IPRINT, IPROPL, IPROPS,
-     B                 IPSI,   IPSISC, IREF,   IRMSET, IRSTRT,
-     C                 IRXSET, ISAVEU, ISCRU,  ISHIFT, ISIGPR,
-     D                 ISIGU,  ISYM,   IV,     IVP,    IVPP,
-     D                 IWAVE,  IWAVSC, IZERO,  JSTEP,  JTOTL,
+     8                 IECONV, IFCONV, IFEGEN, IFLS,   IFVARY,
+     9                 ILDSVU, IMGSEL, INTFLG, IPARTU, IPERT,
+     A                 IPHSUM, IPRINT, IPROPL, IPROPS, IPSISC,
+     B                 IREF,   IRMSET, IRSTRT, IRXSET, ISAVEU,
+     C                 ISCRU,  ISHIFT, ISIGPR, ISIGU,  ISYM,
+     D                 IV,     IVP,    IVPP,   IWAVE,  IWAVEF,
+     D                 IWAVSC, IWVSTP, IZERO,  JSTEP,  JTOTL,
      E                 JTOTU,  KSAVE,  LABEL,  LASTIN, LINE,
      F                 LMAX,   LOGNRG, LTYPE,  MAGEL,  MHI,
      G                 MMAX,   MONQN,  MSET,   MUNIT,  MXPHI,
      H                 MXSIG,  NCAC,   NCONV,  NFIELD, NFVARY,
      I                 NGAUSS, NGMP,   NLPRBR, NNRG,   NNRGPG,
-     J                 NSTAB,  NTEMP,  NUMDER, OTOL,   PHILW,
-     K                 PHIST,  POWRX,  POWRL,  POWRS,  PRNTLV,
-     L                 RMAX,   RMID,   RMIN,   RUNAME, RUNIT,
-     M                 RVFAC,  RVIVAS, SCALAM, SHRINK, STEPL,
-     N                 STEPS,  TEMP,   THETLW, THETST, THI,
-     O                 TLO,    TOL,    TOLHI,  TOLHIL, TOLHIS,
-     P                 URED,   WKBMN,  WKBMX,  XI,     XSQMAX
+     J                 NSTAB,  NTEMP,  NUMDER, NWVCOL, OTOL,
+     K                 PHILW,  PHIST,  POWRL,  POWRS,  POWRX,
+     L                 PRNTLV, RMAX,   RMID,   RMIN,   RUNAME,
+     M                 RUNIT,  RVFAC,  RVIVAS, SCALAM, SHRINK,
+     N                 STEPL,  STEPS,  TEMP,   THETLW, THETST,
+     O                 THI,    TLO,    TOL,    TOLHI,  TOLHIL,
+     P                 TOLHIS, URED,   WKBMN,  WKBMX,  XI,
+     Q                 XSQMAX
       EQUIVALENCE (MXPAR,MXPHI), (RMID,RVIVAS), (DR,DRNOW),
      1            (TOL,TOLHI), (NLPRBR,IFLS), (IPRINT,PRNTLV),
      2            (KSAVE,IPHSUM), (MSET,IBFIX), (MHI,IBHI)
@@ -223,7 +227,7 @@ C  RMAX IS THE OUTER RADIUS TO WHICH THE PROPAGATION MUST EXTEND
 C
       DATA CURRWD /'       ','(8-BYTE)'/
       DATA CTIME /'         '/,CDATE /'           '/
-      DATA IPROGM /19/, PDATE /'2020.01'/
+      DATA IPROGM /19/, PDATE /'2022.0'/
       DATA PLUR /' ','S'/
       DATA YPLUR /'Y  ','IES'/
       DATA CDRIVE /'M'/
@@ -320,7 +324,7 @@ C
       DO I=1,MXEFV
         EFVNAM(I)=' '
         EFVUNT(I)=' '
-        FIXFLD(I)=0.0D0
+        FIXFLD(I)=0.D0
         IFVARY(I)=MXEFV+1
       ENDDO
       FLDMAX=0.D0
@@ -337,7 +341,6 @@ C
       IECONV=0
       IFCONV=0
       IFEGEN=0
-      IFIELD=-1
       ILDSVU=0
       IMGSEL=4
       INTFLG=0
@@ -360,6 +363,8 @@ C
       IVP=.FALSE.
       IVPP=.FALSE.
       IWAVE=0
+      IWAVEF=.TRUE.
+      IWVSTP=1
       IZERO=0
       JSTEP=1
       JTOTL=0
@@ -392,6 +397,7 @@ C
       NSTAB=5
       NTEMP=0
       NUMDER=.FALSE.
+      NWVCOL=8
       OTOL=.005D0
       PHILW=0.D0
       PHIST=0.D0
@@ -416,7 +422,7 @@ C
       TOLHI=0.0001D0
       TOLHIL=unset
       TOLHIS=unset
-      THI=1.0D0
+      THI=1.D0
       TLO=-0.1D0
       XI=0.25D0
       URED=0.D0
@@ -427,6 +433,7 @@ C  OTHER VARIABLES
       ILSU=11
       IOSFLG=0
       IRSTRT=0
+      ISCRUR=0
       ITPSUB=0
       LWARN=.FALSE.
       MAPEFV=0
@@ -444,7 +451,6 @@ C  READ &INPUT  DATA.
       if (.not.inolls) READ(5,INPUT,END=9040)
 C
 
-Set the labels that will be included when a new repository is created in this
 C     INCLUDE STATEMENTS TO RECEIVE, UNPACK AND ALLOCATE DATA TO
 C     VARIABLES
 C
@@ -475,7 +481,7 @@ C
         CALL PROGVS(PDATE)
         CALL TIMEST(CDATE,CTIME)
         WRITE(6,1001)
-        CALL CPRMSM('MOLSCAT',PDATE)
+        CALL CPRMS(PDATE)
       ENDIF
 
       IF (IPRINT.GE.1) WRITE(6,1003) NIST_year
@@ -494,7 +500,7 @@ C
  1006   FORMAT(/' *** ILLEGAL NIPR =',I10)
       ENDIF
 C
-      IF (LOGNRG) DNRG=1.0D0
+      IF (LOGNRG) DNRG=1.D0
 
       IF (IPRINT.GE.1) WRITE(6,1007) IPRINT,ISIGPR
  1007 FORMAT(/'  PRINT LEVEL (IPRINT) =',I3,'     OTHER PRINT CONTROLS',
@@ -551,7 +557,7 @@ C  FOR THIS CASE, NSTATE INITIALIZED TO MAXIMUM AVAILABLE IN X().
       ISJSTT=IXNEXT  ! JSTATE
       NSTATE=MX
       CALL BASIN(NSTATE,X(ISJSTT),URED,NQN,NLABV(9),MXPAR,ITYPE,IPRINT,
-     1           IOSFLG,IBOUND,NLEVEL,X(ISJSTT))
+     1           IOSFLG,IBOUND,NLEVEL,X(ISJSTT),QNAME)
 
 C  BASE ROUTINE INCREMENTS IXNEXT BY AMOUNT OF STORAGE IN JSTATE.
       CALL CHKSTR(NUSED)
@@ -681,6 +687,7 @@ C PROCESS IECONV FOR RESONANCE SEARCH OPTIONS IN ENERGY
      1            (IECONV.EQ.4 .AND. IPHSUM.GT.0)) .AND.
      2            (DNRG.GT.0 .OR. NNRG.GE.3)) THEN
             ISRCH=2
+            SVNAME='E'
             NNRG=MXLOC
             NNRGPG=3
             NPR=3
@@ -699,7 +706,7 @@ C
 C
         IF (NNRG.GT.1 .AND. DNRG.GT.0.D0 .AND. NCONV.EQ.0) THEN
           IF (LOGNRG) THEN
-            RATIO=(ENERGY(2)/ENERGY(1))**(1D0/DBLE(NNRG-1))
+            RATIO=(ENERGY(2)/ENERGY(1))**(1.D0/DBLE(NNRG-1))
             DO I=2,NNRG
               ENERGY(I)=ENERGY(I-1)*RATIO
             ENDDO
@@ -718,6 +725,7 @@ C
       ENDIF
       EPS=EPS*EUNIT
       EPL=EPL*EUNIT
+      EREF=EREF*EUNIT
 C
 C--------------------------------------------------------------------
 C  INITIALIZE POTENTIAL.
@@ -760,13 +768,39 @@ C
       CALL PROPST(RMIN,RMAX,DR,IRMSET,IRXSET,RVFAC,
      1            INTFLG,IMGSEL,IPRINT,
      2            EPS,EPL,POWRX,TOLHI,DRMAX,NSTAB)
+C  SET UP LOGICAL CONTROLLING USE OF SCRATCH FILES
+      LSCRU=ISCRU.NE.0
+      LSCRUR=.FALSE.
+C  ONLY NEED FILE FOR R VALUES IF MORE THAN 1 FIELD AND USING VARIABLE STEPS
+      IF (NFIELD.GT.1 .AND. LSCRU) THEN
+        IF ((IPROPS.EQ.9 .AND. TOLHIS.GT.0.D0) .OR.
+     1      (IPROPL.EQ.9 .AND. TOLHIL.GT.0.D0)) THEN
+          LSCRUR=.TRUE.
+          ISCRUR=ISCRU+1
+          OPEN(ISCRUR,FORM='UNFORMATTED',STATUS='SCRATCH')
+        ENDIF
+      ENDIF
+C  ONLY NEED FILE FOR MATRICES IF MORE THAN 1 ENERGY
+      IF (NNRG.EQ.1 .AND. LSCRU .AND. NCONV.EQ.0) THEN
+        LSCRUR=.TRUE.
+        ISCRUR=ISCRU
+        OPEN(ISCRUR,FORM='UNFORMATTED',STATUS='SCRATCH')
+        ISCRU=0
+        LSCRU=.FALSE.
+      ENDIF
 C
 C  IF WAVEFUNCTIONS ARE REQUESTED, 3 EXTRA FILES ARE USED:
 C  CHANNEL IWAVSC   SCRATCH  SAVING BITS REQUIRED FOR WAVEFN PROPAGATION
 C  CHANNEL IPSISC   SCRATCH  SAVING WAVEFN AS CREATED BY MDPROP
-C  CHANNEL IPSI     FINAL FILE WITH WAVEFN SEQUENTIALLY FROM RMIN TO RMAX
+C  CHANNEL IWAVE    FINAL FILE WITH WAVEFN SEQUENTIALLY FROM RMIN TO RMAX
 C  OPEN TEMPORARY FILES LATER AS N IS REQUIRED FOR RECORD LENGTH
 C
+      IF (IWAVE.NE.0 .AND. IRMSET.NE.0) THEN
+        WRITE(6,1109)
+ 1109   FORMAT(/' RMIN MUST BE FIXED IF WAVEFUNCTIONS ARE BEING ',
+     1          'CALCULATED')
+        IRMSET=0
+      ENDIF
       WAVE=(IWAVE.NE.0 .AND. IPROPS.EQ.6 .AND. IPROPL.EQ.6)
       IF (IWAVE.NE.0 .AND. .NOT.WAVE) THEN
         WRITE(6,1110)
@@ -776,8 +810,9 @@ C
 C
 C  WRITE HEADER ON WAVEFUNCTION FILE
 C
-      IF (WAVE) CALL WVHEAD(IPROGM,LABEL,ITYPE,IBOUND,URED,MUNIT,RUNIT,
-     1                      EUNIT,IPRINT)
+      IF (WAVE) CALL WVHEAD(LABEL,ITYPE,IBOUND,NQN,URED,MUNIT,RUNIT,
+     1                      EUNIT,0.D0,RUNAME,EUNAME,EREF,IPRINT,
+     2                      IREF,MONQN(1))
 
       IF (WAVE .AND. ICHAN.LE.0) THEN
         WRITE(6,*) '  *** SCATTERING CHANNEL MUST BE GIVEN AS ICHAN'
@@ -806,6 +841,13 @@ C
         ELSEIF (IBHI.GT.IBFIX) THEN
           WRITE(6,*) ' RESTRICTING SYMMETRY BLOCKS TO IBFIX = ',IBFIX
           IBHI=0
+        ENDIF
+        IF (ISCRU.NE.0) THEN
+          WRITE(6,*)' ISCRU MUST BE 0'
+          ISCRU=0
+          ISCRUR=0
+          LSCRU=.FALSE.
+          LSCRUR=.FALSE.
         ENDIF
       ENDIF
 C
@@ -872,7 +914,7 @@ C
  1270 FORMAT(/'  RESONANCE SEARCH OPTION. ONLY FIRST 5 ENERGIES ',
      1       'GIVEN. OTHERS WILL BE DETERMINED INTERACTIVELY.')
 C
-      IF (ISRCH.EQ.2 .AND. IPRINT.GE.1) then
+      IF (ISRCH.EQ.2 .AND. IPRINT.GE.1) THEN
         WRITE(6,1275)
  1275 FORMAT(/'  RESONANCE CONVERGENCE OPTION. ONLY FIRST 3 ENERGIES ',
      1       'GIVEN. OTHERS WILL BE DETERMINED INTERACTIVELY.')
@@ -1001,7 +1043,7 @@ C  RESET VALUES READY FOR LOOP LATER ON
      1                          MXPAR,' SYMMETRY BLOCKS'
       IF (IBFIX.GT.0 .AND. IBHI.GT.0 .AND. IBHI.LT.IBFIX) IBHI=0
       IF (IBFIX.GT.0 .AND. IBHI.LE.0) IBHI=IBFIX
-      IF (IBFIX.EQ.0) IBHI=MXPAR
+      IF (IBFIX.EQ.0 .AND. IBHI.EQ.0) IBHI=MXPAR
       IF (IBFIX.GT.0 .AND. IPRINT.GE.1) THEN
         IF (IBFIX.LT.IBHI) THEN
           WRITE(6,1600) IBFIX,IBHI
@@ -1065,7 +1107,7 @@ C
         STOP
       ENDIF
       IOUT=IXNEXT        ! SIGCUR
-C  NOTE THAT IXNEXT WILL BE CHANGED BY OUTINT
+C  NOTE THAT IXNEXT WILL BE CHANGED BY SPINIT
       CALL FLUSH(6)
 
 C  SET LOGICALS THAT DETERMINE WHETHER TO:
@@ -1094,13 +1136,13 @@ C  LEVELS WILL BE CONSISTENT BETWEEN DIFFERENT CALCULATIONS)
         LACCXS=(LCURXS .AND. (NFVARY.EQ.0 .AND. NDGVL.EQ.0))
       ENDIF
 
-      CALL OUTINT(LABEL,ENERGY,EUNIT,NNRG,NFIELD,NSTATE,NQN,X(ISJSTT),
+      CALL SPINIT(LABEL,ENERGY,EUNIT,NNRG,NFIELD,NSTATE,NQN,X(ISJSTT),
      1            X(IOUT),ICAC,URED,ITYPE,IPHSUM,ISST,MINJT,MAXJT,
      2            ISIGU,IPARTU,ISAVEU,IPROGM,MXSIG,ISIGPR,JSTEP,IRSTRT,
      3            ILDSVU,LCURXS,LACCXS,NSIG,ICHAN,IFCONV,IBOUND,
      4            RUNAME,IPRINT)
 C
-C  STORAGE CAPACITY HAS ALREADY BEEN CHECKED (IN OUTINT) FOR THESE
+C  STORAGE CAPACITY HAS ALREADY BEEN CHECKED (IN SPINIT) FOR THESE
 C  ARRAYS
       NSTOR=NSIG*NSIG
       IDEG=IOUT+NSTOR    ! SIGDEG
@@ -1131,7 +1173,7 @@ C  PROCESS RESTART REQUEST ...
       IF (IPRINT.GE.1) WRITE(6,1060)
 C
       EFIRST=ENERGY(1)*CM2RU
-      EMX=-1D30
+      EMX=-1.D30
       DO INRG=1,NNRG
         EMX=MAX(EMX,ENERGY(INRG))
       ENDDO
@@ -1146,8 +1188,8 @@ C
      1  CALL THRESH(X(1),N,CM2RU,ITYPE,MONQN,NQN,NJLQN(ITYP),EREF,X(1),
      2              0)
 C  EREF IS IN UNITS OF CM^-1
-      IF (IPRINT.GE.1) CALL EREFIN(MONQN,NQN,NJLQN(ITYP),EUNAME,EREF,
-     1                             EUNIT)
+      IF (IPRINT.GE.1) CALL EREFIN(MONQN,NQN,NJLQN(ITYP),EUNAME,
+     1                             EREF,EUNIT)
 
 C  SET UP LOGICALS CONTROLLING PRINTING
 C
@@ -1176,6 +1218,8 @@ C ***************  LOOP OVER SYMMETRY BLOCKS BEGINS HERE  **************
 C
         DO 200 IB=IBMIN,IBMAX
 
+          IWRITR=LSCRUR
+          IREADR=.FALSE.
 C  WRITE HEADER FOR CURRENT BLOCK IF IPRINT>=2
           IF (PBLKHD) WRITE(6,2100) JTOT,IB
  2100     FORMAT(/2X,29('*'),'  ANGULAR MOMENTUM JTOT  =',I4,'  ',
@@ -1197,7 +1241,7 @@ C
      1              X,X,X,X,MXLAM,NHAM,
      2              X(ILAM),X,WGHT,IEXCH,THETA,PHI,IB,
      3              .TRUE.,EFIRST,NSTATE,IPRINT,IBOUND,X(ISJSTT),
-     4              X)
+     4              X,QNAME)
 C
 C  MOLD IS A REMNANT OF THE PREVIOUS SYMMETRY BLOCK PROCESSING.
 C  MXP IS USED IN CONVERGENCE CHECKING, MOLD IS PASSED TO PRBR
@@ -1218,7 +1262,7 @@ C  ALLOCATE STORAGE FOR COUPLED EQUATION SOLVER.
 C
 C  ALLOCATE STORAGE COMMON TO ALL SCATTERING. . .
 C  NOTE THAT INTEGER ARRAYS OF LENGTH N ARE NOT REDUCED BY NIPR
-C  IC1 IS IXNEXT AFTER ALLOCATIONS OF BASIN, POTENL, OUTINT ...
+C  IC1 IS IXNEXT AFTER ALLOCATIONS OF BASIN, POTENL, SPINIT ...
             ISNEVR=IC1           ! LNEVER
             ISJIND=ISNEVR+NLEVEL ! JSINDX
             IF (NLEVEL.EQ.0) ISJIND=ISNEVR+NSTATE
@@ -1260,7 +1304,14 @@ C
      1                X(ISEINT),X(ISCENT),X(ISVL),X(ISIV),MXLAM,NHAM,
      2                X(ILAM),X(ISWVEC),WGHT,IEXCH,THETA,PHI,IB,
      3                .FALSE.,EFIRST,NSTATE,IPRINT,IBOUND,X(ISJSTT),
-     4                X(ISDGVL))
+     4                X(ISDGVL),QNAME)
+            IF (WAVE) CALL WVSBLK(JTOT,IB,N,NQN,NSTATE,X(IXJSTT),
+     1                            X(ISJIND),X(ISL),X(ISCENT),EREF,
+     2                            EUNIT,EUNAME,QNAME,IBOUND,IPRINT,
+     3                            NFIELD,'FIELD'//PLUR(MIN(NFIELD,2)))
+          ELSE
+            IF (IPRINT.GE.10) WRITE(6,2250) JFIELD,IRSTRT
+ 2250       FORMAT('  NO BASIS FUNCTIONS FOR THIS BLOCK',2I4)
           ENDIF
 C
 C ******************  LOOP OVER EXTERNAL FIELDS BEGINS HERE  *************
@@ -1268,6 +1319,8 @@ C
           OLDFAC=0.D0
           IFXE=0
           DO 300 JFIELD=1,NFIELD
+            IREAD=ISAV.EQ.-1
+            IWRITE=LSCRU .AND. ISAV.NE.-1
             IF (LSPEC .OR. LCHAR) THEN
               IF (JFIELD.EQ.1) THEN
                 FLDNOW=FLDMIN
@@ -1281,7 +1334,7 @@ C
 C  SET ALL THE EXTERNAL VARIABLES, USING FLDNOW FOR THE (SINGLE) VARYING
 C  QUANTITY IF SEARCH OR CHARACTERISATION OF RESONANCE BEING PERFORMED
             CALL SETEFV(FIELD,FLDNOW)
-            IF (PEFVHD) THEN
+            IF (PEFVHD .AND.N.GT.0) THEN
               IF (IPRINT.GE.6) THEN
                 WRITE(6,'(/2X,59("--"))')
               ENDIF
@@ -1344,6 +1397,8 @@ C  CHECK THAT RMAX IS BEYOND CENTRIFUGAL BARRIER
               CALL FINDRX(ENERGY,X(ISEINT),X(ISCENT),NPR,N,CM2RU,
      1                    RMAX,RMXINT,EREF,IRXSET,IPRINT)
 C
+              IF (WAVE) CALL WVSETS(DUMMY,EUNIT,EUNAME,EREF,JFIELD,
+     1                              ICHAN,NNRG)
             ENDIF
 C
 C ******************  LOOP OVER ENERGIES BEGINS HERE  ******************
@@ -1396,7 +1451,7 @@ C  ADDRESS OF CURRENT SET OF ACCUMULATED CROSS SECTIONS:
                 ICXS=IOUT+((JFIELD-1)*NNRG+(INRG+1))*NSTOR
 
                 IF (N.LE.0) THEN
-                  IF (LACCXS) CALL OUTSIG(ISIGU,IB,MXPAR,INRG,
+                  IF (LACCXS) CALL SIGSAV(ISIGU,IB,MXPAR,INRG,
      1                                    ENERGY(INRG),MINJT(IFXE),
      2                                    MAXJT(IFXE),X(ICXS),IPRINT)
                   GOTO 500
@@ -1416,7 +1471,7 @@ C
      2                     ') =',F18.9/9X,'WILL NOT BE USED IN ',
      3                     'PRESSURE BROADENING CALCULATION: SKIPPING')
                     IF (ICAC(IFXE).GE.0) ICAC(IFXE)=ICAC(IFXE)+1
-                    IF (LACCXS) CALL OUTSIG(ISIGU,IB,MXPAR,INRG,
+                    IF (LACCXS) CALL SIGSAV(ISIGU,IB,MXPAR,INRG,
      1                                      ENERGY(INRG),MINJT(IFXE),
      2                                      MAXJT(IFXE),X(ICXS),IPRINT)
                     GOTO 500
@@ -1426,8 +1481,8 @@ C
                 ETOT=ENERGY(INRG)+EREF
                 ERED=ETOT*CM2RU
 
-                IF (IPRINT.GE.7) CALL PRPROP('ENERGY',ENERGY(INRG),
-     1                                       EUNAME)
+                IF (IPRINT.GE.7) CALL PRPROP('ENERGY',
+     1                                       ENERGY(INRG)/EUNIT,EUNAME)
                 IF (IPRINT.GE.8) CALL PREABS(ETOT,EREF,EUNIT,EUNAME)
 C
                 IF (ICODE.EQ.0) THEN
@@ -1435,8 +1490,6 @@ C
                   ICODE=1
                 ENDIF
                 ESHIFT=ERED-EFIRST
-                IWRITE=(ISCRU.GT.0 .AND. ICODE.EQ.1)
-                IREAD=(ISCRU.GT.0 .AND. ICODE.EQ.2)
 C
 C  ICODE CONTROLS WHETHER POTENTIAL INFORMATION IS READ FROM CHANNEL
 C  ICODE=1 CALCULATES INFORMATION AND STORES IT
@@ -1499,7 +1552,7 @@ C
  2550             FORMAT(2X,'SKIPPING JTOT =',I5,', SYMMETRY BLOCK =',
      1                   I3,', ENERGY(',I3,') BECAUSE RMIN > RMAX')
                   ICAC(IFXE)=ICAC(IFXE)+1
-                  IF (LACCXS) CALL OUTSIG(ISIGU,IB,MXPAR,INRG,
+                  IF (LACCXS) CALL SIGSAV(ISIGU,IB,MXPAR,INRG,
      1                                    ENERGY(INRG),MINJT(IFXE),
      2                                    MAXJT(IFXE),X(ICXS),IPRINT)
                   GOTO 500
@@ -1515,7 +1568,7 @@ C  IF ILDSVU>0, WRITE LOG-DERIVATIVE MATRIX OUT TO A FILE.
 
 C  WE WRITE THE PROPAGATION HEADER HERE BECAUSE DEEPER THAN THIS THE
 C  CODE DOES NOT KNOW ABOUT JTOT.  GLOBAL HEADER AND GLOBAL VECTORS
-C  WERE WRITTEN BY OUTINT.  PROPAGATION VECTORS AND MAIN
+C  WERE WRITTEN BY SPINIT.  PROPAGATION VECTORS AND MAIN
 C  LOG-DERIVATIVE DATA WILL BE WRITTEN BY PROPAGATOR OR ITS
 C  CONTROLLER.  SEE LDRDWT.F FOR DESCRIPTION OF FORMAT AND READ/WRITE
 C  ROUTINES.  SECOND ARGUMENT .TRUE. MEANS "WRITE".
@@ -1534,24 +1587,24 @@ C
 C  SOLVE COUPLED EQUATIONS.
 C  PROPAGATORS ARE CALLED FROM SUBROUTINE SCCTRL
 
-                IF (WAVE) THEN
-                  CALL WVINFO(JTOT,IB,ICHAN,N,NQN,NSTATE,X(ISJSTT),
-     1                        X(ISJIND),X(ISL),X(ISCENT),ETOT,EREF,
-     2                        EUNIT,EUNAME,IBOUND,IPRINT)
-                ENDIF
-
 C  CALCULATE K USING THE HIGHEST ENERGY (ISCRU/=0) OR THE CURRENT ENERGY
                 IF (ICODE.EQ.1 .OR. ISCRU.EQ.0) THEN
                   CAYS=CALCK(EPS*CM2RU,EREDMX,X(ISEINT),N)
                   CAYL=CALCK(EPL*CM2RU,EREDMX,X(ISEINT),N)
                 ENDIF
 
+                IF (WAVE) CALL WVCURR(INRG,ETOT,EREF,EUNIT,
+     1                                EUNAME)
                 CALL SCCTRL(N,MXLAM,NHAM,
      1                      X(ISJIND),X(ISSR),X(ISSI),X(ISK),X(ISVL),
      2                      X(ISIV),X(ISEINT),X(ISCENT),X(ISWVEC),
      3                      X(ISL),X(ISNB),X(ISP),ERED,EP2RU,CM2RU,
      4                      RSCALE,DEGTOL,DRMAX,NSTAB,NOPEN,IPRINT,
      5                      IBOUND,ICHAN,WAVE,ILDSVU)
+                IREAD=LSCRU
+                IREADR=LSCRUR
+                IWRITE=.FALSE.
+                IWRITR=.FALSE.
 C
                 CALL GCLOCK(TJTIME)
                 TTIME=(TJTIME-TITIME)
@@ -1587,17 +1640,17 @@ C
                 IT2=IXNEXT+MAX(N,NSIG) ! INDACC
                 IXNEXT=IT2+MAX(N,NSIG)
                 CALL CHKSTR(NUSED)
-                CALL OUTPUT(JTOT,X(ISNB),X(ISJIND),X(ISL),X(ISINLV),
-     1                      X(ISWVEC),X(ISSR),X(ISSI),X(ISK),RUNIT,
-     2                      SCLEN,ESUM,NOPEN,IB,IBMAX,WGHT,IEXCH,
-     3                      INRG,TTIME,ENERGY(INRG),EREF,X(IOUT),
-     4                      X(ICXS),X(IDEG),X(ISJSTT),ISST,ICAC(IFXE),
-     5                      MINJT(IFXE),MAXJT(IFXE),NSTATE,
-     6                      NQN,OTOL,DTOL,IPHSUM,ISIGU,IPARTU,ISAVEU,
-     7                      ISIGPR,IRSTRX,ICHAN,X(IT1),X(ISCENT),
-     8                      X(ISEINT),IBOUND,X(IT1),X(IT2),
-     9                      X(ISNEVR),CM2RU,JFIELD,IPRINT,.FALSE.,PTIME,
-     A                      AWVMAX,RUNAME)
+                CALL SPROC(JTOT,X(ISNB),X(ISJIND),X(ISL),X(ISINLV),
+     1                     X(ISWVEC),X(ISSR),X(ISSI),X(ISK),RUNIT,
+     2                     SCLEN,ESUM,NOPEN,IB,IBMAX,WGHT,IEXCH,
+     3                     INRG,TTIME,ENERGY(INRG),EREF,X(IOUT),
+     4                     X(ICXS),X(IDEG),X(ISJSTT),ISST,ICAC(IFXE),
+     5                     MINJT(IFXE),MAXJT(IFXE),NSTATE,
+     6                     NQN,OTOL,DTOL,IPHSUM,ISIGU,IPARTU,ISAVEU,
+     7                     ISIGPR,IRSTRX,ICHAN,X(IT1),X(ISCENT),
+     8                     X(ISEINT),IBOUND,X(IT1),X(IT2),
+     9                     X(ISNEVR),CM2RU,JFIELD,IPRINT,.FALSE.,PTIME,
+     A                     AWVMAX,RUNAME)
                 IF (PTIME.AND.IPRINT.GE.2) WRITE(6,2570) TTIME
 C  LINE UNDER RUNNING TOTAL FROM OUTPUT IF NOT LAST ONE OF BLOCK
                 IF (ISIGPR.GT.0 .AND. IPRINT.GE.3 .AND. NCONV.GT.0 .AND.
@@ -1703,26 +1756,21 @@ C
                   IF (IECONV.EQ.4) THEN
                     CALL LOCPOL(INRG,ENERGY(INRG)/EUNIT,ESUM,0.D0,ENEW,
      1                          DTOL,TLO,THI,XI,IECONV-1,
-     2                          IPRINT,LCONT,RUNAME,
-     3                          "E                   ",
-     4                          EUNAME,NOPEN,X(ISSR),X(ISSI))
-                    ENEW=ENEW*EUNIT
+     2                          IPRINT,LCONT,RUNAME,SVNAME,
+     3                          EUNAME,NOPEN,X(ISSR),X(ISSI))
                   ELSEIF (IECONV.EQ.5) THEN
                     IOFF=NOPEN*(ICHAN-1)+ICHAN-1
                     CALL LOCPOL(INRG,ENERGY(INRG)/EUNIT,X(ISSR+IOFF),
      1                          X(ISSI+IOFF),ENEW,DTOL,TLO,THI,
      2                          XI,IECONV-1,IPRINT,LCONT,RUNAME,
-     3                          "E                   ",EUNAME,
-     4                          NOPEN,X(ISSR),X(ISSI))
-                    ENEW=ENEW*EUNIT
+     3                          SVNAME,EUNAME,NOPEN,X(ISSR),X(ISSI))
                   ELSE
                     CALL LOCPOL(INRG,ENERGY(INRG)/EUNIT,SCLNOW,SLIMAG,
      1                          ENEW,DTOL,TLO,THI,XI,IECONV-1,
-     2                          IPRINT,LCONT,RUNAME,
-     3                          "E                   ",
-     4                          EUNAME,NOPEN,X(ISSR),X(ISSI))
-                    ENEW=ENEW*EUNIT
+     2                          IPRINT,LCONT,RUNAME,SVNAME,
+     3                          EUNAME,NOPEN,X(ISSR),X(ISSI))
                   ENDIF
+                  ENEW=ENEW*EUNIT
                   IF (.NOT.LCONT) GOTO 290
                 ENDIF
 C
@@ -1849,9 +1897,9 @@ C ********************  END OF LOOP OVER JTOT  ******************
 C
 C  END OF RUN BOOKKEEPING
 C
-C  CALL TO OUTPCH ONLY IF NOT SEARCHING AND NOT TESTING CONVERGENCE
+C  CALL TO SIGWRT ONLY IF NOT SEARCHING AND NOT TESTING CONVERGENCE
  9000 IF (.NOT.LSPEC .AND. .NOT.LCHAR .AND. NCONV.EQ.0)
-     1  CALL OUTPCH(X(IACC),ENERGY,NNRG,FIELD,NFIELD,MINJT,MAXJT,
+     1  CALL SIGWRT(X(IACC),ENERGY,NNRG,FIELD,NFIELD,MINJT,MAXJT,
      2              ISIGPR,LABEL,F710,EUNAME,ISIGU,LWARN,EREF,X(ISINLV),
      3              X(ISNEVR),IPRINT)
       IF (NLPRBR.GT.0 .AND. IPRINT.GE.1) WRITE(6,FMT=F710) TRIM(LABEL)
@@ -1879,6 +1927,8 @@ C
         CALL TIMEMS(TOTIME,NUSED,MXSAVE)
         WRITE(6,1001)
       ENDIF
+      IF (LSCRU) CLOSE(ISCRU)
+      IF (LSCRUR) CLOSE(ISCRUR)
 
       IF (LASTIN.EQ.0) GOTO 10
 C

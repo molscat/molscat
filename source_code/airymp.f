@@ -1,5 +1,6 @@
       SUBROUTINE  AIRYMP(X, FTHETA, FPHI, XMMOD, XNMOD)
-C  This subroutine is part of the MOLSCAT, BOUND and FIELD suite of programs
+C  Copyright (C) 2022 J. M. Hutson & C. R. Le Sueur
+C  Distributed under the GNU General Public License, version 3
 C
 C  AUTHOR:  MILLARD ALEXANDER
 C  CURRENT REVISION DATE: 23-SEPT-87
@@ -89,7 +90,7 @@ C ----------------------------------------------------------------------
         XNMOD = SQRT( SCAIP ** 2 + SCBIP ** 2)
         FTHETA = ATAN2(SCBI, SCAI)
         FPHI = ATAN2(SCBIP, SCAIP)
-        IF (X.LT.(-5.0D0) ) THEN
+        IF (X.LT.(-5.D0) ) THEN
           FTHETA = FTHETA - ZETA
           FPHI = FPHI - ZETA
         ENDIF

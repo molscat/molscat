@@ -1,5 +1,6 @@
       DOUBLE PRECISION FUNCTION ZBES(K)
-C  This subroutine is part of the MOLSCAT, BOUND and FIELD suite of programs
+C  Copyright (C) 2022 J. M. Hutson & C. R. Le Sueur
+C  Distributed under the GNU General Public License, version 3
 C
 C  ROUTINE REQUIRED BY GASLEG (GAUSS LEGENDRE PT/WT GENERATOR)
 C  TAKEN FROM AD VAN DER AVOIRD'S N2-N2 CODE (SG 11/7/91)
@@ -7,11 +8,11 @@ C  TAKEN FROM AD VAN DER AVOIRD'S N2-N2 CODE (SG 11/7/91)
       DATA PI/3.14159 26535 89793 D0/
 
       B=(DBLE(K)-0.25D0)*PI
-      BB=1.0D0/(8.0D0*B)
+      BB=1.D0/(8.D0*B)
       B3=BB*BB*BB
       B5=B3*BB*BB
       B7=B5*BB*BB
-      ZBES=B+BB-(124.0D0/3.0D0)*B3+(120928.0D0/15.0D0)*B5
-     1     -(401743168.0D0/105.0D0)*B7
+      ZBES=B+BB-(124.D0/3.D0)*B3+(120928.D0/15.D0)*B5
+     1     -(401743168.D0/105.D0)*B7
       RETURN
       END

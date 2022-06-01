@@ -6,7 +6,8 @@
      5                  W1,W2,EYE11,EYE12,EYE22,VECOLD,
      6                  RSTART,RSTOP,NSTEP,DRNOW,DRMAX,TLDIAG,TOFF,
      7                  ERED,EP2RU,CM2RU,RSCALE,IPRINT)
-C  This subroutine is part of the MOLSCAT, BOUND and FIELD suite of programs
+C  Copyright (C) 2022 J. M. Hutson & C. R. Le Sueur
+C  Distributed under the GNU General Public License, version 3
       IMPLICIT DOUBLE PRECISION (A-H,O-Z)
 C------------------------------------------------------------------
 C  MODIFIED FROM NRCC CODE FOR COMPATIBILITY WITH MOLSCAT
@@ -14,7 +15,7 @@ C    BY S. GREEN (FEB. 1981) AND J.M. HUTSON (OCT. 1984)
 C    APR 87 MODIFY WARNING OUTPUT ASSOC. W/ 1800 FORMAT
 C------------------------------------------------------------------
 C  ROUTINES USED
-C  WAVMAT  -CALCULATES THE POTENTIAL ENERGY INTERACTION MATRIX
+C  HAMMAT  -CALCULATES THE POTENTIAL ENERGY INTERACTION MATRIX
 C  DERMAT  -CALCULATES THE FIRST AND SECOND DERIVATIVES OF THE POTENTIAL
 C  TRNSFM  -TRANSFORMS MATRICES INTO THE NEW BASIS VIA A
 C               SIMILARITY TRANSFORMATION
@@ -38,8 +39,8 @@ C  ISCRU  - SCRATCH UNIT USED IF IREAD/IWRITE IS TRUE
 C------------------------------------------------------------------
 C
 C  COMMON BLOCK FOR CONTROL OF USE OF PROPAGATION SCRATCH FILE
-      LOGICAL IREAD,IWRITE
-      COMMON /PRPSCR/ ESHIFT,ISCRU,IREAD,IWRITE
+      LOGICAL IREAD,IWRITE,IREADR,IWRITR
+      COMMON /PRPSCR/ ESHIFT,ISCRU,ISCRUR,IREAD,IWRITE,IREADR,IWRITR
 
 C  CHARACTER VARIABLES
 C------------------------------------------------------------------
@@ -82,9 +83,6 @@ C          A GEOMETRIC PROGRESSION AND THE INTERVAL IS DIVIDED
 C          INTO IALPHA STEPS.
 C------------------------------------------------------------------
       COMMON /POPT  / IVECT,IPOTL,IEYE,IGZRO,IGPERT,IWAVE,IRMAT,IOC
-      LOGICAL LPOPT(7)
-      EQUIVALENCE (LPOPT(1),IVECT)
-C  LPOPT CONTAINS PRINTING OPTIONS FROM NRCC VERSION.
 C  THESE ARE ALL SET FALSE HERE.  CHANGE TO DEBUG.
 C  WHEN THE LOGICAL VARIABLE IS TRUE,
 C  IVECT - EIGENVALUES AND EIGENVECTORS.
@@ -130,8 +128,13 @@ C  SET DEFAULT VALUES FOR PRINTING
       COFF = 0.D0
       CDIAG = 0.D0
       SDIAG = 0.D0
-      DO 100 I=1,7
-  100   LPOPT(I)=.FALSE.
+      IVECT=.FALSE.
+      IPOTL=.FALSE.
+      IEYE=.FALSE.
+      IGZRO=.FALSE.
+      IGPERT=.FALSE.
+      IWAVE=.FALSE.
+      IRMAT=.FALSE.
       IF (.NOT.(IREAD .AND. IWRITE)) GOTO 101
 
       WRITE(6,699)
@@ -221,7 +224,7 @@ C-------------------------------------------------------------------
 C-------------------------------------------------------------------
 C  EVALUATE THE POTENTIAL AND ITS DERIVATIVES.
 C-------------------------------------------------------------------
-      CALL WAVMAT(W,N,RCENT,P,VL,IVL,ERED,EINT,CENT,EP2RU,CM2RU,
+      CALL HAMMAT(W,N,RCENT,P,VL,IVL,ERED,EINT,CENT,EP2RU,CM2RU,
      1            RSCALE,WKS,MXLAM,NHAM,IPRINT)
       DO 165 I = 1, NSQ
   165   W0(I) = W(I)
@@ -245,7 +248,7 @@ C  EVALUATE THE POTENTIAL AT THE RMIDI WHERE THE INTERACTION IS TO
 C  BE DIAGONALIZED AND SAVE THE OLD EIGENVECTORS.
 C-------------------------------------------------------------------
       IF (RMIDI.NE.RCENT)
-     1  CALL WAVMAT(W,N,RMIDI,P,VL,IVL,ERED,EINT,CENT,EP2RU,CM2RU,
+     1  CALL HAMMAT(W,N,RMIDI,P,VL,IVL,ERED,EINT,CENT,EP2RU,CM2RU,
      2              RSCALE,WKS,MXLAM,NHAM,IPRINT)
       DO 240 I = 1,NSQ
   240   VECOLD(I) = VECNEW(I)

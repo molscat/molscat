@@ -1,7 +1,7 @@
       SUBROUTINE RDSIGU(ISIGU)
-C  Copyright (C) 2019 J. M. Hutson & C. R. Le Sueur
+C  Copyright (C) 2022 J. M. Hutson & C. R. Le Sueur
 C  Distributed under the GNU General Public License, version 3
-      USE efvs
+      USE efvs, ONLY: EFV, EFVNAM, EFVUNT, IEFVST, ISVEFV, NEFV, NEFVP
       IMPLICIT DOUBLE PRECISION (A-H,O-Z)
 C
 C  THIS ROUTINE LISTS/PUNCHES THE 'SAVED' CROSS SECTIONS FROM (ISIGU)

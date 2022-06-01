@@ -2,9 +2,9 @@
      1                NBASIS,JSINDX,L,WVEC,
      2                SREAL,SIMAG,IC,IL,IC1,IL1,
      3                JSTATE,MXPAR,WGHT,IPRINT,ILSU)
-C  Copyright (C) 2020 J. M. Hutson & C. R. Le Sueur
+C  Copyright (C) 2022 J. M. Hutson & C. R. Le Sueur
 C  Distributed under the GNU General Public License, version 3
-      USE basis_data, ONLY: NLEVEL, JLEVEL, ELEVEL, JHALF, IDENT
+      USE basis_data, ONLY: ELEVEL, IDENT, JHALF, JLEVEL, NLEVEL
       USE sizes, ONLY: MXNRG => MXNRG_in_MOLSCAT, MXLN
       IMPLICIT DOUBLE PRECISION (A-H,O-Z)
       SAVE
@@ -308,12 +308,17 @@ C  THERE SHOULD ONLY BE 1 MATCH.  IF NDEBUG.EQ..FALSE. CHECK THIS.
  3800         CONTINUE
  3700       CONTINUE
 C
- 3999       IF (NMATCH-1) 3600,4099,4098
+c           IF (NMATCH-1) 3600,4099,4098
+            IF (NMATCH.LT.1) THEN
+              GOTO 3600
+            ELSEIF (NMATCH.GT.1) THEN
 C
- 4098       WRITE(6,409) NMATCH,IPTIND,IIN,IAIN,JTIN,IPTBK,NNTRY,L1,L2
-  409       FORMAT(/' * * * WARNING. NMATCH.GT.1 =',I3,
-     1             '  FOR IPTIND,IIN,IAIN,JTIN,IPTBK,NNTRY,L1,L2 =',8I6)
-            GOTO 3600
+              WRITE(6,409) NMATCH,IPTIND,IIN,IAIN,JTIN,IPTBK,NNTRY,L1,L2
+  409         FORMAT(/' * * * WARNING. NMATCH.GT.1 =',I3,
+     1               '  FOR IPTIND,IIN,IAIN,JTIN,IPTBK,NNTRY,L1,L2 =',
+     2               8I6)
+              GOTO 3600
+            ENDIF
 C
  4099       CONTINUE
             IF (EPM) GOTO 3630

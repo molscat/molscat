@@ -1,6 +1,6 @@
       DOUBLE PRECISION FUNCTION BRENT(XA,XB,XC,FA,FB,FC,ZFIRST,DTOL,
      1                                CONVGE,METHOD)
-C  Copyright (C) 2019 J. M. Hutson & C. R. Le Sueur
+C  Copyright (C) 2022 J. M. Hutson & C. R. Le Sueur
 C  Distributed under the GNU General Public License, version 3
 C
 C  WRITTEN 27-11-15 BY CR Le Sueur
@@ -49,7 +49,7 @@ C  IF THIS IS THE FIRST TIME IN THIS LOOP, SET UP SOME EXTRA INFO
 C  SET UP SOME CONSTANTS (C.F. NUMERICAL RECIPES, P 253, WIKIPEDIA ON
 C  BRENT METHOD)
       S=FB/FA
-      SM1=S-1D0
+      SM1=S-1.D0
       BMA=XB-XA
       CMB=XC-XB
       CME=XC-XE
@@ -57,8 +57,8 @@ C  BRENT METHOD)
 C  USE INVERSE QUADRATIC INTERPOLATION
         R=FB/FC
         T=FA/FC
-        P=S*(T*(R-T)*CMB-(1D0-R)*BMA)
-        Q=(R-1D0)*SM1*(T-1D0)
+        P=S*(T*(R-T)*CMB-(1.D0-R)*BMA)
+        Q=(R-1.D0)*SM1*(T-1.D0)
         METHOD='INV Q INTERP'
       ELSE
 C  USE SECANT
@@ -78,9 +78,9 @@ C  NEW POINT IS B+DB
       CME=XC-XE
 C  IF DB IS NOT BETWEEN 3(XA-XB)/4 AND ZERO, USE BISECTION
 C  IF |DB| >= |(XC-XE)/2| OR |XE| < |DTOL| USE BISECTION
-      IF ((3D0*BMA/4D0+DB)*BMA.LT.0.0D0 .OR. BMA*DB.GT.0.0D0 .OR.
-     1    ABS(DB).GE.ABS(CME)/2D0 .OR. ABS(XE).LT.ABS(DTOL)) THEN
-        DB=-BMA/2D0
+      IF ((3.D0*BMA/4.D0+DB)*BMA.LT.0.D0 .OR. BMA*DB.GT.0.D0 .OR.
+     1    ABS(DB).GE.ABS(CME)/2.D0 .OR. ABS(XE).LT.ABS(DTOL)) THEN
+        DB=-BMA/2.D0
         METHOD='BISECTION   '
         PREV_BIS=.TRUE.
       ELSE

@@ -1,14 +1,14 @@
       FUNCTION PLEG(N,X)
-C  Copyright (C) 2019 J. M. Hutson & C. R. Le Sueur
+C  Copyright (C) 2022 J. M. Hutson & C. R. Le Sueur
 C  Distributed under the GNU General Public License, version 3
       IMPLICIT DOUBLE PRECISION (A-H,O-Z)
 C
 C  FUNCTION TO GENERATE LEGENDRE POLYNOMIALS
 C
-      PLEG=1.0D0
+      PLEG=1.D0
       IF (N.EQ.0) RETURN
 
-      P0=1.0D0
+      P0=1.D0
       P1=X
 
       DO 100 K=3,N+1

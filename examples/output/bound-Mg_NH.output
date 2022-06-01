@@ -2,11 +2,11 @@
  |                                                                            |
  |          Bound states of interacting pairs of atoms and molecules          |
  |                                                                            |
- |              Copyright (C) 2020 J. M. Hutson & C. R. Le Sueur              |
+ |              Copyright (C) 2022 J. M. Hutson & C. R. Le Sueur              |
  |                                                                            |
- |                               Version 2020.0                               |
+ |                               Version 2022.0                               |
  |                                                                            |
- |                       Run on 14 Feb 2020   at 20:28:59                     |
+ |                       Run on 31 May 2022   at 10:31:24                     |
  |                                                                            |
   -- BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND --
 
@@ -15,11 +15,16 @@
   the terms of the GNU General Public License, version 3, as published by
   the Free Software Foundation.
 
-  Publications resulting from the use of this program should cite both
-  the version of the program used:
-  J. M. Hutson & C. R. Le Sueur, BOUND computer code 2020.0              
+  Publications resulting from the use of this program should cite both the
+  version of the program used:
+
+  J. M. Hutson & C. R. Le Sueur, BOUND: a program for bound states of
+  interacting pairs of atoms and molecules,
+  Version 2022.0, https//github.com/molscat/molscat
+
   and the published paper:
-  J. M. Hutson & C. R. Le Sueur, Comput. Phys. Commun. 241, pp 1-8 (2019).
+
+  J. M. Hutson & C. R. Le Sueur, Comput. Phys. Commun., 241, 1-8 (2019).
 
 
   USING CODATA 2018 RECOMMENDED VALUES OF FUNDAMENTAL PHYSICAL CONSTANTS
@@ -200,6 +205,8 @@
   INITIALIZATION DONE.  TIME WAS   0.00 CPU SECS.       112 WORDS OF STORAGE USED.
 
   ============================= ITYP = 9: Mg + NH in magnetic field; near-threshold states =============================
+  SCRATCH FILE OPENED ON UNIT           30
+  SCRATCH FILE OPENED ON UNIT           31
 
   *****************************  ANGULAR MOMENTUM JTOT  =  -1   AND SYMMETRY BLOCK  =    2  ****************************
 
@@ -312,7 +319,6 @@
       100          27          2         3         3             7
 
   EFV SET     1:  MAGNETIC Z FIELD =   370.0000000     GAUSS
-  SCRATCH FILE OPENED ON UNIT           30
   REFERENCE ENERGY IS                          -4.2291130299E-02 CM-1    =  -1267.856191     MHZ     
 
   NODE COUNT IMPLIES   169 STATES BELOW MINIMUM ENERGY =  -100.0000000     MHZ   
@@ -322,9 +328,9 @@
 
   SEARCHING FOR BOUND STATE NUMBER   170
 
-  CONVERGED ON STATE NUMBER   170 AT                              ENERGY =  -42.82350672     MHZ   
+  CONVERGED ON STATE NUMBER   170 AT                              ENERGY =  -42.82351278     MHZ   
 
-  SMALLEST EIGENVALUE OF MATCHING MATRIX IS NUMBER  7 =  2.94520E-11
+  SMALLEST EIGENVALUE OF MATCHING MATRIX IS NUMBER  7 =  3.38574E-11
 
   WITH PRINCIPAL EIGENVECTOR COMPONENTS
   CHAN     VEC    VEC**2   L   QUANTUM NUMBERS
@@ -337,7 +343,6 @@
   = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = 
 
   EFV SET     2:  MAGNETIC Z FIELD =   375.0000000     GAUSS
-  SCRATCH FILE OPENED ON UNIT           30
   REFERENCE ENERGY IS                          -4.2758480887E-02 CM-1    =  -1281.867009     MHZ     
 
   NODE COUNT IMPLIES   169 STATES BELOW MINIMUM ENERGY =  -100.0000000     MHZ   
@@ -347,9 +352,9 @@
 
   SEARCHING FOR BOUND STATE NUMBER   170
 
-  CONVERGED ON STATE NUMBER   170 AT                              ENERGY =  -30.52255807     MHZ   
+  CONVERGED ON STATE NUMBER   170 AT                              ENERGY =  -30.52255574     MHZ   
 
-  SMALLEST EIGENVALUE OF MATCHING MATRIX IS NUMBER  7 =  1.56263E-10
+  SMALLEST EIGENVALUE OF MATCHING MATRIX IS NUMBER  7 =  1.56867E-10
 
   WITH PRINCIPAL EIGENVECTOR COMPONENTS
   CHAN     VEC    VEC**2   L   QUANTUM NUMBERS
@@ -362,7 +367,6 @@
   = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = 
 
   EFV SET     3:  MAGNETIC Z FIELD =   380.0000000     GAUSS
-  SCRATCH FILE OPENED ON UNIT           30
   REFERENCE ENERGY IS                          -4.3225831474E-02 CM-1    =  -1295.877827     MHZ     
 
   NODE COUNT IMPLIES   169 STATES BELOW MINIMUM ENERGY =  -100.0000000     MHZ   
@@ -372,9 +376,9 @@
 
   SEARCHING FOR BOUND STATE NUMBER   170
 
-  CONVERGED ON STATE NUMBER   170 AT                              ENERGY =  -18.13769930     MHZ   
+  CONVERGED ON STATE NUMBER   170 AT                              ENERGY =  -18.13771243     MHZ   
 
-  SMALLEST EIGENVALUE OF MATCHING MATRIX IS NUMBER  7 =  8.59970E-09
+  SMALLEST EIGENVALUE OF MATCHING MATRIX IS NUMBER  7 =  8.59773E-09
 
   WITH PRINCIPAL EIGENVECTOR COMPONENTS
   CHAN     VEC    VEC**2   L   QUANTUM NUMBERS
@@ -387,7 +391,6 @@
   = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = 
 
   EFV SET     4:  MAGNETIC Z FIELD =   385.0000000     GAUSS
-  SCRATCH FILE OPENED ON UNIT           30
   REFERENCE ENERGY IS                          -4.3693182063E-02 CM-1    =  -1309.888645     MHZ     
 
   NODE COUNT IMPLIES   169 STATES BELOW MINIMUM ENERGY =  -100.0000000     MHZ   
@@ -397,9 +400,9 @@
 
   SEARCHING FOR BOUND STATE NUMBER   170
 
-  CONVERGED ON STATE NUMBER   170 AT                              ENERGY =  -5.660812292     MHZ   
+  CONVERGED ON STATE NUMBER   170 AT                              ENERGY =  -5.660814340     MHZ   
 
-  SMALLEST EIGENVALUE OF MATCHING MATRIX IS NUMBER  7 =  1.23297E-09
+  SMALLEST EIGENVALUE OF MATCHING MATRIX IS NUMBER  7 =  1.24266E-09
 
   WITH PRINCIPAL EIGENVECTOR COMPONENTS
   CHAN     VEC    VEC**2   L   QUANTUM NUMBERS
@@ -415,11 +418,11 @@
  |                                                                            |
  |          Bound states of interacting pairs of atoms and molecules          |
  |                                                                            |
- |              Copyright (C) 2020 J. M. Hutson & C. R. Le Sueur              |
+ |              Copyright (C) 2022 J. M. Hutson & C. R. Le Sueur              |
  |                                                                            |
- |                               Version 2020.0                               |
+ |                               Version 2022.0                               |
  |                                                                            |
- |                    This run used      35.03 cpu secs and                   |
- |             207873 of the allocated   1000000 words of storage             |
+ |                    This run used      10.03 cpu secs and                   |
+ |             207773 of the allocated   1000000 words of storage             |
  |                                                                            |
   -- BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND --

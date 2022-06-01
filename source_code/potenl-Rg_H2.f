@@ -1,7 +1,6 @@
       SUBROUTINE POTENL(IC, MXLMB, LMB, RR, P, ITYP, IPRINT)
-C  Copyright (C) 2020 J. M. Hutson & C. R. Le Sueur
+C  Copyright (C) 2022 J. M. Hutson & C. R. Le Sueur
 C  Distributed under the GNU General Public License, version 3
-      USE angles
       USE potential, ONLY: LAMBDA, MXLMDA, RMNAME, EPNAME
       IMPLICIT DOUBLE PRECISION (A-H,O-Z)
       SAVE
@@ -36,7 +35,7 @@ C  IC=0   CALCULATION OF POTENTIAL
 C
       IF (IC.EQ.0) GOTO 530
       IF (IC.EQ.-1) GOTO 120
-      WRITE (6,110) IC
+      WRITE(6,110) IC
   110 FORMAT ('  ***** ERROR IN POTENL - IC =',I6)
       STOP
 C-----------------------------------------------------------------------
@@ -52,7 +51,7 @@ C  FIRST CHECK IF ITYP VALUE IS ACCEPTABLE
 C
   120 ITYPE = ITYP-10*(ITYP/10)
       IF (ITYPE.EQ.7) GOTO 140
-      WRITE (6,130) ITYP
+      WRITE(6,130) ITYP
   130 FORMAT ('  ***** ERROR IN POTENL - CANNOT HANDLE ITYPE =',I6)
       STOP
 C
@@ -93,8 +92,8 @@ C  INITIALISE NAMELIST VARIABLES BEFORE READ
       JMAXV0 = 9999
       JMAXV1 = 9999
       NGP = 10
-      SCAL = 0.0D0
-      SCALMX = 1.0D5
+      SCAL = 0.D0
+      SCALMX = 1.D5
 C-----------------------------------------------------------------------
       READ(5,POTL)
 C-----------------------------------------------------------------------
@@ -104,7 +103,7 @@ C  FOLLOWING TRANSFORMATION (FOR (IHET.GT.0)).  ***
       NOFK = MIN(9,NSTR)
       IF (IHET.EQ.0) NOFK = 4
       IF (IPRINT.GE.1)
-     1  WRITE (6,150) NLEG,NSTR,IHET,JMAXV0,JMAXV1,NGP,SCAL,SCALMX
+     1  WRITE(6,150) NLEG,NSTR,IHET,JMAXV0,JMAXV1,NGP,SCAL,SCALMX
   150 FORMAT (/'  /POTL/ DATA IS   NLEG =',I3,'   NSTR =',I3,
      1        '   IHET =',I2,'   JMAXV0 =',I3,'    JMAXV1 =',I3/
      2        19X,'NGP  =',I3,'    SCAL =',F8.1,'  SCALMX =',F8.1)
@@ -139,7 +138,7 @@ C  SET RM AND EPSIL
 C
       RR = 1.D0
       P(1) = 1.D0
-      IF (IPRINT.GE.1) WRITE (6,160)
+      IF (IPRINT.GE.1) WRITE(6,160)
   160 FORMAT ('  LENGTH UNITS ARE ANGSTROMS.    ENERGY UNITS ARE ',
      1        'WAVENUMBERS (1/CM)')
 C***********************************************************************
@@ -167,16 +166,16 @@ C-----------------------------------------------------------------------
      1       ' IN THIS VERSION OF POTENL')
       STOP
 C
-    5 IF (NOFPOT*(NOFPOT+1)/2 .LE. 210) GOTO 165
+    5 IF (NOFPOT*(NOFPOT+1)/2.LE.210) GOTO 165
 
-      WRITE (6,163) NOFPOT
+      WRITE(6,163) NOFPOT
   163 FORMAT('   POTENL: NOFPOT =',I4,' TOO GREAT FOR ARRAY DIMENSIONS')
       STOP
 
-  165 IF (IPRINT.GE.1) WRITE (6,430)
-      IF (IDAMP.EQ.1 .AND. IPRINT.GE.1) WRITE (6,431) R0
-      IF (IDAMP.EQ.2 .AND. IPRINT.GE.1) WRITE (6,432)
-      IF (IPRINT.GE.1) WRITE (6,433)
+  165 IF (IPRINT.GE.1) WRITE(6,430)
+      IF (IDAMP.EQ.1 .AND. IPRINT.GE.1) WRITE(6,431) R0
+      IF (IDAMP.EQ.2 .AND. IPRINT.GE.1) WRITE(6,432)
+      IF (IPRINT.GE.1) WRITE(6,433)
       DO 210 LAM=1,2
         MM = MP(LAM)
         DO 190 K=1,4
@@ -204,16 +203,16 @@ C-----------------------------------------------------------------------
           VPRMR(3,LAM,K) = VT(3)
           IF (VT(2).LE.Z0) GOTO 200
 
-  190     IF (IPRINT.GE.1) WRITE (6,440) LAMB(LAM),IK,MP(LAM),BETA(LAM),
-     1                                   (VPRM(I,LAM,K),I=1,3),
-     2                                   VPRMR(2,LAM,K),VPRMR(1,LAM,K)
+  190     IF (IPRINT.GE.1) WRITE(6,440) LAMB(LAM),IK,MP(LAM),BETA(LAM),
+     1                                  (VPRM(I,LAM,K),I=1,3),
+     2                                  VPRMR(2,LAM,K),VPRMR(1,LAM,K)
         GOTO 210
 
   200   VPRMR(1,LAM,K) = Z0
         VPRMR(2,LAM,K) = Z0
-        IF (IPRINT.GE.1) WRITE (6,450) LAMB(LAM),VPRM(3,LAM,4)
+        IF (IPRINT.GE.1) WRITE(6,450) LAMB(LAM),VPRM(3,LAM,4)
   210 CONTINUE
-      IF (IPRINT.GE.1) WRITE (6,470)
+      IF (IPRINT.GE.1) WRITE(6,470)
 C** READ IN THE VIBRATIONAL & ROTATIONAL QUANTUM NUMBERS  IV & IJ  AND
 C     EXPECTATION VALUES AND (FOR NOFPOT>1) MATRIX ELEMENTS OF POWERS  K
 C     TO  8  OF THE STRETCHING COORDINATE  XI .
@@ -244,13 +243,13 @@ C** CHECK FOR EXCLUSION OF THIS (V,J) AND SET UP LMB
         IF (IV(J).EQ.1.AND.IJ(J).GT.JMAXV1) GOTO 320
 
         IF (J.LE.MXJ) GOTO 235
-        WRITE (6,231) MXJ
+        WRITE(6,231) MXJ
   231   FORMAT ('  ****** ERROR IN POTENL - ARRAYS AA, C6, ETC. (',I4,
      1          ') ARE NOT BIG ENOUGH')
         STOP
 
   235   IF (5*J*NLEG.LE.MXLMB) GOTO 240
-        WRITE (6,236) MXLMB
+        WRITE(6,236) MXLMB
   236   FORMAT ('  ****** ERROR IN POTENL - ARRAY LMB(',I7,
      1          ') IS NOT BIG ENOUGH')
         STOP
@@ -307,16 +306,16 @@ C
   290   IF (JJ.GE.2) GOTO 300
 
         IF (NSTR.LE.1 .AND. IPRINT.GE.1)
-     1    WRITE (6,460) IV(J),IJ(J),(LAMB(L),C6(L,J),
-     2                                            C8(L,J),AA(L,J),L=1,2)
-        IF (IPRINT.GE.1) WRITE (6,500) IV(J),IJ(J),(XI(K,J),K=1,NOFK)
+     1    WRITE(6,460) IV(J),IJ(J),(LAMB(L),C6(L,J),
+     2                              C8(L,J),AA(L,J),L=1,2)
+        IF (IPRINT.GE.1) WRITE(6,500) IV(J),IJ(J),(XI(K,J),K=1,NOFK)
         GOTO 310
 
   300   IF (NSTR.LE.1 .AND. IPRINT.GE.1)
-     1    WRITE (6,480) IVD(J),IJD,IV(J),IJ(J),(LAMB(L),
-     2                                    C6(L,J),C8(L,J),AA(L,J),L=1,2)
-        IF (IPRINT.GE.1) WRITE (6,510) IVD(J),IJD,IV(J),IJ(J),
-     1                                 (XI(K,J),K=1,NOFK)
+     1    WRITE(6,480) IVD(J),IJD,IV(J),IJ(J),(LAMB(L),C6(L,J),
+     2                                         C8(L,J),AA(L,J),L=1,2)
+        IF (IPRINT.GE.1) WRITE(6,510) IVD(J),IJD,IV(J),IJ(J),
+     1                                (XI(K,J),K=1,NOFK)
   310   J = J+1
   320 CONTINUE
 
@@ -327,7 +326,7 @@ C     FINISHED WITH CHANNEL 1. CLOSE FILE ON VAX.
       CLOSE(1)
       IF (NINPOT.GT.0) GOTO 340
 
-      WRITE (6,330)
+      WRITE(6,330)
   330 FORMAT ('  ****** ERROR IN POTENL - FINAL LIST OF DIATOM ',
      1        'STATES IS EMPTY - CHECK JMAXV0,JMAXV1,MATRIX ELEMENTS')
       STOP
@@ -336,7 +335,7 @@ C     FINISHED WITH CHANNEL 1. CLOSE FILE ON VAX.
       MXLMB = NLEG*NOFJ
       IF (NOFJ.EQ.J-1) GOTO 360
 
-      WRITE (6,350) NOFJ,J
+      WRITE(6,350) NOFJ,J
   350 FORMAT ('  ****** ERROR IN POTENL - INCORRECT QUANTUM NUMBER ',
      1        'INDEXING',2I7)
       STOP
@@ -357,15 +356,15 @@ C     FINISHED WITH CHANNEL 1. CLOSE FILE ON VAX.
   380 CONTINUE
       IF (IHET.LE.0) GOTO 420
 
-      IF (IPRINT.GE.1) WRITE (6,490) DREL
-      IF (NSTR.LE.1 .AND. IPRINT.GE.1) WRITE (6,520) (DEL(J),J=1,NOFJ)
+      IF (IPRINT.GE.1) WRITE(6,490) DREL
+      IF (NSTR.LE.1 .AND. IPRINT.GE.1) WRITE(6,520) (DEL(J),J=1,NOFJ)
 C** PREPARE GAUSSIAN WEIGHTS AND POINTS FOR QUADRATURE(S)
 C   IN CENTRE-OF-MASS TRANSFORMATION
 C   AND ALSO FORM PWT ARRAY CONTAINING PRODUCTS OF LEGENDRE
 C   POLYNOMIALS AND GAUSSIAN WEIGHTS.
       IF (NGP.LE.16) GOTO 400
 
-      IF (IPRINT.GE.1) WRITE (6,390)
+      IF (IPRINT.GE.1) WRITE(6,390)
   390 FORMAT ('  *** TOO MANY GAUSSIAN POINTS REQUESTED FOR ARRAY ',
      1        'DIMENSIONS. NGP RESET TO 16.'/)
       NGP = 16
@@ -523,7 +522,7 @@ C
 C  SCALING OPTION FOR MATRIX ELEMENTS OFF-DIAGONAL IN V
 C  PURPOSE IS TO MAKE RESONANCES WIDER AND EASIER TO FIND
 C
-        IF (SCAL.LE.1.0D0) GOTO 680
+        IF (SCAL.LE.1.D0) GOTO 680
         IF (IV(JPOT).EQ.IVD(JPOT)) GOTO 680
         VPOT = VPOT*SCAL
         IF (VPOT.GT.SCALMX) VPOT = SCALMX

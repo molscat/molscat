@@ -17,7 +17,7 @@
 
  &BASIS9
     ISA    =  1,           ! data for 85-RB
-    GSA    =  2.00231930,
+    GSA    =  2.00233113,
     INUCA  =  5,
     HFSPLA = +3.035732440300,
     GA     = -2.936400E-4,

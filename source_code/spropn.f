@@ -1,5 +1,7 @@
       SUBROUTINE SPROPN(WIDTH, EIGNOW, HP, Y1, Y4, Y2, NCH)
-C  This subroutine is part of the MOLSCAT, BOUND and FIELD suite of programs
+C  Copyright (C) 2022 J. M. Hutson & C. R. Le Sueur
+C  Distributed under the GNU General Public License, version 3
+C
 C  Tijs Karman
 C  CURRENT REVISION DATE: 25-10-2017
 C-----------------------------------------------------------------------
@@ -320,9 +322,9 @@ C  X UNTIL CONTRIBUTION IS SMALL COMPARED TO THE LOWEST TERM
       DO WHILE (ABS(E(I+1)).GT.ACCU .AND. I.LT.98)
         I    = I+1
 C  UPDATE GAMMA(3I+1/2)
-        C    = C*3D0/8D0*(2D0*I-1D0)*(6D0*I-5D0)*(6D0*I-1D0)
+        C    = C*3.D0/8.D0*(2.D0*I-1.D0)*(6.D0*I-5.D0)*(6.D0*I-1.D0)
 C  UPDATE 1 / FACTORIAL(I) 54^I GAMMA(I+1/2)
-        C    = C/(54*I*(I-0.5D0))
+        C    = C/(54.D0*I*(I-0.5D0))
         E(I+1) = C/(X**(I))
       ENDDO
       N=I
@@ -365,10 +367,10 @@ C  X UNTIL CONTRIBUTION IS SMALL COMPARED TO THE LOWEST TERM
       DO WHILE (ABS(E(I+1)).GT.ACCU .AND. I.LT.98)
         I    = I+1
 C  UPDATE GAMMA(3I+1/2)
-        C    = C*3D0/8D0*(2D0*I-1D0)*(6D0*I-5D0)*(6D0*I-1D0)
+        C    = C*3.D0/8.D0*(2.D0*I-1.D0)*(6.D0*I-5.D0)*(6.D0*I-1.D0)
 C  UPDATE 1 / FACTORIAL(I) 54^I GAMMA(I+1/2)
-        C    = C/(54*I*(I-0.5D0))
-        D    = -C*(6.D0*I+1.0D0)/(6.D0*I-1.0D0)
+        C    = C/(54.D0*I*(I-0.5D0))
+        D    = -C*(6.D0*I+1.D0)/(6.D0*I-1.D0)
         E(I+1) = D/(X**(I))
       ENDDO
       N=I
@@ -413,8 +415,8 @@ C  X UNTIL CONTRIBUTION IS SMALL COMPARED TO THE LOWEST TERM
         K = K+1
         DO WHILE (I.LT.2*K+1)
           I = I+1
-          C = C*3D0/8D0*(2D0*I-1D0)*(6D0*I-5D0)*(6D0*I-1D0)
-          C = C/(54*I*(I-0.5D0))
+          C = C*3.D0/8.D0*(2.D0*I-1.D0)*(6.D0*I-5.D0)*(6.D0*I-1.D0)
+          C = C/(54.D0*I*(I-0.5D0))
         ENDDO
         E(K+1) = C/(X**(I))
       ENDDO
@@ -451,7 +453,7 @@ C  INITIALIZE AND FIRST TERM IN EXPANSION
       I     = 1
       K     = 0
       C     = 3.75D0/54.D0
-      D     = -C*(6.D0*I+1.0D0)/(6.D0*I-1.0D0)
+      D     = -C*(6.D0*I+1.D0)/(6.D0*I-1.D0)
       E(1)  = D/X
       UACCU = ACCU*ABS(E(1))
 
@@ -461,9 +463,9 @@ C  X UNTIL CONTRIBUTION IS SMALL COMPARED TO THE LOWEST TERM
         K = K+1
         DO WHILE (I.LT.2*K+1)
           I = I+1
-          C = C*3D0/8D0*(2D0*I-1D0)*(6D0*I-5D0)*(6D0*I-1D0)
-          C = C/(54*I*(I-0.5D0))
-          D  = -C*(6.D0*I+1.0D0)/(6.D0*I-1.0D0)
+          C = C*3.D0/8.D0*(2.D0*I-1.D0)*(6.D0*I-5.D0)*(6.D0*I-1.D0)
+          C = C/(54.D0*I*(I-0.5D0))
+          D  = -C*(6.D0*I+1.D0)/(6.D0*I-1.D0)
         ENDDO
         E(K+1) = D/(X**(I))
       ENDDO
@@ -509,8 +511,8 @@ C  X UNTIL CONTRIBUTION IS SMALL COMPARED TO THE LOWEST TERM
         K = K+1
         DO WHILE (I.LT.2*K)
           I = I+1
-          C = C*3D0/8D0*(2D0*I-1D0)*(6D0*I-5D0)*(6D0*I-1D0)
-          C = C/(54*I*(I-0.5D0))
+          C = C*3.D0/8.D0*(2.D0*I-1.D0)*(6.D0*I-5.D0)*(6.D0*I-1.D0)
+          C = C/(54.D0*I*(I-0.5D0))
         ENDDO
         E(K+1) = C/(X**(I))
       ENDDO
@@ -557,9 +559,9 @@ C  X UNTIL CONTRIBUTION IS SMALL COMPARED TO THE LOWEST TERM
         K = K+1
         DO WHILE (I.LT.2*K)
           I = I+1
-          C = C*3D0/8D0*(2D0*I-1D0)*(6D0*I-5D0)*(6D0*I-1D0)
-          C = C/(54*I*(I-0.5D0))
-          D = -C*(6.D0*I+1.0D0)/(6.D0*I-1.0D0)
+          C = C*3.D0/8.D0*(2.D0*I-1.D0)*(6.D0*I-5.D0)*(6.D0*I-1.D0)
+          C = C/(54.D0*I*(I-0.5D0))
+          D = -C*(6.D0*I+1.D0)/(6.D0*I-1.D0)
         ENDDO
         E(K+1) = D/(X**(I))
       ENDDO

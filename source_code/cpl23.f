@@ -1,6 +1,6 @@
       SUBROUTINE CPL23(N,MXLAM,LAM,NSTATE,JSTATE,JSINDX,L,MVALUE,IEX,
      1                 VL,IPRINT,LFIRST)
-C  Copyright (C) 2019 J. M. Hutson & C. R. Le Sueur
+C  Copyright (C) 2022 J. M. Hutson & C. R. Le Sueur
 C  Distributed under the GNU General Public License, version 3
 C
 C  CS COUPLING MATRIX FOR LINEAR ROTOR-LINEAR ROTOR (ITYPE=23)
@@ -18,9 +18,9 @@ C
      1     IFIRST
 C
       INTEGER IPRINT
-      INTEGER LAM(2),JSTATE(NSTATE,3),JSINDX(2),L(2)
+      INTEGER LAM(*),JSTATE(NSTATE,3),JSINDX(*),L(*)
       LOGICAL LODD,NOMEM,LFIRST
-      DIMENSION VL(2)
+      DIMENSION VL(*)
 C
 C  DYNAMIC STORAGE COMMON BLOCK ...
       COMMON /MEMORY/ MX,IXNEXT,NIPR,IDUMMY,X(1)

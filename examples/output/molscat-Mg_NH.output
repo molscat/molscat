@@ -3,11 +3,11 @@
  |                Non-reactive quantum scattering calculations                |
  |                     on atomic and molecular collisions                     |
  |                                                                            |
- |              Copyright (C) 2020 J. M. Hutson & C. R. Le Sueur              |
+ |              Copyright (C) 2022 J. M. Hutson & C. R. Le Sueur              |
  |                                                                            |
- |                               Version 2020.0                               |
+ |                               Version 2022.0                               |
  |                                                                            |
- |                       Run on 14 Feb 2020   at 20:18:33                     |
+ |                       Run on 31 May 2022   at 10:24:35                     |
  |                                                                            |
   ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
 
@@ -16,11 +16,16 @@
   the terms of the GNU General Public License, version 3, as published by
   the Free Software Foundation.
 
-  Publications resulting from the use of this program should cite both
-  the version of the program used:
-  J. M. Hutson & C. R. Le Sueur, MOLSCAT computer code 2020.0              
+  Publications resulting from the use of this program should cite both the
+  version of the program used:
+
+  J. M. Hutson & C. R. Le Sueur, MOLSCAT: a program for non-reactive quantum
+  scattering calculation on atomic and molecular collisions,
+  Version 2022.0, https//github.com/molscat/molscat
+
   and the published paper:
-  J. M. Hutson & C. R. Le Sueur, Comput. Phys. Commun. 241, pp 9-18 (2019).
+
+  J. M. Hutson & C. R. Le Sueur, Comput. Phys. Commun., 241, 9-18 (2019).
 
 
   USING CODATA 2018 RECOMMENDED VALUES OF FUNDAMENTAL PHYSICAL CONSTANTS
@@ -316,7 +321,7 @@
   CHANNEL      L      PAIR LEVEL    PAIR ENERGY (CM-1)    PAIR ENERGY (K)
        1       2           1       -0.008641890115       -0.124337516766E-01
        5       2           2       -0.007707189057       -0.110889254077E-01
-       9       4           3       -0.006772488003       -0.974409914320E-02
+       9       4           3       -0.006772488003       -0.974409914317E-02
 
   * * * * * * * * * *  STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FROM LEVEL I TO LEVEL F  * * * * * * * * * *
               FOR JTOT =  -2 AND SYMMETRY BLOCK =   1 AND EFV SET =   1 AT ENERGY(  1) = 6.9503480E-04 CM-1
@@ -2330,12 +2335,12 @@
  |                Non-reactive quantum scattering calculations                |
  |                     on atomic and molecular collisions                     |
  |                                                                            |
- |              Copyright (C) 2020 J. M. Hutson & C. R. Le Sueur              |
+ |              Copyright (C) 2022 J. M. Hutson & C. R. Le Sueur              |
  |                                                                            |
- |                               Version 2020.0                               |
+ |                               Version 2022.0                               |
  |                                                                            |
- |                    This run used      13.56 cpu secs and                   |
- |             124853 of the allocated   1000000 words of storage             |
+ |                    This run used       8.96 cpu secs and                   |
+ |             124721 of the allocated   1000000 words of storage             |
  |                                                                            |
   ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
   ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
@@ -2343,11 +2348,11 @@
  |                Non-reactive quantum scattering calculations                |
  |                     on atomic and molecular collisions                     |
  |                                                                            |
- |              Copyright (C) 2020 J. M. Hutson & C. R. Le Sueur              |
+ |              Copyright (C) 2022 J. M. Hutson & C. R. Le Sueur              |
  |                                                                            |
- |                               Version 2020.0                               |
+ |                               Version 2022.0                               |
  |                                                                            |
- |                       Run on 14 Feb 2020   at 20:18:47                     |
+ |                       Run on 31 May 2022   at 10:24:44                     |
  |                                                                            |
   ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
 
@@ -2356,11 +2361,16 @@
   the terms of the GNU General Public License, version 3, as published by
   the Free Software Foundation.
 
-  Publications resulting from the use of this program should cite both
-  the version of the program used:
-  J. M. Hutson & C. R. Le Sueur, MOLSCAT computer code 2020.0              
+  Publications resulting from the use of this program should cite both the
+  version of the program used:
+
+  J. M. Hutson & C. R. Le Sueur, MOLSCAT: a program for non-reactive quantum
+  scattering calculation on atomic and molecular collisions,
+  Version 2022.0, https//github.com/molscat/molscat
+
   and the published paper:
-  J. M. Hutson & C. R. Le Sueur, Comput. Phys. Commun. 241, pp 9-18 (2019).
+
+  J. M. Hutson & C. R. Le Sueur, Comput. Phys. Commun., 241, 9-18 (2019).
 
 
   USING CODATA 2018 RECOMMENDED VALUES OF FUNDAMENTAL PHYSICAL CONSTANTS
@@ -2646,7 +2656,7 @@
   EFV SET     1:  POTL SCALING FACTOR =   1.000000000     ;  MAGNETIC Z FIELD =   10.00000000     GAUSS
   REFERENCE ENERGY IS                           9.3481175648E-04 CM-1    =  1.3449855402E-03 K       
 
-  COUPLED EQUATIONS PROPAGATED AT                                 ENERGY =  6.9503480040E-04 K       
+  COUPLED EQUATIONS PROPAGATED AT                                 ENERGY =  1.0000000000E-03 K       
   ABSOLUTE ENERGY  IS                           1.6298465569E-03 CM-1    =  2.3449855402E-03 K       
 
   MDPROP. LOG-DERIVATIVE MATRIX PROPAGATED FROM       2.3000  TO  5.0000      IN     68  STEPS.
@@ -2676,7 +2686,7 @@
 
   - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
-  COUPLED EQUATIONS PROPAGATED AT                                 ENERGY =  6.9503480040E-03 K       
+  COUPLED EQUATIONS PROPAGATED AT                                 ENERGY =  1.0000000000E-02 K       
   ABSOLUTE ENERGY  IS                           7.8851597605E-03 CM-1    =  1.1344985540E-02 K       
 
   MDPROP. LOG-DERIVATIVE MATRIX PROPAGATED FROM       2.3000  TO  5.0000      IN     68  STEPS.
@@ -2706,7 +2716,7 @@
 
   - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
-  COUPLED EQUATIONS PROPAGATED AT                                 ENERGY =  6.9503480040E-02 K       
+  COUPLED EQUATIONS PROPAGATED AT                                 ENERGY =  0.1000000000     K       
   ABSOLUTE ENERGY  IS                           7.0438291796E-02 CM-1    =  0.1013449855     K       
 
   MDPROP. LOG-DERIVATIVE MATRIX PROPAGATED FROM       2.3000  TO  5.0000      IN     68  STEPS.
@@ -2846,7 +2856,7 @@
   EFV SET     1:  POTL SCALING FACTOR =   1.000000000     ;  MAGNETIC Z FIELD =   10.00000000     GAUSS
   REFERENCE ENERGY IS                           9.3481175648E-04 CM-1    =  1.3449855402E-03 K       
 
-  COUPLED EQUATIONS PROPAGATED AT                                 ENERGY =  6.9503480040E-04 K       
+  COUPLED EQUATIONS PROPAGATED AT                                 ENERGY =  1.0000000000E-03 K       
   ABSOLUTE ENERGY  IS                           1.6298465569E-03 CM-1    =  2.3449855402E-03 K       
 
   MDPROP. LOG-DERIVATIVE MATRIX PROPAGATED FROM       2.3000  TO  5.0000      IN     68  STEPS.
@@ -2875,7 +2885,7 @@
 
   - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
-  COUPLED EQUATIONS PROPAGATED AT                                 ENERGY =  6.9503480040E-03 K       
+  COUPLED EQUATIONS PROPAGATED AT                                 ENERGY =  1.0000000000E-02 K       
   ABSOLUTE ENERGY  IS                           7.8851597605E-03 CM-1    =  1.1344985540E-02 K       
 
   MDPROP. LOG-DERIVATIVE MATRIX PROPAGATED FROM       2.3000  TO  5.0000      IN     68  STEPS.
@@ -2904,7 +2914,7 @@
 
   - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
-  COUPLED EQUATIONS PROPAGATED AT                                 ENERGY =  6.9503480040E-02 K       
+  COUPLED EQUATIONS PROPAGATED AT                                 ENERGY =  0.1000000000     K       
   ABSOLUTE ENERGY  IS                           7.0438291796E-02 CM-1    =  0.1013449855     K       
 
   MDPROP. LOG-DERIVATIVE MATRIX PROPAGATED FROM       2.3000  TO  5.0000      IN     68  STEPS.
@@ -3057,7 +3067,7 @@
   EFV SET     1:  POTL SCALING FACTOR =   1.000000000     ;  MAGNETIC Z FIELD =   10.00000000     GAUSS
   REFERENCE ENERGY IS                           9.3481175648E-04 CM-1    =  1.3449855402E-03 K       
 
-  COUPLED EQUATIONS PROPAGATED AT                                 ENERGY =  6.9503480040E-04 K       
+  COUPLED EQUATIONS PROPAGATED AT                                 ENERGY =  1.0000000000E-03 K       
   ABSOLUTE ENERGY  IS                           1.6298465569E-03 CM-1    =  2.3449855402E-03 K       
 
   MDPROP. LOG-DERIVATIVE MATRIX PROPAGATED FROM       2.3000  TO  5.0000      IN     68  STEPS.
@@ -3089,7 +3099,7 @@
 
   - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
-  COUPLED EQUATIONS PROPAGATED AT                                 ENERGY =  6.9503480040E-03 K       
+  COUPLED EQUATIONS PROPAGATED AT                                 ENERGY =  1.0000000000E-02 K       
   ABSOLUTE ENERGY  IS                           7.8851597605E-03 CM-1    =  1.1344985540E-02 K       
 
   MDPROP. LOG-DERIVATIVE MATRIX PROPAGATED FROM       2.3000  TO  5.0000      IN     68  STEPS.
@@ -3121,7 +3131,7 @@
 
   - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
-  COUPLED EQUATIONS PROPAGATED AT                                 ENERGY =  6.9503480040E-02 K       
+  COUPLED EQUATIONS PROPAGATED AT                                 ENERGY =  0.1000000000     K       
   ABSOLUTE ENERGY  IS                           7.0438291796E-02 CM-1    =  0.1013449855     K       
 
   MDPROP. LOG-DERIVATIVE MATRIX PROPAGATED FROM       2.3000  TO  5.0000      IN     68  STEPS.
@@ -3271,7 +3281,7 @@
   EFV SET     1:  POTL SCALING FACTOR =   1.000000000     ;  MAGNETIC Z FIELD =   10.00000000     GAUSS
   REFERENCE ENERGY IS                           9.3481175648E-04 CM-1    =  1.3449855402E-03 K       
 
-  COUPLED EQUATIONS PROPAGATED AT                                 ENERGY =  6.9503480040E-04 K       
+  COUPLED EQUATIONS PROPAGATED AT                                 ENERGY =  1.0000000000E-03 K       
   ABSOLUTE ENERGY  IS                           1.6298465569E-03 CM-1    =  2.3449855402E-03 K       
 
   MDPROP. LOG-DERIVATIVE MATRIX PROPAGATED FROM       2.3000  TO  5.0000      IN     68  STEPS.
@@ -3301,7 +3311,7 @@
 
   - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
-  COUPLED EQUATIONS PROPAGATED AT                                 ENERGY =  6.9503480040E-03 K       
+  COUPLED EQUATIONS PROPAGATED AT                                 ENERGY =  1.0000000000E-02 K       
   ABSOLUTE ENERGY  IS                           7.8851597605E-03 CM-1    =  1.1344985540E-02 K       
 
   MDPROP. LOG-DERIVATIVE MATRIX PROPAGATED FROM       2.3000  TO  5.0000      IN     68  STEPS.
@@ -3331,7 +3341,7 @@
 
   - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
-  COUPLED EQUATIONS PROPAGATED AT                                 ENERGY =  6.9503480040E-02 K       
+  COUPLED EQUATIONS PROPAGATED AT                                 ENERGY =  0.1000000000     K       
   ABSOLUTE ENERGY  IS                           7.0438291796E-02 CM-1    =  0.1013449855     K       
 
   MDPROP. LOG-DERIVATIVE MATRIX PROPAGATED FROM       2.3000  TO  5.0000      IN     68  STEPS.
@@ -3487,7 +3497,7 @@
   EFV SET     1:  POTL SCALING FACTOR =   1.000000000     ;  MAGNETIC Z FIELD =   10.00000000     GAUSS
   REFERENCE ENERGY IS                           9.3481175648E-04 CM-1    =  1.3449855402E-03 K       
 
-  COUPLED EQUATIONS PROPAGATED AT                                 ENERGY =  6.9503480040E-04 K       
+  COUPLED EQUATIONS PROPAGATED AT                                 ENERGY =  1.0000000000E-03 K       
   ABSOLUTE ENERGY  IS                           1.6298465569E-03 CM-1    =  2.3449855402E-03 K       
 
   MDPROP. LOG-DERIVATIVE MATRIX PROPAGATED FROM       2.3000  TO  5.0000      IN     68  STEPS.
@@ -3519,7 +3529,7 @@
 
   - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
-  COUPLED EQUATIONS PROPAGATED AT                                 ENERGY =  6.9503480040E-03 K       
+  COUPLED EQUATIONS PROPAGATED AT                                 ENERGY =  1.0000000000E-02 K       
   ABSOLUTE ENERGY  IS                           7.8851597605E-03 CM-1    =  1.1344985540E-02 K       
 
   MDPROP. LOG-DERIVATIVE MATRIX PROPAGATED FROM       2.3000  TO  5.0000      IN     68  STEPS.
@@ -3551,7 +3561,7 @@
 
   - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
-  COUPLED EQUATIONS PROPAGATED AT                                 ENERGY =  6.9503480040E-02 K       
+  COUPLED EQUATIONS PROPAGATED AT                                 ENERGY =  0.1000000000     K       
   ABSOLUTE ENERGY  IS                           7.0438291796E-02 CM-1    =  0.1013449855     K       
 
   MDPROP. LOG-DERIVATIVE MATRIX PROPAGATED FROM       2.3000  TO  5.0000      IN     68  STEPS.
@@ -3706,7 +3716,7 @@
   EFV SET     1:  POTL SCALING FACTOR =   1.000000000     ;  MAGNETIC Z FIELD =   10.00000000     GAUSS
   REFERENCE ENERGY IS                           9.3481175648E-04 CM-1    =  1.3449855402E-03 K       
 
-  COUPLED EQUATIONS PROPAGATED AT                                 ENERGY =  6.9503480040E-04 K       
+  COUPLED EQUATIONS PROPAGATED AT                                 ENERGY =  1.0000000000E-03 K       
   ABSOLUTE ENERGY  IS                           1.6298465569E-03 CM-1    =  2.3449855402E-03 K       
 
   MDPROP. LOG-DERIVATIVE MATRIX PROPAGATED FROM       2.3000  TO  5.0000      IN     68  STEPS.
@@ -3737,7 +3747,7 @@
 
   - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
-  COUPLED EQUATIONS PROPAGATED AT                                 ENERGY =  6.9503480040E-03 K       
+  COUPLED EQUATIONS PROPAGATED AT                                 ENERGY =  1.0000000000E-02 K       
   ABSOLUTE ENERGY  IS                           7.8851597605E-03 CM-1    =  1.1344985540E-02 K       
 
   MDPROP. LOG-DERIVATIVE MATRIX PROPAGATED FROM       2.3000  TO  5.0000      IN     68  STEPS.
@@ -3768,7 +3778,7 @@
 
   - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
-  COUPLED EQUATIONS PROPAGATED AT                                 ENERGY =  6.9503480040E-02 K       
+  COUPLED EQUATIONS PROPAGATED AT                                 ENERGY =  0.1000000000     K       
   ABSOLUTE ENERGY  IS                           7.0438291796E-02 CM-1    =  0.1013449855     K       
 
   MDPROP. LOG-DERIVATIVE MATRIX PROPAGATED FROM       2.3000  TO  5.0000      IN     68  STEPS.
@@ -3923,7 +3933,7 @@
   EFV SET     1:  POTL SCALING FACTOR =   1.000000000     ;  MAGNETIC Z FIELD =   10.00000000     GAUSS
   REFERENCE ENERGY IS                           9.3481175648E-04 CM-1    =  1.3449855402E-03 K       
 
-  COUPLED EQUATIONS PROPAGATED AT                                 ENERGY =  6.9503480040E-04 K       
+  COUPLED EQUATIONS PROPAGATED AT                                 ENERGY =  1.0000000000E-03 K       
   ABSOLUTE ENERGY  IS                           1.6298465569E-03 CM-1    =  2.3449855402E-03 K       
 
   MDPROP. LOG-DERIVATIVE MATRIX PROPAGATED FROM       2.3000  TO  5.0000      IN     68  STEPS.
@@ -3955,7 +3965,7 @@
 
   - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
-  COUPLED EQUATIONS PROPAGATED AT                                 ENERGY =  6.9503480040E-03 K       
+  COUPLED EQUATIONS PROPAGATED AT                                 ENERGY =  1.0000000000E-02 K       
   ABSOLUTE ENERGY  IS                           7.8851597605E-03 CM-1    =  1.1344985540E-02 K       
 
   MDPROP. LOG-DERIVATIVE MATRIX PROPAGATED FROM       2.3000  TO  5.0000      IN     68  STEPS.
@@ -3987,7 +3997,7 @@
 
   - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
-  COUPLED EQUATIONS PROPAGATED AT                                 ENERGY =  6.9503480040E-02 K       
+  COUPLED EQUATIONS PROPAGATED AT                                 ENERGY =  0.1000000000     K       
   ABSOLUTE ENERGY  IS                           7.0438291796E-02 CM-1    =  0.1013449855     K       
 
   MDPROP. LOG-DERIVATIVE MATRIX PROPAGATED FROM       2.3000  TO  5.0000      IN     68  STEPS.
@@ -4137,7 +4147,7 @@
   EFV SET     1:  POTL SCALING FACTOR =   1.000000000     ;  MAGNETIC Z FIELD =   10.00000000     GAUSS
   REFERENCE ENERGY IS                           9.3481175648E-04 CM-1    =  1.3449855402E-03 K       
 
-  COUPLED EQUATIONS PROPAGATED AT                                 ENERGY =  6.9503480040E-04 K       
+  COUPLED EQUATIONS PROPAGATED AT                                 ENERGY =  1.0000000000E-03 K       
   ABSOLUTE ENERGY  IS                           1.6298465569E-03 CM-1    =  2.3449855402E-03 K       
 
   MDPROP. LOG-DERIVATIVE MATRIX PROPAGATED FROM       2.3000  TO  5.0000      IN     68  STEPS.
@@ -4167,7 +4177,7 @@
 
   - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
-  COUPLED EQUATIONS PROPAGATED AT                                 ENERGY =  6.9503480040E-03 K       
+  COUPLED EQUATIONS PROPAGATED AT                                 ENERGY =  1.0000000000E-02 K       
   ABSOLUTE ENERGY  IS                           7.8851597605E-03 CM-1    =  1.1344985540E-02 K       
 
   MDPROP. LOG-DERIVATIVE MATRIX PROPAGATED FROM       2.3000  TO  5.0000      IN     68  STEPS.
@@ -4197,7 +4207,7 @@
 
   - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
-  COUPLED EQUATIONS PROPAGATED AT                                 ENERGY =  6.9503480040E-02 K       
+  COUPLED EQUATIONS PROPAGATED AT                                 ENERGY =  0.1000000000     K       
   ABSOLUTE ENERGY  IS                           7.0438291796E-02 CM-1    =  0.1013449855     K       
 
   MDPROP. LOG-DERIVATIVE MATRIX PROPAGATED FROM       2.3000  TO  5.0000      IN     68  STEPS.
@@ -4340,7 +4350,7 @@
   EFV SET     1:  POTL SCALING FACTOR =   1.000000000     ;  MAGNETIC Z FIELD =   10.00000000     GAUSS
   REFERENCE ENERGY IS                           9.3481175648E-04 CM-1    =  1.3449855402E-03 K       
 
-  COUPLED EQUATIONS PROPAGATED AT                                 ENERGY =  6.9503480040E-04 K       
+  COUPLED EQUATIONS PROPAGATED AT                                 ENERGY =  1.0000000000E-03 K       
   ABSOLUTE ENERGY  IS                           1.6298465569E-03 CM-1    =  2.3449855402E-03 K       
 
   MDPROP. LOG-DERIVATIVE MATRIX PROPAGATED FROM       2.3000  TO  5.0000      IN     68  STEPS.
@@ -4370,7 +4380,7 @@
 
   - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
-  COUPLED EQUATIONS PROPAGATED AT                                 ENERGY =  6.9503480040E-03 K       
+  COUPLED EQUATIONS PROPAGATED AT                                 ENERGY =  1.0000000000E-02 K       
   ABSOLUTE ENERGY  IS                           7.8851597605E-03 CM-1    =  1.1344985540E-02 K       
 
   MDPROP. LOG-DERIVATIVE MATRIX PROPAGATED FROM       2.3000  TO  5.0000      IN     68  STEPS.
@@ -4400,7 +4410,7 @@
 
   - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
-  COUPLED EQUATIONS PROPAGATED AT                                 ENERGY =  6.9503480040E-02 K       
+  COUPLED EQUATIONS PROPAGATED AT                                 ENERGY =  0.1000000000     K       
   ABSOLUTE ENERGY  IS                           7.0438291796E-02 CM-1    =  0.1013449855     K       
 
   MDPROP. LOG-DERIVATIVE MATRIX PROPAGATED FROM       2.3000  TO  5.0000      IN     68  STEPS.
@@ -4540,7 +4550,7 @@
   EFV SET     1:  POTL SCALING FACTOR =   1.000000000     ;  MAGNETIC Z FIELD =   10.00000000     GAUSS
   REFERENCE ENERGY IS                           9.3481175648E-04 CM-1    =  1.3449855402E-03 K       
 
-  COUPLED EQUATIONS PROPAGATED AT                                 ENERGY =  6.9503480040E-04 K       
+  COUPLED EQUATIONS PROPAGATED AT                                 ENERGY =  1.0000000000E-03 K       
   ABSOLUTE ENERGY  IS                           1.6298465569E-03 CM-1    =  2.3449855402E-03 K       
 
   MDPROP. LOG-DERIVATIVE MATRIX PROPAGATED FROM       2.3000  TO  5.0000      IN     68  STEPS.
@@ -4569,7 +4579,7 @@
 
   - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
-  COUPLED EQUATIONS PROPAGATED AT                                 ENERGY =  6.9503480040E-03 K       
+  COUPLED EQUATIONS PROPAGATED AT                                 ENERGY =  1.0000000000E-02 K       
   ABSOLUTE ENERGY  IS                           7.8851597605E-03 CM-1    =  1.1344985540E-02 K       
 
   MDPROP. LOG-DERIVATIVE MATRIX PROPAGATED FROM       2.3000  TO  5.0000      IN     68  STEPS.
@@ -4598,7 +4608,7 @@
 
   - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
-  COUPLED EQUATIONS PROPAGATED AT                                 ENERGY =  6.9503480040E-02 K       
+  COUPLED EQUATIONS PROPAGATED AT                                 ENERGY =  0.1000000000     K       
   ABSOLUTE ENERGY  IS                           7.0438291796E-02 CM-1    =  0.1013449855     K       
 
   MDPROP. LOG-DERIVATIVE MATRIX PROPAGATED FROM       2.3000  TO  5.0000      IN     68  STEPS.
@@ -4729,7 +4739,7 @@
   EFV SET     1:  POTL SCALING FACTOR =   1.000000000     ;  MAGNETIC Z FIELD =   10.00000000     GAUSS
   REFERENCE ENERGY IS                           9.3481175648E-04 CM-1    =  1.3449855402E-03 K       
 
-  COUPLED EQUATIONS PROPAGATED AT                                 ENERGY =  6.9503480040E-04 K       
+  COUPLED EQUATIONS PROPAGATED AT                                 ENERGY =  1.0000000000E-03 K       
   ABSOLUTE ENERGY  IS                           1.6298465569E-03 CM-1    =  2.3449855402E-03 K       
 
   MDPROP. LOG-DERIVATIVE MATRIX PROPAGATED FROM       2.3000  TO  5.0000      IN     68  STEPS.
@@ -4758,7 +4768,7 @@
 
   - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
-  COUPLED EQUATIONS PROPAGATED AT                                 ENERGY =  6.9503480040E-03 K       
+  COUPLED EQUATIONS PROPAGATED AT                                 ENERGY =  1.0000000000E-02 K       
   ABSOLUTE ENERGY  IS                           7.8851597605E-03 CM-1    =  1.1344985540E-02 K       
 
   MDPROP. LOG-DERIVATIVE MATRIX PROPAGATED FROM       2.3000  TO  5.0000      IN     68  STEPS.
@@ -4787,7 +4797,7 @@
 
   - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
-  COUPLED EQUATIONS PROPAGATED AT                                 ENERGY =  6.9503480040E-02 K       
+  COUPLED EQUATIONS PROPAGATED AT                                 ENERGY =  0.1000000000     K       
   ABSOLUTE ENERGY  IS                           7.0438291796E-02 CM-1    =  0.1013449855     K       
 
   MDPROP. LOG-DERIVATIVE MATRIX PROPAGATED FROM       2.3000  TO  5.0000      IN     68  STEPS.
@@ -4912,7 +4922,7 @@
   EFV SET     1:  POTL SCALING FACTOR =   1.000000000     ;  MAGNETIC Z FIELD =   10.00000000     GAUSS
   REFERENCE ENERGY IS                           9.3481175648E-04 CM-1    =  1.3449855402E-03 K       
 
-  COUPLED EQUATIONS PROPAGATED AT                                 ENERGY =  6.9503480040E-04 K       
+  COUPLED EQUATIONS PROPAGATED AT                                 ENERGY =  1.0000000000E-03 K       
   ABSOLUTE ENERGY  IS                           1.6298465569E-03 CM-1    =  2.3449855402E-03 K       
 
   MDPROP. LOG-DERIVATIVE MATRIX PROPAGATED FROM       2.3000  TO  5.0000      IN     68  STEPS.
@@ -4939,7 +4949,7 @@
 
   - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
-  COUPLED EQUATIONS PROPAGATED AT                                 ENERGY =  6.9503480040E-03 K       
+  COUPLED EQUATIONS PROPAGATED AT                                 ENERGY =  1.0000000000E-02 K       
   ABSOLUTE ENERGY  IS                           7.8851597605E-03 CM-1    =  1.1344985540E-02 K       
 
   MDPROP. LOG-DERIVATIVE MATRIX PROPAGATED FROM       2.3000  TO  5.0000      IN     68  STEPS.
@@ -4966,7 +4976,7 @@
 
   - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
-  COUPLED EQUATIONS PROPAGATED AT                                 ENERGY =  6.9503480040E-02 K       
+  COUPLED EQUATIONS PROPAGATED AT                                 ENERGY =  0.1000000000     K       
   ABSOLUTE ENERGY  IS                           7.0438291796E-02 CM-1    =  0.1013449855     K       
 
   MDPROP. LOG-DERIVATIVE MATRIX PROPAGATED FROM       2.3000  TO  5.0000      IN     68  STEPS.
@@ -5080,7 +5090,7 @@
   EFV SET     1:  POTL SCALING FACTOR =   1.000000000     ;  MAGNETIC Z FIELD =   10.00000000     GAUSS
   REFERENCE ENERGY IS                           9.3481175648E-04 CM-1    =  1.3449855402E-03 K       
 
-  COUPLED EQUATIONS PROPAGATED AT                                 ENERGY =  6.9503480040E-04 K       
+  COUPLED EQUATIONS PROPAGATED AT                                 ENERGY =  1.0000000000E-03 K       
   ABSOLUTE ENERGY  IS                           1.6298465569E-03 CM-1    =  2.3449855402E-03 K       
 
   MDPROP. LOG-DERIVATIVE MATRIX PROPAGATED FROM       2.3000  TO  5.0000      IN     68  STEPS.
@@ -5107,7 +5117,7 @@
 
   - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
-  COUPLED EQUATIONS PROPAGATED AT                                 ENERGY =  6.9503480040E-03 K       
+  COUPLED EQUATIONS PROPAGATED AT                                 ENERGY =  1.0000000000E-02 K       
   ABSOLUTE ENERGY  IS                           7.8851597605E-03 CM-1    =  1.1344985540E-02 K       
 
   MDPROP. LOG-DERIVATIVE MATRIX PROPAGATED FROM       2.3000  TO  5.0000      IN     68  STEPS.
@@ -5134,7 +5144,7 @@
 
   - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
-  COUPLED EQUATIONS PROPAGATED AT                                 ENERGY =  6.9503480040E-02 K       
+  COUPLED EQUATIONS PROPAGATED AT                                 ENERGY =  0.1000000000     K       
   ABSOLUTE ENERGY  IS                           7.0438291796E-02 CM-1    =  0.1013449855     K       
 
   MDPROP. LOG-DERIVATIVE MATRIX PROPAGATED FROM       2.3000  TO  5.0000      IN     68  STEPS.
@@ -5245,7 +5255,7 @@
   EFV SET     1:  POTL SCALING FACTOR =   1.000000000     ;  MAGNETIC Z FIELD =   10.00000000     GAUSS
   REFERENCE ENERGY IS                           9.3481175648E-04 CM-1    =  1.3449855402E-03 K       
 
-  COUPLED EQUATIONS PROPAGATED AT                                 ENERGY =  6.9503480040E-04 K       
+  COUPLED EQUATIONS PROPAGATED AT                                 ENERGY =  1.0000000000E-03 K       
   ABSOLUTE ENERGY  IS                           1.6298465569E-03 CM-1    =  2.3449855402E-03 K       
 
   MDPROP. LOG-DERIVATIVE MATRIX PROPAGATED FROM       2.3000  TO  5.0000      IN     68  STEPS.
@@ -5271,7 +5281,7 @@
 
   - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
-  COUPLED EQUATIONS PROPAGATED AT                                 ENERGY =  6.9503480040E-03 K       
+  COUPLED EQUATIONS PROPAGATED AT                                 ENERGY =  1.0000000000E-02 K       
   ABSOLUTE ENERGY  IS                           7.8851597605E-03 CM-1    =  1.1344985540E-02 K       
 
   MDPROP. LOG-DERIVATIVE MATRIX PROPAGATED FROM       2.3000  TO  5.0000      IN     68  STEPS.
@@ -5297,7 +5307,7 @@
 
   - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
-  COUPLED EQUATIONS PROPAGATED AT                                 ENERGY =  6.9503480040E-02 K       
+  COUPLED EQUATIONS PROPAGATED AT                                 ENERGY =  0.1000000000     K       
   ABSOLUTE ENERGY  IS                           7.0438291796E-02 CM-1    =  0.1013449855     K       
 
   MDPROP. LOG-DERIVATIVE MATRIX PROPAGATED FROM       2.3000  TO  5.0000      IN     68  STEPS.
@@ -5327,11 +5337,11 @@
  |                Non-reactive quantum scattering calculations                |
  |                     on atomic and molecular collisions                     |
  |                                                                            |
- |              Copyright (C) 2020 J. M. Hutson & C. R. Le Sueur              |
+ |              Copyright (C) 2022 J. M. Hutson & C. R. Le Sueur              |
  |                                                                            |
- |                               Version 2020.0                               |
+ |                               Version 2022.0                               |
  |                                                                            |
- |                    This run used      13.42 cpu secs and                   |
- |             101338 of the allocated   1000000 words of storage             |
+ |                    This run used       8.60 cpu secs and                   |
+ |             101230 of the allocated   1000000 words of storage             |
  |                                                                            |
   ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---

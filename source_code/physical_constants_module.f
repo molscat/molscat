@@ -1,5 +1,5 @@
       module physical_constants
-C  Copyright (C) 2020 J. M. Hutson & C. R. Le Sueur
+C  Copyright (C) 2022 J. M. Hutson & C. R. Le Sueur
 C  Distributed under the GNU General Public License, version 3
       implicit none
 
@@ -33,6 +33,11 @@ c  electron mass (2018 CODATA value)
 
 c  These values are calculated from the above (the values recorded here are from 2018 CODATA tables)
       double precision,parameter::
+c  vacuum permitivity
+     & epsilon_zero_in_SI              = elementary_charge_in_SI**2
+     &                                   /(2d0*fine_structure_constant
+     &                                     *Planck_constant_in_SI
+     &                                     *speed_of_light_in_SI),
 c  bohr radius is defined as hbar/(electron_mass*speed_of_light*fine_structure_constant)
      & bohr_in_SI                       = 0.529177210903d-10,        ! m
 c  hartree is defined as electron_mass*(speed_of_light*fine_structure_constant)**2

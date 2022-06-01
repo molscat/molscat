@@ -1,7 +1,7 @@
       SUBROUTINE VRTP(IDERIV,R,VV)
-C  Copyright (C) 2019 J. M. Hutson & C. R. Le Sueur
+C  Copyright (C) 2022 J. M. Hutson & C. R. Le Sueur
 C  Distributed under the GNU General Public License, version 3
-      USE angles
+      USE angles, ONLY: COSANG, ICNSYM, IHOMO
 C
 C  FARRAR-LEE H2-H2 MSV POTENTIAL PLUS ANISOTROPIC TERMS USED BY ZARUR AND
 C                                                                RABITZ.
@@ -22,7 +22,7 @@ C  CHANGED TO USE ANGLES MODULE ON 16-08-2018
 C     COMMON/ANGLES/COSANG(MXANG),FACTOR,IHOMO,ICNSYM,IHOMO2,ICNSY2
 C
 C  DEFINE STATEMENT FUNCTIONS
-      E(R)=EXP(BETA*(1D0-R))
+      E(R)=EXP(BETA*(1.D0-R))
       P4(C1,C2,C3,C4,R)=C1+R*(C2+R*(C3+R*C4))
 C     P3(C1,C2,C3,R)=C1+R*(C2+R*C3)
 C     P2(C1,C2,R)=C1+R*C2
@@ -35,11 +35,11 @@ C
         RMSAVE=RM
         EPSIL=24.17D0
 C  SET UP CONSTANTS
-C       CONST(1)=(4D0*3.1415926D0)**( 1.5D0)
-        CONST(1)=(4D0*PI)**(1.5D0)
-        CONST(2)=(.14D0/5D0)*CONST(1)
+C       CONST(1)=(4.D0*3.1415926D0)**( 1.5D0)
+        CONST(1)=(4.D0*PI)**(1.5D0)
+        CONST(2)=(.14D0/5.D0)*CONST(1)
         CONST(3)=CONST(2)
-        CONST(4)=54836D0 / EPSIL
+        CONST(4)=54836.D0 / EPSIL
         R1=1.0754D0
         R2=1.4D0
         C6=( 57913.D0 /EPSIL)/  RM**6
@@ -86,9 +86,9 @@ C
         V=P4(B(1),B(2),B(3),B(4),R)
         GOTO 5000
  2100   T1=E(R)
-        V=T1*(T1-2D0)
+        V=T1*(T1-2.D0)
         GOTO 5000
- 2200   RSQ=1D0/(R*R)
+ 2200   RSQ=1.D0/(R*R)
         R6=RSQ*RSQ*RSQ
         V=-R6*(C6+C8*RSQ)
  5000   DO 5001 I=1,3

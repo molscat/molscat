@@ -1,9 +1,9 @@
       SUBROUTINE THRESH(EINT,N,CM2RU,ITYPE,MONQN,NQN,NJLQN,
      1                  EREF,JSINDX,IPRINT)
-C  Copyright (C) 2020 J. M. Hutson & C. R. Le Sueur
+C  Copyright (C) 2022 J. M. Hutson & C. R. Le Sueur
 C  Distributed under the GNU General Public License, version 3
-      USE potential
-      USE basis_data, ONLY: NLEVEL, JLEVEL, ELEVEL
+      USE potential, ONLY: IREF, NCONST, NDGVL
+      USE basis_data, ONLY: ELEVEL, JLEVEL, NLEVEL
 C
 C  SUBROUTINE TO IMPLEMENT EXTENDED LOGIC FOR OBTAINING THE ENERGY
 C  OF THE INCOMING CHANNEL FROM EITHER IREF OR

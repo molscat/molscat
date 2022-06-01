@@ -1,7 +1,12 @@
       SUBROUTINE ECNV(EUNITS,TOCM,UNAME,IPRINT)
-C  Copyright (C) 2019 J. M. Hutson & C. R. Le Sueur
+C  Copyright (C) 2022 J. M. Hutson & C. R. Le Sueur
 C  Distributed under the GNU General Public License, version 3
-      USE physical_constants
+      USE physical_constants, ONLY: GHz_in_inv_cm, Hz_in_inv_cm,
+     c                              K_in_inv_cm, MHz_in_inv_cm,
+     c                              eV_in_inv_cm, erg_in_inv_cm,
+     c                              hartree_in_inv_cm,
+     c                              kJ_per_mol_in_inv_cm,
+     c                              kcal_per_mol_in_inv_cm
       IMPLICIT DOUBLE PRECISION (A-H,O-Z)
 C
 C  THIS ROUTINE ACCEPTS A 4 BYTE INPUT - EUNITS - AND DETERMINES

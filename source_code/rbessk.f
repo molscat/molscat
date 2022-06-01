@@ -1,5 +1,6 @@
       SUBROUTINE RBESSK (ELL,X,VRATIO)
-C  This subroutine is part of the MOLSCAT, BOUND and FIELD suite of programs
+C  Copyright (C) 2022 J. M. Hutson & C. R. Le Sueur
+C  Distributed under the GNU General Public License, version 3
 C------------------------------------------------------------------------------
 C  THIS ROUTINE ORIGINATES FROM THE ABC CODE BY MANOLOPOULOS ET AL.
 C  COMPUTER PHYSICS COMMUNICATIONS 133 (2000) 128-135.
@@ -16,7 +17,7 @@ C  D/DX K(ELL,X) = DK * EXP(EK)
 C  -----------------------------------------------------------------
 C
 
-      IF (X.LE.0.0D0 .OR. ELL.LT.-0.5D0) STOP 'RBESSK 0'
+      IF (X.LE.0.D0 .OR. ELL.LT.-0.5D0) STOP 'RBESSK 0'
       V = ELL+0.5D0
       CALL MBESSK (V,X,CK,DK,EK)
       PI = ACOS(-1.D0)

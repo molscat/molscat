@@ -3,11 +3,11 @@
  |                Non-reactive quantum scattering calculations                |
  |                     on atomic and molecular collisions                     |
  |                                                                            |
- |              Copyright (C) 2020 J. M. Hutson & C. R. Le Sueur              |
+ |              Copyright (C) 2022 J. M. Hutson & C. R. Le Sueur              |
  |                                                                            |
- |                               Version 2020.0                               |
+ |                               Version 2022.0                               |
  |                                                                            |
- |                       Run on 14 Feb 2020   at 20:17:46                     |
+ |                       Run on 31 May 2022   at 10:24:07                     |
  |                                                                            |
   ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
 
@@ -16,11 +16,16 @@
   the terms of the GNU General Public License, version 3, as published by
   the Free Software Foundation.
 
-  Publications resulting from the use of this program should cite both
-  the version of the program used:
-  J. M. Hutson & C. R. Le Sueur, MOLSCAT computer code 2020.0              
+  Publications resulting from the use of this program should cite both the
+  version of the program used:
+
+  J. M. Hutson & C. R. Le Sueur, MOLSCAT: a program for non-reactive quantum
+  scattering calculation on atomic and molecular collisions,
+  Version 2022.0, https//github.com/molscat/molscat
+
   and the published paper:
-  J. M. Hutson & C. R. Le Sueur, Comput. Phys. Commun. 241, pp 9-18 (2019).
+
+  J. M. Hutson & C. R. Le Sueur, Comput. Phys. Commun., 241, 9-18 (2019).
 
 
   USING CODATA 2018 RECOMMENDED VALUES OF FUNDAMENTAL PHYSICAL CONSTANTS
@@ -183,7 +188,7 @@
 
   COUPLED EQUATIONS SOLVED BY DIABATIC MODIFIED LOG-DERIVATIVE PROPAGATOR OF MANOLOPOULOS
 
-  PROPAGATION STEP SIZE DETERMINED USING STEP =   15.0     (PER WAVELENGTH)
+  PROPAGATION STEP SIZE DETERMINED USING STEP =   15.0     (PER HALF WAVELENGTH)
   STEP SIZE CONSTANT THROUGHOUT RANGE
   STEP SIZE MAY BE ADJUSTED SLIGHTLY SO THAT RANGE IS A WHOLE NUMBER OF STEPS
 
@@ -198,7 +203,7 @@
   PUBLICATIONS RESULTING FROM THE USE OF THIS PROPAGATOR SHOULD REFERENCE
   M. H. ALEXANDER AND D. E. MANOLOPOULOS,  J. CHEM. PHYS. 86, 2044 (1987).
 
-  PROPAGATION STEP SIZE DETERMINED USING STEP =   15.0     (PER WAVELENGTH)
+  PROPAGATION STEP SIZE DETERMINED USING STEP =   15.0     (PER HALF WAVELENGTH)
   STEP SIZES ADJUSTED TO MAINTAIN APPROXIMATE ACCURACY VIA PERTURBATION THEORY
   WITH TOLHI =  1.00E-04 AND POWR =   3.0    
 
@@ -250,7 +255,7 @@
 
   FOR JTOT =    0, SYMMETRY BLOCK =  2, ENERGY(  1) =  300.0000    : MAX DIAG & OFF-DIAG =  5.80E-02 &   2.10E-02
 
-  OUTSIG: DA FILE (10) UPDATED WITH SIGMA FOR ENERGY(  1) =  300.0000    
+  SIGSAV: DA FILE (10) UPDATED WITH SIGMA FOR ENERGY(  1) =  300.0000    
             JTOT =   0 MTOT = 2
 
   *****************************  ANGULAR MOMENTUM JTOT  =   1   AND SYMMETRY BLOCK  =    1  ****************************
@@ -282,7 +287,7 @@
 
   FOR JTOT =    1, SYMMETRY BLOCK =  2, ENERGY(  1) =  300.0000    : MAX DIAG & OFF-DIAG =  3.52E-01 &   1.34E-01
 
-  OUTSIG: DA FILE (10) UPDATED WITH SIGMA FOR ENERGY(  1) =  300.0000    
+  SIGSAV: DA FILE (10) UPDATED WITH SIGMA FOR ENERGY(  1) =  300.0000    
             JTOT =   1 MTOT = 2
 
   *****************************  ANGULAR MOMENTUM JTOT  =   2   AND SYMMETRY BLOCK  =    1  ****************************
@@ -314,7 +319,7 @@
 
   FOR JTOT =    2, SYMMETRY BLOCK =  2, ENERGY(  1) =  300.0000    : MAX DIAG & OFF-DIAG =  1.19E+00 &   2.70E-01
 
-  OUTSIG: DA FILE (10) UPDATED WITH SIGMA FOR ENERGY(  1) =  300.0000    
+  SIGSAV: DA FILE (10) UPDATED WITH SIGMA FOR ENERGY(  1) =  300.0000    
             JTOT =   2 MTOT = 2
 
   *****************************  ANGULAR MOMENTUM JTOT  =   3   AND SYMMETRY BLOCK  =    1  ****************************
@@ -346,7 +351,7 @@
 
   FOR JTOT =    3, SYMMETRY BLOCK =  2, ENERGY(  1) =  300.0000    : MAX DIAG & OFF-DIAG =  1.82E+00 &   3.75E-01
 
-  OUTSIG: DA FILE (10) UPDATED WITH SIGMA FOR ENERGY(  1) =  300.0000    
+  SIGSAV: DA FILE (10) UPDATED WITH SIGMA FOR ENERGY(  1) =  300.0000    
             JTOT =   3 MTOT = 2
 
   *****************************  ANGULAR MOMENTUM JTOT  =   4   AND SYMMETRY BLOCK  =    1  ****************************
@@ -378,7 +383,7 @@
 
   FOR JTOT =    4, SYMMETRY BLOCK =  2, ENERGY(  1) =  300.0000    : MAX DIAG & OFF-DIAG =  2.38E+00 &   5.69E-01
 
-  OUTSIG: DA FILE (10) UPDATED WITH SIGMA FOR ENERGY(  1) =  300.0000    
+  SIGSAV: DA FILE (10) UPDATED WITH SIGMA FOR ENERGY(  1) =  300.0000    
             JTOT =   4 MTOT = 2
 
   *****************************  ANGULAR MOMENTUM JTOT  =   5   AND SYMMETRY BLOCK  =    1  ****************************
@@ -410,7 +415,7 @@
 
   FOR JTOT =    5, SYMMETRY BLOCK =  2, ENERGY(  1) =  300.0000    : MAX DIAG & OFF-DIAG =  5.42E+00 &   1.04E+00
 
-  OUTSIG: DA FILE (10) UPDATED WITH SIGMA FOR ENERGY(  1) =  300.0000    
+  SIGSAV: DA FILE (10) UPDATED WITH SIGMA FOR ENERGY(  1) =  300.0000    
             JTOT =   5 MTOT = 2
 
   *****************************  ANGULAR MOMENTUM JTOT  =   6   AND SYMMETRY BLOCK  =    1  ****************************
@@ -442,7 +447,7 @@
 
   FOR JTOT =    6, SYMMETRY BLOCK =  2, ENERGY(  1) =  300.0000    : MAX DIAG & OFF-DIAG =  5.05E+00 &   1.37E+00
 
-  OUTSIG: DA FILE (10) UPDATED WITH SIGMA FOR ENERGY(  1) =  300.0000    
+  SIGSAV: DA FILE (10) UPDATED WITH SIGMA FOR ENERGY(  1) =  300.0000    
             JTOT =   6 MTOT = 2
 
   *****************************  ANGULAR MOMENTUM JTOT  =   7   AND SYMMETRY BLOCK  =    1  ****************************
@@ -474,7 +479,7 @@
 
   FOR JTOT =    7, SYMMETRY BLOCK =  2, ENERGY(  1) =  300.0000    : MAX DIAG & OFF-DIAG =  9.78E+00 &   1.60E+00
 
-  OUTSIG: DA FILE (10) UPDATED WITH SIGMA FOR ENERGY(  1) =  300.0000    
+  SIGSAV: DA FILE (10) UPDATED WITH SIGMA FOR ENERGY(  1) =  300.0000    
             JTOT =   7 MTOT = 2
 
   *****************************  ANGULAR MOMENTUM JTOT  =   8   AND SYMMETRY BLOCK  =    1  ****************************
@@ -506,7 +511,7 @@
 
   FOR JTOT =    8, SYMMETRY BLOCK =  2, ENERGY(  1) =  300.0000    : MAX DIAG & OFF-DIAG =  8.27E+00 &   1.77E+00
 
-  OUTSIG: DA FILE (10) UPDATED WITH SIGMA FOR ENERGY(  1) =  300.0000    
+  SIGSAV: DA FILE (10) UPDATED WITH SIGMA FOR ENERGY(  1) =  300.0000    
             JTOT =   8 MTOT = 2
 
   *****************************  ANGULAR MOMENTUM JTOT  =   9   AND SYMMETRY BLOCK  =    1  ****************************
@@ -538,7 +543,7 @@
 
   FOR JTOT =    9, SYMMETRY BLOCK =  2, ENERGY(  1) =  300.0000    : MAX DIAG & OFF-DIAG =  1.16E+01 &   2.02E+00
 
-  OUTSIG: DA FILE (10) UPDATED WITH SIGMA FOR ENERGY(  1) =  300.0000    
+  SIGSAV: DA FILE (10) UPDATED WITH SIGMA FOR ENERGY(  1) =  300.0000    
             JTOT =   9 MTOT = 2
 
   *****************************  ANGULAR MOMENTUM JTOT  =  10   AND SYMMETRY BLOCK  =    1  ****************************
@@ -570,7 +575,7 @@
 
   FOR JTOT =   10, SYMMETRY BLOCK =  2, ENERGY(  1) =  300.0000    : MAX DIAG & OFF-DIAG =  1.01E+01 &   2.27E+00
 
-  OUTSIG: DA FILE (10) UPDATED WITH SIGMA FOR ENERGY(  1) =  300.0000    
+  SIGSAV: DA FILE (10) UPDATED WITH SIGMA FOR ENERGY(  1) =  300.0000    
             JTOT =  10 MTOT = 2
 
   *****************************  ANGULAR MOMENTUM JTOT  =  11   AND SYMMETRY BLOCK  =    1  ****************************
@@ -602,7 +607,7 @@
 
   FOR JTOT =   11, SYMMETRY BLOCK =  2, ENERGY(  1) =  300.0000    : MAX DIAG & OFF-DIAG =  1.49E+01 &   2.34E+00
 
-  OUTSIG: DA FILE (10) UPDATED WITH SIGMA FOR ENERGY(  1) =  300.0000    
+  SIGSAV: DA FILE (10) UPDATED WITH SIGMA FOR ENERGY(  1) =  300.0000    
             JTOT =  11 MTOT = 2
 
   *****************************  ANGULAR MOMENTUM JTOT  =  12   AND SYMMETRY BLOCK  =    1  ****************************
@@ -634,7 +639,7 @@
 
   FOR JTOT =   12, SYMMETRY BLOCK =  2, ENERGY(  1) =  300.0000    : MAX DIAG & OFF-DIAG =  1.48E+01 &   2.33E+00
 
-  OUTSIG: DA FILE (10) UPDATED WITH SIGMA FOR ENERGY(  1) =  300.0000    
+  SIGSAV: DA FILE (10) UPDATED WITH SIGMA FOR ENERGY(  1) =  300.0000    
             JTOT =  12 MTOT = 2
 
   *****************************  ANGULAR MOMENTUM JTOT  =  13   AND SYMMETRY BLOCK  =    1  ****************************
@@ -666,7 +671,7 @@
 
   FOR JTOT =   13, SYMMETRY BLOCK =  2, ENERGY(  1) =  300.0000    : MAX DIAG & OFF-DIAG =  1.72E+01 &   2.35E+00
 
-  OUTSIG: DA FILE (10) UPDATED WITH SIGMA FOR ENERGY(  1) =  300.0000    
+  SIGSAV: DA FILE (10) UPDATED WITH SIGMA FOR ENERGY(  1) =  300.0000    
             JTOT =  13 MTOT = 2
 
   *****************************  ANGULAR MOMENTUM JTOT  =  14   AND SYMMETRY BLOCK  =    1  ****************************
@@ -698,7 +703,7 @@
 
   FOR JTOT =   14, SYMMETRY BLOCK =  2, ENERGY(  1) =  300.0000    : MAX DIAG & OFF-DIAG =  1.79E+01 &   2.42E+00
 
-  OUTSIG: DA FILE (10) UPDATED WITH SIGMA FOR ENERGY(  1) =  300.0000    
+  SIGSAV: DA FILE (10) UPDATED WITH SIGMA FOR ENERGY(  1) =  300.0000    
             JTOT =  14 MTOT = 2
 
   *****************************  ANGULAR MOMENTUM JTOT  =  15   AND SYMMETRY BLOCK  =    1  ****************************
@@ -730,7 +735,7 @@
 
   FOR JTOT =   15, SYMMETRY BLOCK =  2, ENERGY(  1) =  300.0000    : MAX DIAG & OFF-DIAG =  2.19E+01 &   2.26E+00
 
-  OUTSIG: DA FILE (10) UPDATED WITH SIGMA FOR ENERGY(  1) =  300.0000    
+  SIGSAV: DA FILE (10) UPDATED WITH SIGMA FOR ENERGY(  1) =  300.0000    
             JTOT =  15 MTOT = 2
 
   *****************************  ANGULAR MOMENTUM JTOT  =  16   AND SYMMETRY BLOCK  =    1  ****************************
@@ -762,7 +767,7 @@
 
   FOR JTOT =   16, SYMMETRY BLOCK =  2, ENERGY(  1) =  300.0000    : MAX DIAG & OFF-DIAG =  1.56E+01 &   2.32E+00
 
-  OUTSIG: DA FILE (10) UPDATED WITH SIGMA FOR ENERGY(  1) =  300.0000    
+  SIGSAV: DA FILE (10) UPDATED WITH SIGMA FOR ENERGY(  1) =  300.0000    
             JTOT =  16 MTOT = 2
 
   *****************************  ANGULAR MOMENTUM JTOT  =  17   AND SYMMETRY BLOCK  =    1  ****************************
@@ -794,7 +799,7 @@
 
   FOR JTOT =   17, SYMMETRY BLOCK =  2, ENERGY(  1) =  300.0000    : MAX DIAG & OFF-DIAG =  1.91E+01 &   2.06E+00
 
-  OUTSIG: DA FILE (10) UPDATED WITH SIGMA FOR ENERGY(  1) =  300.0000    
+  SIGSAV: DA FILE (10) UPDATED WITH SIGMA FOR ENERGY(  1) =  300.0000    
             JTOT =  17 MTOT = 2
 
   *****************************  ANGULAR MOMENTUM JTOT  =  18   AND SYMMETRY BLOCK  =    1  ****************************
@@ -826,7 +831,7 @@
 
   FOR JTOT =   18, SYMMETRY BLOCK =  2, ENERGY(  1) =  300.0000    : MAX DIAG & OFF-DIAG =  1.49E+01 &   2.15E+00
 
-  OUTSIG: DA FILE (10) UPDATED WITH SIGMA FOR ENERGY(  1) =  300.0000    
+  SIGSAV: DA FILE (10) UPDATED WITH SIGMA FOR ENERGY(  1) =  300.0000    
             JTOT =  18 MTOT = 2
 
   *****************************  ANGULAR MOMENTUM JTOT  =  19   AND SYMMETRY BLOCK  =    1  ****************************
@@ -858,7 +863,7 @@
 
   FOR JTOT =   19, SYMMETRY BLOCK =  2, ENERGY(  1) =  300.0000    : MAX DIAG & OFF-DIAG =  1.99E+01 &   2.12E+00
 
-  OUTSIG: DA FILE (10) UPDATED WITH SIGMA FOR ENERGY(  1) =  300.0000    
+  SIGSAV: DA FILE (10) UPDATED WITH SIGMA FOR ENERGY(  1) =  300.0000    
             JTOT =  19 MTOT = 2
 
   *****************************  ANGULAR MOMENTUM JTOT  =  20   AND SYMMETRY BLOCK  =    1  ****************************
@@ -890,7 +895,7 @@
 
   FOR JTOT =   20, SYMMETRY BLOCK =  2, ENERGY(  1) =  300.0000    : MAX DIAG & OFF-DIAG =  1.51E+01 &   2.07E+00
 
-  OUTSIG: DA FILE (10) UPDATED WITH SIGMA FOR ENERGY(  1) =  300.0000    
+  SIGSAV: DA FILE (10) UPDATED WITH SIGMA FOR ENERGY(  1) =  300.0000    
             JTOT =  20 MTOT = 2
 
   *****************************  ANGULAR MOMENTUM JTOT  =  21   AND SYMMETRY BLOCK  =    1  ****************************
@@ -922,7 +927,7 @@
 
   FOR JTOT =   21, SYMMETRY BLOCK =  2, ENERGY(  1) =  300.0000    : MAX DIAG & OFF-DIAG =  1.89E+01 &   1.71E+00
 
-  OUTSIG: DA FILE (10) UPDATED WITH SIGMA FOR ENERGY(  1) =  300.0000    
+  SIGSAV: DA FILE (10) UPDATED WITH SIGMA FOR ENERGY(  1) =  300.0000    
             JTOT =  21 MTOT = 2
 
   *****************************  ANGULAR MOMENTUM JTOT  =  22   AND SYMMETRY BLOCK  =    1  ****************************
@@ -954,7 +959,7 @@
 
   FOR JTOT =   22, SYMMETRY BLOCK =  2, ENERGY(  1) =  300.0000    : MAX DIAG & OFF-DIAG =  1.50E+01 &   1.91E+00
 
-  OUTSIG: DA FILE (10) UPDATED WITH SIGMA FOR ENERGY(  1) =  300.0000    
+  SIGSAV: DA FILE (10) UPDATED WITH SIGMA FOR ENERGY(  1) =  300.0000    
             JTOT =  22 MTOT = 2
 
   *****************************  ANGULAR MOMENTUM JTOT  =  23   AND SYMMETRY BLOCK  =    1  ****************************
@@ -986,7 +991,7 @@
 
   FOR JTOT =   23, SYMMETRY BLOCK =  2, ENERGY(  1) =  300.0000    : MAX DIAG & OFF-DIAG =  1.47E+01 &   1.67E+00
 
-  OUTSIG: DA FILE (10) UPDATED WITH SIGMA FOR ENERGY(  1) =  300.0000    
+  SIGSAV: DA FILE (10) UPDATED WITH SIGMA FOR ENERGY(  1) =  300.0000    
             JTOT =  23 MTOT = 2
 
   *****************************  ANGULAR MOMENTUM JTOT  =  24   AND SYMMETRY BLOCK  =    1  ****************************
@@ -1018,7 +1023,7 @@
 
   FOR JTOT =   24, SYMMETRY BLOCK =  2, ENERGY(  1) =  300.0000    : MAX DIAG & OFF-DIAG =  1.11E+01 &   1.25E+00
 
-  OUTSIG: DA FILE (10) UPDATED WITH SIGMA FOR ENERGY(  1) =  300.0000    
+  SIGSAV: DA FILE (10) UPDATED WITH SIGMA FOR ENERGY(  1) =  300.0000    
             JTOT =  24 MTOT = 2
 
   *****************************  ANGULAR MOMENTUM JTOT  =  25   AND SYMMETRY BLOCK  =    1  ****************************
@@ -1050,7 +1055,7 @@
 
   FOR JTOT =   25, SYMMETRY BLOCK =  2, ENERGY(  1) =  300.0000    : MAX DIAG & OFF-DIAG =  1.37E+01 &   6.98E-01
 
-  OUTSIG: DA FILE (10) UPDATED WITH SIGMA FOR ENERGY(  1) =  300.0000    
+  SIGSAV: DA FILE (10) UPDATED WITH SIGMA FOR ENERGY(  1) =  300.0000    
             JTOT =  25 MTOT = 2
 
   *****************************  ANGULAR MOMENTUM JTOT  =  26   AND SYMMETRY BLOCK  =    1  ****************************
@@ -1082,7 +1087,7 @@
 
   FOR JTOT =   26, SYMMETRY BLOCK =  2, ENERGY(  1) =  300.0000    : MAX DIAG & OFF-DIAG =  1.19E+01 &   3.33E-01
 
-  OUTSIG: DA FILE (10) UPDATED WITH SIGMA FOR ENERGY(  1) =  300.0000    
+  SIGSAV: DA FILE (10) UPDATED WITH SIGMA FOR ENERGY(  1) =  300.0000    
             JTOT =  26 MTOT = 2
 
   *****************************  ANGULAR MOMENTUM JTOT  =  27   AND SYMMETRY BLOCK  =    1  ****************************
@@ -1114,7 +1119,7 @@
 
   FOR JTOT =   27, SYMMETRY BLOCK =  2, ENERGY(  1) =  300.0000    : MAX DIAG & OFF-DIAG =  8.14E+00 &   3.67E-01
 
-  OUTSIG: DA FILE (10) UPDATED WITH SIGMA FOR ENERGY(  1) =  300.0000    
+  SIGSAV: DA FILE (10) UPDATED WITH SIGMA FOR ENERGY(  1) =  300.0000    
             JTOT =  27 MTOT = 2
 
   *****************************  ANGULAR MOMENTUM JTOT  =  28   AND SYMMETRY BLOCK  =    1  ****************************
@@ -1146,7 +1151,7 @@
 
   FOR JTOT =   28, SYMMETRY BLOCK =  2, ENERGY(  1) =  300.0000    : MAX DIAG & OFF-DIAG =  4.94E+00 &   3.95E-01
 
-  OUTSIG: DA FILE (10) UPDATED WITH SIGMA FOR ENERGY(  1) =  300.0000    
+  SIGSAV: DA FILE (10) UPDATED WITH SIGMA FOR ENERGY(  1) =  300.0000    
             JTOT =  28 MTOT = 2
 
   *****************************  ANGULAR MOMENTUM JTOT  =  29   AND SYMMETRY BLOCK  =    1  ****************************
@@ -1178,7 +1183,7 @@
 
   FOR JTOT =   29, SYMMETRY BLOCK =  2, ENERGY(  1) =  300.0000    : MAX DIAG & OFF-DIAG =  4.35E+00 &   4.34E-01
 
-  OUTSIG: DA FILE (10) UPDATED WITH SIGMA FOR ENERGY(  1) =  300.0000    
+  SIGSAV: DA FILE (10) UPDATED WITH SIGMA FOR ENERGY(  1) =  300.0000    
             JTOT =  29 MTOT = 2
 
   *****************************  ANGULAR MOMENTUM JTOT  =  30   AND SYMMETRY BLOCK  =    1  ****************************
@@ -1210,7 +1215,7 @@
 
   FOR JTOT =   30, SYMMETRY BLOCK =  2, ENERGY(  1) =  300.0000    : MAX DIAG & OFF-DIAG =  4.73E+00 &   4.52E-01
 
-  OUTSIG: DA FILE (10) UPDATED WITH SIGMA FOR ENERGY(  1) =  300.0000    
+  SIGSAV: DA FILE (10) UPDATED WITH SIGMA FOR ENERGY(  1) =  300.0000    
             JTOT =  30 MTOT = 2
 
   *****************************  ANGULAR MOMENTUM JTOT  =  31   AND SYMMETRY BLOCK  =    1  ****************************
@@ -1242,7 +1247,7 @@
 
   FOR JTOT =   31, SYMMETRY BLOCK =  2, ENERGY(  1) =  300.0000    : MAX DIAG & OFF-DIAG =  4.76E+00 &   5.04E-01
 
-  OUTSIG: DA FILE (10) UPDATED WITH SIGMA FOR ENERGY(  1) =  300.0000    
+  SIGSAV: DA FILE (10) UPDATED WITH SIGMA FOR ENERGY(  1) =  300.0000    
             JTOT =  31 MTOT = 2
 
   *****************************  ANGULAR MOMENTUM JTOT  =  32   AND SYMMETRY BLOCK  =    1  ****************************
@@ -1274,7 +1279,7 @@
 
   FOR JTOT =   32, SYMMETRY BLOCK =  2, ENERGY(  1) =  300.0000    : MAX DIAG & OFF-DIAG =  4.59E+00 &   5.38E-01
 
-  OUTSIG: DA FILE (10) UPDATED WITH SIGMA FOR ENERGY(  1) =  300.0000    
+  SIGSAV: DA FILE (10) UPDATED WITH SIGMA FOR ENERGY(  1) =  300.0000    
             JTOT =  32 MTOT = 2
 
   *****************************  ANGULAR MOMENTUM JTOT  =  33   AND SYMMETRY BLOCK  =    1  ****************************
@@ -1306,7 +1311,7 @@
 
   FOR JTOT =   33, SYMMETRY BLOCK =  2, ENERGY(  1) =  300.0000    : MAX DIAG & OFF-DIAG =  4.48E+00 &   5.74E-01
 
-  OUTSIG: DA FILE (10) UPDATED WITH SIGMA FOR ENERGY(  1) =  300.0000    
+  SIGSAV: DA FILE (10) UPDATED WITH SIGMA FOR ENERGY(  1) =  300.0000    
             JTOT =  33 MTOT = 2
 
   *****************************  ANGULAR MOMENTUM JTOT  =  34   AND SYMMETRY BLOCK  =    1  ****************************
@@ -1338,7 +1343,7 @@
 
   FOR JTOT =   34, SYMMETRY BLOCK =  2, ENERGY(  1) =  300.0000    : MAX DIAG & OFF-DIAG =  4.39E+00 &   6.06E-01
 
-  OUTSIG: DA FILE (10) UPDATED WITH SIGMA FOR ENERGY(  1) =  300.0000    
+  SIGSAV: DA FILE (10) UPDATED WITH SIGMA FOR ENERGY(  1) =  300.0000    
             JTOT =  34 MTOT = 2
 
   *****************************  ANGULAR MOMENTUM JTOT  =  35   AND SYMMETRY BLOCK  =    1  ****************************
@@ -1370,7 +1375,7 @@
 
   FOR JTOT =   35, SYMMETRY BLOCK =  2, ENERGY(  1) =  300.0000    : MAX DIAG & OFF-DIAG =  5.50E+00 &   6.42E-01
 
-  OUTSIG: DA FILE (10) UPDATED WITH SIGMA FOR ENERGY(  1) =  300.0000    
+  SIGSAV: DA FILE (10) UPDATED WITH SIGMA FOR ENERGY(  1) =  300.0000    
             JTOT =  35 MTOT = 2
 
   *****************************  ANGULAR MOMENTUM JTOT  =  36   AND SYMMETRY BLOCK  =    1  ****************************
@@ -1402,7 +1407,7 @@
 
   FOR JTOT =   36, SYMMETRY BLOCK =  2, ENERGY(  1) =  300.0000    : MAX DIAG & OFF-DIAG =  5.75E+00 &   6.74E-01
 
-  OUTSIG: DA FILE (10) UPDATED WITH SIGMA FOR ENERGY(  1) =  300.0000    
+  SIGSAV: DA FILE (10) UPDATED WITH SIGMA FOR ENERGY(  1) =  300.0000    
             JTOT =  36 MTOT = 2
 
   *****************************  ANGULAR MOMENTUM JTOT  =  37   AND SYMMETRY BLOCK  =    1  ****************************
@@ -1434,7 +1439,7 @@
 
   FOR JTOT =   37, SYMMETRY BLOCK =  2, ENERGY(  1) =  300.0000    : MAX DIAG & OFF-DIAG =  5.30E+00 &   7.01E-01
 
-  OUTSIG: DA FILE (10) UPDATED WITH SIGMA FOR ENERGY(  1) =  300.0000    
+  SIGSAV: DA FILE (10) UPDATED WITH SIGMA FOR ENERGY(  1) =  300.0000    
             JTOT =  37 MTOT = 2
 
   *****************************  ANGULAR MOMENTUM JTOT  =  38   AND SYMMETRY BLOCK  =    1  ****************************
@@ -1466,7 +1471,7 @@
 
   FOR JTOT =   38, SYMMETRY BLOCK =  2, ENERGY(  1) =  300.0000    : MAX DIAG & OFF-DIAG =  5.57E+00 &   7.24E-01
 
-  OUTSIG: DA FILE (10) UPDATED WITH SIGMA FOR ENERGY(  1) =  300.0000    
+  SIGSAV: DA FILE (10) UPDATED WITH SIGMA FOR ENERGY(  1) =  300.0000    
             JTOT =  38 MTOT = 2
 
   *****************************  ANGULAR MOMENTUM JTOT  =  39   AND SYMMETRY BLOCK  =    1  ****************************
@@ -1498,7 +1503,7 @@
 
   FOR JTOT =   39, SYMMETRY BLOCK =  2, ENERGY(  1) =  300.0000    : MAX DIAG & OFF-DIAG =  5.30E+00 &   7.42E-01
 
-  OUTSIG: DA FILE (10) UPDATED WITH SIGMA FOR ENERGY(  1) =  300.0000    
+  SIGSAV: DA FILE (10) UPDATED WITH SIGMA FOR ENERGY(  1) =  300.0000    
             JTOT =  39 MTOT = 2
 
   *****************************  ANGULAR MOMENTUM JTOT  =  40   AND SYMMETRY BLOCK  =    1  ****************************
@@ -1530,7 +1535,7 @@
 
   FOR JTOT =   40, SYMMETRY BLOCK =  2, ENERGY(  1) =  300.0000    : MAX DIAG & OFF-DIAG =  6.78E+00 &   7.55E-01
 
-  OUTSIG: DA FILE (10) UPDATED WITH SIGMA FOR ENERGY(  1) =  300.0000    
+  SIGSAV: DA FILE (10) UPDATED WITH SIGMA FOR ENERGY(  1) =  300.0000    
             JTOT =  40 MTOT = 2
 
   *****************************  ANGULAR MOMENTUM JTOT  =  41   AND SYMMETRY BLOCK  =    1  ****************************
@@ -1557,12 +1562,12 @@
     2       2.87746E-01    1.15580E+00    3.37253E-01    6.93624E-02    6.02108E-02    4.56369E-12
     3       7.60827E-01    3.57000E-01    2.05522E+00    1.39544E-01    6.41150E-02    1.35360E-11
     4       1.51244E-02    4.35037E-02    8.26796E-02    4.81728E+00    4.98240E-01    1.41550E-11
-    5       5.29631E-02    3.77518E-02    3.79761E-02    4.98081E-01    5.49518E+00    1.73829E-10
+    5       5.29631E-02    3.77518E-02    3.79761E-02    4.98081E-01    5.49518E+00    1.73830E-10
     6       2.89060E-13    2.82379E-13    7.91215E-13    1.39644E-12    1.71544E-11    5.51768E-02
 
   FOR JTOT =   41, SYMMETRY BLOCK =  2, ENERGY(  1) =  300.0000    : MAX DIAG & OFF-DIAG =  5.50E+00 &   7.61E-01
 
-  OUTSIG: DA FILE (10) UPDATED WITH SIGMA FOR ENERGY(  1) =  300.0000    
+  SIGSAV: DA FILE (10) UPDATED WITH SIGMA FOR ENERGY(  1) =  300.0000    
             JTOT =  41 MTOT = 2
 
   *****************************  ANGULAR MOMENTUM JTOT  =  42   AND SYMMETRY BLOCK  =    1  ****************************
@@ -1594,7 +1599,7 @@
 
   FOR JTOT =   42, SYMMETRY BLOCK =  2, ENERGY(  1) =  300.0000    : MAX DIAG & OFF-DIAG =  6.73E+00 &   7.60E-01
 
-  OUTSIG: DA FILE (10) UPDATED WITH SIGMA FOR ENERGY(  1) =  300.0000    
+  SIGSAV: DA FILE (10) UPDATED WITH SIGMA FOR ENERGY(  1) =  300.0000    
             JTOT =  42 MTOT = 2
 
   *****************************  ANGULAR MOMENTUM JTOT  =  43   AND SYMMETRY BLOCK  =    1  ****************************
@@ -1626,7 +1631,7 @@
 
   FOR JTOT =   43, SYMMETRY BLOCK =  2, ENERGY(  1) =  300.0000    : MAX DIAG & OFF-DIAG =  5.70E+00 &   7.48E-01
 
-  OUTSIG: DA FILE (10) UPDATED WITH SIGMA FOR ENERGY(  1) =  300.0000    
+  SIGSAV: DA FILE (10) UPDATED WITH SIGMA FOR ENERGY(  1) =  300.0000    
             JTOT =  43 MTOT = 2
 
   *****************************  ANGULAR MOMENTUM JTOT  =  44   AND SYMMETRY BLOCK  =    1  ****************************
@@ -1658,7 +1663,7 @@
 
   FOR JTOT =   44, SYMMETRY BLOCK =  2, ENERGY(  1) =  300.0000    : MAX DIAG & OFF-DIAG =  7.28E+00 &   7.27E-01
 
-  OUTSIG: DA FILE (10) UPDATED WITH SIGMA FOR ENERGY(  1) =  300.0000    
+  SIGSAV: DA FILE (10) UPDATED WITH SIGMA FOR ENERGY(  1) =  300.0000    
             JTOT =  44 MTOT = 2
 
   *****************************  ANGULAR MOMENTUM JTOT  =  45   AND SYMMETRY BLOCK  =    1  ****************************
@@ -1690,7 +1695,7 @@
 
   FOR JTOT =   45, SYMMETRY BLOCK =  2, ENERGY(  1) =  300.0000    : MAX DIAG & OFF-DIAG =  6.56E+00 &   7.00E-01
 
-  OUTSIG: DA FILE (10) UPDATED WITH SIGMA FOR ENERGY(  1) =  300.0000    
+  SIGSAV: DA FILE (10) UPDATED WITH SIGMA FOR ENERGY(  1) =  300.0000    
             JTOT =  45 MTOT = 2
 
   *****************************  ANGULAR MOMENTUM JTOT  =  46   AND SYMMETRY BLOCK  =    1  ****************************
@@ -1722,7 +1727,7 @@
 
   FOR JTOT =   46, SYMMETRY BLOCK =  2, ENERGY(  1) =  300.0000    : MAX DIAG & OFF-DIAG =  7.93E+00 &   7.05E-01
 
-  OUTSIG: DA FILE (10) UPDATED WITH SIGMA FOR ENERGY(  1) =  300.0000    
+  SIGSAV: DA FILE (10) UPDATED WITH SIGMA FOR ENERGY(  1) =  300.0000    
             JTOT =  46 MTOT = 2
 
   *****************************  ANGULAR MOMENTUM JTOT  =  47   AND SYMMETRY BLOCK  =    1  ****************************
@@ -1754,7 +1759,7 @@
 
   FOR JTOT =   47, SYMMETRY BLOCK =  2, ENERGY(  1) =  300.0000    : MAX DIAG & OFF-DIAG =  8.01E+00 &   8.13E-01
 
-  OUTSIG: DA FILE (10) UPDATED WITH SIGMA FOR ENERGY(  1) =  300.0000    
+  SIGSAV: DA FILE (10) UPDATED WITH SIGMA FOR ENERGY(  1) =  300.0000    
             JTOT =  47 MTOT = 2
 
   *****************************  ANGULAR MOMENTUM JTOT  =  48   AND SYMMETRY BLOCK  =    1  ****************************
@@ -1786,7 +1791,7 @@
 
   FOR JTOT =   48, SYMMETRY BLOCK =  2, ENERGY(  1) =  300.0000    : MAX DIAG & OFF-DIAG =  8.97E+00 &   9.22E-01
 
-  OUTSIG: DA FILE (10) UPDATED WITH SIGMA FOR ENERGY(  1) =  300.0000    
+  SIGSAV: DA FILE (10) UPDATED WITH SIGMA FOR ENERGY(  1) =  300.0000    
             JTOT =  48 MTOT = 2
 
   *****************************  ANGULAR MOMENTUM JTOT  =  49   AND SYMMETRY BLOCK  =    1  ****************************
@@ -1818,7 +1823,7 @@
 
   FOR JTOT =   49, SYMMETRY BLOCK =  2, ENERGY(  1) =  300.0000    : MAX DIAG & OFF-DIAG =  7.11E+00 &   1.01E+00
 
-  OUTSIG: DA FILE (10) UPDATED WITH SIGMA FOR ENERGY(  1) =  300.0000    
+  SIGSAV: DA FILE (10) UPDATED WITH SIGMA FOR ENERGY(  1) =  300.0000    
             JTOT =  49 MTOT = 2
 
   *****************************  ANGULAR MOMENTUM JTOT  =  50   AND SYMMETRY BLOCK  =    1  ****************************
@@ -1846,11 +1851,11 @@
     3       4.26013E-01    4.21796E-01    3.29807E+00    8.34429E-04    1.38899E-02    2.81031E-12
     4       2.62719E-03    1.55173E-03    4.94399E-04    7.05357E+00    3.93508E-02    1.25313E-12
     5       3.52113E-02    2.31261E-02    8.22713E-03    3.93383E-02    8.52888E+00    1.45152E-10
-    6       6.45909E-14    1.51741E-13    1.64269E-13    1.23626E-13    1.43244E-11    3.34861E-03
+    6       6.45908E-14    1.51741E-13    1.64269E-13    1.23626E-13    1.43244E-11    3.34861E-03
 
   FOR JTOT =   50, SYMMETRY BLOCK =  2, ENERGY(  1) =  300.0000    : MAX DIAG & OFF-DIAG =  8.53E+00 &   1.08E+00
 
-  OUTSIG: DA FILE (10) UPDATED WITH SIGMA FOR ENERGY(  1) =  300.0000    
+  SIGSAV: DA FILE (10) UPDATED WITH SIGMA FOR ENERGY(  1) =  300.0000    
             JTOT =  50 MTOT = 2
 
   *****************************  ANGULAR MOMENTUM JTOT  =  51   AND SYMMETRY BLOCK  =    1  ****************************
@@ -1882,7 +1887,7 @@
 
   FOR JTOT =   51, SYMMETRY BLOCK =  2, ENERGY(  1) =  300.0000    : MAX DIAG & OFF-DIAG =  7.48E+00 &   1.18E+00
 
-  OUTSIG: DA FILE (10) UPDATED WITH SIGMA FOR ENERGY(  1) =  300.0000    
+  SIGSAV: DA FILE (10) UPDATED WITH SIGMA FOR ENERGY(  1) =  300.0000    
             JTOT =  51 MTOT = 2
 
   *****************************  ANGULAR MOMENTUM JTOT  =  52   AND SYMMETRY BLOCK  =    1  ****************************
@@ -1914,7 +1919,7 @@
 
   FOR JTOT =   52, SYMMETRY BLOCK =  2, ENERGY(  1) =  300.0000    : MAX DIAG & OFF-DIAG =  7.67E+00 &   1.22E+00
 
-  OUTSIG: DA FILE (10) UPDATED WITH SIGMA FOR ENERGY(  1) =  300.0000    
+  SIGSAV: DA FILE (10) UPDATED WITH SIGMA FOR ENERGY(  1) =  300.0000    
             JTOT =  52 MTOT = 2
 
   *****************************  ANGULAR MOMENTUM JTOT  =  53   AND SYMMETRY BLOCK  =    1  ****************************
@@ -1946,7 +1951,7 @@
 
   FOR JTOT =   53, SYMMETRY BLOCK =  2, ENERGY(  1) =  300.0000    : MAX DIAG & OFF-DIAG =  7.29E+00 &   1.23E+00
 
-  OUTSIG: DA FILE (10) UPDATED WITH SIGMA FOR ENERGY(  1) =  300.0000    
+  SIGSAV: DA FILE (10) UPDATED WITH SIGMA FOR ENERGY(  1) =  300.0000    
             JTOT =  53 MTOT = 2
 
   *****************************  ANGULAR MOMENTUM JTOT  =  54   AND SYMMETRY BLOCK  =    1  ****************************
@@ -1978,7 +1983,7 @@
 
   FOR JTOT =   54, SYMMETRY BLOCK =  2, ENERGY(  1) =  300.0000    : MAX DIAG & OFF-DIAG =  6.62E+00 &   1.20E+00
 
-  OUTSIG: DA FILE (10) UPDATED WITH SIGMA FOR ENERGY(  1) =  300.0000    
+  SIGSAV: DA FILE (10) UPDATED WITH SIGMA FOR ENERGY(  1) =  300.0000    
             JTOT =  54 MTOT = 2
 
   *****************************  ANGULAR MOMENTUM JTOT  =  55   AND SYMMETRY BLOCK  =    1  ****************************
@@ -2010,7 +2015,7 @@
 
   FOR JTOT =   55, SYMMETRY BLOCK =  2, ENERGY(  1) =  300.0000    : MAX DIAG & OFF-DIAG =  5.87E+00 &   1.13E+00
 
-  OUTSIG: DA FILE (10) UPDATED WITH SIGMA FOR ENERGY(  1) =  300.0000    
+  SIGSAV: DA FILE (10) UPDATED WITH SIGMA FOR ENERGY(  1) =  300.0000    
             JTOT =  55 MTOT = 2
 
   *****************************  ANGULAR MOMENTUM JTOT  =  56   AND SYMMETRY BLOCK  =    1  ****************************
@@ -2042,7 +2047,7 @@
 
   FOR JTOT =   56, SYMMETRY BLOCK =  2, ENERGY(  1) =  300.0000    : MAX DIAG & OFF-DIAG =  5.12E+00 &   1.03E+00
 
-  OUTSIG: DA FILE (10) UPDATED WITH SIGMA FOR ENERGY(  1) =  300.0000    
+  SIGSAV: DA FILE (10) UPDATED WITH SIGMA FOR ENERGY(  1) =  300.0000    
             JTOT =  56 MTOT = 2
 
   *****************************  ANGULAR MOMENTUM JTOT  =  57   AND SYMMETRY BLOCK  =    1  ****************************
@@ -2074,7 +2079,7 @@
 
   FOR JTOT =   57, SYMMETRY BLOCK =  2, ENERGY(  1) =  300.0000    : MAX DIAG & OFF-DIAG =  4.43E+00 &   8.95E-01
 
-  OUTSIG: DA FILE (10) UPDATED WITH SIGMA FOR ENERGY(  1) =  300.0000    
+  SIGSAV: DA FILE (10) UPDATED WITH SIGMA FOR ENERGY(  1) =  300.0000    
             JTOT =  57 MTOT = 2
 
   *****************************  ANGULAR MOMENTUM JTOT  =  58   AND SYMMETRY BLOCK  =    1  ****************************
@@ -2106,7 +2111,7 @@
 
   FOR JTOT =   58, SYMMETRY BLOCK =  2, ENERGY(  1) =  300.0000    : MAX DIAG & OFF-DIAG =  3.81E+00 &   7.38E-01
 
-  OUTSIG: DA FILE (10) UPDATED WITH SIGMA FOR ENERGY(  1) =  300.0000    
+  SIGSAV: DA FILE (10) UPDATED WITH SIGMA FOR ENERGY(  1) =  300.0000    
             JTOT =  58 MTOT = 2
 
   *****************************  ANGULAR MOMENTUM JTOT  =  59   AND SYMMETRY BLOCK  =    1  ****************************
@@ -2138,7 +2143,7 @@
 
   FOR JTOT =   59, SYMMETRY BLOCK =  2, ENERGY(  1) =  300.0000    : MAX DIAG & OFF-DIAG =  3.92E+00 &   5.71E-01
 
-  OUTSIG: DA FILE (10) UPDATED WITH SIGMA FOR ENERGY(  1) =  300.0000    
+  SIGSAV: DA FILE (10) UPDATED WITH SIGMA FOR ENERGY(  1) =  300.0000    
             JTOT =  59 MTOT = 2
 
   *****************************  ANGULAR MOMENTUM JTOT  =  60   AND SYMMETRY BLOCK  =    1  ****************************
@@ -2161,7 +2166,7 @@
                        FOR JTOT =  60 AND SYMMETRY BLOCK =   2 AT ENERGY(  1) =  300.0000     CM-1
 
     F  I =      1              2              3              4              5              6
-    1       3.68266E+00    7.42384E-02    3.79632E-03    1.15574E-15    2.13614E-14    3.98434E-15
+    1       3.68266E+00    7.42384E-02    3.79632E-03    1.15573E-15    2.13614E-14    3.98434E-15
     2       4.10750E-01    2.65502E+00    9.54513E-02    7.48538E-14    5.72575E-13    4.18819E-14
     3       2.22344E-02    1.01040E-01    2.43844E+00    1.60967E-12    3.39845E-14    8.74993E-13
     4       4.01060E-15    4.69479E-14    9.53732E-13    2.25745E+00    3.23280E-03    4.42771E-15
@@ -2170,7 +2175,7 @@
 
   FOR JTOT =   60, SYMMETRY BLOCK =  2, ENERGY(  1) =  300.0000    : MAX DIAG & OFF-DIAG =  3.68E+00 &   4.11E-01
 
-  OUTSIG: DA FILE (10) UPDATED WITH SIGMA FOR ENERGY(  1) =  300.0000    
+  SIGSAV: DA FILE (10) UPDATED WITH SIGMA FOR ENERGY(  1) =  300.0000    
             JTOT =  60 MTOT = 2
 
   *****************************  ANGULAR MOMENTUM JTOT  =  61   AND SYMMETRY BLOCK  =    1  ****************************
@@ -2193,7 +2198,7 @@
                        FOR JTOT =  61 AND SYMMETRY BLOCK =   2 AT ENERGY(  1) =  300.0000     CM-1
 
     F  I =      1              2              3              4              5              6
-    1       3.00554E+00    4.85141E-02    2.37916E-03    5.80040E-16    9.69926E-15    1.03275E-15
+    1       3.00554E+00    4.85141E-02    2.37916E-03    5.80041E-16    9.69926E-15    1.03275E-15
     2       2.68421E-01    2.22159E+00    9.15379E-02    5.95120E-14    8.18017E-13    2.09973E-14
     3       1.39343E-02    9.68979E-02    2.82250E+00    2.41535E-12    3.58825E-14    2.25070E-14
     4       2.01284E-15    3.73256E-14    1.43110E-12    1.93561E+00    2.60646E-03    1.43747E-15
@@ -2202,7 +2207,7 @@
 
   FOR JTOT =   61, SYMMETRY BLOCK =  2, ENERGY(  1) =  300.0000    : MAX DIAG & OFF-DIAG =  3.01E+00 &   2.68E-01
 
-  OUTSIG: DA FILE (10) UPDATED WITH SIGMA FOR ENERGY(  1) =  300.0000    
+  SIGSAV: DA FILE (10) UPDATED WITH SIGMA FOR ENERGY(  1) =  300.0000    
             JTOT =  61 MTOT = 2
 
   *****************************  ANGULAR MOMENTUM JTOT  =  62   AND SYMMETRY BLOCK  =    1  ****************************
@@ -2234,7 +2239,7 @@
 
   FOR JTOT =   62, SYMMETRY BLOCK =  2, ENERGY(  1) =  300.0000    : MAX DIAG & OFF-DIAG =  3.70E+00 &   1.55E-01
 
-  OUTSIG: DA FILE (10) UPDATED WITH SIGMA FOR ENERGY(  1) =  300.0000    
+  SIGSAV: DA FILE (10) UPDATED WITH SIGMA FOR ENERGY(  1) =  300.0000    
             JTOT =  62 MTOT = 2
 
   *****************************  ANGULAR MOMENTUM JTOT  =  63   AND SYMMETRY BLOCK  =    1  ****************************
@@ -2266,7 +2271,7 @@
 
   FOR JTOT =   63, SYMMETRY BLOCK =  2, ENERGY(  1) =  300.0000    : MAX DIAG & OFF-DIAG =  3.78E+00 &   7.56E-02
 
-  OUTSIG: DA FILE (10) UPDATED WITH SIGMA FOR ENERGY(  1) =  300.0000    
+  SIGSAV: DA FILE (10) UPDATED WITH SIGMA FOR ENERGY(  1) =  300.0000    
             JTOT =  63 MTOT = 2
 
   *****************************  ANGULAR MOMENTUM JTOT  =  64   AND SYMMETRY BLOCK  =    1  ****************************
@@ -2298,7 +2303,7 @@
 
   FOR JTOT =   64, SYMMETRY BLOCK =  2, ENERGY(  1) =  300.0000    : MAX DIAG & OFF-DIAG =  3.94E+00 &   5.16E-02
 
-  OUTSIG: DA FILE (10) UPDATED WITH SIGMA FOR ENERGY(  1) =  300.0000    
+  SIGSAV: DA FILE (10) UPDATED WITH SIGMA FOR ENERGY(  1) =  300.0000    
             JTOT =  64 MTOT = 2
 
   *****************************  ANGULAR MOMENTUM JTOT  =  65   AND SYMMETRY BLOCK  =    1  ****************************
@@ -2324,13 +2329,13 @@
     1       8.69128E-01    1.12787E-03    1.44401E-05    5.39345E-18    2.76003E-16    8.86780E-20
     2       6.24031E-03    2.65595E+00    3.47256E-02    1.88688E-14    6.49520E-13    1.42462E-16
     3       8.45733E-05    3.67590E-02    4.50326E+00    3.59513E-12    9.80010E-15    8.64784E-15
-    4       1.87162E-17    1.18344E-14    2.13012E-12    1.06233E+00    1.17434E-03    8.40173E-18
+    4       1.87162E-17    1.18344E-14    2.13012E-12    1.06233E+00    1.17434E-03    8.40174E-18
     5       9.57473E-16    4.07246E-13    5.80472E-15    1.17396E-03    1.31041E+00    1.29497E-14
     6       3.03585E-20    8.81488E-18    5.05487E-16    8.28864E-19    1.27795E-15    1.57565E-12
 
   FOR JTOT =   65, SYMMETRY BLOCK =  2, ENERGY(  1) =  300.0000    : MAX DIAG & OFF-DIAG =  4.50E+00 &   3.68E-02
 
-  OUTSIG: DA FILE (10) UPDATED WITH SIGMA FOR ENERGY(  1) =  300.0000    
+  SIGSAV: DA FILE (10) UPDATED WITH SIGMA FOR ENERGY(  1) =  300.0000    
             JTOT =  65 MTOT = 2
 
   *****************************  ANGULAR MOMENTUM JTOT  =  66   AND SYMMETRY BLOCK  =    1  ****************************
@@ -2353,16 +2358,16 @@
                        FOR JTOT =  66 AND SYMMETRY BLOCK =   2 AT ENERGY(  1) =  300.0000     CM-1
 
     F  I =      1              2              3              4              5              6
-    1       3.79687E+00    3.30822E-04    2.74176E-06    1.01491E-18    1.29373E-16    4.87698E-21
+    1       3.79687E+00    3.30822E-04    2.74176E-06    1.01490E-18    1.29373E-16    4.87698E-21
     2       1.83039E-03    2.51287E+00    2.42635E-02    1.34018E-14    1.27495E-12    2.92565E-17
     3       1.60580E-05    2.56842E-02    5.19322E+00    1.89553E-12    8.05751E-15    1.72880E-17
-    4       3.52190E-18    8.40555E-15    1.12310E-12    9.18820E-01    9.74730E-04    2.01511E-18
+    4       3.52189E-18    8.40555E-15    1.12310E-12    9.18820E-01    9.74730E-04    2.01511E-18
     5       4.48805E-16    7.99386E-13    4.77256E-15    9.74419E-04    1.13173E+00    5.12354E-15
     6       1.66961E-21    1.81025E-18    1.01053E-18    1.98799E-19    5.05618E-16    1.23520E-13
 
   FOR JTOT =   66, SYMMETRY BLOCK =  2, ENERGY(  1) =  300.0000    : MAX DIAG & OFF-DIAG =  5.19E+00 &   2.57E-02
 
-  OUTSIG: DA FILE (10) UPDATED WITH SIGMA FOR ENERGY(  1) =  300.0000    
+  SIGSAV: DA FILE (10) UPDATED WITH SIGMA FOR ENERGY(  1) =  300.0000    
             JTOT =  66 MTOT = 2
 
   *****************************  ANGULAR MOMENTUM JTOT  =  67   AND SYMMETRY BLOCK  =    1  ****************************
@@ -2385,16 +2390,16 @@
                        FOR JTOT =  67 AND SYMMETRY BLOCK =   2 AT ENERGY(  1) =  300.0000     CM-1
 
     F  I =      1              2              3              4              5              6
-    1       7.32529E+00    7.03962E-04    3.21295E-07    1.64343E-19    2.94534E-16    1.41367E-22
+    1       7.32529E+00    7.03962E-04    3.21295E-07    1.64343E-19    2.94534E-16    1.41366E-22
     2       3.89491E-03    2.36795E+00    1.68967E-02    1.18329E-14    7.86868E-13    5.59723E-18
     3       1.88177E-06    1.78861E-02    5.78132E+00    4.97261E-12    5.74296E-15    7.26756E-16
-    4       5.70298E-19    7.42154E-15    2.94628E-12    7.96310E-01    8.12571E-04    4.57931E-19
+    4       5.70299E-19    7.42154E-15    2.94628E-12    7.96310E-01    8.12571E-04    4.57931E-19
     5       1.02176E-15    4.93362E-13    3.40162E-15    8.12313E-04    9.79476E-01    2.48523E-15
-    6       4.83964E-23    3.46329E-19    4.24807E-17    4.51766E-20    2.45255E-16    8.69324E-15
+    6       4.83962E-23    3.46329E-19    4.24807E-17    4.51766E-20    2.45255E-16    8.69324E-15
 
   FOR JTOT =   67, SYMMETRY BLOCK =  2, ENERGY(  1) =  300.0000    : MAX DIAG & OFF-DIAG =  7.33E+00 &   1.79E-02
 
-  OUTSIG: DA FILE (10) UPDATED WITH SIGMA FOR ENERGY(  1) =  300.0000    
+  SIGSAV: DA FILE (10) UPDATED WITH SIGMA FOR ENERGY(  1) =  300.0000    
             JTOT =  67 MTOT = 2
 
   *****************************  ANGULAR MOMENTUM JTOT  =  68   AND SYMMETRY BLOCK  =    1  ****************************
@@ -2403,7 +2408,7 @@
                        FOR JTOT =  68 AND SYMMETRY BLOCK =   1 AT ENERGY(  1) =  300.0000     CM-1
 
     F  I =      2              3              4              5              6
-    2       1.93774E+00    8.56868E-03    8.96560E-15    4.42800E-13    1.30793E-19
+    2       1.93774E+00    8.56868E-03    8.96561E-15    4.42800E-13    1.30793E-19
     3       9.07042E-03    5.22525E+00    4.43115E-12    3.36909E-15    2.68029E-17
     4       5.62318E-15    2.62546E-12    8.50269E-01    6.78975E-04    4.06082E-21
     5       2.77633E-13    1.99555E-15    6.78759E-04    6.90923E-01    6.49471E-17
@@ -2417,16 +2422,16 @@
                        FOR JTOT =  68 AND SYMMETRY BLOCK =   2 AT ENERGY(  1) =  300.0000     CM-1
 
     F  I =      1              2              3              4              5              6
-    1       8.29984E+00    1.15694E-03    7.64691E-08    3.16502E-20    7.43374E-16    7.92056E-24
+    1       8.29984E+00    1.15694E-03    7.64691E-08    3.16501E-20    7.43374E-16    7.92045E-24
     2       6.40119E-03    2.74590E+00    1.18166E-02    5.51956E-15    1.27218E-12    1.01512E-18
     3       4.47866E-07    1.25086E-02    6.15233E+00    2.14477E-12    3.44396E-15    2.80040E-18
-    4       1.09832E-19    3.46184E-15    1.27078E-12    6.91581E-01    6.80111E-04    9.89621E-20
+    4       1.09831E-19    3.46184E-15    1.27078E-12    6.91581E-01    6.80111E-04    9.89621E-20
     5       2.57881E-15    7.97649E-13    2.03990E-15    6.79894E-04    8.49460E-01    1.23837E-16
-    6       2.71157E-24    6.28106E-20    1.63690E-19    9.76300E-21    1.22209E-17    5.51528E-16
+    6       2.71153E-24    6.28106E-20    1.63690E-19    9.76300E-21    1.22209E-17    5.51528E-16
 
   FOR JTOT =   68, SYMMETRY BLOCK =  2, ENERGY(  1) =  300.0000    : MAX DIAG & OFF-DIAG =  8.30E+00 &   1.25E-02
 
-  OUTSIG: DA FILE (10) UPDATED WITH SIGMA FOR ENERGY(  1) =  300.0000    
+  SIGSAV: DA FILE (10) UPDATED WITH SIGMA FOR ENERGY(  1) =  300.0000    
             JTOT =  68 MTOT = 2
 
   *****************************  ANGULAR MOMENTUM JTOT  =  69   AND SYMMETRY BLOCK  =    1  ****************************
@@ -2452,13 +2457,13 @@
     1       5.82731E+00    1.33095E-03    1.37732E-07    1.08573E-19    3.38698E-16    4.41474E-24
     2       7.36392E-03    3.52329E+00    8.32930E-03    5.33733E-15    8.45850E-13    1.75735E-19
     3       8.06674E-07    8.81702E-03    6.28357E+00    3.87432E-12    2.87352E-15    4.93275E-17
-    4       3.76767E-19    3.34754E-15    2.29554E-12    6.01911E-01    5.71405E-04    2.03724E-20
+    4       3.76765E-19    3.34754E-15    2.29554E-12    6.01911E-01    5.71405E-04    2.03724E-20
     5       1.17497E-15    5.30343E-13    1.70202E-15    5.71223E-04    7.38240E-01    1.65978E-16
     6       1.51137E-24    1.08736E-20    2.88331E-18    2.00981E-21    1.63796E-17    3.16611E-17
 
   FOR JTOT =   69, SYMMETRY BLOCK =  2, ENERGY(  1) =  300.0000    : MAX DIAG & OFF-DIAG =  6.28E+00 &   8.82E-03
 
-  OUTSIG: DA FILE (10) UPDATED WITH SIGMA FOR ENERGY(  1) =  300.0000    
+  SIGSAV: DA FILE (10) UPDATED WITH SIGMA FOR ENERGY(  1) =  300.0000    
             JTOT =  69 MTOT = 2
 
   *****************************  ANGULAR MOMENTUM JTOT  =  70   AND SYMMETRY BLOCK  =    1  ****************************
@@ -2481,16 +2486,16 @@
                        FOR JTOT =  70 AND SYMMETRY BLOCK =   2 AT ENERGY(  1) =  300.0000     CM-1
 
     F  I =      1              2              3              4              5              6
-    1       2.39586E+00    1.25515E-03    1.46460E-07    5.28663E-20    7.59329E-16    1.14183E-24
+    1       2.39586E+00    1.25515E-03    1.46460E-07    5.28656E-20    7.59329E-16    1.14183E-24
     2       6.94454E-03    4.39886E+00    5.92731E-03    3.34871E-15    1.14131E-12    2.91411E-20
     3       8.57789E-07    6.27439E-03    6.20739E+00    2.12300E-12    1.56827E-15    8.96638E-21
-    4       1.83455E-19    2.10029E-15    1.25788E-12    5.24897E-01    4.81747E-04    3.99965E-21
+    4       1.83452E-19    2.10029E-15    1.25788E-12    5.24897E-01    4.81747E-04    3.99965E-21
     5       2.63416E-15    7.15596E-13    9.28903E-16    4.81593E-04    6.42951E-01    2.31538E-17
-    6       3.90899E-25    1.80311E-21    5.24107E-22    3.94581E-22    2.28494E-18    1.65042E-18
+    6       3.90900E-25    1.80311E-21    5.24107E-22    3.94581E-22    2.28494E-18    1.65042E-18
 
   FOR JTOT =   70, SYMMETRY BLOCK =  2, ENERGY(  1) =  300.0000    : MAX DIAG & OFF-DIAG =  6.21E+00 &   6.94E-03
 
-  OUTSIG: DA FILE (10) UPDATED WITH SIGMA FOR ENERGY(  1) =  300.0000    
+  SIGSAV: DA FILE (10) UPDATED WITH SIGMA FOR ENERGY(  1) =  300.0000    
             JTOT =  70 MTOT = 2
 
   *****************************  ANGULAR MOMENTUM JTOT  =  71   AND SYMMETRY BLOCK  =    1  ****************************
@@ -2513,16 +2518,16 @@
                        FOR JTOT =  71 AND SYMMETRY BLOCK =   2 AT ENERGY(  1) =  300.0000     CM-1
 
     F  I =      1              2              3              4              5              6
-    1       3.18889E-01    1.05524E-03    1.12770E-07    4.93843E-20    4.51146E-16    1.99906E-25
+    1       3.18889E-01    1.05524E-03    1.12770E-07    4.93857E-20    4.51146E-16    1.99906E-25
     2       5.83846E-03    5.16014E+00    4.25811E-03    1.98937E-15    8.28023E-13    4.67365E-21
     3       6.60471E-07    4.50744E-03    5.97712E+00    2.05238E-12    1.39744E-15    2.69531E-18
-    4       1.71372E-19    1.24772E-15    1.21603E-12    4.58700E-01    4.07509E-04    7.52147E-22
+    4       1.71377E-19    1.24772E-15    1.21603E-12    4.58700E-01    4.07509E-04    7.52147E-22
     5       1.56506E-15    5.19166E-13    8.27721E-16    4.07380E-04    5.61081E-01    3.47280E-18
-    6       6.84369E-26    2.89183E-22    1.57548E-19    7.42023E-23    3.42715E-19    7.83620E-20
+    6       6.84368E-26    2.89183E-22    1.57548E-19    7.42023E-23    3.42715E-19    7.83620E-20
 
   FOR JTOT =   71, SYMMETRY BLOCK =  2, ENERGY(  1) =  300.0000    : MAX DIAG & OFF-DIAG =  5.98E+00 &   5.84E-03
 
-  OUTSIG: DA FILE (10) UPDATED WITH SIGMA FOR ENERGY(  1) =  300.0000    
+  SIGSAV: DA FILE (10) UPDATED WITH SIGMA FOR ENERGY(  1) =  300.0000    
             JTOT =  71 MTOT = 2
 
   *****************************  ANGULAR MOMENTUM JTOT  =  72   AND SYMMETRY BLOCK  =    1  ****************************
@@ -2534,7 +2539,7 @@
     2       4.51989E+00    2.29249E-03    1.65154E-15    6.69141E-13    8.07395E-23
     3       2.42673E-03    4.53687E+00    1.77287E-12    7.25136E-16    5.92091E-20
     4       1.03583E-15    1.05042E-12    4.91123E-01    3.45234E-04    4.50521E-24
-    5       4.19548E-13    4.29507E-16    3.45124E-04    4.01250E-01    2.09570E-19
+    5       4.19548E-13    4.29506E-16    3.45124E-04    4.01250E-01    2.09570E-19
     6       4.99577E-24    3.46092E-21    4.44456E-25    2.06815E-20    1.33231E-22
 
   FOR JTOT =   72, SYMMETRY BLOCK =  1, ENERGY(  1) =  300.0000    : MAX DIAG & OFF-DIAG =  4.54E+00 &   2.43E-03
@@ -2545,16 +2550,16 @@
                        FOR JTOT =  72 AND SYMMETRY BLOCK =   2 AT ENERGY(  1) =  300.0000     CM-1
 
     F  I =      1              2              3              4              5              6
-    1       1.27304E-01    8.24723E-04    7.37291E-08    6.18365E-20    2.63634E-16    2.81929E-26
+    1       1.27304E-01    8.24723E-04    7.37291E-08    6.18366E-20    2.63634E-16    2.81930E-26
     2       4.56306E-03    5.70524E+00    3.08674E-03    2.13406E-15    1.61884E-12    7.21912E-22
     3       4.31818E-07    3.26748E-03    5.64611E+00    1.69060E-12    9.19669E-16    2.58786E-20
-    4       2.14583E-19    1.33847E-15    1.00168E-12    4.01640E-01    3.45795E-04    1.35428E-22
+    4       2.14584E-19    1.33847E-15    1.00168E-12    4.01640E-01    3.45795E-04    1.35428E-22
     5       9.14562E-16    1.01500E-12    5.44731E-16    3.45685E-04    4.90647E-01    2.13810E-18
-    6       9.65173E-27    4.46684E-23    1.51267E-21    1.33605E-23    2.10999E-19    3.39900E-21
+    6       9.65174E-27    4.46684E-23    1.51267E-21    1.33605E-23    2.10999E-19    3.39900E-21
 
   FOR JTOT =   72, SYMMETRY BLOCK =  2, ENERGY(  1) =  300.0000    : MAX DIAG & OFF-DIAG =  5.71E+00 &   4.56E-03
 
-  OUTSIG: DA FILE (10) UPDATED WITH SIGMA FOR ENERGY(  1) =  300.0000    
+  SIGSAV: DA FILE (10) UPDATED WITH SIGMA FOR ENERGY(  1) =  300.0000    
             JTOT =  72 MTOT = 2
 
   *****************************  ANGULAR MOMENTUM JTOT  =  73   AND SYMMETRY BLOCK  =    1  ****************************
@@ -2577,16 +2582,16 @@
                        FOR JTOT =  73 AND SYMMETRY BLOCK =   2 AT ENERGY(  1) =  300.0000     CM-1
 
     F  I =      1              2              3              4              5              6
-    1       1.29635E+00    6.16235E-04    4.41425E-08    7.02610E-21    3.98191E-16    3.45480E-27
+    1       1.29635E+00    6.16235E-04    4.41425E-08    7.02439E-21    3.98191E-16    3.45481E-27
     2       3.40953E-03    6.00995E+00    2.25614E-03    1.08166E-15    1.03605E-12    1.06932E-22
-    3       2.58534E-07    2.38825E-03    5.25805E+00    1.38586E-12    7.82270E-16    1.08248E-19
-    4       2.43817E-20    6.78410E-16    8.21120E-13    3.52337E-01    2.94283E-04    2.33357E-23
+    3       2.58534E-07    2.38825E-03    5.25805E+00    1.38586E-12    7.82271E-16    1.08248E-19
+    4       2.43758E-20    6.78410E-16    8.21120E-13    3.52337E-01    2.94283E-04    2.33357E-23
     5       1.38135E-15    6.49599E-13    4.63348E-16    2.94190E-04    4.29901E-01    1.13082E-19
     6       1.18274E-27    6.61643E-24    6.32734E-21    2.30215E-24    1.11595E-20    1.35080E-22
 
   FOR JTOT =   73, SYMMETRY BLOCK =  2, ENERGY(  1) =  300.0000    : MAX DIAG & OFF-DIAG =  6.01E+00 &   3.41E-03
 
-  OUTSIG: DA FILE (10) UPDATED WITH SIGMA FOR ENERGY(  1) =  300.0000    
+  SIGSAV: DA FILE (10) UPDATED WITH SIGMA FOR ENERGY(  1) =  300.0000    
             JTOT =  73 MTOT = 2
 
   *****************************  ANGULAR MOMENTUM JTOT  =  74   AND SYMMETRY BLOCK  =    1  ****************************
@@ -2595,7 +2600,7 @@
                        FOR JTOT =  74 AND SYMMETRY BLOCK =   1 AT ENERGY(  1) =  300.0000     CM-1
 
     F  I =      2              3              4              5              6
-    2       4.70877E+00    1.24474E-03    9.85311E-16    5.85776E-13    1.60621E-24
+    2       4.70877E+00    1.24474E-03    9.85312E-16    5.85776E-13    1.60621E-24
     3       1.31762E-03    3.84628E+00    1.46138E-12    4.93316E-16    1.52318E-21
     4       6.17982E-16    8.65868E-13    3.77761E-01    2.50759E-04    1.17797E-25
     5       3.67279E-13    2.92197E-16    2.50680E-04    3.09402E-01    1.28052E-20
@@ -2609,16 +2614,16 @@
                        FOR JTOT =  74 AND SYMMETRY BLOCK =   2 AT ENERGY(  1) =  300.0000     CM-1
 
     F  I =      1              2              3              4              5              6
-    1       3.11647E+00    4.50204E-04    2.52800E-08    2.12472E-20    1.22475E-16    3.88537E-28
+    1       3.11647E+00    4.50204E-04    2.52800E-08    2.12476E-20    1.22475E-16    3.88537E-28
     2       2.49091E-03    6.09610E+00    1.66125E-03    1.06028E-15    1.81262E-12    1.53351E-23
     3       1.48061E-07    1.75853E-03    4.84546E+00    1.74886E-12    5.97729E-16    5.85263E-21
-    4       7.37312E-20    6.65000E-16    1.03620E-12    3.09704E-01    2.51163E-04    3.86448E-24
+    4       7.37327E-20    6.65000E-16    1.03620E-12    3.09704E-01    2.51163E-04    3.86448E-24
     5       4.24872E-16    1.13650E-12    3.54042E-16    2.51083E-04    3.77392E-01    5.81577E-20
     6       1.33014E-28    9.48862E-25    3.42101E-22    3.81246E-25    5.73931E-21    4.93035E-24
 
   FOR JTOT =   74, SYMMETRY BLOCK =  2, ENERGY(  1) =  300.0000    : MAX DIAG & OFF-DIAG =  6.10E+00 &   2.49E-03
 
-  OUTSIG: DA FILE (10) UPDATED WITH SIGMA FOR ENERGY(  1) =  300.0000    
+  SIGSAV: DA FILE (10) UPDATED WITH SIGMA FOR ENERGY(  1) =  300.0000    
             JTOT =  74 MTOT = 2
 
   *****************************  ANGULAR MOMENTUM JTOT  =  75   AND SYMMETRY BLOCK  =    1  ****************************
@@ -2641,16 +2646,16 @@
                        FOR JTOT =  75 AND SYMMETRY BLOCK =   2 AT ENERGY(  1) =  300.0000     CM-1
 
     F  I =      1              2              3              4              5              6
-    1       5.05875E+00    3.26612E-04    1.41905E-08    7.71608E-21    1.54435E-16    4.10894E-29
+    1       5.05875E+00    3.26612E-04    1.41905E-08    7.71664E-21    1.54435E-16    4.10885E-29
     2       1.80710E-03    6.00738E+00    1.23146E-03    8.38814E-16    1.05383E-12    2.12582E-24
     3       8.31113E-08    1.30357E-03    4.43072E+00    1.66013E-12    4.89352E-16    2.79347E-21
-    4       2.67761E-20    5.26099E-16    9.83631E-13    2.72707E-01    2.14930E-04    6.15427E-25
+    4       2.67780E-20    5.26099E-16    9.83631E-13    2.72707E-01    2.14930E-04    6.15427E-25
     5       5.35745E-16    6.60748E-13    2.89849E-16    2.14861E-04    3.31938E-01    1.40970E-20
-    6       1.40668E-29    1.31536E-25    1.63285E-22    6.07143E-26    1.39117E-21    1.65662E-25
+    6       1.40665E-29    1.31536E-25    1.63285E-22    6.07143E-26    1.39117E-21    1.65662E-25
 
   FOR JTOT =   75, SYMMETRY BLOCK =  2, ENERGY(  1) =  300.0000    : MAX DIAG & OFF-DIAG =  6.01E+00 &   1.81E-03
 
-  OUTSIG: DA FILE (10) UPDATED WITH SIGMA FOR ENERGY(  1) =  300.0000    
+  SIGSAV: DA FILE (10) UPDATED WITH SIGMA FOR ENERGY(  1) =  300.0000    
             JTOT =  75 MTOT = 2
 
   *****************************  ANGULAR MOMENTUM JTOT  =  76   AND SYMMETRY BLOCK  =    1  ****************************
@@ -2673,16 +2678,16 @@
                        FOR JTOT =  76 AND SYMMETRY BLOCK =   2 AT ENERGY(  1) =  300.0000     CM-1
 
     F  I =      1              2              3              4              5              6
-    1       6.80563E+00    2.37262E-04    7.91147E-09    2.49799E-21    1.34024E-16    4.13321E-30
+    1       6.80563E+00    2.37262E-04    7.91147E-09    2.49792E-21    1.34024E-16    4.13322E-30
     2       1.31273E-03    5.79208E+00    9.18257E-04    5.20735E-16    1.76490E-12    2.84183E-25
     3       4.63360E-08    9.72025E-04    4.02848E+00    3.02816E-12    3.99034E-16    5.01941E-22
-    4       8.66846E-21    3.26602E-16    1.79419E-12    2.40559E-01    1.84391E-04    9.42506E-26
+    4       8.66822E-21    3.26602E-16    1.79419E-12    2.40559E-01    1.84391E-04    9.42506E-26
     5       4.64936E-16    1.10658E-12    2.36353E-16    1.84332E-04    2.92477E-01    5.91549E-22
     6       1.41499E-30    1.75838E-26    2.93397E-23    9.29819E-27    5.83772E-23    5.13677E-27
 
   FOR JTOT =   76, SYMMETRY BLOCK =  2, ENERGY(  1) =  300.0000    : MAX DIAG & OFF-DIAG =  6.81E+00 &   1.31E-03
 
-  OUTSIG: DA FILE (10) UPDATED WITH SIGMA FOR ENERGY(  1) =  300.0000    
+  SIGSAV: DA FILE (10) UPDATED WITH SIGMA FOR ENERGY(  1) =  300.0000    
             JTOT =  76 MTOT = 2
 
   *****************************  ANGULAR MOMENTUM JTOT  =  77   AND SYMMETRY BLOCK  =    1  ****************************
@@ -2705,16 +2710,16 @@
                        FOR JTOT =  77 AND SYMMETRY BLOCK =   2 AT ENERGY(  1) =  300.0000     CM-1
 
     F  I =      1              2              3              4              5              6
-    1       8.19247E+00    1.73066E-04    4.40302E-09    4.50011E-21    4.02622E-17    3.99446E-31
+    1       8.19247E+00    1.73066E-04    4.40302E-09    4.49993E-21    4.02621E-17    3.99431E-31
     2       9.57545E-04    5.49361E+00    6.88366E-04    4.97965E-16    7.36568E-13    3.67847E-26
     3       2.57877E-08    7.28674E-04    3.64760E+00    2.31489E-12    2.86313E-16    3.37379E-23
-    4       1.56161E-20    3.12321E-16    1.37157E-12    2.12588E-01    1.58588E-04    1.39116E-26
+    4       1.56155E-20    3.12321E-16    1.37157E-12    2.12588E-01    1.58588E-04    1.39116E-26
     5       1.39672E-16    4.61824E-13    1.69586E-16    1.58537E-04    2.58174E-01    4.75044E-22
-    6       1.36749E-31    2.27606E-27    1.97206E-24    1.37243E-27    4.68799E-23    1.47268E-28
+    6       1.36743E-31    2.27606E-27    1.97206E-24    1.37243E-27    4.68799E-23    1.47268E-28
 
   FOR JTOT =   77, SYMMETRY BLOCK =  2, ENERGY(  1) =  300.0000    : MAX DIAG & OFF-DIAG =  8.19E+00 &   9.58E-04
 
-  OUTSIG: DA FILE (10) UPDATED WITH SIGMA FOR ENERGY(  1) =  300.0000    
+  SIGSAV: DA FILE (10) UPDATED WITH SIGMA FOR ENERGY(  1) =  300.0000    
             JTOT =  77 MTOT = 2
 
   *****************************  ANGULAR MOMENTUM JTOT  =  78   AND SYMMETRY BLOCK  =    1  ****************************
@@ -2737,16 +2742,16 @@
                        FOR JTOT =  78 AND SYMMETRY BLOCK =   2 AT ENERGY(  1) =  300.0000     CM-1
 
     F  I =      1              2              3              4              5              6
-    1       9.16093E+00    1.26739E-04    2.45014E-09    6.49661E-22    7.50037E-17    3.71326E-32
+    1       9.16093E+00    1.26739E-04    2.45014E-09    6.49477E-22    7.50037E-17    3.71340E-32
     2       7.01226E-04    5.14661E+00    5.18447E-04    3.59300E-16    1.63535E-12    4.60381E-27
     3       1.43500E-08    5.48805E-04    3.29293E+00    4.08483E-12    2.58129E-16    2.33677E-23
-    4       2.25443E-21    2.25351E-16    2.42027E-12    1.88165E-01    1.36708E-04    1.97994E-27
+    4       2.25379E-21    2.25351E-16    2.42027E-12    1.88165E-01    1.36708E-04    1.97994E-27
     5       2.60193E-16    1.02536E-12    1.52893E-16    1.36664E-04    2.28292E-01    5.60644E-23
-    6       1.27122E-32    2.84861E-28    1.36590E-24    1.95328E-28    5.53273E-24    3.91153E-30
+    6       1.27127E-32    2.84861E-28    1.36590E-24    1.95328E-28    5.53273E-24    3.91153E-30
 
   FOR JTOT =   78, SYMMETRY BLOCK =  2, ENERGY(  1) =  300.0000    : MAX DIAG & OFF-DIAG =  9.16E+00 &   7.01E-04
 
-  OUTSIG: DA FILE (10) UPDATED WITH SIGMA FOR ENERGY(  1) =  300.0000    
+  SIGSAV: DA FILE (10) UPDATED WITH SIGMA FOR ENERGY(  1) =  300.0000    
             JTOT =  78 MTOT = 2
 
   *****************************  ANGULAR MOMENTUM JTOT  =  79   AND SYMMETRY BLOCK  =    1  ****************************
@@ -2769,16 +2774,16 @@
                        FOR JTOT =  79 AND SYMMETRY BLOCK =   2 AT ENERGY(  1) =  300.0000     CM-1
 
     F  I =      1              2              3              4              5              6
-    1       9.72485E+00    9.31063E-05    1.36360E-09    9.20291E-22    4.15474E-17    3.31715E-33
+    1       9.72485E+00    9.31063E-05    1.36360E-09    9.20290E-22    4.15474E-17    3.31708E-33
     2       5.15143E-04    4.77703E+00    3.92141E-04    2.21185E-16    7.24001E-13    5.56438E-28
     3       7.98639E-09    4.15102E-04    2.96662E+00    3.87156E-12    1.61346E-16    1.90591E-26
     4       3.19356E-21    1.38726E-16    2.29390E-12    1.66831E-01    1.18115E-04    2.71823E-28
     5       1.44130E-16    4.53945E-13    9.55674E-17    1.18077E-04    2.02194E-01    4.12807E-24
-    6       1.13561E-33    3.44297E-29    1.11405E-27    2.68164E-29    4.07380E-25    9.64366E-32
+    6       1.13559E-33    3.44297E-29    1.11405E-27    2.68164E-29    4.07380E-25    9.64366E-32
 
   FOR JTOT =   79, SYMMETRY BLOCK =  2, ENERGY(  1) =  300.0000    : MAX DIAG & OFF-DIAG =  9.72E+00 &   5.15E-04
 
-  OUTSIG: DA FILE (10) UPDATED WITH SIGMA FOR ENERGY(  1) =  300.0000    
+  SIGSAV: DA FILE (10) UPDATED WITH SIGMA FOR ENERGY(  1) =  300.0000    
             JTOT =  79 MTOT = 2
 
   *****************************  ANGULAR MOMENTUM JTOT  =  80   AND SYMMETRY BLOCK  =    1  ****************************
@@ -2801,16 +2806,16 @@
                        FOR JTOT =  80 AND SYMMETRY BLOCK =   2 AT ENERGY(  1) =  300.0000     CM-1
 
     F  I =      1              2              3              4              5              6
-    1       9.94094E+00    6.85540E-05    7.59257E-10    7.26635E-22    1.89151E-17    2.85159E-34
+    1       9.94094E+00    6.85540E-05    7.59257E-10    7.26549E-22    1.89151E-17    2.85149E-34
     2       3.79299E-04    4.40306E+00    2.97735E-04    2.26221E-16    9.52296E-13    6.49450E-29
     3       4.44683E-09    3.15169E-04    2.66895E+00    4.07947E-12    1.45035E-16    6.22749E-25
-    4       2.52155E-21    1.41884E-16    2.41709E-12    1.48156E-01    1.02276E-04    3.60116E-29
+    4       2.52125E-21    1.41884E-16    2.41709E-12    1.48156E-01    1.02276E-04    3.60116E-29
     5       6.56177E-17    5.97085E-13    8.59057E-17    1.02243E-04    1.79386E-01    2.24793E-24
-    6       9.76229E-35    4.01848E-30    3.64012E-26    3.55269E-30    2.21838E-25    2.21103E-33
+    6       9.76195E-35    4.01848E-30    3.64012E-26    3.55269E-30    2.21838E-25    2.21103E-33
 
   FOR JTOT =   80, SYMMETRY BLOCK =  2, ENERGY(  1) =  300.0000    : MAX DIAG & OFF-DIAG =  9.94E+00 &   3.79E-04
 
-  OUTSIG: DA FILE (10) UPDATED WITH SIGMA FOR ENERGY(  1) =  300.0000    
+  SIGSAV: DA FILE (10) UPDATED WITH SIGMA FOR ENERGY(  1) =  300.0000    
             JTOT =  80 MTOT = 2
 
   *****************************  ANGULAR MOMENTUM JTOT  =  81   AND SYMMETRY BLOCK  =    1  ****************************
@@ -2833,16 +2838,16 @@
                        FOR JTOT =  81 AND SYMMETRY BLOCK =   2 AT ENERGY(  1) =  300.0000     CM-1
 
     F  I =      1              2              3              4              5              6
-    1       9.88281E+00    5.05776E-05    4.23101E-10    7.10975E-23    3.24401E-17    2.36695E-35
+    1       9.88281E+00    5.05776E-05    4.23101E-10    7.10974E-23    3.24401E-17    2.36695E-35
     2       2.79838E-04    4.03715E+00    2.26834E-04    1.33097E-16    1.61088E-12    7.34063E-30
     3       2.47803E-09    2.40117E-04    2.39915E+00    4.56601E-12    1.00014E-16    1.63915E-26
     4       2.46720E-22    8.34778E-17    2.70537E-12    1.31761E-01    8.87403E-05    4.61198E-30
     5       1.12537E-16    1.01001E-12    5.92394E-17    8.87121E-05    1.59395E-01    1.54193E-25
-    6       8.10316E-36    4.54203E-31    9.58123E-28    4.54990E-31    1.52166E-26    4.72237E-35
+    6       8.10314E-36    4.54203E-31    9.58123E-28    4.54990E-31    1.52166E-26    4.72237E-35
 
   FOR JTOT =   81, SYMMETRY BLOCK =  2, ENERGY(  1) =  300.0000    : MAX DIAG & OFF-DIAG =  9.88E+00 &   2.80E-04
 
-  OUTSIG: DA FILE (10) UPDATED WITH SIGMA FOR ENERGY(  1) =  300.0000    
+  SIGSAV: DA FILE (10) UPDATED WITH SIGMA FOR ENERGY(  1) =  300.0000    
             JTOT =  81 MTOT = 2
 
   *****************************  ANGULAR MOMENTUM JTOT  =  82   AND SYMMETRY BLOCK  =    1  ****************************
@@ -2865,16 +2870,16 @@
                        FOR JTOT =  82 AND SYMMETRY BLOCK =   2 AT ENERGY(  1) =  300.0000     CM-1
 
     F  I =      1              2              3              4              5              6
-    1       9.62338E+00    3.73765E-05    2.36068E-10    2.47766E-22    1.30577E-17    1.90483E-36
+    1       9.62338E+00    3.73765E-05    2.36068E-10    2.47731E-22    1.30577E-17    1.90471E-36
     2       2.06798E-04    3.68708E+00    1.73369E-04    9.68909E-17    8.32894E-13    8.06446E-31
     3       1.38261E-09    1.83521E-04    2.15571E+00    3.46664E-12    7.53753E-17    8.65968E-27
-    4       8.59790E-22    6.07694E-17    2.05399E-12    1.17367E-01    7.71552E-05    5.72093E-31
+    4       8.59667E-22    6.07694E-17    2.05399E-12    1.17367E-01    7.71552E-05    5.72093E-31
     5       4.52979E-17    5.22220E-13    4.46457E-17    7.71306E-05    1.41844E-01    2.08474E-26
-    6       6.52112E-37    4.98990E-32    5.06180E-28    5.64392E-32    2.05734E-27    9.40610E-37
+    6       6.52068E-37    4.98990E-32    5.06180E-28    5.64392E-32    2.05734E-27    9.40610E-37
 
   FOR JTOT =   82, SYMMETRY BLOCK =  2, ENERGY(  1) =  300.0000    : MAX DIAG & OFF-DIAG =  9.62E+00 &   2.07E-04
 
-  OUTSIG: DA FILE (10) UPDATED WITH SIGMA FOR ENERGY(  1) =  300.0000    
+  SIGSAV: DA FILE (10) UPDATED WITH SIGMA FOR ENERGY(  1) =  300.0000    
             JTOT =  82 MTOT = 2
 
   *****************************  ANGULAR MOMENTUM JTOT  =  83   AND SYMMETRY BLOCK  =    1  ****************************
@@ -2885,7 +2890,7 @@
     F  I =      2              3              4              5              6
     2       2.49011E+00    1.02038E-04    7.50406E-17    5.91669E-13    6.72454E-33
     3       1.08013E-04    1.51657E+00    2.95627E-12    3.61739E-17    1.93616E-29
-    4       4.70651E-17    1.75159E-12    1.26552E-01    6.71094E-05    1.53999E-33
+    4       4.70650E-17    1.75159E-12    1.26552E-01    6.71094E-05    1.53999E-33
     5       3.70973E-13    2.14262E-17    6.70880E-05    1.04591E-01    6.19414E-28
     6       4.16082E-34    1.13173E-30    1.51926E-34    6.11270E-29    3.01327E-40
 
@@ -2897,16 +2902,16 @@
                        FOR JTOT =  83 AND SYMMETRY BLOCK =   2 AT ENERGY(  1) =  300.0000     CM-1
 
     F  I =      1              2              3              4              5              6
-    1       9.22588E+00    2.76701E-05    1.31941E-10    1.01628E-22    9.60204E-18    1.47802E-37
-    2       1.53095E-04    3.35760E+00    1.32877E-04    9.95946E-17    1.70690E-12    8.55188E-32
-    3       7.72755E-10    1.40657E-04    1.93679E+00    3.96954E-12    6.74306E-17    1.28343E-27
-    4       3.52666E-22    6.24652E-17    2.35195E-12    1.04694E-01    6.72135E-05    6.85974E-32
+    1       9.22588E+00    2.76701E-05    1.31941E-10    1.01617E-22    9.60204E-18    1.47819E-37
+    2       1.53095E-04    3.35760E+00    1.32877E-04    9.95947E-17    1.70690E-12    8.55188E-32
+    3       7.72755E-10    1.40657E-04    1.93679E+00    3.96954E-12    6.74307E-17    1.28343E-27
+    4       3.52628E-22    6.24652E-17    2.35195E-12    1.04694E-01    6.72135E-05    6.85974E-32
     5       3.33101E-17    1.07022E-12    3.99400E-17    6.71921E-05    1.26427E-01    6.96128E-27
-    6       5.05992E-38    5.29149E-33    7.50198E-29    6.76741E-33    6.86976E-28    1.75067E-38
+    6       5.06050E-38    5.29149E-33    7.50198E-29    6.76741E-33    6.86976E-28    1.75067E-38
 
   FOR JTOT =   83, SYMMETRY BLOCK =  2, ENERGY(  1) =  300.0000    : MAX DIAG & OFF-DIAG =  9.23E+00 &   1.53E-04
 
-  OUTSIG: DA FILE (10) UPDATED WITH SIGMA FOR ENERGY(  1) =  300.0000    
+  SIGSAV: DA FILE (10) UPDATED WITH SIGMA FOR ENERGY(  1) =  300.0000    
             JTOT =  83 MTOT = 2
 
   *****************************  ANGULAR MOMENTUM JTOT  =  84   AND SYMMETRY BLOCK  =    1  ****************************
@@ -2929,16 +2934,16 @@
                        FOR JTOT =  84 AND SYMMETRY BLOCK =   2 AT ENERGY(  1) =  300.0000     CM-1
 
     F  I =      1              2              3              4              5              6
-    1       8.74088E+00    2.05169E-05    7.38804E-11    1.97983E-23    1.32673E-17    1.11271E-38
+    1       8.74088E+00    2.05169E-05    7.38804E-11    1.97926E-23    1.32673E-17    1.11278E-38
     2       1.13517E-04    3.05110E+00    1.02117E-04    5.26085E-17    1.52328E-12    8.80798E-33
     3       4.32704E-10    1.08096E-04    1.74038E+00    2.70818E-12    4.51388E-17    3.56359E-29
-    4       6.87034E-23    3.29957E-17    1.60460E-12    9.35168E-02    5.86604E-05    7.97260E-33
-    5       4.60253E-17    9.55088E-13    2.67362E-17    5.86417E-05    1.12835E-01    3.32712E-28
-    6       3.80932E-39    5.44995E-34    2.08301E-30    7.86528E-34    3.28338E-29    3.04898E-40
+    4       6.86838E-23    3.29957E-17    1.60460E-12    9.35168E-02    5.86604E-05    7.97261E-33
+    5       4.60253E-17    9.55088E-13    2.67363E-17    5.86417E-05    1.12835E-01    3.32712E-28
+    6       3.80955E-39    5.44995E-34    2.08301E-30    7.86529E-34    3.28338E-29    3.04898E-40
 
   FOR JTOT =   84, SYMMETRY BLOCK =  2, ENERGY(  1) =  300.0000    : MAX DIAG & OFF-DIAG =  8.74E+00 &   1.14E-04
 
-  OUTSIG: DA FILE (10) UPDATED WITH SIGMA FOR ENERGY(  1) =  300.0000    
+  SIGSAV: DA FILE (10) UPDATED WITH SIGMA FOR ENERGY(  1) =  300.0000    
             JTOT =  84 MTOT = 2
 
   *****************************  ANGULAR MOMENTUM JTOT  =  85   AND SYMMETRY BLOCK  =    1  ****************************
@@ -2961,16 +2966,16 @@
                        FOR JTOT =  85 AND SYMMETRY BLOCK =   2 AT ENERGY(  1) =  300.0000     CM-1
 
     F  I =      1              2              3              4              5              6
-    1       8.20693E+00    1.52386E-05    4.14670E-11    5.66370E-23    4.42917E-18    8.11860E-40
+    1       8.20693E+00    1.52386E-05    4.14670E-11    5.66232E-23    4.42917E-18    8.11749E-40
     2       8.43126E-05    2.76843E+00    7.86638E-05    5.40878E-17    1.47692E-12    8.79695E-34
     3       2.42865E-10    8.32700E-05    1.56444E+00    2.62721E-12    4.84450E-17    3.52371E-29
-    4       1.96540E-22    3.39235E-17    1.55662E-12    8.36543E-02    5.12923E-05    8.98195E-34
-    5       1.53651E-17    9.26021E-13    2.86945E-17    5.12759E-05    1.00847E-01    6.66383E-29
-    6       2.77937E-40    5.44313E-35    2.05970E-30    8.86104E-35    6.57622E-30    4.97376E-42
+    4       1.96492E-22    3.39235E-17    1.55662E-12    8.36543E-02    5.12923E-05    8.98194E-34
+    5       1.53651E-17    9.26021E-13    2.86946E-17    5.12759E-05    1.00847E-01    6.66383E-29
+    6       2.77899E-40    5.44313E-35    2.05970E-30    8.86104E-35    6.57622E-30    4.97376E-42
 
   FOR JTOT =   85, SYMMETRY BLOCK =  2, ENERGY(  1) =  300.0000    : MAX DIAG & OFF-DIAG =  8.21E+00 &   8.43E-05
 
-  OUTSIG: DA FILE (10) UPDATED WITH SIGMA FOR ENERGY(  1) =  300.0000    
+  SIGSAV: DA FILE (10) UPDATED WITH SIGMA FOR ENERGY(  1) =  300.0000    
             JTOT =  85 MTOT = 2
 
   *****************************  ANGULAR MOMENTUM JTOT  =  86   AND SYMMETRY BLOCK  =    1  ****************************
@@ -2993,16 +2998,16 @@
                        FOR JTOT =  86 AND SYMMETRY BLOCK =   2 AT ENERGY(  1) =  300.0000     CM-1
 
     F  I =      1              2              3              4              5              6
-    1       7.65232E+00    1.13364E-05    2.33236E-11    1.37128E-23    4.64540E-18    5.74571E-41
-    2       6.27227E-05    2.50946E+00    6.07322E-05    4.69966E-17    1.44271E-12    8.51879E-35
+    1       7.65232E+00    1.13364E-05    2.33236E-11    1.37251E-23    4.64540E-18    5.74557E-41
+    2       6.27227E-05    2.50946E+00    6.07322E-05    4.69966E-17    1.44271E-12    8.51880E-35
     3       1.36602E-10    6.42883E-05    1.40702E+00    2.32888E-12    3.46560E-17    1.61302E-31
-    4       4.75858E-23    2.94760E-17    1.37986E-12    7.49260E-02    4.49275E-05    9.80806E-35
+    4       4.76285E-23    2.94760E-17    1.37986E-12    7.49260E-02    4.49275E-05    9.80806E-35
     5       1.61152E-17    9.04573E-13    2.05272E-17    4.49132E-05    9.02663E-02    1.53400E-29
-    6       1.96702E-41    5.27102E-36    9.42850E-33    9.67604E-36    1.51383E-30    7.61419E-44
+    6       1.96697E-41    5.27102E-36    9.42850E-33    9.67604E-36    1.51383E-30    7.61419E-44
 
   FOR JTOT =   86, SYMMETRY BLOCK =  2, ENERGY(  1) =  300.0000    : MAX DIAG & OFF-DIAG =  7.65E+00 &   6.43E-05
 
-  OUTSIG: DA FILE (10) UPDATED WITH SIGMA FOR ENERGY(  1) =  300.0000    
+  SIGSAV: DA FILE (10) UPDATED WITH SIGMA FOR ENERGY(  1) =  300.0000    
             JTOT =  86 MTOT = 2
 
   *****************************  ANGULAR MOMENTUM JTOT  =  87   AND SYMMETRY BLOCK  =    1  ****************************
@@ -3011,10 +3016,10 @@
                        FOR JTOT =  87 AND SYMMETRY BLOCK =   1 AT ENERGY(  1) =  300.0000     CM-1
 
     F  I =      2              3              4              5              6
-    2       1.68156E+00    3.63325E-05    4.24082E-17    1.06844E-12    5.63265E-37
-    3       3.84600E-05    9.91823E-01    2.92876E-12    2.45546E-17    1.76205E-32
-    4       2.65982E-17    1.73529E-12    8.09683E-02    3.93591E-05    2.10941E-37
-    5       6.69909E-13    1.45440E-17    3.93465E-05    6.71282E-02    4.78047E-33
+    2       1.68156E+00    3.63325E-05    4.24081E-17    1.06844E-12    5.63265E-37
+    3       3.84600E-05    9.91823E-01    2.92876E-12    2.45545E-17    1.76205E-32
+    4       2.65981E-17    1.73529E-12    8.09683E-02    3.93591E-05    2.10941E-37
+    5       6.69909E-13    1.45439E-17    3.93465E-05    6.71282E-02    4.78047E-33
     6       3.48521E-38    1.02996E-33    2.08101E-38    4.71762E-34    1.46294E-47
 
   FOR JTOT =   87, SYMMETRY BLOCK =  1, ENERGY(  1) =  300.0000    : MAX DIAG & OFF-DIAG =  1.68E+00 &   3.94E-05
@@ -3025,16 +3030,16 @@
                        FOR JTOT =  87 AND SYMMETRY BLOCK =   2 AT ENERGY(  1) =  300.0000     CM-1
 
     F  I =      1              2              3              4              5              6
-    1       7.09703E+00    8.44590E-06    1.31526E-11    6.70110E-24    5.34394E-18    3.95214E-42
+    1       7.09703E+00    8.44590E-06    1.31526E-11    6.69386E-24    5.34394E-18    3.95194E-42
     2       4.67298E-05    2.27327E+00    4.69879E-05    3.21185E-17    1.77237E-12    8.01812E-36
     3       7.70322E-11    4.97393E-05    1.26623E+00    1.43910E-12    3.39210E-17    4.42098E-31
-    4       2.32540E-23    2.01445E-17    8.52669E-13    6.71949E-02    3.94193E-05    1.04013E-35
+    4       2.32288E-23    2.01446E-17    8.52669E-13    6.71949E-02    3.94193E-05    1.04013E-35
     5       1.85385E-17    1.11126E-12    2.00918E-17    3.94067E-05    8.08876E-02    6.04672E-31
-    6       1.35300E-42    4.96123E-37    2.58418E-32    1.02613E-36    5.96722E-32    1.09442E-45
+    6       1.35293E-42    4.96123E-37    2.58418E-32    1.02613E-36    5.96722E-32    1.09442E-45
 
   FOR JTOT =   87, SYMMETRY BLOCK =  2, ENERGY(  1) =  300.0000    : MAX DIAG & OFF-DIAG =  7.10E+00 &   4.97E-05
 
-  OUTSIG: DA FILE (10) UPDATED WITH SIGMA FOR ENERGY(  1) =  300.0000    
+  SIGSAV: DA FILE (10) UPDATED WITH SIGMA FOR ENERGY(  1) =  300.0000    
             JTOT =  87 MTOT = 2
 
   *****************************  ANGULAR MOMENTUM JTOT  =  88   AND SYMMETRY BLOCK  =    1  ****************************
@@ -3057,16 +3062,16 @@
                        FOR JTOT =  88 AND SYMMETRY BLOCK =   2 AT ENERGY(  1) =  300.0000     CM-1
 
     F  I =      1              2              3              4              5              6
-    1       6.55501E+00    6.30292E-06    7.43370E-12    1.22650E-23    1.66065E-18    2.63739E-43
+    1       6.55501E+00    6.30292E-06    7.43370E-12    1.22647E-23    1.66065E-18    2.63640E-43
     2       3.48731E-05    2.05872E+00    3.64194E-05    3.08427E-17    1.36153E-12    7.32402E-37
     3       4.35378E-11    3.85520E-05    1.14038E+00    2.64485E-12    3.10870E-17    3.23030E-32
-    4       4.25616E-23    1.93444E-17    1.56708E-12    6.03413E-02    3.46462E-05    1.07062E-36
-    5       5.76091E-18    8.53674E-13    1.84132E-17    3.46352E-05    7.25794E-02    1.41177E-31
-    6       9.02899E-44    4.53175E-38    1.88819E-33    1.05621E-37    1.39321E-32    1.47987E-47
+    4       4.25606E-23    1.93443E-17    1.56708E-12    6.03413E-02    3.46462E-05    1.07062E-36
+    5       5.76092E-18    8.53674E-13    1.84132E-17    3.46352E-05    7.25794E-02    1.41177E-31
+    6       9.02561E-44    4.53175E-38    1.88819E-33    1.05621E-37    1.39321E-32    1.47987E-47
 
   FOR JTOT =   88, SYMMETRY BLOCK =  2, ENERGY(  1) =  300.0000    : MAX DIAG & OFF-DIAG =  6.56E+00 &   3.86E-05
 
-  OUTSIG: DA FILE (10) UPDATED WITH SIGMA FOR ENERGY(  1) =  300.0000    
+  SIGSAV: DA FILE (10) UPDATED WITH SIGMA FOR ENERGY(  1) =  300.0000    
             JTOT =  88 MTOT = 2
 
   *****************************  ANGULAR MOMENTUM JTOT  =  89   AND SYMMETRY BLOCK  =    1  ****************************
@@ -3150,11 +3155,11 @@
  |                Non-reactive quantum scattering calculations                |
  |                     on atomic and molecular collisions                     |
  |                                                                            |
- |              Copyright (C) 2020 J. M. Hutson & C. R. Le Sueur              |
+ |              Copyright (C) 2022 J. M. Hutson & C. R. Le Sueur              |
  |                                                                            |
- |                               Version 2020.0                               |
+ |                               Version 2022.0                               |
  |                                                                            |
- |                    This run used      46.82 cpu secs and                   |
- |              22338 of the allocated   1000000 words of storage             |
+ |                    This run used      28.26 cpu secs and                   |
+ |              22279 of the allocated   1000000 words of storage             |
  |                                                                            |
   ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---

@@ -1,6 +1,7 @@
       INTEGER FUNCTION LDRWGH(ILDSVU, LWRITE, LABEL, ITYPE, NLEV,
      *                        NLEVEL, NQN, NNRG, URED, IPROGM)
-C  This subroutine is part of the MOLSCAT, BOUND and FIELD suite of programs
+C  Copyright (C) 2022 J. M. Hutson & C. R. Le Sueur
+C  Distributed under the GNU General Public License, version 3
 C
 C  WRITTEN 3 OCT 2012 G. MCBANE
 C
@@ -128,7 +129,7 @@ C------------------------------------------------------ END OF LDRWGV
       INTEGER FUNCTION LDRWPH(ILDSVU, LWRITE, JTOT, INRG,
      1                        EN, IEXCH, WT, IBLOCK, NCH, ERED,
      2                        EP2RU)
-      USE efvs
+      USE efvs, ONLY: EFV, IEFVST, ISVEFV, NEFV, NEFVP
 CER   INTEGER FUNCTION LDRWPH(ILDSVU, LWRITE, JTOT, INRG,
 CER  *     EN, IEXCH, WT, IBLOCK, NCH, FIELD1, FIELD2)
 C

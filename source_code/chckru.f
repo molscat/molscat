@@ -1,8 +1,8 @@
       SUBROUTINE CHCKRU(RUNIT,RUNAME,RPUNIT,RSCALE,unset,IPRINT)
-C  Copyright (C) 2020 J. M. Hutson & C. R. Le Sueur
+C  Copyright (C) 2022 J. M. Hutson & C. R. Le Sueur
 C  Distributed under the GNU General Public License, version 3
       USE potential, ONLY: RMNAME
-      USE physical_constants, ONLY: bohr_in_SI
+      USE physical_constants, ONLY: bohr_to_Angstrom
       IMPLICIT NONE
 
       DOUBLE PRECISION, INTENT(INOUT) :: RUNIT,RPUNIT,RSCALE
@@ -36,7 +36,7 @@ C  Distributed under the GNU General Public License, version 3
 C
       IF (RUNIT.EQ.1.D0) THEN
         RUNAME='ANGSTROM'
-      ELSEIF (ABS(RUNIT-bohr_in_SI*1.D10).LT.1.D-6) THEN
+      ELSEIF (ABS(RUNIT-bohr_to_Angstrom).LT.1.D-6) THEN
         RUNAME='BOHR    '
       ENDIF
 C

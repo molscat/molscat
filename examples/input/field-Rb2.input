@@ -1,7 +1,7 @@
  &INPUT
     LABEL  = '85Rb-85Rb: positions of bound states below aa threshold',
     URED   =  42.455894869,
-    IPRINT =   5,   IBDSUM =   4,
+    IPRINT =   5,   IBDSUM =   4,     ISCRU  =   30,
     RMIN   =   3.0, RMATCH =  21.0,   RMAX   =   15.0E3, IRMSET =  0,
     IPROPS =   6,   IPROPL =   9,     DR     =    0.002, TOLHIL =  1.E-7,
     JTOTL  =   8,   JTOTU  =   8,     JSTEP  =    2,     IBFIX  =  2,

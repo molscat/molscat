@@ -1,6 +1,6 @@
       DOUBLE PRECISION FUNCTION DRCALC(RSTART,RSTOP,KSTEP,NSTEP,POW)
       IMPLICIT NONE
-C  Copyright (C) 2019 J. M. Hutson & C. R. Le Sueur
+C  Copyright (C) 2022 J. M. Hutson & C. R. Le Sueur
 C  Distributed under the GNU General Public License, version 3
 
 C  CR LeSueur Jan 2019
@@ -21,7 +21,7 @@ C
      1                    POWINV
 
       POWINT=1.D0-POW
-      POWINV=1D0/POWINT
+      POWINV=1.D0/POWINT
 
       IF (POWINT.NE.0.D0) THEN
         ZSTART=RSTART**POWINT

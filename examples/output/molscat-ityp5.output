@@ -3,11 +3,11 @@
  |                Non-reactive quantum scattering calculations                |
  |                     on atomic and molecular collisions                     |
  |                                                                            |
- |              Copyright (C) 2020 J. M. Hutson & C. R. Le Sueur              |
+ |              Copyright (C) 2022 J. M. Hutson & C. R. Le Sueur              |
  |                                                                            |
- |                               Version 2020.0                               |
+ |                               Version 2022.0                               |
  |                                                                            |
- |                       Run on 14 Feb 2020   at 20:16:40                     |
+ |                       Run on 31 May 2022   at 10:23:29                     |
  |                                                                            |
   ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
 
@@ -16,11 +16,16 @@
   the terms of the GNU General Public License, version 3, as published by
   the Free Software Foundation.
 
-  Publications resulting from the use of this program should cite both
-  the version of the program used:
-  J. M. Hutson & C. R. Le Sueur, MOLSCAT computer code 2020.0              
+  Publications resulting from the use of this program should cite both the
+  version of the program used:
+
+  J. M. Hutson & C. R. Le Sueur, MOLSCAT: a program for non-reactive quantum
+  scattering calculation on atomic and molecular collisions,
+  Version 2022.0, https//github.com/molscat/molscat
+
   and the published paper:
-  J. M. Hutson & C. R. Le Sueur, Comput. Phys. Commun. 241, pp 9-18 (2019).
+
+  J. M. Hutson & C. R. Le Sueur, Comput. Phys. Commun., 241, 9-18 (2019).
 
 
   USING CODATA 2018 RECOMMENDED VALUES OF FUNDAMENTAL PHYSICAL CONSTANTS
@@ -147,7 +152,7 @@
 
   COUPLED EQUATIONS SOLVED BY DIABATIC MODIFIED LOG-DERIVATIVE PROPAGATOR OF MANOLOPOULOS
 
-  PROPAGATION STEP SIZE DETERMINED USING STEP =   80.0     (PER WAVELENGTH)
+  PROPAGATION STEP SIZE DETERMINED USING STEP =   80.0     (PER HALF WAVELENGTH)
   STEP SIZE CONSTANT THROUGHOUT RANGE
   STEP SIZE MAY BE ADJUSTED SLIGHTLY SO THAT RANGE IS A WHOLE NUMBER OF STEPS
 
@@ -162,7 +167,7 @@
   PUBLICATIONS RESULTING FROM THE USE OF THIS PROPAGATOR SHOULD REFERENCE
   M. H. ALEXANDER AND D. E. MANOLOPOULOS,  J. CHEM. PHYS. 86, 2044 (1987).
 
-  PROPAGATION STEP SIZE DETERMINED USING STEP =   80.0     (PER WAVELENGTH)
+  PROPAGATION STEP SIZE DETERMINED USING STEP =   80.0     (PER HALF WAVELENGTH)
   STEP SIZES ADJUSTED TO MAINTAIN APPROXIMATE ACCURACY VIA PERTURBATION THEORY
   WITH TOLHI =  1.00E-04 AND POWR =   3.0    
 
@@ -170,6 +175,7 @@
 
   CONVERGENCE RUN REQUESTED
   RESTRICTING JTOT TO FIRST VALUE
+  ISCRU MUST BE 0
 
   ======================================================================================================================
 
@@ -324,12 +330,12 @@
  |                Non-reactive quantum scattering calculations                |
  |                     on atomic and molecular collisions                     |
  |                                                                            |
- |              Copyright (C) 2020 J. M. Hutson & C. R. Le Sueur              |
+ |              Copyright (C) 2022 J. M. Hutson & C. R. Le Sueur              |
  |                                                                            |
- |                               Version 2020.0                               |
+ |                               Version 2022.0                               |
  |                                                                            |
- |                    This run used       2.00 cpu secs and                   |
- |             200215 of the allocated   1000000 words of storage             |
+ |                    This run used       1.19 cpu secs and                   |
+ |             200073 of the allocated   1000000 words of storage             |
  |                                                                            |
   ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
   ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
@@ -337,11 +343,11 @@
  |                Non-reactive quantum scattering calculations                |
  |                     on atomic and molecular collisions                     |
  |                                                                            |
- |              Copyright (C) 2020 J. M. Hutson & C. R. Le Sueur              |
+ |              Copyright (C) 2022 J. M. Hutson & C. R. Le Sueur              |
  |                                                                            |
- |                               Version 2020.0                               |
+ |                               Version 2022.0                               |
  |                                                                            |
- |                       Run on 14 Feb 2020   at 20:16:42                     |
+ |                       Run on 31 May 2022   at 10:23:31                     |
  |                                                                            |
   ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
 
@@ -350,11 +356,16 @@
   the terms of the GNU General Public License, version 3, as published by
   the Free Software Foundation.
 
-  Publications resulting from the use of this program should cite both
-  the version of the program used:
-  J. M. Hutson & C. R. Le Sueur, MOLSCAT computer code 2020.0              
+  Publications resulting from the use of this program should cite both the
+  version of the program used:
+
+  J. M. Hutson & C. R. Le Sueur, MOLSCAT: a program for non-reactive quantum
+  scattering calculation on atomic and molecular collisions,
+  Version 2022.0, https//github.com/molscat/molscat
+
   and the published paper:
-  J. M. Hutson & C. R. Le Sueur, Comput. Phys. Commun. 241, pp 9-18 (2019).
+
+  J. M. Hutson & C. R. Le Sueur, Comput. Phys. Commun., 241, 9-18 (2019).
 
 
   USING CODATA 2018 RECOMMENDED VALUES OF FUNDAMENTAL PHYSICAL CONSTANTS
@@ -504,6 +515,7 @@
 
   CONVERGENCE RUN REQUESTED
   RESTRICTING JTOT TO FIRST VALUE
+  ISCRU MUST BE 0
 
   ======================================================================================================================
 
@@ -658,12 +670,12 @@
  |                Non-reactive quantum scattering calculations                |
  |                     on atomic and molecular collisions                     |
  |                                                                            |
- |              Copyright (C) 2020 J. M. Hutson & C. R. Le Sueur              |
+ |              Copyright (C) 2022 J. M. Hutson & C. R. Le Sueur              |
  |                                                                            |
- |                               Version 2020.0                               |
+ |                               Version 2022.0                               |
  |                                                                            |
- |                    This run used       1.94 cpu secs and                   |
- |             200215 of the allocated   1000000 words of storage             |
+ |                    This run used       1.16 cpu secs and                   |
+ |             200073 of the allocated   1000000 words of storage             |
  |                                                                            |
   ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
   ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
@@ -671,11 +683,11 @@
  |                Non-reactive quantum scattering calculations                |
  |                     on atomic and molecular collisions                     |
  |                                                                            |
- |              Copyright (C) 2020 J. M. Hutson & C. R. Le Sueur              |
+ |              Copyright (C) 2022 J. M. Hutson & C. R. Le Sueur              |
  |                                                                            |
- |                               Version 2020.0                               |
+ |                               Version 2022.0                               |
  |                                                                            |
- |                       Run on 14 Feb 2020   at 20:16:44                     |
+ |                       Run on 31 May 2022   at 10:23:32                     |
  |                                                                            |
   ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
 
@@ -684,11 +696,16 @@
   the terms of the GNU General Public License, version 3, as published by
   the Free Software Foundation.
 
-  Publications resulting from the use of this program should cite both
-  the version of the program used:
-  J. M. Hutson & C. R. Le Sueur, MOLSCAT computer code 2020.0              
+  Publications resulting from the use of this program should cite both the
+  version of the program used:
+
+  J. M. Hutson & C. R. Le Sueur, MOLSCAT: a program for non-reactive quantum
+  scattering calculation on atomic and molecular collisions,
+  Version 2022.0, https//github.com/molscat/molscat
+
   and the published paper:
-  J. M. Hutson & C. R. Le Sueur, Comput. Phys. Commun. 241, pp 9-18 (2019).
+
+  J. M. Hutson & C. R. Le Sueur, Comput. Phys. Commun., 241, 9-18 (2019).
 
 
   USING CODATA 2018 RECOMMENDED VALUES OF FUNDAMENTAL PHYSICAL CONSTANTS
@@ -815,7 +832,7 @@
 
   COUPLED EQUATIONS SOLVED BY DIABATIC MODIFIED LOG-DERIVATIVE PROPAGATOR OF MANOLOPOULOS
 
-  PROPAGATION STEP SIZE DETERMINED USING STEP =   40.0     (PER WAVELENGTH)
+  PROPAGATION STEP SIZE DETERMINED USING STEP =   40.0     (PER HALF WAVELENGTH)
   STEP SIZE CONSTANT THROUGHOUT RANGE
   STEP SIZE MAY BE ADJUSTED SLIGHTLY SO THAT RANGE IS A WHOLE NUMBER OF STEPS
 
@@ -830,7 +847,7 @@
   PUBLICATIONS RESULTING FROM THE USE OF THIS PROPAGATOR SHOULD REFERENCE
   M. H. ALEXANDER AND D. E. MANOLOPOULOS,  J. CHEM. PHYS. 86, 2044 (1987).
 
-  PROPAGATION STEP SIZE DETERMINED USING STEP =   40.0     (PER WAVELENGTH)
+  PROPAGATION STEP SIZE DETERMINED USING STEP =   40.0     (PER HALF WAVELENGTH)
   STEP SIZES ADJUSTED TO MAINTAIN APPROXIMATE ACCURACY VIA PERTURBATION THEORY
   WITH TOLHI =  1.00E-04 AND POWR =   3.0    
 
@@ -838,6 +855,7 @@
 
   CONVERGENCE RUN REQUESTED
   RESTRICTING JTOT TO FIRST VALUE
+  ISCRU MUST BE 0
 
   ======================================================================================================================
 
@@ -894,8 +912,8 @@
   - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
   FOR RMIN =   3.10 STEPS =  40.00 RMID =   8.00 STEPL =  40.00 RMAX =      30.00
-  RMS CHANGE IN S-MATRIX ELEMENTS IS         1.88793E-10     LOG IS  -9.724
-  RMS CHANGE IN TRANSITION PROBABILITIES IS  9.16354E-11     LOG IS -10.038
+  RMS CHANGE IN S-MATRIX ELEMENTS IS         1.88809E-10     LOG IS  -9.724
+  RMS CHANGE IN TRANSITION PROBABILITIES IS  9.16443E-11     LOG IS -10.038
 
   * * * * * * * * * *  STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FROM LEVEL I TO LEVEL F  * * * * * * * * * *
                        FOR JTOT =   5 AND SYMMETRY BLOCK =   2 AT ENERGY(  2) =  110.0000     CM-1
@@ -925,8 +943,8 @@
   - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
   FOR RMIN =   3.20 STEPS =  40.00 RMID =   8.00 STEPL =  40.00 RMAX =      30.00
-  RMS CHANGE IN S-MATRIX ELEMENTS IS         3.86239E-10     LOG IS  -9.413
-  RMS CHANGE IN TRANSITION PROBABILITIES IS  1.87517E-10     LOG IS  -9.727
+  RMS CHANGE IN S-MATRIX ELEMENTS IS         3.86249E-10     LOG IS  -9.413
+  RMS CHANGE IN TRANSITION PROBABILITIES IS  1.87522E-10     LOG IS  -9.727
 
   * * * * * * * * * *  STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FROM LEVEL I TO LEVEL F  * * * * * * * * * *
                        FOR JTOT =   5 AND SYMMETRY BLOCK =   2 AT ENERGY(  3) =  110.0000     CM-1
@@ -956,8 +974,8 @@
   - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
   FOR RMIN =   3.30 STEPS =  40.00 RMID =   8.00 STEPL =  40.00 RMAX =      30.00
-  RMS CHANGE IN S-MATRIX ELEMENTS IS         5.93009E-10     LOG IS  -9.227
-  RMS CHANGE IN TRANSITION PROBABILITIES IS  2.87907E-10     LOG IS  -9.541
+  RMS CHANGE IN S-MATRIX ELEMENTS IS         5.93022E-10     LOG IS  -9.227
+  RMS CHANGE IN TRANSITION PROBABILITIES IS  2.87917E-10     LOG IS  -9.541
 
   * * * * * * * * * *  STATE-TO-STATE PARTIAL CROSS SECTIONS (ANGSTROM**2) FROM LEVEL I TO LEVEL F  * * * * * * * * * *
                        FOR JTOT =   5 AND SYMMETRY BLOCK =   2 AT ENERGY(  4) =  110.0000     CM-1
@@ -990,12 +1008,12 @@
  |                Non-reactive quantum scattering calculations                |
  |                     on atomic and molecular collisions                     |
  |                                                                            |
- |              Copyright (C) 2020 J. M. Hutson & C. R. Le Sueur              |
+ |              Copyright (C) 2022 J. M. Hutson & C. R. Le Sueur              |
  |                                                                            |
- |                               Version 2020.0                               |
+ |                               Version 2022.0                               |
  |                                                                            |
- |                    This run used       2.01 cpu secs and                   |
- |             200215 of the allocated   1000000 words of storage             |
+ |                    This run used       1.25 cpu secs and                   |
+ |             200073 of the allocated   1000000 words of storage             |
  |                                                                            |
   ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
   ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
@@ -1003,11 +1021,11 @@
  |                Non-reactive quantum scattering calculations                |
  |                     on atomic and molecular collisions                     |
  |                                                                            |
- |              Copyright (C) 2020 J. M. Hutson & C. R. Le Sueur              |
+ |              Copyright (C) 2022 J. M. Hutson & C. R. Le Sueur              |
  |                                                                            |
- |                               Version 2020.0                               |
+ |                               Version 2022.0                               |
  |                                                                            |
- |                       Run on 14 Feb 2020   at 20:16:46                     |
+ |                       Run on 31 May 2022   at 10:23:33                     |
  |                                                                            |
   ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
 
@@ -1016,11 +1034,16 @@
   the terms of the GNU General Public License, version 3, as published by
   the Free Software Foundation.
 
-  Publications resulting from the use of this program should cite both
-  the version of the program used:
-  J. M. Hutson & C. R. Le Sueur, MOLSCAT computer code 2020.0              
+  Publications resulting from the use of this program should cite both the
+  version of the program used:
+
+  J. M. Hutson & C. R. Le Sueur, MOLSCAT: a program for non-reactive quantum
+  scattering calculation on atomic and molecular collisions,
+  Version 2022.0, https//github.com/molscat/molscat
+
   and the published paper:
-  J. M. Hutson & C. R. Le Sueur, Comput. Phys. Commun. 241, pp 9-18 (2019).
+
+  J. M. Hutson & C. R. Le Sueur, Comput. Phys. Commun., 241, 9-18 (2019).
 
 
   USING CODATA 2018 RECOMMENDED VALUES OF FUNDAMENTAL PHYSICAL CONSTANTS
@@ -1147,7 +1170,7 @@
 
   COUPLED EQUATIONS SOLVED BY DIABATIC MODIFIED LOG-DERIVATIVE PROPAGATOR OF MANOLOPOULOS
 
-  PROPAGATION STEP SIZE DETERMINED USING STEP =   40.0     (PER WAVELENGTH)
+  PROPAGATION STEP SIZE DETERMINED USING STEP =   40.0     (PER HALF WAVELENGTH)
   STEP SIZE CONSTANT THROUGHOUT RANGE
   STEP SIZE MAY BE ADJUSTED SLIGHTLY SO THAT RANGE IS A WHOLE NUMBER OF STEPS
 
@@ -1162,7 +1185,7 @@
   PUBLICATIONS RESULTING FROM THE USE OF THIS PROPAGATOR SHOULD REFERENCE
   M. H. ALEXANDER AND D. E. MANOLOPOULOS,  J. CHEM. PHYS. 86, 2044 (1987).
 
-  PROPAGATION STEP SIZE DETERMINED USING STEP =   40.0     (PER WAVELENGTH)
+  PROPAGATION STEP SIZE DETERMINED USING STEP =   40.0     (PER HALF WAVELENGTH)
   STEP SIZES ADJUSTED TO MAINTAIN APPROXIMATE ACCURACY VIA PERTURBATION THEORY
   WITH TOLHI =  1.00E-04 AND POWR =   3.0    
 
@@ -1170,6 +1193,7 @@
 
   CONVERGENCE RUN REQUESTED
   RESTRICTING JTOT TO FIRST VALUE
+  ISCRU MUST BE 0
 
   ======================================================================================================================
 
@@ -1322,12 +1346,12 @@
  |                Non-reactive quantum scattering calculations                |
  |                     on atomic and molecular collisions                     |
  |                                                                            |
- |              Copyright (C) 2020 J. M. Hutson & C. R. Le Sueur              |
+ |              Copyright (C) 2022 J. M. Hutson & C. R. Le Sueur              |
  |                                                                            |
- |                               Version 2020.0                               |
+ |                               Version 2022.0                               |
  |                                                                            |
- |                    This run used       1.88 cpu secs and                   |
- |             200215 of the allocated   1000000 words of storage             |
+ |                    This run used       1.29 cpu secs and                   |
+ |             200073 of the allocated   1000000 words of storage             |
  |                                                                            |
   ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
   ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
@@ -1335,11 +1359,11 @@
  |                Non-reactive quantum scattering calculations                |
  |                     on atomic and molecular collisions                     |
  |                                                                            |
- |              Copyright (C) 2020 J. M. Hutson & C. R. Le Sueur              |
+ |              Copyright (C) 2022 J. M. Hutson & C. R. Le Sueur              |
  |                                                                            |
- |                               Version 2020.0                               |
+ |                               Version 2022.0                               |
  |                                                                            |
- |                       Run on 14 Feb 2020   at 20:16:48                     |
+ |                       Run on 31 May 2022   at 10:23:34                     |
  |                                                                            |
   ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
 
@@ -1348,11 +1372,16 @@
   the terms of the GNU General Public License, version 3, as published by
   the Free Software Foundation.
 
-  Publications resulting from the use of this program should cite both
-  the version of the program used:
-  J. M. Hutson & C. R. Le Sueur, MOLSCAT computer code 2020.0              
+  Publications resulting from the use of this program should cite both the
+  version of the program used:
+
+  J. M. Hutson & C. R. Le Sueur, MOLSCAT: a program for non-reactive quantum
+  scattering calculation on atomic and molecular collisions,
+  Version 2022.0, https//github.com/molscat/molscat
+
   and the published paper:
-  J. M. Hutson & C. R. Le Sueur, Comput. Phys. Commun. 241, pp 9-18 (2019).
+
+  J. M. Hutson & C. R. Le Sueur, Comput. Phys. Commun., 241, 9-18 (2019).
 
 
   USING CODATA 2018 RECOMMENDED VALUES OF FUNDAMENTAL PHYSICAL CONSTANTS
@@ -1479,7 +1508,7 @@
 
   COUPLED EQUATIONS SOLVED BY DIABATIC MODIFIED LOG-DERIVATIVE PROPAGATOR OF MANOLOPOULOS
 
-  PROPAGATION STEP SIZE DETERMINED USING STEP =   40.0     (PER WAVELENGTH)
+  PROPAGATION STEP SIZE DETERMINED USING STEP =   40.0     (PER HALF WAVELENGTH)
   STEP SIZE CONSTANT THROUGHOUT RANGE
   STEP SIZE MAY BE ADJUSTED SLIGHTLY SO THAT RANGE IS A WHOLE NUMBER OF STEPS
 
@@ -1494,7 +1523,7 @@
   PUBLICATIONS RESULTING FROM THE USE OF THIS PROPAGATOR SHOULD REFERENCE
   M. H. ALEXANDER AND D. E. MANOLOPOULOS,  J. CHEM. PHYS. 86, 2044 (1987).
 
-  PROPAGATION STEP SIZE DETERMINED USING STEP =   40.0     (PER WAVELENGTH)
+  PROPAGATION STEP SIZE DETERMINED USING STEP =   40.0     (PER HALF WAVELENGTH)
   STEP SIZES ADJUSTED TO MAINTAIN APPROXIMATE ACCURACY VIA PERTURBATION THEORY
   WITH TOLHI =  1.00E-04 AND POWR =   3.0    
 
@@ -1624,7 +1653,7 @@
 
   FOR JTOT =   25, SYMMETRY BLOCK =  1, ENERGY(  1) =  110.0000    : MAX DIAG & OFF-DIAG =  4.77E-01 &   2.32E-05
 
-  FOR JTOT =   25, SYMMETRY BLOCK =  2, ENERGY(  1) =  110.0000    : MAX DIAG & OFF-DIAG =  4.65E-01 &   2.63E-05
+  FOR JTOT =   25, SYMMETRY BLOCK =  2, ENERGY(  1) =  110.0000    : MAX DIAG & OFF-DIAG =  4.64E-01 &   2.63E-05
 
   FOR JTOT =   26, SYMMETRY BLOCK =  1, ENERGY(  1) =  110.0000    : MAX DIAG & OFF-DIAG =  3.30E-01 &   1.10E-05
 
@@ -1644,7 +1673,7 @@
 
   FOR JTOT =   30, SYMMETRY BLOCK =  1, ENERGY(  1) =  110.0000    : MAX DIAG & OFF-DIAG =  8.80E-02 &   6.23E-07
 
-  FOR JTOT =   30, SYMMETRY BLOCK =  2, ENERGY(  1) =  110.0000    : MAX DIAG & OFF-DIAG =  8.57E-02 &   7.24E-07
+  FOR JTOT =   30, SYMMETRY BLOCK =  2, ENERGY(  1) =  110.0000    : MAX DIAG & OFF-DIAG =  8.57E-02 &   7.23E-07
 
 
 
@@ -1780,12 +1809,12 @@
  |                Non-reactive quantum scattering calculations                |
  |                     on atomic and molecular collisions                     |
  |                                                                            |
- |              Copyright (C) 2020 J. M. Hutson & C. R. Le Sueur              |
+ |              Copyright (C) 2022 J. M. Hutson & C. R. Le Sueur              |
  |                                                                            |
- |                               Version 2020.0                               |
+ |                               Version 2022.0                               |
  |                                                                            |
- |                    This run used      53.28 cpu secs and                   |
- |             174467 of the allocated   1000000 words of storage             |
+ |                    This run used      30.05 cpu secs and                   |
+ |             174317 of the allocated   1000000 words of storage             |
  |                                                                            |
   ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
   ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
@@ -1793,11 +1822,11 @@
  |                Non-reactive quantum scattering calculations                |
  |                     on atomic and molecular collisions                     |
  |                                                                            |
- |              Copyright (C) 2020 J. M. Hutson & C. R. Le Sueur              |
+ |              Copyright (C) 2022 J. M. Hutson & C. R. Le Sueur              |
  |                                                                            |
- |                               Version 2020.0                               |
+ |                               Version 2022.0                               |
  |                                                                            |
- |                       Run on 14 Feb 2020   at 20:17:42                     |
+ |                       Run on 31 May 2022   at 10:24:04                     |
  |                                                                            |
   ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
 
@@ -1806,11 +1835,16 @@
   the terms of the GNU General Public License, version 3, as published by
   the Free Software Foundation.
 
-  Publications resulting from the use of this program should cite both
-  the version of the program used:
-  J. M. Hutson & C. R. Le Sueur, MOLSCAT computer code 2020.0              
+  Publications resulting from the use of this program should cite both the
+  version of the program used:
+
+  J. M. Hutson & C. R. Le Sueur, MOLSCAT: a program for non-reactive quantum
+  scattering calculation on atomic and molecular collisions,
+  Version 2022.0, https//github.com/molscat/molscat
+
   and the published paper:
-  J. M. Hutson & C. R. Le Sueur, Comput. Phys. Commun. 241, pp 9-18 (2019).
+
+  J. M. Hutson & C. R. Le Sueur, Comput. Phys. Commun., 241, 9-18 (2019).
 
 
   USING CODATA 2018 RECOMMENDED VALUES OF FUNDAMENTAL PHYSICAL CONSTANTS
@@ -1944,7 +1978,7 @@
 
   COUPLED EQUATIONS SOLVED BY DIABATIC MODIFIED LOG-DERIVATIVE PROPAGATOR OF MANOLOPOULOS
 
-  PROPAGATION STEP SIZE DETERMINED USING STEP =   40.0     (PER WAVELENGTH)
+  PROPAGATION STEP SIZE DETERMINED USING STEP =   40.0     (PER HALF WAVELENGTH)
   STEP SIZE CONSTANT THROUGHOUT RANGE
   STEP SIZE MAY BE ADJUSTED SLIGHTLY SO THAT RANGE IS A WHOLE NUMBER OF STEPS
 
@@ -1959,7 +1993,7 @@
   PUBLICATIONS RESULTING FROM THE USE OF THIS PROPAGATOR SHOULD REFERENCE
   M. H. ALEXANDER AND D. E. MANOLOPOULOS,  J. CHEM. PHYS. 86, 2044 (1987).
 
-  PROPAGATION STEP SIZE DETERMINED USING STEP =   40.0     (PER WAVELENGTH)
+  PROPAGATION STEP SIZE DETERMINED USING STEP =   40.0     (PER HALF WAVELENGTH)
   STEP SIZES ADJUSTED TO MAINTAIN APPROXIMATE ACCURACY VIA PERTURBATION THEORY
   WITH TOLHI =  1.00E-04 AND POWR =   3.0    
 
@@ -2129,7 +2163,7 @@
 
   FOR JTOT =   17, SYMMETRY BLOCK =  3, ENERGY(  1) =  110.0000    : MAX DIAG & OFF-DIAG =  2.30E+00 &   1.18E-05
 
-  FOR JTOT =   17, SYMMETRY BLOCK =  4, ENERGY(  1) =  110.0000    : MAX DIAG & OFF-DIAG =  8.09E-05 &   5.00E-32
+  FOR JTOT =   17, SYMMETRY BLOCK =  4, ENERGY(  1) =  110.0000    : MAX DIAG & OFF-DIAG =  8.09E-05 &   4.85E-32
 
   FOR JTOT =   18, SYMMETRY BLOCK =  1, ENERGY(  1) =  110.0000    : MAX DIAG & OFF-DIAG =  4.68E+00 &   7.87E-05
 
@@ -2137,7 +2171,7 @@
 
   FOR JTOT =   18, SYMMETRY BLOCK =  3, ENERGY(  1) =  110.0000    : MAX DIAG & OFF-DIAG =  1.34E+00 &   7.79E-07
 
-  FOR JTOT =   18, SYMMETRY BLOCK =  4, ENERGY(  1) =  110.0000    : MAX DIAG & OFF-DIAG =  9.91E-06 &   1.33E-34
+  FOR JTOT =   18, SYMMETRY BLOCK =  4, ENERGY(  1) =  110.0000    : MAX DIAG & OFF-DIAG =  9.91E-06 &   1.32E-34
 
   FOR JTOT =   19, SYMMETRY BLOCK =  1, ENERGY(  1) =  110.0000    : MAX DIAG & OFF-DIAG =  3.12E+00 &   6.08E-06
 
@@ -2145,7 +2179,7 @@
 
   FOR JTOT =   19, SYMMETRY BLOCK =  3, ENERGY(  1) =  110.0000    : MAX DIAG & OFF-DIAG =  8.00E-01 &   5.36E-08
 
-  FOR JTOT =   19, SYMMETRY BLOCK =  4, ENERGY(  1) =  110.0000    : MAX DIAG & OFF-DIAG =  8.93E-07 &   3.45E-37
+  FOR JTOT =   19, SYMMETRY BLOCK =  4, ENERGY(  1) =  110.0000    : MAX DIAG & OFF-DIAG =  8.93E-07 &   3.94E-37
 
   FOR JTOT =   20, SYMMETRY BLOCK =  1, ENERGY(  1) =  110.0000    : MAX DIAG & OFF-DIAG =  1.98E+00 &   4.65E-07
 
@@ -2153,7 +2187,7 @@
 
   FOR JTOT =   20, SYMMETRY BLOCK =  3, ENERGY(  1) =  110.0000    : MAX DIAG & OFF-DIAG =  4.94E-01 &   3.95E-09
 
-  FOR JTOT =   20, SYMMETRY BLOCK =  4, ENERGY(  1) =  110.0000    : MAX DIAG & OFF-DIAG =  6.06E-08 &   3.92E-40
+  FOR JTOT =   20, SYMMETRY BLOCK =  4, ENERGY(  1) =  110.0000    : MAX DIAG & OFF-DIAG =  6.06E-08 &   9.01E-40
 
   FOR JTOT =   21, SYMMETRY BLOCK =  1, ENERGY(  1) =  110.0000    : MAX DIAG & OFF-DIAG =  1.25E+00 &   3.78E-08
 
@@ -2161,7 +2195,7 @@
 
   FOR JTOT =   21, SYMMETRY BLOCK =  3, ENERGY(  1) =  110.0000    : MAX DIAG & OFF-DIAG =  3.14E-01 &   6.65E-10
 
-  FOR JTOT =   21, SYMMETRY BLOCK =  4, ENERGY(  1) =  110.0000    : MAX DIAG & OFF-DIAG =  3.16E-09 &   1.60E-42
+  FOR JTOT =   21, SYMMETRY BLOCK =  4, ENERGY(  1) =  110.0000    : MAX DIAG & OFF-DIAG =  3.16E-09 &   1.27E-41
 
   FOR JTOT =   22, SYMMETRY BLOCK =  1, ENERGY(  1) =  110.0000    : MAX DIAG & OFF-DIAG =  8.07E-01 &   3.32E-09
 
@@ -2169,7 +2203,7 @@
 
   FOR JTOT =   22, SYMMETRY BLOCK =  3, ENERGY(  1) =  110.0000    : MAX DIAG & OFF-DIAG =  2.04E-01 &   2.58E-11
 
-  FOR JTOT =   22, SYMMETRY BLOCK =  4, ENERGY(  1) =  110.0000    : MAX DIAG & OFF-DIAG =  1.29E-10 &   2.84E-41
+  FOR JTOT =   22, SYMMETRY BLOCK =  4, ENERGY(  1) =  110.0000    : MAX DIAG & OFF-DIAG =  1.29E-10 &   2.18E-44
 
   FOR JTOT =   23, SYMMETRY BLOCK =  1, ENERGY(  1) =  110.0000    : MAX DIAG & OFF-DIAG =  5.32E-01 &   3.10E-10
 
@@ -2177,7 +2211,7 @@
 
   FOR JTOT =   23, SYMMETRY BLOCK =  3, ENERGY(  1) =  110.0000    : MAX DIAG & OFF-DIAG =  1.36E-01 &   2.60E-11
 
-  FOR JTOT =   23, SYMMETRY BLOCK =  4, ENERGY(  1) =  110.0000    : MAX DIAG & OFF-DIAG =  4.19E-12 &   5.17E-44
+  FOR JTOT =   23, SYMMETRY BLOCK =  4, ENERGY(  1) =  110.0000    : MAX DIAG & OFF-DIAG =  4.19E-12 &   1.29E-46
 
   FOR JTOT =   24, SYMMETRY BLOCK =  1, ENERGY(  1) =  110.0000    : MAX DIAG & OFF-DIAG =  3.58E-01 &   3.04E-11
 
@@ -2185,7 +2219,7 @@
 
   FOR JTOT =   24, SYMMETRY BLOCK =  3, ENERGY(  1) =  110.0000    : MAX DIAG & OFF-DIAG =  9.24E-02 &   4.39E-12
 
-  FOR JTOT =   24, SYMMETRY BLOCK =  4, ENERGY(  1) =  110.0000    : MAX DIAG & OFF-DIAG =  1.10E-13 &   6.89E-47
+  FOR JTOT =   24, SYMMETRY BLOCK =  4, ENERGY(  1) =  110.0000    : MAX DIAG & OFF-DIAG =  1.10E-13 &   1.31E-45
 
   FOR JTOT =   25, SYMMETRY BLOCK =  1, ENERGY(  1) =  110.0000    : MAX DIAG & OFF-DIAG =  2.45E-01 &   3.10E-12
 
@@ -2193,7 +2227,7 @@
 
   FOR JTOT =   25, SYMMETRY BLOCK =  3, ENERGY(  1) =  110.0000    : MAX DIAG & OFF-DIAG =  6.37E-02 &   1.79E-14
 
-  FOR JTOT =   25, SYMMETRY BLOCK =  4, ENERGY(  1) =  110.0000    : MAX DIAG & OFF-DIAG =  2.36E-15 &   8.47E-50
+  FOR JTOT =   25, SYMMETRY BLOCK =  4, ENERGY(  1) =  110.0000    : MAX DIAG & OFF-DIAG =  2.36E-15 &   8.10E-49
 
   FOR JTOT =   26, SYMMETRY BLOCK =  1, ENERGY(  1) =  110.0000    : MAX DIAG & OFF-DIAG =  1.71E-01 &   3.24E-13
 
@@ -2201,7 +2235,7 @@
 
   FOR JTOT =   26, SYMMETRY BLOCK =  3, ENERGY(  1) =  110.0000    : MAX DIAG & OFF-DIAG =  4.47E-02 &   1.34E-13
 
-  FOR JTOT =   26, SYMMETRY BLOCK =  4, ENERGY(  1) =  110.0000    : MAX DIAG & OFF-DIAG =  4.19E-17 &   2.65E-50
+  FOR JTOT =   26, SYMMETRY BLOCK =  4, ENERGY(  1) =  110.0000    : MAX DIAG & OFF-DIAG =  4.19E-17 &   1.16E-50
 
   FOR JTOT =   27, SYMMETRY BLOCK =  1, ENERGY(  1) =  110.0000    : MAX DIAG & OFF-DIAG =  1.21E-01 &   3.45E-14
 
@@ -2209,7 +2243,7 @@
 
   FOR JTOT =   27, SYMMETRY BLOCK =  3, ENERGY(  1) =  110.0000    : MAX DIAG & OFF-DIAG =  3.18E-02 &   1.26E-14
 
-  FOR JTOT =   27, SYMMETRY BLOCK =  4, ENERGY(  1) =  110.0000    : MAX DIAG & OFF-DIAG =  6.21E-19 &   3.41E-53
+  FOR JTOT =   27, SYMMETRY BLOCK =  4, ENERGY(  1) =  110.0000    : MAX DIAG & OFF-DIAG =  6.21E-19 &   2.67E-53
 
   FOR JTOT =   28, SYMMETRY BLOCK =  1, ENERGY(  1) =  110.0000    : MAX DIAG & OFF-DIAG =  8.71E-02 &   3.73E-15
 
@@ -2217,7 +2251,7 @@
 
   FOR JTOT =   28, SYMMETRY BLOCK =  3, ENERGY(  1) =  110.0000    : MAX DIAG & OFF-DIAG =  2.28E-02 &   5.26E-17
 
-  FOR JTOT =   28, SYMMETRY BLOCK =  4, ENERGY(  1) =  110.0000    : MAX DIAG & OFF-DIAG =  7.78E-21 &   2.11E-53
+  FOR JTOT =   28, SYMMETRY BLOCK =  4, ENERGY(  1) =  110.0000    : MAX DIAG & OFF-DIAG =  7.78E-21 &   3.80E-55
 
   FOR JTOT =   29, SYMMETRY BLOCK =  1, ENERGY(  1) =  110.0000    : MAX DIAG & OFF-DIAG =  6.33E-02 &   4.06E-16
 
@@ -2357,11 +2391,11 @@
  |                Non-reactive quantum scattering calculations                |
  |                     on atomic and molecular collisions                     |
  |                                                                            |
- |              Copyright (C) 2020 J. M. Hutson & C. R. Le Sueur              |
+ |              Copyright (C) 2022 J. M. Hutson & C. R. Le Sueur              |
  |                                                                            |
- |                               Version 2020.0                               |
+ |                               Version 2022.0                               |
  |                                                                            |
- |                    This run used       4.65 cpu secs and                   |
- |              29930 of the allocated   1000000 words of storage             |
+ |                    This run used       2.72 cpu secs and                   |
+ |              29898 of the allocated   1000000 words of storage             |
  |                                                                            |
   ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---

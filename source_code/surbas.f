@@ -1,10 +1,11 @@
       SUBROUTINE SURBAS(JSTATE, N, JSINDX, L, EINT, CENT, VL, IV,
      1                  MXLAM, NHAM, LAM, ERED, WVEC, LCOUNT, THETA,
      2                  PHI, EMAXK, IPRINT)
-C  Copyright (C) 2020 J. M. Hutson & C. R. Le Sueur
+C  Copyright (C) 2022 J. M. Hutson & C. R. Le Sueur
 C  Distributed under the GNU General Public License, version 3
-      USE basis_data
-      USE physical_constants
+      USE basis_data, ONLY: ELEVEL, EMAX, J1MAX, J2MAX, JLEVEL, NLEVEL,
+     b                      ROTI
+      USE physical_constants, ONLY: bfct
 C
 C  SUBROUTINE TO SET UP ATOM-SURFACE SCATTERING.
 C  THIS VERSION USES 2 ELEMENTS OF THE VL ARRAY FOR EACH PAIR OF

@@ -1,5 +1,5 @@
       SUBROUTINE HERM(H,N,X)
-C  Copyright (C) 2019 J. M. Hutson & C. R. Le Sueur
+C  Copyright (C) 2022 J. M. Hutson & C. R. Le Sueur
 C  Distributed under the GNU General Public License, version 3
 C
 C  SUBROUTINE TO GENERATE HERMITE POLYNOMIALS USING RECURSION FORMULA
@@ -13,7 +13,7 @@ C  ON EXIT:  H CONTAINS THE VALUES OF THE HERMITE POLYNOMIALS AT X.
       IMPLICIT DOUBLE PRECISION (A-H,O-Z)
       DIMENSION H(N)
 
-      P0=1.0D0
+      P0=1.D0
       H(1)=P0
       IF (N.LE.1) RETURN
       X2=X+X

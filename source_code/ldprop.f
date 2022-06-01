@@ -2,7 +2,7 @@
      1                  Z,U,VL,IV,EINT,CENT,P,DIAG,
      2                  RSTART,RSTOP,NSTEP,DR,NODES,
      3                  ERED,EP2RU,CM2RU,RSCALE,IPRINT)
-C  Copyright (C) 2020 J. M. Hutson & C. R. Le Sueur
+C  Copyright (C) 2022 J. M. Hutson & C. R. Le Sueur
 C  Distributed under the GNU General Public License, version 3
 C
 C  SUBROUTINE FOR JOHNSON'S LOG-DERIVATIVE PROPAGATOR
@@ -15,8 +15,8 @@ C
       IMPLICIT DOUBLE PRECISION (A-H,O-Z)
 C
 C  COMMON BLOCK FOR CONTROL OF USE OF PROPAGATION SCRATCH FILE
-      LOGICAL IREAD,IWRITE
-      COMMON /PRPSCR/ ESHIFT,ISCRU,IREAD,IWRITE
+      LOGICAL IREAD,IWRITE,IREADR,IWRITR
+      COMMON /PRPSCR/ ESHIFT,ISCRU,ISCRUR,IREAD,IWRITE,IREADR,IWRITR
 
       DIMENSION U(N,N),Z(N,N),P(MXLAM),VL(2),IV(2),EINT(N),CENT(N),
      1          DIAG(N)
@@ -34,7 +34,7 @@ C
         DO 130 I=1,N
   130     U(I,I)=U(I,I)-ESHIFT
       ELSE
-        CALL WAVMAT(U,N,R,P,VL,IV,ERED,EINT,CENT,EP2RU,CM2RU,
+        CALL HAMMAT(U,N,R,P,VL,IV,ERED,EINT,CENT,EP2RU,CM2RU,
      1              RSCALE,DIAG,MXLAM,NHAM,IPRINT)
         IF (IWRITE) WRITE(ISCRU) U
       ENDIF
@@ -54,7 +54,7 @@ C
           DO 160 I=1,N
   160       U(I,I)=U(I,I)+ESH
         ELSE
-          CALL WAVMAT(U,N,R,P,VL,IV,ERED,EINT,CENT,EP2RU,CM2RU,
+          CALL HAMMAT(U,N,R,P,VL,IV,ERED,EINT,CENT,EP2RU,CM2RU,
      1                RSCALE,DIAG,MXLAM,NHAM,IPRINT)
           DO 180 J = 1,N
             DO 170 I = J,N
@@ -98,7 +98,7 @@ C
           DO 220 I=1,N
   220       U(I,I)=U(I,I)+ESH
         ELSE
-          CALL WAVMAT(U,N,R,P,VL,IV,ERED,EINT,CENT,EP2RU,CM2RU,
+          CALL HAMMAT(U,N,R,P,VL,IV,ERED,EINT,CENT,EP2RU,CM2RU,
      1                RSCALE,DIAG,MXLAM,NHAM,IPRINT)
           DO 240 J=1,N
             DO 230 I=J,N

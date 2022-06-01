@@ -1,7 +1,7 @@
       SUBROUTINE ASROT(J,EVEC,H,EVAL,NH)
-C  Copyright (C) 2019 J. M. Hutson & C. R. Le Sueur
+C  Copyright (C) 2022 J. M. Hutson & C. R. Le Sueur
 C  Distributed under the GNU General Public License, version 3
-      USE basis_data
+      USE basis_data, ONLY: ROTI
 C  THIS SUBROUTINE SETS UP THE ASYMMETRIC ROTOR FUNCTIONS:
 C  H_{J,K;J,K}=ALPHA*J*(J+1)+BETA*K**2
 C              -DJ*J**2*(J+1)**2-DJK*J*(J+1)*K**2-DK*K**4
@@ -25,10 +25,18 @@ C
 C
 C  DO THE ACTUAL CALCULATION FOR A GIVEN J
 C
-      ALPHA=0.5D0*(A(1)+B(1))
-      BETA=C(1)-ALPHA
-      GAMMA1=0.25D0*(A(1)-B(1))
-      TD = A(1).EQ.B(1) .AND. B(1).EQ.C(1)
+      A=ROTI(1)
+      B=ROTI(3)
+      C=ROTI(5)
+      DJ=ROTI(7)
+      DJK=ROTI(8)
+      DK=ROTI(9)
+      DT=ROTI(10)
+
+      ALPHA=0.5D0*(A+B)
+      BETA=C-ALPHA
+      GAMMA1=0.25D0*(A-B)
+      TD = A.EQ.B .AND. B.EQ.C
 C
       JJ=J*(J+1)
       NK=J+J+1
@@ -66,7 +74,7 @@ C  ALSO PRINT SPHERICAL TOP SYMMETRY LABELS IF ANY DEGENERATE SETS
 C  ARE PRESENT.
 C  A, B AND C ARE PASSED ONLY TO CORRECT ORDER OF NEAR-DEGEN LEVELS
 C
-      CALL DMSYM(J,NK,EVAL,EVEC,H,A(1),B(1),C(1))
+      CALL DMSYM(J,NK,EVAL,EVEC,H,A,B,C)
 C
       IF (EVLIST) THEN
         WRITE(6,604)

@@ -1,5 +1,6 @@
       SUBROUTINE RBESJY (ELL,X, V_U, DV_U, V_Y, DV_Y )
-C  This subroutine is part of the MOLSCAT, BOUND and FIELD suite of programs
+C  Copyright (C) 2022 J. M. Hutson & C. R. Le Sueur
+C  Distributed under the GNU General Public License, version 3
 C
 C------------------------------------------------------------------------
 C  THIS ROUTINE ORIGINATES FROM THE ABC CODE BY MANOLOPOULOS ET AL.
@@ -18,7 +19,7 @@ C  D/DX Y(ELL,X) = DY * EXP(EY)
 C-----------------------------------------------------------------
 C
 
-      IF (X.LE.0.0D0 .OR. ELL.LT.-0.5D0) STOP 'RBESJY 0'
+      IF (X.LE.0.D0 .OR. ELL.LT.-0.5D0) STOP 'RBESJY 0'
       V = ELL+0.5D0
       CALL BESSJY (V,X,CJ,DJ,EJ,CY,DY,EY)
       PI = ACOS(-1.D0)

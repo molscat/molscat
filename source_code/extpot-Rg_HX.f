@@ -1,7 +1,7 @@
       FUNCTION EXTPOT(R,COSTH)
-C  Copyright (C) 2019 J. M. Hutson & C. R. Le Sueur
+C  Copyright (C) 2022 J. M. Hutson & C. R. Le Sueur
 C  Distributed under the GNU General Public License, version 3
-      USE physical_constants
+      USE physical_constants, ONLY: bohr_to_Angstrom, hartree_in_inv_cm
 C
 C  SUBROUTINE TO EVALUATE HFD-TYPE FITTING POTENTIAL WITH
 C  POINT-CHARGE + QUADRUPOLE INDUCTION ENERGY
@@ -279,14 +279,14 @@ C
       RQ(2)=-RCM
       QUADP=QUAD-(Q(1)*RQ(1)*RQ(1)+Q(2)*RQ(2)*RQ(2))
 C
-      SINTH=SQRT(1.0D0-COSTH*COSTH)
+      SINTH=SQRT(1.D0-COSTH*COSTH)
 C
-      EZ=0.0D0
-      EX=0.0D0
+      EZ=0.D0
+      EX=0.D0
       DO 200 NC=1,NCHARG
-        RRGQ=SQRT(RR*RR+RQ(NC)*RQ(NC)-2.0D0*RR*RQ(NC)*COSTH)
+        RRGQ=SQRT(RR*RR+RQ(NC)*RQ(NC)-2.D0*RR*RQ(NC)*COSTH)
         SINE=SINTH*RQ(NC)/RRGQ
-        COSN=SQRT(1.0D0-SINE*SINE)
+        COSN=SQRT(1.D0-SINE*SINE)
         FAC=Q(NC)/(RRGQ*RRGQ)
         EZ=EZ+FAC*COSN
         EX=EX+FAC*SINE
@@ -296,12 +296,12 @@ C  GUARD AGAINST COSIN>1 (IF CONSTRUCT ADDED BY JMH, 22 MAY 2002)
         IF (ABS(COSIN).GE.1.D0) THEN
           SININ=0.D0
         ELSE
-          SININ=SQRT(1.0D0-COSIN*COSIN)
+          SININ=SQRT(1.D0-COSIN*COSIN)
         ENDIF
         EQUAD=1.5D0*QUADP*(3.D0*COSIN*COSIN-1.D0)/RRGQ**4
         EZ=EZ+EQUAD*COSN
         EX=EX+EQUAD*SINE
-        EQUAD=3.0D0*QUADP*SININ*COSIN/RRGQ**4
+        EQUAD=3.D0*QUADP*SININ*COSIN/RRGQ**4
 C  NOTE THAT THE NEXT LINE SHOULD IN FACT READ
 C  EZ=EZ-EQUAD*SINE
 C  HOWEVER, THE FITS TO OBTAIN THE AR-HF H6(4,3,2) AND

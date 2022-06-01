@@ -1,7 +1,9 @@
       SUBROUTINE SETBAS
-C  Copyright (C) 2019 J. M. Hutson & C. R. Le Sueur
+C  Copyright (C) 2022 J. M. Hutson & C. R. Le Sueur
 C  Distributed under the GNU General Public License, version 3
-      USE basis_data
+      USE basis_data, ONLY: ELEVEL, IDENT, ISYM, J1MAX, J1MIN, J1STEP,
+     b                      J2MAX, J2MIN, J2STEP, JLEVEL, JMAX, JMIN,
+     b                      JSTEP, KMAX, NLEVEL, ROTI
       IMPLICIT DOUBLE PRECISION (A-H,O-Z)
       SAVE
 C
@@ -19,10 +21,13 @@ C                      |+> TUNNELLING STATE FOR NH3
 C                      |-> TUNNELLING STATE FOR ND3
 C
       LOGICAL LEVIN,EIN
-      INTEGER NSTATE,JSTATE(1)
+      INTEGER NSTATE,JSTATE(*)
 C --------------------------------------------------------- SETBAS ABOVE
       ENTRY SET1(LEVIN,EIN,NSTATE,JSTATE,IPRINT)
 
+      BE=ROTI(1)
+      ALPHAE=ROTI(3)
+      DE=ROTI(5)
       IF (LEVIN) GOTO 1902
 
       IF (IPRINT.GE.1) WRITE(6,601) JMIN,JMAX,JSTEP
@@ -52,18 +57,18 @@ C --------------------------------------------------------- SETBAS ABOVE
       IF (EIN) GOTO 7002
 
       IF (IPRINT.GE.1) THEN
-        WRITE(6,633) BE(1)
+        WRITE(6,633) BE
   633   FORMAT(/'  ENERGY LEVELS OBTAINED FROM B(E) =',F12.6)
-        IF (ALPHAE(1).NE.0.D0) WRITE(6,634) ALPHAE(1)
+        IF (ALPHAE.NE.0.D0) WRITE(6,634) ALPHAE
   634   FORMAT('  WITH B(V) CALCULATED FROM B(E) AND ALPHA(E) =',F10.6)
-        IF (DE(1).NE.0.D0) WRITE(6,635) DE(1)
+        IF (DE.NE.0.D0) WRITE(6,635) DE
   635   FORMAT('  ENERGY LEVELS CORRECTED FOR D(E) =',F12.8)
       ENDIF
 
       DO 1702 I=1,NSTATE
         JI=JSTATE(I)
         FJ=JI*(JI+1)
- 1702   ELEVEL(I)=(BE(1)-ALPHAE(1)/2.D0)*FJ - DE(1)*FJ*FJ
+ 1702   ELEVEL(I)=(BE-ALPHAE/2.D0)*FJ - DE*FJ*FJ
       RETURN
 
  7002 IF (IPRINT.GE.1) WRITE(6,631)
@@ -73,6 +78,11 @@ C  * * * * * * * * * * * * * * * * * * * * * * * END OF SET1 AND SETBAS
 C
       ENTRY SET2(LEVIN,EIN,NSTATE,JSTATE,IPRINT)
 
+      BE=ROTI(1)
+      ALPHAE=ROTI(3)
+      DE=ROTI(5)
+      WE=ROTI(7)
+      WEXE=ROTI(9)
       IF (LEVIN) GOTO 2902
 
       WRITE(6,201)
@@ -95,13 +105,13 @@ C
       IF (EIN) GOTO 2002
 
       IF (IPRINT.GE.1) THEN
-        WRITE(6,202) WE(1),BE(1)
+        WRITE(6,202) WE,BE
   202   FORMAT(/'  ENERGY LEVELS OBTAINED FROM W(E) =',F10.4,
      1         ',   B(E) =',F10.4/9X,'WITH ZERO ENERGY AT V=0, J=0')
-        IF (WEXE(1).NE.0.D0) WRITE(6,636) WEXE(1)
+        IF (WEXE.NE.0.D0) WRITE(6,636) WEXE
   636   FORMAT('  CORRECTED FOR W(E)X(E) =',F10.4)
-        IF (ALPHAE(1).NE.0.D0) WRITE(6,634) ALPHAE(1)
-        IF (DE(1).NE.0.D0) WRITE(6,635) DE(1)
+        IF (ALPHAE.NE.0.D0) WRITE(6,634) ALPHAE
+        IF (DE.NE.0.D0) WRITE(6,635) DE
       ENDIF
 
       DO 2702 I=1,NSTATE
@@ -109,8 +119,8 @@ C
         JVI=JSTATE(NSTATE+I)
         FJ=JI*(JI+1)
         FV=JVI
- 2702   ELEVEL(I)=WE(1)*FV-WEXE(1)*FV*(FV+1.D0)+(BE(1)-ALPHAE(1)
-     1             *(FV+0.5D0))*FJ - DE(1)*FJ*FJ
+ 2702   ELEVEL(I)=WE*FV-WEXE*FV*(FV+1.D0)+(BE-ALPHAE
+     1             *(FV+0.5D0))*FJ - DE*FJ*FJ
       RETURN
 
  2002 IF (IPRINT.GE.1) WRITE(6,631)
@@ -119,14 +129,29 @@ C     * * * * * * * * * * * * * * * * * * * * * * * * * * * END OF SET2
 C
       ENTRY SET3(LEVIN,EIN,NSTATE,JSTATE,IPRINT)
 
+      BE1=ROTI(1)
+      BE2=ROTI(2)
+      ALPHE1=ROTI(3)
+      ALPHE2=ROTI(4)
+      DE1=ROTI(5)
+      DE2=ROTI(6)
       IF (IDENT.EQ.0) GOTO 1993
 
       J2MIN=J1MIN
       J2MAX=J1MAX
       J2STEP=J1STEP
-      IF (BE(2).EQ.0.D0) BE(2)=BE(1)
-      IF (ALPHAE(2).EQ.0.D0) ALPHAE(2)=ALPHAE(1)
-      IF (DE(2).EQ.0.D0) DE(2)=DE(1)
+      IF (BE2.EQ.0.D0) THEN
+        BE2=BE1
+        ROTI(2)=ROTI(1)
+      ENDIF
+      IF (ALPHE2.EQ.0.D0) THEN
+        ALPHE2=ALPHE1
+        ROTI(4)=ROTI(3)
+      ENDIF
+      IF (DE2.EQ.0.D0) THEN
+        DE2=DE1
+        ROTI(6)=ROTI(5)
+      ENDIF
 
  1993 IF (LEVIN) GOTO 5303
 
@@ -194,14 +219,14 @@ C  SET ELEVEL VALUES
       IF (EIN) GOTO 1073
 
       IF (IPRINT.GE.1) THEN
-        WRITE(6,313) 1,BE(1)
-        IF (ALPHAE(1).NE.0.D0) WRITE(6,634) ALPHAE(1)
-        IF (DE(1).NE.0.D0) WRITE(6,635) DE(1)
-        WRITE(6,313) 2,BE(2)
+        WRITE(6,313) 1,BE1
+        IF (ALPHE1.NE.0.D0) WRITE(6,634) ALPHE1
+        IF (DE1.NE.0.D0) WRITE(6,635) DE1
+        WRITE(6,313) 2,BE2
   313   FORMAT(/'  ENERGY LEVELS OF ROTOR',I2,' OBTAINED FROM B(E) =',
      1          F12.6)
-        IF (ALPHAE(2).NE.0.D0) WRITE(6,634) ALPHAE(2)
-        IF (DE(2).NE.0.D0) WRITE(6,635) DE(2)
+        IF (ALPHE2.NE.0.D0) WRITE(6,634) ALPHE2
+        IF (DE2.NE.0.D0) WRITE(6,635) DE2
       ENDIF
 
       DO 1063 I=1,NLEVEL
@@ -209,8 +234,8 @@ C  SET ELEVEL VALUES
         GJ=DBLE(JLEVEL(2*I))
         FJ=FJ*(FJ+1.D0)
         GJ=GJ*(GJ+1.D0)
- 1063   ELEVEL(I)=(BE(1)-ALPHAE(1)*0.5D0)*FJ - DE(1)*FJ*FJ
-     1         +  (BE(2)-ALPHAE(2)*0.5D0)*GJ - DE(2)*GJ*GJ
+ 1063   ELEVEL(I)=(BE1-ALPHE1*0.5D0)*FJ - DE1*FJ*FJ
+     1         +  (BE2-ALPHE2*0.5D0)*GJ - DE2*GJ*GJ
       RETURN
 
  1073 IF (IPRINT.GE.1) WRITE(6,312)
@@ -223,6 +248,9 @@ C
 C  N.B. WE USE D(L,K,M) WITH EDMONDS CONVENTIONS OF PHASE FOR THE
 C  BASIS FUNCTIONS.  THIS IS SAME AS THADDEUS IN H2CO PAPER.
 C
+      A=ROTI(1)
+      B=ROTI(3)
+      C=ROTI(5)
       IF (LEVIN) GOTO 5305
 
       NLEVEL=0
@@ -277,7 +305,7 @@ C
       IF (EIN) GOTO 5335
 
       IF (IPRINT.GE.1) THEN
-        WRITE(6,604) A(1),B(1),C(1)
+        WRITE(6,604) A,B,C
   604   FORMAT(/'  ENERGY LEVELS OBTAINED FROM ZEROTH-ORDER ',
      1         'NEAR-SYMMETRIC TOP FORMULA'/
      2         10X,'ROTATIONAL CONSTANTS ARE A, B, C (CM-1) =',3F12.4/
@@ -304,12 +332,12 @@ C
         JJ=JSTATE(I)
         KK=ABS(JSTATE(I+NSTATE))
         SS=(-1.D0)**JSTATE(I+2*NSTATE)
-        HKK=(A(1)+B(1))*DBLE(JJ*(JJ+1)-KK*KK)/2.D0+ C(1)*DBLE(KK*KK)
+        HKK=(A+B)*DBLE(JJ*(JJ+1)-KK*KK)/2.D0+C*DBLE(KK*KK)
         IF (MOD(JSTATE(I)+JSTATE(I+2*NSTATE),2).NE.0)
      1    HKK=HKK+(-1.D0)**ISYM(4)*
      1              (ROTI(10)-ROTI(11)*(JJ*(JJ+1)-KK*KK)-ROTI(12)*KK*KK)
 C  OFF-DIAGONAL CONTRIBUTION ONLY FROM K=1/K=-1 CASE. . .
-        IF (KK.EQ.1) HKK=HKK+ SS * (A(1)-B(1)) *
+        IF (KK.EQ.1) HKK=HKK+ SS * (A-B) *
      1                        SQRT(DBLE((JJ*(JJ+1)-KK*(KK-1))*
      1                                  (JJ*(JJ+1)-(KK-1)*(KK-2))))/4.D0
  5345   ELEVEL(I)=HKK

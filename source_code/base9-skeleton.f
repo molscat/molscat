@@ -1,14 +1,21 @@
       module BASE9_SUITE
-C  Copyright (C) 2020 J. M. Hutson & C. R. Le Sueur
+C  Copyright (C) 2022 J. M. Hutson & C. R. Le Sueur
 C  Distributed under the GNU General Public License, version 3
 C
-C  CR Le Sueur Oct 2018
+C  CR Le Sueur and JM Hutson 2018-2022
 C  This file provides a skeleton version of a plug-in basis-set suite
 C  with some indications of how to adapt it for your own use
 
 C  It must be read in conjunction with the full documentation,
 C  which specifies the values that must be given to the variables
 C  and arrays that are set in these routines.
+
+C  Plug-in basis set suites were formerly written using ENTRY statements
+C  for most of the callable routines, so that input variables could
+C  be used in multiple routines.
+C  However, ENTRY statements are deprecated in modern Fortran, so this
+C  skeleton uses variables and arrays declared in module BASE9_SUITE
+C  to provide similar capabilities
 
       IMPLICIT NONE
 
@@ -25,7 +32,8 @@ c  nlabvs is used internally in potin9
       end module BASE9_SUITE
 C=========================================================================
       SUBROUTINE BAS9IN(PRTP, IBOUND, IPRINT)
-      USE potential
+      USE potential, ONLY: NCONST, NDGVL, NEXTMS, NEXTRA, NRSQ,
+     1                     VCONST
       USE efvs  ! only needed if efvs are included in the calculation
       USE base9_suite
 c     USE basis_data
@@ -88,8 +96,10 @@ c  needed only if efvs are included in the calculation
         mapefv = 1 ! position of first efv in vconst
       endif
 
+c  set default values of input variables before READ(5,BASIS9)
+
 c  read any additional quantities required to define the basis set
-c     READ(5,&BASIS9)
+c     READ(5,BASIS9)
 
       RETURN
       END SUBROUTINE BAS9IN
@@ -97,15 +107,16 @@ C=========================================================================
       SUBROUTINE SET9(LEVIN, EIN, NSTATE, JSTATE, NQN, QNAME, NBLOCK,
      1                NLABV, IPRINT)
       USE basis_data ! needed only if H_intl is diagonal
-      USE potential  ! needed only to check NCONST
+      USE potential, ONLY: NCONST
       USE base9_suite
       IMPLICIT NONE
 
       INTEGER, INTENT(OUT)      :: NQN, NBLOCK, NLABV, NSTATE,
      1                             JSTATE(*)
-c  JSTATE is dimensioned (NSTATE,NQN), but because NSTATE is not known
-c  on entry, it cannot be given those dimensions explicitly.
-c
+c  JSTATE is conceptually dimensioned (NSTATE,NQN), but NSTATE is not
+c  known on entry, so it cannot be given those dimensions explicitly.
+c  It is instead indexed as a 1-dimensional array
+
       CHARACTER(8), INTENT(OUT) :: QNAME(10)
 
       LOGICAL, INTENT(IN)       :: LEVIN, EIN
@@ -116,6 +127,9 @@ c
      1           nqlev
 
       NQN = nqns ! one greater than the number of quantum labels
+
+c  set meaninful names for quantum numbers, used as headers in output
+
       do iqn=1,nqn-1
         qname(iqn) = 'qn label' ! name of quantum label
       enddo
@@ -131,11 +145,16 @@ c  number of indices for each term in the potential expansion
         stop
       endif
 
+c  set up lists of quantum numbers and energies
+
 c  set jlevel, elevel and nlevel only if H_intl is diagonal
 
 c  nqlev is the number of quantum numbers that affect the pair energy.
-c  it is internal to set9 and not used elsewhere.
+c  it is internal to set9 and not used elsewhere
       nqlev=2
+
+c  jlevel, elevel and nlevel are needed only if H_intl is diagonal (nconst.eq.0)
+c  but they may be useful within the basis-set suite in other cases
 
       if (nconst.eq.0) then
         iqn1mn=jmin
@@ -154,26 +173,56 @@ c         jlevel(2+nqlev*ilevel)=iqn2
         nlevel=ilevel
       endif
 
-c  count the number of states and then assign values to the jstate array.
-c  this example (with loops over iqn2 and iqncpl uncommented) is for
-c  two angular momenta iqn1 and iqn2 that couple to give a resultant iqncpl
-      do iloop=1,2
+c  count the number of pair states (iloop=1)
+c  and then assign values to the jstate array (iloop=2).
+c  jstate is differently ordered from jlevel and may include additional
+c  quantum numbers that do not affect the threshold energies
+
+c  if jlevel has been created, it makes sense to use if here rather than repeating the logic
+
+      if (nconst.eq.0) then
+        do iloop=1,2
         istate=0
-        do iqn1=iqn1mn,iqn1mx,iqn1st
-c       do iqn2=iqn2mn,iqn2mx,iqn2st       ! other quantum labels to cycle over
-c       do iqncpl=abs(iqn1-iqn2),iqn1+iqn2 ! and maybe some coupling between them
+        do ilevel=1,nlevel
+        iqn1=jlevel(1+nqlev*ilevel)
+c       iqn2=jlevel(2+nqlev*ilevel)
+c  if there are additional quantum numbers needed to label pair states
+c  that do not affect the channel energy, include them here.
+c  this example is for an angular momentum that is the resultant of iqn1 and iqn2
+c       do iqncpl=abs(iqn1-iqn2),iqn1+iqn2
           istate=istate+1
-          if (iloop.eq.2) then
-            jstate(istate)=iqn1
-c           jstate(istate+nstate)=iqn2     ! other quantum labels stored
-c           jstate(istate+nstate*2)=iqncpl ! and coupling label also stored
-          endif
+              if (iloop.eq.2) then
+                jstate(istate)=iqn1
+c               jstate(istate+nstate)=iqn2         ! other quantum label(s)
+c               jstate(istate+nstate*2)=iqncpl     ! resultant of iqn1 and iqn2 if needed
+c  for nconst.eq.0, final element of jstate is a pointer to the elevel and jlevel arrays
+                jstate(istate+nstate*nqlev)=ilevel ! resultant of iqn1 and iqn2 if needed
+              endif
 c       enddo
 c       enddo
         enddo
-        nstate=istate
-
       enddo
+
+c  alternatively, if jlevel was not created, this is the only place that
+c  the loops over allowed values of quantum numbers are needed
+      else
+        do iloop=1,2
+          istate=0
+          do iqn1=iqn1mn,iqn1mx,iqn1st
+c         do iqn2=iqn2mn,iqn2mx,iqn2st       ! other quantum labels to cycle over
+c         do iqncpl=abs(iqn1-iqn2),iqn1+iqn2 ! resultant of iqn1 and iqn2 if needed
+            istate=istate+1
+            if (iloop.eq.2) then
+              jstate(istate)=iqn1
+c             jstate(istate+nstate)=iqn2     ! other quantum label(s)
+c             jstate(istate+nstate*2)=iqncpl
+            endif
+c         enddo
+c         enddo
+          enddo
+          nstate=istate
+        enddo
+      endif
 
       RETURN
       END SUBROUTINE SET9
@@ -194,16 +243,21 @@ C=========================================================================
 
       integer :: ifunc,istate,iqn1,lmin,lmax,ll
 
+c  either count (LCOUNT=.TRUE) or set up (LCOUNT=.FALSE.)
+c  basis functions to be included for these values of
+c  angular momentum JTOT and symmetry block IBLOCK
+
       ifunc=0
       do istate=1,nstate
         iqn1=jstate(istate,1)
 c       iqn2=jstate(istate,2)
 c       ... etc
-        lmin=0
+c decide on range of partial-wave quantum numbers allowed for this JTOT and IBLOCK
+        lmin=abs(jtot-iqn1)
+        lmax=abs(jtot+iqn1)
         do ll=lmin,lmax
+c  skip any functions that should not be included for this JTOT and IBLOCK
 c         if (.not.(some conditions on jtot, iblock, ll, iqn1 (etc))) cycle
-
-c  now counting only those basis functions included in the current symmetry block
           ifunc=ifunc+1
           if (.not.lcount) then
             jsindx(ifunc)=istate ! pointer to basis function
@@ -248,9 +302,11 @@ c  to project out potential expansion coefficients
       integer :: il,npttot,nfun,ipt,ipt1tm,ipt1,i,ix
       double precision pt1,wt1
 
-c  optionally set itypp to one of the precoded values (1 to 8) and do nothing else
+c  main / usual function of potin9 is to set itypp to one of the
+c  precoded values understood by POTENL (1 to 8) and do nothing else
       itypp = 1
-c  alternatively define a special-purpose set of potential indices for itypp=9
+
+c  alternatively, set itypp=9 and define a special-purpose set of potential indices
       if (itypp.eq.9) then
         mxlam=0
         do l1=0,l1max
@@ -356,7 +412,7 @@ C=========================================================================
      1                JSINDX, L, JTOT, VL, IV, CENT, DGVL, IBOUND,
      2                IEXCH, IPRINT)
       USE base9_suite
-      USE potential
+      USE potential, ONLY: NCONST, NDGVL, NRSQ, NVLBLK
       IMPLICIT NONE
 
       DOUBLE PRECISION, INTENT(OUT) :: VL(NVLBLK,N*(N+1)/2), CENT(N),
@@ -379,6 +435,9 @@ c  This code is included to silence compiler warning
         iv(1,1) = 0
       endif
 
+c  set up the matrix elements for the potential and other operators
+c  between the basis functions set up in cpl9
+
       DO ICOL = 1, N
 
 c  if nconst = 0, there can be contributions to the internal energy that
@@ -392,7 +451,7 @@ c  These are included in the DGVL array and there are NDGVL of them.
           enddo
         endif
 
-c  if ibound /= 0, the centrifugal operator is not simply L(L+1).
+c  if ibound.ne.0, the centrifugal operator is not simply L(L+1).
 c  if nrsq = 0, its diagonal elements are stored in CENT.
         lcol=l(icol)
         if (ibound.ne.0 .and. nrsq.eq.0) then

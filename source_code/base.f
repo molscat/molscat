@@ -2,12 +2,17 @@
      1                EINT, CENT, VL, IV, MXLAM, NHAM,
      2                LAM, WVEC, WGHT, IEXCH, THETA, PHI, ICODE,
      3                LCOUNT, ERED, NLEVV, IPRINT, IBOUND, ATAU,
-     4                DGVL)
-C  Copyright (C) 2020 J. M. Hutson & C. R. Le Sueur
+     4                DGVL, QNAME)
+C  Copyright (C) 2022 J. M. Hutson & C. R. Le Sueur
 C  Distributed under the GNU General Public License, version 3
-      USE efvs, ONLY: NEFV, MAPEFV
-      USE potential
-      USE basis_data
+      USE efvs, ONLY: MAPEFV, NEFV
+      USE potential, ONLY: NCONST, NDGVL, NEXTMS, NEXTRA, NRSQ, NVLBLK
+      USE basis_data, ONLY: A, ALPHAE, B, BE, C, DE, DJ, DJK, DK, DT,
+     b                      ELEVEL, EMAX, IDENT, ISYM, ISYM2, J1MAX,
+     b                      J1MIN, J1STEP, J2MAX, J2MIN, J2STEP, JHALF,
+     b                      JLEVEL, JMAX, JMIN, JSTEP, KMAX, KSET,
+     b                      NLEVEL, ROTI, SPNUC, WE, WEXE, WT,
+     s                      MXELVL, MXJLVL, MXROTS
 C
       IMPLICIT DOUBLE PRECISION (A-H,O-Z)
       SAVE
@@ -72,7 +77,7 @@ C
 C      ADDITIONAL CHANGE MADE MAY 82. THE VL ARRAY IS NOW STORED
 C      SO THAT THE POTENTIAL SYMMETRY TERM IS MOST RAPIDLY VARYING,
 C      RATHER THAN THE CHANNEL INDICES AS BEFORE. THIS IS TO KEEP
-C      PAGING TO A MINIMUM IN SUBROUTINE WAVMAT.
+C      PAGING TO A MINIMUM IN SUBROUTINE HAMMAT.
 C
 C      CODE ADDED FOR BCT HAMILTONIAN SET 2016
 C
@@ -489,7 +494,7 @@ C
 C * * * * * * * * * * * * * * * * * * * * * * * * * * * END OF BASE * *
 C
       ENTRY BASIN(NLEVV,JSTATE,URED,NQ,NLABV,MXPAR,ITYPP,IPRINT,
-     1            IOSFLG,IBOUND,NPLEVS,ATAU)
+     1            IOSFLG,IBOUND,NPLEVS,ATAU,QNAME)
 C
 C  SET DEFAULT VALUES BEFORE READ(5,BASIS).
       IOFF=0
@@ -524,7 +529,7 @@ C  SET DEFAULT VALUES BEFORE READ(5,BASIS).
       MPLMIN=.TRUE.
       EUNITS=1
       EUNIT=1.D0
-      EUNAME='B EN UNITS'
+      EUNAME='EN UNITS'
       BCT=.FALSE.
       JZCSMX=-1
       IBOUND=0
@@ -589,6 +594,8 @@ C
       IF (ITP.EQ.7) ITP=2
       IF (ITP.NE.9) GOTO 6837
 
+C  THE FOLLOWING LINES NEED TO BE REMOVED IF BAS9IN IS TO BE ALLOWED TO
+C  SET IBOUND AND NRSQ
       IBOUND=0
       NRSQ=0
       IF (JHALF.NE.1) THEN

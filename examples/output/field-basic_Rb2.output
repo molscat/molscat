@@ -3,11 +3,11 @@
  |          Bound states of interacting pairs of atoms and molecules          |
  |                      as a function of external field                       |
  |                                                                            |
- |              Copyright (C) 2020 J. M. Hutson & C. R. Le Sueur              |
+ |              Copyright (C) 2022 J. M. Hutson & C. R. Le Sueur              |
  |                                                                            |
- |                               Version 2020.0                               |
+ |                               Version 2022.0                               |
  |                                                                            |
- |                       Run on 14 Feb 2020   at 20:12:29                     |
+ |                       Run on 31 May 2022   at 10:20:22                     |
  |                                                                            |
   -- FIELD ------ FIELD ------ FIELD ------ FIELD ------ FIELD ------ FIELD --
 
@@ -16,11 +16,16 @@
   the terms of the GNU General Public License, version 3, as published by
   the Free Software Foundation.
 
-  Publications resulting from the use of this program should cite both
-  the version of the program used:
-  J. M. Hutson & C. R. Le Sueur, FIELD computer code 2020.0              
+  Publications resulting from the use of this program should cite both the
+  version of the program used:
+
+  J. M. Hutson & C. R. Le Sueur, FIELD: a program for bound states of
+  interacting pairs of atoms and molecules as a function of external field,
+  Version 2022.0, https//github.com/molscat/molscat
+
   and the published paper:
-  J. M. Hutson & C. R. Le Sueur, Comput. Phys. Commun. 241, pp 1-8 (2019).
+
+  J. M. Hutson & C. R. Le Sueur, Comput. Phys. Commun., 241, 1-8 (2019).
 
 
   USING CODATA 2018 RECOMMENDED VALUES OF FUNDAMENTAL PHYSICAL CONSTANTS
@@ -35,7 +40,7 @@
   ATOM - ATOM IN UNCOUPLED BASIS  
 
 
-  ATOMS  WITH S = 1/2,     MU_S   =    2.002319 MU_B
+  ATOMS  WITH S = 1/2,     MU_S   =    2.002331 MU_B
               I = 5/2,     MU_NUC =   -0.000294 MU_B
               HYPERFINE SPLITTING =    3.035732, COUPLING CONST =    1.011911 GHZ
 
@@ -143,7 +148,7 @@
   INTERACTION POTENTIAL FOR EXPANSION TERM NUMBER   1
 
   JMH routine for Tiemann-style alkali dimer potentials
-  Rb2 potential from Strauss et al., PRA 82, 052514 (2010)               
+  Rb2 potential from Strauss et al., PRA 82, 052514 (2010)
 
   gamma shifted from   5.317689000000    
                   to   5.317691178394    
@@ -167,7 +172,7 @@
   INTERACTION POTENTIAL FOR EXPANSION TERM NUMBER   2
 
   JMH routine for Tiemann-style alkali dimer potentials
-  Rb2 potential from Strauss et al., PRA 82, 052514 (2010)               
+  Rb2 potential from Strauss et al., PRA 82, 052514 (2010)
 
   gamma shifted from   5.317691178394    
                   to   5.317691178394    
@@ -332,19 +337,17 @@
 
   PROPAGATION   1: - - - - - - - - - - - - - - - - - -  MAGNETIC Z FIELD =   850.0000000     GAUSS 
 
-  PROPAGATION   2: - - - - - - - - - - - - - - - - - -  MAGNETIC Z FIELD =   852.0133965     GAUSS 
+  PROPAGATION   2: - - - - - - - - - - - - - - - - - -  MAGNETIC Z FIELD =   852.0080286     GAUSS 
 
-  PROPAGATION   3: - - - - - - - - - - - - - - - - - -  MAGNETIC Z FIELD =   851.8814791     GAUSS 
+  PROPAGATION   3: - - - - - - - - - - - - - - - - - -  MAGNETIC Z FIELD =   851.8764450     GAUSS 
 
-  PROPAGATION   4: - - - - - - - - - - - - - - - - - -  MAGNETIC Z FIELD =   851.8811344     GAUSS 
+  PROPAGATION   4: - - - - - - - - - - - - - - - - - -  MAGNETIC Z FIELD =   851.8761022     GAUSS 
 
-  PROPAGATION   5: - - - - - - - - - - - - - - - - - -  MAGNETIC Z FIELD =   851.8811357     GAUSS 
+  CONVERGED ON STATE NUMBER  1469 AT                    MAGNETIC Z FIELD =   851.8761017     GAUSS 
 
-  CONVERGED ON STATE NUMBER  1469 AT                    MAGNETIC Z FIELD =   851.8811351     GAUSS 
+  LAST STEP WAS                                                            -4.4951320888E-07 GAUSS 
 
-  LAST STEP WAS                                                            -5.3324549754E-07 GAUSS 
-
-  SMALLEST EIGENVALUE OF MATCHING MATRIX IS NUMBER  8 =  7.99336E-09
+  SMALLEST EIGENVALUE OF MATCHING MATRIX IS NUMBER  8 =  3.76213E-09
 
   WITH PRINCIPAL EIGENVECTOR COMPONENTS
   CHAN     VEC    VEC**2   L   QUANTUM NUMBERS
@@ -364,17 +367,17 @@
 
   PROPAGATION   3: - - - - - - - - - - - - - - - - - -  MAGNETIC Z FIELD =   818.7500000     GAUSS 
 
-  PROPAGATION   4: - - - - - - - - - - - - - - - - - -  MAGNETIC Z FIELD =   819.5732382     GAUSS 
+  PROPAGATION   4: - - - - - - - - - - - - - - - - - -  MAGNETIC Z FIELD =   819.5683666     GAUSS 
 
-  PROPAGATION   5: - - - - - - - - - - - - - - - - - -  MAGNETIC Z FIELD =   819.5673920     GAUSS 
+  PROPAGATION   5: - - - - - - - - - - - - - - - - - -  MAGNETIC Z FIELD =   819.5625498     GAUSS 
 
-  PROPAGATION   6: - - - - - - - - - - - - - - - - - -  MAGNETIC Z FIELD =   819.5673857     GAUSS 
+  PROPAGATION   6: - - - - - - - - - - - - - - - - - -  MAGNETIC Z FIELD =   819.5625435     GAUSS 
 
-  CONVERGED ON STATE NUMBER  1470 AT                    MAGNETIC Z FIELD =   819.5673857     GAUSS 
+  CONVERGED ON STATE NUMBER  1470 AT                    MAGNETIC Z FIELD =   819.5625435     GAUSS 
 
-  LAST STEP WAS                                                            -3.1877789297E-09 GAUSS 
+  LAST STEP WAS                                                            -2.2876065486E-09 GAUSS 
 
-  SMALLEST EIGENVALUE OF MATCHING MATRIX IS NUMBER  9 =  2.76899E-11
+  SMALLEST EIGENVALUE OF MATCHING MATRIX IS NUMBER  9 =  1.98739E-11
 
   WITH PRINCIPAL EIGENVECTOR COMPONENTS
   CHAN     VEC    VEC**2   L   QUANTUM NUMBERS
@@ -388,15 +391,15 @@
 
   PROPAGATION   1: - - - - - - - - - - - - - - - - - -  MAGNETIC Z FIELD =   806.2500000     GAUSS 
 
-  PROPAGATION   2: - - - - - - - - - - - - - - - - - -  MAGNETIC Z FIELD =   810.9616898     GAUSS 
+  PROPAGATION   2: - - - - - - - - - - - - - - - - - -  MAGNETIC Z FIELD =   810.9569203     GAUSS 
 
-  PROPAGATION   3: - - - - - - - - - - - - - - - - - -  MAGNETIC Z FIELD =   810.9519208     GAUSS 
+  PROPAGATION   3: - - - - - - - - - - - - - - - - - -  MAGNETIC Z FIELD =   810.9471311     GAUSS 
 
-  CONVERGED ON STATE NUMBER  1471 AT                    MAGNETIC Z FIELD =   810.9519209     GAUSS 
+  CONVERGED ON STATE NUMBER  1471 AT                    MAGNETIC Z FIELD =   810.9471311     GAUSS 
 
-  LAST STEP WAS                                                             6.7920950642E-08 GAUSS 
+  LAST STEP WAS                                                             6.5610493039E-08 GAUSS 
 
-  SMALLEST EIGENVALUE OF MATCHING MATRIX IS NUMBER  9 = -5.95406E-10
+  SMALLEST EIGENVALUE OF MATCHING MATRIX IS NUMBER  9 = -5.75156E-10
 
   WITH PRINCIPAL EIGENVECTOR COMPONENTS
   CHAN     VEC    VEC**2   L   QUANTUM NUMBERS
@@ -411,11 +414,11 @@
  |          Bound states of interacting pairs of atoms and molecules          |
  |                      as a function of external field                       |
  |                                                                            |
- |              Copyright (C) 2020 J. M. Hutson & C. R. Le Sueur              |
+ |              Copyright (C) 2022 J. M. Hutson & C. R. Le Sueur              |
  |                                                                            |
- |                               Version 2020.0                               |
+ |                               Version 2022.0                               |
  |                                                                            |
- |                    This run used      28.91 cpu secs and                   |
- |               7691 of the allocated   1000000 words of storage             |
+ |                    This run used      19.83 cpu secs and                   |
+ |               7663 of the allocated   1000000 words of storage             |
  |                                                                            |
   -- FIELD ------ FIELD ------ FIELD ------ FIELD ------ FIELD ------ FIELD --

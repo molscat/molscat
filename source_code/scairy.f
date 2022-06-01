@@ -1,25 +1,26 @@
       SUBROUTINE SCAIRY(Z, SCAI, SCBI, SCAIP, SCBIP, ZETA)
-C  This subroutine is part of the MOLSCAT, BOUND and FIELD suite of programs
+C  Copyright (C) 2022 J. M. Hutson & C. R. Le Sueur
+C  Distributed under the GNU General Public License, version 3
 C
 C  SCALED AIRY FUNCTIONS AND DERIVATIVES
 C  THIS PROGRAM WRITTEN BY D.E. MANOLOPOULOS (SEPT. 1986)
 C  CURRENT REVISION DATE: SEPT-1986
 C  ----------------------------------------------------------------
-C  FOR  Z .LT. (-5.0D0)
+C  FOR  Z .LT. (-5.D0)
 C  AI(Z) = SCAI*COS(ZETA) + SCBI*SIN(ZETA)
 C  BI(Z) = SCBI*COS(ZETA) - SCAI*SIN(ZETA)
 C  AI'(Z) = SCAIP*COS(ZETA) + SCBIP*SIN(ZETA)
 C  BI'(Z) = SCBIP*COS(ZETA) - SCAIP*SIN(ZETA)
 C  WHERE ZETA = (2/3)*(-Z)**(3/2) + PI/4
 C
-C  FOR (-5.0D0) .LE. Z .LE. (+0.0D0)
+C  FOR (-5.D0) .LE. Z .LE. (+0.D0)
 C  AI(Z) = SCAI
 C  BI(Z) = SCBI
 C  AI'(Z) = SCAIP
 C  BI'(Z) = SCBIP
 C  AND ZETA = 0
 C
-C  FOR (+0.0D0) .LT. Z
+C  FOR (+0.D0) .LT. Z
 C  AI(Z) = SCAI*EXP(-ZETA)
 C  BI(Z) = SCBI*EXP(+ZETA)
 C  AI'(Z) = SCAIP*EXP(-ZETA)
@@ -39,8 +40,8 @@ C  ----------------------------------------------------------------
       DATA C2   / 2.58819403792806798D-01 /
       DATA RT3  / 1.73205080756887729D+00 /
       DATA PIB4 / 7.85398163397448310D-01 /
-      ZETA = 0.0D0
-      XEPS = 0.0D0
+      ZETA = 0.D0
+      XEPS = 0.D0
 C ----------------------------------------------------------------------
 C  HERE IF NEAR ENOUGH ORIGIN TO USE 3 TERM POWER SERIES
       IF (ABS(Z).LE.0.025D0) THEN
@@ -59,7 +60,7 @@ C  NOW FOR DERIVATIVES
 C  SCALE THE FUNCTIONS BY EXP(ZETA) IF Z .GT. 0
         IF (Z.GT.0.D0) THEN
           ROOTZ = SQRT(Z)
-          ZETA = 2.0D0 * Z * ROOTZ / 3.0D0
+          ZETA = 2.D0 * Z * ROOTZ / 3.D0
           EX = EXP(ZETA)
           SCAI = SCAI * EX
           SCAIP = SCAIP * EX
@@ -69,13 +70,13 @@ C  SCALE THE FUNCTIONS BY EXP(ZETA) IF Z .GT. 0
         RETURN
       ENDIF
 
-      IF (Z.LT.(+9.0D0)) GOTO 10
+      IF (Z.LT.(+9.D0)) GOTO 10
 
 C  HERE IF Z >= 9
       ROOTZ = SQRT(Z)
       ROOT4Z = SQRT(ROOTZ)
-      ZETA = 2.0D0*Z*ROOTZ/3.0D0
-      T = 36.0D0/ZETA - 1.0D0
+      ZETA = 2.D0*Z*ROOTZ/3.D0
+      T = 36.D0/ZETA - 1.D0
       Y = ((((((((( +1.16537795324979200D-15*T
      *  -1.16414171455572480D-14)*T +1.25420655508401920D-13)*T
      *  -1.55860414100340659D-12)*T +2.21045776110011276D-11)*T
@@ -112,10 +113,10 @@ C  HERE IF Z >= 9
 
 C  HERE IF 4.5 <=  Z < 9
       ROOTZ = SQRT(Z)
-      ZETA = 2.0D0*Z*ROOTZ/3.0D0
+      ZETA = 2.D0*Z*ROOTZ/3.D0
       EXP1Z = EXP(ZETA-2.5D0*Z)
       EXP2Z = EXP(ZETA-2.625D0*Z)
-      T = 4.0D0*Z/9.0D0 - 3.0D0
+      T = 4.D0*Z/9.D0 - 3.D0
       Y = ((((((((((((((((((((( +9.69081960415394529D-11*T
      *  +3.24436136050920784D-10)*T -3.57419513430644674D-09)*T
      *  -3.84461320827974687D-09)*T +8.88116699085949212D-08)*T
@@ -174,14 +175,14 @@ C  HERE IF 4.5 <=  Z < 9
       SCBIP = Y/EXP2Z
       RETURN
 
-  20  IF (Z.LE.(+0.0D0)) GOTO 40
+  20  IF (Z.LE.(+0.D0)) GOTO 40
 
 C  HERE IF 0.025 < Z < 4.5
       ROOTZ = SQRT(Z)
-      ZETA = 2.0D0*Z*ROOTZ/3.0D0
+      ZETA = 2.D0*Z*ROOTZ/3.D0
       EXP1Z = EXP(ZETA-1.5D0*Z)
       EXP2Z = EXP(ZETA-1.375D0*Z)
-      T = 4.0D0*Z/9.0D0 - 1.0D0
+      T = 4.D0*Z/9.D0 - 1.D0
 
       IF (Z.LT.(+XEPS)) GOTO 30
 
@@ -248,13 +249,13 @@ C  HERE IF 0.025 < Z < 4.5
       SCBIP = Y/EXP1Z
       RETURN
 
-  40  IF (Z.LT.(-5.0D0)) GOTO 60
+  40  IF (Z.LT.(-5.D0)) GOTO 60
 
 C  HERE IF -5 <= Z < -0.025
-      T = Z/5.0D0
+      T = Z/5.D0
       T = -T*T*T
-      T = 2.0D0*T - 1.0D0
-      T2 = 2.0D0*T
+      T = 2.D0*T - 1.D0
+      T2 = 2.D0*T
 
       IF (Z.GT.(-XEPS)) GOTO 50
 
@@ -335,8 +336,8 @@ C  HERE IF -5 <= Z < -0.025
 C  HERE IF Z <= -5
   60  ROOTZ = SQRT(-Z)
       ROOT4Z = -SQRT(ROOTZ)
-      ZETA = 2.0D0*(-Z)*ROOTZ/3.0D0
-      T = -250.0D0/(Z*Z*Z) - 1.0D0
+      ZETA = 2.D0*(-Z)*ROOTZ/3.D0
+      T = -250.D0/(Z*Z*Z) - 1.D0
       A = ((((((((((((( -4.50071772808806400D-15*T
      *  +1.11777933477806080D-14)*T -1.39959545848483840D-14)*T
      *  +4.93110187870320640D-14)*T -2.02193307034590720D-13)*T

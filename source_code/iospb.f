@@ -1,7 +1,7 @@
       SUBROUTINE IOSPB(ENERGY,QL,QLOLD,NL,LINE,
      1                 LTYPE,ITYPE,NVC,LM,IXQL,
      2                 LMAX,NIXQL,NQL)
-C  Copyright (C) 2019 J. M. Hutson & C. R. Le Sueur
+C  Copyright (C) 2022 J. M. Hutson & C. R. Le Sueur
 C  Distributed under the GNU General Public License, version 3
       USE basis_data, ONLY: JLEVEL, NLEVEL
 C
@@ -51,7 +51,7 @@ C  NPL IS NO. OF INDICES IN LINE PER CROSS SECTION
       NL=0
       RETURN
 
- 1111 QTOT=0.0D0
+ 1111 QTOT=0.D0
       IF (LMAX.LT.2) GOTO 1001
 
       DO 1000 IL=2,LMAX
@@ -168,8 +168,8 @@ C
           XL=L
 C  TERM 1 . . .
           PF=(1.D0+EPSA*EPSA)*(1.D0+EPSB*EPSB)
-          TF=THRJ(XJA,XL,XJA,XKA,0.0D0,-XKA)*
-     1       THRJ(XJB,XL,XJB,XKB,0.0D0,-XKB)
+          TF=THRJ(XJA,XL,XJA,XKA,0.D0,-XKA)*
+     1       THRJ(XJB,XL,XJB,XKB,0.D0,-XKB)
 C  HANDLE Q(0,0,0)  -- I.E. QLOLD  -- SEPARATELY.
           IF (L.EQ.0) GOTO 5101
           CALL IXQLF(LM,LMAX,L,IZERO,IZERO,IZERO,IX,IXQL,NIXQL,NQL)
@@ -195,7 +195,7 @@ C  HANDLE Q(0,0,0)  -- I.E. QLOLD  -- SEPARATELY.
 C  TERM 2 . . .
           PF=2.D0*EPSA*(1.D0+EPSB*EPSB)
           TF=THRJ(XJA,XL,XJA,-XKA,2.D0*XKA,-XKA)*
-     &        THRJ(XJB,XL,XJB,XKB,0.0D0,-XKB)
+     &        THRJ(XJB,XL,XJB,XKB,0.D0,-XKB)
           CALL IXQLF(LM,LMAX,L,KA2,IZERO,IONE,IX,IXQL,NIXQL,NQL)
           IF (IX.EQ.0) WRITE(6,659) L,KA2,IZERO,IONE
           IF (IX.LE.0) GOTO 5300
@@ -210,7 +210,7 @@ C  TERM 2 . . .
 
 C  TERM 3 . . .
           PF=2.D0*EPSB*(1.D0+EPSA*EPSA)
-          TF=THRJ(XJA,XL,XJA,XKA,0.0D0,-XKA)*
+          TF=THRJ(XJA,XL,XJA,XKA,0.D0,-XKA)*
      &       THRJ(XJB,XL,XJB,-XKB,2.D0*XKB,-XKB)
           CALL IXQLF(LM,LMAX,L,KB2,IZERO,IONE,IX,IXQL,NIXQL,NQL)
           IF (IX.EQ.0) WRITE(6,659) L,IZERO,KB2,IONE

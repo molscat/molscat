@@ -1,7 +1,7 @@
       FUNCTION EXTPOT(R,COSTH)
-C  Copyright (C) 2019 J. M. Hutson & C. R. Le Sueur
+C  Copyright (C) 2022 J. M. Hutson & C. R. Le Sueur
 C  Distributed under the GNU General Public License, version 3
-      USE physical_constants
+      USE physical_constants, ONLY: bohr_to_Angstrom, hartree_in_inv_cm
 C
 C  SUBROUTINE TO EVALUATE SYSTEMATIC FITTING POTENTIAL WITH
 C  OVERLAP-BASED REPULSION ENERGY
@@ -39,7 +39,7 @@ C              CONSISTENT AND UP-TO-DATE VALUES
 C
 C  CHECK THAT THE LONG-RANGE PARAMETERS HAVE BEEN INITIALISED.
 C
-      IF (RLAM(1) .LE. 0.D0) GOTO 998
+      IF (RLAM(1).LE.0.D0) GOTO 998
 C
 C  FIND DISTANCES AND ANGLES TO THE DISPERSION SITES
 C

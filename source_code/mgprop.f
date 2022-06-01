@@ -2,7 +2,8 @@
      1                  Y,U,VL,IV,EINT,CENT,P,DG,
      2                  RSTART,RSTOP,NSTEP,DR,NODES,
      3                  ERED,EP2RU,CM2RU,RSCALE,IPRINT)
-C  This subroutine is part of the MOLSCAT, BOUND and FIELD suite of programs
+C  Copyright (C) 2022 J. M. Hutson & C. R. Le Sueur
+C  Distributed under the GNU General Public License, version 3
 C
 C  31 AUG 2012 G. MCBANE.
 C
@@ -47,8 +48,8 @@ C  (LOG-DERIVATIVE MATRIX AT RSTOP) AND NODES.
       IMPLICIT DOUBLE PRECISION (A-H,O-Z)
 C
 C  COMMON BLOCK FOR CONTROL OF USE OF PROPAGATION SCRATCH FILE
-      LOGICAL IREAD,IWRITE
-      COMMON /PRPSCR/ ESHIFT,ISCRU,IREAD,IWRITE
+      LOGICAL IREAD,IWRITE,IREADR,IWRITR
+      COMMON /PRPSCR/ ESHIFT,ISCRU,ISCRUR,IREAD,IWRITE,IREADR,IWRITR
 
       DIMENSION U(N,N),Y(N,N),P(MXLAM),VL(2),IV(2),EINT(N),CENT(N),DG(N)
 
@@ -73,14 +74,14 @@ C  PROPAGATE
 
 C  OBTAIN W MATRIX.  IF A(MSYMP)=0, THEN FINAL W FROM LAST SECTOR EQUALS W FOR FIRST SUBSTEP OF THIS
 C  SECTOR, AND W CAN BE REUSED.
-            IF (K.NE.1 .OR. ISTEP.EQ.1 .OR. A(MSYMP).NE.0.0D0) THEN
+            IF (K.NE.1 .OR. ISTEP.EQ.1 .OR. A(MSYMP).NE.0.D0) THEN
                IF (IREAD) THEN
                   READ(ISCRU) U
                   DO I = 1,N
                      U(I,I)=U(I,I)-ESHIFT
                   ENDDO
                ELSE
-                  CALL WAVMAT(U,N,R,P,VL,IV,ERED,EINT,CENT,EP2RU,CM2RU,
+                  CALL HAMMAT(U,N,R,P,VL,IV,ERED,EINT,CENT,EP2RU,CM2RU,
      1                        RSCALE,DG,MXLAM,NHAM,IPRINT)
                ENDIF
                IF (IWRITE) WRITE(ISCRU) U
@@ -94,25 +95,25 @@ C  1ST STEP OF EQN 43 FROM MG PAPER: X_K = Y_K-1 + B_K*W*H, LOWER TRIANGLE ONLY
 C  Y MATRIX NOW CONTAINS X_K
 C
 C  2ND STEP OF EQN 43, USING ALTERNATIVE FORM OF EQN 44
-            IF (A(K).NE.0.0D0) THEN
+            IF (A(K).NE.0.D0) THEN
                DO J = 1, N
                   CALL DSCAL(N+1-J,A(K)*H,Y(J,J),1)
-                  Y(J,J)=Y(J,J)+1.0D0
+                  Y(J,J)=Y(J,J)+1.D0
                ENDDO
 C  Y NOW CONTAINS (I+A_K X_K DR)
                CALL SYMINV(Y,N,N,NCU)
 C  NODE COUNT: ADD TO TOTAL IF STEPPING "FORWARD", SUBTRACT IF BACKWARD
-               IF (A(K).GE.0.0D0) THEN
+               IF (A(K).GE.0.D0) THEN
                   NODES = NODES+NCU
                ELSE
                   NODES = NODES-NCU
                ENDIF
 C  Y NOW CONTAINS (I+A_K X_K DR)^{-1}
                DO J = 1, N
-                  CALL DSCAL(N+1-J,-1.0D0,Y(J,J),1)
-                  Y(J,J)=Y(J,J)+1.0D0
+                  CALL DSCAL(N+1-J,-1.D0,Y(J,J),1)
+                  Y(J,J)=Y(J,J)+1.D0
                ENDDO
-               D1 = 1.0D0/(A(K)*H)
+               D1 = 1.D0/(A(K)*H)
                DO J = 1, N
                   CALL DSCAL(N+1-J,D1,Y(J,J),1)
                ENDDO
@@ -173,7 +174,7 @@ C  CONSTANTS FOR CS4 PROPAGATOR
      1           0.40302128160421D0,
      2          -0.12092087633891D0,
      3           0.51272193319241D0,
-     4           0.0D0/
+     4           0.D0/
       DATA BCS4 /0.061758858135626D0,
      1           0.33897802655364D0,
      2           0.61479130717558D0,

@@ -1,5 +1,5 @@
       SUBROUTINE VINIT(NV,RUNIT,VUNIT)
-C  Copyright (C) 2020 J. M. Hutson & C. R. Le Sueur
+C  Copyright (C) 2022 J. M. Hutson & C. R. Le Sueur
 C  Distributed under the GNU General Public License, version 3
 C
 C  THIS VERSION OF VINIT IMPLEMENTS THE POTENTIAL FORM OF
@@ -8,6 +8,7 @@ C  IT MAKES USE OF A MODULE pot_data_Tiemann THAT MUST CONTAIN THE
 C  POTENTIAL PARAMETERS FOR THE SPECIFIC SYSTEM.
 C  THIS VERSION IS DESIGNED FOR SYSTEMS LIKE ALKALI-METAL DIATOMICS,
 C  WITH TWO CURVES THAT DESCRIBE SINGLET AND TRIPLET STATES.
+      USE physical_constants, only: bohr_to_Angstrom
       USE potential, ONLY: RMNAME, EPNAME
       USE pot_data_Tiemann
       IMPLICIT NONE
@@ -34,7 +35,7 @@ C
       ENDIF
       IF (IPRINT.GE.1) WRITE(6,*) ' JMH routine for Tiemann-style',
      1                            ' alkali dimer potentials'
-      IF (IPRINT.GE.1) WRITE(6,*) POTNAM
+      IF (IPRINT.GE.1) WRITE(6,*) TRIM(POTNAM)
 C
 C  THREE CHOICES HERE:
 C  CALCULATE EXCHANGE POWER GAMMA FROM EXPONENT BETA,
@@ -43,9 +44,9 @@ C
       GAMOLD=GAMMA
       BETOLD=BETA
       IF (GAMBET.EQ.2) THEN
-        BETA = 7.D0 / (bohr_to_angstrom * (GAMMA + 1.D0))
+        BETA = 7.D0 / (bohr_to_Angstrom * (GAMMA + 1.D0))
       ELSEIF (GAMBET.EQ.1) THEN
-        GAMMA = 7.D0 / (BETA * bohr_to_angstrom) - 1.D0
+        GAMMA = 7.D0 / (BETA * bohr_to_Angstrom) - 1.D0
       ENDIF
 
       IF (IPRINT.GE.2) THEN
@@ -136,9 +137,13 @@ C  DERIVATIVE OF XI
           WRITE(6,100) '                 to ',BSRNEW ,' cm-1 A^n'
         ELSE
           WRITE(6,*) ' B(SR) not shifted to match dV/dR'
-          WRITE(6,100) ' Derivative discontinuity at RSR is ',
-     1                 BSRNEW-BSR(NV),' cm-1/A'
-          WRITE(6,100) ' Discontinuity / value is ',
+          WRITE(6,100) ' Derivative of V_SR at RSR is ',
+     1                 -NSR(NV)*BSR(NV)/RSR(NV)**(NSR(NV)+1.d0),
+     2                 ' cm-1/A'
+          WRITE(6,100) ' Derivative discontinuity  is ',
+     1                 -NSR(NV)*(BSRNEW-BSR(NV))/RSR(NV)
+     2                 **(NSR(NV)+1.d0),' cm-1/A'
+          WRITE(6,100) ' Discontinuity / value     is ',
      1                 (BSRNEW-BSR(NV))/BSRNEW
         ENDIF
       ENDIF

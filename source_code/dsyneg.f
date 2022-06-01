@@ -1,5 +1,5 @@
       SUBROUTINE DSYNEG(UPLO,A,KPVT,N,INERT)
-C  Copyright (C) 2019 J. M. Hutson & C. R. Le Sueur
+C  Copyright (C) 2022 J. M. Hutson & C. R. Le Sueur
 C  Distributed under the GNU General Public License, version 3
 C
 C  SUBROUTINE BY J. M. HUTSON, APRIL 1994
@@ -16,7 +16,7 @@ C
       UPPER = LSAME (UPLO , 'U')
       IF (UPPER) THEN
          INERT=0
-         T = 0.0D0
+         T = 0.D0
          DO 190 K = 1, N
             D = A(K,K)
 C
@@ -30,21 +30,21 @@ C          (S  C)
 C  TO AVOID UNDERFLOW/OVERFLOW TROUBLES.
 C  TAKE TWO PASSES THROUGH SCALING.  USE  T  FOR FLAG.
 C
-               IF (T.NE.0.0D0) GOTO 130
+               IF (T.NE.0.D0) GOTO 130
                   T = ABS(A(K,K+1))
                   D = (D/T)*A(K+1,K+1) - T
                GOTO 140
   130          CONTINUE
                   D = T
-                  T = 0.0D0
+                  T = 0.D0
   140          CONTINUE
   150       CONTINUE
 C
-               IF (D.LT.0.0D0) INERT = INERT + 1
+               IF (D.LT.0.D0) INERT = INERT + 1
   190    CONTINUE
       ELSE
          INERT=0
-         T = 0.0D0
+         T = 0.D0
          DO 290 K = N, 1, -1
             D = A(K,K)
 C
@@ -58,17 +58,17 @@ C          (S  C)
 C  TO AVOID UNDERFLOW/OVERFLOW TROUBLES.
 C  TAKE TWO PASSES THROUGH SCALING.  USE  T  FOR FLAG.
 C
-               IF (T.NE.0.0D0) GOTO 230
+               IF (T.NE.0.D0) GOTO 230
                   T = ABS(A(K,K-1))
                   D = (D/T)*A(K-1,K-1) - T
                GOTO 240
   230          CONTINUE
                   D = T
-                  T = 0.0D0
+                  T = 0.D0
   240          CONTINUE
   250       CONTINUE
 C
-               IF (D.LT.0.0D0) INERT = INERT + 1
+               IF (D.LT.0.D0) INERT = INERT + 1
   290    CONTINUE
       ENDIF
 C

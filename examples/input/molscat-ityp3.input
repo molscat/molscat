@@ -77,6 +77,7 @@
     JTOTL  = 0,    JTOTU  =  99999,
     NNRG   = 2,    ENERGY =   2016.4, 1613.1,
     DTOL   = 0.1,  OTOL   =      0.01,
+    LASTIN = 0,
  /
 
  &BASIS
@@ -100,7 +101,6 @@
     JTOTL  = 0,    JTOTU  =  99999,
     NNRG   = 1,    ENERGY =    800.,
     DTOL   = 0.1,  OTOL   =      0.01,
-    LASTIN = 0,
  /
 
  &BASIS

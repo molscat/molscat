@@ -1,8 +1,8 @@
       SUBROUTINE EAVG(NT,T,NGP,E,NNRG,IPRINT)
-C  Copyright (C) 2019 J. M. Hutson & C. R. Le Sueur
+C  Copyright (C) 2022 J. M. Hutson & C. R. Le Sueur
 C  Distributed under the GNU General Public License, version 3
-      USE physical_constants
-      USE sizes, MXNRG => MXNRG_in_MOLSCAT
+      USE physical_constants, ONLY: K_in_inv_cm
+      USE sizes, ONLY: MXNRG => MXNRG_in_MOLSCAT
 C  THIS ROUTINE SETS UP ENERGIES FOR NGP-POINT GAUSS-LAGUERRE INTEG.
 C  AT SPECIFIED TEMPERATURES (DEG. KELVIN).
 C

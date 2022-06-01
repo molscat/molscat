@@ -1,5 +1,5 @@
       SUBROUTINE  VINIT(II,RM,RESULT)
-C  Copyright (C) 2019 J. M. Hutson & C. R. Le Sueur
+C  Copyright (C) 2022 J. M. Hutson & C. R. Le Sueur
 C  Distributed under the GNU General Public License, version 3
 C -------------------------------------------------------
       IMPLICIT DOUBLE PRECISION (A-H,O-Z)
@@ -82,10 +82,10 @@ C  CALCULATE ASSOCIATED LEGENDRE POLYNOMIALS
 C  IT WILL BE NEEDED LATER
 C
       ALLOCATE(POL(NANGS,NANGS))
-      PI = ACOS(-1.0D0)
+      PI = ACOS(-1.D0)
       LAMMAX = LMAX
       DO IA=1,NANGS
-        COSTH = COS(ANGLS(IA)*PI/180.0D0)
+        COSTH = COS(ANGLS(IA)*PI/180.D0)
         CALL CALCPL(NANGS, COSTH, POL(1,IA))
       ENDDO
 
@@ -93,7 +93,7 @@ C
       MP = 5
       LP = 1
       NFIX = 0
-      ASYM = 0.0D0
+      ASYM = 0.D0
       BETA1= 3.D0/56.D0
       BETA2=-4.D0*BETA1/3.D0
       BETA3= 7.D0*BETA1/15.D0
@@ -127,7 +127,7 @@ C -------------------------------------------------------
 C -------------------------------------------------------
       IF (II.GT.LMAX) GOTO 17
 
-      TOTAL = 0.0D0
+      TOTAL = 0.D0
 
       CALL GETRAD(X, RR, VPT, NANGS, NRA, RPT, WT,
      O            ALPHAS, BETA, NP, MP, LP, NRAMAX )
@@ -138,7 +138,7 @@ C  INTEGRATION - LOOP OVER QUADRATURES WT TIMES VALUE
       DO IA=1, NANGS
         TOTAL = TOTAL + POL(II,IA)*RR(IA)*WT(IA)
       ENDDO
-      TOTAL = TOTAL * (2.0D0*(II-1) + 1.0D0 )/2.0D0
+      TOTAL = TOTAL * (2.D0*(II-1) + 1.D0 )/2.D0
 
    16 RETURN
 
@@ -176,7 +176,7 @@ C ----------------------------------------------------
           RS = MIN( RPT(I),RPT(J))
           RL = MAX( RPT(I),RPT(J))
 
-          Q(I,J)=0.0D0
+          Q(I,J)=0.D0
           DO K=0,N-1
             Q(I,J)=Q(I,J)+BETA(K+1)*(RS/RL)**K
           ENDDO
@@ -197,15 +197,15 @@ C ----------------------------------------------------
       IMPLICIT DOUBLE PRECISION(A-H,O-Z)
       DIMENSION BETA(1),RPT(NR),ALPHA(NR)
 
-      V = 0.0D0
+      V = 0.D0
       DO I=1,NR
         RS = MIN(R,RPT(I))
         RL = MAX(R,RPT(I))
-        Q  = 0.0D0
+        Q  = 0.D0
         DO K=1,N
           Q = Q+ BETA(K)*(RS/RL)**(K-1)
         ENDDO
-        Q = Q*(1.0D0/RL)**(L*(M+1))
+        Q = Q*(1.D0/RL)**(L*(M+1))
         V = V + Q*ALPHA(I)
       ENDDO
       VRKHS = V

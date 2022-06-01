@@ -1,10 +1,10 @@
       SUBROUTINE IOSOUT(ENERGY,QL,QLOLD,NVC,ITYPE,ATAU,LM,IXQL,
      1                  LMAX,NIXQL,NQL,JTSTEP)
-C  Copyright (C) 2019 J. M. Hutson & C. R. Le Sueur
+C  Copyright (C) 2022 J. M. Hutson & C. R. Le Sueur
 C  Distributed under the GNU General Public License, version 3
       USE sizes, ONLY: MXJLVL
-      USE angles
-      USE basis_data, ONLY: NLEVEL, JLEVEL, IDENT
+      USE angles, ONLY: ICNSYM, IHOMO
+      USE basis_data, ONLY: IDENT, JLEVEL, NLEVEL
       IMPLICIT DOUBLE PRECISION (A-H,O-Z)
 C
 C>>SG MODIFIED MAY 92 - ITYPE=3 / ADD JTSTEP TO PARAMETER LIST.

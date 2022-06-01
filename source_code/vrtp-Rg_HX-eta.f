@@ -1,7 +1,7 @@
       SUBROUTINE VRTP(IDERIV,R,V)
-C  Copyright (C) 2019 J. M. Hutson & C. R. Le Sueur
+C  Copyright (C) 2022 J. M. Hutson & C. R. Le Sueur
 C  Distributed under the GNU General Public License, version 3
-      USE angles
+      USE angles, ONLY: COSANG
 C  THIS VERSION OF VRTP SUBROUTINE DESIGNED SPECIFICALLY FOR H6(4,3,X)
 C  POTENTIALS OF Ar-HF AND Ar-HCl
 C

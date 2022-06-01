@@ -2,11 +2,11 @@
  |                                                                            |
  |          Bound states of interacting pairs of atoms and molecules          |
  |                                                                            |
- |              Copyright (C) 2020 J. M. Hutson & C. R. Le Sueur              |
+ |              Copyright (C) 2022 J. M. Hutson & C. R. Le Sueur              |
  |                                                                            |
- |                               Version 2020.0                               |
+ |                               Version 2022.0                               |
  |                                                                            |
- |                       Run on 14 Feb 2020   at 20:29:56                     |
+ |                       Run on 31 May 2022   at 10:31:34                     |
  |                                                                            |
   -- BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND --
 
@@ -15,11 +15,16 @@
   the terms of the GNU General Public License, version 3, as published by
   the Free Software Foundation.
 
-  Publications resulting from the use of this program should cite both
-  the version of the program used:
-  J. M. Hutson & C. R. Le Sueur, BOUND computer code 2020.0              
+  Publications resulting from the use of this program should cite both the
+  version of the program used:
+
+  J. M. Hutson & C. R. Le Sueur, BOUND: a program for bound states of
+  interacting pairs of atoms and molecules,
+  Version 2022.0, https//github.com/molscat/molscat
+
   and the published paper:
-  J. M. Hutson & C. R. Le Sueur, Comput. Phys. Commun. 241, pp 1-8 (2019).
+
+  J. M. Hutson & C. R. Le Sueur, Comput. Phys. Commun., 241, 1-8 (2019).
 
 
   USING CODATA 2018 RECOMMENDED VALUES OF FUNDAMENTAL PHYSICAL CONSTANTS
@@ -83,7 +88,7 @@
   ALL LENGTHS ARE IN UNITS OF ANGSTROM UNLESS OTHERWISE STATED
 
   NO DUPLICATED SETS OF INDICES IN LAMBDA ARRAY
-  INTERACTION MATRIX USES   2 BLOCKS OF VL ARRAY FOR R-DEPENDENT TERMS IN POTENTIAL
+  INTERACTION MATRIX USES   1 BLOCKS OF VL ARRAY FOR R-DEPENDENT TERMS IN POTENTIAL
 
   ======================================================================================================================
 
@@ -156,8 +161,8 @@
                          ----      J         V   ----
         1           1              0         1                 0             1         0.0000000
         2           2              0         2                 0             2       100.0000000
-  INNER CLASSICAL TURNING POINT AT R =  1.0004
-  RADIAL PROPAGATION WILL START AT R =  0.6978
+  INNER CLASSICAL TURNING POINT AT R =    1.0004
+  RADIAL PROPAGATION WILL START AT R =    0.6978
 
   COUPLED EQUATIONS PROPAGATED AT                                 ENERGY =  -1.000000000     CM-1  
 
@@ -226,7 +231,7 @@
 
   LOG-DERIVATIVE MATRIX PROPAGATED FROM       0.6978  TO       1.5000  IN    802  STEPS.     0 NODES FOUND.
   LOG-DERIVATIVE MATRIX PROPAGATED FROM       6.0000  TO       1.5000  IN   4500  STEPS.     0 NODES FOUND.
-  COUNT OF NEGATIVE EIGENVALUES OF MATCHING MATRIX GIVES     1 ADDITIONAL NODES.
+  COUNT OF NEGATIVE EIGENVALUES OF MATCHING MATRIX GIVES     1 ADDITIONAL NODE. 
 
   EIGENVALUES OF MATCHING MATRIX ARE:
      1   -13.64587       2    24.22472    
@@ -270,7 +275,7 @@
 
   LOG-DERIVATIVE MATRIX PROPAGATED FROM       0.6978  TO       1.5000  IN    802  STEPS.     0 NODES FOUND.
   LOG-DERIVATIVE MATRIX PROPAGATED FROM       6.0000  TO       1.5000  IN   4500  STEPS.     0 NODES FOUND.
-  COUNT OF NEGATIVE EIGENVALUES OF MATCHING MATRIX GIVES     1 ADDITIONAL NODES.
+  COUNT OF NEGATIVE EIGENVALUES OF MATCHING MATRIX GIVES     1 ADDITIONAL NODE. 
 
   EIGENVALUES OF MATCHING MATRIX ARE:
      1  -0.4163483       2    24.37837    
@@ -309,7 +314,7 @@
 
   LOG-DERIVATIVE MATRIX PROPAGATED FROM       0.6978  TO       1.5000  IN    802  STEPS.     0 NODES FOUND.
   LOG-DERIVATIVE MATRIX PROPAGATED FROM       6.0000  TO       1.5000  IN   4500  STEPS.     0 NODES FOUND.
-  COUNT OF NEGATIVE EIGENVALUES OF MATCHING MATRIX GIVES     1 ADDITIONAL NODES.
+  COUNT OF NEGATIVE EIGENVALUES OF MATCHING MATRIX GIVES     1 ADDITIONAL NODE. 
 
   EIGENVALUES OF MATCHING MATRIX ARE:
      1  -8.9999288E-08   2    24.38816    
@@ -322,7 +327,7 @@
 
   LAST STEP WAS                                                            -2.2013324497E-08 CM-1  
 
-  TIME TO LOCATE THIS STATE WAS     0.29 CPU SECONDS
+  TIME TO LOCATE THIS STATE WAS     0.11 CPU SECONDS
 
   SMALLEST EIGENVALUE OF MATCHING MATRIX IS NUMBER  1
 
@@ -365,7 +370,7 @@
 
   LOG-DERIVATIVE MATRIX PROPAGATED FROM       0.6978  TO       1.5000  IN    802  STEPS.     1 NODES FOUND.
   LOG-DERIVATIVE MATRIX PROPAGATED FROM       6.0000  TO       1.5000  IN   4500  STEPS.     0 NODES FOUND.
-  COUNT OF NEGATIVE EIGENVALUES OF MATCHING MATRIX GIVES     1 ADDITIONAL NODES.
+  COUNT OF NEGATIVE EIGENVALUES OF MATCHING MATRIX GIVES     1 ADDITIONAL NODE. 
 
   EIGENVALUES OF MATCHING MATRIX ARE:
      1   -4.235240       2    18.62072    
@@ -396,7 +401,7 @@
 
   LOG-DERIVATIVE MATRIX PROPAGATED FROM       0.6978  TO       1.5000  IN    802  STEPS.     1 NODES FOUND.
   LOG-DERIVATIVE MATRIX PROPAGATED FROM       6.0000  TO       1.5000  IN   4500  STEPS.     0 NODES FOUND.
-  COUNT OF NEGATIVE EIGENVALUES OF MATCHING MATRIX GIVES     1 ADDITIONAL NODES.
+  COUNT OF NEGATIVE EIGENVALUES OF MATCHING MATRIX GIVES     1 ADDITIONAL NODE. 
 
   EIGENVALUES OF MATCHING MATRIX ARE:
      1  -6.1890133E-04   2    19.26420    
@@ -435,7 +440,7 @@
 
   LAST STEP WAS                                                             5.3214677109E-10 CM-1  
 
-  TIME TO LOCATE THIS STATE WAS     0.21 CPU SECONDS
+  TIME TO LOCATE THIS STATE WAS     0.08 CPU SECONDS
 
   SMALLEST EIGENVALUE OF MATCHING MATRIX IS NUMBER  1
 
@@ -449,11 +454,11 @@
  |                                                                            |
  |          Bound states of interacting pairs of atoms and molecules          |
  |                                                                            |
- |              Copyright (C) 2020 J. M. Hutson & C. R. Le Sueur              |
+ |              Copyright (C) 2022 J. M. Hutson & C. R. Le Sueur              |
  |                                                                            |
- |                               Version 2020.0                               |
+ |                               Version 2022.0                               |
  |                                                                            |
- |                    This run used       0.56 cpu secs and                   |
- |                 81 of the allocated   1000000 words of storage             |
+ |                    This run used       0.22 cpu secs and                   |
+ |                 77 of the allocated   1000000 words of storage             |
  |                                                                            |
   -- BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND --

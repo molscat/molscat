@@ -2,9 +2,9 @@ SUBROUTINE YTRANS(Y,EVEC,EINT,WVEC,                      &
                   JSINDX,L,N,P,VL,IV,                    &
                   MXLAM,NHAM,ERED,EP2RU,CM2RU,DEGTOL,    &
                   NOPEN,IBOUND,CENT,IPRINT,LQUIET)
-!  Copyright (C) 2020 J. M. Hutson & C. R. Le Sueur
+!  Copyright (C) 2022 J. M. Hutson & C. R. Le Sueur
 !  Distributed under the GNU General Public License, version 3
-USE potential
+USE potential, ONLY: NCONST, NEXTMS, NEXTRA, NRSQ, NVLBLK, VCONST
 !  Routine to transform the log derivative matrix (Y) with primitive
 !  basis into that with asymptotic basis.
 !
@@ -136,14 +136,15 @@ do i_op=1,n_ops
     write(6,900) 'operator #',i_op,P(1:i_dim)/CM2RU
   endif
 900  format(3x,a,i2,1p,10(g17.10,1x))
-! next 7 lines are analogous to code in WAVVEC
+! next 7 lines are analogous to code in SUMLAM
   do j=1,N
-    call dgemv('T',i_dim,j,1.0d0,VL(i),NVLBLK,P,1,0.0d0,wks(1,j,i_op),1)
+    call dgemv('T',i_dim,j,1.d0,VL(i),NVLBLK,P,1,0.d0,wks(1,j,i_op),1)
     i=i+j*NVLBLK
   enddo
   ibeg=ibeg+mconst(i_op)
   call dsyfil('L',N,wks(1,1,i_op),N)
 enddo
+deallocate (mconst)
 
 Lmin=0
 Lmax=0
@@ -175,6 +176,8 @@ elseif (NRSQ.eq.0 .and. IBOUND.ne.0) then
   enddo
   Lmin=1
   Lmax=index_CENT
+else
+  maskCorL=0
 endif
 
 if (.not.no37 .and. NRSQ.eq.0) then
@@ -227,7 +230,7 @@ do LL=Lmin,Lmax
       write(6,'(/,a)') '  Asymptotic Hamiltonian'
     endif
     write(6,'(a,I3,a,I3)') '  submatrix',nn,'*',nn
-    call MATPRN(6,Wsub,nn,nn,nn,2,Wsub, 'submatrix is:',1)
+    call MATPRN(6,Wsub,nn,nn,nn,2,Wsub, ' submatrix is:',1)
   endif
 
 !  recursively (if necessary) diagonalise submatrices of asymptotic
@@ -278,6 +281,8 @@ do LL=Lmin,Lmax
       irsq=1
     endif
     r_L(:)=eval(:,irsq)
+  else
+    r_L(:)=dble(L(:)*(L(:)+1))
   endif
 
 
@@ -291,10 +296,10 @@ do LL=Lmin,Lmax
     imax = IDAMAX(nn,Wsub(:,i,1),1)
 
 !  When the largest magnitude of amplitude is negative...
-    if (Wsub(imax,i,1).lt.0.0D0) then
+    if (Wsub(imax,i,1).lt.0.D0) then
 
 !  DSCAL is BLAS routine. Change the sign (multiply vector by -1).
-      call DSCAL(nn,-1.0D0,Wsub(:,i,1),1)
+      call DSCAL(nn,-1.D0,Wsub(:,i,1),1)
     endif
   enddo
 
@@ -363,7 +368,7 @@ do LL=Lmin,Lmax
   deallocate(eval)
 enddo
 
-deallocate(wks)
+deallocate(wks,maskCorL)
 
 !---------------------------------------------------------------
 !Print sorted by the energy
@@ -379,44 +384,40 @@ if (jprint.ge.15 .and. NRSQ.gt.0 .and. NCONST.gt.0) then
   write(6,*) ' Index      Asymp channel no.     L       Energy'
   do i=1,N
     write(6,'(i5,i16,i15,E28.15)') &
-               i,nchan(i),nint(sqrt(r_L(i)+0.25d0)-0.5d0),EINT(nchan(i))/CM2RU
+               i,nchan(i),nint(sqrt(r_L(nchan(i))+0.25d0)-0.5d0),(EINT(nchan(i))+ered)/CM2RU
   enddo
   write(6,*)
   deallocate(nchan)
 endif
 
 !  Count the number of open channels
-call wvcalc(WVEC,wmax,ERED,EINT,NOPEN,N)
+call gtwvec(WVEC,wmax,ERED,EINT,NOPEN,N)
 
 ! Transform to asymptotic basis
 if (lquiet) then
-! next 5 lines to get round bug? in matmul which causes it to crash
-! sometimes if large matrix multiplies are allocated back to same space
-  allocate (eval(N,N),wks(N,N,2))
-  eval=transpose(EVEC)
-  wks(:,:,1)=matmul(eval,Y)
-  Y=matmul(wks(:,:,1),evec)
-! this is original code
-! Y=matmul(matmul(transpose(EVEC),Y),EVEC)
+  if (iprint.ge.20) &
+    call MATPRN(6,Y,N,N,N,2,Y,' Untransformed Y:',1)
+  allocate (wks(N,N,2))
+  call TRNSFM(evec,Y,wks,N,.false.,.false.)
   if (iprint.ge.20) then
-    call MATPRN(6,EVEC,N,N,N,3,EVEC,' Eigenvectors (last time):',1)
-    call MATPRN(6,Y,N,N,N,3,Y,' transformed Y:',1)
-    do ll=1,NHAM
+    call MATPRN(6,EVEC,N,N,N,3,EVEC,' Transformation to asymptotic basis',1)
+    call MATPRN(6,Y,N,N,N,2,Y,' Transformed Y:',1)
+    do ll=1,NVLBLK
       it=ll
       do j=1,N
       do i=1,j
         wks(i,j,1)=vl(it)
         wks(j,i,1)=vl(it)
-        it=it+NHAM
+        it=it+NVLBLK
       enddo
       enddo
       write (6,*) ' For potential term ',ll,':'
-      if (iprint.ge.23) call MATPRN(6,wks,N,N,N,2,wks,'original VL',1)
-      call trnsfm(eval,wks(:,:,1),wks(:,:,2),N,.false.,.false.)
-      call MATPRN(6,wks,N,N,N,2,wks,'transformed VL',1)
+      if (iprint.ge.23) call MATPRN(6,wks,N,N,N,2,wks,' Original VL',1)
+      call TRNSFM(evec,wks(:,:,1),wks(:,:,2),N,.false.,.false.)
+      call MATPRN(6,wks,N,N,N,2,wks,' Transformed VL',1)
     enddo
   endif
-  deallocate (eval,wks)
+  deallocate (wks)
 endif
 
 ! Place eigenvalues of L^2 operator in array CENT ready to be used

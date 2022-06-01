@@ -1,5 +1,6 @@
       SUBROUTINE GASLEG(N,Z,A)
-C  This subroutine is part of the MOLSCAT, BOUND and FIELD suite of programs
+C  Copyright (C) 2022 J. M. Hutson & C. R. Le Sueur
+C  Distributed under the GNU General Public License, version 3
       IMPLICIT DOUBLE PRECISION (A-H,O-Z)
 C  ROUTINE TO GENERATE GAUSS-LEGENDRE POINTS/WEIGHTS
 C  TAKEN FROM AD VAN DER AVOIRD'S N2-N2 CODE  (S Green 11/7/91)
@@ -21,8 +22,8 @@ C  SET UP INITIAL CONDITIONS FOR ODD/EVEN NUMBER OF POINTS
    20 NN=N+1
       IFIN=0
       IODD=0
-      C=2.0D0/PI
-      C=1.0D0-(C*C)
+      C=2.D0/PI
+      C=1.D0-(C*C)
       IF (MOD(N,2).EQ.0) GOTO 30
       NKNT=(N-1)/2
       IODD=1
@@ -31,12 +32,12 @@ C  SET UP INITIAL CONDITIONS FOR ODD/EVEN NUMBER OF POINTS
    30 NKNT=N/2
 C
    40 K=1
-      CHA=0.0D0
-      CHB=0.0D0
-      P(1)=1.0D0
+      CHA=0.D0
+      CHB=0.D0
+      P(1)=1.D0
       DN=N+0.50D0
       DN2=DN*DN
-      DEN=SQRT(DN2+(C/4.0D0))
+      DEN=SQRT(DN2+(C/4.D0))
 
 C  LOOPS GENERATING POINTS AND WEIGHTS
 C  P(I) IS LEGENDRE POLYNOMIAL P_{I-1}(X)
@@ -49,27 +50,27 @@ C  LOOP MARKED BY LABEL 50 CYCLES OVER THE ROOTS, USING COS(ZBES(K)/FACTOR)
 C  AS INITIAL GUESS.
    50 BES=ZBES(K)
       X=COS(BES/DEN)
-      PDX=1.0D0/(1.0D0-X*X)
+      PDX=1.D0/(1.D0-X*X)
    60 CONTINUE
       P(2)=X
       DO 70 I=3,NN
         IM1=I-1
         IM2=I-2
-        P(I)=((2.0D0*IM1-1.0D0)*X*P(IM1)-IM2*P(IM2))/IM1
+        P(I)=((2.D0*IM1-1.D0)*X*P(IM1)-IM2*P(IM2))/IM1
         PD(I)=IM1*PDX*(P(IM1)-X*P(I))
    70 CONTINUE
       IF (IFIN.EQ.1) GOTO 100
-      IF (ABS(P(NN)).LT.1.0D-12) GOTO 80
+      IF (ABS(P(NN)).LT.1.D-12) GOTO 80
       X=X-(P(NN)/PD(NN))
-      PDX=1.0D0/(1.0D0-X*X)
+      PDX=1.D0/(1.D0-X*X)
       GOTO 60
    80 Z(K)=X
       TA=N*P(N)
       TA=TA*TA
-      A(K)=(2.0D0*(1.0D0-X*X))/TA
-      CHA=CHA+2.0D0*A(K)
+      A(K)=(2.D0*(1.D0-X*X))/TA
+      CHA=CHA+2.D0*A(K)
       Z2=Z(K)*Z(K)
-      CHB=CHB+2.0D0*A(K)*Z2
+      CHB=CHB+2.D0*A(K)*Z2
       IF (K.EQ.NKNT) GOTO 90
       K=K+1
       GOTO 50
@@ -78,14 +79,14 @@ C  AS INITIAL GUESS.
 C
 C  IF AN ODD NUMBER OF POINTS/WEIGHTS IS REQUIRED, GENERATE AND STORE
 C  THE LAST ONE (WHICH IS AT 0) ALSO.
-      X=0.0D0
+      X=0.D0
       K=NKNT+1
       Z(K)=X
       IFIN=1
       GOTO 60
   100 TA=N*P(N)
       TA=TA*TA
-      A(K)=2.0D0/TA
+      A(K)=2.D0/TA
       CHA=CHA+A(K)
 
   110 CONTINUE

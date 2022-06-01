@@ -4,7 +4,7 @@
      3                  L,NB,P,ERED,EP2RU,CM2RU,
      4                  RSCALE,DEGTOL,DRMAX,NSTAB,NOPEN,IPRINT,
      5                  IBOUND,ICHAN,WAVE,ILDSVU)
-C  Copyright (C) 2020 J. M. Hutson & C. R. Le Sueur
+C  Copyright (C) 2022 J. M. Hutson & C. R. Le Sueur
 C  Distributed under the GNU General Public License, version 3
 C
 C  THIS SUBROUTINE SETS UP THE STORAGE REQUIREMENTS FOR ALL THE
@@ -22,8 +22,8 @@ C  DYNAMIC STORAGE COMMON BLOCK ...
       COMMON /MEMORY/ MX,IXNEXT,NIPR,IDUMMY,X(1)
 C
 C  COMMON BLOCK FOR CONTROL OF USE OF PROPAGATION SCRATCH FILE
-      LOGICAL IREAD,IWRITE
-      COMMON /PRPSCR/ ESHIFT,ISCRU,IREAD,IWRITE
+      LOGICAL IREAD,IWRITE,IREADR,IWRITR
+      COMMON /PRPSCR/ ESHIFT,ISCRU,ISCRUR,IREAD,IWRITE,IREADR,IWRITR
 C
 C  COMMON BLOCK FOR CONTROL OF PROPAGATION SEGMENTS
       COMMON /RADIAL/ RMNINT,RMXINT,RMID,RMATCH,DRS,DRL,STEPS,STEPL,
@@ -42,9 +42,9 @@ C  COMMON BLOCK FOR DERIVATIVES
       COMMON /DERIVS/ NUMDER
 
 C  COMMON BLOCK FOR INPUT/OUTPUT CHANNEL NUMBERS
-      LOGICAL PSIFMT
-      INTEGER IPSISC,IWAVSC,IPSI
-      COMMON /IOCHAN/ IPSISC,IWAVSC,IPSI,NWVCOL,PSIFMT
+      LOGICAL IWAVEF
+      INTEGER IPSISC,IWAVSC,IWAVE
+      COMMON /IOCHAN/ IPSISC,IWAVSC,IWAVE,NWVCOL,IWVSTP,IWAVEF
 C
       NSQ=N*N
 
@@ -60,7 +60,7 @@ C  IC2 IS USED TO REMEMBER WHAT IS SCRATCH FOR RESETTING AT END
       NUSED=0
 C
 C  COUNT THE NUMBER OF OPEN CHANNELS AND SET UP WVEC ARRAY
-      CALL WVCALC(WVEC,WMAX,ERED,EINT,NOPEN,N)
+      CALL GTWVEC(WVEC,WMAX,ERED,EINT,NOPEN,N)
       IF (NOPEN.EQ.0) RETURN
 
 C  SET S MATRIX TO IDENTITY IN CASE NO PROPAGATION IS DONE
@@ -113,13 +113,13 @@ C
 C  INITIALISE Y MATRIX (HERE CALLED SR)
 C
         IF (IPROP.NE.-1) THEN
-          IT1=IC2
-          IT2=IT1+N
+          IT1=IC2    ! DIAG
+          IT2=IT1+N  ! EVAL
           IXNEXT=IT2+N
           CALL CHKSTR(NUSED)
           IF (ISTART.EQ.0)
      1      CALL YINIT(SR,U,VL,IV,P,CENT,EINT,X(IT1),
-     2                 X(IT2),SI,N,MXLAM,NHAM,
+     2                 X(IT2),SI,N,MXLAM,NHAM, !NPOTL,
      3                 ERED,RSTART,EP2RU,CM2RU,RSCALE,
      4                 .TRUE.,IPRINT)
           IXNEXT=IT1
@@ -237,7 +237,8 @@ C
 C  SOLVE COUPLED EQUATIONS BY DIABATIC LOG-DERIVATIVE PROPAGATOR
 C  OF MANOLOPOULOS
 C
-          IF (N.GT.1 .AND. NSTEP.GT.0 .AND. RSTART.LT.RSTOP) THEN
+          IF ((N.GT.1 .OR. WAVE) .AND. NSTEP.GT.0 .AND.
+     1        RSTART.LT.RSTOP) THEN
             IT1=IC2       ! Y14
             IT2=IT1+N     ! Y23
             IT3=IT2+N     ! DIAG
@@ -262,7 +263,7 @@ C
             IT5=IT4+NPT       ! Y2
             IF1=IT5+NPT
             ITP=IT3           ! P
-            IF2=ITP+NPT*NHAM
+            IF2=ITP+NPT*NHAM !*MXLAM
             IXNEXT=MAX(IF1,IF2)
             NUSED=0
             CALL CHKSTR(NUSED)
@@ -319,21 +320,20 @@ C
             IF (ISCRU.EQ.0) ITWO=-1
             IT1=IC2     ! Y1
             IT2=IT1+N   ! Y2
-            IT3=IT2+N   ! Y3
-            IT4=IT3+N   ! Y4
-            IT5=IT4+N   ! VECNOW
-            IT6=IT5+NSQ ! VECNEW
-            IT7=IT6+NSQ ! EIGOLD
-            IT8=IT7+N   ! EIGNOW
-            IT9=IT8+N   ! HP
-            IXNEXT=IT9+N
+            IT3=IT2+N   ! Y4
+            IT4=IT3+N   ! VECNOW
+            IT5=IT4+NSQ ! VECNEW
+            IT6=IT5+NSQ ! EIGOLD
+            IT7=IT6+N   ! EIGNOW
+            IT8=IT7+N   ! HP
+            IXNEXT=IT8+N
             CALL CHKSTR(NUSED)
             CALL AIPROP(N,MXLAM,NHAM,
      1                  SR,SI,U,VL,IV,EINT,CENT,P,
-     3                  X(IT1),X(IT2),X(IT3),X(IT4),X(IT5),X(IT6),
-     4                  X(IT7),X(IT8),X(IT9),
+     3                  X(IT1),X(IT2),X(IT3),X(IT4),X(IT5),
+     4                  X(IT6),X(IT7),X(IT8),
      5                  RSTART,RSTOP,NSTEP,DR,POW,TOLHIT,NODES,
-     6                  ERED,EP2RU,CM2RU,RSCALE,IPRINT)
+     6                  ERED,EP2RU,CM2RU,RSCALE,IPRINT,IREC,WAVE)
             IF (IPRINT.GE.8) WRITE(6,2000) 'AIPROP',RSTART,RSTOP,NSTEP
           ENDIF
 C
@@ -366,6 +366,7 @@ C
         ISTART=1
         NSTEPS(ISEG)=NSTEP
       ENDDO
+      IF (ISCRUR.NE.0) REWIND (ISCRUR)
 C
 C  -----------------------------------------------------------------------
 C  END OF PROPAGATION
@@ -402,14 +403,11 @@ C
       ENDIF
 
       IF (WAVE) THEN
-        CALL WVPROP(RBSEG,RESEG,DRSEG,IPRSEG,NSEG)
 C  CALCULATE SCATTERING WAVEFUNCTION
         IT6=IT5+NSQ
         IXNEXT=IT6+NSQ
         CALL CHKSTR(NUSED)
-        NTSTPS=SUM(NSTEPS(1:NSEG))
-        CALL WVSTPS(NTSTPS+1)
-        CALL SCWAVE(RBSEG,RESEG,DRSEG,NSTEPS,NSEG,
+        CALL SCWAVE(RBSEG,RESEG,DRSEG,IPRSEG,NSTEPS,NSEG,
      1              WVEC,X(IT1),X(IT2),X(IT3),X(IT4),
      1              X(IT6),SR,SI,X(IT5),U,L,N,NSQ,NOPEN,NB,
      2              ICHAN,IREC,IPRINT)

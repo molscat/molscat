@@ -2,11 +2,11 @@
  |                                                                            |
  |          Bound states of interacting pairs of atoms and molecules          |
  |                                                                            |
- |              Copyright (C) 2020 J. M. Hutson & C. R. Le Sueur              |
+ |              Copyright (C) 2022 J. M. Hutson & C. R. Le Sueur              |
  |                                                                            |
- |                               Version 2020.0                               |
+ |                               Version 2022.0                               |
  |                                                                            |
- |                       Run on 14 Feb 2020   at 20:28:33                     |
+ |                       Run on 31 May 2022   at 10:31:18                     |
  |                                                                            |
   -- BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND --
 
@@ -15,11 +15,16 @@
   the terms of the GNU General Public License, version 3, as published by
   the Free Software Foundation.
 
-  Publications resulting from the use of this program should cite both
-  the version of the program used:
-  J. M. Hutson & C. R. Le Sueur, BOUND computer code 2020.0              
+  Publications resulting from the use of this program should cite both the
+  version of the program used:
+
+  J. M. Hutson & C. R. Le Sueur, BOUND: a program for bound states of
+  interacting pairs of atoms and molecules,
+  Version 2022.0, https//github.com/molscat/molscat
+
   and the published paper:
-  J. M. Hutson & C. R. Le Sueur, Comput. Phys. Commun. 241, pp 1-8 (2019).
+
+  J. M. Hutson & C. R. Le Sueur, Comput. Phys. Commun., 241, 1-8 (2019).
 
 
   USING CODATA 2018 RECOMMENDED VALUES OF FUNDAMENTAL PHYSICAL CONSTANTS
@@ -216,6 +221,7 @@
   INITIALIZATION DONE.  TIME WAS   0.00 CPU SECS.       178 WORDS OF STORAGE USED.
 
   ============================ Ar-CO2 on split repulsion potential of JCP 105, 9130 (1996) =============================
+  SCRATCH FILE OPENED ON UNIT           30
 
   *****************************  ANGULAR MOMENTUM JTOT  =   0   AND SYMMETRY BLOCK  =    2  ****************************
 
@@ -239,7 +245,6 @@
        12          12                  22                     22            12       195.8935433
        13          13                  24                     24            13       232.2848340
        14          14                  26                     26            14       271.7732558
-  SCRATCH FILE OPENED ON UNIT           30
 
   NODE COUNT IMPLIES     0 STATES BELOW MINIMUM ENERGY =  -180.0000000     CM-1  
   NODE COUNT IMPLIES     2 STATES BELOW MAXIMUM ENERGY =  -130.0000000     CM-1  
@@ -250,7 +255,7 @@
 
   CONVERGED ON STATE NUMBER     1 AT                              ENERGY =  -165.6289795     CM-1  
 
-  SMALLEST EIGENVALUE OF MATCHING MATRIX IS NUMBER  1 =  2.27374E-13
+  SMALLEST EIGENVALUE OF MATCHING MATRIX IS NUMBER  1 =  9.94760E-13
 
   WITH PRINCIPAL EIGENVECTOR COMPONENTS
   CHAN     VEC    VEC**2   L   QUANTUM NUMBERS
@@ -266,7 +271,7 @@
 
   CONVERGED ON STATE NUMBER     2 AT                              ENERGY =  -131.1638128     CM-1  
 
-  SMALLEST EIGENVALUE OF MATCHING MATRIX IS NUMBER  1 = -3.74344E-13
+  SMALLEST EIGENVALUE OF MATCHING MATRIX IS NUMBER  1 =  2.14958E-12
 
   WITH PRINCIPAL EIGENVECTOR COMPONENTS
   CHAN     VEC    VEC**2   L   QUANTUM NUMBERS
@@ -299,11 +304,11 @@
  |                                                                            |
  |          Bound states of interacting pairs of atoms and molecules          |
  |                                                                            |
- |              Copyright (C) 2020 J. M. Hutson & C. R. Le Sueur              |
+ |              Copyright (C) 2022 J. M. Hutson & C. R. Le Sueur              |
  |                                                                            |
- |                               Version 2020.0                               |
+ |                               Version 2022.0                               |
  |                                                                            |
- |                    This run used       0.14 cpu secs and                   |
+ |                    This run used       0.05 cpu secs and                   |
  |               2416 of the allocated   1000000 words of storage             |
  |                                                                            |
   -- BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND --

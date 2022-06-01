@@ -1,7 +1,7 @@
       SUBROUTINE POTENL(ICNTRL, MXLMB, LAM, R, P, ITYPE, IPRINT)
-C  Copyright (C) 2020 J. M. Hutson & C. R. Le Sueur
+C  Copyright (C) 2022 J. M. Hutson & C. R. Le Sueur
 C  Distributed under the GNU General Public License, version 3
-      USE angles
+      USE angles, ONLY: COSANG, FACTOR, ICNSY2, ICNSYM, IHOMO, IHOMO2
       USE potential, ONLY: LAMBDA, MXLMDA, EPNAME, RMNAME
 C
 C  -----------------------------------------------------------------
@@ -46,6 +46,7 @@ C  -----------------------------------------------------------------
 C
       IMPLICIT DOUBLE PRECISION (A-H,O-Z)
       SAVE
+      SAVE NPTS
 C
 C  -----------------------------------------------------------------
 C  * NOTES FOR PROGRAMS OTHER THAN MOLSCAT (STORAGE CONSIDERATIONS):
@@ -190,7 +191,7 @@ C  EVALUATE RADIAL COEFFICIENTS AS POWERS, EXPONENTIALS OR VSTAR
           IX=IX+1
           NP=NPOWER(IX)
           IF (NP.EQ.0) GOTO 30
-C  PROTECT AGAINST OVERFLOW AT ORIGIN. VALUE USED BALANCED WITH WAVMAT
+C  PROTECT AGAINST OVERFLOW AT ORIGIN. VALUE USED BALANCED WITH HAMMAT
           RR=R
           IF (NP.LT.0 .AND. ABS(R).LT.1.D-8) RR=1.D-8
           TERM=RR**NP
@@ -624,43 +625,43 @@ C  OF FREEDOM AND GET THE POINTS AND WEIGHTS
           STOP
         ENDIF
 
-        IF (NPT.GT.0 .AND. MAXL+1.GT.NPT .AND. IPRINT.GE.10)
+        IF (NPTS(1).GT.0 .AND. MAXL+1.GT.NPTS(1) .AND. IPRINT.GE.10)
      1    WRITE(6,*) 'NOT ENOUGH POINTS'
-        NPT=MAX(NPT,MAXL+1)
-        IF (NPT.GT.MXPT) GOTO 9993
-        CALL GAUSSP(-1.D0,1.D0,NPT,XPT(1,1),XWT(1,1))
+        NPTS(1)=MAX(NPTS(1),MAXL+1)
+        IF (NPTS(1).GT.MXPT) GOTO 9993
+        CALL GAUSSP(-1.D0,1.D0,NPTS(1),XPT(1,1),XWT(1,1))
         IF (IPRINT.GE.1) WRITE(6,9200) NPT,'THETA-1'
  9200   FORMAT(2X,'USING ',I3,'-POINT QUADRATURE FOR ',A)
         IF (IHOMO.EQ.2) THEN
-          DO IPT=1,NPT/2
+          DO IPT=1,NPTS(1)/2
             XWT(IPT,1)=2.D0*XWT(IPT,1)
           ENDDO
-          NPT=(NPT+1)/2
+          NPTS(1)=(NPTS(1)+1)/2
           IF (IPRINT.GE.1) WRITE(6,9210)
  9210     FORMAT(2X,'HOMONUCLEAR SYMMETRY: ONLY HALF OF THE THETA-1 ',
      1           'POINTS WILL BE USED')
         ENDIF
 
         IF (ITYP.EQ.2) THEN
-          IF (NPS.GT.0 .AND. 2*MAXV+1.GT.NPS .AND. IPRINT.GE.10)
+          IF (NPTS(2).GT.0 .AND. 2*MAXV+1.GT.NPTS(2) .AND. IPRINT.GE.10)
      1      WRITE(6,*) 'NOT ENOUGH POINTS'
-          NPS=MAX(NPS,2*MAXV+1)
-          IF (NPS.GT.MXPT) GOTO 9993
-          CALL GAUSHP(NPS,XPT(1,2),XWT(1,2))
-          IF (IPRINT.GE.1) WRITE(6,9200) NPS,'VIBRATIONS'
+          NPTS(2)=MAX(NPTS(2),2*MAXV+1)
+          IF (NPTS(2).GT.MXPT) GOTO 9993
+          CALL GAUSHP(NPTS(2),XPT(1,2),XWT(1,2))
+          IF (IPRINT.GE.1) WRITE(6,9200) NPTS(2),'VIBRATIONS'
 
         ELSEIF (ITYP.EQ.3) THEN
-          IF (NPS.GT.0 .AND. MAXL2+1.GT.NPS .AND. IPRINT.GE.10)
+          IF (NPTS(2).GT.0 .AND. MAXL2+1.GT.NPTS(2) .AND. IPRINT.GE.10)
      1      WRITE(6,*) 'NOT ENOUGH POINTS'
-          NPS=MAX(NPS,MAXL2+1)
-          IF (NPS.GT.MXPT) GOTO 9993
-          CALL GAUSSP(-1.D0,1.D0,NPS,XPT(1,2),XWT(1,2))
-          IF (IPRINT.GE.1) WRITE(6,9200) NPS,'THETA-2'
+          NPTS(2)=MAX(NPTS(2),MAXL2+1)
+          IF (NPTS(2).GT.MXPT) GOTO 9993
+          CALL GAUSSP(-1.D0,1.D0,NPTS(2),XPT(1,2),XWT(1,2))
+          IF (IPRINT.GE.1) WRITE(6,9200) NPTS(2),'THETA-2'
           IF (ICNSYM.EQ.2) THEN
-            DO IPT=1,NPS/2
+            DO IPT=1,NPTS(2)/2
               XWT(IPT,2)=2.D0*XWT(IPT,2)
             ENDDO
-            NPS=(NPS+1)/2
+            NPTS(2)=(NPTS(2)+1)/2
             IF (IPRINT.GE.1) WRITE(6,9220)
  9220       FORMAT(2X,'HOMONUCLEAR MOLECULE 2: ONLY HALF OF THE ',
      1             'THETA-2 POINTS WILL BE USED')
@@ -679,14 +680,14 @@ C  OF FREEDOM AND GET THE POINTS AND WEIGHTS
           ENDDO
 
         ELSEIF (ITYP.EQ.5 .OR. ITYP.EQ.6) THEN
-          IF (NPS.GT.0 .AND. (NPS.LT.1+(MAXK+ICNSYM-1)/ICNSYM) .AND.
-     1        IPRINT.GE.10) WRITE(6,*) 'NOT ENOUGH POINTS'
-          NPS=MAX(NPS,1+(MAXK+ICNSYM-1)/ICNSYM)
-          IF (NPS.GT.MXPT) GOTO 9993
-          IF (IPRINT.GE.1) WRITE(6,9200) NPS,'PHI'
-          DO IPX=1,NPS
-            XPT(IPX,2)=PI*DBLE(2*IPX-1)/DBLE(2*ICNSYM*NPS)
-            XWT(IPX,2)=SQRT(PI+PI)/DBLE(NPS)
+          IF (NPTS(2).GT.0 .AND. (NPTS(2).LT.1+(MAXK+ICNSYM-1)/ICNSYM)
+     1        .AND. IPRINT.GE.10) WRITE(6,*) 'NOT ENOUGH POINTS'
+          NPTS(2)=MAX(NPTS(2),1+(MAXK+ICNSYM-1)/ICNSYM)
+          IF (NPTS(2).GT.MXPT) GOTO 9993
+          IF (IPRINT.GE.1) WRITE(6,9200) NPTS(2),'PHI'
+          DO IPX=1,NPTS(2)
+            XPT(IPX,2)=PI*DBLE(2*IPX-1)/DBLE(2*ICNSYM*NPTS(2))
+            XWT(IPX,2)=SQRT(PI+PI)/DBLE(NPTS(2))
           ENDDO
         ENDIF
 
@@ -703,7 +704,7 @@ C  (THEY ARE STORED AT THE VERY END OF THE X ARRAY)
 
 C  CALCULATE FUNCTIONS AT EACH QUADRATURE POINT
         IF (ITYP.EQ.1) THEN
-          DO IP=1,NPT
+          DO IP=1,NPTS(1)
           DO IL=1,MXLAM
             L=LAM(NPQL*(IL-1)+1)
             IX=IX+1
@@ -712,14 +713,14 @@ C  CALCULATE FUNCTIONS AT EACH QUADRATURE POINT
           ENDDO
 
         ELSEIF (ITYP.EQ.2) THEN
-          DO IP2=1,NPS
+          DO IP2=1,NPTS(2)
             CALL HERM(H,MAXV+1,XPT(IP2,2))
             TOTAL1=SQRT(PI)
             DO IV=1,MAXV+1
               H(IV)=H(IV)/SQRT(TOTAL1)
               TOTAL1=TOTAL1*DBLE(2*IV)
             ENDDO
-            DO IP1=1,NPT
+            DO IP1=1,NPTS(1)
             DO IL=1,MXLAM
               L=LAM(NPQL*(IL-1)+1)
               IX=IX+1
@@ -749,8 +750,8 @@ C  SIMILARLY TO THAT IN IOSB1
           ENDDO
 
         ELSEIF (ITYP.EQ.5 .OR. ITYP.EQ.6) THEN
-          DO IPX=1,NPS
-          DO IPT=1,NPT
+          DO IPX=1,NPTS(2)
+          DO IPT=1,NPTS(1)
           DO IL=1,MXLAM
             L=LAM(2*IL-1)
             M=LAM(2*IL)
@@ -942,7 +943,7 @@ C
  9992 FORMAT(/'  *** POTENL. PROJECTED POTENTIAL HAS',I3,
      1       ' DIMENSIONS, BUT MXDIM=',I3)
       STOP
- 9993 WRITE(6,9994) NPT,NPS,MXPT
+ 9993 WRITE(6,9994) NPTS(1),NPTS(2),MXPT
  9994 FORMAT(/'  *** POTENL. EITHER NPT OR NPS EXCEEDS MXPT'
      2       /'  NPT =',I6,'  NPS =',I6/'  MXPT=',I7)
       STOP
@@ -957,9 +958,9 @@ C  STORE THE PROJECTION COEFFS.  IF USING /MEMORY/...X, IT IS
 C  POSSIBLE FOR THE CODE HERE TO OVERWRITE THE LAM ARRAY WITH
 C  COEFFS.  HOWEVER, THE PROGRAM SHOULD THEN TERMINATE WHEN CHKSTR
 C  IS CALLED FROM DRIVER AFTER RETURN FROM POTENL INITIALIZATION.
- 9600 NREQ=MXLAM*(NPT+NPS)
+ 9600 NREQ=MXLAM*(NPTS(1)+NPTS(2))
       MXSTRT=MX+NREQ
-      WRITE(6,9601) NPT,NPS,MXLAM,NREQ,MXSTRT,MXSTRT-IXNEXT+1
+      WRITE(6,9601) NPTS(1),NPTS(2),MXLAM,NREQ,MXSTRT,MXSTRT-IXNEXT+1
  9601 FORMAT('  *** POTENL. NOT ENOUGH ROOM FOR PROJECTION COEFFICIENTS'
      1      /'      REQUIRES (',I4,' +',I4,') * ',I4,' =',I8/
      2       '      OF',I8,' ORIGINALLY SUPPLIED IN X(), ONLY',I8,
