@@ -150,7 +150,7 @@ ANG_MOM     = j3j000.o j6j.o j9j.o parsgn.o sixj.o threej.o thrj.o xninej.o
 W_MATRIX    = dermat.o hammat.o sumlam.o
 CORE_ALL    = brent.o calck.o chckru.o cheint.o drcalc.o drset.o ecnv.o \
               ecnvx.o findrm.o gnham.o idpchk.o prprop.o progms.o propst.o \
-              setefv.o stsrch.o thresh.o thrlst.o wvbksb.f wvhead.o \
+              setefv.o stsrch.o thresh.o thrlst.o wvbksb.o wvhead.o \
               $(YTRANS) $(PROPS_LD) $(BASE) $(UTILITIES) $(LIBUTILS) \
               $(ANG_MOM) $(W_MATRIX)
 IOS         = chck6i.o dasize.o get102.o gaussp.o gasleg.o iosbin.o iosclc.o \
