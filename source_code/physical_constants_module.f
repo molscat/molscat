@@ -1,10 +1,10 @@
       module physical_constants
-C  Copyright (C) 2022 J. M. Hutson & C. R. Le Sueur
+C  Copyright (C) 2025 J. M. Hutson & C. R. Le Sueur
 C  Distributed under the GNU General Public License, version 3
       implicit none
 
-c  These values are from the BIPM draft brochure.  Values inserted 27-03-2019
-      integer,parameter:: NIST_year=2018
+c  These values are from the BIPM draft brochure.  Values inserted 18-09-2025
+      integer,parameter:: NIST_year=2022
       double precision, parameter ::
      & speed_of_light_in_SI                    = 2.99792458d8,     ! m s^-1
      & Planck_constant_in_SI                   = 6.62607015d-34,   ! J s
@@ -19,19 +19,19 @@ c  and these are other defined values
      & cal_in_SI                               = 4.184d0     ! J
 
       double precision, parameter ::
-     & inverse_fine_structure_constant = 137.035999084d0,    ! 2018 CODATA value
-     & fine_structure_constant         = 7.2973525693d-3,    ! 2018 CODATA value
-c  electron spin g-factor (2018 CODATA value)
-     & g_e                             =-2.00231930436256d0,
-c  atomic mass constant (2018 CODATA value)
-     & atomic_mass_constant            = 1.66053906660d-27,
-c  proton mass (2018 CODATA value)
-     & proton_mass                     = 1.67262192369d-27,
+     & inverse_fine_structure_constant = 137.035999177d0,    ! 2022 CODATA value
+     & fine_structure_constant         = 7.2973525643d-3,    ! 2022 CODATA value
+c  electron spin g-factor (2022 CODATA value)
+     & g_e                             =-2.00231930436092d0,
+c  atomic mass constant (2022 CODATA value)
+     & atomic_mass_constant            = 1.66053906892d-27,
+c  proton mass (2022 CODATA value)
+     & proton_mass                     = 1.67262192595d-27,
 c
-c  electron mass (2018 CODATA value)
-     & electron_mass                   = 9.1093837015d-31
+c  electron mass (2022 CODATA value)
+     & electron_mass                   = 9.1093837139d-31
 
-c  These values are calculated from the above (the values recorded here are from 2018 CODATA tables)
+c  These values are calculated from the above (the values recorded here are from 2022 CODATA tables)
       double precision,parameter::
 c  vacuum permitivity
      & epsilon_zero_in_SI              = elementary_charge_in_SI**2
@@ -39,23 +39,23 @@ c  vacuum permitivity
      &                                     *Planck_constant_in_SI
      &                                     *speed_of_light_in_SI),
 c  bohr radius is defined as hbar/(electron_mass*speed_of_light*fine_structure_constant)
-     & bohr_in_SI                       = 0.529177210903d-10,        ! m
+     & bohr_in_SI                       = 0.529177210544d-10,        ! m
 c  hartree is defined as electron_mass*(speed_of_light*fine_structure_constant)**2
-     & hartree_in_SI                    = 4.3597447222071d-18,       ! J
+     & hartree_in_SI                    = 4.3597447222060d-18,       ! J
 c  bohr magneton is defined as elementary_charge*hbar/(2d0*electron_mass)
 c  (nuclear magneton is defined as bohr_magneton*electron_mass/proton_mass)
-     & bohr_magneton_in_SI              = 927.40100783d-26,          ! J/T
+     & bohr_magneton_in_SI              = 927.40100657d-26,          ! J/T
      & electronvolt_in_SI               = elementary_charge_in_SI,   ! V
 c  conversion factor from Joule to inverse cm
      & Joule_in_inv_cm                  = 1d-2/Planck_constant_in_SI ! cm^-1/J
      &                                        /speed_of_light_in_SI,
 c  and these are energy equivalents (or prefactors for the magneton values) in inverse cm
-     & hartree_in_inv_cm                = 2.1947463136320d5, ! hartree_in_SI*Joule_in_inv_cm
      & Hz_in_inv_cm                     = 3.335640951d-11,   ! 1d-2/speed_of_light_in_SI
      & eV_in_inv_cm                     = 8.065543937d3,     ! electronvolt_in_SI*Joule_in_inv_cm
      & K_in_inv_cm                      = 0.6950348004d0,    ! Boltzmann_constant_in_SI*Joule_in_inv_cm
-     & bohr_magneton_in_inv_cm_per_T    = 0.46686447783d0,   ! bohr_magneton_in_SI*Joule_in_inv_cm
-     & nuclear_magneton_in_inv_cm_per_T = 2.54262341353d-4   ! bohr_magneton_in_inv_cm_per_T*electron_mass/proton_mass
+     & hartree_in_inv_cm                = 2.1947463136314d5, ! hartree_in_SI*Joule_in_inv_cm
+     & bohr_magneton_in_inv_cm_per_T    = 0.46686447719d0,   ! bohr_magneton_in_SI*Joule_in_inv_cm
+     & nuclear_magneton_in_inv_cm_per_T = 2.54262341009d-4   ! bohr_magneton_in_inv_cm_per_T*electron_mass/proton_mass
 
       double precision,parameter::
      & Angstrom_in_SI = 1d-10, ! m per Angstrom
