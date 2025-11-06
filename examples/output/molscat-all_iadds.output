@@ -3,11 +3,11 @@
  |                Non-reactive quantum scattering calculations                |
  |                     on atomic and molecular collisions                     |
  |                                                                            |
- |              Copyright (C) 2022 J. M. Hutson & C. R. Le Sueur              |
+ |              Copyright (C) 2025 J. M. Hutson & C. R. Le Sueur              |
  |                                                                            |
- |                               Version 2022.0                               |
+ |                               Version 2025.0                               |
  |                                                                            |
- |                       Run on 31 May 2022   at 10:20:44                     |
+ |                       Run on 06 Nov 2025   at 16:35:41                     |
  |                                                                            |
   ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
 
@@ -21,17 +21,14 @@
 
   J. M. Hutson & C. R. Le Sueur, MOLSCAT: a program for non-reactive quantum
   scattering calculation on atomic and molecular collisions,
-  Version 2022.0, https//github.com/molscat/molscat
+  Version 2025.0, https//github.com/molscat/molscat
 
   and the published paper:
 
   J. M. Hutson & C. R. Le Sueur, Comput. Phys. Commun., 241, 9-18 (2019).
 
 
-  USING CODATA 2018 RECOMMENDED VALUES OF FUNDAMENTAL PHYSICAL CONSTANTS
-
-  MEMORY ALLOCATED TO MAIN WORKING ARRAY IS   1000000 (8-BYTE) WORDS (    7.63 MB)
-  2 INTEGERS CAN BE STORED IN EACH WORD.
+  USING CODATA 2022 RECOMMENDED VALUES OF FUNDAMENTAL PHYSICAL CONSTANTS
 
   PRINT LEVEL (IPRINT) =  3     OTHER PRINT CONTROLS  ISIGPR = 1
 
@@ -109,7 +106,7 @@
   ALL LENGTHS ARE IN UNITS OF RM (  3.50000000 ANGSTROM ) UNLESS OTHERWISE STATED
 
   NO DUPLICATED SETS OF INDICES IN LAMBDA ARRAY
-  INTERACTION MATRIX USES   3 BLOCKS OF VL ARRAY FOR R-DEPENDENT TERMS IN POTENTIAL
+  INTERACTION MATRIX USES   6 BLOCKS OF VL ARRAY FOR R-DEPENDENT TERMS IN POTENTIAL
 
   ======================================================================================================================
 
@@ -164,7 +161,7 @@
 
   ======================================================================================================================
 
-  INITIALIZATION DONE.  TIME WAS   0.00 CPU SECS.       171 WORDS OF STORAGE USED.
+  INITIALIZATION DONE.  TIME WAS   0.00 CPU SECS.
 
   ==================================== model system: ITYP=2; no decoupling (IADD=0) ====================================
 
@@ -174,8 +171,8 @@
                        FOR JTOT =  10 AND SYMMETRY BLOCK =   1 AT ENERGY(  1) =  1250.000     CM-1
 
     F  I =      2              3
-    2       2.74032E-02    6.93518E-07
-    3       7.58333E-07    9.87493E-02
+    2       2.74036E-02    6.93550E-07
+    3       7.58368E-07    9.87492E-02
 
   FOR JTOT =   10, SYMMETRY BLOCK =  1, ENERGY(  1) =  1250.000    : MAX DIAG & OFF-DIAG =  9.87E-02 &   7.58E-07
 
@@ -183,8 +180,8 @@
                        FOR JTOT =  10 AND SYMMETRY BLOCK =   1 AT ENERGY(  2) =  1000.000     CM-1
 
     F  I =      2              3
-    2       8.97048E-02    2.62422E-07
-    3       2.30419E-07    1.00276E-01
+    2       8.97048E-02    2.62428E-07
+    3       2.30424E-07    1.00277E-01
 
   FOR JTOT =   10, SYMMETRY BLOCK =  1, ENERGY(  2) =  1000.000    : MAX DIAG & OFF-DIAG =  1.00E-01 &   2.62E-07
 
@@ -194,10 +191,10 @@
                        FOR JTOT =  10 AND SYMMETRY BLOCK =   2 AT ENERGY(  1) =  1250.000     CM-1
 
     F  I =      1              2              3              5
-    1       1.73081E-01    3.78339E-04    5.16669E-09    2.09215E-11
-    2       1.61929E-03    7.56976E-02    1.10257E-06    6.71410E-13
-    3       2.41801E-08    1.20562E-06    6.97678E-02    9.95511E-12
-    5       8.36861E-13    6.27486E-15    8.50864E-14    3.22979E+00
+    1       1.73081E-01    3.78338E-04    5.16667E-09    2.09187E-11
+    2       1.61929E-03    7.56976E-02    1.10257E-06    6.71283E-13
+    3       2.41800E-08    1.20561E-06    6.97678E-02    9.95512E-12
+    5       8.36747E-13    6.27367E-15    8.50865E-14    3.22979E+00
 
   FOR JTOT =   10, SYMMETRY BLOCK =  2, ENERGY(  1) =  1250.000    : MAX DIAG & OFF-DIAG =  3.23E+00 &   1.62E-03
 
@@ -205,9 +202,9 @@
                        FOR JTOT =  10 AND SYMMETRY BLOCK =   2 AT ENERGY(  2) =  1000.000     CM-1
 
     F  I =      1              2              3
-    1       1.86541E-01    3.35951E-04    1.27971E-09
-    2       1.37740E-03    3.80608E-02    4.17202E-07
-    3       4.60695E-09    3.66324E-07    1.77278E-01
+    1       1.86541E-01    3.35950E-04    1.27970E-09
+    2       1.37740E-03    3.80608E-02    4.17201E-07
+    3       4.60694E-09    3.66323E-07    1.77278E-01
 
   FOR JTOT =   10, SYMMETRY BLOCK =  2, ENERGY(  2) =  1000.000    : MAX DIAG & OFF-DIAG =  1.87E-01 &   1.38E-03
 
@@ -226,8 +223,8 @@
                        FOR JTOT =  20 AND SYMMETRY BLOCK =   1 AT ENERGY(  2) =  1000.000     CM-1
 
     F  I =      2              3
-    2       1.86732E-02    4.12482E-07
-    3       3.62179E-07    2.48254E-01
+    2       1.86732E-02    4.12481E-07
+    3       3.62178E-07    2.48254E-01
 
   FOR JTOT =   20, SYMMETRY BLOCK =  1, ENERGY(  2) =  1000.000    : MAX DIAG & OFF-DIAG =  2.48E-01 &   4.12E-07
 
@@ -237,10 +234,10 @@
                        FOR JTOT =  20 AND SYMMETRY BLOCK =   2 AT ENERGY(  1) =  1250.000     CM-1
 
     F  I =      1              2              3              5
-    1       1.61799E-04    7.09661E-04    8.65129E-09    9.51542E-12
-    2       3.03735E-03    6.44588E-02    1.89657E-06    3.05296E-13
-    3       4.04880E-08    2.07382E-06    1.67716E-01    7.11458E-12
-    5       3.80617E-13    2.85324E-15    6.08084E-14    7.49172E+00
+    1       1.61810E-04    7.09661E-04    8.65127E-09    9.51366E-12
+    2       3.03735E-03    6.44587E-02    1.89656E-06    3.05228E-13
+    3       4.04879E-08    2.07381E-06    1.67716E-01    7.11458E-12
+    5       3.80546E-13    2.85259E-15    6.08084E-14    7.49172E+00
 
   FOR JTOT =   20, SYMMETRY BLOCK =  2, ENERGY(  1) =  1250.000    : MAX DIAG & OFF-DIAG =  7.49E+00 &   3.04E-03
 
@@ -248,9 +245,9 @@
                        FOR JTOT =  20 AND SYMMETRY BLOCK =   2 AT ENERGY(  2) =  1000.000     CM-1
 
     F  I =      1              2              3
-    1       5.92765E-03    6.21247E-04    1.95890E-09
-    2       2.54711E-03    2.56944E-01    6.60609E-07
-    3       7.05206E-09    5.80047E-07    3.39709E-01
+    1       5.92764E-03    6.21246E-04    1.95890E-09
+    2       2.54711E-03    2.56944E-01    6.60608E-07
+    3       7.05204E-09    5.80046E-07    3.39709E-01
 
   FOR JTOT =   20, SYMMETRY BLOCK =  2, ENERGY(  2) =  1000.000    : MAX DIAG & OFF-DIAG =  3.40E-01 &   2.55E-03
 
@@ -261,7 +258,7 @@
 
     F  I =      2              3
     2       1.62651E-01    1.39284E-06
-    3       1.52302E-06    1.92776E-01
+    3       1.52301E-06    1.92776E-01
 
   FOR JTOT =   30, SYMMETRY BLOCK =  1, ENERGY(  1) =  1250.000    : MAX DIAG & OFF-DIAG =  1.93E-01 &   1.52E-06
 
@@ -270,7 +267,7 @@
 
     F  I =      2              3
     2       6.38587E-02    4.13058E-07
-    3       3.62686E-07    4.43631E-01
+    3       3.62685E-07    4.43631E-01
 
   FOR JTOT =   30, SYMMETRY BLOCK =  1, ENERGY(  2) =  1000.000    : MAX DIAG & OFF-DIAG =  4.44E-01 &   4.13E-07
 
@@ -280,10 +277,10 @@
                        FOR JTOT =  30 AND SYMMETRY BLOCK =   2 AT ENERGY(  1) =  1250.000     CM-1
 
     F  I =      1              2              3              5
-    1       5.49534E-02    9.86011E-04    9.83349E-09    1.95753E-13
-    2       4.22013E-03    1.42768E-01    2.25555E-06    1.23420E-13
-    3       4.60208E-08    2.46635E-06    3.45136E-01    1.26367E-12
-    5       7.83013E-15    1.15346E-15    1.08006E-14    2.24625E-01
+    1       5.49531E-02    9.86010E-04    9.83347E-09    1.95636E-13
+    2       4.22012E-03    1.42768E-01    2.25554E-06    1.23405E-13
+    3       4.60206E-08    2.46634E-06    3.45136E-01    1.26368E-12
+    5       7.82545E-15    1.15332E-15    1.08006E-14    2.24625E-01
 
   FOR JTOT =   30, SYMMETRY BLOCK =  2, ENERGY(  1) =  1250.000    : MAX DIAG & OFF-DIAG =  3.45E-01 &   4.22E-03
 
@@ -291,9 +288,9 @@
                        FOR JTOT =  30 AND SYMMETRY BLOCK =   2 AT ENERGY(  2) =  1000.000     CM-1
 
     F  I =      1              2              3
-    1       2.44471E-02    8.41494E-04    1.88355E-09
-    2       3.45012E-03    2.93903E-01    6.73293E-07
-    3       6.78076E-09    5.91184E-07    3.81087E-01
+    1       2.44471E-02    8.41493E-04    1.88354E-09
+    2       3.45012E-03    2.93903E-01    6.73291E-07
+    3       6.78075E-09    5.91182E-07    3.81087E-01
 
   FOR JTOT =   30, SYMMETRY BLOCK =  2, ENERGY(  2) =  1000.000    : MAX DIAG & OFF-DIAG =  3.81E-01 &   3.45E-03
 
@@ -312,7 +309,7 @@
                        FOR JTOT =  40 AND SYMMETRY BLOCK =   1 AT ENERGY(  2) =  1000.000     CM-1
 
     F  I =      2              3
-    2       2.96466E-01    2.92648E-07
+    2       2.96466E-01    2.92647E-07
     3       2.56959E-07    5.07683E-01
 
   FOR JTOT =   40, SYMMETRY BLOCK =  1, ENERGY(  2) =  1000.000    : MAX DIAG & OFF-DIAG =  5.08E-01 &   2.93E-07
@@ -323,10 +320,10 @@
                        FOR JTOT =  40 AND SYMMETRY BLOCK =   2 AT ENERGY(  1) =  1250.000     CM-1
 
     F  I =      1              2              3              5
-    1       1.16470E-01    1.18368E-03    8.66889E-09    9.81561E-14
-    2       5.06614E-03    2.43420E-01    2.12585E-06    4.00421E-15
-    3       4.05704E-08    2.32453E-06    3.56981E-01    3.16728E-15
-    5       3.92624E-15    3.74225E-17    2.70707E-17    1.62824E+01
+    1       1.16470E-01    1.18368E-03    8.66887E-09    9.81520E-14
+    2       5.06614E-03    2.43420E-01    2.12584E-06    4.00411E-15
+    3       4.05703E-08    2.32452E-06    3.56981E-01    3.16728E-15
+    5       3.92608E-15    3.74216E-17    2.70708E-17    1.62824E+01
 
   FOR JTOT =   40, SYMMETRY BLOCK =  2, ENERGY(  1) =  1250.000    : MAX DIAG & OFF-DIAG =  1.63E+01 &   5.07E-03
 
@@ -334,9 +331,9 @@
                        FOR JTOT =  40 AND SYMMETRY BLOCK =   2 AT ENERGY(  2) =  1000.000     CM-1
 
     F  I =      1              2              3
-    1       5.69089E-01    9.70752E-04    1.25909E-09
-    2       3.98008E-03    3.36195E-01    4.91525E-07
-    3       4.53274E-09    4.31583E-07    6.80602E-01
+    1       5.69089E-01    9.70751E-04    1.25909E-09
+    2       3.98008E-03    3.36195E-01    4.91524E-07
+    3       4.53273E-09    4.31582E-07    6.80602E-01
 
   FOR JTOT =   40, SYMMETRY BLOCK =  2, ENERGY(  2) =  1000.000    : MAX DIAG & OFF-DIAG =  6.81E-01 &   3.98E-03
 
@@ -357,49 +354,49 @@
    ENERGY (CM-1)    JTOTL  JSTEP  JTOTU      F    I         SIG(F,I)
    1250.000000         10     10     40      1    1          3.44666      
    1250.000000         10     10     40      2    1         0.139429      
-   1250.000000         10     10     40      3    1         1.512593E-06  
-   1250.000000         10     10     40      5    1         1.229235E-11  
+   1250.000000         10     10     40      3    1         1.512589E-06  
+   1250.000000         10     10     40      5    1         1.229045E-11  
 
-   1250.000000         10     10     40      1    2         3.257689E-02  
+   1250.000000         10     10     40      1    2         3.257688E-02  
    1250.000000         10     10     40      2    2          10.5778      
-   1250.000000         10     10     40      3    2         1.305539E-04  
-   1250.000000         10     10     40      5    2         1.031898E-13  
+   1250.000000         10     10     40      3    2         1.305538E-04  
+   1250.000000         10     10     40      5    2         1.031701E-13  
 
-   1250.000000         10     10     40      1    3         3.232036E-07  
-   1250.000000         10     10     40      2    3         1.193955E-04  
+   1250.000000         10     10     40      1    3         3.232028E-07  
+   1250.000000         10     10     40      2    3         1.193953E-04  
    1250.000000         10     10     40      3    3          17.4322      
-   1250.000000         10     10     40      5    3         1.567225E-12  
+   1250.000000         10     10     40      5    3         1.567226E-12  
 
-   1250.000000         10     10     40      1    5         3.073086E-10  
-   1250.000000         10     10     40      2    5         1.104131E-11  
-   1250.000000         10     10     40      3    5         1.833653E-10  
+   1250.000000         10     10     40      1    5         3.072611E-10  
+   1250.000000         10     10     40      2    5         1.103920E-11  
+   1250.000000         10     10     40      3    5         1.833654E-10  
    1250.000000         10     10     40      5    5          272.285      
 
   TOTAL INELASTIC INTEGRAL CROSS SECTIONS IN ANGSTROM**2 FROM LEVEL
-   1.39431E-01                                                 1
-   3.27074E-02                                                 2
-   1.19719E-04                                                 3
-   5.01715E-10                                                 5
+   1.39431E-01                                                  1
+   3.27074E-02                                                  2
+   1.19719E-04                                                  3
+   5.01666E-10                                                  5
 
 
    ENERGY (CM-1)    JTOTL  JSTEP  JTOTU      F    I         SIG(F,I)
    1000.000000         10     10     40      1    1          7.86004      
    1000.000000         10     10     40      2    1         0.113547      
-   1000.000000         10     10     40      3    1         2.297251E-07  
+   1000.000000         10     10     40      3    1         2.297246E-07  
 
-   1000.000000         10     10     40      1    2         2.769443E-02  
+   1000.000000         10     10     40      1    2         2.769442E-02  
    1000.000000         10     10     40      2    2          13.9380      
-   1000.000000         10     10     40      3    2         3.181381E-05  
+   1000.000000         10     10     40      3    2         3.181379E-05  
 
-   1000.000000         10     10     40      1    3         6.381252E-08  
-   1000.000000         10     10     40      2    3         3.623239E-05  
+   1000.000000         10     10     40      1    3         6.381239E-08  
+   1000.000000         10     10     40      2    3         3.623238E-05  
    1000.000000         10     10     40      3    3          28.7852      
 
 
   TOTAL INELASTIC INTEGRAL CROSS SECTIONS IN ANGSTROM**2 FROM LEVEL
-   1.13547E-01                                                 1
-   2.77262E-02                                                 2
-   3.62962E-05                                                 3
+   1.13547E-01                                                  1
+   2.77262E-02                                                  2
+   3.62962E-05                                                  3
 
 
 
@@ -408,12 +405,11 @@
  |                Non-reactive quantum scattering calculations                |
  |                     on atomic and molecular collisions                     |
  |                                                                            |
- |              Copyright (C) 2022 J. M. Hutson & C. R. Le Sueur              |
+ |              Copyright (C) 2025 J. M. Hutson & C. R. Le Sueur              |
  |                                                                            |
- |                               Version 2022.0                               |
+ |                               Version 2025.0                               |
  |                                                                            |
- |                    This run used       0.52 cpu secs and                   |
- |               3388 of the allocated   1000000 words of storage             |
+ |                      This run used       0.39 cpu secs                     |
  |                                                                            |
   ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
   ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
@@ -421,11 +417,11 @@
  |                Non-reactive quantum scattering calculations                |
  |                     on atomic and molecular collisions                     |
  |                                                                            |
- |              Copyright (C) 2022 J. M. Hutson & C. R. Le Sueur              |
+ |              Copyright (C) 2025 J. M. Hutson & C. R. Le Sueur              |
  |                                                                            |
- |                               Version 2022.0                               |
+ |                               Version 2025.0                               |
  |                                                                            |
- |                       Run on 31 May 2022   at 10:20:44                     |
+ |                       Run on 06 Nov 2025   at 16:35:41                     |
  |                                                                            |
   ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
 
@@ -439,17 +435,14 @@
 
   J. M. Hutson & C. R. Le Sueur, MOLSCAT: a program for non-reactive quantum
   scattering calculation on atomic and molecular collisions,
-  Version 2022.0, https//github.com/molscat/molscat
+  Version 2025.0, https//github.com/molscat/molscat
 
   and the published paper:
 
   J. M. Hutson & C. R. Le Sueur, Comput. Phys. Commun., 241, 9-18 (2019).
 
 
-  USING CODATA 2018 RECOMMENDED VALUES OF FUNDAMENTAL PHYSICAL CONSTANTS
-
-  MEMORY ALLOCATED TO MAIN WORKING ARRAY IS   1000000 (8-BYTE) WORDS (    7.63 MB)
-  2 INTEGERS CAN BE STORED IN EACH WORD.
+  USING CODATA 2022 RECOMMENDED VALUES OF FUNDAMENTAL PHYSICAL CONSTANTS
 
   PRINT LEVEL (IPRINT) =  3     OTHER PRINT CONTROLS  ISIGPR = 1
 
@@ -531,7 +524,7 @@
   ALL LENGTHS ARE IN UNITS OF RM (  3.50000000 ANGSTROM ) UNLESS OTHERWISE STATED
 
   NO DUPLICATED SETS OF INDICES IN LAMBDA ARRAY
-  INTERACTION MATRIX USES   3 BLOCKS OF VL ARRAY FOR R-DEPENDENT TERMS IN POTENTIAL
+  INTERACTION MATRIX USES   6 BLOCKS OF VL ARRAY FOR R-DEPENDENT TERMS IN POTENTIAL
 
   ======================================================================================================================
 
@@ -584,7 +577,7 @@
 
   ======================================================================================================================
 
-  INITIALIZATION DONE.  TIME WAS   0.00 CPU SECS.       171 WORDS OF STORAGE USED.
+  INITIALIZATION DONE.  TIME WAS   0.00 CPU SECS.
 
   ================================ model system: ITYP=2; effective potential (IADD=10) =================================
 
@@ -594,10 +587,10 @@
                        FOR JTOT =  10 AND SYMMETRY BLOCK =   1 AT ENERGY(  1) =  1250.000     CM-1
 
     F  I =      1              2              3              5
-    1       1.76107E-01    2.27443E-04    1.99758E-09    1.19091E-11
-    2       9.73456E-04    1.64349E-01    1.52441E-06    4.56381E-13
-    3       9.34867E-09    1.66687E-06    1.40082E-01    5.59824E-12
-    5       4.76365E-13    4.26525E-15    4.78482E-14    3.36826E+00
+    1       1.76107E-01    2.27443E-04    1.99757E-09    1.19072E-11
+    2       9.73456E-04    1.64349E-01    1.52440E-06    4.56312E-13
+    3       9.34865E-09    1.66687E-06    1.40082E-01    5.59824E-12
+    5       4.76290E-13    4.26460E-15    4.78482E-14    3.36826E+00
 
   FOR JTOT =   10, SYMMETRY BLOCK =  1, ENERGY(  1) =  1250.000    : MAX DIAG & OFF-DIAG =  3.37E+00 &   9.73E-04
 
@@ -605,9 +598,9 @@
                        FOR JTOT =  10 AND SYMMETRY BLOCK =   1 AT ENERGY(  2) =  1000.000     CM-1
 
     F  I =      1              2              3
-    1       1.91458E-01    1.92560E-04    4.55858E-10
-    2       7.89495E-04    1.85391E-02    5.51626E-07
-    3       1.64109E-09    4.84354E-07    4.05380E-01
+    1       1.91458E-01    1.92560E-04    4.55857E-10
+    2       7.89494E-04    1.85391E-02    5.51625E-07
+    3       1.64109E-09    4.84353E-07    4.05380E-01
 
   FOR JTOT =   10, SYMMETRY BLOCK =  1, ENERGY(  2) =  1000.000    : MAX DIAG & OFF-DIAG =  4.05E-01 &   7.89E-04
 
@@ -617,10 +610,10 @@
                        FOR JTOT =  20 AND SYMMETRY BLOCK =   1 AT ENERGY(  1) =  1250.000     CM-1
 
     F  I =      1              2              3              5
-    1       6.05367E-04    4.21611E-04    3.15196E-09    8.69239E-12
-    2       1.80449E-03    2.32160E-02    2.54305E-06    2.60014E-13
-    3       1.47512E-08    2.78072E-06    3.55571E-02    3.96857E-12
-    5       3.47695E-13    2.43004E-15    3.39194E-14    7.68424E+00
+    1       6.05389E-04    4.21611E-04    3.15195E-09    8.69090E-12
+    2       1.80449E-03    2.32159E-02    2.54304E-06    2.59974E-13
+    3       1.47511E-08    2.78070E-06    3.55571E-02    3.96857E-12
+    5       3.47636E-13    2.42966E-15    3.39194E-14    7.68424E+00
 
   FOR JTOT =   20, SYMMETRY BLOCK =  1, ENERGY(  1) =  1250.000    : MAX DIAG & OFF-DIAG =  7.68E+00 &   1.80E-03
 
@@ -628,9 +621,9 @@
                        FOR JTOT =  20 AND SYMMETRY BLOCK =   1 AT ENERGY(  2) =  1000.000     CM-1
 
     F  I =      1              2              3
-    1       4.11327E-03    3.50498E-04    6.39609E-10
-    2       1.43704E-03    5.11892E-01    8.33754E-07
-    3       2.30259E-09    7.32077E-07    3.44447E-01
+    1       4.11326E-03    3.50498E-04    6.39607E-10
+    2       1.43704E-03    5.11892E-01    8.33752E-07
+    3       2.30259E-09    7.32075E-07    3.44447E-01
 
   FOR JTOT =   20, SYMMETRY BLOCK =  1, ENERGY(  2) =  1000.000    : MAX DIAG & OFF-DIAG =  5.12E-01 &   1.44E-03
 
@@ -640,10 +633,10 @@
                        FOR JTOT =  30 AND SYMMETRY BLOCK =   1 AT ENERGY(  1) =  1250.000     CM-1
 
     F  I =      1              2              3              5
-    1       4.89563E-02    5.73820E-04    3.23615E-09    2.13236E-12
-    2       2.45595E-03    9.52631E-02    2.87333E-06    2.09387E-14
-    3       1.51452E-08    3.14186E-06    8.49285E-02    6.90259E-13
-    5       8.52943E-14    1.95689E-16    5.89965E-15    3.34466E-01
+    1       4.89561E-02    5.73820E-04    3.23614E-09    2.13202E-12
+    2       2.45595E-03    9.52630E-02    2.87332E-06    2.09346E-14
+    3       1.51451E-08    3.14185E-06    8.49286E-02    6.90259E-13
+    5       8.52806E-14    1.95651E-16    5.89965E-15    3.34466E-01
 
   FOR JTOT =   30, SYMMETRY BLOCK =  1, ENERGY(  1) =  1250.000    : MAX DIAG & OFF-DIAG =  3.34E-01 &   2.46E-03
 
@@ -651,9 +644,9 @@
                        FOR JTOT =  30 AND SYMMETRY BLOCK =   1 AT ENERGY(  2) =  1000.000     CM-1
 
     F  I =      1              2              3
-    1       2.00525E-02    4.61720E-04    5.28038E-10
-    2       1.89305E-03    6.86494E-01    7.81844E-07
-    3       1.90094E-09    6.86497E-07    1.36089E+00
+    1       2.00524E-02    4.61720E-04    5.28037E-10
+    2       1.89305E-03    6.86494E-01    7.81842E-07
+    3       1.90093E-09    6.86495E-07    1.36089E+00
 
   FOR JTOT =   30, SYMMETRY BLOCK =  1, ENERGY(  2) =  1000.000    : MAX DIAG & OFF-DIAG =  1.36E+00 &   1.89E-03
 
@@ -663,10 +656,10 @@
                        FOR JTOT =  40 AND SYMMETRY BLOCK =   1 AT ENERGY(  1) =  1250.000     CM-1
 
     F  I =      1              2              3              5
-    1       1.28592E-01    6.67435E-04    2.43738E-09    1.36301E-13
-    2       2.85662E-03    2.69702E-01    2.49235E-06    8.57068E-15
-    3       1.14069E-08    2.72528E-06    7.00619E-01    1.66692E-15
-    5       5.45203E-15    8.00998E-17    1.42472E-17    1.61411E+01
+    1       1.28592E-01    6.67435E-04    2.43738E-09    1.36305E-13
+    2       2.85662E-03    2.69702E-01    2.49234E-06    8.57077E-15
+    3       1.14069E-08    2.72527E-06    7.00619E-01    1.66693E-15
+    5       5.45218E-15    8.01006E-17    1.42473E-17    1.61411E+01
 
   FOR JTOT =   40, SYMMETRY BLOCK =  1, ENERGY(  1) =  1250.000    : MAX DIAG & OFF-DIAG =  1.61E+01 &   2.86E-03
 
@@ -675,8 +668,8 @@
 
     F  I =      1              2              3
     1       5.88038E-01    5.09933E-04    2.76012E-10
-    2       2.09072E-03    1.09365E-01    4.95989E-07
-    3       9.93643E-10    4.35503E-07    1.58370E+00
+    2       2.09072E-03    1.09365E-01    4.95988E-07
+    3       9.93642E-10    4.35502E-07    1.58370E+00
 
   FOR JTOT =   40, SYMMETRY BLOCK =  1, ENERGY(  2) =  1000.000    : MAX DIAG & OFF-DIAG =  1.58E+00 &   2.09E-03
 
@@ -696,50 +689,50 @@
 
    ENERGY (CM-1)    JTOTL  JSTEP  JTOTU      F    I         SIG(F,I)
    1250.000000         10     10     40      1    1          3.54260      
-   1250.000000         10     10     40      2    1         8.090523E-02  
-   1250.000000         10     10     40      3    1         5.065195E-07  
-   1250.000000         10     10     40      5    1         9.148068E-12  
+   1250.000000         10     10     40      2    1         8.090520E-02  
+   1250.000000         10     10     40      3    1         5.065181E-07  
+   1250.000000         10     10     40      5    1         9.146587E-12  
 
-   1250.000000         10     10     40      1    2         1.890309E-02  
+   1250.000000         10     10     40      1    2         1.890308E-02  
    1250.000000         10     10     40      2    2          5.52530      
-   1250.000000         10     10     40      3    2         1.031473E-04  
-   1250.000000         10     10     40      5    2         6.971071E-14  
+   1250.000000         10     10     40      3    2         1.031470E-04  
+   1250.000000         10     10     40      5    2         6.970009E-14  
 
-   1250.000000         10     10     40      1    3         1.082307E-07  
-   1250.000000         10     10     40      2    3         9.433132E-05  
+   1250.000000         10     10     40      1    3         1.082304E-07  
+   1250.000000         10     10     40      2    3         9.433099E-05  
    1250.000000         10     10     40      3    3          9.61187      
-   1250.000000         10     10     40      5    3         8.768155E-13  
+   1250.000000         10     10     40      5    3         8.768158E-13  
 
-   1250.000000         10     10     40      1    5         2.287017E-10  
-   1250.000000         10     10     40      2    5         7.459046E-12  
-   1250.000000         10     10     40      3    5         1.025874E-10  
+   1250.000000         10     10     40      1    5         2.286647E-10  
+   1250.000000         10     10     40      2    5         7.457910E-12  
+   1250.000000         10     10     40      3    5         1.025875E-10  
    1250.000000         10     10     40      5    5          275.281      
 
   TOTAL INELASTIC INTEGRAL CROSS SECTIONS IN ANGSTROM**2 FROM LEVEL
-   8.09057E-02                                                 1
-   1.90062E-02                                                 2
-   9.44396E-05                                                 3
-   3.38748E-10                                                 5
+   8.09057E-02                                                  1
+   1.90062E-02                                                  2
+   9.44392E-05                                                  3
+   3.38710E-10                                                  5
 
 
    ENERGY (CM-1)    JTOTL  JSTEP  JTOTU      F    I         SIG(F,I)
-   1000.000000         10     10     40      1    1          8.03661      
-   1000.000000         10     10     40      2    1         6.210315E-02  
-   1000.000000         10     10     40      3    1         6.838261E-08  
+   1000.000000         10     10     40      1    1          8.03662      
+   1000.000000         10     10     40      2    1         6.210312E-02  
+   1000.000000         10     10     40      3    1         6.838246E-08  
 
-   1000.000000         10     10     40      1    2         1.514711E-02  
+   1000.000000         10     10     40      1    2         1.514710E-02  
    1000.000000         10     10     40      2    2          13.2629      
-   1000.000000         10     10     40      3    2         2.338431E-05  
+   1000.000000         10     10     40      3    2         2.338425E-05  
 
-   1000.000000         10     10     40      1    3         1.899517E-08  
-   1000.000000         10     10     40      2    3         2.663213E-05  
+   1000.000000         10     10     40      1    3         1.899513E-08  
+   1000.000000         10     10     40      2    3         2.663207E-05  
    1000.000000         10     10     40      3    3          36.9442      
 
 
   TOTAL INELASTIC INTEGRAL CROSS SECTIONS IN ANGSTROM**2 FROM LEVEL
-   6.21032E-02                                                 1
-   1.51705E-02                                                 2
-   2.66511E-05                                                 3
+   6.21032E-02                                                  1
+   1.51705E-02                                                  2
+   2.66511E-05                                                  3
 
 
 
@@ -748,12 +741,11 @@
  |                Non-reactive quantum scattering calculations                |
  |                     on atomic and molecular collisions                     |
  |                                                                            |
- |              Copyright (C) 2022 J. M. Hutson & C. R. Le Sueur              |
+ |              Copyright (C) 2025 J. M. Hutson & C. R. Le Sueur              |
  |                                                                            |
- |                               Version 2022.0                               |
+ |                               Version 2025.0                               |
  |                                                                            |
- |                    This run used       0.07 cpu secs and                   |
- |                536 of the allocated   1000000 words of storage             |
+ |                      This run used       0.05 cpu secs                     |
  |                                                                            |
   ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
   ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
@@ -761,11 +753,11 @@
  |                Non-reactive quantum scattering calculations                |
  |                     on atomic and molecular collisions                     |
  |                                                                            |
- |              Copyright (C) 2022 J. M. Hutson & C. R. Le Sueur              |
+ |              Copyright (C) 2025 J. M. Hutson & C. R. Le Sueur              |
  |                                                                            |
- |                               Version 2022.0                               |
+ |                               Version 2025.0                               |
  |                                                                            |
- |                       Run on 31 May 2022   at 10:20:44                     |
+ |                       Run on 06 Nov 2025   at 16:35:41                     |
  |                                                                            |
   ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
 
@@ -779,17 +771,14 @@
 
   J. M. Hutson & C. R. Le Sueur, MOLSCAT: a program for non-reactive quantum
   scattering calculation on atomic and molecular collisions,
-  Version 2022.0, https//github.com/molscat/molscat
+  Version 2025.0, https//github.com/molscat/molscat
 
   and the published paper:
 
   J. M. Hutson & C. R. Le Sueur, Comput. Phys. Commun., 241, 9-18 (2019).
 
 
-  USING CODATA 2018 RECOMMENDED VALUES OF FUNDAMENTAL PHYSICAL CONSTANTS
-
-  MEMORY ALLOCATED TO MAIN WORKING ARRAY IS   1000000 (8-BYTE) WORDS (    7.63 MB)
-  2 INTEGERS CAN BE STORED IN EACH WORD.
+  USING CODATA 2022 RECOMMENDED VALUES OF FUNDAMENTAL PHYSICAL CONSTANTS
 
   PRINT LEVEL (IPRINT) =  3     OTHER PRINT CONTROLS  ISIGPR = 1
 
@@ -880,7 +869,7 @@
   ALL LENGTHS ARE IN UNITS OF RM (  3.50000000 ANGSTROM ) UNLESS OTHERWISE STATED
 
   NO DUPLICATED SETS OF INDICES IN LAMBDA ARRAY
-  INTERACTION MATRIX USES   3 BLOCKS OF VL ARRAY FOR R-DEPENDENT TERMS IN POTENTIAL
+  INTERACTION MATRIX USES   6 BLOCKS OF VL ARRAY FOR R-DEPENDENT TERMS IN POTENTIAL
 
   ======================================================================================================================
 
@@ -935,7 +924,7 @@
 
   ======================================================================================================================
 
-  INITIALIZATION DONE.  TIME WAS   0.00 CPU SECS.       171 WORDS OF STORAGE USED.
+  INITIALIZATION DONE.  TIME WAS   0.00 CPU SECS.
 
   =================================== model system: ITYP=2; coupled states (IADD=20) ===================================
 
@@ -945,10 +934,10 @@
                        FOR JTOT =  10 AND SYMMETRY BLOCK =   1 AT ENERGY(  1) =  1250.000     CM-1
 
     F  I =      1              2              3              5
-    1       1.73044E-01    3.82138E-04    5.38230E-09    1.09295E-11
-    2       1.63555E-03    1.86600E-02    4.19856E-07    7.54966E-13
-    3       2.51892E-08    4.59095E-07    4.20791E-03    9.61492E-12
-    5       4.37179E-13    7.05576E-15    8.21788E-14    3.22916E+00
+    1       1.73044E-01    3.82137E-04    5.38229E-09    1.09274E-11
+    2       1.63555E-03    1.86600E-02    4.19854E-07    7.54838E-13
+    3       2.51891E-08    4.59093E-07    4.20791E-03    9.61492E-12
+    5       4.37097E-13    7.05456E-15    8.21788E-14    3.22916E+00
 
   FOR JTOT =   10, SYMMETRY BLOCK =  1, ENERGY(  1) =  1250.000    : MAX DIAG & OFF-DIAG =  3.23E+00 &   1.64E-03
 
@@ -956,9 +945,9 @@
                        FOR JTOT =  10 AND SYMMETRY BLOCK =   1 AT ENERGY(  2) =  1000.000     CM-1
 
     F  I =      1              2              3
-    1       1.86496E-01    3.39650E-04    1.33927E-09
-    2       1.39256E-03    1.87666E-02    1.59800E-07
-    3       4.82136E-09    1.40312E-07    2.22081E-02
+    1       1.86496E-01    3.39650E-04    1.33926E-09
+    2       1.39256E-03    1.87667E-02    1.59800E-07
+    3       4.82135E-09    1.40312E-07    2.22081E-02
 
   FOR JTOT =   10, SYMMETRY BLOCK =  1, ENERGY(  2) =  1000.000    : MAX DIAG & OFF-DIAG =  1.86E-01 &   1.39E-03
 
@@ -968,8 +957,8 @@
                        FOR JTOT =  10 AND SYMMETRY BLOCK =   2 AT ENERGY(  1) =  1250.000     CM-1
 
     F  I =      2              3
-    2       4.37756E-02    7.71363E-07
-    3       8.43453E-07    9.78156E-03
+    2       4.37751E-02    7.71402E-07
+    3       8.43496E-07    9.78157E-03
 
   FOR JTOT =   10, SYMMETRY BLOCK =  2, ENERGY(  1) =  1250.000    : MAX DIAG & OFF-DIAG =  4.38E-02 &   8.43E-07
 
@@ -977,8 +966,8 @@
                        FOR JTOT =  10 AND SYMMETRY BLOCK =   2 AT ENERGY(  2) =  1000.000     CM-1
 
     F  I =      2              3
-    2       3.04808E-02    2.92975E-07
-    3       2.57246E-07    4.79779E-02
+    2       3.04808E-02    2.92982E-07
+    3       2.57252E-07    4.79779E-02
 
   FOR JTOT =   10, SYMMETRY BLOCK =  2, ENERGY(  2) =  1000.000    : MAX DIAG & OFF-DIAG =  4.80E-02 &   2.93E-07
 
@@ -988,8 +977,8 @@
                        FOR JTOT =  10 AND SYMMETRY BLOCK =   3 AT ENERGY(  1) =  1250.000     CM-1
 
     F  I =      2              3
-    2       6.74071E-02    6.74401E-07
-    3       7.37429E-07    1.44032E-02
+    2       6.74067E-02    6.74426E-07
+    3       7.37457E-07    1.44033E-02
 
   FOR JTOT =   10, SYMMETRY BLOCK =  3, ENERGY(  1) =  1250.000    : MAX DIAG & OFF-DIAG =  6.74E-02 &   7.37E-07
 
@@ -997,8 +986,8 @@
                        FOR JTOT =  10 AND SYMMETRY BLOCK =   3 AT ENERGY(  2) =  1000.000     CM-1
 
     F  I =      2              3
-    2       6.25915E-03    2.56965E-07
-    3       2.25628E-07    5.89491E-02
+    2       6.25915E-03    2.56971E-07
+    3       2.25633E-07    5.89490E-02
 
   FOR JTOT =   10, SYMMETRY BLOCK =  3, ENERGY(  2) =  1000.000    : MAX DIAG & OFF-DIAG =  5.89E-02 &   2.57E-07
 
@@ -1008,10 +997,10 @@
                        FOR JTOT =  20 AND SYMMETRY BLOCK =   1 AT ENERGY(  1) =  1250.000     CM-1
 
     F  I =      1              2              3              5
-    1       1.60479E-04    7.11650E-04    8.55459E-09    6.35206E-12
-    2       3.04586E-03    2.53818E-02    7.03818E-07    4.53405E-13
-    3       4.00355E-08    7.69596E-07    2.28405E-02    6.77348E-12
-    5       2.54082E-13    4.23743E-15    5.78930E-14    7.49115E+00
+    1       1.60489E-04    7.11650E-04    8.55457E-09    6.35062E-12
+    2       3.04586E-03    2.53818E-02    7.03815E-07    4.53326E-13
+    3       4.00354E-08    7.69592E-07    2.28405E-02    6.77348E-12
+    5       2.54025E-13    4.23669E-15    5.78930E-14    7.49115E+00
 
   FOR JTOT =   20, SYMMETRY BLOCK =  1, ENERGY(  1) =  1250.000    : MAX DIAG & OFF-DIAG =  7.49E+00 &   3.05E-03
 
@@ -1019,9 +1008,9 @@
                        FOR JTOT =  20 AND SYMMETRY BLOCK =   1 AT ENERGY(  2) =  1000.000     CM-1
 
     F  I =      1              2              3
-    1       5.93712E-03    6.22056E-04    1.90270E-09
-    2       2.55043E-03    1.00843E-01    2.43427E-07
-    3       6.84972E-09    2.13741E-07    5.61262E-03
+    1       5.93710E-03    6.22056E-04    1.90270E-09
+    2       2.55043E-03    1.00843E-01    2.43426E-07
+    3       6.84970E-09    2.13740E-07    5.61262E-03
 
   FOR JTOT =   20, SYMMETRY BLOCK =  1, ENERGY(  2) =  1000.000    : MAX DIAG & OFF-DIAG =  1.01E-01 &   2.55E-03
 
@@ -1031,7 +1020,7 @@
                        FOR JTOT =  20 AND SYMMETRY BLOCK =   2 AT ENERGY(  1) =  1250.000     CM-1
 
     F  I =      2              3
-    2       4.14549E-02    1.29031E-06
+    2       4.14548E-02    1.29031E-06
     3       1.41090E-06    4.19294E-02
 
   FOR JTOT =   20, SYMMETRY BLOCK =  2, ENERGY(  1) =  1250.000    : MAX DIAG & OFF-DIAG =  4.19E-02 &   1.41E-06
@@ -1040,8 +1029,8 @@
                        FOR JTOT =  20 AND SYMMETRY BLOCK =   2 AT ENERGY(  2) =  1000.000     CM-1
 
     F  I =      2              3
-    2       2.08938E-01    4.47398E-07
-    3       3.92837E-07    1.44531E-02
+    2       2.08938E-01    4.47397E-07
+    3       3.92836E-07    1.44531E-02
 
   FOR JTOT =   20, SYMMETRY BLOCK =  2, ENERGY(  2) =  1000.000    : MAX DIAG & OFF-DIAG =  2.09E-01 &   4.47E-07
 
@@ -1051,7 +1040,7 @@
                        FOR JTOT =  20 AND SYMMETRY BLOCK =   3 AT ENERGY(  1) =  1250.000     CM-1
 
     F  I =      2              3
-    2       7.84364E-03    1.12812E-06
+    2       7.84359E-03    1.12811E-06
     3       1.23355E-06    3.12682E-02
 
   FOR JTOT =   20, SYMMETRY BLOCK =  3, ENERGY(  1) =  1250.000    : MAX DIAG & OFF-DIAG =  3.13E-02 &   1.23E-06
@@ -1060,8 +1049,8 @@
                        FOR JTOT =  20 AND SYMMETRY BLOCK =   3 AT ENERGY(  2) =  1000.000     CM-1
 
     F  I =      2              3
-    2       2.03619E-01    3.90408E-07
-    3       3.42797E-07    2.64048E-02
+    2       2.03619E-01    3.90407E-07
+    3       3.42796E-07    2.64048E-02
 
   FOR JTOT =   20, SYMMETRY BLOCK =  3, ENERGY(  2) =  1000.000    : MAX DIAG & OFF-DIAG =  2.04E-01 &   3.90E-07
 
@@ -1071,10 +1060,10 @@
                        FOR JTOT =  30 AND SYMMETRY BLOCK =   1 AT ENERGY(  1) =  1250.000     CM-1
 
     F  I =      1              2              3              5
-    1       5.49894E-02    9.76202E-04    8.90171E-09    3.25365E-12
-    2       4.17814E-03    5.70983E-02    8.02190E-07    3.91513E-14
-    3       4.16600E-08    8.77161E-07    3.78966E-04    1.17188E-12
-    5       1.30146E-13    3.65900E-16    1.00161E-14    2.24540E-01
+    1       5.49891E-02    9.76201E-04    8.90169E-09    3.25318E-12
+    2       4.17814E-03    5.70982E-02    8.02186E-07    3.91433E-14
+    3       4.16599E-08    8.77157E-07    3.78965E-04    1.17188E-12
+    5       1.30127E-13    3.65825E-16    1.00161E-14    2.24540E-01
 
   FOR JTOT =   30, SYMMETRY BLOCK =  1, ENERGY(  1) =  1250.000    : MAX DIAG & OFF-DIAG =  2.25E-01 &   4.18E-03
 
@@ -1082,9 +1071,9 @@
                        FOR JTOT =  30 AND SYMMETRY BLOCK =   1 AT ENERGY(  2) =  1000.000     CM-1
 
     F  I =      1              2              3
-    1       2.44637E-02    8.28106E-04    1.60336E-09
-    2       3.39523E-03    1.55924E-01    2.31528E-07
-    3       5.77208E-09    2.03293E-07    1.79350E-01
+    1       2.44637E-02    8.28106E-04    1.60335E-09
+    2       3.39523E-03    1.55924E-01    2.31527E-07
+    3       5.77207E-09    2.03292E-07    1.79350E-01
 
   FOR JTOT =   30, SYMMETRY BLOCK =  1, ENERGY(  2) =  1000.000    : MAX DIAG & OFF-DIAG =  1.79E-01 &   3.40E-03
 
@@ -1094,8 +1083,8 @@
                        FOR JTOT =  30 AND SYMMETRY BLOCK =   2 AT ENERGY(  1) =  1250.000     CM-1
 
     F  I =      2              3
-    2       9.92413E-02    1.46701E-06
-    3       1.60411E-06    2.10479E-04
+    2       9.92412E-02    1.46700E-06
+    3       1.60410E-06    2.10478E-04
 
   FOR JTOT =   30, SYMMETRY BLOCK =  2, ENERGY(  1) =  1250.000    : MAX DIAG & OFF-DIAG =  9.92E-02 &   1.60E-06
 
@@ -1103,8 +1092,8 @@
                        FOR JTOT =  30 AND SYMMETRY BLOCK =   2 AT ENERGY(  2) =  1000.000     CM-1
 
     F  I =      2              3
-    2       3.13553E-01    4.24958E-07
-    3       3.73134E-07    3.57811E-01
+    2       3.13553E-01    4.24957E-07
+    3       3.73133E-07    3.57811E-01
 
   FOR JTOT =   30, SYMMETRY BLOCK =  2, ENERGY(  2) =  1000.000    : MAX DIAG & OFF-DIAG =  3.58E-01 &   4.25E-07
 
@@ -1114,8 +1103,8 @@
                        FOR JTOT =  30 AND SYMMETRY BLOCK =   3 AT ENERGY(  1) =  1250.000     CM-1
 
     F  I =      2              3
-    2       3.46873E-02    1.28219E-06
-    3       1.40202E-06    6.13149E-04
+    2       3.46872E-02    1.28219E-06
+    3       1.40202E-06    6.13150E-04
 
   FOR JTOT =   30, SYMMETRY BLOCK =  3, ENERGY(  1) =  1250.000    : MAX DIAG & OFF-DIAG =  3.47E-02 &   1.40E-06
 
@@ -1123,8 +1112,8 @@
                        FOR JTOT =  30 AND SYMMETRY BLOCK =   3 AT ENERGY(  2) =  1000.000     CM-1
 
     F  I =      2              3
-    2       2.70408E-01    3.72954E-07
-    3       3.27472E-07    3.51299E-01
+    2       2.70408E-01    3.72953E-07
+    3       3.27471E-07    3.51299E-01
 
   FOR JTOT =   30, SYMMETRY BLOCK =  3, ENERGY(  2) =  1000.000    : MAX DIAG & OFF-DIAG =  3.51E-01 &   3.73E-07
 
@@ -1134,10 +1123,10 @@
                        FOR JTOT =  40 AND SYMMETRY BLOCK =   1 AT ENERGY(  1) =  1250.000     CM-1
 
     F  I =      1              2              3              5
-    1       1.16497E-01    1.14861E-03    6.84004E-09    1.28817E-14
-    2       4.91605E-03    1.08124E-02    7.04574E-07    2.35884E-15
-    3       3.20114E-08    7.70422E-07    1.24466E-01    2.90603E-15
-    5       5.15268E-16    2.20452E-17    2.48378E-17    1.62824E+01
+    1       1.16498E-01    1.14861E-03    6.84002E-09    1.28832E-14
+    2       4.91605E-03    1.08125E-02    7.04572E-07    2.35879E-15
+    3       3.20113E-08    7.70420E-07    1.24466E-01    2.90602E-15
+    5       5.15326E-16    2.20448E-17    2.48378E-17    1.62824E+01
 
   FOR JTOT =   40, SYMMETRY BLOCK =  1, ENERGY(  1) =  1250.000    : MAX DIAG & OFF-DIAG =  1.63E+01 &   4.92E-03
 
@@ -1145,8 +1134,8 @@
                        FOR JTOT =  40 AND SYMMETRY BLOCK =   1 AT ENERGY(  2) =  1000.000     CM-1
 
     F  I =      1              2              3
-    1       5.69330E-01    9.29030E-04    8.65992E-10
-    2       3.80902E-03    2.91598E-04    1.50074E-07
+    1       5.69330E-01    9.29030E-04    8.65991E-10
+    2       3.80902E-03    2.91598E-04    1.50073E-07
     3       3.11757E-09    1.31772E-07    2.32665E-01
 
   FOR JTOT =   40, SYMMETRY BLOCK =  1, ENERGY(  2) =  1000.000    : MAX DIAG & OFF-DIAG =  5.69E-01 &   3.81E-03
@@ -1157,8 +1146,8 @@
                        FOR JTOT =  40 AND SYMMETRY BLOCK =   2 AT ENERGY(  1) =  1250.000     CM-1
 
     F  I =      2              3
-    2       3.47555E-02    1.28536E-06
-    3       1.40548E-06    2.42942E-01
+    2       3.47546E-02    1.28543E-06
+    3       1.40556E-06    2.42942E-01
 
   FOR JTOT =   40, SYMMETRY BLOCK =  2, ENERGY(  1) =  1250.000    : MAX DIAG & OFF-DIAG =  2.43E-01 &   1.41E-06
 
@@ -1166,8 +1155,8 @@
                        FOR JTOT =  40 AND SYMMETRY BLOCK =   2 AT ENERGY(  2) =  1000.000     CM-1
 
     F  I =      2              3
-    2       6.57484E-04    2.76367E-07
-    3       2.42663E-07    4.60561E-01
+    2       6.57501E-04    2.76373E-07
+    3       2.42669E-07    4.60561E-01
 
   FOR JTOT =   40, SYMMETRY BLOCK =  2, ENERGY(  2) =  1000.000    : MAX DIAG & OFF-DIAG =  4.61E-01 &   2.76E-07
 
@@ -1177,8 +1166,8 @@
                        FOR JTOT =  40 AND SYMMETRY BLOCK =   3 AT ENERGY(  1) =  1250.000     CM-1
 
     F  I =      2              3
-    2       1.14712E-01    1.12294E-06
-    3       1.22789E-06    2.23182E-01
+    2       1.14713E-01    1.12294E-06
+    3       1.22788E-06    2.23182E-01
 
   FOR JTOT =   40, SYMMETRY BLOCK =  3, ENERGY(  1) =  1250.000    : MAX DIAG & OFF-DIAG =  2.23E-01 &   1.23E-06
 
@@ -1187,7 +1176,7 @@
 
     F  I =      2              3
     2       4.99850E-02    2.42028E-07
-    3       2.12513E-07    4.41454E-01
+    3       2.12512E-07    4.41454E-01
 
   FOR JTOT =   40, SYMMETRY BLOCK =  3, ENERGY(  2) =  1000.000    : MAX DIAG & OFF-DIAG =  4.41E-01 &   2.42E-07
 
@@ -1198,6 +1187,9 @@
 
   STATE-TO-STATE INTEGRAL CROSS SECTIONS IN ANGSTROM**2 BETWEEN    4 LEVELS WITH THRESHOLD ENERGIES (IN CM-1):
 
+
+  INCOMPLETE CROSS SECTIONS ARE OMITTED
+
     1     0.000000000000
     2   180.000000000000
     3   600.000000000000
@@ -1206,49 +1198,49 @@
   *** N.B. CROSS SECTIONS HAVE BEEN MULTIPLIED BY 10.0 TO ACCOUNT FOR JSTEP
 
    ENERGY (CM-1)    JTOTL  JSTEP  JTOTU      F    I         SIG(F,I)
-   1250.000000         10     10     40      1    1          3.44691      
+   1250.000000         10     10     40      1    1          3.44692      
    1250.000000         10     10     40      2    1         0.137756      
-   1250.000000         10     10     40      3    1         1.388960E-06  
-   1250.000000         10     10     40      5    1         8.219229E-12  
+   1250.000000         10     10     40      3    1         1.388957E-06  
+   1250.000000         10     10     40      5    1         8.217644E-12  
 
-   1250.000000         10     10     40      1    2         3.218600E-02  
-   1250.000000         10     10     40      2    2          5.55830      
-   1250.000000         10     10     40      3    2         1.274111E-04  
-   1250.000000         10     10     40      5    2         1.168113E-13  
+   1250.000000         10     10     40      1    2         3.218599E-02  
+   1250.000000         10     10     40      2    2          5.55828      
+   1250.000000         10     10     40      3    2         1.274122E-04  
+   1250.000000         10     10     40      5    2         1.167912E-13  
 
-   1250.000000         10     10     40      1    3         2.967864E-07  
-   1250.000000         10     10     40      2    3         1.165213E-04  
-   1250.000000         10     10     40      5    3         1.501127E-12  
+   1250.000000         10     10     40      1    3         2.967857E-07  
+   1250.000000         10     10     40      2    3         1.165223E-04  
+   1250.000000         10     10     40      5    3         1.501128E-12  
 
-   1250.000000         10     10     40      1    5         2.054807E-10  
-   1250.000000         10     10     40      2    5         1.249881E-11  
-   1250.000000         10     10     40      3    5         1.756318E-10  
+   1250.000000         10     10     40      1    5         2.054411E-10  
+   1250.000000         10     10     40      2    5         1.249666E-11  
+   1250.000000         10     10     40      3    5         1.756319E-10  
    1250.000000         10     10     40      5    5          272.273      
 
   TOTAL INELASTIC INTEGRAL CROSS SECTIONS IN ANGSTROM**2 FROM LEVEL
-   1.37757E-01                                                 1
-   3.23134E-02                                                 2
-   1.16818E-04                                                 3
-   3.93611E-10                                                 5
+   1.37757E-01                                                  1
+   3.23134E-02                                                  2
+   1.16819E-04                                                  3
+   3.93570E-10                                                  5
 
 
    ENERGY (CM-1)    JTOTL  JSTEP  JTOTU      F    I         SIG(F,I)
    1000.000000         10     10     40      1    1          7.86227      
-   1000.000000         10     10     40      2    1         0.111473      
-   1000.000000         10     10     40      3    1         2.056073E-07  
+   1000.000000         10     10     40      2    1         0.111472      
+   1000.000000         10     10     40      3    1         2.056069E-07  
 
-   1000.000000         10     10     40      1    2         2.718842E-02  
+   1000.000000         10     10     40      1    2         2.718841E-02  
    1000.000000         10     10     40      2    2          13.5973      
-   1000.000000         10     10     40      3    2         3.063409E-05  
+   1000.000000         10     10     40      3    2         3.063420E-05  
 
-   1000.000000         10     10     40      1    3         5.711313E-08  
-   1000.000000         10     10     40      2    3         3.488882E-05  
+   1000.000000         10     10     40      1    3         5.711302E-08  
+   1000.000000         10     10     40      2    3         3.488895E-05  
 
 
   TOTAL INELASTIC INTEGRAL CROSS SECTIONS IN ANGSTROM**2 FROM LEVEL
-   1.11473E-01                                                 1
-   2.72191E-02                                                 2
-   3.49459E-05                                                 3
+   1.11473E-01                                                  1
+   2.72190E-02                                                  2
+   3.49461E-05                                                  3
 
 
 
@@ -1257,12 +1249,11 @@
  |                Non-reactive quantum scattering calculations                |
  |                     on atomic and molecular collisions                     |
  |                                                                            |
- |              Copyright (C) 2022 J. M. Hutson & C. R. Le Sueur              |
+ |              Copyright (C) 2025 J. M. Hutson & C. R. Le Sueur              |
  |                                                                            |
- |                               Version 2022.0                               |
+ |                               Version 2025.0                               |
  |                                                                            |
- |                    This run used       0.16 cpu secs and                   |
- |                725 of the allocated   1000000 words of storage             |
+ |                      This run used       0.11 cpu secs                     |
  |                                                                            |
   ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
   ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
@@ -1270,11 +1261,11 @@
  |                Non-reactive quantum scattering calculations                |
  |                     on atomic and molecular collisions                     |
  |                                                                            |
- |              Copyright (C) 2022 J. M. Hutson & C. R. Le Sueur              |
+ |              Copyright (C) 2025 J. M. Hutson & C. R. Le Sueur              |
  |                                                                            |
- |                               Version 2022.0                               |
+ |                               Version 2025.0                               |
  |                                                                            |
- |                       Run on 31 May 2022   at 10:20:45                     |
+ |                       Run on 06 Nov 2025   at 16:35:42                     |
  |                                                                            |
   ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
 
@@ -1288,17 +1279,14 @@
 
   J. M. Hutson & C. R. Le Sueur, MOLSCAT: a program for non-reactive quantum
   scattering calculation on atomic and molecular collisions,
-  Version 2022.0, https//github.com/molscat/molscat
+  Version 2025.0, https//github.com/molscat/molscat
 
   and the published paper:
 
   J. M. Hutson & C. R. Le Sueur, Comput. Phys. Commun., 241, 9-18 (2019).
 
 
-  USING CODATA 2018 RECOMMENDED VALUES OF FUNDAMENTAL PHYSICAL CONSTANTS
-
-  MEMORY ALLOCATED TO MAIN WORKING ARRAY IS   1000000 (8-BYTE) WORDS (    7.63 MB)
-  2 INTEGERS CAN BE STORED IN EACH WORD.
+  USING CODATA 2022 RECOMMENDED VALUES OF FUNDAMENTAL PHYSICAL CONSTANTS
 
   PRINT LEVEL (IPRINT) =  3     OTHER PRINT CONTROLS  ISIGPR = 1
 
@@ -1391,7 +1379,7 @@
   ALL LENGTHS ARE IN UNITS OF RM (  3.50000000 ANGSTROM ) UNLESS OTHERWISE STATED
 
   NO DUPLICATED SETS OF INDICES IN LAMBDA ARRAY
-  INTERACTION MATRIX USES   3 BLOCKS OF VL ARRAY FOR R-DEPENDENT TERMS IN POTENTIAL
+  INTERACTION MATRIX USES   6 BLOCKS OF VL ARRAY FOR R-DEPENDENT TERMS IN POTENTIAL
 
   ======================================================================================================================
 
@@ -1446,7 +1434,7 @@
 
   ======================================================================================================================
 
-  INITIALIZATION DONE.  TIME WAS   0.00 CPU SECS.       171 WORDS OF STORAGE USED.
+  INITIALIZATION DONE.  TIME WAS   0.00 CPU SECS.
 
   =========================== model system: ITYP=2; helicity decoupling (IADD=20, IBOUND=1) ============================
 
@@ -1456,10 +1444,10 @@
                        FOR JTOT =  10 AND SYMMETRY BLOCK =   1 AT ENERGY(  1) =  1250.000     CM-1
 
     F  I =      1              2              3              5
-    1       1.73089E-01    3.77409E-04    5.07083E-09    1.10601E-11
-    2       1.61531E-03    4.40003E-03    3.99475E-07    7.59260E-13
-    3       2.37315E-08    4.36809E-07    2.52312E-02    9.91174E-12
-    5       4.42404E-13    7.09589E-15    8.47157E-14    3.22985E+00
+    1       1.73089E-01    3.77409E-04    5.07082E-09    1.10580E-11
+    2       1.61531E-03    4.40005E-03    3.99473E-07    7.59132E-13
+    3       2.37314E-08    4.36807E-07    2.52312E-02    9.91174E-12
+    5       4.42321E-13    7.09469E-15    8.47158E-14    3.22985E+00
 
   FOR JTOT =   10, SYMMETRY BLOCK =  1, ENERGY(  1) =  1250.000    : MAX DIAG & OFF-DIAG =  3.23E+00 &   1.62E-03
 
@@ -1467,9 +1455,9 @@
                        FOR JTOT =  10 AND SYMMETRY BLOCK =   1 AT ENERGY(  2) =  1000.000     CM-1
 
     F  I =      1              2              3
-    1       1.86549E-01    3.34856E-04    1.24793E-09
-    2       1.37291E-03    3.97302E-02    1.50535E-07
-    3       4.49256E-09    1.32177E-07    2.06409E-02
+    1       1.86549E-01    3.34855E-04    1.24793E-09
+    2       1.37291E-03    3.97302E-02    1.50534E-07
+    3       4.49255E-09    1.32176E-07    2.06409E-02
 
   FOR JTOT =   10, SYMMETRY BLOCK =  1, ENERGY(  2) =  1000.000    : MAX DIAG & OFF-DIAG =  1.87E-01 &   1.37E-03
 
@@ -1479,8 +1467,8 @@
                        FOR JTOT =  10 AND SYMMETRY BLOCK =   2 AT ENERGY(  1) =  1250.000     CM-1
 
     F  I =      2              3
-    2       2.18737E-02    7.33418E-07
-    3       8.01962E-07    3.91670E-02
+    2       2.18732E-02    7.33456E-07
+    3       8.02003E-07    3.91670E-02
 
   FOR JTOT =   10, SYMMETRY BLOCK =  2, ENERGY(  1) =  1250.000    : MAX DIAG & OFF-DIAG =  3.92E-02 &   8.02E-07
 
@@ -1488,8 +1476,8 @@
                        FOR JTOT =  10 AND SYMMETRY BLOCK =   2 AT ENERGY(  2) =  1000.000     CM-1
 
     F  I =      2              3
-    2       5.90009E-02    2.75935E-07
-    3       2.42284E-07    2.49227E-02
+    2       5.90009E-02    2.75942E-07
+    3       2.42290E-07    2.49227E-02
 
   FOR JTOT =   10, SYMMETRY BLOCK =  2, ENERGY(  2) =  1000.000    : MAX DIAG & OFF-DIAG =  5.90E-02 &   2.76E-07
 
@@ -1499,8 +1487,8 @@
                        FOR JTOT =  10 AND SYMMETRY BLOCK =   3 AT ENERGY(  1) =  1250.000     CM-1
 
     F  I =      2              3
-    2       7.53413E-02    6.45686E-07
-    3       7.06031E-07    8.39291E-03
+    2       7.53410E-02    6.45712E-07
+    3       7.06059E-07    8.39290E-03
 
   FOR JTOT =   10, SYMMETRY BLOCK =  3, ENERGY(  1) =  1250.000    : MAX DIAG & OFF-DIAG =  7.53E-02 &   7.06E-07
 
@@ -1508,8 +1496,8 @@
                        FOR JTOT =  10 AND SYMMETRY BLOCK =   3 AT ENERGY(  2) =  1000.000     CM-1
 
     F  I =      2              3
-    2       1.19647E-03    2.44700E-07
-    3       2.14858E-07    6.54374E-06
+    2       1.19647E-03    2.44705E-07
+    3       2.14863E-07    6.54462E-06
 
   FOR JTOT =   10, SYMMETRY BLOCK =  3, ENERGY(  2) =  1000.000    : MAX DIAG & OFF-DIAG =  1.20E-03 &   2.45E-07
 
@@ -1519,10 +1507,10 @@
                        FOR JTOT =  20 AND SYMMETRY BLOCK =   1 AT ENERGY(  1) =  1250.000     CM-1
 
     F  I =      1              2              3              5
-    1       1.61454E-04    7.02721E-04    8.05793E-09    6.33432E-12
-    2       3.00765E-03    4.05387E-02    6.69345E-07    4.58156E-13
-    3       3.77111E-08    7.31901E-07    6.45881E-02    6.98696E-12
-    5       2.53373E-13    4.28183E-15    5.97176E-14    7.49211E+00
+    1       1.61465E-04    7.02721E-04    8.05791E-09    6.33289E-12
+    2       3.00765E-03    4.05387E-02    6.69342E-07    4.58078E-13
+    3       3.77110E-08    7.31898E-07    6.45881E-02    6.98696E-12
+    5       2.53316E-13    4.28110E-15    5.97176E-14    7.49211E+00
 
   FOR JTOT =   20, SYMMETRY BLOCK =  1, ENERGY(  1) =  1250.000    : MAX DIAG & OFF-DIAG =  7.49E+00 &   3.01E-03
 
@@ -1530,9 +1518,9 @@
                        FOR JTOT =  20 AND SYMMETRY BLOCK =   1 AT ENERGY(  2) =  1000.000     CM-1
 
     F  I =      1              2              3
-    1       5.92541E-03    6.13094E-04    1.76930E-09
-    2       2.51369E-03    9.01017E-02    2.29205E-07
-    3       6.36948E-09    2.01253E-07    1.52800E-02
+    1       5.92539E-03    6.13094E-04    1.76930E-09
+    2       2.51368E-03    9.01017E-02    2.29204E-07
+    3       6.36946E-09    2.01253E-07    1.52800E-02
 
   FOR JTOT =   20, SYMMETRY BLOCK =  1, ENERGY(  2) =  1000.000    : MAX DIAG & OFF-DIAG =  9.01E-02 &   2.51E-03
 
@@ -1542,8 +1530,8 @@
                        FOR JTOT =  20 AND SYMMETRY BLOCK =   2 AT ENERGY(  1) =  1250.000     CM-1
 
     F  I =      2              3
-    2       6.09243E-02    1.22678E-06
-    3       1.34144E-06    1.19549E-01
+    2       6.09242E-02    1.22678E-06
+    3       1.34143E-06    1.19549E-01
 
   FOR JTOT =   20, SYMMETRY BLOCK =  2, ENERGY(  1) =  1250.000    : MAX DIAG & OFF-DIAG =  1.20E-01 &   1.34E-06
 
@@ -1551,8 +1539,8 @@
                        FOR JTOT =  20 AND SYMMETRY BLOCK =   2 AT ENERGY(  2) =  1000.000     CM-1
 
     F  I =      2              3
-    2       1.99464E-01    4.21669E-07
-    3       3.70246E-07    1.80024E-02
+    2       1.99464E-01    4.21668E-07
+    3       3.70245E-07    1.80024E-02
 
   FOR JTOT =   20, SYMMETRY BLOCK =  2, ENERGY(  2) =  1000.000    : MAX DIAG & OFF-DIAG =  1.99E-01 &   4.22E-07
 
@@ -1562,8 +1550,8 @@
                        FOR JTOT =  20 AND SYMMETRY BLOCK =   3 AT ENERGY(  1) =  1250.000     CM-1
 
     F  I =      2              3
-    2       3.94463E-03    1.08092E-06
-    3       1.18194E-06    8.34019E-02
+    2       3.94459E-03    1.08091E-06
+    3       1.18193E-06    8.34019E-02
 
   FOR JTOT =   20, SYMMETRY BLOCK =  3, ENERGY(  1) =  1250.000    : MAX DIAG & OFF-DIAG =  8.34E-02 &   1.18E-06
 
@@ -1572,7 +1560,7 @@
 
     F  I =      2              3
     2       1.97627E-01    3.71523E-07
-    3       3.26216E-07    4.53156E-05
+    3       3.26215E-07    4.53150E-05
 
   FOR JTOT =   20, SYMMETRY BLOCK =  3, ENERGY(  2) =  1000.000    : MAX DIAG & OFF-DIAG =  1.98E-01 &   3.72E-07
 
@@ -1582,10 +1570,10 @@
                        FOR JTOT =  30 AND SYMMETRY BLOCK =   1 AT ENERGY(  1) =  1250.000     CM-1
 
     F  I =      1              2              3              5
-    1       5.49627E-02    9.63598E-04    8.36744E-09    3.34522E-12
-    2       4.12420E-03    7.11981E-02    7.61710E-07    3.94395E-14
-    3       3.91596E-08    8.32898E-07    1.88776E-02    1.21074E-12
-    5       1.33809E-13    3.68594E-16    1.03482E-14    2.24947E-01
+    1       5.49625E-02    9.63598E-04    8.36742E-09    3.34474E-12
+    2       4.12420E-03    7.11981E-02    7.61707E-07    3.94316E-14
+    3       3.91595E-08    8.32895E-07    1.88776E-02    1.21074E-12
+    5       1.33790E-13    3.68520E-16    1.03482E-14    2.24947E-01
 
   FOR JTOT =   30, SYMMETRY BLOCK =  1, ENERGY(  1) =  1250.000    : MAX DIAG & OFF-DIAG =  2.25E-01 &   4.12E-03
 
@@ -1595,7 +1583,7 @@
     F  I =      1              2              3
     1       2.44371E-02    8.15788E-04    1.48629E-09
     2       3.34473E-03    1.53750E-01    2.17353E-07
-    3       5.35065E-09    1.90847E-07    1.63063E-01
+    3       5.35064E-09    1.90846E-07    1.63063E-01
 
   FOR JTOT =   30, SYMMETRY BLOCK =  1, ENERGY(  2) =  1000.000    : MAX DIAG & OFF-DIAG =  1.63E-01 &   3.34E-03
 
@@ -1605,8 +1593,8 @@
                        FOR JTOT =  30 AND SYMMETRY BLOCK =   2 AT ENERGY(  1) =  1250.000     CM-1
 
     F  I =      2              3
-    2       1.18318E-01    1.39453E-06
-    3       1.52486E-06    2.76982E-02
+    2       1.18318E-01    1.39452E-06
+    3       1.52485E-06    2.76982E-02
 
   FOR JTOT =   30, SYMMETRY BLOCK =  2, ENERGY(  1) =  1250.000    : MAX DIAG & OFF-DIAG =  1.18E-01 &   1.52E-06
 
@@ -1614,8 +1602,8 @@
                        FOR JTOT =  30 AND SYMMETRY BLOCK =   2 AT ENERGY(  2) =  1000.000     CM-1
 
     F  I =      2              3
-    2       3.15167E-01    4.00241E-07
-    3       3.51431E-07    3.37976E-01
+    2       3.15167E-01    4.00240E-07
+    3       3.51430E-07    3.37976E-01
 
   FOR JTOT =   30, SYMMETRY BLOCK =  2, ENERGY(  2) =  1000.000    : MAX DIAG & OFF-DIAG =  3.38E-01 &   4.00E-07
 
@@ -1625,8 +1613,8 @@
                        FOR JTOT =  30 AND SYMMETRY BLOCK =   3 AT ENERGY(  1) =  1250.000     CM-1
 
     F  I =      2              3
-    2       2.82178E-02    1.22488E-06
-    3       1.33935E-06    6.21304E-03
+    2       2.82177E-02    1.22487E-06
+    3       1.33935E-06    6.21303E-03
 
   FOR JTOT =   30, SYMMETRY BLOCK =  3, ENERGY(  1) =  1250.000    : MAX DIAG & OFF-DIAG =  2.82E-02 &   1.34E-06
 
@@ -1634,7 +1622,7 @@
                        FOR JTOT =  30 AND SYMMETRY BLOCK =   3 AT ENERGY(  2) =  1000.000     CM-1
 
     F  I =      2              3
-    2       2.61626E-01    3.53144E-07
+    2       2.61626E-01    3.53143E-07
     3       3.10077E-07    3.57892E-01
 
   FOR JTOT =   30, SYMMETRY BLOCK =  3, ENERGY(  2) =  1000.000    : MAX DIAG & OFF-DIAG =  3.58E-01 &   3.53E-07
@@ -1645,10 +1633,10 @@
                        FOR JTOT =  40 AND SYMMETRY BLOCK =   1 AT ENERGY(  1) =  1250.000     CM-1
 
     F  I =      1              2              3              5
-    1       1.16580E-01    1.13317E-03    6.40750E-09    1.05043E-14
-    2       4.84998E-03    5.27809E-03    6.67185E-07    2.31949E-15
-    3       2.99871E-08    7.29538E-07    1.42955E-01    3.00992E-15
-    5       4.20172E-16    2.16775E-17    2.57258E-17    1.62820E+01
+    1       1.16580E-01    1.13317E-03    6.40748E-09    1.05056E-14
+    2       4.84998E-03    5.27810E-03    6.67183E-07    2.31944E-15
+    3       2.99870E-08    7.29536E-07    1.42955E-01    3.00993E-15
+    5       4.20225E-16    2.16770E-17    2.57259E-17    1.62820E+01
 
   FOR JTOT =   40, SYMMETRY BLOCK =  1, ENERGY(  1) =  1250.000    : MAX DIAG & OFF-DIAG =  1.63E+01 &   4.85E-03
 
@@ -1656,8 +1644,8 @@
                        FOR JTOT =  40 AND SYMMETRY BLOCK =   1 AT ENERGY(  2) =  1000.000     CM-1
 
     F  I =      1              2              3
-    1       5.69504E-01    9.14545E-04    7.98540E-10
-    2       3.74963E-03    2.67886E-03    1.40258E-07
+    1       5.69504E-01    9.14544E-04    7.98538E-10
+    2       3.74963E-03    2.67886E-03    1.40257E-07
     3       2.87474E-09    1.23153E-07    2.37739E-01
 
   FOR JTOT =   40, SYMMETRY BLOCK =  1, ENERGY(  2) =  1000.000    : MAX DIAG & OFF-DIAG =  5.70E-01 &   3.75E-03
@@ -1668,8 +1656,8 @@
                        FOR JTOT =  40 AND SYMMETRY BLOCK =   2 AT ENERGY(  1) =  1250.000     CM-1
 
     F  I =      2              3
-    2       2.47610E-02    1.21865E-06
-    3       1.33255E-06    2.80424E-01
+    2       2.47602E-02    1.21872E-06
+    3       1.33262E-06    2.80424E-01
 
   FOR JTOT =   40, SYMMETRY BLOCK =  2, ENERGY(  1) =  1250.000    : MAX DIAG & OFF-DIAG =  2.80E-01 &   1.33E-06
 
@@ -1677,8 +1665,8 @@
                        FOR JTOT =  40 AND SYMMETRY BLOCK =   2 AT ENERGY(  2) =  1000.000     CM-1
 
     F  I =      2              3
-    2       5.38440E-05    2.58924E-07
-    3       2.27348E-07    4.76637E-01
+    2       5.38393E-05    2.58930E-07
+    3       2.27353E-07    4.76637E-01
 
   FOR JTOT =   40, SYMMETRY BLOCK =  2, ENERGY(  2) =  1000.000    : MAX DIAG & OFF-DIAG =  4.77E-01 &   2.59E-07
 
@@ -1689,7 +1677,7 @@
 
     F  I =      2              3
     2       1.23080E-01    1.07081E-06
-    3       1.17089E-06    2.55620E-01
+    3       1.17088E-06    2.55620E-01
 
   FOR JTOT =   40, SYMMETRY BLOCK =  3, ENERGY(  1) =  1250.000    : MAX DIAG & OFF-DIAG =  2.56E-01 &   1.17E-06
 
@@ -1698,7 +1686,7 @@
 
     F  I =      2              3
     2       5.71264E-02    2.28661E-07
-    3       2.00776E-07    4.65643E-01
+    3       2.00775E-07    4.65643E-01
 
   FOR JTOT =   40, SYMMETRY BLOCK =  3, ENERGY(  2) =  1000.000    : MAX DIAG & OFF-DIAG =  4.66E-01 &   2.29E-07
 
@@ -1708,6 +1696,9 @@
   LEVEL   6 WITH ENERGY   1380.000000000000 IS NEVER OPEN
 
   STATE-TO-STATE INTEGRAL CROSS SECTIONS IN ANGSTROM**2 BETWEEN    4 LEVELS WITH THRESHOLD ENERGIES (IN CM-1):
+
+
+  INCOMPLETE CROSS SECTIONS ARE OMITTED
 
     1     0.000000000000
     2   180.000000000000
@@ -1719,47 +1710,47 @@
    ENERGY (CM-1)    JTOTL  JSTEP  JTOTU      F    I         SIG(F,I)
    1250.000000         10     10     40      1    1          3.44793      
    1250.000000         10     10     40      2    1         0.135971      
-   1250.000000         10     10     40      3    1         1.305893E-06  
-   1250.000000         10     10     40      5    1         8.300060E-12  
+   1250.000000         10     10     40      3    1         1.305890E-06  
+   1250.000000         10     10     40      5    1         8.298468E-12  
 
-   1250.000000         10     10     40      1    2         3.176901E-02  
-   1250.000000         10     10     40      2    2          5.77875      
-   1250.000000         10     10     40      3    2         1.213016E-04  
-   1250.000000         10     10     40      5    2         1.176799E-13  
+   1250.000000         10     10     40      1    2         3.176900E-02  
+   1250.000000         10     10     40      2    2          5.77873      
+   1250.000000         10     10     40      3    2         1.213026E-04  
+   1250.000000         10     10     40      5    2         1.176599E-13  
 
-   1250.000000         10     10     40      1    3         2.790370E-07  
-   1250.000000         10     10     40      2    3         1.109339E-04  
-   1250.000000         10     10     40      5    3         1.548072E-12  
+   1250.000000         10     10     40      1    3         2.790363E-07  
+   1250.000000         10     10     40      2    3         1.109349E-04  
+   1250.000000         10     10     40      5    3         1.548073E-12  
 
-   1250.000000         10     10     40      1    5         2.075015E-10  
-   1250.000000         10     10     40      2    5         1.259175E-11  
-   1250.000000         10     10     40      3    5         1.811245E-10  
+   1250.000000         10     10     40      1    5         2.074617E-10  
+   1250.000000         10     10     40      2    5         1.258961E-11  
+   1250.000000         10     10     40      3    5         1.811246E-10  
    1250.000000         10     10     40      5    5          272.289      
 
   TOTAL INELASTIC INTEGRAL CROSS SECTIONS IN ANGSTROM**2 FROM LEVEL
-   1.35973E-01                                                 1
-   3.18903E-02                                                 2
-   1.11213E-04                                                 3
-   4.01218E-10                                                 5
+   1.35973E-01                                                  1
+   3.18903E-02                                                  2
+   1.11214E-04                                                  3
+   4.01176E-10                                                  5
 
 
    ENERGY (CM-1)    JTOTL  JSTEP  JTOTU      F    I         SIG(F,I)
    1000.000000         10     10     40      1    1          7.86416      
    1000.000000         10     10     40      2    1         0.109810      
-   1000.000000         10     10     40      3    1         1.908743E-07  
+   1000.000000         10     10     40      3    1         1.908739E-07  
 
-   1000.000000         10     10     40      1    2         2.678283E-02  
+   1000.000000         10     10     40      1    2         2.678282E-02  
    1000.000000         10     10     40      2    2          13.7752      
-   1000.000000         10     10     40      3    2         2.890665E-05  
+   1000.000000         10     10     40      3    2         2.890676E-05  
 
-   1000.000000         10     10     40      1    3         5.302064E-08  
-   1000.000000         10     10     40      2    3         3.292146E-05  
+   1000.000000         10     10     40      1    3         5.302053E-08  
+   1000.000000         10     10     40      2    3         3.292158E-05  
 
 
   TOTAL INELASTIC INTEGRAL CROSS SECTIONS IN ANGSTROM**2 FROM LEVEL
-   1.09810E-01                                                 1
-   2.68117E-02                                                 2
-   3.29745E-05                                                 3
+   1.09810E-01                                                  1
+   2.68117E-02                                                  2
+   3.29746E-05                                                  3
 
 
 
@@ -1768,12 +1759,11 @@
  |                Non-reactive quantum scattering calculations                |
  |                     on atomic and molecular collisions                     |
  |                                                                            |
- |              Copyright (C) 2022 J. M. Hutson & C. R. Le Sueur              |
+ |              Copyright (C) 2025 J. M. Hutson & C. R. Le Sueur              |
  |                                                                            |
- |                               Version 2022.0                               |
+ |                               Version 2025.0                               |
  |                                                                            |
- |                    This run used       0.16 cpu secs and                   |
- |                725 of the allocated   1000000 words of storage             |
+ |                      This run used       0.11 cpu secs                     |
  |                                                                            |
   ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
   ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
@@ -1781,11 +1771,11 @@
  |                Non-reactive quantum scattering calculations                |
  |                     on atomic and molecular collisions                     |
  |                                                                            |
- |              Copyright (C) 2022 J. M. Hutson & C. R. Le Sueur              |
+ |              Copyright (C) 2025 J. M. Hutson & C. R. Le Sueur              |
  |                                                                            |
- |                               Version 2022.0                               |
+ |                               Version 2025.0                               |
  |                                                                            |
- |                       Run on 31 May 2022   at 10:20:45                     |
+ |                       Run on 06 Nov 2025   at 16:35:42                     |
  |                                                                            |
   ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
 
@@ -1799,17 +1789,14 @@
 
   J. M. Hutson & C. R. Le Sueur, MOLSCAT: a program for non-reactive quantum
   scattering calculation on atomic and molecular collisions,
-  Version 2022.0, https//github.com/molscat/molscat
+  Version 2025.0, https//github.com/molscat/molscat
 
   and the published paper:
 
   J. M. Hutson & C. R. Le Sueur, Comput. Phys. Commun., 241, 9-18 (2019).
 
 
-  USING CODATA 2018 RECOMMENDED VALUES OF FUNDAMENTAL PHYSICAL CONSTANTS
-
-  MEMORY ALLOCATED TO MAIN WORKING ARRAY IS   1000000 (8-BYTE) WORDS (    7.63 MB)
-  2 INTEGERS CAN BE STORED IN EACH WORD.
+  USING CODATA 2022 RECOMMENDED VALUES OF FUNDAMENTAL PHYSICAL CONSTANTS
 
   PRINT LEVEL (IPRINT) =  3     OTHER PRINT CONTROLS  ISIGPR = 1
 
@@ -1895,7 +1882,7 @@
   ALL LENGTHS ARE IN UNITS OF RM (  3.50000000 ANGSTROM ) UNLESS OTHERWISE STATED
 
   NO DUPLICATED SETS OF INDICES IN LAMBDA ARRAY
-  INTERACTION MATRIX USES   3 BLOCKS OF VL ARRAY FOR R-DEPENDENT TERMS IN POTENTIAL
+  INTERACTION MATRIX USES   6 BLOCKS OF VL ARRAY FOR R-DEPENDENT TERMS IN POTENTIAL
 
   ======================================================================================================================
 
@@ -1950,7 +1937,7 @@
 
   ======================================================================================================================
 
-  INITIALIZATION DONE.  TIME WAS   0.00 CPU SECS.       171 WORDS OF STORAGE USED.
+  INITIALIZATION DONE.  TIME WAS   0.00 CPU SECS.
 
   ================================ model system: ITYP=2; decoupled L-dominant (IADD=30) ================================
 
@@ -1960,10 +1947,10 @@
                        FOR JTOT =  10 AND SYMMETRY BLOCK =   1 AT ENERGY(  1) =  1250.000     CM-1
 
     F  I =      1              2              3              5
-    1       1.75962E-01    1.25771E-04    1.28304E-09    1.11387E-11
-    2       5.38300E-04    1.39867E-02    3.17458E-07    2.02340E-13
-    3       6.00463E-09    3.47127E-07    1.48126E-04    1.60829E-12
-    5       4.45549E-13    1.89102E-15    1.37460E-14    3.38452E+00
+    1       1.75962E-01    1.25771E-04    1.28304E-09    1.11369E-11
+    2       5.38300E-04    1.39867E-02    3.17457E-07    2.02303E-13
+    3       6.00461E-09    3.47126E-07    1.48126E-04    1.60829E-12
+    5       4.45476E-13    1.89069E-15    1.37461E-14    3.38452E+00
 
   FOR JTOT =   10, SYMMETRY BLOCK =  1, ENERGY(  1) =  1250.000    : MAX DIAG & OFF-DIAG =  3.38E+00 &   5.38E-04
 
@@ -1983,8 +1970,8 @@
                        FOR JTOT =  10 AND SYMMETRY BLOCK =   2 AT ENERGY(  1) =  1250.000     CM-1
 
     F  I =      2              3
-    2       1.70554E-02    1.35330E-07
-    3       1.47978E-07    3.70352E-02
+    2       1.70557E-02    1.35337E-07
+    3       1.47985E-07    3.70352E-02
 
   FOR JTOT =   10, SYMMETRY BLOCK =  2, ENERGY(  1) =  1250.000    : MAX DIAG & OFF-DIAG =  3.70E-02 &   1.48E-07
 
@@ -1992,8 +1979,8 @@
                        FOR JTOT =  10 AND SYMMETRY BLOCK =   2 AT ENERGY(  2) =  1000.000     CM-1
 
     F  I =      2              3
-    2       4.15752E-02    5.14019E-08
-    3       4.51333E-08    5.26652E-02
+    2       4.15752E-02    5.14031E-08
+    3       4.51344E-08    5.26652E-02
 
   FOR JTOT =   10, SYMMETRY BLOCK =  2, ENERGY(  2) =  1000.000    : MAX DIAG & OFF-DIAG =  5.27E-02 &   5.14E-08
 
@@ -2003,8 +1990,8 @@
                        FOR JTOT =  10 AND SYMMETRY BLOCK =   3 AT ENERGY(  1) =  1250.000     CM-1
 
     F  I =      2              3
-    2       3.01578E-02    4.45177E-08
-    3       4.86783E-08    4.09790E-03
+    2       3.01576E-02    4.45199E-08
+    3       4.86807E-08    4.09791E-03
 
   FOR JTOT =   10, SYMMETRY BLOCK =  3, ENERGY(  1) =  1250.000    : MAX DIAG & OFF-DIAG =  3.02E-02 &   4.87E-08
 
@@ -2012,8 +1999,8 @@
                        FOR JTOT =  10 AND SYMMETRY BLOCK =   3 AT ENERGY(  2) =  1000.000     CM-1
 
     F  I =      2              3
-    2       6.26893E-03    1.66516E-08
-    3       1.46209E-08    1.95139E-02
+    2       6.26893E-03    1.66520E-08
+    3       1.46212E-08    1.95138E-02
 
   FOR JTOT =   10, SYMMETRY BLOCK =  3, ENERGY(  2) =  1000.000    : MAX DIAG & OFF-DIAG =  1.95E-02 &   1.67E-08
 
@@ -2023,8 +2010,8 @@
                        FOR JTOT =  10 AND SYMMETRY BLOCK =   4 AT ENERGY(  1) =  1250.000     CM-1
 
     F  I =      2              3
-    2       9.32726E-03    1.01494E-08
-    3       1.10980E-08    2.99325E-02
+    2       9.32746E-03    1.01500E-08
+    3       1.10986E-08    2.99325E-02
 
   FOR JTOT =   10, SYMMETRY BLOCK =  4, ENERGY(  1) =  1250.000    : MAX DIAG & OFF-DIAG =  2.99E-02 &   1.11E-08
 
@@ -2032,10 +2019,10 @@
                        FOR JTOT =  10 AND SYMMETRY BLOCK =   4 AT ENERGY(  2) =  1000.000     CM-1
 
     F  I =      2              3
-    2       5.02374E-02    3.74493E-09
-    3       3.28823E-09    3.17407E-02
+    2       5.02374E-02    3.74502E-09
+    3       3.28831E-09    3.17408E-02
 
-  FOR JTOT =   10, SYMMETRY BLOCK =  4, ENERGY(  2) =  1000.000    : MAX DIAG & OFF-DIAG =  5.02E-02 &   3.74E-09
+  FOR JTOT =   10, SYMMETRY BLOCK =  4, ENERGY(  2) =  1000.000    : MAX DIAG & OFF-DIAG =  5.02E-02 &   3.75E-09
 
   *****************************  ANGULAR MOMENTUM JTOT  =  10   AND SYMMETRY BLOCK  =    5  ****************************
 
@@ -2043,8 +2030,8 @@
                        FOR JTOT =  10 AND SYMMETRY BLOCK =   5 AT ENERGY(  1) =  1250.000     CM-1
 
     F  I =      2              3
-    2       3.20706E-02    1.23743E-09
-    3       1.35308E-09    1.24565E-02
+    2       3.20704E-02    1.23751E-09
+    3       1.35317E-09    1.24565E-02
 
   FOR JTOT =   10, SYMMETRY BLOCK =  5, ENERGY(  1) =  1250.000    : MAX DIAG & OFF-DIAG =  3.21E-02 &   1.35E-09
 
@@ -2052,8 +2039,8 @@
                        FOR JTOT =  10 AND SYMMETRY BLOCK =   5 AT ENERGY(  2) =  1000.000     CM-1
 
     F  I =      2              3
-    2       3.79974E-03    4.53922E-10
-    3       3.98566E-10    3.98683E-02
+    2       3.79974E-03    4.53935E-10
+    3       3.98577E-10    3.98683E-02
 
   FOR JTOT =   10, SYMMETRY BLOCK =  5, ENERGY(  2) =  1000.000    : MAX DIAG & OFF-DIAG =  3.99E-02 &   4.54E-10
 
@@ -2063,10 +2050,10 @@
                        FOR JTOT =  20 AND SYMMETRY BLOCK =   1 AT ENERGY(  1) =  1250.000     CM-1
 
     F  I =      1              2              3              5
-    1       6.44875E-04    2.71745E-04    3.01869E-09    1.09142E-11
-    2       1.16307E-03    5.42643E-02    6.78624E-07    1.28006E-13
-    3       1.41275E-08    7.42047E-07    7.42273E-02    1.12783E-12
-    5       4.36568E-13    1.19632E-15    9.63955E-15    7.69957E+00
+    1       6.44898E-04    2.71745E-04    3.01868E-09    1.09125E-11
+    2       1.16307E-03    5.42643E-02    6.78621E-07    1.27981E-13
+    3       1.41274E-08    7.42044E-07    7.42273E-02    1.12783E-12
+    5       4.36502E-13    1.19609E-15    9.63955E-15    7.69957E+00
 
   FOR JTOT =   20, SYMMETRY BLOCK =  1, ENERGY(  1) =  1250.000    : MAX DIAG & OFF-DIAG =  7.70E+00 &   1.16E-03
 
@@ -2074,9 +2061,9 @@
                        FOR JTOT =  20 AND SYMMETRY BLOCK =   1 AT ENERGY(  2) =  1000.000     CM-1
 
     F  I =      1              2              3
-    1       4.01664E-03    2.39940E-04    7.22013E-10
-    2       9.83755E-04    7.14081E-02    2.48330E-07
-    3       2.59925E-09    2.18046E-07    8.64953E-02
+    1       4.01663E-03    2.39940E-04    7.22011E-10
+    2       9.83754E-04    7.14081E-02    2.48330E-07
+    3       2.59924E-09    2.18046E-07    8.64953E-02
 
   FOR JTOT =   20, SYMMETRY BLOCK =  1, ENERGY(  2) =  1000.000    : MAX DIAG & OFF-DIAG =  8.65E-02 &   9.84E-04
 
@@ -2086,8 +2073,8 @@
                        FOR JTOT =  20 AND SYMMETRY BLOCK =   2 AT ENERGY(  1) =  1250.000     CM-1
 
     F  I =      2              3
-    2       5.57311E-02    3.32777E-07
-    3       3.63878E-07    8.51905E-03
+    2       5.57311E-02    3.32776E-07
+    3       3.63876E-07    8.51905E-03
 
   FOR JTOT =   20, SYMMETRY BLOCK =  2, ENERGY(  1) =  1250.000    : MAX DIAG & OFF-DIAG =  5.57E-02 &   3.64E-07
 
@@ -2095,7 +2082,7 @@
                        FOR JTOT =  20 AND SYMMETRY BLOCK =   2 AT ENERGY(  2) =  1000.000     CM-1
 
     F  I =      2              3
-    2       4.40992E-03    1.19265E-07
+    2       4.40992E-03    1.19264E-07
     3       1.04720E-07    8.30325E-02
 
   FOR JTOT =   20, SYMMETRY BLOCK =  2, ENERGY(  2) =  1000.000    : MAX DIAG & OFF-DIAG =  8.30E-02 &   1.19E-07
@@ -2106,7 +2093,7 @@
                        FOR JTOT =  20 AND SYMMETRY BLOCK =   3 AT ENERGY(  1) =  1250.000     CM-1
 
     F  I =      2              3
-    2       8.08623E-03    1.20540E-07
+    2       8.08620E-03    1.20539E-07
     3       1.31805E-07    4.55409E-02
 
   FOR JTOT =   20, SYMMETRY BLOCK =  3, ENERGY(  1) =  1250.000    : MAX DIAG & OFF-DIAG =  4.55E-02 &   1.32E-07
@@ -2115,8 +2102,8 @@
                        FOR JTOT =  20 AND SYMMETRY BLOCK =   3 AT ENERGY(  2) =  1000.000     CM-1
 
     F  I =      2              3
-    2       1.04947E-01    4.22923E-08
-    3       3.71347E-08    4.92800E-03
+    2       1.04947E-01    4.22922E-08
+    3       3.71346E-08    4.92800E-03
 
   FOR JTOT =   20, SYMMETRY BLOCK =  3, ENERGY(  2) =  1000.000    : MAX DIAG & OFF-DIAG =  1.05E-01 &   4.23E-08
 
@@ -2126,8 +2113,8 @@
                        FOR JTOT =  20 AND SYMMETRY BLOCK =   4 AT ENERGY(  1) =  1250.000     CM-1
 
     F  I =      2              3
-    2       7.96521E-02    2.89035E-08
-    3       3.16048E-08    5.08208E-02
+    2       7.96521E-02    2.89034E-08
+    3       3.16046E-08    5.08208E-02
 
   FOR JTOT =   20, SYMMETRY BLOCK =  4, ENERGY(  1) =  1250.000    : MAX DIAG & OFF-DIAG =  7.97E-02 &   3.16E-08
 
@@ -2135,8 +2122,8 @@
                        FOR JTOT =  20 AND SYMMETRY BLOCK =   4 AT ENERGY(  2) =  1000.000     CM-1
 
     F  I =      2              3
-    2       9.68303E-03    9.96184E-09
-    3       8.74698E-09    1.17405E-01
+    2       9.68303E-03    9.96181E-09
+    3       8.74696E-09    1.17405E-01
 
   FOR JTOT =   20, SYMMETRY BLOCK =  4, ENERGY(  2) =  1000.000    : MAX DIAG & OFF-DIAG =  1.17E-01 &   9.96E-09
 
@@ -2146,8 +2133,8 @@
                        FOR JTOT =  20 AND SYMMETRY BLOCK =   5 AT ENERGY(  1) =  1250.000     CM-1
 
     F  I =      2              3
-    2       7.05687E-05    3.55383E-09
-    3       3.88596E-09    6.86879E-03
+    2       7.05656E-05    3.55381E-09
+    3       3.88594E-09    6.86879E-03
 
   FOR JTOT =   20, SYMMETRY BLOCK =  5, ENERGY(  1) =  1250.000    : MAX DIAG & OFF-DIAG =  6.87E-03 &   3.89E-09
 
@@ -2166,10 +2153,10 @@
                        FOR JTOT =  30 AND SYMMETRY BLOCK =   1 AT ENERGY(  1) =  1250.000     CM-1
 
     F  I =      1              2              3              5
-    1       4.86061E-02    4.15898E-04    4.23174E-09    8.41671E-13
-    2       1.78004E-03    1.15038E-01    9.33654E-07    3.32093E-15
-    3       1.98046E-08    1.02091E-06    1.09904E-01    1.75003E-13
-    5       3.36668E-14    3.10367E-17    1.49575E-15    3.43323E-01
+    1       4.86059E-02    4.15898E-04    4.23173E-09    8.41458E-13
+    2       1.78004E-03    1.15038E-01    9.33650E-07    3.31978E-15
+    3       1.98045E-08    1.02091E-06    1.09904E-01    1.75003E-13
+    5       3.36583E-14    3.10260E-17    1.49575E-15    3.43323E-01
 
   FOR JTOT =   30, SYMMETRY BLOCK =  1, ENERGY(  1) =  1250.000    : MAX DIAG & OFF-DIAG =  3.43E-01 &   1.78E-03
 
@@ -2177,7 +2164,7 @@
                        FOR JTOT =  30 AND SYMMETRY BLOCK =   1 AT ENERGY(  2) =  1000.000     CM-1
 
     F  I =      1              2              3
-    1       1.98946E-02    3.61576E-04    8.74406E-10
+    1       1.98946E-02    3.61576E-04    8.74405E-10
     2       1.48246E-03    9.42743E-02    2.99415E-07
     3       3.14786E-09    2.62901E-07    2.27896E-02
 
@@ -2189,8 +2176,8 @@
                        FOR JTOT =  30 AND SYMMETRY BLOCK =   2 AT ENERGY(  1) =  1250.000     CM-1
 
     F  I =      2              3
-    2       4.86678E-02    4.71506E-07
-    3       5.15573E-07    1.88587E-02
+    2       4.86679E-02    4.71504E-07
+    3       5.15570E-07    1.88587E-02
 
   FOR JTOT =   30, SYMMETRY BLOCK =  2, ENERGY(  1) =  1250.000    : MAX DIAG & OFF-DIAG =  4.87E-02 &   5.16E-07
 
@@ -2209,7 +2196,7 @@
                        FOR JTOT =  30 AND SYMMETRY BLOCK =   3 AT ENERGY(  1) =  1250.000     CM-1
 
     F  I =      2              3
-    2       2.65127E-02    1.75617E-07
+    2       2.65126E-02    1.75616E-07
     3       1.92029E-07    4.27548E-02
 
   FOR JTOT =   30, SYMMETRY BLOCK =  3, ENERGY(  1) =  1250.000    : MAX DIAG & OFF-DIAG =  4.28E-02 &   1.92E-07
@@ -2218,7 +2205,7 @@
                        FOR JTOT =  30 AND SYMMETRY BLOCK =   3 AT ENERGY(  2) =  1000.000     CM-1
 
     F  I =      2              3
-    2       1.45163E-01    5.30403E-08
+    2       1.45163E-01    5.30402E-08
     3       4.65719E-08    9.28634E-02
 
   FOR JTOT =   30, SYMMETRY BLOCK =  3, ENERGY(  2) =  1000.000    : MAX DIAG & OFF-DIAG =  1.45E-01 &   5.30E-08
@@ -2229,8 +2216,8 @@
                        FOR JTOT =  30 AND SYMMETRY BLOCK =   4 AT ENERGY(  1) =  1250.000     CM-1
 
     F  I =      2              3
-    2       1.16823E-01    4.28391E-08
-    3       4.68427E-08    1.05325E-01
+    2       1.16823E-01    4.28389E-08
+    3       4.68425E-08    1.05325E-01
 
   FOR JTOT =   30, SYMMETRY BLOCK =  4, ENERGY(  1) =  1250.000    : MAX DIAG & OFF-DIAG =  1.17E-01 &   4.68E-08
 
@@ -2238,8 +2225,8 @@
                        FOR JTOT =  30 AND SYMMETRY BLOCK =   4 AT ENERGY(  2) =  1000.000     CM-1
 
     F  I =      2              3
-    2       5.50973E-02    1.25352E-08
-    3       1.10065E-08    8.00987E-03
+    2       5.50973E-02    1.25351E-08
+    3       1.10065E-08    8.00986E-03
 
   FOR JTOT =   30, SYMMETRY BLOCK =  4, ENERGY(  2) =  1000.000    : MAX DIAG & OFF-DIAG =  5.51E-02 &   1.25E-08
 
@@ -2249,8 +2236,8 @@
                        FOR JTOT =  30 AND SYMMETRY BLOCK =   5 AT ENERGY(  1) =  1250.000     CM-1
 
     F  I =      2              3
-    2       2.33344E-04    5.28479E-09
-    3       5.77870E-09    5.35634E-03
+    2       2.33351E-04    5.28476E-09
+    3       5.77866E-09    5.35634E-03
 
   FOR JTOT =   30, SYMMETRY BLOCK =  5, ENERGY(  1) =  1250.000    : MAX DIAG & OFF-DIAG =  5.36E-03 &   5.78E-09
 
@@ -2269,10 +2256,10 @@
                        FOR JTOT =  40 AND SYMMETRY BLOCK =   1 AT ENERGY(  1) =  1250.000     CM-1
 
     F  I =      1              2              3              5
-    1       1.28342E-01    5.43992E-04    4.40612E-09    7.81814E-13
-    2       2.32829E-03    4.77329E-02    9.97274E-07    2.96972E-15
-    3       2.06207E-08    1.09048E-06    6.98507E-03    3.84432E-16
-    5       3.12725E-14    2.77544E-17    3.28574E-18    1.61273E+01
+    1       1.28342E-01    5.43992E-04    4.40611E-09    7.81824E-13
+    2       2.32829E-03    4.77328E-02    9.97271E-07    2.96974E-15
+    3       2.06206E-08    1.09047E-06    6.98506E-03    3.84435E-16
+    5       3.12729E-14    2.77546E-17    3.28577E-18    1.61273E+01
 
   FOR JTOT =   40, SYMMETRY BLOCK =  1, ENERGY(  1) =  1250.000    : MAX DIAG & OFF-DIAG =  1.61E+01 &   2.33E-03
 
@@ -2280,9 +2267,9 @@
                        FOR JTOT =  40 AND SYMMETRY BLOCK =   1 AT ENERGY(  2) =  1000.000     CM-1
 
     F  I =      1              2              3
-    1       5.86805E-01    4.58954E-04    7.00283E-10
+    1       5.86805E-01    4.58954E-04    7.00282E-10
     2       1.88171E-03    1.45722E-01    2.53552E-07
-    3       2.52102E-09    2.22631E-07    1.70253E-01
+    3       2.52101E-09    2.22631E-07    1.70253E-01
 
   FOR JTOT =   40, SYMMETRY BLOCK =  1, ENERGY(  2) =  1000.000    : MAX DIAG & OFF-DIAG =  5.87E-01 &   1.88E-03
 
@@ -2292,8 +2279,8 @@
                        FOR JTOT =  40 AND SYMMETRY BLOCK =   2 AT ENERGY(  1) =  1250.000     CM-1
 
     F  I =      2              3
-    2       1.60267E-01    5.04496E-07
-    3       5.51645E-07    1.21777E-01
+    2       1.60267E-01    5.04517E-07
+    3       5.51669E-07    1.21777E-01
 
   FOR JTOT =   40, SYMMETRY BLOCK =  2, ENERGY(  1) =  1250.000    : MAX DIAG & OFF-DIAG =  1.60E-01 &   5.52E-07
 
@@ -2301,8 +2288,8 @@
                        FOR JTOT =  40 AND SYMMETRY BLOCK =   2 AT ENERGY(  2) =  1000.000     CM-1
 
     F  I =      2              3
-    2       1.87847E-01    1.23280E-07
-    3       1.08246E-07    2.26555E-01
+    2       1.87847E-01    1.23282E-07
+    3       1.08248E-07    2.26555E-01
 
   FOR JTOT =   40, SYMMETRY BLOCK =  2, ENERGY(  2) =  1000.000    : MAX DIAG & OFF-DIAG =  2.27E-01 &   1.23E-07
 
@@ -2312,8 +2299,8 @@
                        FOR JTOT =  40 AND SYMMETRY BLOCK =   3 AT ENERGY(  1) =  1250.000     CM-1
 
     F  I =      2              3
-    2       4.27505E-02    1.88510E-07
-    3       2.06128E-07    1.10289E-01
+    2       4.27498E-02    1.88518E-07
+    3       2.06137E-07    1.10289E-01
 
   FOR JTOT =   40, SYMMETRY BLOCK =  3, ENERGY(  1) =  1250.000    : MAX DIAG & OFF-DIAG =  1.10E-01 &   2.06E-07
 
@@ -2321,8 +2308,8 @@
                        FOR JTOT =  40 AND SYMMETRY BLOCK =   3 AT ENERGY(  2) =  1000.000     CM-1
 
     F  I =      2              3
-    2       1.29574E-02    4.39166E-08
-    3       3.85609E-08    6.31876E-02
+    2       1.29575E-02    4.39174E-08
+    3       3.85616E-08    6.31875E-02
 
   FOR JTOT =   40, SYMMETRY BLOCK =  3, ENERGY(  2) =  1000.000    : MAX DIAG & OFF-DIAG =  6.32E-02 &   4.39E-08
 
@@ -2332,8 +2319,8 @@
                        FOR JTOT =  40 AND SYMMETRY BLOCK =   4 AT ENERGY(  1) =  1250.000     CM-1
 
     F  I =      2              3
-    2       5.09963E-02    4.59892E-08
-    3       5.02873E-08    1.10558E-03
+    2       5.09962E-02    4.59890E-08
+    3       5.02871E-08    1.10558E-03
 
   FOR JTOT =   40, SYMMETRY BLOCK =  4, ENERGY(  1) =  1250.000    : MAX DIAG & OFF-DIAG =  5.10E-02 &   5.03E-08
 
@@ -2342,7 +2329,7 @@
 
     F  I =      2              3
     2       1.14386E-01    1.02032E-08
-    3       8.95892E-09    1.81852E-02
+    3       8.95891E-09    1.81852E-02
 
   FOR JTOT =   40, SYMMETRY BLOCK =  4, ENERGY(  2) =  1000.000    : MAX DIAG & OFF-DIAG =  1.14E-01 &   1.02E-08
 
@@ -2352,8 +2339,8 @@
                        FOR JTOT =  40 AND SYMMETRY BLOCK =   5 AT ENERGY(  1) =  1250.000     CM-1
 
     F  I =      2              3
-    2       1.50413E-01    5.62400E-09
-    3       6.14960E-09    8.85709E-02
+    2       1.50413E-01    5.62397E-09
+    3       6.14957E-09    8.85709E-02
 
   FOR JTOT =   40, SYMMETRY BLOCK =  5, ENERGY(  1) =  1250.000    : MAX DIAG & OFF-DIAG =  1.50E-01 &   6.15E-09
 
@@ -2362,7 +2349,7 @@
 
     F  I =      2              3
     2       1.73309E-01    1.18894E-09
-    3       1.04395E-09    1.91748E-01
+    3       1.04394E-09    1.91748E-01
 
   FOR JTOT =   40, SYMMETRY BLOCK =  5, ENERGY(  2) =  1000.000    : MAX DIAG & OFF-DIAG =  1.92E-01 &   1.19E-09
 
@@ -2373,6 +2360,9 @@
 
   STATE-TO-STATE INTEGRAL CROSS SECTIONS IN ANGSTROM**2 BETWEEN    4 LEVELS WITH THRESHOLD ENERGIES (IN CM-1):
 
+
+  INCOMPLETE CROSS SECTIONS ARE OMITTED
+
     1     0.000000000000
     2   180.000000000000
     3   600.000000000000
@@ -2381,49 +2371,49 @@
   *** N.B. CROSS SECTIONS HAVE BEEN MULTIPLIED BY 10.0 TO ACCOUNT FOR JSTEP
 
    ENERGY (CM-1)    JTOTL  JSTEP  JTOTU      F    I         SIG(F,I)
-   1250.000000         10     10     40      1    1          3.53554      
-   1250.000000         10     10     40      2    1         5.809701E-02  
-   1250.000000         10     10     40      3    1         6.055730E-07  
-   1250.000000         10     10     40      5    1         9.470560E-12  
+   1250.000000         10     10     40      1    1          3.53555      
+   1250.000000         10     10     40      2    1         5.809699E-02  
+   1250.000000         10     10     40      3    1         6.055717E-07  
+   1250.000000         10     10     40      5    1         9.469095E-12  
 
-   1250.000000         10     10     40      1    2         1.357407E-02  
+   1250.000000         10     10     40      1    2         1.357406E-02  
    1250.000000         10     10     40      2    2          10.5984      
-   1250.000000         10     10     40      3    2         5.515276E-05  
-   1250.000000         10     10     40      5    2         3.146131E-14  
+   1250.000000         10     10     40      3    2         5.515302E-05  
+   1250.000000         10     10     40      5    2         3.145553E-14  
 
-   1250.000000         10     10     40      1    3         1.293959E-07  
-   1250.000000         10     10     40      2    3         5.043885E-05  
-   1250.000000         10     10     40      5    3         2.488463E-13  
+   1250.000000         10     10     40      1    3         1.293957E-07  
+   1250.000000         10     10     40      2    3         5.043908E-05  
+   1250.000000         10     10     40      5    3         2.488465E-13  
 
-   1250.000000         10     10     40      1    5         2.367640E-10  
-   1250.000000         10     10     40      2    5         3.366361E-12  
-   1250.000000         10     10     40      3    5         2.911502E-11  
+   1250.000000         10     10     40      1    5         2.367274E-10  
+   1250.000000         10     10     40      2    5         3.365742E-12  
+   1250.000000         10     10     40      3    5         2.911504E-11  
    1250.000000         10     10     40      5    5          275.547      
 
   TOTAL INELASTIC INTEGRAL CROSS SECTIONS IN ANGSTROM**2 FROM LEVEL
-   5.80976E-02                                                 1
-   1.36292E-02                                                 2
-   5.05682E-05                                                 3
-   2.69245E-10                                                 5
+   5.80976E-02                                                  1
+   1.36292E-02                                                  2
+   5.05685E-05                                                  3
+   2.69208E-10                                                  5
 
 
    ENERGY (CM-1)    JTOTL  JSTEP  JTOTU      F    I         SIG(F,I)
    1000.000000         10     10     40      1    1          8.02307      
-   1000.000000         10     10     40      2    1         4.804756E-02  
-   1000.000000         10     10     40      3    1         9.438149E-08  
+   1000.000000         10     10     40      2    1         4.804754E-02  
+   1000.000000         10     10     40      3    1         9.438133E-08  
 
-   1000.000000         10     10     40      1    2         1.171892E-02  
+   1000.000000         10     10     40      1    2         1.171891E-02  
    1000.000000         10     10     40      2    2          13.9881      
-   1000.000000         10     10     40      3    2         1.371138E-05  
+   1000.000000         10     10     40      3    2         1.371140E-05  
 
-   1000.000000         10     10     40      1    3         2.621708E-08  
-   1000.000000         10     10     40      2    3         1.561574E-05  
+   1000.000000         10     10     40      1    3         2.621704E-08  
+   1000.000000         10     10     40      2    3         1.561576E-05  
 
 
   TOTAL INELASTIC INTEGRAL CROSS SECTIONS IN ANGSTROM**2 FROM LEVEL
-   4.80477E-02                                                 1
-   1.17326E-02                                                 2
-   1.56420E-05                                                 3
+   4.80476E-02                                                  1
+   1.17326E-02                                                  2
+   1.56420E-05                                                  3
 
 
 
@@ -2432,12 +2422,11 @@
  |                Non-reactive quantum scattering calculations                |
  |                     on atomic and molecular collisions                     |
  |                                                                            |
- |              Copyright (C) 2022 J. M. Hutson & C. R. Le Sueur              |
+ |              Copyright (C) 2025 J. M. Hutson & C. R. Le Sueur              |
  |                                                                            |
- |                               Version 2022.0                               |
+ |                               Version 2025.0                               |
  |                                                                            |
- |                    This run used       0.23 cpu secs and                   |
- |                536 of the allocated   1000000 words of storage             |
+ |                      This run used       0.17 cpu secs                     |
  |                                                                            |
   ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
   ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
@@ -2445,11 +2434,11 @@
  |                Non-reactive quantum scattering calculations                |
  |                     on atomic and molecular collisions                     |
  |                                                                            |
- |              Copyright (C) 2022 J. M. Hutson & C. R. Le Sueur              |
+ |              Copyright (C) 2025 J. M. Hutson & C. R. Le Sueur              |
  |                                                                            |
- |                               Version 2022.0                               |
+ |                               Version 2025.0                               |
  |                                                                            |
- |                       Run on 31 May 2022   at 10:20:45                     |
+ |                       Run on 06 Nov 2025   at 16:35:42                     |
  |                                                                            |
   ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
 
@@ -2463,17 +2452,14 @@
 
   J. M. Hutson & C. R. Le Sueur, MOLSCAT: a program for non-reactive quantum
   scattering calculation on atomic and molecular collisions,
-  Version 2022.0, https//github.com/molscat/molscat
+  Version 2025.0, https//github.com/molscat/molscat
 
   and the published paper:
 
   J. M. Hutson & C. R. Le Sueur, Comput. Phys. Commun., 241, 9-18 (2019).
 
 
-  USING CODATA 2018 RECOMMENDED VALUES OF FUNDAMENTAL PHYSICAL CONSTANTS
-
-  MEMORY ALLOCATED TO MAIN WORKING ARRAY IS   1000000 (8-BYTE) WORDS (    7.63 MB)
-  2 INTEGERS CAN BE STORED IN EACH WORD.
+  USING CODATA 2022 RECOMMENDED VALUES OF FUNDAMENTAL PHYSICAL CONSTANTS
 
   PRINT LEVEL (IPRINT) =  3     OTHER PRINT CONTROLS  ISIGPR = 1
 
@@ -2555,7 +2541,7 @@
   ALL LENGTHS ARE IN UNITS OF RM (  3.50000000 ANGSTROM ) UNLESS OTHERWISE STATED
 
   NO DUPLICATED SETS OF INDICES IN LAMBDA ARRAY
-  INTERACTION MATRIX USES   3 BLOCKS OF VL ARRAY FOR R-DEPENDENT TERMS IN POTENTIAL
+  INTERACTION MATRIX USES   6 BLOCKS OF VL ARRAY FOR R-DEPENDENT TERMS IN POTENTIAL
 
   ======================================================================================================================
 
@@ -2622,14 +2608,6 @@
   * * * WARNING.
   INPUT LMAX.LE.0 (DEFAULT), HIGHEST VALUE CONSISTENT WITH NUMBER OF QUADRATURE POINTS WILL BE USED.  LMAX =  16
 
-  STORAGE ALLOCATED FOR  NVC (NO. VIB. CHANNELS) =            2
-                         NGPT (NO. GAUSS PTS.) =              8
-                         LMAX (NO. LEGENDRE COEFFS.) =       16
-                         MXXXXL (NO. SYMMETRIES IN POTL) =    2
-                         NQL (NO. QLT) =                     16
-                         NIXQL (NO. INDICES IN IXQL) =        2
-                         NEXT LOCATION =                    536
-
   TIME TO SET UP CALCULATION WAS    0.00   SECONDS.  EXIT IOSDRV
 
 ========================================================================================================================
@@ -2646,38 +2624,36 @@
 
                       PARTIAL WAVES FROM   10 TO    40 (IN STEPS OF   10)
 
-  ***** ***** ***** TIME WAS     0.09  SEC.
+  ***** ***** ***** TIME WAS     0.06  SEC.
  
 
-  ***** ***** STORAGE SO FAR USED       561  OF THE   1000000  AVAILABLE WORDS.
+  FOR ORIENTATION     1     SIG( 1, 1) =  5.7798E-01     SIG( 1, 2) =  5.8161E-13
+                            SIG( 2, 1) =  1.4540E-11     SIG( 2, 2) =  2.0471E+01
 
-  FOR ORIENTATION     1     SIG( 1, 1) =  5.7798E-01     SIG( 1, 2) =  5.8163E-13
-                            SIG( 2, 1) =  1.4541E-11     SIG( 2, 2) =  2.0471E+01
+  FOR ORIENTATION     2     SIG( 1, 1) =  5.6884E-01     SIG( 1, 2) =  3.9418E-13
+                            SIG( 2, 1) =  9.8544E-12     SIG( 2, 2) =  2.0773E+01
 
-  FOR ORIENTATION     2     SIG( 1, 1) =  5.6884E-01     SIG( 1, 2) =  3.8939E-13
-                            SIG( 2, 1) =  9.7347E-12     SIG( 2, 2) =  2.0772E+01
+  FOR ORIENTATION     3     SIG( 1, 1) =  5.2832E-01     SIG( 1, 2) =  6.4363E-13
+                            SIG( 2, 1) =  1.6091E-11     SIG( 2, 2) =  2.2004E+01
 
-  FOR ORIENTATION     3     SIG( 1, 1) =  5.2832E-01     SIG( 1, 2) =  6.4767E-13
-                            SIG( 2, 1) =  1.6192E-11     SIG( 2, 2) =  2.2004E+01
+  FOR ORIENTATION     4     SIG( 1, 1) =  4.4403E-01     SIG( 1, 2) =  5.5882E-13
+                            SIG( 2, 1) =  1.3971E-11     SIG( 2, 2) =  2.4335E+01
 
-  FOR ORIENTATION     4     SIG( 1, 1) =  4.4403E-01     SIG( 1, 2) =  5.6359E-13
-                            SIG( 2, 1) =  1.4090E-11     SIG( 2, 2) =  2.4335E+01
+  FOR ORIENTATION     5     SIG( 1, 1) =  3.5458E-01     SIG( 1, 2) =  7.6978E-13
+                            SIG( 2, 1) =  1.9245E-11     SIG( 2, 2) =  2.7649E+01
 
-  FOR ORIENTATION     5     SIG( 1, 1) =  3.5458E-01     SIG( 1, 2) =  7.6900E-13
-                            SIG( 2, 1) =  1.9225E-11     SIG( 2, 2) =  2.7649E+01
+  FOR ORIENTATION     6     SIG( 1, 1) =  3.4868E-01     SIG( 1, 2) =  2.0520E-12
+                            SIG( 2, 1) =  5.1301E-11     SIG( 2, 2) =  8.1269E+00
 
-  FOR ORIENTATION     6     SIG( 1, 1) =  3.4868E-01     SIG( 1, 2) =  2.0461E-12
-                            SIG( 2, 1) =  5.1151E-11     SIG( 2, 2) =  8.1269E+00
+  FOR ORIENTATION     7     SIG( 1, 1) =  4.5945E-01     SIG( 1, 2) =  4.9062E-12
+                            SIG( 2, 1) =  1.2265E-10     SIG( 2, 2) =  2.6577E+01
 
-  FOR ORIENTATION     7     SIG( 1, 1) =  4.5945E-01     SIG( 1, 2) =  4.9065E-12
-                            SIG( 2, 1) =  1.2266E-10     SIG( 2, 2) =  2.6577E+01
-
-  FOR ORIENTATION     8     SIG( 1, 1) =  5.9013E-01     SIG( 1, 2) =  9.3591E-12
-                            SIG( 2, 1) =  2.3398E-10     SIG( 2, 2) =  3.3750E+01
+  FOR ORIENTATION     8     SIG( 1, 1) =  5.9013E-01     SIG( 1, 2) =  9.3619E-12
+                            SIG( 2, 1) =  2.3405E-10     SIG( 2, 2) =  3.3750E+01
 
   AVERAGE OVER ORIENTATIONS
-                            SIG( 1, 1) =  4.5584E-01     SIG( 1, 2) =  1.7562E-12
-                            SIG( 2, 1) =  4.3904E-11     SIG( 2, 2) =  2.2162E+01
+                            SIG( 1, 1) =  0.0000E+00     SIG( 1, 2) =  0.0000E+00
+                            SIG( 2, 1) =  0.0000E+00     SIG( 2, 2) =  0.0000E+00
   STATE-TO-STATE CROSS SECTIONS (IN ANG**2) FOR KINETIC ENERGY =   1250.0000 CM-1.
 
   PROCESSED BY IOSOUT (FEB 92).
@@ -2689,53 +2665,53 @@
 
   MAXIMUM J-VALUE REQUESTED IS   6
 
-   QLOLD(0)     1 TO  1 = -1.4408E-01    1 TO  2 =  1.6634E-13
-                2 TO  1 =  4.1585E-12    2 TO  2 = -9.3029E+00
+   QLOLD(0)     1 TO  1 = -1.4408E-01    1 TO  2 =  1.6610E-13
+                2 TO  1 =  4.1524E-12    2 TO  2 = -9.3029E+00
 
-   Q(  0 )      1 TO  1 =  3.1176E-01    1 TO  2 =  1.6634E-13
-                2 TO  1 =  4.1585E-12    2 TO  2 =  1.2859E+01
+   Q(  0 )      1 TO  1 =  3.1176E-01    1 TO  2 =  1.6610E-13
+                2 TO  1 =  4.1524E-12    2 TO  2 =  1.2859E+01
 
    Q(  1 )      1 TO  1 =  0.0000E+00    1 TO  2 =  0.0000E+00
                 2 TO  1 =  0.0000E+00    2 TO  2 =  0.0000E+00
 
-   Q(  2 )      1 TO  1 =  1.3328E-01    1 TO  2 =  9.4245E-13
-                2 TO  1 =  2.3561E-11    2 TO  2 =  1.9195E+00
+   Q(  2 )      1 TO  1 =  1.3328E-01    1 TO  2 =  9.4204E-13
+                2 TO  1 =  2.3551E-11    2 TO  2 =  1.9195E+00
 
    Q(  3 )      1 TO  1 =  0.0000E+00    1 TO  2 =  0.0000E+00
                 2 TO  1 =  0.0000E+00    2 TO  2 =  0.0000E+00
 
-   Q(  4 )      1 TO  1 =  1.0452E-02    1 TO  2 =  4.9855E-13
-                2 TO  1 =  1.2464E-11    2 TO  2 =  2.7861E+00
+   Q(  4 )      1 TO  1 =  1.0452E-02    1 TO  2 =  4.9976E-13
+                2 TO  1 =  1.2494E-11    2 TO  2 =  2.7861E+00
 
    Q(  5 )      1 TO  1 =  0.0000E+00    1 TO  2 =  0.0000E+00
                 2 TO  1 =  0.0000E+00    2 TO  2 =  0.0000E+00
 
-   Q(  6 )      1 TO  1 =  3.4241E-04    1 TO  2 =  1.0683E-13
-                2 TO  1 =  2.6708E-12    2 TO  2 =  2.3386E+00
+   Q(  6 )      1 TO  1 =  3.4241E-04    1 TO  2 =  1.0684E-13
+                2 TO  1 =  2.6710E-12    2 TO  2 =  2.3386E+00
 
    Q(  7 )      1 TO  1 =  0.0000E+00    1 TO  2 =  0.0000E+00
                 2 TO  1 =  0.0000E+00    2 TO  2 =  0.0000E+00
 
-   Q(  8 )      1 TO  1 =  6.1584E-06    1 TO  2 =  1.1708E-14
-                2 TO  1 =  2.9270E-13    2 TO  2 =  1.0179E+00
+   Q(  8 )      1 TO  1 =  6.1583E-06    1 TO  2 =  1.1702E-14
+                2 TO  1 =  2.9255E-13    2 TO  2 =  1.0179E+00
 
    Q(  9 )      1 TO  1 =  0.0000E+00    1 TO  2 =  0.0000E+00
                 2 TO  1 =  0.0000E+00    2 TO  2 =  0.0000E+00
 
-   Q( 10 )      1 TO  1 =  6.4293E-08    1 TO  2 =  1.4187E-14
-                2 TO  1 =  3.5468E-13    2 TO  2 =  1.0708E+00
+   Q( 10 )      1 TO  1 =  6.4287E-08    1 TO  2 =  1.4129E-14
+                2 TO  1 =  3.5322E-13    2 TO  2 =  1.0708E+00
 
    Q( 11 )      1 TO  1 =  0.0000E+00    1 TO  2 =  0.0000E+00
                 2 TO  1 =  0.0000E+00    2 TO  2 =  0.0000E+00
 
-   Q( 12 )      1 TO  1 =  1.4839E-08    1 TO  2 =  2.5531E-15
-                2 TO  1 =  6.3828E-14    2 TO  2 =  3.9180E-02
+   Q( 12 )      1 TO  1 =  1.4836E-08    1 TO  2 =  2.6270E-15
+                2 TO  1 =  6.5675E-14    2 TO  2 =  3.9179E-02
 
    Q( 13 )      1 TO  1 =  0.0000E+00    1 TO  2 =  0.0000E+00
                 2 TO  1 =  0.0000E+00    2 TO  2 =  0.0000E+00
 
-   Q( 14 )      1 TO  1 =  6.3100E-07    1 TO  2 =  1.7449E-14
-                2 TO  1 =  4.3622E-13    2 TO  2 =  9.8901E-01
+   Q( 14 )      1 TO  1 =  6.3100E-07    1 TO  2 =  1.7402E-14
+                2 TO  1 =  4.3505E-13    2 TO  2 =  9.8902E-01
 
    Q( 15 )      1 TO  1 =  0.0000E+00    1 TO  2 =  0.0000E+00
                 2 TO  1 =  0.0000E+00    2 TO  2 =  0.0000E+00
@@ -2758,7 +2734,7 @@
       0  1.1613E-02       2  3.9649E-01       4  3.4812E+00       6  6.2746E-01 
 
   FOR INITIAL LEVEL J =   5  NON-ZERO CROSS SECTIONS (ANG**2) TO FINAL LEVELS ARE
-      1  1.6267E-02       3  4.1890E-01       5  3.4758E+00 
+      1  1.6267E-02       3  4.1890E-01       5  3.4759E+00 
 
   FOR INITIAL LEVEL J =   6  NON-ZERO CROSS SECTIONS (ANG**2) TO FINAL LEVELS ARE
       0  2.6339E-04       2  1.8615E-02       4  4.3440E-01       6  3.4729E+00 
@@ -2766,48 +2742,48 @@
   ***** ***** ***** BELOW FOR VIB LEVEL  1 TO  2
 
   FOR INITIAL LEVEL J =   0  NON-ZERO CROSS SECTIONS (ANG**2) TO FINAL LEVELS ARE
-      0  1.6634E-12       2  9.4245E-12       4  4.9855E-12       6  1.0683E-12 
+      0  1.6610E-12       2  9.4204E-12       4  4.9976E-12       6  1.0684E-12 
 
   FOR INITIAL LEVEL J =   1  NON-ZERO CROSS SECTIONS (ANG**2) TO FINAL LEVELS ARE
-      1  5.4332E-12       3  7.8705E-12       5  3.2628E-12 
+      1  5.4291E-12       3  7.8734E-12       5  3.2696E-12 
 
   FOR INITIAL LEVEL J =   2  NON-ZERO CROSS SECTIONS (ANG**2) TO FINAL LEVELS ARE
-      0  1.8849E-12       2  5.7805E-12       4  6.4780E-12       6  2.5766E-12 
+      0  1.8841E-12       2  5.7804E-12       4  6.4791E-12       6  2.5822E-12 
 
   FOR INITIAL LEVEL J =   3  NON-ZERO CROSS SECTIONS (ANG**2) TO FINAL LEVELS ARE
-      1  3.3731E-12       3  5.3321E-12       5  5.8050E-12 
+      1  3.3743E-12       3  5.3308E-12       5  5.8057E-12 
 
   FOR INITIAL LEVEL J =   4  NON-ZERO CROSS SECTIONS (ANG**2) TO FINAL LEVELS ARE
-      0  5.5394E-13       2  3.5989E-12       4  5.0912E-12       6  5.4984E-12 
+      0  5.5529E-13       2  3.5995E-12       4  5.0896E-12       6  5.4988E-12 
 
   FOR INITIAL LEVEL J =   5  NON-ZERO CROSS SECTIONS (ANG**2) TO FINAL LEVELS ARE
-      1  8.8985E-13       3  3.6941E-12       5  5.0151E-12 
+      1  8.9170E-13       3  3.6945E-12       5  5.0133E-12 
 
   FOR INITIAL LEVEL J =   6  NON-ZERO CROSS SECTIONS (ANG**2) TO FINAL LEVELS ARE
-      0  8.2177E-14       2  9.9101E-13       4  3.8066E-12       6  4.9593E-12 
+      0  8.2185E-14       2  9.9313E-13       4  3.8069E-12       6  4.9577E-12 
 
   ***** ***** ***** BELOW FOR VIB LEVEL  2 TO  1
 
   FOR INITIAL LEVEL J =   0  NON-ZERO CROSS SECTIONS (ANG**2) TO FINAL LEVELS ARE
-      0  4.1585E-11       2  2.3561E-10       4  1.2464E-10       6  2.6708E-11 
+      0  4.1524E-11       2  2.3551E-10       4  1.2494E-10       6  2.6710E-11 
 
   FOR INITIAL LEVEL J =   1  NON-ZERO CROSS SECTIONS (ANG**2) TO FINAL LEVELS ARE
-      1  1.3583E-10       3  1.9676E-10       5  8.1569E-11 
+      1  1.3573E-10       3  1.9683E-10       5  8.1739E-11 
 
   FOR INITIAL LEVEL J =   2  NON-ZERO CROSS SECTIONS (ANG**2) TO FINAL LEVELS ARE
-      0  4.7123E-11       2  1.4451E-10       4  1.6195E-10       6  6.4416E-11 
+      0  4.7102E-11       2  1.4451E-10       4  1.6198E-10       6  6.4554E-11 
 
   FOR INITIAL LEVEL J =   3  NON-ZERO CROSS SECTIONS (ANG**2) TO FINAL LEVELS ARE
-      1  8.4327E-11       3  1.3330E-10       5  1.4512E-10 
+      1  8.4358E-11       3  1.3327E-10       5  1.4514E-10 
 
   FOR INITIAL LEVEL J =   4  NON-ZERO CROSS SECTIONS (ANG**2) TO FINAL LEVELS ARE
-      0  1.3849E-11       2  8.9972E-11       4  1.2728E-10       6  1.3746E-10 
+      0  1.3882E-11       2  8.9987E-11       4  1.2724E-10       6  1.3747E-10 
 
   FOR INITIAL LEVEL J =   5  NON-ZERO CROSS SECTIONS (ANG**2) TO FINAL LEVELS ARE
-      1  2.2246E-11       3  9.2352E-11       5  1.2538E-10 
+      1  2.2292E-11       3  9.2363E-11       5  1.2533E-10 
 
   FOR INITIAL LEVEL J =   6  NON-ZERO CROSS SECTIONS (ANG**2) TO FINAL LEVELS ARE
-      0  2.0544E-12       2  2.4775E-11       4  9.5164E-11       6  1.2398E-10 
+      0  2.0546E-12       2  2.4828E-11       4  9.5172E-11       6  1.2394E-10 
 
   ***** ***** ***** BELOW FOR VIB LEVEL  2 TO  2
 
@@ -2844,10 +2820,8 @@
 
                       PARTIAL WAVES FROM   10 TO    40 (IN STEPS OF   10)
 
-  ***** ***** ***** TIME WAS     0.06  SEC.
+  ***** ***** ***** TIME WAS     0.04  SEC.
  
-
-  ***** ***** STORAGE SO FAR USED       561  OF THE   1000000  AVAILABLE WORDS.
 
   FOR ORIENTATION     1     SIG( 1, 1) =  1.0909E+00     SIG( 1, 2) =  0.0000E+00
                             SIG( 2, 1) =  0.0000E+00     SIG( 2, 2) =  0.0000E+00
@@ -2874,7 +2848,7 @@
                             SIG( 2, 1) =  0.0000E+00     SIG( 2, 2) =  0.0000E+00
 
   AVERAGE OVER ORIENTATIONS
-                            SIG( 1, 1) =  8.7232E-01     SIG( 1, 2) =  0.0000E+00
+                            SIG( 1, 1) =  0.0000E+00     SIG( 1, 2) =  0.0000E+00
                             SIG( 2, 1) =  0.0000E+00     SIG( 2, 2) =  0.0000E+00
   STATE-TO-STATE CROSS SECTIONS (IN ANG**2) FOR KINETIC ENERGY =   1000.0000 CM-1.
 
@@ -2909,19 +2883,19 @@
 
    Q(  7 )      1 TO  1 =  0.0000E+00
 
-   Q(  8 )      1 TO  1 =  8.8808E-06
+   Q(  8 )      1 TO  1 =  8.8807E-06
 
    Q(  9 )      1 TO  1 =  0.0000E+00
 
-   Q( 10 )      1 TO  1 =  9.6482E-08
+   Q( 10 )      1 TO  1 =  9.6493E-08
 
    Q( 11 )      1 TO  1 =  0.0000E+00
 
-   Q( 12 )      1 TO  1 =  2.1639E-08
+   Q( 12 )      1 TO  1 =  2.1640E-08
 
    Q( 13 )      1 TO  1 =  0.0000E+00
 
-   Q( 14 )      1 TO  1 =  8.8040E-07
+   Q( 14 )      1 TO  1 =  8.8038E-07
 
    Q( 15 )      1 TO  1 =  0.0000E+00
 
@@ -2954,11 +2928,10 @@
  |                Non-reactive quantum scattering calculations                |
  |                     on atomic and molecular collisions                     |
  |                                                                            |
- |              Copyright (C) 2022 J. M. Hutson & C. R. Le Sueur              |
+ |              Copyright (C) 2025 J. M. Hutson & C. R. Le Sueur              |
  |                                                                            |
- |                               Version 2022.0                               |
+ |                               Version 2025.0                               |
  |                                                                            |
- |                    This run used       0.15 cpu secs and                   |
- |                561 of the allocated   1000000 words of storage             |
+ |                      This run used       0.11 cpu secs                     |
  |                                                                            |
   ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---

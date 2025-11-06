@@ -2,11 +2,11 @@
  |                                                                            |
  |          Bound states of interacting pairs of atoms and molecules          |
  |                                                                            |
- |              Copyright (C) 2022 J. M. Hutson & C. R. Le Sueur              |
+ |              Copyright (C) 2025 J. M. Hutson & C. R. Le Sueur              |
  |                                                                            |
- |                               Version 2022.0                               |
+ |                               Version 2025.0                               |
  |                                                                            |
- |                       Run on 31 May 2022   at 10:31:18                     |
+ |                       Run on 06 Nov 2025   at 16:43:54                     |
  |                                                                            |
   -- BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND --
 
@@ -20,16 +20,14 @@
 
   J. M. Hutson & C. R. Le Sueur, BOUND: a program for bound states of
   interacting pairs of atoms and molecules,
-  Version 2022.0, https//github.com/molscat/molscat
+  Version 2025.0, https//github.com/molscat/molscat
 
   and the published paper:
 
   J. M. Hutson & C. R. Le Sueur, Comput. Phys. Commun., 241, 1-8 (2019).
 
 
-  USING CODATA 2018 RECOMMENDED VALUES OF FUNDAMENTAL PHYSICAL CONSTANTS
-
-  MEMORY ALLOCATED TO MAIN WORKING ARRAY IS   1000000 (8-BYTE) WORDS (    7.63 MB)
+  USING CODATA 2022 RECOMMENDED VALUES OF FUNDAMENTAL PHYSICAL CONSTANTS
 
   PRINT LEVEL (IPRINT) =  2
 
@@ -168,7 +166,7 @@
 
   EACH JTOT IS SPLIT INTO A MAXIMUM OF   2 SYMMETRY BLOCKS
 
-  INITIALIZATION DONE.  TIME WAS   0.00 CPU SECS.        26 WORDS OF STORAGE USED.
+  INITIALIZATION DONE.  TIME WAS   0.00 CPU SECS.
 
   ======================== p-H2 + o-H2: potential of Zarur and Rabitz; coefficients from VSTAR =========================
 
@@ -214,11 +212,10 @@
  |                                                                            |
  |          Bound states of interacting pairs of atoms and molecules          |
  |                                                                            |
- |              Copyright (C) 2022 J. M. Hutson & C. R. Le Sueur              |
+ |              Copyright (C) 2025 J. M. Hutson & C. R. Le Sueur              |
  |                                                                            |
- |                               Version 2022.0                               |
+ |                               Version 2025.0                               |
  |                                                                            |
- |                    This run used       0.06 cpu secs and                   |
- |                891 of the allocated   1000000 words of storage             |
+ |                      This run used       0.04 cpu secs                     |
  |                                                                            |
   -- BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND --

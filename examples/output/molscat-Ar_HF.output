@@ -3,11 +3,11 @@
  |                Non-reactive quantum scattering calculations                |
  |                     on atomic and molecular collisions                     |
  |                                                                            |
- |              Copyright (C) 2022 J. M. Hutson & C. R. Le Sueur              |
+ |              Copyright (C) 2025 J. M. Hutson & C. R. Le Sueur              |
  |                                                                            |
- |                               Version 2022.0                               |
+ |                               Version 2025.0                               |
  |                                                                            |
- |                       Run on 31 May 2022   at 10:20:45                     |
+ |                       Run on 06 Nov 2025   at 16:35:42                     |
  |                                                                            |
   ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
 
@@ -21,17 +21,14 @@
 
   J. M. Hutson & C. R. Le Sueur, MOLSCAT: a program for non-reactive quantum
   scattering calculation on atomic and molecular collisions,
-  Version 2022.0, https//github.com/molscat/molscat
+  Version 2025.0, https//github.com/molscat/molscat
 
   and the published paper:
 
   J. M. Hutson & C. R. Le Sueur, Comput. Phys. Commun., 241, 9-18 (2019).
 
 
-  USING CODATA 2018 RECOMMENDED VALUES OF FUNDAMENTAL PHYSICAL CONSTANTS
-
-  MEMORY ALLOCATED TO MAIN WORKING ARRAY IS   1000000 (8-BYTE) WORDS (    7.63 MB)
-  2 INTEGERS CAN BE STORED IN EACH WORD.
+  USING CODATA 2022 RECOMMENDED VALUES OF FUNDAMENTAL PHYSICAL CONSTANTS
 
   PRINT LEVEL (IPRINT) =  6     OTHER PRINT CONTROLS  ISIGPR = 0
 
@@ -177,13 +174,13 @@
 
   COMPUTED K MATRICES WILL BE SAVED ON UNIT 12
 
-  EIGENPHASE SUMMARY WILL BE WRITTEN TO UNIT  4
+  EIGENPHASE SUMMARY WILL BE WRITTEN TO UNIT  3
 
   STATE-TO-STATE INTEGRAL CROSS-SECTIONS WILL BE COMPUTED BUT NOT STORED ON DISK
 
   ======================================================================================================================
 
-  INITIALIZATION DONE.  TIME WAS   0.00 CPU SECS.      1076 WORDS OF STORAGE USED.
+  INITIALIZATION DONE.  TIME WAS   0.00 CPU SECS.
 
   ============================= Ar-HF v=0 on H6(4,3,2) potential: see JCP 96, 6752 (1992) ==============================
 
@@ -235,24 +232,24 @@
 
   ESTIMATE PARAMETERS OF DISTANT RESONANCE USING 5 ENERGIES
 
-  ENERGY(1) =   16.930000000000     CM-1 EPSUM/PI = 10.242726692024299
-  ENERGY(2) =   16.930100000000     CM-1 EPSUM/PI = 10.242712521354910
-  ENERGY(3) =   16.930200000000     CM-1 EPSUM/PI = 10.242698361212922
-  ENERGY(4) =   16.930300000000     CM-1 EPSUM/PI = 10.242684211838228
-  ENERGY(5) =   16.930400000000     CM-1 EPSUM/PI = 10.242670073478129
+  ENERGY(1) =   16.930000000000     CM-1 EPSUM/PI = 10.242726690002582
+  ENERGY(2) =   16.930100000000     CM-1 EPSUM/PI = 10.242712519334264
+  ENERGY(3) =   16.930200000000     CM-1 EPSUM/PI = 10.242698359193380
+  ENERGY(4) =   16.930300000000     CM-1 EPSUM/PI = 10.242684209819863
+  ENERGY(5) =   16.930400000000     CM-1 EPSUM/PI = 10.242670071461010
 
-  ESTIMATED EIGENPHASE CURVATURES ARE   1.05274       1.07673       1.10146    
+  ESTIMATED EIGENPHASE CURVATURES ARE   1.05274       1.07674       1.10147    
 
-  ESTIMATE RESONANCE ENERGY =   16.943462880043     CM-1       WIDTH = 0.2512E-05 CM-1    
+  ESTIMATE RESONANCE ENERGY =   16.943462066764     CM-1       WIDTH = 0.2512E-05 CM-1    
 
   - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
   CALCULATIONS WILL BE PERFORMED FOR    5 ENERGIES
-  ENERGY    6           =   16.94293236     CM-1
-  ENERGY    7           =   16.94319762     CM-1
-  ENERGY    8           =   16.94346288     CM-1
-  ENERGY    9           =   16.94372814     CM-1
-  ENERGY   10           =   16.94399340     CM-1
+  ENERGY    6           =   16.94293158     CM-1
+  ENERGY    7           =   16.94319683     CM-1
+  ENERGY    8           =   16.94346207     CM-1
+  ENERGY    9           =   16.94372731     CM-1
+  ENERGY   10           =   16.94399255     CM-1
 
   - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
@@ -260,34 +257,34 @@
 
   FOR JTOT =    1, SYMMETRY BLOCK =  2, ENERGY(  6) =  16.94293    : MAX DIAG & OFF-DIAG =  1.35E+00 &   0.00E+00
 
-  S-MATRIX EIGENPHASE SUM, EPSUM/PI = 10.24728
+  S-MATRIX EIGENPHASE SUM, EPSUM/PI = 10.24725
 
   FOR JTOT =    1, SYMMETRY BLOCK =  2, ENERGY(  7) =  16.94320    : MAX DIAG & OFF-DIAG =  1.38E+00 &   0.00E+00
 
-  S-MATRIX EIGENPHASE SUM, EPSUM/PI = 10.22524
+  S-MATRIX EIGENPHASE SUM, EPSUM/PI = 10.22509
 
   FOR JTOT =    1, SYMMETRY BLOCK =  2, ENERGY(  8) =  16.94346    : MAX DIAG & OFF-DIAG =  1.19E+00 &   0.00E+00
 
-  S-MATRIX EIGENPHASE SUM, EPSUM/PI = 10.23704
+  S-MATRIX EIGENPHASE SUM, EPSUM/PI = 10.23703
 
   FOR JTOT =    1, SYMMETRY BLOCK =  2, ENERGY(  9) =  16.94373    : MAX DIAG & OFF-DIAG =  1.29E+00 &   0.00E+00
 
-  S-MATRIX EIGENPHASE SUM, EPSUM/PI = 10.23855
+  S-MATRIX EIGENPHASE SUM, EPSUM/PI = 10.23854
 
   FOR JTOT =    1, SYMMETRY BLOCK =  2, ENERGY( 10) =  16.94399    : MAX DIAG & OFF-DIAG =  1.31E+00 &   0.00E+00
 
   ESTIMATE PARAMETERS OF DISTANT RESONANCE USING 5 ENERGIES
 
-  ENERGY(1) =   16.942932364841     CM-1 EPSUM/PI = 10.243433183155402
-  ENERGY(2) =   16.943197622442     CM-1 EPSUM/PI = 10.247278559556468
-  ENERGY(3) =   16.943462880043     CM-1 EPSUM/PI = 10.225244429689363
-  ENERGY(4) =   16.943728137644     CM-1 EPSUM/PI = 10.237040143588670
-  ENERGY(5) =   16.943993395245     CM-1 EPSUM/PI = 10.238546455636984
+  ENERGY(1) =   16.942931584094     CM-1 EPSUM/PI = 10.243428661622493
+  ENERGY(2) =   16.943196825429     CM-1 EPSUM/PI = 10.247250833006156
+  ENERGY(3) =   16.943462066764     CM-1 EPSUM/PI = 10.225088079271933
+  ENERGY(4) =   16.943727308100     CM-1 EPSUM/PI = 10.237031804342323
+  ENERGY(5) =   16.943992549435     CM-1 EPSUM/PI = 10.238543824922726
 
-  ESTIMATED EIGENPHASE CURVATURES ARE  -367807.       480800.      -146236.    
+  ESTIMATED EIGENPHASE CURVATURES ARE  -369351.       484791.      -148277.    
 
   *** NEXTE: EIGENPHASE CURVATURES AMBIGUOUS: EITHER ENERGIES SPAN RESONANCE OR PHASES AFFECTED BY NUMERICAL NOISE:
-             UNSAFE TO ESTIMATE RESONANCE ENERGY. DNRG INCREASED TO 0.26526E-02 CM-1    
+             UNSAFE TO ESTIMATE RESONANCE ENERGY. DNRG INCREASED TO 0.26524E-02 CM-1    
 
   SIGMA NOT PRINTED BECAUSE ISIGPR = 0
 
@@ -297,12 +294,11 @@
  |                Non-reactive quantum scattering calculations                |
  |                     on atomic and molecular collisions                     |
  |                                                                            |
- |              Copyright (C) 2022 J. M. Hutson & C. R. Le Sueur              |
+ |              Copyright (C) 2025 J. M. Hutson & C. R. Le Sueur              |
  |                                                                            |
- |                               Version 2022.0                               |
+ |                               Version 2025.0                               |
  |                                                                            |
- |                    This run used       0.10 cpu secs and                   |
- |               3525 of the allocated   1000000 words of storage             |
+ |                      This run used       0.07 cpu secs                     |
  |                                                                            |
   ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
   ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
@@ -310,11 +306,11 @@
  |                Non-reactive quantum scattering calculations                |
  |                     on atomic and molecular collisions                     |
  |                                                                            |
- |              Copyright (C) 2022 J. M. Hutson & C. R. Le Sueur              |
+ |              Copyright (C) 2025 J. M. Hutson & C. R. Le Sueur              |
  |                                                                            |
- |                               Version 2022.0                               |
+ |                               Version 2025.0                               |
  |                                                                            |
- |                       Run on 31 May 2022   at 10:20:45                     |
+ |                       Run on 06 Nov 2025   at 16:35:42                     |
  |                                                                            |
   ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
 
@@ -328,17 +324,14 @@
 
   J. M. Hutson & C. R. Le Sueur, MOLSCAT: a program for non-reactive quantum
   scattering calculation on atomic and molecular collisions,
-  Version 2022.0, https//github.com/molscat/molscat
+  Version 2025.0, https//github.com/molscat/molscat
 
   and the published paper:
 
   J. M. Hutson & C. R. Le Sueur, Comput. Phys. Commun., 241, 9-18 (2019).
 
 
-  USING CODATA 2018 RECOMMENDED VALUES OF FUNDAMENTAL PHYSICAL CONSTANTS
-
-  MEMORY ALLOCATED TO MAIN WORKING ARRAY IS   1000000 (8-BYTE) WORDS (    7.63 MB)
-  2 INTEGERS CAN BE STORED IN EACH WORD.
+  USING CODATA 2022 RECOMMENDED VALUES OF FUNDAMENTAL PHYSICAL CONSTANTS
 
   PRINT LEVEL (IPRINT) =  6     OTHER PRINT CONTROLS  ISIGPR = 0
 
@@ -487,7 +480,7 @@
 
   CALCULATION(S) WILL BE FOR SYMMETRY BLOCK   2
 
-  COMPUTED K MATRICES WILL BE SAVED ON UNIT 12
+  COMPUTED K MATRICES WILL BE SAVED ON UNIT 13
 
   EIGENPHASE SUMMARY WILL BE WRITTEN TO UNIT  4
 
@@ -495,7 +488,7 @@
 
   ======================================================================================================================
 
-  INITIALIZATION DONE.  TIME WAS   0.00 CPU SECS.      1886 WORDS OF STORAGE USED.
+  INITIALIZATION DONE.  TIME WAS   0.00 CPU SECS.
 
   ============================= Ar-HF v=0 on H6(4,3,2) potential: see JCP 96, 6752 (1992) ==============================
 
@@ -538,13 +531,13 @@
   FOR JTOT =    1, SYMMETRY BLOCK =  2, ENERGY(  3) =  16.94346    : MAX DIAG & OFF-DIAG =  1.19E+00 &   0.00E+00
 
   3-POINT POLE FORMULA ESTIMATES            E_RES =   16.9433833     CM-1
-                                            GAMMA =  7.68668E-06     CM-1
+                                            GAMMA =  7.68647E-06     CM-1
                                     EPSUM_BG / PI =  0.24061    
 
   - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
-  ENERGY    4           =   16.94338333     CM-1
+  ENERGY    4           =   16.94338332     CM-1
 
-  S-MATRIX EIGENPHASE SUM, EPSUM/PI =  9.74572
+  S-MATRIX EIGENPHASE SUM, EPSUM/PI =  9.74581
 
   FOR JTOT =    1, SYMMETRY BLOCK =  2, ENERGY(  4) =  16.94338    : MAX DIAG & OFF-DIAG =  1.44E+00 &   0.00E+00
 
@@ -553,7 +546,7 @@
                                     EPSUM_BG / PI =  0.24062    
 
   - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
-  ENERGY    5           =   16.94338250     CM-1
+  ENERGY    5           =   16.94338249     CM-1
 
   S-MATRIX EIGENPHASE SUM, EPSUM/PI =  9.67784
 
@@ -564,28 +557,28 @@
                                     EPSUM_BG / PI =  0.24064    
 
   - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
-  ENERGY    6           =   16.94339097     CM-1
+  ENERGY    6           =   16.94339096     CM-1
 
   S-MATRIX EIGENPHASE SUM, EPSUM/PI = 10.09306
 
   FOR JTOT =    1, SYMMETRY BLOCK =  2, ENERGY(  6) =  16.94339    : MAX DIAG & OFF-DIAG =  2.34E-01 &   0.00E+00
 
   3-POINT POLE FORMULA ESTIMATES            E_RES =   16.9433833     CM-1
-                                            GAMMA =  7.70456E-06     CM-1
+                                            GAMMA =  7.70457E-06     CM-1
                                     EPSUM_BG / PI =  0.24065    
 
   - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
-  ENERGY    7           =   16.94338327     CM-1
+  ENERGY    7           =   16.94338326     CM-1
 
   S-MATRIX EIGENPHASE SUM, EPSUM/PI =  9.74065
 
   FOR JTOT =    1, SYMMETRY BLOCK =  2, ENERGY(  7) =  16.94338    : MAX DIAG & OFF-DIAG =  1.49E+00 &   0.00E+00
 
   3-POINT POLE FORMULA ESTIMATES            E_RES =   16.9433833     CM-1
-                                            GAMMA =  7.70457E-06     CM-1
+                                            GAMMA =  7.70456E-06     CM-1
                                     EPSUM_BG / PI =  0.24065    
 
-  CONVERGED ON RESONANCE AT E_RES =   16.9433833     CM-1, WITH PREDICTED STEP =  1.80123E-12 CM-1
+  CONVERGED ON RESONANCE AT E_RES =   16.9433833     CM-1, WITH PREDICTED STEP = -1.15463E-12 CM-1
 
   SIGMA NOT PRINTED BECAUSE ISIGPR = 0
 
@@ -595,11 +588,10 @@
  |                Non-reactive quantum scattering calculations                |
  |                     on atomic and molecular collisions                     |
  |                                                                            |
- |              Copyright (C) 2022 J. M. Hutson & C. R. Le Sueur              |
+ |              Copyright (C) 2025 J. M. Hutson & C. R. Le Sueur              |
  |                                                                            |
- |                               Version 2022.0                               |
+ |                               Version 2025.0                               |
  |                                                                            |
- |                    This run used       0.07 cpu secs and                   |
- |               4335 of the allocated   1000000 words of storage             |
+ |                      This run used       0.05 cpu secs                     |
  |                                                                            |
   ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---

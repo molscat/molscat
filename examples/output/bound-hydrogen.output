@@ -2,11 +2,11 @@
  |                                                                            |
  |          Bound states of interacting pairs of atoms and molecules          |
  |                                                                            |
- |              Copyright (C) 2022 J. M. Hutson & C. R. Le Sueur              |
+ |              Copyright (C) 2025 J. M. Hutson & C. R. Le Sueur              |
  |                                                                            |
- |                               Version 2022.0                               |
+ |                               Version 2025.0                               |
  |                                                                            |
- |                       Run on 31 May 2022   at 10:31:22                     |
+ |                       Run on 06 Nov 2025   at 16:43:57                     |
  |                                                                            |
   -- BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND --
 
@@ -20,16 +20,14 @@
 
   J. M. Hutson & C. R. Le Sueur, BOUND: a program for bound states of
   interacting pairs of atoms and molecules,
-  Version 2022.0, https//github.com/molscat/molscat
+  Version 2025.0, https//github.com/molscat/molscat
 
   and the published paper:
 
   J. M. Hutson & C. R. Le Sueur, Comput. Phys. Commun., 241, 1-8 (2019).
 
 
-  USING CODATA 2018 RECOMMENDED VALUES OF FUNDAMENTAL PHYSICAL CONSTANTS
-
-  MEMORY ALLOCATED TO MAIN WORKING ARRAY IS   1000000 (8-BYTE) WORDS (    7.63 MB)
+  USING CODATA 2022 RECOMMENDED VALUES OF FUNDAMENTAL PHYSICAL CONSTANTS
 
   PRINT LEVEL (IPRINT) =  5
 
@@ -146,7 +144,7 @@
 
   CALCULATIONS WILL BE FOR SYMMETRY BLOCK   2  ONLY
 
-  INITIALIZATION DONE.  TIME WAS   0.00 CPU SECS.         3 WORDS OF STORAGE USED.
+  INITIALIZATION DONE.  TIME WAS   0.00 CPU SECS.
 
   ======================================= Hydrogen: ITYPE=1; IPROPS=8, IPROPL=9 ========================================
 
@@ -167,9 +165,9 @@
 
   SEARCHING FOR BOUND STATE NUMBER     1
 
-  CONVERGED ON STATE NUMBER     1 AT                              ENERGY = -0.4999999980     AU    
+  CONVERGED ON STATE NUMBER     1 AT                              ENERGY = -0.4999999984     AU    
 
-  SMALLEST EIGENVALUE OF MATCHING MATRIX IS NUMBER  1 =  1.49053E-08
+  SMALLEST EIGENVALUE OF MATCHING MATRIX IS NUMBER  1 =  1.17265E-08
 
   WITH PRINCIPAL EIGENVECTOR COMPONENTS
   CHAN     VEC    VEC**2   L   QUANTUM NUMBERS
@@ -180,9 +178,9 @@
 
   SEARCHING FOR BOUND STATE NUMBER     2
 
-  CONVERGED ON STATE NUMBER     2 AT                              ENERGY = -0.1249999950     AU    
+  CONVERGED ON STATE NUMBER     2 AT                              ENERGY = -0.1249999951     AU    
 
-  SMALLEST EIGENVALUE OF MATCHING MATRIX IS NUMBER  1 =  2.19118E-07
+  SMALLEST EIGENVALUE OF MATCHING MATRIX IS NUMBER  1 =  2.13869E-07
 
   WITH PRINCIPAL EIGENVECTOR COMPONENTS
   CHAN     VEC    VEC**2   L   QUANTUM NUMBERS
@@ -193,9 +191,9 @@
 
   SEARCHING FOR BOUND STATE NUMBER     3
 
-  CONVERGED ON STATE NUMBER     3 AT                              ENERGY = -5.5555550931E-02 AU    
+  CONVERGED ON STATE NUMBER     3 AT                              ENERGY = -5.5555551007E-02 AU    
 
-  SMALLEST EIGENVALUE OF MATCHING MATRIX IS NUMBER  1 = -1.72294E-06
+  SMALLEST EIGENVALUE OF MATCHING MATRIX IS NUMBER  1 = -1.72147E-06
 
   WITH PRINCIPAL EIGENVECTOR COMPONENTS
   CHAN     VEC    VEC**2   L   QUANTUM NUMBERS
@@ -206,9 +204,9 @@
 
   SEARCHING FOR BOUND STATE NUMBER     4
 
-  CONVERGED ON STATE NUMBER     4 AT                              ENERGY = -3.1249998650E-02 AU    
+  CONVERGED ON STATE NUMBER     4 AT                              ENERGY = -3.1249998668E-02 AU    
 
-  SMALLEST EIGENVALUE OF MATCHING MATRIX IS NUMBER  1 =  1.21456E-06
+  SMALLEST EIGENVALUE OF MATCHING MATRIX IS NUMBER  1 =  1.19823E-06
 
   WITH PRINCIPAL EIGENVECTOR COMPONENTS
   CHAN     VEC    VEC**2   L   QUANTUM NUMBERS
@@ -219,9 +217,9 @@
 
   SEARCHING FOR BOUND STATE NUMBER     5
 
-  CONVERGED ON STATE NUMBER     5 AT                              ENERGY = -1.9999998026E-02 AU    
+  CONVERGED ON STATE NUMBER     5 AT                              ENERGY = -1.9999998054E-02 AU    
 
-  SMALLEST EIGENVALUE OF MATCHING MATRIX IS NUMBER  1 = -6.94165E-08
+  SMALLEST EIGENVALUE OF MATCHING MATRIX IS NUMBER  1 = -6.93992E-08
 
   WITH PRINCIPAL EIGENVECTOR COMPONENTS
   CHAN     VEC    VEC**2   L   QUANTUM NUMBERS
@@ -232,9 +230,9 @@
 
   SEARCHING FOR BOUND STATE NUMBER     6
 
-  CONVERGED ON STATE NUMBER     6 AT                              ENERGY = -1.3889504332E-02 AU    
+  CONVERGED ON STATE NUMBER     6 AT                              ENERGY = -1.3889504350E-02 AU    
 
-  SMALLEST EIGENVALUE OF MATCHING MATRIX IS NUMBER  1 = -4.35826E-05
+  SMALLEST EIGENVALUE OF MATCHING MATRIX IS NUMBER  1 = -4.35811E-05
 
   WITH PRINCIPAL EIGENVECTOR COMPONENTS
   CHAN     VEC    VEC**2   L   QUANTUM NUMBERS
@@ -245,9 +243,9 @@
 
   SEARCHING FOR BOUND STATE NUMBER     7
 
-  CONVERGED ON STATE NUMBER     7 AT                              ENERGY = -1.0332270780E-02 AU    
+  CONVERGED ON STATE NUMBER     7 AT                              ENERGY = -1.0332270791E-02 AU    
 
-  SMALLEST EIGENVALUE OF MATCHING MATRIX IS NUMBER  1 = -7.32162E-07
+  SMALLEST EIGENVALUE OF MATCHING MATRIX IS NUMBER  1 = -7.32039E-07
 
   WITH PRINCIPAL EIGENVECTOR COMPONENTS
   CHAN     VEC    VEC**2   L   QUANTUM NUMBERS
@@ -258,9 +256,9 @@
 
   SEARCHING FOR BOUND STATE NUMBER     8
 
-  CONVERGED ON STATE NUMBER     8 AT                              ENERGY = -7.1321668699E-03 AU    
+  CONVERGED ON STATE NUMBER     8 AT                              ENERGY = -7.1321668956E-03 AU    
 
-  SMALLEST EIGENVALUE OF MATCHING MATRIX IS NUMBER  1 = -1.18326E-06
+  SMALLEST EIGENVALUE OF MATCHING MATRIX IS NUMBER  1 = -1.18269E-06
 
   WITH PRINCIPAL EIGENVECTOR COMPONENTS
   CHAN     VEC    VEC**2   L   QUANTUM NUMBERS
@@ -271,9 +269,9 @@
 
   SEARCHING FOR BOUND STATE NUMBER     9
 
-  CONVERGED ON STATE NUMBER     9 AT                              ENERGY = -1.6256807753E-03 AU    
+  CONVERGED ON STATE NUMBER     9 AT                              ENERGY = -1.6256808136E-03 AU    
 
-  SMALLEST EIGENVALUE OF MATCHING MATRIX IS NUMBER  1 =  2.51736E-09
+  SMALLEST EIGENVALUE OF MATCHING MATRIX IS NUMBER  1 =  4.14564E-09
 
   WITH PRINCIPAL EIGENVECTOR COMPONENTS
   CHAN     VEC    VEC**2   L   QUANTUM NUMBERS
@@ -297,9 +295,9 @@
 
   SEARCHING FOR BOUND STATE NUMBER     1
 
-  CONVERGED ON STATE NUMBER     1 AT                              ENERGY = -0.1249999971     AU    
+  CONVERGED ON STATE NUMBER     1 AT                              ENERGY = -0.1249999972     AU    
 
-  SMALLEST EIGENVALUE OF MATCHING MATRIX IS NUMBER  1 =  9.57712E-07
+  SMALLEST EIGENVALUE OF MATCHING MATRIX IS NUMBER  1 =  9.33608E-07
 
   WITH PRINCIPAL EIGENVECTOR COMPONENTS
   CHAN     VEC    VEC**2   L   QUANTUM NUMBERS
@@ -310,9 +308,9 @@
 
   SEARCHING FOR BOUND STATE NUMBER     2
 
-  CONVERGED ON STATE NUMBER     2 AT                              ENERGY = -5.5555549764E-02 AU    
+  CONVERGED ON STATE NUMBER     2 AT                              ENERGY = -5.5555549847E-02 AU    
 
-  SMALLEST EIGENVALUE OF MATCHING MATRIX IS NUMBER  1 =  5.79462E-07
+  SMALLEST EIGENVALUE OF MATCHING MATRIX IS NUMBER  1 =  5.67106E-07
 
   WITH PRINCIPAL EIGENVECTOR COMPONENTS
   CHAN     VEC    VEC**2   L   QUANTUM NUMBERS
@@ -323,9 +321,9 @@
 
   SEARCHING FOR BOUND STATE NUMBER     3
 
-  CONVERGED ON STATE NUMBER     3 AT                              ENERGY = -3.1249998128E-02 AU    
+  CONVERGED ON STATE NUMBER     3 AT                              ENERGY = -3.1249998151E-02 AU    
 
-  SMALLEST EIGENVALUE OF MATCHING MATRIX IS NUMBER  1 =  3.19581E-06
+  SMALLEST EIGENVALUE OF MATCHING MATRIX IS NUMBER  1 =  3.15565E-06
 
   WITH PRINCIPAL EIGENVECTOR COMPONENTS
   CHAN     VEC    VEC**2   L   QUANTUM NUMBERS
@@ -336,9 +334,9 @@
 
   SEARCHING FOR BOUND STATE NUMBER     4
 
-  CONVERGED ON STATE NUMBER     4 AT                              ENERGY = -1.9999997698E-02 AU    
+  CONVERGED ON STATE NUMBER     4 AT                              ENERGY = -1.9999997729E-02 AU    
 
-  SMALLEST EIGENVALUE OF MATCHING MATRIX IS NUMBER  1 =  1.20402E-05
+  SMALLEST EIGENVALUE OF MATCHING MATRIX IS NUMBER  1 =  1.20442E-05
 
   WITH PRINCIPAL EIGENVECTOR COMPONENTS
   CHAN     VEC    VEC**2   L   QUANTUM NUMBERS
@@ -349,9 +347,9 @@
 
   SEARCHING FOR BOUND STATE NUMBER     5
 
-  CONVERGED ON STATE NUMBER     5 AT                              ENERGY = -1.3889377566E-02 AU    
+  CONVERGED ON STATE NUMBER     5 AT                              ENERGY = -1.3889377583E-02 AU    
 
-  SMALLEST EIGENVALUE OF MATCHING MATRIX IS NUMBER  1 = -3.38179E-06
+  SMALLEST EIGENVALUE OF MATCHING MATRIX IS NUMBER  1 = -3.36852E-06
 
   WITH PRINCIPAL EIGENVECTOR COMPONENTS
   CHAN     VEC    VEC**2   L   QUANTUM NUMBERS
@@ -362,9 +360,9 @@
 
   SEARCHING FOR BOUND STATE NUMBER     6
 
-  CONVERGED ON STATE NUMBER     6 AT                              ENERGY = -1.0310452689E-02 AU    
+  CONVERGED ON STATE NUMBER     6 AT                              ENERGY = -1.0310452702E-02 AU    
 
-  SMALLEST EIGENVALUE OF MATCHING MATRIX IS NUMBER  1 =  1.28426E-04
+  SMALLEST EIGENVALUE OF MATCHING MATRIX IS NUMBER  1 =  1.28413E-04
 
   WITH PRINCIPAL EIGENVECTOR COMPONENTS
   CHAN     VEC    VEC**2   L   QUANTUM NUMBERS
@@ -375,9 +373,9 @@
 
   SEARCHING FOR BOUND STATE NUMBER     7
 
-  CONVERGED ON STATE NUMBER     7 AT                              ENERGY = -7.2376953139E-03 AU    
+  CONVERGED ON STATE NUMBER     7 AT                              ENERGY = -7.2376953372E-03 AU    
 
-  SMALLEST EIGENVALUE OF MATCHING MATRIX IS NUMBER  1 = -8.69244E-07
+  SMALLEST EIGENVALUE OF MATCHING MATRIX IS NUMBER  1 = -8.63439E-07
 
   WITH PRINCIPAL EIGENVECTOR COMPONENTS
   CHAN     VEC    VEC**2   L   QUANTUM NUMBERS
@@ -388,9 +386,9 @@
 
   SEARCHING FOR BOUND STATE NUMBER     8
 
-  CONVERGED ON STATE NUMBER     8 AT                              ENERGY = -1.8797040599E-03 AU    
+  CONVERGED ON STATE NUMBER     8 AT                              ENERGY = -1.8797040973E-03 AU    
 
-  SMALLEST EIGENVALUE OF MATCHING MATRIX IS NUMBER  1 =  1.00345E-04
+  SMALLEST EIGENVALUE OF MATCHING MATRIX IS NUMBER  1 =  1.00343E-04
 
   WITH PRINCIPAL EIGENVECTOR COMPONENTS
   CHAN     VEC    VEC**2   L   QUANTUM NUMBERS
@@ -402,11 +400,10 @@
  |                                                                            |
  |          Bound states of interacting pairs of atoms and molecules          |
  |                                                                            |
- |              Copyright (C) 2022 J. M. Hutson & C. R. Le Sueur              |
+ |              Copyright (C) 2025 J. M. Hutson & C. R. Le Sueur              |
  |                                                                            |
- |                               Version 2022.0                               |
+ |                               Version 2025.0                               |
  |                                                                            |
- |                    This run used       2.51 cpu secs and                   |
- |                 42 of the allocated   1000000 words of storage             |
+ |                      This run used       1.81 cpu secs                     |
  |                                                                            |
   -- BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND --

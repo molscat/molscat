@@ -2,11 +2,11 @@
  |                                                                            |
  |          Bound states of interacting pairs of atoms and molecules          |
  |                                                                            |
- |              Copyright (C) 2022 J. M. Hutson & C. R. Le Sueur              |
+ |              Copyright (C) 2025 J. M. Hutson & C. R. Le Sueur              |
  |                                                                            |
- |                               Version 2022.0                               |
+ |                               Version 2025.0                               |
  |                                                                            |
- |                       Run on 31 May 2022   at 10:20:20                     |
+ |                       Run on 06 Nov 2025   at 16:35:23                     |
  |                                                                            |
   -- BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND --
 
@@ -20,16 +20,14 @@
 
   J. M. Hutson & C. R. Le Sueur, BOUND: a program for bound states of
   interacting pairs of atoms and molecules,
-  Version 2022.0, https//github.com/molscat/molscat
+  Version 2025.0, https//github.com/molscat/molscat
 
   and the published paper:
 
   J. M. Hutson & C. R. Le Sueur, Comput. Phys. Commun., 241, 1-8 (2019).
 
 
-  USING CODATA 2018 RECOMMENDED VALUES OF FUNDAMENTAL PHYSICAL CONSTANTS
-
-  MEMORY ALLOCATED TO MAIN WORKING ARRAY IS   1000000 (8-BYTE) WORDS (    7.63 MB)
+  USING CODATA 2022 RECOMMENDED VALUES OF FUNDAMENTAL PHYSICAL CONSTANTS
 
   PRINT LEVEL (IPRINT) =  1
 
@@ -140,26 +138,25 @@
 
   CALCULATIONS WILL BE FOR SYMMETRY BLOCK   2  ONLY
 
-  INITIALIZATION DONE.  TIME WAS   0.00 CPU SECS.         9 WORDS OF STORAGE USED.
+  INITIALIZATION DONE.  TIME WAS   0.00 CPU SECS.
 
   =============================================== model system: ITYPE=1 ================================================
 
   *****************************  ANGULAR MOMENTUM JTOT  =   1   AND SYMMETRY BLOCK  =    2  ****************************
 
-  CONVERGED ON STATE NUMBER     4 AT                              ENERGY =  -4.992074660     CM-1  
+  CONVERGED ON STATE NUMBER     4 AT                              ENERGY =  -4.992074672     CM-1  
 
-  CONVERGED ON STATE NUMBER     5 AT                              ENERGY =  -1.413103885     CM-1  
+  CONVERGED ON STATE NUMBER     5 AT                              ENERGY =  -1.413103892     CM-1  
 
 
   -- BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND --
  |                                                                            |
  |          Bound states of interacting pairs of atoms and molecules          |
  |                                                                            |
- |              Copyright (C) 2022 J. M. Hutson & C. R. Le Sueur              |
+ |              Copyright (C) 2025 J. M. Hutson & C. R. Le Sueur              |
  |                                                                            |
- |                               Version 2022.0                               |
+ |                               Version 2025.0                               |
  |                                                                            |
- |                    This run used       2.18 cpu secs and                   |
- |                354 of the allocated   1000000 words of storage             |
+ |                      This run used       1.67 cpu secs                     |
  |                                                                            |
   -- BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND --

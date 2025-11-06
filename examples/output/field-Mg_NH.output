@@ -3,11 +3,11 @@
  |          Bound states of interacting pairs of atoms and molecules          |
  |                      as a function of external field                       |
  |                                                                            |
- |              Copyright (C) 2022 J. M. Hutson & C. R. Le Sueur              |
+ |              Copyright (C) 2025 J. M. Hutson & C. R. Le Sueur              |
  |                                                                            |
- |                               Version 2022.0                               |
+ |                               Version 2025.0                               |
  |                                                                            |
- |                       Run on 31 May 2022   at 10:31:35                     |
+ |                       Run on 06 Nov 2025   at 16:44:06                     |
  |                                                                            |
   -- FIELD ------ FIELD ------ FIELD ------ FIELD ------ FIELD ------ FIELD --
 
@@ -21,16 +21,14 @@
 
   J. M. Hutson & C. R. Le Sueur, FIELD: a program for bound states of
   interacting pairs of atoms and molecules as a function of external field,
-  Version 2022.0, https//github.com/molscat/molscat
+  Version 2025.0, https//github.com/molscat/molscat
 
   and the published paper:
 
   J. M. Hutson & C. R. Le Sueur, Comput. Phys. Commun., 241, 1-8 (2019).
 
 
-  USING CODATA 2018 RECOMMENDED VALUES OF FUNDAMENTAL PHYSICAL CONSTANTS
-
-  MEMORY ALLOCATED TO MAIN WORKING ARRAY IS   1000000 (8-BYTE) WORDS (    7.63 MB)
+  USING CODATA 2022 RECOMMENDED VALUES OF FUNDAMENTAL PHYSICAL CONSTANTS
 
   PRINT LEVEL (IPRINT) =  3
 
@@ -200,7 +198,7 @@
 
   CALCULATIONS WILL BE FOR SYMMETRY BLOCK   2  ONLY
 
-  INITIALIZATION DONE.  TIME WAS   0.00 CPU SECS.       112 WORDS OF STORAGE USED.
+  INITIALIZATION DONE.  TIME WAS   0.00 CPU SECS.
 
   ===================== ITYP = 9: Mg + NH in magnetic field; bound states and threshold crossings ======================
 
@@ -209,6 +207,8 @@
   BASIS SET FOR MTOT = -1, PARITY = (-1)**1
   * * * NOTE.  FOR JTOT =  -1,  ALL COUPLING COEFFICIENTS ARE 0.0 FOR POTENTIAL SYMMETRY   6
   * * * NOTE.  FOR JTOT =  -1,  ALL COUPLING COEFFICIENTS ARE 0.0 FOR POTENTIAL SYMMETRY   7
+  CONSTRUCTION OF BASIS SET TOOK                  0.00 CPU SECS.
+  CONSTRUCTION OF COUPLING (VL) ARRAY TOOK        0.00 CPU SECS.
   = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = 
 
   ENERGY      1 =   0.000000000     MHZ     
@@ -223,7 +223,7 @@
 
   SEARCHING FOR BOUND STATE NUMBER   170
 
-  CONVERGED ON STATE NUMBER   170 AT                    MAGNETIC Z FIELD =   387.2557999     GAUSS 
+  CONVERGED ON STATE NUMBER   170 AT                    MAGNETIC Z FIELD =   387.2559149     GAUSS 
   = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = 
 
   ENERGY      2 =  -20.00000000     MHZ     
@@ -238,7 +238,7 @@
 
   SEARCHING FOR BOUND STATE NUMBER   170
 
-  CONVERGED ON STATE NUMBER   170 AT                    MAGNETIC Z FIELD =   379.2506740     GAUSS 
+  CONVERGED ON STATE NUMBER   170 AT                    MAGNETIC Z FIELD =   379.2507910     GAUSS 
   = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = 
 
   ENERGY      3 =  -40.00000000     MHZ     
@@ -253,7 +253,7 @@
 
   SEARCHING FOR BOUND STATE NUMBER   170
 
-  CONVERGED ON STATE NUMBER   170 AT                    MAGNETIC Z FIELD =   371.1507616     GAUSS 
+  CONVERGED ON STATE NUMBER   170 AT                    MAGNETIC Z FIELD =   371.1508804     GAUSS 
 
 
   -- FIELD ------ FIELD ------ FIELD ------ FIELD ------ FIELD ------ FIELD --
@@ -261,11 +261,10 @@
  |          Bound states of interacting pairs of atoms and molecules          |
  |                      as a function of external field                       |
  |                                                                            |
- |              Copyright (C) 2022 J. M. Hutson & C. R. Le Sueur              |
+ |              Copyright (C) 2025 J. M. Hutson & C. R. Le Sueur              |
  |                                                                            |
- |                               Version 2022.0                               |
+ |                               Version 2025.0                               |
  |                                                                            |
- |                    This run used      39.13 cpu secs and                   |
- |             117573 of the allocated   1000000 words of storage             |
+ |                      This run used      31.79 cpu secs                     |
  |                                                                            |
   -- FIELD ------ FIELD ------ FIELD ------ FIELD ------ FIELD ------ FIELD --

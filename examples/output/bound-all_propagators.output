@@ -2,11 +2,11 @@
  |                                                                            |
  |          Bound states of interacting pairs of atoms and molecules          |
  |                                                                            |
- |              Copyright (C) 2022 J. M. Hutson & C. R. Le Sueur              |
+ |              Copyright (C) 2025 J. M. Hutson & C. R. Le Sueur              |
  |                                                                            |
- |                               Version 2022.0                               |
+ |                               Version 2025.0                               |
  |                                                                            |
- |                       Run on 31 May 2022   at 10:30:12                     |
+ |                       Run on 06 Nov 2025   at 16:43:01                     |
  |                                                                            |
   -- BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND --
 
@@ -20,16 +20,14 @@
 
   J. M. Hutson & C. R. Le Sueur, BOUND: a program for bound states of
   interacting pairs of atoms and molecules,
-  Version 2022.0, https//github.com/molscat/molscat
+  Version 2025.0, https//github.com/molscat/molscat
 
   and the published paper:
 
   J. M. Hutson & C. R. Le Sueur, Comput. Phys. Commun., 241, 1-8 (2019).
 
 
-  USING CODATA 2018 RECOMMENDED VALUES OF FUNDAMENTAL PHYSICAL CONSTANTS
-
-  MEMORY ALLOCATED TO MAIN WORKING ARRAY IS   1000000 (8-BYTE) WORDS (    7.63 MB)
+  USING CODATA 2022 RECOMMENDED VALUES OF FUNDAMENTAL PHYSICAL CONSTANTS
 
   PRINT LEVEL (IPRINT) =  5
 
@@ -152,7 +150,7 @@
 
   CALCULATIONS WILL BE FOR SYMMETRY BLOCK   2  ONLY
 
-  INITIALIZATION DONE.  TIME WAS   0.00 CPU SECS.         9 WORDS OF STORAGE USED.
+  INITIALIZATION DONE.  TIME WAS   0.00 CPU SECS.
 
   ============================= model system: ITYPE=1; IPROPS=6, IPROPL=9 (RMID > RMATCH) ==============================
 
@@ -176,9 +174,9 @@
 
   SEARCHING FOR BOUND STATE NUMBER     4
 
-  CONVERGED ON STATE NUMBER     4 AT                              ENERGY =  -5.065870692     CM-1  
+  CONVERGED ON STATE NUMBER     4 AT                              ENERGY =  -5.065870704     CM-1  
 
-  SMALLEST EIGENVALUE OF MATCHING MATRIX IS NUMBER  1 = -1.04580E-06
+  SMALLEST EIGENVALUE OF MATCHING MATRIX IS NUMBER  1 = -1.04903E-06
 
   WITH PRINCIPAL EIGENVECTOR COMPONENTS
   CHAN     VEC    VEC**2   L   QUANTUM NUMBERS
@@ -189,9 +187,9 @@
 
   SEARCHING FOR BOUND STATE NUMBER     5
 
-  CONVERGED ON STATE NUMBER     5 AT                              ENERGY =  -1.463920383     CM-1  
+  CONVERGED ON STATE NUMBER     5 AT                              ENERGY =  -1.463920390     CM-1  
 
-  SMALLEST EIGENVALUE OF MATCHING MATRIX IS NUMBER  1 =  6.12498E-03
+  SMALLEST EIGENVALUE OF MATCHING MATRIX IS NUMBER  1 =  6.12683E-03
 
   WITH PRINCIPAL EIGENVECTOR COMPONENTS
   CHAN     VEC    VEC**2   L   QUANTUM NUMBERS
@@ -221,9 +219,9 @@
 
   SEARCHING FOR BOUND STATE NUMBER     4
 
-  CONVERGED ON STATE NUMBER     4 AT                              ENERGY =  -4.992074659     CM-1  
+  CONVERGED ON STATE NUMBER     4 AT                              ENERGY =  -4.992074672     CM-1  
 
-  SMALLEST EIGENVALUE OF MATCHING MATRIX IS NUMBER  1 =  1.62811E-08
+  SMALLEST EIGENVALUE OF MATCHING MATRIX IS NUMBER  1 =  1.72259E-08
 
   WITH PRINCIPAL EIGENVECTOR COMPONENTS
   CHAN     VEC    VEC**2   L   QUANTUM NUMBERS
@@ -234,9 +232,9 @@
 
   SEARCHING FOR BOUND STATE NUMBER     5
 
-  CONVERGED ON STATE NUMBER     5 AT                              ENERGY =  -1.413103862     CM-1  
+  CONVERGED ON STATE NUMBER     5 AT                              ENERGY =  -1.413103869     CM-1  
 
-  SMALLEST EIGENVALUE OF MATCHING MATRIX IS NUMBER  1 =  1.99599E-02
+  SMALLEST EIGENVALUE OF MATCHING MATRIX IS NUMBER  1 =  2.00961E-02
 
   WITH PRINCIPAL EIGENVECTOR COMPONENTS
   CHAN     VEC    VEC**2   L   QUANTUM NUMBERS
@@ -271,22 +269,22 @@
 
   SEARCHING FOR BOUND STATE NUMBER     4
 
-  CONVERGED ON STATE NUMBER     4 AT                              ENERGY =  -4.844814115     CM-1  
+  CONVERGED ON STATE NUMBER     4 AT                              ENERGY =  -4.844814128     CM-1  
 
-  SMALLEST EIGENVALUE OF MATCHING MATRIX IS NUMBER  1 =  4.72100E-06
+  SMALLEST EIGENVALUE OF MATCHING MATRIX IS NUMBER  1 =  4.72057E-06
 
   WITH PRINCIPAL EIGENVECTOR COMPONENTS
   CHAN     VEC    VEC**2   L   QUANTUM NUMBERS
 
-   2   -0.9989    0.9979   2   0   1
+   2    0.9989    0.9979   2   0   1
 
   - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
   SEARCHING FOR BOUND STATE NUMBER     5
 
-  CONVERGED ON STATE NUMBER     5 AT                              ENERGY =  -1.312115803     CM-1  
+  CONVERGED ON STATE NUMBER     5 AT                              ENERGY =  -1.312115810     CM-1  
 
-  SMALLEST EIGENVALUE OF MATCHING MATRIX IS NUMBER  1 =  2.14744E-02
+  SMALLEST EIGENVALUE OF MATCHING MATRIX IS NUMBER  1 =  2.17510E-02
 
   WITH PRINCIPAL EIGENVECTOR COMPONENTS
   CHAN     VEC    VEC**2   L   QUANTUM NUMBERS
@@ -301,23 +299,22 @@
  |                                                                            |
  |          Bound states of interacting pairs of atoms and molecules          |
  |                                                                            |
- |              Copyright (C) 2022 J. M. Hutson & C. R. Le Sueur              |
+ |              Copyright (C) 2025 J. M. Hutson & C. R. Le Sueur              |
  |                                                                            |
- |                               Version 2022.0                               |
+ |                               Version 2025.0                               |
  |                                                                            |
- |                    This run used       0.87 cpu secs and                   |
- |                891 of the allocated   1000000 words of storage             |
+ |                      This run used       0.69 cpu secs                     |
  |                                                                            |
   -- BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND --
   -- BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND --
  |                                                                            |
  |          Bound states of interacting pairs of atoms and molecules          |
  |                                                                            |
- |              Copyright (C) 2022 J. M. Hutson & C. R. Le Sueur              |
+ |              Copyright (C) 2025 J. M. Hutson & C. R. Le Sueur              |
  |                                                                            |
- |                               Version 2022.0                               |
+ |                               Version 2025.0                               |
  |                                                                            |
- |                       Run on 31 May 2022   at 10:30:13                     |
+ |                       Run on 06 Nov 2025   at 16:43:02                     |
  |                                                                            |
   -- BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND --
 
@@ -331,16 +328,14 @@
 
   J. M. Hutson & C. R. Le Sueur, BOUND: a program for bound states of
   interacting pairs of atoms and molecules,
-  Version 2022.0, https//github.com/molscat/molscat
+  Version 2025.0, https//github.com/molscat/molscat
 
   and the published paper:
 
   J. M. Hutson & C. R. Le Sueur, Comput. Phys. Commun., 241, 1-8 (2019).
 
 
-  USING CODATA 2018 RECOMMENDED VALUES OF FUNDAMENTAL PHYSICAL CONSTANTS
-
-  MEMORY ALLOCATED TO MAIN WORKING ARRAY IS   1000000 (8-BYTE) WORDS (    7.63 MB)
+  USING CODATA 2022 RECOMMENDED VALUES OF FUNDAMENTAL PHYSICAL CONSTANTS
 
   PRINT LEVEL (IPRINT) =  5
 
@@ -463,7 +458,7 @@
 
   CALCULATIONS WILL BE FOR SYMMETRY BLOCK   2  ONLY
 
-  INITIALIZATION DONE.  TIME WAS   0.00 CPU SECS.         9 WORDS OF STORAGE USED.
+  INITIALIZATION DONE.  TIME WAS   0.00 CPU SECS.
 
   ============================= model system: ITYPE=1; IPROPS=6, IPROPL=9 (RMID < RMATCH) ==============================
 
@@ -487,9 +482,9 @@
 
   SEARCHING FOR BOUND STATE NUMBER     4
 
-  CONVERGED ON STATE NUMBER     4 AT                              ENERGY =  -5.065870139     CM-1  
+  CONVERGED ON STATE NUMBER     4 AT                              ENERGY =  -5.065870151     CM-1  
 
-  SMALLEST EIGENVALUE OF MATCHING MATRIX IS NUMBER  1 = -4.41069E-05
+  SMALLEST EIGENVALUE OF MATCHING MATRIX IS NUMBER  1 = -4.41072E-05
 
   WITH PRINCIPAL EIGENVECTOR COMPONENTS
   CHAN     VEC    VEC**2   L   QUANTUM NUMBERS
@@ -500,9 +495,9 @@
 
   SEARCHING FOR BOUND STATE NUMBER     5
 
-  CONVERGED ON STATE NUMBER     5 AT                              ENERGY =  -1.463920165     CM-1  
+  CONVERGED ON STATE NUMBER     5 AT                              ENERGY =  -1.463920172     CM-1  
 
-  SMALLEST EIGENVALUE OF MATCHING MATRIX IS NUMBER  1 =  1.00710E-07
+  SMALLEST EIGENVALUE OF MATCHING MATRIX IS NUMBER  1 =  1.00719E-07
 
   WITH PRINCIPAL EIGENVECTOR COMPONENTS
   CHAN     VEC    VEC**2   L   QUANTUM NUMBERS
@@ -532,9 +527,9 @@
 
   SEARCHING FOR BOUND STATE NUMBER     4
 
-  CONVERGED ON STATE NUMBER     4 AT                              ENERGY =  -4.992074113     CM-1  
+  CONVERGED ON STATE NUMBER     4 AT                              ENERGY =  -4.992074125     CM-1  
 
-  SMALLEST EIGENVALUE OF MATCHING MATRIX IS NUMBER  1 =  3.68775E-05
+  SMALLEST EIGENVALUE OF MATCHING MATRIX IS NUMBER  1 =  3.68779E-05
 
   WITH PRINCIPAL EIGENVECTOR COMPONENTS
   CHAN     VEC    VEC**2   L   QUANTUM NUMBERS
@@ -545,9 +540,9 @@
 
   SEARCHING FOR BOUND STATE NUMBER     5
 
-  CONVERGED ON STATE NUMBER     5 AT                              ENERGY =  -1.413103648     CM-1  
+  CONVERGED ON STATE NUMBER     5 AT                              ENERGY =  -1.413103656     CM-1  
 
-  SMALLEST EIGENVALUE OF MATCHING MATRIX IS NUMBER  1 =  1.25522E-08
+  SMALLEST EIGENVALUE OF MATCHING MATRIX IS NUMBER  1 =  1.25569E-08
 
   WITH PRINCIPAL EIGENVECTOR COMPONENTS
   CHAN     VEC    VEC**2   L   QUANTUM NUMBERS
@@ -580,50 +575,49 @@
 
   SEARCHING FOR BOUND STATE NUMBER     4
 
-  CONVERGED ON STATE NUMBER     4 AT                              ENERGY =  -4.844813566     CM-1  
+  CONVERGED ON STATE NUMBER     4 AT                              ENERGY =  -4.844813579     CM-1  
 
-  SMALLEST EIGENVALUE OF MATCHING MATRIX IS NUMBER  1 = -2.58818E-05
+  SMALLEST EIGENVALUE OF MATCHING MATRIX IS NUMBER  1 = -2.58816E-05
 
   WITH PRINCIPAL EIGENVECTOR COMPONENTS
   CHAN     VEC    VEC**2   L   QUANTUM NUMBERS
 
-   2   -1.0000    1.0000   2   0   1
+   2    1.0000    1.0000   2   0   1
 
   - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
   SEARCHING FOR BOUND STATE NUMBER     5
 
-  CONVERGED ON STATE NUMBER     5 AT                              ENERGY =  -1.312115591     CM-1  
+  CONVERGED ON STATE NUMBER     5 AT                              ENERGY =  -1.312115598     CM-1  
 
-  SMALLEST EIGENVALUE OF MATCHING MATRIX IS NUMBER  1 = -9.60654E-12
+  SMALLEST EIGENVALUE OF MATCHING MATRIX IS NUMBER  1 = -9.03810E-12
 
   WITH PRINCIPAL EIGENVECTOR COMPONENTS
   CHAN     VEC    VEC**2   L   QUANTUM NUMBERS
 
-   2   -1.0000    1.0000   2   0   1
+   2    1.0000    1.0000   2   0   1
 
 
   -- BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND --
  |                                                                            |
  |          Bound states of interacting pairs of atoms and molecules          |
  |                                                                            |
- |              Copyright (C) 2022 J. M. Hutson & C. R. Le Sueur              |
+ |              Copyright (C) 2025 J. M. Hutson & C. R. Le Sueur              |
  |                                                                            |
- |                               Version 2022.0                               |
+ |                               Version 2025.0                               |
  |                                                                            |
- |                    This run used       0.64 cpu secs and                   |
- |                891 of the allocated   1000000 words of storage             |
+ |                      This run used       0.49 cpu secs                     |
  |                                                                            |
   -- BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND --
   -- BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND --
  |                                                                            |
  |          Bound states of interacting pairs of atoms and molecules          |
  |                                                                            |
- |              Copyright (C) 2022 J. M. Hutson & C. R. Le Sueur              |
+ |              Copyright (C) 2025 J. M. Hutson & C. R. Le Sueur              |
  |                                                                            |
- |                               Version 2022.0                               |
+ |                               Version 2025.0                               |
  |                                                                            |
- |                       Run on 31 May 2022   at 10:30:14                     |
+ |                       Run on 06 Nov 2025   at 16:43:03                     |
  |                                                                            |
   -- BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND --
 
@@ -637,16 +631,14 @@
 
   J. M. Hutson & C. R. Le Sueur, BOUND: a program for bound states of
   interacting pairs of atoms and molecules,
-  Version 2022.0, https//github.com/molscat/molscat
+  Version 2025.0, https//github.com/molscat/molscat
 
   and the published paper:
 
   J. M. Hutson & C. R. Le Sueur, Comput. Phys. Commun., 241, 1-8 (2019).
 
 
-  USING CODATA 2018 RECOMMENDED VALUES OF FUNDAMENTAL PHYSICAL CONSTANTS
-
-  MEMORY ALLOCATED TO MAIN WORKING ARRAY IS   1000000 (8-BYTE) WORDS (    7.63 MB)
+  USING CODATA 2022 RECOMMENDED VALUES OF FUNDAMENTAL PHYSICAL CONSTANTS
 
   PRINT LEVEL (IPRINT) =  5
 
@@ -759,7 +751,7 @@
 
   CALCULATIONS WILL BE FOR SYMMETRY BLOCK   2  ONLY
 
-  INITIALIZATION DONE.  TIME WAS   0.00 CPU SECS.         9 WORDS OF STORAGE USED.
+  INITIALIZATION DONE.  TIME WAS   0.00 CPU SECS.
 
   ===================================== model system: ITYPE=1; IPROPS=5, IPROPL=9 ======================================
 
@@ -783,9 +775,9 @@
 
   SEARCHING FOR BOUND STATE NUMBER     4
 
-  CONVERGED ON STATE NUMBER     4 AT                              ENERGY =  -5.065870118     CM-1  
+  CONVERGED ON STATE NUMBER     4 AT                              ENERGY =  -5.065870131     CM-1  
 
-  SMALLEST EIGENVALUE OF MATCHING MATRIX IS NUMBER  1 = -1.05388E-06
+  SMALLEST EIGENVALUE OF MATCHING MATRIX IS NUMBER  1 = -1.05313E-06
 
   WITH PRINCIPAL EIGENVECTOR COMPONENTS
   CHAN     VEC    VEC**2   L   QUANTUM NUMBERS
@@ -796,9 +788,9 @@
 
   SEARCHING FOR BOUND STATE NUMBER     5
 
-  CONVERGED ON STATE NUMBER     5 AT                              ENERGY =  -1.463920157     CM-1  
+  CONVERGED ON STATE NUMBER     5 AT                              ENERGY =  -1.463920164     CM-1  
 
-  SMALLEST EIGENVALUE OF MATCHING MATRIX IS NUMBER  1 =  6.04650E-03
+  SMALLEST EIGENVALUE OF MATCHING MATRIX IS NUMBER  1 =  6.04934E-03
 
   WITH PRINCIPAL EIGENVECTOR COMPONENTS
   CHAN     VEC    VEC**2   L   QUANTUM NUMBERS
@@ -828,9 +820,9 @@
 
   SEARCHING FOR BOUND STATE NUMBER     4
 
-  CONVERGED ON STATE NUMBER     4 AT                              ENERGY =  -4.992074093     CM-1  
+  CONVERGED ON STATE NUMBER     4 AT                              ENERGY =  -4.992074106     CM-1  
 
-  SMALLEST EIGENVALUE OF MATCHING MATRIX IS NUMBER  1 =  1.58797E-08
+  SMALLEST EIGENVALUE OF MATCHING MATRIX IS NUMBER  1 =  1.60229E-08
 
   WITH PRINCIPAL EIGENVECTOR COMPONENTS
   CHAN     VEC    VEC**2   L   QUANTUM NUMBERS
@@ -841,9 +833,9 @@
 
   SEARCHING FOR BOUND STATE NUMBER     5
 
-  CONVERGED ON STATE NUMBER     5 AT                              ENERGY =  -1.413103640     CM-1  
+  CONVERGED ON STATE NUMBER     5 AT                              ENERGY =  -1.413103647     CM-1  
 
-  SMALLEST EIGENVALUE OF MATCHING MATRIX IS NUMBER  1 =  1.57563E-02
+  SMALLEST EIGENVALUE OF MATCHING MATRIX IS NUMBER  1 =  1.58875E-02
 
   WITH PRINCIPAL EIGENVECTOR COMPONENTS
   CHAN     VEC    VEC**2   L   QUANTUM NUMBERS
@@ -878,53 +870,52 @@
 
   SEARCHING FOR BOUND STATE NUMBER     4
 
-  CONVERGED ON STATE NUMBER     4 AT                              ENERGY =  -4.844813546     CM-1  
+  CONVERGED ON STATE NUMBER     4 AT                              ENERGY =  -4.844813559     CM-1  
 
-  SMALLEST EIGENVALUE OF MATCHING MATRIX IS NUMBER  1 =  4.72196E-06
+  SMALLEST EIGENVALUE OF MATCHING MATRIX IS NUMBER  1 =  4.72101E-06
 
   WITH PRINCIPAL EIGENVECTOR COMPONENTS
   CHAN     VEC    VEC**2   L   QUANTUM NUMBERS
 
-   2   -0.9989    0.9979   2   0   1
+   2    0.9989    0.9979   2   0   1
 
   - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
   SEARCHING FOR BOUND STATE NUMBER     5
 
-  CONVERGED ON STATE NUMBER     5 AT                              ENERGY =  -1.312115583     CM-1  
+  CONVERGED ON STATE NUMBER     5 AT                              ENERGY =  -1.312115590     CM-1  
 
-  SMALLEST EIGENVALUE OF MATCHING MATRIX IS NUMBER  1 =  1.38112E-02
+  SMALLEST EIGENVALUE OF MATCHING MATRIX IS NUMBER  1 =  1.40336E-02
 
   WITH PRINCIPAL EIGENVECTOR COMPONENTS
   CHAN     VEC    VEC**2   L   QUANTUM NUMBERS
 
-   1   -0.3610    0.1303   0   2   2
-   2   -0.6021    0.3626   2   0   1
-   3    0.4291    0.1841   2   2   2
-   5   -0.5683    0.3229   4   2   2
+   1    0.3610    0.1303   0   2   2
+   2    0.6021    0.3626   2   0   1
+   3   -0.4291    0.1841   2   2   2
+   5    0.5683    0.3229   4   2   2
 
 
   -- BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND --
  |                                                                            |
  |          Bound states of interacting pairs of atoms and molecules          |
  |                                                                            |
- |              Copyright (C) 2022 J. M. Hutson & C. R. Le Sueur              |
+ |              Copyright (C) 2025 J. M. Hutson & C. R. Le Sueur              |
  |                                                                            |
- |                               Version 2022.0                               |
+ |                               Version 2025.0                               |
  |                                                                            |
- |                    This run used       0.80 cpu secs and                   |
- |                891 of the allocated   1000000 words of storage             |
+ |                      This run used       0.61 cpu secs                     |
  |                                                                            |
   -- BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND --
   -- BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND --
  |                                                                            |
  |          Bound states of interacting pairs of atoms and molecules          |
  |                                                                            |
- |              Copyright (C) 2022 J. M. Hutson & C. R. Le Sueur              |
+ |              Copyright (C) 2025 J. M. Hutson & C. R. Le Sueur              |
  |                                                                            |
- |                               Version 2022.0                               |
+ |                               Version 2025.0                               |
  |                                                                            |
- |                       Run on 31 May 2022   at 10:30:14                     |
+ |                       Run on 06 Nov 2025   at 16:43:03                     |
  |                                                                            |
   -- BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND --
 
@@ -938,16 +929,14 @@
 
   J. M. Hutson & C. R. Le Sueur, BOUND: a program for bound states of
   interacting pairs of atoms and molecules,
-  Version 2022.0, https//github.com/molscat/molscat
+  Version 2025.0, https//github.com/molscat/molscat
 
   and the published paper:
 
   J. M. Hutson & C. R. Le Sueur, Comput. Phys. Commun., 241, 1-8 (2019).
 
 
-  USING CODATA 2018 RECOMMENDED VALUES OF FUNDAMENTAL PHYSICAL CONSTANTS
-
-  MEMORY ALLOCATED TO MAIN WORKING ARRAY IS   1000000 (8-BYTE) WORDS (    7.63 MB)
+  USING CODATA 2022 RECOMMENDED VALUES OF FUNDAMENTAL PHYSICAL CONSTANTS
 
   PRINT LEVEL (IPRINT) =  5
 
@@ -1060,7 +1049,7 @@
 
   CALCULATIONS WILL BE FOR SYMMETRY BLOCK   2  ONLY
 
-  INITIALIZATION DONE.  TIME WAS   0.00 CPU SECS.         9 WORDS OF STORAGE USED.
+  INITIALIZATION DONE.  TIME WAS   0.00 CPU SECS.
 
   ===================================== model system: ITYPE=1; IPROPS=7, IPROPL=9 ======================================
 
@@ -1084,9 +1073,9 @@
 
   SEARCHING FOR BOUND STATE NUMBER     4
 
-  CONVERGED ON STATE NUMBER     4 AT                              ENERGY =  -5.065870655     CM-1  
+  CONVERGED ON STATE NUMBER     4 AT                              ENERGY =  -5.065870667     CM-1  
 
-  SMALLEST EIGENVALUE OF MATCHING MATRIX IS NUMBER  1 = -1.04917E-06
+  SMALLEST EIGENVALUE OF MATCHING MATRIX IS NUMBER  1 = -1.04306E-06
 
   WITH PRINCIPAL EIGENVECTOR COMPONENTS
   CHAN     VEC    VEC**2   L   QUANTUM NUMBERS
@@ -1097,9 +1086,9 @@
 
   SEARCHING FOR BOUND STATE NUMBER     5
 
-  CONVERGED ON STATE NUMBER     5 AT                              ENERGY =  -1.463920389     CM-1  
+  CONVERGED ON STATE NUMBER     5 AT                              ENERGY =  -1.463920396     CM-1  
 
-  SMALLEST EIGENVALUE OF MATCHING MATRIX IS NUMBER  1 =  6.12688E-03
+  SMALLEST EIGENVALUE OF MATCHING MATRIX IS NUMBER  1 =  6.12984E-03
 
   WITH PRINCIPAL EIGENVECTOR COMPONENTS
   CHAN     VEC    VEC**2   L   QUANTUM NUMBERS
@@ -1129,9 +1118,9 @@
 
   SEARCHING FOR BOUND STATE NUMBER     4
 
-  CONVERGED ON STATE NUMBER     4 AT                              ENERGY =  -4.992074623     CM-1  
+  CONVERGED ON STATE NUMBER     4 AT                              ENERGY =  -4.992074635     CM-1  
 
-  SMALLEST EIGENVALUE OF MATCHING MATRIX IS NUMBER  1 =  2.09270E-08
+  SMALLEST EIGENVALUE OF MATCHING MATRIX IS NUMBER  1 =  1.52700E-08
 
   WITH PRINCIPAL EIGENVECTOR COMPONENTS
   CHAN     VEC    VEC**2   L   QUANTUM NUMBERS
@@ -1142,9 +1131,9 @@
 
   SEARCHING FOR BOUND STATE NUMBER     5
 
-  CONVERGED ON STATE NUMBER     5 AT                              ENERGY =  -1.413103870     CM-1  
+  CONVERGED ON STATE NUMBER     5 AT                              ENERGY =  -1.413103877     CM-1  
 
-  SMALLEST EIGENVALUE OF MATCHING MATRIX IS NUMBER  1 =  2.01074E-02
+  SMALLEST EIGENVALUE OF MATCHING MATRIX IS NUMBER  1 =  2.02447E-02
 
   WITH PRINCIPAL EIGENVECTOR COMPONENTS
   CHAN     VEC    VEC**2   L   QUANTUM NUMBERS
@@ -1179,53 +1168,52 @@
 
   SEARCHING FOR BOUND STATE NUMBER     4
 
-  CONVERGED ON STATE NUMBER     4 AT                              ENERGY =  -4.844814079     CM-1  
+  CONVERGED ON STATE NUMBER     4 AT                              ENERGY =  -4.844814092     CM-1  
 
-  SMALLEST EIGENVALUE OF MATCHING MATRIX IS NUMBER  1 =  4.72202E-06
+  SMALLEST EIGENVALUE OF MATCHING MATRIX IS NUMBER  1 =  4.72206E-06
 
   WITH PRINCIPAL EIGENVECTOR COMPONENTS
   CHAN     VEC    VEC**2   L   QUANTUM NUMBERS
 
-   2   -0.9989    0.9979   2   0   1
+   2    0.9989    0.9979   2   0   1
 
   - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
   SEARCHING FOR BOUND STATE NUMBER     5
 
-  CONVERGED ON STATE NUMBER     5 AT                              ENERGY =  -1.312115811     CM-1  
+  CONVERGED ON STATE NUMBER     5 AT                              ENERGY =  -1.312115818     CM-1  
 
-  SMALLEST EIGENVALUE OF MATCHING MATRIX IS NUMBER  1 =  2.17775E-02
+  SMALLEST EIGENVALUE OF MATCHING MATRIX IS NUMBER  1 =  2.20569E-02
 
   WITH PRINCIPAL EIGENVECTOR COMPONENTS
   CHAN     VEC    VEC**2   L   QUANTUM NUMBERS
 
-   1   -0.3610    0.1303   0   2   2
-   2   -0.6021    0.3626   2   0   1
-   3    0.4291    0.1841   2   2   2
-   5   -0.5683    0.3230   4   2   2
+   1    0.3610    0.1303   0   2   2
+   2    0.6021    0.3626   2   0   1
+   3   -0.4291    0.1841   2   2   2
+   5    0.5683    0.3230   4   2   2
 
 
   -- BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND --
  |                                                                            |
  |          Bound states of interacting pairs of atoms and molecules          |
  |                                                                            |
- |              Copyright (C) 2022 J. M. Hutson & C. R. Le Sueur              |
+ |              Copyright (C) 2025 J. M. Hutson & C. R. Le Sueur              |
  |                                                                            |
- |                               Version 2022.0                               |
+ |                               Version 2025.0                               |
  |                                                                            |
- |                    This run used       5.35 cpu secs and                   |
- |                891 of the allocated   1000000 words of storage             |
+ |                      This run used       3.97 cpu secs                     |
  |                                                                            |
   -- BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND --
   -- BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND --
  |                                                                            |
  |          Bound states of interacting pairs of atoms and molecules          |
  |                                                                            |
- |              Copyright (C) 2022 J. M. Hutson & C. R. Le Sueur              |
+ |              Copyright (C) 2025 J. M. Hutson & C. R. Le Sueur              |
  |                                                                            |
- |                               Version 2022.0                               |
+ |                               Version 2025.0                               |
  |                                                                            |
- |                       Run on 31 May 2022   at 10:30:20                     |
+ |                       Run on 06 Nov 2025   at 16:43:07                     |
  |                                                                            |
   -- BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND --
 
@@ -1239,16 +1227,14 @@
 
   J. M. Hutson & C. R. Le Sueur, BOUND: a program for bound states of
   interacting pairs of atoms and molecules,
-  Version 2022.0, https//github.com/molscat/molscat
+  Version 2025.0, https//github.com/molscat/molscat
 
   and the published paper:
 
   J. M. Hutson & C. R. Le Sueur, Comput. Phys. Commun., 241, 1-8 (2019).
 
 
-  USING CODATA 2018 RECOMMENDED VALUES OF FUNDAMENTAL PHYSICAL CONSTANTS
-
-  MEMORY ALLOCATED TO MAIN WORKING ARRAY IS   1000000 (8-BYTE) WORDS (    7.63 MB)
+  USING CODATA 2022 RECOMMENDED VALUES OF FUNDAMENTAL PHYSICAL CONSTANTS
 
   PRINT LEVEL (IPRINT) =  5
 
@@ -1362,7 +1348,7 @@
 
   CALCULATIONS WILL BE FOR SYMMETRY BLOCK   2  ONLY
 
-  INITIALIZATION DONE.  TIME WAS   0.00 CPU SECS.         9 WORDS OF STORAGE USED.
+  INITIALIZATION DONE.  TIME WAS   0.00 CPU SECS.
 
   ===================================== model system: ITYPE=1; IPROPS=8, IPROPL=9 ======================================
 
@@ -1386,9 +1372,9 @@
 
   SEARCHING FOR BOUND STATE NUMBER     4
 
-  CONVERGED ON STATE NUMBER     4 AT                              ENERGY =  -5.065870117     CM-1  
+  CONVERGED ON STATE NUMBER     4 AT                              ENERGY =  -5.065870130     CM-1  
 
-  SMALLEST EIGENVALUE OF MATCHING MATRIX IS NUMBER  1 = -1.05262E-06
+  SMALLEST EIGENVALUE OF MATCHING MATRIX IS NUMBER  1 = -1.05424E-06
 
   WITH PRINCIPAL EIGENVECTOR COMPONENTS
   CHAN     VEC    VEC**2   L   QUANTUM NUMBERS
@@ -1399,9 +1385,9 @@
 
   SEARCHING FOR BOUND STATE NUMBER     5
 
-  CONVERGED ON STATE NUMBER     5 AT                              ENERGY =  -1.463920156     CM-1  
+  CONVERGED ON STATE NUMBER     5 AT                              ENERGY =  -1.463920163     CM-1  
 
-  SMALLEST EIGENVALUE OF MATCHING MATRIX IS NUMBER  1 =  6.04642E-03
+  SMALLEST EIGENVALUE OF MATCHING MATRIX IS NUMBER  1 =  6.04897E-03
 
   WITH PRINCIPAL EIGENVECTOR COMPONENTS
   CHAN     VEC    VEC**2   L   QUANTUM NUMBERS
@@ -1431,9 +1417,9 @@
 
   SEARCHING FOR BOUND STATE NUMBER     4
 
-  CONVERGED ON STATE NUMBER     4 AT                              ENERGY =  -4.992074092     CM-1  
+  CONVERGED ON STATE NUMBER     4 AT                              ENERGY =  -4.992074105     CM-1  
 
-  SMALLEST EIGENVALUE OF MATCHING MATRIX IS NUMBER  1 =  1.52322E-08
+  SMALLEST EIGENVALUE OF MATCHING MATRIX IS NUMBER  1 =  1.53977E-08
 
   WITH PRINCIPAL EIGENVECTOR COMPONENTS
   CHAN     VEC    VEC**2   L   QUANTUM NUMBERS
@@ -1444,9 +1430,9 @@
 
   SEARCHING FOR BOUND STATE NUMBER     5
 
-  CONVERGED ON STATE NUMBER     5 AT                              ENERGY =  -1.413103639     CM-1  
+  CONVERGED ON STATE NUMBER     5 AT                              ENERGY =  -1.413103646     CM-1  
 
-  SMALLEST EIGENVALUE OF MATCHING MATRIX IS NUMBER  1 =  1.57498E-02
+  SMALLEST EIGENVALUE OF MATCHING MATRIX IS NUMBER  1 =  1.58812E-02
 
   WITH PRINCIPAL EIGENVECTOR COMPONENTS
   CHAN     VEC    VEC**2   L   QUANTUM NUMBERS
@@ -1481,53 +1467,52 @@
 
   SEARCHING FOR BOUND STATE NUMBER     4
 
-  CONVERGED ON STATE NUMBER     4 AT                              ENERGY =  -4.844813545     CM-1  
+  CONVERGED ON STATE NUMBER     4 AT                              ENERGY =  -4.844813558     CM-1  
 
-  SMALLEST EIGENVALUE OF MATCHING MATRIX IS NUMBER  1 =  4.72155E-06
+  SMALLEST EIGENVALUE OF MATCHING MATRIX IS NUMBER  1 =  4.72126E-06
 
   WITH PRINCIPAL EIGENVECTOR COMPONENTS
   CHAN     VEC    VEC**2   L   QUANTUM NUMBERS
 
-   2   -0.9989    0.9979   2   0   1
+   2    0.9989    0.9979   2   0   1
 
   - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
   SEARCHING FOR BOUND STATE NUMBER     5
 
-  CONVERGED ON STATE NUMBER     5 AT                              ENERGY =  -1.312115583     CM-1  
+  CONVERGED ON STATE NUMBER     5 AT                              ENERGY =  -1.312115590     CM-1  
 
-  SMALLEST EIGENVALUE OF MATCHING MATRIX IS NUMBER  1 =  1.37994E-02
+  SMALLEST EIGENVALUE OF MATCHING MATRIX IS NUMBER  1 =  1.40227E-02
 
   WITH PRINCIPAL EIGENVECTOR COMPONENTS
   CHAN     VEC    VEC**2   L   QUANTUM NUMBERS
 
-   1   -0.3610    0.1303   0   2   2
-   2   -0.6021    0.3626   2   0   1
-   3    0.4291    0.1841   2   2   2
-   5   -0.5683    0.3229   4   2   2
+   1    0.3610    0.1303   0   2   2
+   2    0.6021    0.3626   2   0   1
+   3   -0.4291    0.1841   2   2   2
+   5    0.5683    0.3229   4   2   2
 
 
   -- BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND --
  |                                                                            |
  |          Bound states of interacting pairs of atoms and molecules          |
  |                                                                            |
- |              Copyright (C) 2022 J. M. Hutson & C. R. Le Sueur              |
+ |              Copyright (C) 2025 J. M. Hutson & C. R. Le Sueur              |
  |                                                                            |
- |                               Version 2022.0                               |
+ |                               Version 2025.0                               |
  |                                                                            |
- |                    This run used       1.08 cpu secs and                   |
- |                891 of the allocated   1000000 words of storage             |
+ |                      This run used       0.85 cpu secs                     |
  |                                                                            |
   -- BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND --
   -- BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND --
  |                                                                            |
  |          Bound states of interacting pairs of atoms and molecules          |
  |                                                                            |
- |              Copyright (C) 2022 J. M. Hutson & C. R. Le Sueur              |
+ |              Copyright (C) 2025 J. M. Hutson & C. R. Le Sueur              |
  |                                                                            |
- |                               Version 2022.0                               |
+ |                               Version 2025.0                               |
  |                                                                            |
- |                       Run on 31 May 2022   at 10:30:21                     |
+ |                       Run on 06 Nov 2025   at 16:43:08                     |
  |                                                                            |
   -- BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND --
 
@@ -1541,16 +1526,14 @@
 
   J. M. Hutson & C. R. Le Sueur, BOUND: a program for bound states of
   interacting pairs of atoms and molecules,
-  Version 2022.0, https//github.com/molscat/molscat
+  Version 2025.0, https//github.com/molscat/molscat
 
   and the published paper:
 
   J. M. Hutson & C. R. Le Sueur, Comput. Phys. Commun., 241, 1-8 (2019).
 
 
-  USING CODATA 2018 RECOMMENDED VALUES OF FUNDAMENTAL PHYSICAL CONSTANTS
-
-  MEMORY ALLOCATED TO MAIN WORKING ARRAY IS   1000000 (8-BYTE) WORDS (    7.63 MB)
+  USING CODATA 2022 RECOMMENDED VALUES OF FUNDAMENTAL PHYSICAL CONSTANTS
 
   PRINT LEVEL (IPRINT) =  5
 
@@ -1661,7 +1644,7 @@
 
   CALCULATIONS WILL BE FOR SYMMETRY BLOCK   2  ONLY
 
-  INITIALIZATION DONE.  TIME WAS   0.00 CPU SECS.         9 WORDS OF STORAGE USED.
+  INITIALIZATION DONE.  TIME WAS   0.00 CPU SECS.
 
   ======================================= model system: ITYPE=1; IPROPS=IPROPL=6 =======================================
 
@@ -1685,9 +1668,9 @@
 
   SEARCHING FOR BOUND STATE NUMBER     4
 
-  CONVERGED ON STATE NUMBER     4 AT                              ENERGY =  -5.065870726     CM-1  
+  CONVERGED ON STATE NUMBER     4 AT                              ENERGY =  -5.065870738     CM-1  
 
-  SMALLEST EIGENVALUE OF MATCHING MATRIX IS NUMBER  1 = -1.04705E-06
+  SMALLEST EIGENVALUE OF MATCHING MATRIX IS NUMBER  1 = -1.04618E-06
 
   WITH PRINCIPAL EIGENVECTOR COMPONENTS
   CHAN     VEC    VEC**2   L   QUANTUM NUMBERS
@@ -1698,9 +1681,9 @@
 
   SEARCHING FOR BOUND STATE NUMBER     5
 
-  CONVERGED ON STATE NUMBER     5 AT                              ENERGY =  -1.463920424     CM-1  
+  CONVERGED ON STATE NUMBER     5 AT                              ENERGY =  -1.463920431     CM-1  
 
-  SMALLEST EIGENVALUE OF MATCHING MATRIX IS NUMBER  1 =  6.13961E-03
+  SMALLEST EIGENVALUE OF MATCHING MATRIX IS NUMBER  1 =  6.14212E-03
 
   WITH PRINCIPAL EIGENVECTOR COMPONENTS
   CHAN     VEC    VEC**2   L   QUANTUM NUMBERS
@@ -1730,9 +1713,9 @@
 
   SEARCHING FOR BOUND STATE NUMBER     4
 
-  CONVERGED ON STATE NUMBER     4 AT                              ENERGY =  -4.992074693     CM-1  
+  CONVERGED ON STATE NUMBER     4 AT                              ENERGY =  -4.992074705     CM-1  
 
-  SMALLEST EIGENVALUE OF MATCHING MATRIX IS NUMBER  1 =  1.53335E-08
+  SMALLEST EIGENVALUE OF MATCHING MATRIX IS NUMBER  1 =  1.48796E-08
 
   WITH PRINCIPAL EIGENVECTOR COMPONENTS
   CHAN     VEC    VEC**2   L   QUANTUM NUMBERS
@@ -1743,9 +1726,9 @@
 
   SEARCHING FOR BOUND STATE NUMBER     5
 
-  CONVERGED ON STATE NUMBER     5 AT                              ENERGY =  -1.413103904     CM-1  
+  CONVERGED ON STATE NUMBER     5 AT                              ENERGY =  -1.413103911     CM-1  
 
-  SMALLEST EIGENVALUE OF MATCHING MATRIX IS NUMBER  1 =  2.07566E-02
+  SMALLEST EIGENVALUE OF MATCHING MATRIX IS NUMBER  1 =  2.08948E-02
 
   WITH PRINCIPAL EIGENVECTOR COMPONENTS
   CHAN     VEC    VEC**2   L   QUANTUM NUMBERS
@@ -1780,53 +1763,52 @@
 
   SEARCHING FOR BOUND STATE NUMBER     4
 
-  CONVERGED ON STATE NUMBER     4 AT                              ENERGY =  -4.844814147     CM-1  
+  CONVERGED ON STATE NUMBER     4 AT                              ENERGY =  -4.844814160     CM-1  
 
-  SMALLEST EIGENVALUE OF MATCHING MATRIX IS NUMBER  1 =  4.72111E-06
+  SMALLEST EIGENVALUE OF MATCHING MATRIX IS NUMBER  1 =  4.72121E-06
 
   WITH PRINCIPAL EIGENVECTOR COMPONENTS
   CHAN     VEC    VEC**2   L   QUANTUM NUMBERS
 
-   2   -0.9989    0.9979   2   0   1
+   2    0.9989    0.9979   2   0   1
 
   - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
   SEARCHING FOR BOUND STATE NUMBER     5
 
-  CONVERGED ON STATE NUMBER     5 AT                              ENERGY =  -1.312115843     CM-1  
+  CONVERGED ON STATE NUMBER     5 AT                              ENERGY =  -1.312115851     CM-1  
 
-  SMALLEST EIGENVALUE OF MATCHING MATRIX IS NUMBER  1 =  2.30503E-02
+  SMALLEST EIGENVALUE OF MATCHING MATRIX IS NUMBER  1 =  2.33357E-02
 
   WITH PRINCIPAL EIGENVECTOR COMPONENTS
   CHAN     VEC    VEC**2   L   QUANTUM NUMBERS
 
-   1   -0.3610    0.1303   0   2   2
-   2   -0.6021    0.3625   2   0   1
-   3    0.4291    0.1841   2   2   2
-   5   -0.5683    0.3230   4   2   2
+   1    0.3610    0.1303   0   2   2
+   2    0.6021    0.3625   2   0   1
+   3   -0.4291    0.1841   2   2   2
+   5    0.5683    0.3230   4   2   2
 
 
   -- BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND --
  |                                                                            |
  |          Bound states of interacting pairs of atoms and molecules          |
  |                                                                            |
- |              Copyright (C) 2022 J. M. Hutson & C. R. Le Sueur              |
+ |              Copyright (C) 2025 J. M. Hutson & C. R. Le Sueur              |
  |                                                                            |
- |                               Version 2022.0                               |
+ |                               Version 2025.0                               |
  |                                                                            |
- |                    This run used       1.76 cpu secs and                   |
- |                651 of the allocated   1000000 words of storage             |
+ |                      This run used       1.45 cpu secs                     |
  |                                                                            |
   -- BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND --
   -- BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND --
  |                                                                            |
  |          Bound states of interacting pairs of atoms and molecules          |
  |                                                                            |
- |              Copyright (C) 2022 J. M. Hutson & C. R. Le Sueur              |
+ |              Copyright (C) 2025 J. M. Hutson & C. R. Le Sueur              |
  |                                                                            |
- |                               Version 2022.0                               |
+ |                               Version 2025.0                               |
  |                                                                            |
- |                       Run on 31 May 2022   at 10:30:23                     |
+ |                       Run on 06 Nov 2025   at 16:43:09                     |
  |                                                                            |
   -- BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND --
 
@@ -1840,16 +1822,14 @@
 
   J. M. Hutson & C. R. Le Sueur, BOUND: a program for bound states of
   interacting pairs of atoms and molecules,
-  Version 2022.0, https//github.com/molscat/molscat
+  Version 2025.0, https//github.com/molscat/molscat
 
   and the published paper:
 
   J. M. Hutson & C. R. Le Sueur, Comput. Phys. Commun., 241, 1-8 (2019).
 
 
-  USING CODATA 2018 RECOMMENDED VALUES OF FUNDAMENTAL PHYSICAL CONSTANTS
-
-  MEMORY ALLOCATED TO MAIN WORKING ARRAY IS   1000000 (8-BYTE) WORDS (    7.63 MB)
+  USING CODATA 2022 RECOMMENDED VALUES OF FUNDAMENTAL PHYSICAL CONSTANTS
 
   PRINT LEVEL (IPRINT) =  5
 
@@ -1960,7 +1940,7 @@
 
   CALCULATIONS WILL BE FOR SYMMETRY BLOCK   2  ONLY
 
-  INITIALIZATION DONE.  TIME WAS   0.00 CPU SECS.         9 WORDS OF STORAGE USED.
+  INITIALIZATION DONE.  TIME WAS   0.00 CPU SECS.
 
   ======================================= model system: ITYPE=1; IPROPS=IPROPL=5 =======================================
 
@@ -1984,9 +1964,9 @@
 
   SEARCHING FOR BOUND STATE NUMBER     4
 
-  CONVERGED ON STATE NUMBER     4 AT                              ENERGY =  -5.065870693     CM-1  
+  CONVERGED ON STATE NUMBER     4 AT                              ENERGY =  -5.065870705     CM-1  
 
-  SMALLEST EIGENVALUE OF MATCHING MATRIX IS NUMBER  1 = -1.05591E-06
+  SMALLEST EIGENVALUE OF MATCHING MATRIX IS NUMBER  1 = -1.04782E-06
 
   WITH PRINCIPAL EIGENVECTOR COMPONENTS
   CHAN     VEC    VEC**2   L   QUANTUM NUMBERS
@@ -1997,9 +1977,9 @@
 
   SEARCHING FOR BOUND STATE NUMBER     5
 
-  CONVERGED ON STATE NUMBER     5 AT                              ENERGY =  -1.463920405     CM-1  
+  CONVERGED ON STATE NUMBER     5 AT                              ENERGY =  -1.463920412     CM-1  
 
-  SMALLEST EIGENVALUE OF MATCHING MATRIX IS NUMBER  1 =  6.13352E-03
+  SMALLEST EIGENVALUE OF MATCHING MATRIX IS NUMBER  1 =  6.13784E-03
 
   WITH PRINCIPAL EIGENVECTOR COMPONENTS
   CHAN     VEC    VEC**2   L   QUANTUM NUMBERS
@@ -2029,9 +2009,9 @@
 
   SEARCHING FOR BOUND STATE NUMBER     4
 
-  CONVERGED ON STATE NUMBER     4 AT                              ENERGY =  -4.992074660     CM-1  
+  CONVERGED ON STATE NUMBER     4 AT                              ENERGY =  -4.992074673     CM-1  
 
-  SMALLEST EIGENVALUE OF MATCHING MATRIX IS NUMBER  1 =  1.41964E-08
+  SMALLEST EIGENVALUE OF MATCHING MATRIX IS NUMBER  1 =  1.77104E-08
 
   WITH PRINCIPAL EIGENVECTOR COMPONENTS
   CHAN     VEC    VEC**2   L   QUANTUM NUMBERS
@@ -2042,16 +2022,16 @@
 
   SEARCHING FOR BOUND STATE NUMBER     5
 
-  CONVERGED ON STATE NUMBER     5 AT                              ENERGY =  -1.413103886     CM-1  
+  CONVERGED ON STATE NUMBER     5 AT                              ENERGY =  -1.413103893     CM-1  
 
-  SMALLEST EIGENVALUE OF MATCHING MATRIX IS NUMBER  1 =  2.04071E-02
+  SMALLEST EIGENVALUE OF MATCHING MATRIX IS NUMBER  1 =  2.05437E-02
 
   WITH PRINCIPAL EIGENVECTOR COMPONENTS
   CHAN     VEC    VEC**2   L   QUANTUM NUMBERS
 
-   1   -0.9004    0.8107   1   0   1
-   2   -0.2767    0.0766   1   2   2
-   3    0.3357    0.1127   3   2   2
+   1    0.9004    0.8107   1   0   1
+   2    0.2767    0.0766   1   2   2
+   3   -0.3357    0.1127   3   2   2
 
   *****************************  ANGULAR MOMENTUM JTOT  =   2   AND SYMMETRY BLOCK  =    2  ****************************
 
@@ -2079,53 +2059,52 @@
 
   SEARCHING FOR BOUND STATE NUMBER     4
 
-  CONVERGED ON STATE NUMBER     4 AT                              ENERGY =  -4.844814116     CM-1  
+  CONVERGED ON STATE NUMBER     4 AT                              ENERGY =  -4.844814129     CM-1  
 
-  SMALLEST EIGENVALUE OF MATCHING MATRIX IS NUMBER  1 =  4.71736E-06
+  SMALLEST EIGENVALUE OF MATCHING MATRIX IS NUMBER  1 =  4.71449E-06
 
   WITH PRINCIPAL EIGENVECTOR COMPONENTS
   CHAN     VEC    VEC**2   L   QUANTUM NUMBERS
 
-   2   -0.9989    0.9979   2   0   1
+   2    0.9989    0.9979   2   0   1
 
   - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
   SEARCHING FOR BOUND STATE NUMBER     5
 
-  CONVERGED ON STATE NUMBER     5 AT                              ENERGY =  -1.312115826     CM-1  
+  CONVERGED ON STATE NUMBER     5 AT                              ENERGY =  -1.312115833     CM-1  
 
-  SMALLEST EIGENVALUE OF MATCHING MATRIX IS NUMBER  1 =  2.23824E-02
+  SMALLEST EIGENVALUE OF MATCHING MATRIX IS NUMBER  1 =  2.26728E-02
 
   WITH PRINCIPAL EIGENVECTOR COMPONENTS
   CHAN     VEC    VEC**2   L   QUANTUM NUMBERS
 
-   1   -0.3610    0.1303   0   2   2
-   2   -0.6021    0.3626   2   0   1
-   3    0.4291    0.1841   2   2   2
-   5   -0.5683    0.3230   4   2   2
+   1    0.3610    0.1303   0   2   2
+   2    0.6021    0.3626   2   0   1
+   3   -0.4291    0.1841   2   2   2
+   5    0.5683    0.3230   4   2   2
 
 
   -- BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND --
  |                                                                            |
  |          Bound states of interacting pairs of atoms and molecules          |
  |                                                                            |
- |              Copyright (C) 2022 J. M. Hutson & C. R. Le Sueur              |
+ |              Copyright (C) 2025 J. M. Hutson & C. R. Le Sueur              |
  |                                                                            |
- |                               Version 2022.0                               |
+ |                               Version 2025.0                               |
  |                                                                            |
- |                    This run used       7.41 cpu secs and                   |
- |                651 of the allocated   1000000 words of storage             |
+ |                      This run used       6.07 cpu secs                     |
  |                                                                            |
   -- BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND --
   -- BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND --
  |                                                                            |
  |          Bound states of interacting pairs of atoms and molecules          |
  |                                                                            |
- |              Copyright (C) 2022 J. M. Hutson & C. R. Le Sueur              |
+ |              Copyright (C) 2025 J. M. Hutson & C. R. Le Sueur              |
  |                                                                            |
- |                               Version 2022.0                               |
+ |                               Version 2025.0                               |
  |                                                                            |
- |                       Run on 31 May 2022   at 10:30:30                     |
+ |                       Run on 06 Nov 2025   at 16:43:16                     |
  |                                                                            |
   -- BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND --
 
@@ -2139,16 +2118,14 @@
 
   J. M. Hutson & C. R. Le Sueur, BOUND: a program for bound states of
   interacting pairs of atoms and molecules,
-  Version 2022.0, https//github.com/molscat/molscat
+  Version 2025.0, https//github.com/molscat/molscat
 
   and the published paper:
 
   J. M. Hutson & C. R. Le Sueur, Comput. Phys. Commun., 241, 1-8 (2019).
 
 
-  USING CODATA 2018 RECOMMENDED VALUES OF FUNDAMENTAL PHYSICAL CONSTANTS
-
-  MEMORY ALLOCATED TO MAIN WORKING ARRAY IS   1000000 (8-BYTE) WORDS (    7.63 MB)
+  USING CODATA 2022 RECOMMENDED VALUES OF FUNDAMENTAL PHYSICAL CONSTANTS
 
   PRINT LEVEL (IPRINT) =  5
 
@@ -2259,7 +2236,7 @@
 
   CALCULATIONS WILL BE FOR SYMMETRY BLOCK   2  ONLY
 
-  INITIALIZATION DONE.  TIME WAS   0.00 CPU SECS.         9 WORDS OF STORAGE USED.
+  INITIALIZATION DONE.  TIME WAS   0.00 CPU SECS.
 
   ======================================= model system: ITYPE=1; IPROPS=IPROPL=7 =======================================
 
@@ -2283,9 +2260,9 @@
 
   SEARCHING FOR BOUND STATE NUMBER     4
 
-  CONVERGED ON STATE NUMBER     4 AT                              ENERGY =  -5.065870692     CM-1  
+  CONVERGED ON STATE NUMBER     4 AT                              ENERGY =  -5.065870705     CM-1  
 
-  SMALLEST EIGENVALUE OF MATCHING MATRIX IS NUMBER  1 = -1.04785E-06
+  SMALLEST EIGENVALUE OF MATCHING MATRIX IS NUMBER  1 = -1.04687E-06
 
   WITH PRINCIPAL EIGENVECTOR COMPONENTS
   CHAN     VEC    VEC**2   L   QUANTUM NUMBERS
@@ -2296,9 +2273,9 @@
 
   SEARCHING FOR BOUND STATE NUMBER     5
 
-  CONVERGED ON STATE NUMBER     5 AT                              ENERGY =  -1.463920405     CM-1  
+  CONVERGED ON STATE NUMBER     5 AT                              ENERGY =  -1.463920412     CM-1  
 
-  SMALLEST EIGENVALUE OF MATCHING MATRIX IS NUMBER  1 =  6.13274E-03
+  SMALLEST EIGENVALUE OF MATCHING MATRIX IS NUMBER  1 =  6.13508E-03
 
   WITH PRINCIPAL EIGENVECTOR COMPONENTS
   CHAN     VEC    VEC**2   L   QUANTUM NUMBERS
@@ -2328,9 +2305,9 @@
 
   SEARCHING FOR BOUND STATE NUMBER     4
 
-  CONVERGED ON STATE NUMBER     4 AT                              ENERGY =  -4.992074660     CM-1  
+  CONVERGED ON STATE NUMBER     4 AT                              ENERGY =  -4.992074672     CM-1  
 
-  SMALLEST EIGENVALUE OF MATCHING MATRIX IS NUMBER  1 =  1.46598E-08
+  SMALLEST EIGENVALUE OF MATCHING MATRIX IS NUMBER  1 =  1.54433E-08
 
   WITH PRINCIPAL EIGENVECTOR COMPONENTS
   CHAN     VEC    VEC**2   L   QUANTUM NUMBERS
@@ -2341,9 +2318,9 @@
 
   SEARCHING FOR BOUND STATE NUMBER     5
 
-  CONVERGED ON STATE NUMBER     5 AT                              ENERGY =  -1.413103885     CM-1  
+  CONVERGED ON STATE NUMBER     5 AT                              ENERGY =  -1.413103892     CM-1  
 
-  SMALLEST EIGENVALUE OF MATCHING MATRIX IS NUMBER  1 =  2.04002E-02
+  SMALLEST EIGENVALUE OF MATCHING MATRIX IS NUMBER  1 =  2.05388E-02
 
   WITH PRINCIPAL EIGENVECTOR COMPONENTS
   CHAN     VEC    VEC**2   L   QUANTUM NUMBERS
@@ -2378,22 +2355,22 @@
 
   SEARCHING FOR BOUND STATE NUMBER     4
 
-  CONVERGED ON STATE NUMBER     4 AT                              ENERGY =  -4.844814116     CM-1  
+  CONVERGED ON STATE NUMBER     4 AT                              ENERGY =  -4.844814128     CM-1  
 
-  SMALLEST EIGENVALUE OF MATCHING MATRIX IS NUMBER  1 =  4.72089E-06
+  SMALLEST EIGENVALUE OF MATCHING MATRIX IS NUMBER  1 =  4.72076E-06
 
   WITH PRINCIPAL EIGENVECTOR COMPONENTS
   CHAN     VEC    VEC**2   L   QUANTUM NUMBERS
 
-   2   -0.9989    0.9979   2   0   1
+   2    0.9989    0.9979   2   0   1
 
   - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
   SEARCHING FOR BOUND STATE NUMBER     5
 
-  CONVERGED ON STATE NUMBER     5 AT                              ENERGY =  -1.312115826     CM-1  
+  CONVERGED ON STATE NUMBER     5 AT                              ENERGY =  -1.312115833     CM-1  
 
-  SMALLEST EIGENVALUE OF MATCHING MATRIX IS NUMBER  1 =  2.23612E-02
+  SMALLEST EIGENVALUE OF MATCHING MATRIX IS NUMBER  1 =  2.26422E-02
 
   WITH PRINCIPAL EIGENVECTOR COMPONENTS
   CHAN     VEC    VEC**2   L   QUANTUM NUMBERS
@@ -2408,23 +2385,22 @@
  |                                                                            |
  |          Bound states of interacting pairs of atoms and molecules          |
  |                                                                            |
- |              Copyright (C) 2022 J. M. Hutson & C. R. Le Sueur              |
+ |              Copyright (C) 2025 J. M. Hutson & C. R. Le Sueur              |
  |                                                                            |
- |                               Version 2022.0                               |
+ |                               Version 2025.0                               |
  |                                                                            |
- |                    This run used      29.32 cpu secs and                   |
- |                891 of the allocated   1000000 words of storage             |
+ |                      This run used      23.04 cpu secs                     |
  |                                                                            |
   -- BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND --
   -- BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND --
  |                                                                            |
  |          Bound states of interacting pairs of atoms and molecules          |
  |                                                                            |
- |              Copyright (C) 2022 J. M. Hutson & C. R. Le Sueur              |
+ |              Copyright (C) 2025 J. M. Hutson & C. R. Le Sueur              |
  |                                                                            |
- |                               Version 2022.0                               |
+ |                               Version 2025.0                               |
  |                                                                            |
- |                       Run on 31 May 2022   at 10:30:59                     |
+ |                       Run on 06 Nov 2025   at 16:43:39                     |
  |                                                                            |
   -- BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND --
 
@@ -2438,16 +2414,14 @@
 
   J. M. Hutson & C. R. Le Sueur, BOUND: a program for bound states of
   interacting pairs of atoms and molecules,
-  Version 2022.0, https//github.com/molscat/molscat
+  Version 2025.0, https//github.com/molscat/molscat
 
   and the published paper:
 
   J. M. Hutson & C. R. Le Sueur, Comput. Phys. Commun., 241, 1-8 (2019).
 
 
-  USING CODATA 2018 RECOMMENDED VALUES OF FUNDAMENTAL PHYSICAL CONSTANTS
-
-  MEMORY ALLOCATED TO MAIN WORKING ARRAY IS   1000000 (8-BYTE) WORDS (    7.63 MB)
+  USING CODATA 2022 RECOMMENDED VALUES OF FUNDAMENTAL PHYSICAL CONSTANTS
 
   PRINT LEVEL (IPRINT) =  5
 
@@ -2560,7 +2534,7 @@
 
   CALCULATIONS WILL BE FOR SYMMETRY BLOCK   2  ONLY
 
-  INITIALIZATION DONE.  TIME WAS   0.00 CPU SECS.         9 WORDS OF STORAGE USED.
+  INITIALIZATION DONE.  TIME WAS   0.00 CPU SECS.
 
   ======================================= model system: ITYPE=1; IPROPS=IPROPL=8 =======================================
 
@@ -2584,9 +2558,9 @@
 
   SEARCHING FOR BOUND STATE NUMBER     4
 
-  CONVERGED ON STATE NUMBER     4 AT                              ENERGY =  -5.065870691     CM-1  
+  CONVERGED ON STATE NUMBER     4 AT                              ENERGY =  -5.065870704     CM-1  
 
-  SMALLEST EIGENVALUE OF MATCHING MATRIX IS NUMBER  1 = -1.04858E-06
+  SMALLEST EIGENVALUE OF MATCHING MATRIX IS NUMBER  1 = -1.04875E-06
 
   WITH PRINCIPAL EIGENVECTOR COMPONENTS
   CHAN     VEC    VEC**2   L   QUANTUM NUMBERS
@@ -2597,9 +2571,9 @@
 
   SEARCHING FOR BOUND STATE NUMBER     5
 
-  CONVERGED ON STATE NUMBER     5 AT                              ENERGY =  -1.463920404     CM-1  
+  CONVERGED ON STATE NUMBER     5 AT                              ENERGY =  -1.463920411     CM-1  
 
-  SMALLEST EIGENVALUE OF MATCHING MATRIX IS NUMBER  1 =  6.13299E-03
+  SMALLEST EIGENVALUE OF MATCHING MATRIX IS NUMBER  1 =  6.13572E-03
 
   WITH PRINCIPAL EIGENVECTOR COMPONENTS
   CHAN     VEC    VEC**2   L   QUANTUM NUMBERS
@@ -2629,9 +2603,9 @@
 
   SEARCHING FOR BOUND STATE NUMBER     4
 
-  CONVERGED ON STATE NUMBER     4 AT                              ENERGY =  -4.992074659     CM-1  
+  CONVERGED ON STATE NUMBER     4 AT                              ENERGY =  -4.992074671     CM-1  
 
-  SMALLEST EIGENVALUE OF MATCHING MATRIX IS NUMBER  1 =  1.56903E-08
+  SMALLEST EIGENVALUE OF MATCHING MATRIX IS NUMBER  1 =  1.76543E-08
 
   WITH PRINCIPAL EIGENVECTOR COMPONENTS
   CHAN     VEC    VEC**2   L   QUANTUM NUMBERS
@@ -2642,9 +2616,9 @@
 
   SEARCHING FOR BOUND STATE NUMBER     5
 
-  CONVERGED ON STATE NUMBER     5 AT                              ENERGY =  -1.413103885     CM-1  
+  CONVERGED ON STATE NUMBER     5 AT                              ENERGY =  -1.413103892     CM-1  
 
-  SMALLEST EIGENVALUE OF MATCHING MATRIX IS NUMBER  1 =  2.03925E-02
+  SMALLEST EIGENVALUE OF MATCHING MATRIX IS NUMBER  1 =  2.05324E-02
 
   WITH PRINCIPAL EIGENVECTOR COMPONENTS
   CHAN     VEC    VEC**2   L   QUANTUM NUMBERS
@@ -2679,41 +2653,40 @@
 
   SEARCHING FOR BOUND STATE NUMBER     4
 
-  CONVERGED ON STATE NUMBER     4 AT                              ENERGY =  -4.844814115     CM-1  
+  CONVERGED ON STATE NUMBER     4 AT                              ENERGY =  -4.844814127     CM-1  
 
-  SMALLEST EIGENVALUE OF MATCHING MATRIX IS NUMBER  1 =  4.72164E-06
+  SMALLEST EIGENVALUE OF MATCHING MATRIX IS NUMBER  1 =  4.72316E-06
 
   WITH PRINCIPAL EIGENVECTOR COMPONENTS
   CHAN     VEC    VEC**2   L   QUANTUM NUMBERS
 
-   2   -0.9989    0.9979   2   0   1
+   2    0.9989    0.9979   2   0   1
 
   - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
   SEARCHING FOR BOUND STATE NUMBER     5
 
-  CONVERGED ON STATE NUMBER     5 AT                              ENERGY =  -1.312115826     CM-1  
+  CONVERGED ON STATE NUMBER     5 AT                              ENERGY =  -1.312115833     CM-1  
 
-  SMALLEST EIGENVALUE OF MATCHING MATRIX IS NUMBER  1 =  2.23450E-02
+  SMALLEST EIGENVALUE OF MATCHING MATRIX IS NUMBER  1 =  2.26266E-02
 
   WITH PRINCIPAL EIGENVECTOR COMPONENTS
   CHAN     VEC    VEC**2   L   QUANTUM NUMBERS
 
-   1   -0.3610    0.1303   0   2   2
-   2   -0.6021    0.3626   2   0   1
-   3    0.4291    0.1841   2   2   2
-   5   -0.5683    0.3230   4   2   2
+   1    0.3610    0.1303   0   2   2
+   2    0.6021    0.3626   2   0   1
+   3   -0.4291    0.1841   2   2   2
+   5    0.5683    0.3230   4   2   2
 
 
   -- BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND --
  |                                                                            |
  |          Bound states of interacting pairs of atoms and molecules          |
  |                                                                            |
- |              Copyright (C) 2022 J. M. Hutson & C. R. Le Sueur              |
+ |              Copyright (C) 2025 J. M. Hutson & C. R. Le Sueur              |
  |                                                                            |
- |                               Version 2022.0                               |
+ |                               Version 2025.0                               |
  |                                                                            |
- |                    This run used      18.22 cpu secs and                   |
- |                651 of the allocated   1000000 words of storage             |
+ |                      This run used      15.33 cpu secs                     |
  |                                                                            |
   -- BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND --

@@ -2,11 +2,11 @@
  |                                                                            |
  |          Bound states of interacting pairs of atoms and molecules          |
  |                                                                            |
- |              Copyright (C) 2022 J. M. Hutson & C. R. Le Sueur              |
+ |              Copyright (C) 2025 J. M. Hutson & C. R. Le Sueur              |
  |                                                                            |
- |                               Version 2022.0                               |
+ |                               Version 2025.0                               |
  |                                                                            |
- |                       Run on 31 May 2022   at 10:31:18                     |
+ |                       Run on 06 Nov 2025   at 16:43:54                     |
  |                                                                            |
   -- BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND --
 
@@ -20,16 +20,14 @@
 
   J. M. Hutson & C. R. Le Sueur, BOUND: a program for bound states of
   interacting pairs of atoms and molecules,
-  Version 2022.0, https//github.com/molscat/molscat
+  Version 2025.0, https//github.com/molscat/molscat
 
   and the published paper:
 
   J. M. Hutson & C. R. Le Sueur, Comput. Phys. Commun., 241, 1-8 (2019).
 
 
-  USING CODATA 2018 RECOMMENDED VALUES OF FUNDAMENTAL PHYSICAL CONSTANTS
-
-  MEMORY ALLOCATED TO MAIN WORKING ARRAY IS   1000000 (8-BYTE) WORDS (    7.63 MB)
+  USING CODATA 2022 RECOMMENDED VALUES OF FUNDAMENTAL PHYSICAL CONSTANTS
 
   PRINT LEVEL (IPRINT) =  3
 
@@ -184,7 +182,7 @@
 
   EACH JTOT IS SPLIT INTO A MAXIMUM OF   2 SYMMETRY BLOCKS
 
-  INITIALIZATION DONE.  TIME WAS   0.00 CPU SECS.       129 WORDS OF STORAGE USED.
+  INITIALIZATION DONE.  TIME WAS   0.00 CPU SECS.
 
   ============================= Ar-HCl v=0 on H6(4,3,0) potential: see JPC 96, 4237 (1992) =============================
 
@@ -211,7 +209,7 @@
 
   SEARCHING FOR BOUND STATE NUMBER     3
 
-  CONVERGED ON STATE NUMBER     3 AT                              ENERGY =  -82.71731079     CM-1  
+  CONVERGED ON STATE NUMBER     3 AT                              ENERGY =  -82.71731080     CM-1  
 
   *****************************  ANGULAR MOMENTUM JTOT  =   1   AND SYMMETRY BLOCK  =    1  ****************************
 
@@ -222,7 +220,7 @@
 
   SEARCHING FOR BOUND STATE NUMBER     1
 
-  CONVERGED ON STATE NUMBER     1 AT                              ENERGY =  -81.11694139     CM-1  
+  CONVERGED ON STATE NUMBER     1 AT                              ENERGY =  -81.11694140     CM-1  
 
   *****************************  ANGULAR MOMENTUM JTOT  =   1   AND SYMMETRY BLOCK  =    2  ****************************
 
@@ -245,7 +243,7 @@
 
   SEARCHING FOR BOUND STATE NUMBER     3
 
-  CONVERGED ON STATE NUMBER     3 AT                              ENERGY =  -82.61337213     CM-1  
+  CONVERGED ON STATE NUMBER     3 AT                              ENERGY =  -82.61337214     CM-1  
 
   - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
@@ -258,23 +256,22 @@
  |                                                                            |
  |          Bound states of interacting pairs of atoms and molecules          |
  |                                                                            |
- |              Copyright (C) 2022 J. M. Hutson & C. R. Le Sueur              |
+ |              Copyright (C) 2025 J. M. Hutson & C. R. Le Sueur              |
  |                                                                            |
- |                               Version 2022.0                               |
+ |                               Version 2025.0                               |
  |                                                                            |
- |                    This run used       0.20 cpu secs and                   |
- |               2373 of the allocated   1000000 words of storage             |
+ |                      This run used       0.15 cpu secs                     |
  |                                                                            |
   -- BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND --
   -- BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND --
  |                                                                            |
  |          Bound states of interacting pairs of atoms and molecules          |
  |                                                                            |
- |              Copyright (C) 2022 J. M. Hutson & C. R. Le Sueur              |
+ |              Copyright (C) 2025 J. M. Hutson & C. R. Le Sueur              |
  |                                                                            |
- |                               Version 2022.0                               |
+ |                               Version 2025.0                               |
  |                                                                            |
- |                       Run on 31 May 2022   at 10:31:18                     |
+ |                       Run on 06 Nov 2025   at 16:43:54                     |
  |                                                                            |
   -- BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND --
 
@@ -288,16 +285,14 @@
 
   J. M. Hutson & C. R. Le Sueur, BOUND: a program for bound states of
   interacting pairs of atoms and molecules,
-  Version 2022.0, https//github.com/molscat/molscat
+  Version 2025.0, https//github.com/molscat/molscat
 
   and the published paper:
 
   J. M. Hutson & C. R. Le Sueur, Comput. Phys. Commun., 241, 1-8 (2019).
 
 
-  USING CODATA 2018 RECOMMENDED VALUES OF FUNDAMENTAL PHYSICAL CONSTANTS
-
-  MEMORY ALLOCATED TO MAIN WORKING ARRAY IS   1000000 (8-BYTE) WORDS (    7.63 MB)
+  USING CODATA 2022 RECOMMENDED VALUES OF FUNDAMENTAL PHYSICAL CONSTANTS
 
   PRINT LEVEL (IPRINT) =  3
 
@@ -463,7 +458,7 @@
 
   CALCULATIONS WILL BE FOR SYMMETRY BLOCKS   1  TO   2
 
-  INITIALIZATION DONE.  TIME WAS   0.00 CPU SECS.       129 WORDS OF STORAGE USED.
+  INITIALIZATION DONE.  TIME WAS   0.00 CPU SECS.
 
   ========================== Ar-HCl v=0 on H6(4,3,0) potential (HD): see JPC 96, 4237 (1992) ===========================
 
@@ -488,41 +483,41 @@
 
   SEARCHING FOR BOUND STATE NUMBER     3
 
-  CONVERGED ON STATE NUMBER     3 AT                              ENERGY =  -82.71731079     CM-1  
+  CONVERGED ON STATE NUMBER     3 AT                              ENERGY =  -82.71731080     CM-1  
 
   ======================================================================================================================
-  CALCULATE EXPECTATION VALUES OF POTENTIAL( 3)/R** 0 WITH DELTA =  1.000E-03
+  CALCULATE EXPECTATION VALUES OF POTENTIAL(  3)/R** 0 WITH DELTA =  1.000E-03
 
   FINITE DIFFERENCE CALCULATION CONVERGED AT                      ENERGY =  -115.1512913     CM-1
-  CALCULATED EXPECTATION VALUE <POT( 3)/R** 0> FOR NODE    1 IS  0.342894    
+  CALCULATED EXPECTATION VALUE <POT(  3)/R** 0> FOR NODE    1 IS  0.342894    
 
   - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
-  FINITE DIFFERENCE CALCULATION CONVERGED AT                      ENERGY =  -91.48507816     CM-1
-  CALCULATED EXPECTATION VALUE <POT( 3)/R** 0> FOR NODE    2 IS  0.337477    
+  FINITE DIFFERENCE CALCULATION CONVERGED AT                      ENERGY =  -91.48507817     CM-1
+  CALCULATED EXPECTATION VALUE <POT(  3)/R** 0> FOR NODE    2 IS  0.337477    
 
   - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
-  FINITE DIFFERENCE CALCULATION CONVERGED AT                      ENERGY =  -82.71700441     CM-1
-  CALCULATED EXPECTATION VALUE <POT( 3)/R** 0> FOR NODE    3 IS  0.306376    
+  FINITE DIFFERENCE CALCULATION CONVERGED AT                      ENERGY =  -82.71700442     CM-1
+  CALCULATED EXPECTATION VALUE <POT(  3)/R** 0> FOR NODE    3 IS  0.306376    
 
   - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
   ======================================================================================================================
-  CALCULATE EXPECTATION VALUES OF POTENTIAL( 1)/R** 2 WITH DELTA =  1.000E-03
+  CALCULATE EXPECTATION VALUES OF POTENTIAL(  1)/R** 2 WITH DELTA =  1.000E-03
 
-  FINITE DIFFERENCE CALCULATION CONVERGED AT                      ENERGY =  -115.1515710     CM-1
-  CALCULATED EXPECTATION VALUE <POT( 1)/R** 2> FOR NODE    1 IS  6.312103E-02
+  FINITE DIFFERENCE CALCULATION CONVERGED AT                      ENERGY =  -115.1515711     CM-1
+  CALCULATED EXPECTATION VALUE <POT(  1)/R** 2> FOR NODE    1 IS  6.312103E-02
 
   - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
   FINITE DIFFERENCE CALCULATION CONVERGED AT                      ENERGY =  -91.48534850     CM-1
-  CALCULATED EXPECTATION VALUE <POT( 1)/R** 2> FOR NODE    2 IS  6.713999E-02
+  CALCULATED EXPECTATION VALUE <POT(  1)/R** 2> FOR NODE    2 IS  6.713999E-02
 
   - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
-  FINITE DIFFERENCE CALCULATION CONVERGED AT                      ENERGY =  -82.71725129     CM-1
-  CALCULATED EXPECTATION VALUE <POT( 1)/R** 2> FOR NODE    3 IS  5.949082E-02
+  FINITE DIFFERENCE CALCULATION CONVERGED AT                      ENERGY =  -82.71725131     CM-1
+  CALCULATED EXPECTATION VALUE <POT(  1)/R** 2> FOR NODE    3 IS  5.949082E-02
 
   - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
@@ -549,41 +544,41 @@
 
   SEARCHING FOR BOUND STATE NUMBER     3
 
-  CONVERGED ON STATE NUMBER     3 AT                              ENERGY =  -82.61137187     CM-1  
+  CONVERGED ON STATE NUMBER     3 AT                              ENERGY =  -82.61137189     CM-1  
 
   ======================================================================================================================
-  CALCULATE EXPECTATION VALUES OF POTENTIAL( 3)/R** 0 WITH DELTA =  1.000E-03
+  CALCULATE EXPECTATION VALUES OF POTENTIAL(  3)/R** 0 WITH DELTA =  1.000E-03
 
   FINITE DIFFERENCE CALCULATION CONVERGED AT                      ENERGY =  -115.0388869     CM-1
-  CALCULATED EXPECTATION VALUE <POT( 3)/R** 0> FOR NODE    1 IS  0.342931    
+  CALCULATED EXPECTATION VALUE <POT(  3)/R** 0> FOR NODE    1 IS  0.342931    
 
   - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
   FINITE DIFFERENCE CALCULATION CONVERGED AT                      ENERGY =  -91.36551866     CM-1
-  CALCULATED EXPECTATION VALUE <POT( 3)/R** 0> FOR NODE    2 IS  0.337367    
+  CALCULATED EXPECTATION VALUE <POT(  3)/R** 0> FOR NODE    2 IS  0.337367    
 
   - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
-  FINITE DIFFERENCE CALCULATION CONVERGED AT                      ENERGY =  -82.61106549     CM-1
-  CALCULATED EXPECTATION VALUE <POT( 3)/R** 0> FOR NODE    3 IS  0.306385    
+  FINITE DIFFERENCE CALCULATION CONVERGED AT                      ENERGY =  -82.61106550     CM-1
+  CALCULATED EXPECTATION VALUE <POT(  3)/R** 0> FOR NODE    3 IS  0.306385    
 
   - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
   ======================================================================================================================
-  CALCULATE EXPECTATION VALUES OF POTENTIAL( 1)/R** 2 WITH DELTA =  1.000E-03
+  CALCULATE EXPECTATION VALUES OF POTENTIAL(  1)/R** 2 WITH DELTA =  1.000E-03
 
   FINITE DIFFERENCE CALCULATION CONVERGED AT                      ENERGY =  -115.0391667     CM-1
-  CALCULATED EXPECTATION VALUE <POT( 1)/R** 2> FOR NODE    1 IS  6.311806E-02
+  CALCULATED EXPECTATION VALUE <POT(  1)/R** 2> FOR NODE    1 IS  6.311806E-02
 
   - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
-  FINITE DIFFERENCE CALCULATION CONVERGED AT                      ENERGY =  -91.36578889     CM-1
-  CALCULATED EXPECTATION VALUE <POT( 1)/R** 2> FOR NODE    2 IS  6.713502E-02
+  FINITE DIFFERENCE CALCULATION CONVERGED AT                      ENERGY =  -91.36578890     CM-1
+  CALCULATED EXPECTATION VALUE <POT(  1)/R** 2> FOR NODE    2 IS  6.713502E-02
 
   - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
-  FINITE DIFFERENCE CALCULATION CONVERGED AT                      ENERGY =  -82.61131238     CM-1
-  CALCULATED EXPECTATION VALUE <POT( 1)/R** 2> FOR NODE    3 IS  5.948706E-02
+  FINITE DIFFERENCE CALCULATION CONVERGED AT                      ENERGY =  -82.61131240     CM-1
+  CALCULATED EXPECTATION VALUE <POT(  1)/R** 2> FOR NODE    3 IS  5.948706E-02
 
   - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
@@ -596,21 +591,21 @@
 
   SEARCHING FOR BOUND STATE NUMBER     1
 
-  CONVERGED ON STATE NUMBER     1 AT                              ENERGY =  -81.11694139     CM-1  
+  CONVERGED ON STATE NUMBER     1 AT                              ENERGY =  -81.11694140     CM-1  
 
   ======================================================================================================================
-  CALCULATE EXPECTATION VALUES OF POTENTIAL( 3)/R** 0 WITH DELTA =  1.000E-03
+  CALCULATE EXPECTATION VALUES OF POTENTIAL(  3)/R** 0 WITH DELTA =  1.000E-03
 
   FINITE DIFFERENCE CALCULATION CONVERGED AT                      ENERGY =  -81.11705215     CM-1
-  CALCULATED EXPECTATION VALUE <POT( 3)/R** 0> FOR NODE    1 IS -0.110758    
+  CALCULATED EXPECTATION VALUE <POT(  3)/R** 0> FOR NODE    1 IS -0.110758    
 
   - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
   ======================================================================================================================
-  CALCULATE EXPECTATION VALUES OF POTENTIAL( 1)/R** 2 WITH DELTA =  1.000E-03
+  CALCULATE EXPECTATION VALUES OF POTENTIAL(  1)/R** 2 WITH DELTA =  1.000E-03
 
-  FINITE DIFFERENCE CALCULATION CONVERGED AT                      ENERGY =  -81.11687712     CM-1
-  CALCULATED EXPECTATION VALUE <POT( 1)/R** 2> FOR NODE    1 IS  6.426793E-02
+  FINITE DIFFERENCE CALCULATION CONVERGED AT                      ENERGY =  -81.11687713     CM-1
+  CALCULATED EXPECTATION VALUE <POT(  1)/R** 2> FOR NODE    1 IS  6.426793E-02
 
   - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
@@ -619,23 +614,22 @@
  |                                                                            |
  |          Bound states of interacting pairs of atoms and molecules          |
  |                                                                            |
- |              Copyright (C) 2022 J. M. Hutson & C. R. Le Sueur              |
+ |              Copyright (C) 2025 J. M. Hutson & C. R. Le Sueur              |
  |                                                                            |
- |                               Version 2022.0                               |
+ |                               Version 2025.0                               |
  |                                                                            |
- |                    This run used       0.28 cpu secs and                   |
- |               1311 of the allocated   1000000 words of storage             |
+ |                      This run used       0.21 cpu secs                     |
  |                                                                            |
   -- BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND --
   -- BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND --
  |                                                                            |
  |          Bound states of interacting pairs of atoms and molecules          |
  |                                                                            |
- |              Copyright (C) 2022 J. M. Hutson & C. R. Le Sueur              |
+ |              Copyright (C) 2025 J. M. Hutson & C. R. Le Sueur              |
  |                                                                            |
- |                               Version 2022.0                               |
+ |                               Version 2025.0                               |
  |                                                                            |
- |                       Run on 31 May 2022   at 10:31:18                     |
+ |                       Run on 06 Nov 2025   at 16:43:54                     |
  |                                                                            |
   -- BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND --
 
@@ -649,16 +643,14 @@
 
   J. M. Hutson & C. R. Le Sueur, BOUND: a program for bound states of
   interacting pairs of atoms and molecules,
-  Version 2022.0, https//github.com/molscat/molscat
+  Version 2025.0, https//github.com/molscat/molscat
 
   and the published paper:
 
   J. M. Hutson & C. R. Le Sueur, Comput. Phys. Commun., 241, 1-8 (2019).
 
 
-  USING CODATA 2018 RECOMMENDED VALUES OF FUNDAMENTAL PHYSICAL CONSTANTS
-
-  MEMORY ALLOCATED TO MAIN WORKING ARRAY IS   1000000 (8-BYTE) WORDS (    7.63 MB)
+  USING CODATA 2022 RECOMMENDED VALUES OF FUNDAMENTAL PHYSICAL CONSTANTS
 
   PRINT LEVEL (IPRINT) =  3
 
@@ -817,7 +809,7 @@
 
   CALCULATIONS WILL BE FOR SYMMETRY BLOCK   2  ONLY
 
-  INITIALIZATION DONE.  TIME WAS   0.00 CPU SECS.       129 WORDS OF STORAGE USED.
+  INITIALIZATION DONE.  TIME WAS   0.00 CPU SECS.
 
   =================== Ar-HCl v=0 on H6(4,3,0) potential: see JPC 96, 4237 (1992): wavefunction demo ====================
 
@@ -840,11 +832,10 @@
  |                                                                            |
  |          Bound states of interacting pairs of atoms and molecules          |
  |                                                                            |
- |              Copyright (C) 2022 J. M. Hutson & C. R. Le Sueur              |
+ |              Copyright (C) 2025 J. M. Hutson & C. R. Le Sueur              |
  |                                                                            |
- |                               Version 2022.0                               |
+ |                               Version 2025.0                               |
  |                                                                            |
- |                    This run used       0.02 cpu secs and                   |
- |                950 of the allocated   1000000 words of storage             |
+ |                      This run used       0.02 cpu secs                     |
  |                                                                            |
   -- BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND --

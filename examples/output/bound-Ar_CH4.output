@@ -2,11 +2,11 @@
  |                                                                            |
  |          Bound states of interacting pairs of atoms and molecules          |
  |                                                                            |
- |              Copyright (C) 2022 J. M. Hutson & C. R. Le Sueur              |
+ |              Copyright (C) 2025 J. M. Hutson & C. R. Le Sueur              |
  |                                                                            |
- |                               Version 2022.0                               |
+ |                               Version 2025.0                               |
  |                                                                            |
- |                       Run on 31 May 2022   at 10:31:20                     |
+ |                       Run on 06 Nov 2025   at 16:43:56                     |
  |                                                                            |
   -- BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND --
 
@@ -20,16 +20,14 @@
 
   J. M. Hutson & C. R. Le Sueur, BOUND: a program for bound states of
   interacting pairs of atoms and molecules,
-  Version 2022.0, https//github.com/molscat/molscat
+  Version 2025.0, https//github.com/molscat/molscat
 
   and the published paper:
 
   J. M. Hutson & C. R. Le Sueur, Comput. Phys. Commun., 241, 1-8 (2019).
 
 
-  USING CODATA 2018 RECOMMENDED VALUES OF FUNDAMENTAL PHYSICAL CONSTANTS
-
-  MEMORY ALLOCATED TO MAIN WORKING ARRAY IS   1000000 (8-BYTE) WORDS (    7.63 MB)
+  USING CODATA 2022 RECOMMENDED VALUES OF FUNDAMENTAL PHYSICAL CONSTANTS
 
   PRINT LEVEL (IPRINT) =  5
 
@@ -45,11 +43,11 @@
   A = B = C =    5.24104
   DJ        =  0.111E-03
   DT        =  0.442E-05
-
-  INPUT ENERGY LEVELS WILL BE INCLUDED ONLY IF THEY MEET SELECTION CRITERIA SPECIFIED BITWISE BY ISYM = 177
+ F
 
   CALCULATED ROTATIONAL LEVELS FOR J =  0 ARE
              0.00000
+  ENERGY LEVEL AT     0.00000 HAS SYMMETRY A1
 
   CALCULATED ROTATIONAL LEVELS FOR J =  1 ARE
             10.48163    10.48163    10.48163
@@ -101,6 +99,10 @@
   ENERGY LEVEL AT   293.16902 HAS SYMMETRY E 
   ENERGY LEVEL AT   293.17761 HAS SYMMETRY F1
 
+  ROTOR FUNCTIONS EXCLUDED BASED ON ISYM(1) = 177 CORRESPONDING TO BIT PATTERN
+  FOR EXCLUDING ODD AND EVEN K, ODD AND EVEN J+PRTY, DEGENERACY 1, 2, 3, >3, SYMMETRY A, E
+                 1       0       0       0                      1  1  0   1           0  0
+
   QUANTUM NUMBERS FOR INTERACTING PAIR:
   EACH PAIR STATE IS LABELLED BY  5 QUANTUM NUMBERS
   EACH CHANNEL FUNCTION IS FORMED BY COMBINING A PAIR STATE WITH A VALUE OF L.
@@ -108,22 +110,22 @@
 
   PAIR STATE    ----------- PAIR STATE QUANTUM NUMBERS -----------   PAIR LEVEL     PAIR ENERGY (CM-1)
                         J       TAU      PRTY                    
-        1               1         1         0        96         3       1            10.4816277
-        2               2         2         0        99         5       2            31.4423287
-        3               3        -1         0       104         7       3            62.8756663
-        4               3         0         1       111         7       4            62.8767283
-        5               4        -3         1       118         9       5           104.7745079
-        6               4         4         0       127         9       6           104.7798179
-        7               5        -3         0       136        11       7           157.1239904
-        8               5        -1         1       147        11       8           157.1275734
-        9               5         4         0       158        11       9           157.1385904
-       10               6        -3         0       169        13      10           219.9143809
-       11               6         1         0       182        13      11           219.9361713
-       12               6         4         1       195        13      12           219.9406751
-       13               7        -5         0       208        15      13           293.1216566
-       14               7        -3         1       223        15      14           293.1252078
-       15               7         1         1       238        15      15           293.1634398
-       16               7         7         0       253        15      16           293.1776110
+        1               1         1         0         0         3       1            10.4816277
+        2               2         2         0         3         5       2            31.4423287
+        3               3        -1         0         8         7       3            62.8756663
+        4               3         0         1        15         7       4            62.8767283
+        5               4        -3         1        22         9       5           104.7745079
+        6               4         4         0        31         9       6           104.7798179
+        7               5        -3         0        40        11       7           157.1239904
+        8               5        -1         1        51        11       8           157.1275734
+        9               5         4         0        62        11       9           157.1385904
+       10               6        -3         0        73        13      10           219.9143809
+       11               6         1         0        86        13      11           219.9361713
+       12               6         4         1        99        13      12           219.9406751
+       13               7        -5         0       112        15      13           293.1216566
+       14               7        -3         1       127        15      14           293.1252078
+       15               7         1         1       142        15      15           293.1634398
+       16               7         7         0       157        15      16           293.1776110
 
   ======================================================================================================================
   GENERAL-PURPOSE POTENL ROUTINE (MAY 18)
@@ -213,14 +215,11 @@
 
   CALCULATIONS WILL BE FOR SYMMETRY BLOCK   2  ONLY
 
-  INITIALIZATION DONE.  TIME WAS   0.00 CPU SECS.       961 WORDS OF STORAGE USED.
+  INITIALIZATION DONE.  TIME WAS   0.00 CPU SECS.
 
   ============================ Ar-CH4 (T) on MSV potential of Buck et al CPL 98, 199 (1983) ============================
 
   *****************************  ANGULAR MOMENTUM JTOT  =   1   AND SYMMETRY BLOCK  =    2  ****************************
-
-  CPL6 (MAR 93).   JTOT-INDEPENDENT PARTS OF COUPLING MATRIX STORED.
-                   REQUIRED STORAGE =     272
 
   CHANNEL FUNCTION LIST:
 
@@ -228,32 +227,32 @@
 
   CHANNEL  PAIR STATE   ----------- PAIR STATE QUANTUM NUMBERS -----------           L        PAIR LEVEL   PAIR ENERGY (CM-1)
                                J       TAU       PRTY                     
-        1           1          1         1         0        96         3             0             1        10.4816277
-        2           2          2         2         0        99         5             1             2        31.4423287
-        3           1          1         1         0        96         3             2             1        10.4816277
-        4           3          3        -1         0       104         7             2             3        62.8756663
-        5           2          2         2         0        99         5             3             2        31.4423287
-        6           4          3         0         1       111         7             3             4        62.8767283
-        7           6          4         4         0       127         9             3             6       104.7798179
-        8           3          3        -1         0       104         7             4             3        62.8756663
-        9           5          4        -3         1       118         9             4             5       104.7745079
-       10           7          5        -3         0       136        11             4             7       157.1239904
-       11           9          5         4         0       158        11             4             9       157.1385904
-       12           6          4         4         0       127         9             5             6       104.7798179
-       13           8          5        -1         1       147        11             5             8       157.1275734
-       14          10          6        -3         0       169        13             5            10       219.9143809
-       15          11          6         1         0       182        13             5            11       219.9361713
-       16           7          5        -3         0       136        11             6             7       157.1239904
-       17           9          5         4         0       158        11             6             9       157.1385904
-       18          12          6         4         1       195        13             6            12       219.9406751
-       19          13          7        -5         0       208        15             6            13       293.1216566
-       20          16          7         7         0       253        15             6            16       293.1776110
-       21          10          6        -3         0       169        13             7            10       219.9143809
-       22          11          6         1         0       182        13             7            11       219.9361713
-       23          14          7        -3         1       223        15             7            14       293.1252078
-       24          15          7         1         1       238        15             7            15       293.1634398
-       25          13          7        -5         0       208        15             8            13       293.1216566
-       26          16          7         7         0       253        15             8            16       293.1776110
+        1           1          1         1         0         0         3             0             1        10.4816277
+        2           2          2         2         0         3         5             1             2        31.4423287
+        3           1          1         1         0         0         3             2             1        10.4816277
+        4           3          3        -1         0         8         7             2             3        62.8756663
+        5           2          2         2         0         3         5             3             2        31.4423287
+        6           4          3         0         1        15         7             3             4        62.8767283
+        7           6          4         4         0        31         9             3             6       104.7798179
+        8           3          3        -1         0         8         7             4             3        62.8756663
+        9           5          4        -3         1        22         9             4             5       104.7745079
+       10           7          5        -3         0        40        11             4             7       157.1239904
+       11           9          5         4         0        62        11             4             9       157.1385904
+       12           6          4         4         0        31         9             5             6       104.7798179
+       13           8          5        -1         1        51        11             5             8       157.1275734
+       14          10          6        -3         0        73        13             5            10       219.9143809
+       15          11          6         1         0        86        13             5            11       219.9361713
+       16           7          5        -3         0        40        11             6             7       157.1239904
+       17           9          5         4         0        62        11             6             9       157.1385904
+       18          12          6         4         1        99        13             6            12       219.9406751
+       19          13          7        -5         0       112        15             6            13       293.1216566
+       20          16          7         7         0       157        15             6            16       293.1776110
+       21          10          6        -3         0        73        13             7            10       219.9143809
+       22          11          6         1         0        86        13             7            11       219.9361713
+       23          14          7        -3         1       127        15             7            14       293.1252078
+       24          15          7         1         1       142        15             7            15       293.1634398
+       25          13          7        -5         0       112        15             8            13       293.1216566
+       26          16          7         7         0       157        15             8            16       293.1776110
 
   NODE COUNT IMPLIES     0 STATES BELOW MINIMUM ENERGY =  -100.0000000     CM-1  
   NODE COUNT IMPLIES     4 STATES BELOW MAXIMUM ENERGY =  -60.00000000     CM-1  
@@ -262,72 +261,71 @@
 
   SEARCHING FOR BOUND STATE NUMBER     1
 
-  CONVERGED ON STATE NUMBER     1 AT                              ENERGY =  -85.31575232     CM-1  
+  CONVERGED ON STATE NUMBER     1 AT                              ENERGY =  -85.31575514     CM-1  
 
-  SMALLEST EIGENVALUE OF MATCHING MATRIX IS NUMBER  1 =  1.69975E-06
+  SMALLEST EIGENVALUE OF MATCHING MATRIX IS NUMBER  1 =  1.69771E-06
 
   WITH PRINCIPAL EIGENVECTOR COMPONENTS
   CHAN     VEC    VEC**2   L   QUANTUM NUMBERS
 
-   1    0.9667    0.9345   0   1   1   0  96   3   1
-   3   -0.2237    0.0501   2   1   1   0  96   3   1
+   1    0.9667    0.9345   0   1   1   0   0   3   1
+   3   -0.2237    0.0501   2   1   1   0   0   3   1
 
   - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
   SEARCHING FOR BOUND STATE NUMBER     2
 
-  CONVERGED ON STATE NUMBER     2 AT                              ENERGY =  -84.80170350     CM-1  
+  CONVERGED ON STATE NUMBER     2 AT                              ENERGY =  -84.80170629     CM-1  
 
-  SMALLEST EIGENVALUE OF MATCHING MATRIX IS NUMBER  1 =  3.63228E-06
+  SMALLEST EIGENVALUE OF MATCHING MATRIX IS NUMBER  1 =  3.63242E-06
 
   WITH PRINCIPAL EIGENVECTOR COMPONENTS
   CHAN     VEC    VEC**2   L   QUANTUM NUMBERS
 
-   1    0.2499    0.0625   0   1   1   0  96   3   1
-   3    0.9605    0.9225   2   1   1   0  96   3   1
+   1    0.2499    0.0625   0   1   1   0   0   3   1
+   3    0.9605    0.9225   2   1   1   0   0   3   1
 
   - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
   SEARCHING FOR BOUND STATE NUMBER     3
 
-  CONVERGED ON STATE NUMBER     3 AT                              ENERGY =  -66.21480910     CM-1  
+  CONVERGED ON STATE NUMBER     3 AT                              ENERGY =  -66.21481324     CM-1  
 
-  SMALLEST EIGENVALUE OF MATCHING MATRIX IS NUMBER  1 =  7.45717E-08
+  SMALLEST EIGENVALUE OF MATCHING MATRIX IS NUMBER  1 =  7.45329E-08
 
   WITH PRINCIPAL EIGENVECTOR COMPONENTS
   CHAN     VEC    VEC**2   L   QUANTUM NUMBERS
 
-   1   -0.4070    0.1657   0   1   1   0  96   3   1
-   2   -0.4318    0.1865   1   2   2   0  99   5   2
-   3    0.7053    0.4974   2   1   1   0  96   3   1
-   5    0.3800    0.1444   3   2   2   0  99   5   2
+   1   -0.4070    0.1657   0   1   1   0   0   3   1
+   2   -0.4318    0.1865   1   2   2   0   3   5   2
+   3    0.7053    0.4974   2   1   1   0   0   3   1
+   5    0.3800    0.1444   3   2   2   0   3   5   2
 
   - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
   SEARCHING FOR BOUND STATE NUMBER     4
 
-  CONVERGED ON STATE NUMBER     4 AT                              ENERGY =  -63.81704076     CM-1  
+  CONVERGED ON STATE NUMBER     4 AT                              ENERGY =  -63.81704326     CM-1  
 
-  SMALLEST EIGENVALUE OF MATCHING MATRIX IS NUMBER  1 = -6.89017E-07
+  SMALLEST EIGENVALUE OF MATCHING MATRIX IS NUMBER  1 = -6.89056E-07
 
   WITH PRINCIPAL EIGENVECTOR COMPONENTS
   CHAN     VEC    VEC**2   L   QUANTUM NUMBERS
 
-   1    0.6966    0.4853   0   1   1   0  96   3   1
-   2   -0.4397    0.1934   1   2   2   0  99   5   2
-   3    0.2738    0.0750   2   1   1   0  96   3   1
-   5   -0.4870    0.2371   3   2   2   0  99   5   2
+   1    0.6966    0.4853   0   1   1   0   0   3   1
+   2   -0.4397    0.1934   1   2   2   0   3   5   2
+   3    0.2738    0.0750   2   1   1   0   0   3   1
+   5   -0.4870    0.2371   3   2   2   0   3   5   2
 
 
   -- BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND --
  |                                                                            |
  |          Bound states of interacting pairs of atoms and molecules          |
  |                                                                            |
- |              Copyright (C) 2022 J. M. Hutson & C. R. Le Sueur              |
+ |              Copyright (C) 2025 J. M. Hutson & C. R. Le Sueur              |
  |                                                                            |
- |                               Version 2022.0                               |
+ |                               Version 2025.0                               |
  |                                                                            |
- |                    This run used       1.55 cpu secs and                   |
- |               4488 of the allocated   1000000 words of storage             |
+ |                      This run used       1.18 cpu secs                     |
  |                                                                            |
   -- BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND --

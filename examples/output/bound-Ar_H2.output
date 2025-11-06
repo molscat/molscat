@@ -2,11 +2,11 @@
  |                                                                            |
  |          Bound states of interacting pairs of atoms and molecules          |
  |                                                                            |
- |              Copyright (C) 2022 J. M. Hutson & C. R. Le Sueur              |
+ |              Copyright (C) 2025 J. M. Hutson & C. R. Le Sueur              |
  |                                                                            |
- |                               Version 2022.0                               |
+ |                               Version 2025.0                               |
  |                                                                            |
- |                       Run on 31 May 2022   at 10:31:18                     |
+ |                       Run on 06 Nov 2025   at 16:43:54                     |
  |                                                                            |
   -- BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND --
 
@@ -20,16 +20,14 @@
 
   J. M. Hutson & C. R. Le Sueur, BOUND: a program for bound states of
   interacting pairs of atoms and molecules,
-  Version 2022.0, https//github.com/molscat/molscat
+  Version 2025.0, https//github.com/molscat/molscat
 
   and the published paper:
 
   J. M. Hutson & C. R. Le Sueur, Comput. Phys. Commun., 241, 1-8 (2019).
 
 
-  USING CODATA 2018 RECOMMENDED VALUES OF FUNDAMENTAL PHYSICAL CONSTANTS
-
-  MEMORY ALLOCATED TO MAIN WORKING ARRAY IS   1000000 (8-BYTE) WORDS (    7.63 MB)
+  USING CODATA 2022 RECOMMENDED VALUES OF FUNDAMENTAL PHYSICAL CONSTANTS
 
   PRINT LEVEL (IPRINT) =  2
 
@@ -106,7 +104,7 @@
 
   ALL LENGTHS ARE IN UNITS OF ANGSTROM UNLESS OTHERWISE STATED
 
-  INTERACTION MATRIX USES   3 BLOCKS OF VL ARRAY FOR R-DEPENDENT TERMS IN POTENTIAL
+  INTERACTION MATRIX USES  12 BLOCKS OF VL ARRAY FOR R-DEPENDENT TERMS IN POTENTIAL
 
   ======================================================================================================================
 
@@ -165,7 +163,7 @@
 
   CALCULATIONS WILL BE FOR SYMMETRY BLOCK   1  ONLY
 
-  INITIALIZATION DONE.  TIME WAS   0.00 CPU SECS.        39 WORDS OF STORAGE USED.
+  INITIALIZATION DONE.  TIME WAS   0.00 CPU SECS.
 
   ================================= ground state for Ar-H2 v=1 (LeRoy-Hutson TT3(6,8)) =================================
   SCRATCH FILE OPENED ON UNIT           30
@@ -184,10 +182,10 @@
   ----------------------------------------------------------------------------------------------------------------------
   TESTING CONVERGENCE OF PROPAGATION PARAMETERS: DRS CHANGED TO   8.00000E-02
 
-  ENERGY CONVERGED: E =   4478.290754     CM-1 FOR DR =  8.000E-02
+  ENERGY CONVERGED: E =   4478.290744     CM-1 FOR DR =  8.000E-02
 
   FOR BOUND STATE   1, RICHARDSON EXTRAPOLATION BASED ON ERROR PROPORTIONAL TO DR**4 FOR IPROPS =  6
-  GIVES EXTRAPOLATED ENERGY =                                                4478.290883     CM-1
+  GIVES EXTRAPOLATED ENERGY =                                                4478.290884     CM-1
   THIS IS THE BEST AVAILABLE EXTRAPOLATED VALUE FROM THIS SET OF CALCULATIONS.
 
   - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
@@ -197,11 +195,10 @@
  |                                                                            |
  |          Bound states of interacting pairs of atoms and molecules          |
  |                                                                            |
- |              Copyright (C) 2022 J. M. Hutson & C. R. Le Sueur              |
+ |              Copyright (C) 2025 J. M. Hutson & C. R. Le Sueur              |
  |                                                                            |
- |                               Version 2022.0                               |
+ |                               Version 2025.0                               |
  |                                                                            |
- |                    This run used       0.00 cpu secs and                   |
- |                103 of the allocated   1000000 words of storage             |
+ |                      This run used       0.00 cpu secs                     |
  |                                                                            |
   -- BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND --

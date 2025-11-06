@@ -3,11 +3,11 @@
  |                Non-reactive quantum scattering calculations                |
  |                     on atomic and molecular collisions                     |
  |                                                                            |
- |              Copyright (C) 2022 J. M. Hutson & C. R. Le Sueur              |
+ |              Copyright (C) 2025 J. M. Hutson & C. R. Le Sueur              |
  |                                                                            |
- |                               Version 2022.0                               |
+ |                               Version 2025.0                               |
  |                                                                            |
- |                       Run on 31 May 2022   at 10:24:53                     |
+ |                       Run on 06 Nov 2025   at 16:38:44                     |
  |                                                                            |
   ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
 
@@ -21,17 +21,14 @@
 
   J. M. Hutson & C. R. Le Sueur, MOLSCAT: a program for non-reactive quantum
   scattering calculation on atomic and molecular collisions,
-  Version 2022.0, https//github.com/molscat/molscat
+  Version 2025.0, https//github.com/molscat/molscat
 
   and the published paper:
 
   J. M. Hutson & C. R. Le Sueur, Comput. Phys. Commun., 241, 9-18 (2019).
 
 
-  USING CODATA 2018 RECOMMENDED VALUES OF FUNDAMENTAL PHYSICAL CONSTANTS
-
-  MEMORY ALLOCATED TO MAIN WORKING ARRAY IS   1000000 (8-BYTE) WORDS (    7.63 MB)
-  2 INTEGERS CAN BE STORED IN EACH WORD.
+  USING CODATA 2022 RECOMMENDED VALUES OF FUNDAMENTAL PHYSICAL CONSTANTS
 
   PRINT LEVEL (IPRINT) =  3     OTHER PRINT CONTROLS  ISIGPR = 0
 
@@ -148,51 +145,50 @@
 
   INTERACTION POTENTIAL FOR EXPANSION TERM NUMBER   1
 
-  JMH routine for Tiemann-style alkali dimer potentials
+  JMH routine for alkali dimer potentials with generalized Hannover form
   Rb2 potential from Strauss et al., PRA 82, 052514 (2010)
 
   gamma shifted from   5.317689000000    
-                  to   5.317691178394    
+                  to   5.317691182680    
 
   For potential  1 at RLR =  11.00000000000     A
                   with C6 =  22700320.00000     and C8 =  778288600.0000    
-  V_LR  =  -18.02609055718    cm-1
+  V_LR  =  -18.02609056183    cm-1
   V_mid =  -18.02577440996    cm-1, dV/dR =   11.44316013529    cm-1/A
   A(0) shifted from  -3993.592873000     cm-1
-                 to  -3993.593189147     cm-1 to match value of V(R) at RLR
-  Derivative discontinuity at RLR (intrinsic to functional form) is  0.1531623206460     cm-1/A
-  Discontinuity / value is  1.3207835607195E-02
+                 to  -3993.593189152     cm-1 to match value of V(R) at RLR
+  Derivative discontinuity at RLR (intrinsic to functional form) is  0.1531623299471     cm-1/A
+  Discontinuity / value is  1.3207836398671E-02
 
   For potential  1 at RSR =  3.126000000000     A
-  V     =  -6.255737835919    cm-1, dV/dR =  -9257.490374248    cm-1/A and n =   4.533895000000    
-  B(SR) shifted from   1120053.610000     cm-1 A^n
-                  to   1120053.629089     cm-1 A^n
+  V     =  -6.255737840563    cm-1, dV/dR =  -9257.490374248    cm-1/A from mid-range power series.
+  Short-range potential is A(SR) / R**n(SR) * exp(-alpha(SR)*R),
+  with n(SR) =   4.533895000000     and alpha =  0.000000000000    
+  B(SR) shifted from   1120053.610000     cm-1 A^n(SR)
+                  to   1120053.629089     cm-1 A^n(SR)
   A(SR) shifted from  -6389.048800000     cm-1
-                  to  -6389.049099813     cm-1
+                  to  -6389.049099818     cm-1
 
   INTERACTION POTENTIAL FOR EXPANSION TERM NUMBER   2
 
-  JMH routine for Tiemann-style alkali dimer potentials
-  Rb2 potential from Strauss et al., PRA 82, 052514 (2010)
-
-  gamma shifted from   5.317691178394    
-                  to   5.317691178394    
 
   For potential  2 at RLR =  11.00000000000     A
                   with C6 =  22700320.00000     and C8 =  778288600.0000    
-  V_LR  =  -17.12240051666    cm-1
+  V_LR  =  -17.12240051202    cm-1
   V_mid =  -17.12208948080    cm-1, dV/dR =   9.935247938667    cm-1/A
   A(0) shifted from  -241.5033520000     cm-1
-                 to  -241.5036630359     cm-1 to match value of V(R) at RLR
-  Derivative discontinuity at RLR (intrinsic to functional form) is -0.1489325085633     cm-1/A
-  Discontinuity / value is -1.5218445555638E-02
+                 to  -241.5036630312     cm-1 to match value of V(R) at RLR
+  Derivative discontinuity at RLR (intrinsic to functional form) is -0.1489325178644     cm-1/A
+  Discontinuity / value is -1.5218446520516E-02
 
   For potential  2 at RSR =  5.070000000000     A
-  V     =  -10.77028535667    cm-1, dV/dR =  -543.9945779764    cm-1/A and n =   4.533895000000    
-  B(SR) shifted from   956231.6770000     cm-1 A^n
-                  to   956231.6938206     cm-1 A^n
+  V     =  -10.77028535202    cm-1, dV/dR =  -543.9945779764    cm-1/A from mid-range power series.
+  Short-range potential is A(SR) / R**n(SR) * exp(-alpha(SR)*R),
+  with n(SR) =   4.533895000000     and alpha =  0.000000000000    
+  B(SR) shifted from   956231.6770000     cm-1 A^n(SR)
+                  to   956231.6938206     cm-1 A^n(SR)
   A(SR) shifted from  -619.0885430000     cm-1
-                  to  -619.0888525798     cm-1
+                  to  -619.0888525752     cm-1
 
   INTERACTION POTENTIAL FOR EXPANSION TERM NUMBER   3
 
@@ -284,7 +280,7 @@
   THESE ENERGY VALUES ARE RELATIVE TO THE REFERENCE ENERGY SPECIFIED BY MONOMER QUANTUM NUMBERS   4   4   4   4
   THE REFERENCE ENERGY WILL BE CALCULATED FOR EVERY EFV SET
 
-  INITIALIZATION DONE.  TIME WAS   0.00 CPU SECS.       392 WORDS OF STORAGE USED.
+  INITIALIZATION DONE.  TIME WAS   0.00 CPU SECS.
 
   =============================== 85Rb-85Rb elastic pole characterisation in aa channel ================================
 
@@ -292,12 +288,14 @@
   SYMMETRY BLOCK =   2 SELECTS PARITY  1
   MTOT =  8/2
   BASIS SET GENERATED FOR TWO IDENTICAL BOSONS
+  CONSTRUCTION OF BASIS SET TOOK                  0.00 CPU SECS.
+  CONSTRUCTION OF COUPLING (VL) ARRAY TOOK        0.00 CPU SECS.
 
-  CONVERGED ON RESONANCE AT MAGNETIC Z FIELD_RES =   171.559450     GAUSS, WITH PREDICTED STEP = -2.15601E-07 GAUSS
+  CONVERGED ON RESONANCE AT MAGNETIC Z FIELD_RES =   171.559483     GAUSS, WITH PREDICTED STEP = -2.11730E-07 GAUSS
 
-  3-POINT POLE FORMULA ESTIMATES MAGNETIC Z FIELD_RES =   171.559450     GAUSS
-                                                DELTA = -2.38803E-05     GAUSS
-                                                 A_BG =  -438.61         BOHR      
+  3-POINT POLE FORMULA ESTIMATES MAGNETIC Z FIELD_RES =   171.559483     GAUSS
+                                                DELTA = -2.38699E-05     GAUSS
+                                                 A_BG =  -438.71         BOHR      
 
 
 
@@ -306,12 +304,11 @@
  |                Non-reactive quantum scattering calculations                |
  |                     on atomic and molecular collisions                     |
  |                                                                            |
- |              Copyright (C) 2022 J. M. Hutson & C. R. Le Sueur              |
+ |              Copyright (C) 2025 J. M. Hutson & C. R. Le Sueur              |
  |                                                                            |
- |                               Version 2022.0                               |
+ |                               Version 2025.0                               |
  |                                                                            |
- |                    This run used      11.98 cpu secs and                   |
- |               6789 of the allocated   1000000 words of storage             |
+ |                      This run used       9.50 cpu secs                     |
  |                                                                            |
   ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
   ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
@@ -319,11 +316,11 @@
  |                Non-reactive quantum scattering calculations                |
  |                     on atomic and molecular collisions                     |
  |                                                                            |
- |              Copyright (C) 2022 J. M. Hutson & C. R. Le Sueur              |
+ |              Copyright (C) 2025 J. M. Hutson & C. R. Le Sueur              |
  |                                                                            |
- |                               Version 2022.0                               |
+ |                               Version 2025.0                               |
  |                                                                            |
- |                       Run on 31 May 2022   at 10:25:05                     |
+ |                       Run on 06 Nov 2025   at 16:38:53                     |
  |                                                                            |
   ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
 
@@ -337,17 +334,14 @@
 
   J. M. Hutson & C. R. Le Sueur, MOLSCAT: a program for non-reactive quantum
   scattering calculation on atomic and molecular collisions,
-  Version 2022.0, https//github.com/molscat/molscat
+  Version 2025.0, https//github.com/molscat/molscat
 
   and the published paper:
 
   J. M. Hutson & C. R. Le Sueur, Comput. Phys. Commun., 241, 9-18 (2019).
 
 
-  USING CODATA 2018 RECOMMENDED VALUES OF FUNDAMENTAL PHYSICAL CONSTANTS
-
-  MEMORY ALLOCATED TO MAIN WORKING ARRAY IS   1000000 (8-BYTE) WORDS (    7.63 MB)
-  2 INTEGERS CAN BE STORED IN EACH WORD.
+  USING CODATA 2022 RECOMMENDED VALUES OF FUNDAMENTAL PHYSICAL CONSTANTS
 
   PRINT LEVEL (IPRINT) =  4     OTHER PRINT CONTROLS  ISIGPR = 0
 
@@ -464,51 +458,50 @@
 
   INTERACTION POTENTIAL FOR EXPANSION TERM NUMBER   1
 
-  JMH routine for Tiemann-style alkali dimer potentials
+  JMH routine for alkali dimer potentials with generalized Hannover form
   Rb2 potential from Strauss et al., PRA 82, 052514 (2010)
 
-  gamma shifted from   5.317691178394    
-                  to   5.317691178394    
+  gamma shifted from   5.317689000000    
+                  to   5.317691182680    
 
   For potential  1 at RLR =  11.00000000000     A
                   with C6 =  22700320.00000     and C8 =  778288600.0000    
-  V_LR  =  -18.02609055718    cm-1
-  V_mid =  -18.02609055718    cm-1, dV/dR =   11.44316013529    cm-1/A
-  A(0) shifted from  -3993.593189147     cm-1
-                 to  -3993.593189147     cm-1 to match value of V(R) at RLR
-  Derivative discontinuity at RLR (intrinsic to functional form) is  0.1531623206460     cm-1/A
-  Discontinuity / value is  1.3207835607195E-02
+  V_LR  =  -18.02609056183    cm-1
+  V_mid =  -18.02577440996    cm-1, dV/dR =   11.44316013529    cm-1/A
+  A(0) shifted from  -3993.592873000     cm-1
+                 to  -3993.593189152     cm-1 to match value of V(R) at RLR
+  Derivative discontinuity at RLR (intrinsic to functional form) is  0.1531623299471     cm-1/A
+  Discontinuity / value is  1.3207836398671E-02
 
   For potential  1 at RSR =  3.126000000000     A
-  V     =  -6.255737835919    cm-1, dV/dR =  -9257.490374248    cm-1/A and n =   4.533895000000    
-  B(SR) shifted from   1120053.629089     cm-1 A^n
-                  to   1120053.629089     cm-1 A^n
-  A(SR) shifted from  -6389.049099813     cm-1
-                  to  -6389.049099813     cm-1
+  V     =  -6.255737840563    cm-1, dV/dR =  -9257.490374248    cm-1/A from mid-range power series.
+  Short-range potential is A(SR) / R**n(SR) * exp(-alpha(SR)*R),
+  with n(SR) =   4.533895000000     and alpha =  0.000000000000    
+  B(SR) shifted from   1120053.610000     cm-1 A^n(SR)
+                  to   1120053.629089     cm-1 A^n(SR)
+  A(SR) shifted from  -6389.048800000     cm-1
+                  to  -6389.049099818     cm-1
 
   INTERACTION POTENTIAL FOR EXPANSION TERM NUMBER   2
 
-  JMH routine for Tiemann-style alkali dimer potentials
-  Rb2 potential from Strauss et al., PRA 82, 052514 (2010)
-
-  gamma shifted from   5.317691178394    
-                  to   5.317691178394    
 
   For potential  2 at RLR =  11.00000000000     A
                   with C6 =  22700320.00000     and C8 =  778288600.0000    
-  V_LR  =  -17.12240051666    cm-1
-  V_mid =  -17.12240051666    cm-1, dV/dR =   9.935247938667    cm-1/A
-  A(0) shifted from  -241.5036630359     cm-1
-                 to  -241.5036630359     cm-1 to match value of V(R) at RLR
-  Derivative discontinuity at RLR (intrinsic to functional form) is -0.1489325085633     cm-1/A
-  Discontinuity / value is -1.5218445555638E-02
+  V_LR  =  -17.12240051202    cm-1
+  V_mid =  -17.12208948080    cm-1, dV/dR =   9.935247938667    cm-1/A
+  A(0) shifted from  -241.5033520000     cm-1
+                 to  -241.5036630312     cm-1 to match value of V(R) at RLR
+  Derivative discontinuity at RLR (intrinsic to functional form) is -0.1489325178644     cm-1/A
+  Discontinuity / value is -1.5218446520516E-02
 
   For potential  2 at RSR =  5.070000000000     A
-  V     =  -10.77028535667    cm-1, dV/dR =  -543.9945779764    cm-1/A and n =   4.533895000000    
-  B(SR) shifted from   956231.6938206     cm-1 A^n
-                  to   956231.6938206     cm-1 A^n
-  A(SR) shifted from  -619.0888525798     cm-1
-                  to  -619.0888525798     cm-1
+  V     =  -10.77028535202    cm-1, dV/dR =  -543.9945779764    cm-1/A from mid-range power series.
+  Short-range potential is A(SR) / R**n(SR) * exp(-alpha(SR)*R),
+  with n(SR) =   4.533895000000     and alpha =  0.000000000000    
+  B(SR) shifted from   956231.6770000     cm-1 A^n(SR)
+                  to   956231.6938206     cm-1 A^n(SR)
+  A(SR) shifted from  -619.0885430000     cm-1
+                  to  -619.0888525752     cm-1
 
   INTERACTION POTENTIAL FOR EXPANSION TERM NUMBER   3
 
@@ -600,7 +593,7 @@
   THESE ENERGY VALUES ARE RELATIVE TO THE REFERENCE ENERGY SPECIFIED BY MONOMER QUANTUM NUMBERS   4  -4   4  -4
   THE REFERENCE ENERGY WILL BE CALCULATED FOR EVERY EFV SET
 
-  INITIALIZATION DONE.  TIME WAS   0.00 CPU SECS.       392 WORDS OF STORAGE USED.
+  INITIALIZATION DONE.  TIME WAS   0.00 CPU SECS.
 
   ========================= 85Rb-85Rb weakly decayed resonance characterisation in ee channel ==========================
 
@@ -608,6 +601,8 @@
   SYMMETRY BLOCK =   2 SELECTS PARITY  1
   MTOT = -8/2
   BASIS SET GENERATED FOR TWO IDENTICAL BOSONS
+  CONSTRUCTION OF BASIS SET TOOK                  0.00 CPU SECS.
+  CONSTRUCTION OF COUPLING (VL) ARRAY TOOK        0.00 CPU SECS.
 
   EFV SET     1:  MAGNETIC Z FIELD =   214.9800000     GAUSS
   REFERENCE ENERGY IS                          -0.1059945360     CM-1    = -0.1525024876     K       
@@ -618,29 +613,29 @@
   EFV SET     3:  MAGNETIC Z FIELD =   215.1800000     GAUSS
   REFERENCE ENERGY IS                          -0.1059845805     CM-1    = -0.1524881638     K       
 
-  EFV SET     4:  MAGNETIC Z FIELD =   215.0864158     GAUSS
-  REFERENCE ENERGY IS                          -0.1059892385     CM-1    = -0.1524948657     K       
+  EFV SET     4:  MAGNETIC Z FIELD =   215.0863860     GAUSS
+  REFERENCE ENERGY IS                          -0.1059892400     CM-1    = -0.1524948678     K       
 
-  EFV SET     5:  MAGNETIC Z FIELD =   215.0840219     GAUSS
-  REFERENCE ENERGY IS                          -0.1059893577     CM-1    = -0.1524950371     K       
+  EFV SET     5:  MAGNETIC Z FIELD =   215.0839918     GAUSS
+  REFERENCE ENERGY IS                          -0.1059893592     CM-1    = -0.1524950393     K       
 
-  EFV SET     6:  MAGNETIC Z FIELD =   215.0834485     GAUSS
-  REFERENCE ENERGY IS                          -0.1059893862     CM-1    = -0.1524950782     K       
+  EFV SET     6:  MAGNETIC Z FIELD =   215.0834185     GAUSS
+  REFERENCE ENERGY IS                          -0.1059893877     CM-1    = -0.1524950804     K       
 
-  EFV SET     7:  MAGNETIC Z FIELD =   215.0840023     GAUSS
-  REFERENCE ENERGY IS                          -0.1059893587     CM-1    = -0.1524950385     K       
+  EFV SET     7:  MAGNETIC Z FIELD =   215.0839722     GAUSS
+  REFERENCE ENERGY IS                          -0.1059893602     CM-1    = -0.1524950407     K       
 
-  EFV SET     8:  MAGNETIC Z FIELD =   215.0895410     GAUSS
-  REFERENCE ENERGY IS                          -0.1059890830     CM-1    = -0.1524946419     K       
+  EFV SET     8:  MAGNETIC Z FIELD =   215.0895110     GAUSS
+  REFERENCE ENERGY IS                          -0.1059890845     CM-1    = -0.1524946440     K       
 
-  CONVERGED ON RESONANCE AT MAGNETIC Z FIELD_RES =   215.084002     GAUSS, WITH PREDICTED STEP = -8.28379E-10 GAUSS
+  CONVERGED ON RESONANCE AT MAGNETIC Z FIELD_RES =   215.083972     GAUSS, WITH PREDICTED STEP =  4.27974E-10 GAUSS
 
-  3-POINT POLE FORMULA ESTIMATES MAGNETIC Z FIELD_RES =   215.084002     GAUSS
+  3-POINT POLE FORMULA ESTIMATES MAGNETIC Z FIELD_RES =   215.083972     GAUSS
                                                 DELTA =  5.53865E-03     GAUSS
                                                  A_BG =  -381.03         BOHR      
 
-  SCATTERING LENGTH FOR POINT  7 GIVES          A_RES =  1.76885E+08 BOHR      
-  THIS IMPLIES     GAMMA_INEL (= -2*A_BG*DELTA/A_RES) =  2.38616E-08 GAUSS
+  SCATTERING LENGTH FOR POINT  7 GIVES          A_RES =  1.76884E+08 BOHR      
+  THIS IMPLIES     GAMMA_INEL (= -2*A_BG*DELTA/A_RES) =  2.38617E-08 GAUSS
 
 
 
@@ -649,12 +644,11 @@
  |                Non-reactive quantum scattering calculations                |
  |                     on atomic and molecular collisions                     |
  |                                                                            |
- |              Copyright (C) 2022 J. M. Hutson & C. R. Le Sueur              |
+ |              Copyright (C) 2025 J. M. Hutson & C. R. Le Sueur              |
  |                                                                            |
- |                               Version 2022.0                               |
+ |                               Version 2025.0                               |
  |                                                                            |
- |                    This run used      10.54 cpu secs and                   |
- |               6789 of the allocated   1000000 words of storage             |
+ |                      This run used       8.44 cpu secs                     |
  |                                                                            |
   ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
   ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
@@ -662,11 +656,11 @@
  |                Non-reactive quantum scattering calculations                |
  |                     on atomic and molecular collisions                     |
  |                                                                            |
- |              Copyright (C) 2022 J. M. Hutson & C. R. Le Sueur              |
+ |              Copyright (C) 2025 J. M. Hutson & C. R. Le Sueur              |
  |                                                                            |
- |                               Version 2022.0                               |
+ |                               Version 2025.0                               |
  |                                                                            |
- |                       Run on 31 May 2022   at 10:25:16                     |
+ |                       Run on 06 Nov 2025   at 16:39:02                     |
  |                                                                            |
   ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
 
@@ -680,17 +674,14 @@
 
   J. M. Hutson & C. R. Le Sueur, MOLSCAT: a program for non-reactive quantum
   scattering calculation on atomic and molecular collisions,
-  Version 2022.0, https//github.com/molscat/molscat
+  Version 2025.0, https//github.com/molscat/molscat
 
   and the published paper:
 
   J. M. Hutson & C. R. Le Sueur, Comput. Phys. Commun., 241, 9-18 (2019).
 
 
-  USING CODATA 2018 RECOMMENDED VALUES OF FUNDAMENTAL PHYSICAL CONSTANTS
-
-  MEMORY ALLOCATED TO MAIN WORKING ARRAY IS   1000000 (8-BYTE) WORDS (    7.63 MB)
-  2 INTEGERS CAN BE STORED IN EACH WORD.
+  USING CODATA 2022 RECOMMENDED VALUES OF FUNDAMENTAL PHYSICAL CONSTANTS
 
   PRINT LEVEL (IPRINT) =  4     OTHER PRINT CONTROLS  ISIGPR = 0
 
@@ -807,51 +798,50 @@
 
   INTERACTION POTENTIAL FOR EXPANSION TERM NUMBER   1
 
-  JMH routine for Tiemann-style alkali dimer potentials
+  JMH routine for alkali dimer potentials with generalized Hannover form
   Rb2 potential from Strauss et al., PRA 82, 052514 (2010)
 
-  gamma shifted from   5.317691178394    
-                  to   5.317691178394    
+  gamma shifted from   5.317689000000    
+                  to   5.317691182680    
 
   For potential  1 at RLR =  11.00000000000     A
                   with C6 =  22700320.00000     and C8 =  778288600.0000    
-  V_LR  =  -18.02609055718    cm-1
-  V_mid =  -18.02609055718    cm-1, dV/dR =   11.44316013529    cm-1/A
-  A(0) shifted from  -3993.593189147     cm-1
-                 to  -3993.593189147     cm-1 to match value of V(R) at RLR
-  Derivative discontinuity at RLR (intrinsic to functional form) is  0.1531623206460     cm-1/A
-  Discontinuity / value is  1.3207835607195E-02
+  V_LR  =  -18.02609056183    cm-1
+  V_mid =  -18.02577440996    cm-1, dV/dR =   11.44316013529    cm-1/A
+  A(0) shifted from  -3993.592873000     cm-1
+                 to  -3993.593189152     cm-1 to match value of V(R) at RLR
+  Derivative discontinuity at RLR (intrinsic to functional form) is  0.1531623299471     cm-1/A
+  Discontinuity / value is  1.3207836398671E-02
 
   For potential  1 at RSR =  3.126000000000     A
-  V     =  -6.255737835919    cm-1, dV/dR =  -9257.490374248    cm-1/A and n =   4.533895000000    
-  B(SR) shifted from   1120053.629089     cm-1 A^n
-                  to   1120053.629089     cm-1 A^n
-  A(SR) shifted from  -6389.049099813     cm-1
-                  to  -6389.049099813     cm-1
+  V     =  -6.255737840563    cm-1, dV/dR =  -9257.490374248    cm-1/A from mid-range power series.
+  Short-range potential is A(SR) / R**n(SR) * exp(-alpha(SR)*R),
+  with n(SR) =   4.533895000000     and alpha =  0.000000000000    
+  B(SR) shifted from   1120053.610000     cm-1 A^n(SR)
+                  to   1120053.629089     cm-1 A^n(SR)
+  A(SR) shifted from  -6389.048800000     cm-1
+                  to  -6389.049099818     cm-1
 
   INTERACTION POTENTIAL FOR EXPANSION TERM NUMBER   2
 
-  JMH routine for Tiemann-style alkali dimer potentials
-  Rb2 potential from Strauss et al., PRA 82, 052514 (2010)
-
-  gamma shifted from   5.317691178394    
-                  to   5.317691178394    
 
   For potential  2 at RLR =  11.00000000000     A
                   with C6 =  22700320.00000     and C8 =  778288600.0000    
-  V_LR  =  -17.12240051666    cm-1
-  V_mid =  -17.12240051666    cm-1, dV/dR =   9.935247938667    cm-1/A
-  A(0) shifted from  -241.5036630359     cm-1
-                 to  -241.5036630359     cm-1 to match value of V(R) at RLR
-  Derivative discontinuity at RLR (intrinsic to functional form) is -0.1489325085633     cm-1/A
-  Discontinuity / value is -1.5218445555638E-02
+  V_LR  =  -17.12240051202    cm-1
+  V_mid =  -17.12208948080    cm-1, dV/dR =   9.935247938667    cm-1/A
+  A(0) shifted from  -241.5033520000     cm-1
+                 to  -241.5036630312     cm-1 to match value of V(R) at RLR
+  Derivative discontinuity at RLR (intrinsic to functional form) is -0.1489325178644     cm-1/A
+  Discontinuity / value is -1.5218446520516E-02
 
   For potential  2 at RSR =  5.070000000000     A
-  V     =  -10.77028535667    cm-1, dV/dR =  -543.9945779764    cm-1/A and n =   4.533895000000    
-  B(SR) shifted from   956231.6938206     cm-1 A^n
-                  to   956231.6938206     cm-1 A^n
-  A(SR) shifted from  -619.0888525798     cm-1
-                  to  -619.0888525798     cm-1
+  V     =  -10.77028535202    cm-1, dV/dR =  -543.9945779764    cm-1/A from mid-range power series.
+  Short-range potential is A(SR) / R**n(SR) * exp(-alpha(SR)*R),
+  with n(SR) =   4.533895000000     and alpha =  0.000000000000    
+  B(SR) shifted from   956231.6770000     cm-1 A^n(SR)
+                  to   956231.6938206     cm-1 A^n(SR)
+  A(SR) shifted from  -619.0885430000     cm-1
+                  to  -619.0888525752     cm-1
 
   INTERACTION POTENTIAL FOR EXPANSION TERM NUMBER   3
 
@@ -943,7 +933,7 @@
   THESE ENERGY VALUES ARE RELATIVE TO THE REFERENCE ENERGY SPECIFIED BY MONOMER QUANTUM NUMBERS   4  -4   4  -4
   THE REFERENCE ENERGY WILL BE CALCULATED FOR EVERY EFV SET
 
-  INITIALIZATION DONE.  TIME WAS   0.00 CPU SECS.       392 WORDS OF STORAGE USED.
+  INITIALIZATION DONE.  TIME WAS   0.00 CPU SECS.
 
   ============================== 85Rb-85Rb quite strongly decayed resonance in ee channel ==============================
 
@@ -951,42 +941,62 @@
   SYMMETRY BLOCK =   2 SELECTS PARITY  1
   MTOT = -8/2
   BASIS SET GENERATED FOR TWO IDENTICAL BOSONS
+  CONSTRUCTION OF BASIS SET TOOK                  0.00 CPU SECS.
+  CONSTRUCTION OF COUPLING (VL) ARRAY TOOK        0.00 CPU SECS.
 
   EFV SET     1:  MAGNETIC Z FIELD =   603.8700000     GAUSS
-  REFERENCE ENERGY IS                          -9.3123692565E-02 CM-1    = -0.1339842156     K       
+  REFERENCE ENERGY IS                          -9.3123692576E-02 CM-1    = -0.1339842156     K       
 
   EFV SET     2:  MAGNETIC Z FIELD =   604.2700000     GAUSS
-  REFERENCE ENERGY IS                          -9.3118262881E-02 CM-1    = -0.1339764035     K       
+  REFERENCE ENERGY IS                          -9.3118262892E-02 CM-1    = -0.1339764035     K       
 
   EFV SET     3:  MAGNETIC Z FIELD =   604.0700000     GAUSS
-  REFERENCE ENERGY IS                          -9.3120975479E-02 CM-1    = -0.1339803063     K       
+  REFERENCE ENERGY IS                          -9.3120975490E-02 CM-1    = -0.1339803064     K       
 
-  EFV SET     4:  MAGNETIC Z FIELD =   603.9840239     GAUSS
-  REFERENCE ENERGY IS                          -9.3122142951E-02 CM-1    = -0.1339819861     K       
+  EFV SET     4:  MAGNETIC Z FIELD =   603.9839881     GAUSS
+  REFERENCE ENERGY IS                          -9.3122143448E-02 CM-1    = -0.1339819868     K       
+  WARNING: |GAMMA_INEL| > |DELTA|. RESONANCE IS SIGNIFICANTLY DECAYED.
+  IFCONV=1 MAY NOT BE APPROPRIATE, AND YOU MAY WISH TO ADJUST TLO AND THI ACCORDINGLY.
 
-  EFV SET     5:  MAGNETIC Z FIELD =   603.9741699     GAUSS
-  REFERENCE ENERGY IS                          -9.3122276812E-02 CM-1    = -0.1339821787     K       
 
-  EFV SET     6:  MAGNETIC Z FIELD =   603.9738161     GAUSS
-  REFERENCE ENERGY IS                          -9.3122281619E-02 CM-1    = -0.1339821856     K       
+  EFV SET     5:  MAGNETIC Z FIELD =   603.9741338     GAUSS
+  REFERENCE ENERGY IS                          -9.3122277313E-02 CM-1    = -0.1339821794     K       
+  WARNING: |GAMMA_INEL| > |DELTA|. RESONANCE IS SIGNIFICANTLY DECAYED.
+  IFCONV=1 MAY NOT BE APPROPRIATE, AND YOU MAY WISH TO ADJUST TLO AND THI ACCORDINGLY.
 
-  EFV SET     7:  MAGNETIC Z FIELD =   603.9737986     GAUSS
-  REFERENCE ENERGY IS                          -9.3122281856E-02 CM-1    = -0.1339821859     K       
 
-  EFV SET     8:  MAGNETIC Z FIELD =   603.9740040     GAUSS
-  REFERENCE ENERGY IS                          -9.3122279065E-02 CM-1    = -0.1339821819     K       
+  EFV SET     6:  MAGNETIC Z FIELD =   603.9737798     GAUSS
+  REFERENCE ENERGY IS                          -9.3122282122E-02 CM-1    = -0.1339821863     K       
+  WARNING: |GAMMA_INEL| > |DELTA|. RESONANCE IS SIGNIFICANTLY DECAYED.
+  IFCONV=1 MAY NOT BE APPROPRIATE, AND YOU MAY WISH TO ADJUST TLO AND THI ACCORDINGLY.
 
-  EFV SET     9:  MAGNETIC Z FIELD =   603.9738173     GAUSS
-  REFERENCE ENERGY IS                          -9.3122281603E-02 CM-1    = -0.1339821856     K       
 
-  CONVERGED ON RESONANCE AT MAGNETIC Z FIELD_RES =   603.973817     GAUSS, WITH PREDICTED STEP =  3.63184E-09 GAUSS
+  EFV SET     7:  MAGNETIC Z FIELD =   603.9737623     GAUSS
+  REFERENCE ENERGY IS                          -9.3122282360E-02 CM-1    = -0.1339821867     K       
+  WARNING: |GAMMA_INEL| > |DELTA|. RESONANCE IS SIGNIFICANTLY DECAYED.
+  IFCONV=1 MAY NOT BE APPROPRIATE, AND YOU MAY WISH TO ADJUST TLO AND THI ACCORDINGLY.
 
-  3-POINT POLE FORMULA ESTIMATES MAGNETIC Z FIELD_RES =   603.973817     GAUSS
-                                                DELTA =  1.86799E-04     GAUSS
-                                                 A_BG =  -475.77         BOHR      
+
+  EFV SET     8:  MAGNETIC Z FIELD =   603.9739678     GAUSS
+  REFERENCE ENERGY IS                          -9.3122279568E-02 CM-1    = -0.1339821826     K       
+  WARNING: |GAMMA_INEL| > |DELTA|. RESONANCE IS SIGNIFICANTLY DECAYED.
+  IFCONV=1 MAY NOT BE APPROPRIATE, AND YOU MAY WISH TO ADJUST TLO AND THI ACCORDINGLY.
+
+
+  EFV SET     9:  MAGNETIC Z FIELD =   603.9737810     GAUSS
+  REFERENCE ENERGY IS                          -9.3122282106E-02 CM-1    = -0.1339821863     K       
+  WARNING: |GAMMA_INEL| > |DELTA|. RESONANCE IS SIGNIFICANTLY DECAYED.
+  IFCONV=1 MAY NOT BE APPROPRIATE, AND YOU MAY WISH TO ADJUST TLO AND THI ACCORDINGLY.
+
+
+  CONVERGED ON RESONANCE AT MAGNETIC Z FIELD_RES =   603.973781     GAUSS, WITH PREDICTED STEP =  2.22269E-09 GAUSS
+
+  3-POINT POLE FORMULA ESTIMATES MAGNETIC Z FIELD_RES =   603.973781     GAUSS
+                                                DELTA =  1.86800E-04     GAUSS
+                                                 A_BG =  -475.84         BOHR      
 
   SCATTERING LENGTH FOR POINT  9 GIVES          A_RES =   762.21     BOHR      
-  THIS IMPLIES     GAMMA_INEL (= -2*A_BG*DELTA/A_RES) =  2.33200E-04 GAUSS
+  THIS IMPLIES     GAMMA_INEL (= -2*A_BG*DELTA/A_RES) =  2.33231E-04 GAUSS
 
 
 
@@ -995,12 +1005,11 @@
  |                Non-reactive quantum scattering calculations                |
  |                     on atomic and molecular collisions                     |
  |                                                                            |
- |              Copyright (C) 2022 J. M. Hutson & C. R. Le Sueur              |
+ |              Copyright (C) 2025 J. M. Hutson & C. R. Le Sueur              |
  |                                                                            |
- |                               Version 2022.0                               |
+ |                               Version 2025.0                               |
  |                                                                            |
- |                    This run used      11.81 cpu secs and                   |
- |               6789 of the allocated   1000000 words of storage             |
+ |                      This run used       9.45 cpu secs                     |
  |                                                                            |
   ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
   ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
@@ -1008,11 +1017,11 @@
  |                Non-reactive quantum scattering calculations                |
  |                     on atomic and molecular collisions                     |
  |                                                                            |
- |              Copyright (C) 2022 J. M. Hutson & C. R. Le Sueur              |
+ |              Copyright (C) 2025 J. M. Hutson & C. R. Le Sueur              |
  |                                                                            |
- |                               Version 2022.0                               |
+ |                               Version 2025.0                               |
  |                                                                            |
- |                       Run on 31 May 2022   at 10:25:27                     |
+ |                       Run on 06 Nov 2025   at 16:39:11                     |
  |                                                                            |
   ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
 
@@ -1026,17 +1035,14 @@
 
   J. M. Hutson & C. R. Le Sueur, MOLSCAT: a program for non-reactive quantum
   scattering calculation on atomic and molecular collisions,
-  Version 2022.0, https//github.com/molscat/molscat
+  Version 2025.0, https//github.com/molscat/molscat
 
   and the published paper:
 
   J. M. Hutson & C. R. Le Sueur, Comput. Phys. Commun., 241, 9-18 (2019).
 
 
-  USING CODATA 2018 RECOMMENDED VALUES OF FUNDAMENTAL PHYSICAL CONSTANTS
-
-  MEMORY ALLOCATED TO MAIN WORKING ARRAY IS   1000000 (8-BYTE) WORDS (    7.63 MB)
-  2 INTEGERS CAN BE STORED IN EACH WORD.
+  USING CODATA 2022 RECOMMENDED VALUES OF FUNDAMENTAL PHYSICAL CONSTANTS
 
   PRINT LEVEL (IPRINT) =  4     OTHER PRINT CONTROLS  ISIGPR = 0
 
@@ -1153,51 +1159,50 @@
 
   INTERACTION POTENTIAL FOR EXPANSION TERM NUMBER   1
 
-  JMH routine for Tiemann-style alkali dimer potentials
+  JMH routine for alkali dimer potentials with generalized Hannover form
   Rb2 potential from Strauss et al., PRA 82, 052514 (2010)
 
-  gamma shifted from   5.317691178394    
-                  to   5.317691178394    
+  gamma shifted from   5.317689000000    
+                  to   5.317691182680    
 
   For potential  1 at RLR =  11.00000000000     A
                   with C6 =  22700320.00000     and C8 =  778288600.0000    
-  V_LR  =  -18.02609055718    cm-1
-  V_mid =  -18.02609055718    cm-1, dV/dR =   11.44316013529    cm-1/A
-  A(0) shifted from  -3993.593189147     cm-1
-                 to  -3993.593189147     cm-1 to match value of V(R) at RLR
-  Derivative discontinuity at RLR (intrinsic to functional form) is  0.1531623206460     cm-1/A
-  Discontinuity / value is  1.3207835607195E-02
+  V_LR  =  -18.02609056183    cm-1
+  V_mid =  -18.02577440996    cm-1, dV/dR =   11.44316013529    cm-1/A
+  A(0) shifted from  -3993.592873000     cm-1
+                 to  -3993.593189152     cm-1 to match value of V(R) at RLR
+  Derivative discontinuity at RLR (intrinsic to functional form) is  0.1531623299471     cm-1/A
+  Discontinuity / value is  1.3207836398671E-02
 
   For potential  1 at RSR =  3.126000000000     A
-  V     =  -6.255737835919    cm-1, dV/dR =  -9257.490374248    cm-1/A and n =   4.533895000000    
-  B(SR) shifted from   1120053.629089     cm-1 A^n
-                  to   1120053.629089     cm-1 A^n
-  A(SR) shifted from  -6389.049099813     cm-1
-                  to  -6389.049099813     cm-1
+  V     =  -6.255737840563    cm-1, dV/dR =  -9257.490374248    cm-1/A from mid-range power series.
+  Short-range potential is A(SR) / R**n(SR) * exp(-alpha(SR)*R),
+  with n(SR) =   4.533895000000     and alpha =  0.000000000000    
+  B(SR) shifted from   1120053.610000     cm-1 A^n(SR)
+                  to   1120053.629089     cm-1 A^n(SR)
+  A(SR) shifted from  -6389.048800000     cm-1
+                  to  -6389.049099818     cm-1
 
   INTERACTION POTENTIAL FOR EXPANSION TERM NUMBER   2
 
-  JMH routine for Tiemann-style alkali dimer potentials
-  Rb2 potential from Strauss et al., PRA 82, 052514 (2010)
-
-  gamma shifted from   5.317691178394    
-                  to   5.317691178394    
 
   For potential  2 at RLR =  11.00000000000     A
                   with C6 =  22700320.00000     and C8 =  778288600.0000    
-  V_LR  =  -17.12240051666    cm-1
-  V_mid =  -17.12240051666    cm-1, dV/dR =   9.935247938667    cm-1/A
-  A(0) shifted from  -241.5036630359     cm-1
-                 to  -241.5036630359     cm-1 to match value of V(R) at RLR
-  Derivative discontinuity at RLR (intrinsic to functional form) is -0.1489325085633     cm-1/A
-  Discontinuity / value is -1.5218445555638E-02
+  V_LR  =  -17.12240051202    cm-1
+  V_mid =  -17.12208948080    cm-1, dV/dR =   9.935247938667    cm-1/A
+  A(0) shifted from  -241.5033520000     cm-1
+                 to  -241.5036630312     cm-1 to match value of V(R) at RLR
+  Derivative discontinuity at RLR (intrinsic to functional form) is -0.1489325178644     cm-1/A
+  Discontinuity / value is -1.5218446520516E-02
 
   For potential  2 at RSR =  5.070000000000     A
-  V     =  -10.77028535667    cm-1, dV/dR =  -543.9945779764    cm-1/A and n =   4.533895000000    
-  B(SR) shifted from   956231.6938206     cm-1 A^n
-                  to   956231.6938206     cm-1 A^n
-  A(SR) shifted from  -619.0888525798     cm-1
-                  to  -619.0888525798     cm-1
+  V     =  -10.77028535202    cm-1, dV/dR =  -543.9945779764    cm-1/A from mid-range power series.
+  Short-range potential is A(SR) / R**n(SR) * exp(-alpha(SR)*R),
+  with n(SR) =   4.533895000000     and alpha =  0.000000000000    
+  B(SR) shifted from   956231.6770000     cm-1 A^n(SR)
+                  to   956231.6938206     cm-1 A^n(SR)
+  A(SR) shifted from  -619.0885430000     cm-1
+                  to  -619.0888525752     cm-1
 
   INTERACTION POTENTIAL FOR EXPANSION TERM NUMBER   3
 
@@ -1289,7 +1294,7 @@
   THESE ENERGY VALUES ARE RELATIVE TO THE REFERENCE ENERGY SPECIFIED BY MONOMER QUANTUM NUMBERS   6   4   6   4
   THE REFERENCE ENERGY WILL BE CALCULATED FOR EVERY EFV SET
 
-  INITIALIZATION DONE.  TIME WAS   0.00 CPU SECS.       392 WORDS OF STORAGE USED.
+  INITIALIZATION DONE.  TIME WAS   0.00 CPU SECS.
 
   ======================== 85Rb-85Rb strongly decayed resonance characterisation in kk channel =========================
 
@@ -1297,46 +1302,48 @@
   SYMMETRY BLOCK =   2 SELECTS PARITY  1
   MTOT =  8/2
   BASIS SET GENERATED FOR TWO IDENTICAL BOSONS
+  CONSTRUCTION OF BASIS SET TOOK                  0.00 CPU SECS.
+  CONSTRUCTION OF COUPLING (VL) ARRAY TOOK        0.00 CPU SECS.
 
   EFV SET     1:  MAGNETIC Z FIELD =   171.7400000     GAUSS
-  REFERENCE ENERGY IS                           9.5717289386E-02 CM-1    =  0.1377158228     K       
+  REFERENCE ENERGY IS                           9.5717289370E-02 CM-1    =  0.1377158227     K       
 
   EFV SET     2:  MAGNETIC Z FIELD =   172.1400000     GAUSS
-  REFERENCE ENERGY IS                           9.5745023834E-02 CM-1    =  0.1377557264     K       
+  REFERENCE ENERGY IS                           9.5745023817E-02 CM-1    =  0.1377557264     K       
 
   EFV SET     3:  MAGNETIC Z FIELD =   171.9400000     GAUSS
-  REFERENCE ENERGY IS                           9.5731155913E-02 CM-1    =  0.1377357736     K       
+  REFERENCE ENERGY IS                           9.5731155896E-02 CM-1    =  0.1377357736     K       
 
-  EFV SET     4:  MAGNETIC Z FIELD =   171.9092494     GAUSS
-  REFERENCE ENERGY IS                           9.5729023800E-02 CM-1    =  0.1377327060     K       
+  EFV SET     4:  MAGNETIC Z FIELD =   171.9092525     GAUSS
+  REFERENCE ENERGY IS                           9.5729024000E-02 CM-1    =  0.1377327063     K       
 
-  EFV SET     5:  MAGNETIC Z FIELD =   171.8576948     GAUSS
-  REFERENCE ENERGY IS                           9.5725449307E-02 CM-1    =  0.1377275631     K       
+  EFV SET     5:  MAGNETIC Z FIELD =   171.8577135     GAUSS
+  REFERENCE ENERGY IS                           9.5725450590E-02 CM-1    =  0.1377275649     K       
 
-  EFV SET     6:  MAGNETIC Z FIELD =   171.8404785     GAUSS
-  REFERENCE ENERGY IS                           9.5724255650E-02 CM-1    =  0.1377258457     K       
+  EFV SET     6:  MAGNETIC Z FIELD =   171.8404996     GAUSS
+  REFERENCE ENERGY IS                           9.5724257099E-02 CM-1    =  0.1377258477     K       
 
-  EFV SET     7:  MAGNETIC Z FIELD =   171.8427689     GAUSS
-  REFERENCE ENERGY IS                           9.5724414452E-02 CM-1    =  0.1377260741     K       
+  EFV SET     7:  MAGNETIC Z FIELD =   171.8427894     GAUSS
+  REFERENCE ENERGY IS                           9.5724415857E-02 CM-1    =  0.1377260762     K       
 
-  EFV SET     8:  MAGNETIC Z FIELD =   171.8424630     GAUSS
-  REFERENCE ENERGY IS                           9.5724393244E-02 CM-1    =  0.1377260436     K       
+  EFV SET     8:  MAGNETIC Z FIELD =   171.8424835     GAUSS
+  REFERENCE ENERGY IS                           9.5724394649E-02 CM-1    =  0.1377260457     K       
 
-  EFV SET     9:  MAGNETIC Z FIELD =   171.8427236     GAUSS
-  REFERENCE ENERGY IS                           9.5724411308E-02 CM-1    =  0.1377260696     K       
+  EFV SET     9:  MAGNETIC Z FIELD =   171.8427441     GAUSS
+  REFERENCE ENERGY IS                           9.5724412712E-02 CM-1    =  0.1377260716     K       
 
-  EFV SET    10:  MAGNETIC Z FIELD =   171.8453399     GAUSS
-  REFERENCE ENERGY IS                           9.5724592707E-02 CM-1    =  0.1377263306     K       
+  EFV SET    10:  MAGNETIC Z FIELD =   171.8453604     GAUSS
+  REFERENCE ENERGY IS                           9.5724594113E-02 CM-1    =  0.1377263326     K       
 
-  CONVERGED ON RESONANCE AT MAGNETIC Z FIELD_RES =   171.842724     GAUSS, WITH PREDICTED STEP =  1.89381E-07 GAUSS
+  CONVERGED ON RESONANCE AT MAGNETIC Z FIELD_RES =   171.842744     GAUSS, WITH PREDICTED STEP =  2.07711E-07 GAUSS
 
   PARAMETERS OBTAINED ARE:
-                        MAGNETIC Z FIELD_RES =   171.842724     GAUSS
+                        MAGNETIC Z FIELD_RES =   171.842744     GAUSS
                              A_BG  (IN BOHR) =  -491.04      -22.387     i 
-                             A_RES (IN BOHR) =   4.7036     +0.38888     i 
+                             A_RES (IN BOHR) =   4.7036     +0.38881     i 
 
-                                  GAMMA_INEL = -2.61639E-03 GAUSS
-  DELTA (= -ALPHA_RES*GAMMA_INEL/2*ALPHA_BG) = -1.25311E-05 GAUSS
+                                  GAMMA_INEL = -2.61642E-03 GAUSS
+  DELTA (= -ALPHA_RES*GAMMA_INEL/2*ALPHA_BG) = -1.25312E-05 GAUSS
 
 
   ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
@@ -1344,12 +1351,11 @@
  |                Non-reactive quantum scattering calculations                |
  |                     on atomic and molecular collisions                     |
  |                                                                            |
- |              Copyright (C) 2022 J. M. Hutson & C. R. Le Sueur              |
+ |              Copyright (C) 2025 J. M. Hutson & C. R. Le Sueur              |
  |                                                                            |
- |                               Version 2022.0                               |
+ |                               Version 2025.0                               |
  |                                                                            |
- |                    This run used      12.97 cpu secs and                   |
- |               6789 of the allocated   1000000 words of storage             |
+ |                      This run used      10.54 cpu secs                     |
  |                                                                            |
   ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
   ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
@@ -1357,11 +1363,11 @@
  |                Non-reactive quantum scattering calculations                |
  |                     on atomic and molecular collisions                     |
  |                                                                            |
- |              Copyright (C) 2022 J. M. Hutson & C. R. Le Sueur              |
+ |              Copyright (C) 2025 J. M. Hutson & C. R. Le Sueur              |
  |                                                                            |
- |                               Version 2022.0                               |
+ |                               Version 2025.0                               |
  |                                                                            |
- |                       Run on 31 May 2022   at 10:25:40                     |
+ |                       Run on 06 Nov 2025   at 16:39:22                     |
  |                                                                            |
   ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
 
@@ -1375,17 +1381,14 @@
 
   J. M. Hutson & C. R. Le Sueur, MOLSCAT: a program for non-reactive quantum
   scattering calculation on atomic and molecular collisions,
-  Version 2022.0, https//github.com/molscat/molscat
+  Version 2025.0, https//github.com/molscat/molscat
 
   and the published paper:
 
   J. M. Hutson & C. R. Le Sueur, Comput. Phys. Commun., 241, 9-18 (2019).
 
 
-  USING CODATA 2018 RECOMMENDED VALUES OF FUNDAMENTAL PHYSICAL CONSTANTS
-
-  MEMORY ALLOCATED TO MAIN WORKING ARRAY IS   1000000 (8-BYTE) WORDS (    7.63 MB)
-  2 INTEGERS CAN BE STORED IN EACH WORD.
+  USING CODATA 2022 RECOMMENDED VALUES OF FUNDAMENTAL PHYSICAL CONSTANTS
 
   PRINT LEVEL (IPRINT) =  5     OTHER PRINT CONTROLS  ISIGPR = 0
 
@@ -1504,51 +1507,50 @@
 
   INTERACTION POTENTIAL FOR EXPANSION TERM NUMBER   1
 
-  JMH routine for Tiemann-style alkali dimer potentials
+  JMH routine for alkali dimer potentials with generalized Hannover form
   Rb2 potential from Strauss et al., PRA 82, 052514 (2010)
 
-  gamma shifted from   5.317691178394    
-                  to   5.317691178394    
+  gamma shifted from   5.317689000000    
+                  to   5.317691182680    
 
   For potential  1 at RLR =  11.00000000000     A
                   with C6 =  22700320.00000     and C8 =  778288600.0000    
-  V_LR  =  -18.02609055718    cm-1
-  V_mid =  -18.02609055718    cm-1, dV/dR =   11.44316013529    cm-1/A
-  A(0) shifted from  -3993.593189147     cm-1
-                 to  -3993.593189147     cm-1 to match value of V(R) at RLR
-  Derivative discontinuity at RLR (intrinsic to functional form) is  0.1531623206460     cm-1/A
-  Discontinuity / value is  1.3207835607195E-02
+  V_LR  =  -18.02609056183    cm-1
+  V_mid =  -18.02577440996    cm-1, dV/dR =   11.44316013529    cm-1/A
+  A(0) shifted from  -3993.592873000     cm-1
+                 to  -3993.593189152     cm-1 to match value of V(R) at RLR
+  Derivative discontinuity at RLR (intrinsic to functional form) is  0.1531623299471     cm-1/A
+  Discontinuity / value is  1.3207836398671E-02
 
   For potential  1 at RSR =  3.126000000000     A
-  V     =  -6.255737835919    cm-1, dV/dR =  -9257.490374248    cm-1/A and n =   4.533895000000    
-  B(SR) shifted from   1120053.629089     cm-1 A^n
-                  to   1120053.629089     cm-1 A^n
-  A(SR) shifted from  -6389.049099813     cm-1
-                  to  -6389.049099813     cm-1
+  V     =  -6.255737840563    cm-1, dV/dR =  -9257.490374248    cm-1/A from mid-range power series.
+  Short-range potential is A(SR) / R**n(SR) * exp(-alpha(SR)*R),
+  with n(SR) =   4.533895000000     and alpha =  0.000000000000    
+  B(SR) shifted from   1120053.610000     cm-1 A^n(SR)
+                  to   1120053.629089     cm-1 A^n(SR)
+  A(SR) shifted from  -6389.048800000     cm-1
+                  to  -6389.049099818     cm-1
 
   INTERACTION POTENTIAL FOR EXPANSION TERM NUMBER   2
 
-  JMH routine for Tiemann-style alkali dimer potentials
-  Rb2 potential from Strauss et al., PRA 82, 052514 (2010)
-
-  gamma shifted from   5.317691178394    
-                  to   5.317691178394    
 
   For potential  2 at RLR =  11.00000000000     A
                   with C6 =  22700320.00000     and C8 =  778288600.0000    
-  V_LR  =  -17.12240051666    cm-1
-  V_mid =  -17.12240051666    cm-1, dV/dR =   9.935247938667    cm-1/A
-  A(0) shifted from  -241.5036630359     cm-1
-                 to  -241.5036630359     cm-1 to match value of V(R) at RLR
-  Derivative discontinuity at RLR (intrinsic to functional form) is -0.1489325085633     cm-1/A
-  Discontinuity / value is -1.5218445555638E-02
+  V_LR  =  -17.12240051202    cm-1
+  V_mid =  -17.12208948080    cm-1, dV/dR =   9.935247938667    cm-1/A
+  A(0) shifted from  -241.5033520000     cm-1
+                 to  -241.5036630312     cm-1 to match value of V(R) at RLR
+  Derivative discontinuity at RLR (intrinsic to functional form) is -0.1489325178644     cm-1/A
+  Discontinuity / value is -1.5218446520516E-02
 
   For potential  2 at RSR =  5.070000000000     A
-  V     =  -10.77028535667    cm-1, dV/dR =  -543.9945779764    cm-1/A and n =   4.533895000000    
-  B(SR) shifted from   956231.6938206     cm-1 A^n
-                  to   956231.6938206     cm-1 A^n
-  A(SR) shifted from  -619.0888525798     cm-1
-                  to  -619.0888525798     cm-1
+  V     =  -10.77028535202    cm-1, dV/dR =  -543.9945779764    cm-1/A from mid-range power series.
+  Short-range potential is A(SR) / R**n(SR) * exp(-alpha(SR)*R),
+  with n(SR) =   4.533895000000     and alpha =  0.000000000000    
+  B(SR) shifted from   956231.6770000     cm-1 A^n(SR)
+                  to   956231.6938206     cm-1 A^n(SR)
+  A(SR) shifted from  -619.0885430000     cm-1
+                  to  -619.0888525752     cm-1
 
   INTERACTION POTENTIAL FOR EXPANSION TERM NUMBER   3
 
@@ -1643,7 +1645,7 @@
   THESE ENERGY VALUES ARE RELATIVE TO THE REFERENCE ENERGY SPECIFIED BY MONOMER QUANTUM NUMBERS   4  -4   4  -4
   THE REFERENCE ENERGY WILL BE CALCULATED FOR EVERY EFV SET
 
-  INITIALIZATION DONE.  TIME WAS   0.00 CPU SECS.       392 WORDS OF STORAGE USED.
+  INITIALIZATION DONE.  TIME WAS   0.00 CPU SECS.
 
   ================================== 85Rb-85Rb quasibound state below the ee channel ===================================
 
@@ -1651,6 +1653,8 @@
   SYMMETRY BLOCK =   2 SELECTS PARITY  1
   MTOT = -8/2
   BASIS SET GENERATED FOR TWO IDENTICAL BOSONS
+  CONSTRUCTION OF BASIS SET TOOK                  0.00 CPU SECS.
+  CONSTRUCTION OF COUPLING (VL) ARRAY TOOK        0.00 CPU SECS.
 
   BASIS FUNCTION LIST:
   BASIS FN        SET   ------ PAIR STATE QUANTUM NUMBERS ------           L 
@@ -1685,38 +1689,38 @@
        28          46          1         1        -1        -5             2
 
   EFV SET     1:  MAGNETIC Z FIELD =   155.0000000     GAUSS
-  REFERENCE ENERGY IS                          -0.1091029606     CM-1    =  -3270.824473     MHZ     
+  REFERENCE ENERGY IS                          -0.1091029606     CM-1    =  -3270.824474     MHZ     
 
   - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
-  ENERGY    4           = -6.4897973433E-09 CM-1 = -1.9455922980E-04 MHZ     
+  ENERGY    4           = -6.5916786981E-09 CM-1 = -1.9761355598E-04 MHZ     
 
   - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
-  ENERGY    5           = -4.3337196984E-09 CM-1 = -1.2992164811E-04 MHZ     
+  ENERGY    5           = -4.3194676142E-09 CM-1 = -1.2949438137E-04 MHZ     
 
   - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
-  ENERGY    6           = -4.7403082302E-09 CM-1 = -1.4211086564E-04 MHZ     
+  ENERGY    6           = -4.7454360129E-09 CM-1 = -1.4226459270E-04 MHZ     
 
   - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
-  ENERGY    7           = -4.7237211773E-09 CM-1 = -1.4161359831E-04 MHZ     
+  ENERGY    7           = -4.7272440149E-09 CM-1 = -1.4171921032E-04 MHZ     
 
   - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
-  ENERGY    8           = -4.6911775736E-09 CM-1 = -1.4063796561E-04 MHZ     
+  ENERGY    8           = -4.6946823883E-09 CM-1 = -1.4074303731E-04 MHZ     
 
   - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
-  ENERGY    9           = -4.7269443113E-09 CM-1 = -1.4171022543E-04 MHZ     
+  ENERGY    9           = -4.7304628957E-09 CM-1 = -1.4181570994E-04 MHZ     
 
-  CONVERGED ON RESONANCE AT E_RES = -1.416127427E-04 MHZ, WITH PREDICTED STEP =  8.55576E-10 MHZ
+  CONVERGED ON RESONANCE AT E_RES = -1.417181939E-04 MHZ, WITH PREDICTED STEP =  1.01641E-09 MHZ
 
-  3-POINT POLE FORMULA ESTIMATES            E_RES = -1.416127427E-04 MHZ
-                                            GAMMA =  9.74804E-07     MHZ
+  3-POINT POLE FORMULA ESTIMATES            E_RES = -1.417181939E-04 MHZ
+                                            GAMMA =  9.75164E-07     MHZ
                                     EPSUM_BG / PI =  0.13672    
 
   PARTIAL WIDTHS OBTAINED FROM TWO OF THE S MATRICES USED IN THE FINAL ITERATION
-  KEEPING E_RES = -1.416127427E-04 MHZ AND GAMMA =  9.74804E-07 MHZ FIXED
+  KEEPING E_RES = -1.417181939E-04 MHZ AND GAMMA =  9.75164E-07 MHZ FIXED
     I  S_BG                         DIAMETER                     GAMMA_I / MHZ
-    1 -0.76565E+00 -0.64059E+00 i   0.73769E+00 +0.68067E+00 i   4.89225E-07
-    2 -0.69682E+00 -0.71486E+00 i   0.43918E+00 +0.51949E+00 i   3.31557E-07
-    3  0.80458E+00 -0.59384E+00 i  -0.25434E+00 +0.18754E+00 i   1.54022E-07
+    1 -0.76566E+00 -0.64059E+00 i   0.73770E+00 +0.68065E+00 i   4.89406E-07
+    2 -0.69682E+00 -0.71485E+00 i   0.43919E+00 +0.51948E+00 i   3.31681E-07
+    3  0.80458E+00 -0.59384E+00 i  -0.25433E+00 +0.18755E+00 i   1.54078E-07
 
 
   ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
@@ -1724,12 +1728,11 @@
  |                Non-reactive quantum scattering calculations                |
  |                     on atomic and molecular collisions                     |
  |                                                                            |
- |              Copyright (C) 2022 J. M. Hutson & C. R. Le Sueur              |
+ |              Copyright (C) 2025 J. M. Hutson & C. R. Le Sueur              |
  |                                                                            |
- |                               Version 2022.0                               |
+ |                               Version 2025.0                               |
  |                                                                            |
- |                    This run used       7.83 cpu secs and                   |
- |               6789 of the allocated   1000000 words of storage             |
+ |                      This run used       6.32 cpu secs                     |
  |                                                                            |
   ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
   ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
@@ -1737,11 +1740,11 @@
  |                Non-reactive quantum scattering calculations                |
  |                     on atomic and molecular collisions                     |
  |                                                                            |
- |              Copyright (C) 2022 J. M. Hutson & C. R. Le Sueur              |
+ |              Copyright (C) 2025 J. M. Hutson & C. R. Le Sueur              |
  |                                                                            |
- |                               Version 2022.0                               |
+ |                               Version 2025.0                               |
  |                                                                            |
- |                       Run on 31 May 2022   at 10:25:48                     |
+ |                       Run on 06 Nov 2025   at 16:39:28                     |
  |                                                                            |
   ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
 
@@ -1755,17 +1758,14 @@
 
   J. M. Hutson & C. R. Le Sueur, MOLSCAT: a program for non-reactive quantum
   scattering calculation on atomic and molecular collisions,
-  Version 2022.0, https//github.com/molscat/molscat
+  Version 2025.0, https//github.com/molscat/molscat
 
   and the published paper:
 
   J. M. Hutson & C. R. Le Sueur, Comput. Phys. Commun., 241, 9-18 (2019).
 
 
-  USING CODATA 2018 RECOMMENDED VALUES OF FUNDAMENTAL PHYSICAL CONSTANTS
-
-  MEMORY ALLOCATED TO MAIN WORKING ARRAY IS   1000000 (8-BYTE) WORDS (    7.63 MB)
-  2 INTEGERS CAN BE STORED IN EACH WORD.
+  USING CODATA 2022 RECOMMENDED VALUES OF FUNDAMENTAL PHYSICAL CONSTANTS
 
   PRINT LEVEL (IPRINT) =  1     OTHER PRINT CONTROLS  ISIGPR = 0
 
@@ -1884,51 +1884,50 @@
 
   INTERACTION POTENTIAL FOR EXPANSION TERM NUMBER   1
 
-  JMH routine for Tiemann-style alkali dimer potentials
+  JMH routine for alkali dimer potentials with generalized Hannover form
   Rb2 potential from Strauss et al., PRA 82, 052514 (2010)
 
-  gamma shifted from   5.317691178394    
-                  to   5.317691178394    
+  gamma shifted from   5.317689000000    
+                  to   5.317691182680    
 
   For potential  1 at RLR =  11.00000000000     A
                   with C6 =  22700320.00000     and C8 =  778288600.0000    
-  V_LR  =  -18.02609055718    cm-1
-  V_mid =  -18.02609055718    cm-1, dV/dR =   11.44316013529    cm-1/A
-  A(0) shifted from  -3993.593189147     cm-1
-                 to  -3993.593189147     cm-1 to match value of V(R) at RLR
-  Derivative discontinuity at RLR (intrinsic to functional form) is  0.1531623206460     cm-1/A
-  Discontinuity / value is  1.3207835607195E-02
+  V_LR  =  -18.02609056183    cm-1
+  V_mid =  -18.02577440996    cm-1, dV/dR =   11.44316013529    cm-1/A
+  A(0) shifted from  -3993.592873000     cm-1
+                 to  -3993.593189152     cm-1 to match value of V(R) at RLR
+  Derivative discontinuity at RLR (intrinsic to functional form) is  0.1531623299471     cm-1/A
+  Discontinuity / value is  1.3207836398671E-02
 
   For potential  1 at RSR =  3.126000000000     A
-  V     =  -6.255737835919    cm-1, dV/dR =  -9257.490374248    cm-1/A and n =   4.533895000000    
-  B(SR) shifted from   1120053.629089     cm-1 A^n
-                  to   1120053.629089     cm-1 A^n
-  A(SR) shifted from  -6389.049099813     cm-1
-                  to  -6389.049099813     cm-1
+  V     =  -6.255737840563    cm-1, dV/dR =  -9257.490374248    cm-1/A from mid-range power series.
+  Short-range potential is A(SR) / R**n(SR) * exp(-alpha(SR)*R),
+  with n(SR) =   4.533895000000     and alpha =  0.000000000000    
+  B(SR) shifted from   1120053.610000     cm-1 A^n(SR)
+                  to   1120053.629089     cm-1 A^n(SR)
+  A(SR) shifted from  -6389.048800000     cm-1
+                  to  -6389.049099818     cm-1
 
   INTERACTION POTENTIAL FOR EXPANSION TERM NUMBER   2
 
-  JMH routine for Tiemann-style alkali dimer potentials
-  Rb2 potential from Strauss et al., PRA 82, 052514 (2010)
-
-  gamma shifted from   5.317691178394    
-                  to   5.317691178394    
 
   For potential  2 at RLR =  11.00000000000     A
                   with C6 =  22700320.00000     and C8 =  778288600.0000    
-  V_LR  =  -17.12240051666    cm-1
-  V_mid =  -17.12240051666    cm-1, dV/dR =   9.935247938667    cm-1/A
-  A(0) shifted from  -241.5036630359     cm-1
-                 to  -241.5036630359     cm-1 to match value of V(R) at RLR
-  Derivative discontinuity at RLR (intrinsic to functional form) is -0.1489325085633     cm-1/A
-  Discontinuity / value is -1.5218445555638E-02
+  V_LR  =  -17.12240051202    cm-1
+  V_mid =  -17.12208948080    cm-1, dV/dR =   9.935247938667    cm-1/A
+  A(0) shifted from  -241.5033520000     cm-1
+                 to  -241.5036630312     cm-1 to match value of V(R) at RLR
+  Derivative discontinuity at RLR (intrinsic to functional form) is -0.1489325178644     cm-1/A
+  Discontinuity / value is -1.5218446520516E-02
 
   For potential  2 at RSR =  5.070000000000     A
-  V     =  -10.77028535667    cm-1, dV/dR =  -543.9945779764    cm-1/A and n =   4.533895000000    
-  B(SR) shifted from   956231.6938206     cm-1 A^n
-                  to   956231.6938206     cm-1 A^n
-  A(SR) shifted from  -619.0888525798     cm-1
-                  to  -619.0888525798     cm-1
+  V     =  -10.77028535202    cm-1, dV/dR =  -543.9945779764    cm-1/A from mid-range power series.
+  Short-range potential is A(SR) / R**n(SR) * exp(-alpha(SR)*R),
+  with n(SR) =   4.533895000000     and alpha =  0.000000000000    
+  B(SR) shifted from   956231.6770000     cm-1 A^n(SR)
+                  to   956231.6938206     cm-1 A^n(SR)
+  A(SR) shifted from  -619.0885430000     cm-1
+                  to  -619.0888525752     cm-1
 
   INTERACTION POTENTIAL FOR EXPANSION TERM NUMBER   3
 
@@ -2114,7 +2113,7 @@
   THESE ENERGY VALUES ARE RELATIVE TO THE REFERENCE ENERGY SPECIFIED BY MONOMER QUANTUM NUMBERS   4   4   4   4
   THE REFERENCE ENERGY WILL BE CALCULATED FOR EVERY EFV SET
 
-  INITIALIZATION DONE.  TIME WAS   0.00 CPU SECS.       392 WORDS OF STORAGE USED.
+  INITIALIZATION DONE.  TIME WAS   0.00 CPU SECS.
 
   ============================= 85Rb-85Rb effective range across resonances in aa channel ==============================
 
@@ -2122,410 +2121,412 @@
   SYMMETRY BLOCK =   2 SELECTS PARITY  1
   MTOT =  8/2
   BASIS SET GENERATED FOR TWO IDENTICAL BOSONS
+  CONSTRUCTION OF BASIS SET TOOK                  0.00 CPU SECS.
+  CONSTRUCTION OF COUPLING (VL) ARRAY TOOK        0.00 CPU SECS.
 
   EFFECTIVE RANGE AT EFV SET   1 FOR CHANNEL   1:
-  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   338.85     BOHR WITH 1/A(K=0) =  -0.2548670326E-02 BOHR^-1
-  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   335.57     BOHR WITH   A(K=0) =   -392.3532051     BOHR
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   338.85     BOHR WITH 1/A(K=0) =  -0.2548668658E-02 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   335.57     BOHR WITH   A(K=0) =   -392.3534618     BOHR
 
   EFFECTIVE RANGE AT EFV SET   2 FOR CHANNEL   1:
-  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   338.92     BOHR WITH 1/A(K=0) =  -0.2550165102E-02 BOHR^-1
-  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   335.65     BOHR WITH   A(K=0) =   -392.1232339     BOHR
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   338.92     BOHR WITH 1/A(K=0) =  -0.2550163380E-02 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   335.65     BOHR WITH   A(K=0) =   -392.1234986     BOHR
 
   EFFECTIVE RANGE AT EFV SET   3 FOR CHANNEL   1:
-  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   339.00     BOHR WITH 1/A(K=0) =  -0.2551714576E-02 BOHR^-1
-  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   335.72     BOHR WITH   A(K=0) =   -391.8851317     BOHR
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   339.00     BOHR WITH 1/A(K=0) =  -0.2551712879E-02 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   335.72     BOHR WITH   A(K=0) =   -391.8853923     BOHR
 
   EFFECTIVE RANGE AT EFV SET   4 FOR CHANNEL   1:
-  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   339.07     BOHR WITH 1/A(K=0) =  -0.2553322954E-02 BOHR^-1
-  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   335.80     BOHR WITH   A(K=0) =   -391.6382836     BOHR
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   339.07     BOHR WITH 1/A(K=0) =  -0.2553321317E-02 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   335.80     BOHR WITH   A(K=0) =   -391.6385348     BOHR
 
   EFFECTIVE RANGE AT EFV SET   5 FOR CHANNEL   1:
-  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   339.16     BOHR WITH 1/A(K=0) =  -0.2554994909E-02 BOHR^-1
-  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   335.88     BOHR WITH   A(K=0) =   -391.3820075     BOHR
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   339.16     BOHR WITH 1/A(K=0) =  -0.2554993145E-02 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   335.88     BOHR WITH   A(K=0) =   -391.3822778     BOHR
 
   EFFECTIVE RANGE AT EFV SET   6 FOR CHANNEL   1:
-  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   339.24     BOHR WITH 1/A(K=0) =  -0.2556735959E-02 BOHR^-1
-  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   335.97     BOHR WITH   A(K=0) =   -391.1154968     BOHR
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   339.24     BOHR WITH 1/A(K=0) =  -0.2556734259E-02 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   335.97     BOHR WITH   A(K=0) =   -391.1157568     BOHR
 
   EFFECTIVE RANGE AT EFV SET   7 FOR CHANNEL   1:
-  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   339.33     BOHR WITH 1/A(K=0) =  -0.2558552611E-02 BOHR^-1
-  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   336.06     BOHR WITH   A(K=0) =   -390.8377999     BOHR
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   339.33     BOHR WITH 1/A(K=0) =  -0.2558550920E-02 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   336.06     BOHR WITH   A(K=0) =   -390.8380583     BOHR
 
   EFFECTIVE RANGE AT EFV SET   8 FOR CHANNEL   1:
-  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   339.42     BOHR WITH 1/A(K=0) =  -0.2560453279E-02 BOHR^-1
-  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   336.15     BOHR WITH   A(K=0) =   -390.5476821     BOHR
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   339.42     BOHR WITH 1/A(K=0) =  -0.2560451577E-02 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   336.15     BOHR WITH   A(K=0) =   -390.5479417     BOHR
 
   EFFECTIVE RANGE AT EFV SET   9 FOR CHANNEL   1:
-  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   339.52     BOHR WITH 1/A(K=0) =  -0.2562449819E-02 BOHR^-1
-  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   336.25     BOHR WITH   A(K=0) =   -390.2433938     BOHR
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   339.52     BOHR WITH 1/A(K=0) =  -0.2562448057E-02 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   336.25     BOHR WITH   A(K=0) =   -390.2436620     BOHR
 
   EFFECTIVE RANGE AT EFV SET  10 FOR CHANNEL   1:
-  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   339.62     BOHR WITH 1/A(K=0) =  -0.2564563964E-02 BOHR^-1
-  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   336.35     BOHR WITH   A(K=0) =   -389.9216980     BOHR
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   339.62     BOHR WITH 1/A(K=0) =  -0.2564562151E-02 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   336.35     BOHR WITH   A(K=0) =   -389.9219737     BOHR
 
   EFFECTIVE RANGE AT EFV SET  11 FOR CHANNEL   1:
-  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   339.72     BOHR WITH 1/A(K=0) =  -0.2566871603E-02 BOHR^-1
-  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   336.46     BOHR WITH   A(K=0) =   -389.5711648     BOHR
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   339.72     BOHR WITH 1/A(K=0) =  -0.2566869863E-02 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   336.46     BOHR WITH   A(K=0) =   -389.5714287     BOHR
 
   EFFECTIVE RANGE AT EFV SET  12 FOR CHANNEL   1:
-  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   336.87     BOHR WITH 1/A(K=0) =  -0.2564600724E-02 BOHR^-1
-  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   333.66     BOHR WITH   A(K=0) =   -389.9162396     BOHR
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   336.87     BOHR WITH 1/A(K=0) =  -0.2564594847E-02 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   333.65     BOHR WITH   A(K=0) =   -389.9171333     BOHR
 
   EFFECTIVE RANGE AT EFV SET  13 FOR CHANNEL   1:
-  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   339.93     BOHR WITH 1/A(K=0) =  -0.2571169561E-02 BOHR^-1
-  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   336.66     BOHR WITH   A(K=0) =   -388.9199761     BOHR
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   339.93     BOHR WITH 1/A(K=0) =  -0.2571167782E-02 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   336.66     BOHR WITH   A(K=0) =   -388.9202451     BOHR
 
   EFFECTIVE RANGE AT EFV SET  14 FOR CHANNEL   1:
-  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   340.07     BOHR WITH 1/A(K=0) =  -0.2573900995E-02 BOHR^-1
-  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   336.80     BOHR WITH   A(K=0) =   -388.5072632     BOHR
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   340.07     BOHR WITH 1/A(K=0) =  -0.2573899213E-02 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   336.80     BOHR WITH   A(K=0) =   -388.5075322     BOHR
 
   EFFECTIVE RANGE AT EFV SET  15 FOR CHANNEL   1:
-  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   340.20     BOHR WITH 1/A(K=0) =  -0.2576781904E-02 BOHR^-1
-  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   336.94     BOHR WITH   A(K=0) =   -388.0729135     BOHR
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   340.20     BOHR WITH 1/A(K=0) =  -0.2576780142E-02 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   336.94     BOHR WITH   A(K=0) =   -388.0731789     BOHR
 
   EFFECTIVE RANGE AT EFV SET  16 FOR CHANNEL   1:
-  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   340.35     BOHR WITH 1/A(K=0) =  -0.2579942706E-02 BOHR^-1
-  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   337.09     BOHR WITH   A(K=0) =   -387.5974809     BOHR
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   340.35     BOHR WITH 1/A(K=0) =  -0.2579940910E-02 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   337.09     BOHR WITH   A(K=0) =   -387.5977507     BOHR
 
   EFFECTIVE RANGE AT EFV SET  17 FOR CHANNEL   1:
-  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   340.51     BOHR WITH 1/A(K=0) =  -0.2583552069E-02 BOHR^-1
-  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   337.25     BOHR WITH   A(K=0) =   -387.0560009     BOHR
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   340.51     BOHR WITH 1/A(K=0) =  -0.2583550240E-02 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   337.25     BOHR WITH   A(K=0) =   -387.0562749     BOHR
 
   EFFECTIVE RANGE AT EFV SET  18 FOR CHANNEL   1:
-  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   340.70     BOHR WITH 1/A(K=0) =  -0.2588003053E-02 BOHR^-1
-  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   337.44     BOHR WITH   A(K=0) =   -386.3903403     BOHR
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   340.70     BOHR WITH 1/A(K=0) =  -0.2588001158E-02 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   337.44     BOHR WITH   A(K=0) =   -386.3906233     BOHR
 
   EFFECTIVE RANGE AT EFV SET  19 FOR CHANNEL   1:
-  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   340.90     BOHR WITH 1/A(K=0) =  -0.2594658665E-02 BOHR^-1
-  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   337.65     BOHR WITH   A(K=0) =   -385.3992336     BOHR
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   340.90     BOHR WITH 1/A(K=0) =  -0.2594656501E-02 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   337.65     BOHR WITH   A(K=0) =   -385.3995549     BOHR
 
   EFFECTIVE RANGE AT EFV SET  20 FOR CHANNEL   1:
-  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   340.59     BOHR WITH 1/A(K=0) =  -0.2614562649E-02 BOHR^-1
-  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   337.36     BOHR WITH   A(K=0) =   -382.4654225     BOHR
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   340.59     BOHR WITH 1/A(K=0) =  -0.2614558526E-02 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   337.36     BOHR WITH   A(K=0) =   -382.4660256     BOHR
 
   EFFECTIVE RANGE AT EFV SET  21 FOR CHANNEL   1:
-  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   336.91     BOHR WITH 1/A(K=0) =  -0.2559196243E-02 BOHR^-1
-  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   333.69     BOHR WITH   A(K=0) =   -390.7396247     BOHR
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   336.91     BOHR WITH 1/A(K=0) =  -0.2559190779E-02 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   333.69     BOHR WITH   A(K=0) =   -390.7404590     BOHR
 
   EFFECTIVE RANGE AT EFV SET  22 FOR CHANNEL   1:
-  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   340.39     BOHR WITH 1/A(K=0) =  -0.2585456305E-02 BOHR^-1
-  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   337.13     BOHR WITH   A(K=0) =   -386.7709444     BOHR
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   340.39     BOHR WITH 1/A(K=0) =  -0.2585454217E-02 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   337.13     BOHR WITH   A(K=0) =   -386.7712568     BOHR
 
   EFFECTIVE RANGE AT EFV SET  23 FOR CHANNEL   1:
-  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   340.93     BOHR WITH 1/A(K=0) =  -0.2593388231E-02 BOHR^-1
-  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   337.67     BOHR WITH   A(K=0) =   -385.5880218     BOHR
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   340.93     BOHR WITH 1/A(K=0) =  -0.2593386229E-02 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   337.67     BOHR WITH   A(K=0) =   -385.5883195     BOHR
 
   EFFECTIVE RANGE AT EFV SET  24 FOR CHANNEL   1:
-  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   341.25     BOHR WITH 1/A(K=0) =  -0.2599189074E-02 BOHR^-1
-  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   337.99     BOHR WITH   A(K=0) =   -384.7274909     BOHR
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   341.25     BOHR WITH 1/A(K=0) =  -0.2599187166E-02 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   337.99     BOHR WITH   A(K=0) =   -384.7277733     BOHR
 
   EFFECTIVE RANGE AT EFV SET  25 FOR CHANNEL   1:
-  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   341.52     BOHR WITH 1/A(K=0) =  -0.2604500769E-02 BOHR^-1
-  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   338.27     BOHR WITH   A(K=0) =   -383.9428858     BOHR
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   341.52     BOHR WITH 1/A(K=0) =  -0.2604498920E-02 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   338.27     BOHR WITH   A(K=0) =   -383.9431583     BOHR
 
   EFFECTIVE RANGE AT EFV SET  26 FOR CHANNEL   1:
-  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   341.78     BOHR WITH 1/A(K=0) =  -0.2609784396E-02 BOHR^-1
-  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   338.53     BOHR WITH   A(K=0) =   -383.1655955     BOHR
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   341.78     BOHR WITH 1/A(K=0) =  -0.2609782518E-02 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   338.53     BOHR WITH   A(K=0) =   -383.1658713     BOHR
 
   EFFECTIVE RANGE AT EFV SET  27 FOR CHANNEL   1:
-  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   342.05     BOHR WITH 1/A(K=0) =  -0.2615240901E-02 BOHR^-1
-  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   338.80     BOHR WITH   A(K=0) =   -382.3661694     BOHR
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   342.05     BOHR WITH 1/A(K=0) =  -0.2615239008E-02 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   338.80     BOHR WITH   A(K=0) =   -382.3664463     BOHR
 
   EFFECTIVE RANGE AT EFV SET  28 FOR CHANNEL   1:
-  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   342.33     BOHR WITH 1/A(K=0) =  -0.2620990933E-02 BOHR^-1
-  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   339.08     BOHR WITH   A(K=0) =   -381.5273411     BOHR
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   342.33     BOHR WITH 1/A(K=0) =  -0.2620989022E-02 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   339.08     BOHR WITH   A(K=0) =   -381.5276191     BOHR
 
   EFFECTIVE RANGE AT EFV SET  29 FOR CHANNEL   1:
-  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   342.62     BOHR WITH 1/A(K=0) =  -0.2627127308E-02 BOHR^-1
-  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   339.38     BOHR WITH   A(K=0) =   -380.6362021     BOHR
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   342.62     BOHR WITH 1/A(K=0) =  -0.2627125391E-02 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   339.38     BOHR WITH   A(K=0) =   -380.6364799     BOHR
 
   EFFECTIVE RANGE AT EFV SET  30 FOR CHANNEL   1:
-  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   342.94     BOHR WITH 1/A(K=0) =  -0.2633736271E-02 BOHR^-1
-  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   339.69     BOHR WITH   A(K=0) =   -379.6810775     BOHR
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   342.94     BOHR WITH 1/A(K=0) =  -0.2633734279E-02 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   339.69     BOHR WITH   A(K=0) =   -379.6813645     BOHR
 
   EFFECTIVE RANGE AT EFV SET  31 FOR CHANNEL   1:
-  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   343.28     BOHR WITH 1/A(K=0) =  -0.2640907360E-02 BOHR^-1
-  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   340.04     BOHR WITH   A(K=0) =   -378.6501220     BOHR
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   343.28     BOHR WITH 1/A(K=0) =  -0.2640905358E-02 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   340.04     BOHR WITH   A(K=0) =   -378.6504090     BOHR
 
   EFFECTIVE RANGE AT EFV SET  32 FOR CHANNEL   1:
-  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   343.65     BOHR WITH 1/A(K=0) =  -0.2648740798E-02 BOHR^-1
-  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   340.41     BOHR WITH   A(K=0) =   -377.5303229     BOHR
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   343.65     BOHR WITH 1/A(K=0) =  -0.2648738763E-02 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   340.41     BOHR WITH   A(K=0) =   -377.5306129     BOHR
 
   EFFECTIVE RANGE AT EFV SET  33 FOR CHANNEL   1:
-  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   344.06     BOHR WITH 1/A(K=0) =  -0.2657353326E-02 BOHR^-1
-  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   340.83     BOHR WITH   A(K=0) =   -376.3067714     BOHR
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   344.06     BOHR WITH 1/A(K=0) =  -0.2657351195E-02 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   340.83     BOHR WITH   A(K=0) =   -376.3070732     BOHR
 
   EFFECTIVE RANGE AT EFV SET  34 FOR CHANNEL   1:
-  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   344.51     BOHR WITH 1/A(K=0) =  -0.2666884767E-02 BOHR^-1
-  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   341.28     BOHR WITH   A(K=0) =   -374.9618856     BOHR
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   344.51     BOHR WITH 1/A(K=0) =  -0.2666882484E-02 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   341.28     BOHR WITH   A(K=0) =   -374.9622066     BOHR
 
   EFFECTIVE RANGE AT EFV SET  35 FOR CHANNEL   1:
-  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   345.01     BOHR WITH 1/A(K=0) =  -0.2677506271E-02 BOHR^-1
-  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   341.78     BOHR WITH   A(K=0) =   -373.4744719     BOHR
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   345.01     BOHR WITH 1/A(K=0) =  -0.2677504026E-02 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   341.78     BOHR WITH   A(K=0) =   -373.4747850     BOHR
 
   EFFECTIVE RANGE AT EFV SET  36 FOR CHANNEL   1:
-  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   345.57     BOHR WITH 1/A(K=0) =  -0.2689431169E-02 BOHR^-1
-  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   342.34     BOHR WITH   A(K=0) =   -371.8185328     BOHR
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   345.57     BOHR WITH 1/A(K=0) =  -0.2689428865E-02 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   342.34     BOHR WITH   A(K=0) =   -371.8188513     BOHR
 
   EFFECTIVE RANGE AT EFV SET  37 FOR CHANNEL   1:
-  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   346.20     BOHR WITH 1/A(K=0) =  -0.2702929621E-02 BOHR^-1
-  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   342.98     BOHR WITH   A(K=0) =   -369.9617140     BOHR
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   346.20     BOHR WITH 1/A(K=0) =  -0.2702927201E-02 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   342.98     BOHR WITH   A(K=0) =   -369.9620452     BOHR
 
   EFFECTIVE RANGE AT EFV SET  38 FOR CHANNEL   1:
-  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   346.92     BOHR WITH 1/A(K=0) =  -0.2718350146E-02 BOHR^-1
-  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   343.70     BOHR WITH   A(K=0) =   -367.8630647     BOHR
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   346.92     BOHR WITH 1/A(K=0) =  -0.2718347613E-02 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   343.70     BOHR WITH   A(K=0) =   -367.8634075     BOHR
 
   EFFECTIVE RANGE AT EFV SET  39 FOR CHANNEL   1:
-  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   347.74     BOHR WITH 1/A(K=0) =  -0.2736150297E-02 BOHR^-1
-  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   344.53     BOHR WITH   A(K=0) =   -365.4699731     BOHR
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   347.74     BOHR WITH 1/A(K=0) =  -0.2736147626E-02 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   344.53     BOHR WITH   A(K=0) =   -365.4703298     BOHR
 
   EFFECTIVE RANGE AT EFV SET  40 FOR CHANNEL   1:
-  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   348.70     BOHR WITH 1/A(K=0) =  -0.2756944254E-02 BOHR^-1
-  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   345.49     BOHR WITH   A(K=0) =   -362.7135216     BOHR
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   348.70     BOHR WITH 1/A(K=0) =  -0.2756941346E-02 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   345.49     BOHR WITH   A(K=0) =   -362.7139042     BOHR
 
   EFFECTIVE RANGE AT EFV SET  41 FOR CHANNEL   1:
-  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   349.82     BOHR WITH 1/A(K=0) =  -0.2781575708E-02 BOHR^-1
-  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   346.62     BOHR WITH   A(K=0) =   -359.5016918     BOHR
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   349.82     BOHR WITH 1/A(K=0) =  -0.2781572438E-02 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   346.62     BOHR WITH   A(K=0) =   -359.5021144     BOHR
 
   EFFECTIVE RANGE AT EFV SET  42 FOR CHANNEL   1:
-  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   351.16     BOHR WITH 1/A(K=0) =  -0.2811237374E-02 BOHR^-1
-  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   347.97     BOHR WITH   A(K=0) =   -355.7086409     BOHR
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   351.16     BOHR WITH 1/A(K=0) =  -0.2811233749E-02 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   347.97     BOHR WITH   A(K=0) =   -355.7090996     BOHR
 
   EFFECTIVE RANGE AT EFV SET  43 FOR CHANNEL   1:
-  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   352.79     BOHR WITH 1/A(K=0) =  -0.2847671788E-02 BOHR^-1
-  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   349.61     BOHR WITH   A(K=0) =   -351.1576482     BOHR
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   352.79     BOHR WITH 1/A(K=0) =  -0.2847667751E-02 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   349.61     BOHR WITH   A(K=0) =   -351.1581461     BOHR
 
   EFFECTIVE RANGE AT EFV SET  44 FOR CHANNEL   1:
-  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   354.81     BOHR WITH 1/A(K=0) =  -0.2893530871E-02 BOHR^-1
-  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   351.65     BOHR WITH   A(K=0) =   -345.5923376     BOHR
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   354.81     BOHR WITH 1/A(K=0) =  -0.2893525992E-02 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   351.65     BOHR WITH   A(K=0) =   -345.5929203     BOHR
 
   EFFECTIVE RANGE AT EFV SET  45 FOR CHANNEL   1:
-  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   357.39     BOHR WITH 1/A(K=0) =  -0.2953056804E-02 BOHR^-1
-  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   354.25     BOHR WITH   A(K=0) =   -338.6262526     BOHR
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   357.39     BOHR WITH 1/A(K=0) =  -0.2953050831E-02 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   354.25     BOHR WITH   A(K=0) =   -338.6269374     BOHR
 
   EFFECTIVE RANGE AT EFV SET  46 FOR CHANNEL   1:
-  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   360.80     BOHR WITH 1/A(K=0) =  -0.3033487136E-02 BOHR^-1
-  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   357.67     BOHR WITH   A(K=0) =   -329.6480612     BOHR
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   360.80     BOHR WITH 1/A(K=0) =  -0.3033479219E-02 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   357.68     BOHR WITH   A(K=0) =   -329.6489215     BOHR
 
   EFFECTIVE RANGE AT EFV SET  47 FOR CHANNEL   1:
-  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   365.49     BOHR WITH 1/A(K=0) =  -0.3148262707E-02 BOHR^-1
-  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   362.40     BOHR WITH   A(K=0) =   -317.6304012     BOHR
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   365.49     BOHR WITH 1/A(K=0) =  -0.3148251747E-02 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   362.40     BOHR WITH   A(K=0) =   -317.6315069     BOHR
 
   EFFECTIVE RANGE AT EFV SET  48 FOR CHANNEL   1:
-  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   372.34     BOHR WITH 1/A(K=0) =  -0.3325489529E-02 BOHR^-1
-  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   369.31     BOHR WITH   A(K=0) =   -300.7031156     BOHR
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   372.34     BOHR WITH 1/A(K=0) =  -0.3325472464E-02 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   369.31     BOHR WITH   A(K=0) =   -300.7046587     BOHR
 
   EFFECTIVE RANGE AT EFV SET  49 FOR CHANNEL   1:
-  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   383.23     BOHR WITH 1/A(K=0) =  -0.3635440729E-02 BOHR^-1
-  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   380.28     BOHR WITH   A(K=0) =   -275.0661688     BOHR
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   383.23     BOHR WITH 1/A(K=0) =  -0.3635409381E-02 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   380.28     BOHR WITH   A(K=0) =   -275.0685407     BOHR
 
   EFFECTIVE RANGE AT EFV SET  50 FOR CHANNEL   1:
-  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   402.16     BOHR WITH 1/A(K=0) =  -0.4317102033E-02 BOHR^-1
-  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   399.43     BOHR WITH   A(K=0) =   -231.6344710     BOHR
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   402.16     BOHR WITH 1/A(K=0) =  -0.4317022859E-02 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   399.43     BOHR WITH   A(K=0) =   -231.6387191     BOHR
 
   EFFECTIVE RANGE AT EFV SET  51 FOR CHANNEL   1:
-  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   409.50     BOHR WITH 1/A(K=0) =  -0.7044568859E-02 BOHR^-1
-  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   407.76     BOHR WITH   A(K=0) =   -141.9527551     BOHR
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   409.51     BOHR WITH 1/A(K=0) =  -0.7044072174E-02 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   407.76     BOHR WITH   A(K=0) =   -141.9627642     BOHR
 
   EFFECTIVE RANGE AT EFV SET  52 FOR CHANNEL   1:
-  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS  -723.28     BOHR WITH 1/A(K=0) =   0.6563561071E-02 BOHR^-1
-  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS  -717.48     BOHR WITH   A(K=0) =    152.3541136     BOHR
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS  -723.59     BOHR WITH 1/A(K=0) =   0.6565578047E-02 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS  -717.78     BOHR WITH   A(K=0) =    152.3073092     BOHR
 
   EFFECTIVE RANGE AT EFV SET  53 FOR CHANNEL   1:
-  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   185.94     BOHR WITH 1/A(K=0) =  -0.2323708518E-03 BOHR^-1
-  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   175.74     BOHR WITH   A(K=0) =   -4300.341601     BOHR
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   185.93     BOHR WITH 1/A(K=0) =  -0.2322405592E-03 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   175.72     BOHR WITH   A(K=0) =   -4302.751278     BOHR
 
   EFFECTIVE RANGE AT EFV SET  54 FOR CHANNEL   1:
-  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   259.82     BOHR WITH 1/A(K=0) =  -0.1204873780E-02 BOHR^-1
-  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   255.78     BOHR WITH   A(K=0) =   -829.9168169     BOHR
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   259.81     BOHR WITH 1/A(K=0) =  -0.1204829177E-02 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   255.77     BOHR WITH   A(K=0) =   -829.9475386     BOHR
 
   EFFECTIVE RANGE AT EFV SET  55 FOR CHANNEL   1:
-  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   285.46     BOHR WITH 1/A(K=0) =  -0.1594150958E-02 BOHR^-1
-  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   281.76     BOHR WITH   A(K=0) =   -627.2693161     BOHR
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   285.46     BOHR WITH 1/A(K=0) =  -0.1594127746E-02 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   281.76     BOHR WITH   A(K=0) =   -627.2784491     BOHR
 
   EFFECTIVE RANGE AT EFV SET  56 FOR CHANNEL   1:
-  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   298.35     BOHR WITH 1/A(K=0) =  -0.1803922040E-02 BOHR^-1
-  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   294.77     BOHR WITH   A(K=0) =   -554.3296846     BOHR
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   298.35     BOHR WITH 1/A(K=0) =  -0.1803907342E-02 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   294.77     BOHR WITH   A(K=0) =   -554.3342010     BOHR
 
   EFFECTIVE RANGE AT EFV SET  57 FOR CHANNEL   1:
-  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   306.08     BOHR WITH 1/A(K=0) =  -0.1935148844E-02 BOHR^-1
-  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   302.57     BOHR WITH   A(K=0) =   -516.7407642     BOHR
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   306.08     BOHR WITH 1/A(K=0) =  -0.1935138392E-02 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   302.57     BOHR WITH   A(K=0) =   -516.7435549     BOHR
 
   EFFECTIVE RANGE AT EFV SET  58 FOR CHANNEL   1:
-  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   311.22     BOHR WITH 1/A(K=0) =  -0.2025033573E-02 BOHR^-1
-  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   307.76     BOHR WITH   A(K=0) =   -493.8051176     BOHR
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   311.23     BOHR WITH 1/A(K=0) =  -0.2025025503E-02 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   307.76     BOHR WITH   A(K=0) =   -493.8070854     BOHR
 
   EFFECTIVE RANGE AT EFV SET  59 FOR CHANNEL   1:
-  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   314.90     BOHR WITH 1/A(K=0) =  -0.2090487788E-02 BOHR^-1
-  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   311.46     BOHR WITH   A(K=0) =   -478.3443585     BOHR
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   314.90     BOHR WITH 1/A(K=0) =  -0.2090481296E-02 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   311.46     BOHR WITH   A(K=0) =   -478.3458440     BOHR
 
   EFFECTIVE RANGE AT EFV SET  60 FOR CHANNEL   1:
-  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   317.65     BOHR WITH 1/A(K=0) =  -0.2140306203E-02 BOHR^-1
-  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   314.23     BOHR WITH   A(K=0) =   -467.2106368     BOHR
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   317.65     BOHR WITH 1/A(K=0) =  -0.2140300661E-02 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   314.23     BOHR WITH   A(K=0) =   -467.2118466     BOHR
 
   EFFECTIVE RANGE AT EFV SET  61 FOR CHANNEL   1:
-  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   319.79     BOHR WITH 1/A(K=0) =  -0.2179514495E-02 BOHR^-1
-  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   316.39     BOHR WITH   A(K=0) =   -458.8060393     BOHR
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   319.79     BOHR WITH 1/A(K=0) =  -0.2179509746E-02 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   316.39     BOHR WITH   A(K=0) =   -458.8070389     BOHR
 
   EFFECTIVE RANGE AT EFV SET  62 FOR CHANNEL   1:
-  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   321.51     BOHR WITH 1/A(K=0) =  -0.2211193161E-02 BOHR^-1
-  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   318.12     BOHR WITH   A(K=0) =   -452.2331604     BOHR
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   321.51     BOHR WITH 1/A(K=0) =  -0.2211188938E-02 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   318.11     BOHR WITH   A(K=0) =   -452.2340239     BOHR
 
   EFFECTIVE RANGE AT EFV SET  63 FOR CHANNEL   1:
-  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   322.91     BOHR WITH 1/A(K=0) =  -0.2237335458E-02 BOHR^-1
-  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   319.53     BOHR WITH   A(K=0) =   -446.9491756     BOHR
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   322.91     BOHR WITH 1/A(K=0) =  -0.2237331619E-02 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   319.53     BOHR WITH   A(K=0) =   -446.9499426     BOHR
 
   EFFECTIVE RANGE AT EFV SET  64 FOR CHANNEL   1:
-  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   324.08     BOHR WITH 1/A(K=0) =  -0.2259288175E-02 BOHR^-1
-  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   320.71     BOHR WITH   A(K=0) =   -442.6064592     BOHR
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   324.08     BOHR WITH 1/A(K=0) =  -0.2259284635E-02 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   320.71     BOHR WITH   A(K=0) =   -442.6071526     BOHR
 
   EFFECTIVE RANGE AT EFV SET  65 FOR CHANNEL   1:
-  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   325.07     BOHR WITH 1/A(K=0) =  -0.2277994300E-02 BOHR^-1
-  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   321.70     BOHR WITH   A(K=0) =   -438.9720338     BOHR
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   325.07     BOHR WITH 1/A(K=0) =  -0.2277990946E-02 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   321.71     BOHR WITH   A(K=0) =   -438.9726800     BOHR
 
   EFFECTIVE RANGE AT EFV SET  66 FOR CHANNEL   1:
-  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   325.92     BOHR WITH 1/A(K=0) =  -0.2294133450E-02 BOHR^-1
-  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   322.56     BOHR WITH   A(K=0) =   -435.8839736     BOHR
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   325.92     BOHR WITH 1/A(K=0) =  -0.2294130297E-02 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   322.56     BOHR WITH   A(K=0) =   -435.8845725     BOHR
 
   EFFECTIVE RANGE AT EFV SET  67 FOR CHANNEL   1:
-  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   326.66     BOHR WITH 1/A(K=0) =  -0.2308207992E-02 BOHR^-1
-  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   323.31     BOHR WITH   A(K=0) =   -433.2262042     BOHR
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   326.66     BOHR WITH 1/A(K=0) =  -0.2308205069E-02 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   323.31     BOHR WITH   A(K=0) =   -433.2267528     BOHR
 
   EFFECTIVE RANGE AT EFV SET  68 FOR CHANNEL   1:
-  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   327.31     BOHR WITH 1/A(K=0) =  -0.2320597550E-02 BOHR^-1
-  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   323.96     BOHR WITH   A(K=0) =   -430.9132992     BOHR
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   327.31     BOHR WITH 1/A(K=0) =  -0.2320594664E-02 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   323.96     BOHR WITH   A(K=0) =   -430.9138350     BOHR
 
   EFFECTIVE RANGE AT EFV SET  69 FOR CHANNEL   1:
-  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   327.89     BOHR WITH 1/A(K=0) =  -0.2331593694E-02 BOHR^-1
-  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   324.54     BOHR WITH   A(K=0) =   -428.8811076     BOHR
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   327.88     BOHR WITH 1/A(K=0) =  -0.2331591028E-02 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   324.54     BOHR WITH   A(K=0) =   -428.8815979     BOHR
 
   EFFECTIVE RANGE AT EFV SET  70 FOR CHANNEL   1:
-  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   328.40     BOHR WITH 1/A(K=0) =  -0.2341424914E-02 BOHR^-1
-  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   325.05     BOHR WITH   A(K=0) =   -427.0803661     BOHR
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   328.40     BOHR WITH 1/A(K=0) =  -0.2341422240E-02 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   325.05     BOHR WITH   A(K=0) =   -427.0808538     BOHR
 
   EFFECTIVE RANGE AT EFV SET  71 FOR CHANNEL   1:
-  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   328.85     BOHR WITH 1/A(K=0) =  -0.2350271950E-02 BOHR^-1
-  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   325.51     BOHR WITH   A(K=0) =   -425.4727713     BOHR
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   328.85     BOHR WITH 1/A(K=0) =  -0.2350269409E-02 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   325.51     BOHR WITH   A(K=0) =   -425.4732312     BOHR
 
   EFFECTIVE RANGE AT EFV SET  72 FOR CHANNEL   1:
-  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   329.27     BOHR WITH 1/A(K=0) =  -0.2358280339E-02 BOHR^-1
-  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   325.93     BOHR WITH   A(K=0) =   -424.0279674     BOHR
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   329.27     BOHR WITH 1/A(K=0) =  -0.2358277860E-02 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   325.93     BOHR WITH   A(K=0) =   -424.0284132     BOHR
 
   EFFECTIVE RANGE AT EFV SET  73 FOR CHANNEL   1:
-  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   329.65     BOHR WITH 1/A(K=0) =  -0.2365568104E-02 BOHR^-1
-  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   326.31     BOHR WITH   A(K=0) =   -422.7216737     BOHR
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   329.65     BOHR WITH 1/A(K=0) =  -0.2365565689E-02 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   326.31     BOHR WITH   A(K=0) =   -422.7221053     BOHR
 
   EFFECTIVE RANGE AT EFV SET  74 FOR CHANNEL   1:
-  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   329.99     BOHR WITH 1/A(K=0) =  -0.2372232349E-02 BOHR^-1
-  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   326.66     BOHR WITH   A(K=0) =   -421.5341680     BOHR
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   329.99     BOHR WITH 1/A(K=0) =  -0.2372229998E-02 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   326.66     BOHR WITH   A(K=0) =   -421.5345857     BOHR
 
   EFFECTIVE RANGE AT EFV SET  75 FOR CHANNEL   1:
-  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   330.30     BOHR WITH 1/A(K=0) =  -0.2378353386E-02 BOHR^-1
-  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   326.97     BOHR WITH   A(K=0) =   -420.4493200     BOHR
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   330.30     BOHR WITH 1/A(K=0) =  -0.2378351093E-02 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   326.97     BOHR WITH   A(K=0) =   -420.4497253     BOHR
 
   EFFECTIVE RANGE AT EFV SET  76 FOR CHANNEL   1:
-  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   330.59     BOHR WITH 1/A(K=0) =  -0.2383998328E-02 BOHR^-1
-  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   327.26     BOHR WITH   A(K=0) =   -419.4537890     BOHR
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   330.59     BOHR WITH 1/A(K=0) =  -0.2383996094E-02 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   327.26     BOHR WITH   A(K=0) =   -419.4541821     BOHR
 
   EFFECTIVE RANGE AT EFV SET  77 FOR CHANNEL   1:
-  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   330.86     BOHR WITH 1/A(K=0) =  -0.2389223833E-02 BOHR^-1
-  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   327.53     BOHR WITH   A(K=0) =   -418.5364221     BOHR
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   330.86     BOHR WITH 1/A(K=0) =  -0.2389221623E-02 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   327.53     BOHR WITH   A(K=0) =   -418.5368091     BOHR
 
   EFFECTIVE RANGE AT EFV SET  78 FOR CHANNEL   1:
-  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   331.11     BOHR WITH 1/A(K=0) =  -0.2394077778E-02 BOHR^-1
-  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   327.78     BOHR WITH   A(K=0) =   -417.6878719     BOHR
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   331.11     BOHR WITH 1/A(K=0) =  -0.2394075610E-02 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   327.78     BOHR WITH   A(K=0) =   -417.6882503     BOHR
 
   EFFECTIVE RANGE AT EFV SET  79 FOR CHANNEL   1:
-  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   331.34     BOHR WITH 1/A(K=0) =  -0.2398601217E-02 BOHR^-1
-  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   328.02     BOHR WITH   A(K=0) =   -416.9001913     BOHR
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   331.34     BOHR WITH 1/A(K=0) =  -0.2398599064E-02 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   328.02     BOHR WITH   A(K=0) =   -416.9005655     BOHR
 
   EFFECTIVE RANGE AT EFV SET  80 FOR CHANNEL   1:
-  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   331.56     BOHR WITH 1/A(K=0) =  -0.2402829280E-02 BOHR^-1
-  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   328.23     BOHR WITH   A(K=0) =   -416.1666269     BOHR
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   331.56     BOHR WITH 1/A(K=0) =  -0.2402827169E-02 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   328.23     BOHR WITH   A(K=0) =   -416.1669925     BOHR
 
   EFFECTIVE RANGE AT EFV SET  81 FOR CHANNEL   1:
-  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   331.76     BOHR WITH 1/A(K=0) =  -0.2406792388E-02 BOHR^-1
-  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   328.44     BOHR WITH   A(K=0) =   -415.4813718     BOHR
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   331.76     BOHR WITH 1/A(K=0) =  -0.2406790310E-02 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   328.44     BOHR WITH   A(K=0) =   -415.4817306     BOHR
 
   EFFECTIVE RANGE AT EFV SET  82 FOR CHANNEL   1:
-  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   331.95     BOHR WITH 1/A(K=0) =  -0.2410516929E-02 BOHR^-1
-  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   328.63     BOHR WITH   A(K=0) =   -414.8394209     BOHR
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   331.95     BOHR WITH 1/A(K=0) =  -0.2410514754E-02 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   328.63     BOHR WITH   A(K=0) =   -414.8397952     BOHR
 
   EFFECTIVE RANGE AT EFV SET  83 FOR CHANNEL   1:
-  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   332.13     BOHR WITH 1/A(K=0) =  -0.2414025872E-02 BOHR^-1
-  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   328.81     BOHR WITH   A(K=0) =   -414.2364420     BOHR
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   332.13     BOHR WITH 1/A(K=0) =  -0.2414023721E-02 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   328.81     BOHR WITH   A(K=0) =   -414.2368110     BOHR
 
   EFFECTIVE RANGE AT EFV SET  84 FOR CHANNEL   1:
-  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   332.30     BOHR WITH 1/A(K=0) =  -0.2417339367E-02 BOHR^-1
-  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   328.98     BOHR WITH   A(K=0) =   -413.6686558     BOHR
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   332.30     BOHR WITH 1/A(K=0) =  -0.2417337330E-02 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   328.98     BOHR WITH   A(K=0) =   -413.6690044     BOHR
 
   EFFECTIVE RANGE AT EFV SET  85 FOR CHANNEL   1:
-  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   332.46     BOHR WITH 1/A(K=0) =  -0.2420475347E-02 BOHR^-1
-  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   329.14     BOHR WITH   A(K=0) =   -413.1327197     BOHR
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   332.45     BOHR WITH 1/A(K=0) =  -0.2420473362E-02 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   329.14     BOHR WITH   A(K=0) =   -413.1330586     BOHR
 
   EFFECTIVE RANGE AT EFV SET  86 FOR CHANNEL   1:
-  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   332.61     BOHR WITH 1/A(K=0) =  -0.2423449439E-02 BOHR^-1
-  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   329.29     BOHR WITH   A(K=0) =   -412.6257316     BOHR
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   332.61     BOHR WITH 1/A(K=0) =  -0.2423447379E-02 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   329.29     BOHR WITH   A(K=0) =   -412.6260823     BOHR
 
   EFFECTIVE RANGE AT EFV SET  87 FOR CHANNEL   1:
-  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   332.75     BOHR WITH 1/A(K=0) =  -0.2426275447E-02 BOHR^-1
-  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   329.43     BOHR WITH   A(K=0) =   -412.1451387     BOHR
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   332.75     BOHR WITH 1/A(K=0) =  -0.2426273450E-02 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   329.43     BOHR WITH   A(K=0) =   -412.1454778     BOHR
 
   EFFECTIVE RANGE AT EFV SET  88 FOR CHANNEL   1:
-  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   332.89     BOHR WITH 1/A(K=0) =  -0.2428965933E-02 BOHR^-1
-  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   329.57     BOHR WITH   A(K=0) =   -411.6886318     BOHR
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   332.88     BOHR WITH 1/A(K=0) =  -0.2428963937E-02 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   329.57     BOHR WITH   A(K=0) =   -411.6889701     BOHR
 
   EFFECTIVE RANGE AT EFV SET  89 FOR CHANNEL   1:
-  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   333.01     BOHR WITH 1/A(K=0) =  -0.2431531873E-02 BOHR^-1
-  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   329.70     BOHR WITH   A(K=0) =   -411.2541983     BOHR
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   333.01     BOHR WITH 1/A(K=0) =  -0.2431529888E-02 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   329.70     BOHR WITH   A(K=0) =   -411.2545340     BOHR
 
   EFFECTIVE RANGE AT EFV SET  90 FOR CHANNEL   1:
-  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   333.14     BOHR WITH 1/A(K=0) =  -0.2433983202E-02 BOHR^-1
-  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   329.83     BOHR WITH   A(K=0) =   -410.8400249     BOHR
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   333.14     BOHR WITH 1/A(K=0) =  -0.2433981238E-02 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   329.83     BOHR WITH   A(K=0) =   -410.8403564     BOHR
 
   EFFECTIVE RANGE AT EFV SET  91 FOR CHANNEL   1:
-  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   333.26     BOHR WITH 1/A(K=0) =  -0.2436328830E-02 BOHR^-1
-  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   329.95     BOHR WITH   A(K=0) =   -410.4444908     BOHR
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   333.26     BOHR WITH 1/A(K=0) =  -0.2436326889E-02 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   329.95     BOHR WITH   A(K=0) =   -410.4448178     BOHR
 
   EFFECTIVE RANGE AT EFV SET  92 FOR CHANNEL   1:
-  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   333.37     BOHR WITH 1/A(K=0) =  -0.2438576866E-02 BOHR^-1
-  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   330.06     BOHR WITH   A(K=0) =   -410.0661274     BOHR
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   333.37     BOHR WITH 1/A(K=0) =  -0.2438574960E-02 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   330.06     BOHR WITH   A(K=0) =   -410.0664480     BOHR
 
   EFFECTIVE RANGE AT EFV SET  93 FOR CHANNEL   1:
-  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   333.48     BOHR WITH 1/A(K=0) =  -0.2440734578E-02 BOHR^-1
-  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   330.17     BOHR WITH   A(K=0) =   -409.7036219     BOHR
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   333.48     BOHR WITH 1/A(K=0) =  -0.2440732618E-02 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   330.17     BOHR WITH   A(K=0) =   -409.7039509     BOHR
 
   EFFECTIVE RANGE AT EFV SET  94 FOR CHANNEL   1:
-  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   333.58     BOHR WITH 1/A(K=0) =  -0.2442808451E-02 BOHR^-1
-  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   330.28     BOHR WITH   A(K=0) =   -409.3558051     BOHR
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   333.58     BOHR WITH 1/A(K=0) =  -0.2442806555E-02 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   330.28     BOHR WITH   A(K=0) =   -409.3561229     BOHR
 
   EFFECTIVE RANGE AT EFV SET  95 FOR CHANNEL   1:
-  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   333.69     BOHR WITH 1/A(K=0) =  -0.2444804493E-02 BOHR^-1
-  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   330.38     BOHR WITH   A(K=0) =   -409.0215990     BOHR
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   333.69     BOHR WITH 1/A(K=0) =  -0.2444802584E-02 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   330.38     BOHR WITH   A(K=0) =   -409.0219184     BOHR
 
   EFFECTIVE RANGE AT EFV SET  96 FOR CHANNEL   1:
-  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   333.78     BOHR WITH 1/A(K=0) =  -0.2446728207E-02 BOHR^-1
-  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   330.47     BOHR WITH   A(K=0) =   -408.7000191     BOHR
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   333.78     BOHR WITH 1/A(K=0) =  -0.2446726308E-02 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   330.47     BOHR WITH   A(K=0) =   -408.7003363     BOHR
 
   EFFECTIVE RANGE AT EFV SET  97 FOR CHANNEL   1:
-  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   333.88     BOHR WITH 1/A(K=0) =  -0.2448584543E-02 BOHR^-1
-  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   330.57     BOHR WITH   A(K=0) =   -408.3901814     BOHR
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   333.88     BOHR WITH 1/A(K=0) =  -0.2448582657E-02 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   330.57     BOHR WITH   A(K=0) =   -408.3904960     BOHR
 
   EFFECTIVE RANGE AT EFV SET  98 FOR CHANNEL   1:
-  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   333.97     BOHR WITH 1/A(K=0) =  -0.2450378025E-02 BOHR^-1
-  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   330.66     BOHR WITH   A(K=0) =   -408.0912807     BOHR
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   333.97     BOHR WITH 1/A(K=0) =  -0.2450376138E-02 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   330.66     BOHR WITH   A(K=0) =   -408.0915949     BOHR
 
   EFFECTIVE RANGE AT EFV SET  99 FOR CHANNEL   1:
-  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   334.05     BOHR WITH 1/A(K=0) =  -0.2452112801E-02 BOHR^-1
-  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   330.75     BOHR WITH   A(K=0) =   -407.8025797     BOHR
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   334.05     BOHR WITH 1/A(K=0) =  -0.2452110911E-02 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   330.75     BOHR WITH   A(K=0) =   -407.8028939     BOHR
 
   EFFECTIVE RANGE AT EFV SET 100 FOR CHANNEL   1:
-  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   334.14     BOHR WITH 1/A(K=0) =  -0.2453792791E-02 BOHR^-1
-  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   330.83     BOHR WITH   A(K=0) =   -407.5233853     BOHR
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   334.14     BOHR WITH 1/A(K=0) =  -0.2453790910E-02 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   330.83     BOHR WITH   A(K=0) =   -407.5236976     BOHR
 
   EFFECTIVE RANGE AT EFV SET 101 FOR CHANNEL   1:
-  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   334.22     BOHR WITH 1/A(K=0) =  -0.2455421378E-02 BOHR^-1
-  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   330.91     BOHR WITH   A(K=0) =   -407.2530980     BOHR
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   334.22     BOHR WITH 1/A(K=0) =  -0.2455419459E-02 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   330.92     BOHR WITH   A(K=0) =   -407.2534163     BOHR
 
 
   ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
@@ -2533,11 +2534,10 @@
  |                Non-reactive quantum scattering calculations                |
  |                     on atomic and molecular collisions                     |
  |                                                                            |
- |              Copyright (C) 2022 J. M. Hutson & C. R. Le Sueur              |
+ |              Copyright (C) 2025 J. M. Hutson & C. R. Le Sueur              |
  |                                                                            |
- |                               Version 2022.0                               |
+ |                               Version 2025.0                               |
  |                                                                            |
- |                    This run used     263.35 cpu secs and                   |
- |               6789 of the allocated   1000000 words of storage             |
+ |                      This run used     213.43 cpu secs                     |
  |                                                                            |
   ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---

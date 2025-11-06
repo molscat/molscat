@@ -3,11 +3,11 @@
  |                Non-reactive quantum scattering calculations                |
  |                     on atomic and molecular collisions                     |
  |                                                                            |
- |              Copyright (C) 2022 J. M. Hutson & C. R. Le Sueur              |
+ |              Copyright (C) 2025 J. M. Hutson & C. R. Le Sueur              |
  |                                                                            |
- |                               Version 2022.0                               |
+ |                               Version 2025.0                               |
  |                                                                            |
- |                       Run on 31 May 2022   at 10:30:12                     |
+ |                       Run on 06 Nov 2025   at 16:43:01                     |
  |                                                                            |
   ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
 
@@ -21,17 +21,14 @@
 
   J. M. Hutson & C. R. Le Sueur, MOLSCAT: a program for non-reactive quantum
   scattering calculation on atomic and molecular collisions,
-  Version 2022.0, https//github.com/molscat/molscat
+  Version 2025.0, https//github.com/molscat/molscat
 
   and the published paper:
 
   J. M. Hutson & C. R. Le Sueur, Comput. Phys. Commun., 241, 9-18 (2019).
 
 
-  USING CODATA 2018 RECOMMENDED VALUES OF FUNDAMENTAL PHYSICAL CONSTANTS
-
-  MEMORY ALLOCATED TO MAIN WORKING ARRAY IS   1000000 (8-BYTE) WORDS (    7.63 MB)
-  2 INTEGERS CAN BE STORED IN EACH WORD.
+  USING CODATA 2022 RECOMMENDED VALUES OF FUNDAMENTAL PHYSICAL CONSTANTS
 
   PRINT LEVEL (IPRINT) = 12     OTHER PRINT CONTROLS  ISIGPR = 0
 
@@ -88,7 +85,7 @@
   ALL LENGTHS ARE IN UNITS OF ANGSTROM UNLESS OTHERWISE STATED
 
   NO DUPLICATED SETS OF INDICES IN LAMBDA ARRAY
-  INTERACTION MATRIX USES   1 BLOCKS OF VL ARRAY FOR R-DEPENDENT TERMS IN POTENTIAL
+  INTERACTION MATRIX USES   3 BLOCKS OF VL ARRAY FOR R-DEPENDENT TERMS IN POTENTIAL
 
   ======================================================================================================================
 
@@ -143,7 +140,7 @@
 
   ======================================================================================================================
 
-  INITIALIZATION DONE.  TIME WAS   0.00 CPU SECS.        23 WORDS OF STORAGE USED.
+  INITIALIZATION DONE.  TIME WAS   0.00 CPU SECS.
 
   =========================== 2-channel system with Lennard-Jones 12-6 potentials: S matrix ============================
 
@@ -159,22 +156,24 @@
         2           2              0         2                 0             2       100.0000000
 
   COUPLED EQUATIONS PROPAGATED AT                                 ENERGY =   200.0000000     CM-1    
-  INNER CLASSICAL TURNING POINT AT R =    0.9487
-  RADIAL PROPAGATION WILL START AT R =    0.6915
+  INNER CLASSICAL TURNING POINT AT R =     0.949
+  RADIAL PROPAGATION WILL START AT R =     0.697
 
-  MAPROP. LOG-DERIVATIVE MATRIX PROPAGATED FROM       0.6915  TO  1.5000      IN    809  STEPS.
+  MAPROP. LOG-DERIVATIVE MATRIX PROPAGATED FROM       0.6968  TO  1.5000      IN    803  STEPS.
+  TIME TAKEN FOR CURRENT PROPAGATION:        0.00 CPU SECS.
 
   AIPROP. LOG-DERIVATIVE MATRIX PROPAGATED FROM       1.5000  TO  6.0000      IN     76  STEPS.
+  TIME TAKEN FOR CURRENT PROPAGATION:        0.00 CPU SECS.
 
   OPEN CHANNEL   WVEC (1/ANG.)    CHANNEL           L    PAIR LEVEL            PAIR ENERGY (CM-1)
-           1    1.54039375E+01         1            0         1              0.000000000000
-           2    1.08922287E+01         2            0         2            100.000000000000
+           1    1.54039375E+01         1            0         1                  0.000000000000
+           2    1.08922287E+01         2            0         2                100.000000000000
 
   ROW  COL       S**2                  PHASE/2PI              RE (S)                 IM (S)
-    1    1 9.9975957086441E-001   1.7448435629297E-002   9.9387695590410E-001   1.0939911968210E-001
-    2    1 2.4042913559031E-004  -4.8388056054868E-001  -1.5426316883254E-002  -1.5677636963942E-003
-    1    2 2.4042913559031E-004  -4.8388056054868E-001  -1.5426316883254E-002  -1.5677636963942E-003
-    2    2 9.9975957086441E-001  -4.8520955672665E-001  -9.9556530943398E-001  -9.2786235595743E-002
+    1    1 9.9975957085920E-001   1.7448432686324E-002   9.9387695792443E-001   1.0939910130379E-001
+    2    1 2.4042914079565E-004  -4.8388056296530E-001  -1.5426317074051E-002  -1.5677634791307E-003
+    1    2 2.4042914079565E-004  -4.8388056296530E-001  -1.5426317074051E-002  -1.5677634791307E-003
+    2    2 9.9975957085920E-001  -4.8520955861693E-001  -9.9556531053341E-001  -9.2786223771228E-002
 
   FOR JTOT =    0, SYMMETRY BLOCK =  2, ENERGY(  1) =  200.0000    : MAX DIAG & OFF-DIAG =  1.06E-01 &   6.37E-06
 
@@ -186,12 +185,11 @@
  |                Non-reactive quantum scattering calculations                |
  |                     on atomic and molecular collisions                     |
  |                                                                            |
- |              Copyright (C) 2022 J. M. Hutson & C. R. Le Sueur              |
+ |              Copyright (C) 2025 J. M. Hutson & C. R. Le Sueur              |
  |                                                                            |
- |                               Version 2022.0                               |
+ |                               Version 2025.0                               |
  |                                                                            |
- |                    This run used       0.00 cpu secs and                   |
- |                 79 of the allocated   1000000 words of storage             |
+ |                      This run used       0.00 cpu secs                     |
  |                                                                            |
   ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
   ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
@@ -199,11 +197,11 @@
  |                Non-reactive quantum scattering calculations                |
  |                     on atomic and molecular collisions                     |
  |                                                                            |
- |              Copyright (C) 2022 J. M. Hutson & C. R. Le Sueur              |
+ |              Copyright (C) 2025 J. M. Hutson & C. R. Le Sueur              |
  |                                                                            |
- |                               Version 2022.0                               |
+ |                               Version 2025.0                               |
  |                                                                            |
- |                       Run on 31 May 2022   at 10:30:12                     |
+ |                       Run on 06 Nov 2025   at 16:43:01                     |
  |                                                                            |
   ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
 
@@ -217,17 +215,14 @@
 
   J. M. Hutson & C. R. Le Sueur, MOLSCAT: a program for non-reactive quantum
   scattering calculation on atomic and molecular collisions,
-  Version 2022.0, https//github.com/molscat/molscat
+  Version 2025.0, https//github.com/molscat/molscat
 
   and the published paper:
 
   J. M. Hutson & C. R. Le Sueur, Comput. Phys. Commun., 241, 9-18 (2019).
 
 
-  USING CODATA 2018 RECOMMENDED VALUES OF FUNDAMENTAL PHYSICAL CONSTANTS
-
-  MEMORY ALLOCATED TO MAIN WORKING ARRAY IS   1000000 (8-BYTE) WORDS (    7.63 MB)
-  2 INTEGERS CAN BE STORED IN EACH WORD.
+  USING CODATA 2022 RECOMMENDED VALUES OF FUNDAMENTAL PHYSICAL CONSTANTS
 
   PRINT LEVEL (IPRINT) =  6     OTHER PRINT CONTROLS  ISIGPR = 0
 
@@ -286,7 +281,7 @@
   ALL LENGTHS ARE IN UNITS OF ANGSTROM UNLESS OTHERWISE STATED
 
   NO DUPLICATED SETS OF INDICES IN LAMBDA ARRAY
-  INTERACTION MATRIX USES   1 BLOCKS OF VL ARRAY FOR R-DEPENDENT TERMS IN POTENTIAL
+  INTERACTION MATRIX USES   3 BLOCKS OF VL ARRAY FOR R-DEPENDENT TERMS IN POTENTIAL
 
   ======================================================================================================================
 
@@ -356,13 +351,13 @@
 
   CALCULATION(S) WILL BE FOR SYMMETRY BLOCK   2
 
-  EIGENPHASE SUMMARY WILL BE WRITTEN TO UNIT  1
+  EIGENPHASE SUMMARY WILL BE WRITTEN TO UNIT 10
 
   STATE-TO-STATE INTEGRAL CROSS-SECTIONS WILL BE COMPUTED BUT NOT STORED ON DISK
 
   ======================================================================================================================
 
-  INITIALIZATION DONE.  TIME WAS   0.00 CPU SECS.        99 WORDS OF STORAGE USED.
+  INITIALIZATION DONE.  TIME WAS   0.00 CPU SECS.
 
   =========================== 2-channel system with Lennard-Jones 12-6 potentials: resonance ===========================
 
@@ -401,19 +396,19 @@
 
   - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
-  S-MATRIX EIGENPHASE SUM, EPSUM/PI =  9.94557
+  S-MATRIX EIGENPHASE SUM, EPSUM/PI =  9.94558
 
   FOR JTOT =    0, SYMMETRY BLOCK =  2, ENERGY(  5) =  42.83840    : MAX DIAG & OFF-DIAG =  7.16E-03 &   0.00E+00
 
   - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
-  S-MATRIX EIGENPHASE SUM, EPSUM/PI =  9.95064
+  S-MATRIX EIGENPHASE SUM, EPSUM/PI =  9.95065
 
   FOR JTOT =    0, SYMMETRY BLOCK =  2, ENERGY(  6) =  42.83850    : MAX DIAG & OFF-DIAG =  5.90E-03 &   0.00E+00
 
   - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
-  S-MATRIX EIGENPHASE SUM, EPSUM/PI =  9.95754
+  S-MATRIX EIGENPHASE SUM, EPSUM/PI =  9.95755
 
   FOR JTOT =    0, SYMMETRY BLOCK =  2, ENERGY(  7) =  42.83860    : MAX DIAG & OFF-DIAG =  4.37E-03 &   0.00E+00
 
@@ -425,49 +420,49 @@
 
   - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
-  S-MATRIX EIGENPHASE SUM, EPSUM/PI =  9.98291
+  S-MATRIX EIGENPHASE SUM, EPSUM/PI =  9.98292
 
   FOR JTOT =    0, SYMMETRY BLOCK =  2, ENERGY(  9) =  42.83880    : MAX DIAG & OFF-DIAG =  7.12E-04 &   0.00E+00
 
   - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
-  S-MATRIX EIGENPHASE SUM, EPSUM/PI = 10.01006
+  S-MATRIX EIGENPHASE SUM, EPSUM/PI = 10.01007
 
   FOR JTOT =    0, SYMMETRY BLOCK =  2, ENERGY( 10) =  42.83890    : MAX DIAG & OFF-DIAG =  2.47E-04 &   0.00E+00
 
   - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
-  S-MATRIX EIGENPHASE SUM, EPSUM/PI = 10.06862
+  S-MATRIX EIGENPHASE SUM, EPSUM/PI = 10.06865
 
   FOR JTOT =    0, SYMMETRY BLOCK =  2, ENERGY( 11) =  42.83900    : MAX DIAG & OFF-DIAG =  1.13E-02 &   0.00E+00
 
   - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
-  S-MATRIX EIGENPHASE SUM, EPSUM/PI = 10.24395
+  S-MATRIX EIGENPHASE SUM, EPSUM/PI = 10.24402
 
   FOR JTOT =    0, SYMMETRY BLOCK =  2, ENERGY( 12) =  42.83910    : MAX DIAG & OFF-DIAG =  1.19E-01 &   0.00E+00
 
   - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
-  S-MATRIX EIGENPHASE SUM, EPSUM/PI = 10.60736
+  S-MATRIX EIGENPHASE SUM, EPSUM/PI = 10.60743
 
   FOR JTOT =    0, SYMMETRY BLOCK =  2, ENERGY( 13) =  42.83920    : MAX DIAG & OFF-DIAG =  2.20E-01 &   0.00E+00
 
   - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
-  S-MATRIX EIGENPHASE SUM, EPSUM/PI = 10.76425
+  S-MATRIX EIGENPHASE SUM, EPSUM/PI = 10.76427
 
   FOR JTOT =    0, SYMMETRY BLOCK =  2, ENERGY( 14) =  42.83930    : MAX DIAG & OFF-DIAG =  1.13E-01 &   0.00E+00
 
   - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
-  S-MATRIX EIGENPHASE SUM, EPSUM/PI = 10.81822
+  S-MATRIX EIGENPHASE SUM, EPSUM/PI = 10.81823
 
   FOR JTOT =    0, SYMMETRY BLOCK =  2, ENERGY( 15) =  42.83940    : MAX DIAG & OFF-DIAG =  7.22E-02 &   0.00E+00
 
   - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
-  S-MATRIX EIGENPHASE SUM, EPSUM/PI = 10.84384
+  S-MATRIX EIGENPHASE SUM, EPSUM/PI = 10.84385
 
   FOR JTOT =    0, SYMMETRY BLOCK =  2, ENERGY( 16) =  42.83950    : MAX DIAG & OFF-DIAG =  5.49E-02 &   0.00E+00
 
@@ -485,7 +480,7 @@
 
   - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
-  S-MATRIX EIGENPHASE SUM, EPSUM/PI = 10.87488
+  S-MATRIX EIGENPHASE SUM, EPSUM/PI = 10.87489
 
   FOR JTOT =    0, SYMMETRY BLOCK =  2, ENERGY( 19) =  42.83980    : MAX DIAG & OFF-DIAG =  3.63E-02 &   0.00E+00
 
@@ -503,11 +498,10 @@
  |                Non-reactive quantum scattering calculations                |
  |                     on atomic and molecular collisions                     |
  |                                                                            |
- |              Copyright (C) 2022 J. M. Hutson & C. R. Le Sueur              |
+ |              Copyright (C) 2025 J. M. Hutson & C. R. Le Sueur              |
  |                                                                            |
- |                               Version 2022.0                               |
+ |                               Version 2025.0                               |
  |                                                                            |
- |                    This run used       0.04 cpu secs and                   |
- |                155 of the allocated   1000000 words of storage             |
+ |                      This run used       0.03 cpu secs                     |
  |                                                                            |
   ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---

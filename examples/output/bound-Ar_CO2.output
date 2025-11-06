@@ -2,11 +2,11 @@
  |                                                                            |
  |          Bound states of interacting pairs of atoms and molecules          |
  |                                                                            |
- |              Copyright (C) 2022 J. M. Hutson & C. R. Le Sueur              |
+ |              Copyright (C) 2025 J. M. Hutson & C. R. Le Sueur              |
  |                                                                            |
- |                               Version 2022.0                               |
+ |                               Version 2025.0                               |
  |                                                                            |
- |                       Run on 31 May 2022   at 10:31:18                     |
+ |                       Run on 06 Nov 2025   at 16:43:54                     |
  |                                                                            |
   -- BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND --
 
@@ -20,16 +20,14 @@
 
   J. M. Hutson & C. R. Le Sueur, BOUND: a program for bound states of
   interacting pairs of atoms and molecules,
-  Version 2022.0, https//github.com/molscat/molscat
+  Version 2025.0, https//github.com/molscat/molscat
 
   and the published paper:
 
   J. M. Hutson & C. R. Le Sueur, Comput. Phys. Commun., 241, 1-8 (2019).
 
 
-  USING CODATA 2018 RECOMMENDED VALUES OF FUNDAMENTAL PHYSICAL CONSTANTS
-
-  MEMORY ALLOCATED TO MAIN WORKING ARRAY IS   1000000 (8-BYTE) WORDS (    7.63 MB)
+  USING CODATA 2022 RECOMMENDED VALUES OF FUNDAMENTAL PHYSICAL CONSTANTS
 
   PRINT LEVEL (IPRINT) =  5
 
@@ -218,7 +216,7 @@
 
   CALCULATIONS WILL BE FOR SYMMETRY BLOCK   2  ONLY
 
-  INITIALIZATION DONE.  TIME WAS   0.00 CPU SECS.       178 WORDS OF STORAGE USED.
+  INITIALIZATION DONE.  TIME WAS   0.00 CPU SECS.
 
   ============================ Ar-CO2 on split repulsion potential of JCP 105, 9130 (1996) =============================
   SCRATCH FILE OPENED ON UNIT           30
@@ -255,15 +253,15 @@
 
   CONVERGED ON STATE NUMBER     1 AT                              ENERGY =  -165.6289795     CM-1  
 
-  SMALLEST EIGENVALUE OF MATCHING MATRIX IS NUMBER  1 =  9.94760E-13
+  SMALLEST EIGENVALUE OF MATCHING MATRIX IS NUMBER  1 = -5.40012E-13
 
   WITH PRINCIPAL EIGENVECTOR COMPONENTS
   CHAN     VEC    VEC**2   L   QUANTUM NUMBERS
 
-   1    0.5682    0.3228   0   0   1
-   2   -0.5737    0.3291   2   2   2
-   3    0.4544    0.2065   4   4   3
-   4   -0.3114    0.0970   6   6   4
+   1   -0.5682    0.3228   0   0   1
+   2    0.5737    0.3291   2   2   2
+   3   -0.4544    0.2065   4   4   3
+   4    0.3114    0.0970   6   6   4
 
   - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
@@ -271,7 +269,7 @@
 
   CONVERGED ON STATE NUMBER     2 AT                              ENERGY =  -131.1638128     CM-1  
 
-  SMALLEST EIGENVALUE OF MATCHING MATRIX IS NUMBER  1 =  2.14958E-12
+  SMALLEST EIGENVALUE OF MATCHING MATRIX IS NUMBER  1 =  1.33271E-11
 
   WITH PRINCIPAL EIGENVECTOR COMPONENTS
   CHAN     VEC    VEC**2   L   QUANTUM NUMBERS
@@ -304,11 +302,10 @@
  |                                                                            |
  |          Bound states of interacting pairs of atoms and molecules          |
  |                                                                            |
- |              Copyright (C) 2022 J. M. Hutson & C. R. Le Sueur              |
+ |              Copyright (C) 2025 J. M. Hutson & C. R. Le Sueur              |
  |                                                                            |
- |                               Version 2022.0                               |
+ |                               Version 2025.0                               |
  |                                                                            |
- |                    This run used       0.05 cpu secs and                   |
- |               2416 of the allocated   1000000 words of storage             |
+ |                      This run used       0.04 cpu secs                     |
  |                                                                            |
   -- BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND ------ BOUND --
