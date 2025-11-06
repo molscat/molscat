@@ -1,5 +1,5 @@
 recursive subroutine multop(i_op,n_ops,eval,evec,degtol,nn,ncurr,ibeg,iprint)
-!  Copyright (C) 2020 J. M. Hutson & C. R. Le Sueur
+!  Copyright (C) 2025 J. M. Hutson & C. R. Le Sueur
 !  Distributed under the GNU General Public License, version 3
 USE potential, only: nconst,nrsq
 ! This subroutine diagonalises the (long-range) Hamiltonian matrix in order to
@@ -139,6 +139,7 @@ enddo
 nsets=iset
 
 ! loop over degenerate sets of eigenvalues
+!  Start of long DO loop #1
 do iset=1,nsets
   jbeg=setbeg(iset)+ibeg-1
   jend=setend(iset)+ibeg-1
@@ -178,6 +179,7 @@ do iset=1,nsets
   endif
 
 enddo
+!  End of long DO loop #1
 
 deallocate (setbeg,setend)
 

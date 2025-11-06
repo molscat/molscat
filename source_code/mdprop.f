@@ -1,9 +1,9 @@
       SUBROUTINE MDPROP(N,MXLAM,NHAM,
-     1                  Y,U,VL,IV,EINT,CENT,P,
-     2                  Y14,Y23,DIAG,W,W2,W3,
-     3                  RSTART,RSTOP,NSTEP,DR,NODES,IREC,WAVE,
-     4                  ERED,EP2RU,CM2RU,RSCALE,IPRINT)
-C  Copyright (C) 2022 J. M. Hutson & C. R. Le Sueur
+     1                  Y,VL,IV,EINT,CENT,
+     2                  RSTART,RSTOP,NSTEP,DR,NODES,IREC,WAVE,
+     3                  ERED,EP2RU,CM2RU,RSCALE,IPRINT)
+      USE potential, ONLY: NCONST, NRSQ
+C  Copyright (C) 2025 J. M. Hutson & C. R. Le Sueur
 C  Distributed under the GNU General Public License, version 3
 C
 C  ROUTINE ORIGINALLY BY DE Manolopoulos, 1986.
@@ -40,9 +40,10 @@ C  BUT {\CAL Y}_{2 AND 3} ARE THE SAME AS EACH OTHER AND THE SAME FOR
 C  EACH HALF SECTOR, SO W*W2 IS EXACTLY THE EXPRESSION NEEDED.
 C
       LOGICAL WAVE
-      DIMENSION U(N,N),Y(N,N),Y14(N),Y23(N),DIAG(N)
-      DIMENSION P(MXLAM),VL(2),IV(2),EINT(N),CENT(N)
-      DIMENSION W(N,N),W2(N,N),W3(N,N)
+      DIMENSION Y(N,N)
+      DIMENSION VL(*),IV(*),EINT(N),CENT(N)
+      ALLOCATABLE :: W(:,:),W2(:,:),W3(:,:),Y14(:),Y23(:),DIAG(:),
+     1               P(:),U(:,:)
 C  COMMON BLOCK TO DESCRIBE WHICH DRIVER IS USED
       CHARACTER(1) CDRIVE
       COMMON /CNTROL/ CDRIVE
@@ -72,20 +73,24 @@ C
 C  INITIALISATION OF Y USES WHOLE POTENTIAL, NOT JUST RESIDUAL.
 C  CORRECTION FOR THIS WILL BE ADDED LATER
 C
+      ALLOCATE (DIAG(N),U(N,N))
       IF (IREAD) THEN
         READ(ISCRU) R,U
-        DO 130 I=1,N
-  130     U(I,I)=U(I,I)-ESHIFT
+        DO I=1,N
+          U(I,I)=U(I,I)-ESHIFT
+        ENDDO
       ELSE
+        ALLOCATE (P(MXLAM+NCONST+NRSQ))
         CALL HAMMAT(U,N,R,P,VL,IV,ERED,EINT,CENT,EP2RU,CM2RU,
      1              RSCALE,DIAG,MXLAM,NHAM,IPRINT)
         IF (IWRITE) WRITE(ISCRU) R,U
       ENDIF
 
-      DO 160 J=1,N
-      DO 160 I=J,N
+      DO J=1,N
+      DO I=J,N
         Y(I,J)=H*Y(I,J)+D1*U(I,J)
-  160 CONTINUE
+      ENDDO
+      ENDDO
 C  NOW Y CONTAINS H{\HAT Y}(R_{BEGIN})+H^2/3(U(R_{BEGIN})+W_{REF})
 C
 C  MAIN LOOP OVER STEPS
@@ -93,12 +98,16 @@ C  LINES UP TO LABEL 320 ACCUMULATE
 C  HY(C) + Y14 + HQ(C) = 2Y14 + 2HQ(C) - Y23 [HY(A)+Y14+HQ(A)]^-1 Y23
 C  WHICH IS NEEDED TO INITIALIZE SECOND HALF-SECTOR
 C
-      DO 500 KSTEP=1,NSTEP
+      ALLOCATE (Y14(N),Y23(N))
+      IF (WAVE) ALLOCATE (W(N,N),W2(N,N),W3(N,N))
+!  Start of long DO loop #1
+      DO KSTEP=1,NSTEP
+!  Start of long IF block #1
         IF (IREAD) THEN
           READ(ISCRU) R,DIAG,U
-          DO 180 I=1,N
+          DO I=1,N
             DIAG(I)=DIAG(I)-ESHIFT
- 180      CONTINUE
+          ENDDO
         ELSE
 C
 C  CALCULATE 2HQ(C) = [0.125 I - (1/16) (H^2/3) U(C)]^-1 - 8 I
@@ -109,27 +118,29 @@ C
           CALL HAMMAT(U,N,R,P,VL,IV,ERED,EINT,CENT,EP2RU,CM2RU,
      1                RSCALE,DIAG,MXLAM,NHAM,IPRINT)
 C  U HERE IS U(C)+W_{REF}
-          DO 200 J=1,N
-          DO 200 I=J,N
+          DO J=1,N
+          DO I=J,N
             U(I,J)=D4*U(I,J)
- 200      CONTINUE
+          ENDDO
+          ENDDO
 C  NOW U IS -H^2/(3*16)(U(C)+W_{REF})
-          DO 220 I=1,N
+          DO I=1,N
             U(I,I)=0.125D0
- 220      CONTINUE
+          ENDDO
 C  NOW U IS I/8-H^2/(3*16)(U(C))
           CALL SYMINV(U,N,N,KOUNT)
           IF (KOUNT.GT.N) GOTO 900
           NSAVE=NSAVE+KOUNT
-          DO 240 I=1,N
+          DO I=1,N
             U(I,I)=U(I,I)-8.D0
- 240      CONTINUE
+          ENDDO
 C  NOW U IS 8[I-H^2/6*U(C)]^{-1}-8I = 2HQ(C) (SEE EQN 12 OF MANOLOPOULOS
 C  PAPER)
           IF (IWRITE) WRITE(ISCRU) R,DIAG,U
         ENDIF
+!  End of long IF block #1
 C
-        DO 300 I=1,N
+        DO I=1,N
           WREF=DIAG(I)
 C  HALF ANGLE FORMULAE ARE USED TO PRODUCE COT/COSEC OR COTH/COSECH
           ARG=HALF*SQRT(ABS(WREF))
@@ -150,7 +161,7 @@ C  NEXT LINE CORRECTS FOR USING THE COMPLETE POTENTIAL MATRIX
 C  IN INITIALISATION OF Y AND CALL TO HAMMAT BELOW
           Y14(I)=Y14(I)-D1*DIAG(I)
           Y(I,I)=Y(I,I)+Y14(I)
- 300    CONTINUE
+        ENDDO
 C  NOW Y14 CONTAINS (HY1(A,C) = HY4(A,C))-H^2/3*W_REF
 C  AND Y CONTAINS H({\HAT Y}(A)+{\CAL Y}_1(A,C))
 C
@@ -159,17 +170,19 @@ C
         NODES=NODES+KOUNT
 C
         IF (WAVE) THEN
-          DO 310 J=1,N
-          DO 310 I=J,N
+          DO J=1,N
+          DO I=J,N
             W(I,J)=Y(I,J)
- 310      CONTINUE
+          ENDDO
+          ENDDO
 C  W NOW CONTAINS 1/H[Y(A)+{\CAL Y}_1(A,C)]^{-1}
         ENDIF
 C
-        DO 320 J=1,N
-        DO 320 I=J,N
+        DO J=1,N
+        DO I=J,N
           Y(I,J)=U(I,J)-Y23(I)*Y(I,J)*Y23(J)
- 320    CONTINUE
+        ENDDO
+        ENDDO
 C  NOW Y CONTAINS H{\CAL Y}_1(C,B)+
 C     H[{\CAL Y}_4(A,C)
 C          -{\CAL Y}_3(A,C)[{\HAT Y}(A)+{\CAL Y}_1(A,C)]^{-1}{\CAL Y}_2(A,C)]
@@ -183,47 +196,50 @@ C  CONSTRUCTION OF SCATTERING WAVEFUNCTION IS SLIGHLY DIFFERENT...
         IF (KSTEP.EQ.NSTEP .OR. (WAVE .AND. CDRIVE.EQ.'M')) D2=D1
         IF (IREAD) THEN
           READ(ISCRU) R,U
-          DO 360 I=1,N
+          DO I=1,N
             U(I,I)=U(I,I)-D2*ESHIFT
- 360      CONTINUE
+          ENDDO
         ELSE
           R=R+H
           CALL HAMMAT(U,N,R,P,VL,IV,ERED,EINT,CENT,EP2RU,CM2RU,
      1                RSCALE,DIAG,MXLAM,NHAM,IPRINT)
-          DO 380 J=1,N
-          DO 380 I=J,N
+          DO J=1,N
+          DO I=J,N
             U(I,J)=D2*U(I,J)
- 380      CONTINUE
+          ENDDO
+          ENDDO
 C  NOW U CONTAINS 2H^2/3(U(B)+W_{REF}(C,B))
 C  BUT NOTE THAT U(B)+W_{REF}(C,B)=U(A_{NEXT})+W_{REF}(NEXT)
           IF (IWRITE) WRITE(ISCRU) R,U
         ENDIF
 C
-        DO 400 J=1,N
-        DO 400 I=J,N
+        DO J=1,N
+        DO I=J,N
           WAV=Y23(I)*Y(I,J)*Y23(J)
           IF (WAVE) W2(I,J)=WAV
 C  W2 CONTAINS  H{\CAL Y}_3(C,B)[Y(C)+{\CAL Y}_1(C,B)]^{-1}{\CAL Y}_2(C,B)
 C  WHICH EQUALS H{\CAL Y}_2(A,C)[Y(C)+{\CAL Y}_1(C,B)]^{-1}{\CAL Y}_2(C,B)
           Y(I,J)=U(I,J)-WAV
- 400    CONTINUE
+        ENDDO
+        ENDDO
 C  NOW Y CONTAINS
 C     H^2/3[U(A_{NEXT}+W_{REF}(NEXT)+U(B)+W_{REF}(C,B)]
 C      -H{\CAL Y}_3(C,B)[{\HAT Y}(C)+{\CAL Y}_1(C,B)]^{-1}{\CAL Y}_2(C,B)]
-        DO 420 I=1,N
+        DO I=1,N
           Y(I,I)=Y(I,I)+Y14(I)
- 420    CONTINUE
+        ENDDO
 C  AND NOW Y CONTAINS
 C  H^2/3[U(B)+U(A_{NEXT})+W_{REF}(NEXT)]
 C  +H[Y_4(C,B)-{\CAL Y}_3(A,C)[{\HAT Y}(A)+{\CAL Y}_1(A,C)]^{-1}{\CAL Y}_2(A,C)]
 C  = H[{\HAT Y}(A_{NEXT})+H/3(U(A_{NEXT})+W_{REF}(NEXT))]
 C
         IF (WAVE) THEN
-          DO 440 J=1,N
-          DO 440 I=J,N
+          DO J=1,N
+          DO I=J,N
             W(J,I)=W(I,J)
             W2(J,I)=W2(I,J)
- 440      CONTINUE
+          ENDDO
+          ENDDO
           CALL DGEMUL(W,N,'N',W2,N,'N',W3,N,N,N,N)
 C  W3 NOW CONTAINS THE MATRIX WHICH WILL PROPAGATE THE WAVEFUNCTION BACK
 C  FROM B TO A AS GIVEN BY EQN 10 OF THE THORNLEY PAPER
@@ -242,27 +258,32 @@ C  CONSTRUCTION OF SCATTERING WAVEFUNCTION IS SLIGHLY DIFFERENT...
 C  IN THE LAST ROUND OF THE PROPAGATION LOOP U=H^2/3(U(B)+W_{REF}), SO
 C  Y=H{\HAT Y}(R_{END})
 C
- 500  CONTINUE
+      ENDDO
+!  End of long DO loop #1
+      DEALLOCATE (DIAG,Y14,Y23,U)
+      IF (.NOT.IREAD) DEALLOCATE (P)
+      IF (WAVE) DEALLOCATE (W,W2,W3)
 C
 C  END OF LOOP OVER STEPS
 C
       HI=1.D0/H
-      DO 600 J=1,N
-      DO 600 I=J,N
+      DO J=1,N
+      DO I=J,N
         Y(I,J)=HI*Y(I,J)
         Y(J,I)=Y(I,J)
- 600  CONTINUE
+      ENDDO
+      ENDDO
 C
       IF (IWRITE) WRITE(ISCRU) NSAVE
       IF (IREAD)  READ (ISCRU) NSAVE
       NODES=NODES-NSAVE
       RETURN
 C
- 900  WRITE(6,1000) KSTEP
+  900 WRITE(6,1000) KSTEP
       STOP
- 910  WRITE(6,1010) IREC,IERR
+  910 WRITE(6,1010) IREC,IERR
       STOP
-1000  FORMAT(/' ***** MDPROP: MATRIX INVERSION ERROR AT STEP K = ',I6,
+ 1000 FORMAT(/' ***** MDPROP: MATRIX INVERSION ERROR AT STEP K = ',I6,
      &       '.  RUN HALTED.')
-1010  FORMAT(/' ***** MDPROP: ERROR WRITING TO WAVEFUNCTION FILE',2I6)
+ 1010 FORMAT(/' ***** MDPROP: ERROR WRITING TO WAVEFUNCTION FILE',2I6)
       END

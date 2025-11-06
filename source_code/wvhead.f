@@ -1,7 +1,7 @@
       SUBROUTINE WVHEAD(LABEL,ITYPE,IBOUND,NQN,URED,MUNIT,RUNIT,
      1                  EUNIT,CONLEN,RUNAME,EUNAME,EREF,IPRINT,IREF,
      2                  MONQN)
-C  Copyright (C) 2022 J. M. Hutson & C. R. Le Sueur
+C  Copyright (C) 2025 J. M. Hutson & C. R. Le Sueur
 C  Distributed under the GNU General Public License, version 3
       USE efvs, ONLY: EFV, EFVNAM, EFVUNT, IEFVST, ISVEFV, ITPSUB,
      e                NEFV, NEFVP
@@ -103,11 +103,12 @@ C  OPEN UNIT FOR STORING WAVEFUNCTIONS
   110   FORMAT(2X,A,A,(A:,', '))
 
 C  WRITE HEADER WHICH GOES ONCE AT THE TOP OF THE WAVEFUNCTION FILE
+!  Start of long IF block #1
       IF (IWAVEF) THEN
         WRITE(IWAVE,1010) 'CALCULATION FROM ',NPROGM,
      1                   ' OUTPUT FORMAT ',WAVEOF
  1010   FORMAT('# ',A,A:,A,A)
-        WRITE(IWAVE,1010) '# RUN LABEL: ',TRIM(LABEL)
+        WRITE(IWAVE,1010) 'RUN LABEL: ',TRIM(LABEL)
         IF (MUNIT.NE.1.D0)
      1    WRITE(IWAVE,1020) 'MASS   UNIT: ','          ',
      2                     MUNIT,' DALTON'
@@ -140,6 +141,7 @@ C  WRITE HEADER WHICH GOES ONCE AT THE TOP OF THE WAVEFUNCTION FILE
         WRITE(IWAVE) NEFV,ISVEFV,(EFVNAM(IEFV),EFVUNT(IEFV),IEFV=1,NEFV)
         WRITE(IWAVE) IWVSTP
       ENDIF
+!  End of long IF block #1
 
       RETURN
 C =========================================================== END OF WVHEAD
@@ -183,6 +185,7 @@ C  F2000 IN BDCTRL/F990 IN SCWAVE, WHICH IS 16 AT THE MOMENT
      1          TRIM(FLVAL)//'))'
 
 C  WRITE A HEADER FOR THIS PARTICULAR SYMMETRY BLOCK
+!  Start of long IF block #2
       IF (IWAVEF) THEN
         WRITE(IWAVE,2010) JTOT,IBLOCK,NBASIS
  2010   FORMAT('# JTOT, IBLOCK, NBASIS: ',2I4,I5)
@@ -228,6 +231,7 @@ C  WAVEFUNCTIONS ARE CALCULATED FOR
         ENDIF
         WRITE(IWAVE) NSETS
       ENDIF
+!  End of long IF block #2
 
       RETURN
 C =========================================================== END OF WVSBLK
@@ -298,7 +302,9 @@ C =========================================================== END OF WVSETS
 C  INFORMATION ABOUT THE PARTICULAR WAVEFUNCTION (ENERGY AND EITHER
 C  INCOMING CHANNEL, OR STATE NUMBER)
 
+!  Start of long IF block #3
       IF (IWAVEF) THEN
+!  Start of long IF block #4
         IF (CDRIVE.EQ.'M') THEN
           IF (EREF.NE.0.D0) THEN
             WRITE(IWAVE,4010) 'SCATTERING CHANNEL ',ICHAN,
@@ -335,6 +341,7 @@ C  INCOMING CHANNEL, OR STATE NUMBER)
           ENDIF
  4020     FORMAT('# ',A,I5,A,1P,11(A,' = ',G20.13,1X,A:,', '))
         ENDIF
+!  End of long IF block #4
         IF (ISTATE.LT.0) WRITE(IWAVE,4030)
  4030   FORMAT('# HAS NOT CONVERGED. BACK-SUBSTITUTION FOR FINAL',
      1         ' PROPAGATION FOLLOWS')
@@ -342,6 +349,7 @@ C  INCOMING CHANNEL, OR STATE NUMBER)
         WRITE(IWAVE) ISTATE,(ENOW-EREF)/EUNIT,EREF/EUNIT
         IF (LENEFV.GT.0) WRITE(IWAVE) (EFV(IEFV),IEFV=0,NEFVP)
       ENDIF
+!  End of long IF block #3
 
       RETURN
 C =========================================================== END OF WVCURR

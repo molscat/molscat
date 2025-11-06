@@ -19,7 +19,7 @@ C          VALUE) ELEMENT
 C  -------------------------------------------------------------------
       IMPLICIT DOUBLE PRECISION (A-H,O-Z)
       INTEGER IDAMAX, N, NA, NC
-      DIMENSION A(1)
+      DIMENSION A(*)
       NC = ( IDAMAX(N, A, NA) - 1) * NA + 1
       C = ABS( A(NC) )
       RETURN

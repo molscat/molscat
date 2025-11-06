@@ -11,11 +11,11 @@ C
       P0=1.D0
       P1=X
 
-      DO 100 K=3,N+1
+      DO K=3,N+1
         TEMP=(DBLE(2*K-3)*X*P1 - DBLE(K-2)*P0) / DBLE(K-1)
         P0=P1
         P1=TEMP
-  100 CONTINUE
+      ENDDO
 
       PLEG=P1
 

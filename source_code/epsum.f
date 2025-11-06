@@ -1,4 +1,4 @@
-      FUNCTION EPSUM(R,N,E)
+      FUNCTION EPSUM(R,N) !,E)
 C  Copyright (C) 2019 J. M. Hutson & C. R. Le Sueur
 C  Distributed under the GNU General Public License, version 3
 C
@@ -14,19 +14,21 @@ C  SEE ASHTON, CHILD AND HUTSON, J. CHEM. PHYS. 78, 4025 (1983).
 C
       IMPLICIT DOUBLE PRECISION (A-H,O-Z)
       SAVE SMLAST
-      DIMENSION R(N,N), E(N)
-      DATA PI/3.141592653589793238462643D0/
+      DIMENSION R(N,N) !, E(N)
+      PARAMETER (PI=3.141592653589793238462643D0)
       DATA SMLAST/10.D0/
+      ALLOCATABLE :: E(:)
 C
       IF (N.EQ.1) GOTO 200
-      IFAIL=0
+      ALLOCATE (E(N))
       CALL DIAGVL(R,N,N,E)
 C
       EPSUM=0.D0
-      DO 100 I=1,N
+      DO I=1,N
         X=ATAN(E(I))
         EPSUM=EPSUM+X
-  100 CONTINUE
+      ENDDO
+      DEALLOCATE (E)
 C
       GOTO 300
   200 EPSUM=ATAN(R(1,1))

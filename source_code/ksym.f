@@ -6,12 +6,13 @@ C  THIS SUBROUTINE SYMMETRISES THE MATRIX AK
       IMPLICIT DOUBLE PRECISION (A-H,O-Z)
       DIMENSION AK(N,N)
 
-      DO 10 I=1,N
-      DO 10 J=1,I
+      DO I=1,N
+      DO J=1,I
         TMP=0.5D0*(AK(I,J)+AK(J,I))
         AK(I,J)=TMP
         AK(J,I)=TMP
-   10 CONTINUE
+      ENDDO
+      ENDDO
 
       RETURN
       END

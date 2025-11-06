@@ -38,11 +38,12 @@ C  ---------------------------------------------------------------------
       IMPLICIT DOUBLE PRECISION (A-H,O-Z)
       INTEGER I, NCH
 C  ARRAYS, MUST BE DIMENSIONED AT LEAST NCH
-      DIMENSION EIGNOW(1), EIGOLD(1), HP(1)
+      DIMENSION EIGNOW(*), EIGOLD(*), HP(*)
+
       FACTOR = 2.D0 / (DRMID**2)
       CAY = 0.D0
       CDIAG = 0.D0
-      DO 30  I = 1 , NCH
+      DO  I = 1 , NCH
 C  ---------------------------------------------------------------------
 C  ESTIMATE SECOND DERIVATIVE OF WAVEVECTOR BY POWER SERIES EXPANSION
 C                                                        2   2    2
@@ -61,7 +62,7 @@ C  ---------------------------------------------------------------------
         W2P =  - FACTOR * (EIGNOW(I) - EIGOLD(I) + DRMID * HP(I))
         CDIAG = CDIAG + ABS(W2P)
         CAY = CAY + SQRT(ABS(EIGNOW(I)))
-30    CONTINUE
+      ENDDO
       CAY = CAY / DBLE(NCH)
       CDIAG = CDIAG / DBLE(NCH)
 C  CAY NOW CONTAINS AVERAGE WAVEVECTOR MAGNITUDE

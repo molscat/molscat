@@ -1,5 +1,5 @@
-      SUBROUTINE ASROT(J,EVEC,H,EVAL,NH)
-C  Copyright (C) 2022 J. M. Hutson & C. R. Le Sueur
+      SUBROUTINE ASROT(J,EVEC,EVAL,NH,IPRINT)
+C  Copyright (C) 2025 J. M. Hutson & C. R. Le Sueur
 C  Distributed under the GNU General Public License, version 3
       USE basis_data, ONLY: ROTI
 C  THIS SUBROUTINE SETS UP THE ASYMMETRIC ROTOR FUNCTIONS:
@@ -20,7 +20,8 @@ C            EVAL CONTAINS THE EIGENVALUES
 C
       IMPLICIT DOUBLE PRECISION (A-H,O-Z)
       LOGICAL TD,EVLIST
-      DIMENSION EVEC(NH,NH),H(NH,NH),EVAL(NH)
+      DIMENSION EVEC(NH,NH),EVAL(NH)
+      ALLOCATABLE H(:,:)
       DATA EVLIST/.FALSE./
 C
 C  DO THE ACTUAL CALCULATION FOR A GIVEN J
@@ -40,9 +41,10 @@ C
 C
       JJ=J*(J+1)
       NK=J+J+1
-      DO 100 IR=1,NK
+      ALLOCATE (H(NK,NK))
+      DO IR=1,NK
         KR=IR-J-1
-      DO 100 IC=1,IR
+      DO IC=1,IR
         KC=IC-J-1
         TERM=0.D0
         IF (KR.EQ.KC) THEN
@@ -59,12 +61,13 @@ C
      2                             (JJ-(KC+3)*(KC+4))))
         ENDIF
         H(IR,IC)=TERM
-  100 CONTINUE
+      ENDDO
+      ENDDO
 
       IFAIL=0
       CALL DIAGVC(H,NH,NK,EVAL,EVEC)
 C
-      WRITE(6,603) J,(EVAL(IC),IC=1,NK)
+      IF (IPRINT.GE.2) WRITE(6,603) J,(EVAL(IC),IC=1,NK)
   603 FORMAT(/'  CALCULATED ROTATIONAL LEVELS FOR J =',I3,' ARE'
      1       /(8X,9F12.5))
 C
@@ -74,16 +77,17 @@ C  ALSO PRINT SPHERICAL TOP SYMMETRY LABELS IF ANY DEGENERATE SETS
 C  ARE PRESENT.
 C  A, B AND C ARE PASSED ONLY TO CORRECT ORDER OF NEAR-DEGEN LEVELS
 C
-      CALL DMSYM(J,NK,EVAL,EVEC,H,A,B,C)
+      CALL DMSYM(J,NK,EVAL,EVEC,H,A,B,C,IPRINT)
+      DEALLOCATE (H)
 C
       IF (EVLIST) THEN
         WRITE(6,604)
   604   FORMAT(/'  EIGENVECTOR COEFFICIENTS:')
-        DO 200 IR=1,NK
+        DO IR=1,NK
           KR=IR-J-1
           WRITE(6,605) J,KR,(EVEC(IR,IC),IC=1,NK)
   605     FORMAT(2I4,9F12.8/(8X,9F12.8))
-  200   CONTINUE
+        ENDDO
       ENDIF
       RETURN
       END

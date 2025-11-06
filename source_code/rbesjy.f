@@ -1,5 +1,5 @@
       SUBROUTINE RBESJY (ELL,X, V_U, DV_U, V_Y, DV_Y )
-C  Copyright (C) 2022 J. M. Hutson & C. R. Le Sueur
+C  Copyright (C) 2025 J. M. Hutson & C. R. Le Sueur
 C  Distributed under the GNU General Public License, version 3
 C
 C------------------------------------------------------------------------
@@ -80,6 +80,7 @@ C  BEGIN BY CALCULATING Y(A,X) AND Y(A+1,X) FOR |A| <= 1/2
 C
       NA = INT(V+0.5D0)
       A = V-NA
+!  Start of long IF block #1
       IF (X.LT.XMIN) THEN
 C
 C  USING TEMME'S SERIES (BESSYA) FOR SMALL X
@@ -223,6 +224,7 @@ C
          F = D*(PA*S+QA*C)
          G = D*(QA1*S-PA1*C)
       ENDIF
+!  End of long IF block #1
 C
 C  NOW RECUR UPWARDS FROM Y(A,X) TO Y(V,X),
 C  SCALING TO AVOID OVERFLOW ALONG THE WAY
@@ -252,6 +254,7 @@ C
 C  FINALLY, CALCULATE J(V,X) AND DJ(V,X)/DX
 C
       VV = MAX(XMIN,V)
+!  Start of long IF block #2
       IF (X.GE.VV) THEN
 C
 C  USING UPWARD RECURSION IN THE CLASSICALLY ALLOWED REGION
@@ -322,6 +325,7 @@ C
          DJ = DJ/SJ
          EJ = DLOG(SJ)-EY
       ENDIF
+!  End of long IF block #2
       RETURN
       END
 C==============================================================================

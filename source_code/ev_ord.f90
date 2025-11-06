@@ -1,5 +1,5 @@
 subroutine ev_ord(evec,ibeg,ncurr,nn,nnctot,iconst,iprint)
-!  Copyright (C) 2019 J. M. Hutson & C. R. Le Sueur
+!  Copyright (C) 2025 J. M. Hutson & C. R. Le Sueur
 !  Distributed under the GNU General Public License, version 3
 !
 !  Written by CRLS 26-03-16
@@ -47,6 +47,7 @@ zmaskv=.false.
 zmaskc=.false.
 
 ! cycle round all the eigenvectors, eliminating them one-by-one
+!  Start of long DO loop #1
 outer: do i=1,ncurr-1
 
 ! for the remaining eigenvectors, find the largest unused component
@@ -145,6 +146,7 @@ outer: do i=1,ncurr-1
          write(6,*) ' Eigenvectors are thoroughly mixed.  Somewhat arbitrary', &
                     ' choices have been made'
        enddo outer
+!  End of long DO loop #1
 
 ! by now, just one vector and one component are not masked.
 do ivec=ibeg,iend

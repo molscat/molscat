@@ -8,28 +8,28 @@ C
 C  ON ENTRY: A, B ARE ARRAYS DIMENSIONED (N,N)
 C
       IMPLICIT DOUBLE PRECISION (A-H,O-Z)
-      DIMENSION A(1),B(1)
+      DIMENSION A(*),B(*)
 
       IND=-N
-      DO 1 I=1,N
+      DO I=1,N
         IND=IND+N
         VMAX=0.D0
         JMAX=0
 C  FIND MAXIMUM VALUE OF B IN COLUMN I
-        DO 2 J=1,N
-          IF (ABS(B(IND+J)).LT.VMAX) GOTO 2
+        DO J=1,N
+          IF (ABS(B(IND+J)).LT.VMAX) CYCLE
           JMAX=J
           VMAX=B(IND+JMAX)
-2       CONTINUE
+        ENDDO
         IF (JMAX.EQ.0) GOTO 999
 C  CHECK SIGN OF A FOR CORRESPONDING INDEX
         TEST=SIGN(B(IND+JMAX),A(IND+JMAX))
-        IF (TEST.EQ.B(IND+JMAX)) GOTO 1
+        IF (TEST.EQ.B(IND+JMAX)) CYCLE
 C  IF NEGATIVE CHANGE SIGNS OF ELEMENTS IN COLUMN I OF B
-        DO 3 J=1,N
+        DO J=1,N
           B(IND+J)=-B(IND+J)
-3       CONTINUE
-1     CONTINUE
+        ENDDO
+      ENDDO
       RETURN
 
 999   WRITE(6,100)

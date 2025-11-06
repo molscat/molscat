@@ -118,8 +118,12 @@ C  SET UP POWR
         POWRL=0.D0
       ENDIF
 
-      IF (IPROPS.EQ.9 .AND. TOLHIS.EQ.0.D0) THEN
-        IF (POWRS.EQ.unset) POWRS=0.D0
+      IF (IPROPS.EQ.9) THEN
+        IF (TOLHIS.EQ.0.D0) THEN
+          IF (POWRS.EQ.unset) POWRS=0.D0
+        ELSE
+          IF (POWRS.EQ.unset) POWRS=3.D0
+        ENDIF
       ELSE
         POWRS=0.D0
       ENDIF

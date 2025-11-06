@@ -11,7 +11,7 @@ C  INTEGRALS FOR THE CURRENT STEP WHICH ARE USED FOR
 C  THE STEP SIZE DETERMINATION ONLY.
 C-------------------------------------------------------------------
       LOGICAL IFIRST
-      DIMENSION CX(1),SX(1),XSQ(1),X(1)
+      DIMENSION CX(*),SX(*),XSQ(*),X(*)
       DIMENSION V0(N,N),V1(N,N),V2(N,N)
       DIMENSION EYE11(N,N),EYE22(N,N)
       DIMENSION EYE12(N,N),A1(N),A1P(N),A2(N),A2P(N)
@@ -52,7 +52,8 @@ C-------------------------------------------------------------------
 C  THE FOLLOWING IS USED WHEN CORRECTIONS TO THE SECOND
 C  DERIVATIVE OF THE POTENTIAL ARE DESIRED.
 C-------------------------------------------------------------------
-      DO 190 I = 1,N
+!  Start of long DO loop #1
+      DO I = 1,N
         XI = X(I)
         SXI = SX(I)
         CXI = CX(I)
@@ -65,7 +66,8 @@ C-------------------------------------------------------------------
         G5 = 2.D0*XSQI
         G6 = 0.5D0*G1
         G7 = G3*XSQI
-      DO 190 J = I,N
+!  Start of long DO loop #2
+      DO J = I,N
         XSQJ = XSQ(J)
         IF (I.EQ.J) GOTO 160
 
@@ -222,9 +224,12 @@ C-------------------------------------------------------------------
         EYE22(I,J) = A2P(I)*TERM3+A2(I)*TERM4+EYE22(I,J)
         EYE22(J,I) = EYE22(I,J)
         EYE12(I,J) = A1P(I)*TERM3+A1(I)*TERM4+EYE12(I,J)
-        IF (I.EQ.J) GOTO 190
+        IF (I.EQ.J) CYCLE
         EYE12(J,I) = A2P(I)*TERM1+A2(I)*TERM2+EYE12(J,I)
-  190 CONTINUE
+      ENDDO
+!  End of long DO loop #2
+      ENDDO
+!  End of long DO loop #1
       RETURN
 C----------------***END-PERT2***-------------------------------------
       END

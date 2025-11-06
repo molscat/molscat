@@ -11,12 +11,12 @@ C               OR 0 IF NO MATCH.
 C
       CHARACTER(1) LETTER,LSTR(N)
       IF (N.LE.0) GOTO 9000
-      DO 1000 I=1,N
-        IF (LSTR(I).NE.LETTER) GOTO 1000
+      DO I=1,N
+        IF (LSTR(I).NE.LETTER) CYCLE
         I4=I
         STSRCH=.TRUE.
         RETURN
- 1000 CONTINUE
+      ENDDO
 
  9000 STSRCH=.FALSE.
       I4=0

@@ -1,5 +1,5 @@
       module BASE9_SUITE
-C  Copyright (C) 2022 J. M. Hutson & C. R. Le Sueur
+C  Copyright (C) 2025 J. M. Hutson & C. R. Le Sueur
 C  Distributed under the GNU General Public License, version 3
 C
 C  CR Le Sueur and JM Hutson 2018-2022
@@ -109,6 +109,7 @@ C=========================================================================
       USE basis_data ! needed only if H_intl is diagonal
       USE potential, ONLY: NCONST
       USE base9_suite
+      USE pair_state, ONLY: JSIZE
       IMPLICIT NONE
 
       INTEGER, INTENT(OUT)      :: NQN, NBLOCK, NLABV, NSTATE,
@@ -178,30 +179,31 @@ c  and then assign values to the jstate array (iloop=2).
 c  jstate is differently ordered from jlevel and may include additional
 c  quantum numbers that do not affect the threshold energies
 
-c  if jlevel has been created, it makes sense to use if here rather than repeating the logic
+c  if jlevel has been created, it makes sense to use it here rather than repeating the logic
 
+!  Start of long IF block #1
       if (nconst.eq.0) then
         do iloop=1,2
-        istate=0
-        do ilevel=1,nlevel
-        iqn1=jlevel(1+nqlev*ilevel)
-c       iqn2=jlevel(2+nqlev*ilevel)
+          istate=0
+          do ilevel=1,nlevel
+            iqn1=jlevel(1+nqlev*ilevel)
+c           iqn2=jlevel(2+nqlev*ilevel)
 c  if there are additional quantum numbers needed to label pair states
 c  that do not affect the channel energy, include them here.
 c  this example is for an angular momentum that is the resultant of iqn1 and iqn2
-c       do iqncpl=abs(iqn1-iqn2),iqn1+iqn2
-          istate=istate+1
-              if (iloop.eq.2) then
-                jstate(istate)=iqn1
-c               jstate(istate+nstate)=iqn2         ! other quantum label(s)
-c               jstate(istate+nstate*2)=iqncpl     ! resultant of iqn1 and iqn2 if needed
+c         do iqncpl=abs(iqn1-iqn2),iqn1+iqn2
+            istate=istate+1
+            if (iloop.eq.2) then
+              jstate(istate)=iqn1
+c             jstate(istate+nstate)=iqn2         ! other quantum label(s)
+c             jstate(istate+nstate*2)=iqncpl     ! resultant of iqn1 and iqn2 if needed
 c  for nconst.eq.0, final element of jstate is a pointer to the elevel and jlevel arrays
-                jstate(istate+nstate*nqlev)=ilevel ! resultant of iqn1 and iqn2 if needed
-              endif
-c       enddo
-c       enddo
+              jstate(istate+nstate*nqlev)=ilevel ! resultant of iqn1 and iqn2 if needed
+            endif
+c         enddo
+c         enddo
+          enddo
         enddo
-      enddo
 
 c  alternatively, if jlevel was not created, this is the only place that
 c  the loops over allowed values of quantum numbers are needed
@@ -221,8 +223,15 @@ c         enddo
 c         enddo
           enddo
           nstate=istate
+c  set9 is called first with a temporary array for jstate, whose size is
+c  preset to a large number.  Here we check the size of that array, and if
+c  we need a larger one, this call will return without populating that array.
+c  Base will then call set9 again, this time with the permanent jstate array,
+c  preallocated to be the correct size.
+          if (iloop.eq.1 .and. nstate*nqn.gt.jsize) return
         enddo
       endif
+!  End of long IF block #1
 
       RETURN
       END SUBROUTINE SET9
@@ -326,6 +335,7 @@ c  if potential coefficients are to be obtained by quadrature and itypp=9,
 c  the points and weights must be defined here.
 c  This is complicated and seldom necessary, but the code might look something like this:
 
+!  Start of long IF block #2
       if (itypp.eq.9 .and. lvrtp) then
 
 c  set values for npts if not set in namelist
@@ -404,6 +414,7 @@ c  these arrays are no longer needed
         deallocate (fn1)
 c       deallocate (fn2) ! etc
       endif
+!  End of long IF block #2
 
       RETURN
       END SUBROUTINE POTIN9
@@ -501,13 +512,13 @@ c     INTEGER, INTENT(IN)           :: JJ1, JJ2
 c     RETURN
 c     END SUBROUTINE DEGEN9
 C=========================================================================
-c     SUBROUTINE THRSH9(IREF, MONQN, NQN, EREF, IPRINT)
+c     SUBROUTINE THRSH9(IREF, MONQN, NJLQN, EREF, IPRINT)
 c     USE base9_suite
 c     IMPLICIT NONE
 
 c     DOUBLE PRECISION, INTENT(OUT) :: EREF
 
-c     INTEGER, INTENT(IN)           :: IREF, MONQN(NQN), NQN, IPRINT
+c     INTEGER, INTENT(IN)           :: IREF, MONQN(NJLQN), NJLQN, IPRINT
 
 c     RETURN
 c     END SUBROUTINE THRSH9

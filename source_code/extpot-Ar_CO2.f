@@ -1,5 +1,5 @@
       FUNCTION EXTPOT(R,COSTH)
-C  Copyright (C) 2022 J. M. Hutson & C. R. Le Sueur
+C  Copyright (C) 2025 J. M. Hutson & C. R. Le Sueur
 C  Distributed under the GNU General Public License, version 3
       USE physical_constants, ONLY: bohr_to_Angstrom, hartree_in_inv_cm
 C
@@ -50,6 +50,7 @@ C  SITE-SITE OR CENTRAL EXPANSION.
 C
 C  SITE-SITE OVERLAP FIRST
 C
+!  Start of long IF block #1
       IF (ISITE.GT.0) THEN
 C
         T=-BOND/RR
@@ -62,14 +63,17 @@ C
         RO2=RR*TEMP
         COSO2=(COSTH+T)/TEMP
 C
-        DO 6 I=1,NLEGC
-    6   OLAM(I)=RLAM(I)*EXP(BFAC*BLAM(I)*(RREF-RR))
+        DO I=1,NLEGC
+        OLAM(I)=RLAM(I)*EXP(BFAC*BLAM(I)*(RREF-RR))
+        ENDDO
         OLAPC=SUMLEG(OLAM,NLEGC,COSTH)
-        DO 7 I=1,NLEGO
-    7   OLAM(I)=RLAM(NLEGC+I)*EXP(BFAC*BLAM(NLEGC+I)*(RREF-RO1))
+        DO I=1,NLEGO
+        OLAM(I)=RLAM(NLEGC+I)*EXP(BFAC*BLAM(NLEGC+I)*(RREF-RO1))
+        ENDDO
         OLAPO1=SUMLEG(OLAM,NLEGO,COSO1)
-        DO 8 I=1,NLEGO
-    8   OLAM(I)=RLAM(NLEGC+I)*EXP(BFAC*BLAM(NLEGC+I)*(RREF-RO2))
+        DO I=1,NLEGO
+        OLAM(I)=RLAM(NLEGC+I)*EXP(BFAC*BLAM(NLEGC+I)*(RREF-RO2))
+        ENDDO
         OLAPO2=SUMLEG(OLAM,NLEGO,-COSO2)
 C       WRITE(6,*) 'RC  =',RR ,'; OVERLAP C  =',OLAPC
 C       WRITE(6,*) 'RO1 =',RO1,'; OVERLAP O1 =',OLAPO1
@@ -87,6 +91,7 @@ C
 C       WRITE(6,*) 'OVERLAP =',OLAP
         V=(SFAC0+SFAC2*(1.5D0*COSTH*COSTH-0.5D0))*OLAP
       ENDIF
+!  End of long IF block #1
 C
 C  NOW GET DISTANCES AND ANGLES TO DISPERSION SITES,
 C  WHICH ARE NOT USUALLY AT THE ATOMS
@@ -157,8 +162,9 @@ C
       IF (ISITE.GT.0) THEN
         READ(5,*) NLEGC,NLEGO,RREF,BOND
         READ(5,*) (RLAM(I),BLAM(I),I=1,NLEGC+NLEGO)
-        DO 100 I=1,NLEGC+NLEGO
-  100   RLAM(I)=RLAM(I)*1.D-6
+        DO I=1,NLEGC+NLEGO
+        RLAM(I)=RLAM(I)*1.D-6
+        ENDDO
       ELSE
         READ(5,*) AOLAP
         READ(5,*) NLEGR

@@ -1,6 +1,6 @@
-      SUBROUTINE IOSOUT(ENERGY,QL,QLOLD,NVC,ITYPE,ATAU,LM,IXQL,
+      SUBROUTINE IOSOUT(ENERGY,QL,QLOLD,NVC,ITYPE,LM,IXQL,
      1                  LMAX,NIXQL,NQL,JTSTEP)
-C  Copyright (C) 2022 J. M. Hutson & C. R. Le Sueur
+C  Copyright (C) 2025 J. M. Hutson & C. R. Le Sueur
 C  Distributed under the GNU General Public License, version 3
       USE sizes, ONLY: MXJLVL
       USE angles, ONLY: ICNSYM, IHOMO
@@ -21,7 +21,6 @@ C  ALLOW FOR MXSIG OUTPUT LEVELS
       CHARACTER(4) LCODE(3),LQLT,LQLS
       DIMENSION QL(NVC,NVC,NQL),QLOLD(NVC,NVC)
       DIMENSION LM(3,LMAX),IXQL(NIXQL,NQL)
-      DIMENSION ATAU(2)
 C  STORAGE RESERVED FOR MAXIMUM OF MXSIG LEVELS
       DIMENSION SIG(MXSIG),SIG3(MXSIG),INDLEV(MXSIG)
 C
@@ -69,24 +68,25 @@ C  DETERMINE IF ALL CHANNELS ARE OPEN.  SINCE WE DON'T HAVE ACCESS
 C  TO NOPEN HERE, SIMPLY FIND THE HIGHEST 'CHANNEL' FOR WHICH WE
 C  HAVE NONZERO QL() OR QLOLD()
       NOUT=0
-      DO 2300 IV=1,NVC
+      DO IV=1,NVC
 
 C  FIRST CHECK QLOLD
-        DO 2301 IVP=1,NVC
+        DO IVP=1,NVC
           IF (QLOLD(IV,IVP).NE.0.D0) GOTO 2390
 
- 2301   CONTINUE
+        ENDDO
 
 C  THEN CHECK QL()
-        DO 2302 IVP=1,NVC
-        DO 2302 IL=1,NQL
+        DO IVP=1,NVC
+        DO IL=1,NQL
           IF (QL(IV,IVP,IL).NE.0.D0) GOTO 2390
 
- 2302   CONTINUE
-        GOTO 2300
+        ENDDO
+        ENDDO
+        CYCLE
 
  2390   NOUT=IV
- 2300 CONTINUE
+      ENDDO
 
       IF (NOUT.NE.NVC) WRITE(6,620) NOUT
   620 FORMAT(/'  IOSOUT (FEB 92).  ALL QL,QLOLD ZERO FOR SOME CHANNELS',
@@ -98,36 +98,41 @@ C<<SG  -<< END OF ADDITIONAL CODE FEB 92.  NB NVC CHANGED TO NOUT BELOW
       WRITE(6,606)(IV,IVP,QLOLD(IV,IVP),IVP=1,NOUT)
   606 FORMAT(/'   QLOLD(0) ',4(2X,I3,' TO',I3,' =',1PE12.4) /
      &                  (12X,4(2X,I3,' TO',I3,' =',1PE12.4)))
-      IF (NOUT.LE.1) GOTO 2001
+C     IF (NOUT.LE.1) GOTO 2001
 
-      DO 2101 IV=2,NOUT
- 2101   WRITE(6,616) (IV,IVP,QLOLD(IV,IVP),IVP=1,NOUT)
+      DO IV=2,NOUT
+        WRITE(6,616) (IV,IVP,QLOLD(IV,IVP),IVP=1,NOUT)
   616   FORMAT(12X,4(2X,I3,' TO',I3,' =',1PE12.4)/
      1         (12X,4(2X,I3,' TO',I3,' =',1PE12.4)))
+      ENDDO
 
- 2001 DO 1300 L=1,NQL
+ 2001 DO L=1,NQL
         LM1=L-1
         IV=1
         WRITE(6,605) LM1,(IV,IVP,QL(IV,IVP,L),IVP=1,NOUT)
   605   FORMAT(/'   Q(',I3,' )  ',4(2X,I3,' TO',I3,' =',1PE12.4) /
      &                      (12X,4(2X,I3,' TO',I3,' =',1PE12.4)))
-        IF (NOUT.LE.1) GOTO 1300
+C       IF (NOUT.LE.1) GOTO 1300
 
-        DO 1301 IV=2,NOUT
- 1301     WRITE(6,616) (IV,IVP,QL(IV,IVP,L),IVP=1,NOUT)
- 1300 CONTINUE
+        DO IV=2,NOUT
+          WRITE(6,616) (IV,IVP,QL(IV,IVP,L),IVP=1,NOUT)
+        ENDDO
+      ENDDO
 C
-      DO 4000 IV=1,NOUT
-      DO 4000 IVP=1,NOUT
+!  Start of long DO loop #1
+      DO IV=1,NOUT
+!  Start of long DO loop #2
+      DO IVP=1,NOUT
         WRITE(6,640) IV,IVP
   640   FORMAT(/'  ***** ***** ***** BELOW FOR VIB LEVEL',I3,' TO',I3)
         IMSG=0
-        DO 1000 JI=IZERO,JTMAX
+!  Start of long DO loop #3
+        DO JI=IZERO,JTMAX
           WRITE(6,603) JI
   603     FORMAT(/'  FOR INITIAL LEVEL J =',I4,'  NON-ZERO CROSS ',
      1           'SECTIONS (ANG**2) TO FINAL LEVELS ARE')
           NONZRO=0
-          DO 1100 JF=IZERO,JTMAX
+          DO JF=IZERO,JTMAX
             IIF=JF+1
             S(IIF)=SPACE
             LLOW=ABS(JF-JI)
@@ -138,68 +143,78 @@ C
             IMSG=1
             LTOP=LMAX-1
  1101       SIG(IIF)=0.D0
-            IF (LLOW.GT.LTOP) GOTO 1100
+            IF (LLOW.GT.LTOP) CYCLE
 
-            DO 1200 L=LLOW,LTOP
+            DO L=LLOW,LTOP
               TJ=THREEJ(JI,L,JF)
- 1200         SIG(IIF)=SIG(IIF)+TJ*TJ*QL(IV,IVP,L+1)
+              SIG(IIF)=SIG(IIF)+TJ*TJ*QL(IV,IVP,L+1)
+            ENDDO
             SIG(IIF)=FUNC(JF)*SIG(IIF) * XJSTEP
             IF (SIG(IIF).NE.0.D0) THEN
               NONZRO=NONZRO+1
               INDLEV(NONZRO)=IIF
             ENDIF
- 1100     CONTINUE
- 1000     WRITE(6,604) (INDLEV(IL)-1,SIG(INDLEV(IL)),S(INDLEV(IL)),
+          ENDDO
+          WRITE(6,604) (INDLEV(IL)-1,SIG(INDLEV(IL)),S(INDLEV(IL)),
      1                  IL=1,NONZRO)
   604     FORMAT(6(4X,I3,1PE12.4,A1))
+        ENDDO
+!  End of long DO loop #3
         IF (IMSG.GT.0) WRITE(6,699)
   699   FORMAT(/'  ***** NOTE.  FOR CROSS SECTIONS MARKED WITH A ',
      1          'STAR, SOME CONTRIBUTING Q(L) ARE NOT AVAILABLE.')
- 4000 CONTINUE
+      ENDDO
+!  End of long DO loop #2
+      ENDDO
+!  End of long DO loop #1
       RETURN
 C
 C>>SG ITYPE=3 CODE ADDED MAY 92.  ASSUMES NVC=1 (ONE VIB CHANNEL)
  3000 WRITE(6,630)
   630 FORMAT(///'  ACCUMULATED Q(L1,L2,L) ARE AS FOLLOWS')
       WRITE(6,651) LCODE(1),LQLS,LM(1,1),LM(2,1),LM(3,1),QLOLD(1,1)
-      DO 3001 L=1,NQL
- 3001 WRITE(6,651) LCODE(1),LQLT,LM(1,L),LM(2,L),LM(3,L),QL(1,1,L)
+      DO L=1,NQL
+        WRITE(6,651) LCODE(1),LQLT,LM(1,L),LM(2,L),LM(3,L),QL(1,1,L)
+      ENDDO
       IF (LM(1,1).EQ.0 .AND. LM(2,1).EQ.0 .AND. LM(3,1).EQ.0) GOTO 3002
       WRITE(6,639)
   639 FORMAT(' IOSOUT *** ERROR. L1=L2=L=0 IS NOT FIRST SYMMETRY IN LM')
  3002 L1MAX=0
       L2MAX=0
-      DO 3003 IL=1,LMAX
+      DO IL=1,LMAX
         L1MAX=MAX(L1MAX,LM(1,IL))
- 3003   L2MAX=MAX(L2MAX,LM(2,IL))
+        L2MAX=MAX(L2MAX,LM(2,IL))
+      ENDDO
       NL2=L2MAX/ICNSYM+1
       IX=0
-      DO 3100 L1=0,L1MAX,IHOMO
+      DO L1=0,L1MAX,IHOMO
         LTOP=L2MAX
         IF (IDENT.GT.0) LTOP=L1
-      DO 3100 L2=0,LTOP,ICNSYM
+      ENDDO
+      DO L2=0,LTOP,ICNSYM
         IX=IX+1
         NSIG=IX
         IF (NSIG.LE.MXSIG) GOTO 3109
         WRITE(6,638) MXSIG
   638   FORMAT(' *** ERROR.  MXSIG (DIMENSION OF SIG3) EXCEEDED',I5)
         STOP
- 3109   SIG3(IX)=0.
+ 3109   SIG3(IX)=0.D0
         LLO=ABS(L1-L2)
         LHI=L1+L2
-        DO 3102 LL=LLO,LHI,2
+        LOOP_LL: DO LL=LLO,LHI,2
 C  SEARCH LM(,IL) FOR L1,L2,LL
-          DO 3101 IL=1,LMAX
+          DO IL=1,LMAX
             IF (L1.NE.LM(1,IL) .OR. L2.NE.LM(2,IL) .OR. LL.NE.LM(3,IL))
-     1        GOTO 3101
+     1        CYCLE
             SIG3(IX)=SIG3(IX)+QL(1,1,IL) * XJSTEP
-            GOTO 3102
- 3101     CONTINUE
+            CYCLE LOOP_LL
+          ENDDO
           WRITE(6,631) L1,L2,LL
   631     FORMAT(' IOSOUT *** ERROR.  REQUIRED QL(',3I3,') NOT FOUND.')
- 3102   CONTINUE
- 3100   WRITE(6,632) L1,L2,SIG3(IX)
+        ENDDO LOOP_LL
+        WRITE(6,632) L1,L2,SIG3(IX)
   632   FORMAT(' SIG(  0  0 ->',2I3,') =',F10.3,' ANG**2')
+      ENDDO
 C
       IF (NLEVEL.LE.0) RETURN
 
@@ -211,13 +226,15 @@ C
         NLEVEL=MXSIG
       ENDIF
       IMSG=0
-      DO 3200 I=1,NLEVEL
+!  Start of long DO loop #4
+      DO I=1,NLEVEL
         JI1=JLEVEL(2*I-1)
         JI2=JLEVEL(2*I)
         WRITE(6,634) I,JI1,JI2
   634   FORMAT(/'  INITIAL LEVEL =',I4,'      J1, J2  =',3I4)
         NONZRO=0
-        DO 3201 IIF=1,NLEVEL
+!  Start of long DO loop #5
+        DO IIF=1,NLEVEL
           JF1=JLEVEL(2*IIF-1)
           JF2=JLEVEL(2*IIF)
           SIG(IIF)=0.D0
@@ -226,9 +243,9 @@ C
           L1HI=JI1+JF1
           L2LO=ABS(JI2-JF2)
           L2HI=JI2+JF2
-          DO 3202 L1=L1LO,L1HI,IHOMO
+          DO L1=L1LO,L1HI,IHOMO
             IX1=L1/IHOMO+1
-          DO 3202 L2=L2LO,L2HI,ICNSYM
+          DO L2=L2LO,L2HI,ICNSYM
             IX2=L2/ICNSYM+1
             IF (IDENT.NE.0) GOTO 3203
 
@@ -245,21 +262,24 @@ C  SEE IF WE HAVE THIS (I.E., IX.LE.NSIG)
 
             S(IIF)=STAR
             IMSG=1
-            GOTO 3202
+            CYCLE
 
  3205       TJ1=THREEJ(JI1,L1,JF1)
             TJ2=THREEJ(JI2,L2,JF2)
             SIG(IIF)=SIG(IIF)+TJ1*TJ1*TJ2*TJ2*SIG3(IX)
- 3202     CONTINUE
+          ENDDO
+          ENDDO
           SIG(IIF)=SIG(IIF)*(2*JF1+1)*(2*JF2+1)
           IF (SIG(IIF).NE.0.D0) THEN
             NONZRO=NONZRO+1
             INDLEV(NONZRO)=IIF
           ENDIF
- 3201   CONTINUE
- 3200   WRITE(6,604) (INDLEV(IL),SIG(INDLEV(IL)),S(INDLEV(IL)),
+        ENDDO
+!  End of long DO loop #5
+        WRITE(6,604) (INDLEV(IL),SIG(INDLEV(IL)),S(INDLEV(IL)),
      1                IL=1,NONZRO)
-
+      ENDDO
+!  End of long DO loop #4
       IF (IMSG.GT.0) WRITE(6,699)
       RETURN
 C
@@ -269,9 +289,10 @@ C  >>SG (FEB 92) N.B. CODE *ASSUMES* NVC=1 (ONE VIB CHANNEL).
   650 FORMAT(///'  ACCUMULATED Q(L,M1,M2) ARE AS FOLLOWS')
       WRITE(6,651) LCODE(1),LQLS,IZERO,IZERO,IZERO,QLOLD(1,1)
   651 FORMAT(' ',A4,2X,A4,'(',3I3,') =',1PE13.5)
-      DO 5001 L=1,NQL
- 5001   WRITE(6,651) LCODE(IXQL(NIXQL,L)+1),LQLT,LM(1,IXQL(1,L)),
+      DO L=1,NQL
+        WRITE(6,651) LCODE(IXQL(NIXQL,L)+1),LQLT,LM(1,IXQL(1,L)),
      &               LM(2,IXQL(1,L)),LM(2,IXQL(2,L)),QL(1,1,L)
+      ENDDO
       IMSG=0
       IF (NLEVEL.LE.MXSIG) GOTO 5109
 
@@ -283,11 +304,13 @@ C  >>SG (FEB 92) N.B. CODE *ASSUMES* NVC=1 (ONE VIB CHANNEL).
       WRITE(6,652)
   652 FORMAT(///'  CROSS SECTIONS WILL BE COMPUTED AMONG FOLLOWING ',
      &       'LEVELS'//'  LEVEL J   K PRTY')
-      DO 5002 I=1,NLEVEL
- 5002   WRITE(6,653) I,JLEVEL(3*I-2),JLEVEL(3*I-1),JLEVEL(3*I)
+      DO I=1,NLEVEL
+        WRITE(6,653) I,JLEVEL(3*I-2),JLEVEL(3*I-1),JLEVEL(3*I)
   653   FORMAT(' ',4I4)
+      ENDDO
 
-      DO 5100 I=1,NLEVEL
+!  Start of long DO loop #6
+      DO I=1,NLEVEL
         JI=JLEVEL(3*I-2)
         XJI=JI
         KI=JLEVEL(3*I-1)
@@ -298,7 +321,8 @@ C  >>SG (FEB 92) N.B. CODE *ASSUMES* NVC=1 (ONE VIB CHANNEL).
         WRITE(6,654) I,JI,KI,JLEVEL(3*I)
   654   FORMAT(/'  INITIAL LEVEL =',I4,'      J, K, PRTY =',3I4)
         NONZRO=0
-        DO 5101 IIF=1,NLEVEL
+!  Start of long DO loop #7
+        DO IIF=1,NLEVEL
           JF=JLEVEL(3*IIF-2)
           XJF=JF
           KF=JLEVEL(3*IIF-1)
@@ -316,7 +340,8 @@ C  >>SG (FEB 92) N.B. CODE *ASSUMES* NVC=1 (ONE VIB CHANNEL).
           SIG(IIF)=0.D0
           S(IIF)=SPACE
           TMAX=0.D0
-          DO 5102 L=LLO,LHI
+!  Start of long DO loop #8
+          DO L=LLO,LHI
             XL=L
             PL=PJK*PARSGN(L)
 C  -----------------------TERM 1 -------------------
@@ -363,27 +388,28 @@ C  -----------------------TERM 2 -------------------
 C  -----------------------TERM 3 -------------------
  5300       PP=EPSF+EPSI*PL
             PP=PP*PP
-            IF (PP.LE.ZTOL) GOTO 5102
+            IF (PP.LE.ZTOL) CYCLE
 
             TJ=THRJ(XJF,XL,XJI,-XKF,XKF+XKI,-XKI)
             TJ=TJ*TJ
-            IF (TJ.LE.ZTOL) GOTO 5102
+            IF (TJ.LE.ZTOL) CYCLE
 
             CALL IXQLF(LM,LMAX,L,MPLS,MPLS,0,INDX,IXQL,NIXQL,NQL)
             IF (INDX.GT.0) GOTO 5310
 
-            IF (INDX.EQ.-1) GOTO 5102
+            IF (INDX.EQ.-1) CYCLE
 
             S(IIF)=STAR
             IMSG=1
-            GOTO 5102
+            CYCLE
 
  5310       TT=PP*TJ*QL(1,1,INDX)
             TMAX=MAX(ABS(TT),TMAX)
             SIG(IIF)=SIG(IIF)+TT * XJSTEP
- 5102     CONTINUE
-          IF (ABS(SIG(IIF)).GE.ZTOL*TMAX) GOTO 5101
-          IF (SIG(IIF).EQ.0.D0) GOTO 5101
+          ENDDO
+!  End of long DO loop #8
+          IF (ABS(SIG(IIF)).GE.ZTOL*TMAX) CYCLE
+          IF (SIG(IIF).EQ.0.D0) CYCLE
 
           IF (PRNT) WRITE(6,697) IIF,SIG(IIF),TMAX
   697     FORMAT('  * * * NOTE.  ROUND-OFF ERROR FOR LEV(F) =',I3,
@@ -394,30 +420,34 @@ C  -----------------------TERM 3 -------------------
             NONZRO=NONZRO+1
             INDLEV(NONZRO)=IIF
           ENDIF
- 5101   CONTINUE
- 5100   WRITE(6,604) (INDLEV(IL),SIG(INDLEV(IL)),S(INDLEV(IL)),
+        ENDDO
+!  End of long DO loop #7
+        WRITE(6,604) (INDLEV(IL),SIG(INDLEV(IL)),S(INDLEV(IL)),
      1                IL=1,NONZRO)
+      ENDDO
+!  End of long DO loop #6
 
       IF (IMSG.GT.0) WRITE(6,699)
       RETURN
 C
 C  BELOW FOR ITYPE=6
- 6000 DO 6100 I=1,NLEVEL
+ 6000 DO I=1,NLEVEL
         WRITE(6,664) I,JLEVEL(4*I-3),JLEVEL(4*I-2),JLEVEL(4*I-1)
   664   FORMAT(/'  INITIAL LEVEL =',I4,'      J, TAU, PARITY =',3I4)
         NONZRO=0
-        DO 6101 IIF=1,NLEVEL
+        DO IIF=1,NLEVEL
           SIG(IIF)=0.D0
           S(IIF)=SPACE
-          CALL SIG6(NLEVEL,JLEVEL,ATAU,I,IIF,SIG(IIF),S(IIF),IMSG,
+          CALL SIG6(NLEVEL,JLEVEL,I,IIF,SIG(IIF),S(IIF),IMSG,
      1              QL,IXQL,NIXQL,NQL,LM,LMAX)
           IF (SIG(IIF).NE.0.D0) THEN
             NONZRO=NONZRO+1
             INDLEV(NONZRO)=IIF
           ENDIF
- 6101   CONTINUE
- 6100   WRITE(6,604) (INDLEV(IL),SIG(INDLEV(IL))*XJSTEP,S(INDLEV(IL)),
+        ENDDO
+        WRITE(6,604) (INDLEV(IL),SIG(INDLEV(IL))*XJSTEP,S(INDLEV(IL)),
      1                IL=1,NONZRO)
+      ENDDO
 
       IF (IMSG.GT.0) WRITE(6,699)
       RETURN

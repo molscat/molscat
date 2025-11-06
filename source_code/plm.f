@@ -50,11 +50,12 @@ C  HERE FOR REGULAR LEGENDRE POLYNOMIALS
       PLM=1.D0
       PM2=0.D0
       XL=0.D0
-      DO 2 L=1,LMAX
+      DO L=1,LMAX
         XL=XL+1.D0
         PP=((2.D0*XL-1.D0)*X*PLM-(XL-1.D0)*PM2)/XL
         PM2=PLM
-    2   PLM=PP
+        PLM=PP
+      ENDDO
       GOTO 9000
 C
 C  HERE FOR ALEXANDER-LEGENDRE POLYNOMIALS
@@ -62,15 +63,16 @@ C
     5 IMAX=2*M
       RAT=1.D0
       AI=0.D0
-      DO 6 I=2,IMAX,2
+      DO I=2,IMAX,2
         AI=AI+2.D0
-    6   RAT=RAT*((AI-1.D0)/AI)
+        RAT=RAT*((AI-1.D0)/AI)
+      ENDDO
       Y=SQRT(1.D0-X*X)
       PLM=SQRT(RAT)*(Y**M)
       PM2=0.D0
       LOW=M+1
       XL=LOW-1
-      DO 10 L=LOW,LMAX
+      DO L=LOW,LMAX
         XL=XL+1.D0
         AL=DBLE((L+M)*(L-M))
         AL=1.D0/AL
@@ -79,7 +81,8 @@ C
         AL2=SQRT(AL2)
         PP=(2.D0*XL-1.D0)*X*PLM*AL-PM2*AL2
         PM2=PLM
-   10   PLM=PP
+        PLM=PP
+      ENDDO
       PLM=PLM*PARSGN(MINM)
 C
 C  CONVERT TO MOLSCAT'S IDIOSYNCRATIC NORMALIZATION

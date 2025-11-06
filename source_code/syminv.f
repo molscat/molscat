@@ -25,73 +25,73 @@ C
       A(1,1) = 1.D0/X
       IF (N.EQ.1) GOTO 300
 C  FORM L
-      DO 100 I = 2,N
+      DO I = 2,N
          I1 = I - 1
          IF (I1.LT.2) GOTO 60
-         DO 40 J = 2,I1
+         DO J = 2,I1
             J1 = J - 1
             X = A(I,J)
-            DO 20 K = 1,J1
+            DO K = 1,J1
                X = X - A(I,K)*A(J,K)
-  20        CONTINUE
+            ENDDO
             A(I,J) = X
-  40     CONTINUE
-  60     X = A(I,I)
-         DO 80 K = 1,I1
+         ENDDO
+   60    X = A(I,I)
+         DO K = 1,I1
             Y = A(I,K)
             Z = Y*A(K,K)
             A(I,K) = Z
             X = X - Y*Z
-  80     CONTINUE
+         ENDDO
          IF (X.LT.0.D0) KOUNT = KOUNT + 1
          IF (X.EQ.0.D0) GOTO 320
          A(I,I) = 1.D0/X
- 100  CONTINUE
+      ENDDO
 C  INVERT L
       N1 = N - 1
-      DO 160 I = 1,N1
+      DO I = 1,N1
          I1 = I + 1
          A(I1,I) = - A(I1,I)
-         IF (I1.GT.N1) GOTO 160
-         DO 140 J = I1,N1
+         IF (I1.GT.N1) CYCLE
+         DO J = I1,N1
             J1 = J + 1
             X = - A(J1,I)
-            DO 120 K = I1,J
+            DO K = I1,J
                X = X - A(J1,K)*A(K,I)
- 120        CONTINUE
+            ENDDO
             A(J1,I) = X
- 140     CONTINUE
- 160  CONTINUE
+         ENDDO
+      ENDDO
 C  FORM INVERSE OF A
-      DO 240 I = 1,N1
+      DO I = 1,N1
          I1 = I + 1
          X = A(I,I)
-         DO 180 K = I1,N
+         DO K = I1,N
             Y = A(K,I)
             Z = Y*A(K,K)
             A(K,I) = Z
             X = X + Y*Z
- 180     CONTINUE
+         ENDDO
          A(I,I) = X
-         IF (I1.GT.N1) GOTO 240
-         DO 220 J = I1,N1
+         IF (I1.GT.N1) CYCLE
+         DO J = I1,N1
             J1 = J + 1
             X = A(J,I)
-            DO 200 K = J1,N
+            DO K = J1,N
                X = X + A(K,J)*A(K,I)
- 200        CONTINUE
+            ENDDO
             A(J,I) = X
- 220     CONTINUE
- 240  CONTINUE
+         ENDDO
+      ENDDO
 C  COPY INVERSE INTO UPPER TRIANGLE
-      DO 280 I = 2,N
+      DO I = 2,N
          I1 = I - 1
-         DO 260 J = 1,I1
+         DO J = 1,I1
             A(J,I) = A(I,J)
- 260     CONTINUE
- 280  CONTINUE
- 300  IFAIL = KOUNT
+         ENDDO
+      ENDDO
+  300 IFAIL = KOUNT
       RETURN
- 320  IFAIL = N + 1
+  320 IFAIL = N + 1
       RETURN
       END

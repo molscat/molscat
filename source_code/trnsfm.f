@@ -11,7 +11,7 @@ C  N IS THE DIMENSION OF THE MATRICES.
 C-------------------------------------------------------------------
       IMPLICIT DOUBLE PRECISION (A-H,O-Z)
       LOGICAL ISTOP,ISYM
-      DIMENSION T(1),W(1),A(1)
+      DIMENSION T(*),W(*),A(*)
       DATA ZERO/0.D0/,HALF/0.5D0/,ONE/1.D0/
 C-------------------------------------------------------------------
 C  MULTIPLY THE TRANSPOSE OF THE MATRIX W TIMES T AND

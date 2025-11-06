@@ -1,10 +1,12 @@
-      SUBROUTINE LOCPOL(JFIELD,FLDNOW,SCLNOW,SLIMAG,FLDNXT,DTOL,
-     &                  TLO,THI,XI,IDECAY,IPRINT,LCONT,RUNAME,
-     &                  CONNAM,CONUNT,NOPEN,SREIN,SIMIN)
-C  Copyright (C) 2022 J. M. Hutson & C. R. Le Sueur
+      SUBROUTINE LOCPOL(JFIELD,FLDNOW,SCLNOW,SLIMAG,FLDNXT,
+     1                  DTOL,TLO,THI,XI,IDECAY,IPRINT,
+     2                  LCONT,RUNAME,CONNAM,CONUNT,
+     3                  NOPEN,SREIN,SIMIN)
+C  Copyright (C) 2025 J. M. Hutson & C. R. Le Sueur
 C  Distributed under the GNU General Public License, version 3
       USE sizes, ONLY: MXLOC
       USE efvs, ONLY: LEFVN, LEFVU
+cINOLLS USE i_nolls, ONLY: save_res
 
 C  SUBROUTINE FOR CONVERGING ON RESONANCES USING SCATTERING LENGTHS.
 C  DESCRIBED IN DETAIL IN arXiv:1708.04661 and arXiv:1912.00206.
@@ -66,6 +68,7 @@ C  MXLOC IS SET IN MODULE SIZES
       LCONT=.TRUE.
 
 C  INITIALISATION
+!  Start of long IF block #1
       IF (JFIELD.EQ.1) THEN
         IMAX=1
         IMID=2
@@ -170,6 +173,7 @@ C       DELTA (= -ALPHA_RES*GAMMA_INEL/2*ALPHA_BG)
 C  SO THAT WHEN PRINTED ADJUSTR, IT ENDS IN THE SAME PLACE
         TSVNAM=TRIM(CONNAM)//'_RES'
       ENDIF
+!  End of long IF block #1
       CALL BCKGRD(FIELDS(JFIELD),SCLNRE(JFIELD),SCLNIM(JFIELD))
 C  SECOND POINT
       IF (JFIELD.EQ.2) THEN
@@ -215,6 +219,7 @@ C  ORDER POINTS BY FIELD ORDER
   161 FORMAT(/'  USING POINTS',
      1       2(1X,I3),' AND',1X,I3)
 
+!  Start of long IF block #2
       IF (IDECAY.LT.2) THEN
 C  PURE ELASTIC OR WEAKLY DECAYED RESONANCE
 
@@ -327,6 +332,7 @@ C  S-MATRIX ELEMENT
      3         2X,A,' = ',SS E12.5,' ',SP,E12.5,' i '/
      4         2X,A,' = ',SS 1PG12.5,5X,A)
       ENDIF
+!  End of long IF block #2
 
 
 C  LOGIC FOR CHOOSING NEXT POINT, DESCRIBED IN arXiv:1912.00206
@@ -366,6 +372,11 @@ C  FIRST, SORT 3 EXISTING POINTS
      1                                TRIM(C150),GAMIN,TRIM(CONUNT)
   170   FORMAT('  SCATTERING LENGTH FOR POINT ',I2,1X,A,' = ',
      1         1PG12.5,1X,A/2X,A,' = ',G12.5,1X,A/)
+        IF (ABS(GAMIN).GT.ABS(DELTA)) WRITE(6,171)
+  171   FORMAT('  WARNING: |GAMMA_INEL| > |DELTA|. RESONANCE IS ',
+     1         'SIGNIFICANTLY DECAYED.'/'  IFCONV=1 MAY NOT BE ',
+     2         'APPROPRIATE, AND YOU MAY WISH TO ADJUST TLO AND THI ',
+     3         'ACCORDINGLY.'/)
       ENDIF
       IF (IPRINT.GE.8) WRITE(6,160) DMAX,DMID,DMIN
   160 FORMAT('  DISTANCES FROM RESONANCE SCALED BY |DELTA|:',
@@ -405,6 +416,7 @@ C     1 POINT CLOSE TO THI*|DELTA|
 C     1 POINT CLOSE TO TLO*|DELTA|
 C     AND 1 POINT AS CLOSE TO THE RESONANCE AS POSSIBLE.
 C  LOGIC HERE SHOULD BE CLEAR FROM THE WRITE STATEMENTS
+!  Start of long IF block #3
       IF (ABS(DMAX).GE.ABS(2*THI)) THEN
         IF (IPRINT.GE.7) WRITE(6,300)
   300   FORMAT('  MOVING POINT FURTHEST FROM THE RESONANCE BECAUSE IT',
@@ -438,20 +450,26 @@ C  LOGIC HERE SHOULD BE CLEAR FROM THE WRITE STATEMENTS
   210 FORMAT('  DISTANCES FROM DESIRED POINT PLACEMENTS SCALED BY'
      1       ' TOLERANCES:',
      1       1P,3(1X,G10.3)/)
+!  Start of long IF block #4
         IF (EMAX.LT.1.D0 .AND. EMID.LT.1.D0 .AND. EMIN.LT.1.D0) THEN
 C CONVERGED
           LCONT=.FALSE.
+cINOLLS call save_res(b0)
           IF (IPRINT.GE.2)
      1      WRITE(6,150) TRIM(CONNAM),
      2                   B0,TRIM(CONUNT),
      3                   B0-FIELDS(IMIN),TRIM(CONUNT)
   150       FORMAT(/'  CONVERGED ON RESONANCE AT ',A,'_RES = ',
      1             1PG16.9,1X,A,', WITH PREDICTED STEP = ',G12.5,1X,A)
+!  Start of long IF block #5
           IF (IPRINT.GE.3 .AND. IPRINT.LE.5) THEN
+!  Start of long IF block #6
             IF (IDECAY.EQ.0) THEN
               WRITE(6,130) TRIM(C130),B0,TRIM(CONUNT),
      1                     TRIM(TDELTA),DELTA,TRIM(CONUNT),
      2                     TRIM(TABG),ABG,RUNAME
+cINOLLS call save_res(delta)
+cINOLLS call save_res(abg)
             ELSEIF (IDECAY.EQ.1) THEN
               WRITE(6,130) TRIM(C130),B0,TRIM(CONUNT),
      1                     TRIM(TDELTA),DELTA,TRIM(CONUNT),
@@ -459,23 +477,31 @@ C CONVERGED
               WRITE(6,170) IMIN,TRIM(C140),ARES,RUNAME,
      1                     TRIM(C150),GAMIN,TRIM(CONUNT)
             ELSEIF (IDECAY.EQ.2) THEN
+cINOLLS call save_res(alphbg)
+cINOLLS call save_res(betabg)
+cINOLLS call save_res(gamin)
+cINOLLS call save_res(deltas)
               WRITE(6,106) ADJUSTR(TSVNAM),B0,TRIM(CONUNT),
      1                     TRIM(RUNAME),ALPHBG,-BETABG,
      2                     TRIM(RUNAME),ALPRES,-BETRES,
      3                     GAMIN,TRIM(CONUNT),
      4                     DELTAS,TRIM(CONUNT)
             ELSEIF (IDECAY.EQ.3) THEN
+cINOLLS call save_res(gamma)
               WRITE(6,130) TRIM(C130),B0,TRIM(CONUNT),
      1                     TRIM(TGAMMA),GAMMA,TRIM(CONUNT),
      2                     TRIM(TDBG),DBG
             ELSEIF (IDECAY.EQ.4) THEN
+cINOLLS call save_res(gamma)
               WRITE(6,111) TRIM(C130),B0,TRIM(CONUNT),
      1                     TRIM(TGAMMA),GAMMA,TRIM(CONUNT),
      2                     TRIM(TSBG),SREBG,SIMBG,
      3                     TRIM(TDIAM),DIAMRE,DIAMIM,
      4                     TRIM(TPARTG),PARTG,TRIM(CONUNT)
             ENDIF
+!  End of long IF block #6
           ENDIF
+!  End of long IF block #5
           IF ((IDECAY.EQ.3 .OR. IDECAY.EQ.4) .AND. NNOPEN.GT.1) THEN
             IF (IPRINT.GE.5) THEN
               WRITE(6,*)
@@ -552,13 +578,15 @@ C MAX POINT FURTHEST FROM CONVERGED
   240 FORMAT('  MOVING POINT CLOSEST TO THE RESONANCE AND',
      1         ' PLACING NEW POINT AT THE PREDICTED RESONANCE POSITION')
         ENDIF
+!  End of long IF block #4
       ENDIF
+!  End of long IF block #3
       RETURN
 
       END SUBROUTINE
 C --------------------------------------------------------------- END OF LOCPOL
       SUBROUTINE POLEQN(B1,A1,B2,A2,B3,A3,ABG,B0,DELTA)
-C  Copyright (C) 2022 J. M. Hutson & C. R. Le Sueur
+C  Copyright (C) 2025 J. M. Hutson & C. R. Le Sueur
 C  Distributed under the GNU General Public License, version 3
 C
 C  SUBROUTINE TO LOCATE A SIMPLE POLE FROM 3 NEARBY POINTS
@@ -587,7 +615,7 @@ C
      2                  B3,ALPHA3,BETA3,
      3                  BRES,ALPHBG,BETABG,ALPRES,BETRES,
      4                  GAMIN)
-C  Copyright (C) 2022 J. M. Hutson & C. R. Le Sueur
+C  Copyright (C) 2025 J. M. Hutson & C. R. Le Sueur
 C  Distributed under the GNU General Public License, version 3
 C
 C  SUBROUTINE TO FIT THREE CALCULATED SCATTERING LENGTHS TO THE EQUATION
@@ -675,7 +703,7 @@ C
      1                 B2,EP2,
      2                 B3,EP3,
      3                 BRES,GAM,DBG)
-C  Copyright (C) 2022 J. M. Hutson & C. R. Le Sueur
+C  Copyright (C) 2025 J. M. Hutson & C. R. Le Sueur
 C  Distributed under the GNU General Public License, version 3
 C
 C  SUBROUTINE TO FIT THREE CALCULATED EIGENPHASE SUMS TO THE
@@ -727,7 +755,7 @@ C
       SUBROUTINE FIT2PT(B1,SR1,SI1,
      1                  B2,SR2,SI2,
      2                  BRES,GAM,SRBG,SIBG,DIAMRE,DIAMIM)
-C  Copyright (C) 2022 J. M. Hutson & C. R. Le Sueur
+C  Copyright (C) 2025 J. M. Hutson & C. R. Le Sueur
 C  Distributed under the GNU General Public License, version 3
 C
 C  SUBROUTINE TO FIT THREE CALCULATED EIGENPHASE SUMS TO THE

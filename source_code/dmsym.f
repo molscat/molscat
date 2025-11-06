@@ -1,5 +1,5 @@
-      SUBROUTINE DMSYM(J,NK,EVAL,EVEC,EVEC2,A,B,C)
-C  Copyright (C) 2019 J. M. Hutson & C. R. Le Sueur
+      SUBROUTINE DMSYM(J,NK,EVAL,EVEC,EVEC2,A,B,C,IPRINT)
+C  Copyright (C) 2025 J. M. Hutson & C. R. Le Sueur
 C  Distributed under the GNU General Public License, version 3
 C
 C  THIS SUBROUTINE IS CALLED BY ASROT TO SYMMETRISE NUMERICALLY
@@ -15,137 +15,146 @@ C
 C  IN SOME CASES THERE CAN BE DEGENERACIES INVOLVING EVEN AND ODD K VALUES TOO.
 C
       IMPLICIT DOUBLE PRECISION (A-H,O-Z)
-      SAVE SYMPRT
       PARAMETER (IDMAX=3)
-      LOGICAL SYMPRT
+      LOGICAL SPHERI
       CHARACTER(1) CSUB,REPNAM(3)
       DIMENSION SMAT(IDMAX,IDMAX),SVEC(IDMAX,IDMAX),SIG(IDMAX),
      1          EVAL2(IDMAX),EVEC2(-J:J,NK)
       DIMENSION EVAL(NK),EVEC(-J:J,NK)
-      DATA SYMPRT/.FALSE./
       DATA REPNAM/'A','E','F'/
-      DATA TOL/1.D-9/
+      PARAMETER (TOL=1.D-10)
 C
       IMAX=0
-      DO 1000 IC=1,NK
-        IF (IC.LE.IMAX) GOTO 1000
+      SPHERI=(A.EQ.B .AND. B.EQ.C)
+      LC=1
+!  Start of long DO loop #1
+      DO IC=1,NK
+        IF (IC.LE.IMAX) CYCLE
 C
 C  LOOK FOR DEGENERATE EIGENVECTORS
 C
-        DO 200 JC=IC,NK
-          IF (ABS(EVAL(JC)-EVAL(IC)).GT.TOL) GOTO 200
+        DO JC=IC,NK
+          IF (ABS(EVAL(JC)-EVAL(IC)).GT.TOL) CYCLE
           IMAX=JC
-  200   CONTINUE
+        ENDDO
 C
         IDEG=1+IMAX-IC
         IF (IDEG.GT.IDMAX) GOTO 1100
         IF (IDEG.EQ.1) GOTO 920
-        IF (IDEG.GE.3) SYMPRT=.TRUE.
+        IF (IDEG.GE.3) SPHERI=.TRUE.
 C
 C  NOW CONSTRUCT THE MATRIX REPRESENTATION OF SIGMA(XZ)
 C
-        DO 400 L=1,IDEG
+        DO L=1,IDEG
           LC=IC+L-1
-        DO 400 M=1,IDEG
+        DO M=1,IDEG
           MC=IC+M-1
           SMAT(M,L)=0.D0
-        DO 400 K=-J,J
+        DO K=-J,J
           SMAT(M,L)=SMAT(M,L)+EVEC(K,MC)*EVEC(-K,LC)
-  400   CONTINUE
+        ENDDO
+        ENDDO
+        ENDDO
 C
         IFAIL=0
         CALL DIAGVC(SMAT,IDMAX,IDEG,SIG,SVEC)
 C
 C  COPY OLD EIGENVALUES AND EIGENVECTORS INTO EVAL2 AND EVEC2
 C
-        DO 500 L=1,IDEG
+        DO L=1,IDEG
           LC=IC+L-1
           EVAL2(L)=EVAL(LC)
-        DO 500 K=-J,J
+        DO K=-J,J
           EVEC2(K,L)=EVEC(K,LC)
-  500   CONTINUE
+        ENDDO
+        ENDDO
 C
 C CONSTRUCT NEW EIGENVECTORS
 C
-        DO 600 L=1,IDEG
+        DO L=1,IDEG
           LC=IC+L-1
-        DO 600 K=-J,J
+        DO K=-J,J
           EVEC(K,LC)=0.D0
-        DO 600 M=1,IDEG
+        DO M=1,IDEG
           EVEC(K,LC)=EVEC(K,LC)+SVEC(M,L)*EVEC2(K,M)
           IF (ABS(EVEC(K,LC)).GT.0.5D0) KMAX=K
-  600   CONTINUE
+        ENDDO
+        ENDDO
+        ENDDO
 C
 C CONSTRUCT NEW EIGENVALUES
 C
-      DO 620 L=1,IDEG
-        LC=IC+L-1
-        EVAL(LC)=0.D0
-        DO 610 M=1,IDEG
-           MC=IC+M-1
-           EVAL(LC)=EVAL(LC)+EVAL2(M)*SVEC(M,L)**2
-  610   CONTINUE
-  620 CONTINUE
+        DO L=1,IDEG
+          LC=IC+L-1
+          EVAL(LC)=0.D0
+        DO M=1,IDEG
+          MC=IC+M-1
+          EVAL(LC)=EVAL(LC)+EVAL2(M)*SVEC(M,L)**2
+        ENDDO
+        ENDDO
 C
 C  KMAX IS DOMINANT K. FOR NEAR-SYM TOP WITH SIMILAR A AND B,
 C  IF K EVEN AND A+B > 2C, SIG=-1 IS ABOVE SIG=+1
 C  IF K ODD  AND   B >   , SIG=-1 IS ABOVE SIG=+1
 C  IN THESE CASES EXCHANGE NEW LEVELS SO THAT TAU LABELLING IS RIGHT
 C
-      IF ((MOD(KMAX,2).EQ.0 .AND. A+B.GT.C+C) .OR.
-     1    (MOD(KMAX,2).EQ.1 .AND.   B.GT.A)) THEN
-        TEMP=EVAL(IC)
-        EVAL(IC)=EVAL(IC+1)
-        EVAL(IC+1)=TEMP
-        DO 650 K=-J,J
-          TEMP=EVEC(K,IC)
-          EVEC(K,IC)=EVEC(K,IC+1)
-          EVEC(K,IC+1)=TEMP
-  650   CONTINUE
-      ENDIF
+        IF ((MOD(KMAX,2).EQ.0 .AND. A+B.GT.C+C) .OR.
+     1      (MOD(KMAX,2).EQ.1 .AND.   B.GT.A)) THEN
+          TEMP=EVAL(IC)
+          EVAL(IC)=EVAL(IC+1)
+          EVAL(IC+1)=TEMP
+          DO K=-J,J
+            TEMP=EVEC(K,IC)
+            EVEC(K,IC)=EVEC(K,IC+1)
+            EVEC(K,IC+1)=TEMP
+          ENDDO
+        ENDIF
 C
 C  THERE IS STILL A POSSIBILITY THAT EVEN AND ODD K ARE MIXED,
-C  BUT ONLY FOR TWO ADJACENT EIGENVECTORS. CHECK FOR THIS
-C  AND FIX IT IF IT IS FOUND
+C  BUT ONLY FOR TWO NUMERICALLY DEGENERATE EIGENVECTORS WITH THE
+C  SAME SYMMETRY UNDEX SIGMA(XZ).
+C  CHECK FOR THIS AND FIX IF IT IS FOUND
 C
-        DO 900 L=1,IDEG-1
+        DO L=1,IDEG-1
+          IF(SIG(L)*SIG(L+1).LT.0.D0) CYCLE
           LC=IC+L-1
-          DO 700 K=-J,J-1
-            IF (ABS(EVEC(K,LC)*EVEC(K+1,LC)).LT.TOL) GOTO 700
+          DO K=-J,J-1
+            IF (ABS(EVEC(K,LC)*EVEC(K+1,LC)).LT.TOL) CYCLE
             THETA=ATAN2(EVEC(K,LC),EVEC(K,LC+1))
             CO=COS(THETA)
             SI=SIN(THETA)
             GOTO 800
-  700     CONTINUE
-          GOTO 900
+          ENDDO
+          CYCLE
 
   800     CONTINUE
 C
 C  ARRIVE HERE IF THERE IS MIXING OF ODD AND EVEN K
 C
-          DO 850 K=-J,J
+          DO K=-J,J
             TEMP      =CO*EVEC(K,LC)-SI*EVEC(K,LC+1)
             EVEC(K,LC)=SI*EVEC(K,LC)+CO*EVEC(K,LC+1)
             EVEC(K,LC+1)=TEMP
-  850     CONTINUE
-  900   CONTINUE
+          ENDDO
+        ENDDO
 C
 C  SPECIAL CODE TO WORK OUT SYMMETRY LABEL FOR SPHERICAL TOP
 C
-  920   IF (.NOT.SYMPRT) GOTO 1000
+  920   IF (.NOT.SPHERI) CYCLE
         CSUB=' '
         IF (IDEG.EQ.2) GOTO 950
         CSUB='1'
         IF (J.LT.2) GOTO 950
-        DO 940 L=1,IDEG
+        DO L=1,IDEG
           LC=IC+L-1
           IF (EVEC(2,LC)**2.GT.TOL) CSUB='2'
-  940   CONTINUE
+        ENDDO
 C
-  950   WRITE(6,601) EVAL(LC),REPNAM(IDEG),CSUB
+  950   IF (IPRINT.GE.3) WRITE(6,601) EVAL(LC),REPNAM(IDEG),CSUB
   601   FORMAT('  ENERGY LEVEL AT',F12.5,' HAS SYMMETRY ',2A1)
 C
- 1000 CONTINUE
+      ENDDO
+!  End of long DO loop #1
 
       RETURN
 C

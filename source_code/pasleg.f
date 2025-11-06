@@ -21,9 +21,9 @@ C
       IND=L*(L+1)/2+M+1
       FAC=0.5D0*DBLE(L+L+1)
 
-      DO 100 I=L-M+1,L+M
+      DO I=L-M+1,L+M
         FAC=FAC/DBLE(I)
-  100 CONTINUE
+      ENDDO
 
       PASLEG=P(IND)*SQRT(FAC)
 

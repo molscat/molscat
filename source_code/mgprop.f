@@ -1,9 +1,10 @@
       SUBROUTINE MGPROP(N,MXLAM,NHAM,
-     1                  Y,U,VL,IV,EINT,CENT,P,DG,
+     1                  Y,VL,IV,EINT,CENT,
      2                  RSTART,RSTOP,NSTEP,DR,NODES,
      3                  ERED,EP2RU,CM2RU,RSCALE,IPRINT)
-C  Copyright (C) 2022 J. M. Hutson & C. R. Le Sueur
+C  Copyright (C) 2025 J. M. Hutson & C. R. Le Sueur
 C  Distributed under the GNU General Public License, version 3
+      USE potential, ONLY: NCONST, NRSQ
 C
 C  31 AUG 2012 G. MCBANE.
 C
@@ -51,7 +52,8 @@ C  COMMON BLOCK FOR CONTROL OF USE OF PROPAGATION SCRATCH FILE
       LOGICAL IREAD,IWRITE,IREADR,IWRITR
       COMMON /PRPSCR/ ESHIFT,ISCRU,ISCRUR,IREAD,IWRITE,IREADR,IWRITR
 
-      DIMENSION U(N,N),Y(N,N),P(MXLAM),VL(2),IV(2),EINT(N),CENT(N),DG(N)
+      DIMENSION Y(N,N),VL(*),IV(*),EINT(N),CENT(N)
+      ALLOCATABLE :: DG(:),P(:),U(:,:)
 
 C  PROPAGATOR CONSTANTS.  MAXMS WILL NEED TO INCREASE IF HIGHER-ORDER
 C  PROPAGATORS ARE INSTALLED.  6 IS ADEQUATE FOR BOTH CS4 AND MA5.
@@ -68,8 +70,12 @@ C  INITIALIZE SCALARS
       NODES = 0
 
 C  PROPAGATE
+      IF (.NOT.IREAD) ALLOCATE (P(MXLAM+NCONST+NRSQ),DG(N))
+      ALLOCATE (U(N,N))
+!  Start of long DO loop #1
       DO ISTEP = 1,NSTEP        ! LOOP OVER SECTORS
          R = RSTART+(ISTEP-1)*H
+!  Start of long DO loop #2
          DO K = 1, MSYMP        ! LOOP OVER SUBSTEPS WITHIN SECTOR
 
 C  OBTAIN W MATRIX.  IF A(MSYMP)=0, THEN FINAL W FROM LAST SECTOR EQUALS W FOR FIRST SUBSTEP OF THIS
@@ -124,8 +130,12 @@ C  Y NOW CONTAINS Y_K
 C  3RD STEP OF EQN 43: UPDATE R
             R = R + A(K)*H
          ENDDO                 ! K LOOP
+!  End of long DO loop #2
 
       ENDDO                    ! ISTEP LOOP
+!  End of long DO loop #1
+      DEALLOCATE (U)
+      IF (.NOT.IREAD) DEALLOCATE (P,DG)
 
 C  FILL IN UPPER TRIANGLE OF Y MATRIX
       CALL DSYFIL('U', N, Y, N)

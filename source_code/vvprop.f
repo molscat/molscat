@@ -1,12 +1,9 @@
-      SUBROUTINE VVPROP(N,NSQ,MXLAM,NHAM,
-     1                  RMAT,VECNEW,W,VL,IVL,EINT,CENT,P,
-     2                  A1,A1P,B1,B1P,WKS,
-     3                  G1,G1P,G2,G2P,COSX,SINX,
-     4                  SINE,DIAG,XK,XSQ,TSTORE,W0,
-     5                  W1,W2,EYE11,EYE12,EYE22,VECOLD,
+      SUBROUTINE VVPROP(N,MXLAM,NHAM,
+     1                  RMAT,VL,IVL,EINT,CENT,
      6                  RSTART,RSTOP,NSTEP,DRNOW,DRMAX,TLDIAG,TOFF,
      7                  ERED,EP2RU,CM2RU,RSCALE,IPRINT)
-C  Copyright (C) 2022 J. M. Hutson & C. R. Le Sueur
+      USE potential, ONLY: NCONST, NRSQ
+C  Copyright (C) 2025 J. M. Hutson & C. R. Le Sueur
 C  Distributed under the GNU General Public License, version 3
       IMPLICIT DOUBLE PRECISION (A-H,O-Z)
 C------------------------------------------------------------------
@@ -28,7 +25,6 @@ C              EIGENVALUES AND EIGENVECTORS.
 C------------------------------------------------------------------
 C  ON ENTERING
 C  N      - NUMBER OF CHANNELS
-C  NSQ    - N*N
 C  DRNOW  - INITIAL STEP SIZE
 C  RSTART - MINIMUM RADIAL DISTANCE
 C  RSTOP  - MAXIMUM RADIAL DISTANCE
@@ -70,8 +66,6 @@ C  IVPP  - CALCULATES PERTURBATION CORRECTIONS FROM THE SECOND
 C          DERIVATIVE OF THE INTERACTION POTENTIAL.
 C  ISHIFT- SHIFTS THE REFERENCE POTENTIAL TO BEST FIT THE TRUE
 C          POTENTIAL.
-C  NUMDER- CALCULATES POTENTIAL DERIVATIVES NUMERICALLY (PASSED
-C          DIRECTLY VIA COMMON BLOCK)
 C  IDIAG - INCLUDES ALL OF THE DIAGONAL PERTUBATION CORRECTIONS.
 C  ISYM  - SYMMETRIZES THE R-MATRIX AT EACH INTERVAL.
 C  IPERT - USES THE PERTURBATIONS CORRECTIONS.
@@ -94,19 +88,19 @@ C  IWAVE - PERTURBED WAVEFUNCTIONS.
 C  IRMAT - R-MATRIX
 C  IOC   - INFORMATION PRINTED EVERY IOC-TH STEP
 C--------------------------------------------------------------------
-C  ARRAYS DIMENSIONED AS VECTORS
+C  INTERNAL ARRAYS
 C-------------------------------------------------------------------
-      DIMENSION G1(N),G1P(N),G2(N),G2P(N)
-      DIMENSION A1(N),A1P(N),B1(N),B1P(N)
-      DIMENSION XSQ(N),XK(N),COSX(N),SINX(N),SINE(N),DIAG(N)
+      ALLOCATABLE :: G1(:), G1P(:), G2(:), G2P(:),
+     1               A1(:), A1P(:), B1(:), B1P(:), WKS(:),
+     2               XSQ(:), XK(:), COSX(:), SINX(:), SINE(:),
+     3               DIAG(:), EYE11(:), EYE12(:), EYE22(:),
+     4               W0(:), W1(:), W2(:), TSTORE(:), VECOLD(:),
+     5               VECNEW(:), W(:), P(:)
 C-------------------------------------------------------------------
 C  ARRAYS DIMENSIONED AS MATRICES
 C-------------------------------------------------------------------
-      DIMENSION EYE11(NSQ),EYE12(NSQ),EYE22(NSQ)
-      DIMENSION W0(NSQ),W1(NSQ),W2(NSQ),W(NSQ)
-      DIMENSION RMAT(NSQ)
-      DIMENSION TSTORE(NSQ),VECOLD(NSQ),VECNEW(NSQ)
-      DIMENSION P(MXLAM),VL(2),IVL(2),EINT(N),CENT(N),WKS(N)
+      DIMENSION RMAT(N*N)
+      DIMENSION VL(*),IVL(*),EINT(N),CENT(N)
 C-------------------------------------------------------------------
 C  DATA STATEMENTS FOR PRINTING
 C-------------------------------------------------------------------
@@ -159,7 +153,14 @@ C  PRINT CONTROL DATA
       WRITE(6,2600) RSTART,RSTOP,DRNOW,DRMAX,TOFF,TLDIAG
   110 COFFL = 0.D0
       IF (N.EQ.0) RETURN
+      NSQ=N*N
 
+      ALLOCATE (G1(N),G1P(N),G2(N),G2P(N),DIAG(N),VECNEW(NSQ),
+     1          EYE11(NSQ),EYE12(NSQ),EYE22(NSQ),P(MXLAM+NCONST+NRSQ))
+      ALLOCATE (A1(N),A1P(N),B1(N),B1P(N),WKS(N),
+     1          COSX(N),SINX(N),SINE(N),XK(N),XSQ(N),
+     2          TSTORE(NSQ),W(NSQ),W0(NSQ),W1(NSQ),W2(NSQ),
+     3          VECOLD(NSQ))
       NEWINT = .FALSE.
       NP1 = N+1
       ICRMAT = .TRUE.
@@ -167,19 +168,21 @@ C  PRINT CONTROL DATA
       LAST = .FALSE.
       ITRANS = 0
       IK = 0
-      DO 130 I = 1,N
+      DO I = 1,N
         G1(I) = 0.D0
         G1P(I) = 1.D0
         G2(I) = 1.D0
         G2P(I) = 0.D0
         DIAG(I)=0.D0
-      DO 130 K = 1,N
+      DO K = 1,N
         IK = IK+1
         VECNEW(IK) = 0.D0
         IF (I.EQ.K) VECNEW(IK) = 1.D0
         EYE11(IK) = 0.D0
         EYE12(IK) = 0.D0
-  130   EYE22(IK) = 0.D0
+        EYE22(IK) = 0.D0
+      ENDDO
+      ENDDO
       IF (IPRINT.GE.20) WRITE(6,3100)
       ISTEP = 1
       NTRVL = 0
@@ -214,8 +217,9 @@ C-------------------------------------------------------------------
   155 READ(ISCRU) ISTEP,RNOW,DRNOW,LAST,N,DIAG,TSTORE,
      X            W0,W1,W2,VECNEW,NTRVL,RMIDI,RLAST,RCENT,ITRANS
       READ(ISCRU) NEWINT
-      DO 158 I=1,N
-  158   DIAG(I)=DIAG(I)+ESHIFT
+      DO I=1,N
+        DIAG(I)=DIAG(I)+ESHIFT
+      ENDDO
   160 RCENT = RNOW-0.5D0*DRNOW
       ITHS = .FALSE.
       IF (((NTRVL+1)/IOC)*IOC.EQ.NTRVL+1) ITHS = .TRUE.
@@ -226,13 +230,15 @@ C  EVALUATE THE POTENTIAL AND ITS DERIVATIVES.
 C-------------------------------------------------------------------
       CALL HAMMAT(W,N,RCENT,P,VL,IVL,ERED,EINT,CENT,EP2RU,CM2RU,
      1            RSCALE,WKS,MXLAM,NHAM,IPRINT)
-      DO 165 I = 1, NSQ
-  165   W0(I) = W(I)
+      DO I = 1, NSQ
+        W0(I) = W(I)
+      ENDDO
       IF (IVPD .AND. IVPPD) GOTO 200
 
-      DO 170 I = 1, NSQ
+      DO I = 1, NSQ
         W1(I) = 0.D0
-  170   W2(I) = 0.D0
+        W2(I) = 0.D0
+      ENDDO
   200 IF (IVPPD .OR. ISHIFT) CALL DERMAT(2,W2,N,RCENT,P,VL,IVL,CENT,
      1                                   EP2RU,RSCALE,MXLAM,NHAM,
      2                                   IPRINT)
@@ -250,8 +256,9 @@ C-------------------------------------------------------------------
       IF (RMIDI.NE.RCENT)
      1  CALL HAMMAT(W,N,RMIDI,P,VL,IVL,ERED,EINT,CENT,EP2RU,CM2RU,
      2              RSCALE,WKS,MXLAM,NHAM,IPRINT)
-      DO 240 I = 1,NSQ
-  240   VECOLD(I) = VECNEW(I)
+      DO I = 1,NSQ
+        VECOLD(I) = VECNEW(I)
+      ENDDO
       ITRANS = ITRANS+1
 C-------------------------------------------------------------------
 C  DIAGONALIZE THE INTERACTION POTENTIAL.
@@ -288,10 +295,11 @@ C-------------------------------------------------------------------
 C  SHIFT THE EIGENVALUES AND INITIALIZE FOR CONTRIBUTIONS NOT DESIRED.
 C-------------------------------------------------------------------
       INDX = -N
-      DO 330 J = 1,N
+      DO J = 1,N
         INDX = INDX+NP1
         DIAG(J) = -W0(INDX)-FACTOR*W2(INDX)
-  330   W0(INDX) = -FACTOR*W2(INDX)
+        W0(INDX) = -FACTOR*W2(INDX)
+      ENDDO
       IF (IVD .AND. IVPD .AND. IVPPD) GOTO 350
 
       CTERM0 = 1.D0
@@ -300,10 +308,11 @@ C-------------------------------------------------------------------
       IF (.NOT.IVD) CTERM0 = 0.D0
       IF (.NOT.IVPD) CTERM1 = 0.D0
       IF (.NOT.IVPPD) CTERM2 = 0.D0
-      DO 340 I = 1,NSQ
+      DO I = 1,NSQ
         W0(I) = W0(I)*CTERM0
         W1(I) = W1(I)*CTERM1
-  340   W2(I) = W2(I)*CTERM2
+        W2(I) = W2(I)*CTERM2
+      ENDDO
 C-------------------------------------------------------------------
 C  WRITE ON UNIT ISCRU THE INFORMATION NECESSARY FOR SUBSEQUENT ENERGY
 C  CALCULATIONS.
@@ -327,7 +336,8 @@ C-------------------------------------------------------------------
 C  CALCULATE THE ZERO-TH ORDER WAVEFUNCTIONS AND DERIVATIVES.
 C-------------------------------------------------------------------
   360 NOPLOC = 0
-      DO 390 I = 1,N
+!  Start of long DO loop #1
+      DO I = 1,N
         DIF = DIAG(I)
         XSQ(I) = DIF*DRNOW*DRNOW
         XLMBDA = SQRT(ABS(DIF))
@@ -358,7 +368,9 @@ C-------------------------------------------------------------------
         B1(I) = D
         B1P(I) = C
         G2(I) = C*SX+D*CX
-  390   G2P(I) = C*CX-DIF*D*SX
+        G2P(I) = C*CX-DIF*D*SX
+      ENDDO
+!  End of long DO loop #1
 
 C-------------------------------------------------------------------
 C  ESTIMATE G2P(N) AT END OF NEXT STEP. IF IT IS TOO LARGE,
@@ -403,13 +415,13 @@ C-------------------------------------------------------------------
 
       IF (IREAD) GOTO 430
 
-      DO 420 I = 1,N
+      DO I = 1,N
         A1(I) = 1.D0/SQRT(A1P(I)*A1P(I)/ABS(DIAG(I))+A1(I)*A1(I))
         B1(I) = 1.D0/SQRT(B1P(I)*B1P(I)/ABS(DIAG(I))+B1(I)*B1(I))
         A1P(I) = DRNOW*A1(I)/XK(I)
         B1P(I) = DRNOW*B1(I)/XK(I)
         SINE(I) = 1.D0
-        IF (DIAG(I).GT.0.D0) GOTO 420
+        IF (DIAG(I).GT.0.D0) CYCLE
 
         EXPX = EXP(-XK(I)*DRINT/DRNOW)
         IF (DIAG(I).LT.-XSQMAX) EXPX=0.D0
@@ -418,17 +430,19 @@ C-------------------------------------------------------------------
         B1(I) = B1(I)*EXPX
         A1P(I) = A1P(I)*EXPX
         B1P(I) = B1P(I)*EXPX
-  420 CONTINUE
+      ENDDO
   430 IJ = 0
 
 C-------------------------------------------------------------------
 C  CALCULATE THE PERTURBATION CORRECTIONS TO THE WAVEFUNCTION AND
 C  ITS DERIVATIVE.
 C-------------------------------------------------------------------
-      DO 450 J = 1,N
+!  Start of long DO loop #2
+      DO J = 1,N
         A1J = A1(J)
         A1PJ = A1P(J)
-      DO 450 I = 1,N
+!  Start of long DO loop #3
+      DO I = 1,N
         JI = J+(I-1)*N
         IJ = IJ+1
         PRT1 = G1(J)*EYE12(IJ)-G2(J)*EYE11(IJ)
@@ -470,16 +484,21 @@ C-------------------------------------------------------------------
   440   W2(IJ) = PRT1
         W(JI) = PRT2
         W0(IJ) = PRT1P
-  450   W1(JI) = PRT2P
+        W1(JI) = PRT2P
+      ENDDO
+!  End of long DO loop #3
+      ENDDO
+!  End of long DO loop #2
 
       IF (SOFF.EQ.0.D0) SOFF=1.D-30
       IF (IPERT) GOTO 480
 
-  460 DO 470 I = 1,NSQ
+  460 DO I = 1,NSQ
         W2(I) = 0.D0
         W0(I) = 0.D0
         W(I) = 0.D0
-  470   W1(I) = 0.D0
+        W1(I) = 0.D0
+      ENDDO
   480 IF (LAST) GOTO 500
 
       IF (IALPHA.LE.0) GOTO 485
@@ -534,12 +553,13 @@ C  PERTURBATION CORRECTION.
 C-------------------------------------------------------------------
   510 NP1 = N+1
       II = 1
-      DO 520 I = 1,N
+      DO I = 1,N
         W0(II) = W0(II)+G1P(I)
         W1(II) = W1(II)+G2P(I)
         W2(II) = W2(II)+G1(I)
         W(II) = W(II)+G2(I)
-  520   II = II+NP1
+        II = II+NP1
+      ENDDO
       CALL DCOPY(NSQ,W0,1,TSTORE,1)
       CALL DSYMM('L','L',N,N,1.D0,RMAT,N,W1,N,1.D0,TSTORE,N)
       CALL DCOPY(NSQ,W2,1,VECOLD,1)
@@ -581,19 +601,21 @@ C-------------------------------------------------------------------
 C-------------------------------------------------------------------
 C  REINITIALIZE FOR THE NEXT INTERVAL. STORE THE NEW R-MATRIX IN RMAT.
 C-------------------------------------------------------------------
-      DO 570 I = 1,N
+      DO I = 1,N
         G1(I) = 0.D0
         G2(I) = 1.D0
         G1P(I) = 1.D0
         G2P(I) = 0.D0
-      DO 570 J = 1,N
+      DO J = 1,N
         IJ = I+(J-1)*N
         JI = J+(I-1)*N
         RMAT(JI) = VECOLD(IJ)
         IF (ISYM) RMAT(JI) = 0.5D0*(VECOLD(IJ)+VECOLD(JI))
         EYE11(IJ) = 0.D0
         EYE12(IJ) = 0.D0
-  570   EYE22(IJ) = 0.D0
+        EYE22(IJ) = 0.D0
+      ENDDO
+      ENDDO
 
       NTRVL = NTRVL+1
       IF (.NOT.ITHS) GOTO 580
@@ -706,17 +728,25 @@ C  ORIGINAL BASIS.
 C-------------------------------------------------------------------
   670 NCOL = 1
       NLAST = N
-      DO 690 IR = 1,N
+      DO IR = 1,N
         NORIG = IR
-        DO 680 NTRANS = NCOL,NLAST
+        DO NTRANS = NCOL,NLAST
           VECOLD(NTRANS) = VECNEW(NORIG)
-  680     NORIG = NORIG+N
+          NORIG = NORIG+N
+        ENDDO
         NLAST = NLAST+N
-  690   NCOL = NCOL+N
+        NCOL = NCOL+N
+      ENDDO
 
       CALL TRNSFM(VECOLD,RMAT,TSTORE,N,IFALSE,ISYM)
       IF (IPRINT.LT.10 .AND. NSGERR.GT.0) WRITE(6,1802) NSGERR
       NSTEP=ISTEP
+      DEALLOCATE (G1,G1P,G2,G2P,DIAG,VECNEW,
+     1            EYE11,EYE12,EYE22,P)
+      DEALLOCATE (A1,A1P,B1,B1P,WKS,
+     1            COSX,SINX,SINE,XK,XSQ,
+     2            TSTORE,W,W0,W1,W2,
+     3            VECOLD)
       RETURN
 
 C-------------------------------------------------------------------

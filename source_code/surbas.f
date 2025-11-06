@@ -1,11 +1,12 @@
-      SUBROUTINE SURBAS(JSTATE, N, JSINDX, L, EINT, CENT, VL, IV,
+      SUBROUTINE SURBAS(N, JSINDX, L, EINT, CENT, VL, IV,
      1                  MXLAM, NHAM, LAM, ERED, WVEC, LCOUNT, THETA,
      2                  PHI, EMAXK, IPRINT)
-C  Copyright (C) 2022 J. M. Hutson & C. R. Le Sueur
+C  Copyright (C) 2025 J. M. Hutson & C. R. Le Sueur
 C  Distributed under the GNU General Public License, version 3
       USE basis_data, ONLY: ELEVEL, EMAX, J1MAX, J2MAX, JLEVEL, NLEVEL,
      b                      ROTI
       USE physical_constants, ONLY: bfct
+      USE pair_state, ONLY: JSTATE
 C
 C  SUBROUTINE TO SET UP ATOM-SURFACE SCATTERING.
 C  THIS VERSION USES 2 ELEMENTS OF THE VL ARRAY FOR EACH PAIR OF
@@ -18,8 +19,8 @@ C
       SAVE
       INTEGER FIND
       LOGICAL LCOUNT,LEVIN,EIN,HEX,ORTHOG,EQUIV
-      DIMENSION JSTATE(1), JSINDX(1), L(1), EINT(1), CENT(1),
-     1          WVEC(1), VL(1), IV(1), LAM(1)
+      DIMENSION JSINDX(*), L(*), EINT(*), CENT(*),
+     1          WVEC(*), VL(*), IV(*), LAM(*)
       COMMON /NPOT  / NVLP
       COMMON /LATSYM/ HEX,ORTHOG,EQUIV
 C  16-10-16: BFCT IS NOW STORED IN MODULE physical_constants
@@ -60,25 +61,27 @@ C
 C
    50 I=0
       N=0
-      DO 200 N1=1,NLEVEL
+!  Start of long DO loop #1
+      DO N1=1,NLEVEL
         J1=JSTATE(N1+NLEVEL)
-        IF (ISYM1.GE.0 .AND. 2*J1.LT.ISYM1*JSTATE(N1)) GOTO 200
+        IF (ISYM1.GE.0 .AND. 2*J1.LT.ISYM1*JSTATE(N1)) CYCLE
         AA=XK1+XH*DBLE(JSTATE(N1))
         BB=XK2+XK*DBLE(J1)
         ECHAN=SQUARE(AA,BB)
-        IF (ECHAN*ESCALE.GT.EMAXK) GOTO 200
+        IF (ECHAN*ESCALE.GT.EMAXK) CYCLE
         N=N+1
-        IF (LCOUNT) GOTO 200
+        IF (LCOUNT) CYCLE
         EINT(N)=ECHAN
         DIF=ERED-ECHAN
         WVEC(N)=SIGN(SQRT(ABS(DIF)),DIF)
         JSINDX(N)=JSTATE(N1+NST2)
         L(N)=0
         CENT(N)=0.D0
-        DO 100 M=1,N
+!  Start of long DO loop #2
+        DO M=1,N
           N2=JSINDX(M)
           J2=JSTATE(N2+NLEVEL)
-          IF (ISYM1.GE.0 .AND. 2*J2.LT.ISYM1*JSTATE(N2)) GOTO 100
+          IF (ISYM1.GE.0 .AND. 2*J2.LT.ISYM1*JSTATE(N2)) CYCLE
           I=I+1
           I1=JSTATE(N2)-JSTATE(N1)
           I2=J2-J1
@@ -88,11 +91,11 @@ C
           I=I+1
           IV(I)=0
           VL(I)=0.D0
-          IF (ISYM1.LT.0) GOTO 100
+          IF (ISYM1.LT.0) CYCLE
           IF (2*J1.EQ.ISYM1*JSTATE(N1) .NEQV. 2*J2.EQ.ISYM1*JSTATE(N2))
      1      VL(I-1)=VL(I-1)*ROOT2
           IF (2*J1.EQ.ISYM1*JSTATE(N1)  .OR.  2*J2.EQ.ISYM1*JSTATE(N2))
-     1      GOTO 100
+     1      CYCLE
 C
 C  IDENTIFY FOURIER COMPONENT CONNECTING SIGMA(N1) TO N2
 C
@@ -113,13 +116,15 @@ C
           IV(I)=FIND(I1,I2,LAM,MXLAM)
           VL(I)=1.D0
           IF (IV(I).EQ.0) VL(I)=0.D0
-  100   CONTINUE
-  200 CONTINUE
+        ENDDO
+!  End of long DO loop #2
+      ENDDO
+!  End of long DO loop #1
       RETURN
 C  =================================================== END OF SURBAS
 C
 C
-      ENTRY SET8(LEVIN,EIN,NSTATE,JSTATE,URED,IPRINT)
+      ENTRY SET8(LEVIN,EIN,NSTATE,URED,IPRINT)
 C
       NVLP=2
       ROOT2=SQRT(2.D0)
@@ -149,26 +154,27 @@ C
       N1MAX=SQRT(EMAX)/(SINLAT*XH)
       N1MAX=MIN(N1MAX,J1MAX)
       NLEVEL=0
-      DO 300 N1=-N1MAX,N1MAX
+      DO N1=-N1MAX,N1MAX
         AA=DBLE(N1)*XH
         BB=AA*COSLAT
         N2MAX=(ABS(BB)+SQRT(EMAX+BB*BB-AA*AA))/XK
         N2MAX=MIN(N2MAX,J2MAX)
-      DO 300 N2=-N2MAX,N2MAX
+      DO N2=-N2MAX,N2MAX
         BB=DBLE(N2)*XK
         E=SQUARE(AA,BB)*ESCALE
-        IF (E.LT.EMIN .OR. E.GT.EMAX) GOTO 300
+        IF (E.LT.EMIN .OR. E.GT.EMAX) CYCLE
         NLEVEL=NLEVEL+1
         JLEVEL(2*NLEVEL-1)=N1
         JLEVEL(2*NLEVEL)  =N2
         ELEVEL(NLEVEL)=E
-  300 CONTINUE
+      ENDDO
+      ENDDO
 C
 C  SORT CHANNELS ON ENERGY FOR K=0
 C
-      DO 400 N1=1,NLEVEL
-      DO 400 N2=N1+1,NLEVEL
-        IF (ELEVEL(N2).GE.ELEVEL(N1)) GOTO 400
+      DO N1=1,NLEVEL
+      DO N2=N1+1,NLEVEL
+        IF (ELEVEL(N2).GE.ELEVEL(N1)) CYCLE
         E=ELEVEL(N1)
         ELEVEL(N1)=ELEVEL(N2)
         ELEVEL(N2)=E
@@ -180,13 +186,16 @@ C
         I=JLEVEL(I1)
         JLEVEL(I1)=JLEVEL(I2)
         JLEVEL(I2)=I
-  400 CONTINUE
+      ENDDO
+      ENDDO
       GOTO 700
 C
-  500 DO 520 N1=1,NLEVEL
-      DO 520 N2=N1+1,NLEVEL
-  520   IF (JLEVEL(2*N1-1).EQ.JLEVEL(2*N2-1) .AND.
+  500 DO N1=1,NLEVEL
+      DO N2=N1+1,NLEVEL
+        IF (JLEVEL(2*N1-1).EQ.JLEVEL(2*N2-1) .AND.
      1      JLEVEL(2*N1)  .EQ.JLEVEL(2*N2)) GOTO 530
+      ENDDO
+      ENDDO
 
       GOTO 540
 
@@ -200,18 +209,19 @@ C
      1       I3)
 
   700 NSTATE=NLEVEL
+      ALLOCATE (JSTATE(3*NSTATE))
       NST2=2*NSTATE
-      DO 800 I=1,NSTATE
+      DO I=1,NSTATE
         N1=JLEVEL(2*I-1)
         N2=JLEVEL(2*I)
         JSTATE(I)=N1
         JSTATE(I+NSTATE)=N2
         JSTATE(I+NST2)=I
-        IF (.NOT.LEVIN) GOTO 800
+        IF (.NOT.LEVIN) CYCLE
         AA=DBLE(N1)*XH
         BB=DBLE(N2)*XK
         ELEVEL(I)=SQUARE(AA,BB)*BFCT/URED
-  800 CONTINUE
+      ENDDO
 C
       IF (EIN .AND. IPRINT.GE.1) WRITE(6,605)
   605 FORMAT(' *** NOTE. INPUT CHANNEL ENERGIES OVERWRITTEN BY VALUES',

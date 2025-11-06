@@ -1,15 +1,15 @@
       SUBROUTINE SPROC(JTOT, NBASIS, JSINDX, L, INDLEV,
      1                 WVEC, SREAL, SIMAG, AKMAT, RUNIT,
      2                 SCLEN, ESUM, NOPEN, IB, IBMAX, WGHT, IEXCH,
-     3                 INRG, TTIME, ENERGN, EREF, SIGCUR, SIGACC,
-     4                 SIGDEG, JSTATE, ISST, JECONV,
+     3                 INRG, TTIME, ENERGN, EREF,
+     4                 JSTATE, ISST, JECONV,
      5                 MINJTN, MAXJTN, NSTATE,
      6                 NQN, OTOL, DTOL, IPHSUM, ISIGU, IPARTU, ISAVEU,
-     7                 ISIGPR, IRSTRT, ICHAN, TEMP1, CENT,
-     8                 EINT, IBOUND, INDUSE, INDACC, LNEVER,
-     9                 CM2RU, JFIELD, IPRINT, LRESRT, PTIME,
-     A                 AWVMAX,RUNAME)
-C  Copyright (C) 2022 J. M. Hutson & C. R. Le Sueur
+     7                 ISIGPR, IRSTRT, ICHAN,
+     8                 CENT, EINT, IBOUND, IFXE,
+     9                 LNEVER, CM2RU, JFIELD, IPRINT, LRESRT, PTIME,
+     A                 AWVMAX,EUNAME,RUNAME,EPNAME,EP2RU,EUNIT)
+C  Copyright (C) 2025 J. M. Hutson & C. R. Le Sueur
 C  Distributed under the GNU General Public License, version 3
       USE efvs, ONLY: EFV, EFVNAM, EFVUNT, IEFVST, ISVEFV, ITPSUB,
      e                LEFVN, LEFVU, LISTFV, NEFV, NEFVP, NNZRO
@@ -17,6 +17,7 @@ C  Distributed under the GNU General Public License, version 3
       USE basis_data, ONLY: ELEVEL, JHALF, NLEVEL
       IMPLICIT DOUBLE PRECISION (A-H,O-Z)
       SAVE
+      ALLOCATABLE :: IN2LEV(:)
 C
 C  FOR MOLSCAT VERSION 14, JUL 1994
 C    WITH RESTART (IRSTRT) CAPABILITIES
@@ -50,51 +51,44 @@ C
 C  JAN 18 -- CODE REARRANGED TO ALLOW EARLY RETURN IF CROSS SECTIONS ARE
 C            NOT ACCUMULATED
 C
-      DIMENSION NBASIS(1),JSINDX(1),L(1),INDLEV(1),CENT(1),EINT(1),
-     1          WVEC(1),TEMP1(1),SIG(1),
-     1          INDUSE(1),INDACC(1),SIGTOT(1)
+      DIMENSION NBASIS(*),JSINDX(*),L(*),INDLEV(*),CENT(*),EINT(*),
+     1          WVEC(*)
       DIMENSION SREAL(NOPEN,NOPEN),SIMAG(NOPEN,NOPEN),AKMAT(NOPEN,NOPEN)
+      ALLOCATABLE :: INDUSE(:),INDACC(:),SIGMA(:,:),DEGENS(:,:),
+     1               ACCSIG(:,:,:),TOTSIG(:)
       DOUBLE COMPLEX SCATLN,SCLEN
       INTEGER ISST(2),MAXJT(2),MINJT(2),ICAC(2)
-      INTEGER NSTATE,JSTATE(1)
-      DIMENSION SIGCUR(1),SIGACC(1),SIGDEG(1),ENERGY(1)
+      INTEGER NSTATE,JSTATE(*)
+      DIMENSION ENERGY(*)!,SIGCUR(1),SIGACC(1),SIGDEG(1)
       DIMENSION FIELD(1)
       LOGICAL OKEY,LOUT,ACCUM,OPENCH,LWARN,LCURXS,LACCXS,LCURPS,LACCPS,
      1        LLOPEN,LUSE,LNEVER(1),LNEG,LDIAG,LRESRT,PTIME,LWRITE,
-     2        LFIRST
+     2        LFIRST,LNOPS,LNOCON,DAONLY
       CHARACTER CTIME*9,CDATE*11
-      CHARACTER(1)   STAR,SPACE
+      CHARACTER(1)   STAR,SPACE,CHAR2
       CHARACTER(2)   CNC,CH,CX
       CHARACTER(3)   CLEFV,C1,C2,CEFVN,CEFVU
       CHARACTER(4)   C3
       CHARACTER(6)   NAMEL
-      CHARACTER(8)   UNAME
-      CHARACTER(10)  RUNAME,UTNAME
+      CHARACTER(8)   EUNAME,UNAME
+      CHARACTER(10)  RUNAME,UTNAME,EPNAME
       CHARACTER(50)  F931,F932,F941,F942
       CHARACTER(50)  F191,F200,F933,F943
       CHARACTER(130) F710,F945
       CHARACTER(90)  F300,F301,F302,F303,F304,F250,F400
       CHARACTER(80)  LABL
-      CHARACTER(30)  F241,F242,F243,F244,F842,F843
-      CHARACTER(50)  F841
+      CHARACTER(40)  F241,F242,F243,F244,F842,F843
+      CHARACTER(80)  F841
       CHARACTER(110) F844
       CHARACTER(250) F850,F305
       CHARACTER(80)  LABEL
       DATA IBMIN/-1/
 
 C
-C     include common block for results to be returned via pvm
-C
-cINOLLS include 'all/pvmdat1.f'
-cINOLLS include 'all/pvmdat11.f'
-C
 C  COMMON BLOCK FOR RESONANCE SEARCHES
       COMMON /EIGSUM/ EPSM(5)
 
 C  ALTERED TO USE ARRAY SIZES FROM MODULE sizes ON 23-06-17 BY CRLS
-
-C  DYNAMIC STORAGE COMMON BLOCK ...
-      COMMON /MEMORY/ MX,IXNEXT,NIPR,IDUMMY,X(1)
 C
 C  COMMON BLOCK FOR INPUT/OUTPUT CHANNEL NUMBERS
       LOGICAL IWAVEF
@@ -136,16 +130,27 @@ C       WRITE(6,'(/2X,A)') 'LIST OF OPEN CHANNELS:'
           NAMEL='<L**2>'
         ENDIF
         IF (LCURXS) THEN
-          WRITE(6,100) NAMEL
+          IF (EP2RU.NE.CM2RU) THEN
+            WRITE(6,100) NAMEL,TRIM(EPNAME)
+          ELSE
+            WRITE(6,100) NAMEL
+          ENDIF
   100     FORMAT(/'  OPEN CHANNEL',3X,'WVEC (1/ANG.)',4X,'CHANNEL',
-     1           7X,A6,3X,'PAIR LEVEL',12X,'PAIR ENERGY (CM-1)')
+     1           7X,A6,3X,'PAIR LEVEL',12X,'PAIR ENERGY (CM-1)':,2X,
+     2           'PAIR ENERGY (',A,')')
         ELSE
-          WRITE(6,101) NAMEL
+          IF (EP2RU.NE.CM2RU) THEN
+            WRITE(6,101) NAMEL,TRIM(EPNAME)
+          ELSE
+            WRITE(6,101) NAMEL
+          ENDIF
   101     FORMAT(/'  OPEN CHANNEL',3X,'WVEC (1/ANG.)',4X,'CHANNEL',
-     1           7X,A6,6X,'PAIR ENERGY (CM-1)')
+     1           7X,A6,6X,'PAIR ENERGY (CM-1)':,2X,'PAIR ENERGY (',
+     2           A,')')
         ENDIF
 
       ENDIF
+!  Start of long DO loop #1
       DO I=1,NOPEN
         NB=NBASIS(I)
         IF (LCURXS .AND. .NOT.LRESRT) THEN
@@ -164,21 +169,32 @@ C  IF INDLEV HASN'T BEEN USED, HIJACK IT TO PROVIDE INDEX TO SIGMA
           ELSEIF (.NOT.LRESRT) THEN
             INDLEV(NB)=JSTATE(NTOP+JSINDX(NB))
           ENDIF
-        ELSEIF (LRESRT) THEN
-          INDLEV(NB)=JSTATE(NTOP+JSINDX(NB))
         ENDIF
 
+!  Start of long IF block #1
         IF (IPRINT.GE.10) THEN
           IF (LCURXS) THEN
             IF (IBOUND.EQ.0) THEN
-              WRITE(6,110) I,WVEC(NB),NB,L(NB),INDLEV(NB),
-     1                     EINT(NB)/CM2RU
+              IF (EP2RU.NE.CM2RU) THEN
+                WRITE(6,110) I,WVEC(NB),NB,L(NB),INDLEV(NB),
+     1                       EINT(NB)/CM2RU,EINT(NB)/EP2RU
+              ELSE
+                WRITE(6,110) I,WVEC(NB),NB,L(NB),INDLEV(NB),
+     1                       EINT(NB)/CM2RU
+              ENDIF
             ELSE
-              WRITE(6,115) I,WVEC(NB),NB,CENT(NB),INDLEV(NB),
-     1                     EINT(NB)/CM2RU
+              IF (EP2RU.NE.CM2RU) THEN
+                WRITE(6,115) I,WVEC(NB),NB,CENT(NB),INDLEV(NB),
+     1                       EINT(NB)/CM2RU,EINT(NB)/EP2RU
+              ELSE
+                WRITE(6,115) I,WVEC(NB),NB,CENT(NB),INDLEV(NB),
+     1                       EINT(NB)/CM2RU
+              ENDIF
             ENDIF
-  110       FORMAT(I12,1P,E18.8,0P,6X,I4,3X,I10,  6X,I4,9X,F19.12)
-  115       FORMAT(I12,1P,E18.8,0P,6X,I4,3X,F10.2,6X,I4,9X,F19.12)
+  110       FORMAT(I12,1P,E18.8,0P,6X,I4,3X,I10,  6X,I4,13X,F19.12:
+     1             ,F19.12)
+  115       FORMAT(I12,1P,E18.8,0P,6X,I4,3X,F10.2,6X,I4,13X,F19.12:
+     1             ,F19.12)
           ELSE
             IF (IBOUND.EQ.0) THEN
               WRITE(6,111) I,WVEC(NB),NB,L(NB),EINT(NB)/CM2RU
@@ -189,8 +205,11 @@ C  IF INDLEV HASN'T BEEN USED, HIJACK IT TO PROVIDE INDEX TO SIGMA
   116       FORMAT(I12,1P,E18.8,0P,6X,I4,3X,F10.2,6X,F19.12)
           ENDIF
         ENDIF
+!  End of long IF block #1
       ENDDO
+!  End of long DO loop #1
 C
+!  Start of long IF block #2
       IF (IPRINT.GE.11) THEN
         IF (ITYPE.EQ.8) THEN
           WRITE(6,120) '   G1   G2'
@@ -200,12 +219,12 @@ C
   120   FORMAT(/A10,7X,'S**2',18X,'PHASE/2PI',14X,'RE (S)',
      1         17X,'IM (S)'  )
 
-        DO 1000 ICOL=1,NOPEN
+        DO ICOL=1,NOPEN
           LEVC=JSINDX(NBASIS(ICOL))
 C  JSINDX(NBASIS(I)) IS STATE NUMBER OF ITH BASIS FUNCTION
           IF ((JSTATE(LEVC).NE.0 .OR. JSTATE(NSTATE+LEVC).NE.0) .AND.
-     1        ITYPE.EQ.8) GOTO 1000
-          DO 1020 IROW=1,NOPEN
+     1        ITYPE.EQ.8) CYCLE
+          DO IROW=1,NOPEN
             SR=SREAL(IROW,ICOL)
             SI=SIMAG(IROW,ICOL)
             SMAG=(SR**2+SI**2)
@@ -223,9 +242,10 @@ C  ALL OTHER CASES
   130           FORMAT(2I5,4(ES21.13E3,2X))
               ENDIF
             ENDIF
- 1020     CONTINUE
- 1000   CONTINUE
+          ENDDO
+        ENDDO
       ENDIF
+!  End of long IF block #2
 
 C  SAVE S MATRICES ON TAPE (ISAVEU) . . .
 C
@@ -237,11 +257,11 @@ C               VERSION 16 INCLUDES EXTERNAL VARIABLES
      2                EREF,IEXCH,WGHT,NOPEN
         IF (LDIAG) THEN
           IF (IBOUND.EQ.0) THEN
-            WRITE(ISAVEU) (JSINDX(NBASIS(I)),L(NBASIS(I)),
+            WRITE(ISAVEU) (JSTATE(NTOP+JSINDX(NBASIS(I))),L(NBASIS(I)),
      1                                       WVEC(NBASIS(I)),I=1,NOPEN)
           ELSE
-            WRITE(ISAVEU) (JSINDX(NBASIS(I)),CENT(NBASIS(I)),
-     1                                       WVEC(NBASIS(I)),I=1,NOPEN)
+            WRITE(ISAVEU) (JSTATE(NTOP+JSINDX(NBASIS(I))),
+     1                     CENT(NBASIS(I)),WVEC(NBASIS(I)),I=1,NOPEN)
           ENDIF
         ELSE
           IF (IBOUND.EQ.0) THEN
@@ -278,8 +298,9 @@ C
       CALL CALCA(NOPEN,NBASIS,L,WVEC,SREAL,SIMAG,AWVMAX,
      1           SCLEN,ICHAN,RUNAME,LRPOW,IPRINT)
 
+!  Start of long IF block #3
       IF (IPHSUM.GT.0) THEN
-        ESUM=EPSUM(AKMAT,NOPEN,TEMP1)
+        ESUM=EPSUM(AKMAT,NOPEN) !,TEMP1)
         IS=INRG-5*((INRG-1)/5)
         EPSM(IS)=ESUM
 
@@ -294,39 +315,61 @@ C
 
 C  THE FORMAT STRING F250 IS BUILT IN SPINIT USING THE SAME TYPE OF LOGIC
 C  AS BELOW
+!  Start of long IF block #4
         IF (IFCONV.NE.0) THEN
 C  WRITE THE SINGLE EFV, THE EIGENPHASE SUM AND THE SCATTERING LENGTH
-          WRITE(IPHSUM,FMT=F250) JTOT,IB,NOPEN,INRG,ENERGN,
-     1                           EFV(ISVEFV),ESUM,
+          IF (EUNIT.EQ.1.D0) THEN
+            WRITE(IPHSUM,FMT=F250) JTOT,IB,NOPEN,INRG,ENERGN,
+     1                             EFV(ISVEFV),ESUM,
      2        ICHAN,LL,IPOW,DD,DBLE(SCLEN),IMAG(SCLEN)
+          ELSE
+            WRITE(IPHSUM,FMT=F250) JTOT,IB,NOPEN,INRG,ENERGN,
+     1                             ENERGN/EUNIT,EFV(ISVEFV),ESUM,
+     2        ICHAN,LL,IPOW,DD,DBLE(SCLEN),IMAG(SCLEN)
+          ENDIF
 
         ELSEIF (ICHAN.GT.0) THEN
 C  WRITE ALL THE EFVS (THERE CAN BE NONE HERE), THE EIGENPHASE SUM AND
 C  THE SCATTERING LENGTH
-          WRITE(IPHSUM,FMT=F250) JTOT,IB,NOPEN,INRG,ENERGN,
-     1                           (EFV(LISTFV(I)),I=1,NNZRO),ESUM,
-     2                           ICHAN,LL,IPOW,DD,
-     3                           DBLE(SCLEN),IMAG(SCLEN)
+          IF (EUNIT.EQ.1D0) THEN
+            WRITE(IPHSUM,FMT=F250) JTOT,IB,NOPEN,INRG,ENERGN,
+     1                             (EFV(LISTFV(I)),I=1,NNZRO),ESUM,
+     2                             ICHAN,LL,IPOW,DD,
+     3                             DBLE(SCLEN),IMAG(SCLEN)
+          ELSE
+            WRITE(IPHSUM,FMT=F250) JTOT,IB,NOPEN,INRG,ENERGN,
+     1                             ENERGN/EUNIT,
+     2                             (EFV(LISTFV(I)),I=1,NNZRO),ESUM,
+     3                             ICHAN,LL,IPOW,DD,
+     4                             DBLE(SCLEN),IMAG(SCLEN)
+          ENDIF
 
         ELSE
 C  WRITE ALL THE EFVS (THERE CAN BE NONE HERE) AND THE EIGENPHASE SUM
-          WRITE(IPHSUM,FMT=F250) JTOT,IB,NOPEN,INRG,ENERGN,
-     1                           (EFV(LISTFV(I)),I=1,NNZRO),ESUM
+          IF (EUNIT.EQ.1.D0) THEN
+            WRITE(IPHSUM,FMT=F250) JTOT,IB,NOPEN,INRG,ENERGN,
+     1                             (EFV(LISTFV(I)),I=1,NNZRO),ESUM
+          ELSE
+            WRITE(IPHSUM,FMT=F250) JTOT,IB,NOPEN,INRG,ENERGN,
+     1                             ENERGN/EUNIT,
+     2                             (EFV(LISTFV(I)),I=1,NNZRO),ESUM
+          ENDIF
         ENDIF
+!  End of long IF block #4
 
         IF (ISAVEU.GT.0 .AND. IRSTRT.EQ.0) WRITE(ISAVEU) ESUM
       ENDIF
+!  End of long IF block #3
 
 C  FROM THIS POINT THE CODE IS CONCERNED WITH CALCULATING CROSS SECTIONS
       IF (.NOT.LCURXS) RETURN
 
 C
 C  PROCESS S-MATRIX: ACCUMULATE X-SECTIONS IN SIGACC; PRINT.
-C  CLEAR SIGCURR FIRST.
+C  CLEAR SIGCUR FIRST.
 C
-      DO I=1,NSTOR
-        SIGCUR(I)=0.D0
-      ENDDO
+      ALLOCATE (SIGMA(NSIG,NSIG))
+      SIGMA=0.D0
 C
 C  CALCULATE GLOBAL MULTIPLICATIVE FACTOR FOR X-SECTIONS.
 C  JHALF=2 IF JTOT IS TWICE THE REAL (HALF-INTEGER) TOTAL ANG MOM
@@ -344,7 +387,8 @@ C
       IF (WGHT.GT.0.D0) XJ=XJ*WGHT
       IF (ITYPE.EQ.8) XJ=1.D0
 C
-      DO 2000 ICOL=1,NOPEN
+!  Start of long DO loop #2
+      DO ICOL=1,NOPEN
         LCOL=INDLEV(NBASIS(ICOL))
         IF (LCOL.EQ.0) CYCLE
 C
@@ -357,7 +401,7 @@ C
           LCOL=-LCOL
         ENDIF
 
-      DO 2000 IROW=1,NOPEN
+      DO IROW=1,NOPEN
         LROW=INDLEV(NBASIS(IROW))
         IF (LROW.EQ.0) CYCLE
         SR=SREAL(IROW,ICOL)
@@ -371,6 +415,7 @@ C  IF BOTH NEGATIVE, INDICATE BY NEGATIVE SIGMA
           LROW=-LROW
           IF (CSI.LT.0.D0) CSF=-1.D0
         ENDIF
+        LNEG=(LNEG .OR. CSF.LT.0.D0)
 C
         IF (LROW.LE.NSIG .AND. LCOL.LE.NSIG) THEN
           DD=WVEC(NBASIS(IROW))**2/RUNIT**2
@@ -378,18 +423,19 @@ C
 C  FOR IROW = ICOL,  CALCULATE  T = 1 - S.
             SMAG=(1.D0-SR)**2+SI**2
           ENDIF
-C  II IS INDEX OF SIG(ICOL,IROW).  N.B. JSTATE(LEV,NQN) HAS POINTER
-C  TO 'SERIAL' NUMBER OF 'LEVEL'.
-          II=(LROW-1)*NSIG+LCOL
-C  ACCOUNT FOR K(J,J), DEGEN. LATTER IN SIG(NSTOR+II).
-          SIGCUR(II) = SIGCUR(II) + CSF * SMAG*XJ/(SIGDEG(II)*DD)
+          SIGMA(LCOL,LROW)=SIGMA(LCOL,LROW)+CSF*SMAG*XJ
+     1                                      /(DEGENS(LCOL,LROW)*DD)
         ENDIF
- 2000 CONTINUE
+      ENDDO
+      ENDDO
+!  End of long DO loop #2
 
+!  Start of long IF block #5
       IF (ISIGPR.GT.0 .AND. IPRINT.GE.3) THEN
 
 C  BUILD A LIST OF ENTRIES IN CROSS SECTION MATRIX THAT ARE DUE
 C  TO CURRENT SET OF CHANNELS
+        ALLOCATE (INDUSE(NSIG))
         IUSE=0
         DO IOPEN=1,NOPEN
           ILVL=INDLEV(NBASIS(IOPEN))
@@ -445,40 +491,46 @@ C  SORT THE LIST
      1                              MIN(ISET*NCOLS,IUSE))
           DO I=1,IUSE
             IT=INDUSE(I)
-            WRITE(6,201) IT,(ABS(SIGCUR((INDUSE(II)-1)*NSIG+IT)),
-     1                       II=(ISET-1)*NCOLS+1,MIN(ISET*NCOLS,IUSE))
+            WRITE(6,201) IT,(ABS(SIGMA(IT,INDUSE(J))),
+     1                       J=(ISET-1)*NCOLS+1,MIN(ISET*NCOLS,IUSE))
           ENDDO
         ENDDO
+        DEALLOCATE (INDUSE)
       ENDIF
+!  End of long IF block #5
 
       II=0
       XII=0.D0
       XIJ=0.D0
-      DO JI=1,NSIG
+      DO J=1,NSIG
         DO I=1,NSIG
           II=II+1
-          IF (JI.NE.I) THEN
-            XIJ=MAX(XIJ,ABS(SIGCUR(II)))
+          IF (J.NE.I) THEN
+            XIJ=MAX(XIJ,ABS(SIGMA(I,J)))
           ELSE
-            XII=MAX(XII,ABS(SIGCUR(II)))
+            XII=MAX(XII,ABS(SIGMA(I,J)))
           ENDIF
         ENDDO
       ENDDO
 
 C  FROM THIS POINT THE CODE IS CONCERNED WITH ACCUMULATING CROSS SECTIONS
-      IF (.NOT.LACCXS) RETURN
+      IF (.NOT.LACCXS) THEN
+        DEALLOCATE(SIGMA)
+        RETURN
+      ENDIF
 C
 C  ACCUMULATE X-SECTIONS.
 C
-      IF (ACCUM) THEN
-        II=0
-        DO 3000 JI=1,NSIG
-        DO 3000 I=1,NSIG
-          II=II+1
-          SIGACC(II)=SIGACC(II)+SIGCUR(II)
- 3000   CONTINUE
+      IF (ACCUM .AND. LACCXS .AND. LNOCON) THEN
+        DO J=1,NSIG
+        DO I=1,NSIG
+          ACCSIG(I,J,IFXE)=ACCSIG(I,J,IFXE)+SIGMA(I,J)
+        ENDDO
+        ENDDO
+      ENDIF
+      IF (IPARTU.EQ.0) DEALLOCATE (SIGMA)
 C
-      ELSEIF (.NOT.ACCUM) THEN
+      IF (.NOT.ACCUM) THEN
 
 C  CODE BELOW IS REACHED IF SIGMA NOT ACCUMULATED. . .
         IF (ITYPE.EQ.8) GOTO 4000
@@ -525,12 +577,14 @@ C
 C
 C  EXTRA RESTRICTIONS ON PRINTING SO THAT RUNNING TOTAL IS NOT PRINTED
 C  AT FIRST CALL TO SPROC, AND ONLY PRINTED FOR THE LAST SYMMETRY BLOCK
-      IF (.NOT.LFIRST .AND. ISIGPR.GT.0 .AND. IPRINT.GE.11 .AND.
+!  Start of long IF block #6
+      IF (.NOT.LFIRST .AND. ISIGPR.GT.0 .AND. IPRINT.GE.10 .AND.
      1    IB.EQ.IBMAX) THEN
 
         WRITE(6,210) MINJTN,JTOT
-  210   FORMAT(/2X,10('* '),'STATE-TO-STATE INTEGRAL CROSS SECTIONS: ',
-     1         'ACCUMULATED FROM JTOT = ',I3,' TO ',I3,1X,10(' *'))
+  210   FORMAT(/2X,10('*-'),'STATE-TO-STATE INTEGRAL CROSS SECTIONS: ',
+     1         '(ANGSTROM**2) ACCUMULATED FROM JTOT = ',I3,' TO ',I3,
+     2         1X,10('-*'))
         ISTART=(INRG+1)*NSTOR
 C
         IF (JHALF.EQ.0) THEN
@@ -542,6 +596,7 @@ C
         ENDIF
 C
         IUSE=0
+        ALLOCATE (INDACC(NSIG))
         DO IACC=1,MIN(NLEVEL,NSIG)
           IF (.NOT.LNEVER(IACC)) THEN
             IUSE=IUSE+1
@@ -554,11 +609,14 @@ C
      1                              MIN(ISET*NCOLS,IUSE))
           DO I=1,IUSE
             IT=INDACC(I)
-            WRITE(6,201) IT,(ABS(SIGACC((INDACC(II)-1)*NSIG+IT))*XJS,
-     1                       II=(ISET-1)*NCOLS+1,MIN(ISET*NCOLS,IUSE))
+            WRITE(6,201) IT,(ABS(ACCSIG(IT,INDACC(J),IFXE))*XJS,
+     1                       J=(ISET-1)*NCOLS+1,MIN(ISET*NCOLS,IUSE))
           ENDDO
         ENDDO
+        DEALLOCATE (INDACC)
+
       ENDIF
+!  End of long IF block #6
 
 C  JECONV COUNTS THE NUMBER OF CONSECUTIVE TIMES THE MAXIMUM DIAGONAL AND
 C  OFF-DIAGONAL CONTRIBUTIONS ARE LESS THAN DTOL AND OTOL (RESPECTIVELY)
@@ -575,35 +633,31 @@ C =============================================================================
 C  ENTRY TO ALLOW UPDATING OF SIG() ON UNIT ISIGU
 C  IN CASE THERE ARE NO BASIS FNS FOR SYMMETRY BLOCK IB=IBMAX.
 C
-      ENTRY SIGSAV(ISIGU,IB,IBMAX,INRG,ENERGN,MINJTN,MAXJTN,SIGACC,
+      ENTRY SIGSAV(ISIGU,IB,IBMAX,INRG,IFXE,ENERGN,MINJTN,MAXJTN,
      1             IPRINT)
 
 C  THIS CODE IS ONLY USED FOR ACCUMULATING CROSS SECTIONS
-      IF (.NOT.LACCXS) RETURN
+      IF (.NOT.LACCXS .AND. LNOCON) RETURN
       IRET=1
 C
 C  UPDATE DISK (ISIGU) RECORD IF THIS IS THE LAST SYMMETRY BLOCK
  4000 IF (LOUT .AND. IB.EQ.IBMAX) THEN
         XJS=JTSTEP
-        IJ=0 !(INRG+1)*NSTOR
         I10=ISST(INRG)
-        DO 4100 I=1,NSIG
-        DO 4100 II=1,NSIG
-          IJ=IJ+1
-C  I10 IS INCREMENTED BY ASSOCIATED VARIABLE HERE.
-          IF (SIGACC(IJ).GE.0.D0) THEN
-
-C  (NOTE THE FORMAT STRINGS F400 AND F305 WERE BUILT IN SPINIT)
-            WRITE(ISIGU,FMT=F400,REC=I10) STAR,ENERGN,
-     1                                   (EFV(IEFV),IEFV=IEFVST,NEFVP),
-     1      MINJTN,JTSTEP,MAXJTN,II,I,SIGACC(IJ)*XJS,SPACE
+        DO I=1,NSIG
+        DO II=1,NSIG
+          IF (ACCSIG(J,I,IFXE).GE.0.D0) THEN
+            CHAR2=SPACE
           ELSE
-            WRITE(ISIGU,FMT=F400,REC=I10) STAR,ENERGN,
-     1                                   (EFV(IEFV),IEFV=IEFVST,NEFVP),
-     2      MINJTN,JTSTEP,MAXJTN,II,I,ABS(SIGACC(IJ))*XJS,STAR
+            CHAR2=STAR
           ENDIF
+          WRITE(ISIGU,FMT=F400,REC=I10) STAR,ENERGN,
+     1                                  (EFV(IEFV),IEFV=IEFVST,NEFVP),
+     2        MINJTN,JTSTEP,MAXJTN,J,I,ABS(ACCSIG(J,I,IFXE))*XJS,CHAR2
+C  I10 IS INCREMENTED BY ASSOCIATED VARIABLE HERE.
           I10=I10+1
- 4100   CONTINUE
+        ENDDO
+        ENDDO
 
         IF (IPRINT.GE.2) THEN
           WRITE(6,FMT=F305) ISIGU,INRG,ENERGN,
@@ -622,9 +676,10 @@ C  NO ATTEMPT HAS BEEN MADE TO KEEP THIS UP TO DATE.
      1                     (EFV(IEFV),IEFV=IEFVST,NEFVP)
   310   FORMAT(3I5,G20.5,(G13.5))
         DO I=1,NSIG
-          WRITE(IPARTU,320) (SIGCUR((II-1)*NSIG+I),II=1,NSIG)
+          WRITE(IPARTU,320) (SIGMA(J,I),J=1,NSIG)
   320     FORMAT(5G14.6)
         ENDDO
+        DEALLOCATE (SIGMA)
       ENDIF
 C
       INVERR=0
@@ -635,16 +690,18 @@ C * * * * * * * * * * * * * * * * * * * * * * * * * * * * * END OF SPROC
 C
 C  INITIALIZATION ENTRY.
 C
-      ENTRY SPINIT(LABEL,ENERGY,EFACT,NNRG,NFIELD,NSTATE,NQN,JSTATE,
-     1             SIG,ICAC,URED,ITYP,IPHSUM,ISST,MINJT,MAXJT,
+      ENTRY SPINIT(LABEL,ENERGY,EFACT,NNRG,NFIELD,NSTATE,NQN,JSTATE,!SIG,
+     1             ICAC,URED,ITYP,IPHSUM,ISST,MINJT,MAXJT,
      2             ISIGU,IPARTU,ISAVEU,IPROGM,MXSIG,ISIGPR,JST,IRSTRT,
-     3             ILDSVU,LCURPS,LACCPS,NLEVS,ICHAN,IFCNPS,IBOUND,
-     4             RUNAME,IPRINT)
+     3             ILDSVU,LCURPS,LACCPS,LNOPS,NLEVS,ICHAN,IFCNPS,IBOUND,
+     4             RUNAME,IPRINT,EUNIT,EUNAME)
 C
       EF=EFACT
       LCURXS=LCURPS ! VARIABLES COPIED SO THEY CAN BE SAVED
       LACCXS=LACCPS
       IFCONV=IFCNPS
+      LNOCON=LNOPS
+      LNEG=.FALSE.
       LDIAG=(NCONST.EQ.0 .AND. NRSQ.EQ.0)
 C
       LENEFV=MAX(NEFVP-IEFVST+1,0)
@@ -678,6 +735,7 @@ C  .TRUE. IN SECOND ARGUMENT MEANS "WRITE"
 C
 C  PROCESS IRSTRT POSSIBILITIES NEXT.
 C
+!  Start of long IF block #7
       IF (IRSTRT.NE.0) THEN
         WRITE(6,*) ' *** '
         IF (IRSTRT.GT.4) THEN
@@ -706,6 +764,7 @@ C
 C  PREPARE TO SAVE S MATRICES ON (ISAVEU).
 C
         NQL=NQN*NSTATE
+!  Start of long IF block #8
         IF (ISAVEU.GT.0) THEN
           IF (IPHSUM.LE.0) THEN
             IF (IPRINT.GE.1) WRITE(6,790) ISAVEU,IPROGM
@@ -747,7 +806,9 @@ C  06-09-2018: THIS WRITE STATEMENT ADDED
      1                               IEFV=1,NEFV)
           WRITE(ISAVEU) NFIELD,NNRG,(ENERGY(I),I=1,NNRG)
         ENDIF
+!  End of long IF block #8
 C
+!  Start of long IF block #9
         IF (IPHSUM.GT.0) THEN
           IF (IPRINT.GE.1) WRITE(6,820) IPHSUM
   820     FORMAT(/'  EIGENPHASE SUMMARY WILL BE WRITTEN TO UNIT',I3)
@@ -768,6 +829,11 @@ C  FIRST (ALWAYS) PART OF HEADER (LENGTH 44)
           LH=44
           F841="(/'  JTOT  IBLOCK  NOP   I',4X,'ENERGY(I)/CM-1',3X,"
           F241="(I6,5X,I3,I5,I4,2X,G16.9,3X,"
+          IF (EUNIT.NE.1.D0) THEN
+            LH=44+21
+            F841=TRIM(F841)//"2X,'ENERGY(I)/"//ADJUSTL(EUNAME)//"',1X,"
+            F241=TRIM(F241)//"G16.9,5X,"
+          ENDIF
           WRITE(CH,'(I2)') LH
 
 C  FORMAT FOR EIGENPHASE SUM (LENGTH 22)
@@ -800,7 +866,7 @@ C  FORMAT FOR EFVS
 
 
 C  FORMAT FOR SCATTERING LENGTH
-          F844=CH//"X,'SCATTERING LENGTH'/"//TRIM(C2)//
+          F844="46X,'SCATTERING LENGTH'/"//TRIM(C2)//
      1        "X,'CHAN   L POW',5X,'WVEC*"//ADJUSTL(RUNAME)//
      2        "',7X,'RE(A)/"//ADJUSTL(RUNAME)//"',7X,"//
      3        "'IM(A)/"//TRIM(ADJUSTL(RUNAME))//"')"
@@ -808,6 +874,7 @@ C  FORMAT FOR SCATTERING LENGTH
 
 C  WRITE HEADER: SEVERAL DIFFERENT OPTIONS
 
+!  Start of long IF block #10
           IF (IFCONV.NE.0) THEN
 C  WILL WANT SCATTERING LENGTHS AND THERE WILL DEFINITELY BE AT LEAST
 C  THE SINGLE VARYING EFV
@@ -855,9 +922,12 @@ C  WILL WANT JUST EIGENPHASE SUM
             WRITE(IPHSUM,FMT=F850)
             F250=TRIM(F241)//TRIM(F243)//")"
           ENDIF
+!  End of long IF block #10
 
         ENDIF
+!  End of long IF block #9
       ENDIF
+!  End of long IF block #7
 
 C  FIND NSIG AS MAX. INDEX FROM JSTATE(I,NQN); ALLOW FOR NEG SIG IND
       IJ=(NQN-1)*NSTATE
@@ -890,46 +960,27 @@ C  FOR TSIG; NSTOR FOR DEGEN; NNRGF*NSTOR FOR SIG.
       NNRGF=NNRG*NFIELD
       IF (.NOT.LCURXS) THEN
         IJ=0
-      ELSEIF (.NOT.LACCXS) THEN
-        IJ=NSTOR*2
       ELSE
-        IJ=NSTOR*(NNRGF+2)
-      ENDIF
-C  IXNEXT INCREMENTED TO REFLECT ADDITIONAL STORAGE TAKEN UP BY SIG.
-      IXNEXT=IXNEXT+IJ
-      NUSED=0
-      CALL CHKSTR(NUSED)
-C
-C  INITIALIZE SIG TO ZERO (NOTE THAT BECAUSE OF ADDRESSES OF
-C  SIGCUR, SIGDEG AND SIGACC, SIGDEG CAN BE ADDRESSED BY
-C  USING AN OFFSET WITHIN SIG.  THIS IS UGLY BUT AT PRESENT
-C  UNAVOIDABLE)
-C
-C  TO SORT THIS ISSUE OUT, THE SIZE OF SIG NEEDS TO BE DECIDED BEFORE
-C  SPINIT IS CALLED, WHICH COULD BE DONE...
-      IF (LACCXS) THEN
-        II=2*NSTOR+1
-        DO I=II,IJ
-          SIG(I)=0.D0
-        ENDDO
+        ALLOCATE (DEGENS(NSIG,NSIG))
+        IF (NCONST.NE.0) THEN
+          DEGENS=1.D0
+        ELSE
+          DO LROW=1,NSIG
+          DO LCOL=1,NSIG
+            CALL DEGENF(LROW,LCOL,DEGENS(LROW,LCOL))
+          ENDDO
+          ENDDO
+        ENDIF
+        IF (.NOT.(LACCXS .AND. LNOCON)) THEN
+          IJ=NSTOR*2
+        ELSE
+          ALLOCATE (ACCSIG(NSIG,NSIG,NNRGF))
+          ACCSIG=0.D0
+          IJ=NSTOR*(NNRGF+2)
+        ENDIF
       ENDIF
 
-C  DEGENERACY INFORMATION (SIGDEG) IN SIG(NSTOR+(LROW-1)*NSIG+LCOL)
-C  FOR NCONST>0, THE ACTUAL DEGENERACY CANNOT BE CALCULATED UNTIL
-C  THE LEVEL LIST IS COMPLETE (IN THE CALL TO SPROC), SO SET ALL THE
-C  DEGENERACIES TO 1 HERE. THIS WILL USUALLY BE ADEQUATE IN FIELDS.
       IF (.NOT.LCURXS) RETURN
-      II=NSTOR
-      IJ=(NQN-1)*NSTATE
-      DO 5000 LROW=1,NSIG
-      DO 5000 LCOL=1,NSIG
-        II=II+1
-        IF (NCONST.EQ.0) THEN
-          CALL DEGENF(LCOL,LROW,SIG(II))
-        ELSE
-          SIG(II)=1.D0
-        ENDIF
- 5000 CONTINUE
 C
 C  CALCULATIONS TO CONSTRUCT FORMAT STATEMENTS FOR USE IN SIGWRT:
 C  IT IS IMPORTANT THAT NUMLEN MATCHES THE TOTAL LENGTH OF THE FORMAT
@@ -979,7 +1030,7 @@ C  THESE FORMAT STATEMENTS ARE USED IN SIGSAV FOR SUMMARY WRITTEN TO STDOUT
         F945=TRIM(F931)//TRIM(F933)
       ENDIF
 C
-      IF (.NOT.LACCXS) RETURN
+      IF (.NOT.(LACCXS .AND. LNOCON)) RETURN
 C
 C  PREPARE FOR STORAGE OF SIG ON DA (ISIGU).
       MXREC=NSTOR*NNRGF+2
@@ -988,6 +1039,7 @@ C  PREPARE FOR STORAGE OF SIG ON DA (ISIGU).
      1                     FORM='FORMATTED',RECL=240,IOSTAT=IERR)
       LOUT=IERR.EQ.0
 C
+!  Start of long IF block #11
       IF (LOUT) THEN
         IF (IPRINT.GE.1) WRITE(6,720) ISIGU
   720   FORMAT(/'  STATE-TO-STATE INTEGRAL CROSS SECTIONS ',
@@ -1022,6 +1074,7 @@ C  INITIALIZE DATA SET ON ISIGU. . .
   770   FORMAT(/'  STATE-TO-STATE INTEGRAL CROSS-SECTIONS WILL BE ',
      1         'COMPUTED BUT NOT STORED ON DISK')
       ENDIF
+!  End of long IF block #11
 C
 C  NOTE THE CODE BELOW HAS NOT BEEN MAINTAINED.
       IF (IPARTU.GT.0) THEN
@@ -1050,12 +1103,16 @@ C  SET UP 'BOOKKEEPING' VARIABLES.
 C * * * * * * * * * * * * * * * * * * * * * * * * * * * * END OF SPINIT
 C
 C
-      ENTRY SIGWRT(SIGACC,ENERGY,NNRG,FIELD,NFIELD,MINJT,MAXJT,
-     1             ISIGPR,LABL,F710,UNAME,ISIGU,LWARN,EREF,INDLEV,
-     2             SIGTOT,IPRINT)
+      ENTRY SIGWRT(ENERGY,NNRG,FIELD,NFIELD,MINJT,MAXJT,
+     1             ISIGPR,LABL,F710,UNAME,ISIGU,LWARN,EREF,
+     2             IPRINT,DAONLY)
 
 C  THIS CODE IS ONLY USED IF CROSS SECTIONS ARE ACCUMULATED
-      IF (.NOT.LACCXS .OR. .NOT.ACCUM) RETURN
+      IF (ALLOCATED(DEGENS)) DEALLOCATE (DEGENS)
+      IF (DAONLY .OR. (.NOT.(LACCXS .AND. LNOCON) .OR. .NOT.ACCUM)) THEN
+        IF (ALLOCATED(ACCSIG)) DEALLOCATE (ACCSIG)
+        RETURN
+      ENDIF
 
 C  ARGUMENT 'JTSTEP' ADDED AUG 86; MOVED TO 'SPROC' APR 94  - SG
 C  ARGUMENT 'ISIGU' ADDED JUL 92 - JMH
@@ -1065,84 +1122,99 @@ C  NEVER PUNCH THESE VALUES (INDICATED BY NEGATIVE SIGMA) HOWEVER.
 
         IF (IPRINT.GE.1) WRITE(6,900)
   900   FORMAT(/'  SIGMA NOT PRINTED BECAUSE ISIGPR = 0')
-      ELSE
-        IF (IPRINT.GE.1) THEN
-          WRITE(6,FMT=F710) TRIM(LABL)
-        ENDIF
-        IF (LWARN) THEN
-          WRITE(6,*)
-          WRITE(6,*) ' ************************************************'
-          WRITE(6,*) ' ************************************************'
-          WRITE(6,*) ' **   WARNING. SOME SIGMA MAY BE INCOMPLETE    **'
-          WRITE(6,*) ' **   BECAUSE  IFEGEN .GT. 1                   **'
-          WRITE(6,*) ' ************************************************'
-          WRITE(6,*) ' ************************************************'
-        ENDIF
+        DEALLOCATE (ACCSIG)
+        RETURN
+      ENDIF
+      IF (IPRINT.GE.1) THEN
+        WRITE(6,FMT=F710) TRIM(LABL)
+      ENDIF
+      IF (LWARN) THEN
+        WRITE(6,*)
+        WRITE(6,*) ' ************************************************'
+        WRITE(6,*) ' ************************************************'
+        WRITE(6,*) ' **   WARNING. SOME SIGMA MAY BE INCOMPLETE    **'
+        WRITE(6,*) ' **   BECAUSE  IFEGEN .GT. 1                   **'
+        WRITE(6,*) ' ************************************************'
+        WRITE(6,*) ' ************************************************'
+      ENDIF
 
 C  NOTE THAT ARRAY INDLEV IS NOT THE SAME ARRAY AS IN SPROC.  THE SAME
 C  NAME HAS BEEN USED BECAUSE IT PERFORMS BROADLY THE SAME FUNCTION
-        IF (NSIG.GT.0) THEN
-          WRITE(6,*)
-          IOPEN=0
-          DO 9002 ILVL=1,MIN(NLEVEL,NSIG)
-            LLOPEN=.FALSE.
-            DO 9001 IENER=1,NNRG
-              IF (EREF+ENERGY(IENER).GT.ELEVEL(ILVL)) LLOPEN=.TRUE.
- 9001       CONTINUE
-            IF (LLOPEN) THEN
-              IOPEN=IOPEN+1
-              INDLEV(IOPEN)=ILVL
-            ELSE
-              WRITE(6,924) ILVL,ELEVEL(ILVL)
-  924         FORMAT(2X,'LEVEL',I4,' WITH ENERGY ',F19.12,
-     1               ' IS NEVER OPEN')
-            ENDIF
- 9002     CONTINUE
-
-          IF (IOPEN.GT.1) THEN
-            WRITE(6,925) IOPEN
+!  Start of long IF block #12
+      IF (NSIG.GT.0) THEN
+        WRITE(6,*)
+        IOPEN=0
+        ALLOCATE (IN2LEV(NSIG))
+        DO ILVL=1,MIN(NLEVEL,NSIG)
+          LLOPEN=.FALSE.
+          DO IENER=1,NNRG
+            IF (EREF+ENERGY(IENER).GT.ELEVEL(ILVL)) LLOPEN=.TRUE.
+          ENDDO
+          IF (LLOPEN) THEN
+            IOPEN=IOPEN+1
+            IN2LEV(IOPEN)=ILVL
           ELSE
-            WRITE(6,926)
+            WRITE(6,924) ILVL,ELEVEL(ILVL)
+  924       FORMAT(2X,'LEVEL',I4,' WITH ENERGY ',F19.12,
+     1             ' IS NEVER OPEN')
           ENDIF
-  925     FORMAT(/'  STATE-TO-STATE INTEGRAL CROSS SECTIONS IN ',
-     1           'ANGSTROM**2 BETWEEN',I5,
-     2           ' LEVELS WITH THRESHOLD ENERGIES (IN CM-1):'/)
-  926     FORMAT(/'  STATE-TO-STATE INTEGRAL CROSS SECTIONS IN ',
-     1           'ANGSTROM**2 FOR'
-     2           ' LEVEL WITH THRESHOLD ENERGY (IN CM-1):'/)
+        ENDDO
 
-          WRITE(6,927) (INDLEV(IL),ELEVEL(INDLEV(IL)),IL=1,IOPEN)
-  927     FORMAT((I5,F19.12))
-        ENDIF
-C
-        IF (JHALF.EQ.0) THEN
-          XJSTEP=1.D0
+        IF (IOPEN.GT.1) THEN
+          WRITE(6,925) IOPEN
         ELSE
-          XJSTEP=DBLE(JTSTEP)/DBLE(JHALF)
-          IF (JTSTEP.NE.1) WRITE(6,940) XJSTEP
-  940     FORMAT(/'  *** N.B. CROSS SECTIONS HAVE BEEN MULTIPLIED BY',
-     1           F5.1,' TO ACCOUNT FOR JSTEP')
+          WRITE(6,926)
         ENDIF
+  925   FORMAT(/'  STATE-TO-STATE INTEGRAL CROSS SECTIONS IN ',
+     1         'ANGSTROM**2 BETWEEN',I5,
+     2         ' LEVELS WITH THRESHOLD ENERGIES (IN CM-1):'/)
+  926   FORMAT(/'  STATE-TO-STATE INTEGRAL CROSS SECTIONS IN ',
+     1         'ANGSTROM**2 FOR'
+     2         ' LEVEL WITH THRESHOLD ENERGY (IN CM-1):'/)
+        IF (LNEG) THEN
+          WRITE(6,*)
+          IF (ISIGPR.GE.2) THEN
+            WRITE(6,*) ' INCOMPLETE CROSS SECTIONS ARE MARKED WITH A *'
+          ELSEIF (ISIGPR.EQ.1) THEN
+            WRITE(6,*) ' INCOMPLETE CROSS SECTIONS ARE OMITTED'
+          ENDIF
+          WRITE(6,*)
+        ENDIF
+
+        WRITE(6,927) (IN2LEV(IL),ELEVEL(IN2LEV(IL)),IL=1,IOPEN)
+  927   FORMAT((I5,F19.12))
+      ENDIF
+!  End of long IF block #12
+C
+      IF (JHALF.EQ.0) THEN
+        XJSTEP=1.D0
+      ELSE
+        XJSTEP=DBLE(JTSTEP)/DBLE(JHALF)
+        IF (JTSTEP.NE.1) WRITE(6,940) XJSTEP
+  940   FORMAT(/'  *** N.B. CROSS SECTIONS HAVE BEEN MULTIPLIED BY',
+     1         F5.1,' TO ACCOUNT FOR JSTEP')
+      ENDIF
 C ***
 C *** AUG 86.  FORCE PUNCH FROM INTERNAL SIG MATRIX. BY SETTING LOUT
-        LOUT=.FALSE.
+      LOUT=.FALSE.
 C ***
-        IF (LOUT) THEN
+      IF (LOUT) THEN
 C  BELOW PUNCHES FROM DISK(ISIGU ) STORAGE.
-          IF (LACCXS) CALL RDSIGU(ISIGU)
-          RETURN
-        ENDIF
+        IF (LACCXS .AND. LNOCON) CALL RDSIGU(ISIGU)
+        RETURN
       ENDIF
 
 C  OUTPUT FROM STORAGE IN SIG.
       IJ=0
 C
+      ALLOCATE (TOTSIG(NSIG))
       IF (EF.NE.1.D0) UTNAME='('//TRIM(UNAME)//')'
       K=0
-      DO 9000 IFIELD=1,NFIELD
+!  Start of long DO loop #3
+      DO IFIELD=1,NFIELD
         CALL SETEFV(FIELD,SV_VAL)
-        DO 9100 IENER=1,NNRG
-          LNEG=.FALSE.
+!  Start of long DO loop #4
+        DO IENER=1,NNRG
           K=K+1
           MN=MINJT(K)
           MXJ=MAXJT(K)
@@ -1157,18 +1229,19 @@ C
             ENDIF
           ENDIF
           LWRITE=.FALSE.
-          DO 9200 I=1,IOPEN !NSIG
-            IT=INDLEV(I)
-            SIGTOT(I)=0.D0
-            DO 9300 II=1,IOPEN !NSIG
-              IIT=INDLEV(II)
-              IJ=((IFIELD-1)*NNRG+IENER-1)*NSIG**2+(IT-1)*NSIG+IIT
-              SIJ=SIGACC(IJ)*XJSTEP
-              IF (II.NE.I) THEN
-                IF (SIGTOT(I).LT.0.D0 .OR. SIJ.LT.0.D0) THEN
-                  SIGTOT(I)=-ABS(SIGTOT(I))-ABS(SIJ)
+          TOTSIG=0.D0
+!  Start of long DO loop #5
+          DO I=1,IOPEN !NSIG
+            IT=IN2LEV(I)
+!  Start of long DO loop #6
+            DO J=1,IOPEN !NSIG
+              JT=IN2LEV(J)
+              SIJ=ACCSIG(JT,IT,K)*XJSTEP
+              IF (J.NE.I) THEN
+                IF (TOTSIG(I).LT.0.D0 .OR. SIJ.LT.0.D0) THEN
+                  TOTSIG(I)=-ABS(TOTSIG(I))-ABS(SIJ)
                 ELSE
-                  SIGTOT(I)=SIGTOT(I)+SIJ
+                  TOTSIG(I)=TOTSIG(I)+SIJ
                 ENDIF
               ENDIF
               IF (ISIGPR.GT.0) THEN
@@ -1176,50 +1249,51 @@ C
                   IF (EF.NE.1.D0) THEN
                     WRITE(6,FMT=F300) SPACE,EK,EK/EF,
      1                                (EFV(IEFV),IEFV=IEFVST,NEFVP),
-     2                                MN,JTSTEP,MXJ,IIT,IT,SIJ,SPACE
+     2                                MN,JTSTEP,MXJ,JT,IT,SIJ,SPACE
                   ELSE
                     WRITE(6,FMT=F300) SPACE,EK,
      1                                (EFV(IEFV),IEFV=IEFVST,NEFVP),
-     2                                MN,JTSTEP,MXJ,IIT,IT,SIJ,SPACE
+     2                                MN,JTSTEP,MXJ,JT,IT,SIJ,SPACE
                   ENDIF
                 ELSEIF (ABS(SIJ).GE.EPS .AND. ISIGPR.GE.2) THEN
                   IF (EF.NE.1.D0) THEN
                     WRITE(6,FMT=F300) SPACE,EK,EK/EF,
      1                                (EFV(IEFV),IEFV=IEFVST,NEFVP),
-     2                                MN,JTSTEP,MXJ,IIT,IT,ABS(SIJ),STAR
+     2                                MN,JTSTEP,MXJ,JT,IT,ABS(SIJ),STAR
                   ELSE
                     WRITE(6,FMT=F300) SPACE,EK,
      1                                (EFV(IEFV),IEFV=IEFVST,NEFVP),
-     2                                MN,JTSTEP,MXJ,IIT,IT,ABS(SIJ),STAR
+     2                                MN,JTSTEP,MXJ,JT,IT,ABS(SIJ),STAR
                   ENDIF
                 ENDIF
               ENDIF
- 9300       CONTINUE
+            ENDDO
+!  End of long DO loop #6
             IF (ISIGPR.GT.0 .AND. I.NE.IOPEN .AND.
-     1          ABS(SIGTOT(I)).GT.0.D0) WRITE(6,*)
-            IF (ABS(SIGTOT(I)).GT.0.D0) LWRITE=.TRUE.
- 9200     CONTINUE
+     1          ABS(TOTSIG(I)).GT.0.D0) WRITE(6,*)
+            IF (ABS(TOTSIG(I)).GT.0.D0) LWRITE=.TRUE.
+          ENDDO
+!  End of long DO loop #5
           IF (ISIGPR.GT.0 .AND. LWRITE) THEN
             WRITE(6,950)
   950       FORMAT(/2X,'TOTAL INELASTIC INTEGRAL CROSS SECTIONS IN ',
      1             'ANGSTROM**2 FROM LEVEL')
-  951       FORMAT(2X,1P,E12.5,A1,46X,0P,I3)
+  951       FORMAT(2X,1P,E12.5,1X,A1,46X,0P,I3)
             DO I=1,IOPEN
-              IF (SIGTOT(I).LT.0.D0) THEN
-                WRITE(6,951) -SIGTOT(I),STAR,INDLEV(I)
-                LNEG=.TRUE.
-              ELSEIF (SIGTOT(I).GT.0.D0) THEN
-                WRITE(6,951) SIGTOT(I),SPACE,INDLEV(I)
+              IF (TOTSIG(I).LT.0.D0) THEN
+                WRITE(6,951) -TOTSIG(I),STAR,IN2LEV(I)
+              ELSEIF (TOTSIG(I).GT.0.D0) THEN
+                WRITE(6,951) TOTSIG(I),SPACE,IN2LEV(I)
               ENDIF
             ENDDO
             WRITE(6,*)
           ENDIF
-          IF (LNEG) THEN
-            WRITE(6,*) ' INCOMPLETE CROSS SECTIONS ARE MARKED WITH A *'
-            WRITE(6,*)
-          ENDIF
- 9100   CONTINUE
- 9000 CONTINUE
+        ENDDO
+!  End of long DO loop #4
+      ENDDO
+!  End of long DO loop #3
+      IF (NSIG.GT.0) DEALLOCATE (IN2LEV)
+      DEALLOCATE (TOTSIG,ACCSIG)
 
       RETURN
       END

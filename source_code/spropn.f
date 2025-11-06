@@ -1,5 +1,5 @@
       SUBROUTINE SPROPN(WIDTH, EIGNOW, HP, Y1, Y4, Y2, NCH)
-C  Copyright (C) 2022 J. M. Hutson & C. R. Le Sueur
+C  Copyright (C) 2025 J. M. Hutson & C. R. Le Sueur
 C  Distributed under the GNU General Public License, version 3
 C
 C  Tijs Karman
@@ -60,17 +60,17 @@ C-----------------------------------------------------------------------
      :                 DTHET1, DTHET2, DTNHFM, DTNHFP, DARG, DCAY, DKAP,
      :                 OFLOW,X1,X2
      :                 Z,DEL,RTIJS,Y2TIJS,C1,C2,C4,E1,E2,E4
-      DIMENSION EIGNOW(1), HP(1), Y1(1), Y2(1), Y4(1)
+      DIMENSION EIGNOW(*), HP(*), Y1(*), Y2(*), Y4(*)
       INTEGER I, NCH
-      DATA     DONETH,             DTWOTH,     DHALF
-     :  / 0.333333333333333D0, 0.666666666666667D0, 0.5D0 /
-      DATA  DPI / 3.1415926535897932D0 /
+      PARAMETER (DONETH=0.333333333333333D0,
+     1           DTWOTH=0.666666666666667D0, DHALF=0.5D0,
+     2           DPI=3.1415926535897932D0)
 C  AC REFERS TO THE AIRY CRITERION.
 C  USES ASYMPTOTIC EXPANSION OF AIRY FUNCTIONS FOR ABS(W0/W1).GT.EXP(AC)
 C  USES MODULI AND PHASES OF DIRECTLY COMPUTED AIRY FUNCTIONS OTHERWISE
       PARAMETER (AC=3.D0)
 C  ACCURACY FOR NUMERICALLY COMPUTING THE SERIES OCCURING IN EQ. (A12-15)
-      ACCU = 10.**(-20)
+      ACCU = 10.D0**(-20)
 C  THE PARAMETER OFLOW IS THE LARGEST VALUE OF X FOR WHICH EXP(X)
 C  DOES NOT CAUSE A SINGLE PRECISION OVERFLOW
 C                                     N
@@ -78,11 +78,13 @@ C  A REASONABLE VALUE IS X = [ LN(2) 2 ] - 5, WHERE N IS THE NUMBER OF
 C  BITS? THE CHARACTERISTIC OF A FLOATING POINT NUMBER
       DATA OFLOW / 83.D0 /
 C  NOW DETERMINE B_MIN1, Y1, AND Y4 PARAMETERS FOR ALL NCH CHANNELS
-      DO 10  I = 1, NCH
+!  Start of long DO loop #1
+      DO I = 1, NCH
         DSLOPE = HP(I)
-        DARG = 1.E+10
+        DARG = 1.D+10
         IF (DSLOPE.NE.0.D0)
      :    DARG = LOG(ABS(EIGNOW(I))) - DTWOTH*LOG(ABS(DSLOPE))
+!  Start of long IF block #1
         IF (DARG.GT.AC) THEN
 C-----------------------------------------------------------------------
 C
@@ -170,6 +172,7 @@ C  USED WITH AIRY FUNCTIONS AS REFERENCE SOLUTIONS
           X2 = DX2
 
 C-----------------------------------------------------------------------
+!  Start of long IF block #2
           IF (X1.LE.0.D0 .AND. X2.LE.0.D0) THEN
 C  HERE FOR BOTH X_1 AND X_2 NEGATIVE (SEE EQNS 38A, 38B, 38C)
 C
@@ -190,7 +193,7 @@ C
             BFACT = SINH(DTHET1 - DTHET2) +
      :              TNHFAC * SINH(DTHET1 + DTHET2)
             DLZETA = ABS(DZETA2 - DZETA1)
-            Y2(I) = 0.
+            Y2(I) = 0.D0
             IF (DLZETA.LE.OFLOW) THEN
               B = DMMOD1 * DMMOD2 * COSH(DZETA2 - DZETA1) * BFACT
               Y2(I) = 1.D0 / B
@@ -206,11 +209,11 @@ C-----------------------------------------------------------------------
 C  HERE FOR X_1 POSITIVE AND X_2 NEGATIVE (SEE EQNS 41A, 41B, 41C AND 42,
 C  BUT THET1 CORRESPONDS TO CHI1 AND PHI1 CORRESPONDS TO ETA1
 C
-            DTNHFP = 1 + TANH(DZETA1)
-            DTNHFM = 1 - TANH(DZETA1)
+            DTNHFP = 1.D0 + TANH(DZETA1)
+            DTNHFM = 1.D0 - TANH(DZETA1)
             BFACT = COSH(DTHET1) * ( - COS(DTHET2) * DTNHFP
      :            + TANH(DTHET1) * SIN(DTHET2) * DTNHFM)
-            Y2(I) = 0.
+            Y2(I) = 0.D0
             IF (ABS(DZETA1).LE.OFLOW) THEN
               Y2(I) = COSH(DZETA1) * (DMMOD1 * DMMOD2 * BFACT)
               Y2(I) = 1.D0 / Y2(I)
@@ -226,11 +229,11 @@ C-----------------------------------------------------------------------
 C  HERE FOR X_1 NEGATIVE AND X_2 POSITIVE (SEE EQNS 43A, 43B, 43C AND
 C  44, BUT THET2 CORRESPONDS TO CHI2 AND PHI2 CORRESPONDS TO ETA2
 C
-            DTNHFP = 1 + TANH(DZETA2)
-            DTNHFM = 1 - TANH(DZETA2)
+            DTNHFP = 1.D0 + TANH(DZETA2)
+            DTNHFM = 1.D0 - TANH(DZETA2)
             BFACT = COSH(DTHET2) * ( COS(DTHET1) * DTNHFP
      :            - TANH(DTHET2) * SIN(DTHET1) * DTNHFM)
-            Y2(I) = 0.
+            Y2(I) = 0.D0
             IF (ABS(DZETA2).LE.OFLOW) THEN
               Y2(I) =  COSH(DZETA2) * (DMMOD1 * DMMOD2 * BFACT)
               Y2(I) = 1.D0 / Y2(I)
@@ -243,6 +246,7 @@ C
      :            / (DMMOD1 * BFACT)
 C-----------------------------------------------------------------------
           ENDIF
+!  End of long IF block #2
           Y1(I) = DALPHA * Y1(I)
           Y4(I) = DALPHA * Y4(I)
           Y2(I) = DALPHA * Y2(I) / DPI
@@ -250,7 +254,9 @@ C  AT THIS POINT THE Y1, Y2, AND Y4 PROPAGATORS CORRESPOND IDENTICALLY
 C  TO EQS. (38)-(44) OF M. ALEXANDER AND D. MANOLOPOULOS, "A STABLE
 C  LINEAR REFERENCE POTENTIAL ALGORITHM FOR SOLUTION ..."
         ENDIF
-10    CONTINUE
+!  End of long IF block #1
+      ENDDO
+!  End of long DO loop #1
       RETURN
       END
 
@@ -602,6 +608,7 @@ C  EXPONENTIALLY SCALED VERSION, R IS MISSING FACTOR EXP(E).
 
 C  FOR X LARGE COMPARED TO DELTA, USE ASYMPTOTIC EXPANSIONS
       DELX = DEL/X
+!  Start of long IF block #3
       IF (X.GT.0.D0) THEN
 C  LARGE POSITIVE X
 C  EQ. (A12) OF JCP 141 064102 (2014)
@@ -659,6 +666,7 @@ C  COMBINE EXPANSION
         E = 0.D0
 
       ENDIF
+!  End of long IF block #3
 
       RETURN
       END
@@ -682,6 +690,7 @@ C  EXPONENTIALLY SCALED VERSION, R IS MISSING FACTOR EXP(E).
 
 C  FOR X LARGE COMPARED TO DELTA, USE ASYMPTOTIC EXPANSIONS
       DELX = DEL/X
+!  Start of long IF block #4
       IF (X.GT.0.D0) THEN
 C  LARGE POSITIVE X
 C  EQ. (A14) OF JCP 141 064102 (2014)
@@ -739,6 +748,7 @@ C  COMBINE EXPANSION
         E = 0.D0
 
       ENDIF
+!  End of long IF block #4
 
       RETURN
       END

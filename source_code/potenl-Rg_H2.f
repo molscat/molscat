@@ -1,5 +1,5 @@
       SUBROUTINE POTENL(IC, MXLMB, LMB, RR, P, ITYP, IPRINT)
-C  Copyright (C) 2022 J. M. Hutson & C. R. Le Sueur
+C  Copyright (C) 2025 J. M. Hutson & C. R. Le Sueur
 C  Distributed under the GNU General Public License, version 3
       USE potential, ONLY: LAMBDA, MXLMDA, RMNAME, EPNAME
       IMPLICIT DOUBLE PRECISION (A-H,O-Z)
@@ -20,10 +20,10 @@ C
      1          AA(2,210), C8(2,210), C6(2,210), XI(9,210), IV(210),
      2          IVD(210), IJ(210), DEL(210), XG(20), WG(20), SM(15),
      3          FSM(15,15), PWT(16,16), MP(2), LAMB(2), D(4)
-      DATA Z0/0.D0/,ZH/0.5D0/,Z1/1.D0/,Z2/2.D0/,Z4/4.D0/,Z6/6.D0/,
-     1     Z8/8.D0/,Z12/12.D0/
+      PARAMETER (Z0=0.D0,ZH=0.5D0,Z1=1.D0,Z2=2.D0,Z4=4.D0,Z6=6.D0,
+     1           Z8=8.D0,Z12=12.D0)
       DATA MXJ/210/
-      DATA LAMB/0,2/,X0/0.7666348D0/,DREL/-0.1665563536D0/
+      PARAMETER (LAMB=(/0,2/),X0=0.7666348D0,DREL=-0.1665563536D0)
       DATA FILNAM /'data/h2even.dat'/
       NAMELIST /POTL/ NLEG,NSTR,IHET,JMAXV0,JMAXV1,NGP,SCAL,SCALMX,
      1                FILNAM
@@ -176,9 +176,10 @@ C
       IF (IDAMP.EQ.1 .AND. IPRINT.GE.1) WRITE(6,431) R0
       IF (IDAMP.EQ.2 .AND. IPRINT.GE.1) WRITE(6,432)
       IF (IPRINT.GE.1) WRITE(6,433)
-      DO 210 LAM=1,2
+!  Start of long DO loop #1
+      DO LAM=1,2
         MM = MP(LAM)
-        DO 190 K=1,4
+        DO K=1,4
           IK = K-1
 C**  VT(I)  ARE  EPSILON, REQ & C6, FOR I=1-3, FOR THIS (LAM,K)
 C-----------------------------------------------------------------------
@@ -203,15 +204,17 @@ C-----------------------------------------------------------------------
           VPRMR(3,LAM,K) = VT(3)
           IF (VT(2).LE.Z0) GOTO 200
 
-  190     IF (IPRINT.GE.1) WRITE(6,440) LAMB(LAM),IK,MP(LAM),BETA(LAM),
+          IF (IPRINT.GE.1) WRITE(6,440) LAMB(LAM),IK,MP(LAM),BETA(LAM),
      1                                  (VPRM(I,LAM,K),I=1,3),
      2                                  VPRMR(2,LAM,K),VPRMR(1,LAM,K)
-        GOTO 210
+        ENDDO
+        CYCLE
 
   200   VPRMR(1,LAM,K) = Z0
         VPRMR(2,LAM,K) = Z0
         IF (IPRINT.GE.1) WRITE(6,450) LAMB(LAM),VPRM(3,LAM,4)
-  210 CONTINUE
+      ENDDO
+!  End of long DO loop #1
       IF (IPRINT.GE.1) WRITE(6,470)
 C** READ IN THE VIBRATIONAL & ROTATIONAL QUANTUM NUMBERS  IV & IJ  AND
 C     EXPECTATION VALUES AND (FOR NOFPOT>1) MATRIX ELEMENTS OF POWERS  K
@@ -231,16 +234,17 @@ C     STRENGTH COEFFICIENTS FOR POTENTIAL MATRIX ELEMENTS
       KLM = 0
       IFAC = 2-IHET
       J = 1
-      OPEN(1,FILE=FILNAM,STATUS='OLD',ERR=999)
-  220 DO 320 JJ=1,JJMX
+      OPEN(1,FILE=TRIM(FILNAM),STATUS='OLD',ERR=999)
+!  Start of long DO loop #2
+  220 DO JJ=1,JJMX
 C-----------------------------------------------------------------------
         READ (1,*) IV(J),IJ(J),IVD(J),IJD,(XI(I,J),I=1,9)
 C-----------------------------------------------------------------------
 C** CHECK FOR EXCLUSION OF THIS (V,J) AND SET UP LMB
-        IF (IVD(J).EQ.0.AND.IJD.GT.JMAXV0) GOTO 320
-        IF (IVD(J).EQ.1.AND.IJD.GT.JMAXV1) GOTO 320
-        IF (IV(J).EQ.0.AND.IJ(J).GT.JMAXV0) GOTO 320
-        IF (IV(J).EQ.1.AND.IJ(J).GT.JMAXV1) GOTO 320
+        IF (IVD(J).EQ.0.AND.IJD.GT.JMAXV0) CYCLE
+        IF (IVD(J).EQ.1.AND.IJD.GT.JMAXV1) CYCLE
+        IF (IV(J).EQ.0.AND.IJ(J).GT.JMAXV0) CYCLE
+        IF (IV(J).EQ.1.AND.IJ(J).GT.JMAXV1) CYCLE
 
         IF (J.LE.MXJ) GOTO 235
         WRITE(6,231) MXJ
@@ -256,7 +260,7 @@ C** CHECK FOR EXCLUSION OF THIS (V,J) AND SET UP LMB
 
   240   IF (JJ.EQ.1) NINPOT = NINPOT+1
         KLEG = -IFAC
-        DO 250 ILEG=1,NLEG
+        DO ILEG=1,NLEG
           KLEG = KLEG+IFAC
           KLM = KLM+1
           LMB(1,KLM) = KLEG
@@ -264,24 +268,25 @@ C** CHECK FOR EXCLUSION OF THIS (V,J) AND SET UP LMB
           LMB(3,KLM) = IJ(J)
           LMB(4,KLM) = IVD(J)
           LMB(5,KLM) = IJD
-  250   CONTINUE
+        ENDDO
         DEL(J) = Z0
         IF (NSTR.GT.1) GOTO 280
 
         DEL(J) = (XI(2,J)+Z1)*X0*DREL
-        DO 270 LAM=1,2
+        DO LAM=1,2
           AAT = Z0
           C8T = Z0
           C6T = Z0
-          DO 260 K=1,4
+          DO K=1,4
             XIPW = XI(K,J)
             AAT = AAT+VPRMR(1,LAM,K)*XIPW
             C8T = C8T+VPRMR(2,LAM,K)*XIPW
-  260       C6T = C6T+VPRMR(3,LAM,K)*XIPW
+            C6T = C6T+VPRMR(3,LAM,K)*XIPW
+          ENDDO
           AA(LAM,J) = AAT
           C8(LAM,J) = C8T
           C6(LAM,J) = C6T
-  270   CONTINUE
+        ENDDO
         GOTO 290
 
 C       CONVERT POWERS OF XI TO P_N(XI) FOR GAUSS-LEGENDRE QUADRATURE.
@@ -317,7 +322,8 @@ C
         IF (IPRINT.GE.1) WRITE(6,510) IVD(J),IJD,IV(J),IJ(J),
      1                                (XI(K,J),K=1,NOFK)
   310   J = J+1
-  320 CONTINUE
+      ENDDO
+!  End of long DO loop #2
 
       JJMX = JJMX-1
       IF (JJMX.GT.0) GOTO 220
@@ -343,15 +349,16 @@ C     FINISHED WITH CHANNEL 1. CLOSE FILE ON VAX.
   360 IF (NSTR.GT.1.OR.NINPOT.EQ.1) GOTO 380
 
       INOW = NOFJ+1
-      DO 370 I=2,NINPOT
+      DO I=2,NINPOT
         INOW = INOW-1
         JTOP = I-1
-      DO 370 J=1,JTOP
+      DO J=1,JTOP
         INOW = INOW-1
         ID = NOFJ+1-I*(I+1)/2
         JD = NOFJ+1-J*(J+1)/2
         DEL(INOW) = ZH*(DEL(ID)+DEL(JD))
-  370 CONTINUE
+      ENDDO
+      ENDDO
 
   380 CONTINUE
       IF (IHET.LE.0) GOTO 420
@@ -375,19 +382,21 @@ C     GET GAUSS-LEGENDRE QUADRATURE POINTS AND WEIGHTS
 C     WRITE(6,609) NGP, (XG(I),WG(I),I=1,NGP)
 C     609 FORMAT(/2X,'POINTS AND WEIGHTS FOR SIMPLE GAUSSIAN',I3,
 C     1          '-PT QUADRATURE'//(2(F25.20,F23.20)))
-      DO 410 I=1,NGP
+      DO I=1,NGP
         XX = XG(I)
         PLEG = Z0
         PLEGP = Z1
         A3N = -Z1
         A4N = -Z1
-      DO 410 ILEG=1,NGP
+      DO ILEG=1,NGP
         PWT(ILEG,I) = PLEGP*WG(I)
         A3N = A3N+Z2
         A4N = A4N+Z1
         PLEGB = PLEG
         PLEG = PLEGP
-  410   PLEGP = (A3N*XX*PLEG-A4N*PLEGB)/DBLE(ILEG)
+        PLEGP = (A3N*XX*PLEG-A4N*PLEGB)/DBLE(ILEG)
+      ENDDO
+      ENDDO
 
   420 RETURN
   999 WRITE(6,*) ' *** ERROR: FILE '//TRIM(FILNAM)//' NOT FOUND'
@@ -441,12 +450,13 @@ C  HOMONUCLEAR DIATOM, USING PREAVERAGED AA, C8, C6, ETC.
       R6=RR**(-6)
       R8=R6/(RR*RR)
       EXPBR=EXP(-BETA(1)*RR)
-      DO 550 J=1,NOFJ
+      DO J=1,NOFJ
         CALL VHOM (RR,R0,J,AA,C8,C6,BETA,R6,R8,EXPBR,VLAM,IDAMP)
-        DO 540 ILEG=1,NLEG
+        DO ILEG=1,NLEG
           IND = IND+1
-  540     P(IND) = VLAM(ILEG)
-  550 CONTINUE
+          P(IND) = VLAM(ILEG)
+        ENDDO
+      ENDDO
       RETURN
 C+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 C  ARRIVE HERE TO PREPARE POTENTIAL ARRAYS FOR A HETERONUCLEAR DIATOM BY
@@ -456,11 +466,12 @@ C  PROCEDURE IF THE POTENTIAL IS AVAILABLE AS AN EXPLICIT FUNCTION OF
 C  DIATOM BOND LENGTH.
   560 IF (NSTR.GT.1) GOTO 620
       IND = 0
-      DO 610 J=1,NOFJ
-        DO 570 ILEG=1,NLEG
-  570     SM(ILEG) = Z0
+      DO J=1,NOFJ
+        DO ILEG=1,NLEG
+          SM(ILEG) = Z0
+        ENDDO
         TT = DEL(J)/RR
-        DO 590 IGP=1,NGP
+        DO IGP=1,NGP
           XX = XG(IGP)
           FXG = SQRT(Z1+TT*(TT+Z2*XX))
           XGP = (XX+TT)/FXG
@@ -470,14 +481,15 @@ C  DIATOM BOND LENGTH.
           EXPBR=EXP(-BETA(1)*RRP)
           CALL VHOM (RRP,R0,J,AA,C8,C6,BETA,R6,R8,EXPBR,VLAM,IDAMP)
           YP = VLAM(1)+P2(XGP)*VLAM(2)
-          DO 580 ILEG=1,NLEG
-  580       SM(ILEG) = SM(ILEG)+YP*PWT(ILEG,IGP)
-  590   CONTINUE
-        DO 600 ILEG=1,NLEG
+          DO ILEG=1,NLEG
+            SM(ILEG) = SM(ILEG)+YP*PWT(ILEG,IGP)
+          ENDDO
+        ENDDO
+        DO ILEG=1,NLEG
           IND = IND+1
           P(IND) = (ILEG-ZH)*SM(ILEG)
-  600   CONTINUE
-  610 CONTINUE
+        ENDDO
+      ENDDO
       RETURN
 C+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 C  ARRIVE HERE TO PREPARE POTENTIAL ARRAYS FOR A HETERONUCLEAR DIATOM BY
@@ -489,35 +501,43 @@ C  THE TRANSFORMATION IS BASED ON LIU ET AL., JCP 68, 5028 (1978)
 C  BUT NOTE COMMENT ABOVE ABOUT USE OF XI = (R-X0)/X0 HERE SO THAT
 C  THIS IS INACCURATE FOR VIBRATIONAL STATES THAT EXTEND OUTSIDE 2*X0.
 C+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-  620 DO 630 ILEG=1,NLEG
-      DO 630 ISTR=1,NOFK
-  630   FSM(ISTR,ILEG) = Z0
-      DO 650 IGSTR=1,NGP
+  620 DO ILEG=1,NLEG
+      DO ISTR=1,NOFK
+        FSM(ISTR,ILEG) = Z0
+      ENDDO
+      ENDDO
+      DO IGSTR=1,NGP
         XID = XG(IGSTR)
         TT = DREL*X0*(Z1+XID)/RR
-      DO 650 IANG=1,NGP
+      DO IANG=1,NGP
         XX = XG(IANG)
         FXG = SQRT(Z1+TT*(TT+Z2*XX))
         XGP = (XX+TT)/FXG
         RRP = RR*FXG
         CALL FVHOM (RRP,XGP,XID,R0,VPRMR,BETA,VPOT,IDAMP)
-        DO 640 ILEG=1,NLEG
+        DO ILEG=1,NLEG
           YP = VPOT*PWT(ILEG,IANG)
-        DO 640 ISTR=1,NOFK
-  640     FSM(ISTR,ILEG) = FSM(ISTR,ILEG)+YP*PWT(ISTR,IGSTR)
-  650 CONTINUE
+        DO ISTR=1,NOFK
+          FSM(ISTR,ILEG) = FSM(ISTR,ILEG)+YP*PWT(ISTR,IGSTR)
+        ENDDO
+        ENDDO
+      ENDDO
+      ENDDO
 C
-      DO 660 ILEG=1,NLEG
-      DO 660 ISTR=1,NOFK
-  660   FSM(ISTR,ILEG) = FSM(ISTR,ILEG)*(ILEG-ZH)*(ISTR-ZH)
+      DO ILEG=1,NLEG
+      DO ISTR=1,NOFK
+        FSM(ISTR,ILEG) = FSM(ISTR,ILEG)*(ILEG-ZH)*(ISTR-ZH)
+      ENDDO
+      ENDDO
 C
       IND = 0
-      DO 680 JPOT=1,NOFJ
-      DO 680 ILEG=1,NLEG
+      DO JPOT=1,NOFJ
+      DO ILEG=1,NLEG
         IND = IND+1
         VPOT = Z0
-        DO 670 ISTR=1,NOFK
-  670     VPOT = VPOT+XI(ISTR,JPOT)*FSM(ISTR,ILEG)
+        DO ISTR=1,NOFK
+          VPOT = VPOT+XI(ISTR,JPOT)*FSM(ISTR,ILEG)
+        ENDDO
 C
 C  SCALING OPTION FOR MATRIX ELEMENTS OFF-DIAGONAL IN V
 C  PURPOSE IS TO MAKE RESONANCES WIDER AND EASIER TO FIND
@@ -528,6 +548,8 @@ C
         IF (VPOT.GT.SCALMX) VPOT = SCALMX
         IF (VPOT.LT.-SCALMX) VPOT = -SCALMX
   680   P(IND) = VPOT
+      ENDDO
+      ENDDO
       RETURN
       END
 
@@ -541,9 +563,10 @@ C  FORM FOR EACH LAMBDA.
       DIMENSION AA(2,210),C8(2,210),C6(2,210),BETA(2),VLAM(2),D(4)
       DATA Z1/1.D0/,Z4/4.D0/
       CALL DAMP(IDAMP,RR,R0,BETA(1),D)
-      DO 10 ILEG=1,2
-   10   VLAM(ILEG)=AA(ILEG,J)*REP-D(4)*C8(ILEG,J)*RM8
+      DO ILEG=1,2
+        VLAM(ILEG)=AA(ILEG,J)*REP-D(4)*C8(ILEG,J)*RM8
      1                           -D(2)*C6(ILEG,J)*RM6
+      ENDDO
       RETURN
       END
 C
@@ -561,18 +584,21 @@ C
       CALL DAMP(IDAMP,RRP,R0,BETA(1),D)
 C
       RM2 = Z1/RRP**2
-      DO 20 II=1,3
-   20   PSM(II) = Z0
+      DO II=1,3
+        PSM(II) = Z0
+      ENDDO
       PLEG(1) = Z1
       PLEG(2) = 1.5D0*COSTHP**2-0.5D0
       XIDP = Z1
-      DO 40 KK=1,4
-      DO 30 LL=1,2
+      DO KK=1,4
+      DO LL=1,2
         FCT = PLEG(LL)*XIDP
-      DO 30 II=1,3
-   30   PSM(II) = PSM(II)+FCT*VPRMR(II,LL,KK)
+      DO II=1,3
+        PSM(II) = PSM(II)+FCT*VPRMR(II,LL,KK)
+      ENDDO
+      ENDDO
         XIDP = XIDP*XID
-   40 CONTINUE
+      ENDDO
       VPOT = PSM(1)*EXP(-BETA(1)*RRP)-
      1       (D(4)*PSM(2)*RM2+D(2)*PSM(3))*RM2**3
       RETURN
@@ -593,34 +619,38 @@ C
       SAVE
       DIMENSION D(4)
 C
-      GOTO(100,200) IDAMP
-  100 D(1)=0.D0
-      D(2)=1.D0
-      D(3)=0.D0
-      D(4)=1.D0
-      IF (R.GE.RM) RETURN
-      X=RM/R
-      D(1)=(12.D0/R)*X*(X-1.D0)**2
-      D(2)=EXP(-4.D0*(X-1.D0)**3)
-      D(3)=D(1)
-      D(4)=D(2)
-      RETURN
+C  CRLS 06-2022: COMPUTED GOTO REPLACED
+C     GOTO(100,200) IDAMP
+      IF (IDAMP.EQ.1) THEN
+        D(1)=0.D0
+        D(2)=1.D0
+        D(3)=0.D0
+        D(4)=1.D0
+        IF (R.GE.RM) RETURN
+        X=RM/R
+        D(1)=(12.D0/R)*X*(X-1.D0)**2
+        D(2)=EXP(-4.D0*(X-1.D0)**3)
+        D(3)=D(1)
+        D(4)=D(2)
 C
-  200 KMAX=8
-      Y=1.D0
-      Z=Y
-      BR=BETA*R
-      DO 250 K=1,KMAX
-        Y=Y*BR/DBLE(K)
-        Z=Z+Y
-  250   IF (K.GE.5) D(K-4)=Z
+      ELSE
+        KMAX=8
+        Y=1.D0
+        Z=Y
+        BR=BETA*R
+        DO K=1,KMAX
+          Y=Y*BR/DBLE(K)
+          Z=Z+Y
+          IF (K.GE.5) D(K-4)=Z
+        ENDDO
 C
-      Y=EXP(-BR)
-      D(1)=BETA*Y*(D(2)-D(1))
-      D(2)=1.D0-Y*D(2)
-      D(1)=D(1)/D(2)
-      D(3)=BETA*Y*(D(4)-D(3))
-      D(4)=1.D0-Y*D(4)
-      D(3)=D(3)/D(4)
+        Y=EXP(-BR)
+        D(1)=BETA*Y*(D(2)-D(1))
+        D(2)=1.D0-Y*D(2)
+        D(1)=D(1)/D(2)
+        D(3)=BETA*Y*(D(4)-D(3))
+        D(4)=1.D0-Y*D(4)
+        D(3)=D(3)/D(4)
+      ENDIF
       RETURN
       END

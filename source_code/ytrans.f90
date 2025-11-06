@@ -1,8 +1,8 @@
 SUBROUTINE YTRANS(Y,EVEC,EINT,WVEC,                      &
-                  JSINDX,L,N,P,VL,IV,                    &
+                  JSINDX,L,N,VL,IV,                      &
                   MXLAM,NHAM,ERED,EP2RU,CM2RU,DEGTOL,    &
                   NOPEN,IBOUND,CENT,IPRINT,LQUIET)
-!  Copyright (C) 2022 J. M. Hutson & C. R. Le Sueur
+!  Copyright (C) 2025 J. M. Hutson & C. R. Le Sueur
 !  Distributed under the GNU General Public License, version 3
 USE potential, ONLY: NCONST, NEXTMS, NEXTRA, NRSQ, NVLBLK, VCONST
 !  Routine to transform the log derivative matrix (Y) with primitive
@@ -48,14 +48,8 @@ double precision, intent(in)   ::VL(1),DEGTOL,EP2RU,CM2RU,ERED
 double precision, intent(inout)::Y(N,N),CENT(N)
 double precision, intent(out)  ::EVEC(N,N),EINT(N),WVEC(N)
 logical                          LQUIET
-!  array used as workspace
-double precision P(1)
 
 !-----------------------------------------------------------
-
-integer          :: MX,IXNEXT,NIPR,IDUMMY
-double precision :: X
-COMMON /MEMORY/ MX,IXNEXT,NIPR,IDUMMY,X(1)
 
 character(1)     :: CDRIVE
 COMMON /CNTROL/ CDRIVE
@@ -65,16 +59,16 @@ COMMON /VLFLAG/ IVLFL
 COMMON /VLSAVE/ IVLU
 
 !  internal variables
-double precision, allocatable  :: Wsub(:,:,:),eigmag(:)
+double precision, allocatable  :: Wsub(:,:,:),eigmag(:),p(:)
 double precision, allocatable  :: eval(:,:),wks(:,:,:),r_L(:)
 integer, allocatable           :: nchan(:),mconst(:),maskCorL(:)
 integer                           jprint,Lmin,Lmax,LL,nn,icol,irow,i,j,imax, &
                                   it,i_op,n_ops,irsq,i_dim,iextra,ibeg,      &
-                                  NEXTRA_local,index_CENT
+                                  NEXTRA_local,index_CENT,ndegen
 integer, external              :: IDAMAX
 double precision                  realL,tol_L,wmax,CENTcur,CENTmax
-logical                           no37,nowarn,zdegen
-character(6)                   :: l_one
+logical                           no37,nowarn,zdegen,zlabel
+character(6)                   :: l_one,connect
 character(19)                  :: string
 data no37,nowarn/.True.,.False./
 data tol_L/1d-10/
@@ -119,7 +113,7 @@ if ((jprint.ge.6 .and. n_ops.gt.1 .and. CDRIVE.eq.'M') .or. jprint.ge.10) then
 endif
 890  format(/'  Coefficients of operators to be diagonalised to find ',a)
 
-allocate(wks(N,N,n_ops))
+allocate(wks(N,N,n_ops),p(mxlam+nconst+nrsq))
 ibeg=1
 do i_op=1,n_ops
   i=ibeg
@@ -144,7 +138,7 @@ do i_op=1,n_ops
   ibeg=ibeg+mconst(i_op)
   call dsyfil('L',N,wks(1,1,i_op),N)
 enddo
-deallocate (mconst)
+deallocate (p)
 
 Lmin=0
 Lmax=0
@@ -188,6 +182,7 @@ endif
 allocate (r_L(N))
 
 EVEC=0.d0
+!  Start of long DO loop #1
 do LL=Lmin,Lmax
 
   nn=N
@@ -244,7 +239,7 @@ do LL=Lmin,Lmax
       if (jprint.ge.10) write(6,*) ' Calling multop'
     endif
   endif
-910   format(/2x,a,1x,i2)
+910   format(/2x,a,i4)
 911   format(/2x,a,1x,G12.5)
   call multop(1,n_ops,eval,Wsub,DEGTOL,nn,nn,1,jprint)
 
@@ -304,12 +299,16 @@ do LL=Lmin,Lmax
   enddo
 
 !  check for degeneracies
-  if (.not.nowarn) then
+!  Start of long IF block #1
+  if (.not.nowarn .and. jprint.gt.0) then
     allocate(eigmag(n_ops))
     do i_op=1,n_ops
       eigmag(i_op)=maxval(eval(:,i_op))-minval(eval(:,i_op))
     enddo
+    zlabel=.false.
+!  Start of long DO loop #2
     do j=1,nn-1
+      ndegen=0
       do i=j+1,nn
         if (abs(eval(i,1)-eval(j,1)).lt.degtol*eigmag(1)) then
           zdegen=.true.
@@ -317,25 +316,46 @@ do LL=Lmin,Lmax
             if (abs(eval(i,i_op)-eval(j,i_op)).gt. &
                 degtol*eigmag(i_op)) zdegen=.false.
           enddo
-          if (zdegen) then
-            write(6,*)
-            write(6,'(a,i5,a,i5,a)') '  Warning in YTRANS. Eigenvalues ', &
-                                     j,' and ',i, &
-                                     ' near-degenerate for all operators'
-            do i_op=1,n_ops
-              write(6,'(a,i3)') '  i_op =',i_op
-              write(6,"(10x,'Eval(',i2,')',18x,'Eval(',i2,')',18x,'diff')") &
-                    j,i
-              write(6,*) eval(j,i_op),eval(i,i_op), &
-                         eval(j,i_op)-eval(i,i_op)
-            enddo
-            write(6,*) ' Channels may be mixed'
-          endif
+          if (.not.zdegen) cycle
+          ndegen=ndegen+1
         endif
       enddo
+      if (ndegen.eq.0) cycle
+      write(6,*)
+      if (.not.zlabel) then
+        if (NRSQ.eq.0 .and. IBOUND.eq.0) then
+          write(6,910) 'Warning in YTRANS: degeneracies found for L =',LL
+          write(6,*)
+        elseif (NRSQ.eq.0 .and. IBOUND.ne.0) then
+          write(6,911) 'Warning in YTRANS: degeneracies found for CENT =', &
+                       CENTcur
+          write(6,*)
+        endif 
+        zlabel=.true.
+      endif
+      connect=' and '
+      if (ndegen.gt.1) connect='  to  '
+      if (n_ops.eq.1) then
+        write(6,'(a,i5,a,i5,a)') '  Eigenvalues ', &
+                                 j,connect,j+ndegen,' near-degenerate'
+      else
+        write(6,'(a,i5,a,i5,a)') '  Eigenvalues ', &
+                                 j,connect,j+ndegen, &
+                                 ' near-degenerate for all operators'
+      endif
+      do i_op=1,n_ops
+        if (n_ops.gt.1) write(6,'(a,i3)') '  i_op =',i_op
+        write(6,"(10x,'Eval(',i2,')',18x,'Eval(',i2,')',18x,'diff')") &
+              j,j+ndegen
+        write(6,*) eval(j,i_op),eval(j+ndegen,i_op), &
+                   eval(j,i_op)-eval(j+ndegen,i_op)
+      enddo
+      write(6,*) ' Channels may be mixed'
     enddo
+!  End of long DO loop #2
     deallocate(eigmag)
   endif
+!  End of long IF block #1
 
 !  Copy eigenvector submatrix into position in evec
   icol=0
@@ -367,8 +387,9 @@ do LL=Lmin,Lmax
 
   deallocate(eval)
 enddo
+!  End of long DO loop #1
 
-deallocate(wks,maskCorL)
+deallocate(wks)
 
 !---------------------------------------------------------------
 !Print sorted by the energy
@@ -422,6 +443,7 @@ endif
 
 ! Place eigenvalues of L^2 operator in array CENT ready to be used
 ! by YTOK
+!  Start of long IF block #2
 if (NRSQ.ne.0) then
 930 format(2x,a,i4,a,f8.4)
   do i=1,N
@@ -455,6 +477,7 @@ elseif (IBOUND.ne.0) then
 else
   CENT(:)=dble(L*(L+1))
 endif
+!  End of long IF block #2
 
 deallocate (r_L)
 

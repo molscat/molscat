@@ -1,5 +1,5 @@
       SUBROUTINE DSYNEG(UPLO,A,KPVT,N,INERT)
-C  Copyright (C) 2022 J. M. Hutson & C. R. Le Sueur
+C  Copyright (C) 2025 J. M. Hutson & C. R. Le Sueur
 C  Distributed under the GNU General Public License, version 3
 C
 C  SUBROUTINE BY J. M. HUTSON, APRIL 1994
@@ -14,10 +14,11 @@ C  SYMMETRIC INDEFINITE MATRIX AFTER BUNCH-KAUFMAN DECOMPOSITION
 C  USING LAPACK ROUTINE DSYTRF
 C
       UPPER = LSAME (UPLO , 'U')
+!  Start of long IF block #1
       IF (UPPER) THEN
          INERT=0
          T = 0.D0
-         DO 190 K = 1, N
+         DO K = 1, N
             D = A(K,K)
 C
 C  CHECK IF 1 BY 1
@@ -41,11 +42,11 @@ C
   150       CONTINUE
 C
                IF (D.LT.0.D0) INERT = INERT + 1
-  190    CONTINUE
+         ENDDO
       ELSE
          INERT=0
          T = 0.D0
-         DO 290 K = N, 1, -1
+         DO K = N, 1, -1
             D = A(K,K)
 C
 C  CHECK IF 1 BY 1
@@ -69,8 +70,9 @@ C
   250       CONTINUE
 C
                IF (D.LT.0.D0) INERT = INERT + 1
-  290    CONTINUE
+         ENDDO
       ENDIF
+!  End of long IF block #1
 C
       RETURN
       END

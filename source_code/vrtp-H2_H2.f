@@ -1,5 +1,5 @@
       SUBROUTINE VRTP(IDERIV,R,VV)
-C  Copyright (C) 2022 J. M. Hutson & C. R. Le Sueur
+C  Copyright (C) 2025 J. M. Hutson & C. R. Le Sueur
 C  Distributed under the GNU General Public License, version 3
       USE angles, ONLY: COSANG, ICNSYM, IHOMO
 C
@@ -30,6 +30,7 @@ C
 C
 C * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
 C
+!  Start of long IF block #1
       IF (IDERIV.EQ.-1) THEN
         RM=3.49D0
         RMSAVE=RM
@@ -91,8 +92,9 @@ C
  2200   RSQ=1.D0/(R*R)
         R6=RSQ*RSQ*RSQ
         V=-R6*(C6+C8*RSQ)
- 5000   DO 5001 I=1,3
- 5001   VI(I)=V*CONST(I)
+ 5000   DO I=1,3
+          VI(I)=V*CONST(I)
+        ENDDO
 C  QUADRUPOLE - QUADRUPOLE TERM
         RR=R*RMSAVE
         R12=R**(-12)
@@ -117,4 +119,5 @@ C
         WRITE(6,*) ' *** VRTP (H2-H2). NO SUPPORT FOR IDERIV',IDERIV
         STOP
       ENDIF
+!  End of long IF block #1
       END

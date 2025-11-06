@@ -14,15 +14,19 @@ C  STATEMENT FUNCTION FOR DELTA ASSOCIATED W/ RACAH AND SIXJ SYMBOLS
 C     DELTA(I,J,K)= SQRT(1.D0/ ( BINOM(I+J+K+1,I+J-K) *
 C    1                 BINOM(K+K+1,I-J+K) * DBLE(K+J-I+1) )  )
 C
+C  CRLS 06-2022: ARITHMETIC IFS REPLACED
       I1=J1+J2+J3
       IF (I1-2*(I1/2).NE.0) GOTO 8
-    1 I2=J1-J2+J3
-      IF (I2) 8,2,2
-    2 I3=J1+J2-J3
-      IF (I3) 8,3,3
-    3 I4=-J1+J2+J3
-      IF (I4) 8,4,4
-    4 I5=I1/2
+      I2=J1-J2+J3
+C     IF (I2) 8,2,2
+      IF (I2.LT.0) GOTO 8
+      I3=J1+J2-J3
+C     IF (I3) 8,3,3
+      IF (I3.LT.0) GOTO 8
+      I4=-J1+J2+J3
+C     IF (I4) 8,4,4
+      IF (I4.LT.0) GOTO 8
+      I5=I1/2
       I6=I2/2
 
       SIGN3J=1.D0
@@ -40,10 +44,11 @@ C     B1,B2 ARE BINOM ASSOCIATED W/ DELTA
         FN = N+1
         F = 0.D0
         B = 1.D0
-        DO 101 I = 1,MNM
+        DO I = 1,MNM
           F = F+1.D0
           C = (FN-F)*B
-  101     B = C/F
+          B = C/F
+        ENDDO
         B1 = B
       ENDIF
 
@@ -57,10 +62,11 @@ C     B1,B2 ARE BINOM ASSOCIATED W/ DELTA
         FN = N+1
         F = 0.D0
         B = 1.D0
-        DO 102 I = 1,MNM
+        DO I = 1,MNM
           F = F+1.D0
           C = (FN-F)*B
-  102     B = C/F
+          B = C/F
+        ENDDO
         B2 = B
       ENDIF
       DELTA=SQRT(1.D0/(B1*B2*(J3+J2-J1+1)))
@@ -76,10 +82,11 @@ C     B3=BINOM(I5,J1),  B4=BINOM(J1,I6)
         FN = N+1
         F = 0.D0
         B = 1.D0
-        DO 103 I = 1,MNM
+        DO I = 1,MNM
           F = F+1.D0
           C = (FN-F)*B
-  103     B = C/F
+          B = C/F
+        ENDDO
         B3 = B
       ENDIF
 
@@ -93,10 +100,11 @@ C     B3=BINOM(I5,J1),  B4=BINOM(J1,I6)
         FN = N+1
         F = 0.D0
         B = 1.D0
-        DO 104 I = 1,MNM
+        DO I = 1,MNM
           F = F+1.D0
           C = (FN-F)*B
-  104     B = C/F
+          B = C/F
+        ENDDO
         B4 = B
       ENDIF
 

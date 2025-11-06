@@ -1,10 +1,10 @@
-      SUBROUTINE DVPROP(N,NSQ,MXLAM,NHAM,
-     1                  SR,A,VL,IV,EINT,CENT,L,NB,P,
-     2                  Y,YP,F,DIAG,
+      SUBROUTINE DVPROP(N,MXLAM,NHAM,
+     1                  SR,VL,IV,EINT,CENT,L,NB,
      3                  RSTART,RSTOP,NSTEP,HH,NSTAB,
      4                  ERED,EP2RU,CM2RU,RSCALE,IPRINT)
-C  Copyright (C) 2022 J. M. Hutson & C. R. Le Sueur
+C  Copyright (C) 2025 J. M. Hutson & C. R. Le Sueur
 C  Distributed under the GNU General Public License, version 3
+      USE potential, ONLY: NCONST, NRSQ
 C
 C  DE VOGELAERE PROPAGATION (DOUBLE PRECISION)
 C  THIS IS A CUT-DOWN VERSION OF PAUL MCGUIRE'S PROGRAM
@@ -16,11 +16,10 @@ C
 C  NSTAB  IS NUMBER OF STEPS TAKEN BEFORE STABILIZATION.
 C
       IMPLICIT DOUBLE PRECISION (A-H,O-Z)
-      INTEGER L(N),NB(N),IV(1)
+      INTEGER L(N),NB(N),IV(*)
       INTEGER IPRINT
-      DIMENSION Y(NSQ,4),YP(NSQ,2),F(NSQ,4),A(NSQ),
-     1          DIAG(N),P(MXLAM),SR(NSQ),VL(2),EINT(N),CENT(N),
-     2          R(4)
+      ALLOCATABLE :: Y(:,:),YP(:,:),F(:,:),DIAG(:),A(:),P(:)
+      DIMENSION SR(N*N),VL(*),EINT(N),CENT(N),R(4)
 C
 C  INDICES ON Y, YP, F ARE (ITH SOLN. COMP, NTH SOLN, KTH R VALUE)
 C
@@ -34,28 +33,34 @@ C
 C  ZERO STORAGE . . .
 C
       NP1=N+1
-      DO 700 I=1,4
-      DO 700 IJ=1,NSQ
+      NSQ=N*N
+
+      ALLOCATE (Y(NSQ,4),F(NSQ,4),YP(NSQ,2))
+      DO I=1,4
+      DO IJ=1,NSQ
         Y(IJ,I)=0.D0
-  700   F(IJ,I)=0.D0
+        F(IJ,I)=0.D0
+      ENDDO
+      ENDDO
 C
 C  SUBROUTINE DVSTRT REPLACED BY INITIALISATION FROM YINIT IN NOV 2018
 C  SR CONTAINS INITIAL LOG-DERIVATIVE MATRIX:
 C  COPY IT TO WAVEFUNCTION DERIVATIVE IN YP(IJ,1)
 C
-      DO 800 IJ=1,NSQ
+      DO IJ=1,NSQ
         YP(IJ,1)=SR(IJ)
         YP(IJ,2)=0.D0
-  800   SR(IJ)=0.D0
+        SR(IJ)=0.D0
+      ENDDO
 C
 C  AND SET WAVEFUNCTION IN Y(IJ,2) TO UNIT MATRIX:
 C  OFF-DIAGONAL ELEMENTS ALREADY ZERO
 C
       IJ=1
-      DO 900 I=1,N
+      DO I=1,N
         Y(IJ,2)=1.D0
         IJ=IJ+NP1
-  900 CONTINUE
+      ENDDO
 C
 C  ********** START PROPAGATION **********
       NSTAB=MAX(NSTAB,1)
@@ -64,6 +69,7 @@ C  ********** START PROPAGATION **********
 C  GET F(,,2) FROM Y(,,2)
       R4=R(2)
 C
+      ALLOCATE (A(NSQ),DIAG(N),P(MXLAM+NCONST+NRSQ))
       IF (IREAD) THEN
         READ(ISCRU) A
         DO IJ=1,NSQ,NP1
@@ -98,7 +104,8 @@ C
 C
 C  **********      MAIN BODY OF ITERATION  **********
 C  PROPAGATE FROM (-1/2) AND (0) TO (1/2) AND (1).
-      DO 3000 ISTEP=1,NSTEP
+!  Start of long DO loop #1
+      DO ISTEP=1,NSTEP
       CALL DAXPY(NSQ,1.D0,Y(1,2),1,Y(1,3),1)
       CALL DAXPY(NSQ,H2,YP(1,1),1,Y(1,3),1)
       CALL DAXPY(NSQ,H2*H2*4.D0/6.D0,F(1,2),1,Y(1,3),1)
@@ -144,7 +151,7 @@ C
 C
 C  **********      THIS ENDS DE VOGELAERE CYCLE    **********
 C
-      IF (ISTEP.EQ.NSTEP) GOTO 3000
+      IF (ISTEP.EQ.NSTEP) CYCLE
 C
 C  ********** STABILIZATION EVERY NSTAB STEPS     **********
       IF (ISTEP-NSTAB*(ISTEP/NSTAB).EQ.0) THEN
@@ -163,12 +170,14 @@ C  **********   RE-INITIALIZE FOR NEXT CYCLE OF PROPAGATION *********
       CALL DCOPY(NSQ,Y(1,4),1,Y(1,2),1)
       CALL DCOPY(NSQ,F(1,3),1,F(1,1),1)
       CALL DCOPY(NSQ,F(1,4),1,F(1,2),1)
-      DO 5200 IJ=1,NSQ
+      DO IJ=1,NSQ
         YP(IJ,2)=0.D0
         Y(IJ,3)=0.D0
- 5200   Y(IJ,4)=0.D0
+        Y(IJ,4)=0.D0
+      ENDDO
 C
- 3000 CONTINUE
+      ENDDO
+!  End of long DO loop #1
 C
 C  ********** ASYMPTOTIC REGION **********
 C
@@ -181,6 +190,7 @@ C  TRANSPOSE PSI AND PSI'
       CALL TRNSP(SR,N)
       CALL TRNSP(Y(1,4),N)
       CALL DGESV(N,N,Y(1,4),N,Y,SR,N,IER)
+      DEALLOCATE(Y,YP,F,DIAG,A,P)
       IF (IER.NE.0) THEN
         WRITE(6,689) IER
   689   FORMAT(' * * * ERROR. IER =',I2,' FROM DGESV IN DVPROP')

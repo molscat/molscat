@@ -1,6 +1,6 @@
       DOUBLE PRECISION FUNCTION DRCALC(RSTART,RSTOP,KSTEP,NSTEP,POW)
       IMPLICIT NONE
-C  Copyright (C) 2022 J. M. Hutson & C. R. Le Sueur
+C  Copyright (C) 2025 J. M. Hutson & C. R. Le Sueur
 C  Distributed under the GNU General Public License, version 3
 
 C  CR LeSueur Jan 2019
@@ -32,7 +32,7 @@ C
         RLAST=(ZSTART+DBLE(KSTEP)*DZ)**POWINV
         DRCALC=RNOW-RLAST
       ELSE
-        DZ=RSTART*((RSTOP/RSTART)**1.D0/DBLE(NSTEP)-1.D0)
+        DZ=RSTART*((RSTOP/RSTART)**(1.D0/DBLE(NSTEP))-1.D0)
         DRCALC=DZ*(1.D0+DZ/RSTART)**KSTEP
       ENDIF
 

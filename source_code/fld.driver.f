@@ -1,13 +1,16 @@
       SUBROUTINE DRIVER
-C  Copyright (C) 2022 J. M. Hutson & C. R. Le Sueur
+C  Copyright (C) 2025 J. M. Hutson & C. R. Le Sueur
 C  Distributed under the GNU General Public License, version 3
       USE efvs, ONLY: EFV, EFVNAM, EFVUNT, IEFVST, ISVEFV, ITPSUB,
      e                MXEFV, MAPEFV, NEFV, NEFVP, SCALAM, SVNAME, SVUNIT
-      USE potential, ONLY: CONLEN, EPNAME, IREF, NCONST, NDGVL, NEXTRA,
-     p                     NRSQ, NVLBLK, RMNAME
+      USE potential, ONLY: CONFRQ, CONLEN, EPNAME, IREF, NCONST, NDGVL,
+     p                     NEXTRA, NRSQ, NVLBLK, RMNAME
       USE basis_data, ONLY: NJLQN9
       USE physical_constants, ONLY: NIST_year, bfct
-      USE sizes, ONLY: MXNRG => MXNRG_in_FIELD, MXNODE, MXOMEG
+      USE sizes, ONLY: MXNRG => MXNRG_in_FIELD, mxlmda, MXNODE, MXOMEG
+      USE pair_state, ONLY: ATAU, JSTATE
+cINOLLS USE i_nolls, ONLY: idata, nidata, nrdata, rdata, inolls_init,
+cINOLLS1                   inolls_data, inolls_check, save_res, write_res
 C
 C***********************************************************************
 C
@@ -18,7 +21,7 @@ C
 C  TO FIND THE APPLIED FIELD WHERE A BOUND STATE HAS A SPECIFIED ENERGY.
 C  WHEN ENERGY IS SET TO A THRESHOLD, THIS FINDS RESONANCE POSITIONS
 C
-C  CURRENT VERSION: 2022.0
+C  CURRENT VERSION: 2025.0
 C***********************************************************************
 C
 C  DEFAULT UNITS ARE
@@ -40,18 +43,16 @@ C  NQN IS NO. OF QUANTUM NUMBERS USED TO DESCRIBE INTERACTION PARTNERS
 C
       IMPLICIT DOUBLE PRECISION (A-H,O-Z)
       logical :: inolls=.false.
-cINOLLS include 'fpvm3.h'
       PARAMETER (NEXP=10,MXMNQN=10)
       INTEGER EUNITS,PRNTLV,SHRINK,MONQN(MXMNQN)
       DOUBLE PRECISION MUNIT
-cINOLLS include 'all/pvmdat1.f'
 C
 C  ARRAY TO HOLD TIME AND DATE
       CHARACTER CTIME*9,CDATE*11
       CHARACTER METHOD*12
 C
       LOGICAL LFSCAN,LFSRCH,NOBIS,UPWARD
-      LOGICAL CONVGE,ENOISE
+      LOGICAL CONVGE,ENOISE,LTYP8
 C
       CHARACTER(80)  LABEL
       CHARACTER(120) LABL
@@ -60,6 +61,12 @@ C
       CHARACTER(8)   EUNAME,QNAME(10)
       CHARACTER(20)  PDATE
       CHARACTER(10)  RUNAME
+C  ALLOCATABLE ARRAYS
+      ALLOCATABLE ESCR(:)
+      ALLOCATABLE JSINDX(:),EINT(:),CENT(:),WVEC(:),L(:),P(:),VL(:,:),
+     1            IV(:,:),DGVL(:,:),EVFMIN(:),EVFMAX(:),EVBDST(:),
+     2            EVSMLL(:),EVFLO(:,:),EVFHI(:,:)
+      ALLOCATABLE LAM(:),LAMTMP(:)
 C
 C  FOLLOWING ARRAYS ALL HAVE DIMENSION MXNODE. MXNODE IS THE MAXIMUM
 C  NUMBER OF NODES THAT CAN BE SOUGHT IN A SINGLE RUN.
@@ -78,18 +85,8 @@ C  ARRAYS FOR EFVS AND ENERGIES
       LOGICAL ZCNTN
       DIMENSION OLDFAC(MXOMEG)
 C
-C     include common block for data received via pvm
-C
-cINOLLS include 'all/pvmdat.f'
-C
-C  DYNAMIC STORAGE COMMON BLOCK ...
-      COMMON /MEMORY/ MX,IXNEXT,NIPR,IDUMMY,X(1)
-      COMMON /VLFLAG/ IVLFL
-C  MX,IXNEXT ARE MAX AND NEXT AVAILABLE LOCATION IN X() ARRAY
-C  NIPR IS NUMBER OF INTEGERS PER REAL; SHOULD BE 1 OR 2.
-C    E.G. FOR IBM R*8/I*4, NIPR=2.  AN INTEGER ARRAY OF DIM. N
-C    CAN BE STORED IN A REAL ARRAY OF DIMENSION (N+NIPR-1)/NIPR.
-C  IVLFL FLAGS WHETHER IV() ARRAY IS USED AS POINTER W/ VL ARRAY.
+C  DUMMY ARRAYS
+      DIMENSION DUMAR(1),IDUMAR(1),DUMAR2(1,1),IDUMA2(1,1)
 C
 C  COMMON BLOCK FOR CONTROL OF USE OF PROPAGATION SCRATCH FILE
       LOGICAL IREAD,IWRITE,IREADR,IWRITR
@@ -118,7 +115,7 @@ C  COMMON BLOCK TO DESCRIBE WHICH DRIVER IS USED
 C  COMMON BLOCK FOR INPUT/OUTPUT CHANNEL NUMBERS
       LOGICAL IWAVEF
       COMMON /IOCHAN/ IPSISC,IWAVSC,IWAVE,NWVCOL,IWVSTP,IWAVEF
-      DATA IPSISC,IWAVSC/108,110/
+      DATA IPSISC,IWAVSC/972,973/
       LOGICAL WAVE
 
 C  COMMON BLOCK FOR CONTROL OF PROPAGATION BOUNDARY CONDITIONS
@@ -133,17 +130,16 @@ C
      4                 EUNAME, EUNITS, EUNIT,  FIELD,  FIXFLD,
      5                 FLDMAX, FLDMIN, IBDSUM, IBFIX,  IBHI,
      6                 IFIELD, IFVARY, IMGSEL, INTFLG, IPRINT,
-     7                 IPROPL, IPROPS, IPSISC, IREF,   IRMSET,
-     8                 ISCRU,  IWAVE,  IWAVEF, IWAVSC, IWVSTP,
-     9                 JSTEP,  JTOTL,  JTOTU,  KSAVE,  LABEL,
-     A                 LASTIN, MAGEL,  MHI,    MONQN,  MSET,
-     B                 MUNIT,  MXCALC, NFVARY, NNRG,   NOBIS,
-     C                 NODMAX, NODMIN, NUMDER, NWVCOL, PHILW,
-     D                 PHIST,  POWRL,  POWRS,  POWRX,  PRNTLV,
-     E                 RMATCH, RMAX,   RMID,   RMIN,   RUNAME,
-     F                 RUNIT,  SCALAM, STEPL,  STEPS,  THETLW,
-     G                 THETST, TOLHI,  TOLHIL, TOLHIS, URED,
-     H                 WKBMN,  WKBMX,
+     7                 IPROPL, IPROPS, IREF,   IRMSET, ISCRU,  
+     8                 IWAVE,  IWAVEF, IWVSTP, JSTEP,  JTOTL,  
+     9                 JTOTU,  KSAVE,  LABEL,  LASTIN, MAGEL,  
+     A                 MHI,    MONQN,  MSET,   MUNIT,  MXCALC, 
+     B                 NFVARY, NNRG,   NOBIS,  NODMAX, NODMIN, 
+     C                 NUMDER, NWVCOL, PHILW,  PHIST,  POWRL,  
+     D                 POWRS,  POWRX,  PRNTLV, RMATCH, RMAX,   
+     E                 RMID,   RMIN,   RUNAME, RUNIT,  SCALAM, 
+     F                 STEPL,  STEPS,  THETLW, THETST, TOLHI,  
+     G                 TOLHIL, TOLHIS, URED,   WKBMN,  WKBMX,
 C
 C  UNUSED NAMELIST VARIABLES RETAINED FOR DATA-FILE COMPATIBILITY
 C
@@ -163,7 +159,7 @@ C  LEVEL CONTAINED IN JLEVEL. (VALUE FOR ITYP=9 IS A DUMMY VALUE)
       DATA NJLQN/1,2,2,3,3,2,2,2,1/
 C
       DATA LABEL /'        '/
-      DATA IPROGM /19/, PDATE /'2022.0'/
+      DATA IPROGM /19/, PDATE /'2025.0'/
       DATA PLUR/'S',' ','S'/
       DATA YPLUR/'IES','Y  ','IES'/
       DATA CDRIVE /'F'/
@@ -175,24 +171,20 @@ C  BFCT IS IN MODULE physical_constants
 C
 C  * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
 C
-C     include statements to enroll program in PVM
-C
-cINOLLS include 'all/pvmdat2.f'
-C
-      MXSAVE=MX
-   10 MX=MXSAVE
-      unset=PUNSET
+   10 unset=PUNSET
+C  RESET ITEMS IN COMMON BLOCKS IN CASE OF REPEAT CALCULATIONS
+      IVLU=0
+      IVLFL=0
+      NCONST=0
+      NRSQ=0
+      RMATCH=0.D0
+      ERED=0.D0
+      IPSISC=972
+      IWAVSC=973
       CALL GCLOCK(TFIRST)
       CALL GDATE(CDATE)
       CALL GTIME(CTIME)
 C
-C  SET PARAMETERS IN COMMON/MEMORY/
-C
-      NIPR=2
-      IXNEXT=1
-C  SET NUSED.LT.0 AND CALL CHKSTR TO RESET COUNTER FOR EACH &INPUT.
-      NUSED=-1
-      CALL CHKSTR(NUSED)
 C  SET DEFAULT NAMES FOR UNITS USED BY POTENTIAL ROUTINES
       EPNAME='EPSIL'
       RMNAME='RM'
@@ -303,16 +295,13 @@ C  INITIALISE IPERTN TO 0 SO THAT HAMMAT DOES NOT ATTEMPT PERTURBATION
       NFIELD=0
       NHAM=0
       NJLQN9=99999
-      NUSED=0
       PI=ACOS(-1.D0)
       UPWARD=.FALSE.
 C
       if (.not.inolls) READ(5,INPUT,END=999)
 C
-C     include statements to receive, unpack and allocate data to
-C     variables
-C
-cINOLLS include 'field/rinput-v2018.f'
+cINOLLS call inolls_init
+cINOLLS include 'field-input-namelist.h'
 C
       LABEL=ADJUSTL(LABEL)
       LABLEN=MAX(LEN(TRIM(LABEL)),1)
@@ -347,13 +336,6 @@ C
  1003 FORMAT(/'  USING CODATA ',I4,' RECOMMENDED VALUES OF',
      1   ' FUNDAMENTAL PHYSICAL CONSTANTS')
 C
-      IF (IPRINT.GE.1) THEN
-        AMXKB=DBLE(MX)/128.D0/1024.D0
-        WRITE(6,1004) MX,AMXKB
- 1004   FORMAT(/'  MEMORY ALLOCATED TO MAIN WORKING ARRAY IS',I10,
-     1          ' (8-BYTE) WORDS (',F8.2,' MB)')
-      ENDIF
-
       IF (IPRINT.GE.1) WRITE(6,1007) IPRINT
  1007 FORMAT(/'  PRINT LEVEL (IPRINT) =',I3)
 
@@ -389,10 +371,11 @@ C
 C--------------------------------------------------------------------
 C  INITIALIZE BASIS ROUTINE  -----------------
 C
-      IXJSTT=IXNEXT
-      NSTATE=MX
-      CALL BASIN(NSTATE,X(IXJSTT),URED,NQN,NLABV(9),MXPAR,ITYPE,IPRINT,
-     1           IOSFLG,IBOUND,NLEVEL,X(ISJSTT),QNAME)
+      IF (ALLOCATED(JSTATE)) DEALLOCATE(JSTATE)
+      IF (ALLOCATED(ATAU)) DEALLOCATE(ATAU)
+      CALL BASIN(NSTATE,URED,NQN,NLABV(9),MXPAR,ITYPE,IPRINT,
+     1           IOSFLG,IBOUND,NLEVEL,QNAME)
+      LTYP8=ITYPE.EQ.8
 C
       IF (NEXTRA.NE.0) THEN
 C  IF NEXTRA HAS BEEN SET, ASSUME THAT DEGTOL IS NEEDED
@@ -426,8 +409,6 @@ C  INITIALISE ALL EXTERNAL VARIABLE QUANTITIES
 
       LENEFV=MAX(NEFVP-IEFVST+1,0)
 C
-C  BASE ROUTINE INCREMENTS IXNEXT BY AMOUNT OF STORAGE IN JSTATE.
-      CALL CHKSTR(NUSED)
       IVLSAV=IVLU
       IF (IPRINT.GE.1) WRITE(6,1060)
 C
@@ -440,11 +421,23 @@ C     AND VICE VERSA. IF BOTH ARE SET, POTENL USES SEPARATE LENGTH UNITS.
 C     IF NEITHER IS SET, THEY DEFAULT TO 1 (ANGSTROMS).
 C     THE SCALING FACTOR RUNIT/RPUNIT IS PLACED IN RSCALE.
 C
-      ILAM=IXNEXT
-      MXLAM=NIPR*(MX-ILAM+1)
+      MXLAM=MXLMDA
 C
       RPUNIT=unset
-      CALL POTENL(-1,MXLAM,X(ILAM),RPUNIT,EP2CM,ITYPE,IPRINT)
+      IF (ALLOCATED(LAM)) DEALLOCATE (LAM)
+      ALLOCATE (LAMTMP(MXLMDA))
+      CALL POTENL(-1,MXLAM,LAMTMP,RPUNIT,EP2CM,ITYPE,IPRINT)
+      ITYP=MOD(ITYPE,10)
+      NLAM=MXLAM*NLABV(ITYP)
+      IF (NLAM.GT.MXLMDA) THEN
+        WRITE(6,*)'***** ERROR: NOT ENOUGH SPACE FOR LAMBDA ARRAY'
+        WRITE(6,*)'INCREASE MXLMDA IN SIZES MODULE AND RECOMPILE'
+        WRITE(6,*)'MXLMDA NEEDS TO BE AT LEAST',NLAM
+        STOP
+      ENDIF
+      ALLOCATE (LAM(NLAM))
+      LAM=LAMTMP(1:NLAM)
+      DEALLOCATE (LAMTMP)
 C
       CALL CHCKRU(RUNIT,RUNAME,RPUNIT,RSCALE,unset,IPRINT)
 C
@@ -471,13 +464,8 @@ C
      3       '  HARMONIC ',A9,' =',F14.6,1X,A/)
       ENDIF
 
-      ITYP=MOD(ITYPE,10)
-      IXNEXT=IXNEXT+(MXLAM*NLABV(ITYP)+NIPR-1)/NIPR
+      CALL GNHAM(IPRINT,ITYPE,NLABV(ITYP),MXLAM,NHAM,LAM)
 
-      CALL GNHAM(IPRINT,ITYPE,NLABV(ITYP),MXLAM,NHAM,X(ILAM))
-
-      CALL CHKSTR(NUSED)
-      IC1=IXNEXT
       IF (IPRINT.GE.1) WRITE(6,1060)
 C
 C  PROCESS REQUESTED PROPAGATOR -- AND ITS INPUT DATA.
@@ -518,9 +506,11 @@ C
       WAVE=(IWAVE.NE.0 .AND. (IPROPS.EQ.6 .OR. IPROPS.EQ.9) .AND.
      1                       (IPROPL.EQ.6 .OR. IPROPL.EQ.9))
       IF (IWAVE.NE.0 .AND. .NOT.WAVE) THEN
-        WRITE(6,1110)
- 1110   FORMAT(/'  WAVEFUNCTIONS ONLY AVAILABLE FOR LDMD AND AIRY '
-     1          'PROPAGATORS: REQUEST CANCELLED')
+        WRITE(6,1110) IWAVE
+ 1110   FORMAT(/'  CALCULATION OF WAVEFUNCTIONS IS IMPLEMENTED ONLY',
+     1          ' FOR LDMD AND AIRY PROPAGATORS (IPROP = 6 AND 9):'/
+     2          '  REQUEST FOR WAVEFUNCTIONS ON CHANNEL',I3,
+     3          ' CANCELLED')
       ENDIF
 C
 C  WRITE HEADER ON WAVEFUNCTION FILE
@@ -539,9 +529,10 @@ C
 C  EINT AND JSINDX ARE NOT DEFINED YET BUT ARE NOT NEEDED IN THIS CALL
 C
       IF (NCONST.EQ.0 .AND. NDGVL.EQ.0)
-     1  CALL THRESH(X(ISEINT),N,CM2RU,ITYPE,MONQN,NQN,
-     2              NJLQN(ITYP),EREF,X(ISJIND),0)
+     1  CALL THRESH(DUMAR,N,CM2RU,MONQN,NQN,
+     2              NJLQN(ITYP),EREF,IDUMAR,0)
 
+!  Start of long IF block #1
       IF (IPRINT.GE.1) THEN
         IF (LFSCAN) THEN
           WRITE(6,1300) TRIM(EFVNAM(ISVEFV)),FLDMIN,
@@ -619,6 +610,7 @@ C
         CALL EREFIN(MONQN,NQN,NJLQN(ITYP),EUNAME,EREF,EUNIT)
 C
       ENDIF
+!  End of long IF block #1
 C
       CALL GCLOCK(TITIME)
       TTIME=TITIME-TFIRST
@@ -656,19 +648,20 @@ C  INCORPORATING POSSIBILITY OF LOOPING FROM IBFIX TO IBHI CRLS 25-07-18
  1610 FORMAT(/'  CALCULATIONS WILL BE FOR SYMMETRY BLOCK',
      1       I4,'  ONLY')
 
-      IF (IPRINT.GE.1) WRITE(6,1900) TTIME,NUSED
- 1900 FORMAT(/'  INITIALIZATION DONE.  TIME WAS',F7.2,' CPU SECS.',
-     1       I10,' WORDS OF STORAGE USED.')
+      IF (IPRINT.GE.1) WRITE(6,1900) TTIME
+ 1900 FORMAT(/'  INITIALIZATION DONE.  TIME WAS',F7.2,' CPU SECS.')
 C
 C  **************  LOOP OVER JTOT BEGINS HERE.  ******************
 C
       IF (IPRINT.GE.1) WRITE(6,'(/1X,A)') TRIM(LABL)
-      DO 100 JTOT=JTOTL,JTOTU,JSTEP
+!  Start of long DO loop #1
+      LOOP_JTOT: DO JTOT=JTOTL,JTOTU,JSTEP
         THETA=THETLW+THETST*DBLE(JTOT)
 C
 C  ***************  LOOP OVER SYMMETRY BLOCKS BEGINS HERE  **************
 C
-        DO 200 IB=IBMIN,IBMAX
+!  Start of long DO loop #2
+        DO IB=IBMIN,IBMAX
           IF (IPRINT.GE.1) WRITE(6,2100) JTOT,IB
  2100     FORMAT(/2X,29('*'),'  ANGULAR MOMENTUM JTOT  =',I4,'  ',
      1           ' AND SYMMETRY BLOCK  = ',I4,2X,28('*'))
@@ -681,67 +674,55 @@ C
 C
 C  CHOOSE BASIS FUNCTIONS
 C
-          CALL BASE(JTOT,X(IXJSTT),N,X,X,CM2RU,
-     1              X,X,X,X,MXLAM,NHAM,
-     2              X(ILAM),X,WGHT,IEXCH,THETA,PHI,IB,
-     3              .TRUE.,EBAS,NSTATE,IPRINT,IBOUND,X(ISJSTT),
-     4              X,QNAME)
+          CALL BASE(JTOT,N,IDUMAR,IDUMAR,CM2RU,
+     1              DUMAR,DUMAR,DUMAR2,IDUMA2,MXLAM,NHAM,
+     2              LAM,DUMAR,WGHT,IEXCH,THETA,PHI,IB,
+     3              .TRUE.,EBAS,NSTATE,IPRINT,IBOUND,
+     4              DUMAR,QNAME)
 C
 C  N IS THE NUMBER OF BASIS FUNCTIONS
 C  SKIP THIS JTOT,IB IF NO CHANNELS
 C
-          IF (N.LE.0) GOTO 200
-          NSQ = N*N
+          IF (N.LE.0) CYCLE
 C
 C  ALLOCATE STORAGE FOR COUPLED EQUATION SOLVER.
 C
 C  ALLOCATE STORAGE COMMON TO ALL PROPAGATORS. . .
-          ISJIND=IC1                 ! JSINDX
-          ISEINT=ISJIND+N            ! EINT
-          ISCENT=ISEINT+N            ! CENT
-          ISWVEC=ISCENT+N            ! WVEC
-          ISL=ISWVEC+N               ! L
-          ISP=ISL+N                  ! P
-          IPDIM=MXLAM+NCONST+NRSQ
-          ISIV=ISP+IPDIM             ! IV
-          IF (NUMDER .AND. IPRINT.GE.23 .AND.
-     1                                   (IPROPS.EQ.7 .OR. IPROPL.EQ.7))
-     2      ISIV=ISIV+2*IPDIM
+          ALLOCATE (JSINDX(N),EINT(N),CENT(N),WVEC(N),L(N))
           NV=N*(N+1)/2
-          IF (IVLU.EQ.0) NV=NV*NVLBLK
-          ISVL=ISIV                  ! VL
-          IF (IVLFL.GT.0) ISVL=ISIV+(NV+NIPR-1)/NIPR
-          ISDGVL=ISVL+NV             ! DGVL
-          IXNEXT=ISDGVL
-          IF (NCONST.EQ.0) IXNEXT=IXNEXT+N*NDGVL
-          CALL CHKSTR(NUSED)
+          IF (IVLU.EQ.0) THEN
+            NVL=NVLBLK
+          ELSE
+            NVL=1
+          ENDIF
+          ALLOCATE (VL(NVL,NV))
+          IF (IVLFL.GT.0) THEN
+            ALLOCATE (IV(NVL,NV))
+          ELSE
+            ALLOCATE (IV(1,1))
+          ENDIF
+          IF (NCONST.GT.0) THEN
+            ALLOCATE (DGVL(N,NDGVL))
+          ELSE
+            ALLOCATE (DGVL(1,1))
+          ENDIF
 C
 C  SET UP BASIS FUNCTIONS IN ALLOCATED STORAGE
 C
-          CALL BASE(JTOT,X(IXJSTT),N,X(ISJIND),X(ISL),CM2RU,
-     1              X(ISEINT),X(ISCENT),X(ISVL),X(ISIV),MXLAM,NHAM,
-     2              X(ILAM),X(ISWVEC),WGHT,IEXCH,THETA,PHI,IB,
-     3              .FALSE.,EBAS,NSTATE,IPRINT,IBOUND,X(ISJSTT),
-     4              X(ISDGVL),QNAME)
-          IF (WAVE) CALL WVSBLK(JTOT,IB,N,NQN,NSTATE,X(IXJSTT),
-     1                          X(ISJIND),X(ISL),X(ISCENT),EREF,
+          CALL BASE(JTOT,N,JSINDX,L,CM2RU,
+     1              EINT,CENT,VL,IV,MXLAM,NHAM,
+     2              LAM,WVEC,WGHT,IEXCH,THETA,PHI,IB,
+     3              .FALSE.,EBAS,NSTATE,IPRINT,IBOUND,
+     4              DGVL,QNAME)
+          IF (WAVE) CALL WVSBLK(JTOT,IB,N,NQN,NSTATE,JSTATE,
+     1                          JSINDX,L,CENT,EREF,
      2                          EUNIT,EUNAME,QNAME,IBOUND,IPRINT,NNRG,
      3                          'ENERG'//YPLUR(MIN(NNRG,2)))
 C
-C  CALCULATE STORAGE ALLOCATIONS FOR Y(OUT), Y(IN) AND U
-C
-          NSQ=N*N
-          ISYOUT=IXNEXT        ! Y(OUT)
-          ISYIN=ISYOUT+NSQ     ! Y(IN)
-          ISU=ISYIN+NSQ        ! U
-          IXNEXT=ISU+NSQ
-
-          CALL CHKSTR(NUSED)
-
-C
 C  ******************  LOOP OVER ENERGIES BEGINS HERE  ******************
 C
-          DO 300 INRG=1,NNRG
+!  Start of long DO loop #3
+          DO INRG=1,NNRG
 C  CANNOT USE PROPAGATOR SCRATCH FILE IF FIELDS ARE CHANGING
             IWRITR=LSCRUR
             IREADR=.FALSE.
@@ -756,23 +737,12 @@ C  FIRST SET THE LIMITS
 C
             OLDFAC=0.D0
 C
-C  ALLOCATE STORAGE USED FOR EIGENVECTORS OF SMALLEST EIGENVALUE AT
-C  FLDMIN AND FLDMAX
-            ISLOW=IXNEXT    ! EVEC AT FLDMIN
-            ISHIGH=ISLOW+N  ! EVEC AT FLDMAX
-            IC2=ISHIGH+N
-            IXNEXT=IC2
-            CALL CHKSTR(NUSED)
-
-C  ISEVEC IS A POINTER TO WHERE THE EIGENVECTOR OF THE SMALLEST
-C  EIGENVALUE FOR THE CURRENT CALCULATION IS STORED
-            ISEVEC=ISLOW
-
-C
 C  ******************  LOOP OVER FIELDS BEGINS HERE  ******************
 C
-            DO 400 IFLD=1,NFIELD
-              IF (IFLD.EQ.2 .AND. .NOT.LFSCAN) ISEVEC=ISHIGH
+            ALLOCATE (EVFMIN(N),EVFMAX(N))
+            ALLOCATE (EVBDST(N))
+!  Start of long DO loop #4
+            DO IFLD=1,NFIELD
               IF (.NOT.LFSCAN) THEN
                 IF (IFLD.EQ.1) FLD=FLDMIN
                 IF (IFLD.EQ.2) FLD=FLDMAX
@@ -787,20 +757,22 @@ C
 C  CALL CHEINT OR YTRANS TO GET EINT FOR THIS FIELD
 C
               IF (NCONST.EQ.0 .AND. NDGVL.GT.0) THEN
-                CALL CHEINT(X(ISEINT),X(ISDGVL),N,OLDFAC,CM2RU)
+                CALL CHEINT(EINT,DGVL,N,OLDFAC,CM2RU)
                 IF (IPRINT.GE.10)
-     1            CALL THRLST(N,X(ISEINT),X(ISCENT),CM2RU,X(ISL),
+     1            CALL THRLST(N,EINT,CENT,CM2RU,L,
      2                        IBOUND,EUNIT,EUNAME)
               ENDIF
 
               IF (NCONST.GT.0 .OR. NRSQ.GT.0) THEN
-                CALL YTRANS(X(ISYOUT),X(ISU),X(ISEINT),X(ISWVEC),
-     1                      X(ISJIND),X(ISL),N,X(ISP),X(ISVL),X(ISIV),
+                ALLOCATE (ESCR(N*N))
+                CALL YTRANS(DUM,ESCR,EINT,WVEC,
+     1                      JSINDX,L,N,VL,IV,
      2                      MXLAM,NHAM,ERED,EP2RU,CM2RU,DEGTOL,
-     3                      NOPEN,IBOUND,X(ISCENT),IPRINT,.FALSE.)
+     3                      NOPEN,IBOUND,CENT,IPRINT,.FALSE.)
+                DEALLOCATE (ESCR)
 C
                 IF (IPRINT.GE.10)
-     1            CALL THRLST(N,X(ISEINT),X(ISCENT),CM2RU,X(ISL),
+     1            CALL THRLST(N,EINT,CENT,CM2RU,L,
      2                        IBOUND,EUNIT,EUNAME)
               ENDIF
 C
@@ -808,33 +780,24 @@ C  CALCULATE EREF
 C
               ETEMP=ENERGY(INRG)*EUNIT
               IF (IREF.NE.0 .OR. MONQN(1).NE.-99999)
-     1          CALL THRESH(X(ISEINT),N,CM2RU,ITYPE,MONQN,NQN,
-     2                      NJLQN(ITYP),EREF,X(ISJIND),IPRINT)
-              ERED=ETEMP+EREF
+     1          CALL THRESH(EINT,N,CM2RU,MONQN,NQN,
+     2                      NJLQN(ITYP),EREF,JSINDX,IPRINT)
+              EINCM=ETEMP+EREF
               IF (IPRINT.GE. 9) CALL PREREF(EREF,EUNIT,EUNAME)
-              IF (IPRINT.GE.10) CALL PREABS(ERED,EREF,EUNIT,EUNAME)
+              IF (IPRINT.GE.10) CALL PREABS(EINCM,EREF,EUNIT,EUNAME)
 C
-              ERED=ERED*CM2RU
+              ERED=EINCM*CM2RU
               EREDMX=ERED
               IF (ITYPE.NE.8 .AND. ISCRU.NE.0) EREDMX=EMX+EREF*CM2RU
               IF (IRMSET.GT.0 .AND. IFLD.EQ.1 .AND. INRG.EQ.1) THEN
                 RMNINT=RMIN
-                ITW=IXNEXT
-                IT1=ITW+N*N
-                IT2=IT1+N
-                IT3=IT2+N
-                IT4=IT3+N
-                IXNEXT=IT4+N
-                CALL CHKSTR(NUSED)
-                CALL FINDRM(X(ITW),N,RMNINT,RTURN,X(ISP),X(ISVL),
-     1                      X(ISIV),EREDMX,X(ISEINT),X(ISCENT),
-     2                      X(IT1),X(IT2),X(IT3),X(IT4),MXLAM,NHAM,
-     3                      EP2RU,CM2RU,RSCALE,IRMSET,ITYPE,IPRINT)
-                IXNEXT=ITW
+                CALL FINDRM(N,RMNINT,RTURN,VL,IV,EREDMX,EINT,CENT,
+     1                      MXLAM,NHAM,EP2RU,CM2RU,RSCALE,IRMSET,
+     2                      LTYP8,IPRINT)
               ENDIF
 
-              CAYS=CALCK(EPS*CM2RU,EREDMX,X(ISEINT),N)
-              CAYL=CALCK(EPL*CM2RU,EREDMX,X(ISEINT),N)
+              CAYS=CALCK(EPS*CM2RU,EREDMX,EINT,N)
+              CAYL=CALCK(EPL*CM2RU,EREDMX,EINT,N)
               IF (STEPS.GT.0.D0 .AND. CAYS.EQ.0.D0) THEN
                 WRITE(6,*) ' *** ERROR: EKIN+EPS IS NOT +VE'
                 STOP
@@ -844,9 +807,8 @@ C
                 STOP
               ENDIF
 
-              CALL BDCTRL(N,MXLAM,NHAM,X(ISYOUT),X(ISYIN),
-     1                    X(ISU),X(ISEVEC),X(IDUM),X(ISVL),X(ISIV),
-     2                    X(ISEINT), X(ISCENT), X(ISP), NODE, ERED,
+              CALL BDCTRL(N,MXLAM,NHAM,EVBDST,VL,IV,
+     2                    EINT, CENT, NODE, ERED,
      3                    EP2RU, CM2RU, RSCALE, EIGMIN, .FALSE.,
      4                    IMIN, IPRINT)
               IREADR=LSCRUR
@@ -866,10 +828,13 @@ C
                 NODLO=NODE
                 EIGLOW=EIGMIN
                 ILOW=IMIN
+                CALL DCOPY(N,EVBDST,1,EVFMIN,1)
               ELSE
                 NODHI=NODE
                 EIGHIG=EIGMIN
                 IHIGH=IMIN
+                IF (IFLD.EQ.2 .AND. .NOT.LFSCAN)
+     1            CALL DCOPY(N,EVBDST,1,EVFMAX,1)
               ENDIF
 
               IF ((IFLD.EQ.2 .AND. .NOT.LFSCAN) .AND. IPRINT.GE.2)
@@ -879,9 +844,13 @@ C
               NFOUND=0
               IF (NCALC.GE.MXCALC) GOTO 390
 C
-  400       CONTINUE
+            ENDDO
+!  End of long DO loop #4
 C
-            IF (LFSCAN) GOTO 330
+            IF (LFSCAN) THEN
+              DEALLOCATE (EVFMIN,EVFMAX,EVBDST)
+              GOTO 330
+            ENDIF
 C
             NBDST=ABS(NODHI-NODLO)
             NBDST=MIN(NBDST,MXNODE)
@@ -897,6 +866,7 @@ C
      2               'SYMMETRY BLOCK.')
             ELSEIF (NODHI.GT.NODLO) THEN
               UPWARD=.FALSE.
+              LUPWRD=1
               IF (IPRINT.GE.3)
      1          WRITE(6,2420) 'IN',NBDST,PLUR(MIN(2,NBDST))
  2420         FORMAT(/'  NODE COUNT ',A2,'CREASES BETWEEN FLDMIN ',
@@ -905,6 +875,7 @@ C
      3               ' IN THIS INTERVAL')
             ELSEIF (NODHI.LT.NODLO) THEN
               UPWARD=.TRUE.
+              LUPWRD=-1
               IF (IPRINT.GE.3)
      1          WRITE(6,2420) 'DE',NBDST,PLUR(MIN(2,NBDST))
             ENDIF
@@ -912,49 +883,38 @@ C
 C
 C  ALLOCATE STORAGE FOR EIGENVECTORS OF SMALLEST EIGENVALUE AT RANGE
 C  ENDPOINTS FOR EACH NODE
-            ISVLO=IC2            ! EVEC AT FLDLO
-            ISVHI=ISVLO+NBDST*N  ! EVEC AT FLDHI
-            IXNEXT=ISVHI+NBDST*N
-            IC3=IXNEXT
-            CALL CHKSTR(NUSED)
+            ALLOCATE (EVFLO(N,NBDST),EVFHI(N,NBDST))
 
 C
 C  LOOP OVER ALL NODES, SETTING UP INITIAL VALUES FOR RANGE ENDPOINTS
 C
             DO I=1,NBDST
-C
-C  IVLO AND IVHI ARE ADDRESSES FOR EVEC AT FLDLO AND FLDHI FOR CURRENT NODE
-C
-              IVLO=ISVLO+(I-1)*N
-              IVHI=ISVHI+(I-1)*N
 
               FLDLO(I)=FLDMIN
               NLO(I)=NODLO
               EIGLO=EIGLOW
               ILO(I)=ILOW
-              CALL DCOPY(N,X(ISLOW),1,X(IVLO),1)
+              CALL DCOPY(N,EVFMIN,1,EVFLO(1,I),1)
               FLDHI(I)=FLDMAX
               NHI(I)=NODHI
               EIGHI(I)=EIGHIG
               IHI(I)=IHIGH
-              CALL DCOPY(N,X(ISHIGH),1,X(IVHI),1)
+              CALL DCOPY(N,EVFMAX,1,EVFHI(1,I),1)
             ENDDO
+            DEALLOCATE (EVFMIN,EVFMAX)
 C
 C
 C  FROM NOW ON, THE CLOSEST AVAILABLE BOUNDS ON THE FIELD OF EACH
 C  NODE WILL BE STORED IN FLDLO(NODE-NODHI) AND FLDHI(NODE-NODHI).
 C
-cINOLLS include 'field/pvmdat7.f'
-C
-            DO 500 IBDST=1,NBDST
+!  Start of long DO loop #5
+            DO IBDST=1,NBDST
               NPROP=1
               TNTIME=TITIME
               NSEEK=IBDST+NODHI
               IF (.NOT.UPWARD) NSEEK=IBDST+NODLO
-              IF (NSEEK.LT.NODMIN .OR. NSEEK.GT.NODMAX) GOTO 500
+              IF (NSEEK.LT.NODMIN .OR. NSEEK.GT.NODMAX) CYCLE
               IF (IPRINT.GE.2) CALL PRNDCT(NSEEK)
-C
-cINOLLS include 'all/pvmdat5.f'
 C
 C  START BISECTION TO FIND THIS NODE
 C
@@ -971,37 +931,38 @@ C
 C  CALL CHEINT OR YTRANS TO GET EINT FOR THIS FIELD
 C
               IF (NCONST.EQ.0 .AND. NDGVL.GT.0) THEN
-                CALL CHEINT(X(ISEINT),X(ISDGVL),N,OLDFAC,CM2RU)
+                CALL CHEINT(EINT,DGVL,N,OLDFAC,CM2RU)
                 IF (IPRINT.GE.10)
-     1            CALL THRLST(N,X(ISEINT),X(ISCENT),CM2RU,X(ISL),
+     1            CALL THRLST(N,EINT,CENT,CM2RU,L,
      2                        IBOUND,EUNIT,EUNAME)
               ENDIF
 
               IF (NCONST.GT.0 .OR. NRSQ.GT.0) THEN
-                CALL YTRANS(X(ISYOUT),X(ISU),X(ISEINT),X(ISWVEC),
-     1                      X(ISJIND),X(ISL),N,X(ISP),X(ISVL),X(ISIV),
+                ALLOCATE (ESCR(N*N))
+                CALL YTRANS(DUM,ESCR,EINT,WVEC,
+     1                      JSINDX,L,N,VL,IV,
      2                      MXLAM,NHAM,ERED,EP2RU,CM2RU,DEGTOL,
-     3                      NOPEN,IBOUND,X(ISCENT),IPRINT,.FALSE.)
+     3                      NOPEN,IBOUND,CENT,IPRINT,.FALSE.)
+                DEALLOCATE (ESCR)
                 IF (IPRINT.GE.10)
-     1            CALL THRLST(N,X(ISEINT),X(ISCENT),CM2RU,X(ISL),
+     1            CALL THRLST(N,EINT,CENT,CM2RU,L,
      2                        IBOUND,EUNIT,EUNAME)
               ENDIF
-              IXNEXT=IC3
 C
 C  FIND EREF IF ENERGIES ARE RELATIVE TO A THRESHOLD
 C
               ETEMP=ENERGY(INRG)*EUNIT
               IF (IREF.NE.0 .OR. MONQN(1).NE.-99999)
-     1          CALL THRESH(X(ISEINT),N,CM2RU,ITYPE,MONQN,NQN,
-     2                      NJLQN(ITYP),EREF,X(ISJIND),IPRINT)
-              ERED=ETEMP+EREF
+     1          CALL THRESH(EINT,N,CM2RU,MONQN,NQN,
+     2                      NJLQN(ITYP),EREF,JSINDX,IPRINT)
+              EINCM=ETEMP+EREF
               IF (IPRINT.GE. 9) CALL PREREF(EREF,EUNIT,EUNAME)
-              IF (IPRINT.GE.10) CALL PREABS(ERED,EREF,EUNIT,EUNAME)
+              IF (IPRINT.GE.10) CALL PREABS(EINCM,EREF,EUNIT,EUNAME)
 C
-              ERED=ERED*CM2RU
+              ERED=EINCM*CM2RU
 
-              CAYS=CALCK(EPS*CM2RU,EREDMX,X(ISEINT),N)
-              CAYL=CALCK(EPL*CM2RU,EREDMX,X(ISEINT),N)
+              CAYS=CALCK(EPS*CM2RU,EREDMX,EINT,N)
+              CAYL=CALCK(EPL*CM2RU,EREDMX,EINT,N)
               IF (STEPS.GT.0.D0 .AND. CAYS.EQ.0.D0) THEN
                 WRITE(6,*) ' *** ERROR: EKIN+EPS IS NOT +VE'
                 STOP
@@ -1011,9 +972,8 @@ C
                 STOP
               ENDIF
 
-              CALL BDCTRL(N,MXLAM,NHAM,X(ISYOUT),X(ISYIN),
-     1                    X(ISU),X(ISEVEC),X(IDUM),X(ISVL),X(ISIV),
-     2                    X(ISEINT), X(ISCENT), X(ISP), NODE, ERED,
+              CALL BDCTRL(N,MXLAM,NHAM,EVBDST,VL,IV,
+     2                    EINT, CENT, NODE, ERED,
      3                    EP2RU, CM2RU, RSCALE, EIGMIN, .FALSE.,
      4                    IMIN, IPRINT)
               IF (IPRINT.GE.6) CALL PRPRCT(NPROP,SVNAME,FLDHLF,SVUNIT)
@@ -1029,8 +989,6 @@ C
 C  LOOP OVER THIS NODE AND THE REST, UPDATING INITIAL VALUES FOR RANGE
 C  ENDPOINTS
               DO I=IBDST,NBDST
-                IVLO=ISVLO+(I-1)*N
-                IVHI=ISVHI+(I-1)*N
                 IF ((UPWARD .AND. (NODE.GE.NODHI+I)) .OR.
      1              (.NOT.UPWARD .AND. NODE.LT.NODLO+I)) THEN
                   IF (FLDHLF.GT.FLDLO(I)) THEN
@@ -1038,7 +996,7 @@ C  ENDPOINTS
                     NLO(I)=NODE
                     EIGLO(I)=EIGMIN
                     ILO(I)=IMIN
-                    CALL DCOPY(N,X(ISEVEC),1,X(IVLO),1)
+                    CALL DCOPY(N,EVBDST,1,EVFLO(1,I),1)
                   ENDIF
                 ELSE
                   IF (FLDHLF.LT.FLDHI(I)) THEN
@@ -1046,18 +1004,16 @@ C  ENDPOINTS
                     NHI(I)=NODE
                     EIGHI(I)=EIGMIN
                     IHI(I)=IMIN
-                    CALL DCOPY(N,X(ISEVEC),1,X(IVHI),1)
+                    CALL DCOPY(N,EVBDST,1,EVFHI(1,I),1)
                   ENDIF
                 ENDIF
               ENDDO
 C
 C
-              IF (UPWARD .AND. (NLO(IBDST)-NHI(IBDST).GT.1)) GOTO 510
-              IF (.NOT.UPWARD .AND. (NHI(IBDST)-NLO(IBDST).GT.1))
-     1          GOTO 510
+              IF (LUPWRD*(NHI(IBDST)-NLO(IBDST)).GT.1) GOTO 510
 C
-              IF ((UPWARD .AND. (NHI(IBDST).GE.NLO(IBDST))) .OR.
-     2            (.NOT.UPWARD .AND. (NLO(IBDST).GE.NHI(IBDST)))) THEN
+              IF (LUPWRD*NHI(IBDST).LE.LUPWRD*NLO(IBDST) .OR.
+     1            FLDHI(IBDST).LE.FLDLO(IBDST)) THEN
                 WRITE(6,2500) NSEEK,IBDST,
      1                      (NLO(I),FLDLO(I),NHI(I),FLDHI(I),I=1,NBDST)
  2500           FORMAT(/'  ERROR IN NODE COUNT LOGIC.'/
@@ -1102,21 +1058,20 @@ C
      2                       FLDLO(IBDST),EIGLO(IBDST),
      3                       FLDHI(IBDST),EIGHI(IBDST)
                 ENDIF
-                GOTO 500
+                CYCLE
               ENDIF
 C
 C  EIGENVECTOR FOR SMALLEST EIGENVALUE IN CURRENT SEARCH IS STORED AT
 C  POSITION IVSMLL (WHICH IS THE SAME AS IVLO - EVECS AT RANGE ENDPOINTS
 C  ARE NO LONGER NEEDED FOR THE CURRENT NODE)
 C
-              IVSMLL=ISVLO+(IBDST-1)*N
+              ALLOCATE (EVSMLL(N))
               IF (ABS(EIGHI(IBDST)).LT.ABS(EIGLO(IBDST))) THEN
                 FLDNOW=FLDHI(IBDST)
                 EIGNOW=EIGHI(IBDST)
                 ESMALL=EIGNOW
                 ISMALL=IHI(IBDST)
-                IVHI=ISVHI+(IBDST-1)*N
-                CALL DCOPY(N,X(IVHI),1,X(IVSMLL),1)
+                CALL DCOPY(N,EVFHI(1,IBDST),1,EVSMLL,1)
                 FLDLST=FLDLO(IBDST)
                 EIGLST=EIGLO(IBDST)
               ELSE
@@ -1124,6 +1079,7 @@ C
                 EIGNOW=EIGLO(IBDST)
                 ESMALL=EIGNOW
                 ISMALL=ILO(IBDST)
+                CALL DCOPY(N,EVFLO(1,IBDST),1,EVSMLL,1)
                 FLDLST=FLDHI(IBDST)
                 EIGLST=EIGHI(IBDST)
               ENDIF
@@ -1142,7 +1098,8 @@ C
 
               CONVGE=.FALSE.
               ENOISE=.FALSE.
-              DO 600 ITER=1,NITER
+!  Start of long DO loop #6
+              DO ITER=1,NITER
 C
 C  CALCULATE THE NEXT FIELD USING THE VWDB ALGORITHM
 C
@@ -1166,36 +1123,37 @@ C
 C  CALL CHEINT OR YTRANS TO GET EINT FOR THIS FIELD
 C
                 IF (NCONST.EQ.0 .AND. NDGVL.GT.0) THEN
-                  CALL CHEINT(X(ISEINT),X(ISDGVL),N,OLDFAC,CM2RU)
+                  CALL CHEINT(EINT,DGVL,N,OLDFAC,CM2RU)
                   IF (IPRINT.GE.10)
-     1              CALL THRLST(N,X(ISEINT),X(ISCENT),CM2RU,X(ISL),
+     1              CALL THRLST(N,EINT,CENT,CM2RU,L,
      2                          IBOUND,EUNIT,EUNAME)
                 ENDIF
 
                 IF (NCONST.GT.0 .OR. NRSQ.GT.0) THEN
-                  CALL YTRANS(X(ISYOUT),X(ISU),X(ISEINT),X(ISWVEC),
-     1                        X(ISJIND),X(ISL),N,X(ISP),X(ISVL),X(ISIV),
+                  ALLOCATE (ESCR(N*N))
+                  CALL YTRANS(DUM,ESCR,EINT,WVEC,
+     1                        JSINDX,L,N,VL,IV,
      2                        MXLAM,NHAM,ERED,EP2RU,CM2RU,DEGTOL,
-     3                        NOPEN,IBOUND,X(ISCENT),IPRINT,.FALSE.)
+     3                        NOPEN,IBOUND,CENT,IPRINT,.FALSE.)
+                  DEALLOCATE (ESCR)
                   IF (IPRINT.GE.10)
-     1              CALL THRLST(N,X(ISEINT),X(ISCENT),CM2RU,X(ISL),
+     1              CALL THRLST(N,EINT,CENT,CM2RU,L,
      2                          IBOUND,EUNIT,EUNAME)
-                  IXNEXT=IC3
                 ENDIF
 C
                 ETEMP=ENERGY(INRG)*EUNIT
                 IF (IREF.NE.0 .OR. MONQN(1).NE.-99999)
-     1            CALL THRESH(X(ISEINT),N,CM2RU,ITYPE,MONQN,NQN,
-     2                        NJLQN(ITYP),EREF,X(ISJIND),IPRINT)
-                ERED=ETEMP+EREF
+     1            CALL THRESH(EINT,N,CM2RU,MONQN,NQN,
+     2                        NJLQN(ITYP),EREF,JSINDX,IPRINT)
+                EINCM=ETEMP+EREF
                 IF (IPRINT.GE. 9) CALL PREREF(EREF,EUNIT,EUNAME)
-                IF (IPRINT.GE.10) CALL PREABS(ERED,EREF,EUNIT,EUNAME)
+                IF (IPRINT.GE.10) CALL PREABS(EINCM,EREF,EUNIT,EUNAME)
+                ERED=EINCM*CM2RU
                 IF (CONVGE) EXIT
 C
-                ERED=ERED*CM2RU
 
-                CAYS=CALCK(EPS*CM2RU,ERED,X(ISEINT),N)
-                CAYL=CALCK(EPL*CM2RU,ERED,X(ISEINT),N)
+                CAYS=CALCK(EPS*CM2RU,ERED,EINT,N)
+                CAYL=CALCK(EPL*CM2RU,ERED,EINT,N)
                 IF (STEPS.GT.0.D0 .AND. CAYS.EQ.0.D0) THEN
                   WRITE(6,*) ' *** ERROR: EKIN+EPS IS NOT +VE'
                   STOP
@@ -1205,9 +1163,8 @@ C
                   STOP
                 ENDIF
 
-                CALL BDCTRL(N,MXLAM,NHAM,X(ISYOUT),X(ISYIN),
-     1                      X(ISU),X(ISEVEC),X(IDUM),X(ISVL),X(ISIV),
-     2                      X(ISEINT), X(ISCENT), X(ISP), NODE, ERED,
+                CALL BDCTRL(N,MXLAM,NHAM,EVBDST,VL,IV,
+     2                      EINT, CENT, NODE, ERED,
      3                      EP2RU, CM2RU, RSCALE, EIGMIN, .FALSE.,
      4                      IMIN, IPRINT)
 
@@ -1216,7 +1173,7 @@ C  UPDATE SMALLEST EIGENVALUE, EIGENVECTOR OF SMALLEST EIGENVALUE AND
 C  INDEX
                   ESMALL=EIGMIN
                   ISMALL=IMIN
-                  CALL DCOPY(N,X(ISEVEC),1,X(IVSMLL),1)
+                  CALL DCOPY(N,EVBDST,1,EVSMLL,1)
                 ENDIF
 
                 IF (IPRINT.GE.6)
@@ -1257,7 +1214,8 @@ C  (CONTRAPOINT (XA,FA) AND CURRENT ITERATE (XB,FB) MUST BRACKET THE ROOT)
                   FA=EIGMIN
                 ENDIF
 C
-  600         CONTINUE
+              ENDDO
+!  End of long DO loop #6
 
               IF (.NOT.CONVGE) THEN
                 WRITE(6,*) ' BOUND STATE',IBDST,'NOT CONVERGED IN',
@@ -1285,15 +1243,16 @@ C
 
               EVAL(IBDST,1)=FLDNEW
 C
-cINOLLS include 'field/pvmdat8.f'
+cINOLLS call save_res(fldnew)
 C
               NCHECK(IBDST)=NSEEK
 C
               IF (IPRINT.GE.5 .OR. WAVE) THEN
 
-                CALL EVMTCH(X(IVSMLL),ESMALL,ISMALL,X(IXJSTT),X(ISL),
-     2                      X(ISJIND),N,NSTATE,NQN,IPRINT,WAVE)
+                CALL EVMTCH(EVSMLL,ESMALL,ISMALL,JSTATE,
+     2                      L,JSINDX,N,NSTATE,NQN,IPRINT,WAVE)
               ENDIF
+              DEALLOCATE (EVSMLL)
 C
 C  END OF BOUND-STATE LOCATION SECTION
 C ===========================================================================
@@ -1311,34 +1270,30 @@ C
                 ISTATE=NSEEK
                 IF (.NOT.CONVGE) ISTATE=-NSEEK
                 CALL WVCURR(ISTATE,ENEW,EREF,EUNIT,EUNAME)
-C
-C  ALLOCATE STORAGE FOR SUMPSI
-                ITSUMP=IC3          ! SUMPSI
-                IXNEXT=ITSUMP+N
-                CALL CHKSTR(NUSED)
 
-                CALL BDCTRL(N,MXLAM,NHAM,X(ISYOUT),X(ISYIN),
-     1                      X(ISU),X(ISEVEC),X(ITSUMP),X(ISVL),X(ISIV),
-     2                      X(ISEINT), X(ISCENT), X(ISP), NODE, ERED,
+                CALL BDCTRL(N,MXLAM,NHAM,EVBDST,VL,IV,
+     2                      EINT, CENT, NODE, ERED,
      3                      EP2RU, CM2RU, RSCALE, EIGMIN, .TRUE.,
      4                      IMIN, IPRINT)
 C
                 CALL GCLOCK(TITIME)
                 TTIME=TITIME-TIMLST
                 TIMLST=TITIME
-                IXNEXT=IC3
               ENDIF
 C
-  500       CONTINUE
+            ENDDO
+!  End of long DO loop #5
 
 C  RELEASE STORAGE USED FOR STORING EIGENVECTORS OF SMALLEST EIGENVALUES
-            IXNEXT=IC2
+            IF (ALLOCATED(EVFLO)) DEALLOCATE (EVFLO,EVFHI)
+            IF (ALLOCATED(EVBDST)) DEALLOCATE (EVBDST)
 C
   390       IF (NCALC.GE.MXCALC) THEN
               NBDST=NFOUND
               IF (IPRINT.GE.1) WRITE(6,2390) MXCALC,NFOUND
  2390         FORMAT(/'  *** WARNING. MXCALC =',I5,' REACHED AFTER ONLY'
      1               ,I5,' NODES FOUND.')
+              EXIT LOOP_JTOT
             ENDIF
 C
 C  END OF WAVEFUNCTION CALCULATION
@@ -1347,16 +1302,20 @@ C
 C  RESET EFVS TO ORIGINAL VALUES
   330       CALL RSTEFV(FIXFLD)
 C
-  300     CONTINUE
+          ENDDO
+!  End of long DO loop #3
 C
 C  **********************  END OF LOOP OVER ENERGIES  *********************
 C
+          DEALLOCATE (JSINDX,EINT,CENT,WVEC,L,VL,IV,DGVL)
           IF (LSCRUR) CLOSE(ISCRUR)
-  200   CONTINUE
+        ENDDO
+!  End of long DO loop #2
 C
 C  ******************  END OF LOOP OVER SYMMETRY BLOCKS  ****************
 C
-  100 CONTINUE
+      ENDDO LOOP_JTOT
+!  End of long DO loop #1
 C
 C  ********************  END OF LOOP OVER JTOT  ******************
 C
@@ -1367,14 +1326,12 @@ C
       CALL GCLOCK(TLAST)
       TOTIME=TLAST-TFIRST
 C
-      CALL CHKSTR(NUSED)
-
       IF (IPRINT.GE.1) THEN
         WRITE(6,'(/)')
         WRITE(6,1001)
         WRITE(6,1002)
         CALL PROGVS(PDATE)
-        CALL TIMEMS(TOTIME,NUSED,MXSAVE)
+        CALL TIMEMS(TOTIME)
         WRITE(6,1001)
       ENDIF
 
@@ -1382,9 +1339,7 @@ C
 
  999  CONTINUE
 C
-C     include statements to pack and send results to master
-C
-cINOLLS include 'all/pvmdat4.f'
+cINOLLS call write_res
 C
       RETURN
       END

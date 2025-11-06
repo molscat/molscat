@@ -27,10 +27,10 @@ C
       INTEGER IERR, NCH, NCHM1, NCHP1
       EXTERNAL DSCAL, DCOPY, HAMMAT, DIAGVL
 *  SQUARE MATRIX (OF ROW DIMENSION NCH)
-      DIMENSION W(1)
+      DIMENSION W(*)
 *  VECTORS DIMENSIONED AT LEAST NCH
-      DIMENSION EIGNOW(1),SCR1(1),P(1),VL(1),IV(1),EINT(1)
-      DIMENSION CENT(1)
+      DIMENSION EIGNOW(*),SCR1(*),P(*),VL(*),IV(*),EINT(*)
+      DIMENSION CENT(*)
 * ------------------------------------------------------------------
       DATA XMIN1 / -1.D0/
       NCHP1 = NCH + 1

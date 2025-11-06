@@ -1,6 +1,6 @@
-      SUBROUTINE THRESH(EINT,N,CM2RU,ITYPE,MONQN,NQN,NJLQN,
+      SUBROUTINE THRESH(EINT,N,CM2RU,MONQN,NQN,NJLQN,
      1                  EREF,JSINDX,IPRINT)
-C  Copyright (C) 2022 J. M. Hutson & C. R. Le Sueur
+C  Copyright (C) 2025 J. M. Hutson & C. R. Le Sueur
 C  Distributed under the GNU General Public License, version 3
       USE potential, ONLY: IREF, NCONST, NDGVL
       USE basis_data, ONLY: ELEVEL, JLEVEL, NLEVEL
@@ -22,17 +22,19 @@ C
 
 C  ALTERED TO USE ARRAY SIZES FROM MODULE sizes ON 23-06-17 BY CRLS
 
+!  Start of long IF block #1
       IF (MONQN(1).NE.-99999) THEN
+!  Start of long IF block #2
         IF (NCONST.GT.0) THEN
           CALL THRSH9(IREF,MONQN,NQN,EREF,IPRINT)
         ELSE
           II=0
-          DO 20 I=1,NLEVEL
+          DO I=1,NLEVEL
             MATCH=.TRUE.
-            DO 10 IQN=1,NJLQN
+            DO IQN=1,NJLQN
               II=II+1
               IF (MONQN(IQN).NE.JLEVEL(II)) MATCH=.FALSE.
-   10       CONTINUE
+            ENDDO
             IF (MATCH) THEN
               IF (NDGVL.EQ.0) THEN
                 EREF=ELEVEL(I)
@@ -50,12 +52,13 @@ C  ALTERED TO USE ARRAY SIZES FROM MODULE sizes ON 23-06-17 BY CRLS
               ENDIF
               RETURN
             ENDIF
-   20     CONTINUE
+          ENDDO
           WRITE(6,100) (MONQN(IQN),IQN=1,NJLQN)
   100     FORMAT(' *** ERROR IN THRESH: REFERENCE LEVEL NOT FOUND ',
      1           'WITH SPECIFIED QUANTUM NUMBERS'/1X,8I6)
           STOP
         ENDIF
+!  End of long IF block #2
 C
       ELSEIF (IREF.GT.0) THEN
         IF (NCONST.NE.0 .OR. NDGVL.GT.0) THEN
@@ -68,12 +71,14 @@ C
   110   FORMAT(' *** ERROR IN THRESH. NEGATIVE IREF NOT IMPLEMENTED')
         STOP
       ENDIF
+!  End of long IF block #1
 
       RETURN
 C============================================================== EREFIN
       ENTRY EREFIN(MONQN,NQN,NJLQN,UNAME,EREF,EFACT)
 C  PRINT REFERENCE ENERGY AND HOW OBTAINED
 
+!  Start of long IF block #3
       IF (MONQN(1).NE.-99999) THEN
         WRITE(6,400)
   400   FORMAT(/2X,'THESE ENERGY VALUES ARE RELATIVE TO THE ',
@@ -107,5 +112,6 @@ C  PRINT REFERENCE ENERGY AND HOW OBTAINED
           WRITE(6,450) EREF,'CM-1'
         ENDIF
       ENDIF
+!  End of long IF block #3
       RETURN
       END

@@ -1,10 +1,12 @@
       SUBROUTINE SETBAS
-C  Copyright (C) 2022 J. M. Hutson & C. R. Le Sueur
+C  Copyright (C) 2025 J. M. Hutson & C. R. Le Sueur
 C  Distributed under the GNU General Public License, version 3
       USE basis_data, ONLY: ELEVEL, IDENT, ISYM, J1MAX, J1MIN, J1STEP,
      b                      J2MAX, J2MIN, J2STEP, JLEVEL, JMAX, JMIN,
      b                      JSTEP, KMAX, NLEVEL, ROTI
+      USE pair_state, ONLY : JSTATE
       IMPLICIT DOUBLE PRECISION (A-H,O-Z)
+      INTEGER IP(4)
       SAVE
 C
 C  SUBROUTINE TO GENERATE LEVEL LISTS AND MONOMER ENERGIES
@@ -20,10 +22,14 @@ C        NOTE THAT JSTATE(2*NSTATE+1)=1 IS
 C                      |+> TUNNELLING STATE FOR NH3
 C                      |-> TUNNELLING STATE FOR ND3
 C
+C  CRLS 06-2022: ALL ENTRY POINTS CHANGED TO USE ALLOCATABLE ARRAY FOR JSTATE
+C                JSTATE IS CARRIED IN THE pair_state MODULE SO THAT ITS
+C                SIZE CAN BE SET IN THESE LOWER ROUTINES
+C
       LOGICAL LEVIN,EIN
-      INTEGER NSTATE,JSTATE(*)
+      INTEGER NSTATE
 C --------------------------------------------------------- SETBAS ABOVE
-      ENTRY SET1(LEVIN,EIN,NSTATE,JSTATE,IPRINT)
+      ENTRY SET1(LEVIN,EIN,NSTATE,IPRINT)
 
       BE=ROTI(1)
       ALPHAE=ROTI(3)
@@ -36,9 +42,10 @@ C --------------------------------------------------------- SETBAS ABOVE
       JMIN=MAX(0,JMIN)
       JMAX=MAX(JMIN,JMAX)
       NLEVEL=0
-      DO 1012 I=JMIN,JMAX,JSTEP
+      DO I=JMIN,JMAX,JSTEP
         NLEVEL=NLEVEL+1
- 1012   JLEVEL(NLEVEL)=I
+        JLEVEL(NLEVEL)=I
+      ENDDO
       GOTO 1802
 
  1902 IF (IPRINT.GE.1) WRITE(6,632) NLEVEL
@@ -48,12 +55,14 @@ C --------------------------------------------------------- SETBAS ABOVE
  1802 JMIN=JLEVEL(1)
       JMAX=JMIN
       NSTATE=NLEVEL
-      DO 1912 I=1,NLEVEL
+      ALLOCATE (JSTATE(NSTATE*2))
+      DO I=1,NLEVEL
         JI=JLEVEL(I)
         IF (JI.LT.JMIN) JMIN=JI
         IF (JI.GT.JMAX) JMAX=JI
-        JSTATE(NSTATE+I)=I
- 1912   JSTATE(     I)=JI
+        JSTATE(I+NSTATE)=I
+        JSTATE(I       )=JI
+      ENDDO
       IF (EIN) GOTO 7002
 
       IF (IPRINT.GE.1) THEN
@@ -65,10 +74,11 @@ C --------------------------------------------------------- SETBAS ABOVE
   635   FORMAT('  ENERGY LEVELS CORRECTED FOR D(E) =',F12.8)
       ENDIF
 
-      DO 1702 I=1,NSTATE
+      DO I=1,NSTATE
         JI=JSTATE(I)
         FJ=JI*(JI+1)
- 1702   ELEVEL(I)=(BE-ALPHAE/2.D0)*FJ - DE*FJ*FJ
+        ELEVEL(I)=(BE-ALPHAE/2.D0)*FJ - DE*FJ*FJ
+      ENDDO
       RETURN
 
  7002 IF (IPRINT.GE.1) WRITE(6,631)
@@ -76,7 +86,7 @@ C --------------------------------------------------------- SETBAS ABOVE
       RETURN
 C  * * * * * * * * * * * * * * * * * * * * * * * END OF SET1 AND SETBAS
 C
-      ENTRY SET2(LEVIN,EIN,NSTATE,JSTATE,IPRINT)
+      ENTRY SET2(LEVIN,EIN,NSTATE,IPRINT)
 
       BE=ROTI(1)
       ALPHAE=ROTI(3)
@@ -94,14 +104,16 @@ C
       JMIN=JLEVEL(1)
       JMAX=JMIN
       NSTATE=NLEVEL
-      DO 2912 I=1,NLEVEL
+      ALLOCATE (JSTATE(NSTATE*3))
+      DO I=1,NLEVEL
         JI=JLEVEL(2*I-1)
         JVI=JLEVEL(2*I)
         JMIN=MIN(JMIN,JI)
         JMAX=MAX(JMAX,JI)
-        JSTATE(2*NSTATE+I)=I
-        JSTATE(  NSTATE+I)=JVI
- 2912   JSTATE(       I)=JI
+        JSTATE(I         )=JI
+        JSTATE(I+NSTATE  )=JVI
+        JSTATE(I+NSTATE*2)=I
+      ENDDO
       IF (EIN) GOTO 2002
 
       IF (IPRINT.GE.1) THEN
@@ -114,20 +126,21 @@ C
         IF (DE.NE.0.D0) WRITE(6,635) DE
       ENDIF
 
-      DO 2702 I=1,NSTATE
+      DO I=1,NSTATE
         JI =JSTATE(     I)
         JVI=JSTATE(NSTATE+I)
         FJ=JI*(JI+1)
         FV=JVI
- 2702   ELEVEL(I)=WE*FV-WEXE*FV*(FV+1.D0)+(BE-ALPHAE
-     1             *(FV+0.5D0))*FJ - DE*FJ*FJ
+        ELEVEL(I)=WE*FV-WEXE*FV*(FV+1.D0)
+     1              +(BE-ALPHAE*(FV+0.5D0))*FJ - DE*FJ*FJ
+      ENDDO
       RETURN
 
  2002 IF (IPRINT.GE.1) WRITE(6,631)
       RETURN
 C     * * * * * * * * * * * * * * * * * * * * * * * * * * * END OF SET2
 C
-      ENTRY SET3(LEVIN,EIN,NSTATE,JSTATE,IPRINT)
+      ENTRY SET3(LEVIN,EIN,NSTATE,IPRINT)
 
       BE1=ROTI(1)
       BE2=ROTI(2)
@@ -169,14 +182,15 @@ C
       J2STEP=MAX(J2STEP,1)
       NLEVEL=0
       I=1
-      DO 1013 JJ1=J1MIN,J1MAX,J1STEP
-      DO 1013 JJ2=J2MIN,J2MAX,J2STEP
-        IF (IDENT.NE.0 .AND. JJ1.GT.JJ2) GOTO 1013
+      DO JJ1=J1MIN,J1MAX,J1STEP
+      DO JJ2=J2MIN,J2MAX,J2STEP
+        IF (IDENT.NE.0 .AND. JJ1.GT.JJ2) CYCLE
         JLEVEL(I)=JJ1
         JLEVEL(I+1)=JJ2
         I=I+2
         NLEVEL=NLEVEL+1
- 1013 CONTINUE
+      ENDDO
+      ENDDO
       GOTO 1023
 
  5303 IF (IPRINT.GE.1) WRITE(6,333) NLEVEL
@@ -188,32 +202,28 @@ C  PROCESS JLEVEL TO JSTATE FORMAT.  JMIN(JMAX) ARE LOW(HIGH) OF J12.
       JMAX=JMIN
 C  EXPAND J1, J2  TO  J1, J2, J12
       NSTATE=0
-      DO 1033 I=1,NLEVEL
+      DO I=1,NLEVEL
+        JJ1=JLEVEL(2*I-1)
+        JJ2=JLEVEL(2*I)
+        NSTATE=NSTATE+2*MIN(JJ1,JJ2)+1
+      ENDDO
+      ALLOCATE (JSTATE(NSTATE*4))
+      ISTATE=1
+      DO I=1,NLEVEL
         JJ1=JLEVEL(2*I-1)
         JJ2=JLEVEL(2*I)
         JK=ABS(JJ1-JJ2)
         JTOP=JJ1+JJ2
-      DO 1033 J12=JK,JTOP
-        JSTATE(4*NSTATE+1)=JJ1
-        JSTATE(4*NSTATE+2)=JJ2
-        JSTATE(4*NSTATE+3)=J12
-        JSTATE(4*NSTATE+4)=I
-        NSTATE=NSTATE+1
+      DO J12=JK,JTOP
+        JSTATE(ISTATE         )=JJ1
+        JSTATE(ISTATE+NSTATE  )=JJ2
+        JSTATE(ISTATE+NSTATE*2)=J12
+        JSTATE(ISTATE+NSTATE*3)=I
+        ISTATE=ISTATE+1
         JMIN=MIN(JMIN,J12)
         JMAX=MAX(JMAX,J12)
- 1033 CONTINUE
-
-C  REARRANGE TO PROPER ORDER IN HIGHER JSTATE STORAGE
-      JK=4*NSTATE
-      DO 1043 I=1,NSTATE
-        JSTATE(JK       +I)=JSTATE(4*I-3)
-        JSTATE(JK+  NSTATE+I)=JSTATE(4*I-2)
-        JSTATE(JK+2*NSTATE+I)=JSTATE(4*I-1)
- 1043   JSTATE(JK+3*NSTATE+I)=JSTATE(4*I)
-
-C  COPY BACK . . .
-      DO 1053 I=1,JK
- 1053   JSTATE(I)=JSTATE(JK+I)
+      ENDDO
+      ENDDO
 
 C  SET ELEVEL VALUES
       IF (EIN) GOTO 1073
@@ -229,13 +239,14 @@ C  SET ELEVEL VALUES
         IF (DE2.NE.0.D0) WRITE(6,635) DE2
       ENDIF
 
-      DO 1063 I=1,NLEVEL
+      DO I=1,NLEVEL
         FJ=DBLE(JLEVEL(2*I-1))
         GJ=DBLE(JLEVEL(2*I))
         FJ=FJ*(FJ+1.D0)
         GJ=GJ*(GJ+1.D0)
- 1063   ELEVEL(I)=(BE1-ALPHE1*0.5D0)*FJ - DE1*FJ*FJ
+        ELEVEL(I)=(BE1-ALPHE1*0.5D0)*FJ - DE1*FJ*FJ
      1         +  (BE2-ALPHE2*0.5D0)*GJ - DE2*GJ*GJ
+      ENDDO
       RETURN
 
  1073 IF (IPRINT.GE.1) WRITE(6,312)
@@ -243,7 +254,7 @@ C  SET ELEVEL VALUES
       RETURN
 C  * * * * * * * * * * * * * * * * * * * * * * * * * * * END OF SET3
 C
-      ENTRY SET5(LEVIN,EIN,NSTATE,JSTATE,IPRINT)
+      ENTRY SET5(LEVIN,EIN,NSTATE,IPRINT)
 C
 C  N.B. WE USE D(L,K,M) WITH EDMONDS CONVENTIONS OF PHASE FOR THE
 C  BASIS FUNCTIONS.  THIS IS SAME AS THADDEUS IN H2CO PAPER.
@@ -251,6 +262,7 @@ C
       A=ROTI(1)
       B=ROTI(3)
       C=ROTI(5)
+      JMININ=JMIN
       IF (LEVIN) GOTO 5305
 
       NLEVEL=0
@@ -265,43 +277,79 @@ C
       JMIN=MAX(JMIN,0)
       JMAX=MAX(JMIN,JMAX)
 
-      DO 5315 JJ=JMIN,JMAX
-      DO 5315 KK=0,JJ
-        IF (KMAX.LT.0 .AND. KK+KMAX.NE.0) GOTO 5315
-        IF (KMAX.GE.0 .AND. KK.GT.KMAX)   GOTO 5315
-        IF (ISYM(3).EQ.1 .AND. MOD(KK,3).EQ.0) GOTO 5315
-        IF (ISYM(3).EQ.3 .AND. MOD(KK,3).NE.0) GOTO 5315
-        IF (JSTEP.GT.1 .AND. MOD(JJ+KK,JSTEP).NE.MOD(JMIN,JSTEP))
-     1      GOTO 5314
+C  ISYM(1) IS INTERPRETED BITWISE: THE BITS ARE FLAGS AS FOLLOWS
+C       0 - ODD  K EXCLUDED
+C       1 - EVEN K EXCLUDED
+C       3 - ODD  +/-K * (-1)**J EXCLUDED
+C       4 - EVEN +/-K * (-1)**J EXCLUDED
 
+      JSYM=ISYM(1)
+      DO IBIT=1,4
+        IP(IBIT)=MOD(JSYM,2)
+        JSYM=JSYM/2
+      ENDDO
+
+C  THE FOLLOWING COMBINATIONS WILL RESULT IN NO BASIS FUNCTIONS
+C  IP(1)=IP(2)=1, IP(3)=IP(4)=1
+
+      IF (IP(1)+IP(2).EQ.2 .OR. IP(3)+IP(4).EQ.2) THEN
+        WRITE(6,*) '  THIS COMBINATION OF SYMMETRY RESTRICTIONS',
+     1             ' REDUCES THE NUMBER OF PAIR LEVELS TO ZERO'
+        STOP
+      ENDIF
+
+!  Start of long DO loop #1
+      DO JJ=JMIN,JMAX
+      DO KK=0,JJ
+        IF (KMAX.LT.0 .AND. KK+KMAX.NE.0)      CYCLE
+        IF (KMAX.GE.0 .AND. KK.GT.KMAX)        CYCLE
+C  TESTS ON EVEN/ODD MONOMER K
+        IF(IP(1).EQ.1 .AND. MOD(KK,2).EQ.1)    CYCLE
+        IF(IP(2).EQ.1 .AND. MOD(KK,2).EQ.0)    CYCLE
+C  TESTS ON K MULTIPLE OF 3 OR NOT
+        IF (ISYM(3).EQ.1 .AND. MOD(KK,3).EQ.0) CYCLE
+        IF (ISYM(3).EQ.3 .AND. MOD(KK,3).NE.0) CYCLE
+        IF (JSTEP.GT.1 
+     1      .AND. MOD(JJ+KK,JSTEP).NE.MOD(JMININ,JSTEP))   GOTO 5314
+        IF(IP(3).EQ.1 .AND. MOD(JJ,2).EQ.1)                GOTO 5314
+        IF(IP(4).EQ.1 .AND. MOD(JJ,2).EQ.0)                GOTO 5314
+        IF(ISYM(2).GE.0 .AND. MOD(KK+1,2).EQ.ISYM(2))      GOTO 5314
         JLEVEL(I+1)=JJ
         JLEVEL(I+2)=KK
         JLEVEL(I+3)=2
         I=I+3
         NLEVEL=NLEVEL+1
- 5314   IF (KK.EQ.0) GOTO 5315
-        IF (JSTEP.GT.1 .AND. MOD(JJ+KK+1,JSTEP).NE.JMIN) GOTO 5315
+ 5314   IF (KK.EQ.0) CYCLE
+        IF (JSTEP.GT.1 
+     1      .AND. MOD(JJ+KK+1,JSTEP).NE.MOD(JMININ,JSTEP)) CYCLE
+        IF(IP(3).EQ.1 .AND. MOD(JJ,2).EQ.0)                CYCLE
+        IF(IP(4).EQ.1 .AND. MOD(JJ,2).EQ.1)                CYCLE
+        IF(ISYM(2).GE.0 .AND. MOD(KK,2).EQ.ISYM(2))        CYCLE
         JLEVEL(I+1)=JJ
         JLEVEL(I+2)=KK
         JLEVEL(I+3)=1
         I=I+3
         NLEVEL=NLEVEL+1
- 5315 CONTINUE
+      ENDDO
+      ENDDO
+!  End of long DO loop #1
       GOTO 5355
 
  5305 IF (IPRINT.GE.1) WRITE(6,632) NLEVEL
  5355 JMIN=JLEVEL(1)
       JMAX=JMIN
       NSTATE=NLEVEL
-      DO 5325 I=1,NLEVEL
-        JSTATE(         I)=JLEVEL(3*I-2)
-        JSTATE(  NSTATE+I)=JLEVEL(3*I-1)
-        JSTATE(2*NSTATE+I)=JLEVEL(3*I)
-        JSTATE(3*NSTATE+I)=I
+      ALLOCATE (JSTATE(NSTATE*4))
+
+      DO I=1,NLEVEL
+        JSTATE(I         )=JLEVEL(3*I-2)
+        JSTATE(I+NSTATE  )=JLEVEL(3*I-1)
+        JSTATE(I+NSTATE*2)=JLEVEL(3*I)
+        JSTATE(I+NSTATE*3)=I
         JJ=JSTATE(I)
         IF (JJ.LT.JMIN) JMIN=JJ
         IF (JJ.GT.JMAX) JMAX=JJ
- 5325 CONTINUE
+      ENDDO
       IF (EIN) GOTO 5335
 
       IF (IPRINT.GE.1) THEN
@@ -319,16 +367,22 @@ C
      2         /'  AND                    FOR K**2        =',F12.7,
      3         /'  WITH K=0 STATE ALLOWED FOR STATE OF |',I2,
      4          '> SYMMETRY')
-        IF (ISYM(3).EQ.1) THEN
-          WRITE(6,606)
-  606     FORMAT('  3-FOLD SYMMETRY: ONLY E STATES INCLUDED')
-        ELSEIF (ISYM(3).EQ.3) THEN
-          WRITE(6,607)
-  607     FORMAT('  3-FOLD SYMMETRY: ONLY A STATES INCLUDED')
-        ENDIF
+        IF (ISYM(3).EQ.1) WRITE(6,606) 'E'
+        IF (ISYM(3).EQ.3) WRITE(6,606) 'A'
+  606   FORMAT('  3-FOLD SYMMETRY: ONLY ',A1,' STATES INCLUDED')
+        IF(JSTEP.GT.1) WRITE(6,608) JSTEP,JMININ,JSTEP,MOD(JMININ,JSTEP)
+  608   FORMAT(/'  JSTEP =',I2,', JMIN =',I2,': ROTOR FUNCTIONS',
+     1          ' INCLUDED ONLY IF MOD(J+K+PRTY,',I1,') IS ',I1)
+        IF(ISYM(1).GT.0) WRITE(6,609) ISYM(1),(IP(I),I=1,4)
+  609   FORMAT(/'  ROTOR FUNCTIONS EXCLUDED BASED ON ISYM(1) =',I3/
+     1          '  CORRESPONDING TO BIT PATTERN',4I2
+     2          '  FOR EXCLUDING ODD AND EVEN K, ODD AND EVEN J+PRTY')
+        IF(ISYM(2).GE.0) WRITE(6,610) ISYM(2),ISYM(2)
+  610   FORMAT(/'  ISYM(2) =',I2,': ROTOR FUNCTIONS INCLUDED ONLY IF',
+     1          '  MOD(K+PRTY,2) IS',I2)
       ENDIF
 
-      DO 5345 I=1,NSTATE
+      DO I=1,NSTATE
         JJ=JSTATE(I)
         KK=ABS(JSTATE(I+NSTATE))
         SS=(-1.D0)**JSTATE(I+2*NSTATE)
@@ -340,7 +394,8 @@ C  OFF-DIAGONAL CONTRIBUTION ONLY FROM K=1/K=-1 CASE. . .
         IF (KK.EQ.1) HKK=HKK+ SS * (A-B) *
      1                        SQRT(DBLE((JJ*(JJ+1)-KK*(KK-1))*
      1                                  (JJ*(JJ+1)-(KK-1)*(KK-2))))/4.D0
- 5345   ELEVEL(I)=HKK
+        ELEVEL(I)=HKK
+      ENDDO
       RETURN
 
  5335 IF (IPRINT.GE.1) WRITE(6,631)

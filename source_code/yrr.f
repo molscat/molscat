@@ -1,5 +1,5 @@
       FUNCTION YRR(L1,L2,L,CT1,CT2,DP)
-C  Copyright (C) 2019 J. M. Hutson & C. R. Le Sueur
+C  Copyright (C) 2022 J. M. Hutson & C. R. Le Sueur
 C  Distributed under the GNU General Public License, version 3
 C
 C  BISPHERICAL HARMONIC ANGULAR FUNCTIONS FOR TWO DIATOMS
@@ -22,33 +22,29 @@ C                 PARSGN(J)
 C
       IMPLICIT DOUBLE PRECISION (A-H,O-Z)
       LOGICAL LODD
-      DATA PI/3.14159 26535 89793 D0/
-      LODD(I)=2*(I/2)-I.NE.0
+      PARAMETER (PI=3.141592653589793D0)
 C
-      IF (LODD(L1+L2+L)) GOTO 9999
+      IF (MOD(L1+L2+L,2).NE.0) THEN
+        WRITE(6,699) L1,L2,L
+  699   FORMAT(/' YRR *** ERROR.  ODD ARGUMENTS NOT ALLOWED',3I5)
+        STOP
+      ENDIF
 C
       XL1=L1
       XL2=L2
       XL=L
 C  SQRT(4*PI) FROM Y(L,M,THETA=0), 2*PI FOR TWO P(LM)S
-      DEN=SQRT(4.D0*PI)*2.D0*PI
+      DEN=SQRT(PI)*4.D0*PI
       FACT=((2.D0*XL+1.D0)/DEN)*PARSGN(L1+L2)
-      MTOP=MIN(L1,L2)
-      M=0
-      XM=0.D0
       TOTAL=THRJ(XL1,XL2,XL,0.D0,0.D0,0.D0)*PLM(L1,0,CT1)*PLM(L2,0,CT2)
 
- 2000 M=M+1
-        IF (M.GT.MTOP) GOTO 3000
-        XM=XM+1.D0
+      DO M=1,MIN(L1,L2)
+        XM=M
         TOTAL=TOTAL+2.D0*PARSGN(M)*THRJ(XL1,XL2,XL,XM,-XM,0.D0)*
      1               PLM(L1,M,CT1)*PLM(L2,M,CT2)*COS(XM*DP)
-      GOTO 2000
+      ENDDO
 
- 3000 YRR=FACT*TOTAL
+      YRR=FACT*TOTAL
       RETURN
 
- 9999 WRITE(6,699) L1,L2,L
-  699 FORMAT(/' YRR *** ERROR.  ODD ARGUMENTS NOT ALLOWED',3I5)
-      STOP
       END

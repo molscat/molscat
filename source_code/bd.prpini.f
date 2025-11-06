@@ -1,10 +1,11 @@
       SUBROUTINE PRPINI(RMIN,RMAX,DR,RVFAC,IRMSET,IRXSET,
      1                  EPS,EPL,DRSEG,EPSEG,IPRSEG,STPSEG,TOLSEG,
      2                  POWSEG,DIRNAM,POWRX,TOLHI)
-C  Copyright (C) 2019 J. M. Hutson & C. R. Le Sueur
+C  Copyright (C) 2025 J. M. Hutson & C. R. Le Sueur
 C  Distributed under the GNU General Public License, version 3
 
 C  CR Le Sueur Dec 2018
+C  OCT 2022 UPDATED TO TAKE ACCOUNT OF RMID OUTSIDE RANGE RMID-RMAX
       IMPLICIT NONE
 
 C  THIS ROUTINE SETS UP THE NUMBER OF SEGMENTS FOR A BOUND OR FIELD
@@ -36,8 +37,25 @@ C  SET UP NUMBER OF SEGMENTS
       NSEG=2
       IF (RMATCH.EQ.unset .AND. RMID.EQ.unset) THEN
         STOP
-      ELSEIF (RMATCH.EQ.unset) THEN
+      ELSEIF (RMATCH.EQ.unset .OR. RMATCH.LT.RMIN .OR. RMATCH.GT.RMAX)
+     1THEN
         RMATCH=RMID
+      ELSEIF (RMID.NE.unset .AND. RMID.GT.RMAX) THEN
+        NSEG=2
+        IPROPL=IPROPS
+        RMID=RMATCH
+        DRL=DRS
+        TOLHIL=TOLHIS
+        POWRL=POWRS
+        STEPL=STEPS
+      ELSEIF (RMID.NE.unset .AND. RMID.LT.RMIN) THEN
+        NSEG=2
+        IPROPS=IPROPL
+        RMID=RMATCH
+        DRS=DRL
+        TOLHIS=TOLHIL
+        POWRS=POWRL
+        STEPS=STEPL
       ELSEIF (RMID.EQ.unset .OR. ABS(RMID/RMATCH-1.D0).LT.1.D-8) THEN
         RMID=RMATCH
       ELSE
@@ -94,8 +112,12 @@ C  SET UP POWR
         POWRL=0.D0
       ENDIF
 
-      IF (IPROPS.EQ.9 .AND. TOLHIS.EQ.0.D0) THEN
-        IF (POWRS.EQ.unset) POWRS=0.D0
+      IF (IPROPS.EQ.9) THEN
+        IF (TOLHIS.EQ.0.D0) THEN
+          IF (POWRS.EQ.unset) POWRS=0.D0
+        ELSE
+          IF (POWRS.EQ.unset) POWRS=3.D0
+        ENDIF
       ELSE
         POWRS=0.D0
       ENDIF
@@ -134,7 +156,9 @@ C  SET UP VALUES FOR PRINTING
       STPSEG(2)=STEPL
       TOLSEG(2)=TOLHIL
 
+!  Start of long IF block #1
       IF (NSEG.EQ.3) THEN
+!  Start of long IF block #2
         IF (RMID.LT.RMATCH) THEN
           DIRNAM(2)='OUT'
           IPRSEG(2)=IPROPS
@@ -168,7 +192,9 @@ C         TOLSEG(2)=TOLHIL
           STPSEG(3)=STEPS
           TOLSEG(3)=TOLHIS
         ENDIF
+!  End of long IF block #2
       ENDIF
+!  End of long IF block #1
 
       RETURN
       END

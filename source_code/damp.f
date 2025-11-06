@@ -12,15 +12,18 @@ C
       Y=1.D0
       Z=1.D0
       BR=BETA*R
-      DO 100 K=1,KMAX
+      DO K=1,KMAX
         Y=Y*BR/DBLE(K)
         Z=Z+Y
-  100   P(K)=Z
+        P(K)=Z
+      ENDDO
 C
       Z=EXP(-BR)
-      DO 200 K=KMIN,KMAX
-  200   DP(K)=(P(K)-P(K-1))*BETA*Z
-      DO 300 K=KMIN,KMAX
-  300   P(K)=1.D0-Z*P(K)
+      DO K=KMIN,KMAX
+        DP(K)=(P(K)-P(K-1))*BETA*Z
+      ENDDO
+      DO K=KMIN,KMAX
+        P(K)=1.D0-Z*P(K)
+      ENDDO
       RETURN
       END

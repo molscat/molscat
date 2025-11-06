@@ -21,12 +21,12 @@ C  ON EXIT:  H CONTAINS THE VALUES OF THE HERMITE POLYNOMIALS AT X.
       H(2)=P1
       IF (N.LE.2) RETURN
 
-      DO 100 K=3,N
+      DO K=3,N
         TEMP=X2*P1 - DBLE(K+K-4)*P0
         P0=P1
         P1=TEMP
         H(K)=P1
-  100 CONTINUE
+      ENDDO
 
       RETURN
       END

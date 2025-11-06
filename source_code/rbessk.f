@@ -1,5 +1,5 @@
       SUBROUTINE RBESSK (ELL,X,VRATIO)
-C  Copyright (C) 2022 J. M. Hutson & C. R. Le Sueur
+C  Copyright (C) 2025 J. M. Hutson & C. R. Le Sueur
 C  Distributed under the GNU General Public License, version 3
 C------------------------------------------------------------------------------
 C  THIS ROUTINE ORIGINATES FROM THE ABC CODE BY MANOLOPOULOS ET AL.
@@ -67,6 +67,7 @@ C  BEGIN BY CALCULATING K(A,X) AND K(A+1,X) FOR |A| <= 1/2
 C
       NA = INT(V+0.5D0)
       A = V-NA
+!  Start of long IF block #1
       IF (X.LT.XMIN) THEN
 C
 C  USING TEMME'S SERIES FOR SMALL X
@@ -138,6 +139,7 @@ C
          G = F*(A+X+0.5D0-P)/X
          EX = X
       ENDIF
+!  End of long IF block #1
 C
 C  NOW RECUR UPWARDS FROM K(A,X) TO K(V,X),
 C  SCALING TO AVOID OVERFLOW ALONG THE WAY

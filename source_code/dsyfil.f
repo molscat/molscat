@@ -11,11 +11,13 @@ C
       DIMENSION A(LDA,N)
 
       IF (UPLO.EQ.'L') THEN
-        DO 10 J=1,N-1
-   10     CALL DCOPY(N-J,A(J,J+1),LDA,A(J+1,J),1)
+        DO J=1,N-1
+          CALL DCOPY(N-J,A(J,J+1),LDA,A(J+1,J),1)
+        ENDDO
       ELSEIF (UPLO.EQ.'U') THEN
-        DO 20 J=1,N-1
-   20     CALL DCOPY(N-J,A(J+1,J),1,A(J,J+1),LDA)
+        DO J=1,N-1
+          CALL DCOPY(N-J,A(J+1,J),1,A(J,J+1),LDA)
+        ENDDO
       ENDIF
 C
       RETURN

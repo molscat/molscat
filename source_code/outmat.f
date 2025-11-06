@@ -25,7 +25,7 @@ C    NMAX:     MAXIMUM ROW DIMENSION OF MATRIX TMAT
 C  ---------------------------------------------------------------------
 C
       IMPLICIT DOUBLE PRECISION (A-H,O-Z)
-      DIMENSION EIGOLD(1), HP(1), TMAT(1)
+      DIMENSION EIGOLD(*), HP(*), TMAT(*)
       LOGICAL LAST
 C
 C  COMMON BLOCK FOR CONTROL OF USE OF PROPAGATION SCRATCH FILE

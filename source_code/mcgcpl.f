@@ -54,18 +54,19 @@ C
      1           VL,IPRINT,LFIRST)
       RETURN
 C
- 6000 CALL CPL26(N,MXLAM,LAM,NSTATE,JSTATE,JSINDX,MVALUE,ATAU,
+ 6000 CALL CPL26(N,MXLAM,LAM,NSTATE,JSINDX,MVALUE,
      1           VL,IPRINT,LFIRST)
       RETURN
 C
  7000 IF (IVLFL.LE.0) GOTO 9999
       XM=DBLE(MVALUE)
       NZERO=NHAM*N*(N+1)/2
-      DO 1547 I=1,NZERO
+      DO I=1,NZERO
         IV(I)=0
- 1547   VL(I)=0.D0
+        VL(I)=0.D0
+      ENDDO
       NZERO=0
-      DO 1517 LL=1,MXLAM
+      DO LL=1,MXLAM
         LLL=LAM(5*LL-4)
         NV=LAM(5*LL-3)
         NJ=LAM(5*LL-2)
@@ -73,28 +74,29 @@ C
         NJ1=LAM(5*LL)
         NNZ=0
         II=0
-        DO 1507 ICOL=1,N
+        DO ICOL=1,N
           NVC=JSTATE(JSINDX(ICOL),2)
           NJC=JSTATE(JSINDX(ICOL),1)
-        DO 1507 IROW=1,ICOL
+        DO IROW=1,ICOL
           NVR=JSTATE(JSINDX(IROW),2)
           NJR=JSTATE(JSINDX(IROW),1)
           II=II+1
           IF (.NOT.((NV.EQ.NVC .AND. NJ.EQ.NJC .AND.
      1               NV1.EQ.NVR .AND. NJ1.EQ.NJR) .OR.
      2              (NV.EQ.NVR .AND. NJ.EQ.NJR .AND.
-     3               NV1.EQ.NVC .AND. NJ1.EQ.NJC))) GOTO 1507
+     3               NV1.EQ.NVC .AND. NJ1.EQ.NJC))) CYCLE
           I=(II-1)*NHAM+LLL+1
           VL(I)=PARSGN(MVALUE)*SQRT(Z(NJR)*Z(NJC))*
      1          THREEJ(NJR,LLL,NJC)*
      2          THRJ(DBLE(NJR),DBLE(LLL),DBLE(NJC),-XM,Z0,XM)
           IV(I)=LL
           IF (VL(I).NE.0.D0) NNZ=NNZ+1
- 1507   CONTINUE
-        IF (NNZ.GT.0) GOTO 1517
+        ENDDO
+        ENDDO
+        IF (NNZ.GT.0) CYCLE
         IF (IPRINT.GE.14) WRITE(6,612) MVALUE,LL
         NZERO=NZERO+1
- 1517 CONTINUE
+      ENDDO
 
       IF (NZERO.GT.0 .AND. IPRINT.GE.10 .AND. IPRINT.LT.14)
      1  WRITE(6,620) MVALUE,NZERO

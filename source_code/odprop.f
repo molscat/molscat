@@ -1,6 +1,5 @@
       SUBROUTINE ODPROP(MXLAM,NHAM,
-     1                  Y,VL,IV,EINT,CENT,P,
-     2                  U,W,Q,Y1,Y2,
+     1                  Y,VL,IV,EINT,CENT,
      3                  RSTART,RSTOP,NSTEP,DR,NODES,
      4                  ERED,EP2RU,CM2RU,RSCALE,IPRINT)
 C  Copyright (C) 2022 J. M. Hutson & C. R. Le Sueur
@@ -21,9 +20,8 @@ C  COMMON BLOCK FOR CONTROL OF USE OF PROPAGATION SCRATCH FILE
       LOGICAL IREAD,IWRITE,IREADR,IWRITR
       COMMON /PRPSCR/ ESHIFT,ISCRU,ISCRUR,IREAD,IWRITE,IREADR,IWRITR
 
-      DIMENSION U(NSTEP+1),W(NSTEP+1),Q(NSTEP+1),Y1(NSTEP+1),
-     1          Y2(NSTEP+1),IDUM1(1),
-     1          P(NHAM,NSTEP+1),VL(NHAM),IV(NHAM),EINT(1),CENT(1)
+      ALLOCATABLE :: U(:),W(:),Q(:),Y1(:),Y2(:),P(:,:)
+      DIMENSION IDUM1(1),VL(NHAM),IV(NHAM),EINT(*),CENT(*)
 C
       COMMON /VLFLAG/ IVLFL
 C
@@ -42,42 +40,48 @@ C  CHANGED (THOUGH VECTORISATION WOULD REQUIRE EXPLICIT R ARRAYS).
       H=DR/2.D0
       EP2CM=EP2RU/CM2RU
 C
+      ALLOCATE (Q(NPT),U(NPT),W(NPT))
       IF (IREAD) GOTO 400
+      NPELS=MAX(NHAM,MXLAM+NCONST+NRSQ)
+      ALLOCATE (P(NPELS,NPT))
 C
 C  FIRST GET POTENTIAL U AT EVEN-NUMBERED POINTS
 C
       R=RSTART
-      DO 100 I=1,NPT
+      DO I=1,NPT
         CALL POTENL(0,MXLAM,IDUM1,R*RSCALE,P(1,I),IDUM2,IPRINT)
         DO J=1,NCONST
           P(MXLAM+J,I)=VCONST(J)/EP2CM
         ENDDO
         CALL SCAPOT(P(1,I),MXLAM)
-        CALL PERTRB(R*RSCALE,P(1,I),NHAM,0)
-        DO J=1,NHAM
+        CALL PERTRB(R*RSCALE,P(1,I),NPELS,0)
+        DO J=1,MXLAM+NCONST
           P(J,I)=EP2RU*P(J,I)
         ENDDO
-  100   R=R+DR
+        R=R+DR
+      ENDDO
 
 C  COMPUTE THE RADIAL CONTRIBUTION TO W
 C
       EINTEP=0.D0
       IF (NCONST.EQ.0) EINTEP=EINT(1)
 
-      DO 110 I=1,NPT
-  110   U(I)=EINTEP
+      DO I=1,NPT
+        U(I)=EINTEP
+      ENDDO
 
-      DO 130 J=1,NHAM
+      DO J=1,NHAM
         V=VL(J)
-        IF (V.EQ.0.D0) GOTO 130
+        IF (V.EQ.0.D0) CYCLE
         IF (IVLFL.NE.0) THEN
           IVJ=IV(J)
         ELSE
           IVJ=J
         ENDIF
-        DO 120 I=1,NPT
-  120     U(I)=U(I)+V*P(IVJ,I)
-  130 CONTINUE
+        DO I=1,NPT
+          U(I)=U(I)+V*P(IVJ,I)
+        ENDDO
+      ENDDO
 C
 C  THE NEXT 2 LOOPS DO NOT VECTORISE BECAUSE OF THE FACTORS OF R.
 C  THEY COULD BE MADE TO BY EXTENDING THE P ARRAY
@@ -85,18 +89,20 @@ C  BUT NRSQ>0 AND CONLEN>0.D0 ARE UNCOMMON CASES SO NOT DONE.
 C
       IF (NRSQ.EQ.0) THEN
         R=RSTART
-        DO 140 I=1,NPT
+        DO I=1,NPT
           RSQ=MIN(1.D0/(R*R),1.D16)
           U(I)=U(I)+CENT(1)*RSQ
-  140     R=R+DR
+          R=R+DR
+        ENDDO
       ENDIF
 
       IF (CONLEN.GT.0.D0) THEN
         R=RSTART
-        DO 150 I=1,NPT
+        DO I=1,NPT
           RSQ=R*R/CONLEN**4
           U(I)=U(I)+RSQ
-  150     R=R+DR
+          R=R+DR
+        ENDDO
       ENDIF
 
       UBEG=U(1)
@@ -104,57 +110,65 @@ C
 C  NOW GET POTENTIAL W AT ODD-NUMBERED POINTS
 C
       R=RSTART+H
-      DO 200 I=1,NSTEP
+      DO I=1,NSTEP
         CALL POTENL(0,MXLAM,IDUM1,R*RSCALE,P(1,I),IDUM2,IPRINT)
         DO J=1,NCONST
           P(MXLAM+J,I)=VCONST(J)/EP2CM
         ENDDO
         CALL SCAPOT(P(1,I),MXLAM)
-        CALL PERTRB(R*RSCALE,P(1,I),NHAM,0)
-        DO J=1,NHAM
+        CALL PERTRB(R*RSCALE,P(1,I),NPELS,0)
+        DO J=1,MXLAM+NCONST
           P(J,I)=EP2RU*P(J,I)
         ENDDO
-  200   R=R+DR
+        R=R+DR
+      ENDDO
 
-      DO 210 I=1,NSTEP
-  210   W(I)=EINTEP
+      DO I=1,NSTEP
+        W(I)=EINTEP
+      ENDDO
 
-      DO 230 J=1,NHAM
+      DO J=1,NHAM
         V=VL(J)
-        IF (V.EQ.0.D0) GOTO 230
+        IF (V.EQ.0.D0) CYCLE
         IF (IVLFL.NE.0) THEN
           IVJ=IV(J)
         ELSE
           IVJ=J
         ENDIF
-        DO 220 I=1,NPT
-  220     W(I)=W(I)+V*P(IVJ,I)
-  230 CONTINUE
+        DO I=1,NPT
+          W(I)=W(I)+V*P(IVJ,I)
+        ENDDO
+      ENDDO
 
       IF (NRSQ.EQ.0) THEN
         R=RSTART+H
-        DO 240 I=1,NSTEP
+        DO I=1,NSTEP
           RSQ=MIN(1.D0/(R*R),1.D16)
           W(I)=W(I)+CENT(1)*RSQ
-  240     R=R+DR
+          R=R+DR
+        ENDDO
       ENDIF
 
       IF (CONLEN.GT.0.D0) THEN
         R=RSTART+H
-        DO 250 I=1,NSTEP
+        DO I=1,NSTEP
           RSQ=R*R/CONLEN**4
           U(I)=U(I)+RSQ
-  250     R=R+DR
+          R=R+DR
+        ENDDO
       ENDIF
 C
 C  FORM VECTOR OF CORRECTIONS U
 C
       Q(1)=0.D0
-      DO 310 I=2,NPT
-  310   Q(I)=U(I)-W(I-1)
+      DO I=2,NPT
+        Q(I)=U(I)-W(I-1)
+      ENDDO
       QLAST=Q(NPT)*DR6
-      DO 320 I=1,NSTEP
-  320   U(I)=(U(I)-W(I)+Q(I))*DR6
+      DO I=1,NSTEP
+        U(I)=(U(I)-W(I)+Q(I))*DR6
+      ENDDO
+      DEALLOCATE(P)
       IF (IWRITE) WRITE(ISCRU) CENT(1),QLAST,W,U
       GOTO 500
 C
@@ -172,22 +186,25 @@ C
       DC=CENT(1)-CSAV
       IF (ABS(DC).LT.1.D-8) GOTO 500
       R=RSTART+H
-      DO 410 I=1,NSTEP
+      DO I=1,NSTEP
         Q(I)=DC/(R*R)
         W(I)=W(I)+Q(I)
-  410   R=R+DR
+        R=R+DR
+      ENDDO
       R=RSTART
       U(1)=U(1)+DC/(R*R)-Q(1)
       R=R+DR
-      DO 420 I=2,NSTEP
+      DO I=2,NSTEP
         U(I)=U(I)+((DC+DC)/(R*R)-Q(I)-Q(I-1))*DR6
-  420   R=R+DR
+        R=R+DR
+      ENDDO
       QLAST=QLAST+(DC/(R*R)-Q(NSTEP))*DR6
 C
 C  NOW GET PROPAGATORS.
 C  THIS LOOP REQUIRES SPECIAL TREATMENT TO VECTORISE ON CRAY
 C
-  500 DO 510 I=1,NSTEP
+  500 ALLOCATE (Y1(NSTEP),Y2(NSTEP))
+      DO I=1,NSTEP
         WREF=W(I)-ERED
         FLAM=0.5D0*SQRT(ABS(WREF))
         IF (WREF.LT.0.D0) THEN
@@ -200,14 +217,17 @@ C
           Y2(I)=FLAM/TN-FLAM*TN
         ENDIF
         Y2(I)=Y2(I)*Y2(I)
-  510   Q(I)=Y1(I)+U(I)
+        Q(I)=Y1(I)+U(I)
+      ENDDO
 C
 C  FINALLY DO THE PROPAGATION. THIS LOOP IS NOT VECTORISABLE,
 C  SO THE WORK IN IT IS KEPT TO AN ABSOLUTE MINIMUM.
 C
-      DO 700 I=1,NSTEP
-  700   Y=Y1(I)-Y2(I)/(Y+Q(I))
+      DO I=1,NSTEP
+        Y=Y1(I)-Y2(I)/(Y+Q(I))
+      ENDDO
 C
+      DEALLOCATE(Y1,Y2,Q,U,W)
       Y=Y+QLAST
       RETURN
       END

@@ -12,10 +12,10 @@ C
       JJ=J
       CALL ORDER(II,JJ)
       FIND=0
-      DO 10 N=1,NG
-        IF (II.NE.IG(1,N) .OR. JJ.NE.IG(2,N)) GOTO 10
+      DO N=1,NG
+        IF (II.NE.IG(1,N) .OR. JJ.NE.IG(2,N)) CYCLE
         FIND=N
-        GOTO 20
-   10 CONTINUE
-   20 RETURN
+        EXIT
+      ENDDO
+      RETURN
       END

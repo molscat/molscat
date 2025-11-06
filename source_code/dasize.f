@@ -3,7 +3,7 @@ C  Copyright (C) 2019 J. M. Hutson & C. R. Le Sueur
 C  Distributed under the GNU General Public License, version 3
       IMPLICIT DOUBLE PRECISION (A-H,O-Z)
       SAVE MXUSED,IX,R,S
-      PARAMETER (NREC=50000)
+      PARAMETER (NREC=50000,NIPR=2)
       DIMENSION IX(6,NREC)
       DIMENSION IR2(2),IS2(2)
       EQUIVALENCE (R,IR1,IR2(1)),(S,IS1,IS2(1))
@@ -11,7 +11,7 @@ C  Distributed under the GNU General Public License, version 3
 C
 C  DYNAMIC STORAGE COMMON BLOCK ...
 C  NEEDED FOR NIPR; PREVIOUSLY PASSED IN COMMON /INTPAC/
-      COMMON /MEMORY/ MX,IXNEXT,NIPR,IDUMMY,X(1)
+c     COMMON /MEMORY/ MX,IXNEXT,NIPR,IDUMMY,X(1)
 C
       DATA MAXREC/NREC/
 C

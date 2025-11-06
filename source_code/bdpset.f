@@ -43,7 +43,9 @@ C  COMMON BLOCK FOR CONTROL OF PROPAGATION SEGMENTS
       POWSEG(2)=POWRL
       ICHNGE=1
 
+!  Start of long IF block #1
       IF (NSEG.EQ.3) THEN
+!  Start of long IF block #2
         IF (RMID.LT.RMATCH) THEN
 C  RMNINT - 1 -> RMID; RMID - 2 -> RMATCH; RMATCH <- 3 - RMXINT
           RESEG(1)=RMID
@@ -88,7 +90,9 @@ C         ICHNGE=1
           STPSEG(3)=STEPS
           TOLSEG(3)=TOLHIS
         ENDIF
+!  End of long IF block #2
       ENDIF
+!  End of long IF block #1
 
       RETURN
       END

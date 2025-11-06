@@ -1,11 +1,10 @@
-      SUBROUTINE MAPROP(N,NSQ,MXLAM,NHAM,
-     1                  Y,T,U,VL,IV,EINT,CENT,P,
-     2                  Q,W,EIVAL,Y1,Y2,Y3,Y4,
-     3                  DIAG,
-     4                  RSTART,RSTOP,NSTEP,DR,NODES,
-     5                  ERED,EP2RU,CM2RU,RSCALE,IPRINT)
-C  Copyright (C) 2022 J. M. Hutson & C. R. Le Sueur
+      SUBROUTINE MAPROP(N,MXLAM,NHAM,
+     1                  Y,VL,IV,EINT,CENT,
+     2                  RSTART,RSTOP,NSTEP,DR,NODES,
+     3                  ERED,EP2RU,CM2RU,RSCALE,IPRINT)
+C  Copyright (C) 2025 J. M. Hutson & C. R. Le Sueur
 C  Distributed under the GNU General Public License, version 3
+      USE potential, ONLY: NCONST, NRSQ
       IMPLICIT DOUBLE PRECISION (A-H,O-Z)
 C
 C  ROUTINE TO SOLVE A SET OF COUPLED EQUATIONS USING THE QUASIADIABATIC
@@ -27,9 +26,10 @@ C  COMMON VLFLAG ONLY TO CONTROL PRINTING OF P ARRAY AT HIGH PRINT LEVEL
       COMMON /VLFLAG/ IVLFL
 
       DOUBLE PRECISION, ALLOCATABLE :: WKS(:)
-      DIMENSION Q(NSQ),T(NSQ),U(NSQ),W(NSQ),Y(NSQ),
-     &          EIVAL(N),Y1(N),Y2(N),Y3(N),Y4(N)
-      DIMENSION P(MXLAM),VL(2),IV(2),EINT(N),CENT(N),DIAG(N)
+      ALLOCATABLE :: T(:),Q(:),W(:),EIVAL(:),Y1(:),Y2(:),Y3(:),
+     1               Y4(:),U(:),DIAG(:),P(:)
+      DIMENSION Y(N*N)
+      DIMENSION VL(*),IV(*),EINT(N),CENT(N)
 C
       NODES=0
 C
@@ -42,32 +42,37 @@ C
 C  FOR MOLSCAT, BOUND AND FIELD, Y IS PASSED IN FREE BASIS
 C  SO INITIALISE T TO A UNIT MATRIX
 C
-      DO 80 IJ=1,NSQ
+      NSQ=N*N
+      ALLOCATE (T(NSQ),Q(NSQ),U(NSQ))
+      DO IJ=1,NSQ
         T(IJ)=0.D0
-  80  CONTINUE
+      ENDDO
       NP1=N+1
       IJ=1
-      DO 90 I=1,N
+      DO I=1,N
         T(IJ)=1.D0
         IJ=IJ+NP1
-  90  CONTINUE
+      ENDDO
 
       IF (.NOT.IREAD) THEN
 C
 C  Q MATRIX IS USED TO HOLD CORRECTION TO Y4 FROM PREVIOUS
 C  SECTOR. INITIALISE IT FOR THE FIRST SECTOR.
 C
-        DO 110 IJ=1,NSQ
+        DO IJ=1,NSQ
           Q(IJ)=0.D0
- 110    CONTINUE
+        ENDDO
 C
+        ALLOCATE (P(MXLAM+NCONST+NRSQ))
+        ALLOCATE (DIAG(N))
         CALL HAMMAT(U,N,R,P,VL,IV,0.D0,EINT,CENT,EP2RU,CM2RU,
      1              RSCALE,DIAG,MXLAM,NHAM,IPRINT)
         IF (IWRITE) WRITE(ISCRU) U
       ELSE
         READ(ISCRU) U
-        DO 130 I=1,NSQ,N+1
-  130     U(I)=U(I)-ESHIFT
+        DO I=1,NSQ,N+1
+          U(I)=U(I)-ESHIFT
+        ENDDO
       ENDIF
 C
         IF (IPRINT.GE.19) WRITE(6,*)' POTENTIAL COEFFICIENTS P, '//
@@ -78,7 +83,9 @@ C
 C
 C  PROPAGATION LOOP BEGINS HERE
 C
-      DO 500 KSTEP=1,NSTEP
+      ALLOCATE (W(NSQ),EIVAL(N),Y1(N),Y2(N),Y3(N),Y4(N))
+!  Start of long DO loop #1
+      DO KSTEP=1,NSTEP
         IF (IREAD) GOTO 180
         R=R+0.5D0*DR
         CALL HAMMAT(W,N,R,P,VL,IV,0.D0,EINT,CENT,EP2RU,CM2RU,
@@ -86,19 +93,19 @@ C
 C
 C  CALCULATE CORRECTION TO Y1(K)
 C
-        DO 120 IJ=1,NSQ
+        DO IJ=1,NSQ
           U(IJ)=U(IJ)-W(IJ)
- 120    CONTINUE
+        ENDDO
         CR=DR/6.D0
-        DO 140 IJ=1,NSQ
+        DO IJ=1,NSQ
           U(IJ)=CR*U(IJ)
- 140    CONTINUE
+        ENDDO
 C
 C  PLUS CORRECTION TO Y4(K-1)
 C
-        DO 160 IJ=1,NSQ
+        DO IJ=1,NSQ
           U(IJ)=U(IJ)+Q(IJ)
- 160    CONTINUE
+        ENDDO
 C
 C  TRANSFORM CORRECTION TO OLD BASIS
 C
@@ -106,14 +113,14 @@ C
         IF (IWRITE) WRITE(ISCRU) U
         GOTO 200
 
- 180    READ(ISCRU) U
- 200    CONTINUE
+  180   READ(ISCRU) U
+  200   CONTINUE
 C
 C  APPLY CORRECTION TO Y MATRIX IN OLD BASIS
 C
-        DO 220 IJ=1,NSQ
+        DO IJ=1,NSQ
           Y(IJ)=Y(IJ)+U(IJ)
- 220    CONTINUE
+        ENDDO
 C
 C  DIAGONALISE COUPLING MATRIX
 C
@@ -142,7 +149,7 @@ C
         IF (IPRINT.GE.19)
      1    WRITE(6,666) 'AD: ',R,(((EIVAL(I))/EP2RU),I=1,MIN(30,N))
         IF (IPRINT.GE.24) CALL MATPRN(6,U,N,N,N,3,W,' EIGENVECTORS',1)
- 666      FORMAT(2X,A4,F10.4,(9G18.8))
+  666     FORMAT(2X,A4,F10.4,(9G18.8))
 C
         IF (IPRINT.GE.23) THEN
 C
@@ -159,18 +166,19 @@ C         CALL MATPRN(6,Q,N,N,N,2,Q,' DV/DR IN PRIMITIVE BASIS SET',1)
           DEALLOCATE(WKS)
 C         CALL MATPRN(6,Q,N,N,N,2,Q,' DV/DR IN ADIABATIC BASIS SET',1)
           IJ=0
-          DO 230 I=1,N
-          DO 230 J=1,N
+          DO I=1,N
+          DO J=1,N
           IJ=IJ+1
           IF (ABS(EIVAL(I)-EIVAL(J)).GT.1.D-20) THEN
             Q(IJ)=Q(IJ)/(EIVAL(I)-EIVAL(J))
           ELSE
             IF (I.NE.J) WRITE(6,667) I,J
- 667        FORMAT(' CHANNELS',I4,' AND',I4,' ARE DEGENERATE:',
+  667       FORMAT(' CHANNELS',I4,' AND',I4,' ARE DEGENERATE:',
      1      ' D/DR ELEMENT SET TO ZERO')
             Q(IJ)=0.D0
           ENDIF
- 230      CONTINUE
+          ENDDO
+          ENDDO
           CALL MATPRN(6,Q,N,N,N,2,Q,' D/DR IN ADIABATIC BASIS SET',1)
         ENDIF
 C
@@ -178,14 +186,14 @@ C  CALCULATE SECTOR-TO-SECTOR TRANSFORMATION MATRIX, Q.
 C  OLD EIGENVECTORS ARE IN T AND NEW ONES IN U
 C
         CALL DGEMUL(T,N,'T',U,N,'N',Q,N,N,N,N)
-        DO 240 IJ=1,NSQ
+        DO IJ=1,NSQ
           T(IJ)=U(IJ)
- 240    CONTINUE
+        ENDDO
         IF (IWRITE) WRITE(ISCRU) DR,EIVAL,Q
         GOTO 280
 
- 260    READ(ISCRU) DR,EIVAL,Q
- 280    CONTINUE
+  260   READ(ISCRU) DR,EIVAL,Q
+  280   CONTINUE
 C
 C  TRANSFORM Y MATRIX TO NEW BASIS
 C
@@ -196,7 +204,7 @@ C  HALF ANGLE FORMULAE ARE USED FOR MAXIMUM OPACITY.
 C
         NCHECK=0
         WMAX=24.D0/(DR*DR)
-        DO 300 I=1,N
+        DO I=1,N
           WREF=EIVAL(I)-ERED
           FLAM=0.5D0*SQRT(ABS(WREF))
           IF (WREF.LT.0.D0) THEN
@@ -211,15 +219,15 @@ C
           ENDIF
           Y3(I)=Y2(I)
           Y4(I)=Y1(I)
- 300    CONTINUE
+        ENDDO
 C
 C  PROPAGATE Y MATRIX ACROSS THE SECTOR
 C
         II=-N
-        DO 320 I=1,N
+        DO I=1,N
           II=II+N+1
           Y(II)=Y(II)+Y1(I)
- 320    CONTINUE
+        ENDDO
 C
         CALL SYMINV(Y,N,N,NCOUNT)
         IF (NCOUNT.GT.N) GOTO 900
@@ -227,18 +235,19 @@ C
         IF (NCHECK.EQ.0) NODES=NODES+NCOUNT
 C
         IJ=0
-        DO 340 J=1,N
-        DO 340 I=1,N
+        DO J=1,N
+        DO I=1,N
           IJ=IJ+1
           Y(IJ)=-Y3(I)*Y(IJ)*Y2(J)
- 340    CONTINUE
+        ENDDO
+        ENDDO
         II=-N
-        DO 360 I=1,N
+        DO I=1,N
           II=II+N+1
           Y(II)=Y(II)+Y4(I)
- 360    CONTINUE
+        ENDDO
 C
-        IF (IREAD) GOTO 500
+        IF (IREAD) CYCLE
 
         R=R+0.5D0*DR
         CALL HAMMAT(U,N,R,P,VL,IV,0.D0,EINT,CENT,EP2RU,CM2RU,
@@ -246,17 +255,19 @@ C
 C
 C  CALCULATE CORRECTION TO Y4(K)
 C
-        DO 380 IJ=1,NSQ
+        DO IJ=1,NSQ
           Q(IJ)=U(IJ)-W(IJ)
- 380    CONTINUE
+        ENDDO
         CR=DR/6.D0
-        DO 400 IJ=1,NSQ
+        DO IJ=1,NSQ
           Q(IJ)=CR*Q(IJ)
- 400    CONTINUE
+        ENDDO
 C
 C *** COULD CHANGE DR HERE ***
 C
- 500  CONTINUE
+      ENDDO
+!  End of long DO loop #1
+      IF (.NOT.IREAD) DEALLOCATE (P,DIAG)
 C
 C
 C  PROPAGATION LOOP ENDS HERE
@@ -272,13 +283,14 @@ C
 C
 C  APPLY FINAL CORRECTION IN ORIGINAL BASIS
 C
-      DO 520 IJ=1,NSQ
+      DO IJ=1,NSQ
         Y(IJ)=Y(IJ)+Q(IJ)
- 520  CONTINUE
+      ENDDO
+      DEALLOCATE (T,Q,U,W,EIVAL,Y1,Y2,Y3,Y4)
       RETURN
 C
- 900  WRITE(6,1000) KSTEP
-1000  FORMAT(/' ***** MATRIX INVERSION ERROR IN MAPROP AT ',
+  900 WRITE(6,1000) KSTEP
+ 1000 FORMAT(/' ***** MATRIX INVERSION ERROR IN MAPROP AT ',
      &       'STEP  K = ',I6,'  RUN HALTED.')
       STOP
       END

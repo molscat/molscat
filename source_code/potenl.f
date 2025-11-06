@@ -1,8 +1,10 @@
       SUBROUTINE POTENL(ICNTRL, MXLMB, LAM, R, P, ITYPE, IPRINT)
-C  Copyright (C) 2022 J. M. Hutson & C. R. Le Sueur
+C  Copyright (C) 2025 J. M. Hutson & C. R. Le Sueur
 C  Distributed under the GNU General Public License, version 3
       USE angles, ONLY: COSANG, FACTOR, ICNSY2, ICNSYM, IHOMO, IHOMO2
-      USE potential, ONLY: LAMBDA, MXLMDA, EPNAME, RMNAME
+      USE potential, ONLY: LAMBDA, MXLMDA, EPNAME, RMNAME, VRESET
+cINOLLS USE i_nolls, ONLY: idata, nidata, nrdata, rdata, parms,
+cINOLLS1                   inolls_data, inolls_check
 C
 C  -----------------------------------------------------------------
 C  * GENERAL POTENL ROUTINE; DESCRIPTION OF FUNCTIONS:
@@ -49,23 +51,6 @@ C
       SAVE NPTS
 C
 C  -----------------------------------------------------------------
-C  * NOTES FOR PROGRAMS OTHER THAN MOLSCAT (STORAGE CONSIDERATIONS):
-C  -----------------------------------------------------------------
-C  THE X() ARRAY CAN BE DEFINED INTERNALLY OR, IF THIS ROUTINE
-C  IS USED WITH THE MOLSCAT/BOUND/FIELD CODE, IT IS TAKEN FROM THE
-C  /MEMORY/...,X()  STORAGE MECHANISM IN THOSE PROGRAMS.
-C  THIS DECK SHOULD BE MODIFIED ACCORDINGLY IN THE STATEMENTS BELOW
-C  AND THE STATEMENTS WHICH FOLLOW STATEMENT NUMBER 2000
-C  -----------------------------------------------------------------
-C  ----- NEXT TWO STATEMENTS ARE USED FOR INTERNAL X() STORAGE -----
-C  ----- ALSO, "X" MUST BE ADDED TO THE "SAVE" STATEMENT ABOVE -----
-C     PARAMETER (MXX=30000)
-C     DIMENSION X(MXX)
-C  ----- NEXT TWO STATEMENTS ARE FOR /MEMORY/ MECHANISM-----
-      DIMENSION X(1)
-      COMMON /MEMORY/ MX,IXNEXT,NIPR,IDUMMY,X
-C
-C  -----------------------------------------------------------------
 C  * SPECIFICATION STATEMENTS:
 C  -----------------------------------------------------------------C
 C  MXDIM IS MAX NUMBER OF DIMENSIONS FOR PROJECTION
@@ -84,6 +69,7 @@ C     DIMENSION PNAMES(25),LOCN(25),INDX(25)
       DIMENSION A(IXMX), E(IEXMX)
       DIMENSION H(MXHERM),TOTAL(1)
       DIMENSION XPT(MXPT,MXDIM),XWT(MXPT,MXDIM),INX(MXDIM),NPTS(MXDIM)
+      ALLOCATABLE QP(:),QPTMP(:)
       EQUIVALENCE (NPT,NPTS(1)), (NPS,NPTS(2))
 C
       EQUIVALENCE (MXLAM,MXSYM),(LMAX,L1MAX)
@@ -95,11 +81,6 @@ C  COMMON BLOCK FOR COMMUNICATING WITH POTENTIAL ROUTINES
 C  CHANGED TO USE ANGLES MODULE ON 16-08-2018
 C     COMMON /ANGLES/ COSANG(MXANG),FACTOR,IHOMO,ICNSYM,IHOMO2,ICNSY2
       logical :: inolls=.false.
-C
-C     include common block for data received via pvm
-C
-cINOLLS include 'all/pvmdat1.f'
-cINOLLS include 'all/pvmdat.f'
 C
 C  -----------------------------------------------------------------
 C  * NAMELIST SPECIFICATION (AND DESCRIPTION OF PARAMETERS):
@@ -182,12 +163,12 @@ C  ----- CASE 1 -----
 C  EVALUATE RADIAL COEFFICIENTS AS POWERS, EXPONENTIALS OR VSTAR
       IX=0
       IEX=0
-      DO 10 I=1,MXLMB
+      DO I=1,MXLMB
         TOTAL1=0.D0
         NT=NTERM(I)
         IF (NT.EQ.0) GOTO 10
         IF (NT.LT.0) GOTO 20
-        DO 40 IT=1,NT
+        DO IT=1,NT
           IX=IX+1
           NP=NPOWER(IX)
           IF (NP.EQ.0) GOTO 30
@@ -203,6 +184,7 @@ C
           TERM=EXP(E(IEX)*R)
           IF (ICNTRL.GT.0) TERM=TERM*E(IEX)**ICNTRL
    40     TOTAL1=TOTAL1+A(IX)*TERM
+        ENDDO
         GOTO 10
    20   IF (ICNTRL.EQ.0) CALL VSTAR (I,R,CONTR)
         IF (ICNTRL.EQ.1) CALL VSTAR1(I,R,CONTR)
@@ -211,6 +193,7 @@ C
      1                        *SQRT(4.D0*PI/DBLE(2*LAMBDA(I+I-1)+1))
         TOTAL1=TOTAL1+CONTR
    10   P(I)=TOTAL1
+      ENDDO
       IF (IPRINT.GE.30) THEN
         WRITE(6,100) 'P(I) = ',(P(I),I=1,MXLMB)
       ENDIF
@@ -228,8 +211,8 @@ C  EXPLICIT PROJECTION OF LEGENDRE COMPONENTS VIA VRTP
       ENDDO
 C  START YPT() INDEX = IX;
 C  IX COUNTS DOWN LAMBDA THEN 1ST DIMENSION, 2ND DIMENSION, ...
-      IX=IXFAC
-      DO 230 I=1,NTOT
+      IX=0 !IXFAC
+      DO I=1,NTOT
         WEIGHT=1.D0
         DO ID=1,NDIM
           COSANG(ID)=XPT(INX(ID),ID)
@@ -240,21 +223,21 @@ C  IX COUNTS DOWN LAMBDA THEN 1ST DIMENSION, 2ND DIMENSION, ...
 C  ACCUMULATE CONTRIBUTIONS TO EACH P()
         DO IL=1,MXLMB
           IX=IX+1
-          P(IL)=P(IL)+TOTAL(1)*X(IX)
+          P(IL)=P(IL)+TOTAL(1)*QP(IX)
         ENDDO
 C  INCREMENT THE INDICES FOR EACH DIMENSION, INX(ID), STARTING W/ 1ST
         ID=1
   260   INX(ID)=INX(ID)+1
-        IF (INX(ID).LE.NPTS(ID)) GOTO 230
+        IF (INX(ID).LE.NPTS(ID)) CYCLE
 C  WE REACH HERE IF WE'VE HIT MAX FOR THIS DIMENSION; START NEXT,
         INX(ID)=1
         ID=ID+1
         IF (ID.LE.NDIM) GOTO 260
 C  IF WE REACH HERE WE SHOULD HAVE COUNTED ALL NTOT ELEMENTS
-        IF (I.EQ.NTOT) GOTO 230
+        IF (I.EQ.NTOT) CYCLE
         WRITE(6,*) ' POTENL. ERROR IN PROJECTION. NO. TERMS',I
         STOP
-  230 CONTINUE
+      ENDDO
 
       IF (IPRINT.GE.30) THEN
         WRITE(6,100) 'P(I) = ',(P(I),I=1,MXLMB)
@@ -304,9 +287,11 @@ C  INITIALIZE NAMELIST VARIABLES BEFORE READ
       NHAM=-1
       RM=-1.D0
       QOUT=(MOD(ITYPE,10).NE.9)
+      VRESET=.TRUE.
       if (.not.inolls) READ(5,POTL)
 C
-cINOLLS include 'all/rpotl-v15.f'
+cINOLLS call inolls_data
+cINOLLS include 'potl-namelist.h'
 C
 C
       IF (NHAM.NE.-1) WRITE(6,9020) NHAM
@@ -321,9 +306,27 @@ C  CALLING SEQUENCE OF POTIN9 EXTENDED BY JMH, 2 NOV 95.
 C
       IF (ITYP.EQ.9) THEN
         JTYPE=ITYPE
+        ALLOCATE (QPTMP(MAXPT**MXDIM*MAX(1,MXLAM)))
+        IXFAC=0
+        MX=SIZE(QPTMP)
         CALL POTIN9(JTYPE,LAM,MXLAM,NPTS,NDIM,XPT,XWT,
      1              MXPT,IVMIN,IVMAX,L1MAX,L2MAX,
-     2              MXLMB,X,MX,IXFAC)
+     2              MXLMB,QPTMP,MX,IXFAC)
+        IF (LVRTP) THEN
+          ALLOCATE (QP(IXFAC))
+          IF (IXFAC.EQ.0) THEN
+            WRITE(6,*)'**** ERROR: SIZE OF ARRAY OF QUADRATURE ',
+     1              "FUNCTIONS HASN'T BEEN SET"
+            STOP
+          ELSEIF (IXFAC.LE.SIZE(QPTMP)) THEN
+            QP=QPTMP(1:IXFAC)
+          ELSE
+            WRITE(6,*)'**** ERROR: ARRAY FOR QUADRATURE FUNCTIONS ',
+     1                'NEEDS TO BE AT LEAST ',IXFAC
+            STOP
+          ENDIF
+        ENDIF
+        DEALLOCATE (QPTMP)
         ITYP=MOD(JTYPE,10)
         NQDIM(9)=NDIM
       ENDIF
@@ -391,6 +394,7 @@ C
         IF (IPRINT.GE.1) WRITE(6,9060)
  9060   FORMAT(/'  UNEXPANDED POTENTIAL IS OBTAINED FROM VRTP ROUTINE.',
      1         //'  A SUITABLE VRTP ROUTINE MUST BE SUPPLIED.')
+        P(1)=EPSIL
         CALL VRTP(ICNTRL,RM,P)
         EPSIL=P(1)
         IF (PCASE.EQ.4) THEN
@@ -403,6 +407,7 @@ C
         ENDIF
       ENDIF
 
+!  Start of long IF block #1
       IF (PCASE.EQ.3) THEN
 C  IOS APPROXIMATION BEING USED.  PROPAGATIONS PERFORMED AT FIXED
 C  ORIENTATIONS
@@ -435,6 +440,7 @@ C>>IT WOULD MAKE GOOD SENSE TO USE IVMIN,IVMAX TO GENERATE HERE.
         ENDIF
         GOTO 6000
       ENDIF
+!  End of long IF block #1
 
 C  CHECK SYMMETRIES (IHOMO ETC, ALSO L2MAX=-1)
       IF (IHOMO.NE.1 .AND. IHOMO.NE.2) THEN
@@ -487,8 +493,10 @@ C  CHECK SYMMETRIES (IHOMO ETC, ALSO L2MAX=-1)
       ENDIF
 
 C  SET UP LAMBDA IF REQUIRED
+!  Start of long IF block #2
       IF (LMAX.GE.0) THEN
         MXLAM=0
+!  Start of long IF block #3
         IF (ITYP.EQ.1) THEN
           DO L=0,LMAX,IHOMO
             MXLAM=MXLAM+1
@@ -541,7 +549,9 @@ C  NEED TO CHECK IVMIN,IVMAX
      2           'FOR ITYP =',I2)
           STOP
         ENDIF
+!  End of long IF block #3
       ENDIF
+!  End of long IF block #2
 
 C  COPY LAMBDA ARRAY INTO LAM
       DO ILAM=1,NPQL*ABS(MXLAM)
@@ -577,7 +587,9 @@ C  FIND MAXIMA OF QUANTUM LABELS
       ENDIF
 
 C  CHECK SYMMETRIES
+!  Start of long IF block #4
       IF (MOD(ITYPE,10).NE.9) THEN
+!  Start of long IF block #5
       IF (ITYP.EQ.1 .OR. ITYP.EQ.2) THEN
         DO IL=1,MXLAM
           L=LAM(IL)
@@ -612,8 +624,11 @@ C  CHECK SYMMETRIES
           ENDIF
         ENDDO
       ENDIF
+!  End of long IF block #5
       ENDIF
+!  End of long IF block #4
 C
+!  Start of long IF block #6
       IF (LVRTP) THEN
 C  CALCULATE NUMBER OF QUADRATURE POINTS REQUIRED FOR EACH SEPARATE DEGREE
 C  OF FREEDOM AND GET THE POINTS AND WEIGHTS
@@ -642,6 +657,7 @@ C  OF FREEDOM AND GET THE POINTS AND WEIGHTS
      1           'POINTS WILL BE USED')
         ENDIF
 
+!  Start of long IF block #7
         IF (ITYP.EQ.2) THEN
           IF (NPTS(2).GT.0 .AND. 2*MAXV+1.GT.NPTS(2) .AND. IPRINT.GE.10)
      1      WRITE(6,*) 'NOT ENOUGH POINTS'
@@ -690,25 +706,26 @@ C  OF FREEDOM AND GET THE POINTS AND WEIGHTS
             XWT(IPX,2)=SQRT(PI+PI)/DBLE(NPTS(2))
           ENDDO
         ENDIF
+!  End of long IF block #7
 
 C  CHECK THAT FUNCTIONS AT QUADRATURE POINTS CAN BE FITTED INTO MEMORY
-C  (THEY ARE STORED AT THE VERY END OF THE X ARRAY)
         NTOT=1
         DO IDIM=1,NDIM
           NTOT=NTOT*NPTS(IDIM)
         ENDDO
-        IXFAC=MX-MXLAM*NTOT
-        MX=IXFAC
-        IF (MX+1.LT.IXNEXT) GOTO 9600
-        IX=IXFAC
+        IXFAC=MXLAM*NTOT
+        IF (ALLOCATED(QP)) DEALLOCATE (QP)
+        ALLOCATE (QP(IXFAC))
+        IX=0
 
 C  CALCULATE FUNCTIONS AT EACH QUADRATURE POINT
+!  Start of long IF block #8
         IF (ITYP.EQ.1) THEN
           DO IP=1,NPTS(1)
           DO IL=1,MXLAM
             L=LAM(NPQL*(IL-1)+1)
             IX=IX+1
-            X(IX)=SQRT(DBLE(L)+0.5D0)*PLM(L,0,XPT(IP,1))
+            QP(IX)=SQRT(DBLE(L)+0.5D0)*PLM(L,0,XPT(IP,1))
           ENDDO
           ENDDO
 
@@ -724,7 +741,7 @@ C  CALCULATE FUNCTIONS AT EACH QUADRATURE POINT
             DO IL=1,MXLAM
               L=LAM(NPQL*(IL-1)+1)
               IX=IX+1
-              X(IX)=SQRT(DBLE(L)+0.5D0)*PLM(L,0,XPT(IP1,1))*
+              QP(IX)=SQRT(DBLE(L)+0.5D0)*PLM(L,0,XPT(IP1,1))*
      1              H(1+LAM(3*IL-1))*H(1+LAM(3*IL))
             ENDDO
             ENDDO
@@ -742,7 +759,7 @@ C  SIMILARLY TO THAT IN IOSB1
             L2=LAM(NPQL*(IL-1)+2)
             LL=LAM(NPQL*IL)
             IX=IX+1
-            X(IX)=YRR(L1,L2,LL,XPT(IPT,1),XPT(IPX,2),XPT(IP3,3))
+            QP(IX)=YRR(L1,L2,LL,XPT(IPT,1),XPT(IPX,2),XPT(IP3,3))
      1            *PI8/F(LL)
           ENDDO
           ENDDO
@@ -756,19 +773,23 @@ C  SIMILARLY TO THAT IN IOSB1
             L=LAM(2*IL-1)
             M=LAM(2*IL)
             IX=IX+1
-            X(IX)=PLM(L,M,XPT(IPT,1))*COS(DBLE(M)*XPT(IPX,2))
+            QP(IX)=PLM(L,M,XPT(IPT,1))*COS(DBLE(M)*XPT(IPX,2))
           ENDDO
           ENDDO
           ENDDO
         ENDIF
+!  End of long IF block #8
 
       ENDIF
+!  End of long IF block #6
 
 C  WRITE MESSAGES...
+!  Start of long IF block #9
       IF (IPRINT.GE.1 .AND. QOUT) THEN
         WRITE(6,9300)
  9300 FORMAT(/'  ANGULAR DEPENDENCE OF POTENTIAL EXPANDED IN TERMS OF')
 
+!  Start of long IF block #10
         IF (ITYP.EQ.1) THEN
           QNAME(1)=QTYPE(1)
           IF (IPRINT.GE.1) WRITE(6,9310)
@@ -856,16 +877,19 @@ C  WRITE MESSAGES...
           QNAME(1)=QTYPE(11)
           QNAME(2)=QTYPE(12)
         ENDIF
+!  End of long IF block #10
 
       ELSE
         IF (IPRINT.GE.1) WRITE(6,9390) ITYPE
  9390   FORMAT(/'  *** POTENL. ITYPE =',I4,' CANNOT BE PROCESSED TO',
      1         ' DETERMINE THE POTENTIAL EXPANSION LABELS')
       ENDIF
+!  End of long IF block #9
 
 C  PROCESS EXPRESSIONS FOR EXPANSION COEFFICIENTS
  5000 IX=0
       IEX=0
+!  Start of long DO loop #1
       DO I=1,MXLAM
         IF (IPRINT.GE.1) THEN
           WRITE(6,9410) I
@@ -881,6 +905,7 @@ C  PROCESS EXPRESSIONS FOR EXPANSION COEFFICIENTS
 
         NT=NTERM(I)
         IF (NT.LT.0) CALL VINIT(I,RM,EPSIL)
+!  Start of long DO loop #2
         DO IT=1,NT
           IX=IX+1
           IF (IX.GT.IXMX) THEN
@@ -917,7 +942,9 @@ C         ENDIF
      1                            /DBLE(2*LAMBDA(IQ-NQPL+1)+1))
           ENDIF
         ENDDO
+!  End of long DO loop #2
       ENDDO
+!  End of long DO loop #1
 
  6000 CONTINUE
 C
@@ -953,17 +980,4 @@ C
      2       '  OFFENDING VALUE OF MXLAM =',I8)
       STOP
 C
-C  BELOW IS REACHED IF THERE WAS NOT ENOUGH ROOM IN THE X ARRAY TO
-C  STORE THE PROJECTION COEFFS.  IF USING /MEMORY/...X, IT IS
-C  POSSIBLE FOR THE CODE HERE TO OVERWRITE THE LAM ARRAY WITH
-C  COEFFS.  HOWEVER, THE PROGRAM SHOULD THEN TERMINATE WHEN CHKSTR
-C  IS CALLED FROM DRIVER AFTER RETURN FROM POTENL INITIALIZATION.
- 9600 NREQ=MXLAM*(NPTS(1)+NPTS(2))
-      MXSTRT=MX+NREQ
-      WRITE(6,9601) NPTS(1),NPTS(2),MXLAM,NREQ,MXSTRT,MXSTRT-IXNEXT+1
- 9601 FORMAT('  *** POTENL. NOT ENOUGH ROOM FOR PROJECTION COEFFICIENTS'
-     1      /'      REQUIRES (',I4,' +',I4,') * ',I4,' =',I8/
-     2       '      OF',I8,' ORIGINALLY SUPPLIED IN X(), ONLY',I8,
-     3       '  WERE AVAILABLE.')
-      STOP
       END

@@ -16,10 +16,9 @@ C  (NUMBER OF BLOCKS OF VL ARRAY USED FOR POTENTIAL EXPANSION AND INTERNAL
 C  HAMILTONIAN EXPANSION PLUS NUMBER OF BLOCKS USED FOR EXTRA OPERATORS)
 C
       IMPLICIT DOUBLE PRECISION (A-H,O-Z)
-      DIMENSION VL(1),P(1),IV(1),W(N,N)
+      DIMENSION VL(*),P(*),IV(*),W(N,N)
 C
-C     DYNAMIC STORAGE COMMON BLOCK ...
-      COMMON /MEMORY/ MX,IXNEXT,NIPR,IDUMMY,X(1)
+      ALLOCATABLE X(:)
       COMMON /VLFLAG/ IVLFL
       COMMON /VLSAVE/ IVLU
 C
@@ -31,29 +30,29 @@ C
         I=1
 C  EACH CALL TO DGEMV GENERATES THE J-TH COLUMN OF THE W ARRAY.  THE
 C  RELEVANT STARTING ELEMENT OF THE VL ARRAY IS AT NHAM*(J)*(J-1)/2+1
-        DO 1 J=1,N
+        DO J=1,N
           CALL DGEMV('T',NHAM,J,1.D0,VL(I),NVLBLK,P,1,0.D0,W(1,J),1)
           I=I+J*NVLBLK
-   1    CONTINUE
+        ENDDO
       ELSE
 C  ALTERNATIVELY READ A BLOCK OF THE VL ARRAY FROM CHANNEL IVLU AND THEN
 C  GENERATE A COLUMN OF THE W ARRAY USING THE FORMULA ABOVE
         REWIND IVLU
-        ISV=IXNEXT
-        IXNEXT=ISV+N*(N+1)/2
-        NUSED=0
-        CALL CHKSTR(NUSED)
-        DO 2 J=1,N
-        DO 2 K=1,J
-   2      W(K,J)=0.D0
-        DO 5 LL=1,NHAM
-          READ(IVLU) (X(ISV+I),I=0,N*(N+1)/2-1)
+        DO J=1,N
+        DO K=1,J
+          W(K,J)=0.D0
+        ENDDO
+        ENDDO
+        ALLOCATE (X(N*(N+1)/2))
+        DO LL=1,NHAM
+          READ(IVLU) (X(I),I=1,N*(N+1)/2)
           I=1
-          DO 4 J=1,N
-            CALL DAXPY(J,P(LL),X(ISV+I-1),1,W(1,J),1)
-   4        I=I+J
-   5    CONTINUE
-        IXNEXT=ISV
+          DO J=1,N
+            CALL DAXPY(J,P(LL),X(I),1,W(1,J),1)
+            I=I+J
+          ENDDO
+        ENDDO
+        DEALLOCATE (X)
       ENDIF
 C
 C     FILL IN LOWER TRIANGLE
@@ -73,17 +72,18 @@ C
       ENDIF
 C
       I2=0
-      DO 12 J=1,N
-      DO 12 K=1,J
+      DO J=1,N
+      DO K=1,J
         I1=I2+1
         I2=I2+NVLBLK !NHAM
         WW=0.D0
-        DO 11 I=I1,I1+NHAM-1
+        DO I=I1,I1+NHAM-1
           IF (VL(I).NE.0.D0) WW=WW+VL(I)*P(IV(I))
-  11    CONTINUE
+        ENDDO
         W(J,K)=WW
         W(K,J)=WW
-  12  CONTINUE
+      ENDDO
+      ENDDO
 C
       RETURN
       END

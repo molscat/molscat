@@ -11,9 +11,11 @@ C                 1 INDICATES FAILURE.
 C
       IEND=0
       READ(IU,END=9999) ((S(I,J),J=1,I),I=1,N)
-      DO 1000 I=1,N
-      DO 1000 J=1,I-1
- 1000 S(J,I)=S(I,J)
+      DO I=1,N
+      DO J=1,I-1
+        S(J,I)=S(I,J)
+      ENDDO
+      ENDDO
       RETURN
  9999 IEND=1
       RETURN
@@ -38,16 +40,16 @@ C  PASSED VARIABLES FOR HEADER
       INTEGER, INTENT(OUT)          :: JSTATE(NSTATE*NQN),NLVL,NNRG,
      1                                 NFIELD,NDGVL,NCONST,NRSQ,IBOUND
 
-      DOUBLE PRECISION, INTENT(OUT) :: ELEVEL(1),ENERGY(1)
+      DOUBLE PRECISION, INTENT(OUT) :: ELEVEL(*),ENERGY(*)
 
       LOGICAL, INTENT(IN)           :: LFIN
 C  PASSED VARIABLES FOR LOOPS
       INTEGER, INTENT(IN)           :: IREAD
       INTEGER, INTENT(OUT)          :: JTOT,INRG,IEXCH,M,NOPEN,IFIELD,
-     1                                 L(1),INDLEV(1)
+     1                                 L(*),INDLEV(*)
 
-      DOUBLE PRECISION, INTENT(OUT) :: ENERGN,WT,WVEC(1),EREF,CENT(1),
-     1                                 SREAL(1),SIMAG(1),AKMAT(1)
+      DOUBLE PRECISION, INTENT(OUT) :: ENERGN,WT,WVEC(*),EREF,CENT(*),
+     1                                 SREAL(*),SIMAG(*),AKMAT(*)
       DOUBLE PRECISION, INTENT(OUT) :: EFV(0:MXEFV)
 
       INTEGER, INTENT(OUT)          :: IFAIL
@@ -126,11 +128,13 @@ C  THIS READS THE LOOP INFORMATION REQUIRED BY THE POST-PROCESSING
 C  PROGRAMS.  IT IS FULL OF READ STATEMENTS FOR LEGACY OUTPUTS.
    20 IFAIL=0
 C  FOR DCS AND SBE CODES
+!  Start of long IF block #1
       IF (LFMT) THEN
 C       READ(IRDUNT,103,END=1000) JTOT,INRG,ENERGN,IEXCH,WT,M
 C       READ(IRDUNT,104,END=2000) NOPEN,(JSINDX(I),L(I),WVEC(I),
 C    1                                   I=1,NOPEN)
       ELSE
+!  Start of long IF block #2
         IF (IPROGM.LT.14) THEN
           READ(IRDUNT,END=1000) JTOT,INRG,ENERGN,IEXCH,WT,M
           READ(IRDUNT,END=2000) NOPEN,(INDLEV(I),L(I),WVEC(I),
@@ -179,7 +183,9 @@ C  IS ACTUALLY JSINDX
             ENDIF
           ENDIF
         ENDIF
+!  End of long IF block #2
       ENDIF
+!  End of long IF block #1
 
       RETURN
 

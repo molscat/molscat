@@ -18,7 +18,7 @@ C            GAUSS-LAGUERRE QUADRATURE;
 C            NNRG IS THE NUMBER OF ENERGY VALUES NEEDED.
 
       IMPLICIT DOUBLE PRECISION (A-H,O-Z)
-      DIMENSION E(1),T(1)
+      DIMENSION E(*),T(*)
       DIMENSION A(20),W(20)
 C     DATA XK /.6950305D0/
 C  16-10-16: NOW OBTAIN FROM MODULE physical_constants
@@ -42,26 +42,27 @@ C  16-10-16: NOW OBTAIN FROM MODULE physical_constants
      1       '-POINT GAUSS-LAGUERRE INTEGRATION OVER BOLTZMANN ',
      2       'DISTRIBUTION')
       NN=0
-      DO 1000 I=1,NT
+      DO I=1,NT
         IF (NN+NGP.LE.MXNRG) GOTO 1010
 
         WRITE(6,601) I,T(I)
   601   FORMAT(/' * * * WARNING.  NOT ENOUGH SPACE IN ENERGY() TO ',
      1         'PROCESS TEMP(',I3,' ) =',F8.2)
-        GOTO 1000
+        CYCLE
 
  1010   XT=XK*T(I)
         IF (IPRINT.GE.1) WRITE(6,602) T(I),XT
   602   FORMAT(/'        FOR TEMP =',F8.2,' DEG. K  =',F8.2,
      1         ' (CM-1), THE AVERAGE IS APPROXIMATELY THE SUM OF')
-        DO 1100 J=1,NGP
+        DO J=1,NGP
           EN=XT*A(IST+J)
           WT=A(IST+J)*W(IST+J)
           NN=NN+1
           E(NN)=EN
- 1100     IF (IPRINT.GE.1) WRITE(6,603) WT,EN
+          IF (IPRINT.GE.1) WRITE(6,603) WT,EN
+        ENDDO
   603   FORMAT(15X,F13.8, '  *  SIG( E =',F12.4,' ) ')
- 1000 CONTINUE
+      ENDDO
 
       NNRG=MIN(MXNRG,MAX(NNRG,NN))
       RETURN

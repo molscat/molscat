@@ -23,9 +23,23 @@ C * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
 C
       T1=(B-A)/2.D0
       T2=(B+A)/2.D0
-      IF (NPT-1) 9999,9998,9997
+C  CRLS 06-2022: REPLACE ARITHMETIC IF
+C     IF (NPT-1) 9999,9998,9997
+      IF (NPT.LE.1) THEN
+        IF (NPT.LT.1) THEN
+          WRITE(6,610) NPT
+  610     FORMAT(/' * * * WARNING.  GAUSS-LEGENDRE REQUESTED WITH',
+     1           ' NPT =',I6)
+C  REPLACE WITH SINGLE-POINT AT (A+B)/2 * (B-A)
+          NPT=1
+        ENDIF
 
- 9997 IF (NPT.LE.MXPT) GOTO 3100
+        XPT(1)=T2
+        WHT(1)=2.D0*T1
+        RETURN
+      ENDIF
+
+      IF (NPT.LE.MXPT) GOTO 3100
       WRITE(6,601) NPT,MXPT
   601 FORMAT(/' * * * WARNING.  GAUSS-LEGENDRE NPT =',I6,
      1       '  REDUCED TO',I4)
@@ -35,23 +49,16 @@ C
       I1=1
       I2=NPT
       IC=1
-      DO 2000 I=1,N2
+      DO I=1,N2
         XPT(I1)=-X(IC)*T1+T2
         XPT(I2)=X(IC)*T1+T2
         WHT(I1)=W(IC)*T1
         WHT(I2)=WHT(I1)
         I1=I1+1
         I2=I2-1
- 2000   IC=IC+1
+        IC=IC+1
+      ENDDO
 C  N.B FOR NPT ODD, THE LAST (I.E. MIDDLE) TERM IS EVALUATED TWICE.
       RETURN
 
- 9999 WRITE(6,610) NPT
-  610 FORMAT(/' * * * WARNING.  GAUSS-LEGENDRE REQUESTED WITH NPT =',I6)
-C  REPLACE WITH SINGLE-POINT AT (A+B)/2 * (B-A)
-      NPT=1
-
- 9998 XPT(1)=T2
-      WHT(1)=2.D0*T1
-      RETURN
       END

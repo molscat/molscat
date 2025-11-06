@@ -27,11 +27,12 @@ C
       P0=1.D0
       P1=X
 
-      DO 10 K=3,NP
+      DO K=3,NP
         TEMP=(DBLE(K+K-3)*X*P1 - DBLE(K-2)*P0) / DBLE(K-1)
         P0=P1
         P1=TEMP
-   10   SUMLEG=SUMLEG+P1*COEFF(K)
+        SUMLEG=SUMLEG+P1*COEFF(K)
+      ENDDO
 
       RETURN
       END

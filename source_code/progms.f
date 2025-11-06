@@ -13,7 +13,7 @@ C  PRINT VERSION NUMBER AND COPYRIGHT STATEMENT
       WRITE(6,10) PDATE
 
    10 FORMAT(' |',76X,'|'/' |',14X,
-     4       'Copyright (C) 2022 J. M. Hutson & C. R. Le Sueur',14X,'|'/
+     4       'Copyright (C) 2025 J. M. Hutson & C. R. Le Sueur',14X,'|'/
      4       ' |',76X,'|'/
      5       ' |',31X,'Version ',A20,17X,'|'/
      6       ' |',76X,'|')
@@ -39,10 +39,9 @@ C  PRINT AMOUNT OF CPU TIME AND MEMORY USED
       INTEGER MXSAVE,NUSED
       DOUBLE PRECISION TOTIME
 
-      WRITE(6,10) TOTIME,NUSED,MXSAVE
-   10 FORMAT(' |',20X,'This run used',F11.2,' cpu secs and',19X,'|',/,
-     8       ' |',9X,I10,' of the allocated',I10,' words of storage',
-     9       13X,'|'/' |',76X,'|')
+      WRITE(6,10) TOTIME
+   10 FORMAT(' |',22X,'This run used',F11.2,' cpu secs',21X,'|',/,
+     9       ' |',76X,'|')
       RETURN
       END
 C=========================================================================

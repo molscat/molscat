@@ -1,7 +1,7 @@
       SUBROUTINE PROPST(RMIN,RMAX,DR,IRMSET,IRXSET,RVFAC,
      1                  INTFLG,IMGSEL,IPRINT,
      2                  EPS,EPL,POWRX,TOLHI,DRMAX,NSTAB)
-C  Copyright (C) 2022 J. M. Hutson & C. R. Le Sueur
+C  Copyright (C) 2025 J. M. Hutson & C. R. Le Sueur
 C  Distributed under the GNU General Public License, version 3
 
 C  CR Le Sueur Jan 2019
@@ -201,6 +201,7 @@ C              1ST             3RD             2ND
       ENDIF
 
 C  FOR MOLSCAT, ALL PROPAGATIONS ARE TOWARDS RMAX
+!  Start of long IF block #1
       IF (CDRIVE.EQ.'M' .AND. IPRINT.GE.1) THEN
         WRITE(6,1000) 'COUPLED EQUATIONS WILL BE PROPAGATED OUTWARDS ',
      1                'IN',NSEG,'SEGMENT',PLUR(MIN(NSEG,2))
@@ -245,9 +246,11 @@ C  FOR BOUND/FIELD, ALL PROPAGATIONS ARE TOWARDS RMATCH
           ENDIF
         ENDIF
       ENDIF
+!  End of long IF block #1
  1000 FORMAT(/2X,A,A,1X,I1,1X,A:,A)
  1010 FORMAT(1X,A,1PG11.4,A,G11.4:,A,G11.4:,A,G11.4)
 
+!  Start of long DO loop #1
       DO ISEG=1,NSEG
 
         WRITE(6,1020) ' SEGMENT ',ISEG,' WILL BE PROPAGATED ',
@@ -268,6 +271,7 @@ C  FOR BOUND/FIELD, ALL PROPAGATIONS ARE TOWARDS RMATCH
         STEP=STPSEG(ISEG)
         POWR=POWSEG(ISEG)
 
+!  Start of long IF block #2
         IF (IPROP.EQ.IWKB) THEN
           WRITE(6,299) TOLHIT,NGMP
   299     FORMAT(/'  PHASE SHIFT CALCULATED IN WKB APPROXIMATION BY ',
@@ -342,6 +346,7 @@ C  FOR BOUND/FIELD, ALL PROPAGATIONS ARE TOWARDS RMATCH
      4           'J. CHEM. PHYS. 86, 2044 (1987).')
 
         ENDIF
+!  End of long IF block #2
 
 C  TEXT ABOUT HOW STEP SIZE IS CHOSEN
         IF (IPROP.GE.IDV .OR. IPROP.EQ.IAIRY) THEN
@@ -433,6 +438,7 @@ C  WRITE MESSAGES ABOUT Y MATRIX INITIALISATION
      1         ' WITH THE VALUE ',1PE10.3)
 C
       ENDDO
+!  End of long DO loop #1
 
       RETURN
       END

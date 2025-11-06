@@ -28,9 +28,9 @@ C
       IF (IDERIV.LT.-1) RETURN
 
       READ(5,*) NPOT
-      DO 200 I=1,NPOT
+      DO I=1,NPOT
         READ(5,*) POT(I)
-  200 CONTINUE
+      ENDDO
       READ(5,*) ETA
 
       CALL EXTINT

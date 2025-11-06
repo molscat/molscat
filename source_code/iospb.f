@@ -1,7 +1,7 @@
       SUBROUTINE IOSPB(ENERGY,QL,QLOLD,NL,LINE,
      1                 LTYPE,ITYPE,NVC,LM,IXQL,
      2                 LMAX,NIXQL,NQL)
-C  Copyright (C) 2022 J. M. Hutson & C. R. Le Sueur
+C  Copyright (C) 2025 J. M. Hutson & C. R. Le Sueur
 C  Distributed under the GNU General Public License, version 3
       USE basis_data, ONLY: JLEVEL, NLEVEL
 C
@@ -54,8 +54,9 @@ C  NPL IS NO. OF INDICES IN LINE PER CROSS SECTION
  1111 QTOT=0.D0
       IF (LMAX.LT.2) GOTO 1001
 
-      DO 1000 IL=2,LMAX
- 1000   QTOT=QTOT+QL(1,1,IL)
+      DO IL=2,LMAX
+        QTOT=QTOT+QL(1,1,IL)
+      ENDDO
  1001 LM1=LMAX-1
       WRITE(6,651) LM1,QTOT,QLOLD(1,1)
   651 FORMAT(/' SUM OVER Q(L), L = 1,',I3,'  =',F12.4,'   QLOLD(0) =',
@@ -65,7 +66,8 @@ C  SAVE QL(1,1,1) AND REPLACE WITH QLOLD(1,1)
       Q0SAVE=QL(1,1,1)
       QL(1,1,1)=QLOLD(1,1)
 C  LOOP OVER LINES
-      DO 2000 LN=1,NL
+!  Start of long DO loop #1
+      DO LN=1,NL
         LVA=LINE((LN-1)*NPL+1)
         LVB=LINE((LN-1)*NPL+2)
         IF (.NOT.LDIAG) GOTO 1091
@@ -82,7 +84,7 @@ C  LOOP OVER LINES
         WRITE(6,691) LN,LVA,LVB,LVA1,LVB1
   691   FORMAT(/' * * * ERROR.  FOR LINE',I3,
      1         '  LEVEL A OR B .GT. NLEVEL - CANNOT PROCESS',4I6)
-        GOTO 2000
+        CYCLE
 
  2001   JA=JLEVEL(LVA)
         JB=JLEVEL(LVB)
@@ -101,15 +103,17 @@ C  LOOP OVER LINES
         LTOP=LM1
  2002   LMIN=MAX(ABS(JA-JA1),ABS(JB-JB1))
         QTOT2=0.
-        DO 2100 L=LMIN,LTOP
+        DO L=LMIN,LTOP
           FC=PARSGN(K)*FUNC(JA1)*DSQRT(FUNC(JB1)*FUNC(JB))*
      1       THREEJ(JA,JA1,L)*THREEJ(JB,JB1,L)*SIXJ(JA,JB,JA1,JB1,K,L)
           TERM=FC*QL(1,1,L+1)
- 2100     QTOT2=QTOT2-TERM
+          QTOT2=QTOT2-TERM
+        ENDDO
         WRITE(6,602) QTOT2
   602   FORMAT(11X,'***** PRESSURE BROADENING CROSS SECTION  =',F12.4,
      &         '  ANG**2   *****')
- 2000 CONTINUE
+      ENDDO
+!  End of long DO loop #1
 
 C  RESTORE QL(1,1,1)
       QL(1,1,1)=Q0SAVE
@@ -129,13 +133,14 @@ C
      1       ,' --- REQUEST CANCELED.')
       RETURN
 
- 5901 DO 5001 LN=1,NL
+!  Start of long DO loop #2
+ 5901 DO LN=1,NL
         LVA=LINE((LN-1)*NPL+1)
         LVB=LINE((LN-1)*NPL+2)
         IF (EXISTS(LVA) .AND. EXISTS(LVB)) GOTO 5002
 
         WRITE(6,691) LN,LVA,LVB
-        GOTO 5001
+        CYCLE
 
  5002   JA=JLEVEL(3*LVA-2)
         KA=JLEVEL(3*LVA-1)
@@ -161,9 +166,10 @@ C
         QTOT2=0.D0
         QTOTI=0.D0
         FACT=-XNORM(EPSA)*XNORM(EPSB)*PARSGN(K+KA+KB)*FUNC(JA)*FUNC(JB)
-        DO 5100 L=IZERO,LTOP,2
+!  Start of long DO loop #3
+        DO L=IZERO,LTOP,2
           SFACT=SIXJ(JA,JB,JA,JB,K,L)
-          IF (ABS(SFACT).LT.TOL) GOTO 5100
+          IF (ABS(SFACT).LT.TOL) CYCLE
 
           XL=L
 C  TERM 1 . . .
@@ -221,54 +227,59 @@ C  TERM 3 . . .
           QTOT2=QTOT2+ADDR
           QTOTI=QTOTI+ADDI
           IF (LPRT) WRITE(6,657) L,IZERO,KB2,XXX,ADDR,ADDI,QTOT2,QTOTI
- 5400     IF (EPSA*EPSB.EQ.0.D0 .OR. KA2.GT.L .OR. KB2.GT.L) GOTO 5100
+ 5400     IF (EPSA*EPSB.EQ.0.D0 .OR. KA2.GT.L .OR. KB2.GT.L) CYCLE
 
 C  TERM 4 . . .
           PF=4.D0*EPSA*EPSB
           TF=THRJ(XJA,XL,XJA,-XKA,2.D0*XKA,-XKA)*
      &        THRJ(XJB,XL,XJB,-XKB,2.D0*XKB,-XKB)
-          IF (KA2-KB2) 5401,5402,5403
+C  CRLS 06-2022: ARITHMETIC IF REPLACED
+C         IF (KA2-KB2) 5401,5402,5403
 
- 5401     CALL IXQLF(LM,LMAX,L,KA2,KB2,IONE,IX,IXQL,NIXQL,NQL)
-          IF (IX.EQ.0) WRITE(6,659) L,KA2,KB2,IONE
-          IF (IX.LE.0) GOTO 5100
+!  Start of long IF block #1
+          IF (KA2.LT.KB2) THEN
+            CALL IXQLF(LM,LMAX,L,KA2,KB2,IONE,IX,IXQL,NIXQL,NQL)
+            IF (IX.EQ.0) WRITE(6,659) L,KA2,KB2,IONE
+            IF (IX.LE.0) CYCLE
 
-          XXX=FACT*SFACT*PF*TF
-          ADDR=XXX*QL(1,1,IX)
-          ADDI=XXX*QL(1,1,IX+1)
-          QTOT2=QTOT2+ADDR
-          QTOTI=QTOTI+ADDI
-          IF (LPRT) WRITE(6,657) L,KA2,KB2,XXX,ADDR,ADDI,QTOT2,QTOTI
-          GOTO 5100
+            XXX=FACT*SFACT*PF*TF
+            ADDR=XXX*QL(1,1,IX)
+            ADDI=XXX*QL(1,1,IX+1)
+            QTOT2=QTOT2+ADDR
+            QTOTI=QTOTI+ADDI
+            IF (LPRT) WRITE(6,657) L,KA2,KB2,XXX,ADDR,ADDI,QTOT2,QTOTI
+          ELSEIF (KA2.EQ.KB2) THEN
+            CALL IXQLF(LM,LMAX,L,KA2,KB2,IZERO,IX,IXQL,NIXQL,NQL)
+            IF (IX.EQ.0) WRITE(6,659) L,KA2,KB2,IZERO
+            IF (IX.LE.0) CYCLE
 
- 5402     CALL IXQLF(LM,LMAX,L,KA2,KB2,IZERO,IX,IXQL,NIXQL,NQL)
-          IF (IX.EQ.0) WRITE(6,659) L,KA2,KB2,IZERO
-          IF (IX.LE.0) GOTO 5100
+            XXX=FACT*SFACT*PF*TF
+            ADDR=XXX*QL(1,1,IX)
+            QTOT2=QTOT2+ADDR
+            ADDI=0.D0
+            IF (LPRT) WRITE(6,657) L,KA2,KB2,XXX,ADDR,ADDI,QTOT2,QTOTI
+          ELSE
+            CALL IXQLF(LM,LMAX,L,KB2,KA2,IONE,IX,IXQL,NIXQL,NQL)
+            IF (IX.EQ.0) WRITE(6,659) L,KB2,KA2,IONE
+            IF (IX.LE.0) CYCLE
 
-          XXX=FACT*SFACT*PF*TF
-          ADDR=XXX*QL(1,1,IX)
-          QTOT2=QTOT2+ADDR
-          ADDI=0.D0
-          IF (LPRT) WRITE(6,657) L,KA2,KB2,XXX,ADDR,ADDI,QTOT2,QTOTI
-          GOTO 5100
-
- 5403     CALL IXQLF(LM,LMAX,L,KB2,KA2,IONE,IX,IXQL,NIXQL,NQL)
-          IF (IX.EQ.0) WRITE(6,659) L,KB2,KA2,IONE
-          IF (IX.LE.0) GOTO 5100
-
-          XXX=FACT*SFACT*PF*TF
-          ADDR=XXX*QL(1,1,IX)
-          ADDI=-XXX*QL(1,1,IX+1)
-          QTOT2=QTOT2+ADDR
-          QTOTI=QTOTI+ADDI
-          IF (LPRT) WRITE(6,657) L,KA2,KB2,XXX,ADDR,ADDI,QTOT2,QTOTI
- 5100   CONTINUE
+            XXX=FACT*SFACT*PF*TF
+            ADDR=XXX*QL(1,1,IX)
+            ADDI=-XXX*QL(1,1,IX+1)
+            QTOT2=QTOT2+ADDR
+            QTOTI=QTOTI+ADDI
+            IF (LPRT) WRITE(6,657) L,KA2,KB2,XXX,ADDR,ADDI,QTOT2,QTOTI
+          ENDIF
+!  End of long IF block #1
+        ENDDO
+!  End of long DO loop #3
 
         WRITE(6,658) QTOT2,QTOTI
   658   FORMAT(11X,'***** CROSS SECTION (A**2),  REAL PART =',F12.4,5X,
      &        'IMAG. PART =',F12.4)
 
- 5001 CONTINUE
+      ENDDO
+!  End of long DO loop #2
 C
       RETURN
       END

@@ -1,9 +1,10 @@
       SUBROUTINE LDPROP(N,MXLAM,NHAM,
-     1                  Z,U,VL,IV,EINT,CENT,P,DIAG,
+     1                  Z,VL,IV,EINT,CENT,
      2                  RSTART,RSTOP,NSTEP,DR,NODES,
      3                  ERED,EP2RU,CM2RU,RSCALE,IPRINT)
-C  Copyright (C) 2022 J. M. Hutson & C. R. Le Sueur
+C  Copyright (C) 2025 J. M. Hutson & C. R. Le Sueur
 C  Distributed under the GNU General Public License, version 3
+      USE potential, ONLY: NCONST, NRSQ
 C
 C  SUBROUTINE FOR JOHNSON'S LOG-DERIVATIVE PROPAGATOR
 C  SEE B R JOHNSON, J COMP PHYS 13, 445 (1973)
@@ -18,8 +19,8 @@ C  COMMON BLOCK FOR CONTROL OF USE OF PROPAGATION SCRATCH FILE
       LOGICAL IREAD,IWRITE,IREADR,IWRITR
       COMMON /PRPSCR/ ESHIFT,ISCRU,ISCRUR,IREAD,IWRITE,IREADR,IWRITR
 
-      DIMENSION U(N,N),Z(N,N),P(MXLAM),VL(2),IV(2),EINT(N),CENT(N),
-     1          DIAG(N)
+      DIMENSION Z(N,N),VL(*),IV(*),EINT(N),CENT(N)
+      ALLOCATABLE :: DIAG(:),P(:),U(:,:)
 
       H=DR/2.D0
       D1 = H*H/3.D0
@@ -29,37 +30,46 @@ C
       R = RSTART
       NODES=0
 C
+      ALLOCATE (U(N,N))
       IF (IREAD) THEN
         READ(ISCRU) U
-        DO 130 I=1,N
-  130     U(I,I)=U(I,I)-ESHIFT
+        DO I=1,N
+          U(I,I)=U(I,I)-ESHIFT
+        ENDDO
       ELSE
+        ALLOCATE (DIAG(N),P(MXLAM+NCONST+NRSQ))
         CALL HAMMAT(U,N,R,P,VL,IV,ERED,EINT,CENT,EP2RU,CM2RU,
      1              RSCALE,DIAG,MXLAM,NHAM,IPRINT)
         IF (IWRITE) WRITE(ISCRU) U
       ENDIF
 
-      DO 150 J = 1,N
-        DO 140 I = J,N
-  140     Z(I,J) = H*Z(I,J)+D1*U(I,J)
-  150   Z(J,J) = 1.D0+Z(J,J)
+      DO J = 1,N
+        DO I = J,N
+          Z(I,J) = H*Z(I,J)+D1*U(I,J)
+        ENDDO
+        Z(J,J) = 1.D0+Z(J,J)
+      ENDDO
 C
 C  START PROPAGATION LOOP
 C
-      DO 260 ISTEP = 1,NSTEP
+!  Start of long DO loop #1
+      DO ISTEP = 1,NSTEP
         R = R+H
         IF (IREAD) THEN
           READ(ISCRU) U
           ESH=-D4*ESHIFT
-          DO 160 I=1,N
-  160       U(I,I)=U(I,I)+ESH
+          DO I=1,N
+            U(I,I)=U(I,I)+ESH
+          ENDDO
         ELSE
           CALL HAMMAT(U,N,R,P,VL,IV,ERED,EINT,CENT,EP2RU,CM2RU,
      1                RSCALE,DIAG,MXLAM,NHAM,IPRINT)
-          DO 180 J = 1,N
-            DO 170 I = J,N
-  170         U(I,J) = D4*U(I,J)
-  180       U(J,J) = 0.125D0+U(J,J)
+          DO J = 1,N
+            DO I = J,N
+              U(I,J) = D4*U(I,J)
+            ENDDO
+            U(J,J) = 0.125D0+U(J,J)
+          ENDDO
           IF (IWRITE) WRITE(ISCRU) U
         ENDIF
 C
@@ -79,10 +89,12 @@ C  EQ 10 FROM 1973 WITH W=4 AND U FROM INVERSION
 C  USING (I+Z)^{-1} Z    = I - (I+Z)^{-1}
 C  AND   (I-H2*V)^{-1} V = (1/H2) [I - (I - H2*V)^{-1}]
 C
-        DO 210 J = 1,N
-          DO 200 I = J,N
-  200       Z(I,J) = U(I,J)-Z(I,J)
-  210     Z(J,J) = Z(J,J)-6.D0
+        DO J = 1,N
+          DO I = J,N
+            Z(I,J) = U(I,J)-Z(I,J)
+          ENDDO
+          Z(J,J) = Z(J,J)-6.D0
+        ENDDO
 C
         CALL SYMINV(Z,N,N,NCZ)
         IF (NCZ.GT.N) GOTO 900
@@ -95,33 +107,44 @@ C
         IF (IREAD) THEN
           READ(ISCRU) U
           ESH=-D2*ESHIFT
-          DO 220 I=1,N
-  220       U(I,I)=U(I,I)+ESH
+          DO I=1,N
+            U(I,I)=U(I,I)+ESH
+          ENDDO
         ELSE
           CALL HAMMAT(U,N,R,P,VL,IV,ERED,EINT,CENT,EP2RU,CM2RU,
      1                RSCALE,DIAG,MXLAM,NHAM,IPRINT)
-          DO 240 J=1,N
-            DO 230 I=J,N
-  230         U(I,J)=D2*U(I,J)
-  240       U(J,J)=U(J,J)+2.D0
+          DO J=1,N
+            DO I=J,N
+              U(I,J)=D2*U(I,J)
+            ENDDO
+            U(J,J)=U(J,J)+2.D0
+          ENDDO
           IF (IWRITE) WRITE(ISCRU) U
         ENDIF
 C
 C  EQ 10 FROM 1973 WITH U=2+D2*V
 C
-        DO 250 J = 1,N
-        DO 250 I = J,N
-  250     Z(I,J) = U(I,J)-Z(I,J)
-  260 CONTINUE
+        DO J = 1,N
+        DO I = J,N
+          Z(I,J) = U(I,J)-Z(I,J)
+        ENDDO
+        ENDDO
+      ENDDO
+!  End of long DO loop #1
+
+      IF (.NOT.IREAD) DEALLOCATE (DIAG,P)
+      DEALLOCATE (U)
 C
 C  FINISHED PROPAGATING. CONVERT 1+Z BACK TO Y WITH EQ 21 FROM 1977
 C
       HI = 1.D0/H
-      DO 280 J = 1,N
-        DO 270 I = J,N
+      DO J = 1,N
+        DO I = J,N
           Z(I,J) = HI*Z(I,J)
-  270     Z(J,I) = Z(I,J)
-  280   Z(J,J) = Z(J,J)-HI
+          Z(J,I) = Z(I,J)
+        ENDDO
+        Z(J,J) = Z(J,J)-HI
+      ENDDO
 
       RETURN
 C

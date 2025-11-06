@@ -1,5 +1,5 @@
       SUBROUTINE BAS9IN(PRTP,IBOUND,IPRINT)
-C  Copyright (C) 2022 J. M. Hutson & C. R. Le Sueur
+C  Copyright (C) 2025 J. M. Hutson & C. R. Le Sueur
 C  Distributed under the GNU General Public License, version 3
       USE efvs, ONLY: EFV, EFVNAM, EFVUNT, MAPEFV, NEFV
       USE potential, ONLY: IREF, NCONST, NDGVL, NRSQ, VCONST
@@ -23,7 +23,7 @@ C----------------------------------------------------------------------
 C  USES (DIAG, ODD), PARSGN
       CHARACTER(8) PRTP(4),QNAME(10)
       LOGICAL LEVIN,EIN,LCOUNT,DIAG,ODD
-      DIMENSION JSTATE(1),VL(1),IV(1),JSINDX(1),L(1),CENT(1),LAM(1)
+      DIMENSION JSTATE(*),VL(*),IV(*),JSINDX(*),L(*),CENT(*),LAM(*)
       DIMENSION DGVL(*)
       DIMENSION MONQN(3)
 C
@@ -153,9 +153,9 @@ C
       IF (LEVIN) GOTO 220
       NLEVEL=0
       NSTATE=0
-      DO 210 NN=JMIN,JMAX,JSTEP
-      DO 210 JJ=ABS(NN-IS),NN+IS,1
-      DO 210 MM=-JJ,JJ,1
+      DO NN=JMIN,JMAX,JSTEP
+      DO JJ=ABS(NN-IS),NN+IS,1
+      DO MM=-JJ,JJ,1
         JLEVEL(3*NLEVEL+1)=NN
         JLEVEL(3*NLEVEL+2)=JJ
         JLEVEL(3*NLEVEL+3)=MM
@@ -163,7 +163,9 @@ C
 C  NL IS NUMBER OF SETS OF INTERNAL QUANTUM NUMBERS FOR THIS LEVEL
         NL=1
         NSTATE=NSTATE+NL
-  210 CONTINUE
+      ENDDO
+      ENDDO
+      ENDDO
       GOTO 230
   220 IF (IPRINT.GE.1) WRITE(6,602)
   602 FORMAT(/'  BASIS FUNCTIONS TAKEN FROM JLEVEL INPUT')
@@ -178,15 +180,16 @@ C
       NSTATE=NLEVEL
       NQN=4
       II=0
-      DO 250 I=1,NSTATE
+      DO I=1,NSTATE
          II=II+1
-      DO 250 K=1,NL
+      DO K=1,NL
          INDX=(NQN-1)*(I-1)
          JSTATE(I)         =JLEVEL(INDX+1)
          JSTATE(I+NSTATE)  =JLEVEL(INDX+2)
          JSTATE(I+NSTATE*2)=JLEVEL(INDX+3)
          JSTATE(I+NSTATE*3)=II
-  250 CONTINUE
+      ENDDO
+      ENDDO
 
       IF (IPRINT.GE.1) THEN
          IF (EIN) THEN
@@ -198,11 +201,11 @@ C
      &              F10.5/'  GAMMA  =',F10.5/'  LAMBDA =',F10.5)
          ENDIF
       ENDIF
-      DO 270 I=1,NLEVEL
+      DO I=1,NLEVEL
          NN=JSTATE(I)
          JJ=JSTATE(I+NSTATE)
          MM=JSTATE(I+NSTATE*2)
-         IF (EIN) GOTO 270
+         IF (EIN) CYCLE
 C  MONOMER ROTATION
          DIAGR=ROTI(1)*DBLE(NN*(NN+1))
 C  SPIN-ROTATION
@@ -214,7 +217,7 @@ C  SPIN-SPIN
 C
          ELEVEL(I)=DIAGR+DIAGSR+DIAGSS
 C
-  270 CONTINUE
+      ENDDO
       RETURN
 C======================================================== END OF SET9
       ENTRY BASE9(LCOUNT,N,JTOT,IBLOCK,JSTATE,NSTATE,NQN,JSINDX,L,
@@ -233,21 +236,21 @@ C  SIGN OF CURLY M NOT NEEDED BECAUSE FIELD CAN BE SET TO NEGATIVE
 C
       M=JTOT
       N=0
-      DO 320 I=1,NSTATE
+      DO I=1,NSTATE
          NN=JSTATE(I)
          MM=JSTATE(2*NSTATE+I)
          LMINN=ABS(M-MM)
-         DO 310 LL=LMINN,LMAX
-            IF (LL.LT.LMIN) GOTO 310 ! ADDED BY AW 30/10/07
-            IF (MLREQ.NE.999 .AND. M-MM.NE.MLREQ) GOTO 310
+         DO LL=LMINN,LMAX
+            IF (LL.LT.LMIN) CYCLE ! ADDED BY AW 30/10/07
+            IF (MLREQ.NE.999 .AND. M-MM.NE.MLREQ) CYCLE
 C  PARITY CHECK
-            IF (ODD(IBLOCK+NN+LL+1)) GOTO 310
+            IF (ODD(IBLOCK+NN+LL+1)) CYCLE
             N=N+1
-            IF (LCOUNT) GOTO 310
+            IF (LCOUNT) CYCLE
             JSINDX(N)=I
             L(N)=LL
-  310    CONTINUE
-  320 CONTINUE
+         ENDDO
+      ENDDO
 C
       IF (LCOUNT .AND. IPRINT.GE.1) WRITE(6,608) M,IBLOCK-1
  608  FORMAT(/'  BASIS SET FOR MTOT = ',I2,', PARITY = (-1)**',I1)
@@ -283,17 +286,20 @@ C
         ENDDO
       ENDIF
 
-      DO 550 LL=1,MXLL
+!  Start of long DO loop #1
+      DO LL=1,MXLL
         IF (LL.LE.MXLAM) LAMB=LAM(LL)
         NNZ=0
         I=LL
-        DO 540 ICOL=1,N
+!  Start of long DO loop #2
+        DO ICOL=1,N
           NCOL= JSTATE(JSINDX(ICOL))
           JCOL= JSTATE(JSINDX(ICOL)+NSTATE)
           MJCOL=JSTATE(JSINDX(ICOL)+NSTATE*2)
           LCOL= L(ICOL)
           MLCOL=M-MJCOL
-          DO 530 IROW=1,ICOL
+!  Start of long DO loop #3
+          DO IROW=1,ICOL
             NROW= JSTATE(JSINDX(IROW))
             JROW= JSTATE(JSINDX(IROW)+NSTATE)
             MJROW=JSTATE(JSINDX(IROW)+NSTATE*2)
@@ -303,6 +309,7 @@ C
 C  CONVENTION HERE IS COLUMN -> "NO PRIME", ROW -> "PRIME"
 C  INCLUDES HINT'S DIAGONAL AND OFF-DIAGONAL TERMS
 C  SETS UP MONOMER ROTATION TERMS (ARE DIAGONAL ONLY)
+!  Start of long IF block #1
             IF (LL.EQ.MXLAM+1) THEN
               IF (ICOL.EQ.IROW) VL(I)=DBLE(NCOL*(NCOL+1))
 C  SETS UP SPIN-ROTATION TERMS (ARE DIAGONAL ONLY)
@@ -347,14 +354,18 @@ C  NEXT IF EXPLOITS SOME 3-J SYMBOLS PROPERTIES
      &                  DBLE(-MJCOL),DBLE(MLAMB),DBLE(MJROW))
               VL(I)=PARSGN(IS+JCOL+JROW+LAMB+MLAMB-M)*FAC1*FAC2*FAC3
             ENDIF
+!  End of long IF block #1
             IF (VL(I).NE.0.D0) NNZ=NNZ+1
   520       I=I+NHAM
-  530     CONTINUE
-  540   CONTINUE
+          ENDDO
+!  End of long DO loop #3
+        ENDDO
+!  End of long DO loop #2
         IF (NNZ.EQ.0) WRITE(6,612) JTOT,LL
   612   FORMAT('  * * * NOTE.  FOR JTOT =',I4,',  ALL COUPLING',
      1         ' COEFFICIENTS ARE 0.0 FOR POTENTIAL SYMMETRY',I4)
-  550 CONTINUE
+      ENDDO
+!  End of long DO loop #1
       RETURN
 C=============================================================== END OF CPL9
       ENTRY THRSH9(JREF,MONQN,NQN1,EREF,IPRINT)
@@ -388,6 +399,7 @@ C  IN THE FOLLOWING, THE 3 CONDITIONS ARE
 C     - REQUESTED NEGLECT OF OFF-DIAGONAL TERMS
 C     - NO OFF-DIAGONAL TERMS EXIST
 C     - UPPER ROTATIONAL FUNCTION EXISTS BUT EXCLUDED BY BASIS SET SIZE
+!  Start of long IF block #2
       IF (IBSFLG.EQ.1 .OR. NN.EQ.JJ .OR. JJ.GE.JMAX) THEN
 C  MONOMER ROTATION
          DIAGR=ROTI(1)*DBLE(NN*(NN+1))
@@ -433,5 +445,6 @@ C  SOLVE 2X2 WITH DIAGONAL ELEMENTS EM AND EP AND OFF-DIAGONAL ODSS
 C  PICK EITHER UPPER OR LOWER EIGENVALUE DEPENDING ON REQUIRED N
          EREF=0.5D0*(EM+EP+SIGN(DIF,DBLE(MONQN(1)-JJ)))
       ENDIF
+!  End of long IF block #2
       RETURN
       END

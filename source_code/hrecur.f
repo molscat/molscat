@@ -19,7 +19,7 @@ C            PN1 CONTAINS VALUE OF NN-1-TH HERMITE POLYNOMIAL AT X.
       DP1=0.D0
       DP=1.D0
 
-      DO 1 J=2,NN
+      DO J=2,NN
         FJ=J
         FJ2=(FJ-1.D0)/2.D0
         Q=X*P-FJ2*P1
@@ -27,7 +27,8 @@ C            PN1 CONTAINS VALUE OF NN-1-TH HERMITE POLYNOMIAL AT X.
         P1=P
         P=Q
         DP1=DP
- 1      DP=DQ
+        DP=DQ
+      ENDDO
 
       PN=P
       DPN=DP
