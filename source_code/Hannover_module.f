@@ -1,0 +1,33 @@
+      module pot_data_Hannover
+C  Copyright (C) 2025 J. M. Hutson & C. R. Le Sueur
+C  Distributed under the GNU General Public License, version 3
+C
+C  MODULE CONTAINING PARAMETERS OF A PAIR OF TIEMANN-STYLE
+C  POTENTIAL CURVES OF AN ALKALI DIMER
+C  UNITS USED ARE CM-1 AND POWERS OF ANGSTROM
+C
+C  POTENTIAL 1 IS SINGLET X, POTENTIAL 2 IS TRIPLET A
+C
+      USE physical_constants, ONLY: bohr_to_Angstrom
+      IMPLICIT NONE
+      save
+
+      CHARACTER (LEN=:), ALLOCATABLE :: POTNAM
+      INTEGER :: NA(2),IPRINT
+      DOUBLE PRECISION, ALLOCATABLE :: A(:,:)
+
+      LOGICAL MATCHL, MATCHV, MATCHD
+
+      DOUBLE PRECISION :: RM(2),B(2),RSR(2),RLR(2),NSR(2),ASR(2),BSR(2)
+      DOUBLE PRECISION :: ALPSR(2) !,DUM
+      DOUBLE PRECISION :: C6,C8,C10
+
+      INTEGER :: NEX,GAMBET
+
+      DOUBLE PRECISION :: CEX,EXSIGN(2),AEX,GAMMA,BETA
+      DOUBLE PRECISION :: RUNITM
+      CHARACTER(8)     :: LENUNT
+
+      COMMON/POTEXT/NSR
+
+      end module pot_data_Hannover
