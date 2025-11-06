@@ -28,8 +28,8 @@
     RMIN   =  0.8,    RMAX   =  6.,         RMID   = 1.5,
     DRS    =  0.001,  DRL    =  0.001,      IRMSET = 8,
     JTOTL  =  0,      JTOTU  =  0,          IBFIX  = 2,
-    NNRG   =  20,     ENERGY =  42.838      DNRG   = 0.0001,      EUNITS = 1,
-    IPHSUM =  1,
+    NNRG   = 20,      ENERGY =  42.838      DNRG   = 0.0001,      EUNITS = 1,
+    IPHSUM = 10,
     LASTIN =  1,
  /
  &BASIS

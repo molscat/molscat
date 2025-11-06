@@ -1,7 +1,7 @@
  &INPUT
     LABEL  =  'Ar-HF v=0 on H6(4,3,2) potential: see JCP 96, 6752 (1992)',
     URED   =  13.331917,
-    IPRINT =   6,   ISAVEU = 12,    ISCRU  = 30,      IPHSUM = 4,
+    IPRINT =   6,   ISAVEU = 12,    ISCRU  = 30,      IPHSUM = 3,
     RMIN   =   2.5, RMAX   = 15.0,  IRMSET =  0,
     IPROPS =   6,   DR     =  0.03,
     JTOTL  =   1,   JTOTU  =  1,    IBFIX  =  2,
@@ -88,7 +88,7 @@
  &INPUT
     LABEL  =  'Ar-HF v=0 on H6(4,3,2) potential: see JCP 96, 6752 (1992)',
     URED   =  13.331917,
-    IPRINT =   6,   ISAVEU = 12,    ISCRU  = 30,      IPHSUM = 4,
+    IPRINT =   6,   ISAVEU = 13,    ISCRU  = 30,      IPHSUM = 4,
     RMIN   =   2.5, RMAX   = 15.0,  IRMSET =  0,
     IPROPS =   6,   DR     =  0.03,
     JTOTL  =   1,   JTOTU  =  1,    IBFIX  =  2,      IECONV = 4,
