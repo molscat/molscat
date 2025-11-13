@@ -40,9 +40,9 @@ COMPILE.f = $(Compiler) -c
 # can change it by setting the environment variable MOLSCAT_EXECUTABLE
 #
 ifeq ($(MOLSCAT_EXECUTABLE),)
-  .DEFAULT_GOAL := $(EXECDIR)/molscat-basic
+  .DEFAULT_GOAL := molscat-basic
 else
-  .DEFAULT_GOAL := $(EXECDIR)/$(MOLSCAT_EXECUTABLE)
+  .DEFAULT_GOAL := $(MOLSCAT_EXECUTABLE)
 endif
 
 # Clear out the list of suffixes and then add the suffixes that define
