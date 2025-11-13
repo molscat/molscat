@@ -316,7 +316,7 @@ $(foreach prog,$(PROGS),$(eval $(call PROGS_template,$(prog))))
 # Set up rules
 #
 
-.PHONY: all
+.PHONY: all clean
 
 all: $(PROGS)
 
@@ -350,3 +350,10 @@ $(OBJDIR)/%.o: %.f | $(OBJDIR)
 $(OBJDIR)/%.o: %.f90 | $(OBJDIR)
 	$(COMPILE.f) $(FFLAGS) $< -o $@
 
+#
+# Cleanup
+#
+clean:
+	rm -f $(OBJDIR)/*.o
+	rm -f *.mod
+	rm -f $(EXECDIR)/*
