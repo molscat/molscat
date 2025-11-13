@@ -10,7 +10,7 @@ else
 endif
 
 LIBS = -llapack -lblas
-ifeq ($(MOLSCAT_COMPILER),gfortran)
+ifeq ($(Compiler),gfortran)
   FFLAGS = -g --std=legacy
 endif
 
