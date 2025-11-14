@@ -10,7 +10,7 @@ else
 endif
 
 LIBS = -llapack -lblas
-ifeq ($(MOLSCAT_COMPILER),gfortran)
+ifeq ($(Compiler),gfortran)
   FFLAGS = -g --std=legacy
 endif
 
@@ -40,9 +40,9 @@ COMPILE.f = $(Compiler) -c
 # can change it by setting the environment variable MOLSCAT_EXECUTABLE
 #
 ifeq ($(MOLSCAT_EXECUTABLE),)
-  .DEFAULT_GOAL := $(EXECDIR)/molscat-basic
+  .DEFAULT_GOAL := molscat-basic
 else
-  .DEFAULT_GOAL := $(EXECDIR)/$(MOLSCAT_EXECUTABLE)
+  .DEFAULT_GOAL := $(MOLSCAT_EXECUTABLE)
 endif
 
 # Clear out the list of suffixes and then add the suffixes that define
@@ -316,7 +316,7 @@ $(foreach prog,$(PROGS),$(eval $(call PROGS_template,$(prog))))
 # Set up rules
 #
 
-.PHONY: all
+.PHONY: all clean
 
 all: $(PROGS)
 
@@ -350,3 +350,10 @@ $(OBJDIR)/%.o: %.f | $(OBJDIR)
 $(OBJDIR)/%.o: %.f90 | $(OBJDIR)
 	$(COMPILE.f) $(FFLAGS) $< -o $@
 
+#
+# Cleanup
+#
+clean:
+	rm -f $(OBJDIR)/*.o
+	rm -f *.mod
+	rm -f $(EXECDIR)/*
